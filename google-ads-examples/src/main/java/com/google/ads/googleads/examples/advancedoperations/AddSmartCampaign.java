@@ -20,44 +20,44 @@ import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v16.common.AdScheduleInfo;
-import com.google.ads.googleads.v16.common.AdTextAsset;
-import com.google.ads.googleads.v16.common.KeywordThemeInfo;
-import com.google.ads.googleads.v16.common.LocationInfo;
-import com.google.ads.googleads.v16.common.SmartCampaignAdInfo;
-import com.google.ads.googleads.v16.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v16.enums.AdTypeEnum.AdType;
-import com.google.ads.googleads.v16.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
-import com.google.ads.googleads.v16.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v16.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v16.enums.BudgetTypeEnum.BudgetType;
-import com.google.ads.googleads.v16.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v16.enums.DayOfWeekEnum.DayOfWeek;
-import com.google.ads.googleads.v16.enums.MinuteOfHourEnum.MinuteOfHour;
-import com.google.ads.googleads.v16.errors.GoogleAdsError;
-import com.google.ads.googleads.v16.errors.GoogleAdsException;
-import com.google.ads.googleads.v16.resources.Ad;
-import com.google.ads.googleads.v16.resources.SmartCampaignSetting;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v16.services.KeywordThemeConstantServiceClient;
-import com.google.ads.googleads.v16.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v16.services.MutateOperation;
-import com.google.ads.googleads.v16.services.MutateOperationResponse;
-import com.google.ads.googleads.v16.services.SmartCampaignSuggestServiceClient;
-import com.google.ads.googleads.v16.services.SmartCampaignSuggestionInfo;
-import com.google.ads.googleads.v16.services.SmartCampaignSuggestionInfo.BusinessContext;
-import com.google.ads.googleads.v16.services.SmartCampaignSuggestionInfo.LocationList;
-import com.google.ads.googleads.v16.services.SuggestKeywordThemeConstantsRequest;
-import com.google.ads.googleads.v16.services.SuggestKeywordThemeConstantsResponse;
-import com.google.ads.googleads.v16.services.SuggestKeywordThemesRequest;
-import com.google.ads.googleads.v16.services.SuggestKeywordThemesResponse;
-import com.google.ads.googleads.v16.services.SuggestKeywordThemesResponse.KeywordTheme;
-import com.google.ads.googleads.v16.services.SuggestSmartCampaignAdRequest;
-import com.google.ads.googleads.v16.services.SuggestSmartCampaignAdResponse;
-import com.google.ads.googleads.v16.services.SuggestSmartCampaignBudgetOptionsRequest;
-import com.google.ads.googleads.v16.services.SuggestSmartCampaignBudgetOptionsResponse;
-import com.google.ads.googleads.v16.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption;
-import com.google.ads.googleads.v16.utils.ResourceNames;
+import com.google.ads.googleads.v17.common.AdScheduleInfo;
+import com.google.ads.googleads.v17.common.AdTextAsset;
+import com.google.ads.googleads.v17.common.KeywordThemeInfo;
+import com.google.ads.googleads.v17.common.LocationInfo;
+import com.google.ads.googleads.v17.common.SmartCampaignAdInfo;
+import com.google.ads.googleads.v17.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v17.enums.AdTypeEnum.AdType;
+import com.google.ads.googleads.v17.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
+import com.google.ads.googleads.v17.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v17.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v17.enums.BudgetTypeEnum.BudgetType;
+import com.google.ads.googleads.v17.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v17.enums.DayOfWeekEnum.DayOfWeek;
+import com.google.ads.googleads.v17.enums.MinuteOfHourEnum.MinuteOfHour;
+import com.google.ads.googleads.v17.errors.GoogleAdsError;
+import com.google.ads.googleads.v17.errors.GoogleAdsException;
+import com.google.ads.googleads.v17.resources.Ad;
+import com.google.ads.googleads.v17.resources.SmartCampaignSetting;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v17.services.KeywordThemeConstantServiceClient;
+import com.google.ads.googleads.v17.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v17.services.MutateOperation;
+import com.google.ads.googleads.v17.services.MutateOperationResponse;
+import com.google.ads.googleads.v17.services.SmartCampaignSuggestServiceClient;
+import com.google.ads.googleads.v17.services.SmartCampaignSuggestionInfo;
+import com.google.ads.googleads.v17.services.SmartCampaignSuggestionInfo.BusinessContext;
+import com.google.ads.googleads.v17.services.SmartCampaignSuggestionInfo.LocationList;
+import com.google.ads.googleads.v17.services.SuggestKeywordThemeConstantsRequest;
+import com.google.ads.googleads.v17.services.SuggestKeywordThemeConstantsResponse;
+import com.google.ads.googleads.v17.services.SuggestKeywordThemesRequest;
+import com.google.ads.googleads.v17.services.SuggestKeywordThemesResponse;
+import com.google.ads.googleads.v17.services.SuggestKeywordThemesResponse.KeywordTheme;
+import com.google.ads.googleads.v17.services.SuggestSmartCampaignAdRequest;
+import com.google.ads.googleads.v17.services.SuggestSmartCampaignAdResponse;
+import com.google.ads.googleads.v17.services.SuggestSmartCampaignBudgetOptionsRequest;
+import com.google.ads.googleads.v17.services.SuggestSmartCampaignBudgetOptionsResponse;
+import com.google.ads.googleads.v17.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption;
+import com.google.ads.googleads.v17.utils.ResourceNames;
 import com.google.protobuf.Descriptors.OneofDescriptor;
 import com.google.protobuf.Message;
 import java.io.FileNotFoundException;
@@ -664,7 +664,7 @@ public class AddSmartCampaign {
 
   // [START add_smart_campaign_8]
   /**
-   * Creates {@link com.google.ads.googleads.v16.resources.CampaignCriterion} operations for add
+   * Creates {@link com.google.ads.googleads.v17.resources.CampaignCriterion} operations for add
    * each {@link KeywordThemeInfo}.
    */
   private Collection<? extends MutateOperation> createCampaignCriterionOperations(

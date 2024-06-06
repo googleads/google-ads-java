@@ -1,3 +1,14 @@
+32.0.0 - 2024-06-06
+-------------------
+- Add support and examples for Google Ads API v17.
+- Update to version 3.30.1 of
+  `google-cloud-shared-dependencies`.
+- Remove usage of page size from search samples.
+
+Compatible with [Google Cloud Libraries Bill of Materials
+(BOM)](https://cloud.google.com/java/docs/bom) release
+`com.google.cloud:libraries-bom:26.40.0`.
+
 31.0.0 - 2024-02-25
 -------------------
 - Add support and examples for Google Ads API v16.1.

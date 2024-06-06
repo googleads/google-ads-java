@@ -18,21 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v16.errors.GoogleAdsError;
-import com.google.ads.googleads.v16.errors.GoogleAdsException;
-import com.google.ads.googleads.v16.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v16.services.GoogleAdsRow;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v16.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v17.errors.GoogleAdsError;
+import com.google.ads.googleads.v17.errors.GoogleAdsException;
+import com.google.ads.googleads.v17.resources.AdGroupBidModifier;
+import com.google.ads.googleads.v17.services.GoogleAdsRow;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v17.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
 
 /** Gets ad group bid modifiers. */
 public class GetAdGroupBidModifiers {
-
-  private static final int PAGE_SIZE = 1_000;
 
   private static class GetAdGroupBidModifiersParams extends CodeSampleParams {
 
@@ -118,12 +116,10 @@ public class GetAdGroupBidModifiers {
       }
       searchQuery += " LIMIT 10000";
 
-      // Creates a request that will retrieve ad group bid modifiers using pages of the specified
-      // page size.
+      // Creates a request that will retrieve ad group bid modifiers.
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
               .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
               .build();
       // Issues the search request.

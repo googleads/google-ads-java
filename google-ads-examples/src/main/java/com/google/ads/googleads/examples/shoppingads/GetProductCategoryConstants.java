@@ -18,13 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v16.errors.GoogleAdsError;
-import com.google.ads.googleads.v16.errors.GoogleAdsException;
-import com.google.ads.googleads.v16.resources.ProductCategoryConstant;
-import com.google.ads.googleads.v16.services.GoogleAdsRow;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v16.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v17.errors.GoogleAdsError;
+import com.google.ads.googleads.v17.errors.GoogleAdsException;
+import com.google.ads.googleads.v17.resources.ProductCategoryConstant;
+import com.google.ads.googleads.v17.resources.ProductCategoryConstant.ProductCategoryLocalization;
+import com.google.ads.googleads.v17.services.GoogleAdsRow;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v17.services.SearchGoogleAdsRequest;
 import com.google.api.client.util.Preconditions;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -35,8 +36,6 @@ import java.util.Map;
 
 /** Fetches the set of all ProductCategoryConstants. */
 public class GetProductCategoryConstants {
-
-  private static final int PAGE_SIZE = 1_000;
 
   private static class GetProductCategoryConstantParams extends CodeSampleParams {
 
@@ -88,7 +87,7 @@ public class GetProductCategoryConstants {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    */
-  private static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates the query.
     String query =
         "SELECT "
@@ -100,7 +99,6 @@ public class GetProductCategoryConstants {
     // Creates the request.
     SearchGoogleAdsRequest request =
         SearchGoogleAdsRequest.newBuilder()
-            .setPageSize(PAGE_SIZE)
             .setCustomerId(Long.toString(customerId))
             .setQuery(query)
             .build();
@@ -129,7 +127,7 @@ public class GetProductCategoryConstants {
                         "US".equals(localization.getRegionCode())
                             && "en".equals(localization.getLanguageCode()))
                 // Gets the name from the product category localization.
-                .map(loc -> loc.getValue())
+                .map(ProductCategoryLocalization::getValue)
                 .findAny()
                 .orElse(null);
         String resourceName = productCategory.getResourceName();

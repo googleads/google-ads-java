@@ -19,20 +19,20 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v16.common.TargetRestriction;
-import com.google.ads.googleads.v16.common.TargetingSetting;
-import com.google.ads.googleads.v16.enums.TargetingDimensionEnum.TargetingDimension;
-import com.google.ads.googleads.v16.errors.GoogleAdsError;
-import com.google.ads.googleads.v16.errors.GoogleAdsException;
-import com.google.ads.googleads.v16.resources.AdGroup;
-import com.google.ads.googleads.v16.services.AdGroupOperation;
-import com.google.ads.googleads.v16.services.AdGroupServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsRow;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v16.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v16.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v16.utils.ResourceNames;
+import com.google.ads.googleads.v17.common.TargetRestriction;
+import com.google.ads.googleads.v17.common.TargetingSetting;
+import com.google.ads.googleads.v17.enums.TargetingDimensionEnum.TargetingDimension;
+import com.google.ads.googleads.v17.errors.GoogleAdsError;
+import com.google.ads.googleads.v17.errors.GoogleAdsException;
+import com.google.ads.googleads.v17.resources.AdGroup;
+import com.google.ads.googleads.v17.services.AdGroupOperation;
+import com.google.ads.googleads.v17.services.AdGroupServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsRow;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v17.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v17.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v17.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -40,8 +40,6 @@ import java.util.List;
 
 /** Updates the AUDIENCE target restriction of a given ad group to bid only. */
 public class UpdateAudienceTargetRestriction {
-
-  private static final int PAGE_SIZE = 1_000;
 
   private static class UpdateAudienceTargetRestrictionParams extends CodeSampleParams {
 
@@ -117,11 +115,10 @@ public class UpdateAudienceTargetRestriction {
               + adGroupId;
       // [END update_audience_target_restriction]
 
-      // Creates a request that will retrieve all ad groups using pages of the specified page size.
+      // Creates a request that will retrieve all ad groups.
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
               .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
               .build();
       // Issues the search request.

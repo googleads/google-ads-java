@@ -15,9 +15,9 @@
 package com.google.ads.googleads.lib.callables;
 
 import com.google.ads.googleads.lib.catalog.GeneratedCatalog;
-import com.google.ads.googleads.v16.errors.GoogleAdsError;
-import com.google.ads.googleads.v16.errors.GoogleAdsException;
-import com.google.ads.googleads.v16.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v17.errors.GoogleAdsError;
+import com.google.ads.googleads.v17.errors.GoogleAdsException;
+import com.google.ads.googleads.v17.errors.GoogleAdsFailure;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.rpc.ApiException;
 import com.google.common.collect.ImmutableList;
