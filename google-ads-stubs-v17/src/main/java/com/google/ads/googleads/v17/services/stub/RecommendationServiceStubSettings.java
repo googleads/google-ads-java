@@ -23,6 +23,7 @@ import com.google.ads.googleads.v17.services.DismissRecommendationResponse;
 import com.google.ads.googleads.v17.services.GenerateRecommendationsRequest;
 import com.google.ads.googleads.v17.services.GenerateRecommendationsResponse;
 import com.google.api.core.ApiFunction;
+import com.google.api.core.ObsoleteApi;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.core.GoogleCredentialsProvider;
 import com.google.api.gax.core.InstantiatingExecutorProvider;
@@ -138,6 +139,7 @@ public class RecommendationServiceStubSettings
   }
 
   /** Returns the default service endpoint. */
+  @ObsoleteApi("Use getEndpoint() instead")
   public static String getDefaultEndpoint() {
     return "googleads.googleapis.com:443";
   }

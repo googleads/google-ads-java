@@ -60,7 +60,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
    * @deprecated google.ads.googleads.v17.common.TargetSpend.target_spend_micros is deprecated.
-   *     See google/ads/googleads/v17/common/bidding.proto;l=196
+   *     See google/ads/googleads/v17/common/bidding.proto;l=198
    * @return Whether the targetSpendMicros field is set.
    */
   @java.lang.Override
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
    * @deprecated google.ads.googleads.v17.common.TargetSpend.target_spend_micros is deprecated.
-   *     See google/ads/googleads/v17/common/bidding.proto;l=196
+   *     See google/ads/googleads/v17/common/bidding.proto;l=198
    * @return The targetSpendMicros.
    */
   @java.lang.Override
@@ -500,7 +500,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
      * @deprecated google.ads.googleads.v17.common.TargetSpend.target_spend_micros is deprecated.
-     *     See google/ads/googleads/v17/common/bidding.proto;l=196
+     *     See google/ads/googleads/v17/common/bidding.proto;l=198
      * @return Whether the targetSpendMicros field is set.
      */
     @java.lang.Override
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
      * @deprecated google.ads.googleads.v17.common.TargetSpend.target_spend_micros is deprecated.
-     *     See google/ads/googleads/v17/common/bidding.proto;l=196
+     *     See google/ads/googleads/v17/common/bidding.proto;l=198
      * @return The targetSpendMicros.
      */
     @java.lang.Override
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
      * @deprecated google.ads.googleads.v17.common.TargetSpend.target_spend_micros is deprecated.
-     *     See google/ads/googleads/v17/common/bidding.proto;l=196
+     *     See google/ads/googleads/v17/common/bidding.proto;l=198
      * @param value The targetSpendMicros to set.
      * @return This builder for chaining.
      */
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
      * @deprecated google.ads.googleads.v17.common.TargetSpend.target_spend_micros is deprecated.
-     *     See google/ads/googleads/v17/common/bidding.proto;l=196
+     *     See google/ads/googleads/v17/common/bidding.proto;l=198
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTargetSpendMicros() {

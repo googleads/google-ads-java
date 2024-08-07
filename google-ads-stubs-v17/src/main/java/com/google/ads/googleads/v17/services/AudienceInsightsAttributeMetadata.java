@@ -260,6 +260,26 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int POTENTIAL_YOUTUBE_REACH_FIELD_NUMBER = 9;
+  private long potentialYoutubeReach_ = 0L;
+  /**
+   * <pre>
+   * An estimate of the number of reachable YouTube users matching this
+   * attribute in the requested location, or zero if that information is not
+   * available for this attribute.  Only populated in
+   * GenerateAudienceOverlapInsightsResponses and in
+   * ListAudienceInsightsAttributesResponses when youtube_reach_location is
+   * present in the request.
+   * </pre>
+   *
+   * <code>int64 potential_youtube_reach = 9;</code>
+   * @return The potentialYoutubeReach.
+   */
+  @java.lang.Override
+  public long getPotentialYoutubeReach() {
+    return potentialYoutubeReach_;
+  }
+
   public static final int YOUTUBE_CHANNEL_METADATA_FIELD_NUMBER = 6;
   /**
    * <pre>
@@ -424,6 +444,9 @@ private static final long serialVersionUID = 0L;
     if (dimensionMetadataCase_ == 8) {
       output.writeMessage(8, (com.google.ads.googleads.v17.services.LocationAttributeMetadata) dimensionMetadata_);
     }
+    if (potentialYoutubeReach_ != 0L) {
+      output.writeInt64(9, potentialYoutubeReach_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -459,6 +482,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.google.ads.googleads.v17.services.LocationAttributeMetadata) dimensionMetadata_);
     }
+    if (potentialYoutubeReach_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(9, potentialYoutubeReach_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -484,6 +511,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDisplayName())) return false;
     if (!getDisplayInfo()
         .equals(other.getDisplayInfo())) return false;
+    if (getPotentialYoutubeReach()
+        != other.getPotentialYoutubeReach()) return false;
     if (!getDimensionMetadataCase().equals(other.getDimensionMetadataCase())) return false;
     switch (dimensionMetadataCase_) {
       case 6:
@@ -522,6 +551,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDisplayName().hashCode();
     hash = (37 * hash) + DISPLAY_INFO_FIELD_NUMBER;
     hash = (53 * hash) + getDisplayInfo().hashCode();
+    hash = (37 * hash) + POTENTIAL_YOUTUBE_REACH_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getPotentialYoutubeReach());
     switch (dimensionMetadataCase_) {
       case 6:
         hash = (37 * hash) + YOUTUBE_CHANNEL_METADATA_FIELD_NUMBER;
@@ -688,6 +720,7 @@ private static final long serialVersionUID = 0L;
       }
       displayName_ = "";
       displayInfo_ = "";
+      potentialYoutubeReach_ = 0L;
       if (youtubeChannelMetadataBuilder_ != null) {
         youtubeChannelMetadataBuilder_.clear();
       }
@@ -748,6 +781,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.displayInfo_ = displayInfo_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.potentialYoutubeReach_ = potentialYoutubeReach_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -828,6 +864,9 @@ private static final long serialVersionUID = 0L;
         displayInfo_ = other.displayInfo_;
         bitField0_ |= 0x00000008;
         onChanged();
+      }
+      if (other.getPotentialYoutubeReach() != 0L) {
+        setPotentialYoutubeReach(other.getPotentialYoutubeReach());
       }
       switch (other.getDimensionMetadataCase()) {
         case YOUTUBE_CHANNEL_METADATA: {
@@ -915,6 +954,11 @@ private static final long serialVersionUID = 0L;
               dimensionMetadataCase_ = 8;
               break;
             } // case 66
+            case 72: {
+              potentialYoutubeReach_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 72
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1382,6 +1426,65 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       displayInfo_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private long potentialYoutubeReach_ ;
+    /**
+     * <pre>
+     * An estimate of the number of reachable YouTube users matching this
+     * attribute in the requested location, or zero if that information is not
+     * available for this attribute.  Only populated in
+     * GenerateAudienceOverlapInsightsResponses and in
+     * ListAudienceInsightsAttributesResponses when youtube_reach_location is
+     * present in the request.
+     * </pre>
+     *
+     * <code>int64 potential_youtube_reach = 9;</code>
+     * @return The potentialYoutubeReach.
+     */
+    @java.lang.Override
+    public long getPotentialYoutubeReach() {
+      return potentialYoutubeReach_;
+    }
+    /**
+     * <pre>
+     * An estimate of the number of reachable YouTube users matching this
+     * attribute in the requested location, or zero if that information is not
+     * available for this attribute.  Only populated in
+     * GenerateAudienceOverlapInsightsResponses and in
+     * ListAudienceInsightsAttributesResponses when youtube_reach_location is
+     * present in the request.
+     * </pre>
+     *
+     * <code>int64 potential_youtube_reach = 9;</code>
+     * @param value The potentialYoutubeReach to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPotentialYoutubeReach(long value) {
+
+      potentialYoutubeReach_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * An estimate of the number of reachable YouTube users matching this
+     * attribute in the requested location, or zero if that information is not
+     * available for this attribute.  Only populated in
+     * GenerateAudienceOverlapInsightsResponses and in
+     * ListAudienceInsightsAttributesResponses when youtube_reach_location is
+     * present in the request.
+     * </pre>
+     *
+     * <code>int64 potential_youtube_reach = 9;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPotentialYoutubeReach() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      potentialYoutubeReach_ = 0L;
       onChanged();
       return this;
     }

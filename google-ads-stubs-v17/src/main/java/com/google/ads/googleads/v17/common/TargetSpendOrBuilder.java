@@ -21,7 +21,7 @@ public interface TargetSpendOrBuilder extends
    *
    * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
    * @deprecated google.ads.googleads.v17.common.TargetSpend.target_spend_micros is deprecated.
-   *     See google/ads/googleads/v17/common/bidding.proto;l=196
+   *     See google/ads/googleads/v17/common/bidding.proto;l=198
    * @return Whether the targetSpendMicros field is set.
    */
   @java.lang.Deprecated boolean hasTargetSpendMicros();
@@ -38,7 +38,7 @@ public interface TargetSpendOrBuilder extends
    *
    * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
    * @deprecated google.ads.googleads.v17.common.TargetSpend.target_spend_micros is deprecated.
-   *     See google/ads/googleads/v17/common/bidding.proto;l=196
+   *     See google/ads/googleads/v17/common/bidding.proto;l=198
    * @return The targetSpendMicros.
    */
   @java.lang.Deprecated long getTargetSpendMicros();

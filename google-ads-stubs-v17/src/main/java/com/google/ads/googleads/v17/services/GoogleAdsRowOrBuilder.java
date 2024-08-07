@@ -3682,7 +3682,7 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
-   * Offline conversion upload client summary.
+   * Offline conversion upload summary at customer level.
    * </pre>
    *
    * <code>.google.ads.googleads.v17.resources.OfflineConversionUploadClientSummary offline_conversion_upload_client_summary = 216;</code>
@@ -3691,7 +3691,7 @@ public interface GoogleAdsRowOrBuilder extends
   boolean hasOfflineConversionUploadClientSummary();
   /**
    * <pre>
-   * Offline conversion upload client summary.
+   * Offline conversion upload summary at customer level.
    * </pre>
    *
    * <code>.google.ads.googleads.v17.resources.OfflineConversionUploadClientSummary offline_conversion_upload_client_summary = 216;</code>
@@ -3700,12 +3700,39 @@ public interface GoogleAdsRowOrBuilder extends
   com.google.ads.googleads.v17.resources.OfflineConversionUploadClientSummary getOfflineConversionUploadClientSummary();
   /**
    * <pre>
-   * Offline conversion upload client summary.
+   * Offline conversion upload summary at customer level.
    * </pre>
    *
    * <code>.google.ads.googleads.v17.resources.OfflineConversionUploadClientSummary offline_conversion_upload_client_summary = 216;</code>
    */
   com.google.ads.googleads.v17.resources.OfflineConversionUploadClientSummaryOrBuilder getOfflineConversionUploadClientSummaryOrBuilder();
+
+  /**
+   * <pre>
+   * Offline conversion upload summary at conversion type level.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.resources.OfflineConversionUploadConversionActionSummary offline_conversion_upload_conversion_action_summary = 228;</code>
+   * @return Whether the offlineConversionUploadConversionActionSummary field is set.
+   */
+  boolean hasOfflineConversionUploadConversionActionSummary();
+  /**
+   * <pre>
+   * Offline conversion upload summary at conversion type level.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.resources.OfflineConversionUploadConversionActionSummary offline_conversion_upload_conversion_action_summary = 228;</code>
+   * @return The offlineConversionUploadConversionActionSummary.
+   */
+  com.google.ads.googleads.v17.resources.OfflineConversionUploadConversionActionSummary getOfflineConversionUploadConversionActionSummary();
+  /**
+   * <pre>
+   * Offline conversion upload summary at conversion type level.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.resources.OfflineConversionUploadConversionActionSummary offline_conversion_upload_conversion_action_summary = 228;</code>
+   */
+  com.google.ads.googleads.v17.resources.OfflineConversionUploadConversionActionSummaryOrBuilder getOfflineConversionUploadConversionActionSummaryOrBuilder();
 
   /**
    * <pre>

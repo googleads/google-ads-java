@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v17.services.ListAudienceInsightsAttributesRequest.class, com.google.ads.googleads.v17.services.ListAudienceInsightsAttributesRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object customerId_ = "";
@@ -357,6 +358,56 @@ private static final long serialVersionUID = 0L;
     return locationCountryFilters_.get(index);
   }
 
+  public static final int YOUTUBE_REACH_LOCATION_FIELD_NUMBER = 6;
+  private com.google.ads.googleads.v17.common.LocationInfo youtubeReachLocation_;
+  /**
+   * <pre>
+   * If present, potential YouTube reach estimates within the specified market
+   * will be returned for attributes for which they are available.  Reach is
+   * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+   * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+   * attribute of those dimensions in every market.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+   * @return Whether the youtubeReachLocation field is set.
+   */
+  @java.lang.Override
+  public boolean hasYoutubeReachLocation() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * If present, potential YouTube reach estimates within the specified market
+   * will be returned for attributes for which they are available.  Reach is
+   * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+   * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+   * attribute of those dimensions in every market.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+   * @return The youtubeReachLocation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v17.common.LocationInfo getYoutubeReachLocation() {
+    return youtubeReachLocation_ == null ? com.google.ads.googleads.v17.common.LocationInfo.getDefaultInstance() : youtubeReachLocation_;
+  }
+  /**
+   * <pre>
+   * If present, potential YouTube reach estimates within the specified market
+   * will be returned for attributes for which they are available.  Reach is
+   * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+   * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+   * attribute of those dimensions in every market.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v17.common.LocationInfoOrBuilder getYoutubeReachLocationOrBuilder() {
+    return youtubeReachLocation_ == null ? com.google.ads.googleads.v17.common.LocationInfo.getDefaultInstance() : youtubeReachLocation_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -390,6 +441,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < locationCountryFilters_.size(); i++) {
       output.writeMessage(5, locationCountryFilters_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(6, getYoutubeReachLocation());
     }
     getUnknownFields().writeTo(output);
   }
@@ -425,6 +479,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, locationCountryFilters_.get(i));
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getYoutubeReachLocation());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -449,6 +507,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCustomerInsightsGroup())) return false;
     if (!getLocationCountryFiltersList()
         .equals(other.getLocationCountryFiltersList())) return false;
+    if (hasYoutubeReachLocation() != other.hasYoutubeReachLocation()) return false;
+    if (hasYoutubeReachLocation()) {
+      if (!getYoutubeReachLocation()
+          .equals(other.getYoutubeReachLocation())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -473,6 +536,10 @@ private static final long serialVersionUID = 0L;
     if (getLocationCountryFiltersCount() > 0) {
       hash = (37 * hash) + LOCATION_COUNTRY_FILTERS_FIELD_NUMBER;
       hash = (53 * hash) + getLocationCountryFiltersList().hashCode();
+    }
+    if (hasYoutubeReachLocation()) {
+      hash = (37 * hash) + YOUTUBE_REACH_LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getYoutubeReachLocation().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -598,13 +665,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v17.services.ListAudienceInsightsAttributesRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getLocationCountryFiltersFieldBuilder();
+        getYoutubeReachLocationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -622,6 +696,11 @@ private static final long serialVersionUID = 0L;
         locationCountryFiltersBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
+      youtubeReachLocation_ = null;
+      if (youtubeReachLocationBuilder_ != null) {
+        youtubeReachLocationBuilder_.dispose();
+        youtubeReachLocationBuilder_ = null;
+      }
       return this;
     }
 
@@ -682,6 +761,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.customerInsightsGroup_ = customerInsightsGroup_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.youtubeReachLocation_ = youtubeReachLocationBuilder_ == null
+            ? youtubeReachLocation_
+            : youtubeReachLocationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -779,6 +866,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasYoutubeReachLocation()) {
+        mergeYoutubeReachLocation(other.getYoutubeReachLocation());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -850,6 +940,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 42
+            case 50: {
+              input.readMessage(
+                  getYoutubeReachLocationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1733,6 +1830,199 @@ private static final long serialVersionUID = 0L;
         locationCountryFilters_ = null;
       }
       return locationCountryFiltersBuilder_;
+    }
+
+    private com.google.ads.googleads.v17.common.LocationInfo youtubeReachLocation_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v17.common.LocationInfo, com.google.ads.googleads.v17.common.LocationInfo.Builder, com.google.ads.googleads.v17.common.LocationInfoOrBuilder> youtubeReachLocationBuilder_;
+    /**
+     * <pre>
+     * If present, potential YouTube reach estimates within the specified market
+     * will be returned for attributes for which they are available.  Reach is
+     * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+     * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+     * attribute of those dimensions in every market.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+     * @return Whether the youtubeReachLocation field is set.
+     */
+    public boolean hasYoutubeReachLocation() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * If present, potential YouTube reach estimates within the specified market
+     * will be returned for attributes for which they are available.  Reach is
+     * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+     * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+     * attribute of those dimensions in every market.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+     * @return The youtubeReachLocation.
+     */
+    public com.google.ads.googleads.v17.common.LocationInfo getYoutubeReachLocation() {
+      if (youtubeReachLocationBuilder_ == null) {
+        return youtubeReachLocation_ == null ? com.google.ads.googleads.v17.common.LocationInfo.getDefaultInstance() : youtubeReachLocation_;
+      } else {
+        return youtubeReachLocationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * If present, potential YouTube reach estimates within the specified market
+     * will be returned for attributes for which they are available.  Reach is
+     * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+     * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+     * attribute of those dimensions in every market.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+     */
+    public Builder setYoutubeReachLocation(com.google.ads.googleads.v17.common.LocationInfo value) {
+      if (youtubeReachLocationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        youtubeReachLocation_ = value;
+      } else {
+        youtubeReachLocationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If present, potential YouTube reach estimates within the specified market
+     * will be returned for attributes for which they are available.  Reach is
+     * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+     * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+     * attribute of those dimensions in every market.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+     */
+    public Builder setYoutubeReachLocation(
+        com.google.ads.googleads.v17.common.LocationInfo.Builder builderForValue) {
+      if (youtubeReachLocationBuilder_ == null) {
+        youtubeReachLocation_ = builderForValue.build();
+      } else {
+        youtubeReachLocationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If present, potential YouTube reach estimates within the specified market
+     * will be returned for attributes for which they are available.  Reach is
+     * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+     * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+     * attribute of those dimensions in every market.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+     */
+    public Builder mergeYoutubeReachLocation(com.google.ads.googleads.v17.common.LocationInfo value) {
+      if (youtubeReachLocationBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          youtubeReachLocation_ != null &&
+          youtubeReachLocation_ != com.google.ads.googleads.v17.common.LocationInfo.getDefaultInstance()) {
+          getYoutubeReachLocationBuilder().mergeFrom(value);
+        } else {
+          youtubeReachLocation_ = value;
+        }
+      } else {
+        youtubeReachLocationBuilder_.mergeFrom(value);
+      }
+      if (youtubeReachLocation_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * If present, potential YouTube reach estimates within the specified market
+     * will be returned for attributes for which they are available.  Reach is
+     * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+     * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+     * attribute of those dimensions in every market.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+     */
+    public Builder clearYoutubeReachLocation() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      youtubeReachLocation_ = null;
+      if (youtubeReachLocationBuilder_ != null) {
+        youtubeReachLocationBuilder_.dispose();
+        youtubeReachLocationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If present, potential YouTube reach estimates within the specified market
+     * will be returned for attributes for which they are available.  Reach is
+     * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+     * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+     * attribute of those dimensions in every market.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+     */
+    public com.google.ads.googleads.v17.common.LocationInfo.Builder getYoutubeReachLocationBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getYoutubeReachLocationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * If present, potential YouTube reach estimates within the specified market
+     * will be returned for attributes for which they are available.  Reach is
+     * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+     * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+     * attribute of those dimensions in every market.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+     */
+    public com.google.ads.googleads.v17.common.LocationInfoOrBuilder getYoutubeReachLocationOrBuilder() {
+      if (youtubeReachLocationBuilder_ != null) {
+        return youtubeReachLocationBuilder_.getMessageOrBuilder();
+      } else {
+        return youtubeReachLocation_ == null ?
+            com.google.ads.googleads.v17.common.LocationInfo.getDefaultInstance() : youtubeReachLocation_;
+      }
+    }
+    /**
+     * <pre>
+     * If present, potential YouTube reach estimates within the specified market
+     * will be returned for attributes for which they are available.  Reach is
+     * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+     * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+     * attribute of those dimensions in every market.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v17.common.LocationInfo, com.google.ads.googleads.v17.common.LocationInfo.Builder, com.google.ads.googleads.v17.common.LocationInfoOrBuilder> 
+        getYoutubeReachLocationFieldBuilder() {
+      if (youtubeReachLocationBuilder_ == null) {
+        youtubeReachLocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v17.common.LocationInfo, com.google.ads.googleads.v17.common.LocationInfo.Builder, com.google.ads.googleads.v17.common.LocationInfoOrBuilder>(
+                getYoutubeReachLocation(),
+                getParentForChildren(),
+                isClean());
+        youtubeReachLocation_ = null;
+      }
+      return youtubeReachLocationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

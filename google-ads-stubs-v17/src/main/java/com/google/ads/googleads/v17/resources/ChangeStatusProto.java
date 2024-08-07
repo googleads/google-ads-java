@@ -36,7 +36,7 @@ public final class ChangeStatusProto {
       "le/ads/googleads/v17/enums/change_status" +
       "_resource_type.proto\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\"\325\016\n\014ChangeStatus\022D\n\rresource_name\030\001 \001(\t" +
+      "\"\227\017\n\014ChangeStatus\022D\n\rresource_name\030\001 \001(\t" +
       "B-\340A\003\372A\'\n%googleads.googleapis.com/Chang" +
       "eStatus\022\'\n\025last_change_date_time\030\030 \001(\tB\003" +
       "\340A\003H\000\210\001\001\022q\n\rresource_type\030\004 \001(\0162U.google" +
@@ -75,21 +75,23 @@ public final class ChangeStatusProto {
       "oup_asset\030& \001(\tB-\340A\003\372A\'\n%googleads.googl" +
       "eapis.com/AdGroupAsset\022L\n\021combined_audie" +
       "nce\030( \001(\tB1\340A\003\372A+\n)googleads.googleapis." +
-      "com/CombinedAudience:c\352A`\n%googleads.goo" +
-      "gleapis.com/ChangeStatus\0227customers/{cus" +
-      "tomer_id}/changeStatus/{change_status_id" +
-      "}B\030\n\026_last_change_date_timeB\013\n\t_campaign" +
-      "B\013\n\t_ad_groupB\016\n\014_ad_group_adB\025\n\023_ad_gro" +
-      "up_criterionB\025\n\023_campaign_criterionB\007\n\005_" +
-      "feedB\014\n\n_feed_itemB\020\n\016_ad_group_feedB\020\n\016" +
-      "_campaign_feedB\030\n\026_ad_group_bid_modifier" +
-      "B\203\002\n&com.google.ads.googleads.v17.resour" +
-      "cesB\021ChangeStatusProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v1" +
-      "7/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V17.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V17\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V17::Resourcesb\006proto3"
+      "com/CombinedAudience\022@\n\013asset_group\030) \001(" +
+      "\tB+\340A\003\372A%\n#googleads.googleapis.com/Asse" +
+      "tGroup:c\352A`\n%googleads.googleapis.com/Ch" +
+      "angeStatus\0227customers/{customer_id}/chan" +
+      "geStatus/{change_status_id}B\030\n\026_last_cha" +
+      "nge_date_timeB\013\n\t_campaignB\013\n\t_ad_groupB" +
+      "\016\n\014_ad_group_adB\025\n\023_ad_group_criterionB\025" +
+      "\n\023_campaign_criterionB\007\n\005_feedB\014\n\n_feed_" +
+      "itemB\020\n\016_ad_group_feedB\020\n\016_campaign_feed" +
+      "B\030\n\026_ad_group_bid_modifierB\203\002\n&com.googl" +
+      "e.ads.googleads.v17.resourcesB\021ChangeSta" +
+      "tusProtoP\001ZKgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v17/resources;re" +
+      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V17" +
+      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V17\\Re" +
+      "sources\352\002&Google::Ads::GoogleAds::V17::R" +
+      "esourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -104,7 +106,7 @@ public final class ChangeStatusProto {
     internal_static_google_ads_googleads_v17_resources_ChangeStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v17_resources_ChangeStatus_descriptor,
-        new java.lang.String[] { "ResourceName", "LastChangeDateTime", "ResourceType", "Campaign", "AdGroup", "ResourceStatus", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", "Feed", "FeedItem", "AdGroupFeed", "CampaignFeed", "AdGroupBidModifier", "SharedSet", "CampaignSharedSet", "Asset", "CustomerAsset", "CampaignAsset", "AdGroupAsset", "CombinedAudience", });
+        new java.lang.String[] { "ResourceName", "LastChangeDateTime", "ResourceType", "Campaign", "AdGroup", "ResourceStatus", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", "Feed", "FeedItem", "AdGroupFeed", "CampaignFeed", "AdGroupBidModifier", "SharedSet", "CampaignSharedSet", "Asset", "CustomerAsset", "CampaignAsset", "AdGroupAsset", "CombinedAudience", "AssetGroup", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

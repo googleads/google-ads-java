@@ -17,6 +17,7 @@
 package com.google.ads.googleads.v17.services;
 
 import com.google.ads.googleads.v17.common.DateRange;
+import com.google.ads.googleads.v17.common.LocationInfo;
 import com.google.ads.googleads.v17.enums.AudienceInsightsDimensionEnum;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
@@ -295,6 +296,58 @@ public class AudienceInsightsServiceClientTest {
       String customerId = "customerId-1581184615";
       InsightsAudience audience = InsightsAudience.newBuilder().build();
       client.generateSuggestedTargetingInsights(customerId, audience);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void generateAudienceOverlapInsightsTest() throws Exception {
+    GenerateAudienceOverlapInsightsResponse expectedResponse =
+        GenerateAudienceOverlapInsightsResponse.newBuilder()
+            .setPrimaryAttributeMetadata(AudienceInsightsAttributeMetadata.newBuilder().build())
+            .addAllDimensionResults(new ArrayList<DimensionOverlapResult>())
+            .build();
+    mockAudienceInsightsService.addResponse(expectedResponse);
+
+    String customerId = "customerId-1581184615";
+    LocationInfo countryLocation = LocationInfo.newBuilder().build();
+    AudienceInsightsAttribute primaryAttribute = AudienceInsightsAttribute.newBuilder().build();
+    List<AudienceInsightsDimensionEnum.AudienceInsightsDimension> dimensions = new ArrayList<>();
+
+    GenerateAudienceOverlapInsightsResponse actualResponse =
+        client.generateAudienceOverlapInsights(
+            customerId, countryLocation, primaryAttribute, dimensions);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAudienceInsightsService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GenerateAudienceOverlapInsightsRequest actualRequest =
+        ((GenerateAudienceOverlapInsightsRequest) actualRequests.get(0));
+
+    Assert.assertEquals(customerId, actualRequest.getCustomerId());
+    Assert.assertEquals(countryLocation, actualRequest.getCountryLocation());
+    Assert.assertEquals(primaryAttribute, actualRequest.getPrimaryAttribute());
+    Assert.assertEquals(dimensions, actualRequest.getDimensionsList());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void generateAudienceOverlapInsightsExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAudienceInsightsService.addException(exception);
+
+    try {
+      String customerId = "customerId-1581184615";
+      LocationInfo countryLocation = LocationInfo.newBuilder().build();
+      AudienceInsightsAttribute primaryAttribute = AudienceInsightsAttribute.newBuilder().build();
+      List<AudienceInsightsDimensionEnum.AudienceInsightsDimension> dimensions = new ArrayList<>();
+      client.generateAudienceOverlapInsights(
+          customerId, countryLocation, primaryAttribute, dimensions);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception.

@@ -51,6 +51,9 @@
           "rpcs": {
             "MutateAdGroupAds": {
               "methods": ["mutateAdGroupAds", "mutateAdGroupAds", "mutateAdGroupAdsCallable"]
+            },
+            "RemoveAutomaticallyCreatedAssets": {
+              "methods": ["removeAutomaticallyCreatedAssets", "removeAutomaticallyCreatedAssets", "removeAutomaticallyCreatedAssets", "removeAutomaticallyCreatedAssetsCallable"]
             }
           }
         }
@@ -303,6 +306,9 @@
           "rpcs": {
             "GenerateAudienceCompositionInsights": {
               "methods": ["generateAudienceCompositionInsights", "generateAudienceCompositionInsights", "generateAudienceCompositionInsightsCallable"]
+            },
+            "GenerateAudienceOverlapInsights": {
+              "methods": ["generateAudienceOverlapInsights", "generateAudienceOverlapInsights", "generateAudienceOverlapInsightsCallable"]
             },
             "GenerateInsightsFinderReport": {
               "methods": ["generateInsightsFinderReport", "generateInsightsFinderReport", "generateInsightsFinderReportCallable"]
@@ -1353,6 +1359,18 @@
           "rpcs": {
             "MutateRemarketingActions": {
               "methods": ["mutateRemarketingActions", "mutateRemarketingActions", "mutateRemarketingActionsCallable"]
+            }
+          }
+        }
+      }
+    },
+    "ShareablePreviewService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ShareablePreviewServiceClient",
+          "rpcs": {
+            "GenerateShareablePreviews": {
+              "methods": ["generateShareablePreviews", "generateShareablePreviews", "generateShareablePreviewsCallable"]
             }
           }
         }

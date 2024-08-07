@@ -4320,5 +4320,61 @@ public interface ErrorCodeOrBuilder extends
    */
   com.google.ads.googleads.v17.errors.ShoppingProductErrorEnum.ShoppingProductError getShoppingProductError();
 
+  /**
+   * <pre>
+   * The reasons for error in automatically created asset removal action.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+   * @return Whether the automaticallyCreatedAssetRemovalError field is set.
+   */
+  boolean hasAutomaticallyCreatedAssetRemovalError();
+  /**
+   * <pre>
+   * The reasons for error in automatically created asset removal action.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+   * @return The enum numeric value on the wire for automaticallyCreatedAssetRemovalError.
+   */
+  int getAutomaticallyCreatedAssetRemovalErrorValue();
+  /**
+   * <pre>
+   * The reasons for error in automatically created asset removal action.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+   * @return The automaticallyCreatedAssetRemovalError.
+   */
+  com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError getAutomaticallyCreatedAssetRemovalError();
+
+  /**
+   * <pre>
+   * The reasons for the shareable preview error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+   * @return Whether the shareablePreviewError field is set.
+   */
+  boolean hasShareablePreviewError();
+  /**
+   * <pre>
+   * The reasons for the shareable preview error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+   * @return The enum numeric value on the wire for shareablePreviewError.
+   */
+  int getShareablePreviewErrorValue();
+  /**
+   * <pre>
+   * The reasons for the shareable preview error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+   * @return The shareablePreviewError.
+   */
+  com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError getShareablePreviewError();
+
   com.google.ads.googleads.v17.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

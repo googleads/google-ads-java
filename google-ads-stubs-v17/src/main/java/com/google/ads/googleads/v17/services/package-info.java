@@ -2244,6 +2244,27 @@
  * }
  * }</pre>
  *
+ * <p>======================= ShareablePreviewServiceClient =======================
+ *
+ * <p>Service Description: Service to generate Shareable Previews.
+ *
+ * <p>Sample for ShareablePreviewServiceClient:
+ *
+ * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+ * try (ShareablePreviewServiceClient shareablePreviewServiceClient =
+ *     ShareablePreviewServiceClient.create()) {
+ *   String customerId = "customerId-1581184615";
+ *   List<ShareablePreview> shareablePreviews = new ArrayList<>();
+ *   GenerateShareablePreviewsResponse response =
+ *       shareablePreviewServiceClient.generateShareablePreviews(customerId, shareablePreviews);
+ * }
+ * }</pre>
+ *
  * <p>======================= SharedCriterionServiceClient =======================
  *
  * <p>Service Description: Service to manage shared criteria.

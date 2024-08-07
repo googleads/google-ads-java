@@ -1325,6 +1325,64 @@ private static final long serialVersionUID = 0L;
     return percentCpcBidMicros_;
   }
 
+  public static final int FIXED_CPM_MICROS_FIELD_NUMBER = 64;
+  private long fixedCpmMicros_ = 0L;
+  /**
+   * <pre>
+   * The fixed amount in micros that the advertiser pays for every thousand
+   * impressions of the ad.
+   * </pre>
+   *
+   * <code>optional int64 fixed_cpm_micros = 64;</code>
+   * @return Whether the fixedCpmMicros field is set.
+   */
+  @java.lang.Override
+  public boolean hasFixedCpmMicros() {
+    return ((bitField0_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * The fixed amount in micros that the advertiser pays for every thousand
+   * impressions of the ad.
+   * </pre>
+   *
+   * <code>optional int64 fixed_cpm_micros = 64;</code>
+   * @return The fixedCpmMicros.
+   */
+  @java.lang.Override
+  public long getFixedCpmMicros() {
+    return fixedCpmMicros_;
+  }
+
+  public static final int TARGET_CPV_MICROS_FIELD_NUMBER = 65;
+  private long targetCpvMicros_ = 0L;
+  /**
+   * <pre>
+   * Average amount in micros that the advertiser is willing to pay for every ad
+   * view.
+   * </pre>
+   *
+   * <code>optional int64 target_cpv_micros = 65;</code>
+   * @return Whether the targetCpvMicros field is set.
+   */
+  @java.lang.Override
+  public boolean hasTargetCpvMicros() {
+    return ((bitField0_ & 0x00004000) != 0);
+  }
+  /**
+   * <pre>
+   * Average amount in micros that the advertiser is willing to pay for every ad
+   * view.
+   * </pre>
+   *
+   * <code>optional int64 target_cpv_micros = 65;</code>
+   * @return The targetCpvMicros.
+   */
+  @java.lang.Override
+  public long getTargetCpvMicros() {
+    return targetCpvMicros_;
+  }
+
   public static final int OPTIMIZED_TARGETING_ENABLED_FIELD_NUMBER = 59;
   private boolean optimizedTargetingEnabled_ = false;
   /**
@@ -1384,7 +1442,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFinalUrlSuffix() {
-    return ((bitField0_ & 0x00002000) != 0);
+    return ((bitField0_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -1442,7 +1500,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTargetingSetting() {
-    return ((bitField0_ & 0x00004000) != 0);
+    return ((bitField0_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -1480,7 +1538,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAudienceSetting() {
-    return ((bitField0_ & 0x00008000) != 0);
+    return ((bitField0_ & 0x00020000) != 0);
   }
   /**
    * <pre>
@@ -1519,7 +1577,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEffectiveTargetCpaMicros() {
-    return ((bitField0_ & 0x00010000) != 0);
+    return ((bitField0_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -1576,7 +1634,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEffectiveTargetRoas() {
-    return ((bitField0_ & 0x00020000) != 0);
+    return ((bitField0_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -2028,7 +2086,7 @@ private static final long serialVersionUID = 0L;
     if (displayCustomBidDimension_ != com.google.ads.googleads.v17.enums.TargetingDimensionEnum.TargetingDimension.UNSPECIFIED.getNumber()) {
       output.writeEnum(23, displayCustomBidDimension_);
     }
-    if (((bitField0_ & 0x00004000) != 0)) {
+    if (((bitField0_ & 0x00010000) != 0)) {
       output.writeMessage(25, getTargetingSetting());
     }
     if (effectiveTargetCpaSource_ != com.google.ads.googleads.v17.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
@@ -2073,13 +2131,13 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00001000) != 0)) {
       output.writeInt64(45, percentCpcBidMicros_);
     }
-    if (((bitField0_ & 0x00002000) != 0)) {
+    if (((bitField0_ & 0x00008000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 46, finalUrlSuffix_);
     }
-    if (((bitField0_ & 0x00010000) != 0)) {
+    if (((bitField0_ & 0x00040000) != 0)) {
       output.writeInt64(47, effectiveTargetCpaMicros_);
     }
-    if (((bitField0_ & 0x00020000) != 0)) {
+    if (((bitField0_ & 0x00080000) != 0)) {
       output.writeDouble(48, effectiveTargetRoas_);
     }
     for (int i = 0; i < labels_.size(); i++) {
@@ -2092,7 +2150,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < excludedParentAssetFieldTypes_.size(); i++) {
       output.writeEnumNoTag(excludedParentAssetFieldTypes_.get(i));
     }
-    if (((bitField0_ & 0x00008000) != 0)) {
+    if (((bitField0_ & 0x00020000) != 0)) {
       output.writeMessage(56, getAudienceSetting());
     }
     if (((bitField0_ & 0x00000040) != 0)) {
@@ -2117,6 +2175,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < primaryStatusReasons_.size(); i++) {
       output.writeEnumNoTag(primaryStatusReasons_.get(i));
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      output.writeInt64(64, fixedCpmMicros_);
+    }
+    if (((bitField0_ & 0x00004000) != 0)) {
+      output.writeInt64(65, targetCpvMicros_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2150,7 +2214,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(23, displayCustomBidDimension_);
     }
-    if (((bitField0_ & 0x00004000) != 0)) {
+    if (((bitField0_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(25, getTargetingSetting());
     }
@@ -2206,14 +2270,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(45, percentCpcBidMicros_);
     }
-    if (((bitField0_ & 0x00002000) != 0)) {
+    if (((bitField0_ & 0x00008000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(46, finalUrlSuffix_);
     }
-    if (((bitField0_ & 0x00010000) != 0)) {
+    if (((bitField0_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(47, effectiveTargetCpaMicros_);
     }
-    if (((bitField0_ & 0x00020000) != 0)) {
+    if (((bitField0_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(48, effectiveTargetRoas_);
     }
@@ -2237,7 +2301,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }excludedParentAssetFieldTypesMemoizedSerializedSize = dataSize;
     }
-    if (((bitField0_ & 0x00008000) != 0)) {
+    if (((bitField0_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(56, getAudienceSetting());
     }
@@ -2276,6 +2340,14 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32SizeNoTag(dataSize);
       }primaryStatusReasonsMemoizedSerializedSize = dataSize;
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(64, fixedCpmMicros_);
+    }
+    if (((bitField0_ & 0x00004000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(65, targetCpvMicros_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2364,6 +2436,16 @@ private static final long serialVersionUID = 0L;
     if (hasPercentCpcBidMicros()) {
       if (getPercentCpcBidMicros()
           != other.getPercentCpcBidMicros()) return false;
+    }
+    if (hasFixedCpmMicros() != other.hasFixedCpmMicros()) return false;
+    if (hasFixedCpmMicros()) {
+      if (getFixedCpmMicros()
+          != other.getFixedCpmMicros()) return false;
+    }
+    if (hasTargetCpvMicros() != other.hasTargetCpvMicros()) return false;
+    if (hasTargetCpvMicros()) {
+      if (getTargetCpvMicros()
+          != other.getTargetCpvMicros()) return false;
     }
     if (getOptimizedTargetingEnabled()
         != other.getOptimizedTargetingEnabled()) return false;
@@ -2485,6 +2567,16 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PERCENT_CPC_BID_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPercentCpcBidMicros());
+    }
+    if (hasFixedCpmMicros()) {
+      hash = (37 * hash) + FIXED_CPM_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFixedCpmMicros());
+    }
+    if (hasTargetCpvMicros()) {
+      hash = (37 * hash) + TARGET_CPV_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTargetCpvMicros());
     }
     hash = (37 * hash) + OPTIMIZED_TARGETING_ENABLED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -2678,6 +2770,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      bitField1_ = 0;
       resourceName_ = "";
       id_ = 0L;
       name_ = "";
@@ -2702,6 +2795,8 @@ private static final long serialVersionUID = 0L;
       targetCpmMicros_ = 0L;
       targetRoas_ = 0D;
       percentCpcBidMicros_ = 0L;
+      fixedCpmMicros_ = 0L;
+      targetCpvMicros_ = 0L;
       optimizedTargetingEnabled_ = false;
       displayCustomBidDimension_ = 0;
       finalUrlSuffix_ = "";
@@ -2722,12 +2817,12 @@ private static final long serialVersionUID = 0L;
       labels_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       excludedParentAssetFieldTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x10000000);
+      bitField0_ = (bitField0_ & ~0x40000000);
       excludedParentAssetSetTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x20000000);
+      bitField0_ = (bitField0_ & ~0x80000000);
       primaryStatus_ = 0;
       primaryStatusReasons_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x80000000);
+      bitField1_ = (bitField1_ & ~0x00000002);
       return this;
     }
 
@@ -2756,6 +2851,7 @@ private static final long serialVersionUID = 0L;
       com.google.ads.googleads.v17.resources.AdGroup result = new com.google.ads.googleads.v17.resources.AdGroup(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
       onBuilt();
       return result;
     }
@@ -2770,19 +2866,19 @@ private static final long serialVersionUID = 0L;
       } else {
         result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
       }
-      if (((bitField0_ & 0x10000000) != 0)) {
+      if (((bitField0_ & 0x40000000) != 0)) {
         excludedParentAssetFieldTypes_ = java.util.Collections.unmodifiableList(excludedParentAssetFieldTypes_);
-        bitField0_ = (bitField0_ & ~0x10000000);
+        bitField0_ = (bitField0_ & ~0x40000000);
       }
       result.excludedParentAssetFieldTypes_ = excludedParentAssetFieldTypes_;
-      if (((bitField0_ & 0x20000000) != 0)) {
+      if (((bitField0_ & 0x80000000) != 0)) {
         excludedParentAssetSetTypes_ = java.util.Collections.unmodifiableList(excludedParentAssetSetTypes_);
-        bitField0_ = (bitField0_ & ~0x20000000);
+        bitField0_ = (bitField0_ & ~0x80000000);
       }
       result.excludedParentAssetSetTypes_ = excludedParentAssetSetTypes_;
-      if (((bitField0_ & 0x80000000) != 0)) {
+      if (((bitField1_ & 0x00000002) != 0)) {
         primaryStatusReasons_ = java.util.Collections.unmodifiableList(primaryStatusReasons_);
-        bitField0_ = (bitField0_ & ~0x80000000);
+        bitField1_ = (bitField1_ & ~0x00000002);
       }
       result.primaryStatusReasons_ = primaryStatusReasons_;
     }
@@ -2855,49 +2951,61 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00001000;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
-        result.optimizedTargetingEnabled_ = optimizedTargetingEnabled_;
-      }
-      if (((from_bitField0_ & 0x00080000) != 0)) {
-        result.displayCustomBidDimension_ = displayCustomBidDimension_;
-      }
-      if (((from_bitField0_ & 0x00100000) != 0)) {
-        result.finalUrlSuffix_ = finalUrlSuffix_;
+        result.fixedCpmMicros_ = fixedCpmMicros_;
         to_bitField0_ |= 0x00002000;
       }
-      if (((from_bitField0_ & 0x00200000) != 0)) {
-        result.targetingSetting_ = targetingSettingBuilder_ == null
-            ? targetingSetting_
-            : targetingSettingBuilder_.build();
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.targetCpvMicros_ = targetCpvMicros_;
         to_bitField0_ |= 0x00004000;
       }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.optimizedTargetingEnabled_ = optimizedTargetingEnabled_;
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.displayCustomBidDimension_ = displayCustomBidDimension_;
+      }
       if (((from_bitField0_ & 0x00400000) != 0)) {
-        result.audienceSetting_ = audienceSettingBuilder_ == null
-            ? audienceSetting_
-            : audienceSettingBuilder_.build();
+        result.finalUrlSuffix_ = finalUrlSuffix_;
         to_bitField0_ |= 0x00008000;
       }
       if (((from_bitField0_ & 0x00800000) != 0)) {
-        result.effectiveTargetCpaMicros_ = effectiveTargetCpaMicros_;
+        result.targetingSetting_ = targetingSettingBuilder_ == null
+            ? targetingSetting_
+            : targetingSettingBuilder_.build();
         to_bitField0_ |= 0x00010000;
       }
       if (((from_bitField0_ & 0x01000000) != 0)) {
-        result.effectiveTargetCpaSource_ = effectiveTargetCpaSource_;
-      }
-      if (((from_bitField0_ & 0x02000000) != 0)) {
-        result.effectiveTargetRoas_ = effectiveTargetRoas_;
+        result.audienceSetting_ = audienceSettingBuilder_ == null
+            ? audienceSetting_
+            : audienceSettingBuilder_.build();
         to_bitField0_ |= 0x00020000;
       }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
+        result.effectiveTargetCpaMicros_ = effectiveTargetCpaMicros_;
+        to_bitField0_ |= 0x00040000;
+      }
       if (((from_bitField0_ & 0x04000000) != 0)) {
-        result.effectiveTargetRoasSource_ = effectiveTargetRoasSource_;
+        result.effectiveTargetCpaSource_ = effectiveTargetCpaSource_;
       }
       if (((from_bitField0_ & 0x08000000) != 0)) {
+        result.effectiveTargetRoas_ = effectiveTargetRoas_;
+        to_bitField0_ |= 0x00080000;
+      }
+      if (((from_bitField0_ & 0x10000000) != 0)) {
+        result.effectiveTargetRoasSource_ = effectiveTargetRoasSource_;
+      }
+      if (((from_bitField0_ & 0x20000000) != 0)) {
         labels_.makeImmutable();
         result.labels_ = labels_;
       }
-      if (((from_bitField0_ & 0x40000000) != 0)) {
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartial1(com.google.ads.googleads.v17.resources.AdGroup result) {
+      int from_bitField1_ = bitField1_;
+      if (((from_bitField1_ & 0x00000001) != 0)) {
         result.primaryStatus_ = primaryStatus_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -3031,6 +3139,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasPercentCpcBidMicros()) {
         setPercentCpcBidMicros(other.getPercentCpcBidMicros());
       }
+      if (other.hasFixedCpmMicros()) {
+        setFixedCpmMicros(other.getFixedCpmMicros());
+      }
+      if (other.hasTargetCpvMicros()) {
+        setTargetCpvMicros(other.getTargetCpvMicros());
+      }
       if (other.getOptimizedTargetingEnabled() != false) {
         setOptimizedTargetingEnabled(other.getOptimizedTargetingEnabled());
       }
@@ -3039,7 +3153,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasFinalUrlSuffix()) {
         finalUrlSuffix_ = other.finalUrlSuffix_;
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00400000;
         onChanged();
       }
       if (other.hasTargetingSetting()) {
@@ -3063,7 +3177,7 @@ private static final long serialVersionUID = 0L;
       if (!other.labels_.isEmpty()) {
         if (labels_.isEmpty()) {
           labels_ = other.labels_;
-          bitField0_ |= 0x08000000;
+          bitField0_ |= 0x20000000;
         } else {
           ensureLabelsIsMutable();
           labels_.addAll(other.labels_);
@@ -3073,7 +3187,7 @@ private static final long serialVersionUID = 0L;
       if (!other.excludedParentAssetFieldTypes_.isEmpty()) {
         if (excludedParentAssetFieldTypes_.isEmpty()) {
           excludedParentAssetFieldTypes_ = other.excludedParentAssetFieldTypes_;
-          bitField0_ = (bitField0_ & ~0x10000000);
+          bitField0_ = (bitField0_ & ~0x40000000);
         } else {
           ensureExcludedParentAssetFieldTypesIsMutable();
           excludedParentAssetFieldTypes_.addAll(other.excludedParentAssetFieldTypes_);
@@ -3083,7 +3197,7 @@ private static final long serialVersionUID = 0L;
       if (!other.excludedParentAssetSetTypes_.isEmpty()) {
         if (excludedParentAssetSetTypes_.isEmpty()) {
           excludedParentAssetSetTypes_ = other.excludedParentAssetSetTypes_;
-          bitField0_ = (bitField0_ & ~0x20000000);
+          bitField0_ = (bitField0_ & ~0x80000000);
         } else {
           ensureExcludedParentAssetSetTypesIsMutable();
           excludedParentAssetSetTypes_.addAll(other.excludedParentAssetSetTypes_);
@@ -3096,7 +3210,7 @@ private static final long serialVersionUID = 0L;
       if (!other.primaryStatusReasons_.isEmpty()) {
         if (primaryStatusReasons_.isEmpty()) {
           primaryStatusReasons_ = other.primaryStatusReasons_;
-          bitField0_ = (bitField0_ & ~0x80000000);
+          bitField1_ = (bitField1_ & ~0x00000002);
         } else {
           ensurePrimaryStatusReasonsIsMutable();
           primaryStatusReasons_.addAll(other.primaryStatusReasons_);
@@ -3164,24 +3278,24 @@ private static final long serialVersionUID = 0L;
             } // case 176
             case 184: {
               displayCustomBidDimension_ = input.readEnum();
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00200000;
               break;
             } // case 184
             case 202: {
               input.readMessage(
                   getTargetingSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00800000;
               break;
             } // case 202
             case 232: {
               effectiveTargetCpaSource_ = input.readEnum();
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x04000000;
               break;
             } // case 232
             case 256: {
               effectiveTargetRoasSource_ = input.readEnum();
-              bitField0_ |= 0x04000000;
+              bitField0_ |= 0x10000000;
               break;
             } // case 256
             case 272: {
@@ -3246,17 +3360,17 @@ private static final long serialVersionUID = 0L;
             } // case 360
             case 370: {
               finalUrlSuffix_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00400000;
               break;
             } // case 370
             case 376: {
               effectiveTargetCpaMicros_ = input.readInt64();
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x02000000;
               break;
             } // case 376
             case 385: {
               effectiveTargetRoas_ = input.readDouble();
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x08000000;
               break;
             } // case 385
             case 394: {
@@ -3286,7 +3400,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getAudienceSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x01000000;
               break;
             } // case 450
             case 456: {
@@ -3313,12 +3427,12 @@ private static final long serialVersionUID = 0L;
             } // case 466
             case 472: {
               optimizedTargetingEnabled_ = input.readBool();
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00100000;
               break;
             } // case 472
             case 496: {
               primaryStatus_ = input.readEnum();
-              bitField0_ |= 0x40000000;
+              bitField1_ |= 0x00000001;
               break;
             } // case 496
             case 504: {
@@ -3338,6 +3452,16 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 506
+            case 512: {
+              fixedCpmMicros_ = input.readInt64();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 512
+            case 520: {
+              targetCpvMicros_ = input.readInt64();
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 520
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3354,6 +3478,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
+    private int bitField1_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -5069,6 +5194,126 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long fixedCpmMicros_ ;
+    /**
+     * <pre>
+     * The fixed amount in micros that the advertiser pays for every thousand
+     * impressions of the ad.
+     * </pre>
+     *
+     * <code>optional int64 fixed_cpm_micros = 64;</code>
+     * @return Whether the fixedCpmMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasFixedCpmMicros() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * The fixed amount in micros that the advertiser pays for every thousand
+     * impressions of the ad.
+     * </pre>
+     *
+     * <code>optional int64 fixed_cpm_micros = 64;</code>
+     * @return The fixedCpmMicros.
+     */
+    @java.lang.Override
+    public long getFixedCpmMicros() {
+      return fixedCpmMicros_;
+    }
+    /**
+     * <pre>
+     * The fixed amount in micros that the advertiser pays for every thousand
+     * impressions of the ad.
+     * </pre>
+     *
+     * <code>optional int64 fixed_cpm_micros = 64;</code>
+     * @param value The fixedCpmMicros to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFixedCpmMicros(long value) {
+
+      fixedCpmMicros_ = value;
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The fixed amount in micros that the advertiser pays for every thousand
+     * impressions of the ad.
+     * </pre>
+     *
+     * <code>optional int64 fixed_cpm_micros = 64;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFixedCpmMicros() {
+      bitField0_ = (bitField0_ & ~0x00040000);
+      fixedCpmMicros_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long targetCpvMicros_ ;
+    /**
+     * <pre>
+     * Average amount in micros that the advertiser is willing to pay for every ad
+     * view.
+     * </pre>
+     *
+     * <code>optional int64 target_cpv_micros = 65;</code>
+     * @return Whether the targetCpvMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasTargetCpvMicros() {
+      return ((bitField0_ & 0x00080000) != 0);
+    }
+    /**
+     * <pre>
+     * Average amount in micros that the advertiser is willing to pay for every ad
+     * view.
+     * </pre>
+     *
+     * <code>optional int64 target_cpv_micros = 65;</code>
+     * @return The targetCpvMicros.
+     */
+    @java.lang.Override
+    public long getTargetCpvMicros() {
+      return targetCpvMicros_;
+    }
+    /**
+     * <pre>
+     * Average amount in micros that the advertiser is willing to pay for every ad
+     * view.
+     * </pre>
+     *
+     * <code>optional int64 target_cpv_micros = 65;</code>
+     * @param value The targetCpvMicros to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTargetCpvMicros(long value) {
+
+      targetCpvMicros_ = value;
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Average amount in micros that the advertiser is willing to pay for every ad
+     * view.
+     * </pre>
+     *
+     * <code>optional int64 target_cpv_micros = 65;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTargetCpvMicros() {
+      bitField0_ = (bitField0_ & ~0x00080000);
+      targetCpvMicros_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private boolean optimizedTargetingEnabled_ ;
     /**
      * <pre>
@@ -5096,7 +5341,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOptimizedTargetingEnabled(boolean value) {
 
       optimizedTargetingEnabled_ = value;
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -5110,7 +5355,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptimizedTargetingEnabled() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00100000);
       optimizedTargetingEnabled_ = false;
       onChanged();
       return this;
@@ -5143,7 +5388,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayCustomBidDimensionValue(int value) {
       displayCustomBidDimension_ = value;
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -5177,7 +5422,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00200000;
       displayCustomBidDimension_ = value.getNumber();
       onChanged();
       return this;
@@ -5193,7 +5438,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayCustomBidDimension() {
-      bitField0_ = (bitField0_ & ~0x00080000);
+      bitField0_ = (bitField0_ & ~0x00200000);
       displayCustomBidDimension_ = 0;
       onChanged();
       return this;
@@ -5209,7 +5454,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
-      return ((bitField0_ & 0x00100000) != 0);
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -5265,7 +5510,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       finalUrlSuffix_ = value;
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -5279,7 +5524,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFinalUrlSuffix() {
       finalUrlSuffix_ = getDefaultInstance().getFinalUrlSuffix();
-      bitField0_ = (bitField0_ & ~0x00100000);
+      bitField0_ = (bitField0_ & ~0x00400000);
       onChanged();
       return this;
     }
@@ -5297,7 +5542,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       finalUrlSuffix_ = value;
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -5314,7 +5559,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the targetingSetting field is set.
      */
     public boolean hasTargetingSetting() {
-      return ((bitField0_ & 0x00200000) != 0);
+      return ((bitField0_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -5347,7 +5592,7 @@ private static final long serialVersionUID = 0L;
       } else {
         targetingSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -5365,7 +5610,7 @@ private static final long serialVersionUID = 0L;
       } else {
         targetingSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -5378,7 +5623,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTargetingSetting(com.google.ads.googleads.v17.common.TargetingSetting value) {
       if (targetingSettingBuilder_ == null) {
-        if (((bitField0_ & 0x00200000) != 0) &&
+        if (((bitField0_ & 0x00800000) != 0) &&
           targetingSetting_ != null &&
           targetingSetting_ != com.google.ads.googleads.v17.common.TargetingSetting.getDefaultInstance()) {
           getTargetingSettingBuilder().mergeFrom(value);
@@ -5389,7 +5634,7 @@ private static final long serialVersionUID = 0L;
         targetingSettingBuilder_.mergeFrom(value);
       }
       if (targetingSetting_ != null) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00800000;
         onChanged();
       }
       return this;
@@ -5402,7 +5647,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.common.TargetingSetting targeting_setting = 25;</code>
      */
     public Builder clearTargetingSetting() {
-      bitField0_ = (bitField0_ & ~0x00200000);
+      bitField0_ = (bitField0_ & ~0x00800000);
       targetingSetting_ = null;
       if (targetingSettingBuilder_ != null) {
         targetingSettingBuilder_.dispose();
@@ -5419,7 +5664,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.common.TargetingSetting targeting_setting = 25;</code>
      */
     public com.google.ads.googleads.v17.common.TargetingSetting.Builder getTargetingSettingBuilder() {
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return getTargetingSettingFieldBuilder().getBuilder();
     }
@@ -5471,7 +5716,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the audienceSetting field is set.
      */
     public boolean hasAudienceSetting() {
-      return ((bitField0_ & 0x00400000) != 0);
+      return ((bitField0_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -5504,7 +5749,7 @@ private static final long serialVersionUID = 0L;
       } else {
         audienceSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -5522,7 +5767,7 @@ private static final long serialVersionUID = 0L;
       } else {
         audienceSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -5535,7 +5780,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAudienceSetting(com.google.ads.googleads.v17.resources.AdGroup.AudienceSetting value) {
       if (audienceSettingBuilder_ == null) {
-        if (((bitField0_ & 0x00400000) != 0) &&
+        if (((bitField0_ & 0x01000000) != 0) &&
           audienceSetting_ != null &&
           audienceSetting_ != com.google.ads.googleads.v17.resources.AdGroup.AudienceSetting.getDefaultInstance()) {
           getAudienceSettingBuilder().mergeFrom(value);
@@ -5546,7 +5791,7 @@ private static final long serialVersionUID = 0L;
         audienceSettingBuilder_.mergeFrom(value);
       }
       if (audienceSetting_ != null) {
-        bitField0_ |= 0x00400000;
+        bitField0_ |= 0x01000000;
         onChanged();
       }
       return this;
@@ -5559,7 +5804,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.AdGroup.AudienceSetting audience_setting = 56 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearAudienceSetting() {
-      bitField0_ = (bitField0_ & ~0x00400000);
+      bitField0_ = (bitField0_ & ~0x01000000);
       audienceSetting_ = null;
       if (audienceSettingBuilder_ != null) {
         audienceSettingBuilder_.dispose();
@@ -5576,7 +5821,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.AdGroup.AudienceSetting audience_setting = 56 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v17.resources.AdGroup.AudienceSetting.Builder getAudienceSettingBuilder() {
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return getAudienceSettingFieldBuilder().getBuilder();
     }
@@ -5628,7 +5873,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEffectiveTargetCpaMicros() {
-      return ((bitField0_ & 0x00800000) != 0);
+      return ((bitField0_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -5656,7 +5901,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEffectiveTargetCpaMicros(long value) {
 
       effectiveTargetCpaMicros_ = value;
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -5670,7 +5915,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEffectiveTargetCpaMicros() {
-      bitField0_ = (bitField0_ & ~0x00800000);
+      bitField0_ = (bitField0_ & ~0x02000000);
       effectiveTargetCpaMicros_ = 0L;
       onChanged();
       return this;
@@ -5701,7 +5946,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEffectiveTargetCpaSourceValue(int value) {
       effectiveTargetCpaSource_ = value;
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -5733,7 +5978,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x04000000;
       effectiveTargetCpaSource_ = value.getNumber();
       onChanged();
       return this;
@@ -5748,7 +5993,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEffectiveTargetCpaSource() {
-      bitField0_ = (bitField0_ & ~0x01000000);
+      bitField0_ = (bitField0_ & ~0x04000000);
       effectiveTargetCpaSource_ = 0;
       onChanged();
       return this;
@@ -5766,7 +6011,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEffectiveTargetRoas() {
-      return ((bitField0_ & 0x02000000) != 0);
+      return ((bitField0_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -5794,7 +6039,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEffectiveTargetRoas(double value) {
 
       effectiveTargetRoas_ = value;
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -5808,7 +6053,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEffectiveTargetRoas() {
-      bitField0_ = (bitField0_ & ~0x02000000);
+      bitField0_ = (bitField0_ & ~0x08000000);
       effectiveTargetRoas_ = 0D;
       onChanged();
       return this;
@@ -5839,7 +6084,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEffectiveTargetRoasSourceValue(int value) {
       effectiveTargetRoasSource_ = value;
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -5871,7 +6116,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x10000000;
       effectiveTargetRoasSource_ = value.getNumber();
       onChanged();
       return this;
@@ -5886,7 +6131,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEffectiveTargetRoasSource() {
-      bitField0_ = (bitField0_ & ~0x04000000);
+      bitField0_ = (bitField0_ & ~0x10000000);
       effectiveTargetRoasSource_ = 0;
       onChanged();
       return this;
@@ -5898,7 +6143,7 @@ private static final long serialVersionUID = 0L;
       if (!labels_.isModifiable()) {
         labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
       }
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x20000000;
     }
     /**
      * <pre>
@@ -5964,7 +6209,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.set(index, value);
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -5982,7 +6227,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.add(value);
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -6000,7 +6245,7 @@ private static final long serialVersionUID = 0L;
       ensureLabelsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, labels_);
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -6015,7 +6260,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLabels() {
       labels_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x08000000);;
+      bitField0_ = (bitField0_ & ~0x20000000);;
       onChanged();
       return this;
     }
@@ -6034,7 +6279,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -6042,9 +6287,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> excludedParentAssetFieldTypes_ =
       java.util.Collections.emptyList();
     private void ensureExcludedParentAssetFieldTypesIsMutable() {
-      if (!((bitField0_ & 0x10000000) != 0)) {
+      if (!((bitField0_ & 0x40000000) != 0)) {
         excludedParentAssetFieldTypes_ = new java.util.ArrayList<java.lang.Integer>(excludedParentAssetFieldTypes_);
-        bitField0_ |= 0x10000000;
+        bitField0_ |= 0x40000000;
       }
     }
     /**
@@ -6162,7 +6407,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearExcludedParentAssetFieldTypes() {
       excludedParentAssetFieldTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x10000000);
+      bitField0_ = (bitField0_ & ~0x40000000);
       onChanged();
       return this;
     }
@@ -6254,9 +6499,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> excludedParentAssetSetTypes_ =
       java.util.Collections.emptyList();
     private void ensureExcludedParentAssetSetTypesIsMutable() {
-      if (!((bitField0_ & 0x20000000) != 0)) {
+      if (!((bitField0_ & 0x80000000) != 0)) {
         excludedParentAssetSetTypes_ = new java.util.ArrayList<java.lang.Integer>(excludedParentAssetSetTypes_);
-        bitField0_ |= 0x20000000;
+        bitField0_ |= 0x80000000;
       }
     }
     /**
@@ -6423,7 +6668,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearExcludedParentAssetSetTypes() {
       excludedParentAssetSetTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x20000000);
+      bitField0_ = (bitField0_ & ~0x80000000);
       onChanged();
       return this;
     }
@@ -6572,7 +6817,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPrimaryStatusValue(int value) {
       primaryStatus_ = value;
-      bitField0_ |= 0x40000000;
+      bitField1_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -6604,7 +6849,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x40000000;
+      bitField1_ |= 0x00000001;
       primaryStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -6619,7 +6864,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrimaryStatus() {
-      bitField0_ = (bitField0_ & ~0x40000000);
+      bitField1_ = (bitField1_ & ~0x00000001);
       primaryStatus_ = 0;
       onChanged();
       return this;
@@ -6628,9 +6873,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> primaryStatusReasons_ =
       java.util.Collections.emptyList();
     private void ensurePrimaryStatusReasonsIsMutable() {
-      if (!((bitField0_ & 0x80000000) != 0)) {
+      if (!((bitField1_ & 0x00000002) != 0)) {
         primaryStatusReasons_ = new java.util.ArrayList<java.lang.Integer>(primaryStatusReasons_);
-        bitField0_ |= 0x80000000;
+        bitField1_ |= 0x00000002;
       }
     }
     /**
@@ -6741,7 +6986,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPrimaryStatusReasons() {
       primaryStatusReasons_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x80000000);
+      bitField1_ = (bitField1_ & ~0x00000002);
       onChanged();
       return this;
     }

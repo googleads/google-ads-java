@@ -206,6 +206,14 @@ private static final long serialVersionUID = 0L;
      * <code>COMBINED_AUDIENCE = 20;</code>
      */
     COMBINED_AUDIENCE(20),
+    /**
+     * <pre>
+     * An AssetGroup resource change.
+     * </pre>
+     *
+     * <code>ASSET_GROUP = 21;</code>
+     */
+    ASSET_GROUP(21),
     UNRECOGNIZED(-1),
     ;
 
@@ -362,6 +370,14 @@ private static final long serialVersionUID = 0L;
      * <code>COMBINED_AUDIENCE = 20;</code>
      */
     public static final int COMBINED_AUDIENCE_VALUE = 20;
+    /**
+     * <pre>
+     * An AssetGroup resource change.
+     * </pre>
+     *
+     * <code>ASSET_GROUP = 21;</code>
+     */
+    public static final int ASSET_GROUP_VALUE = 21;
 
 
     public final int getNumber() {
@@ -407,6 +423,7 @@ private static final long serialVersionUID = 0L;
         case 18: return CAMPAIGN_ASSET;
         case 19: return AD_GROUP_ASSET;
         case 20: return COMBINED_AUDIENCE;
+        case 21: return ASSET_GROUP;
         default: return null;
       }
     }

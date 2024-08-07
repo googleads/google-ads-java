@@ -10,7 +10,7 @@ public interface TextLabelOrBuilder extends
 
   /**
    * <pre>
-   * Background color of the label in RGB format. This string must match the
+   * Background color of the label in HEX format. This string must match the
    * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
    * Note: The background color may not be visible for manager accounts.
    * </pre>
@@ -21,7 +21,7 @@ public interface TextLabelOrBuilder extends
   boolean hasBackgroundColor();
   /**
    * <pre>
-   * Background color of the label in RGB format. This string must match the
+   * Background color of the label in HEX format. This string must match the
    * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
    * Note: The background color may not be visible for manager accounts.
    * </pre>
@@ -32,7 +32,7 @@ public interface TextLabelOrBuilder extends
   java.lang.String getBackgroundColor();
   /**
    * <pre>
-   * Background color of the label in RGB format. This string must match the
+   * Background color of the label in HEX format. This string must match the
    * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
    * Note: The background color may not be visible for manager accounts.
    * </pre>

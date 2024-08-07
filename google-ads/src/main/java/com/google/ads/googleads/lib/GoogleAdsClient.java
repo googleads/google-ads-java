@@ -144,6 +144,12 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
   @Nullable
   public abstract Long getLinkedCustomerId();
 
+  /**
+   * Returns the maximum size of inbound gRPC messages, in bytes.
+   */
+  @Nullable
+  public abstract Integer getMaxInboundMessageBytes();
+
   /** Returns a new {@link GoogleAdsClient.Builder} with the properties as this instance. */
   public abstract Builder toBuilder();
 
@@ -429,6 +435,19 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
      */
     public abstract Builder setLoginCustomerId(Long customerId);
 
+    public abstract Integer getMaxInboundMessageBytes();
+
+    public abstract Builder setMaxInboundMessageBytes(Integer maxInboundMessageSize);
+
+    public void setMaxInboundMessageBytes(Properties properties) {
+
+      String maxInboundMessageBytes = ConfigPropertyKey.MAX_INBOUND_MESSAGE_BYTES.getPropertyValue(properties);
+      if (maxInboundMessageBytes != null) {
+        setMaxInboundMessageBytes(
+            checkPositiveIntString(maxInboundMessageBytes, "maxInboundMessageBytes"));
+      }
+    }
+
     /**
      * @return {@code longString} as a long if it is a valid long literal
      * @throws IllegalArgumentException if {@code longString} is not a valid long literal
@@ -439,6 +458,24 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       } catch (NumberFormatException ex) {
         throw new IllegalArgumentException(
             "Invalid " + fieldName + ", must be a number, provided: " + longString, ex);
+      }
+    }
+
+    /**
+     * @return {@code intString} as an int if it is a valid integer literal
+     * @throws IllegalArgumentException if {@code intString} is not a valid positive integer literal
+     */
+    private int checkPositiveIntString(String intString, String fieldName) {
+      try {
+        int value = Integer.parseInt(intString);
+        if (value <= 0) {
+          throw new IllegalArgumentException(
+              "Invalid " + fieldName + ", must be a positive number, provided: " + intString);
+        }
+        return value;
+      } catch (NumberFormatException ex) {
+        throw new IllegalArgumentException(
+            "Invalid " + fieldName + ", must be a number, provided: " + intString, ex);
       }
     }
 
@@ -534,6 +571,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       setEndpoint(properties);
       setLoginCustomerId(properties);
       setLinkedCustomerId(properties);
+      setMaxInboundMessageBytes(properties);
       return this;
     }
 
@@ -623,16 +661,21 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       // the client is responsible for updating the headers in the transportChannelProvider and
       // loggingInterceptor.
       if (transportChannelProviderIsDefault) {
-        transportChannelProvider =
+        InstantiatingGrpcChannelProvider.Builder transportChannelProviderBuilder =
             InstantiatingGrpcChannelProvider.newBuilder()
                 .setInterceptorProvider(
                     () ->
                         ImmutableList.of(
                             new LoggingInterceptor(
                                 new RequestLogger(), getHeaders(), getEndpoint())))
-                .setMaxInboundMetadataSize(DEFAULT_MAX_INBOUND_METADATA_SIZE)
-                .setMaxInboundMessageSize(DEFAULT_MAX_INBOUND_MESSAGE_SIZE)
-                .build();
+                .setMaxInboundMetadataSize(DEFAULT_MAX_INBOUND_METADATA_SIZE);
+
+        if (getMaxInboundMessageBytes() != null) {
+          transportChannelProviderBuilder.setMaxInboundMessageSize(getMaxInboundMessageBytes());
+        } else {
+          transportChannelProviderBuilder.setMaxInboundMessageSize(DEFAULT_MAX_INBOUND_MESSAGE_SIZE);
+        }
+        transportChannelProvider = transportChannelProviderBuilder.build();
       }
       if (transportChannelProvider.needsHeaders()) {
         transportChannelProvider = transportChannelProvider.withHeaders(getHeaders());
@@ -703,7 +746,9 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       /** Linked customer ID. */
       GOOGLE_ADS_LINKED_CUSTOMER_ID(ConfigPropertyKey.LINKED_CUSTOMER_ID),
       /** Google Ads API endpoint. Overrides the default endpoint of {@value DEFAULT_ENDPOINT}. */
-      GOOGLE_ADS_ENDPOINT(ConfigPropertyKey.ENDPOINT);
+      GOOGLE_ADS_ENDPOINT(ConfigPropertyKey.ENDPOINT),
+      /** Maximum size of inbound gRPC messages, in bytes */
+      GOOGLE_ADS_MAX_INBOUND_MESSAGE_BYTES(ConfigPropertyKey.MAX_INBOUND_MESSAGE_BYTES);
 
       /**
        * The {@link ConfigPropertyKey} that this environment variable maps to, if such a mapping
@@ -731,7 +776,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       LINKED_CUSTOMER_ID("api.googleads.linkedCustomerId"),
       // Service account keys
       SERVICE_ACCOUNT_SECRETS_PATH("api.googleads.serviceAccountSecretsPath"),
-      SERVICE_ACCOUNT_USER("api.googleads.serviceAccountUser");
+      SERVICE_ACCOUNT_USER("api.googleads.serviceAccountUser"),
+      MAX_INBOUND_MESSAGE_BYTES("api.googleads.maxInboundMessageSize");
 
       private final String key;
 

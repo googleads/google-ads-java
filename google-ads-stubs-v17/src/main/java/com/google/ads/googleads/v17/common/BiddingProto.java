@@ -90,6 +90,21 @@ public final class BiddingProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v17_common_PercentCpc_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v17_common_FixedCpm_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v17_common_FixedCpm_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v17_common_FixedCpmTargetFrequencyGoalInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v17_common_FixedCpmTargetFrequencyGoalInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v17_common_TargetCpv_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v17_common_TargetCpv_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -101,61 +116,76 @@ public final class BiddingProto {
     java.lang.String[] descriptorData = {
       "\n-google/ads/googleads/v17/common/biddin" +
       "g.proto\022\037google.ads.googleads.v17.common" +
-      "\032?google/ads/googleads/v17/enums/target_" +
-      "frequency_time_unit.proto\032Egoogle/ads/go" +
-      "ogleads/v17/enums/target_impression_shar" +
-      "e_location.proto\"L\n\nCommission\022#\n\026commis" +
-      "sion_rate_micros\030\002 \001(\003H\000\210\001\001B\031\n\027_commissi" +
-      "on_rate_micros\"\r\n\013EnhancedCpc\"\013\n\tManualC" +
-      "pa\"G\n\tManualCpc\022!\n\024enhanced_cpc_enabled\030" +
-      "\002 \001(\010H\000\210\001\001B\027\n\025_enhanced_cpc_enabled\"\013\n\tM" +
-      "anualCpm\"\013\n\tManualCpv\"n\n\023MaximizeConvers" +
-      "ions\022\036\n\026cpc_bid_ceiling_micros\030\002 \001(\003\022\034\n\024" +
-      "cpc_bid_floor_micros\030\003 \001(\003\022\031\n\021target_cpa" +
-      "_micros\030\004 \001(\003\"l\n\027MaximizeConversionValue" +
-      "\022\023\n\013target_roas\030\002 \001(\001\022\036\n\026cpc_bid_ceiling" +
-      "_micros\030\003 \001(\003\022\034\n\024cpc_bid_floor_micros\030\004 " +
-      "\001(\003\"\275\001\n\tTargetCpa\022\036\n\021target_cpa_micros\030\004" +
-      " \001(\003H\000\210\001\001\022#\n\026cpc_bid_ceiling_micros\030\005 \001(" +
-      "\003H\001\210\001\001\022!\n\024cpc_bid_floor_micros\030\006 \001(\003H\002\210\001" +
-      "\001B\024\n\022_target_cpa_microsB\031\n\027_cpc_bid_ceil" +
-      "ing_microsB\027\n\025_cpc_bid_floor_micros\"s\n\tT" +
-      "argetCpm\022^\n\025target_frequency_goal\030\001 \001(\0132" +
-      "=.google.ads.googleads.v17.common.Target" +
-      "CpmTargetFrequencyGoalH\000B\006\n\004goal\"\234\001\n\034Tar" +
-      "getCpmTargetFrequencyGoal\022\024\n\014target_coun" +
-      "t\030\001 \001(\003\022f\n\ttime_unit\030\002 \001(\0162S.google.ads." +
-      "googleads.v17.enums.TargetFrequencyTimeU" +
-      "nitEnum.TargetFrequencyTimeUnit\"\216\002\n\025Targ" +
-      "etImpressionShare\022q\n\010location\030\001 \001(\0162_.go" +
-      "ogle.ads.googleads.v17.enums.TargetImpre" +
-      "ssionShareLocationEnum.TargetImpressionS" +
-      "hareLocation\022%\n\030location_fraction_micros" +
-      "\030\004 \001(\003H\000\210\001\001\022#\n\026cpc_bid_ceiling_micros\030\005 " +
-      "\001(\003H\001\210\001\001B\033\n\031_location_fraction_microsB\031\n" +
-      "\027_cpc_bid_ceiling_micros\"\262\001\n\nTargetRoas\022" +
-      "\030\n\013target_roas\030\004 \001(\001H\000\210\001\001\022#\n\026cpc_bid_cei" +
-      "ling_micros\030\005 \001(\003H\001\210\001\001\022!\n\024cpc_bid_floor_" +
-      "micros\030\006 \001(\003H\002\210\001\001B\016\n\014_target_roasB\031\n\027_cp" +
-      "c_bid_ceiling_microsB\027\n\025_cpc_bid_floor_m" +
-      "icros\"\213\001\n\013TargetSpend\022$\n\023target_spend_mi" +
-      "cros\030\003 \001(\003B\002\030\001H\000\210\001\001\022#\n\026cpc_bid_ceiling_m" +
-      "icros\030\004 \001(\003H\001\210\001\001B\026\n\024_target_spend_micros" +
-      "B\031\n\027_cpc_bid_ceiling_micros\"\210\001\n\nPercentC" +
-      "pc\022#\n\026cpc_bid_ceiling_micros\030\003 \001(\003H\000\210\001\001\022" +
-      "!\n\024enhanced_cpc_enabled\030\004 \001(\010H\001\210\001\001B\031\n\027_c" +
-      "pc_bid_ceiling_microsB\027\n\025_enhanced_cpc_e" +
-      "nabledB\354\001\n#com.google.ads.googleads.v17." +
-      "commonB\014BiddingProtoP\001ZEgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v17/" +
-      "common;common\242\002\003GAA\252\002\037Google.Ads.GoogleA" +
-      "ds.V17.Common\312\002\037Google\\Ads\\GoogleAds\\V17" +
-      "\\Common\352\002#Google::Ads::GoogleAds::V17::C" +
-      "ommonb\006proto3"
+      "\0323google/ads/googleads/v17/enums/fixed_c" +
+      "pm_goal.proto\032Igoogle/ads/googleads/v17/" +
+      "enums/fixed_cpm_target_frequency_time_un" +
+      "it.proto\032?google/ads/googleads/v17/enums" +
+      "/target_frequency_time_unit.proto\032Egoogl" +
+      "e/ads/googleads/v17/enums/target_impress" +
+      "ion_share_location.proto\"L\n\nCommission\022#" +
+      "\n\026commission_rate_micros\030\002 \001(\003H\000\210\001\001B\031\n\027_" +
+      "commission_rate_micros\"\r\n\013EnhancedCpc\"\013\n" +
+      "\tManualCpa\"G\n\tManualCpc\022!\n\024enhanced_cpc_" +
+      "enabled\030\002 \001(\010H\000\210\001\001B\027\n\025_enhanced_cpc_enab" +
+      "led\"\013\n\tManualCpm\"\013\n\tManualCpv\"n\n\023Maximiz" +
+      "eConversions\022\036\n\026cpc_bid_ceiling_micros\030\002" +
+      " \001(\003\022\034\n\024cpc_bid_floor_micros\030\003 \001(\003\022\031\n\021ta" +
+      "rget_cpa_micros\030\004 \001(\003\"l\n\027MaximizeConvers" +
+      "ionValue\022\023\n\013target_roas\030\002 \001(\001\022\036\n\026cpc_bid" +
+      "_ceiling_micros\030\003 \001(\003\022\034\n\024cpc_bid_floor_m" +
+      "icros\030\004 \001(\003\"\275\001\n\tTargetCpa\022\036\n\021target_cpa_" +
+      "micros\030\004 \001(\003H\000\210\001\001\022#\n\026cpc_bid_ceiling_mic" +
+      "ros\030\005 \001(\003H\001\210\001\001\022!\n\024cpc_bid_floor_micros\030\006" +
+      " \001(\003H\002\210\001\001B\024\n\022_target_cpa_microsB\031\n\027_cpc_" +
+      "bid_ceiling_microsB\027\n\025_cpc_bid_floor_mic" +
+      "ros\"s\n\tTargetCpm\022^\n\025target_frequency_goa" +
+      "l\030\001 \001(\0132=.google.ads.googleads.v17.commo" +
+      "n.TargetCpmTargetFrequencyGoalH\000B\006\n\004goal" +
+      "\"\234\001\n\034TargetCpmTargetFrequencyGoal\022\024\n\014tar" +
+      "get_count\030\001 \001(\003\022f\n\ttime_unit\030\002 \001(\0162S.goo" +
+      "gle.ads.googleads.v17.enums.TargetFreque" +
+      "ncyTimeUnitEnum.TargetFrequencyTimeUnit\"" +
+      "\216\002\n\025TargetImpressionShare\022q\n\010location\030\001 " +
+      "\001(\0162_.google.ads.googleads.v17.enums.Tar" +
+      "getImpressionShareLocationEnum.TargetImp" +
+      "ressionShareLocation\022%\n\030location_fractio" +
+      "n_micros\030\004 \001(\003H\000\210\001\001\022#\n\026cpc_bid_ceiling_m" +
+      "icros\030\005 \001(\003H\001\210\001\001B\033\n\031_location_fraction_m" +
+      "icrosB\031\n\027_cpc_bid_ceiling_micros\"\262\001\n\nTar" +
+      "getRoas\022\030\n\013target_roas\030\004 \001(\001H\000\210\001\001\022#\n\026cpc" +
+      "_bid_ceiling_micros\030\005 \001(\003H\001\210\001\001\022!\n\024cpc_bi" +
+      "d_floor_micros\030\006 \001(\003H\002\210\001\001B\016\n\014_target_roa" +
+      "sB\031\n\027_cpc_bid_ceiling_microsB\027\n\025_cpc_bid" +
+      "_floor_micros\"\213\001\n\013TargetSpend\022$\n\023target_" +
+      "spend_micros\030\003 \001(\003B\002\030\001H\000\210\001\001\022#\n\026cpc_bid_c" +
+      "eiling_micros\030\004 \001(\003H\001\210\001\001B\026\n\024_target_spen" +
+      "d_microsB\031\n\027_cpc_bid_ceiling_micros\"\210\001\n\n" +
+      "PercentCpc\022#\n\026cpc_bid_ceiling_micros\030\003 \001" +
+      "(\003H\000\210\001\001\022!\n\024enhanced_cpc_enabled\030\004 \001(\010H\001\210" +
+      "\001\001B\031\n\027_cpc_bid_ceiling_microsB\027\n\025_enhanc" +
+      "ed_cpc_enabled\"\307\001\n\010FixedCpm\022K\n\004goal\030\001 \001(" +
+      "\0162=.google.ads.googleads.v17.enums.Fixed" +
+      "CpmGoalEnum.FixedCpmGoal\022a\n\025target_frequ" +
+      "ency_info\030\002 \001(\0132@.google.ads.googleads.v" +
+      "17.common.FixedCpmTargetFrequencyGoalInf" +
+      "oH\000B\013\n\tgoal_info\"\257\001\n\037FixedCpmTargetFrequ" +
+      "encyGoalInfo\022\024\n\014target_count\030\001 \001(\003\022v\n\tti" +
+      "me_unit\030\002 \001(\0162c.google.ads.googleads.v17" +
+      ".enums.FixedCpmTargetFrequencyTimeUnitEn" +
+      "um.FixedCpmTargetFrequencyTimeUnit\"\013\n\tTa" +
+      "rgetCpvB\354\001\n#com.google.ads.googleads.v17" +
+      ".commonB\014BiddingProtoP\001ZEgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v17" +
+      "/common;common\242\002\003GAA\252\002\037Google.Ads.Google" +
+      "Ads.V17.Common\312\002\037Google\\Ads\\GoogleAds\\V1" +
+      "7\\Common\352\002#Google::Ads::GoogleAds::V17::" +
+      "Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v17.enums.FixedCpmGoalProto.getDescriptor(),
+          com.google.ads.googleads.v17.enums.FixedCpmTargetFrequencyTimeUnitProto.getDescriptor(),
           com.google.ads.googleads.v17.enums.TargetFrequencyTimeUnitProto.getDescriptor(),
           com.google.ads.googleads.v17.enums.TargetImpressionShareLocationProto.getDescriptor(),
         });
@@ -249,6 +279,26 @@ public final class BiddingProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v17_common_PercentCpc_descriptor,
         new java.lang.String[] { "CpcBidCeilingMicros", "EnhancedCpcEnabled", });
+    internal_static_google_ads_googleads_v17_common_FixedCpm_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_google_ads_googleads_v17_common_FixedCpm_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v17_common_FixedCpm_descriptor,
+        new java.lang.String[] { "Goal", "TargetFrequencyInfo", "GoalInfo", });
+    internal_static_google_ads_googleads_v17_common_FixedCpmTargetFrequencyGoalInfo_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_google_ads_googleads_v17_common_FixedCpmTargetFrequencyGoalInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v17_common_FixedCpmTargetFrequencyGoalInfo_descriptor,
+        new java.lang.String[] { "TargetCount", "TimeUnit", });
+    internal_static_google_ads_googleads_v17_common_TargetCpv_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_google_ads_googleads_v17_common_TargetCpv_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v17_common_TargetCpv_descriptor,
+        new java.lang.String[] { });
+    com.google.ads.googleads.v17.enums.FixedCpmGoalProto.getDescriptor();
+    com.google.ads.googleads.v17.enums.FixedCpmTargetFrequencyTimeUnitProto.getDescriptor();
     com.google.ads.googleads.v17.enums.TargetFrequencyTimeUnitProto.getDescriptor();
     com.google.ads.googleads.v17.enums.TargetImpressionShareLocationProto.getDescriptor();
   }

@@ -25,12 +25,15 @@ import com.google.ads.googleads.lib.test.errors.MockPath;
 import com.google.ads.googleads.lib.utils.AbstractErrorUtils.ErrorPath;
 import com.google.ads.googleads.v17.services.GenerateAdGroupThemesRequest;
 import com.google.ads.googleads.v17.services.GenerateAudienceCompositionInsightsRequest;
+import com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest;
 import com.google.ads.googleads.v17.services.GenerateKeywordHistoricalMetricsRequest;
 import com.google.ads.googleads.v17.services.GenerateKeywordIdeasRequest;
 import com.google.ads.googleads.v17.services.GenerateReachForecastRequest;
 import com.google.ads.googleads.v17.services.GenerateRecommendationsRequest;
+import com.google.ads.googleads.v17.services.GenerateShareablePreviewsRequest;
 import com.google.ads.googleads.v17.services.GraduateExperimentRequest;
 import com.google.ads.googleads.v17.services.ListAudienceInsightsAttributesRequest;
+import com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest;
 import com.google.ads.googleads.v17.services.SuggestBrandsRequest;
 import com.google.ads.googleads.v17.services.SuggestTravelAssetsRequest;
 import com.google.common.collect.ImmutableSet;
@@ -245,6 +248,7 @@ public class AbstractErrorUtilsTest {
         ImmutableSet.<Descriptor>builder()
             .add(ListAudienceInsightsAttributesRequest.getDescriptor())
             .add(GenerateAudienceCompositionInsightsRequest.getDescriptor())
+            .add(GenerateAudienceOverlapInsightsRequest.getDescriptor())
             .add(SuggestBrandsRequest.getDescriptor())
             .add(GenerateKeywordIdeasRequest.getDescriptor())
             .add(GenerateKeywordHistoricalMetricsRequest.getDescriptor())
@@ -253,6 +257,8 @@ public class AbstractErrorUtilsTest {
             .add(GraduateExperimentRequest.getDescriptor())
             .add(SuggestTravelAssetsRequest.getDescriptor())
             .add(GenerateRecommendationsRequest.getDescriptor())
+            .add(GenerateShareablePreviewsRequest.getDescriptor())
+            .add(RemoveAutomaticallyCreatedAssetsRequest.getDescriptor())
             .build();
 
     // Gets the class for the latest version of the Google Ads API.

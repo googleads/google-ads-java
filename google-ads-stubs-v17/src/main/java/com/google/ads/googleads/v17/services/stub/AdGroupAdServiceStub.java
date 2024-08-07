@@ -18,8 +18,10 @@ package com.google.ads.googleads.v17.services.stub;
 
 import com.google.ads.googleads.v17.services.MutateAdGroupAdsRequest;
 import com.google.ads.googleads.v17.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.protobuf.Empty;
 import javax.annotation.Generated;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
@@ -34,6 +36,12 @@ public abstract class AdGroupAdServiceStub implements BackgroundResource {
   public UnaryCallable<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
       mutateAdGroupAdsCallable() {
     throw new UnsupportedOperationException("Not implemented: mutateAdGroupAdsCallable()");
+  }
+
+  public UnaryCallable<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+      removeAutomaticallyCreatedAssetsCallable() {
+    throw new UnsupportedOperationException(
+        "Not implemented: removeAutomaticallyCreatedAssetsCallable()");
   }
 
   @Override

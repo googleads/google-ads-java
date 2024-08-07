@@ -18,6 +18,8 @@ package com.google.ads.googleads.v17.services.stub;
 
 import com.google.ads.googleads.v17.services.GenerateAudienceCompositionInsightsRequest;
 import com.google.ads.googleads.v17.services.GenerateAudienceCompositionInsightsResponse;
+import com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest;
+import com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse;
 import com.google.ads.googleads.v17.services.GenerateInsightsFinderReportRequest;
 import com.google.ads.googleads.v17.services.GenerateInsightsFinderReportResponse;
 import com.google.ads.googleads.v17.services.GenerateSuggestedTargetingInsightsRequest;
@@ -130,6 +132,23 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
                       GenerateSuggestedTargetingInsightsResponse.getDefaultInstance()))
               .build();
 
+  private static final MethodDescriptor<
+          GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+      generateAudienceOverlapInsightsMethodDescriptor =
+          MethodDescriptor
+              .<GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+                  newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v17.services.AudienceInsightsService/GenerateAudienceOverlapInsights")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(
+                      GenerateAudienceOverlapInsightsRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(
+                      GenerateAudienceOverlapInsightsResponse.getDefaultInstance()))
+              .build();
+
   private final UnaryCallable<
           GenerateInsightsFinderReportRequest, GenerateInsightsFinderReportResponse>
       generateInsightsFinderReportCallable;
@@ -144,6 +163,9 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
   private final UnaryCallable<
           GenerateSuggestedTargetingInsightsRequest, GenerateSuggestedTargetingInsightsResponse>
       generateSuggestedTargetingInsightsCallable;
+  private final UnaryCallable<
+          GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+      generateAudienceOverlapInsightsCallable;
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
@@ -252,6 +274,20 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
                       return builder.build();
                     })
                 .build();
+    GrpcCallSettings<
+            GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+        generateAudienceOverlapInsightsTransportSettings =
+            GrpcCallSettings
+                .<GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+                    newBuilder()
+                .setMethodDescriptor(generateAudienceOverlapInsightsMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("customer_id", String.valueOf(request.getCustomerId()));
+                      return builder.build();
+                    })
+                .build();
 
     this.generateInsightsFinderReportCallable =
         callableFactory.createUnaryCallable(
@@ -277,6 +313,11 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
         callableFactory.createUnaryCallable(
             generateSuggestedTargetingInsightsTransportSettings,
             settings.generateSuggestedTargetingInsightsSettings(),
+            clientContext);
+    this.generateAudienceOverlapInsightsCallable =
+        callableFactory.createUnaryCallable(
+            generateAudienceOverlapInsightsTransportSettings,
+            settings.generateAudienceOverlapInsightsSettings(),
             clientContext);
 
     this.backgroundResources =
@@ -318,6 +359,13 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
           GenerateSuggestedTargetingInsightsRequest, GenerateSuggestedTargetingInsightsResponse>
       generateSuggestedTargetingInsightsCallable() {
     return generateSuggestedTargetingInsightsCallable;
+  }
+
+  @Override
+  public UnaryCallable<
+          GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+      generateAudienceOverlapInsightsCallable() {
+    return generateAudienceOverlapInsightsCallable;
   }
 
   @Override

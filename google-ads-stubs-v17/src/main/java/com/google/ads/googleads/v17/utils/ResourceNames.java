@@ -182,6 +182,7 @@ import com.google.ads.googleads.v17.resources.MediaFileName;
 import com.google.ads.googleads.v17.resources.MobileAppCategoryConstantName;
 import com.google.ads.googleads.v17.resources.MobileDeviceConstantName;
 import com.google.ads.googleads.v17.resources.OfflineConversionUploadClientSummaryName;
+import com.google.ads.googleads.v17.resources.OfflineConversionUploadConversionActionSummaryName;
 import com.google.ads.googleads.v17.resources.OfflineUserDataJobName;
 import com.google.ads.googleads.v17.resources.OperatingSystemVersionConstantName;
 import com.google.ads.googleads.v17.resources.PaidOrganicSearchTermViewName;
@@ -1281,11 +1282,21 @@ public class ResourceNames {
     return BatchJobName.format(String.valueOf(customerId), String.valueOf(mutateJobId));
   }
 
-  /** Returns the offline conversion client summary resource name for the specifiec components. */
+  /** Returns the offline conversion client summary resource name for the specified components. */
   public static String offlineConversionClientSummary(
       long customerId, OfflineEventUploadClient client) {
     return OfflineConversionUploadClientSummaryName.format(
         String.valueOf(customerId), client.name());
+  }
+
+  /**
+   * Returns the offline conversion upload conversion action summary resource name for the specified
+   * components.
+   */
+  public static String offlineConversionUploadConversionActionSummary(
+      long customerId, long conversionActionId, OfflineEventUploadClient client) {
+    return OfflineConversionUploadConversionActionSummaryName.format(
+        String.valueOf(customerId), String.valueOf(conversionActionId), client.name());
   }
 
   /** Returns the Offline User Data Job resource name for the specified components. */

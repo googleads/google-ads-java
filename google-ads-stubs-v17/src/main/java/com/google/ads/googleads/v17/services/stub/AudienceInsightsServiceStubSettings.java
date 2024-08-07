@@ -18,6 +18,8 @@ package com.google.ads.googleads.v17.services.stub;
 
 import com.google.ads.googleads.v17.services.GenerateAudienceCompositionInsightsRequest;
 import com.google.ads.googleads.v17.services.GenerateAudienceCompositionInsightsResponse;
+import com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest;
+import com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse;
 import com.google.ads.googleads.v17.services.GenerateInsightsFinderReportRequest;
 import com.google.ads.googleads.v17.services.GenerateInsightsFinderReportResponse;
 import com.google.ads.googleads.v17.services.GenerateSuggestedTargetingInsightsRequest;
@@ -27,6 +29,7 @@ import com.google.ads.googleads.v17.services.ListAudienceInsightsAttributesRespo
 import com.google.ads.googleads.v17.services.ListInsightsEligibleDatesRequest;
 import com.google.ads.googleads.v17.services.ListInsightsEligibleDatesResponse;
 import com.google.api.core.ApiFunction;
+import com.google.api.core.ObsoleteApi;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.core.GoogleCredentialsProvider;
 import com.google.api.gax.core.InstantiatingExecutorProvider;
@@ -109,6 +112,9 @@ public class AudienceInsightsServiceStubSettings
   private final UnaryCallSettings<
           GenerateSuggestedTargetingInsightsRequest, GenerateSuggestedTargetingInsightsResponse>
       generateSuggestedTargetingInsightsSettings;
+  private final UnaryCallSettings<
+          GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+      generateAudienceOverlapInsightsSettings;
 
   /** Returns the object with the settings used for calls to generateInsightsFinderReport. */
   public UnaryCallSettings<
@@ -144,6 +150,13 @@ public class AudienceInsightsServiceStubSettings
     return generateSuggestedTargetingInsightsSettings;
   }
 
+  /** Returns the object with the settings used for calls to generateAudienceOverlapInsights. */
+  public UnaryCallSettings<
+          GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+      generateAudienceOverlapInsightsSettings() {
+    return generateAudienceOverlapInsightsSettings;
+  }
+
   public AudienceInsightsServiceStub createStub() throws IOException {
     if (getTransportChannelProvider()
         .getTransportName()
@@ -167,6 +180,7 @@ public class AudienceInsightsServiceStubSettings
   }
 
   /** Returns the default service endpoint. */
+  @ObsoleteApi("Use getEndpoint() instead")
   public static String getDefaultEndpoint() {
     return "googleads.googleapis.com:443";
   }
@@ -233,6 +247,8 @@ public class AudienceInsightsServiceStubSettings
         settingsBuilder.generateAudienceCompositionInsightsSettings().build();
     generateSuggestedTargetingInsightsSettings =
         settingsBuilder.generateSuggestedTargetingInsightsSettings().build();
+    generateAudienceOverlapInsightsSettings =
+        settingsBuilder.generateAudienceOverlapInsightsSettings().build();
   }
 
   /** Builder for AudienceInsightsServiceStubSettings. */
@@ -254,6 +270,9 @@ public class AudienceInsightsServiceStubSettings
     private final UnaryCallSettings.Builder<
             GenerateSuggestedTargetingInsightsRequest, GenerateSuggestedTargetingInsightsResponse>
         generateSuggestedTargetingInsightsSettings;
+    private final UnaryCallSettings.Builder<
+            GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+        generateAudienceOverlapInsightsSettings;
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -299,6 +318,7 @@ public class AudienceInsightsServiceStubSettings
       listInsightsEligibleDatesSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
       generateAudienceCompositionInsightsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
       generateSuggestedTargetingInsightsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+      generateAudienceOverlapInsightsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
@@ -306,7 +326,8 @@ public class AudienceInsightsServiceStubSettings
               listAudienceInsightsAttributesSettings,
               listInsightsEligibleDatesSettings,
               generateAudienceCompositionInsightsSettings,
-              generateSuggestedTargetingInsightsSettings);
+              generateSuggestedTargetingInsightsSettings,
+              generateAudienceOverlapInsightsSettings);
       initDefaults(this);
     }
 
@@ -322,6 +343,8 @@ public class AudienceInsightsServiceStubSettings
           settings.generateAudienceCompositionInsightsSettings.toBuilder();
       generateSuggestedTargetingInsightsSettings =
           settings.generateSuggestedTargetingInsightsSettings.toBuilder();
+      generateAudienceOverlapInsightsSettings =
+          settings.generateAudienceOverlapInsightsSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
@@ -329,7 +352,8 @@ public class AudienceInsightsServiceStubSettings
               listAudienceInsightsAttributesSettings,
               listInsightsEligibleDatesSettings,
               generateAudienceCompositionInsightsSettings,
-              generateSuggestedTargetingInsightsSettings);
+              generateSuggestedTargetingInsightsSettings,
+              generateAudienceOverlapInsightsSettings);
     }
 
     private static Builder createDefault() {
@@ -367,6 +391,11 @@ public class AudienceInsightsServiceStubSettings
 
       builder
           .generateSuggestedTargetingInsightsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .generateAudienceOverlapInsightsSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
 
@@ -425,6 +454,13 @@ public class AudienceInsightsServiceStubSettings
             GenerateSuggestedTargetingInsightsRequest, GenerateSuggestedTargetingInsightsResponse>
         generateSuggestedTargetingInsightsSettings() {
       return generateSuggestedTargetingInsightsSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to generateAudienceOverlapInsights. */
+    public UnaryCallSettings.Builder<
+            GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+        generateAudienceOverlapInsightsSettings() {
+      return generateAudienceOverlapInsightsSettings;
     }
 
     @Override

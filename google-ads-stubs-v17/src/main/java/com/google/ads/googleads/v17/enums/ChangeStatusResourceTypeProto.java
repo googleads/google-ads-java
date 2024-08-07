@@ -31,8 +31,8 @@ public final class ChangeStatusResourceTypeProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v17/enums/change_" +
       "status_resource_type.proto\022\036google.ads.g" +
-      "oogleads.v17.enums\"\227\003\n\034ChangeStatusResou" +
-      "rceTypeEnum\"\366\002\n\030ChangeStatusResourceType" +
+      "oogleads.v17.enums\"\250\003\n\034ChangeStatusResou" +
+      "rceTypeEnum\"\207\003\n\030ChangeStatusResourceType" +
       "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010AD_GRO" +
       "UP\020\003\022\017\n\013AD_GROUP_AD\020\004\022\026\n\022AD_GROUP_CRITER" +
       "ION\020\005\022\014\n\010CAMPAIGN\020\006\022\026\n\022CAMPAIGN_CRITERIO" +
@@ -41,14 +41,14 @@ public final class ChangeStatusResourceTypeProto {
       "ID_MODIFIER\020\r\022\016\n\nSHARED_SET\020\016\022\027\n\023CAMPAIG" +
       "N_SHARED_SET\020\017\022\t\n\005ASSET\020\020\022\022\n\016CUSTOMER_AS" +
       "SET\020\021\022\022\n\016CAMPAIGN_ASSET\020\022\022\022\n\016AD_GROUP_AS" +
-      "SET\020\023\022\025\n\021COMBINED_AUDIENCE\020\024B\367\001\n\"com.goo" +
-      "gle.ads.googleads.v17.enumsB\035ChangeStatu" +
-      "sResourceTypeProtoP\001ZCgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v17/en" +
-      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
-      "17.Enums\312\002\036Google\\Ads\\GoogleAds\\V17\\Enum" +
-      "s\352\002\"Google::Ads::GoogleAds::V17::Enumsb\006" +
-      "proto3"
+      "SET\020\023\022\025\n\021COMBINED_AUDIENCE\020\024\022\017\n\013ASSET_GR" +
+      "OUP\020\025B\367\001\n\"com.google.ads.googleads.v17.e" +
+      "numsB\035ChangeStatusResourceTypeProtoP\001ZCg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v17/enums;enums\242\002\003GAA\252\002\036Googl" +
+      "e.Ads.GoogleAds.V17.Enums\312\002\036Google\\Ads\\G" +
+      "oogleAds\\V17\\Enums\352\002\"Google::Ads::Google" +
+      "Ads::V17::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

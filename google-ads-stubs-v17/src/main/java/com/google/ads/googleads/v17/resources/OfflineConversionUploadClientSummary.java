@@ -6,7 +6,7 @@ package com.google.ads.googleads.v17.resources;
 
 /**
  * <pre>
- * Offline conversion upload client summary.
+ * Offline conversion upload summary at customer level.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v17.resources.OfflineConversionUploadClientSummary}
@@ -55,9 +55,9 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
-   * Output only. The resource name of the offline conversion upload client
-   * summary. Offline conversion upload client summary resource names have the
-   * form:
+   * Output only. The resource name of the offline conversion upload summary at
+   * customer level. Offline conversion upload client summary resource names
+   * have the form:
    *
    * `customers/{customer_id}/offlineConversionUploadClientSummaries/{client}`
    * </pre>
@@ -80,9 +80,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the offline conversion upload client
-   * summary. Offline conversion upload client summary resource names have the
-   * form:
+   * Output only. The resource name of the offline conversion upload summary at
+   * customer level. Offline conversion upload client summary resource names
+   * have the form:
    *
    * `customers/{customer_id}/offlineConversionUploadClientSummaries/{client}`
    * </pre>
@@ -136,8 +136,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Overall status for offline conversion client summary. Status
-   * is generated
-   *  from most recent calendar day with upload stats
+   * is generated from most recent calendar day with upload stats.
    * </pre>
    *
    * <code>.google.ads.googleads.v17.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -149,8 +148,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Overall status for offline conversion client summary. Status
-   * is generated
-   *  from most recent calendar day with upload stats
+   * is generated from most recent calendar day with upload stats.
    * </pre>
    *
    * <code>.google.ads.googleads.v17.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -204,6 +202,36 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public double getSuccessRate() {
     return successRate_;
+  }
+
+  public static final int PENDING_EVENT_COUNT_FIELD_NUMBER = 11;
+  private long pendingEventCount_ = 0L;
+  /**
+   * <pre>
+   * Output only. Total count of pending uploaded events.
+   * </pre>
+   *
+   * <code>int64 pending_event_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pendingEventCount.
+   */
+  @java.lang.Override
+  public long getPendingEventCount() {
+    return pendingEventCount_;
+  }
+
+  public static final int PENDING_RATE_FIELD_NUMBER = 12;
+  private double pendingRate_ = 0D;
+  /**
+   * <pre>
+   * Output only. The ratio of total pending events to total events.
+   * </pre>
+   *
+   * <code>double pending_rate = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pendingRate.
+   */
+  @java.lang.Override
+  public double getPendingRate() {
+    return pendingRate_;
   }
 
   public static final int LAST_UPLOAD_DATE_TIME_FIELD_NUMBER = 7;
@@ -487,6 +515,12 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < alerts_.size(); i++) {
       output.writeMessage(10, alerts_.get(i));
     }
+    if (pendingEventCount_ != 0L) {
+      output.writeInt64(11, pendingEventCount_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(pendingRate_) != 0) {
+      output.writeDouble(12, pendingRate_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -534,6 +568,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, alerts_.get(i));
     }
+    if (pendingEventCount_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(11, pendingEventCount_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(pendingRate_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(12, pendingRate_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -560,6 +602,11 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToLongBits(getSuccessRate())
         != java.lang.Double.doubleToLongBits(
             other.getSuccessRate())) return false;
+    if (getPendingEventCount()
+        != other.getPendingEventCount()) return false;
+    if (java.lang.Double.doubleToLongBits(getPendingRate())
+        != java.lang.Double.doubleToLongBits(
+            other.getPendingRate())) return false;
     if (!getLastUploadDateTime()
         .equals(other.getLastUploadDateTime())) return false;
     if (!getDailySummariesList()
@@ -594,6 +641,12 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SUCCESS_RATE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getSuccessRate()));
+    hash = (37 * hash) + PENDING_EVENT_COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getPendingEventCount());
+    hash = (37 * hash) + PENDING_RATE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getPendingRate()));
     hash = (37 * hash) + LAST_UPLOAD_DATE_TIME_FIELD_NUMBER;
     hash = (53 * hash) + getLastUploadDateTime().hashCode();
     if (getDailySummariesCount() > 0) {
@@ -707,7 +760,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Offline conversion upload client summary.
+   * Offline conversion upload summary at customer level.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v17.resources.OfflineConversionUploadClientSummary}
@@ -749,6 +802,8 @@ private static final long serialVersionUID = 0L;
       totalEventCount_ = 0L;
       successfulEventCount_ = 0L;
       successRate_ = 0D;
+      pendingEventCount_ = 0L;
+      pendingRate_ = 0D;
       lastUploadDateTime_ = "";
       if (dailySummariesBuilder_ == null) {
         dailySummaries_ = java.util.Collections.emptyList();
@@ -756,21 +811,21 @@ private static final long serialVersionUID = 0L;
         dailySummaries_ = null;
         dailySummariesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000200);
       if (jobSummariesBuilder_ == null) {
         jobSummaries_ = java.util.Collections.emptyList();
       } else {
         jobSummaries_ = null;
         jobSummariesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000400);
       if (alertsBuilder_ == null) {
         alerts_ = java.util.Collections.emptyList();
       } else {
         alerts_ = null;
         alertsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000800);
       return this;
     }
 
@@ -805,27 +860,27 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v17.resources.OfflineConversionUploadClientSummary result) {
       if (dailySummariesBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
+        if (((bitField0_ & 0x00000200) != 0)) {
           dailySummaries_ = java.util.Collections.unmodifiableList(dailySummaries_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000200);
         }
         result.dailySummaries_ = dailySummaries_;
       } else {
         result.dailySummaries_ = dailySummariesBuilder_.build();
       }
       if (jobSummariesBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           jobSummaries_ = java.util.Collections.unmodifiableList(jobSummaries_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.jobSummaries_ = jobSummaries_;
       } else {
         result.jobSummaries_ = jobSummariesBuilder_.build();
       }
       if (alertsBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000800) != 0)) {
           alerts_ = java.util.Collections.unmodifiableList(alerts_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000800);
         }
         result.alerts_ = alerts_;
       } else {
@@ -854,6 +909,12 @@ private static final long serialVersionUID = 0L;
         result.successRate_ = successRate_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.pendingEventCount_ = pendingEventCount_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.pendingRate_ = pendingRate_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.lastUploadDateTime_ = lastUploadDateTime_;
       }
     }
@@ -922,16 +983,22 @@ private static final long serialVersionUID = 0L;
       if (other.getSuccessRate() != 0D) {
         setSuccessRate(other.getSuccessRate());
       }
+      if (other.getPendingEventCount() != 0L) {
+        setPendingEventCount(other.getPendingEventCount());
+      }
+      if (other.getPendingRate() != 0D) {
+        setPendingRate(other.getPendingRate());
+      }
       if (!other.getLastUploadDateTime().isEmpty()) {
         lastUploadDateTime_ = other.lastUploadDateTime_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (dailySummariesBuilder_ == null) {
         if (!other.dailySummaries_.isEmpty()) {
           if (dailySummaries_.isEmpty()) {
             dailySummaries_ = other.dailySummaries_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             ensureDailySummariesIsMutable();
             dailySummaries_.addAll(other.dailySummaries_);
@@ -944,7 +1011,7 @@ private static final long serialVersionUID = 0L;
             dailySummariesBuilder_.dispose();
             dailySummariesBuilder_ = null;
             dailySummaries_ = other.dailySummaries_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000200);
             dailySummariesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDailySummariesFieldBuilder() : null;
@@ -957,7 +1024,7 @@ private static final long serialVersionUID = 0L;
         if (!other.jobSummaries_.isEmpty()) {
           if (jobSummaries_.isEmpty()) {
             jobSummaries_ = other.jobSummaries_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureJobSummariesIsMutable();
             jobSummaries_.addAll(other.jobSummaries_);
@@ -970,7 +1037,7 @@ private static final long serialVersionUID = 0L;
             jobSummariesBuilder_.dispose();
             jobSummariesBuilder_ = null;
             jobSummaries_ = other.jobSummaries_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000400);
             jobSummariesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getJobSummariesFieldBuilder() : null;
@@ -983,7 +1050,7 @@ private static final long serialVersionUID = 0L;
         if (!other.alerts_.isEmpty()) {
           if (alerts_.isEmpty()) {
             alerts_ = other.alerts_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000800);
           } else {
             ensureAlertsIsMutable();
             alerts_.addAll(other.alerts_);
@@ -996,7 +1063,7 @@ private static final long serialVersionUID = 0L;
             alertsBuilder_.dispose();
             alertsBuilder_ = null;
             alerts_ = other.alerts_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000800);
             alertsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAlertsFieldBuilder() : null;
@@ -1063,7 +1130,7 @@ private static final long serialVersionUID = 0L;
             } // case 49
             case 58: {
               lastUploadDateTime_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000100;
               break;
             } // case 58
             case 66: {
@@ -1105,6 +1172,16 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 82
+            case 88: {
+              pendingEventCount_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 88
+            case 97: {
+              pendingRate_ = input.readDouble();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 97
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1125,9 +1202,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the offline conversion upload client
-     * summary. Offline conversion upload client summary resource names have the
-     * form:
+     * Output only. The resource name of the offline conversion upload summary at
+     * customer level. Offline conversion upload client summary resource names
+     * have the form:
      *
      * `customers/{customer_id}/offlineConversionUploadClientSummaries/{client}`
      * </pre>
@@ -1149,9 +1226,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the offline conversion upload client
-     * summary. Offline conversion upload client summary resource names have the
-     * form:
+     * Output only. The resource name of the offline conversion upload summary at
+     * customer level. Offline conversion upload client summary resource names
+     * have the form:
      *
      * `customers/{customer_id}/offlineConversionUploadClientSummaries/{client}`
      * </pre>
@@ -1174,9 +1251,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the offline conversion upload client
-     * summary. Offline conversion upload client summary resource names have the
-     * form:
+     * Output only. The resource name of the offline conversion upload summary at
+     * customer level. Offline conversion upload client summary resource names
+     * have the form:
      *
      * `customers/{customer_id}/offlineConversionUploadClientSummaries/{client}`
      * </pre>
@@ -1195,9 +1272,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the offline conversion upload client
-     * summary. Offline conversion upload client summary resource names have the
-     * form:
+     * Output only. The resource name of the offline conversion upload summary at
+     * customer level. Offline conversion upload client summary resource names
+     * have the form:
      *
      * `customers/{customer_id}/offlineConversionUploadClientSummaries/{client}`
      * </pre>
@@ -1213,9 +1290,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the offline conversion upload client
-     * summary. Offline conversion upload client summary resource names have the
-     * form:
+     * Output only. The resource name of the offline conversion upload summary at
+     * customer level. Offline conversion upload client summary resource names
+     * have the form:
      *
      * `customers/{customer_id}/offlineConversionUploadClientSummaries/{client}`
      * </pre>
@@ -1311,8 +1388,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Overall status for offline conversion client summary. Status
-     * is generated
-     *  from most recent calendar day with upload stats
+     * is generated from most recent calendar day with upload stats.
      * </pre>
      *
      * <code>.google.ads.googleads.v17.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1324,8 +1400,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Overall status for offline conversion client summary. Status
-     * is generated
-     *  from most recent calendar day with upload stats
+     * is generated from most recent calendar day with upload stats.
      * </pre>
      *
      * <code>.google.ads.googleads.v17.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1341,8 +1416,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Overall status for offline conversion client summary. Status
-     * is generated
-     *  from most recent calendar day with upload stats
+     * is generated from most recent calendar day with upload stats.
      * </pre>
      *
      * <code>.google.ads.googleads.v17.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1356,8 +1430,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Overall status for offline conversion client summary. Status
-     * is generated
-     *  from most recent calendar day with upload stats
+     * is generated from most recent calendar day with upload stats.
      * </pre>
      *
      * <code>.google.ads.googleads.v17.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1376,8 +1449,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Overall status for offline conversion client summary. Status
-     * is generated
-     *  from most recent calendar day with upload stats
+     * is generated from most recent calendar day with upload stats.
      * </pre>
      *
      * <code>.google.ads.googleads.v17.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1522,6 +1594,94 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long pendingEventCount_ ;
+    /**
+     * <pre>
+     * Output only. Total count of pending uploaded events.
+     * </pre>
+     *
+     * <code>int64 pending_event_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The pendingEventCount.
+     */
+    @java.lang.Override
+    public long getPendingEventCount() {
+      return pendingEventCount_;
+    }
+    /**
+     * <pre>
+     * Output only. Total count of pending uploaded events.
+     * </pre>
+     *
+     * <code>int64 pending_event_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The pendingEventCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPendingEventCount(long value) {
+
+      pendingEventCount_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Total count of pending uploaded events.
+     * </pre>
+     *
+     * <code>int64 pending_event_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPendingEventCount() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      pendingEventCount_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private double pendingRate_ ;
+    /**
+     * <pre>
+     * Output only. The ratio of total pending events to total events.
+     * </pre>
+     *
+     * <code>double pending_rate = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The pendingRate.
+     */
+    @java.lang.Override
+    public double getPendingRate() {
+      return pendingRate_;
+    }
+    /**
+     * <pre>
+     * Output only. The ratio of total pending events to total events.
+     * </pre>
+     *
+     * <code>double pending_rate = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The pendingRate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPendingRate(double value) {
+
+      pendingRate_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The ratio of total pending events to total events.
+     * </pre>
+     *
+     * <code>double pending_rate = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPendingRate() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      pendingRate_ = 0D;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object lastUploadDateTime_ = "";
     /**
      * <pre>
@@ -1580,7 +1740,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       lastUploadDateTime_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1595,7 +1755,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearLastUploadDateTime() {
       lastUploadDateTime_ = getDefaultInstance().getLastUploadDateTime();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1614,7 +1774,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       lastUploadDateTime_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1622,9 +1782,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v17.resources.OfflineConversionSummary> dailySummaries_ =
       java.util.Collections.emptyList();
     private void ensureDailySummariesIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         dailySummaries_ = new java.util.ArrayList<com.google.ads.googleads.v17.resources.OfflineConversionSummary>(dailySummaries_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
        }
     }
 
@@ -1818,7 +1978,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDailySummaries() {
       if (dailySummariesBuilder_ == null) {
         dailySummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
       } else {
         dailySummariesBuilder_.clear();
@@ -1923,7 +2083,7 @@ private static final long serialVersionUID = 0L;
         dailySummariesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v17.resources.OfflineConversionSummary, com.google.ads.googleads.v17.resources.OfflineConversionSummary.Builder, com.google.ads.googleads.v17.resources.OfflineConversionSummaryOrBuilder>(
                 dailySummaries_,
-                ((bitField0_ & 0x00000080) != 0),
+                ((bitField0_ & 0x00000200) != 0),
                 getParentForChildren(),
                 isClean());
         dailySummaries_ = null;
@@ -1934,9 +2094,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v17.resources.OfflineConversionSummary> jobSummaries_ =
       java.util.Collections.emptyList();
     private void ensureJobSummariesIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         jobSummaries_ = new java.util.ArrayList<com.google.ads.googleads.v17.resources.OfflineConversionSummary>(jobSummaries_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000400;
        }
     }
 
@@ -2130,7 +2290,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearJobSummaries() {
       if (jobSummariesBuilder_ == null) {
         jobSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
       } else {
         jobSummariesBuilder_.clear();
@@ -2235,7 +2395,7 @@ private static final long serialVersionUID = 0L;
         jobSummariesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v17.resources.OfflineConversionSummary, com.google.ads.googleads.v17.resources.OfflineConversionSummary.Builder, com.google.ads.googleads.v17.resources.OfflineConversionSummaryOrBuilder>(
                 jobSummaries_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000400) != 0),
                 getParentForChildren(),
                 isClean());
         jobSummaries_ = null;
@@ -2246,9 +2406,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v17.resources.OfflineConversionAlert> alerts_ =
       java.util.Collections.emptyList();
     private void ensureAlertsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000800) != 0)) {
         alerts_ = new java.util.ArrayList<com.google.ads.googleads.v17.resources.OfflineConversionAlert>(alerts_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000800;
        }
     }
 
@@ -2453,7 +2613,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAlerts() {
       if (alertsBuilder_ == null) {
         alerts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
       } else {
         alertsBuilder_.clear();
@@ -2565,7 +2725,7 @@ private static final long serialVersionUID = 0L;
         alertsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v17.resources.OfflineConversionAlert, com.google.ads.googleads.v17.resources.OfflineConversionAlert.Builder, com.google.ads.googleads.v17.resources.OfflineConversionAlertOrBuilder>(
                 alerts_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000800) != 0),
                 getParentForChildren(),
                 isClean());
         alerts_ = null;

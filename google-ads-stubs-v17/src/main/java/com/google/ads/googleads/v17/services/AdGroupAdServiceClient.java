@@ -16,10 +16,12 @@
 
 package com.google.ads.googleads.v17.services;
 
+import com.google.ads.googleads.v17.resources.AdGroupAdName;
 import com.google.ads.googleads.v17.services.stub.AdGroupAdServiceStub;
 import com.google.ads.googleads.v17.services.stub.AdGroupAdServiceStubSettings;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -73,6 +75,26 @@ import javax.annotation.Generated;
  *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
  *      <ul>
  *           <li><p> mutateAdGroupAdsCallable()
+ *      </ul>
+ *       </td>
+ *    </tr>
+ *    <tr>
+ *      <td><p> RemoveAutomaticallyCreatedAssets</td>
+ *      <td><p> Remove automatically created assets from an ad.
+ * <p>  List of thrown errors:   [AdError]()   [AuthenticationError]()   [AuthorizationError]()   [AutomaticallyCreatedAssetRemovalError]()   [HeaderError]()   [InternalError]()   [MutateError]()   [QuotaError]()   [RequestError]()</td>
+ *      <td>
+ *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
+ *      <ul>
+ *           <li><p> removeAutomaticallyCreatedAssets(RemoveAutomaticallyCreatedAssetsRequest request)
+ *      </ul>
+ *      <p>"Flattened" method variants have converted the fields of the request object into function parameters to enable multiple ways to call the same method.</p>
+ *      <ul>
+ *           <li><p> removeAutomaticallyCreatedAssets(AdGroupAdName adGroupAd, List&lt;AssetsWithFieldType&gt; assetsWithFieldType)
+ *           <li><p> removeAutomaticallyCreatedAssets(String adGroupAd, List&lt;AssetsWithFieldType&gt; assetsWithFieldType)
+ *      </ul>
+ *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
+ *      <ul>
+ *           <li><p> removeAutomaticallyCreatedAssetsCallable()
  *      </ul>
  *       </td>
  *    </tr>
@@ -300,6 +322,154 @@ public class AdGroupAdServiceClient implements BackgroundResource {
   public final UnaryCallable<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
       mutateAdGroupAdsCallable() {
     return stub.mutateAdGroupAdsCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Remove automatically created assets from an ad.
+   *
+   * <p>List of thrown errors: [AdError]() [AuthenticationError]() [AuthorizationError]()
+   * [AutomaticallyCreatedAssetRemovalError]() [HeaderError]() [InternalError]() [MutateError]()
+   * [QuotaError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
+   *   AdGroupAdName adGroupAd = AdGroupAdName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]");
+   *   List<AssetsWithFieldType> assetsWithFieldType = new ArrayList<>();
+   *   adGroupAdServiceClient.removeAutomaticallyCreatedAssets(adGroupAd, assetsWithFieldType);
+   * }
+   * }</pre>
+   *
+   * @param adGroupAd Required. The resource name of the AdGroupAd from which to remove
+   *     automatically created assets.
+   * @param assetsWithFieldType Required. List of assets with field type to be removed from the
+   *     AdGroupAd.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final void removeAutomaticallyCreatedAssets(
+      AdGroupAdName adGroupAd, List<AssetsWithFieldType> assetsWithFieldType) {
+    RemoveAutomaticallyCreatedAssetsRequest request =
+        RemoveAutomaticallyCreatedAssetsRequest.newBuilder()
+            .setAdGroupAd(adGroupAd == null ? null : adGroupAd.toString())
+            .addAllAssetsWithFieldType(assetsWithFieldType)
+            .build();
+    removeAutomaticallyCreatedAssets(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Remove automatically created assets from an ad.
+   *
+   * <p>List of thrown errors: [AdError]() [AuthenticationError]() [AuthorizationError]()
+   * [AutomaticallyCreatedAssetRemovalError]() [HeaderError]() [InternalError]() [MutateError]()
+   * [QuotaError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
+   *   String adGroupAd = AdGroupAdName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]").toString();
+   *   List<AssetsWithFieldType> assetsWithFieldType = new ArrayList<>();
+   *   adGroupAdServiceClient.removeAutomaticallyCreatedAssets(adGroupAd, assetsWithFieldType);
+   * }
+   * }</pre>
+   *
+   * @param adGroupAd Required. The resource name of the AdGroupAd from which to remove
+   *     automatically created assets.
+   * @param assetsWithFieldType Required. List of assets with field type to be removed from the
+   *     AdGroupAd.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final void removeAutomaticallyCreatedAssets(
+      String adGroupAd, List<AssetsWithFieldType> assetsWithFieldType) {
+    RemoveAutomaticallyCreatedAssetsRequest request =
+        RemoveAutomaticallyCreatedAssetsRequest.newBuilder()
+            .setAdGroupAd(adGroupAd)
+            .addAllAssetsWithFieldType(assetsWithFieldType)
+            .build();
+    removeAutomaticallyCreatedAssets(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Remove automatically created assets from an ad.
+   *
+   * <p>List of thrown errors: [AdError]() [AuthenticationError]() [AuthorizationError]()
+   * [AutomaticallyCreatedAssetRemovalError]() [HeaderError]() [InternalError]() [MutateError]()
+   * [QuotaError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
+   *   RemoveAutomaticallyCreatedAssetsRequest request =
+   *       RemoveAutomaticallyCreatedAssetsRequest.newBuilder()
+   *           .setAdGroupAd(
+   *               AdGroupAdName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]").toString())
+   *           .addAllAssetsWithFieldType(new ArrayList<AssetsWithFieldType>())
+   *           .build();
+   *   adGroupAdServiceClient.removeAutomaticallyCreatedAssets(request);
+   * }
+   * }</pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final void removeAutomaticallyCreatedAssets(
+      RemoveAutomaticallyCreatedAssetsRequest request) {
+    removeAutomaticallyCreatedAssetsCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Remove automatically created assets from an ad.
+   *
+   * <p>List of thrown errors: [AdError]() [AuthenticationError]() [AuthorizationError]()
+   * [AutomaticallyCreatedAssetRemovalError]() [HeaderError]() [InternalError]() [MutateError]()
+   * [QuotaError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
+   *   RemoveAutomaticallyCreatedAssetsRequest request =
+   *       RemoveAutomaticallyCreatedAssetsRequest.newBuilder()
+   *           .setAdGroupAd(
+   *               AdGroupAdName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]").toString())
+   *           .addAllAssetsWithFieldType(new ArrayList<AssetsWithFieldType>())
+   *           .build();
+   *   ApiFuture<Empty> future =
+   *       adGroupAdServiceClient.removeAutomaticallyCreatedAssetsCallable().futureCall(request);
+   *   // Do something.
+   *   future.get();
+   * }
+   * }</pre>
+   */
+  public final UnaryCallable<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+      removeAutomaticallyCreatedAssetsCallable() {
+    return stub.removeAutomaticallyCreatedAssetsCallable();
   }
 
   @Override
