@@ -1,3 +1,14 @@
+33.0.0 - 2024-08-08
+-------------------
+- Add support and examples for Google Ads API v17.1.
+- Remove support for v15 of the Google Ads API.
+- Add support for specifying the maximum inbound message
+  bytes in `GoogleAdsClient`.
+- Update to version 3.33.0 of
+  `google-cloud-shared-dependencies`.
+  - Fixes [issue 169](https://github.com/googleads/google-ads-java/issues/169):
+    Infinite loop if refresh token is invalid
+
 32.0.0 - 2024-06-06
 -------------------
 - Add support and examples for Google Ads API v17.

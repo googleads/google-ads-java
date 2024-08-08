@@ -49,6 +49,37 @@ public final class AdGroupAdServiceGrpc {
     return getMutateAdGroupAdsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest,
+      com.google.protobuf.Empty> getRemoveAutomaticallyCreatedAssetsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveAutomaticallyCreatedAssets",
+      requestType = com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest,
+      com.google.protobuf.Empty> getRemoveAutomaticallyCreatedAssetsMethod() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest, com.google.protobuf.Empty> getRemoveAutomaticallyCreatedAssetsMethod;
+    if ((getRemoveAutomaticallyCreatedAssetsMethod = AdGroupAdServiceGrpc.getRemoveAutomaticallyCreatedAssetsMethod) == null) {
+      synchronized (AdGroupAdServiceGrpc.class) {
+        if ((getRemoveAutomaticallyCreatedAssetsMethod = AdGroupAdServiceGrpc.getRemoveAutomaticallyCreatedAssetsMethod) == null) {
+          AdGroupAdServiceGrpc.getRemoveAutomaticallyCreatedAssetsMethod = getRemoveAutomaticallyCreatedAssetsMethod =
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveAutomaticallyCreatedAssets"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new AdGroupAdServiceMethodDescriptorSupplier("RemoveAutomaticallyCreatedAssets"))
+              .build();
+        }
+      }
+    }
+    return getRemoveAutomaticallyCreatedAssetsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -153,6 +184,26 @@ public final class AdGroupAdServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v17.services.MutateAdGroupAdsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAdGroupAdsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Remove automatically created assets from an ad.
+     * List of thrown errors:
+     *   [AdError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [AutomaticallyCreatedAssetRemovalError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    default void removeAutomaticallyCreatedAssets(com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveAutomaticallyCreatedAssetsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -242,6 +293,27 @@ public final class AdGroupAdServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMutateAdGroupAdsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Remove automatically created assets from an ad.
+     * List of thrown errors:
+     *   [AdError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [AutomaticallyCreatedAssetRemovalError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public void removeAutomaticallyCreatedAssets(com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveAutomaticallyCreatedAssetsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -315,6 +387,26 @@ public final class AdGroupAdServiceGrpc {
     public com.google.ads.googleads.v17.services.MutateAdGroupAdsResponse mutateAdGroupAds(com.google.ads.googleads.v17.services.MutateAdGroupAdsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMutateAdGroupAdsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Remove automatically created assets from an ad.
+     * List of thrown errors:
+     *   [AdError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [AutomaticallyCreatedAssetRemovalError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.protobuf.Empty removeAutomaticallyCreatedAssets(com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveAutomaticallyCreatedAssetsMethod(), getCallOptions(), request);
     }
   }
 
@@ -391,9 +483,31 @@ public final class AdGroupAdServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMutateAdGroupAdsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Remove automatically created assets from an ad.
+     * List of thrown errors:
+     *   [AdError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [AutomaticallyCreatedAssetRemovalError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> removeAutomaticallyCreatedAssets(
+        com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveAutomaticallyCreatedAssetsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_MUTATE_AD_GROUP_ADS = 0;
+  private static final int METHODID_REMOVE_AUTOMATICALLY_CREATED_ASSETS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -415,6 +529,10 @@ public final class AdGroupAdServiceGrpc {
         case METHODID_MUTATE_AD_GROUP_ADS:
           serviceImpl.mutateAdGroupAds((com.google.ads.googleads.v17.services.MutateAdGroupAdsRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v17.services.MutateAdGroupAdsResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_AUTOMATICALLY_CREATED_ASSETS:
+          serviceImpl.removeAutomaticallyCreatedAssets((com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -441,6 +559,13 @@ public final class AdGroupAdServiceGrpc {
               com.google.ads.googleads.v17.services.MutateAdGroupAdsRequest,
               com.google.ads.googleads.v17.services.MutateAdGroupAdsResponse>(
                 service, METHODID_MUTATE_AD_GROUP_ADS)))
+        .addMethod(
+          getRemoveAutomaticallyCreatedAssetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_REMOVE_AUTOMATICALLY_CREATED_ASSETS)))
         .build();
   }
 
@@ -490,6 +615,7 @@ public final class AdGroupAdServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AdGroupAdServiceFileDescriptorSupplier())
               .addMethod(getMutateAdGroupAdsMethod())
+              .addMethod(getRemoveAutomaticallyCreatedAssetsMethod())
               .build();
         }
       }

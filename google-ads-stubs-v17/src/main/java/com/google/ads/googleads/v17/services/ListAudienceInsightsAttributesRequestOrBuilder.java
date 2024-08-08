@@ -188,4 +188,43 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
    */
   com.google.ads.googleads.v17.common.LocationInfoOrBuilder getLocationCountryFiltersOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * If present, potential YouTube reach estimates within the specified market
+   * will be returned for attributes for which they are available.  Reach is
+   * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+   * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+   * attribute of those dimensions in every market.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+   * @return Whether the youtubeReachLocation field is set.
+   */
+  boolean hasYoutubeReachLocation();
+  /**
+   * <pre>
+   * If present, potential YouTube reach estimates within the specified market
+   * will be returned for attributes for which they are available.  Reach is
+   * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+   * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+   * attribute of those dimensions in every market.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+   * @return The youtubeReachLocation.
+   */
+  com.google.ads.googleads.v17.common.LocationInfo getYoutubeReachLocation();
+  /**
+   * <pre>
+   * If present, potential YouTube reach estimates within the specified market
+   * will be returned for attributes for which they are available.  Reach is
+   * only available for the AGE_RANGE, GENDER, AFFINITY_USER_INTEREST and
+   * IN_MARKET_USER_INTEREST dimensions, and may not be available for every
+   * attribute of those dimensions in every market.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.LocationInfo youtube_reach_location = 6;</code>
+   */
+  com.google.ads.googleads.v17.common.LocationInfoOrBuilder getYoutubeReachLocationOrBuilder();
 }

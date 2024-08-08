@@ -537,4 +537,24 @@ public interface ChangeStatusOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCombinedAudienceBytes();
+
+  /**
+   * <pre>
+   * Output only. The AssetGroup affected by this change.
+   * </pre>
+   *
+   * <code>string asset_group = 41 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The assetGroup.
+   */
+  java.lang.String getAssetGroup();
+  /**
+   * <pre>
+   * Output only. The AssetGroup affected by this change.
+   * </pre>
+   *
+   * <code>string asset_group = 41 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for assetGroup.
+   */
+  com.google.protobuf.ByteString
+      getAssetGroupBytes();
 }

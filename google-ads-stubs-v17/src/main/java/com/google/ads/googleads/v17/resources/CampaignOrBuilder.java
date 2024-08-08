@@ -497,6 +497,33 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * Settings for Video campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+   * @return Whether the videoCampaignSettings field is set.
+   */
+  boolean hasVideoCampaignSettings();
+  /**
+   * <pre>
+   * Settings for Video campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+   * @return The videoCampaignSettings.
+   */
+  com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings getVideoCampaignSettings();
+  /**
+   * <pre>
+   * Settings for Video campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+   */
+  com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettingsOrBuilder getVideoCampaignSettingsOrBuilder();
+
+  /**
+   * <pre>
    * Settings for Real-Time Bidding, a feature only available for campaigns
    * targeting the Ad Exchange network.
    * </pre>
@@ -2110,6 +2137,63 @@ public interface CampaignOrBuilder extends
    * <code>.google.ads.googleads.v17.common.TargetCpm target_cpm = 41;</code>
    */
   com.google.ads.googleads.v17.common.TargetCpmOrBuilder getTargetCpmOrBuilder();
+
+  /**
+   * <pre>
+   * A manual bidding strategy with a fixed CPM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+   * @return Whether the fixedCpm field is set.
+   */
+  boolean hasFixedCpm();
+  /**
+   * <pre>
+   * A manual bidding strategy with a fixed CPM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+   * @return The fixedCpm.
+   */
+  com.google.ads.googleads.v17.common.FixedCpm getFixedCpm();
+  /**
+   * <pre>
+   * A manual bidding strategy with a fixed CPM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+   */
+  com.google.ads.googleads.v17.common.FixedCpmOrBuilder getFixedCpmOrBuilder();
+
+  /**
+   * <pre>
+   * An automated bidding strategy that sets bids to optimize performance
+   * given the target CPV you set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+   * @return Whether the targetCpv field is set.
+   */
+  boolean hasTargetCpv();
+  /**
+   * <pre>
+   * An automated bidding strategy that sets bids to optimize performance
+   * given the target CPV you set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+   * @return The targetCpv.
+   */
+  com.google.ads.googleads.v17.common.TargetCpv getTargetCpv();
+  /**
+   * <pre>
+   * An automated bidding strategy that sets bids to optimize performance
+   * given the target CPV you set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+   */
+  com.google.ads.googleads.v17.common.TargetCpvOrBuilder getTargetCpvOrBuilder();
 
   com.google.ads.googleads.v17.resources.Campaign.CampaignBiddingStrategyCase getCampaignBiddingStrategyCase();
 }

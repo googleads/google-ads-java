@@ -16,6 +16,7 @@
 
 package com.google.ads.googleads.v17.services;
 
+import com.google.ads.googleads.v17.common.LocationInfo;
 import com.google.ads.googleads.v17.enums.AudienceInsightsDimensionEnum;
 import com.google.ads.googleads.v17.services.stub.AudienceInsightsServiceStub;
 import com.google.ads.googleads.v17.services.stub.AudienceInsightsServiceStubSettings;
@@ -150,6 +151,25 @@ import javax.annotation.Generated;
  *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
  *      <ul>
  *           <li><p> generateSuggestedTargetingInsightsCallable()
+ *      </ul>
+ *       </td>
+ *    </tr>
+ *    <tr>
+ *      <td><p> GenerateAudienceOverlapInsights</td>
+ *      <td><p> Returns a collection of audience attributes along with estimates of the overlap between their potential YouTube reach and that of a given input attribute.
+ * <p>  List of thrown errors:   [AudienceInsightsError]()   [AuthenticationError]()   [AuthorizationError]()   [FieldError]()   [HeaderError]()   [InternalError]()   [QuotaError]()   [RangeError]()   [RequestError]()</td>
+ *      <td>
+ *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
+ *      <ul>
+ *           <li><p> generateAudienceOverlapInsights(GenerateAudienceOverlapInsightsRequest request)
+ *      </ul>
+ *      <p>"Flattened" method variants have converted the fields of the request object into function parameters to enable multiple ways to call the same method.</p>
+ *      <ul>
+ *           <li><p> generateAudienceOverlapInsights(String customerId, LocationInfo countryLocation, AudienceInsightsAttribute primaryAttribute, List&lt;AudienceInsightsDimensionEnum.AudienceInsightsDimension&gt; dimensions)
+ *      </ul>
+ *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
+ *      <ul>
+ *           <li><p> generateAudienceOverlapInsightsCallable()
  *      </ul>
  *       </td>
  *    </tr>
@@ -440,6 +460,7 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *           .setQueryText("queryText-1806881259")
    *           .setCustomerInsightsGroup("customerInsightsGroup1092118566")
    *           .addAllLocationCountryFilters(new ArrayList<LocationInfo>())
+   *           .setYoutubeReachLocation(LocationInfo.newBuilder().build())
    *           .build();
    *   ListAudienceInsightsAttributesResponse response =
    *       audienceInsightsServiceClient.listAudienceInsightsAttributes(request);
@@ -479,6 +500,7 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *           .setQueryText("queryText-1806881259")
    *           .setCustomerInsightsGroup("customerInsightsGroup1092118566")
    *           .addAllLocationCountryFilters(new ArrayList<LocationInfo>())
+   *           .setYoutubeReachLocation(LocationInfo.newBuilder().build())
    *           .build();
    *   ApiFuture<ListAudienceInsightsAttributesResponse> future =
    *       audienceInsightsServiceClient
@@ -814,6 +836,145 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
           GenerateSuggestedTargetingInsightsRequest, GenerateSuggestedTargetingInsightsResponse>
       generateSuggestedTargetingInsightsCallable() {
     return stub.generateSuggestedTargetingInsightsCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a collection of audience attributes along with estimates of the overlap between their
+   * potential YouTube reach and that of a given input attribute.
+   *
+   * <p>List of thrown errors: [AudienceInsightsError]() [AuthenticationError]()
+   * [AuthorizationError]() [FieldError]() [HeaderError]() [InternalError]() [QuotaError]()
+   * [RangeError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (AudienceInsightsServiceClient audienceInsightsServiceClient =
+   *     AudienceInsightsServiceClient.create()) {
+   *   String customerId = "customerId-1581184615";
+   *   LocationInfo countryLocation = LocationInfo.newBuilder().build();
+   *   AudienceInsightsAttribute primaryAttribute = AudienceInsightsAttribute.newBuilder().build();
+   *   List<AudienceInsightsDimensionEnum.AudienceInsightsDimension> dimensions = new ArrayList<>();
+   *   GenerateAudienceOverlapInsightsResponse response =
+   *       audienceInsightsServiceClient.generateAudienceOverlapInsights(
+   *           customerId, countryLocation, primaryAttribute, dimensions);
+   * }
+   * }</pre>
+   *
+   * @param customerId Required. The ID of the customer.
+   * @param countryLocation Required. The country in which to calculate the sizes and overlaps of
+   *     audiences.
+   * @param primaryAttribute Required. The audience attribute that should be intersected with all
+   *     other eligible audiences. This must be an Affinity or In-Market UserInterest, an AgeRange
+   *     or a Gender.
+   * @param dimensions Required. The types of attributes of which to calculate the overlap with the
+   *     primary_attribute. The values must be a subset of AFFINITY_USER_INTEREST,
+   *     IN_MARKET_USER_INTEREST, AGE_RANGE and GENDER.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateAudienceOverlapInsightsResponse generateAudienceOverlapInsights(
+      String customerId,
+      LocationInfo countryLocation,
+      AudienceInsightsAttribute primaryAttribute,
+      List<AudienceInsightsDimensionEnum.AudienceInsightsDimension> dimensions) {
+    GenerateAudienceOverlapInsightsRequest request =
+        GenerateAudienceOverlapInsightsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .setCountryLocation(countryLocation)
+            .setPrimaryAttribute(primaryAttribute)
+            .addAllDimensions(dimensions)
+            .build();
+    return generateAudienceOverlapInsights(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a collection of audience attributes along with estimates of the overlap between their
+   * potential YouTube reach and that of a given input attribute.
+   *
+   * <p>List of thrown errors: [AudienceInsightsError]() [AuthenticationError]()
+   * [AuthorizationError]() [FieldError]() [HeaderError]() [InternalError]() [QuotaError]()
+   * [RangeError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (AudienceInsightsServiceClient audienceInsightsServiceClient =
+   *     AudienceInsightsServiceClient.create()) {
+   *   GenerateAudienceOverlapInsightsRequest request =
+   *       GenerateAudienceOverlapInsightsRequest.newBuilder()
+   *           .setCustomerId("customerId-1581184615")
+   *           .setCountryLocation(LocationInfo.newBuilder().build())
+   *           .setPrimaryAttribute(AudienceInsightsAttribute.newBuilder().build())
+   *           .addAllDimensions(
+   *               new ArrayList<AudienceInsightsDimensionEnum.AudienceInsightsDimension>())
+   *           .setCustomerInsightsGroup("customerInsightsGroup1092118566")
+   *           .build();
+   *   GenerateAudienceOverlapInsightsResponse response =
+   *       audienceInsightsServiceClient.generateAudienceOverlapInsights(request);
+   * }
+   * }</pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateAudienceOverlapInsightsResponse generateAudienceOverlapInsights(
+      GenerateAudienceOverlapInsightsRequest request) {
+    return generateAudienceOverlapInsightsCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a collection of audience attributes along with estimates of the overlap between their
+   * potential YouTube reach and that of a given input attribute.
+   *
+   * <p>List of thrown errors: [AudienceInsightsError]() [AuthenticationError]()
+   * [AuthorizationError]() [FieldError]() [HeaderError]() [InternalError]() [QuotaError]()
+   * [RangeError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (AudienceInsightsServiceClient audienceInsightsServiceClient =
+   *     AudienceInsightsServiceClient.create()) {
+   *   GenerateAudienceOverlapInsightsRequest request =
+   *       GenerateAudienceOverlapInsightsRequest.newBuilder()
+   *           .setCustomerId("customerId-1581184615")
+   *           .setCountryLocation(LocationInfo.newBuilder().build())
+   *           .setPrimaryAttribute(AudienceInsightsAttribute.newBuilder().build())
+   *           .addAllDimensions(
+   *               new ArrayList<AudienceInsightsDimensionEnum.AudienceInsightsDimension>())
+   *           .setCustomerInsightsGroup("customerInsightsGroup1092118566")
+   *           .build();
+   *   ApiFuture<GenerateAudienceOverlapInsightsResponse> future =
+   *       audienceInsightsServiceClient
+   *           .generateAudienceOverlapInsightsCallable()
+   *           .futureCall(request);
+   *   // Do something.
+   *   GenerateAudienceOverlapInsightsResponse response = future.get();
+   * }
+   * }</pre>
+   */
+  public final UnaryCallable<
+          GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+      generateAudienceOverlapInsightsCallable() {
+    return stub.generateAudienceOverlapInsightsCallable();
   }
 
   @Override

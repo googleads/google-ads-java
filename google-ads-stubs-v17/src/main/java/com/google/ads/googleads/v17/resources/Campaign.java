@@ -14020,6 +14020,1501 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface VideoCampaignSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Inventory control for responsive ad containers in reach campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+     * @return Whether the videoAdInventoryControl field is set.
+     */
+    boolean hasVideoAdInventoryControl();
+    /**
+     * <pre>
+     * Inventory control for responsive ad containers in reach campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+     * @return The videoAdInventoryControl.
+     */
+    com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl getVideoAdInventoryControl();
+    /**
+     * <pre>
+     * Inventory control for responsive ad containers in reach campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+     */
+    com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControlOrBuilder getVideoAdInventoryControlOrBuilder();
+  }
+  /**
+   * <pre>
+   * Settings for Video campaign.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings}
+   */
+  public static final class VideoCampaignSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings)
+      VideoCampaignSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VideoCampaignSettings.newBuilder() to construct.
+    private VideoCampaignSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VideoCampaignSettings() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VideoCampaignSettings();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v17.resources.CampaignProto.internal_static_google_ads_googleads_v17_resources_Campaign_VideoCampaignSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v17.resources.CampaignProto.internal_static_google_ads_googleads_v17_resources_Campaign_VideoCampaignSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.class, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.Builder.class);
+    }
+
+    public interface VideoAdInventoryControlOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used for in-stream video ads.
+       * </pre>
+       *
+       * <code>optional bool allow_in_stream = 1;</code>
+       * @return Whether the allowInStream field is set.
+       */
+      boolean hasAllowInStream();
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used for in-stream video ads.
+       * </pre>
+       *
+       * <code>optional bool allow_in_stream = 1;</code>
+       * @return The allowInStream.
+       */
+      boolean getAllowInStream();
+
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used for in-feed video ads.
+       * </pre>
+       *
+       * <code>optional bool allow_in_feed = 2;</code>
+       * @return Whether the allowInFeed field is set.
+       */
+      boolean hasAllowInFeed();
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used for in-feed video ads.
+       * </pre>
+       *
+       * <code>optional bool allow_in_feed = 2;</code>
+       * @return The allowInFeed.
+       */
+      boolean getAllowInFeed();
+
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used as shorts format.
+       * </pre>
+       *
+       * <code>optional bool allow_shorts = 3;</code>
+       * @return Whether the allowShorts field is set.
+       */
+      boolean hasAllowShorts();
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used as shorts format.
+       * </pre>
+       *
+       * <code>optional bool allow_shorts = 3;</code>
+       * @return The allowShorts.
+       */
+      boolean getAllowShorts();
+    }
+    /**
+     * <pre>
+     * For campaigns using responsive ad containers inventory controls determine
+     * on which inventories the ads can be shown. This only applies for
+     * campaigns with the bidding strategies TARGET_CPM and FIXED_CPM.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl}
+     */
+    public static final class VideoAdInventoryControl extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl)
+        VideoAdInventoryControlOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use VideoAdInventoryControl.newBuilder() to construct.
+      private VideoAdInventoryControl(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private VideoAdInventoryControl() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new VideoAdInventoryControl();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v17.resources.CampaignProto.internal_static_google_ads_googleads_v17_resources_Campaign_VideoCampaignSettings_VideoAdInventoryControl_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v17.resources.CampaignProto.internal_static_google_ads_googleads_v17_resources_Campaign_VideoCampaignSettings_VideoAdInventoryControl_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.class, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int ALLOW_IN_STREAM_FIELD_NUMBER = 1;
+      private boolean allowInStream_ = false;
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used for in-stream video ads.
+       * </pre>
+       *
+       * <code>optional bool allow_in_stream = 1;</code>
+       * @return Whether the allowInStream field is set.
+       */
+      @java.lang.Override
+      public boolean hasAllowInStream() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used for in-stream video ads.
+       * </pre>
+       *
+       * <code>optional bool allow_in_stream = 1;</code>
+       * @return The allowInStream.
+       */
+      @java.lang.Override
+      public boolean getAllowInStream() {
+        return allowInStream_;
+      }
+
+      public static final int ALLOW_IN_FEED_FIELD_NUMBER = 2;
+      private boolean allowInFeed_ = false;
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used for in-feed video ads.
+       * </pre>
+       *
+       * <code>optional bool allow_in_feed = 2;</code>
+       * @return Whether the allowInFeed field is set.
+       */
+      @java.lang.Override
+      public boolean hasAllowInFeed() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used for in-feed video ads.
+       * </pre>
+       *
+       * <code>optional bool allow_in_feed = 2;</code>
+       * @return The allowInFeed.
+       */
+      @java.lang.Override
+      public boolean getAllowInFeed() {
+        return allowInFeed_;
+      }
+
+      public static final int ALLOW_SHORTS_FIELD_NUMBER = 3;
+      private boolean allowShorts_ = false;
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used as shorts format.
+       * </pre>
+       *
+       * <code>optional bool allow_shorts = 3;</code>
+       * @return Whether the allowShorts field is set.
+       */
+      @java.lang.Override
+      public boolean hasAllowShorts() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Determine if VideoResponsiveAds can be used as shorts format.
+       * </pre>
+       *
+       * <code>optional bool allow_shorts = 3;</code>
+       * @return The allowShorts.
+       */
+      @java.lang.Override
+      public boolean getAllowShorts() {
+        return allowShorts_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeBool(1, allowInStream_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeBool(2, allowInFeed_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeBool(3, allowShorts_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, allowInStream_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, allowInFeed_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, allowShorts_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl)) {
+          return super.equals(obj);
+        }
+        com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl other = (com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl) obj;
+
+        if (hasAllowInStream() != other.hasAllowInStream()) return false;
+        if (hasAllowInStream()) {
+          if (getAllowInStream()
+              != other.getAllowInStream()) return false;
+        }
+        if (hasAllowInFeed() != other.hasAllowInFeed()) return false;
+        if (hasAllowInFeed()) {
+          if (getAllowInFeed()
+              != other.getAllowInFeed()) return false;
+        }
+        if (hasAllowShorts() != other.hasAllowShorts()) return false;
+        if (hasAllowShorts()) {
+          if (getAllowShorts()
+              != other.getAllowShorts()) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasAllowInStream()) {
+          hash = (37 * hash) + ALLOW_IN_STREAM_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getAllowInStream());
+        }
+        if (hasAllowInFeed()) {
+          hash = (37 * hash) + ALLOW_IN_FEED_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getAllowInFeed());
+        }
+        if (hasAllowShorts()) {
+          hash = (37 * hash) + ALLOW_SHORTS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getAllowShorts());
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * For campaigns using responsive ad containers inventory controls determine
+       * on which inventories the ads can be shown. This only applies for
+       * campaigns with the bidding strategies TARGET_CPM and FIXED_CPM.
+       * </pre>
+       *
+       * Protobuf type {@code google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl)
+          com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControlOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.ads.googleads.v17.resources.CampaignProto.internal_static_google_ads_googleads_v17_resources_Campaign_VideoCampaignSettings_VideoAdInventoryControl_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.ads.googleads.v17.resources.CampaignProto.internal_static_google_ads_googleads_v17_resources_Campaign_VideoCampaignSettings_VideoAdInventoryControl_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.class, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.Builder.class);
+        }
+
+        // Construct using com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          allowInStream_ = false;
+          allowInFeed_ = false;
+          allowShorts_ = false;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.ads.googleads.v17.resources.CampaignProto.internal_static_google_ads_googleads_v17_resources_Campaign_VideoCampaignSettings_VideoAdInventoryControl_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl getDefaultInstanceForType() {
+          return com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl build() {
+          com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl buildPartial() {
+          com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl result = new com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.allowInStream_ = allowInStream_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.allowInFeed_ = allowInFeed_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.allowShorts_ = allowShorts_;
+            to_bitField0_ |= 0x00000004;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl) {
+            return mergeFrom((com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl other) {
+          if (other == com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.getDefaultInstance()) return this;
+          if (other.hasAllowInStream()) {
+            setAllowInStream(other.getAllowInStream());
+          }
+          if (other.hasAllowInFeed()) {
+            setAllowInFeed(other.getAllowInFeed());
+          }
+          if (other.hasAllowShorts()) {
+            setAllowShorts(other.getAllowShorts());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  allowInStream_ = input.readBool();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  allowInFeed_ = input.readBool();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  allowShorts_ = input.readBool();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean allowInStream_ ;
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used for in-stream video ads.
+         * </pre>
+         *
+         * <code>optional bool allow_in_stream = 1;</code>
+         * @return Whether the allowInStream field is set.
+         */
+        @java.lang.Override
+        public boolean hasAllowInStream() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used for in-stream video ads.
+         * </pre>
+         *
+         * <code>optional bool allow_in_stream = 1;</code>
+         * @return The allowInStream.
+         */
+        @java.lang.Override
+        public boolean getAllowInStream() {
+          return allowInStream_;
+        }
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used for in-stream video ads.
+         * </pre>
+         *
+         * <code>optional bool allow_in_stream = 1;</code>
+         * @param value The allowInStream to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAllowInStream(boolean value) {
+
+          allowInStream_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used for in-stream video ads.
+         * </pre>
+         *
+         * <code>optional bool allow_in_stream = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAllowInStream() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          allowInStream_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean allowInFeed_ ;
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used for in-feed video ads.
+         * </pre>
+         *
+         * <code>optional bool allow_in_feed = 2;</code>
+         * @return Whether the allowInFeed field is set.
+         */
+        @java.lang.Override
+        public boolean hasAllowInFeed() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used for in-feed video ads.
+         * </pre>
+         *
+         * <code>optional bool allow_in_feed = 2;</code>
+         * @return The allowInFeed.
+         */
+        @java.lang.Override
+        public boolean getAllowInFeed() {
+          return allowInFeed_;
+        }
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used for in-feed video ads.
+         * </pre>
+         *
+         * <code>optional bool allow_in_feed = 2;</code>
+         * @param value The allowInFeed to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAllowInFeed(boolean value) {
+
+          allowInFeed_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used for in-feed video ads.
+         * </pre>
+         *
+         * <code>optional bool allow_in_feed = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAllowInFeed() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          allowInFeed_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean allowShorts_ ;
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used as shorts format.
+         * </pre>
+         *
+         * <code>optional bool allow_shorts = 3;</code>
+         * @return Whether the allowShorts field is set.
+         */
+        @java.lang.Override
+        public boolean hasAllowShorts() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used as shorts format.
+         * </pre>
+         *
+         * <code>optional bool allow_shorts = 3;</code>
+         * @return The allowShorts.
+         */
+        @java.lang.Override
+        public boolean getAllowShorts() {
+          return allowShorts_;
+        }
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used as shorts format.
+         * </pre>
+         *
+         * <code>optional bool allow_shorts = 3;</code>
+         * @param value The allowShorts to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAllowShorts(boolean value) {
+
+          allowShorts_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Determine if VideoResponsiveAds can be used as shorts format.
+         * </pre>
+         *
+         * <code>optional bool allow_shorts = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAllowShorts() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          allowShorts_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl)
+      }
+
+      // @@protoc_insertion_point(class_scope:google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl)
+      private static final com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl();
+      }
+
+      public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<VideoAdInventoryControl>
+          PARSER = new com.google.protobuf.AbstractParser<VideoAdInventoryControl>() {
+        @java.lang.Override
+        public VideoAdInventoryControl parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<VideoAdInventoryControl> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<VideoAdInventoryControl> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int VIDEO_AD_INVENTORY_CONTROL_FIELD_NUMBER = 1;
+    private com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl videoAdInventoryControl_;
+    /**
+     * <pre>
+     * Inventory control for responsive ad containers in reach campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+     * @return Whether the videoAdInventoryControl field is set.
+     */
+    @java.lang.Override
+    public boolean hasVideoAdInventoryControl() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Inventory control for responsive ad containers in reach campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+     * @return The videoAdInventoryControl.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl getVideoAdInventoryControl() {
+      return videoAdInventoryControl_ == null ? com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.getDefaultInstance() : videoAdInventoryControl_;
+    }
+    /**
+     * <pre>
+     * Inventory control for responsive ad containers in reach campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControlOrBuilder getVideoAdInventoryControlOrBuilder() {
+      return videoAdInventoryControl_ == null ? com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.getDefaultInstance() : videoAdInventoryControl_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getVideoAdInventoryControl());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getVideoAdInventoryControl());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings other = (com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings) obj;
+
+      if (hasVideoAdInventoryControl() != other.hasVideoAdInventoryControl()) return false;
+      if (hasVideoAdInventoryControl()) {
+        if (!getVideoAdInventoryControl()
+            .equals(other.getVideoAdInventoryControl())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasVideoAdInventoryControl()) {
+        hash = (37 * hash) + VIDEO_AD_INVENTORY_CONTROL_FIELD_NUMBER;
+        hash = (53 * hash) + getVideoAdInventoryControl().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Settings for Video campaign.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings)
+        com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v17.resources.CampaignProto.internal_static_google_ads_googleads_v17_resources_Campaign_VideoCampaignSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v17.resources.CampaignProto.internal_static_google_ads_googleads_v17_resources_Campaign_VideoCampaignSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.class, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVideoAdInventoryControlFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        videoAdInventoryControl_ = null;
+        if (videoAdInventoryControlBuilder_ != null) {
+          videoAdInventoryControlBuilder_.dispose();
+          videoAdInventoryControlBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v17.resources.CampaignProto.internal_static_google_ads_googleads_v17_resources_Campaign_VideoCampaignSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings getDefaultInstanceForType() {
+        return com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings build() {
+        com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings buildPartial() {
+        com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings result = new com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.videoAdInventoryControl_ = videoAdInventoryControlBuilder_ == null
+              ? videoAdInventoryControl_
+              : videoAdInventoryControlBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings) {
+          return mergeFrom((com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings other) {
+        if (other == com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.getDefaultInstance()) return this;
+        if (other.hasVideoAdInventoryControl()) {
+          mergeVideoAdInventoryControl(other.getVideoAdInventoryControl());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getVideoAdInventoryControlFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl videoAdInventoryControl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.Builder, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControlOrBuilder> videoAdInventoryControlBuilder_;
+      /**
+       * <pre>
+       * Inventory control for responsive ad containers in reach campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+       * @return Whether the videoAdInventoryControl field is set.
+       */
+      public boolean hasVideoAdInventoryControl() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Inventory control for responsive ad containers in reach campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+       * @return The videoAdInventoryControl.
+       */
+      public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl getVideoAdInventoryControl() {
+        if (videoAdInventoryControlBuilder_ == null) {
+          return videoAdInventoryControl_ == null ? com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.getDefaultInstance() : videoAdInventoryControl_;
+        } else {
+          return videoAdInventoryControlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Inventory control for responsive ad containers in reach campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+       */
+      public Builder setVideoAdInventoryControl(com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl value) {
+        if (videoAdInventoryControlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          videoAdInventoryControl_ = value;
+        } else {
+          videoAdInventoryControlBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Inventory control for responsive ad containers in reach campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+       */
+      public Builder setVideoAdInventoryControl(
+          com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.Builder builderForValue) {
+        if (videoAdInventoryControlBuilder_ == null) {
+          videoAdInventoryControl_ = builderForValue.build();
+        } else {
+          videoAdInventoryControlBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Inventory control for responsive ad containers in reach campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+       */
+      public Builder mergeVideoAdInventoryControl(com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl value) {
+        if (videoAdInventoryControlBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            videoAdInventoryControl_ != null &&
+            videoAdInventoryControl_ != com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.getDefaultInstance()) {
+            getVideoAdInventoryControlBuilder().mergeFrom(value);
+          } else {
+            videoAdInventoryControl_ = value;
+          }
+        } else {
+          videoAdInventoryControlBuilder_.mergeFrom(value);
+        }
+        if (videoAdInventoryControl_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Inventory control for responsive ad containers in reach campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+       */
+      public Builder clearVideoAdInventoryControl() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        videoAdInventoryControl_ = null;
+        if (videoAdInventoryControlBuilder_ != null) {
+          videoAdInventoryControlBuilder_.dispose();
+          videoAdInventoryControlBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Inventory control for responsive ad containers in reach campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+       */
+      public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.Builder getVideoAdInventoryControlBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getVideoAdInventoryControlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Inventory control for responsive ad containers in reach campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+       */
+      public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControlOrBuilder getVideoAdInventoryControlOrBuilder() {
+        if (videoAdInventoryControlBuilder_ != null) {
+          return videoAdInventoryControlBuilder_.getMessageOrBuilder();
+        } else {
+          return videoAdInventoryControl_ == null ?
+              com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.getDefaultInstance() : videoAdInventoryControl_;
+        }
+      }
+      /**
+       * <pre>
+       * Inventory control for responsive ad containers in reach campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.Builder, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControlOrBuilder> 
+          getVideoAdInventoryControlFieldBuilder() {
+        if (videoAdInventoryControlBuilder_ == null) {
+          videoAdInventoryControlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.Builder, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControlOrBuilder>(
+                  getVideoAdInventoryControl(),
+                  getParentForChildren(),
+                  isClean());
+          videoAdInventoryControl_ = null;
+        }
+        return videoAdInventoryControlBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings)
+    private static final com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings();
+    }
+
+    public static com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VideoCampaignSettings>
+        PARSER = new com.google.protobuf.AbstractParser<VideoCampaignSettings>() {
+      @java.lang.Override
+      public VideoCampaignSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VideoCampaignSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VideoCampaignSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AssetAutomationSettingOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v17.resources.Campaign.AssetAutomationSetting)
       com.google.protobuf.MessageOrBuilder {
@@ -14814,6 +16309,8 @@ private static final long serialVersionUID = 0L;
     TARGET_SPEND(27),
     PERCENT_CPC(34),
     TARGET_CPM(41),
+    FIXED_CPM(92),
+    TARGET_CPV(93),
     CAMPAIGNBIDDINGSTRATEGY_NOT_SET(0);
     private final int value;
     private CampaignBiddingStrategyCase(int value) {
@@ -14845,6 +16342,8 @@ private static final long serialVersionUID = 0L;
         case 27: return TARGET_SPEND;
         case 34: return PERCENT_CPC;
         case 41: return TARGET_CPM;
+        case 92: return FIXED_CPM;
+        case 93: return TARGET_CPV;
         case 0: return CAMPAIGNBIDDINGSTRATEGY_NOT_SET;
         default: return null;
       }
@@ -15570,6 +17069,44 @@ private static final long serialVersionUID = 0L;
     return demandGenCampaignSettings_ == null ? com.google.ads.googleads.v17.resources.Campaign.DemandGenCampaignSettings.getDefaultInstance() : demandGenCampaignSettings_;
   }
 
+  public static final int VIDEO_CAMPAIGN_SETTINGS_FIELD_NUMBER = 94;
+  private com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings videoCampaignSettings_;
+  /**
+   * <pre>
+   * Settings for Video campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+   * @return Whether the videoCampaignSettings field is set.
+   */
+  @java.lang.Override
+  public boolean hasVideoCampaignSettings() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Settings for Video campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+   * @return The videoCampaignSettings.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings getVideoCampaignSettings() {
+    return videoCampaignSettings_ == null ? com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.getDefaultInstance() : videoCampaignSettings_;
+  }
+  /**
+   * <pre>
+   * Settings for Video campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettingsOrBuilder getVideoCampaignSettingsOrBuilder() {
+    return videoCampaignSettings_ == null ? com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.getDefaultInstance() : videoCampaignSettings_;
+  }
+
   public static final int REAL_TIME_BIDDING_SETTING_FIELD_NUMBER = 39;
   private com.google.ads.googleads.v17.common.RealTimeBiddingSetting realTimeBiddingSetting_;
   /**
@@ -15583,7 +17120,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRealTimeBiddingSetting() {
-    return ((bitField0_ & 0x00000040) != 0);
+    return ((bitField0_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -15623,7 +17160,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNetworkSettings() {
-    return ((bitField0_ & 0x00000080) != 0);
+    return ((bitField0_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -15661,7 +17198,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHotelSetting() {
-    return ((bitField0_ & 0x00000100) != 0);
+    return ((bitField0_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -15699,7 +17236,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDynamicSearchAdsSetting() {
-    return ((bitField0_ & 0x00000200) != 0);
+    return ((bitField0_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -15737,7 +17274,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasShoppingSetting() {
-    return ((bitField0_ & 0x00000400) != 0);
+    return ((bitField0_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -15775,7 +17312,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTargetingSetting() {
-    return ((bitField0_ & 0x00000800) != 0);
+    return ((bitField0_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -15813,7 +17350,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAudienceSetting() {
-    return ((bitField0_ & 0x00001000) != 0);
+    return ((bitField0_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -15851,7 +17388,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGeoTargetTypeSetting() {
-    return ((bitField0_ & 0x00002000) != 0);
+    return ((bitField0_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -15889,7 +17426,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLocalCampaignSetting() {
-    return ((bitField0_ & 0x00004000) != 0);
+    return ((bitField0_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -15927,7 +17464,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAppCampaignSetting() {
-    return ((bitField0_ & 0x00008000) != 0);
+    return ((bitField0_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -16048,7 +17585,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasBaseCampaign() {
-    return ((bitField0_ & 0x00010000) != 0);
+    return ((bitField0_ & 0x00020000) != 0);
   }
   /**
    * <pre>
@@ -16113,7 +17650,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCampaignBudget() {
-    return ((bitField0_ & 0x00020000) != 0);
+    return ((bitField0_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -16272,7 +17809,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartDate() {
-    return ((bitField0_ & 0x00040000) != 0);
+    return ((bitField0_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -16333,7 +17870,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCampaignGroup() {
-    return ((bitField0_ & 0x00080000) != 0);
+    return ((bitField0_ & 0x00100000) != 0);
   }
   /**
    * <pre>
@@ -16395,7 +17932,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEndDate() {
-    return ((bitField0_ & 0x00100000) != 0);
+    return ((bitField0_ & 0x00200000) != 0);
   }
   /**
    * <pre>
@@ -16461,7 +17998,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFinalUrlSuffix() {
-    return ((bitField0_ & 0x00200000) != 0);
+    return ((bitField0_ & 0x00400000) != 0);
   }
   /**
    * <pre>
@@ -16612,7 +18149,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVanityPharma() {
-    return ((bitField0_ & 0x00400000) != 0);
+    return ((bitField0_ & 0x00800000) != 0);
   }
   /**
    * <pre>
@@ -16654,7 +18191,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSelectiveOptimization() {
-    return ((bitField0_ & 0x00800000) != 0);
+    return ((bitField0_ & 0x01000000) != 0);
   }
   /**
    * <pre>
@@ -16701,7 +18238,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOptimizationGoalSetting() {
-    return ((bitField0_ & 0x01000000) != 0);
+    return ((bitField0_ & 0x02000000) != 0);
   }
   /**
    * <pre>
@@ -16741,7 +18278,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTrackingSetting() {
-    return ((bitField0_ & 0x02000000) != 0);
+    return ((bitField0_ & 0x04000000) != 0);
   }
   /**
    * <pre>
@@ -16815,7 +18352,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOptimizationScore() {
-    return ((bitField0_ & 0x04000000) != 0);
+    return ((bitField0_ & 0x08000000) != 0);
   }
   /**
    * <pre>
@@ -17068,7 +18605,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUrlExpansionOptOut() {
-    return ((bitField0_ & 0x08000000) != 0);
+    return ((bitField0_ & 0x10000000) != 0);
   }
   /**
    * <pre>
@@ -17100,7 +18637,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPerformanceMaxUpgrade() {
-    return ((bitField0_ & 0x10000000) != 0);
+    return ((bitField0_ & 0x20000000) != 0);
   }
   /**
    * <pre>
@@ -17140,7 +18677,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHotelPropertyAssetSet() {
-    return ((bitField0_ & 0x20000000) != 0);
+    return ((bitField0_ & 0x40000000) != 0);
   }
   /**
    * <pre>
@@ -17200,7 +18737,7 @@ private static final long serialVersionUID = 0L;
    * @return Whether the listingType field is set.
    */
   @java.lang.Override public boolean hasListingType() {
-    return ((bitField0_ & 0x40000000) != 0);
+    return ((bitField0_ & 0x80000000) != 0);
   }
   /**
    * <pre>
@@ -17995,6 +19532,95 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v17.common.TargetCpm.getDefaultInstance();
   }
 
+  public static final int FIXED_CPM_FIELD_NUMBER = 92;
+  /**
+   * <pre>
+   * A manual bidding strategy with a fixed CPM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+   * @return Whether the fixedCpm field is set.
+   */
+  @java.lang.Override
+  public boolean hasFixedCpm() {
+    return campaignBiddingStrategyCase_ == 92;
+  }
+  /**
+   * <pre>
+   * A manual bidding strategy with a fixed CPM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+   * @return The fixedCpm.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v17.common.FixedCpm getFixedCpm() {
+    if (campaignBiddingStrategyCase_ == 92) {
+       return (com.google.ads.googleads.v17.common.FixedCpm) campaignBiddingStrategy_;
+    }
+    return com.google.ads.googleads.v17.common.FixedCpm.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A manual bidding strategy with a fixed CPM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v17.common.FixedCpmOrBuilder getFixedCpmOrBuilder() {
+    if (campaignBiddingStrategyCase_ == 92) {
+       return (com.google.ads.googleads.v17.common.FixedCpm) campaignBiddingStrategy_;
+    }
+    return com.google.ads.googleads.v17.common.FixedCpm.getDefaultInstance();
+  }
+
+  public static final int TARGET_CPV_FIELD_NUMBER = 93;
+  /**
+   * <pre>
+   * An automated bidding strategy that sets bids to optimize performance
+   * given the target CPV you set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+   * @return Whether the targetCpv field is set.
+   */
+  @java.lang.Override
+  public boolean hasTargetCpv() {
+    return campaignBiddingStrategyCase_ == 93;
+  }
+  /**
+   * <pre>
+   * An automated bidding strategy that sets bids to optimize performance
+   * given the target CPV you set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+   * @return The targetCpv.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v17.common.TargetCpv getTargetCpv() {
+    if (campaignBiddingStrategyCase_ == 93) {
+       return (com.google.ads.googleads.v17.common.TargetCpv) campaignBiddingStrategy_;
+    }
+    return com.google.ads.googleads.v17.common.TargetCpv.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * An automated bidding strategy that sets bids to optimize performance
+   * given the target CPV you set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v17.common.TargetCpvOrBuilder getTargetCpvOrBuilder() {
+    if (campaignBiddingStrategyCase_ == 93) {
+       return (com.google.ads.googleads.v17.common.TargetCpv) campaignBiddingStrategy_;
+    }
+    return com.google.ads.googleads.v17.common.TargetCpv.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -18028,7 +19654,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < urlCustomParameters_.size(); i++) {
       output.writeMessage(12, urlCustomParameters_.get(i));
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       output.writeMessage(14, getNetworkSettings());
     }
     if (experimentType_ != com.google.ads.googleads.v17.enums.CampaignExperimentTypeEnum.CampaignExperimentType.UNSPECIFIED.getNumber()) {
@@ -18061,22 +19687,22 @@ private static final long serialVersionUID = 0L;
     if (campaignBiddingStrategyCase_ == 31) {
       output.writeMessage(31, (com.google.ads.googleads.v17.common.MaximizeConversionValue) campaignBiddingStrategy_);
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       output.writeMessage(32, getHotelSetting());
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       output.writeMessage(33, getDynamicSearchAdsSetting());
     }
     if (campaignBiddingStrategyCase_ == 34) {
       output.writeMessage(34, (com.google.ads.googleads.v17.common.PercentCpc) campaignBiddingStrategy_);
     }
-    if (((bitField0_ & 0x00000400) != 0)) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       output.writeMessage(36, getShoppingSetting());
     }
     if (campaignBiddingStrategyCase_ == 37) {
       output.writeMessage(37, (com.google.ads.googleads.v17.common.ManualCpv) campaignBiddingStrategy_);
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       output.writeMessage(39, getRealTimeBiddingSetting());
     }
     for (int i = 0; i < frequencyCaps_.size(); i++) {
@@ -18088,19 +19714,19 @@ private static final long serialVersionUID = 0L;
     if (videoBrandSafetySuitability_ != com.google.ads.googleads.v17.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.UNSPECIFIED.getNumber()) {
       output.writeEnum(42, videoBrandSafetySuitability_);
     }
-    if (((bitField0_ & 0x00000800) != 0)) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       output.writeMessage(43, getTargetingSetting());
     }
-    if (((bitField0_ & 0x00400000) != 0)) {
+    if (((bitField0_ & 0x00800000) != 0)) {
       output.writeMessage(44, getVanityPharma());
     }
-    if (((bitField0_ & 0x00800000) != 0)) {
+    if (((bitField0_ & 0x01000000) != 0)) {
       output.writeMessage(45, getSelectiveOptimization());
     }
-    if (((bitField0_ & 0x02000000) != 0)) {
+    if (((bitField0_ & 0x04000000) != 0)) {
       output.writeMessage(46, getTrackingSetting());
     }
-    if (((bitField0_ & 0x00002000) != 0)) {
+    if (((bitField0_ & 0x00004000) != 0)) {
       output.writeMessage(47, getGeoTargetTypeSetting());
     }
     if (campaignBiddingStrategyCase_ == 48) {
@@ -18109,19 +19735,19 @@ private static final long serialVersionUID = 0L;
     if (campaignBiddingStrategyCase_ == 49) {
       output.writeMessage(49, (com.google.ads.googleads.v17.common.Commission) campaignBiddingStrategy_);
     }
-    if (((bitField0_ & 0x00004000) != 0)) {
+    if (((bitField0_ & 0x00008000) != 0)) {
       output.writeMessage(50, getLocalCampaignSetting());
     }
-    if (((bitField0_ & 0x00008000) != 0)) {
+    if (((bitField0_ & 0x00010000) != 0)) {
       output.writeMessage(51, getAppCampaignSetting());
     }
     if (paymentMode_ != com.google.ads.googleads.v17.enums.PaymentModeEnum.PaymentMode.UNSPECIFIED.getNumber()) {
       output.writeEnum(52, paymentMode_);
     }
-    if (((bitField0_ & 0x01000000) != 0)) {
+    if (((bitField0_ & 0x02000000) != 0)) {
       output.writeMessage(54, getOptimizationGoalSetting());
     }
-    if (((bitField0_ & 0x00010000) != 0)) {
+    if (((bitField0_ & 0x00020000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 56, baseCampaign_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
@@ -18136,19 +19762,19 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < labels_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 61, labels_.getRaw(i));
     }
-    if (((bitField0_ & 0x00020000) != 0)) {
+    if (((bitField0_ & 0x00040000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 62, campaignBudget_);
     }
-    if (((bitField0_ & 0x00040000) != 0)) {
+    if (((bitField0_ & 0x00080000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 63, startDate_);
     }
-    if (((bitField0_ & 0x00100000) != 0)) {
+    if (((bitField0_ & 0x00200000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 64, endDate_);
     }
-    if (((bitField0_ & 0x00200000) != 0)) {
+    if (((bitField0_ & 0x00400000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 65, finalUrlSuffix_);
     }
-    if (((bitField0_ & 0x04000000) != 0)) {
+    if (((bitField0_ & 0x08000000) != 0)) {
       output.writeDouble(66, optimizationScore_);
     }
     if (campaignBiddingStrategyCase_ == 67) {
@@ -18164,10 +19790,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessibleBiddingStrategy_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 71, accessibleBiddingStrategy_);
     }
-    if (((bitField0_ & 0x08000000) != 0)) {
+    if (((bitField0_ & 0x10000000) != 0)) {
       output.writeBool(72, urlExpansionOptOut_);
     }
-    if (((bitField0_ & 0x00001000) != 0)) {
+    if (((bitField0_ & 0x00002000) != 0)) {
       output.writeMessage(73, getAudienceSetting());
     }
     if (campaignBiddingStrategyCase_ == 74) {
@@ -18176,10 +19802,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(75, getLocalServicesCampaignSettings());
     }
-    if (((bitField0_ & 0x00080000) != 0)) {
+    if (((bitField0_ & 0x00100000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 76, campaignGroup_);
     }
-    if (((bitField0_ & 0x10000000) != 0)) {
+    if (((bitField0_ & 0x20000000) != 0)) {
       output.writeMessage(77, getPerformanceMaxUpgrade());
     }
     if (biddingStrategySystemStatus_ != com.google.ads.googleads.v17.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus.UNSPECIFIED.getNumber()) {
@@ -18202,13 +19828,13 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < primaryStatusReasons_.size(); i++) {
       output.writeEnumNoTag(primaryStatusReasons_.get(i));
     }
-    if (((bitField0_ & 0x20000000) != 0)) {
+    if (((bitField0_ & 0x40000000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 83, hotelPropertyAssetSet_);
     }
     if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(85, getTravelCampaignSettings());
     }
-    if (((bitField0_ & 0x40000000) != 0)) {
+    if (((bitField0_ & 0x80000000) != 0)) {
       output.writeEnum(86, listingType_);
     }
     for (int i = 0; i < assetAutomationSettings_.size(); i++) {
@@ -18219,6 +19845,15 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(91, getDemandGenCampaignSettings());
+    }
+    if (campaignBiddingStrategyCase_ == 92) {
+      output.writeMessage(92, (com.google.ads.googleads.v17.common.FixedCpm) campaignBiddingStrategy_);
+    }
+    if (campaignBiddingStrategyCase_ == 93) {
+      output.writeMessage(93, (com.google.ads.googleads.v17.common.TargetCpv) campaignBiddingStrategy_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeMessage(94, getVideoCampaignSettings());
     }
     getUnknownFields().writeTo(output);
   }
@@ -18252,7 +19887,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, urlCustomParameters_.get(i));
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getNetworkSettings());
     }
@@ -18296,11 +19931,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(31, (com.google.ads.googleads.v17.common.MaximizeConversionValue) campaignBiddingStrategy_);
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(32, getHotelSetting());
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(33, getDynamicSearchAdsSetting());
     }
@@ -18308,7 +19943,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(34, (com.google.ads.googleads.v17.common.PercentCpc) campaignBiddingStrategy_);
     }
-    if (((bitField0_ & 0x00000400) != 0)) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(36, getShoppingSetting());
     }
@@ -18316,7 +19951,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(37, (com.google.ads.googleads.v17.common.ManualCpv) campaignBiddingStrategy_);
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(39, getRealTimeBiddingSetting());
     }
@@ -18332,23 +19967,23 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(42, videoBrandSafetySuitability_);
     }
-    if (((bitField0_ & 0x00000800) != 0)) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(43, getTargetingSetting());
     }
-    if (((bitField0_ & 0x00400000) != 0)) {
+    if (((bitField0_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(44, getVanityPharma());
     }
-    if (((bitField0_ & 0x00800000) != 0)) {
+    if (((bitField0_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(45, getSelectiveOptimization());
     }
-    if (((bitField0_ & 0x02000000) != 0)) {
+    if (((bitField0_ & 0x04000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(46, getTrackingSetting());
     }
-    if (((bitField0_ & 0x00002000) != 0)) {
+    if (((bitField0_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(47, getGeoTargetTypeSetting());
     }
@@ -18360,11 +19995,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(49, (com.google.ads.googleads.v17.common.Commission) campaignBiddingStrategy_);
     }
-    if (((bitField0_ & 0x00004000) != 0)) {
+    if (((bitField0_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(50, getLocalCampaignSetting());
     }
-    if (((bitField0_ & 0x00008000) != 0)) {
+    if (((bitField0_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(51, getAppCampaignSetting());
     }
@@ -18372,11 +20007,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(52, paymentMode_);
     }
-    if (((bitField0_ & 0x01000000) != 0)) {
+    if (((bitField0_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(54, getOptimizationGoalSetting());
     }
-    if (((bitField0_ & 0x00010000) != 0)) {
+    if (((bitField0_ & 0x00020000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(56, baseCampaign_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
@@ -18397,19 +20032,19 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 2 * getLabelsList().size();
     }
-    if (((bitField0_ & 0x00020000) != 0)) {
+    if (((bitField0_ & 0x00040000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(62, campaignBudget_);
     }
-    if (((bitField0_ & 0x00040000) != 0)) {
+    if (((bitField0_ & 0x00080000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(63, startDate_);
     }
-    if (((bitField0_ & 0x00100000) != 0)) {
+    if (((bitField0_ & 0x00200000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(64, endDate_);
     }
-    if (((bitField0_ & 0x00200000) != 0)) {
+    if (((bitField0_ & 0x00400000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(65, finalUrlSuffix_);
     }
-    if (((bitField0_ & 0x04000000) != 0)) {
+    if (((bitField0_ & 0x08000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(66, optimizationScore_);
     }
@@ -18431,11 +20066,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessibleBiddingStrategy_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(71, accessibleBiddingStrategy_);
     }
-    if (((bitField0_ & 0x08000000) != 0)) {
+    if (((bitField0_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(72, urlExpansionOptOut_);
     }
-    if (((bitField0_ & 0x00001000) != 0)) {
+    if (((bitField0_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(73, getAudienceSetting());
     }
@@ -18447,10 +20082,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(75, getLocalServicesCampaignSettings());
     }
-    if (((bitField0_ & 0x00080000) != 0)) {
+    if (((bitField0_ & 0x00100000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(76, campaignGroup_);
     }
-    if (((bitField0_ & 0x10000000) != 0)) {
+    if (((bitField0_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(77, getPerformanceMaxUpgrade());
     }
@@ -18486,14 +20121,14 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }primaryStatusReasonsMemoizedSerializedSize = dataSize;
     }
-    if (((bitField0_ & 0x20000000) != 0)) {
+    if (((bitField0_ & 0x40000000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(83, hotelPropertyAssetSet_);
     }
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(85, getTravelCampaignSettings());
     }
-    if (((bitField0_ & 0x40000000) != 0)) {
+    if (((bitField0_ & 0x80000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(86, listingType_);
     }
@@ -18508,6 +20143,18 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(91, getDemandGenCampaignSettings());
+    }
+    if (campaignBiddingStrategyCase_ == 92) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(92, (com.google.ads.googleads.v17.common.FixedCpm) campaignBiddingStrategy_);
+    }
+    if (campaignBiddingStrategyCase_ == 93) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(93, (com.google.ads.googleads.v17.common.TargetCpv) campaignBiddingStrategy_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(94, getVideoCampaignSettings());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -18565,6 +20212,11 @@ private static final long serialVersionUID = 0L;
     if (hasDemandGenCampaignSettings()) {
       if (!getDemandGenCampaignSettings()
           .equals(other.getDemandGenCampaignSettings())) return false;
+    }
+    if (hasVideoCampaignSettings() != other.hasVideoCampaignSettings()) return false;
+    if (hasVideoCampaignSettings()) {
+      if (!getVideoCampaignSettings()
+          .equals(other.getVideoCampaignSettings())) return false;
     }
     if (hasRealTimeBiddingSetting() != other.hasRealTimeBiddingSetting()) return false;
     if (hasRealTimeBiddingSetting()) {
@@ -18764,6 +20416,14 @@ private static final long serialVersionUID = 0L;
         if (!getTargetCpm()
             .equals(other.getTargetCpm())) return false;
         break;
+      case 92:
+        if (!getFixedCpm()
+            .equals(other.getFixedCpm())) return false;
+        break;
+      case 93:
+        if (!getTargetCpv()
+            .equals(other.getTargetCpv())) return false;
+        break;
       case 0:
       default:
     }
@@ -18826,6 +20486,10 @@ private static final long serialVersionUID = 0L;
     if (hasDemandGenCampaignSettings()) {
       hash = (37 * hash) + DEMAND_GEN_CAMPAIGN_SETTINGS_FIELD_NUMBER;
       hash = (53 * hash) + getDemandGenCampaignSettings().hashCode();
+    }
+    if (hasVideoCampaignSettings()) {
+      hash = (37 * hash) + VIDEO_CAMPAIGN_SETTINGS_FIELD_NUMBER;
+      hash = (53 * hash) + getVideoCampaignSettings().hashCode();
     }
     if (hasRealTimeBiddingSetting()) {
       hash = (37 * hash) + REAL_TIME_BIDDING_SETTING_FIELD_NUMBER;
@@ -19018,6 +20682,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + TARGET_CPM_FIELD_NUMBER;
         hash = (53 * hash) + getTargetCpm().hashCode();
         break;
+      case 92:
+        hash = (37 * hash) + FIXED_CPM_FIELD_NUMBER;
+        hash = (53 * hash) + getFixedCpm().hashCode();
+        break;
+      case 93:
+        hash = (37 * hash) + TARGET_CPV_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetCpv().hashCode();
+        break;
       case 0:
       default:
     }
@@ -19159,6 +20831,7 @@ private static final long serialVersionUID = 0L;
         getLocalServicesCampaignSettingsFieldBuilder();
         getTravelCampaignSettingsFieldBuilder();
         getDemandGenCampaignSettingsFieldBuilder();
+        getVideoCampaignSettingsFieldBuilder();
         getRealTimeBiddingSettingFieldBuilder();
         getNetworkSettingsFieldBuilder();
         getHotelSettingFieldBuilder();
@@ -19218,6 +20891,11 @@ private static final long serialVersionUID = 0L;
       if (demandGenCampaignSettingsBuilder_ != null) {
         demandGenCampaignSettingsBuilder_.dispose();
         demandGenCampaignSettingsBuilder_ = null;
+      }
+      videoCampaignSettings_ = null;
+      if (videoCampaignSettingsBuilder_ != null) {
+        videoCampaignSettingsBuilder_.dispose();
+        videoCampaignSettingsBuilder_ = null;
       }
       realTimeBiddingSetting_ = null;
       if (realTimeBiddingSettingBuilder_ != null) {
@@ -19286,7 +20964,7 @@ private static final long serialVersionUID = 0L;
         frequencyCaps_ = null;
         frequencyCapsBuilder_.clear();
       }
-      bitField1_ = (bitField1_ & ~0x00000010);
+      bitField1_ = (bitField1_ & ~0x00000020);
       videoBrandSafetySuitability_ = 0;
       vanityPharma_ = null;
       if (vanityPharmaBuilder_ != null) {
@@ -19311,9 +20989,9 @@ private static final long serialVersionUID = 0L;
       paymentMode_ = 0;
       optimizationScore_ = 0D;
       excludedParentAssetFieldTypes_ = java.util.Collections.emptyList();
-      bitField1_ = (bitField1_ & ~0x00001000);
-      excludedParentAssetSetTypes_ = java.util.Collections.emptyList();
       bitField1_ = (bitField1_ & ~0x00002000);
+      excludedParentAssetSetTypes_ = java.util.Collections.emptyList();
+      bitField1_ = (bitField1_ & ~0x00004000);
       urlExpansionOptOut_ = false;
       performanceMaxUpgrade_ = null;
       if (performanceMaxUpgradeBuilder_ != null) {
@@ -19328,7 +21006,7 @@ private static final long serialVersionUID = 0L;
         assetAutomationSettings_ = null;
         assetAutomationSettingsBuilder_.clear();
       }
-      bitField1_ = (bitField1_ & ~0x00040000);
+      bitField1_ = (bitField1_ & ~0x00080000);
       keywordMatchType_ = 0;
       if (commissionBuilder_ != null) {
         commissionBuilder_.clear();
@@ -19368,6 +21046,12 @@ private static final long serialVersionUID = 0L;
       }
       if (targetCpmBuilder_ != null) {
         targetCpmBuilder_.clear();
+      }
+      if (fixedCpmBuilder_ != null) {
+        fixedCpmBuilder_.clear();
+      }
+      if (targetCpvBuilder_ != null) {
+        targetCpvBuilder_.clear();
       }
       campaignBiddingStrategyCase_ = 0;
       campaignBiddingStrategy_ = null;
@@ -19422,28 +21106,28 @@ private static final long serialVersionUID = 0L;
         result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
       }
       if (frequencyCapsBuilder_ == null) {
-        if (((bitField1_ & 0x00000010) != 0)) {
+        if (((bitField1_ & 0x00000020) != 0)) {
           frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
-          bitField1_ = (bitField1_ & ~0x00000010);
+          bitField1_ = (bitField1_ & ~0x00000020);
         }
         result.frequencyCaps_ = frequencyCaps_;
       } else {
         result.frequencyCaps_ = frequencyCapsBuilder_.build();
       }
-      if (((bitField1_ & 0x00001000) != 0)) {
+      if (((bitField1_ & 0x00002000) != 0)) {
         excludedParentAssetFieldTypes_ = java.util.Collections.unmodifiableList(excludedParentAssetFieldTypes_);
-        bitField1_ = (bitField1_ & ~0x00001000);
+        bitField1_ = (bitField1_ & ~0x00002000);
       }
       result.excludedParentAssetFieldTypes_ = excludedParentAssetFieldTypes_;
-      if (((bitField1_ & 0x00002000) != 0)) {
+      if (((bitField1_ & 0x00004000) != 0)) {
         excludedParentAssetSetTypes_ = java.util.Collections.unmodifiableList(excludedParentAssetSetTypes_);
-        bitField1_ = (bitField1_ & ~0x00002000);
+        bitField1_ = (bitField1_ & ~0x00004000);
       }
       result.excludedParentAssetSetTypes_ = excludedParentAssetSetTypes_;
       if (assetAutomationSettingsBuilder_ == null) {
-        if (((bitField1_ & 0x00040000) != 0)) {
+        if (((bitField1_ & 0x00080000) != 0)) {
           assetAutomationSettings_ = java.util.Collections.unmodifiableList(assetAutomationSettings_);
-          bitField1_ = (bitField1_ & ~0x00040000);
+          bitField1_ = (bitField1_ & ~0x00080000);
         }
         result.assetAutomationSettings_ = assetAutomationSettings_;
       } else {
@@ -19509,161 +21193,167 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
-        result.realTimeBiddingSetting_ = realTimeBiddingSettingBuilder_ == null
-            ? realTimeBiddingSetting_
-            : realTimeBiddingSettingBuilder_.build();
+        result.videoCampaignSettings_ = videoCampaignSettingsBuilder_ == null
+            ? videoCampaignSettings_
+            : videoCampaignSettingsBuilder_.build();
         to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
-        result.networkSettings_ = networkSettingsBuilder_ == null
-            ? networkSettings_
-            : networkSettingsBuilder_.build();
+        result.realTimeBiddingSetting_ = realTimeBiddingSettingBuilder_ == null
+            ? realTimeBiddingSetting_
+            : realTimeBiddingSettingBuilder_.build();
         to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
-        result.hotelSetting_ = hotelSettingBuilder_ == null
-            ? hotelSetting_
-            : hotelSettingBuilder_.build();
+        result.networkSettings_ = networkSettingsBuilder_ == null
+            ? networkSettings_
+            : networkSettingsBuilder_.build();
         to_bitField0_ |= 0x00000100;
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
-        result.dynamicSearchAdsSetting_ = dynamicSearchAdsSettingBuilder_ == null
-            ? dynamicSearchAdsSetting_
-            : dynamicSearchAdsSettingBuilder_.build();
+        result.hotelSetting_ = hotelSettingBuilder_ == null
+            ? hotelSetting_
+            : hotelSettingBuilder_.build();
         to_bitField0_ |= 0x00000200;
       }
       if (((from_bitField0_ & 0x00100000) != 0)) {
-        result.shoppingSetting_ = shoppingSettingBuilder_ == null
-            ? shoppingSetting_
-            : shoppingSettingBuilder_.build();
+        result.dynamicSearchAdsSetting_ = dynamicSearchAdsSettingBuilder_ == null
+            ? dynamicSearchAdsSetting_
+            : dynamicSearchAdsSettingBuilder_.build();
         to_bitField0_ |= 0x00000400;
       }
       if (((from_bitField0_ & 0x00200000) != 0)) {
-        result.targetingSetting_ = targetingSettingBuilder_ == null
-            ? targetingSetting_
-            : targetingSettingBuilder_.build();
+        result.shoppingSetting_ = shoppingSettingBuilder_ == null
+            ? shoppingSetting_
+            : shoppingSettingBuilder_.build();
         to_bitField0_ |= 0x00000800;
       }
       if (((from_bitField0_ & 0x00400000) != 0)) {
-        result.audienceSetting_ = audienceSettingBuilder_ == null
-            ? audienceSetting_
-            : audienceSettingBuilder_.build();
+        result.targetingSetting_ = targetingSettingBuilder_ == null
+            ? targetingSetting_
+            : targetingSettingBuilder_.build();
         to_bitField0_ |= 0x00001000;
       }
       if (((from_bitField0_ & 0x00800000) != 0)) {
-        result.geoTargetTypeSetting_ = geoTargetTypeSettingBuilder_ == null
-            ? geoTargetTypeSetting_
-            : geoTargetTypeSettingBuilder_.build();
+        result.audienceSetting_ = audienceSettingBuilder_ == null
+            ? audienceSetting_
+            : audienceSettingBuilder_.build();
         to_bitField0_ |= 0x00002000;
       }
       if (((from_bitField0_ & 0x01000000) != 0)) {
-        result.localCampaignSetting_ = localCampaignSettingBuilder_ == null
-            ? localCampaignSetting_
-            : localCampaignSettingBuilder_.build();
+        result.geoTargetTypeSetting_ = geoTargetTypeSettingBuilder_ == null
+            ? geoTargetTypeSetting_
+            : geoTargetTypeSettingBuilder_.build();
         to_bitField0_ |= 0x00004000;
       }
       if (((from_bitField0_ & 0x02000000) != 0)) {
-        result.appCampaignSetting_ = appCampaignSettingBuilder_ == null
-            ? appCampaignSetting_
-            : appCampaignSettingBuilder_.build();
+        result.localCampaignSetting_ = localCampaignSettingBuilder_ == null
+            ? localCampaignSetting_
+            : localCampaignSettingBuilder_.build();
         to_bitField0_ |= 0x00008000;
       }
       if (((from_bitField0_ & 0x04000000) != 0)) {
+        result.appCampaignSetting_ = appCampaignSettingBuilder_ == null
+            ? appCampaignSetting_
+            : appCampaignSettingBuilder_.build();
+        to_bitField0_ |= 0x00010000;
+      }
+      if (((from_bitField0_ & 0x08000000) != 0)) {
         labels_.makeImmutable();
         result.labels_ = labels_;
       }
-      if (((from_bitField0_ & 0x08000000) != 0)) {
+      if (((from_bitField0_ & 0x10000000) != 0)) {
         result.experimentType_ = experimentType_;
       }
-      if (((from_bitField0_ & 0x10000000) != 0)) {
-        result.baseCampaign_ = baseCampaign_;
-        to_bitField0_ |= 0x00010000;
-      }
       if (((from_bitField0_ & 0x20000000) != 0)) {
-        result.campaignBudget_ = campaignBudget_;
+        result.baseCampaign_ = baseCampaign_;
         to_bitField0_ |= 0x00020000;
       }
       if (((from_bitField0_ & 0x40000000) != 0)) {
-        result.biddingStrategyType_ = biddingStrategyType_;
+        result.campaignBudget_ = campaignBudget_;
+        to_bitField0_ |= 0x00040000;
       }
       if (((from_bitField0_ & 0x80000000) != 0)) {
-        result.accessibleBiddingStrategy_ = accessibleBiddingStrategy_;
+        result.biddingStrategyType_ = biddingStrategyType_;
       }
       result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartial1(com.google.ads.googleads.v17.resources.Campaign result) {
       int from_bitField1_ = bitField1_;
-      int to_bitField0_ = 0;
       if (((from_bitField1_ & 0x00000001) != 0)) {
-        result.startDate_ = startDate_;
-        to_bitField0_ |= 0x00040000;
+        result.accessibleBiddingStrategy_ = accessibleBiddingStrategy_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField1_ & 0x00000002) != 0)) {
-        result.campaignGroup_ = campaignGroup_;
+        result.startDate_ = startDate_;
         to_bitField0_ |= 0x00080000;
       }
       if (((from_bitField1_ & 0x00000004) != 0)) {
-        result.endDate_ = endDate_;
+        result.campaignGroup_ = campaignGroup_;
         to_bitField0_ |= 0x00100000;
       }
       if (((from_bitField1_ & 0x00000008) != 0)) {
-        result.finalUrlSuffix_ = finalUrlSuffix_;
+        result.endDate_ = endDate_;
         to_bitField0_ |= 0x00200000;
       }
-      if (((from_bitField1_ & 0x00000020) != 0)) {
-        result.videoBrandSafetySuitability_ = videoBrandSafetySuitability_;
+      if (((from_bitField1_ & 0x00000010) != 0)) {
+        result.finalUrlSuffix_ = finalUrlSuffix_;
+        to_bitField0_ |= 0x00400000;
       }
       if (((from_bitField1_ & 0x00000040) != 0)) {
+        result.videoBrandSafetySuitability_ = videoBrandSafetySuitability_;
+      }
+      if (((from_bitField1_ & 0x00000080) != 0)) {
         result.vanityPharma_ = vanityPharmaBuilder_ == null
             ? vanityPharma_
             : vanityPharmaBuilder_.build();
-        to_bitField0_ |= 0x00400000;
-      }
-      if (((from_bitField1_ & 0x00000080) != 0)) {
-        result.selectiveOptimization_ = selectiveOptimizationBuilder_ == null
-            ? selectiveOptimization_
-            : selectiveOptimizationBuilder_.build();
         to_bitField0_ |= 0x00800000;
       }
       if (((from_bitField1_ & 0x00000100) != 0)) {
-        result.optimizationGoalSetting_ = optimizationGoalSettingBuilder_ == null
-            ? optimizationGoalSetting_
-            : optimizationGoalSettingBuilder_.build();
+        result.selectiveOptimization_ = selectiveOptimizationBuilder_ == null
+            ? selectiveOptimization_
+            : selectiveOptimizationBuilder_.build();
         to_bitField0_ |= 0x01000000;
       }
       if (((from_bitField1_ & 0x00000200) != 0)) {
-        result.trackingSetting_ = trackingSettingBuilder_ == null
-            ? trackingSetting_
-            : trackingSettingBuilder_.build();
+        result.optimizationGoalSetting_ = optimizationGoalSettingBuilder_ == null
+            ? optimizationGoalSetting_
+            : optimizationGoalSettingBuilder_.build();
         to_bitField0_ |= 0x02000000;
       }
       if (((from_bitField1_ & 0x00000400) != 0)) {
-        result.paymentMode_ = paymentMode_;
-      }
-      if (((from_bitField1_ & 0x00000800) != 0)) {
-        result.optimizationScore_ = optimizationScore_;
+        result.trackingSetting_ = trackingSettingBuilder_ == null
+            ? trackingSetting_
+            : trackingSettingBuilder_.build();
         to_bitField0_ |= 0x04000000;
       }
-      if (((from_bitField1_ & 0x00004000) != 0)) {
-        result.urlExpansionOptOut_ = urlExpansionOptOut_;
+      if (((from_bitField1_ & 0x00000800) != 0)) {
+        result.paymentMode_ = paymentMode_;
+      }
+      if (((from_bitField1_ & 0x00001000) != 0)) {
+        result.optimizationScore_ = optimizationScore_;
         to_bitField0_ |= 0x08000000;
       }
       if (((from_bitField1_ & 0x00008000) != 0)) {
-        result.performanceMaxUpgrade_ = performanceMaxUpgradeBuilder_ == null
-            ? performanceMaxUpgrade_
-            : performanceMaxUpgradeBuilder_.build();
+        result.urlExpansionOptOut_ = urlExpansionOptOut_;
         to_bitField0_ |= 0x10000000;
       }
       if (((from_bitField1_ & 0x00010000) != 0)) {
-        result.hotelPropertyAssetSet_ = hotelPropertyAssetSet_;
+        result.performanceMaxUpgrade_ = performanceMaxUpgradeBuilder_ == null
+            ? performanceMaxUpgrade_
+            : performanceMaxUpgradeBuilder_.build();
         to_bitField0_ |= 0x20000000;
       }
       if (((from_bitField1_ & 0x00020000) != 0)) {
-        result.listingType_ = listingType_;
+        result.hotelPropertyAssetSet_ = hotelPropertyAssetSet_;
         to_bitField0_ |= 0x40000000;
       }
-      if (((from_bitField1_ & 0x00080000) != 0)) {
+      if (((from_bitField1_ & 0x00040000) != 0)) {
+        result.listingType_ = listingType_;
+        to_bitField0_ |= 0x80000000;
+      }
+      if (((from_bitField1_ & 0x00100000) != 0)) {
         result.keywordMatchType_ = keywordMatchType_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -19727,6 +21417,14 @@ private static final long serialVersionUID = 0L;
       if (campaignBiddingStrategyCase_ == 41 &&
           targetCpmBuilder_ != null) {
         result.campaignBiddingStrategy_ = targetCpmBuilder_.build();
+      }
+      if (campaignBiddingStrategyCase_ == 92 &&
+          fixedCpmBuilder_ != null) {
+        result.campaignBiddingStrategy_ = fixedCpmBuilder_.build();
+      }
+      if (campaignBiddingStrategyCase_ == 93 &&
+          targetCpvBuilder_ != null) {
+        result.campaignBiddingStrategy_ = targetCpvBuilder_.build();
       }
     }
 
@@ -19858,6 +21556,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasDemandGenCampaignSettings()) {
         mergeDemandGenCampaignSettings(other.getDemandGenCampaignSettings());
       }
+      if (other.hasVideoCampaignSettings()) {
+        mergeVideoCampaignSettings(other.getVideoCampaignSettings());
+      }
       if (other.hasRealTimeBiddingSetting()) {
         mergeRealTimeBiddingSetting(other.getRealTimeBiddingSetting());
       }
@@ -19891,7 +21592,7 @@ private static final long serialVersionUID = 0L;
       if (!other.labels_.isEmpty()) {
         if (labels_.isEmpty()) {
           labels_ = other.labels_;
-          bitField0_ |= 0x04000000;
+          bitField0_ |= 0x08000000;
         } else {
           ensureLabelsIsMutable();
           labels_.addAll(other.labels_);
@@ -19903,12 +21604,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBaseCampaign()) {
         baseCampaign_ = other.baseCampaign_;
-        bitField0_ |= 0x10000000;
+        bitField0_ |= 0x20000000;
         onChanged();
       }
       if (other.hasCampaignBudget()) {
         campaignBudget_ = other.campaignBudget_;
-        bitField0_ |= 0x20000000;
+        bitField0_ |= 0x40000000;
         onChanged();
       }
       if (other.biddingStrategyType_ != 0) {
@@ -19916,34 +21617,34 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getAccessibleBiddingStrategy().isEmpty()) {
         accessibleBiddingStrategy_ = other.accessibleBiddingStrategy_;
-        bitField0_ |= 0x80000000;
+        bitField1_ |= 0x00000001;
         onChanged();
       }
       if (other.hasStartDate()) {
         startDate_ = other.startDate_;
-        bitField1_ |= 0x00000001;
+        bitField1_ |= 0x00000002;
         onChanged();
       }
       if (other.hasCampaignGroup()) {
         campaignGroup_ = other.campaignGroup_;
-        bitField1_ |= 0x00000002;
+        bitField1_ |= 0x00000004;
         onChanged();
       }
       if (other.hasEndDate()) {
         endDate_ = other.endDate_;
-        bitField1_ |= 0x00000004;
+        bitField1_ |= 0x00000008;
         onChanged();
       }
       if (other.hasFinalUrlSuffix()) {
         finalUrlSuffix_ = other.finalUrlSuffix_;
-        bitField1_ |= 0x00000008;
+        bitField1_ |= 0x00000010;
         onChanged();
       }
       if (frequencyCapsBuilder_ == null) {
         if (!other.frequencyCaps_.isEmpty()) {
           if (frequencyCaps_.isEmpty()) {
             frequencyCaps_ = other.frequencyCaps_;
-            bitField1_ = (bitField1_ & ~0x00000010);
+            bitField1_ = (bitField1_ & ~0x00000020);
           } else {
             ensureFrequencyCapsIsMutable();
             frequencyCaps_.addAll(other.frequencyCaps_);
@@ -19956,7 +21657,7 @@ private static final long serialVersionUID = 0L;
             frequencyCapsBuilder_.dispose();
             frequencyCapsBuilder_ = null;
             frequencyCaps_ = other.frequencyCaps_;
-            bitField1_ = (bitField1_ & ~0x00000010);
+            bitField1_ = (bitField1_ & ~0x00000020);
             frequencyCapsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFrequencyCapsFieldBuilder() : null;
@@ -19989,7 +21690,7 @@ private static final long serialVersionUID = 0L;
       if (!other.excludedParentAssetFieldTypes_.isEmpty()) {
         if (excludedParentAssetFieldTypes_.isEmpty()) {
           excludedParentAssetFieldTypes_ = other.excludedParentAssetFieldTypes_;
-          bitField1_ = (bitField1_ & ~0x00001000);
+          bitField1_ = (bitField1_ & ~0x00002000);
         } else {
           ensureExcludedParentAssetFieldTypesIsMutable();
           excludedParentAssetFieldTypes_.addAll(other.excludedParentAssetFieldTypes_);
@@ -19999,7 +21700,7 @@ private static final long serialVersionUID = 0L;
       if (!other.excludedParentAssetSetTypes_.isEmpty()) {
         if (excludedParentAssetSetTypes_.isEmpty()) {
           excludedParentAssetSetTypes_ = other.excludedParentAssetSetTypes_;
-          bitField1_ = (bitField1_ & ~0x00002000);
+          bitField1_ = (bitField1_ & ~0x00004000);
         } else {
           ensureExcludedParentAssetSetTypesIsMutable();
           excludedParentAssetSetTypes_.addAll(other.excludedParentAssetSetTypes_);
@@ -20014,7 +21715,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHotelPropertyAssetSet()) {
         hotelPropertyAssetSet_ = other.hotelPropertyAssetSet_;
-        bitField1_ |= 0x00010000;
+        bitField1_ |= 0x00020000;
         onChanged();
       }
       if (other.hasListingType()) {
@@ -20024,7 +21725,7 @@ private static final long serialVersionUID = 0L;
         if (!other.assetAutomationSettings_.isEmpty()) {
           if (assetAutomationSettings_.isEmpty()) {
             assetAutomationSettings_ = other.assetAutomationSettings_;
-            bitField1_ = (bitField1_ & ~0x00040000);
+            bitField1_ = (bitField1_ & ~0x00080000);
           } else {
             ensureAssetAutomationSettingsIsMutable();
             assetAutomationSettings_.addAll(other.assetAutomationSettings_);
@@ -20037,7 +21738,7 @@ private static final long serialVersionUID = 0L;
             assetAutomationSettingsBuilder_.dispose();
             assetAutomationSettingsBuilder_ = null;
             assetAutomationSettings_ = other.assetAutomationSettings_;
-            bitField1_ = (bitField1_ & ~0x00040000);
+            bitField1_ = (bitField1_ & ~0x00080000);
             assetAutomationSettingsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAssetAutomationSettingsFieldBuilder() : null;
@@ -20106,6 +21807,14 @@ private static final long serialVersionUID = 0L;
         }
         case TARGET_CPM: {
           mergeTargetCpm(other.getTargetCpm());
+          break;
+        }
+        case FIXED_CPM: {
+          mergeFixedCpm(other.getFixedCpm());
+          break;
+        }
+        case TARGET_CPV: {
+          mergeTargetCpv(other.getTargetCpv());
           break;
         }
         case CAMPAIGNBIDDINGSTRATEGY_NOT_SET: {
@@ -20180,12 +21889,12 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getNetworkSettingsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00040000;
               break;
             } // case 114
             case 136: {
               experimentType_ = input.readEnum();
-              bitField0_ |= 0x08000000;
+              bitField0_ |= 0x10000000;
               break;
             } // case 136
             case 168: {
@@ -20195,7 +21904,7 @@ private static final long serialVersionUID = 0L;
             } // case 168
             case 176: {
               biddingStrategyType_ = input.readEnum();
-              bitField0_ |= 0x40000000;
+              bitField0_ |= 0x80000000;
               break;
             } // case 176
             case 194: {
@@ -20251,14 +21960,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getHotelSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00080000;
               break;
             } // case 258
             case 266: {
               input.readMessage(
                   getDynamicSearchAdsSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00100000;
               break;
             } // case 266
             case 274: {
@@ -20272,7 +21981,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getShoppingSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00200000;
               break;
             } // case 290
             case 298: {
@@ -20286,7 +21995,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getRealTimeBiddingSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00020000;
               break;
             } // case 314
             case 322: {
@@ -20311,42 +22020,42 @@ private static final long serialVersionUID = 0L;
             } // case 330
             case 336: {
               videoBrandSafetySuitability_ = input.readEnum();
-              bitField1_ |= 0x00000020;
+              bitField1_ |= 0x00000040;
               break;
             } // case 336
             case 346: {
               input.readMessage(
                   getTargetingSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00400000;
               break;
             } // case 346
             case 354: {
               input.readMessage(
                   getVanityPharmaFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00000040;
+              bitField1_ |= 0x00000080;
               break;
             } // case 354
             case 362: {
               input.readMessage(
                   getSelectiveOptimizationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00000080;
+              bitField1_ |= 0x00000100;
               break;
             } // case 362
             case 370: {
               input.readMessage(
                   getTrackingSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00000200;
+              bitField1_ |= 0x00000400;
               break;
             } // case 370
             case 378: {
               input.readMessage(
                   getGeoTargetTypeSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x01000000;
               break;
             } // case 378
             case 386: {
@@ -20367,31 +22076,31 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getLocalCampaignSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x02000000;
               break;
             } // case 402
             case 410: {
               input.readMessage(
                   getAppCampaignSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x04000000;
               break;
             } // case 410
             case 416: {
               paymentMode_ = input.readEnum();
-              bitField1_ |= 0x00000400;
+              bitField1_ |= 0x00000800;
               break;
             } // case 416
             case 434: {
               input.readMessage(
                   getOptimizationGoalSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00000100;
+              bitField1_ |= 0x00000200;
               break;
             } // case 434
             case 450: {
               baseCampaign_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x10000000;
+              bitField0_ |= 0x20000000;
               break;
             } // case 450
             case 466: {
@@ -20417,27 +22126,27 @@ private static final long serialVersionUID = 0L;
             } // case 490
             case 498: {
               campaignBudget_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x20000000;
+              bitField0_ |= 0x40000000;
               break;
             } // case 498
             case 506: {
               startDate_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000001;
+              bitField1_ |= 0x00000002;
               break;
             } // case 506
             case 514: {
               endDate_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000004;
+              bitField1_ |= 0x00000008;
               break;
             } // case 514
             case 522: {
               finalUrlSuffix_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000008;
+              bitField1_ |= 0x00000010;
               break;
             } // case 522
             case 529: {
               optimizationScore_ = input.readDouble();
-              bitField1_ |= 0x00000800;
+              bitField1_ |= 0x00001000;
               break;
             } // case 529
             case 538: {
@@ -20465,19 +22174,19 @@ private static final long serialVersionUID = 0L;
             } // case 554
             case 570: {
               accessibleBiddingStrategy_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x80000000;
+              bitField1_ |= 0x00000001;
               break;
             } // case 570
             case 576: {
               urlExpansionOptOut_ = input.readBool();
-              bitField1_ |= 0x00004000;
+              bitField1_ |= 0x00008000;
               break;
             } // case 576
             case 586: {
               input.readMessage(
                   getAudienceSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00800000;
               break;
             } // case 586
             case 594: {
@@ -20496,14 +22205,14 @@ private static final long serialVersionUID = 0L;
             } // case 602
             case 610: {
               campaignGroup_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000002;
+              bitField1_ |= 0x00000004;
               break;
             } // case 610
             case 618: {
               input.readMessage(
                   getPerformanceMaxUpgradeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00008000;
+              bitField1_ |= 0x00010000;
               break;
             } // case 618
             case 624: {
@@ -20552,7 +22261,7 @@ private static final long serialVersionUID = 0L;
             } // case 658
             case 666: {
               hotelPropertyAssetSet_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00010000;
+              bitField1_ |= 0x00020000;
               break;
             } // case 666
             case 682: {
@@ -20564,7 +22273,7 @@ private static final long serialVersionUID = 0L;
             } // case 682
             case 688: {
               listingType_ = input.readEnum();
-              bitField1_ |= 0x00020000;
+              bitField1_ |= 0x00040000;
               break;
             } // case 688
             case 706: {
@@ -20582,7 +22291,7 @@ private static final long serialVersionUID = 0L;
             } // case 706
             case 720: {
               keywordMatchType_ = input.readEnum();
-              bitField1_ |= 0x00080000;
+              bitField1_ |= 0x00100000;
               break;
             } // case 720
             case 730: {
@@ -20592,6 +22301,27 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 730
+            case 738: {
+              input.readMessage(
+                  getFixedCpmFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              campaignBiddingStrategyCase_ = 92;
+              break;
+            } // case 738
+            case 746: {
+              input.readMessage(
+                  getTargetCpvFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              campaignBiddingStrategyCase_ = 93;
+              break;
+            } // case 746
+            case 754: {
+              input.readMessage(
+                  getVideoCampaignSettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 754
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -22664,6 +24394,163 @@ private static final long serialVersionUID = 0L;
       return demandGenCampaignSettingsBuilder_;
     }
 
+    private com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings videoCampaignSettings_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.Builder, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettingsOrBuilder> videoCampaignSettingsBuilder_;
+    /**
+     * <pre>
+     * Settings for Video campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+     * @return Whether the videoCampaignSettings field is set.
+     */
+    public boolean hasVideoCampaignSettings() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * Settings for Video campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+     * @return The videoCampaignSettings.
+     */
+    public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings getVideoCampaignSettings() {
+      if (videoCampaignSettingsBuilder_ == null) {
+        return videoCampaignSettings_ == null ? com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.getDefaultInstance() : videoCampaignSettings_;
+      } else {
+        return videoCampaignSettingsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Settings for Video campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+     */
+    public Builder setVideoCampaignSettings(com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings value) {
+      if (videoCampaignSettingsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        videoCampaignSettings_ = value;
+      } else {
+        videoCampaignSettingsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Video campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+     */
+    public Builder setVideoCampaignSettings(
+        com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.Builder builderForValue) {
+      if (videoCampaignSettingsBuilder_ == null) {
+        videoCampaignSettings_ = builderForValue.build();
+      } else {
+        videoCampaignSettingsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Video campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+     */
+    public Builder mergeVideoCampaignSettings(com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings value) {
+      if (videoCampaignSettingsBuilder_ == null) {
+        if (((bitField0_ & 0x00010000) != 0) &&
+          videoCampaignSettings_ != null &&
+          videoCampaignSettings_ != com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.getDefaultInstance()) {
+          getVideoCampaignSettingsBuilder().mergeFrom(value);
+        } else {
+          videoCampaignSettings_ = value;
+        }
+      } else {
+        videoCampaignSettingsBuilder_.mergeFrom(value);
+      }
+      if (videoCampaignSettings_ != null) {
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Video campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+     */
+    public Builder clearVideoCampaignSettings() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      videoCampaignSettings_ = null;
+      if (videoCampaignSettingsBuilder_ != null) {
+        videoCampaignSettingsBuilder_.dispose();
+        videoCampaignSettingsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Video campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+     */
+    public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.Builder getVideoCampaignSettingsBuilder() {
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return getVideoCampaignSettingsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Settings for Video campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+     */
+    public com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettingsOrBuilder getVideoCampaignSettingsOrBuilder() {
+      if (videoCampaignSettingsBuilder_ != null) {
+        return videoCampaignSettingsBuilder_.getMessageOrBuilder();
+      } else {
+        return videoCampaignSettings_ == null ?
+            com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.getDefaultInstance() : videoCampaignSettings_;
+      }
+    }
+    /**
+     * <pre>
+     * Settings for Video campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings video_campaign_settings = 94;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.Builder, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettingsOrBuilder> 
+        getVideoCampaignSettingsFieldBuilder() {
+      if (videoCampaignSettingsBuilder_ == null) {
+        videoCampaignSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettings.Builder, com.google.ads.googleads.v17.resources.Campaign.VideoCampaignSettingsOrBuilder>(
+                getVideoCampaignSettings(),
+                getParentForChildren(),
+                isClean());
+        videoCampaignSettings_ = null;
+      }
+      return videoCampaignSettingsBuilder_;
+    }
+
     private com.google.ads.googleads.v17.common.RealTimeBiddingSetting realTimeBiddingSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v17.common.RealTimeBiddingSetting, com.google.ads.googleads.v17.common.RealTimeBiddingSetting.Builder, com.google.ads.googleads.v17.common.RealTimeBiddingSettingOrBuilder> realTimeBiddingSettingBuilder_;
@@ -22677,7 +24564,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the realTimeBiddingSetting field is set.
      */
     public boolean hasRealTimeBiddingSetting() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -22712,7 +24599,7 @@ private static final long serialVersionUID = 0L;
       } else {
         realTimeBiddingSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -22731,7 +24618,7 @@ private static final long serialVersionUID = 0L;
       } else {
         realTimeBiddingSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -22745,7 +24632,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRealTimeBiddingSetting(com.google.ads.googleads.v17.common.RealTimeBiddingSetting value) {
       if (realTimeBiddingSettingBuilder_ == null) {
-        if (((bitField0_ & 0x00010000) != 0) &&
+        if (((bitField0_ & 0x00020000) != 0) &&
           realTimeBiddingSetting_ != null &&
           realTimeBiddingSetting_ != com.google.ads.googleads.v17.common.RealTimeBiddingSetting.getDefaultInstance()) {
           getRealTimeBiddingSettingBuilder().mergeFrom(value);
@@ -22756,7 +24643,7 @@ private static final long serialVersionUID = 0L;
         realTimeBiddingSettingBuilder_.mergeFrom(value);
       }
       if (realTimeBiddingSetting_ != null) {
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         onChanged();
       }
       return this;
@@ -22770,7 +24657,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
      */
     public Builder clearRealTimeBiddingSetting() {
-      bitField0_ = (bitField0_ & ~0x00010000);
+      bitField0_ = (bitField0_ & ~0x00020000);
       realTimeBiddingSetting_ = null;
       if (realTimeBiddingSettingBuilder_ != null) {
         realTimeBiddingSettingBuilder_.dispose();
@@ -22788,7 +24675,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
      */
     public com.google.ads.googleads.v17.common.RealTimeBiddingSetting.Builder getRealTimeBiddingSettingBuilder() {
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return getRealTimeBiddingSettingFieldBuilder().getBuilder();
     }
@@ -22842,7 +24729,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the networkSettings field is set.
      */
     public boolean hasNetworkSettings() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -22875,7 +24762,7 @@ private static final long serialVersionUID = 0L;
       } else {
         networkSettingsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -22893,7 +24780,7 @@ private static final long serialVersionUID = 0L;
       } else {
         networkSettingsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -22906,7 +24793,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeNetworkSettings(com.google.ads.googleads.v17.resources.Campaign.NetworkSettings value) {
       if (networkSettingsBuilder_ == null) {
-        if (((bitField0_ & 0x00020000) != 0) &&
+        if (((bitField0_ & 0x00040000) != 0) &&
           networkSettings_ != null &&
           networkSettings_ != com.google.ads.googleads.v17.resources.Campaign.NetworkSettings.getDefaultInstance()) {
           getNetworkSettingsBuilder().mergeFrom(value);
@@ -22917,7 +24804,7 @@ private static final long serialVersionUID = 0L;
         networkSettingsBuilder_.mergeFrom(value);
       }
       if (networkSettings_ != null) {
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         onChanged();
       }
       return this;
@@ -22930,7 +24817,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.NetworkSettings network_settings = 14;</code>
      */
     public Builder clearNetworkSettings() {
-      bitField0_ = (bitField0_ & ~0x00020000);
+      bitField0_ = (bitField0_ & ~0x00040000);
       networkSettings_ = null;
       if (networkSettingsBuilder_ != null) {
         networkSettingsBuilder_.dispose();
@@ -22947,7 +24834,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.NetworkSettings network_settings = 14;</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.NetworkSettings.Builder getNetworkSettingsBuilder() {
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return getNetworkSettingsFieldBuilder().getBuilder();
     }
@@ -22999,7 +24886,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hotelSetting field is set.
      */
     public boolean hasHotelSetting() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -23032,7 +24919,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -23050,7 +24937,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -23063,7 +24950,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHotelSetting(com.google.ads.googleads.v17.resources.Campaign.HotelSettingInfo value) {
       if (hotelSettingBuilder_ == null) {
-        if (((bitField0_ & 0x00040000) != 0) &&
+        if (((bitField0_ & 0x00080000) != 0) &&
           hotelSetting_ != null &&
           hotelSetting_ != com.google.ads.googleads.v17.resources.Campaign.HotelSettingInfo.getDefaultInstance()) {
           getHotelSettingBuilder().mergeFrom(value);
@@ -23074,7 +24961,7 @@ private static final long serialVersionUID = 0L;
         hotelSettingBuilder_.mergeFrom(value);
       }
       if (hotelSetting_ != null) {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         onChanged();
       }
       return this;
@@ -23087,7 +24974,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearHotelSetting() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00080000);
       hotelSetting_ = null;
       if (hotelSettingBuilder_ != null) {
         hotelSettingBuilder_.dispose();
@@ -23104,7 +24991,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.HotelSettingInfo.Builder getHotelSettingBuilder() {
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return getHotelSettingFieldBuilder().getBuilder();
     }
@@ -23156,7 +25043,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dynamicSearchAdsSetting field is set.
      */
     public boolean hasDynamicSearchAdsSetting() {
-      return ((bitField0_ & 0x00080000) != 0);
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -23189,7 +25076,7 @@ private static final long serialVersionUID = 0L;
       } else {
         dynamicSearchAdsSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -23207,7 +25094,7 @@ private static final long serialVersionUID = 0L;
       } else {
         dynamicSearchAdsSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -23220,7 +25107,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDynamicSearchAdsSetting(com.google.ads.googleads.v17.resources.Campaign.DynamicSearchAdsSetting value) {
       if (dynamicSearchAdsSettingBuilder_ == null) {
-        if (((bitField0_ & 0x00080000) != 0) &&
+        if (((bitField0_ & 0x00100000) != 0) &&
           dynamicSearchAdsSetting_ != null &&
           dynamicSearchAdsSetting_ != com.google.ads.googleads.v17.resources.Campaign.DynamicSearchAdsSetting.getDefaultInstance()) {
           getDynamicSearchAdsSettingBuilder().mergeFrom(value);
@@ -23231,7 +25118,7 @@ private static final long serialVersionUID = 0L;
         dynamicSearchAdsSettingBuilder_.mergeFrom(value);
       }
       if (dynamicSearchAdsSetting_ != null) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00100000;
         onChanged();
       }
       return this;
@@ -23244,7 +25131,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.DynamicSearchAdsSetting dynamic_search_ads_setting = 33;</code>
      */
     public Builder clearDynamicSearchAdsSetting() {
-      bitField0_ = (bitField0_ & ~0x00080000);
+      bitField0_ = (bitField0_ & ~0x00100000);
       dynamicSearchAdsSetting_ = null;
       if (dynamicSearchAdsSettingBuilder_ != null) {
         dynamicSearchAdsSettingBuilder_.dispose();
@@ -23261,7 +25148,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.DynamicSearchAdsSetting dynamic_search_ads_setting = 33;</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.DynamicSearchAdsSetting.Builder getDynamicSearchAdsSettingBuilder() {
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return getDynamicSearchAdsSettingFieldBuilder().getBuilder();
     }
@@ -23313,7 +25200,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the shoppingSetting field is set.
      */
     public boolean hasShoppingSetting() {
-      return ((bitField0_ & 0x00100000) != 0);
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -23346,7 +25233,7 @@ private static final long serialVersionUID = 0L;
       } else {
         shoppingSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -23364,7 +25251,7 @@ private static final long serialVersionUID = 0L;
       } else {
         shoppingSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -23377,7 +25264,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeShoppingSetting(com.google.ads.googleads.v17.resources.Campaign.ShoppingSetting value) {
       if (shoppingSettingBuilder_ == null) {
-        if (((bitField0_ & 0x00100000) != 0) &&
+        if (((bitField0_ & 0x00200000) != 0) &&
           shoppingSetting_ != null &&
           shoppingSetting_ != com.google.ads.googleads.v17.resources.Campaign.ShoppingSetting.getDefaultInstance()) {
           getShoppingSettingBuilder().mergeFrom(value);
@@ -23388,7 +25275,7 @@ private static final long serialVersionUID = 0L;
         shoppingSettingBuilder_.mergeFrom(value);
       }
       if (shoppingSetting_ != null) {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00200000;
         onChanged();
       }
       return this;
@@ -23401,7 +25288,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
      */
     public Builder clearShoppingSetting() {
-      bitField0_ = (bitField0_ & ~0x00100000);
+      bitField0_ = (bitField0_ & ~0x00200000);
       shoppingSetting_ = null;
       if (shoppingSettingBuilder_ != null) {
         shoppingSettingBuilder_.dispose();
@@ -23418,7 +25305,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.ShoppingSetting.Builder getShoppingSettingBuilder() {
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00200000;
       onChanged();
       return getShoppingSettingFieldBuilder().getBuilder();
     }
@@ -23470,7 +25357,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the targetingSetting field is set.
      */
     public boolean hasTargetingSetting() {
-      return ((bitField0_ & 0x00200000) != 0);
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -23503,7 +25390,7 @@ private static final long serialVersionUID = 0L;
       } else {
         targetingSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -23521,7 +25408,7 @@ private static final long serialVersionUID = 0L;
       } else {
         targetingSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -23534,7 +25421,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTargetingSetting(com.google.ads.googleads.v17.common.TargetingSetting value) {
       if (targetingSettingBuilder_ == null) {
-        if (((bitField0_ & 0x00200000) != 0) &&
+        if (((bitField0_ & 0x00400000) != 0) &&
           targetingSetting_ != null &&
           targetingSetting_ != com.google.ads.googleads.v17.common.TargetingSetting.getDefaultInstance()) {
           getTargetingSettingBuilder().mergeFrom(value);
@@ -23545,7 +25432,7 @@ private static final long serialVersionUID = 0L;
         targetingSettingBuilder_.mergeFrom(value);
       }
       if (targetingSetting_ != null) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00400000;
         onChanged();
       }
       return this;
@@ -23558,7 +25445,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.common.TargetingSetting targeting_setting = 43;</code>
      */
     public Builder clearTargetingSetting() {
-      bitField0_ = (bitField0_ & ~0x00200000);
+      bitField0_ = (bitField0_ & ~0x00400000);
       targetingSetting_ = null;
       if (targetingSettingBuilder_ != null) {
         targetingSettingBuilder_.dispose();
@@ -23575,7 +25462,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.common.TargetingSetting targeting_setting = 43;</code>
      */
     public com.google.ads.googleads.v17.common.TargetingSetting.Builder getTargetingSettingBuilder() {
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return getTargetingSettingFieldBuilder().getBuilder();
     }
@@ -23627,7 +25514,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the audienceSetting field is set.
      */
     public boolean hasAudienceSetting() {
-      return ((bitField0_ & 0x00400000) != 0);
+      return ((bitField0_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -23660,7 +25547,7 @@ private static final long serialVersionUID = 0L;
       } else {
         audienceSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -23678,7 +25565,7 @@ private static final long serialVersionUID = 0L;
       } else {
         audienceSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -23691,7 +25578,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAudienceSetting(com.google.ads.googleads.v17.resources.Campaign.AudienceSetting value) {
       if (audienceSettingBuilder_ == null) {
-        if (((bitField0_ & 0x00400000) != 0) &&
+        if (((bitField0_ & 0x00800000) != 0) &&
           audienceSetting_ != null &&
           audienceSetting_ != com.google.ads.googleads.v17.resources.Campaign.AudienceSetting.getDefaultInstance()) {
           getAudienceSettingBuilder().mergeFrom(value);
@@ -23702,7 +25589,7 @@ private static final long serialVersionUID = 0L;
         audienceSettingBuilder_.mergeFrom(value);
       }
       if (audienceSetting_ != null) {
-        bitField0_ |= 0x00400000;
+        bitField0_ |= 0x00800000;
         onChanged();
       }
       return this;
@@ -23715,7 +25602,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v17.resources.Campaign.AudienceSetting audience_setting = 73 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearAudienceSetting() {
-      bitField0_ = (bitField0_ & ~0x00400000);
+      bitField0_ = (bitField0_ & ~0x00800000);
       audienceSetting_ = null;
       if (audienceSettingBuilder_ != null) {
         audienceSettingBuilder_.dispose();
@@ -23732,7 +25619,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v17.resources.Campaign.AudienceSetting audience_setting = 73 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.AudienceSetting.Builder getAudienceSettingBuilder() {
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return getAudienceSettingFieldBuilder().getBuilder();
     }
@@ -23784,7 +25671,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetTypeSetting field is set.
      */
     public boolean hasGeoTargetTypeSetting() {
-      return ((bitField0_ & 0x00800000) != 0);
+      return ((bitField0_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -23817,7 +25704,7 @@ private static final long serialVersionUID = 0L;
       } else {
         geoTargetTypeSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -23835,7 +25722,7 @@ private static final long serialVersionUID = 0L;
       } else {
         geoTargetTypeSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -23848,7 +25735,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeGeoTargetTypeSetting(com.google.ads.googleads.v17.resources.Campaign.GeoTargetTypeSetting value) {
       if (geoTargetTypeSettingBuilder_ == null) {
-        if (((bitField0_ & 0x00800000) != 0) &&
+        if (((bitField0_ & 0x01000000) != 0) &&
           geoTargetTypeSetting_ != null &&
           geoTargetTypeSetting_ != com.google.ads.googleads.v17.resources.Campaign.GeoTargetTypeSetting.getDefaultInstance()) {
           getGeoTargetTypeSettingBuilder().mergeFrom(value);
@@ -23859,7 +25746,7 @@ private static final long serialVersionUID = 0L;
         geoTargetTypeSettingBuilder_.mergeFrom(value);
       }
       if (geoTargetTypeSetting_ != null) {
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x01000000;
         onChanged();
       }
       return this;
@@ -23872,7 +25759,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.GeoTargetTypeSetting geo_target_type_setting = 47;</code>
      */
     public Builder clearGeoTargetTypeSetting() {
-      bitField0_ = (bitField0_ & ~0x00800000);
+      bitField0_ = (bitField0_ & ~0x01000000);
       geoTargetTypeSetting_ = null;
       if (geoTargetTypeSettingBuilder_ != null) {
         geoTargetTypeSettingBuilder_.dispose();
@@ -23889,7 +25776,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.GeoTargetTypeSetting geo_target_type_setting = 47;</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.GeoTargetTypeSetting.Builder getGeoTargetTypeSettingBuilder() {
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return getGeoTargetTypeSettingFieldBuilder().getBuilder();
     }
@@ -23941,7 +25828,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the localCampaignSetting field is set.
      */
     public boolean hasLocalCampaignSetting() {
-      return ((bitField0_ & 0x01000000) != 0);
+      return ((bitField0_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -23974,7 +25861,7 @@ private static final long serialVersionUID = 0L;
       } else {
         localCampaignSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -23992,7 +25879,7 @@ private static final long serialVersionUID = 0L;
       } else {
         localCampaignSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -24005,7 +25892,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLocalCampaignSetting(com.google.ads.googleads.v17.resources.Campaign.LocalCampaignSetting value) {
       if (localCampaignSettingBuilder_ == null) {
-        if (((bitField0_ & 0x01000000) != 0) &&
+        if (((bitField0_ & 0x02000000) != 0) &&
           localCampaignSetting_ != null &&
           localCampaignSetting_ != com.google.ads.googleads.v17.resources.Campaign.LocalCampaignSetting.getDefaultInstance()) {
           getLocalCampaignSettingBuilder().mergeFrom(value);
@@ -24016,7 +25903,7 @@ private static final long serialVersionUID = 0L;
         localCampaignSettingBuilder_.mergeFrom(value);
       }
       if (localCampaignSetting_ != null) {
-        bitField0_ |= 0x01000000;
+        bitField0_ |= 0x02000000;
         onChanged();
       }
       return this;
@@ -24029,7 +25916,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.LocalCampaignSetting local_campaign_setting = 50;</code>
      */
     public Builder clearLocalCampaignSetting() {
-      bitField0_ = (bitField0_ & ~0x01000000);
+      bitField0_ = (bitField0_ & ~0x02000000);
       localCampaignSetting_ = null;
       if (localCampaignSettingBuilder_ != null) {
         localCampaignSettingBuilder_.dispose();
@@ -24046,7 +25933,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.LocalCampaignSetting local_campaign_setting = 50;</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.LocalCampaignSetting.Builder getLocalCampaignSettingBuilder() {
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return getLocalCampaignSettingFieldBuilder().getBuilder();
     }
@@ -24098,7 +25985,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the appCampaignSetting field is set.
      */
     public boolean hasAppCampaignSetting() {
-      return ((bitField0_ & 0x02000000) != 0);
+      return ((bitField0_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -24131,7 +26018,7 @@ private static final long serialVersionUID = 0L;
       } else {
         appCampaignSettingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -24149,7 +26036,7 @@ private static final long serialVersionUID = 0L;
       } else {
         appCampaignSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -24162,7 +26049,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAppCampaignSetting(com.google.ads.googleads.v17.resources.Campaign.AppCampaignSetting value) {
       if (appCampaignSettingBuilder_ == null) {
-        if (((bitField0_ & 0x02000000) != 0) &&
+        if (((bitField0_ & 0x04000000) != 0) &&
           appCampaignSetting_ != null &&
           appCampaignSetting_ != com.google.ads.googleads.v17.resources.Campaign.AppCampaignSetting.getDefaultInstance()) {
           getAppCampaignSettingBuilder().mergeFrom(value);
@@ -24173,7 +26060,7 @@ private static final long serialVersionUID = 0L;
         appCampaignSettingBuilder_.mergeFrom(value);
       }
       if (appCampaignSetting_ != null) {
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x04000000;
         onChanged();
       }
       return this;
@@ -24186,7 +26073,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
      */
     public Builder clearAppCampaignSetting() {
-      bitField0_ = (bitField0_ & ~0x02000000);
+      bitField0_ = (bitField0_ & ~0x04000000);
       appCampaignSetting_ = null;
       if (appCampaignSettingBuilder_ != null) {
         appCampaignSettingBuilder_.dispose();
@@ -24203,7 +26090,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.AppCampaignSetting.Builder getAppCampaignSettingBuilder() {
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return getAppCampaignSettingFieldBuilder().getBuilder();
     }
@@ -24249,7 +26136,7 @@ private static final long serialVersionUID = 0L;
       if (!labels_.isModifiable()) {
         labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
       }
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
     }
     /**
      * <pre>
@@ -24315,7 +26202,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.set(index, value);
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -24333,7 +26220,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.add(value);
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -24351,7 +26238,7 @@ private static final long serialVersionUID = 0L;
       ensureLabelsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, labels_);
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -24366,7 +26253,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLabels() {
       labels_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x04000000);;
+      bitField0_ = (bitField0_ & ~0x08000000);;
       onChanged();
       return this;
     }
@@ -24385,7 +26272,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -24413,7 +26300,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExperimentTypeValue(int value) {
       experimentType_ = value;
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -24443,7 +26330,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x10000000;
       experimentType_ = value.getNumber();
       onChanged();
       return this;
@@ -24457,7 +26344,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExperimentType() {
-      bitField0_ = (bitField0_ & ~0x08000000);
+      bitField0_ = (bitField0_ & ~0x10000000);
       experimentType_ = 0;
       onChanged();
       return this;
@@ -24476,7 +26363,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the baseCampaign field is set.
      */
     public boolean hasBaseCampaign() {
-      return ((bitField0_ & 0x10000000) != 0);
+      return ((bitField0_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -24541,7 +26428,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       baseCampaign_ = value;
-      bitField0_ |= 0x10000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -24558,7 +26445,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearBaseCampaign() {
       baseCampaign_ = getDefaultInstance().getBaseCampaign();
-      bitField0_ = (bitField0_ & ~0x10000000);
+      bitField0_ = (bitField0_ & ~0x20000000);
       onChanged();
       return this;
     }
@@ -24579,7 +26466,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       baseCampaign_ = value;
-      bitField0_ |= 0x10000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -24594,7 +26481,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaignBudget field is set.
      */
     public boolean hasCampaignBudget() {
-      return ((bitField0_ & 0x20000000) != 0);
+      return ((bitField0_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -24650,7 +26537,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       campaignBudget_ = value;
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -24664,7 +26551,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCampaignBudget() {
       campaignBudget_ = getDefaultInstance().getCampaignBudget();
-      bitField0_ = (bitField0_ & ~0x20000000);
+      bitField0_ = (bitField0_ & ~0x40000000);
       onChanged();
       return this;
     }
@@ -24682,7 +26569,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       campaignBudget_ = value;
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -24722,7 +26609,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBiddingStrategyTypeValue(int value) {
       biddingStrategyType_ = value;
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -24764,7 +26651,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x80000000;
       biddingStrategyType_ = value.getNumber();
       onChanged();
       return this;
@@ -24784,7 +26671,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBiddingStrategyType() {
-      bitField0_ = (bitField0_ & ~0x40000000);
+      bitField0_ = (bitField0_ & ~0x80000000);
       biddingStrategyType_ = 0;
       onChanged();
       return this;
@@ -24866,7 +26753,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       accessibleBiddingStrategy_ = value;
-      bitField0_ |= 0x80000000;
+      bitField1_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -24887,7 +26774,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAccessibleBiddingStrategy() {
       accessibleBiddingStrategy_ = getDefaultInstance().getAccessibleBiddingStrategy();
-      bitField0_ = (bitField0_ & ~0x80000000);
+      bitField1_ = (bitField1_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -24912,7 +26799,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       accessibleBiddingStrategy_ = value;
-      bitField0_ |= 0x80000000;
+      bitField1_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -24928,7 +26815,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the startDate field is set.
      */
     public boolean hasStartDate() {
-      return ((bitField1_ & 0x00000001) != 0);
+      return ((bitField1_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -24987,7 +26874,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       startDate_ = value;
-      bitField1_ |= 0x00000001;
+      bitField1_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -25002,7 +26889,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearStartDate() {
       startDate_ = getDefaultInstance().getStartDate();
-      bitField1_ = (bitField1_ & ~0x00000001);
+      bitField1_ = (bitField1_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -25021,7 +26908,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       startDate_ = value;
-      bitField1_ |= 0x00000001;
+      bitField1_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -25036,7 +26923,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaignGroup field is set.
      */
     public boolean hasCampaignGroup() {
-      return ((bitField1_ & 0x00000002) != 0);
+      return ((bitField1_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -25092,7 +26979,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       campaignGroup_ = value;
-      bitField1_ |= 0x00000002;
+      bitField1_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -25106,7 +26993,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCampaignGroup() {
       campaignGroup_ = getDefaultInstance().getCampaignGroup();
-      bitField1_ = (bitField1_ & ~0x00000002);
+      bitField1_ = (bitField1_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -25124,7 +27011,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       campaignGroup_ = value;
-      bitField1_ |= 0x00000002;
+      bitField1_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -25142,7 +27029,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the endDate field is set.
      */
     public boolean hasEndDate() {
-      return ((bitField1_ & 0x00000004) != 0);
+      return ((bitField1_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -25207,7 +27094,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       endDate_ = value;
-      bitField1_ |= 0x00000004;
+      bitField1_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -25224,7 +27111,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEndDate() {
       endDate_ = getDefaultInstance().getEndDate();
-      bitField1_ = (bitField1_ & ~0x00000004);
+      bitField1_ = (bitField1_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -25245,7 +27132,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       endDate_ = value;
-      bitField1_ |= 0x00000004;
+      bitField1_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -25261,7 +27148,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
-      return ((bitField1_ & 0x00000008) != 0);
+      return ((bitField1_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -25320,7 +27207,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       finalUrlSuffix_ = value;
-      bitField1_ |= 0x00000008;
+      bitField1_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -25335,7 +27222,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFinalUrlSuffix() {
       finalUrlSuffix_ = getDefaultInstance().getFinalUrlSuffix();
-      bitField1_ = (bitField1_ & ~0x00000008);
+      bitField1_ = (bitField1_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -25354,7 +27241,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       finalUrlSuffix_ = value;
-      bitField1_ |= 0x00000008;
+      bitField1_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -25362,9 +27249,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v17.common.FrequencyCapEntry> frequencyCaps_ =
       java.util.Collections.emptyList();
     private void ensureFrequencyCapsIsMutable() {
-      if (!((bitField1_ & 0x00000010) != 0)) {
+      if (!((bitField1_ & 0x00000020) != 0)) {
         frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v17.common.FrequencyCapEntry>(frequencyCaps_);
-        bitField1_ |= 0x00000010;
+        bitField1_ |= 0x00000020;
        }
     }
 
@@ -25558,7 +27445,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFrequencyCaps() {
       if (frequencyCapsBuilder_ == null) {
         frequencyCaps_ = java.util.Collections.emptyList();
-        bitField1_ = (bitField1_ & ~0x00000010);
+        bitField1_ = (bitField1_ & ~0x00000020);
         onChanged();
       } else {
         frequencyCapsBuilder_.clear();
@@ -25663,7 +27550,7 @@ private static final long serialVersionUID = 0L;
         frequencyCapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v17.common.FrequencyCapEntry, com.google.ads.googleads.v17.common.FrequencyCapEntry.Builder, com.google.ads.googleads.v17.common.FrequencyCapEntryOrBuilder>(
                 frequencyCaps_,
-                ((bitField1_ & 0x00000010) != 0),
+                ((bitField1_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         frequencyCaps_ = null;
@@ -25698,7 +27585,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setVideoBrandSafetySuitabilityValue(int value) {
       videoBrandSafetySuitability_ = value;
-      bitField1_ |= 0x00000020;
+      bitField1_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -25732,7 +27619,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00000020;
+      bitField1_ |= 0x00000040;
       videoBrandSafetySuitability_ = value.getNumber();
       onChanged();
       return this;
@@ -25748,7 +27635,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoBrandSafetySuitability() {
-      bitField1_ = (bitField1_ & ~0x00000020);
+      bitField1_ = (bitField1_ & ~0x00000040);
       videoBrandSafetySuitability_ = 0;
       onChanged();
       return this;
@@ -25766,7 +27653,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the vanityPharma field is set.
      */
     public boolean hasVanityPharma() {
-      return ((bitField1_ & 0x00000040) != 0);
+      return ((bitField1_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -25799,7 +27686,7 @@ private static final long serialVersionUID = 0L;
       } else {
         vanityPharmaBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00000040;
+      bitField1_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -25817,7 +27704,7 @@ private static final long serialVersionUID = 0L;
       } else {
         vanityPharmaBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00000040;
+      bitField1_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -25830,7 +27717,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeVanityPharma(com.google.ads.googleads.v17.resources.Campaign.VanityPharma value) {
       if (vanityPharmaBuilder_ == null) {
-        if (((bitField1_ & 0x00000040) != 0) &&
+        if (((bitField1_ & 0x00000080) != 0) &&
           vanityPharma_ != null &&
           vanityPharma_ != com.google.ads.googleads.v17.resources.Campaign.VanityPharma.getDefaultInstance()) {
           getVanityPharmaBuilder().mergeFrom(value);
@@ -25841,7 +27728,7 @@ private static final long serialVersionUID = 0L;
         vanityPharmaBuilder_.mergeFrom(value);
       }
       if (vanityPharma_ != null) {
-        bitField1_ |= 0x00000040;
+        bitField1_ |= 0x00000080;
         onChanged();
       }
       return this;
@@ -25854,7 +27741,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
      */
     public Builder clearVanityPharma() {
-      bitField1_ = (bitField1_ & ~0x00000040);
+      bitField1_ = (bitField1_ & ~0x00000080);
       vanityPharma_ = null;
       if (vanityPharmaBuilder_ != null) {
         vanityPharmaBuilder_.dispose();
@@ -25871,7 +27758,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.VanityPharma.Builder getVanityPharmaBuilder() {
-      bitField1_ |= 0x00000040;
+      bitField1_ |= 0x00000080;
       onChanged();
       return getVanityPharmaFieldBuilder().getBuilder();
     }
@@ -25927,7 +27814,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the selectiveOptimization field is set.
      */
     public boolean hasSelectiveOptimization() {
-      return ((bitField1_ & 0x00000080) != 0);
+      return ((bitField1_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -25968,7 +27855,7 @@ private static final long serialVersionUID = 0L;
       } else {
         selectiveOptimizationBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -25990,7 +27877,7 @@ private static final long serialVersionUID = 0L;
       } else {
         selectiveOptimizationBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -26007,7 +27894,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSelectiveOptimization(com.google.ads.googleads.v17.resources.Campaign.SelectiveOptimization value) {
       if (selectiveOptimizationBuilder_ == null) {
-        if (((bitField1_ & 0x00000080) != 0) &&
+        if (((bitField1_ & 0x00000100) != 0) &&
           selectiveOptimization_ != null &&
           selectiveOptimization_ != com.google.ads.googleads.v17.resources.Campaign.SelectiveOptimization.getDefaultInstance()) {
           getSelectiveOptimizationBuilder().mergeFrom(value);
@@ -26018,7 +27905,7 @@ private static final long serialVersionUID = 0L;
         selectiveOptimizationBuilder_.mergeFrom(value);
       }
       if (selectiveOptimization_ != null) {
-        bitField1_ |= 0x00000080;
+        bitField1_ |= 0x00000100;
         onChanged();
       }
       return this;
@@ -26035,7 +27922,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
      */
     public Builder clearSelectiveOptimization() {
-      bitField1_ = (bitField1_ & ~0x00000080);
+      bitField1_ = (bitField1_ & ~0x00000100);
       selectiveOptimization_ = null;
       if (selectiveOptimizationBuilder_ != null) {
         selectiveOptimizationBuilder_.dispose();
@@ -26056,7 +27943,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.SelectiveOptimization.Builder getSelectiveOptimizationBuilder() {
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return getSelectiveOptimizationFieldBuilder().getBuilder();
     }
@@ -26117,7 +28004,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the optimizationGoalSetting field is set.
      */
     public boolean hasOptimizationGoalSetting() {
-      return ((bitField1_ & 0x00000100) != 0);
+      return ((bitField1_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -26152,7 +28039,7 @@ private static final long serialVersionUID = 0L;
       } else {
         optimizationGoalSettingBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -26171,7 +28058,7 @@ private static final long serialVersionUID = 0L;
       } else {
         optimizationGoalSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -26185,7 +28072,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOptimizationGoalSetting(com.google.ads.googleads.v17.resources.Campaign.OptimizationGoalSetting value) {
       if (optimizationGoalSettingBuilder_ == null) {
-        if (((bitField1_ & 0x00000100) != 0) &&
+        if (((bitField1_ & 0x00000200) != 0) &&
           optimizationGoalSetting_ != null &&
           optimizationGoalSetting_ != com.google.ads.googleads.v17.resources.Campaign.OptimizationGoalSetting.getDefaultInstance()) {
           getOptimizationGoalSettingBuilder().mergeFrom(value);
@@ -26196,7 +28083,7 @@ private static final long serialVersionUID = 0L;
         optimizationGoalSettingBuilder_.mergeFrom(value);
       }
       if (optimizationGoalSetting_ != null) {
-        bitField1_ |= 0x00000100;
+        bitField1_ |= 0x00000200;
         onChanged();
       }
       return this;
@@ -26210,7 +28097,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.OptimizationGoalSetting optimization_goal_setting = 54;</code>
      */
     public Builder clearOptimizationGoalSetting() {
-      bitField1_ = (bitField1_ & ~0x00000100);
+      bitField1_ = (bitField1_ & ~0x00000200);
       optimizationGoalSetting_ = null;
       if (optimizationGoalSettingBuilder_ != null) {
         optimizationGoalSettingBuilder_.dispose();
@@ -26228,7 +28115,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.OptimizationGoalSetting optimization_goal_setting = 54;</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.OptimizationGoalSetting.Builder getOptimizationGoalSettingBuilder() {
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return getOptimizationGoalSettingFieldBuilder().getBuilder();
     }
@@ -26282,7 +28169,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the trackingSetting field is set.
      */
     public boolean hasTrackingSetting() {
-      return ((bitField1_ & 0x00000200) != 0);
+      return ((bitField1_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -26315,7 +28202,7 @@ private static final long serialVersionUID = 0L;
       } else {
         trackingSettingBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -26333,7 +28220,7 @@ private static final long serialVersionUID = 0L;
       } else {
         trackingSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -26346,7 +28233,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTrackingSetting(com.google.ads.googleads.v17.resources.Campaign.TrackingSetting value) {
       if (trackingSettingBuilder_ == null) {
-        if (((bitField1_ & 0x00000200) != 0) &&
+        if (((bitField1_ & 0x00000400) != 0) &&
           trackingSetting_ != null &&
           trackingSetting_ != com.google.ads.googleads.v17.resources.Campaign.TrackingSetting.getDefaultInstance()) {
           getTrackingSettingBuilder().mergeFrom(value);
@@ -26357,7 +28244,7 @@ private static final long serialVersionUID = 0L;
         trackingSettingBuilder_.mergeFrom(value);
       }
       if (trackingSetting_ != null) {
-        bitField1_ |= 0x00000200;
+        bitField1_ |= 0x00000400;
         onChanged();
       }
       return this;
@@ -26370,7 +28257,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTrackingSetting() {
-      bitField1_ = (bitField1_ & ~0x00000200);
+      bitField1_ = (bitField1_ & ~0x00000400);
       trackingSetting_ = null;
       if (trackingSettingBuilder_ != null) {
         trackingSettingBuilder_.dispose();
@@ -26387,7 +28274,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.TrackingSetting.Builder getTrackingSettingBuilder() {
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return getTrackingSettingFieldBuilder().getBuilder();
     }
@@ -26450,7 +28337,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentModeValue(int value) {
       paymentMode_ = value;
-      bitField1_ |= 0x00000400;
+      bitField1_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -26480,7 +28367,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00000400;
+      bitField1_ |= 0x00000800;
       paymentMode_ = value.getNumber();
       onChanged();
       return this;
@@ -26494,7 +28381,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPaymentMode() {
-      bitField1_ = (bitField1_ & ~0x00000400);
+      bitField1_ = (bitField1_ & ~0x00000800);
       paymentMode_ = 0;
       onChanged();
       return this;
@@ -26521,7 +28408,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOptimizationScore() {
-      return ((bitField1_ & 0x00000800) != 0);
+      return ((bitField1_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -26567,7 +28454,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOptimizationScore(double value) {
 
       optimizationScore_ = value;
-      bitField1_ |= 0x00000800;
+      bitField1_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -26590,7 +28477,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptimizationScore() {
-      bitField1_ = (bitField1_ & ~0x00000800);
+      bitField1_ = (bitField1_ & ~0x00001000);
       optimizationScore_ = 0D;
       onChanged();
       return this;
@@ -26599,9 +28486,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> excludedParentAssetFieldTypes_ =
       java.util.Collections.emptyList();
     private void ensureExcludedParentAssetFieldTypesIsMutable() {
-      if (!((bitField1_ & 0x00001000) != 0)) {
+      if (!((bitField1_ & 0x00002000) != 0)) {
         excludedParentAssetFieldTypes_ = new java.util.ArrayList<java.lang.Integer>(excludedParentAssetFieldTypes_);
-        bitField1_ |= 0x00001000;
+        bitField1_ |= 0x00002000;
       }
     }
     /**
@@ -26719,7 +28606,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearExcludedParentAssetFieldTypes() {
       excludedParentAssetFieldTypes_ = java.util.Collections.emptyList();
-      bitField1_ = (bitField1_ & ~0x00001000);
+      bitField1_ = (bitField1_ & ~0x00002000);
       onChanged();
       return this;
     }
@@ -26811,9 +28698,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> excludedParentAssetSetTypes_ =
       java.util.Collections.emptyList();
     private void ensureExcludedParentAssetSetTypesIsMutable() {
-      if (!((bitField1_ & 0x00002000) != 0)) {
+      if (!((bitField1_ & 0x00004000) != 0)) {
         excludedParentAssetSetTypes_ = new java.util.ArrayList<java.lang.Integer>(excludedParentAssetSetTypes_);
-        bitField1_ |= 0x00002000;
+        bitField1_ |= 0x00004000;
       }
     }
     /**
@@ -26980,7 +28867,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearExcludedParentAssetSetTypes() {
       excludedParentAssetSetTypes_ = java.util.Collections.emptyList();
-      bitField1_ = (bitField1_ & ~0x00002000);
+      bitField1_ = (bitField1_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -27120,7 +29007,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasUrlExpansionOptOut() {
-      return ((bitField1_ & 0x00004000) != 0);
+      return ((bitField1_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -27156,7 +29043,7 @@ private static final long serialVersionUID = 0L;
     public Builder setUrlExpansionOptOut(boolean value) {
 
       urlExpansionOptOut_ = value;
-      bitField1_ |= 0x00004000;
+      bitField1_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -27174,7 +29061,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUrlExpansionOptOut() {
-      bitField1_ = (bitField1_ & ~0x00004000);
+      bitField1_ = (bitField1_ & ~0x00008000);
       urlExpansionOptOut_ = false;
       onChanged();
       return this;
@@ -27192,7 +29079,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the performanceMaxUpgrade field is set.
      */
     public boolean hasPerformanceMaxUpgrade() {
-      return ((bitField1_ & 0x00008000) != 0);
+      return ((bitField1_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -27225,7 +29112,7 @@ private static final long serialVersionUID = 0L;
       } else {
         performanceMaxUpgradeBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00008000;
+      bitField1_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -27243,7 +29130,7 @@ private static final long serialVersionUID = 0L;
       } else {
         performanceMaxUpgradeBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00008000;
+      bitField1_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -27256,7 +29143,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePerformanceMaxUpgrade(com.google.ads.googleads.v17.resources.Campaign.PerformanceMaxUpgrade value) {
       if (performanceMaxUpgradeBuilder_ == null) {
-        if (((bitField1_ & 0x00008000) != 0) &&
+        if (((bitField1_ & 0x00010000) != 0) &&
           performanceMaxUpgrade_ != null &&
           performanceMaxUpgrade_ != com.google.ads.googleads.v17.resources.Campaign.PerformanceMaxUpgrade.getDefaultInstance()) {
           getPerformanceMaxUpgradeBuilder().mergeFrom(value);
@@ -27267,7 +29154,7 @@ private static final long serialVersionUID = 0L;
         performanceMaxUpgradeBuilder_.mergeFrom(value);
       }
       if (performanceMaxUpgrade_ != null) {
-        bitField1_ |= 0x00008000;
+        bitField1_ |= 0x00010000;
         onChanged();
       }
       return this;
@@ -27280,7 +29167,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.PerformanceMaxUpgrade performance_max_upgrade = 77 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPerformanceMaxUpgrade() {
-      bitField1_ = (bitField1_ & ~0x00008000);
+      bitField1_ = (bitField1_ & ~0x00010000);
       performanceMaxUpgrade_ = null;
       if (performanceMaxUpgradeBuilder_ != null) {
         performanceMaxUpgradeBuilder_.dispose();
@@ -27297,7 +29184,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.resources.Campaign.PerformanceMaxUpgrade performance_max_upgrade = 77 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v17.resources.Campaign.PerformanceMaxUpgrade.Builder getPerformanceMaxUpgradeBuilder() {
-      bitField1_ |= 0x00008000;
+      bitField1_ |= 0x00010000;
       onChanged();
       return getPerformanceMaxUpgradeFieldBuilder().getBuilder();
     }
@@ -27348,7 +29235,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hotelPropertyAssetSet field is set.
      */
     public boolean hasHotelPropertyAssetSet() {
-      return ((bitField1_ & 0x00010000) != 0);
+      return ((bitField1_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -27407,7 +29294,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       hotelPropertyAssetSet_ = value;
-      bitField1_ |= 0x00010000;
+      bitField1_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -27422,7 +29309,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearHotelPropertyAssetSet() {
       hotelPropertyAssetSet_ = getDefaultInstance().getHotelPropertyAssetSet();
-      bitField1_ = (bitField1_ & ~0x00010000);
+      bitField1_ = (bitField1_ & ~0x00020000);
       onChanged();
       return this;
     }
@@ -27441,7 +29328,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       hotelPropertyAssetSet_ = value;
-      bitField1_ |= 0x00010000;
+      bitField1_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -27457,7 +29344,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the listingType field is set.
      */
     @java.lang.Override public boolean hasListingType() {
-      return ((bitField1_ & 0x00020000) != 0);
+      return ((bitField1_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -27483,7 +29370,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setListingTypeValue(int value) {
       listingType_ = value;
-      bitField1_ |= 0x00020000;
+      bitField1_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -27515,7 +29402,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00020000;
+      bitField1_ |= 0x00040000;
       listingType_ = value.getNumber();
       onChanged();
       return this;
@@ -27530,7 +29417,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearListingType() {
-      bitField1_ = (bitField1_ & ~0x00020000);
+      bitField1_ = (bitField1_ & ~0x00040000);
       listingType_ = 0;
       onChanged();
       return this;
@@ -27539,9 +29426,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v17.resources.Campaign.AssetAutomationSetting> assetAutomationSettings_ =
       java.util.Collections.emptyList();
     private void ensureAssetAutomationSettingsIsMutable() {
-      if (!((bitField1_ & 0x00040000) != 0)) {
+      if (!((bitField1_ & 0x00080000) != 0)) {
         assetAutomationSettings_ = new java.util.ArrayList<com.google.ads.googleads.v17.resources.Campaign.AssetAutomationSetting>(assetAutomationSettings_);
-        bitField1_ |= 0x00040000;
+        bitField1_ |= 0x00080000;
        }
     }
 
@@ -27757,7 +29644,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAssetAutomationSettings() {
       if (assetAutomationSettingsBuilder_ == null) {
         assetAutomationSettings_ = java.util.Collections.emptyList();
-        bitField1_ = (bitField1_ & ~0x00040000);
+        bitField1_ = (bitField1_ & ~0x00080000);
         onChanged();
       } else {
         assetAutomationSettingsBuilder_.clear();
@@ -27876,7 +29763,7 @@ private static final long serialVersionUID = 0L;
         assetAutomationSettingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v17.resources.Campaign.AssetAutomationSetting, com.google.ads.googleads.v17.resources.Campaign.AssetAutomationSetting.Builder, com.google.ads.googleads.v17.resources.Campaign.AssetAutomationSettingOrBuilder>(
                 assetAutomationSettings_,
-                ((bitField1_ & 0x00040000) != 0),
+                ((bitField1_ & 0x00080000) != 0),
                 getParentForChildren(),
                 isClean());
         assetAutomationSettings_ = null;
@@ -27909,7 +29796,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordMatchTypeValue(int value) {
       keywordMatchType_ = value;
-      bitField1_ |= 0x00080000;
+      bitField1_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -27941,7 +29828,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00080000;
+      bitField1_ |= 0x00100000;
       keywordMatchType_ = value.getNumber();
       onChanged();
       return this;
@@ -27956,7 +29843,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywordMatchType() {
-      bitField1_ = (bitField1_ & ~0x00080000);
+      bitField1_ = (bitField1_ & ~0x00100000);
       keywordMatchType_ = 0;
       onChanged();
       return this;
@@ -30526,6 +32413,371 @@ private static final long serialVersionUID = 0L;
       campaignBiddingStrategyCase_ = 41;
       onChanged();
       return targetCpmBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v17.common.FixedCpm, com.google.ads.googleads.v17.common.FixedCpm.Builder, com.google.ads.googleads.v17.common.FixedCpmOrBuilder> fixedCpmBuilder_;
+    /**
+     * <pre>
+     * A manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+     * @return Whether the fixedCpm field is set.
+     */
+    @java.lang.Override
+    public boolean hasFixedCpm() {
+      return campaignBiddingStrategyCase_ == 92;
+    }
+    /**
+     * <pre>
+     * A manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+     * @return The fixedCpm.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v17.common.FixedCpm getFixedCpm() {
+      if (fixedCpmBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 92) {
+          return (com.google.ads.googleads.v17.common.FixedCpm) campaignBiddingStrategy_;
+        }
+        return com.google.ads.googleads.v17.common.FixedCpm.getDefaultInstance();
+      } else {
+        if (campaignBiddingStrategyCase_ == 92) {
+          return fixedCpmBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v17.common.FixedCpm.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+     */
+    public Builder setFixedCpm(com.google.ads.googleads.v17.common.FixedCpm value) {
+      if (fixedCpmBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignBiddingStrategy_ = value;
+        onChanged();
+      } else {
+        fixedCpmBuilder_.setMessage(value);
+      }
+      campaignBiddingStrategyCase_ = 92;
+      return this;
+    }
+    /**
+     * <pre>
+     * A manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+     */
+    public Builder setFixedCpm(
+        com.google.ads.googleads.v17.common.FixedCpm.Builder builderForValue) {
+      if (fixedCpmBuilder_ == null) {
+        campaignBiddingStrategy_ = builderForValue.build();
+        onChanged();
+      } else {
+        fixedCpmBuilder_.setMessage(builderForValue.build());
+      }
+      campaignBiddingStrategyCase_ = 92;
+      return this;
+    }
+    /**
+     * <pre>
+     * A manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+     */
+    public Builder mergeFixedCpm(com.google.ads.googleads.v17.common.FixedCpm value) {
+      if (fixedCpmBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 92 &&
+            campaignBiddingStrategy_ != com.google.ads.googleads.v17.common.FixedCpm.getDefaultInstance()) {
+          campaignBiddingStrategy_ = com.google.ads.googleads.v17.common.FixedCpm.newBuilder((com.google.ads.googleads.v17.common.FixedCpm) campaignBiddingStrategy_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          campaignBiddingStrategy_ = value;
+        }
+        onChanged();
+      } else {
+        if (campaignBiddingStrategyCase_ == 92) {
+          fixedCpmBuilder_.mergeFrom(value);
+        } else {
+          fixedCpmBuilder_.setMessage(value);
+        }
+      }
+      campaignBiddingStrategyCase_ = 92;
+      return this;
+    }
+    /**
+     * <pre>
+     * A manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+     */
+    public Builder clearFixedCpm() {
+      if (fixedCpmBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 92) {
+          campaignBiddingStrategyCase_ = 0;
+          campaignBiddingStrategy_ = null;
+          onChanged();
+        }
+      } else {
+        if (campaignBiddingStrategyCase_ == 92) {
+          campaignBiddingStrategyCase_ = 0;
+          campaignBiddingStrategy_ = null;
+        }
+        fixedCpmBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+     */
+    public com.google.ads.googleads.v17.common.FixedCpm.Builder getFixedCpmBuilder() {
+      return getFixedCpmFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v17.common.FixedCpmOrBuilder getFixedCpmOrBuilder() {
+      if ((campaignBiddingStrategyCase_ == 92) && (fixedCpmBuilder_ != null)) {
+        return fixedCpmBuilder_.getMessageOrBuilder();
+      } else {
+        if (campaignBiddingStrategyCase_ == 92) {
+          return (com.google.ads.googleads.v17.common.FixedCpm) campaignBiddingStrategy_;
+        }
+        return com.google.ads.googleads.v17.common.FixedCpm.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.FixedCpm fixed_cpm = 92;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v17.common.FixedCpm, com.google.ads.googleads.v17.common.FixedCpm.Builder, com.google.ads.googleads.v17.common.FixedCpmOrBuilder> 
+        getFixedCpmFieldBuilder() {
+      if (fixedCpmBuilder_ == null) {
+        if (!(campaignBiddingStrategyCase_ == 92)) {
+          campaignBiddingStrategy_ = com.google.ads.googleads.v17.common.FixedCpm.getDefaultInstance();
+        }
+        fixedCpmBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v17.common.FixedCpm, com.google.ads.googleads.v17.common.FixedCpm.Builder, com.google.ads.googleads.v17.common.FixedCpmOrBuilder>(
+                (com.google.ads.googleads.v17.common.FixedCpm) campaignBiddingStrategy_,
+                getParentForChildren(),
+                isClean());
+        campaignBiddingStrategy_ = null;
+      }
+      campaignBiddingStrategyCase_ = 92;
+      onChanged();
+      return fixedCpmBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v17.common.TargetCpv, com.google.ads.googleads.v17.common.TargetCpv.Builder, com.google.ads.googleads.v17.common.TargetCpvOrBuilder> targetCpvBuilder_;
+    /**
+     * <pre>
+     * An automated bidding strategy that sets bids to optimize performance
+     * given the target CPV you set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+     * @return Whether the targetCpv field is set.
+     */
+    @java.lang.Override
+    public boolean hasTargetCpv() {
+      return campaignBiddingStrategyCase_ == 93;
+    }
+    /**
+     * <pre>
+     * An automated bidding strategy that sets bids to optimize performance
+     * given the target CPV you set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+     * @return The targetCpv.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v17.common.TargetCpv getTargetCpv() {
+      if (targetCpvBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 93) {
+          return (com.google.ads.googleads.v17.common.TargetCpv) campaignBiddingStrategy_;
+        }
+        return com.google.ads.googleads.v17.common.TargetCpv.getDefaultInstance();
+      } else {
+        if (campaignBiddingStrategyCase_ == 93) {
+          return targetCpvBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v17.common.TargetCpv.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * An automated bidding strategy that sets bids to optimize performance
+     * given the target CPV you set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+     */
+    public Builder setTargetCpv(com.google.ads.googleads.v17.common.TargetCpv value) {
+      if (targetCpvBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignBiddingStrategy_ = value;
+        onChanged();
+      } else {
+        targetCpvBuilder_.setMessage(value);
+      }
+      campaignBiddingStrategyCase_ = 93;
+      return this;
+    }
+    /**
+     * <pre>
+     * An automated bidding strategy that sets bids to optimize performance
+     * given the target CPV you set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+     */
+    public Builder setTargetCpv(
+        com.google.ads.googleads.v17.common.TargetCpv.Builder builderForValue) {
+      if (targetCpvBuilder_ == null) {
+        campaignBiddingStrategy_ = builderForValue.build();
+        onChanged();
+      } else {
+        targetCpvBuilder_.setMessage(builderForValue.build());
+      }
+      campaignBiddingStrategyCase_ = 93;
+      return this;
+    }
+    /**
+     * <pre>
+     * An automated bidding strategy that sets bids to optimize performance
+     * given the target CPV you set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+     */
+    public Builder mergeTargetCpv(com.google.ads.googleads.v17.common.TargetCpv value) {
+      if (targetCpvBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 93 &&
+            campaignBiddingStrategy_ != com.google.ads.googleads.v17.common.TargetCpv.getDefaultInstance()) {
+          campaignBiddingStrategy_ = com.google.ads.googleads.v17.common.TargetCpv.newBuilder((com.google.ads.googleads.v17.common.TargetCpv) campaignBiddingStrategy_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          campaignBiddingStrategy_ = value;
+        }
+        onChanged();
+      } else {
+        if (campaignBiddingStrategyCase_ == 93) {
+          targetCpvBuilder_.mergeFrom(value);
+        } else {
+          targetCpvBuilder_.setMessage(value);
+        }
+      }
+      campaignBiddingStrategyCase_ = 93;
+      return this;
+    }
+    /**
+     * <pre>
+     * An automated bidding strategy that sets bids to optimize performance
+     * given the target CPV you set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+     */
+    public Builder clearTargetCpv() {
+      if (targetCpvBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 93) {
+          campaignBiddingStrategyCase_ = 0;
+          campaignBiddingStrategy_ = null;
+          onChanged();
+        }
+      } else {
+        if (campaignBiddingStrategyCase_ == 93) {
+          campaignBiddingStrategyCase_ = 0;
+          campaignBiddingStrategy_ = null;
+        }
+        targetCpvBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * An automated bidding strategy that sets bids to optimize performance
+     * given the target CPV you set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+     */
+    public com.google.ads.googleads.v17.common.TargetCpv.Builder getTargetCpvBuilder() {
+      return getTargetCpvFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * An automated bidding strategy that sets bids to optimize performance
+     * given the target CPV you set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v17.common.TargetCpvOrBuilder getTargetCpvOrBuilder() {
+      if ((campaignBiddingStrategyCase_ == 93) && (targetCpvBuilder_ != null)) {
+        return targetCpvBuilder_.getMessageOrBuilder();
+      } else {
+        if (campaignBiddingStrategyCase_ == 93) {
+          return (com.google.ads.googleads.v17.common.TargetCpv) campaignBiddingStrategy_;
+        }
+        return com.google.ads.googleads.v17.common.TargetCpv.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * An automated bidding strategy that sets bids to optimize performance
+     * given the target CPV you set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.common.TargetCpv target_cpv = 93;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v17.common.TargetCpv, com.google.ads.googleads.v17.common.TargetCpv.Builder, com.google.ads.googleads.v17.common.TargetCpvOrBuilder> 
+        getTargetCpvFieldBuilder() {
+      if (targetCpvBuilder_ == null) {
+        if (!(campaignBiddingStrategyCase_ == 93)) {
+          campaignBiddingStrategy_ = com.google.ads.googleads.v17.common.TargetCpv.getDefaultInstance();
+        }
+        targetCpvBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v17.common.TargetCpv, com.google.ads.googleads.v17.common.TargetCpv.Builder, com.google.ads.googleads.v17.common.TargetCpvOrBuilder>(
+                (com.google.ads.googleads.v17.common.TargetCpv) campaignBiddingStrategy_,
+                getParentForChildren(),
+                isClean());
+        campaignBiddingStrategy_ = null;
+      }
+      campaignBiddingStrategyCase_ = 93;
+      onChanged();
+      return targetCpvBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

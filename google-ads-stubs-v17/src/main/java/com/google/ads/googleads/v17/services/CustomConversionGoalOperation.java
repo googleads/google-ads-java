@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
    * Remove operation: A resource name for the removed custom conversion goal
    * is expected, in this format:
    *
-   * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
+   * 'customers/{customer_id}/customConversionGoals/{goal_id}'
    * </pre>
    *
    * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
@@ -238,7 +238,7 @@ private static final long serialVersionUID = 0L;
    * Remove operation: A resource name for the removed custom conversion goal
    * is expected, in this format:
    *
-   * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
+   * 'customers/{customer_id}/customConversionGoals/{goal_id}'
    * </pre>
    *
    * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
    * Remove operation: A resource name for the removed custom conversion goal
    * is expected, in this format:
    *
-   * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
+   * 'customers/{customer_id}/customConversionGoals/{goal_id}'
    * </pre>
    *
    * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
@@ -1307,7 +1307,7 @@ private static final long serialVersionUID = 0L;
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
      *
-     * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
+     * 'customers/{customer_id}/customConversionGoals/{goal_id}'
      * </pre>
      *
      * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
@@ -1322,7 +1322,7 @@ private static final long serialVersionUID = 0L;
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
      *
-     * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
+     * 'customers/{customer_id}/customConversionGoals/{goal_id}'
      * </pre>
      *
      * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
@@ -1351,7 +1351,7 @@ private static final long serialVersionUID = 0L;
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
      *
-     * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
+     * 'customers/{customer_id}/customConversionGoals/{goal_id}'
      * </pre>
      *
      * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
@@ -1381,7 +1381,7 @@ private static final long serialVersionUID = 0L;
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
      *
-     * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
+     * 'customers/{customer_id}/customConversionGoals/{goal_id}'
      * </pre>
      *
      * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
@@ -1401,7 +1401,7 @@ private static final long serialVersionUID = 0L;
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
      *
-     * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
+     * 'customers/{customer_id}/customConversionGoals/{goal_id}'
      * </pre>
      *
      * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>
@@ -1420,7 +1420,7 @@ private static final long serialVersionUID = 0L;
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
      *
-     * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
+     * 'customers/{customer_id}/customConversionGoals/{goal_id}'
      * </pre>
      *
      * <code>string remove = 3 [(.google.api.resource_reference) = { ... }</code>

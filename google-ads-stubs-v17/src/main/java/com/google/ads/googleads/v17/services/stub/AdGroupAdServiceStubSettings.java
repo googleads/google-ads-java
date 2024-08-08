@@ -18,7 +18,9 @@ package com.google.ads.googleads.v17.services.stub;
 
 import com.google.ads.googleads.v17.services.MutateAdGroupAdsRequest;
 import com.google.ads.googleads.v17.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest;
 import com.google.api.core.ApiFunction;
+import com.google.api.core.ObsoleteApi;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.core.GoogleCredentialsProvider;
 import com.google.api.gax.core.InstantiatingExecutorProvider;
@@ -36,6 +38,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
+import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
@@ -86,11 +89,19 @@ public class AdGroupAdServiceStubSettings extends StubSettings<AdGroupAdServiceS
 
   private final UnaryCallSettings<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
       mutateAdGroupAdsSettings;
+  private final UnaryCallSettings<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+      removeAutomaticallyCreatedAssetsSettings;
 
   /** Returns the object with the settings used for calls to mutateAdGroupAds. */
   public UnaryCallSettings<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
       mutateAdGroupAdsSettings() {
     return mutateAdGroupAdsSettings;
+  }
+
+  /** Returns the object with the settings used for calls to removeAutomaticallyCreatedAssets. */
+  public UnaryCallSettings<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+      removeAutomaticallyCreatedAssetsSettings() {
+    return removeAutomaticallyCreatedAssetsSettings;
   }
 
   public AdGroupAdServiceStub createStub() throws IOException {
@@ -116,6 +127,7 @@ public class AdGroupAdServiceStubSettings extends StubSettings<AdGroupAdServiceS
   }
 
   /** Returns the default service endpoint. */
+  @ObsoleteApi("Use getEndpoint() instead")
   public static String getDefaultEndpoint() {
     return "googleads.googleapis.com:443";
   }
@@ -174,6 +186,8 @@ public class AdGroupAdServiceStubSettings extends StubSettings<AdGroupAdServiceS
     super(settingsBuilder);
 
     mutateAdGroupAdsSettings = settingsBuilder.mutateAdGroupAdsSettings().build();
+    removeAutomaticallyCreatedAssetsSettings =
+        settingsBuilder.removeAutomaticallyCreatedAssetsSettings().build();
   }
 
   /** Builder for AdGroupAdServiceStubSettings. */
@@ -181,6 +195,8 @@ public class AdGroupAdServiceStubSettings extends StubSettings<AdGroupAdServiceS
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
     private final UnaryCallSettings.Builder<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
         mutateAdGroupAdsSettings;
+    private final UnaryCallSettings.Builder<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+        removeAutomaticallyCreatedAssetsSettings;
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -222,9 +238,11 @@ public class AdGroupAdServiceStubSettings extends StubSettings<AdGroupAdServiceS
       super(clientContext);
 
       mutateAdGroupAdsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+      removeAutomaticallyCreatedAssetsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(mutateAdGroupAdsSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              mutateAdGroupAdsSettings, removeAutomaticallyCreatedAssetsSettings);
       initDefaults(this);
     }
 
@@ -232,9 +250,12 @@ public class AdGroupAdServiceStubSettings extends StubSettings<AdGroupAdServiceS
       super(settings);
 
       mutateAdGroupAdsSettings = settings.mutateAdGroupAdsSettings.toBuilder();
+      removeAutomaticallyCreatedAssetsSettings =
+          settings.removeAutomaticallyCreatedAssetsSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(mutateAdGroupAdsSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              mutateAdGroupAdsSettings, removeAutomaticallyCreatedAssetsSettings);
     }
 
     private static Builder createDefault() {
@@ -252,6 +273,11 @@ public class AdGroupAdServiceStubSettings extends StubSettings<AdGroupAdServiceS
     private static Builder initDefaults(Builder builder) {
       builder
           .mutateAdGroupAdsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .removeAutomaticallyCreatedAssetsSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
 
@@ -277,6 +303,12 @@ public class AdGroupAdServiceStubSettings extends StubSettings<AdGroupAdServiceS
     public UnaryCallSettings.Builder<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
         mutateAdGroupAdsSettings() {
       return mutateAdGroupAdsSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to removeAutomaticallyCreatedAssets. */
+    public UnaryCallSettings.Builder<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+        removeAutomaticallyCreatedAssetsSettings() {
+      return removeAutomaticallyCreatedAssetsSettings;
     }
 
     @Override

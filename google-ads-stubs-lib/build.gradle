@@ -25,6 +25,7 @@ dependencies {
     implementation 'org.slf4j:slf4j-api:1.7.25'
     testImplementation 'org.mockito:mockito-core:4.11.0'
 }
+
 publishing {
     publications {
         maven(MavenPublication) { publication ->

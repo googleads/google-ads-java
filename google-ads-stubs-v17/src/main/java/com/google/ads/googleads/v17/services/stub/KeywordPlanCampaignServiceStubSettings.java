@@ -19,6 +19,7 @@ package com.google.ads.googleads.v17.services.stub;
 import com.google.ads.googleads.v17.services.MutateKeywordPlanCampaignsRequest;
 import com.google.ads.googleads.v17.services.MutateKeywordPlanCampaignsResponse;
 import com.google.api.core.ApiFunction;
+import com.google.api.core.ObsoleteApi;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.core.GoogleCredentialsProvider;
 import com.google.api.gax.core.InstantiatingExecutorProvider;
@@ -119,6 +120,7 @@ public class KeywordPlanCampaignServiceStubSettings
   }
 
   /** Returns the default service endpoint. */
+  @ObsoleteApi("Use getEndpoint() instead")
   public static String getDefaultEndpoint() {
     return "googleads.googleapis.com:443";
   }

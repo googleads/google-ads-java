@@ -167,4 +167,26 @@ public class MockAudienceInsightsServiceImpl extends AudienceInsightsServiceImpl
                   Exception.class.getName())));
     }
   }
+
+  @Override
+  public void generateAudienceOverlapInsights(
+      GenerateAudienceOverlapInsightsRequest request,
+      StreamObserver<GenerateAudienceOverlapInsightsResponse> responseObserver) {
+    Object response = responses.poll();
+    if (response instanceof GenerateAudienceOverlapInsightsResponse) {
+      requests.add(request);
+      responseObserver.onNext(((GenerateAudienceOverlapInsightsResponse) response));
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError(((Exception) response));
+    } else {
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method GenerateAudienceOverlapInsights, expected %s or %s",
+                  response == null ? "null" : response.getClass().getName(),
+                  GenerateAudienceOverlapInsightsResponse.class.getName(),
+                  Exception.class.getName())));
+    }
+  }
 }

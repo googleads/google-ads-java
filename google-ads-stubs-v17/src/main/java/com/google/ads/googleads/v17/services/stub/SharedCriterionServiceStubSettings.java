@@ -19,6 +19,7 @@ package com.google.ads.googleads.v17.services.stub;
 import com.google.ads.googleads.v17.services.MutateSharedCriteriaRequest;
 import com.google.ads.googleads.v17.services.MutateSharedCriteriaResponse;
 import com.google.api.core.ApiFunction;
+import com.google.api.core.ObsoleteApi;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.core.GoogleCredentialsProvider;
 import com.google.api.gax.core.InstantiatingExecutorProvider;
@@ -118,6 +119,7 @@ public class SharedCriterionServiceStubSettings
   }
 
   /** Returns the default service endpoint. */
+  @ObsoleteApi("Use getEndpoint() instead")
   public static String getDefaultEndpoint() {
     return "googleads.googleapis.com:443";
   }

@@ -18,6 +18,8 @@ package com.google.ads.googleads.v17.services.stub;
 
 import com.google.ads.googleads.v17.services.GenerateAudienceCompositionInsightsRequest;
 import com.google.ads.googleads.v17.services.GenerateAudienceCompositionInsightsResponse;
+import com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest;
+import com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse;
 import com.google.ads.googleads.v17.services.GenerateInsightsFinderReportRequest;
 import com.google.ads.googleads.v17.services.GenerateInsightsFinderReportResponse;
 import com.google.ads.googleads.v17.services.GenerateSuggestedTargetingInsightsRequest;
@@ -69,6 +71,13 @@ public abstract class AudienceInsightsServiceStub implements BackgroundResource 
       generateSuggestedTargetingInsightsCallable() {
     throw new UnsupportedOperationException(
         "Not implemented: generateSuggestedTargetingInsightsCallable()");
+  }
+
+  public UnaryCallable<
+          GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+      generateAudienceOverlapInsightsCallable() {
+    throw new UnsupportedOperationException(
+        "Not implemented: generateAudienceOverlapInsightsCallable()");
   }
 
   @Override

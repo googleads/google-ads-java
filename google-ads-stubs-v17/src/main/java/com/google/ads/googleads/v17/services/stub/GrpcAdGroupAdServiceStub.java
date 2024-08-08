@@ -18,6 +18,7 @@ package com.google.ads.googleads.v17.services.stub;
 
 import com.google.ads.googleads.v17.services.MutateAdGroupAdsRequest;
 import com.google.ads.googleads.v17.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -26,6 +27,7 @@ import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.RequestParamsBuilder;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.longrunning.stub.GrpcOperationsStub;
+import com.google.protobuf.Empty;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
@@ -53,8 +55,22 @@ public class GrpcAdGroupAdServiceStub extends AdGroupAdServiceStub {
                   ProtoUtils.marshaller(MutateAdGroupAdsResponse.getDefaultInstance()))
               .build();
 
+  private static final MethodDescriptor<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+      removeAutomaticallyCreatedAssetsMethodDescriptor =
+          MethodDescriptor.<RemoveAutomaticallyCreatedAssetsRequest, Empty>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v17.services.AdGroupAdService/RemoveAutomaticallyCreatedAssets")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(
+                      RemoveAutomaticallyCreatedAssetsRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
+              .build();
+
   private final UnaryCallable<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
       mutateAdGroupAdsCallable;
+  private final UnaryCallable<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+      removeAutomaticallyCreatedAssetsCallable;
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
@@ -111,10 +127,26 @@ public class GrpcAdGroupAdServiceStub extends AdGroupAdServiceStub {
                       return builder.build();
                     })
                 .build();
+    GrpcCallSettings<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+        removeAutomaticallyCreatedAssetsTransportSettings =
+            GrpcCallSettings.<RemoveAutomaticallyCreatedAssetsRequest, Empty>newBuilder()
+                .setMethodDescriptor(removeAutomaticallyCreatedAssetsMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("ad_group_ad", String.valueOf(request.getAdGroupAd()));
+                      return builder.build();
+                    })
+                .build();
 
     this.mutateAdGroupAdsCallable =
         callableFactory.createUnaryCallable(
             mutateAdGroupAdsTransportSettings, settings.mutateAdGroupAdsSettings(), clientContext);
+    this.removeAutomaticallyCreatedAssetsCallable =
+        callableFactory.createUnaryCallable(
+            removeAutomaticallyCreatedAssetsTransportSettings,
+            settings.removeAutomaticallyCreatedAssetsSettings(),
+            clientContext);
 
     this.backgroundResources =
         new BackgroundResourceAggregation(clientContext.getBackgroundResources());
@@ -128,6 +160,12 @@ public class GrpcAdGroupAdServiceStub extends AdGroupAdServiceStub {
   public UnaryCallable<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
       mutateAdGroupAdsCallable() {
     return mutateAdGroupAdsCallable;
+  }
+
+  @Override
+  public UnaryCallable<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+      removeAutomaticallyCreatedAssetsCallable() {
+    return removeAutomaticallyCreatedAssetsCallable;
   }
 
   @Override

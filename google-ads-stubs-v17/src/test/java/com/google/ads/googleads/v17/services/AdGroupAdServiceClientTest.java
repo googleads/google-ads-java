@@ -16,6 +16,7 @@
 
 package com.google.ads.googleads.v17.services;
 
+import com.google.ads.googleads.v17.resources.AdGroupAdName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -24,6 +25,7 @@ import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.Empty;
 import com.google.rpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -113,6 +115,82 @@ public class AdGroupAdServiceClientTest {
       String customerId = "customerId-1581184615";
       List<AdGroupAdOperation> operations = new ArrayList<>();
       client.mutateAdGroupAds(customerId, operations);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void removeAutomaticallyCreatedAssetsTest() throws Exception {
+    Empty expectedResponse = Empty.newBuilder().build();
+    mockAdGroupAdService.addResponse(expectedResponse);
+
+    AdGroupAdName adGroupAd = AdGroupAdName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]");
+    List<AssetsWithFieldType> assetsWithFieldType = new ArrayList<>();
+
+    client.removeAutomaticallyCreatedAssets(adGroupAd, assetsWithFieldType);
+
+    List<AbstractMessage> actualRequests = mockAdGroupAdService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    RemoveAutomaticallyCreatedAssetsRequest actualRequest =
+        ((RemoveAutomaticallyCreatedAssetsRequest) actualRequests.get(0));
+
+    Assert.assertEquals(adGroupAd.toString(), actualRequest.getAdGroupAd());
+    Assert.assertEquals(assetsWithFieldType, actualRequest.getAssetsWithFieldTypeList());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void removeAutomaticallyCreatedAssetsExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAdGroupAdService.addException(exception);
+
+    try {
+      AdGroupAdName adGroupAd = AdGroupAdName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]");
+      List<AssetsWithFieldType> assetsWithFieldType = new ArrayList<>();
+      client.removeAutomaticallyCreatedAssets(adGroupAd, assetsWithFieldType);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void removeAutomaticallyCreatedAssetsTest2() throws Exception {
+    Empty expectedResponse = Empty.newBuilder().build();
+    mockAdGroupAdService.addResponse(expectedResponse);
+
+    String adGroupAd = "adGroupAd916031839";
+    List<AssetsWithFieldType> assetsWithFieldType = new ArrayList<>();
+
+    client.removeAutomaticallyCreatedAssets(adGroupAd, assetsWithFieldType);
+
+    List<AbstractMessage> actualRequests = mockAdGroupAdService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    RemoveAutomaticallyCreatedAssetsRequest actualRequest =
+        ((RemoveAutomaticallyCreatedAssetsRequest) actualRequests.get(0));
+
+    Assert.assertEquals(adGroupAd, actualRequest.getAdGroupAd());
+    Assert.assertEquals(assetsWithFieldType, actualRequest.getAssetsWithFieldTypeList());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void removeAutomaticallyCreatedAssetsExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAdGroupAdService.addException(exception);
+
+    try {
+      String adGroupAd = "adGroupAd916031839";
+      List<AssetsWithFieldType> assetsWithFieldType = new ArrayList<>();
+      client.removeAutomaticallyCreatedAssets(adGroupAd, assetsWithFieldType);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception.

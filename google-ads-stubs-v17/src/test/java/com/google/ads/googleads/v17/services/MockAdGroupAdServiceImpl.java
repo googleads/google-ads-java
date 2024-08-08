@@ -19,6 +19,7 @@ package com.google.ads.googleads.v17.services;
 import com.google.ads.googleads.v17.services.AdGroupAdServiceGrpc.AdGroupAdServiceImplBase;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.Empty;
 import io.grpc.stub.StreamObserver;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -75,6 +76,27 @@ public class MockAdGroupAdServiceImpl extends AdGroupAdServiceImplBase {
                   "Unrecognized response type %s for method MutateAdGroupAds, expected %s or %s",
                   response == null ? "null" : response.getClass().getName(),
                   MutateAdGroupAdsResponse.class.getName(),
+                  Exception.class.getName())));
+    }
+  }
+
+  @Override
+  public void removeAutomaticallyCreatedAssets(
+      RemoveAutomaticallyCreatedAssetsRequest request, StreamObserver<Empty> responseObserver) {
+    Object response = responses.poll();
+    if (response instanceof Empty) {
+      requests.add(request);
+      responseObserver.onNext(((Empty) response));
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError(((Exception) response));
+    } else {
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method RemoveAutomaticallyCreatedAssets, expected %s or %s",
+                  response == null ? "null" : response.getClass().getName(),
+                  Empty.class.getName(),
                   Exception.class.getName())));
     }
   }

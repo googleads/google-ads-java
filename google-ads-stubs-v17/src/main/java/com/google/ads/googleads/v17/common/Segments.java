@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     activityState_ = "";
     externalActivityId_ = "";
     adDestinationType_ = 0;
+    adFormatType_ = 0;
     adNetworkType_ = 0;
     adGroup_ = "";
     assetGroup_ = "";
@@ -108,6 +109,7 @@ private static final long serialVersionUID = 0L;
     skAdNetworkCoarseConversionValue_ = 0;
     skAdNetworkSourceDomain_ = "";
     skAdNetworkSourceType_ = 0;
+    skAdNetworkVersion_ = "";
     newVersusReturningCustomers_ = 0;
   }
 
@@ -448,6 +450,32 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override public com.google.ads.googleads.v17.enums.AdDestinationTypeEnum.AdDestinationType getAdDestinationType() {
     com.google.ads.googleads.v17.enums.AdDestinationTypeEnum.AdDestinationType result = com.google.ads.googleads.v17.enums.AdDestinationTypeEnum.AdDestinationType.forNumber(adDestinationType_);
     return result == null ? com.google.ads.googleads.v17.enums.AdDestinationTypeEnum.AdDestinationType.UNRECOGNIZED : result;
+  }
+
+  public static final int AD_FORMAT_TYPE_FIELD_NUMBER = 191;
+  private int adFormatType_ = 0;
+  /**
+   * <pre>
+   * Ad Format type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType ad_format_type = 191;</code>
+   * @return The enum numeric value on the wire for adFormatType.
+   */
+  @java.lang.Override public int getAdFormatTypeValue() {
+    return adFormatType_;
+  }
+  /**
+   * <pre>
+   * Ad Format type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType ad_format_type = 191;</code>
+   * @return The adFormatType.
+   */
+  @java.lang.Override public com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType getAdFormatType() {
+    com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType result = com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType.forNumber(adFormatType_);
+    return result == null ? com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType.UNRECOGNIZED : result;
   }
 
   public static final int AD_NETWORK_TYPE_FIELD_NUMBER = 3;
@@ -4917,6 +4945,65 @@ private static final long serialVersionUID = 0L;
     return skAdNetworkPostbackSequenceIndex_;
   }
 
+  public static final int SK_AD_NETWORK_VERSION_FIELD_NUMBER = 192;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object skAdNetworkVersion_ = "";
+  /**
+   * <pre>
+   * The version of the SKAdNetwork API used.
+   * </pre>
+   *
+   * <code>optional string sk_ad_network_version = 192;</code>
+   * @return Whether the skAdNetworkVersion field is set.
+   */
+  @java.lang.Override
+  public boolean hasSkAdNetworkVersion() {
+    return ((bitField2_ & 0x00001000) != 0);
+  }
+  /**
+   * <pre>
+   * The version of the SKAdNetwork API used.
+   * </pre>
+   *
+   * <code>optional string sk_ad_network_version = 192;</code>
+   * @return The skAdNetworkVersion.
+   */
+  @java.lang.Override
+  public java.lang.String getSkAdNetworkVersion() {
+    java.lang.Object ref = skAdNetworkVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      skAdNetworkVersion_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The version of the SKAdNetwork API used.
+   * </pre>
+   *
+   * <code>optional string sk_ad_network_version = 192;</code>
+   * @return The bytes for skAdNetworkVersion.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSkAdNetworkVersionBytes() {
+    java.lang.Object ref = skAdNetworkVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      skAdNetworkVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int ASSET_INTERACTION_TARGET_FIELD_NUMBER = 139;
   private com.google.ads.googleads.v17.common.AssetInteractionTarget assetInteractionTarget_;
   /**
@@ -4938,7 +5025,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAssetInteractionTarget() {
-    return ((bitField2_ & 0x00001000) != 0);
+    return ((bitField2_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -5257,7 +5344,7 @@ private static final long serialVersionUID = 0L;
     if (conversionValueRulePrimaryDimension_ != com.google.ads.googleads.v17.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension.UNSPECIFIED.getNumber()) {
       output.writeEnum(138, conversionValueRulePrimaryDimension_);
     }
-    if (((bitField2_ & 0x00001000) != 0)) {
+    if (((bitField2_ & 0x00002000) != 0)) {
       output.writeMessage(139, getAssetInteractionTarget());
     }
     if (recommendationType_ != com.google.ads.googleads.v17.enums.RecommendationTypeEnum.RecommendationType.UNSPECIFIED.getNumber()) {
@@ -5346,6 +5433,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField2_ & 0x00000100) != 0)) {
       output.writeInt64(190, skAdNetworkRedistributedFineConversionValue_);
+    }
+    if (adFormatType_ != com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(191, adFormatType_);
+    }
+    if (((bitField2_ & 0x00001000) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 192, skAdNetworkVersion_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5623,7 +5716,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(138, conversionValueRulePrimaryDimension_);
     }
-    if (((bitField2_ & 0x00001000) != 0)) {
+    if (((bitField2_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(139, getAssetInteractionTarget());
     }
@@ -5726,6 +5819,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(190, skAdNetworkRedistributedFineConversionValue_);
     }
+    if (adFormatType_ != com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(191, adFormatType_);
+    }
+    if (((bitField2_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(192, skAdNetworkVersion_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -5772,6 +5872,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getExternalActivityId())) return false;
     }
     if (adDestinationType_ != other.adDestinationType_) return false;
+    if (adFormatType_ != other.adFormatType_) return false;
     if (adNetworkType_ != other.adNetworkType_) return false;
     if (hasAdGroup() != other.hasAdGroup()) return false;
     if (hasAdGroup()) {
@@ -6150,6 +6251,11 @@ private static final long serialVersionUID = 0L;
       if (getSkAdNetworkPostbackSequenceIndex()
           != other.getSkAdNetworkPostbackSequenceIndex()) return false;
     }
+    if (hasSkAdNetworkVersion() != other.hasSkAdNetworkVersion()) return false;
+    if (hasSkAdNetworkVersion()) {
+      if (!getSkAdNetworkVersion()
+          .equals(other.getSkAdNetworkVersion())) return false;
+    }
     if (hasAssetInteractionTarget() != other.hasAssetInteractionTarget()) return false;
     if (hasAssetInteractionTarget()) {
       if (!getAssetInteractionTarget()
@@ -6195,6 +6301,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + AD_DESTINATION_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + adDestinationType_;
+    hash = (37 * hash) + AD_FORMAT_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + adFormatType_;
     hash = (37 * hash) + AD_NETWORK_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + adNetworkType_;
     if (hasAdGroup()) {
@@ -6540,6 +6648,10 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSkAdNetworkPostbackSequenceIndex());
     }
+    if (hasSkAdNetworkVersion()) {
+      hash = (37 * hash) + SK_AD_NETWORK_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getSkAdNetworkVersion().hashCode();
+    }
     if (hasAssetInteractionTarget()) {
       hash = (37 * hash) + ASSET_INTERACTION_TARGET_FIELD_NUMBER;
       hash = (53 * hash) + getAssetInteractionTarget().hashCode();
@@ -6700,6 +6812,7 @@ private static final long serialVersionUID = 0L;
       activityState_ = "";
       externalActivityId_ = "";
       adDestinationType_ = 0;
+      adFormatType_ = 0;
       adNetworkType_ = 0;
       adGroup_ = "";
       assetGroup_ = "";
@@ -6810,6 +6923,7 @@ private static final long serialVersionUID = 0L;
       skAdNetworkSourceDomain_ = "";
       skAdNetworkSourceType_ = 0;
       skAdNetworkPostbackSequenceIndex_ = 0L;
+      skAdNetworkVersion_ = "";
       assetInteractionTarget_ = null;
       if (assetInteractionTargetBuilder_ != null) {
         assetInteractionTargetBuilder_.dispose();
@@ -6881,97 +6995,96 @@ private static final long serialVersionUID = 0L;
         result.adDestinationType_ = adDestinationType_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.adNetworkType_ = adNetworkType_;
+        result.adFormatType_ = adFormatType_;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.adNetworkType_ = adNetworkType_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.adGroup_ = adGroup_;
         to_bitField0_ |= 0x00000040;
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.assetGroup_ = assetGroup_;
         to_bitField0_ |= 0x00000080;
       }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.auctionInsightDomain_ = auctionInsightDomain_;
         to_bitField0_ |= 0x00000100;
       }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
+      if (((from_bitField0_ & 0x00001000) != 0)) {
         result.budgetCampaignAssociationStatus_ = budgetCampaignAssociationStatusBuilder_ == null
             ? budgetCampaignAssociationStatus_
             : budgetCampaignAssociationStatusBuilder_.build();
         to_bitField0_ |= 0x00000200;
       }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.campaign_ = campaign_;
         to_bitField0_ |= 0x00000400;
       }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
+      if (((from_bitField0_ & 0x00004000) != 0)) {
         result.clickType_ = clickType_;
       }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
+      if (((from_bitField0_ & 0x00008000) != 0)) {
         result.conversionAction_ = conversionAction_;
         to_bitField0_ |= 0x00000800;
       }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
+      if (((from_bitField0_ & 0x00010000) != 0)) {
         result.conversionActionCategory_ = conversionActionCategory_;
       }
-      if (((from_bitField0_ & 0x00010000) != 0)) {
+      if (((from_bitField0_ & 0x00020000) != 0)) {
         result.conversionActionName_ = conversionActionName_;
         to_bitField0_ |= 0x00001000;
       }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
+      if (((from_bitField0_ & 0x00040000) != 0)) {
         result.conversionAdjustment_ = conversionAdjustment_;
         to_bitField0_ |= 0x00002000;
       }
-      if (((from_bitField0_ & 0x00040000) != 0)) {
+      if (((from_bitField0_ & 0x00080000) != 0)) {
         result.conversionAttributionEventType_ = conversionAttributionEventType_;
       }
-      if (((from_bitField0_ & 0x00080000) != 0)) {
+      if (((from_bitField0_ & 0x00100000) != 0)) {
         result.conversionLagBucket_ = conversionLagBucket_;
       }
-      if (((from_bitField0_ & 0x00100000) != 0)) {
+      if (((from_bitField0_ & 0x00200000) != 0)) {
         result.conversionOrAdjustmentLagBucket_ = conversionOrAdjustmentLagBucket_;
       }
-      if (((from_bitField0_ & 0x00200000) != 0)) {
+      if (((from_bitField0_ & 0x00400000) != 0)) {
         result.date_ = date_;
         to_bitField0_ |= 0x00004000;
       }
-      if (((from_bitField0_ & 0x00400000) != 0)) {
+      if (((from_bitField0_ & 0x00800000) != 0)) {
         result.dayOfWeek_ = dayOfWeek_;
       }
-      if (((from_bitField0_ & 0x00800000) != 0)) {
+      if (((from_bitField0_ & 0x01000000) != 0)) {
         result.device_ = device_;
       }
-      if (((from_bitField0_ & 0x01000000) != 0)) {
+      if (((from_bitField0_ & 0x02000000) != 0)) {
         result.externalConversionSource_ = externalConversionSource_;
       }
-      if (((from_bitField0_ & 0x02000000) != 0)) {
+      if (((from_bitField0_ & 0x04000000) != 0)) {
         result.geoTargetAirport_ = geoTargetAirport_;
         to_bitField0_ |= 0x00008000;
       }
-      if (((from_bitField0_ & 0x04000000) != 0)) {
+      if (((from_bitField0_ & 0x08000000) != 0)) {
         result.geoTargetCanton_ = geoTargetCanton_;
         to_bitField0_ |= 0x00010000;
       }
-      if (((from_bitField0_ & 0x08000000) != 0)) {
+      if (((from_bitField0_ & 0x10000000) != 0)) {
         result.geoTargetCity_ = geoTargetCity_;
         to_bitField0_ |= 0x00020000;
       }
-      if (((from_bitField0_ & 0x10000000) != 0)) {
+      if (((from_bitField0_ & 0x20000000) != 0)) {
         result.geoTargetCountry_ = geoTargetCountry_;
         to_bitField0_ |= 0x00040000;
       }
-      if (((from_bitField0_ & 0x20000000) != 0)) {
+      if (((from_bitField0_ & 0x40000000) != 0)) {
         result.geoTargetCounty_ = geoTargetCounty_;
         to_bitField0_ |= 0x00080000;
       }
-      if (((from_bitField0_ & 0x40000000) != 0)) {
+      if (((from_bitField0_ & 0x80000000) != 0)) {
         result.geoTargetDistrict_ = geoTargetDistrict_;
         to_bitField0_ |= 0x00100000;
-      }
-      if (((from_bitField0_ & 0x80000000) != 0)) {
-        result.geoTargetMetro_ = geoTargetMetro_;
-        to_bitField0_ |= 0x00200000;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -6980,129 +7093,129 @@ private static final long serialVersionUID = 0L;
       int from_bitField1_ = bitField1_;
       int to_bitField0_ = 0;
       if (((from_bitField1_ & 0x00000001) != 0)) {
+        result.geoTargetMetro_ = geoTargetMetro_;
+        to_bitField0_ |= 0x00200000;
+      }
+      if (((from_bitField1_ & 0x00000002) != 0)) {
         result.geoTargetMostSpecificLocation_ = geoTargetMostSpecificLocation_;
         to_bitField0_ |= 0x00400000;
       }
-      if (((from_bitField1_ & 0x00000002) != 0)) {
+      if (((from_bitField1_ & 0x00000004) != 0)) {
         result.geoTargetPostalCode_ = geoTargetPostalCode_;
         to_bitField0_ |= 0x00800000;
       }
-      if (((from_bitField1_ & 0x00000004) != 0)) {
+      if (((from_bitField1_ & 0x00000008) != 0)) {
         result.geoTargetProvince_ = geoTargetProvince_;
         to_bitField0_ |= 0x01000000;
       }
-      if (((from_bitField1_ & 0x00000008) != 0)) {
+      if (((from_bitField1_ & 0x00000010) != 0)) {
         result.geoTargetRegion_ = geoTargetRegion_;
         to_bitField0_ |= 0x02000000;
       }
-      if (((from_bitField1_ & 0x00000010) != 0)) {
+      if (((from_bitField1_ & 0x00000020) != 0)) {
         result.geoTargetState_ = geoTargetState_;
         to_bitField0_ |= 0x04000000;
       }
-      if (((from_bitField1_ & 0x00000020) != 0)) {
+      if (((from_bitField1_ & 0x00000040) != 0)) {
         result.hotelBookingWindowDays_ = hotelBookingWindowDays_;
         to_bitField0_ |= 0x08000000;
       }
-      if (((from_bitField1_ & 0x00000040) != 0)) {
+      if (((from_bitField1_ & 0x00000080) != 0)) {
         result.hotelCenterId_ = hotelCenterId_;
         to_bitField0_ |= 0x10000000;
       }
-      if (((from_bitField1_ & 0x00000080) != 0)) {
+      if (((from_bitField1_ & 0x00000100) != 0)) {
         result.hotelCheckInDate_ = hotelCheckInDate_;
         to_bitField0_ |= 0x20000000;
       }
-      if (((from_bitField1_ & 0x00000100) != 0)) {
+      if (((from_bitField1_ & 0x00000200) != 0)) {
         result.hotelCheckInDayOfWeek_ = hotelCheckInDayOfWeek_;
       }
-      if (((from_bitField1_ & 0x00000200) != 0)) {
+      if (((from_bitField1_ & 0x00000400) != 0)) {
         result.hotelCity_ = hotelCity_;
         to_bitField0_ |= 0x40000000;
       }
-      if (((from_bitField1_ & 0x00000400) != 0)) {
+      if (((from_bitField1_ & 0x00000800) != 0)) {
         result.hotelClass_ = hotelClass_;
         to_bitField0_ |= 0x80000000;
       }
       int to_bitField1_ = 0;
-      if (((from_bitField1_ & 0x00000800) != 0)) {
+      if (((from_bitField1_ & 0x00001000) != 0)) {
         result.hotelCountry_ = hotelCountry_;
         to_bitField1_ |= 0x00000001;
       }
-      if (((from_bitField1_ & 0x00001000) != 0)) {
+      if (((from_bitField1_ & 0x00002000) != 0)) {
         result.hotelDateSelectionType_ = hotelDateSelectionType_;
       }
-      if (((from_bitField1_ & 0x00002000) != 0)) {
+      if (((from_bitField1_ & 0x00004000) != 0)) {
         result.hotelLengthOfStay_ = hotelLengthOfStay_;
         to_bitField1_ |= 0x00000002;
       }
-      if (((from_bitField1_ & 0x00004000) != 0)) {
+      if (((from_bitField1_ & 0x00008000) != 0)) {
         result.hotelRateRuleId_ = hotelRateRuleId_;
         to_bitField1_ |= 0x00000004;
       }
-      if (((from_bitField1_ & 0x00008000) != 0)) {
+      if (((from_bitField1_ & 0x00010000) != 0)) {
         result.hotelRateType_ = hotelRateType_;
       }
-      if (((from_bitField1_ & 0x00010000) != 0)) {
+      if (((from_bitField1_ & 0x00020000) != 0)) {
         result.hotelPriceBucket_ = hotelPriceBucket_;
       }
-      if (((from_bitField1_ & 0x00020000) != 0)) {
+      if (((from_bitField1_ & 0x00040000) != 0)) {
         result.hotelState_ = hotelState_;
         to_bitField1_ |= 0x00000008;
       }
-      if (((from_bitField1_ & 0x00040000) != 0)) {
+      if (((from_bitField1_ & 0x00080000) != 0)) {
         result.hour_ = hour_;
         to_bitField1_ |= 0x00000010;
       }
-      if (((from_bitField1_ & 0x00080000) != 0)) {
+      if (((from_bitField1_ & 0x00100000) != 0)) {
         result.interactionOnThisExtension_ = interactionOnThisExtension_;
         to_bitField1_ |= 0x00000020;
       }
-      if (((from_bitField1_ & 0x00100000) != 0)) {
+      if (((from_bitField1_ & 0x00200000) != 0)) {
         result.keyword_ = keywordBuilder_ == null
             ? keyword_
             : keywordBuilder_.build();
         to_bitField1_ |= 0x00000040;
       }
-      if (((from_bitField1_ & 0x00200000) != 0)) {
+      if (((from_bitField1_ & 0x00400000) != 0)) {
         result.month_ = month_;
         to_bitField1_ |= 0x00000080;
       }
-      if (((from_bitField1_ & 0x00400000) != 0)) {
+      if (((from_bitField1_ & 0x00800000) != 0)) {
         result.monthOfYear_ = monthOfYear_;
       }
-      if (((from_bitField1_ & 0x00800000) != 0)) {
+      if (((from_bitField1_ & 0x01000000) != 0)) {
         result.partnerHotelId_ = partnerHotelId_;
         to_bitField1_ |= 0x00000100;
       }
-      if (((from_bitField1_ & 0x01000000) != 0)) {
+      if (((from_bitField1_ & 0x02000000) != 0)) {
         result.placeholderType_ = placeholderType_;
       }
-      if (((from_bitField1_ & 0x02000000) != 0)) {
+      if (((from_bitField1_ & 0x04000000) != 0)) {
         result.productAggregatorId_ = productAggregatorId_;
         to_bitField1_ |= 0x00000200;
       }
-      if (((from_bitField1_ & 0x04000000) != 0)) {
+      if (((from_bitField1_ & 0x08000000) != 0)) {
         result.productCategoryLevel1_ = productCategoryLevel1_;
         to_bitField1_ |= 0x00000400;
       }
-      if (((from_bitField1_ & 0x08000000) != 0)) {
+      if (((from_bitField1_ & 0x10000000) != 0)) {
         result.productCategoryLevel2_ = productCategoryLevel2_;
         to_bitField1_ |= 0x00000800;
       }
-      if (((from_bitField1_ & 0x10000000) != 0)) {
+      if (((from_bitField1_ & 0x20000000) != 0)) {
         result.productCategoryLevel3_ = productCategoryLevel3_;
         to_bitField1_ |= 0x00001000;
       }
-      if (((from_bitField1_ & 0x20000000) != 0)) {
+      if (((from_bitField1_ & 0x40000000) != 0)) {
         result.productCategoryLevel4_ = productCategoryLevel4_;
         to_bitField1_ |= 0x00002000;
       }
-      if (((from_bitField1_ & 0x40000000) != 0)) {
+      if (((from_bitField1_ & 0x80000000) != 0)) {
         result.productCategoryLevel5_ = productCategoryLevel5_;
         to_bitField1_ |= 0x00004000;
-      }
-      if (((from_bitField1_ & 0x80000000) != 0)) {
-        result.productBrand_ = productBrand_;
-        to_bitField1_ |= 0x00008000;
       }
       result.bitField0_ |= to_bitField0_;
       result.bitField1_ |= to_bitField1_;
@@ -7110,127 +7223,127 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial2(com.google.ads.googleads.v17.common.Segments result) {
       int from_bitField2_ = bitField2_;
+      int to_bitField1_ = 0;
       if (((from_bitField2_ & 0x00000001) != 0)) {
-        result.productChannel_ = productChannel_;
+        result.productBrand_ = productBrand_;
+        to_bitField1_ |= 0x00008000;
       }
       if (((from_bitField2_ & 0x00000002) != 0)) {
-        result.productChannelExclusivity_ = productChannelExclusivity_;
+        result.productChannel_ = productChannel_;
       }
       if (((from_bitField2_ & 0x00000004) != 0)) {
+        result.productChannelExclusivity_ = productChannelExclusivity_;
+      }
+      if (((from_bitField2_ & 0x00000008) != 0)) {
         result.productCondition_ = productCondition_;
       }
-      int to_bitField1_ = 0;
-      if (((from_bitField2_ & 0x00000008) != 0)) {
+      if (((from_bitField2_ & 0x00000010) != 0)) {
         result.productCountry_ = productCountry_;
         to_bitField1_ |= 0x00010000;
       }
-      if (((from_bitField2_ & 0x00000010) != 0)) {
+      if (((from_bitField2_ & 0x00000020) != 0)) {
         result.productCustomAttribute0_ = productCustomAttribute0_;
         to_bitField1_ |= 0x00020000;
       }
-      if (((from_bitField2_ & 0x00000020) != 0)) {
+      if (((from_bitField2_ & 0x00000040) != 0)) {
         result.productCustomAttribute1_ = productCustomAttribute1_;
         to_bitField1_ |= 0x00040000;
       }
-      if (((from_bitField2_ & 0x00000040) != 0)) {
+      if (((from_bitField2_ & 0x00000080) != 0)) {
         result.productCustomAttribute2_ = productCustomAttribute2_;
         to_bitField1_ |= 0x00080000;
       }
-      if (((from_bitField2_ & 0x00000080) != 0)) {
+      if (((from_bitField2_ & 0x00000100) != 0)) {
         result.productCustomAttribute3_ = productCustomAttribute3_;
         to_bitField1_ |= 0x00100000;
       }
-      if (((from_bitField2_ & 0x00000100) != 0)) {
+      if (((from_bitField2_ & 0x00000200) != 0)) {
         result.productCustomAttribute4_ = productCustomAttribute4_;
         to_bitField1_ |= 0x00200000;
       }
-      if (((from_bitField2_ & 0x00000200) != 0)) {
+      if (((from_bitField2_ & 0x00000400) != 0)) {
         result.productFeedLabel_ = productFeedLabel_;
         to_bitField1_ |= 0x00400000;
       }
-      if (((from_bitField2_ & 0x00000400) != 0)) {
+      if (((from_bitField2_ & 0x00000800) != 0)) {
         result.productItemId_ = productItemId_;
         to_bitField1_ |= 0x00800000;
       }
-      if (((from_bitField2_ & 0x00000800) != 0)) {
+      if (((from_bitField2_ & 0x00001000) != 0)) {
         result.productLanguage_ = productLanguage_;
         to_bitField1_ |= 0x01000000;
       }
-      if (((from_bitField2_ & 0x00001000) != 0)) {
+      if (((from_bitField2_ & 0x00002000) != 0)) {
         result.productMerchantId_ = productMerchantId_;
         to_bitField1_ |= 0x02000000;
       }
-      if (((from_bitField2_ & 0x00002000) != 0)) {
+      if (((from_bitField2_ & 0x00004000) != 0)) {
         result.productStoreId_ = productStoreId_;
         to_bitField1_ |= 0x04000000;
       }
-      if (((from_bitField2_ & 0x00004000) != 0)) {
+      if (((from_bitField2_ & 0x00008000) != 0)) {
         result.productTitle_ = productTitle_;
         to_bitField1_ |= 0x08000000;
       }
-      if (((from_bitField2_ & 0x00008000) != 0)) {
+      if (((from_bitField2_ & 0x00010000) != 0)) {
         result.productTypeL1_ = productTypeL1_;
         to_bitField1_ |= 0x10000000;
       }
-      if (((from_bitField2_ & 0x00010000) != 0)) {
+      if (((from_bitField2_ & 0x00020000) != 0)) {
         result.productTypeL2_ = productTypeL2_;
         to_bitField1_ |= 0x20000000;
       }
-      if (((from_bitField2_ & 0x00020000) != 0)) {
+      if (((from_bitField2_ & 0x00040000) != 0)) {
         result.productTypeL3_ = productTypeL3_;
         to_bitField1_ |= 0x40000000;
       }
-      if (((from_bitField2_ & 0x00040000) != 0)) {
+      if (((from_bitField2_ & 0x00080000) != 0)) {
         result.productTypeL4_ = productTypeL4_;
         to_bitField1_ |= 0x80000000;
       }
       int to_bitField2_ = 0;
-      if (((from_bitField2_ & 0x00080000) != 0)) {
+      if (((from_bitField2_ & 0x00100000) != 0)) {
         result.productTypeL5_ = productTypeL5_;
         to_bitField2_ |= 0x00000001;
       }
-      if (((from_bitField2_ & 0x00100000) != 0)) {
+      if (((from_bitField2_ & 0x00200000) != 0)) {
         result.quarter_ = quarter_;
         to_bitField2_ |= 0x00000002;
       }
-      if (((from_bitField2_ & 0x00200000) != 0)) {
+      if (((from_bitField2_ & 0x00400000) != 0)) {
         result.recommendationType_ = recommendationType_;
       }
-      if (((from_bitField2_ & 0x00400000) != 0)) {
+      if (((from_bitField2_ & 0x00800000) != 0)) {
         result.searchEngineResultsPageType_ = searchEngineResultsPageType_;
       }
-      if (((from_bitField2_ & 0x00800000) != 0)) {
+      if (((from_bitField2_ & 0x01000000) != 0)) {
         result.searchSubcategory_ = searchSubcategory_;
         to_bitField2_ |= 0x00000004;
       }
-      if (((from_bitField2_ & 0x01000000) != 0)) {
+      if (((from_bitField2_ & 0x02000000) != 0)) {
         result.searchTerm_ = searchTerm_;
         to_bitField2_ |= 0x00000008;
       }
-      if (((from_bitField2_ & 0x02000000) != 0)) {
+      if (((from_bitField2_ & 0x04000000) != 0)) {
         result.searchTermMatchType_ = searchTermMatchType_;
       }
-      if (((from_bitField2_ & 0x04000000) != 0)) {
+      if (((from_bitField2_ & 0x08000000) != 0)) {
         result.slot_ = slot_;
       }
-      if (((from_bitField2_ & 0x08000000) != 0)) {
+      if (((from_bitField2_ & 0x10000000) != 0)) {
         result.conversionValueRulePrimaryDimension_ = conversionValueRulePrimaryDimension_;
       }
-      if (((from_bitField2_ & 0x10000000) != 0)) {
+      if (((from_bitField2_ & 0x20000000) != 0)) {
         result.webpage_ = webpage_;
         to_bitField2_ |= 0x00000010;
       }
-      if (((from_bitField2_ & 0x20000000) != 0)) {
+      if (((from_bitField2_ & 0x40000000) != 0)) {
         result.week_ = week_;
         to_bitField2_ |= 0x00000020;
       }
-      if (((from_bitField2_ & 0x40000000) != 0)) {
+      if (((from_bitField2_ & 0x80000000) != 0)) {
         result.year_ = year_;
         to_bitField2_ |= 0x00000040;
-      }
-      if (((from_bitField2_ & 0x80000000) != 0)) {
-        result.skAdNetworkFineConversionValue_ = skAdNetworkFineConversionValue_;
-        to_bitField2_ |= 0x00000080;
       }
       result.bitField1_ |= to_bitField1_;
       result.bitField2_ |= to_bitField2_;
@@ -7240,45 +7353,53 @@ private static final long serialVersionUID = 0L;
       int from_bitField3_ = bitField3_;
       int to_bitField2_ = 0;
       if (((from_bitField3_ & 0x00000001) != 0)) {
+        result.skAdNetworkFineConversionValue_ = skAdNetworkFineConversionValue_;
+        to_bitField2_ |= 0x00000080;
+      }
+      if (((from_bitField3_ & 0x00000002) != 0)) {
         result.skAdNetworkRedistributedFineConversionValue_ = skAdNetworkRedistributedFineConversionValue_;
         to_bitField2_ |= 0x00000100;
       }
-      if (((from_bitField3_ & 0x00000002) != 0)) {
+      if (((from_bitField3_ & 0x00000004) != 0)) {
         result.skAdNetworkUserType_ = skAdNetworkUserType_;
       }
-      if (((from_bitField3_ & 0x00000004) != 0)) {
+      if (((from_bitField3_ & 0x00000008) != 0)) {
         result.skAdNetworkAdEventType_ = skAdNetworkAdEventType_;
       }
-      if (((from_bitField3_ & 0x00000008) != 0)) {
+      if (((from_bitField3_ & 0x00000010) != 0)) {
         result.skAdNetworkSourceApp_ = skAdNetworkSourceAppBuilder_ == null
             ? skAdNetworkSourceApp_
             : skAdNetworkSourceAppBuilder_.build();
         to_bitField2_ |= 0x00000200;
       }
-      if (((from_bitField3_ & 0x00000010) != 0)) {
+      if (((from_bitField3_ & 0x00000020) != 0)) {
         result.skAdNetworkAttributionCredit_ = skAdNetworkAttributionCredit_;
       }
-      if (((from_bitField3_ & 0x00000020) != 0)) {
+      if (((from_bitField3_ & 0x00000040) != 0)) {
         result.skAdNetworkCoarseConversionValue_ = skAdNetworkCoarseConversionValue_;
       }
-      if (((from_bitField3_ & 0x00000040) != 0)) {
+      if (((from_bitField3_ & 0x00000080) != 0)) {
         result.skAdNetworkSourceDomain_ = skAdNetworkSourceDomain_;
         to_bitField2_ |= 0x00000400;
       }
-      if (((from_bitField3_ & 0x00000080) != 0)) {
+      if (((from_bitField3_ & 0x00000100) != 0)) {
         result.skAdNetworkSourceType_ = skAdNetworkSourceType_;
       }
-      if (((from_bitField3_ & 0x00000100) != 0)) {
+      if (((from_bitField3_ & 0x00000200) != 0)) {
         result.skAdNetworkPostbackSequenceIndex_ = skAdNetworkPostbackSequenceIndex_;
         to_bitField2_ |= 0x00000800;
       }
-      if (((from_bitField3_ & 0x00000200) != 0)) {
+      if (((from_bitField3_ & 0x00000400) != 0)) {
+        result.skAdNetworkVersion_ = skAdNetworkVersion_;
+        to_bitField2_ |= 0x00001000;
+      }
+      if (((from_bitField3_ & 0x00000800) != 0)) {
         result.assetInteractionTarget_ = assetInteractionTargetBuilder_ == null
             ? assetInteractionTarget_
             : assetInteractionTargetBuilder_.build();
-        to_bitField2_ |= 0x00001000;
+        to_bitField2_ |= 0x00002000;
       }
-      if (((from_bitField3_ & 0x00000400) != 0)) {
+      if (((from_bitField3_ & 0x00001000) != 0)) {
         result.newVersusReturningCustomers_ = newVersusReturningCustomers_;
       }
       result.bitField2_ |= to_bitField2_;
@@ -7357,22 +7478,25 @@ private static final long serialVersionUID = 0L;
       if (other.adDestinationType_ != 0) {
         setAdDestinationTypeValue(other.getAdDestinationTypeValue());
       }
+      if (other.adFormatType_ != 0) {
+        setAdFormatTypeValue(other.getAdFormatTypeValue());
+      }
       if (other.adNetworkType_ != 0) {
         setAdNetworkTypeValue(other.getAdNetworkTypeValue());
       }
       if (other.hasAdGroup()) {
         adGroup_ = other.adGroup_;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (other.hasAssetGroup()) {
         assetGroup_ = other.assetGroup_;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (other.hasAuctionInsightDomain()) {
         auctionInsightDomain_ = other.auctionInsightDomain_;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (other.hasBudgetCampaignAssociationStatus()) {
@@ -7380,7 +7504,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCampaign()) {
         campaign_ = other.campaign_;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         onChanged();
       }
       if (other.clickType_ != 0) {
@@ -7388,7 +7512,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasConversionAction()) {
         conversionAction_ = other.conversionAction_;
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         onChanged();
       }
       if (other.conversionActionCategory_ != 0) {
@@ -7396,7 +7520,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasConversionActionName()) {
         conversionActionName_ = other.conversionActionName_;
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         onChanged();
       }
       if (other.hasConversionAdjustment()) {
@@ -7413,7 +7537,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDate()) {
         date_ = other.date_;
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00400000;
         onChanged();
       }
       if (other.dayOfWeek_ != 0) {
@@ -7427,62 +7551,62 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasGeoTargetAirport()) {
         geoTargetAirport_ = other.geoTargetAirport_;
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x04000000;
         onChanged();
       }
       if (other.hasGeoTargetCanton()) {
         geoTargetCanton_ = other.geoTargetCanton_;
-        bitField0_ |= 0x04000000;
+        bitField0_ |= 0x08000000;
         onChanged();
       }
       if (other.hasGeoTargetCity()) {
         geoTargetCity_ = other.geoTargetCity_;
-        bitField0_ |= 0x08000000;
+        bitField0_ |= 0x10000000;
         onChanged();
       }
       if (other.hasGeoTargetCountry()) {
         geoTargetCountry_ = other.geoTargetCountry_;
-        bitField0_ |= 0x10000000;
+        bitField0_ |= 0x20000000;
         onChanged();
       }
       if (other.hasGeoTargetCounty()) {
         geoTargetCounty_ = other.geoTargetCounty_;
-        bitField0_ |= 0x20000000;
+        bitField0_ |= 0x40000000;
         onChanged();
       }
       if (other.hasGeoTargetDistrict()) {
         geoTargetDistrict_ = other.geoTargetDistrict_;
-        bitField0_ |= 0x40000000;
+        bitField0_ |= 0x80000000;
         onChanged();
       }
       if (other.hasGeoTargetMetro()) {
         geoTargetMetro_ = other.geoTargetMetro_;
-        bitField0_ |= 0x80000000;
+        bitField1_ |= 0x00000001;
         onChanged();
       }
       if (other.hasGeoTargetMostSpecificLocation()) {
         geoTargetMostSpecificLocation_ = other.geoTargetMostSpecificLocation_;
-        bitField1_ |= 0x00000001;
+        bitField1_ |= 0x00000002;
         onChanged();
       }
       if (other.hasGeoTargetPostalCode()) {
         geoTargetPostalCode_ = other.geoTargetPostalCode_;
-        bitField1_ |= 0x00000002;
+        bitField1_ |= 0x00000004;
         onChanged();
       }
       if (other.hasGeoTargetProvince()) {
         geoTargetProvince_ = other.geoTargetProvince_;
-        bitField1_ |= 0x00000004;
+        bitField1_ |= 0x00000008;
         onChanged();
       }
       if (other.hasGeoTargetRegion()) {
         geoTargetRegion_ = other.geoTargetRegion_;
-        bitField1_ |= 0x00000008;
+        bitField1_ |= 0x00000010;
         onChanged();
       }
       if (other.hasGeoTargetState()) {
         geoTargetState_ = other.geoTargetState_;
-        bitField1_ |= 0x00000010;
+        bitField1_ |= 0x00000020;
         onChanged();
       }
       if (other.hasHotelBookingWindowDays()) {
@@ -7493,7 +7617,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHotelCheckInDate()) {
         hotelCheckInDate_ = other.hotelCheckInDate_;
-        bitField1_ |= 0x00000080;
+        bitField1_ |= 0x00000100;
         onChanged();
       }
       if (other.hotelCheckInDayOfWeek_ != 0) {
@@ -7501,7 +7625,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHotelCity()) {
         hotelCity_ = other.hotelCity_;
-        bitField1_ |= 0x00000200;
+        bitField1_ |= 0x00000400;
         onChanged();
       }
       if (other.hasHotelClass()) {
@@ -7509,7 +7633,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHotelCountry()) {
         hotelCountry_ = other.hotelCountry_;
-        bitField1_ |= 0x00000800;
+        bitField1_ |= 0x00001000;
         onChanged();
       }
       if (other.hotelDateSelectionType_ != 0) {
@@ -7520,7 +7644,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHotelRateRuleId()) {
         hotelRateRuleId_ = other.hotelRateRuleId_;
-        bitField1_ |= 0x00004000;
+        bitField1_ |= 0x00008000;
         onChanged();
       }
       if (other.hotelRateType_ != 0) {
@@ -7531,7 +7655,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHotelState()) {
         hotelState_ = other.hotelState_;
-        bitField1_ |= 0x00020000;
+        bitField1_ |= 0x00040000;
         onChanged();
       }
       if (other.hasHour()) {
@@ -7545,7 +7669,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasMonth()) {
         month_ = other.month_;
-        bitField1_ |= 0x00200000;
+        bitField1_ |= 0x00400000;
         onChanged();
       }
       if (other.monthOfYear_ != 0) {
@@ -7553,7 +7677,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPartnerHotelId()) {
         partnerHotelId_ = other.partnerHotelId_;
-        bitField1_ |= 0x00800000;
+        bitField1_ |= 0x01000000;
         onChanged();
       }
       if (other.placeholderType_ != 0) {
@@ -7564,32 +7688,32 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasProductCategoryLevel1()) {
         productCategoryLevel1_ = other.productCategoryLevel1_;
-        bitField1_ |= 0x04000000;
+        bitField1_ |= 0x08000000;
         onChanged();
       }
       if (other.hasProductCategoryLevel2()) {
         productCategoryLevel2_ = other.productCategoryLevel2_;
-        bitField1_ |= 0x08000000;
+        bitField1_ |= 0x10000000;
         onChanged();
       }
       if (other.hasProductCategoryLevel3()) {
         productCategoryLevel3_ = other.productCategoryLevel3_;
-        bitField1_ |= 0x10000000;
+        bitField1_ |= 0x20000000;
         onChanged();
       }
       if (other.hasProductCategoryLevel4()) {
         productCategoryLevel4_ = other.productCategoryLevel4_;
-        bitField1_ |= 0x20000000;
+        bitField1_ |= 0x40000000;
         onChanged();
       }
       if (other.hasProductCategoryLevel5()) {
         productCategoryLevel5_ = other.productCategoryLevel5_;
-        bitField1_ |= 0x40000000;
+        bitField1_ |= 0x80000000;
         onChanged();
       }
       if (other.hasProductBrand()) {
         productBrand_ = other.productBrand_;
-        bitField1_ |= 0x80000000;
+        bitField2_ |= 0x00000001;
         onChanged();
       }
       if (other.productChannel_ != 0) {
@@ -7603,47 +7727,47 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasProductCountry()) {
         productCountry_ = other.productCountry_;
-        bitField2_ |= 0x00000008;
+        bitField2_ |= 0x00000010;
         onChanged();
       }
       if (other.hasProductCustomAttribute0()) {
         productCustomAttribute0_ = other.productCustomAttribute0_;
-        bitField2_ |= 0x00000010;
+        bitField2_ |= 0x00000020;
         onChanged();
       }
       if (other.hasProductCustomAttribute1()) {
         productCustomAttribute1_ = other.productCustomAttribute1_;
-        bitField2_ |= 0x00000020;
+        bitField2_ |= 0x00000040;
         onChanged();
       }
       if (other.hasProductCustomAttribute2()) {
         productCustomAttribute2_ = other.productCustomAttribute2_;
-        bitField2_ |= 0x00000040;
+        bitField2_ |= 0x00000080;
         onChanged();
       }
       if (other.hasProductCustomAttribute3()) {
         productCustomAttribute3_ = other.productCustomAttribute3_;
-        bitField2_ |= 0x00000080;
+        bitField2_ |= 0x00000100;
         onChanged();
       }
       if (other.hasProductCustomAttribute4()) {
         productCustomAttribute4_ = other.productCustomAttribute4_;
-        bitField2_ |= 0x00000100;
+        bitField2_ |= 0x00000200;
         onChanged();
       }
       if (other.hasProductFeedLabel()) {
         productFeedLabel_ = other.productFeedLabel_;
-        bitField2_ |= 0x00000200;
+        bitField2_ |= 0x00000400;
         onChanged();
       }
       if (other.hasProductItemId()) {
         productItemId_ = other.productItemId_;
-        bitField2_ |= 0x00000400;
+        bitField2_ |= 0x00000800;
         onChanged();
       }
       if (other.hasProductLanguage()) {
         productLanguage_ = other.productLanguage_;
-        bitField2_ |= 0x00000800;
+        bitField2_ |= 0x00001000;
         onChanged();
       }
       if (other.hasProductMerchantId()) {
@@ -7651,42 +7775,42 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasProductStoreId()) {
         productStoreId_ = other.productStoreId_;
-        bitField2_ |= 0x00002000;
+        bitField2_ |= 0x00004000;
         onChanged();
       }
       if (other.hasProductTitle()) {
         productTitle_ = other.productTitle_;
-        bitField2_ |= 0x00004000;
+        bitField2_ |= 0x00008000;
         onChanged();
       }
       if (other.hasProductTypeL1()) {
         productTypeL1_ = other.productTypeL1_;
-        bitField2_ |= 0x00008000;
+        bitField2_ |= 0x00010000;
         onChanged();
       }
       if (other.hasProductTypeL2()) {
         productTypeL2_ = other.productTypeL2_;
-        bitField2_ |= 0x00010000;
+        bitField2_ |= 0x00020000;
         onChanged();
       }
       if (other.hasProductTypeL3()) {
         productTypeL3_ = other.productTypeL3_;
-        bitField2_ |= 0x00020000;
+        bitField2_ |= 0x00040000;
         onChanged();
       }
       if (other.hasProductTypeL4()) {
         productTypeL4_ = other.productTypeL4_;
-        bitField2_ |= 0x00040000;
+        bitField2_ |= 0x00080000;
         onChanged();
       }
       if (other.hasProductTypeL5()) {
         productTypeL5_ = other.productTypeL5_;
-        bitField2_ |= 0x00080000;
+        bitField2_ |= 0x00100000;
         onChanged();
       }
       if (other.hasQuarter()) {
         quarter_ = other.quarter_;
-        bitField2_ |= 0x00100000;
+        bitField2_ |= 0x00200000;
         onChanged();
       }
       if (other.recommendationType_ != 0) {
@@ -7697,12 +7821,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSearchSubcategory()) {
         searchSubcategory_ = other.searchSubcategory_;
-        bitField2_ |= 0x00800000;
+        bitField2_ |= 0x01000000;
         onChanged();
       }
       if (other.hasSearchTerm()) {
         searchTerm_ = other.searchTerm_;
-        bitField2_ |= 0x01000000;
+        bitField2_ |= 0x02000000;
         onChanged();
       }
       if (other.searchTermMatchType_ != 0) {
@@ -7716,12 +7840,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasWebpage()) {
         webpage_ = other.webpage_;
-        bitField2_ |= 0x10000000;
+        bitField2_ |= 0x20000000;
         onChanged();
       }
       if (other.hasWeek()) {
         week_ = other.week_;
-        bitField2_ |= 0x20000000;
+        bitField2_ |= 0x40000000;
         onChanged();
       }
       if (other.hasYear()) {
@@ -7750,7 +7874,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSkAdNetworkSourceDomain()) {
         skAdNetworkSourceDomain_ = other.skAdNetworkSourceDomain_;
-        bitField3_ |= 0x00000040;
+        bitField3_ |= 0x00000080;
         onChanged();
       }
       if (other.skAdNetworkSourceType_ != 0) {
@@ -7758,6 +7882,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSkAdNetworkPostbackSequenceIndex()) {
         setSkAdNetworkPostbackSequenceIndex(other.getSkAdNetworkPostbackSequenceIndex());
+      }
+      if (other.hasSkAdNetworkVersion()) {
+        skAdNetworkVersion_ = other.skAdNetworkVersion_;
+        bitField3_ |= 0x00000400;
+        onChanged();
       }
       if (other.hasAssetInteractionTarget()) {
         mergeAssetInteractionTarget(other.getAssetInteractionTarget());
@@ -7793,376 +7922,376 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               device_ = input.readEnum();
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x01000000;
               break;
             } // case 8
             case 16: {
               conversionAttributionEventType_ = input.readEnum();
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00080000;
               break;
             } // case 16
             case 24: {
               adNetworkType_ = input.readEnum();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 24
             case 40: {
               dayOfWeek_ = input.readEnum();
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00800000;
               break;
             } // case 40
             case 72: {
               hotelCheckInDayOfWeek_ = input.readEnum();
-              bitField1_ |= 0x00000100;
+              bitField1_ |= 0x00000200;
               break;
             } // case 72
             case 104: {
               hotelDateSelectionType_ = input.readEnum();
-              bitField1_ |= 0x00001000;
+              bitField1_ |= 0x00002000;
               break;
             } // case 104
             case 144: {
               monthOfYear_ = input.readEnum();
-              bitField1_ |= 0x00400000;
+              bitField1_ |= 0x00800000;
               break;
             } // case 144
             case 160: {
               placeholderType_ = input.readEnum();
-              bitField1_ |= 0x01000000;
+              bitField1_ |= 0x02000000;
               break;
             } // case 160
             case 176: {
               searchTermMatchType_ = input.readEnum();
-              bitField2_ |= 0x02000000;
+              bitField2_ |= 0x04000000;
               break;
             } // case 176
             case 184: {
               slot_ = input.readEnum();
-              bitField2_ |= 0x04000000;
+              bitField2_ |= 0x08000000;
               break;
             } // case 184
             case 208: {
               clickType_ = input.readEnum();
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00004000;
               break;
             } // case 208
             case 240: {
               productChannel_ = input.readEnum();
-              bitField2_ |= 0x00000001;
+              bitField2_ |= 0x00000002;
               break;
             } // case 240
             case 248: {
               productChannelExclusivity_ = input.readEnum();
-              bitField2_ |= 0x00000002;
+              bitField2_ |= 0x00000004;
               break;
             } // case 248
             case 256: {
               productCondition_ = input.readEnum();
-              bitField2_ |= 0x00000004;
+              bitField2_ |= 0x00000008;
               break;
             } // case 256
             case 400: {
               conversionLagBucket_ = input.readEnum();
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00100000;
               break;
             } // case 400
             case 408: {
               conversionOrAdjustmentLagBucket_ = input.readEnum();
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00200000;
               break;
             } // case 408
             case 424: {
               conversionActionCategory_ = input.readEnum();
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00010000;
               break;
             } // case 424
             case 440: {
               externalConversionSource_ = input.readEnum();
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x02000000;
               break;
             } // case 440
             case 490: {
               input.readMessage(
                   getKeywordFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00100000;
+              bitField1_ |= 0x00200000;
               break;
             } // case 490
             case 560: {
               searchEngineResultsPageType_ = input.readEnum();
-              bitField2_ |= 0x00400000;
+              bitField2_ |= 0x00800000;
               break;
             } // case 560
             case 592: {
               hotelRateType_ = input.readEnum();
-              bitField1_ |= 0x00008000;
+              bitField1_ |= 0x00010000;
               break;
             } // case 592
             case 624: {
               hotelPriceBucket_ = input.readEnum();
-              bitField1_ |= 0x00010000;
+              bitField1_ |= 0x00020000;
               break;
             } // case 624
             case 634: {
               date_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00400000;
               break;
             } // case 634
             case 640: {
               hotelCenterId_ = input.readInt64();
-              bitField1_ |= 0x00000040;
+              bitField1_ |= 0x00000080;
               break;
             } // case 640
             case 650: {
               hotelCheckInDate_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000080;
+              bitField1_ |= 0x00000100;
               break;
             } // case 650
             case 658: {
               hotelCity_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000200;
+              bitField1_ |= 0x00000400;
               break;
             } // case 658
             case 664: {
               hotelClass_ = input.readInt32();
-              bitField1_ |= 0x00000400;
+              bitField1_ |= 0x00000800;
               break;
             } // case 664
             case 674: {
               hotelCountry_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000800;
+              bitField1_ |= 0x00001000;
               break;
             } // case 674
             case 680: {
               hotelLengthOfStay_ = input.readInt32();
-              bitField1_ |= 0x00002000;
+              bitField1_ |= 0x00004000;
               break;
             } // case 680
             case 690: {
               hotelRateRuleId_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00004000;
+              bitField1_ |= 0x00008000;
               break;
             } // case 690
             case 698: {
               hotelState_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00020000;
+              bitField1_ |= 0x00040000;
               break;
             } // case 698
             case 704: {
               hour_ = input.readInt32();
-              bitField1_ |= 0x00040000;
+              bitField1_ |= 0x00080000;
               break;
             } // case 704
             case 712: {
               interactionOnThisExtension_ = input.readBool();
-              bitField1_ |= 0x00080000;
+              bitField1_ |= 0x00100000;
               break;
             } // case 712
             case 722: {
               month_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00200000;
+              bitField1_ |= 0x00400000;
               break;
             } // case 722
             case 730: {
               partnerHotelId_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00800000;
+              bitField1_ |= 0x01000000;
               break;
             } // case 730
             case 778: {
               productBrand_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x80000000;
+              bitField2_ |= 0x00000001;
               break;
             } // case 778
             case 786: {
               productCountry_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00000008;
+              bitField2_ |= 0x00000010;
               break;
             } // case 786
             case 794: {
               productCustomAttribute0_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00000010;
+              bitField2_ |= 0x00000020;
               break;
             } // case 794
             case 802: {
               productCustomAttribute1_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00000020;
+              bitField2_ |= 0x00000040;
               break;
             } // case 802
             case 810: {
               productCustomAttribute2_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00000040;
+              bitField2_ |= 0x00000080;
               break;
             } // case 810
             case 818: {
               productCustomAttribute3_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00000080;
+              bitField2_ |= 0x00000100;
               break;
             } // case 818
             case 826: {
               productCustomAttribute4_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00000100;
+              bitField2_ |= 0x00000200;
               break;
             } // case 826
             case 834: {
               productItemId_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00000400;
+              bitField2_ |= 0x00000800;
               break;
             } // case 834
             case 842: {
               productLanguage_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00000800;
+              bitField2_ |= 0x00001000;
               break;
             } // case 842
             case 850: {
               productStoreId_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00002000;
+              bitField2_ |= 0x00004000;
               break;
             } // case 850
             case 858: {
               productTitle_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00004000;
+              bitField2_ |= 0x00008000;
               break;
             } // case 858
             case 866: {
               productTypeL1_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00008000;
+              bitField2_ |= 0x00010000;
               break;
             } // case 866
             case 874: {
               productTypeL2_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00010000;
+              bitField2_ |= 0x00020000;
               break;
             } // case 874
             case 882: {
               productTypeL3_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00020000;
+              bitField2_ |= 0x00040000;
               break;
             } // case 882
             case 890: {
               productTypeL4_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00040000;
+              bitField2_ |= 0x00080000;
               break;
             } // case 890
             case 898: {
               productTypeL5_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00080000;
+              bitField2_ |= 0x00100000;
               break;
             } // case 898
             case 906: {
               conversionAction_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00008000;
               break;
             } // case 906
             case 914: {
               conversionActionName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00020000;
               break;
             } // case 914
             case 920: {
               conversionAdjustment_ = input.readBool();
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00040000;
               break;
             } // case 920
             case 930: {
               geoTargetAirport_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x04000000;
               break;
             } // case 930
             case 938: {
               geoTargetCanton_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x04000000;
+              bitField0_ |= 0x08000000;
               break;
             } // case 938
             case 946: {
               geoTargetCity_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x08000000;
+              bitField0_ |= 0x10000000;
               break;
             } // case 946
             case 954: {
               geoTargetCountry_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x10000000;
+              bitField0_ |= 0x20000000;
               break;
             } // case 954
             case 962: {
               geoTargetCounty_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x20000000;
+              bitField0_ |= 0x40000000;
               break;
             } // case 962
             case 970: {
               geoTargetDistrict_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x40000000;
+              bitField0_ |= 0x80000000;
               break;
             } // case 970
             case 978: {
               geoTargetMetro_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x80000000;
+              bitField1_ |= 0x00000001;
               break;
             } // case 978
             case 986: {
               geoTargetMostSpecificLocation_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000001;
+              bitField1_ |= 0x00000002;
               break;
             } // case 986
             case 994: {
               geoTargetPostalCode_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000002;
+              bitField1_ |= 0x00000004;
               break;
             } // case 994
             case 1002: {
               geoTargetProvince_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000004;
+              bitField1_ |= 0x00000008;
               break;
             } // case 1002
             case 1010: {
               geoTargetRegion_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000008;
+              bitField1_ |= 0x00000010;
               break;
             } // case 1010
             case 1018: {
               geoTargetState_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00000010;
+              bitField1_ |= 0x00000020;
               break;
             } // case 1018
             case 1026: {
               quarter_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00100000;
+              bitField2_ |= 0x00200000;
               break;
             } // case 1026
             case 1034: {
               webpage_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x10000000;
+              bitField2_ |= 0x20000000;
               break;
             } // case 1034
             case 1042: {
               week_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x20000000;
+              bitField2_ |= 0x40000000;
               break;
             } // case 1042
             case 1048: {
               year_ = input.readInt32();
-              bitField2_ |= 0x40000000;
+              bitField2_ |= 0x80000000;
               break;
             } // case 1048
             case 1056: {
               productAggregatorId_ = input.readInt64();
-              bitField1_ |= 0x02000000;
+              bitField1_ |= 0x04000000;
               break;
             } // case 1056
             case 1064: {
               productMerchantId_ = input.readInt64();
-              bitField2_ |= 0x00001000;
+              bitField2_ |= 0x00002000;
               break;
             } // case 1064
             case 1074: {
               input.readMessage(
                   getBudgetCampaignAssociationStatusFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00001000;
               break;
             } // case 1074
             case 1080: {
               hotelBookingWindowDays_ = input.readInt64();
-              bitField1_ |= 0x00000020;
+              bitField1_ |= 0x00000040;
               break;
             } // case 1080
             case 1088: {
@@ -8172,56 +8301,56 @@ private static final long serialVersionUID = 0L;
             } // case 1088
             case 1096: {
               skAdNetworkFineConversionValue_ = input.readInt64();
-              bitField2_ |= 0x80000000;
+              bitField3_ |= 0x00000001;
               break;
             } // case 1096
             case 1104: {
               conversionValueRulePrimaryDimension_ = input.readEnum();
-              bitField2_ |= 0x08000000;
+              bitField2_ |= 0x10000000;
               break;
             } // case 1104
             case 1114: {
               input.readMessage(
                   getAssetInteractionTargetFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000200;
+              bitField3_ |= 0x00000800;
               break;
             } // case 1114
             case 1120: {
               recommendationType_ = input.readEnum();
-              bitField2_ |= 0x00200000;
+              bitField2_ |= 0x00400000;
               break;
             } // case 1120
             case 1128: {
               skAdNetworkUserType_ = input.readEnum();
-              bitField3_ |= 0x00000002;
+              bitField3_ |= 0x00000004;
               break;
             } // case 1128
             case 1136: {
               skAdNetworkAdEventType_ = input.readEnum();
-              bitField3_ |= 0x00000004;
+              bitField3_ |= 0x00000008;
               break;
             } // case 1136
             case 1146: {
               input.readMessage(
                   getSkAdNetworkSourceAppFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000008;
+              bitField3_ |= 0x00000010;
               break;
             } // case 1146
             case 1152: {
               skAdNetworkAttributionCredit_ = input.readEnum();
-              bitField3_ |= 0x00000010;
+              bitField3_ |= 0x00000020;
               break;
             } // case 1152
             case 1162: {
               auctionInsightDomain_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000800;
               break;
             } // case 1162
             case 1178: {
               productFeedLabel_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00000200;
+              bitField2_ |= 0x00000400;
               break;
             } // case 1178
             case 1184: {
@@ -8241,77 +8370,77 @@ private static final long serialVersionUID = 0L;
             } // case 1202
             case 1208: {
               skAdNetworkCoarseConversionValue_ = input.readEnum();
-              bitField3_ |= 0x00000020;
+              bitField3_ |= 0x00000040;
               break;
             } // case 1208
             case 1218: {
               skAdNetworkSourceDomain_ = input.readStringRequireUtf8();
-              bitField3_ |= 0x00000040;
+              bitField3_ |= 0x00000080;
               break;
             } // case 1218
             case 1224: {
               skAdNetworkSourceType_ = input.readEnum();
-              bitField3_ |= 0x00000080;
+              bitField3_ |= 0x00000100;
               break;
             } // case 1224
             case 1232: {
               skAdNetworkPostbackSequenceIndex_ = input.readInt64();
-              bitField3_ |= 0x00000100;
+              bitField3_ |= 0x00000200;
               break;
             } // case 1232
             case 1242: {
               searchSubcategory_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x00800000;
+              bitField2_ |= 0x01000000;
               break;
             } // case 1242
             case 1250: {
               searchTerm_ = input.readStringRequireUtf8();
-              bitField2_ |= 0x01000000;
+              bitField2_ |= 0x02000000;
               break;
             } // case 1250
             case 1258: {
               campaign_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00002000;
               break;
             } // case 1258
             case 1266: {
               adGroup_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 1266
             case 1274: {
               assetGroup_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               break;
             } // case 1274
             case 1280: {
               newVersusReturningCustomers_ = input.readEnum();
-              bitField3_ |= 0x00000400;
+              bitField3_ |= 0x00001000;
               break;
             } // case 1280
             case 1290: {
               productCategoryLevel1_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x04000000;
+              bitField1_ |= 0x08000000;
               break;
             } // case 1290
             case 1298: {
               productCategoryLevel2_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x08000000;
+              bitField1_ |= 0x10000000;
               break;
             } // case 1298
             case 1306: {
               productCategoryLevel3_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x10000000;
+              bitField1_ |= 0x20000000;
               break;
             } // case 1306
             case 1314: {
               productCategoryLevel4_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x20000000;
+              bitField1_ |= 0x40000000;
               break;
             } // case 1314
             case 1322: {
               productCategoryLevel5_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x40000000;
+              bitField1_ |= 0x80000000;
               break;
             } // case 1322
             case 1482: {
@@ -8331,9 +8460,19 @@ private static final long serialVersionUID = 0L;
             } // case 1498
             case 1520: {
               skAdNetworkRedistributedFineConversionValue_ = input.readInt64();
-              bitField3_ |= 0x00000001;
+              bitField3_ |= 0x00000002;
               break;
             } // case 1520
+            case 1528: {
+              adFormatType_ = input.readEnum();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 1528
+            case 1538: {
+              skAdNetworkVersion_ = input.readStringRequireUtf8();
+              bitField3_ |= 0x00000400;
+              break;
+            } // case 1538
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -8951,6 +9090,79 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int adFormatType_ = 0;
+    /**
+     * <pre>
+     * Ad Format type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType ad_format_type = 191;</code>
+     * @return The enum numeric value on the wire for adFormatType.
+     */
+    @java.lang.Override public int getAdFormatTypeValue() {
+      return adFormatType_;
+    }
+    /**
+     * <pre>
+     * Ad Format type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType ad_format_type = 191;</code>
+     * @param value The enum numeric value on the wire for adFormatType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAdFormatTypeValue(int value) {
+      adFormatType_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad Format type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType ad_format_type = 191;</code>
+     * @return The adFormatType.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType getAdFormatType() {
+      com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType result = com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType.forNumber(adFormatType_);
+      return result == null ? com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Ad Format type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType ad_format_type = 191;</code>
+     * @param value The adFormatType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAdFormatType(com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000080;
+      adFormatType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad Format type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType ad_format_type = 191;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAdFormatType() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      adFormatType_ = 0;
+      onChanged();
+      return this;
+    }
+
     private int adNetworkType_ = 0;
     /**
      * <pre>
@@ -8974,7 +9186,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdNetworkTypeValue(int value) {
       adNetworkType_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -9004,7 +9216,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       adNetworkType_ = value.getNumber();
       onChanged();
       return this;
@@ -9018,7 +9230,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdNetworkType() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       adNetworkType_ = 0;
       onChanged();
       return this;
@@ -9034,7 +9246,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -9090,7 +9302,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       adGroup_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -9104,7 +9316,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAdGroup() {
       adGroup_ = getDefaultInstance().getAdGroup();
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -9122,7 +9334,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       adGroup_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -9137,7 +9349,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the assetGroup field is set.
      */
     public boolean hasAssetGroup() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -9193,7 +9405,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       assetGroup_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -9207,7 +9419,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAssetGroup() {
       assetGroup_ = getDefaultInstance().getAssetGroup();
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -9225,7 +9437,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       assetGroup_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -9240,7 +9452,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the auctionInsightDomain field is set.
      */
     public boolean hasAuctionInsightDomain() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -9296,7 +9508,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       auctionInsightDomain_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -9310,7 +9522,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAuctionInsightDomain() {
       auctionInsightDomain_ = getDefaultInstance().getAuctionInsightDomain();
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -9328,7 +9540,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       auctionInsightDomain_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -9345,7 +9557,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the budgetCampaignAssociationStatus field is set.
      */
     public boolean hasBudgetCampaignAssociationStatus() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -9378,7 +9590,7 @@ private static final long serialVersionUID = 0L;
       } else {
         budgetCampaignAssociationStatusBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -9396,7 +9608,7 @@ private static final long serialVersionUID = 0L;
       } else {
         budgetCampaignAssociationStatusBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -9409,7 +9621,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeBudgetCampaignAssociationStatus(com.google.ads.googleads.v17.common.BudgetCampaignAssociationStatus value) {
       if (budgetCampaignAssociationStatusBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0) &&
+        if (((bitField0_ & 0x00001000) != 0) &&
           budgetCampaignAssociationStatus_ != null &&
           budgetCampaignAssociationStatus_ != com.google.ads.googleads.v17.common.BudgetCampaignAssociationStatus.getDefaultInstance()) {
           getBudgetCampaignAssociationStatusBuilder().mergeFrom(value);
@@ -9420,7 +9632,7 @@ private static final long serialVersionUID = 0L;
         budgetCampaignAssociationStatusBuilder_.mergeFrom(value);
       }
       if (budgetCampaignAssociationStatus_ != null) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         onChanged();
       }
       return this;
@@ -9433,7 +9645,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
      */
     public Builder clearBudgetCampaignAssociationStatus() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00001000);
       budgetCampaignAssociationStatus_ = null;
       if (budgetCampaignAssociationStatusBuilder_ != null) {
         budgetCampaignAssociationStatusBuilder_.dispose();
@@ -9450,7 +9662,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
      */
     public com.google.ads.googleads.v17.common.BudgetCampaignAssociationStatus.Builder getBudgetCampaignAssociationStatusBuilder() {
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return getBudgetCampaignAssociationStatusFieldBuilder().getBuilder();
     }
@@ -9500,7 +9712,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -9556,7 +9768,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -9570,7 +9782,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCampaign() {
       campaign_ = getDefaultInstance().getCampaign();
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       onChanged();
       return this;
     }
@@ -9588,7 +9800,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       campaign_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -9616,7 +9828,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClickTypeValue(int value) {
       clickType_ = value;
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -9646,7 +9858,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00004000;
       clickType_ = value.getNumber();
       onChanged();
       return this;
@@ -9660,7 +9872,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClickType() {
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00004000);
       clickType_ = 0;
       onChanged();
       return this;
@@ -9676,7 +9888,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -9732,7 +9944,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       conversionAction_ = value;
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -9746,7 +9958,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearConversionAction() {
       conversionAction_ = getDefaultInstance().getConversionAction();
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00008000);
       onChanged();
       return this;
     }
@@ -9764,7 +9976,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       conversionAction_ = value;
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -9792,7 +10004,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionActionCategoryValue(int value) {
       conversionActionCategory_ = value;
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -9822,7 +10034,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00010000;
       conversionActionCategory_ = value.getNumber();
       onChanged();
       return this;
@@ -9836,7 +10048,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionActionCategory() {
-      bitField0_ = (bitField0_ & ~0x00008000);
+      bitField0_ = (bitField0_ & ~0x00010000);
       conversionActionCategory_ = 0;
       onChanged();
       return this;
@@ -9852,7 +10064,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionActionName field is set.
      */
     public boolean hasConversionActionName() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -9908,7 +10120,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       conversionActionName_ = value;
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -9922,7 +10134,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearConversionActionName() {
       conversionActionName_ = getDefaultInstance().getConversionActionName();
-      bitField0_ = (bitField0_ & ~0x00010000);
+      bitField0_ = (bitField0_ & ~0x00020000);
       onChanged();
       return this;
     }
@@ -9940,7 +10152,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       conversionActionName_ = value;
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -9960,7 +10172,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConversionAdjustment() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -9994,7 +10206,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversionAdjustment(boolean value) {
 
       conversionAdjustment_ = value;
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -10011,7 +10223,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionAdjustment() {
-      bitField0_ = (bitField0_ & ~0x00020000);
+      bitField0_ = (bitField0_ & ~0x00040000);
       conversionAdjustment_ = false;
       onChanged();
       return this;
@@ -10040,7 +10252,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionAttributionEventTypeValue(int value) {
       conversionAttributionEventType_ = value;
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -10070,7 +10282,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00080000;
       conversionAttributionEventType_ = value.getNumber();
       onChanged();
       return this;
@@ -10084,7 +10296,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionAttributionEventType() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00080000);
       conversionAttributionEventType_ = 0;
       onChanged();
       return this;
@@ -10115,7 +10327,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionLagBucketValue(int value) {
       conversionLagBucket_ = value;
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -10147,7 +10359,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       conversionLagBucket_ = value.getNumber();
       onChanged();
       return this;
@@ -10162,7 +10374,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionLagBucket() {
-      bitField0_ = (bitField0_ & ~0x00080000);
+      bitField0_ = (bitField0_ & ~0x00100000);
       conversionLagBucket_ = 0;
       onChanged();
       return this;
@@ -10193,7 +10405,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionOrAdjustmentLagBucketValue(int value) {
       conversionOrAdjustmentLagBucket_ = value;
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -10225,7 +10437,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00200000;
       conversionOrAdjustmentLagBucket_ = value.getNumber();
       onChanged();
       return this;
@@ -10240,7 +10452,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionOrAdjustmentLagBucket() {
-      bitField0_ = (bitField0_ & ~0x00100000);
+      bitField0_ = (bitField0_ & ~0x00200000);
       conversionOrAdjustmentLagBucket_ = 0;
       onChanged();
       return this;
@@ -10257,7 +10469,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the date field is set.
      */
     public boolean hasDate() {
-      return ((bitField0_ & 0x00200000) != 0);
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -10316,7 +10528,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       date_ = value;
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -10331,7 +10543,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDate() {
       date_ = getDefaultInstance().getDate();
-      bitField0_ = (bitField0_ & ~0x00200000);
+      bitField0_ = (bitField0_ & ~0x00400000);
       onChanged();
       return this;
     }
@@ -10350,7 +10562,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       date_ = value;
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -10378,7 +10590,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDayOfWeekValue(int value) {
       dayOfWeek_ = value;
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -10408,7 +10620,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00800000;
       dayOfWeek_ = value.getNumber();
       onChanged();
       return this;
@@ -10422,7 +10634,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDayOfWeek() {
-      bitField0_ = (bitField0_ & ~0x00400000);
+      bitField0_ = (bitField0_ & ~0x00800000);
       dayOfWeek_ = 0;
       onChanged();
       return this;
@@ -10451,7 +10663,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDeviceValue(int value) {
       device_ = value;
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -10481,7 +10693,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x01000000;
       device_ = value.getNumber();
       onChanged();
       return this;
@@ -10495,7 +10707,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDevice() {
-      bitField0_ = (bitField0_ & ~0x00800000);
+      bitField0_ = (bitField0_ & ~0x01000000);
       device_ = 0;
       onChanged();
       return this;
@@ -10524,7 +10736,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExternalConversionSourceValue(int value) {
       externalConversionSource_ = value;
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -10554,7 +10766,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       externalConversionSource_ = value.getNumber();
       onChanged();
       return this;
@@ -10568,7 +10780,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExternalConversionSource() {
-      bitField0_ = (bitField0_ & ~0x01000000);
+      bitField0_ = (bitField0_ & ~0x02000000);
       externalConversionSource_ = 0;
       onChanged();
       return this;
@@ -10584,7 +10796,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetAirport field is set.
      */
     public boolean hasGeoTargetAirport() {
-      return ((bitField0_ & 0x02000000) != 0);
+      return ((bitField0_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -10640,7 +10852,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetAirport_ = value;
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -10654,7 +10866,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetAirport() {
       geoTargetAirport_ = getDefaultInstance().getGeoTargetAirport();
-      bitField0_ = (bitField0_ & ~0x02000000);
+      bitField0_ = (bitField0_ & ~0x04000000);
       onChanged();
       return this;
     }
@@ -10672,7 +10884,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetAirport_ = value;
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -10687,7 +10899,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetCanton field is set.
      */
     public boolean hasGeoTargetCanton() {
-      return ((bitField0_ & 0x04000000) != 0);
+      return ((bitField0_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -10743,7 +10955,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetCanton_ = value;
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -10757,7 +10969,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetCanton() {
       geoTargetCanton_ = getDefaultInstance().getGeoTargetCanton();
-      bitField0_ = (bitField0_ & ~0x04000000);
+      bitField0_ = (bitField0_ & ~0x08000000);
       onChanged();
       return this;
     }
@@ -10775,7 +10987,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetCanton_ = value;
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -10790,7 +11002,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetCity field is set.
      */
     public boolean hasGeoTargetCity() {
-      return ((bitField0_ & 0x08000000) != 0);
+      return ((bitField0_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -10846,7 +11058,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetCity_ = value;
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -10860,7 +11072,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetCity() {
       geoTargetCity_ = getDefaultInstance().getGeoTargetCity();
-      bitField0_ = (bitField0_ & ~0x08000000);
+      bitField0_ = (bitField0_ & ~0x10000000);
       onChanged();
       return this;
     }
@@ -10878,7 +11090,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetCity_ = value;
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -10893,7 +11105,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetCountry field is set.
      */
     public boolean hasGeoTargetCountry() {
-      return ((bitField0_ & 0x10000000) != 0);
+      return ((bitField0_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -10949,7 +11161,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetCountry_ = value;
-      bitField0_ |= 0x10000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -10963,7 +11175,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetCountry() {
       geoTargetCountry_ = getDefaultInstance().getGeoTargetCountry();
-      bitField0_ = (bitField0_ & ~0x10000000);
+      bitField0_ = (bitField0_ & ~0x20000000);
       onChanged();
       return this;
     }
@@ -10981,7 +11193,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetCountry_ = value;
-      bitField0_ |= 0x10000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -10996,7 +11208,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetCounty field is set.
      */
     public boolean hasGeoTargetCounty() {
-      return ((bitField0_ & 0x20000000) != 0);
+      return ((bitField0_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -11052,7 +11264,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetCounty_ = value;
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -11066,7 +11278,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetCounty() {
       geoTargetCounty_ = getDefaultInstance().getGeoTargetCounty();
-      bitField0_ = (bitField0_ & ~0x20000000);
+      bitField0_ = (bitField0_ & ~0x40000000);
       onChanged();
       return this;
     }
@@ -11084,7 +11296,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetCounty_ = value;
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -11099,7 +11311,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetDistrict field is set.
      */
     public boolean hasGeoTargetDistrict() {
-      return ((bitField0_ & 0x40000000) != 0);
+      return ((bitField0_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -11155,7 +11367,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetDistrict_ = value;
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -11169,7 +11381,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetDistrict() {
       geoTargetDistrict_ = getDefaultInstance().getGeoTargetDistrict();
-      bitField0_ = (bitField0_ & ~0x40000000);
+      bitField0_ = (bitField0_ & ~0x80000000);
       onChanged();
       return this;
     }
@@ -11187,7 +11399,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetDistrict_ = value;
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -11202,7 +11414,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetMetro field is set.
      */
     public boolean hasGeoTargetMetro() {
-      return ((bitField0_ & 0x80000000) != 0);
+      return ((bitField1_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -11258,7 +11470,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetMetro_ = value;
-      bitField0_ |= 0x80000000;
+      bitField1_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -11272,7 +11484,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetMetro() {
       geoTargetMetro_ = getDefaultInstance().getGeoTargetMetro();
-      bitField0_ = (bitField0_ & ~0x80000000);
+      bitField1_ = (bitField1_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -11290,7 +11502,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetMetro_ = value;
-      bitField0_ |= 0x80000000;
+      bitField1_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -11306,7 +11518,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetMostSpecificLocation field is set.
      */
     public boolean hasGeoTargetMostSpecificLocation() {
-      return ((bitField1_ & 0x00000001) != 0);
+      return ((bitField1_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -11365,7 +11577,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetMostSpecificLocation_ = value;
-      bitField1_ |= 0x00000001;
+      bitField1_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -11380,7 +11592,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetMostSpecificLocation() {
       geoTargetMostSpecificLocation_ = getDefaultInstance().getGeoTargetMostSpecificLocation();
-      bitField1_ = (bitField1_ & ~0x00000001);
+      bitField1_ = (bitField1_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -11399,7 +11611,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetMostSpecificLocation_ = value;
-      bitField1_ |= 0x00000001;
+      bitField1_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -11414,7 +11626,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetPostalCode field is set.
      */
     public boolean hasGeoTargetPostalCode() {
-      return ((bitField1_ & 0x00000002) != 0);
+      return ((bitField1_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -11470,7 +11682,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetPostalCode_ = value;
-      bitField1_ |= 0x00000002;
+      bitField1_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -11484,7 +11696,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetPostalCode() {
       geoTargetPostalCode_ = getDefaultInstance().getGeoTargetPostalCode();
-      bitField1_ = (bitField1_ & ~0x00000002);
+      bitField1_ = (bitField1_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -11502,7 +11714,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetPostalCode_ = value;
-      bitField1_ |= 0x00000002;
+      bitField1_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -11517,7 +11729,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetProvince field is set.
      */
     public boolean hasGeoTargetProvince() {
-      return ((bitField1_ & 0x00000004) != 0);
+      return ((bitField1_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -11573,7 +11785,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetProvince_ = value;
-      bitField1_ |= 0x00000004;
+      bitField1_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -11587,7 +11799,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetProvince() {
       geoTargetProvince_ = getDefaultInstance().getGeoTargetProvince();
-      bitField1_ = (bitField1_ & ~0x00000004);
+      bitField1_ = (bitField1_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -11605,7 +11817,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetProvince_ = value;
-      bitField1_ |= 0x00000004;
+      bitField1_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -11620,7 +11832,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetRegion field is set.
      */
     public boolean hasGeoTargetRegion() {
-      return ((bitField1_ & 0x00000008) != 0);
+      return ((bitField1_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -11676,7 +11888,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetRegion_ = value;
-      bitField1_ |= 0x00000008;
+      bitField1_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -11690,7 +11902,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetRegion() {
       geoTargetRegion_ = getDefaultInstance().getGeoTargetRegion();
-      bitField1_ = (bitField1_ & ~0x00000008);
+      bitField1_ = (bitField1_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -11708,7 +11920,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetRegion_ = value;
-      bitField1_ |= 0x00000008;
+      bitField1_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -11723,7 +11935,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetState field is set.
      */
     public boolean hasGeoTargetState() {
-      return ((bitField1_ & 0x00000010) != 0);
+      return ((bitField1_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -11779,7 +11991,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       geoTargetState_ = value;
-      bitField1_ |= 0x00000010;
+      bitField1_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -11793,7 +12005,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetState() {
       geoTargetState_ = getDefaultInstance().getGeoTargetState();
-      bitField1_ = (bitField1_ & ~0x00000010);
+      bitField1_ = (bitField1_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -11811,7 +12023,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       geoTargetState_ = value;
-      bitField1_ |= 0x00000010;
+      bitField1_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -11827,7 +12039,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHotelBookingWindowDays() {
-      return ((bitField1_ & 0x00000020) != 0);
+      return ((bitField1_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -11853,7 +12065,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHotelBookingWindowDays(long value) {
 
       hotelBookingWindowDays_ = value;
-      bitField1_ |= 0x00000020;
+      bitField1_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -11866,7 +12078,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelBookingWindowDays() {
-      bitField1_ = (bitField1_ & ~0x00000020);
+      bitField1_ = (bitField1_ & ~0x00000040);
       hotelBookingWindowDays_ = 0L;
       onChanged();
       return this;
@@ -11883,7 +12095,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHotelCenterId() {
-      return ((bitField1_ & 0x00000040) != 0);
+      return ((bitField1_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -11909,7 +12121,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHotelCenterId(long value) {
 
       hotelCenterId_ = value;
-      bitField1_ |= 0x00000040;
+      bitField1_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -11922,7 +12134,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelCenterId() {
-      bitField1_ = (bitField1_ & ~0x00000040);
+      bitField1_ = (bitField1_ & ~0x00000080);
       hotelCenterId_ = 0L;
       onChanged();
       return this;
@@ -11938,7 +12150,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hotelCheckInDate field is set.
      */
     public boolean hasHotelCheckInDate() {
-      return ((bitField1_ & 0x00000080) != 0);
+      return ((bitField1_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -11994,7 +12206,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       hotelCheckInDate_ = value;
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -12008,7 +12220,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearHotelCheckInDate() {
       hotelCheckInDate_ = getDefaultInstance().getHotelCheckInDate();
-      bitField1_ = (bitField1_ & ~0x00000080);
+      bitField1_ = (bitField1_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -12026,7 +12238,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       hotelCheckInDate_ = value;
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -12054,7 +12266,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHotelCheckInDayOfWeekValue(int value) {
       hotelCheckInDayOfWeek_ = value;
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -12084,7 +12296,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       hotelCheckInDayOfWeek_ = value.getNumber();
       onChanged();
       return this;
@@ -12098,7 +12310,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelCheckInDayOfWeek() {
-      bitField1_ = (bitField1_ & ~0x00000100);
+      bitField1_ = (bitField1_ & ~0x00000200);
       hotelCheckInDayOfWeek_ = 0;
       onChanged();
       return this;
@@ -12114,7 +12326,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hotelCity field is set.
      */
     public boolean hasHotelCity() {
-      return ((bitField1_ & 0x00000200) != 0);
+      return ((bitField1_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -12170,7 +12382,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       hotelCity_ = value;
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -12184,7 +12396,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearHotelCity() {
       hotelCity_ = getDefaultInstance().getHotelCity();
-      bitField1_ = (bitField1_ & ~0x00000200);
+      bitField1_ = (bitField1_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -12202,7 +12414,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       hotelCity_ = value;
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -12218,7 +12430,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHotelClass() {
-      return ((bitField1_ & 0x00000400) != 0);
+      return ((bitField1_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -12244,7 +12456,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHotelClass(int value) {
 
       hotelClass_ = value;
-      bitField1_ |= 0x00000400;
+      bitField1_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -12257,7 +12469,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelClass() {
-      bitField1_ = (bitField1_ & ~0x00000400);
+      bitField1_ = (bitField1_ & ~0x00000800);
       hotelClass_ = 0;
       onChanged();
       return this;
@@ -12273,7 +12485,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hotelCountry field is set.
      */
     public boolean hasHotelCountry() {
-      return ((bitField1_ & 0x00000800) != 0);
+      return ((bitField1_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -12329,7 +12541,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       hotelCountry_ = value;
-      bitField1_ |= 0x00000800;
+      bitField1_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -12343,7 +12555,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearHotelCountry() {
       hotelCountry_ = getDefaultInstance().getHotelCountry();
-      bitField1_ = (bitField1_ & ~0x00000800);
+      bitField1_ = (bitField1_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -12361,7 +12573,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       hotelCountry_ = value;
-      bitField1_ |= 0x00000800;
+      bitField1_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -12389,7 +12601,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHotelDateSelectionTypeValue(int value) {
       hotelDateSelectionType_ = value;
-      bitField1_ |= 0x00001000;
+      bitField1_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -12419,7 +12631,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00001000;
+      bitField1_ |= 0x00002000;
       hotelDateSelectionType_ = value.getNumber();
       onChanged();
       return this;
@@ -12433,7 +12645,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelDateSelectionType() {
-      bitField1_ = (bitField1_ & ~0x00001000);
+      bitField1_ = (bitField1_ & ~0x00002000);
       hotelDateSelectionType_ = 0;
       onChanged();
       return this;
@@ -12450,7 +12662,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHotelLengthOfStay() {
-      return ((bitField1_ & 0x00002000) != 0);
+      return ((bitField1_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -12476,7 +12688,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHotelLengthOfStay(int value) {
 
       hotelLengthOfStay_ = value;
-      bitField1_ |= 0x00002000;
+      bitField1_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -12489,7 +12701,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelLengthOfStay() {
-      bitField1_ = (bitField1_ & ~0x00002000);
+      bitField1_ = (bitField1_ & ~0x00004000);
       hotelLengthOfStay_ = 0;
       onChanged();
       return this;
@@ -12505,7 +12717,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hotelRateRuleId field is set.
      */
     public boolean hasHotelRateRuleId() {
-      return ((bitField1_ & 0x00004000) != 0);
+      return ((bitField1_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -12561,7 +12773,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       hotelRateRuleId_ = value;
-      bitField1_ |= 0x00004000;
+      bitField1_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -12575,7 +12787,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearHotelRateRuleId() {
       hotelRateRuleId_ = getDefaultInstance().getHotelRateRuleId();
-      bitField1_ = (bitField1_ & ~0x00004000);
+      bitField1_ = (bitField1_ & ~0x00008000);
       onChanged();
       return this;
     }
@@ -12593,7 +12805,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       hotelRateRuleId_ = value;
-      bitField1_ |= 0x00004000;
+      bitField1_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -12621,7 +12833,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHotelRateTypeValue(int value) {
       hotelRateType_ = value;
-      bitField1_ |= 0x00008000;
+      bitField1_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -12651,7 +12863,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00008000;
+      bitField1_ |= 0x00010000;
       hotelRateType_ = value.getNumber();
       onChanged();
       return this;
@@ -12665,7 +12877,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelRateType() {
-      bitField1_ = (bitField1_ & ~0x00008000);
+      bitField1_ = (bitField1_ & ~0x00010000);
       hotelRateType_ = 0;
       onChanged();
       return this;
@@ -12694,7 +12906,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHotelPriceBucketValue(int value) {
       hotelPriceBucket_ = value;
-      bitField1_ |= 0x00010000;
+      bitField1_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -12724,7 +12936,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00010000;
+      bitField1_ |= 0x00020000;
       hotelPriceBucket_ = value.getNumber();
       onChanged();
       return this;
@@ -12738,7 +12950,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelPriceBucket() {
-      bitField1_ = (bitField1_ & ~0x00010000);
+      bitField1_ = (bitField1_ & ~0x00020000);
       hotelPriceBucket_ = 0;
       onChanged();
       return this;
@@ -12754,7 +12966,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hotelState field is set.
      */
     public boolean hasHotelState() {
-      return ((bitField1_ & 0x00020000) != 0);
+      return ((bitField1_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -12810,7 +13022,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       hotelState_ = value;
-      bitField1_ |= 0x00020000;
+      bitField1_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -12824,7 +13036,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearHotelState() {
       hotelState_ = getDefaultInstance().getHotelState();
-      bitField1_ = (bitField1_ & ~0x00020000);
+      bitField1_ = (bitField1_ & ~0x00040000);
       onChanged();
       return this;
     }
@@ -12842,7 +13054,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       hotelState_ = value;
-      bitField1_ |= 0x00020000;
+      bitField1_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -12858,7 +13070,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHour() {
-      return ((bitField1_ & 0x00040000) != 0);
+      return ((bitField1_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -12884,7 +13096,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHour(int value) {
 
       hour_ = value;
-      bitField1_ |= 0x00040000;
+      bitField1_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -12897,7 +13109,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHour() {
-      bitField1_ = (bitField1_ & ~0x00040000);
+      bitField1_ = (bitField1_ & ~0x00080000);
       hour_ = 0;
       onChanged();
       return this;
@@ -12916,7 +13128,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasInteractionOnThisExtension() {
-      return ((bitField1_ & 0x00080000) != 0);
+      return ((bitField1_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -12946,7 +13158,7 @@ private static final long serialVersionUID = 0L;
     public Builder setInteractionOnThisExtension(boolean value) {
 
       interactionOnThisExtension_ = value;
-      bitField1_ |= 0x00080000;
+      bitField1_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -12961,7 +13173,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInteractionOnThisExtension() {
-      bitField1_ = (bitField1_ & ~0x00080000);
+      bitField1_ = (bitField1_ & ~0x00100000);
       interactionOnThisExtension_ = false;
       onChanged();
       return this;
@@ -12979,7 +13191,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keyword field is set.
      */
     public boolean hasKeyword() {
-      return ((bitField1_ & 0x00100000) != 0);
+      return ((bitField1_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -13012,7 +13224,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00100000;
+      bitField1_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -13030,7 +13242,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00100000;
+      bitField1_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -13043,7 +13255,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeyword(com.google.ads.googleads.v17.common.Keyword value) {
       if (keywordBuilder_ == null) {
-        if (((bitField1_ & 0x00100000) != 0) &&
+        if (((bitField1_ & 0x00200000) != 0) &&
           keyword_ != null &&
           keyword_ != com.google.ads.googleads.v17.common.Keyword.getDefaultInstance()) {
           getKeywordBuilder().mergeFrom(value);
@@ -13054,7 +13266,7 @@ private static final long serialVersionUID = 0L;
         keywordBuilder_.mergeFrom(value);
       }
       if (keyword_ != null) {
-        bitField1_ |= 0x00100000;
+        bitField1_ |= 0x00200000;
         onChanged();
       }
       return this;
@@ -13067,7 +13279,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.common.Keyword keyword = 61;</code>
      */
     public Builder clearKeyword() {
-      bitField1_ = (bitField1_ & ~0x00100000);
+      bitField1_ = (bitField1_ & ~0x00200000);
       keyword_ = null;
       if (keywordBuilder_ != null) {
         keywordBuilder_.dispose();
@@ -13084,7 +13296,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v17.common.Keyword keyword = 61;</code>
      */
     public com.google.ads.googleads.v17.common.Keyword.Builder getKeywordBuilder() {
-      bitField1_ |= 0x00100000;
+      bitField1_ |= 0x00200000;
       onChanged();
       return getKeywordFieldBuilder().getBuilder();
     }
@@ -13135,7 +13347,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the month field is set.
      */
     public boolean hasMonth() {
-      return ((bitField1_ & 0x00200000) != 0);
+      return ((bitField1_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -13194,7 +13406,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       month_ = value;
-      bitField1_ |= 0x00200000;
+      bitField1_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -13209,7 +13421,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearMonth() {
       month_ = getDefaultInstance().getMonth();
-      bitField1_ = (bitField1_ & ~0x00200000);
+      bitField1_ = (bitField1_ & ~0x00400000);
       onChanged();
       return this;
     }
@@ -13228,7 +13440,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       month_ = value;
-      bitField1_ |= 0x00200000;
+      bitField1_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -13256,7 +13468,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMonthOfYearValue(int value) {
       monthOfYear_ = value;
-      bitField1_ |= 0x00400000;
+      bitField1_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -13286,7 +13498,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00400000;
+      bitField1_ |= 0x00800000;
       monthOfYear_ = value.getNumber();
       onChanged();
       return this;
@@ -13300,7 +13512,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMonthOfYear() {
-      bitField1_ = (bitField1_ & ~0x00400000);
+      bitField1_ = (bitField1_ & ~0x00800000);
       monthOfYear_ = 0;
       onChanged();
       return this;
@@ -13316,7 +13528,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the partnerHotelId field is set.
      */
     public boolean hasPartnerHotelId() {
-      return ((bitField1_ & 0x00800000) != 0);
+      return ((bitField1_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -13372,7 +13584,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       partnerHotelId_ = value;
-      bitField1_ |= 0x00800000;
+      bitField1_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -13386,7 +13598,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPartnerHotelId() {
       partnerHotelId_ = getDefaultInstance().getPartnerHotelId();
-      bitField1_ = (bitField1_ & ~0x00800000);
+      bitField1_ = (bitField1_ & ~0x01000000);
       onChanged();
       return this;
     }
@@ -13404,7 +13616,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       partnerHotelId_ = value;
-      bitField1_ |= 0x00800000;
+      bitField1_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -13432,7 +13644,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlaceholderTypeValue(int value) {
       placeholderType_ = value;
-      bitField1_ |= 0x01000000;
+      bitField1_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -13462,7 +13674,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x01000000;
+      bitField1_ |= 0x02000000;
       placeholderType_ = value.getNumber();
       onChanged();
       return this;
@@ -13476,7 +13688,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlaceholderType() {
-      bitField1_ = (bitField1_ & ~0x01000000);
+      bitField1_ = (bitField1_ & ~0x02000000);
       placeholderType_ = 0;
       onChanged();
       return this;
@@ -13493,7 +13705,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasProductAggregatorId() {
-      return ((bitField1_ & 0x02000000) != 0);
+      return ((bitField1_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -13519,7 +13731,7 @@ private static final long serialVersionUID = 0L;
     public Builder setProductAggregatorId(long value) {
 
       productAggregatorId_ = value;
-      bitField1_ |= 0x02000000;
+      bitField1_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -13532,7 +13744,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProductAggregatorId() {
-      bitField1_ = (bitField1_ & ~0x02000000);
+      bitField1_ = (bitField1_ & ~0x04000000);
       productAggregatorId_ = 0L;
       onChanged();
       return this;
@@ -13548,7 +13760,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCategoryLevel1 field is set.
      */
     public boolean hasProductCategoryLevel1() {
-      return ((bitField1_ & 0x04000000) != 0);
+      return ((bitField1_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -13604,7 +13816,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCategoryLevel1_ = value;
-      bitField1_ |= 0x04000000;
+      bitField1_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -13618,7 +13830,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCategoryLevel1() {
       productCategoryLevel1_ = getDefaultInstance().getProductCategoryLevel1();
-      bitField1_ = (bitField1_ & ~0x04000000);
+      bitField1_ = (bitField1_ & ~0x08000000);
       onChanged();
       return this;
     }
@@ -13636,7 +13848,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCategoryLevel1_ = value;
-      bitField1_ |= 0x04000000;
+      bitField1_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -13651,7 +13863,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCategoryLevel2 field is set.
      */
     public boolean hasProductCategoryLevel2() {
-      return ((bitField1_ & 0x08000000) != 0);
+      return ((bitField1_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -13707,7 +13919,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCategoryLevel2_ = value;
-      bitField1_ |= 0x08000000;
+      bitField1_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -13721,7 +13933,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCategoryLevel2() {
       productCategoryLevel2_ = getDefaultInstance().getProductCategoryLevel2();
-      bitField1_ = (bitField1_ & ~0x08000000);
+      bitField1_ = (bitField1_ & ~0x10000000);
       onChanged();
       return this;
     }
@@ -13739,7 +13951,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCategoryLevel2_ = value;
-      bitField1_ |= 0x08000000;
+      bitField1_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -13754,7 +13966,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCategoryLevel3 field is set.
      */
     public boolean hasProductCategoryLevel3() {
-      return ((bitField1_ & 0x10000000) != 0);
+      return ((bitField1_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -13810,7 +14022,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCategoryLevel3_ = value;
-      bitField1_ |= 0x10000000;
+      bitField1_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -13824,7 +14036,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCategoryLevel3() {
       productCategoryLevel3_ = getDefaultInstance().getProductCategoryLevel3();
-      bitField1_ = (bitField1_ & ~0x10000000);
+      bitField1_ = (bitField1_ & ~0x20000000);
       onChanged();
       return this;
     }
@@ -13842,7 +14054,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCategoryLevel3_ = value;
-      bitField1_ |= 0x10000000;
+      bitField1_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -13857,7 +14069,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCategoryLevel4 field is set.
      */
     public boolean hasProductCategoryLevel4() {
-      return ((bitField1_ & 0x20000000) != 0);
+      return ((bitField1_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -13913,7 +14125,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCategoryLevel4_ = value;
-      bitField1_ |= 0x20000000;
+      bitField1_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -13927,7 +14139,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCategoryLevel4() {
       productCategoryLevel4_ = getDefaultInstance().getProductCategoryLevel4();
-      bitField1_ = (bitField1_ & ~0x20000000);
+      bitField1_ = (bitField1_ & ~0x40000000);
       onChanged();
       return this;
     }
@@ -13945,7 +14157,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCategoryLevel4_ = value;
-      bitField1_ |= 0x20000000;
+      bitField1_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -13960,7 +14172,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCategoryLevel5 field is set.
      */
     public boolean hasProductCategoryLevel5() {
-      return ((bitField1_ & 0x40000000) != 0);
+      return ((bitField1_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -14016,7 +14228,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCategoryLevel5_ = value;
-      bitField1_ |= 0x40000000;
+      bitField1_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -14030,7 +14242,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCategoryLevel5() {
       productCategoryLevel5_ = getDefaultInstance().getProductCategoryLevel5();
-      bitField1_ = (bitField1_ & ~0x40000000);
+      bitField1_ = (bitField1_ & ~0x80000000);
       onChanged();
       return this;
     }
@@ -14048,7 +14260,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCategoryLevel5_ = value;
-      bitField1_ |= 0x40000000;
+      bitField1_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -14063,7 +14275,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productBrand field is set.
      */
     public boolean hasProductBrand() {
-      return ((bitField1_ & 0x80000000) != 0);
+      return ((bitField2_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -14119,7 +14331,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productBrand_ = value;
-      bitField1_ |= 0x80000000;
+      bitField2_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -14133,7 +14345,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductBrand() {
       productBrand_ = getDefaultInstance().getProductBrand();
-      bitField1_ = (bitField1_ & ~0x80000000);
+      bitField2_ = (bitField2_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -14151,7 +14363,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productBrand_ = value;
-      bitField1_ |= 0x80000000;
+      bitField2_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -14179,7 +14391,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProductChannelValue(int value) {
       productChannel_ = value;
-      bitField2_ |= 0x00000001;
+      bitField2_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -14209,7 +14421,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField2_ |= 0x00000001;
+      bitField2_ |= 0x00000002;
       productChannel_ = value.getNumber();
       onChanged();
       return this;
@@ -14223,7 +14435,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProductChannel() {
-      bitField2_ = (bitField2_ & ~0x00000001);
+      bitField2_ = (bitField2_ & ~0x00000002);
       productChannel_ = 0;
       onChanged();
       return this;
@@ -14252,7 +14464,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProductChannelExclusivityValue(int value) {
       productChannelExclusivity_ = value;
-      bitField2_ |= 0x00000002;
+      bitField2_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -14282,7 +14494,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField2_ |= 0x00000002;
+      bitField2_ |= 0x00000004;
       productChannelExclusivity_ = value.getNumber();
       onChanged();
       return this;
@@ -14296,7 +14508,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProductChannelExclusivity() {
-      bitField2_ = (bitField2_ & ~0x00000002);
+      bitField2_ = (bitField2_ & ~0x00000004);
       productChannelExclusivity_ = 0;
       onChanged();
       return this;
@@ -14325,7 +14537,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProductConditionValue(int value) {
       productCondition_ = value;
-      bitField2_ |= 0x00000004;
+      bitField2_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -14355,7 +14567,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField2_ |= 0x00000004;
+      bitField2_ |= 0x00000008;
       productCondition_ = value.getNumber();
       onChanged();
       return this;
@@ -14369,7 +14581,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProductCondition() {
-      bitField2_ = (bitField2_ & ~0x00000004);
+      bitField2_ = (bitField2_ & ~0x00000008);
       productCondition_ = 0;
       onChanged();
       return this;
@@ -14386,7 +14598,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCountry field is set.
      */
     public boolean hasProductCountry() {
-      return ((bitField2_ & 0x00000008) != 0);
+      return ((bitField2_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -14445,7 +14657,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCountry_ = value;
-      bitField2_ |= 0x00000008;
+      bitField2_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -14460,7 +14672,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCountry() {
       productCountry_ = getDefaultInstance().getProductCountry();
-      bitField2_ = (bitField2_ & ~0x00000008);
+      bitField2_ = (bitField2_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -14479,7 +14691,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCountry_ = value;
-      bitField2_ |= 0x00000008;
+      bitField2_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -14494,7 +14706,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCustomAttribute0 field is set.
      */
     public boolean hasProductCustomAttribute0() {
-      return ((bitField2_ & 0x00000010) != 0);
+      return ((bitField2_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -14550,7 +14762,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCustomAttribute0_ = value;
-      bitField2_ |= 0x00000010;
+      bitField2_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -14564,7 +14776,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCustomAttribute0() {
       productCustomAttribute0_ = getDefaultInstance().getProductCustomAttribute0();
-      bitField2_ = (bitField2_ & ~0x00000010);
+      bitField2_ = (bitField2_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -14582,7 +14794,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCustomAttribute0_ = value;
-      bitField2_ |= 0x00000010;
+      bitField2_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -14597,7 +14809,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCustomAttribute1 field is set.
      */
     public boolean hasProductCustomAttribute1() {
-      return ((bitField2_ & 0x00000020) != 0);
+      return ((bitField2_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -14653,7 +14865,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCustomAttribute1_ = value;
-      bitField2_ |= 0x00000020;
+      bitField2_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -14667,7 +14879,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCustomAttribute1() {
       productCustomAttribute1_ = getDefaultInstance().getProductCustomAttribute1();
-      bitField2_ = (bitField2_ & ~0x00000020);
+      bitField2_ = (bitField2_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -14685,7 +14897,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCustomAttribute1_ = value;
-      bitField2_ |= 0x00000020;
+      bitField2_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -14700,7 +14912,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCustomAttribute2 field is set.
      */
     public boolean hasProductCustomAttribute2() {
-      return ((bitField2_ & 0x00000040) != 0);
+      return ((bitField2_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -14756,7 +14968,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCustomAttribute2_ = value;
-      bitField2_ |= 0x00000040;
+      bitField2_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -14770,7 +14982,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCustomAttribute2() {
       productCustomAttribute2_ = getDefaultInstance().getProductCustomAttribute2();
-      bitField2_ = (bitField2_ & ~0x00000040);
+      bitField2_ = (bitField2_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -14788,7 +15000,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCustomAttribute2_ = value;
-      bitField2_ |= 0x00000040;
+      bitField2_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -14803,7 +15015,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCustomAttribute3 field is set.
      */
     public boolean hasProductCustomAttribute3() {
-      return ((bitField2_ & 0x00000080) != 0);
+      return ((bitField2_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -14859,7 +15071,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCustomAttribute3_ = value;
-      bitField2_ |= 0x00000080;
+      bitField2_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -14873,7 +15085,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCustomAttribute3() {
       productCustomAttribute3_ = getDefaultInstance().getProductCustomAttribute3();
-      bitField2_ = (bitField2_ & ~0x00000080);
+      bitField2_ = (bitField2_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -14891,7 +15103,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCustomAttribute3_ = value;
-      bitField2_ |= 0x00000080;
+      bitField2_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -14906,7 +15118,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productCustomAttribute4 field is set.
      */
     public boolean hasProductCustomAttribute4() {
-      return ((bitField2_ & 0x00000100) != 0);
+      return ((bitField2_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -14962,7 +15174,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productCustomAttribute4_ = value;
-      bitField2_ |= 0x00000100;
+      bitField2_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -14976,7 +15188,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductCustomAttribute4() {
       productCustomAttribute4_ = getDefaultInstance().getProductCustomAttribute4();
-      bitField2_ = (bitField2_ & ~0x00000100);
+      bitField2_ = (bitField2_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -14994,7 +15206,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productCustomAttribute4_ = value;
-      bitField2_ |= 0x00000100;
+      bitField2_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -15009,7 +15221,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productFeedLabel field is set.
      */
     public boolean hasProductFeedLabel() {
-      return ((bitField2_ & 0x00000200) != 0);
+      return ((bitField2_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -15065,7 +15277,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productFeedLabel_ = value;
-      bitField2_ |= 0x00000200;
+      bitField2_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -15079,7 +15291,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductFeedLabel() {
       productFeedLabel_ = getDefaultInstance().getProductFeedLabel();
-      bitField2_ = (bitField2_ & ~0x00000200);
+      bitField2_ = (bitField2_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -15097,7 +15309,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productFeedLabel_ = value;
-      bitField2_ |= 0x00000200;
+      bitField2_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -15112,7 +15324,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productItemId field is set.
      */
     public boolean hasProductItemId() {
-      return ((bitField2_ & 0x00000400) != 0);
+      return ((bitField2_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -15168,7 +15380,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productItemId_ = value;
-      bitField2_ |= 0x00000400;
+      bitField2_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -15182,7 +15394,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductItemId() {
       productItemId_ = getDefaultInstance().getProductItemId();
-      bitField2_ = (bitField2_ & ~0x00000400);
+      bitField2_ = (bitField2_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -15200,7 +15412,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productItemId_ = value;
-      bitField2_ |= 0x00000400;
+      bitField2_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -15215,7 +15427,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productLanguage field is set.
      */
     public boolean hasProductLanguage() {
-      return ((bitField2_ & 0x00000800) != 0);
+      return ((bitField2_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -15271,7 +15483,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productLanguage_ = value;
-      bitField2_ |= 0x00000800;
+      bitField2_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -15285,7 +15497,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductLanguage() {
       productLanguage_ = getDefaultInstance().getProductLanguage();
-      bitField2_ = (bitField2_ & ~0x00000800);
+      bitField2_ = (bitField2_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -15303,7 +15515,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productLanguage_ = value;
-      bitField2_ |= 0x00000800;
+      bitField2_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -15319,7 +15531,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasProductMerchantId() {
-      return ((bitField2_ & 0x00001000) != 0);
+      return ((bitField2_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -15345,7 +15557,7 @@ private static final long serialVersionUID = 0L;
     public Builder setProductMerchantId(long value) {
 
       productMerchantId_ = value;
-      bitField2_ |= 0x00001000;
+      bitField2_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -15358,7 +15570,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProductMerchantId() {
-      bitField2_ = (bitField2_ & ~0x00001000);
+      bitField2_ = (bitField2_ & ~0x00002000);
       productMerchantId_ = 0L;
       onChanged();
       return this;
@@ -15374,7 +15586,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productStoreId field is set.
      */
     public boolean hasProductStoreId() {
-      return ((bitField2_ & 0x00002000) != 0);
+      return ((bitField2_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -15430,7 +15642,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productStoreId_ = value;
-      bitField2_ |= 0x00002000;
+      bitField2_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -15444,7 +15656,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductStoreId() {
       productStoreId_ = getDefaultInstance().getProductStoreId();
-      bitField2_ = (bitField2_ & ~0x00002000);
+      bitField2_ = (bitField2_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -15462,7 +15674,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productStoreId_ = value;
-      bitField2_ |= 0x00002000;
+      bitField2_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -15477,7 +15689,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productTitle field is set.
      */
     public boolean hasProductTitle() {
-      return ((bitField2_ & 0x00004000) != 0);
+      return ((bitField2_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -15533,7 +15745,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productTitle_ = value;
-      bitField2_ |= 0x00004000;
+      bitField2_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -15547,7 +15759,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductTitle() {
       productTitle_ = getDefaultInstance().getProductTitle();
-      bitField2_ = (bitField2_ & ~0x00004000);
+      bitField2_ = (bitField2_ & ~0x00008000);
       onChanged();
       return this;
     }
@@ -15565,7 +15777,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productTitle_ = value;
-      bitField2_ |= 0x00004000;
+      bitField2_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -15580,7 +15792,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productTypeL1 field is set.
      */
     public boolean hasProductTypeL1() {
-      return ((bitField2_ & 0x00008000) != 0);
+      return ((bitField2_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -15636,7 +15848,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productTypeL1_ = value;
-      bitField2_ |= 0x00008000;
+      bitField2_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -15650,7 +15862,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductTypeL1() {
       productTypeL1_ = getDefaultInstance().getProductTypeL1();
-      bitField2_ = (bitField2_ & ~0x00008000);
+      bitField2_ = (bitField2_ & ~0x00010000);
       onChanged();
       return this;
     }
@@ -15668,7 +15880,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productTypeL1_ = value;
-      bitField2_ |= 0x00008000;
+      bitField2_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -15683,7 +15895,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productTypeL2 field is set.
      */
     public boolean hasProductTypeL2() {
-      return ((bitField2_ & 0x00010000) != 0);
+      return ((bitField2_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -15739,7 +15951,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productTypeL2_ = value;
-      bitField2_ |= 0x00010000;
+      bitField2_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -15753,7 +15965,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductTypeL2() {
       productTypeL2_ = getDefaultInstance().getProductTypeL2();
-      bitField2_ = (bitField2_ & ~0x00010000);
+      bitField2_ = (bitField2_ & ~0x00020000);
       onChanged();
       return this;
     }
@@ -15771,7 +15983,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productTypeL2_ = value;
-      bitField2_ |= 0x00010000;
+      bitField2_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -15786,7 +15998,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productTypeL3 field is set.
      */
     public boolean hasProductTypeL3() {
-      return ((bitField2_ & 0x00020000) != 0);
+      return ((bitField2_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -15842,7 +16054,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productTypeL3_ = value;
-      bitField2_ |= 0x00020000;
+      bitField2_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -15856,7 +16068,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductTypeL3() {
       productTypeL3_ = getDefaultInstance().getProductTypeL3();
-      bitField2_ = (bitField2_ & ~0x00020000);
+      bitField2_ = (bitField2_ & ~0x00040000);
       onChanged();
       return this;
     }
@@ -15874,7 +16086,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productTypeL3_ = value;
-      bitField2_ |= 0x00020000;
+      bitField2_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -15889,7 +16101,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productTypeL4 field is set.
      */
     public boolean hasProductTypeL4() {
-      return ((bitField2_ & 0x00040000) != 0);
+      return ((bitField2_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -15945,7 +16157,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productTypeL4_ = value;
-      bitField2_ |= 0x00040000;
+      bitField2_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -15959,7 +16171,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductTypeL4() {
       productTypeL4_ = getDefaultInstance().getProductTypeL4();
-      bitField2_ = (bitField2_ & ~0x00040000);
+      bitField2_ = (bitField2_ & ~0x00080000);
       onChanged();
       return this;
     }
@@ -15977,7 +16189,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productTypeL4_ = value;
-      bitField2_ |= 0x00040000;
+      bitField2_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -15992,7 +16204,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productTypeL5 field is set.
      */
     public boolean hasProductTypeL5() {
-      return ((bitField2_ & 0x00080000) != 0);
+      return ((bitField2_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -16048,7 +16260,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productTypeL5_ = value;
-      bitField2_ |= 0x00080000;
+      bitField2_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -16062,7 +16274,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProductTypeL5() {
       productTypeL5_ = getDefaultInstance().getProductTypeL5();
-      bitField2_ = (bitField2_ & ~0x00080000);
+      bitField2_ = (bitField2_ & ~0x00100000);
       onChanged();
       return this;
     }
@@ -16080,7 +16292,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       productTypeL5_ = value;
-      bitField2_ |= 0x00080000;
+      bitField2_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -16097,7 +16309,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the quarter field is set.
      */
     public boolean hasQuarter() {
-      return ((bitField2_ & 0x00100000) != 0);
+      return ((bitField2_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -16159,7 +16371,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       quarter_ = value;
-      bitField2_ |= 0x00100000;
+      bitField2_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -16175,7 +16387,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearQuarter() {
       quarter_ = getDefaultInstance().getQuarter();
-      bitField2_ = (bitField2_ & ~0x00100000);
+      bitField2_ = (bitField2_ & ~0x00200000);
       onChanged();
       return this;
     }
@@ -16195,7 +16407,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       quarter_ = value;
-      bitField2_ |= 0x00100000;
+      bitField2_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -16223,7 +16435,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRecommendationTypeValue(int value) {
       recommendationType_ = value;
-      bitField2_ |= 0x00200000;
+      bitField2_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -16253,7 +16465,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField2_ |= 0x00200000;
+      bitField2_ |= 0x00400000;
       recommendationType_ = value.getNumber();
       onChanged();
       return this;
@@ -16267,7 +16479,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRecommendationType() {
-      bitField2_ = (bitField2_ & ~0x00200000);
+      bitField2_ = (bitField2_ & ~0x00400000);
       recommendationType_ = 0;
       onChanged();
       return this;
@@ -16296,7 +16508,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSearchEngineResultsPageTypeValue(int value) {
       searchEngineResultsPageType_ = value;
-      bitField2_ |= 0x00400000;
+      bitField2_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -16326,7 +16538,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField2_ |= 0x00400000;
+      bitField2_ |= 0x00800000;
       searchEngineResultsPageType_ = value.getNumber();
       onChanged();
       return this;
@@ -16340,7 +16552,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchEngineResultsPageType() {
-      bitField2_ = (bitField2_ & ~0x00400000);
+      bitField2_ = (bitField2_ & ~0x00800000);
       searchEngineResultsPageType_ = 0;
       onChanged();
       return this;
@@ -16357,7 +16569,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the searchSubcategory field is set.
      */
     public boolean hasSearchSubcategory() {
-      return ((bitField2_ & 0x00800000) != 0);
+      return ((bitField2_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -16416,7 +16628,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       searchSubcategory_ = value;
-      bitField2_ |= 0x00800000;
+      bitField2_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -16431,7 +16643,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSearchSubcategory() {
       searchSubcategory_ = getDefaultInstance().getSearchSubcategory();
-      bitField2_ = (bitField2_ & ~0x00800000);
+      bitField2_ = (bitField2_ & ~0x01000000);
       onChanged();
       return this;
     }
@@ -16450,7 +16662,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       searchSubcategory_ = value;
-      bitField2_ |= 0x00800000;
+      bitField2_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -16465,7 +16677,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the searchTerm field is set.
      */
     public boolean hasSearchTerm() {
-      return ((bitField2_ & 0x01000000) != 0);
+      return ((bitField2_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -16521,7 +16733,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       searchTerm_ = value;
-      bitField2_ |= 0x01000000;
+      bitField2_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -16535,7 +16747,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSearchTerm() {
       searchTerm_ = getDefaultInstance().getSearchTerm();
-      bitField2_ = (bitField2_ & ~0x01000000);
+      bitField2_ = (bitField2_ & ~0x02000000);
       onChanged();
       return this;
     }
@@ -16553,7 +16765,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       searchTerm_ = value;
-      bitField2_ |= 0x01000000;
+      bitField2_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -16581,7 +16793,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSearchTermMatchTypeValue(int value) {
       searchTermMatchType_ = value;
-      bitField2_ |= 0x02000000;
+      bitField2_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -16611,7 +16823,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField2_ |= 0x02000000;
+      bitField2_ |= 0x04000000;
       searchTermMatchType_ = value.getNumber();
       onChanged();
       return this;
@@ -16625,7 +16837,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchTermMatchType() {
-      bitField2_ = (bitField2_ & ~0x02000000);
+      bitField2_ = (bitField2_ & ~0x04000000);
       searchTermMatchType_ = 0;
       onChanged();
       return this;
@@ -16654,7 +16866,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSlotValue(int value) {
       slot_ = value;
-      bitField2_ |= 0x04000000;
+      bitField2_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -16684,7 +16896,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField2_ |= 0x04000000;
+      bitField2_ |= 0x08000000;
       slot_ = value.getNumber();
       onChanged();
       return this;
@@ -16698,7 +16910,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSlot() {
-      bitField2_ = (bitField2_ & ~0x04000000);
+      bitField2_ = (bitField2_ & ~0x08000000);
       slot_ = 0;
       onChanged();
       return this;
@@ -16739,7 +16951,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionValueRulePrimaryDimensionValue(int value) {
       conversionValueRulePrimaryDimension_ = value;
-      bitField2_ |= 0x08000000;
+      bitField2_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -16781,7 +16993,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField2_ |= 0x08000000;
+      bitField2_ |= 0x10000000;
       conversionValueRulePrimaryDimension_ = value.getNumber();
       onChanged();
       return this;
@@ -16801,7 +17013,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionValueRulePrimaryDimension() {
-      bitField2_ = (bitField2_ & ~0x08000000);
+      bitField2_ = (bitField2_ & ~0x10000000);
       conversionValueRulePrimaryDimension_ = 0;
       onChanged();
       return this;
@@ -16817,7 +17029,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the webpage field is set.
      */
     public boolean hasWebpage() {
-      return ((bitField2_ & 0x10000000) != 0);
+      return ((bitField2_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -16873,7 +17085,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       webpage_ = value;
-      bitField2_ |= 0x10000000;
+      bitField2_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -16887,7 +17099,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearWebpage() {
       webpage_ = getDefaultInstance().getWebpage();
-      bitField2_ = (bitField2_ & ~0x10000000);
+      bitField2_ = (bitField2_ & ~0x20000000);
       onChanged();
       return this;
     }
@@ -16905,7 +17117,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       webpage_ = value;
-      bitField2_ |= 0x10000000;
+      bitField2_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -16921,7 +17133,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the week field is set.
      */
     public boolean hasWeek() {
-      return ((bitField2_ & 0x20000000) != 0);
+      return ((bitField2_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -16980,7 +17192,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       week_ = value;
-      bitField2_ |= 0x20000000;
+      bitField2_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -16995,7 +17207,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearWeek() {
       week_ = getDefaultInstance().getWeek();
-      bitField2_ = (bitField2_ & ~0x20000000);
+      bitField2_ = (bitField2_ & ~0x40000000);
       onChanged();
       return this;
     }
@@ -17014,7 +17226,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       week_ = value;
-      bitField2_ |= 0x20000000;
+      bitField2_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -17030,7 +17242,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasYear() {
-      return ((bitField2_ & 0x40000000) != 0);
+      return ((bitField2_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -17056,7 +17268,7 @@ private static final long serialVersionUID = 0L;
     public Builder setYear(int value) {
 
       year_ = value;
-      bitField2_ |= 0x40000000;
+      bitField2_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -17069,7 +17281,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYear() {
-      bitField2_ = (bitField2_ & ~0x40000000);
+      bitField2_ = (bitField2_ & ~0x80000000);
       year_ = 0;
       onChanged();
       return this;
@@ -17088,7 +17300,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSkAdNetworkFineConversionValue() {
-      return ((bitField2_ & 0x80000000) != 0);
+      return ((bitField3_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -17118,7 +17330,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSkAdNetworkFineConversionValue(long value) {
 
       skAdNetworkFineConversionValue_ = value;
-      bitField2_ |= 0x80000000;
+      bitField3_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -17133,7 +17345,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkFineConversionValue() {
-      bitField2_ = (bitField2_ & ~0x80000000);
+      bitField3_ = (bitField3_ & ~0x00000001);
       skAdNetworkFineConversionValue_ = 0L;
       onChanged();
       return this;
@@ -17157,7 +17369,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSkAdNetworkRedistributedFineConversionValue() {
-      return ((bitField3_ & 0x00000001) != 0);
+      return ((bitField3_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -17197,7 +17409,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSkAdNetworkRedistributedFineConversionValue(long value) {
 
       skAdNetworkRedistributedFineConversionValue_ = value;
-      bitField3_ |= 0x00000001;
+      bitField3_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -17217,7 +17429,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkRedistributedFineConversionValue() {
-      bitField3_ = (bitField3_ & ~0x00000001);
+      bitField3_ = (bitField3_ & ~0x00000002);
       skAdNetworkRedistributedFineConversionValue_ = 0L;
       onChanged();
       return this;
@@ -17246,7 +17458,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkAdNetworkUserTypeValue(int value) {
       skAdNetworkUserType_ = value;
-      bitField3_ |= 0x00000002;
+      bitField3_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -17276,7 +17488,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField3_ |= 0x00000002;
+      bitField3_ |= 0x00000004;
       skAdNetworkUserType_ = value.getNumber();
       onChanged();
       return this;
@@ -17290,7 +17502,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkUserType() {
-      bitField3_ = (bitField3_ & ~0x00000002);
+      bitField3_ = (bitField3_ & ~0x00000004);
       skAdNetworkUserType_ = 0;
       onChanged();
       return this;
@@ -17319,7 +17531,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkAdNetworkAdEventTypeValue(int value) {
       skAdNetworkAdEventType_ = value;
-      bitField3_ |= 0x00000004;
+      bitField3_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -17349,7 +17561,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField3_ |= 0x00000004;
+      bitField3_ |= 0x00000008;
       skAdNetworkAdEventType_ = value.getNumber();
       onChanged();
       return this;
@@ -17363,7 +17575,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkAdEventType() {
-      bitField3_ = (bitField3_ & ~0x00000004);
+      bitField3_ = (bitField3_ & ~0x00000008);
       skAdNetworkAdEventType_ = 0;
       onChanged();
       return this;
@@ -17383,7 +17595,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the skAdNetworkSourceApp field is set.
      */
     public boolean hasSkAdNetworkSourceApp() {
-      return ((bitField3_ & 0x00000008) != 0);
+      return ((bitField3_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -17420,7 +17632,7 @@ private static final long serialVersionUID = 0L;
       } else {
         skAdNetworkSourceAppBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000008;
+      bitField3_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -17440,7 +17652,7 @@ private static final long serialVersionUID = 0L;
       } else {
         skAdNetworkSourceAppBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000008;
+      bitField3_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -17455,7 +17667,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSkAdNetworkSourceApp(com.google.ads.googleads.v17.common.SkAdNetworkSourceApp value) {
       if (skAdNetworkSourceAppBuilder_ == null) {
-        if (((bitField3_ & 0x00000008) != 0) &&
+        if (((bitField3_ & 0x00000010) != 0) &&
           skAdNetworkSourceApp_ != null &&
           skAdNetworkSourceApp_ != com.google.ads.googleads.v17.common.SkAdNetworkSourceApp.getDefaultInstance()) {
           getSkAdNetworkSourceAppBuilder().mergeFrom(value);
@@ -17466,7 +17678,7 @@ private static final long serialVersionUID = 0L;
         skAdNetworkSourceAppBuilder_.mergeFrom(value);
       }
       if (skAdNetworkSourceApp_ != null) {
-        bitField3_ |= 0x00000008;
+        bitField3_ |= 0x00000010;
         onChanged();
       }
       return this;
@@ -17481,7 +17693,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v17.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
      */
     public Builder clearSkAdNetworkSourceApp() {
-      bitField3_ = (bitField3_ & ~0x00000008);
+      bitField3_ = (bitField3_ & ~0x00000010);
       skAdNetworkSourceApp_ = null;
       if (skAdNetworkSourceAppBuilder_ != null) {
         skAdNetworkSourceAppBuilder_.dispose();
@@ -17500,7 +17712,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v17.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
      */
     public com.google.ads.googleads.v17.common.SkAdNetworkSourceApp.Builder getSkAdNetworkSourceAppBuilder() {
-      bitField3_ |= 0x00000008;
+      bitField3_ |= 0x00000010;
       onChanged();
       return getSkAdNetworkSourceAppFieldBuilder().getBuilder();
     }
@@ -17567,7 +17779,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkAdNetworkAttributionCreditValue(int value) {
       skAdNetworkAttributionCredit_ = value;
-      bitField3_ |= 0x00000010;
+      bitField3_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -17597,7 +17809,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField3_ |= 0x00000010;
+      bitField3_ |= 0x00000020;
       skAdNetworkAttributionCredit_ = value.getNumber();
       onChanged();
       return this;
@@ -17611,7 +17823,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkAttributionCredit() {
-      bitField3_ = (bitField3_ & ~0x00000010);
+      bitField3_ = (bitField3_ & ~0x00000020);
       skAdNetworkAttributionCredit_ = 0;
       onChanged();
       return this;
@@ -17640,7 +17852,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkAdNetworkCoarseConversionValueValue(int value) {
       skAdNetworkCoarseConversionValue_ = value;
-      bitField3_ |= 0x00000020;
+      bitField3_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -17670,7 +17882,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField3_ |= 0x00000020;
+      bitField3_ |= 0x00000040;
       skAdNetworkCoarseConversionValue_ = value.getNumber();
       onChanged();
       return this;
@@ -17684,7 +17896,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkCoarseConversionValue() {
-      bitField3_ = (bitField3_ & ~0x00000020);
+      bitField3_ = (bitField3_ & ~0x00000040);
       skAdNetworkCoarseConversionValue_ = 0;
       onChanged();
       return this;
@@ -17702,7 +17914,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the skAdNetworkSourceDomain field is set.
      */
     public boolean hasSkAdNetworkSourceDomain() {
-      return ((bitField3_ & 0x00000040) != 0);
+      return ((bitField3_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -17764,7 +17976,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       skAdNetworkSourceDomain_ = value;
-      bitField3_ |= 0x00000040;
+      bitField3_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -17780,7 +17992,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSkAdNetworkSourceDomain() {
       skAdNetworkSourceDomain_ = getDefaultInstance().getSkAdNetworkSourceDomain();
-      bitField3_ = (bitField3_ & ~0x00000040);
+      bitField3_ = (bitField3_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -17800,7 +18012,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       skAdNetworkSourceDomain_ = value;
-      bitField3_ |= 0x00000040;
+      bitField3_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -17834,7 +18046,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkAdNetworkSourceTypeValue(int value) {
       skAdNetworkSourceType_ = value;
-      bitField3_ |= 0x00000080;
+      bitField3_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -17870,7 +18082,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField3_ |= 0x00000080;
+      bitField3_ |= 0x00000100;
       skAdNetworkSourceType_ = value.getNumber();
       onChanged();
       return this;
@@ -17887,7 +18099,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkSourceType() {
-      bitField3_ = (bitField3_ & ~0x00000080);
+      bitField3_ = (bitField3_ & ~0x00000100);
       skAdNetworkSourceType_ = 0;
       onChanged();
       return this;
@@ -17904,7 +18116,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSkAdNetworkPostbackSequenceIndex() {
-      return ((bitField3_ & 0x00000100) != 0);
+      return ((bitField3_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -17930,7 +18142,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSkAdNetworkPostbackSequenceIndex(long value) {
 
       skAdNetworkPostbackSequenceIndex_ = value;
-      bitField3_ |= 0x00000100;
+      bitField3_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -17943,8 +18155,111 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkPostbackSequenceIndex() {
-      bitField3_ = (bitField3_ & ~0x00000100);
+      bitField3_ = (bitField3_ & ~0x00000200);
       skAdNetworkPostbackSequenceIndex_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object skAdNetworkVersion_ = "";
+    /**
+     * <pre>
+     * The version of the SKAdNetwork API used.
+     * </pre>
+     *
+     * <code>optional string sk_ad_network_version = 192;</code>
+     * @return Whether the skAdNetworkVersion field is set.
+     */
+    public boolean hasSkAdNetworkVersion() {
+      return ((bitField3_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * The version of the SKAdNetwork API used.
+     * </pre>
+     *
+     * <code>optional string sk_ad_network_version = 192;</code>
+     * @return The skAdNetworkVersion.
+     */
+    public java.lang.String getSkAdNetworkVersion() {
+      java.lang.Object ref = skAdNetworkVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        skAdNetworkVersion_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The version of the SKAdNetwork API used.
+     * </pre>
+     *
+     * <code>optional string sk_ad_network_version = 192;</code>
+     * @return The bytes for skAdNetworkVersion.
+     */
+    public com.google.protobuf.ByteString
+        getSkAdNetworkVersionBytes() {
+      java.lang.Object ref = skAdNetworkVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        skAdNetworkVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The version of the SKAdNetwork API used.
+     * </pre>
+     *
+     * <code>optional string sk_ad_network_version = 192;</code>
+     * @param value The skAdNetworkVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSkAdNetworkVersion(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      skAdNetworkVersion_ = value;
+      bitField3_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The version of the SKAdNetwork API used.
+     * </pre>
+     *
+     * <code>optional string sk_ad_network_version = 192;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSkAdNetworkVersion() {
+      skAdNetworkVersion_ = getDefaultInstance().getSkAdNetworkVersion();
+      bitField3_ = (bitField3_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The version of the SKAdNetwork API used.
+     * </pre>
+     *
+     * <code>optional string sk_ad_network_version = 192;</code>
+     * @param value The bytes for skAdNetworkVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSkAdNetworkVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      skAdNetworkVersion_ = value;
+      bitField3_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -17970,7 +18285,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the assetInteractionTarget field is set.
      */
     public boolean hasAssetInteractionTarget() {
-      return ((bitField3_ & 0x00000200) != 0);
+      return ((bitField3_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -18021,7 +18336,7 @@ private static final long serialVersionUID = 0L;
       } else {
         assetInteractionTargetBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000200;
+      bitField3_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -18048,7 +18363,7 @@ private static final long serialVersionUID = 0L;
       } else {
         assetInteractionTargetBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000200;
+      bitField3_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -18070,7 +18385,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAssetInteractionTarget(com.google.ads.googleads.v17.common.AssetInteractionTarget value) {
       if (assetInteractionTargetBuilder_ == null) {
-        if (((bitField3_ & 0x00000200) != 0) &&
+        if (((bitField3_ & 0x00000800) != 0) &&
           assetInteractionTarget_ != null &&
           assetInteractionTarget_ != com.google.ads.googleads.v17.common.AssetInteractionTarget.getDefaultInstance()) {
           getAssetInteractionTargetBuilder().mergeFrom(value);
@@ -18081,7 +18396,7 @@ private static final long serialVersionUID = 0L;
         assetInteractionTargetBuilder_.mergeFrom(value);
       }
       if (assetInteractionTarget_ != null) {
-        bitField3_ |= 0x00000200;
+        bitField3_ |= 0x00000800;
         onChanged();
       }
       return this;
@@ -18103,7 +18418,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v17.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      */
     public Builder clearAssetInteractionTarget() {
-      bitField3_ = (bitField3_ & ~0x00000200);
+      bitField3_ = (bitField3_ & ~0x00000800);
       assetInteractionTarget_ = null;
       if (assetInteractionTargetBuilder_ != null) {
         assetInteractionTargetBuilder_.dispose();
@@ -18129,7 +18444,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v17.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      */
     public com.google.ads.googleads.v17.common.AssetInteractionTarget.Builder getAssetInteractionTargetBuilder() {
-      bitField3_ |= 0x00000200;
+      bitField3_ |= 0x00000800;
       onChanged();
       return getAssetInteractionTargetFieldBuilder().getBuilder();
     }
@@ -18214,7 +18529,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNewVersusReturningCustomersValue(int value) {
       newVersusReturningCustomers_ = value;
-      bitField3_ |= 0x00000400;
+      bitField3_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -18248,7 +18563,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField3_ |= 0x00000400;
+      bitField3_ |= 0x00001000;
       newVersusReturningCustomers_ = value.getNumber();
       onChanged();
       return this;
@@ -18264,7 +18579,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNewVersusReturningCustomers() {
-      bitField3_ = (bitField3_ & ~0x00000400);
+      bitField3_ = (bitField3_ & ~0x00001000);
       newVersusReturningCustomers_ = 0;
       onChanged();
       return this;

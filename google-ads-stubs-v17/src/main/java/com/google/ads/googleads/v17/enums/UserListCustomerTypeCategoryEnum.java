@@ -140,6 +140,62 @@ private static final long serialVersionUID = 0L;
      * <code>CART_ABANDONERS = 10;</code>
      */
     CART_ABANDONERS(10),
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 1 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_1_MEMBERS = 11;</code>
+     */
+    LOYALTY_TIER_1_MEMBERS(11),
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 2 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_2_MEMBERS = 12;</code>
+     */
+    LOYALTY_TIER_2_MEMBERS(12),
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 3 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_3_MEMBERS = 13;</code>
+     */
+    LOYALTY_TIER_3_MEMBERS(13),
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 4 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_4_MEMBERS = 14;</code>
+     */
+    LOYALTY_TIER_4_MEMBERS(14),
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 5 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_5_MEMBERS = 15;</code>
+     */
+    LOYALTY_TIER_5_MEMBERS(15),
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 6 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_6_MEMBERS = 16;</code>
+     */
+    LOYALTY_TIER_6_MEMBERS(16),
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 7 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_7_MEMBERS = 17;</code>
+     */
+    LOYALTY_TIER_7_MEMBERS(17),
     UNRECOGNIZED(-1),
     ;
 
@@ -231,6 +287,62 @@ private static final long serialVersionUID = 0L;
      * <code>CART_ABANDONERS = 10;</code>
      */
     public static final int CART_ABANDONERS_VALUE = 10;
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 1 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_1_MEMBERS = 11;</code>
+     */
+    public static final int LOYALTY_TIER_1_MEMBERS_VALUE = 11;
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 2 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_2_MEMBERS = 12;</code>
+     */
+    public static final int LOYALTY_TIER_2_MEMBERS_VALUE = 12;
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 3 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_3_MEMBERS = 13;</code>
+     */
+    public static final int LOYALTY_TIER_3_MEMBERS_VALUE = 13;
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 4 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_4_MEMBERS = 14;</code>
+     */
+    public static final int LOYALTY_TIER_4_MEMBERS_VALUE = 14;
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 5 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_5_MEMBERS = 15;</code>
+     */
+    public static final int LOYALTY_TIER_5_MEMBERS_VALUE = 15;
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 6 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_6_MEMBERS = 16;</code>
+     */
+    public static final int LOYALTY_TIER_6_MEMBERS_VALUE = 16;
+    /**
+     * <pre>
+     * Customer type category for loyalty tier 7 members.
+     * </pre>
+     *
+     * <code>LOYALTY_TIER_7_MEMBERS = 17;</code>
+     */
+    public static final int LOYALTY_TIER_7_MEMBERS_VALUE = 17;
 
 
     public final int getNumber() {
@@ -268,6 +380,13 @@ private static final long serialVersionUID = 0L;
         case 8: return PAID_SUBSCRIBERS;
         case 9: return LOYALTY_SIGN_UPS;
         case 10: return CART_ABANDONERS;
+        case 11: return LOYALTY_TIER_1_MEMBERS;
+        case 12: return LOYALTY_TIER_2_MEMBERS;
+        case 13: return LOYALTY_TIER_3_MEMBERS;
+        case 14: return LOYALTY_TIER_4_MEMBERS;
+        case 15: return LOYALTY_TIER_5_MEMBERS;
+        case 16: return LOYALTY_TIER_6_MEMBERS;
+        case 17: return LOYALTY_TIER_7_MEMBERS;
         default: return null;
       }
     }

@@ -334,6 +334,9 @@ public interface GoogleAdsVersion {
         @ServiceClientDescriptor(settingsClass = RemarketingActionServiceSettings.class)
         RemarketingActionServiceClient createRemarketingActionServiceClient();
          
+        @ServiceClientDescriptor(settingsClass = ShareablePreviewServiceSettings.class)
+        ShareablePreviewServiceClient createShareablePreviewServiceClient();
+         
         @ServiceClientDescriptor(settingsClass = SharedCriterionServiceSettings.class)
         SharedCriterionServiceClient createSharedCriterionServiceClient();
          

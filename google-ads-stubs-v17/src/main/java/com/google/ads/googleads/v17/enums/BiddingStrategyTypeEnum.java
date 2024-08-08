@@ -89,6 +89,14 @@ private static final long serialVersionUID = 0L;
     ENHANCED_CPC(2),
     /**
      * <pre>
+     * Fixed CPM is a manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>FIXED_CPM = 19;</code>
+     */
+    FIXED_CPM(19),
+    /**
+     * <pre>
      * Used for return value only. Indicates that a campaign does not have a
      * bidding strategy. This prevents the campaign from serving. For example,
      * a campaign may be attached to a manager bidding strategy and the serving
@@ -194,6 +202,15 @@ private static final long serialVersionUID = 0L;
     TARGET_CPM(14),
     /**
      * <pre>
+     * Target CPV is an automated bidding strategy that sets bids to optimize
+     * performance given the average target cost per view.
+     * </pre>
+     *
+     * <code>TARGET_CPV = 20;</code>
+     */
+    TARGET_CPV(20),
+    /**
+     * <pre>
      * An automated bidding strategy that sets bids so that a certain percentage
      * of search ads are shown at the top of the first page (or other targeted
      * location).
@@ -270,6 +287,14 @@ private static final long serialVersionUID = 0L;
      * <code>ENHANCED_CPC = 2;</code>
      */
     public static final int ENHANCED_CPC_VALUE = 2;
+    /**
+     * <pre>
+     * Fixed CPM is a manual bidding strategy with a fixed CPM.
+     * </pre>
+     *
+     * <code>FIXED_CPM = 19;</code>
+     */
+    public static final int FIXED_CPM_VALUE = 19;
     /**
      * <pre>
      * Used for return value only. Indicates that a campaign does not have a
@@ -377,6 +402,15 @@ private static final long serialVersionUID = 0L;
     public static final int TARGET_CPM_VALUE = 14;
     /**
      * <pre>
+     * Target CPV is an automated bidding strategy that sets bids to optimize
+     * performance given the average target cost per view.
+     * </pre>
+     *
+     * <code>TARGET_CPV = 20;</code>
+     */
+    public static final int TARGET_CPV_VALUE = 20;
+    /**
+     * <pre>
      * An automated bidding strategy that sets bids so that a certain percentage
      * of search ads are shown at the top of the first page (or other targeted
      * location).
@@ -445,6 +479,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 16: return COMMISSION;
         case 2: return ENHANCED_CPC;
+        case 19: return FIXED_CPM;
         case 17: return INVALID;
         case 18: return MANUAL_CPA;
         case 3: return MANUAL_CPC;
@@ -456,6 +491,7 @@ private static final long serialVersionUID = 0L;
         case 12: return PERCENT_CPC;
         case 6: return TARGET_CPA;
         case 14: return TARGET_CPM;
+        case 20: return TARGET_CPV;
         case 15: return TARGET_IMPRESSION_SHARE;
         case 7: return TARGET_OUTRANK_SHARE;
         case 8: return TARGET_ROAS;

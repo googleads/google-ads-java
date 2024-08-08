@@ -175,6 +175,37 @@ public final class AudienceInsightsServiceGrpc {
     return getGenerateSuggestedTargetingInsightsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest,
+      com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse> getGenerateAudienceOverlapInsightsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateAudienceOverlapInsights",
+      requestType = com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest.class,
+      responseType = com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest,
+      com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse> getGenerateAudienceOverlapInsightsMethod() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest, com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse> getGenerateAudienceOverlapInsightsMethod;
+    if ((getGenerateAudienceOverlapInsightsMethod = AudienceInsightsServiceGrpc.getGenerateAudienceOverlapInsightsMethod) == null) {
+      synchronized (AudienceInsightsServiceGrpc.class) {
+        if ((getGenerateAudienceOverlapInsightsMethod = AudienceInsightsServiceGrpc.getGenerateAudienceOverlapInsightsMethod) == null) {
+          AudienceInsightsServiceGrpc.getGenerateAudienceOverlapInsightsMethod = getGenerateAudienceOverlapInsightsMethod =
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest, com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateAudienceOverlapInsights"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AudienceInsightsServiceMethodDescriptorSupplier("GenerateAudienceOverlapInsights"))
+              .build();
+        }
+      }
+    }
+    return getGenerateAudienceOverlapInsightsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -327,6 +358,28 @@ public final class AudienceInsightsServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v17.services.GenerateSuggestedTargetingInsightsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateSuggestedTargetingInsightsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a collection of audience attributes along with estimates of the
+     * overlap between their potential YouTube reach and that of a given input
+     * attribute.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    default void generateAudienceOverlapInsights(com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateAudienceOverlapInsightsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -470,6 +523,29 @@ public final class AudienceInsightsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGenerateSuggestedTargetingInsightsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a collection of audience attributes along with estimates of the
+     * overlap between their potential YouTube reach and that of a given input
+     * attribute.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public void generateAudienceOverlapInsights(com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGenerateAudienceOverlapInsightsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -591,6 +667,28 @@ public final class AudienceInsightsServiceGrpc {
     public com.google.ads.googleads.v17.services.GenerateSuggestedTargetingInsightsResponse generateSuggestedTargetingInsights(com.google.ads.googleads.v17.services.GenerateSuggestedTargetingInsightsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGenerateSuggestedTargetingInsightsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a collection of audience attributes along with estimates of the
+     * overlap between their potential YouTube reach and that of a given input
+     * attribute.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse generateAudienceOverlapInsights(com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateAudienceOverlapInsightsMethod(), getCallOptions(), request);
     }
   }
 
@@ -719,6 +817,29 @@ public final class AudienceInsightsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGenerateSuggestedTargetingInsightsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns a collection of audience attributes along with estimates of the
+     * overlap between their potential YouTube reach and that of a given input
+     * attribute.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse> generateAudienceOverlapInsights(
+        com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateAudienceOverlapInsightsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GENERATE_INSIGHTS_FINDER_REPORT = 0;
@@ -726,6 +847,7 @@ public final class AudienceInsightsServiceGrpc {
   private static final int METHODID_LIST_INSIGHTS_ELIGIBLE_DATES = 2;
   private static final int METHODID_GENERATE_AUDIENCE_COMPOSITION_INSIGHTS = 3;
   private static final int METHODID_GENERATE_SUGGESTED_TARGETING_INSIGHTS = 4;
+  private static final int METHODID_GENERATE_AUDIENCE_OVERLAP_INSIGHTS = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -763,6 +885,10 @@ public final class AudienceInsightsServiceGrpc {
         case METHODID_GENERATE_SUGGESTED_TARGETING_INSIGHTS:
           serviceImpl.generateSuggestedTargetingInsights((com.google.ads.googleads.v17.services.GenerateSuggestedTargetingInsightsRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v17.services.GenerateSuggestedTargetingInsightsResponse>) responseObserver);
+          break;
+        case METHODID_GENERATE_AUDIENCE_OVERLAP_INSIGHTS:
+          serviceImpl.generateAudienceOverlapInsights((com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -817,6 +943,13 @@ public final class AudienceInsightsServiceGrpc {
               com.google.ads.googleads.v17.services.GenerateSuggestedTargetingInsightsRequest,
               com.google.ads.googleads.v17.services.GenerateSuggestedTargetingInsightsResponse>(
                 service, METHODID_GENERATE_SUGGESTED_TARGETING_INSIGHTS)))
+        .addMethod(
+          getGenerateAudienceOverlapInsightsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest,
+              com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsResponse>(
+                service, METHODID_GENERATE_AUDIENCE_OVERLAP_INSIGHTS)))
         .build();
   }
 
@@ -870,6 +1003,7 @@ public final class AudienceInsightsServiceGrpc {
               .addMethod(getListInsightsEligibleDatesMethod())
               .addMethod(getGenerateAudienceCompositionInsightsMethod())
               .addMethod(getGenerateSuggestedTargetingInsightsMethod())
+              .addMethod(getGenerateAudienceOverlapInsightsMethod())
               .build();
         }
       }

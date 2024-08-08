@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
     campaignAsset_ = "";
     adGroupAsset_ = "";
     combinedAudience_ = "";
+    assetGroup_ = "";
   }
 
   @java.lang.Override
@@ -1156,6 +1157,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ASSET_GROUP_FIELD_NUMBER = 41;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object assetGroup_ = "";
+  /**
+   * <pre>
+   * Output only. The AssetGroup affected by this change.
+   * </pre>
+   *
+   * <code>string asset_group = 41 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The assetGroup.
+   */
+  @java.lang.Override
+  public java.lang.String getAssetGroup() {
+    java.lang.Object ref = assetGroup_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      assetGroup_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The AssetGroup affected by this change.
+   * </pre>
+   *
+   * <code>string asset_group = 41 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for assetGroup.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAssetGroupBytes() {
+    java.lang.Object ref = assetGroup_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      assetGroup_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1233,6 +1281,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(combinedAudience_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 40, combinedAudience_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assetGroup_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 41, assetGroup_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1306,6 +1357,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(combinedAudience_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, combinedAudience_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assetGroup_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(41, assetGroup_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1395,6 +1449,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAdGroupAsset())) return false;
     if (!getCombinedAudience()
         .equals(other.getCombinedAudience())) return false;
+    if (!getAssetGroup()
+        .equals(other.getAssetGroup())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1470,6 +1526,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAdGroupAsset().hashCode();
     hash = (37 * hash) + COMBINED_AUDIENCE_FIELD_NUMBER;
     hash = (53 * hash) + getCombinedAudience().hashCode();
+    hash = (37 * hash) + ASSET_GROUP_FIELD_NUMBER;
+    hash = (53 * hash) + getAssetGroup().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1627,6 +1685,7 @@ private static final long serialVersionUID = 0L;
       campaignAsset_ = "";
       adGroupAsset_ = "";
       combinedAudience_ = "";
+      assetGroup_ = "";
       return this;
     }
 
@@ -1734,6 +1793,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00100000) != 0)) {
         result.combinedAudience_ = combinedAudience_;
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.assetGroup_ = assetGroup_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1883,6 +1945,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00100000;
         onChanged();
       }
+      if (!other.getAssetGroup().isEmpty()) {
+        assetGroup_ = other.assetGroup_;
+        bitField0_ |= 0x00200000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2014,6 +2081,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00100000;
               break;
             } // case 322
+            case 330: {
+              assetGroup_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 330
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4073,6 +4145,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       combinedAudience_ = value;
       bitField0_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object assetGroup_ = "";
+    /**
+     * <pre>
+     * Output only. The AssetGroup affected by this change.
+     * </pre>
+     *
+     * <code>string asset_group = 41 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The assetGroup.
+     */
+    public java.lang.String getAssetGroup() {
+      java.lang.Object ref = assetGroup_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assetGroup_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The AssetGroup affected by this change.
+     * </pre>
+     *
+     * <code>string asset_group = 41 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for assetGroup.
+     */
+    public com.google.protobuf.ByteString
+        getAssetGroupBytes() {
+      java.lang.Object ref = assetGroup_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assetGroup_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The AssetGroup affected by this change.
+     * </pre>
+     *
+     * <code>string asset_group = 41 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The assetGroup to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssetGroup(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      assetGroup_ = value;
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The AssetGroup affected by this change.
+     * </pre>
+     *
+     * <code>string asset_group = 41 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAssetGroup() {
+      assetGroup_ = getDefaultInstance().getAssetGroup();
+      bitField0_ = (bitField0_ & ~0x00200000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The AssetGroup affected by this change.
+     * </pre>
+     *
+     * <code>string asset_group = 41 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for assetGroup to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssetGroupBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      assetGroup_ = value;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }

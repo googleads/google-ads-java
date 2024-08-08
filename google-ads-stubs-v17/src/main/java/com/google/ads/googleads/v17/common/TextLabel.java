@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object backgroundColor_ = "";
   /**
    * <pre>
-   * Background color of the label in RGB format. This string must match the
+   * Background color of the label in HEX format. This string must match the
    * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
    * Note: The background color may not be visible for manager accounts.
    * </pre>
@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Background color of the label in RGB format. This string must match the
+   * Background color of the label in HEX format. This string must match the
    * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
    * Note: The background color may not be visible for manager accounts.
    * </pre>
@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Background color of the label in RGB format. This string must match the
+   * Background color of the label in HEX format. This string must match the
    * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
    * Note: The background color may not be visible for manager accounts.
    * </pre>
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object backgroundColor_ = "";
     /**
      * <pre>
-     * Background color of the label in RGB format. This string must match the
+     * Background color of the label in HEX format. This string must match the
      * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
      * Note: The background color may not be visible for manager accounts.
      * </pre>
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Background color of the label in RGB format. This string must match the
+     * Background color of the label in HEX format. This string must match the
      * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
      * Note: The background color may not be visible for manager accounts.
      * </pre>
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Background color of the label in RGB format. This string must match the
+     * Background color of the label in HEX format. This string must match the
      * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
      * Note: The background color may not be visible for manager accounts.
      * </pre>
@@ -602,7 +602,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Background color of the label in RGB format. This string must match the
+     * Background color of the label in HEX format. This string must match the
      * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
      * Note: The background color may not be visible for manager accounts.
      * </pre>
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Background color of the label in RGB format. This string must match the
+     * Background color of the label in HEX format. This string must match the
      * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
      * Note: The background color may not be visible for manager accounts.
      * </pre>
@@ -637,7 +637,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Background color of the label in RGB format. This string must match the
+     * Background color of the label in HEX format. This string must match the
      * regular expression '^&#92;#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'.
      * Note: The background color may not be visible for manager accounts.
      * </pre>

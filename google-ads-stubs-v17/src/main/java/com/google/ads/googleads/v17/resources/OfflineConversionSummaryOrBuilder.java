@@ -30,6 +30,16 @@ public interface OfflineConversionSummaryOrBuilder extends
 
   /**
    * <pre>
+   * Output only. Total count of pending uploaded event.
+   * </pre>
+   *
+   * <code>int64 pending_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pendingCount.
+   */
+  long getPendingCount();
+
+  /**
+   * <pre>
    * Output only. Dimension key for last N jobs.
    * </pre>
    *

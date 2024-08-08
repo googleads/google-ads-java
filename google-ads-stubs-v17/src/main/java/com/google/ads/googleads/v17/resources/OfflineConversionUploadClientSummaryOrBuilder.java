@@ -10,9 +10,9 @@ public interface OfflineConversionUploadClientSummaryOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the offline conversion upload client
-   * summary. Offline conversion upload client summary resource names have the
-   * form:
+   * Output only. The resource name of the offline conversion upload summary at
+   * customer level. Offline conversion upload client summary resource names
+   * have the form:
    *
    * `customers/{customer_id}/offlineConversionUploadClientSummaries/{client}`
    * </pre>
@@ -23,9 +23,9 @@ public interface OfflineConversionUploadClientSummaryOrBuilder extends
   java.lang.String getResourceName();
   /**
    * <pre>
-   * Output only. The resource name of the offline conversion upload client
-   * summary. Offline conversion upload client summary resource names have the
-   * form:
+   * Output only. The resource name of the offline conversion upload summary at
+   * customer level. Offline conversion upload client summary resource names
+   * have the form:
    *
    * `customers/{customer_id}/offlineConversionUploadClientSummaries/{client}`
    * </pre>
@@ -58,8 +58,7 @@ public interface OfflineConversionUploadClientSummaryOrBuilder extends
   /**
    * <pre>
    * Output only. Overall status for offline conversion client summary. Status
-   * is generated
-   *  from most recent calendar day with upload stats
+   * is generated from most recent calendar day with upload stats.
    * </pre>
    *
    * <code>.google.ads.googleads.v17.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -69,8 +68,7 @@ public interface OfflineConversionUploadClientSummaryOrBuilder extends
   /**
    * <pre>
    * Output only. Overall status for offline conversion client summary. Status
-   * is generated
-   *  from most recent calendar day with upload stats
+   * is generated from most recent calendar day with upload stats.
    * </pre>
    *
    * <code>.google.ads.googleads.v17.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -107,6 +105,26 @@ public interface OfflineConversionUploadClientSummaryOrBuilder extends
    * @return The successRate.
    */
   double getSuccessRate();
+
+  /**
+   * <pre>
+   * Output only. Total count of pending uploaded events.
+   * </pre>
+   *
+   * <code>int64 pending_event_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pendingEventCount.
+   */
+  long getPendingEventCount();
+
+  /**
+   * <pre>
+   * Output only. The ratio of total pending events to total events.
+   * </pre>
+   *
+   * <code>double pending_rate = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pendingRate.
+   */
+  double getPendingRate();
 
   /**
    * <pre>

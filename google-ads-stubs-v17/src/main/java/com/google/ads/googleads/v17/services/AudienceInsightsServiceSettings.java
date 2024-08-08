@@ -112,6 +112,14 @@ public class AudienceInsightsServiceSettings
         .generateSuggestedTargetingInsightsSettings();
   }
 
+  /** Returns the object with the settings used for calls to generateAudienceOverlapInsights. */
+  public UnaryCallSettings<
+          GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+      generateAudienceOverlapInsightsSettings() {
+    return ((AudienceInsightsServiceStubSettings) getStubSettings())
+        .generateAudienceOverlapInsightsSettings();
+  }
+
   public static final AudienceInsightsServiceSettings create(
       AudienceInsightsServiceStubSettings stub) throws IOException {
     return new AudienceInsightsServiceSettings.Builder(stub.toBuilder()).build();
@@ -246,6 +254,13 @@ public class AudienceInsightsServiceSettings
             GenerateSuggestedTargetingInsightsRequest, GenerateSuggestedTargetingInsightsResponse>
         generateSuggestedTargetingInsightsSettings() {
       return getStubSettingsBuilder().generateSuggestedTargetingInsightsSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to generateAudienceOverlapInsights. */
+    public UnaryCallSettings.Builder<
+            GenerateAudienceOverlapInsightsRequest, GenerateAudienceOverlapInsightsResponse>
+        generateAudienceOverlapInsightsSettings() {
+      return getStubSettingsBuilder().generateAudienceOverlapInsightsSettings();
     }
 
     @Override

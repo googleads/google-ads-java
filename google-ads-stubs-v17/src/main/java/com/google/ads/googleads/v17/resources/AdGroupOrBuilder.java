@@ -500,6 +500,48 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
+   * The fixed amount in micros that the advertiser pays for every thousand
+   * impressions of the ad.
+   * </pre>
+   *
+   * <code>optional int64 fixed_cpm_micros = 64;</code>
+   * @return Whether the fixedCpmMicros field is set.
+   */
+  boolean hasFixedCpmMicros();
+  /**
+   * <pre>
+   * The fixed amount in micros that the advertiser pays for every thousand
+   * impressions of the ad.
+   * </pre>
+   *
+   * <code>optional int64 fixed_cpm_micros = 64;</code>
+   * @return The fixedCpmMicros.
+   */
+  long getFixedCpmMicros();
+
+  /**
+   * <pre>
+   * Average amount in micros that the advertiser is willing to pay for every ad
+   * view.
+   * </pre>
+   *
+   * <code>optional int64 target_cpv_micros = 65;</code>
+   * @return Whether the targetCpvMicros field is set.
+   */
+  boolean hasTargetCpvMicros();
+  /**
+   * <pre>
+   * Average amount in micros that the advertiser is willing to pay for every ad
+   * view.
+   * </pre>
+   *
+   * <code>optional int64 target_cpv_micros = 65;</code>
+   * @return The targetCpvMicros.
+   */
+  long getTargetCpvMicros();
+
+  /**
+   * <pre>
    * True if optimized targeting is enabled. Optimized Targeting is the
    * replacement for Audience Expansion.
    * </pre>

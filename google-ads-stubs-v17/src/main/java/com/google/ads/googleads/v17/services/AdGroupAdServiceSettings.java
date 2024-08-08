@@ -27,6 +27,7 @@ import com.google.api.gax.rpc.ClientSettings;
 import com.google.api.gax.rpc.StubSettings;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.api.gax.rpc.UnaryCallSettings;
+import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
@@ -75,6 +76,13 @@ public class AdGroupAdServiceSettings extends ClientSettings<AdGroupAdServiceSet
   public UnaryCallSettings<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
       mutateAdGroupAdsSettings() {
     return ((AdGroupAdServiceStubSettings) getStubSettings()).mutateAdGroupAdsSettings();
+  }
+
+  /** Returns the object with the settings used for calls to removeAutomaticallyCreatedAssets. */
+  public UnaryCallSettings<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+      removeAutomaticallyCreatedAssetsSettings() {
+    return ((AdGroupAdServiceStubSettings) getStubSettings())
+        .removeAutomaticallyCreatedAssetsSettings();
   }
 
   public static final AdGroupAdServiceSettings create(AdGroupAdServiceStubSettings stub)
@@ -177,6 +185,12 @@ public class AdGroupAdServiceSettings extends ClientSettings<AdGroupAdServiceSet
     public UnaryCallSettings.Builder<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
         mutateAdGroupAdsSettings() {
       return getStubSettingsBuilder().mutateAdGroupAdsSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to removeAutomaticallyCreatedAssets. */
+    public UnaryCallSettings.Builder<RemoveAutomaticallyCreatedAssetsRequest, Empty>
+        removeAutomaticallyCreatedAssetsSettings() {
+      return getStubSettingsBuilder().removeAutomaticallyCreatedAssetsSettings();
     }
 
     @Override

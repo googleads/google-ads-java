@@ -96,6 +96,7 @@ public class GoogleAdsClientTest {
   private static final String SERVICE_ACCOUNT_USER = "someuser@example.com";
   private static final long LOGIN_CUSTOMER_ID = 123456789L;
   private static final long LINKED_CUSTOMER_ID = 987654321L;
+  private static final Integer MAX_INBOUND_MESSAGE_SIZE = 123456789;
   private static final MockGoogleAdsService mockService = new MockGoogleAdsService();
   private static final MockServiceHelper mockServiceHelper =
       new MockServiceHelper("fake-address", mockService);
@@ -126,6 +127,9 @@ public class GoogleAdsClientTest {
     testProperties.setProperty(ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyKey(), DEVELOPER_TOKEN);
     testProperties.setProperty(
         ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey(), String.valueOf(LOGIN_CUSTOMER_ID));
+    testProperties.setProperty(
+        ConfigPropertyKey.MAX_INBOUND_MESSAGE_BYTES.getPropertyKey(),
+        String.valueOf(MAX_INBOUND_MESSAGE_SIZE));
     mockServiceHelper.reset();
     localChannelProvider = mockServiceHelper.createChannelProvider();
   }
@@ -317,6 +321,7 @@ public class GoogleAdsClientTest {
             .setCredentials(credentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLoginCustomerId(LOGIN_CUSTOMER_ID)
+            .setMaxInboundMessageBytes(MAX_INBOUND_MESSAGE_SIZE)
             .build();
     assertGoogleAdsClient(client, true);
   }
@@ -411,10 +416,13 @@ public class GoogleAdsClientTest {
             .put(
                 AdsEnvironmentVariable.GOOGLE_ADS_LINKED_CUSTOMER_ID.name(),
                 Long.toString(LINKED_CUSTOMER_ID))
+            .put(AdsEnvironmentVariable.GOOGLE_ADS_MAX_INBOUND_MESSAGE_BYTES.name(),
+                Integer.toString(MAX_INBOUND_MESSAGE_SIZE))
             .build();
     testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
     testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
     testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.MAX_INBOUND_MESSAGE_BYTES.getPropertyKey());
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
             .setEnvironmentValueGetter(environment::get)
@@ -846,6 +854,56 @@ public class GoogleAdsClientTest {
         GoogleAdsClient.newBuilder().getTransportChannelProvider().needsEndpoint());
   }
 
+  /** Ensure that can set the max inbound message size from properties. */
+  @Test
+  public void maxInboundMessageBytes_isSet() {
+    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+    InstantiatingGrpcChannelProvider channelProvider =
+        (InstantiatingGrpcChannelProvider) client.getTransportChannelProvider();
+    assertEquals("Max inbound message size must be set",
+        MAX_INBOUND_MESSAGE_SIZE, channelProvider.toBuilder().getMaxInboundMessageSize());
+  }
+
+  /** Ensure that can set the max inbound message size directly on the builder. */
+  @Test
+  public void maxInboundMessageBytes_isSet_fromBuilder() {
+    testProperties.remove(ConfigPropertyKey.MAX_INBOUND_MESSAGE_BYTES.getPropertyKey());
+    GoogleAdsClient client = GoogleAdsClient.newBuilder()
+        .setMaxInboundMessageBytes(MAX_INBOUND_MESSAGE_SIZE)
+        .fromProperties(testProperties)
+        .build();
+    InstantiatingGrpcChannelProvider channelProvider =
+        (InstantiatingGrpcChannelProvider) client.getTransportChannelProvider();
+    assertEquals("Max inbound message size must be set",
+        MAX_INBOUND_MESSAGE_SIZE,
+        channelProvider.toBuilder().getMaxInboundMessageSize());
+  }
+
+  /** Ensure that the max inbound message size the default value when not set. */
+  @Test
+  public void maxInboundMessageBytes_isDefault_ifNotSet() {
+    testProperties.remove(ConfigPropertyKey.MAX_INBOUND_MESSAGE_BYTES.getPropertyKey());
+    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+    InstantiatingGrpcChannelProvider channelProvider =
+        (InstantiatingGrpcChannelProvider) client.getTransportChannelProvider();
+    assertEquals("Max inbound message size must be the default value",
+        GoogleAdsClient.DEFAULT_MAX_INBOUND_MESSAGE_SIZE,
+        channelProvider.toBuilder().getMaxInboundMessageSize());
+  }
+
+  /** Ensure that the max inbound message size can be overridden on cloned clients. */
+  @Test
+  public void maxInboundMessageBytes_canSetOnClonedClients() {
+    Integer expectedValue = new Integer(987654321);
+    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+    GoogleAdsClient otherClient = client.toBuilder().setMaxInboundMessageBytes(expectedValue).build();
+    InstantiatingGrpcChannelProvider channelProvider =
+        (InstantiatingGrpcChannelProvider) otherClient.getTransportChannelProvider();
+    assertEquals("Max inbound message size must be the value from the new builder",
+        expectedValue,
+        channelProvider.toBuilder().getMaxInboundMessageSize());
+  }
+
   /** Ensure that hashCode doesn't collide for a test instance. */
   @Test
   public void hashCode_doesNotCollide() {
@@ -959,7 +1017,7 @@ public class GoogleAdsClientTest {
           channelProvider.getMaxInboundMetadataSize());
       assertEquals(
           "Max inbound message size",
-          GoogleAdsClient.DEFAULT_MAX_INBOUND_MESSAGE_SIZE,
+          MAX_INBOUND_MESSAGE_SIZE,
           // For some reason, this setting is only available on the builder.
           channelProvider.toBuilder().getMaxInboundMessageSize());
     }
@@ -971,6 +1029,8 @@ public class GoogleAdsClientTest {
       assertEquals("developer token", DEVELOPER_TOKEN, client.getDeveloperToken());
     }
     assertEquals("Login customer id", loginCustomerId, client.getLoginCustomerId());
+    assertEquals(
+        "Max inbound message size", MAX_INBOUND_MESSAGE_SIZE, client.getMaxInboundMessageBytes());
   }
 
   /**

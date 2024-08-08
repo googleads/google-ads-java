@@ -115,6 +115,21 @@ private static final long serialVersionUID = 0L;
     return failedCount_;
   }
 
+  public static final int PENDING_COUNT_FIELD_NUMBER = 5;
+  private long pendingCount_ = 0L;
+  /**
+   * <pre>
+   * Output only. Total count of pending uploaded event.
+   * </pre>
+   *
+   * <code>int64 pending_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pendingCount.
+   */
+  @java.lang.Override
+  public long getPendingCount() {
+    return pendingCount_;
+  }
+
   public static final int JOB_ID_FIELD_NUMBER = 1;
   /**
    * <pre>
@@ -235,6 +250,9 @@ private static final long serialVersionUID = 0L;
     if (failedCount_ != 0L) {
       output.writeInt64(4, failedCount_);
     }
+    if (pendingCount_ != 0L) {
+      output.writeInt64(5, pendingCount_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -260,6 +278,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, failedCount_);
     }
+    if (pendingCount_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, pendingCount_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -279,6 +301,8 @@ private static final long serialVersionUID = 0L;
         != other.getSuccessfulCount()) return false;
     if (getFailedCount()
         != other.getFailedCount()) return false;
+    if (getPendingCount()
+        != other.getPendingCount()) return false;
     if (!getDimensionKeyCase().equals(other.getDimensionKeyCase())) return false;
     switch (dimensionKeyCase_) {
       case 1:
@@ -309,6 +333,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + FAILED_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getFailedCount());
+    hash = (37 * hash) + PENDING_COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getPendingCount());
     switch (dimensionKeyCase_) {
       case 1:
         hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
@@ -459,6 +486,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       successfulCount_ = 0L;
       failedCount_ = 0L;
+      pendingCount_ = 0L;
       dimensionKeyCase_ = 0;
       dimensionKey_ = null;
       return this;
@@ -500,6 +528,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.failedCount_ = failedCount_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.pendingCount_ = pendingCount_;
       }
     }
 
@@ -557,6 +588,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getFailedCount() != 0L) {
         setFailedCount(other.getFailedCount());
+      }
+      if (other.getPendingCount() != 0L) {
+        setPendingCount(other.getPendingCount());
       }
       switch (other.getDimensionKeyCase()) {
         case JOB_ID: {
@@ -620,6 +654,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 32
+            case 40: {
+              pendingCount_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -736,6 +775,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearFailedCount() {
       bitField0_ = (bitField0_ & ~0x00000002);
       failedCount_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long pendingCount_ ;
+    /**
+     * <pre>
+     * Output only. Total count of pending uploaded event.
+     * </pre>
+     *
+     * <code>int64 pending_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The pendingCount.
+     */
+    @java.lang.Override
+    public long getPendingCount() {
+      return pendingCount_;
+    }
+    /**
+     * <pre>
+     * Output only. Total count of pending uploaded event.
+     * </pre>
+     *
+     * <code>int64 pending_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The pendingCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPendingCount(long value) {
+
+      pendingCount_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Total count of pending uploaded event.
+     * </pre>
+     *
+     * <code>int64 pending_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPendingCount() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      pendingCount_ = 0L;
       onChanged();
       return this;
     }

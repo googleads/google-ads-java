@@ -183,6 +183,25 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Ad Format type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType ad_format_type = 191;</code>
+   * @return The enum numeric value on the wire for adFormatType.
+   */
+  int getAdFormatTypeValue();
+  /**
+   * <pre>
+   * Ad Format type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType ad_format_type = 191;</code>
+   * @return The adFormatType.
+   */
+  com.google.ads.googleads.v17.enums.AdFormatTypeEnum.AdFormatType getAdFormatType();
+
+  /**
+   * <pre>
    * Ad network type.
    * </pre>
    *
@@ -2694,6 +2713,35 @@ public interface SegmentsOrBuilder extends
    * @return The skAdNetworkPostbackSequenceIndex.
    */
   long getSkAdNetworkPostbackSequenceIndex();
+
+  /**
+   * <pre>
+   * The version of the SKAdNetwork API used.
+   * </pre>
+   *
+   * <code>optional string sk_ad_network_version = 192;</code>
+   * @return Whether the skAdNetworkVersion field is set.
+   */
+  boolean hasSkAdNetworkVersion();
+  /**
+   * <pre>
+   * The version of the SKAdNetwork API used.
+   * </pre>
+   *
+   * <code>optional string sk_ad_network_version = 192;</code>
+   * @return The skAdNetworkVersion.
+   */
+  java.lang.String getSkAdNetworkVersion();
+  /**
+   * <pre>
+   * The version of the SKAdNetwork API used.
+   * </pre>
+   *
+   * <code>optional string sk_ad_network_version = 192;</code>
+   * @return The bytes for skAdNetworkVersion.
+   */
+  com.google.protobuf.ByteString
+      getSkAdNetworkVersionBytes();
 
   /**
    * <pre>

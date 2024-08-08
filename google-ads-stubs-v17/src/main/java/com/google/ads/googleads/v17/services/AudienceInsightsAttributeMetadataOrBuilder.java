@@ -106,6 +106,21 @@ public interface AudienceInsightsAttributeMetadataOrBuilder extends
 
   /**
    * <pre>
+   * An estimate of the number of reachable YouTube users matching this
+   * attribute in the requested location, or zero if that information is not
+   * available for this attribute.  Only populated in
+   * GenerateAudienceOverlapInsightsResponses and in
+   * ListAudienceInsightsAttributesResponses when youtube_reach_location is
+   * present in the request.
+   * </pre>
+   *
+   * <code>int64 potential_youtube_reach = 9;</code>
+   * @return The potentialYoutubeReach.
+   */
+  long getPotentialYoutubeReach();
+
+  /**
+   * <pre>
    * Special metadata for a YouTube channel.
    * </pre>
    *

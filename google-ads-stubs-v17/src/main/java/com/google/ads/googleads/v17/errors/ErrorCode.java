@@ -203,6 +203,8 @@ private static final long serialVersionUID = 0L;
     IDENTITY_VERIFICATION_ERROR(181),
     USER_LIST_CUSTOMER_TYPE_ERROR(183),
     SHOPPING_PRODUCT_ERROR(184),
+    AUTOMATICALLY_CREATED_ASSET_REMOVAL_ERROR(185),
+    SHAREABLE_PREVIEW_ERROR(186),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -374,6 +376,8 @@ private static final long serialVersionUID = 0L;
         case 181: return IDENTITY_VERIFICATION_ERROR;
         case 183: return USER_LIST_CUSTOMER_TYPE_ERROR;
         case 184: return SHOPPING_PRODUCT_ERROR;
+        case 185: return AUTOMATICALLY_CREATED_ASSET_REMOVAL_ERROR;
+        case 186: return SHAREABLE_PREVIEW_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -7011,6 +7015,92 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v17.errors.ShoppingProductErrorEnum.ShoppingProductError.UNSPECIFIED;
   }
 
+  public static final int AUTOMATICALLY_CREATED_ASSET_REMOVAL_ERROR_FIELD_NUMBER = 185;
+  /**
+   * <pre>
+   * The reasons for error in automatically created asset removal action.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+   * @return Whether the automaticallyCreatedAssetRemovalError field is set.
+   */
+  public boolean hasAutomaticallyCreatedAssetRemovalError() {
+    return errorCodeCase_ == 185;
+  }
+  /**
+   * <pre>
+   * The reasons for error in automatically created asset removal action.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+   * @return The enum numeric value on the wire for automaticallyCreatedAssetRemovalError.
+   */
+  public int getAutomaticallyCreatedAssetRemovalErrorValue() {
+    if (errorCodeCase_ == 185) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for error in automatically created asset removal action.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+   * @return The automaticallyCreatedAssetRemovalError.
+   */
+  public com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError getAutomaticallyCreatedAssetRemovalError() {
+    if (errorCodeCase_ == 185) {
+      com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError result = com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError.forNumber(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError.UNSPECIFIED;
+  }
+
+  public static final int SHAREABLE_PREVIEW_ERROR_FIELD_NUMBER = 186;
+  /**
+   * <pre>
+   * The reasons for the shareable preview error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+   * @return Whether the shareablePreviewError field is set.
+   */
+  public boolean hasShareablePreviewError() {
+    return errorCodeCase_ == 186;
+  }
+  /**
+   * <pre>
+   * The reasons for the shareable preview error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+   * @return The enum numeric value on the wire for shareablePreviewError.
+   */
+  public int getShareablePreviewErrorValue() {
+    if (errorCodeCase_ == 186) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the shareable preview error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+   * @return The shareablePreviewError.
+   */
+  public com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError getShareablePreviewError() {
+    if (errorCodeCase_ == 186) {
+      com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError result = com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError.forNumber(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -7486,6 +7576,12 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 184) {
       output.writeEnum(184, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 185) {
+      output.writeEnum(185, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 186) {
+      output.writeEnum(186, ((java.lang.Integer) errorCode_));
     }
     getUnknownFields().writeTo(output);
   }
@@ -8111,6 +8207,14 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 184) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(184, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 185) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(185, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 186) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(186, ((java.lang.Integer) errorCode_));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -8745,6 +8849,14 @@ private static final long serialVersionUID = 0L;
         if (getShoppingProductErrorValue()
             != other.getShoppingProductErrorValue()) return false;
         break;
+      case 185:
+        if (getAutomaticallyCreatedAssetRemovalErrorValue()
+            != other.getAutomaticallyCreatedAssetRemovalErrorValue()) return false;
+        break;
+      case 186:
+        if (getShareablePreviewErrorValue()
+            != other.getShareablePreviewErrorValue()) return false;
+        break;
       case 0:
       default:
     }
@@ -9375,6 +9487,14 @@ private static final long serialVersionUID = 0L;
       case 184:
         hash = (37 * hash) + SHOPPING_PRODUCT_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getShoppingProductErrorValue();
+        break;
+      case 185:
+        hash = (37 * hash) + AUTOMATICALLY_CREATED_ASSET_REMOVAL_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getAutomaticallyCreatedAssetRemovalErrorValue();
+        break;
+      case 186:
+        hash = (37 * hash) + SHAREABLE_PREVIEW_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getShareablePreviewErrorValue();
         break;
       case 0:
       default:
@@ -10240,6 +10360,14 @@ private static final long serialVersionUID = 0L;
         }
         case SHOPPING_PRODUCT_ERROR: {
           setShoppingProductErrorValue(other.getShoppingProductErrorValue());
+          break;
+        }
+        case AUTOMATICALLY_CREATED_ASSET_REMOVAL_ERROR: {
+          setAutomaticallyCreatedAssetRemovalErrorValue(other.getAutomaticallyCreatedAssetRemovalErrorValue());
+          break;
+        }
+        case SHAREABLE_PREVIEW_ERROR: {
+          setShareablePreviewErrorValue(other.getShareablePreviewErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -11196,6 +11324,18 @@ private static final long serialVersionUID = 0L;
               errorCode_ = rawValue;
               break;
             } // case 1472
+            case 1480: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 185;
+              errorCode_ = rawValue;
+              break;
+            } // case 1480
+            case 1488: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 186;
+              errorCode_ = rawValue;
+              break;
+            } // case 1488
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -25701,6 +25841,194 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearShoppingProductError() {
       if (errorCodeCase_ == 184) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for error in automatically created asset removal action.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+     * @return Whether the automaticallyCreatedAssetRemovalError field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutomaticallyCreatedAssetRemovalError() {
+      return errorCodeCase_ == 185;
+    }
+    /**
+     * <pre>
+     * The reasons for error in automatically created asset removal action.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+     * @return The enum numeric value on the wire for automaticallyCreatedAssetRemovalError.
+     */
+    @java.lang.Override
+    public int getAutomaticallyCreatedAssetRemovalErrorValue() {
+      if (errorCodeCase_ == 185) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for error in automatically created asset removal action.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+     * @param value The enum numeric value on the wire for automaticallyCreatedAssetRemovalError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAutomaticallyCreatedAssetRemovalErrorValue(int value) {
+      errorCodeCase_ = 185;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for error in automatically created asset removal action.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+     * @return The automaticallyCreatedAssetRemovalError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError getAutomaticallyCreatedAssetRemovalError() {
+      if (errorCodeCase_ == 185) {
+        com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError result = com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError.forNumber(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for error in automatically created asset removal action.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+     * @param value The automaticallyCreatedAssetRemovalError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAutomaticallyCreatedAssetRemovalError(com.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 185;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for error in automatically created asset removal action.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAutomaticallyCreatedAssetRemovalError() {
+      if (errorCodeCase_ == 185) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the shareable preview error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+     * @return Whether the shareablePreviewError field is set.
+     */
+    @java.lang.Override
+    public boolean hasShareablePreviewError() {
+      return errorCodeCase_ == 186;
+    }
+    /**
+     * <pre>
+     * The reasons for the shareable preview error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+     * @return The enum numeric value on the wire for shareablePreviewError.
+     */
+    @java.lang.Override
+    public int getShareablePreviewErrorValue() {
+      if (errorCodeCase_ == 186) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the shareable preview error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+     * @param value The enum numeric value on the wire for shareablePreviewError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setShareablePreviewErrorValue(int value) {
+      errorCodeCase_ = 186;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the shareable preview error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+     * @return The shareablePreviewError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError getShareablePreviewError() {
+      if (errorCodeCase_ == 186) {
+        com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError result = com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError.forNumber(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the shareable preview error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+     * @param value The shareablePreviewError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setShareablePreviewError(com.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 186;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the shareable preview error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v17.errors.ShareablePreviewErrorEnum.ShareablePreviewError shareable_preview_error = 186;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearShareablePreviewError() {
+      if (errorCodeCase_ == 186) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();
