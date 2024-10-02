@@ -577,7 +577,7 @@ public class AddPerformanceMaxCampaign {
       // [END add_performance_max_campaign_9]
     }
 
-    // Create a search theme asset group signal.
+    // Creates a search theme asset group signal.
     // To learn more about Search Themes Signals, see:
     // https://developers.google.com/google-ads/api/performance-max/asset-group-signals#search_themes
     // [START add_performance_max_campaign_10]
