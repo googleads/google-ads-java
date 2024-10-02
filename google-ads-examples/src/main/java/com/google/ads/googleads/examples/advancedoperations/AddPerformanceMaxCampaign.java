@@ -558,7 +558,7 @@ public class AddPerformanceMaxCampaign {
     List<MutateOperation> mutateOperations = new ArrayList<>();
 
     if (audienceId != null) {
-      // Create an audience asset group signal.
+      // Creates an audience asset group signal.
       // To learn more about Audience Signals, see:
       // https://developers.google.com/google-ads/api/performance-max/asset-group-signals#audiences
       // [START add_performance_max_campaign_9]
