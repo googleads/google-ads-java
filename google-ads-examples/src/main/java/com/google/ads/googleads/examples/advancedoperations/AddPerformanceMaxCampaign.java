@@ -25,6 +25,7 @@ import com.google.ads.googleads.v17.common.ImageAsset;
 import com.google.ads.googleads.v17.common.LanguageInfo;
 import com.google.ads.googleads.v17.common.LocationInfo;
 import com.google.ads.googleads.v17.common.MaximizeConversionValue;
+import com.google.ads.googleads.v17.common.SearchThemeInfo;
 import com.google.ads.googleads.v17.common.TextAsset;
 import com.google.ads.googleads.v17.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
 import com.google.ads.googleads.v17.enums.AssetFieldTypeEnum.AssetFieldType;
@@ -194,10 +195,8 @@ public class AddPerformanceMaxCampaign {
             assetGroupResourceName,
             headlineAssetResourceNames,
             descriptionAssetResourceNames));
-    if (audienceId != null) {
-      mutateOperations.addAll(
-          createAssetGroupSignalOperations(customerId, assetGroupResourceName, audienceId));
-    }
+    mutateOperations.addAll(
+        createAssetGroupSignalOperations(customerId, assetGroupResourceName, audienceId));
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -550,7 +549,6 @@ public class AddPerformanceMaxCampaign {
   }
   // [END add_performance_max_campaign_8]
 
-  // [START add_performance_max_campaign_9]
   /**
    * Creates a list of MutateOperations that create {@link
    * com.google.ads.googleads.v17.resources.AssetGroupSignal} objects.
@@ -558,22 +556,46 @@ public class AddPerformanceMaxCampaign {
   private List<MutateOperation> createAssetGroupSignalOperations(
       long customerId, String assetGroupResourceName, Long audienceId) {
     List<MutateOperation> mutateOperations = new ArrayList<>();
-    AssetGroupSignal assetGroupSignal =
-        AssetGroupSignal.newBuilder()
-            .setAssetGroup(assetGroupResourceName)
-            .setAudience(
-                AudienceInfo.newBuilder()
-                    .setAudience(ResourceNames.audience(customerId, audienceId)))
-            .build();
-    // Adds an operation to the list to create the asset group signal.
+
+    if (audienceId != null) {
+      // Creates an audience asset group signal.
+      // To learn more about Audience Signals, see:
+      // https://developers.google.com/google-ads/api/performance-max/asset-group-signals#audiences
+      // [START add_performance_max_campaign_9]
+      AssetGroupSignal audienceSignal = AssetGroupSignal.newBuilder()
+          .setAssetGroup(assetGroupResourceName)
+          .setAudience(
+              AudienceInfo.newBuilder()
+                  .setAudience(ResourceNames.audience(customerId, audienceId)))
+          .build();
+
+      mutateOperations.add(
+          MutateOperation.newBuilder()
+              .setAssetGroupSignalOperation(
+                  AssetGroupSignalOperation.newBuilder().setCreate(audienceSignal))
+              .build());
+      // [END add_performance_max_campaign_9]
+    }
+
+    // Creates a search theme asset group signal.
+    // To learn more about Search Themes Signals, see:
+    // https://developers.google.com/google-ads/api/performance-max/asset-group-signals#search_themes
+    // [START add_performance_max_campaign_10]
+    AssetGroupSignal searchThemeSignal = AssetGroupSignal.newBuilder()
+        .setAssetGroup(assetGroupResourceName)
+        .setSearchTheme(
+            SearchThemeInfo.newBuilder().setText("travel").build())
+        .build();
+
     mutateOperations.add(
         MutateOperation.newBuilder()
             .setAssetGroupSignalOperation(
-                AssetGroupSignalOperation.newBuilder().setCreate(assetGroupSignal))
+                AssetGroupSignalOperation.newBuilder().setCreate(searchThemeSignal))
             .build());
+    // [END add_performance_max_campaign_10]
+
     return mutateOperations;
   }
-  // [END add_performance_max_campaign_9]
 
   /**
    * Prints the details of a MutateGoogleAdsResponse.
