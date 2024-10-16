@@ -18,18 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v17.common.PolicyTopicEntry;
-import com.google.ads.googleads.v17.common.PolicyTopicEvidence;
-import com.google.ads.googleads.v17.common.PolicyTopicEvidence.TextList;
-import com.google.ads.googleads.v17.errors.GoogleAdsError;
-import com.google.ads.googleads.v17.errors.GoogleAdsException;
-import com.google.ads.googleads.v17.resources.Ad;
-import com.google.ads.googleads.v17.resources.AdGroupAd;
-import com.google.ads.googleads.v17.resources.AdGroupAdPolicySummary;
-import com.google.ads.googleads.v17.services.GoogleAdsRow;
-import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v17.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v17.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v18.common.PolicyTopicEntry;
+import com.google.ads.googleads.v18.common.PolicyTopicEvidence;
+import com.google.ads.googleads.v18.common.PolicyTopicEvidence.TextList;
+import com.google.ads.googleads.v18.errors.GoogleAdsError;
+import com.google.ads.googleads.v18.errors.GoogleAdsException;
+import com.google.ads.googleads.v18.resources.Ad;
+import com.google.ads.googleads.v18.resources.AdGroupAd;
+import com.google.ads.googleads.v18.resources.AdGroupAdPolicySummary;
+import com.google.ads.googleads.v18.services.GoogleAdsRow;
+import com.google.ads.googleads.v18.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v18.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v18.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v18.services.SearchSettings;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -111,7 +112,8 @@ public class GetAllDisapprovedAds {
           SearchGoogleAdsRequest.newBuilder()
               .setCustomerId(Long.toString(customerId))
               .setQuery(searchQuery)
-              .setReturnTotalResultsCount(true)
+              .setSearchSettings(
+                  SearchSettings.newBuilder().setReturnTotalResultsCount(true))
               .build();
       // Issues the search request.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);

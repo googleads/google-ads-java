@@ -18,19 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v17.common.OfflineUserAddressInfo;
-import com.google.ads.googleads.v17.common.UserIdentifier;
-import com.google.ads.googleads.v17.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType;
-import com.google.ads.googleads.v17.enums.UserIdentifierSourceEnum.UserIdentifierSource;
-import com.google.ads.googleads.v17.errors.GoogleAdsError;
-import com.google.ads.googleads.v17.errors.GoogleAdsException;
-import com.google.ads.googleads.v17.services.ConversionAdjustment;
-import com.google.ads.googleads.v17.services.ConversionAdjustmentResult;
-import com.google.ads.googleads.v17.services.ConversionAdjustmentUploadServiceClient;
-import com.google.ads.googleads.v17.services.GclidDateTimePair;
-import com.google.ads.googleads.v17.services.UploadConversionAdjustmentsRequest;
-import com.google.ads.googleads.v17.services.UploadConversionAdjustmentsResponse;
-import com.google.ads.googleads.v17.utils.ResourceNames;
+import com.google.ads.googleads.v18.common.OfflineUserAddressInfo;
+import com.google.ads.googleads.v18.common.UserIdentifier;
+import com.google.ads.googleads.v18.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType;
+import com.google.ads.googleads.v18.enums.UserIdentifierSourceEnum.UserIdentifierSource;
+import com.google.ads.googleads.v18.errors.GoogleAdsError;
+import com.google.ads.googleads.v18.errors.GoogleAdsException;
+import com.google.ads.googleads.v18.services.ConversionAdjustment;
+import com.google.ads.googleads.v18.services.ConversionAdjustmentResult;
+import com.google.ads.googleads.v18.services.ConversionAdjustmentUploadServiceClient;
+import com.google.ads.googleads.v18.services.GclidDateTimePair;
+import com.google.ads.googleads.v18.services.UploadConversionAdjustmentsRequest;
+import com.google.ads.googleads.v18.services.UploadConversionAdjustmentsResponse;
+import com.google.ads.googleads.v18.utils.ResourceNames;
 import com.google.common.collect.ImmutableMap;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -169,8 +169,9 @@ public class UploadEnhancedConversionsForWeb {
     //         .setHashedPhoneNumber("...")
     //         .build();
 
-    Map<String, String> rawRecord =
+    ImmutableMap.Builder<String, String> rawRecordBuilder =
         ImmutableMap.<String, String>builder()
+            .put("email", "alex.2@example.com")
             // Email address that includes a period (.) before the Gmail domain.
             .put("email", "alex.2@example.com")
             // Address that includes all four required elements: first name, last name, country
@@ -181,15 +182,23 @@ public class UploadEnhancedConversionsForWeb {
             .put("postalCode", "94045")
             // Phone number to be converted to E.164 format, with a leading '+' as required.
             .put("phone", "+1 800 5550102")
-            // This example lets you input conversion details as arguments, but in reality you might
+            // This example lets you put conversion details as arguments, but in reality you might
             // store this data alongside other user data, so we include it in this sample user
             // record.
             .put("orderId", orderId)
             .put("conversionActionId", Long.toString(conversionActionId))
-            .put("conversionDateTime", conversionDateTime)
-            .put("currencyCode", "USD")
-            .put("userAgent", userAgent)
-            .build();
+            .put("currencyCode", "USD");
+
+    // Adds entries for the optional fields.
+    if (conversionDateTime != null) {
+      rawRecordBuilder.put("conversionDateTime", conversionDateTime);
+    }
+    if (userAgent != null) {
+      rawRecordBuilder.put("userAgent", userAgent);
+    }
+
+    // Builds the map representing the record.
+    Map<String, String> rawRecord = rawRecordBuilder.build();
 
     // Creates a SHA256 message digest for hashing user identifiers in a privacy-safe way, as
     // described at https://support.google.com/google-ads/answer/9888656.
@@ -268,7 +277,7 @@ public class UploadEnhancedConversionsForWeb {
 
     // Sets the conversion date and time if provided. Providing this value is optional but
     // recommended.
-    if (rawRecord.get("conversionDateTime") != null) {
+    if (rawRecord.containsKey("conversionDateTime")) {
       enhancementBuilder.setGclidDateTimePair(
           GclidDateTimePair.newBuilder()
               .setConversionDateTime(rawRecord.get("conversionDateTime")));
@@ -277,7 +286,7 @@ public class UploadEnhancedConversionsForWeb {
     // Sets the user agent if provided. This should match the user agent of the request that sent
     // the original conversion so the conversion and its enhancement are either both attributed as
     // same-device or both attributed as cross-device.
-    if (rawRecord.get("userAgent") != null) {
+    if (rawRecord.containsKey("userAgent")) {
       enhancementBuilder.setUserAgent(rawRecord.get("userAgent"));
     }
     // [END add_conversion_details]

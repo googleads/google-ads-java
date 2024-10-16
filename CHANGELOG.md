@@ -1,3 +1,14 @@
+34.0.0 - 2024-10-17
+-------------------
+- Add support and examples for Google Ads API v18.
+- Updated campaignmanagement/GetAllDisapprovedAds example to use the new
+  `SearchSettings` object.
+- Update to version 3.35.0 of `google-cloud-shared-dependencies`.
+
+Compatible with [Google Cloud Libraries Bill of Materials
+(BOM)](https://cloud.google.com/java/docs/bom) release
+`com.google.cloud:libraries-bom:26.46.0`.
+
 33.0.0 - 2024-08-08
 -------------------
 - Add support and examples for Google Ads API v17.1.

@@ -18,18 +18,18 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v17.common.Consent;
-import com.google.ads.googleads.v17.common.UserIdentifier;
-import com.google.ads.googleads.v17.enums.ConsentStatusEnum.ConsentStatus;
-import com.google.ads.googleads.v17.enums.UserIdentifierSourceEnum.UserIdentifierSource;
-import com.google.ads.googleads.v17.errors.GoogleAdsError;
-import com.google.ads.googleads.v17.errors.GoogleAdsException;
-import com.google.ads.googleads.v17.services.ClickConversion;
-import com.google.ads.googleads.v17.services.ClickConversionResult;
-import com.google.ads.googleads.v17.services.ConversionUploadServiceClient;
-import com.google.ads.googleads.v17.services.UploadClickConversionsRequest;
-import com.google.ads.googleads.v17.services.UploadClickConversionsResponse;
-import com.google.ads.googleads.v17.utils.ResourceNames;
+import com.google.ads.googleads.v18.common.Consent;
+import com.google.ads.googleads.v18.common.UserIdentifier;
+import com.google.ads.googleads.v18.enums.ConsentStatusEnum.ConsentStatus;
+import com.google.ads.googleads.v18.enums.UserIdentifierSourceEnum.UserIdentifierSource;
+import com.google.ads.googleads.v18.errors.GoogleAdsError;
+import com.google.ads.googleads.v18.errors.GoogleAdsException;
+import com.google.ads.googleads.v18.services.ClickConversion;
+import com.google.ads.googleads.v18.services.ClickConversionResult;
+import com.google.ads.googleads.v18.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v18.services.UploadClickConversionsRequest;
+import com.google.ads.googleads.v18.services.UploadClickConversionsResponse;
+import com.google.ads.googleads.v18.utils.ResourceNames;
 import com.google.common.collect.ImmutableMap;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -181,23 +181,32 @@ public class UploadEnhancedConversionsForLeads {
     //         .setHashedPhoneNumber("...")
     //         .build();
 
-    Map<String, String> rawRecord =
+    ImmutableMap.Builder<String, String> rawRecordBuilder =
         ImmutableMap.<String, String>builder()
-            // Email address that includes a period (.) before the Gmail domain.
             .put("email", "alex.2@example.com")
             // Phone number to be converted to E.164 format, with a leading '+' as required.
             .put("phone", "+1 800 5550102")
-            // This example lets you input conversion details as arguments, but in reality you might
+            // This example lets you put conversion details as arguments, but in reality you might
             // store this data alongside other user data, so we include it in this sample user
             // record.
-            .put("orderId", orderId)
-            .put("gclid", gclid)
             .put("conversionActionId", Long.toString(conversionActionId))
             .put("conversionDateTime", conversionDateTime)
             .put("conversionValue", Double.toString(conversionValue))
-            .put("currencyCode", "USD")
-            .put("adUserDataConsent", adUserDataConsent == null ? null : adUserDataConsent.name())
-            .build();
+            .put("currencyCode", "USD");
+
+    // Adds entries for the optional fields.
+    if (orderId != null) {
+      rawRecordBuilder.put("orderId", orderId);
+    }
+    if (gclid != null) {
+      rawRecordBuilder.put("gclid", gclid);
+    }
+    if (adUserDataConsent != null) {
+      rawRecordBuilder.put("adUserDataConsent", adUserDataConsent.name());
+    }
+
+    // Builds the map representing the record.
+    Map<String, String> rawRecord = rawRecordBuilder.build();
 
     // Creates a SHA256 message digest for hashing user identifiers in a privacy-safe way, as
     // described at https://support.google.com/google-ads/answer/9888656.
@@ -239,17 +248,17 @@ public class UploadEnhancedConversionsForLeads {
     clickConversionBuilder.setCurrencyCode(rawRecord.get("currencyCode"));
 
     // Sets the order ID if provided.
-    if (rawRecord.get("orderId") != null) {
+    if (rawRecord.containsKey("orderId")) {
       clickConversionBuilder.setOrderId(rawRecord.get("orderId"));
     }
 
     // Sets the Google click ID (gclid) if provided.
-    if (rawRecord.get("gclid") != null) {
+    if (rawRecord.containsKey("gclid")) {
       clickConversionBuilder.setGclid(rawRecord.get("gclid"));
     }
 
     // Sets the consent information, if provided.
-    if (rawRecord.get("adUserDataConsent") != null) {
+    if (rawRecord.containsKey("adUserDataConsent")) {
       // Specifies whether user consent was obtained for the data you are uploading. See
       // https://www.google.com/about/company/user-consent-policy for details.
       clickConversionBuilder.setConsent(

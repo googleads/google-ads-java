@@ -111,7 +111,7 @@ public abstract class AbstractErrorUtils<
    */
   public List<GoogleAdsErrorT> getGoogleAdsErrors(long operationIndex, Status partialFailureStatus)
       throws InvalidProtocolBufferException {
-    List<GoogleAdsErrorT> result = new ArrayList();
+    List<GoogleAdsErrorT> result = new ArrayList<>();
     for (Any detail : partialFailureStatus.getDetailsList()) {
       GoogleAdsFailureT failure = getGoogleAdsFailure(detail);
       result.addAll(getGoogleAdsErrors(operationIndex, failure));
@@ -126,7 +126,7 @@ public abstract class AbstractErrorUtils<
    */
   public List<GoogleAdsErrorT> getGoogleAdsErrors(
       long operationIndex, GoogleAdsFailureT googleAdsFailure) {
-    List<GoogleAdsErrorT> result = new ArrayList();
+    List<GoogleAdsErrorT> result = new ArrayList<>();
     // Searches all the errors for one relating to the specified operation.
     for (ErrorPath<GoogleAdsErrorT> path : getErrorPaths(googleAdsFailure)) {
       if (path.isOperationIndex()
@@ -183,7 +183,7 @@ public abstract class AbstractErrorUtils<
     return StreamSupport.stream(getErrorPaths(googleAdsFailureT).spliterator(), false)
         .filter(ErrorPath::isOperationIndex)
         .filter(p -> p.getIndex().isPresent())
-        .map(p -> (Long) p.getIndex().get())
+        .map(p -> p.getIndex().get())
         .distinct()
         .collect(Collectors.toList());
   }
@@ -235,8 +235,8 @@ public abstract class AbstractErrorUtils<
    * @param googleAdsFailure the failure from which to extract {@link ErrorPath}s.
    * @return all error paths found
    */
-  protected Iterable<ErrorPath> getErrorPaths(GoogleAdsFailureT googleAdsFailure) {
-    List<ErrorPath> errorPaths = new ArrayList<>();
+  protected Iterable<ErrorPath<GoogleAdsErrorT>> getErrorPaths(GoogleAdsFailureT googleAdsFailure) {
+    List<ErrorPath<GoogleAdsErrorT>> errorPaths = new ArrayList<>();
     for (GoogleAdsErrorT googleAdsError : getGoogleAdsErrors(googleAdsFailure)) {
       List<FieldPathElementT> fieldPathElement = getFieldPathElements(googleAdsError);
       if (!fieldPathElement.isEmpty()) {
