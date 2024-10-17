@@ -22,6 +22,7 @@ import com.google.api.gax.grpc.GrpcCallContext;
 import com.google.api.gax.rpc.ApiCallContext;
 import com.google.api.gax.rpc.ResponseObserver;
 import com.google.api.gax.rpc.ServerStreamingCallable;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,6 +41,7 @@ public class ExceptionTransformingServerStreamingCallableTest {
   private ExceptionTransformingServerStreamingCallable<Object, Object> serverStreamingCallable;
 
   @Mock public ResponseObserver<Object> innerObserver;
+  private AutoCloseable mockCloseable;
 
   @Parameters(name = "{0}")
   public static Iterable<Object[]> params() {
@@ -53,13 +55,18 @@ public class ExceptionTransformingServerStreamingCallableTest {
 
   @Before
   public void setup() {
-    MockitoAnnotations.initMocks(this);
+    mockCloseable = MockitoAnnotations.openMocks(this);
     // Sets up mock callable to abstract away gRPC.
     this.innerCallable = new MockServerStreamingCallable();
     // Creates the instances to be tested.
     this.serverStreamingCallable =
         new ExceptionTransformingServerStreamingCallable(
             innerCallable, new GoogleAdsExceptionTransformation());
+  }
+
+  @After
+  public void closeMocks() throws Exception {
+    mockCloseable.close();
   }
 
   @Test

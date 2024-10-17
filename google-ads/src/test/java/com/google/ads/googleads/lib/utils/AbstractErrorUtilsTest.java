@@ -23,24 +23,26 @@ import com.google.ads.googleads.lib.test.errors.MockError;
 import com.google.ads.googleads.lib.test.errors.MockFailure;
 import com.google.ads.googleads.lib.test.errors.MockPath;
 import com.google.ads.googleads.lib.utils.AbstractErrorUtils.ErrorPath;
-import com.google.ads.googleads.v17.services.GenerateAdGroupThemesRequest;
-import com.google.ads.googleads.v17.services.GenerateAudienceCompositionInsightsRequest;
-import com.google.ads.googleads.v17.services.GenerateAudienceOverlapInsightsRequest;
-import com.google.ads.googleads.v17.services.GenerateKeywordHistoricalMetricsRequest;
-import com.google.ads.googleads.v17.services.GenerateKeywordIdeasRequest;
-import com.google.ads.googleads.v17.services.GenerateReachForecastRequest;
-import com.google.ads.googleads.v17.services.GenerateRecommendationsRequest;
-import com.google.ads.googleads.v17.services.GenerateShareablePreviewsRequest;
-import com.google.ads.googleads.v17.services.GraduateExperimentRequest;
-import com.google.ads.googleads.v17.services.ListAudienceInsightsAttributesRequest;
-import com.google.ads.googleads.v17.services.RemoveAutomaticallyCreatedAssetsRequest;
-import com.google.ads.googleads.v17.services.SuggestBrandsRequest;
-import com.google.ads.googleads.v17.services.SuggestTravelAssetsRequest;
+import com.google.ads.googleads.v18.services.GenerateAdGroupThemesRequest;
+import com.google.ads.googleads.v18.services.GenerateAudienceCompositionInsightsRequest;
+import com.google.ads.googleads.v18.services.GenerateAudienceOverlapInsightsRequest;
+import com.google.ads.googleads.v18.services.GenerateKeywordHistoricalMetricsRequest;
+import com.google.ads.googleads.v18.services.GenerateKeywordIdeasRequest;
+import com.google.ads.googleads.v18.services.GenerateReachForecastRequest;
+import com.google.ads.googleads.v18.services.GenerateRecommendationsRequest;
+import com.google.ads.googleads.v18.services.GenerateShareablePreviewsRequest;
+import com.google.ads.googleads.v18.services.GenerateTargetingSuggestionMetricsRequest;
+import com.google.ads.googleads.v18.services.GraduateExperimentRequest;
+import com.google.ads.googleads.v18.services.ListAudienceInsightsAttributesRequest;
+import com.google.ads.googleads.v18.services.RemoveAutomaticallyCreatedAssetsRequest;
+import com.google.ads.googleads.v18.services.SuggestBrandsRequest;
+import com.google.ads.googleads.v18.services.SuggestTravelAssetsRequest;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 import com.google.protobuf.Any;
 import com.google.protobuf.Descriptors.Descriptor;
+import com.google.protobuf.Descriptors.FieldDescriptor;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.rpc.Status;
 import java.lang.reflect.Method;
@@ -221,7 +223,7 @@ public class AbstractErrorUtilsTest {
 
     @Override
     protected ErrorPath<MockError> createErrorPath(MockError error, MockPath errorLocation) {
-      return new ErrorPath(
+      return new ErrorPath<>(
           error,
           errorLocation.getFieldName(),
           Optional.ofNullable(errorLocation.hasIndex() ? errorLocation.getIndex() : null));
@@ -259,6 +261,7 @@ public class AbstractErrorUtilsTest {
             .add(GenerateRecommendationsRequest.getDescriptor())
             .add(GenerateShareablePreviewsRequest.getDescriptor())
             .add(RemoveAutomaticallyCreatedAssetsRequest.getDescriptor())
+            .add(GenerateTargetingSuggestionMetricsRequest.getDescriptor())
             .build();
 
     // Gets the class for the latest version of the Google Ads API.
@@ -306,7 +309,7 @@ public class AbstractErrorUtilsTest {
               // Keeps the request descriptor if it contains at least one repeated field. Request
               // types with no repeated fields cannot have a list of operations, so they are
               // irrelevant for this test.
-              .filter(desc -> desc.getFields().stream().anyMatch(fldDesc -> fldDesc.isRepeated()))
+              .filter(desc -> desc.getFields().stream().anyMatch(FieldDescriptor::isRepeated))
               // Keeps the request descriptor if it does not have any fields that match the known
               // list of operation field names.
               .filter(
@@ -314,7 +317,7 @@ public class AbstractErrorUtilsTest {
                       desc.getFields().stream()
                           .noneMatch(fldDesc -> OPERATION_FIELD_NAMES.contains(fldDesc.getName())))
               // Gets the name of the request type.
-              .map(desc -> desc.getName())
+              .map(Descriptor::getName)
               // Adds all unmapped request type names to the list for this service client.
               .collect(Collectors.toList());
 

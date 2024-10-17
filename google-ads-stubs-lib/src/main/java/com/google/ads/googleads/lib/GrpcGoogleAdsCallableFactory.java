@@ -136,7 +136,7 @@ public class GrpcGoogleAdsCallableFactory implements GrpcStubCallableFactory {
     ServerStreamingCallable<RequestT, ResponseT> defaultCallable =
         GrpcCallableFactory.createServerStreamingCallable(
             grpcCallSettings, streamingCallSettings, clientContext);
-    return new ExceptionTransformingServerStreamingCallable(
+    return new ExceptionTransformingServerStreamingCallable<>(
         defaultCallable, googleAdsExceptionTransformation);
   }
 

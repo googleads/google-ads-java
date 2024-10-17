@@ -25,6 +25,7 @@ import com.google.api.gax.rpc.ApiCallContext;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.util.concurrent.MoreExecutors;
 import java.util.concurrent.ExecutionException;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -43,6 +44,7 @@ public class ExceptionTransformingUnaryCallableTest {
   private SettableApiFuture<Object> innerFuture;
 
   @Mock public UnaryCallable mockCallable;
+  private AutoCloseable mockCloseable;
 
   @Parameters(name = "{0}")
   public static Iterable<Object[]> params() {
@@ -55,7 +57,7 @@ public class ExceptionTransformingUnaryCallableTest {
 
   @Before
   public void setup() {
-    MockitoAnnotations.initMocks(this);
+    mockCloseable = MockitoAnnotations.openMocks(this);
     // Sets up the class we're going to test.
     callable =
         new ExceptionTransformingUnaryCallable(
@@ -64,6 +66,11 @@ public class ExceptionTransformingUnaryCallableTest {
     // Mocks out the gRPC callable implementation.
     innerFuture = SettableApiFuture.create();
     when(mockCallable.futureCall(request, callContext)).thenReturn(innerFuture);
+  }
+
+  @After
+  public void closeMocks() throws Exception {
+    mockCloseable.close();
   }
 
   @Test

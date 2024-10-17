@@ -7,24 +7,17 @@ import com.google.common.util.concurrent.MoreExecutors;
 import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.function.Consumer;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnitRunner;
 
-@RunWith(JUnit4.class)
+@RunWith(MockitoJUnitRunner.StrictStubs.class)
 public class DefaultPrimerTest {
 
   private static final ExecutorService DIRECT_EXECUTOR = MoreExecutors.newDirectExecutorService();
   @Mock private Consumer<String> classloaderStrategy;
   @Mock private Credentials credentials;
-
-  @Before
-  public void setup() {
-    MockitoAnnotations.initMocks(this);
-  }
 
   @Test
   public void primeGrpc_loadsClassNamesFromResource_with1entry() {

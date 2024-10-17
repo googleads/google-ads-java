@@ -33,26 +33,6 @@ plugins {
 
 description = 'Google Ads API client library for Java'
 
-sourceSets {
-    main {
-        java {
-            // Includes the generated classes from the google-ads-codegen module
-            // to be compiled by google-ads. The generated sources depend on
-            // imports from google-ads, so are not compiled with
-            // google-ads-codegen. Confusingly we have an api dependency on
-            // google-ads-codegen here, however this only exposes the stubs to
-            // the main library.
-            srcDir new File(project.parent.findProject("google-ads-codegen").buildDir, "generated/catalog")
-        }
-    }
-    test {
-        proto {
-            srcDir 'src/test/resources/protos/'
-        }
-    }
-}
-sourceSets.test.java.srcDir new File(buildDir, 'generated/source/proto/test')
-
 protobuf {
     protoc {
         artifact = 'com.google.protobuf:protoc:3.25.3'
@@ -183,7 +163,7 @@ task verifyLicenses() {
 string comparison on the license name. It is possible that the new license is
 already allowed with a different spelling. If the new license is already allowed
 just add the new spelling to the aliases in google-ads/build.gradle.
-- Otherwise you need to consider if we should accept this new license. For 
+- Otherwise you need to consider if we should accept this new license. For
 Googlers, there is a company policy for this available internally.""")
         }
     }
@@ -344,6 +324,31 @@ publishing {
             configurePom(publication,
                     "Google Ads API client library for Java - main library",
                     "Main library for the Google Ads API client library for Java")
+        }
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            // Includes the generated classes from the google-ads-codegen module
+            // to be compiled by google-ads. The generated sources depend on
+            // imports from google-ads, so are not compiled with
+            // google-ads-codegen. Confusingly we have an api dependency on
+            // google-ads-codegen here, however this only exposes the stubs to
+            // the main library.
+            srcDir project.parent.findProject("google-ads-codegen").tasks.getByName("generateCode")
+        }
+    }
+    test {
+        java {
+            // Adds the generated .java files from the protobuf plugin. This
+            // isn't necessary strictly for Gradle, but IntelliJ doesn't
+            // include the directory without this line.
+            srcDir new File(buildDir, 'generated/source/proto/test')
+        }
+        proto {
+            srcDir 'src/test/resources/protos/'
         }
     }
 }

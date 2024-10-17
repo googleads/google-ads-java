@@ -14,21 +14,20 @@
 
 package com.google.ads.googleads.lib.catalog;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.lessThan;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
 import com.google.ads.googleads.lib.stubs.exceptions.BaseGoogleAdsException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnitRunner;
 
-@RunWith(JUnit4.class)
+@RunWith(MockitoJUnitRunner.StrictStubs.class)
 public class VersionTest {
 
   @Mock private BaseGoogleAdsException.Factory typeFactory;
@@ -37,7 +36,6 @@ public class VersionTest {
 
   @Before
   public void setup() {
-    MockitoAnnotations.initMocks(this);
     v0 = new Version("v0", typeFactory, String.class);
     v1 = new Version("v1", typeFactory, String.class);
   }

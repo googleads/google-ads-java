@@ -14,6 +14,7 @@
 
 package com.google.ads.googleads.lib;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
@@ -28,16 +29,16 @@ import com.google.ads.googleads.lib.GoogleAdsClient.Builder;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.AdsEnvironmentVariable;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ConfigPropertyKey;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
-import com.google.ads.googleads.v17.errors.GoogleAdsError;
-import com.google.ads.googleads.v17.errors.GoogleAdsException;
-import com.google.ads.googleads.v17.errors.GoogleAdsFailure;
-import com.google.ads.googleads.v17.services.GoogleAdsRow;
-import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v17.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v17.services.MockGoogleAdsService;
-import com.google.ads.googleads.v17.services.SearchGoogleAdsResponse;
-import com.google.ads.googleads.v17.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v17.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v18.errors.GoogleAdsError;
+import com.google.ads.googleads.v18.errors.GoogleAdsException;
+import com.google.ads.googleads.v18.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v18.services.GoogleAdsRow;
+import com.google.ads.googleads.v18.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v18.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v18.services.MockGoogleAdsService;
+import com.google.ads.googleads.v18.services.SearchGoogleAdsResponse;
+import com.google.ads.googleads.v18.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v18.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
@@ -67,23 +68,19 @@ import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 import javax.annotation.Nullable;
-import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import org.junit.rules.TemporaryFolder;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 /** Tests for {@link GoogleAdsClient}. */
 @RunWith(JUnit4.class)
@@ -101,8 +98,6 @@ public class GoogleAdsClientTest {
   private static final MockServiceHelper mockServiceHelper =
       new MockServiceHelper("fake-address", mockService);
   @Rule public TemporaryFolder folder = new TemporaryFolder();
-  @Rule public ExpectedException thrown = ExpectedException.none();
-  @Mock private ScheduledExecutorService executor;
   private Credentials fakeCredentials = new FakeCredential();
   private LocalChannelProvider localChannelProvider;
   private Properties testProperties;
@@ -119,7 +114,6 @@ public class GoogleAdsClientTest {
 
   @Before
   public void setUp() {
-    MockitoAnnotations.initMocks(this);
     testProperties = new Properties();
     testProperties.setProperty(ConfigPropertyKey.CLIENT_ID.getPropertyKey(), CLIENT_ID);
     testProperties.setProperty(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey(), CLIENT_SECRET);
@@ -219,7 +213,7 @@ public class GoogleAdsClientTest {
             IllegalStateException.class,
             () -> builder.build());
     // Checks the exception message.
-    MatcherAssert.assertThat(exception.getMessage(), Matchers.containsString("not both"));
+    assertThat(exception.getMessage(), Matchers.containsString("not both"));
 
     // Clears dev token and opts out of using Cloud org for API access.
     builder.setDeveloperToken(null).setUseCloudOrgForApiAccess(false);
@@ -230,7 +224,7 @@ public class GoogleAdsClientTest {
             IllegalStateException.class,
             () -> builder.build());
     // Checks the exception message.
-    MatcherAssert.assertThat(exception.getMessage(), Matchers.containsString("not both"));
+    assertThat(exception.getMessage(), Matchers.containsString("not both"));
   }
 
   /**
@@ -280,9 +274,11 @@ public class GoogleAdsClientTest {
   public void buildFromPropertiesFile_invalidFilePath_throwsException() throws IOException {
     File nonExistentFile = new File(folder.getRoot(), "I_dont_exist.properties");
     // Invokes the fromPropertiesFile method on the builder, which should fail.
-    thrown.expect(FileNotFoundException.class);
-    thrown.expectMessage(nonExistentFile.getName());
-    GoogleAdsClient.newBuilder().fromPropertiesFile(nonExistentFile);
+    FileNotFoundException exception =
+        Assert.assertThrows(
+            FileNotFoundException.class,
+            () -> GoogleAdsClient.newBuilder().fromPropertiesFile(nonExistentFile));
+    assertThat(exception.getMessage(), Matchers.containsString("I_dont_exist.properties"));
   }
 
   /**
@@ -363,9 +359,11 @@ public class GoogleAdsClientTest {
     testProperties.put(
         ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyKey(), "/some/path/secrets.json");
     // Invokes the fromProperties method on the builder, which should fail.
-    thrown.expect(IllegalArgumentException.class);
-    thrown.expectMessage("both");
-    GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+    Throwable throwable =
+        assertThrows(
+            IllegalArgumentException.class,
+            () -> GoogleAdsClient.newBuilder().fromProperties(testProperties).build());
+    assertThat(throwable.getMessage(), Matchers.containsString("both"));
   }
 
   @Test
@@ -383,9 +381,9 @@ public class GoogleAdsClientTest {
     GoogleAdsClient.Builder builder =
         GoogleAdsClient.newBuilder().setEnvironmentValueGetter(environment::get);
     // Invokes the fromEnvironment method on the builder, which should fail.
-    thrown.expect(IllegalArgumentException.class);
-    thrown.expectMessage("both");
-    builder.fromEnvironment();
+    Throwable throwable =
+        assertThrows(IllegalArgumentException.class, () -> builder.fromEnvironment());
+    assertThat(throwable.getMessage(), Matchers.containsString("both"));
   }
 
   /**
@@ -401,9 +399,8 @@ public class GoogleAdsClientTest {
     // Invokes the fromProperties() method on the builder, which should succeed.
     Builder builder = GoogleAdsClient.newBuilder().fromProperties(testProperties);
     // Invokes the build() method on the builder, which should fail.
-    thrown.expect(IllegalStateException.class);
-    thrown.expectMessage("credentials");
-    builder.build();
+    Throwable throwable = assertThrows(IllegalStateException.class, () -> builder.build());
+    assertThat(throwable.getMessage(), Matchers.containsString("credentials"));
   }
 
   @Test
@@ -416,7 +413,8 @@ public class GoogleAdsClientTest {
             .put(
                 AdsEnvironmentVariable.GOOGLE_ADS_LINKED_CUSTOMER_ID.name(),
                 Long.toString(LINKED_CUSTOMER_ID))
-            .put(AdsEnvironmentVariable.GOOGLE_ADS_MAX_INBOUND_MESSAGE_BYTES.name(),
+            .put(
+                AdsEnvironmentVariable.GOOGLE_ADS_MAX_INBOUND_MESSAGE_BYTES.name(),
                 Integer.toString(MAX_INBOUND_MESSAGE_SIZE))
             .build();
     testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
@@ -795,7 +793,7 @@ public class GoogleAdsClientTest {
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setTransportChannelProvider(localChannelProvider)
             .build();
-    Metadata.Key trailerKey =
+    Metadata.Key<byte[]> trailerKey =
         ApiCatalog.getDefault().getLatestVersion().getExceptionFactory().getTrailerKey();
     Metadata trailers = new Metadata();
     GoogleAdsFailure.Builder failure = GoogleAdsFailure.newBuilder();
@@ -824,7 +822,7 @@ public class GoogleAdsClientTest {
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setTransportChannelProvider(localChannelProvider)
             .build();
-    Metadata.Key trailerKey =
+    Metadata.Key<byte[]> trailerKey =
         ApiCatalog.getDefault().getLatestVersion().getExceptionFactory().getTrailerKey();
     Metadata trailers = new Metadata();
     GoogleAdsFailure.Builder failure = GoogleAdsFailure.newBuilder();
@@ -860,21 +858,25 @@ public class GoogleAdsClientTest {
     GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
     InstantiatingGrpcChannelProvider channelProvider =
         (InstantiatingGrpcChannelProvider) client.getTransportChannelProvider();
-    assertEquals("Max inbound message size must be set",
-        MAX_INBOUND_MESSAGE_SIZE, channelProvider.toBuilder().getMaxInboundMessageSize());
+    assertEquals(
+        "Max inbound message size must be set",
+        MAX_INBOUND_MESSAGE_SIZE,
+        channelProvider.toBuilder().getMaxInboundMessageSize());
   }
 
   /** Ensure that can set the max inbound message size directly on the builder. */
   @Test
   public void maxInboundMessageBytes_isSet_fromBuilder() {
     testProperties.remove(ConfigPropertyKey.MAX_INBOUND_MESSAGE_BYTES.getPropertyKey());
-    GoogleAdsClient client = GoogleAdsClient.newBuilder()
-        .setMaxInboundMessageBytes(MAX_INBOUND_MESSAGE_SIZE)
-        .fromProperties(testProperties)
-        .build();
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setMaxInboundMessageBytes(MAX_INBOUND_MESSAGE_SIZE)
+            .fromProperties(testProperties)
+            .build();
     InstantiatingGrpcChannelProvider channelProvider =
         (InstantiatingGrpcChannelProvider) client.getTransportChannelProvider();
-    assertEquals("Max inbound message size must be set",
+    assertEquals(
+        "Max inbound message size must be set",
         MAX_INBOUND_MESSAGE_SIZE,
         channelProvider.toBuilder().getMaxInboundMessageSize());
   }
@@ -886,7 +888,8 @@ public class GoogleAdsClientTest {
     GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
     InstantiatingGrpcChannelProvider channelProvider =
         (InstantiatingGrpcChannelProvider) client.getTransportChannelProvider();
-    assertEquals("Max inbound message size must be the default value",
+    assertEquals(
+        "Max inbound message size must be the default value",
         GoogleAdsClient.DEFAULT_MAX_INBOUND_MESSAGE_SIZE,
         channelProvider.toBuilder().getMaxInboundMessageSize());
   }
@@ -894,12 +897,14 @@ public class GoogleAdsClientTest {
   /** Ensure that the max inbound message size can be overridden on cloned clients. */
   @Test
   public void maxInboundMessageBytes_canSetOnClonedClients() {
-    Integer expectedValue = new Integer(987654321);
+    Integer expectedValue = Integer.valueOf(987654321);
     GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
-    GoogleAdsClient otherClient = client.toBuilder().setMaxInboundMessageBytes(expectedValue).build();
+    GoogleAdsClient otherClient =
+        client.toBuilder().setMaxInboundMessageBytes(expectedValue).build();
     InstantiatingGrpcChannelProvider channelProvider =
         (InstantiatingGrpcChannelProvider) otherClient.getTransportChannelProvider();
-    assertEquals("Max inbound message size must be the value from the new builder",
+    assertEquals(
+        "Max inbound message size must be the value from the new builder",
         expectedValue,
         channelProvider.toBuilder().getMaxInboundMessageSize());
   }
@@ -993,13 +998,13 @@ public class GoogleAdsClientTest {
     Credentials credentials = client.getCredentials();
     assertNotNull("Null credentials", credentials);
     if (expectUserCredentials) {
-      MatcherAssert.assertThat(credentials, Matchers.instanceOf(UserCredentials.class));
+      assertThat(credentials, Matchers.instanceOf(UserCredentials.class));
       UserCredentials userCredentials = (UserCredentials) credentials;
       assertEquals("Client ID", CLIENT_ID, userCredentials.getClientId());
       assertEquals("Client secret", CLIENT_SECRET, userCredentials.getClientSecret());
       assertEquals("Refresh token", REFRESH_TOKEN, userCredentials.getRefreshToken());
     } else {
-      MatcherAssert.assertThat(credentials, Matchers.instanceOf(ServiceAccountCredentials.class));
+      assertThat(credentials, Matchers.instanceOf(ServiceAccountCredentials.class));
       ServiceAccountCredentials serviceAccountCredentials = (ServiceAccountCredentials) credentials;
       assertEquals(SERVICE_ACCOUNT_USER, serviceAccountCredentials.getServiceAccountUser());
       assertEquals(

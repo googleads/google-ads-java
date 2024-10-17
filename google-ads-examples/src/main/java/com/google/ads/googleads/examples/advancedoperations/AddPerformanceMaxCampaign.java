@@ -20,39 +20,39 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v17.common.AudienceInfo;
-import com.google.ads.googleads.v17.common.ImageAsset;
-import com.google.ads.googleads.v17.common.LanguageInfo;
-import com.google.ads.googleads.v17.common.LocationInfo;
-import com.google.ads.googleads.v17.common.MaximizeConversionValue;
-import com.google.ads.googleads.v17.common.SearchThemeInfo;
-import com.google.ads.googleads.v17.common.TextAsset;
-import com.google.ads.googleads.v17.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v17.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v17.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v17.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v17.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v17.errors.GoogleAdsError;
-import com.google.ads.googleads.v17.errors.GoogleAdsException;
-import com.google.ads.googleads.v17.resources.Asset;
-import com.google.ads.googleads.v17.resources.AssetGroup;
-import com.google.ads.googleads.v17.resources.AssetGroupAsset;
-import com.google.ads.googleads.v17.resources.AssetGroupSignal;
-import com.google.ads.googleads.v17.resources.Campaign;
-import com.google.ads.googleads.v17.resources.CampaignBudget;
-import com.google.ads.googleads.v17.resources.CampaignCriterion;
-import com.google.ads.googleads.v17.services.AssetGroupAssetOperation;
-import com.google.ads.googleads.v17.services.AssetGroupOperation;
-import com.google.ads.googleads.v17.services.AssetGroupSignalOperation;
-import com.google.ads.googleads.v17.services.AssetOperation;
-import com.google.ads.googleads.v17.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v17.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v17.services.CampaignOperation;
-import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v17.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v17.services.MutateOperation;
-import com.google.ads.googleads.v17.services.MutateOperationResponse;
-import com.google.ads.googleads.v17.utils.ResourceNames;
+import com.google.ads.googleads.v18.common.AudienceInfo;
+import com.google.ads.googleads.v18.common.ImageAsset;
+import com.google.ads.googleads.v18.common.LanguageInfo;
+import com.google.ads.googleads.v18.common.LocationInfo;
+import com.google.ads.googleads.v18.common.MaximizeConversionValue;
+import com.google.ads.googleads.v18.common.SearchThemeInfo;
+import com.google.ads.googleads.v18.common.TextAsset;
+import com.google.ads.googleads.v18.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v18.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v18.enums.AssetGroupStatusEnum.AssetGroupStatus;
+import com.google.ads.googleads.v18.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v18.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v18.errors.GoogleAdsError;
+import com.google.ads.googleads.v18.errors.GoogleAdsException;
+import com.google.ads.googleads.v18.resources.Asset;
+import com.google.ads.googleads.v18.resources.AssetGroup;
+import com.google.ads.googleads.v18.resources.AssetGroupAsset;
+import com.google.ads.googleads.v18.resources.AssetGroupSignal;
+import com.google.ads.googleads.v18.resources.Campaign;
+import com.google.ads.googleads.v18.resources.CampaignBudget;
+import com.google.ads.googleads.v18.resources.CampaignCriterion;
+import com.google.ads.googleads.v18.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v18.services.AssetGroupOperation;
+import com.google.ads.googleads.v18.services.AssetGroupSignalOperation;
+import com.google.ads.googleads.v18.services.AssetOperation;
+import com.google.ads.googleads.v18.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v18.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v18.services.CampaignOperation;
+import com.google.ads.googleads.v18.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v18.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v18.services.MutateOperation;
+import com.google.ads.googleads.v18.services.MutateOperationResponse;
+import com.google.ads.googleads.v18.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -228,6 +228,7 @@ public class AddPerformanceMaxCampaign {
             CampaignBudgetOperation.newBuilder().setCreate(campaignBudget).build())
         .build();
   }
+
   // [END add_performance_max_campaign_2]
 
   // [START add_performance_max_campaign_3]
@@ -277,6 +278,7 @@ public class AddPerformanceMaxCampaign {
             CampaignOperation.newBuilder().setCreate(performanceMaxCampaign).build())
         .build();
   }
+
   // [END add_performance_max_campaign_3]
 
   // [START add_performance_max_campaign_4]
@@ -336,6 +338,7 @@ public class AddPerformanceMaxCampaign {
                     .build())
         .collect(Collectors.toList());
   }
+
   // [END add_performance_max_campaign_4]
 
   // [START add_performance_max_campaign_5]
@@ -365,6 +368,7 @@ public class AddPerformanceMaxCampaign {
     }
     return assetResourceNames;
   }
+
   // [END add_performance_max_campaign_5]
 
   // [START add_performance_max_campaign_6]
@@ -477,6 +481,7 @@ public class AddPerformanceMaxCampaign {
 
     return mutateOperations;
   }
+
   // [END add_performance_max_campaign_6]
 
   // [START add_performance_max_campaign_7]
@@ -508,6 +513,7 @@ public class AddPerformanceMaxCampaign {
 
     return mutateOperations;
   }
+
   // [END add_performance_max_campaign_7]
 
   // [START add_performance_max_campaign_8]
@@ -547,11 +553,12 @@ public class AddPerformanceMaxCampaign {
 
     return mutateOperations;
   }
+
   // [END add_performance_max_campaign_8]
 
   /**
    * Creates a list of MutateOperations that create {@link
-   * com.google.ads.googleads.v17.resources.AssetGroupSignal} objects.
+   * com.google.ads.googleads.v18.resources.AssetGroupSignal} objects.
    */
   private List<MutateOperation> createAssetGroupSignalOperations(
       long customerId, String assetGroupResourceName, Long audienceId) {
@@ -562,12 +569,13 @@ public class AddPerformanceMaxCampaign {
       // To learn more about Audience Signals, see:
       // https://developers.google.com/google-ads/api/performance-max/asset-group-signals#audiences
       // [START add_performance_max_campaign_9]
-      AssetGroupSignal audienceSignal = AssetGroupSignal.newBuilder()
-          .setAssetGroup(assetGroupResourceName)
-          .setAudience(
-              AudienceInfo.newBuilder()
-                  .setAudience(ResourceNames.audience(customerId, audienceId)))
-          .build();
+      AssetGroupSignal audienceSignal =
+          AssetGroupSignal.newBuilder()
+              .setAssetGroup(assetGroupResourceName)
+              .setAudience(
+                  AudienceInfo.newBuilder()
+                      .setAudience(ResourceNames.audience(customerId, audienceId)))
+              .build();
 
       mutateOperations.add(
           MutateOperation.newBuilder()
@@ -581,11 +589,11 @@ public class AddPerformanceMaxCampaign {
     // To learn more about Search Themes Signals, see:
     // https://developers.google.com/google-ads/api/performance-max/asset-group-signals#search_themes
     // [START add_performance_max_campaign_10]
-    AssetGroupSignal searchThemeSignal = AssetGroupSignal.newBuilder()
-        .setAssetGroup(assetGroupResourceName)
-        .setSearchTheme(
-            SearchThemeInfo.newBuilder().setText("travel").build())
-        .build();
+    AssetGroupSignal searchThemeSignal =
+        AssetGroupSignal.newBuilder()
+            .setAssetGroup(assetGroupResourceName)
+            .setSearchTheme(SearchThemeInfo.newBuilder().setText("travel").build())
+            .build();
 
     mutateOperations.add(
         MutateOperation.newBuilder()

@@ -15,6 +15,7 @@
 package com.google.ads.googleads.examples.utils;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import static org.mockito.ArgumentMatchers.anyInt;
@@ -27,9 +28,7 @@ import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
 import java.io.PrintStream;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.mockito.Mockito;
@@ -48,8 +47,6 @@ public class CodeSampleParamsTest {
     @Parameter(names = "--longOptionalParam")
     Long longOptionalParam;
   }
-
-  @Rule public final ExpectedException exception = ExpectedException.none();
 
   private Runtime mockRuntime = Mockito.mock(Runtime.class);
 
@@ -86,8 +83,7 @@ public class CodeSampleParamsTest {
     String[] args = new String[] {"--stringParam", "abc"};
     TestSampleParams p = new TestSampleParams();
 
-    exception.expect(ParameterException.class);
-    p.parseArguments(args);
+    assertThrows(ParameterException.class, () -> p.parseArguments(args));
   }
 
   @Test
