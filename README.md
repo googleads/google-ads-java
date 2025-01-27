@@ -18,12 +18,12 @@ This project hosts the Java client library for the Google Ads API.
     <dependency>
       <groupId>com.google.api-ads</groupId>
       <artifactId>google-ads</artifactId>
-      <version>34.0.0</version>
+      <version>35.0.0</version>
     </dependency>
 
 ## Gradle dependency
 
-    implementation 'com.google.api-ads:google-ads:34.0.0'
+    implementation 'com.google.api-ads:google-ads:35.0.0'
 
 ## Documentation
 
@@ -52,3 +52,4 @@ Our documentation is available [here](https://developers.google.com/google-ads/a
 - [Josh Radcliff](https://github.com/jradcliff)
 - [Nick Birnie](https://github.com/nwbirnie)
 - [Devin Chasanoff](https://github.com/devchas)
+- [Sarah Botwinick Pollack](https://github.com/sarahcaseybot)
