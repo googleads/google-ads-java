@@ -12,48 +12,50 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.examples.planning;
+package com.google.ads.googleads.examples.feeds;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v18.common.CpcBidSimulationPoint;
 import com.google.ads.googleads.v18.errors.GoogleAdsError;
 import com.google.ads.googleads.v18.errors.GoogleAdsException;
-import com.google.ads.googleads.v18.resources.AdGroupCriterionSimulation;
 import com.google.ads.googleads.v18.services.GoogleAdsRow;
 import com.google.ads.googleads.v18.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v18.services.SearchGoogleAdsStreamRequest;
 import com.google.ads.googleads.v18.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v18.utils.ResourceNames;
 import com.google.api.gax.rpc.ServerStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Gets all available ad group criterion CPC bid simulations for a given ad group. To get ad groups,
- * run GetAdGroups.java.
+ * Gets all feed items of the specified feed item set by fetching all feed item set links. To create
+ * a new feed item set, run CreateFeedItemSet.java. To link a feed item to a feed item set, run
+ * LinkFeedItemSet.java.
  */
-public class GetAdGroupCriterionCpcBidSimulations {
-
-  private static class GetAdGroupCriterionCpcBidSimulationsParams extends CodeSampleParams {
+public class GetFeedItemsOfFeedItemSet {
+  private static class GetFeedItemsOfFeedItemSetParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
-    private Long customerId;
+    private long customerId;
 
-    @Parameter(names = ArgumentNames.AD_GROUP_ID, required = true)
-    private Long adGroupId;
+    @Parameter(names = ArgumentNames.FEED_ID, required = true)
+    private long feedId;
+
+    @Parameter(names = ArgumentNames.FEED_ITEM_SET_ID, required = true)
+    private long feedItemSetId;
   }
 
   public static void main(String[] args) {
-    GetAdGroupCriterionCpcBidSimulationsParams params =
-        new GetAdGroupCriterionCpcBidSimulationsParams();
+    GetFeedItemsOfFeedItemSetParams params = new GetFeedItemsOfFeedItemSetParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
-      params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
+      params.feedId = Long.parseLong("INSERT_FEED_ID_HERE");
+      params.feedItemSetId = Long.parseLong("INSERT_FEED_ITEM_SET_ID_HERE");
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -69,8 +71,8 @@ public class GetAdGroupCriterionCpcBidSimulations {
     }
 
     try {
-      new GetAdGroupCriterionCpcBidSimulations()
-          .runExample(googleAdsClient, params.customerId, params.adGroupId);
+      new GetFeedItemsOfFeedItemSet()
+          .runExample(googleAdsClient, params.customerId, params.feedId, params.feedItemSetId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -82,8 +84,8 @@ public class GetAdGroupCriterionCpcBidSimulations {
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
+        System.exit(1);
       }
-      System.exit(1);
     }
   }
 
@@ -91,26 +93,24 @@ public class GetAdGroupCriterionCpcBidSimulations {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ad group ID to get the ad group criterion CPC bid simulations for.
+   * @param customerId the customer ID.
+   * @param feedId the feed ID.
+   * @param feedItemSetId the feed item set ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  // [START get_ad_group_criterion_cpc_bid_simulations]
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
+  private void runExample(
+      GoogleAdsClient googleAdsClient, long customerId, long feedId, long feedItemSetId) {
+    // Creates a query that retrieves all feed item set links associated with the specified feed
+    // item set.
+    String query =
+        String.format(
+            "SELECT feed_item_set_link.feed_item "
+                + "FROM feed_item_set_link "
+                + "WHERE feed_item_set_link.feed_item_set = '%s'",
+            ResourceNames.feedItemSet(customerId, feedId, feedItemSetId));
+
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-      // Creates a query that retrieves the ad group criterion CPC bid simulations.
-      String query =
-          String.format(
-              "SELECT ad_group_criterion_simulation.ad_group_id, "
-                  + "ad_group_criterion_simulation.criterion_id, "
-                  + "ad_group_criterion_simulation.start_date, "
-                  + "ad_group_criterion_simulation.end_date, "
-                  + "ad_group_criterion_simulation.cpc_bid_point_list.points "
-                  + "FROM ad_group_criterion_simulation "
-                  + "WHERE ad_group_criterion_simulation.type = CPC_BID "
-                  + "AND ad_group_criterion_simulation.ad_group_id = %d",
-              adGroupId);
       // Constructs the SearchGoogleAdsStreamRequest.
       SearchGoogleAdsStreamRequest request =
           SearchGoogleAdsStreamRequest.newBuilder()
@@ -118,36 +118,21 @@ public class GetAdGroupCriterionCpcBidSimulations {
               .setQuery(query)
               .build();
 
-      // Issues the search stream request.
+      // Creates and issues a search Google Ads stream request.
       ServerStream<SearchGoogleAdsStreamResponse> stream =
           googleAdsServiceClient.searchStreamCallable().call(request);
 
-      // Iterates over all rows in all messages and prints the requested field values for
-      // the ad group criterion CPC bid simulation in each row.
+      System.out.printf(
+          "The feed items with the following resource names are linked with the feed "
+              + "item set with ID %d:%n",
+          feedItemSetId);
+
+      // Iterates through and prints all of the results in the stream response.
       for (SearchGoogleAdsStreamResponse response : stream) {
         for (GoogleAdsRow googleAdsRow : response.getResultsList()) {
-          AdGroupCriterionSimulation simulation = googleAdsRow.getAdGroupCriterionSimulation();
-          System.out.printf(
-              "Found ad group criterion CPC bid simulation for ad group ID %d, "
-                  + "criterion ID %d, start date '%s', end date '%s', and points:%n",
-              simulation.getAdGroupId(),
-              simulation.getCriterionId(),
-              simulation.getStartDate(),
-              simulation.getEndDate());
-          for (CpcBidSimulationPoint point : simulation.getCpcBidPointList().getPointsList()) {
-            System.out.printf(
-                "  bid: %d => clicks: %d, cost: %d, impressions: %d, "
-                    + "biddable conversions: %.2f, biddable conversions value: %.2f%s",
-                point.getCpcBidMicros(),
-                point.getClicks(),
-                point.getCostMicros(),
-                point.getImpressions(),
-                point.getBiddableConversions(),
-                point.getBiddableConversions());
-          }
+          System.out.printf("%s%n", googleAdsRow.getFeedItemSetLink());
         }
       }
     }
   }
-  // [END get_ad_group_criterion_cpc_bid_simulations]
 }

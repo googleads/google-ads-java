@@ -20,41 +20,39 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v19.common.AudienceInfo;
-import com.google.ads.googleads.v19.common.ImageAsset;
-import com.google.ads.googleads.v19.common.LanguageInfo;
-import com.google.ads.googleads.v19.common.LocationInfo;
-import com.google.ads.googleads.v19.common.MaximizeConversionValue;
-import com.google.ads.googleads.v19.common.SearchThemeInfo;
-import com.google.ads.googleads.v19.common.TextAsset;
-import com.google.ads.googleads.v19.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v19.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v19.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v19.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v19.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v19.errors.GoogleAdsError;
-import com.google.ads.googleads.v19.errors.GoogleAdsException;
-import com.google.ads.googleads.v19.resources.Asset;
-import com.google.ads.googleads.v19.resources.AssetGroup;
-import com.google.ads.googleads.v19.resources.AssetGroupAsset;
-import com.google.ads.googleads.v19.resources.AssetGroupSignal;
-import com.google.ads.googleads.v19.resources.Campaign;
-import com.google.ads.googleads.v19.resources.CampaignAsset;
-import com.google.ads.googleads.v19.resources.CampaignBudget;
-import com.google.ads.googleads.v19.resources.CampaignCriterion;
-import com.google.ads.googleads.v19.services.AssetGroupAssetOperation;
-import com.google.ads.googleads.v19.services.AssetGroupOperation;
-import com.google.ads.googleads.v19.services.AssetGroupSignalOperation;
-import com.google.ads.googleads.v19.services.AssetOperation;
-import com.google.ads.googleads.v19.services.CampaignAssetOperation;
-import com.google.ads.googleads.v19.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v19.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v19.services.CampaignOperation;
-import com.google.ads.googleads.v19.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v19.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v19.services.MutateOperation;
-import com.google.ads.googleads.v19.services.MutateOperationResponse;
-import com.google.ads.googleads.v19.utils.ResourceNames;
+import com.google.ads.googleads.v18.common.AudienceInfo;
+import com.google.ads.googleads.v18.common.ImageAsset;
+import com.google.ads.googleads.v18.common.LanguageInfo;
+import com.google.ads.googleads.v18.common.LocationInfo;
+import com.google.ads.googleads.v18.common.MaximizeConversionValue;
+import com.google.ads.googleads.v18.common.SearchThemeInfo;
+import com.google.ads.googleads.v18.common.TextAsset;
+import com.google.ads.googleads.v18.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v18.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v18.enums.AssetGroupStatusEnum.AssetGroupStatus;
+import com.google.ads.googleads.v18.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v18.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v18.errors.GoogleAdsError;
+import com.google.ads.googleads.v18.errors.GoogleAdsException;
+import com.google.ads.googleads.v18.resources.Asset;
+import com.google.ads.googleads.v18.resources.AssetGroup;
+import com.google.ads.googleads.v18.resources.AssetGroupAsset;
+import com.google.ads.googleads.v18.resources.AssetGroupSignal;
+import com.google.ads.googleads.v18.resources.Campaign;
+import com.google.ads.googleads.v18.resources.CampaignBudget;
+import com.google.ads.googleads.v18.resources.CampaignCriterion;
+import com.google.ads.googleads.v18.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v18.services.AssetGroupOperation;
+import com.google.ads.googleads.v18.services.AssetGroupSignalOperation;
+import com.google.ads.googleads.v18.services.AssetOperation;
+import com.google.ads.googleads.v18.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v18.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v18.services.CampaignOperation;
+import com.google.ads.googleads.v18.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v18.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v18.services.MutateOperation;
+import com.google.ads.googleads.v18.services.MutateOperationResponse;
+import com.google.ads.googleads.v18.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -109,13 +107,6 @@ public class AddPerformanceMaxCampaign {
         description =
             "An audience ID to use to improve the targeting of the Performance Max campaign")
     private Long audienceId;
-
-    @Parameter(
-        names = "--brandGuidelinesEnabled",
-        arity = 1,
-        description =
-            "A boolean value indicating if the created campaign is enabled for brand guidelines")
-    private boolean brandGuidelinesEnabled = false;
   }
 
   public static void main(String[] args) throws IOException {
@@ -144,8 +135,7 @@ public class AddPerformanceMaxCampaign {
 
     try {
       new AddPerformanceMaxCampaign()
-          .runExample(
-              googleAdsClient, params.customerId, params.audienceId, params.brandGuidelinesEnabled);
+          .runExample(googleAdsClient, params.customerId, params.audienceId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -169,13 +159,8 @@ public class AddPerformanceMaxCampaign {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param audienceId the optional audience ID.
-   * @param brandGuidelinesEnabled indicates if the campaign is enabled for brand guidelines.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      Long audienceId,
-      boolean brandGuidelinesEnabled)
+  private void runExample(GoogleAdsClient googleAdsClient, long customerId, Long audienceId)
       throws IOException {
     // [START add_performance_max_campaign_1]
     // Performance Max campaigns require that repeated assets such as headlines
@@ -201,7 +186,7 @@ public class AddPerformanceMaxCampaign {
     // https://developers.google.com/google-ads/api/docs/mutating/overview
     List<MutateOperation> mutateOperations = new ArrayList<>();
     mutateOperations.add(createCampaignBudgetOperation(customerId));
-    mutateOperations.add(createPerformanceMaxCampaignOperation(customerId, brandGuidelinesEnabled));
+    mutateOperations.add(createPerformanceMaxCampaignOperation(customerId));
     mutateOperations.addAll(createCampaignCriterionOperations(customerId));
     String assetGroupResourceName = ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID);
     mutateOperations.addAll(
@@ -209,8 +194,7 @@ public class AddPerformanceMaxCampaign {
             customerId,
             assetGroupResourceName,
             headlineAssetResourceNames,
-            descriptionAssetResourceNames,
-            brandGuidelinesEnabled));
+            descriptionAssetResourceNames));
     mutateOperations.addAll(
         createAssetGroupSignalOperations(customerId, assetGroupResourceName, audienceId));
 
@@ -249,8 +233,7 @@ public class AddPerformanceMaxCampaign {
 
   // [START add_performance_max_campaign_3]
   /** Creates a MutateOperation that creates a new Performance Max campaign. */
-  private MutateOperation createPerformanceMaxCampaignOperation(
-      long customerId, boolean brandGuidelinesEnabled) {
+  private MutateOperation createPerformanceMaxCampaignOperation(long customerId) {
     Campaign performanceMaxCampaign =
         Campaign.newBuilder()
             .setName("Performance Max campaign #" + getPrintableDateTime())
@@ -280,9 +263,6 @@ public class AddPerformanceMaxCampaign {
             // results, set this value to false to opt in and allow URL expansions. You
             // can optionally add exclusions to limit traffic to parts of your website.
             .setUrlExpansionOptOut(false)
-            // Sets if the campaign is enabled for brand guidelines. For more information on brand
-            // guidelines, see https://support.google.com/google-ads/answer/14934472.
-            .setBrandGuidelinesEnabled(brandGuidelinesEnabled)
             // Assigns the resource name with a temporary ID.
             .setResourceName(
                 ResourceNames.campaign(customerId, PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID))
@@ -397,8 +377,7 @@ public class AddPerformanceMaxCampaign {
       long customerId,
       String assetGroupResourceName,
       List<String> headlineAssetResourceNames,
-      List<String> descriptionAssetResourceNames,
-      boolean brandGuidelinesEnabled)
+      List<String> descriptionAssetResourceNames)
       throws IOException {
     List<MutateOperation> mutateOperations = new ArrayList<>();
     String campaignResourceName =
@@ -434,16 +413,34 @@ public class AddPerformanceMaxCampaign {
 
     // Links the headline assets.
     for (String resourceName : headlineAssetResourceNames) {
+      AssetGroupAsset assetGroupAsset =
+          AssetGroupAsset.newBuilder()
+              .setFieldType(AssetFieldType.HEADLINE)
+              .setAssetGroup(assetGroupResourceName)
+              .setAsset(resourceName)
+              .build();
+      AssetGroupAssetOperation assetGroupAssetOperation =
+          AssetGroupAssetOperation.newBuilder().setCreate(assetGroupAsset).build();
       mutateOperations.add(
-          createAssetGroupAssetMutateOperation(
-              AssetFieldType.HEADLINE, resourceName, assetGroupResourceName));
+          MutateOperation.newBuilder()
+              .setAssetGroupAssetOperation(assetGroupAssetOperation)
+              .build());
     }
 
     // Links the description assets.
     for (String resourceName : descriptionAssetResourceNames) {
+      AssetGroupAsset assetGroupAsset =
+          AssetGroupAsset.newBuilder()
+              .setFieldType(AssetFieldType.DESCRIPTION)
+              .setAssetGroup(assetGroupResourceName)
+              .setAsset(resourceName)
+              .build();
+      AssetGroupAssetOperation assetGroupAssetOperation =
+          AssetGroupAssetOperation.newBuilder().setCreate(assetGroupAsset).build();
       mutateOperations.add(
-          createAssetGroupAssetMutateOperation(
-              AssetFieldType.DESCRIPTION, resourceName, assetGroupResourceName));
+          MutateOperation.newBuilder()
+              .setAssetGroupAssetOperation(assetGroupAssetOperation)
+              .build());
     }
 
     // Creates and links the long headline text asset.
@@ -451,17 +448,18 @@ public class AddPerformanceMaxCampaign {
         createAndLinkTextAsset(customerId, "Travel the World", AssetFieldType.LONG_HEADLINE);
     mutateOperations.addAll(createAndLinkTextAssetOperations);
 
-    // Creates and links the business name and logo assets.
-    List<MutateOperation> createAndLinkBrandAssets =
-        createAndLinkBrandAssets(
-            customerId,
-            brandGuidelinesEnabled,
-            "Interplanetary Cruises",
-            "https://gaagl.page.link/bjYi",
-            "Marketing Logo");
-    mutateOperations.addAll(createAndLinkBrandAssets);
+    // Creates and links the business name text asset.
+    createAndLinkTextAssetOperations =
+        createAndLinkTextAsset(customerId, "Interplanetary Cruises", AssetFieldType.BUSINESS_NAME);
+    mutateOperations.addAll(createAndLinkTextAssetOperations);
 
     // Creates and links the image assets.
+
+    // Creates and links the Logo Asset.
+    createAndLinkTextAssetOperations =
+        createAndLinkImageAsset(
+            customerId, "https://gaagl.page.link/bjYi", AssetFieldType.LOGO, "Marketing Logo");
+    mutateOperations.addAll(createAndLinkTextAssetOperations);
 
     // Creates and links the Marketing Image Asset.
     createAndLinkTextAssetOperations =
@@ -502,11 +500,16 @@ public class AddPerformanceMaxCampaign {
     mutateOperations.add(MutateOperation.newBuilder().setAssetOperation(assetOperation).build());
 
     // Creates an AssetGroupAsset to link the Asset to the AssetGroup.
+    AssetGroupAsset assetGroupAsset =
+        AssetGroupAsset.newBuilder()
+            .setFieldType(assetFieldType)
+            .setAssetGroup(ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID))
+            .setAsset(assetResourceName)
+            .build();
+    AssetGroupAssetOperation assetGroupAssetOperation =
+        AssetGroupAssetOperation.newBuilder().setCreate(assetGroupAsset).build();
     mutateOperations.add(
-        createAssetGroupAssetMutateOperation(
-            assetFieldType,
-            assetResourceName,
-            ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID)));
+        MutateOperation.newBuilder().setAssetGroupAssetOperation(assetGroupAssetOperation).build());
 
     return mutateOperations;
   }
@@ -537,115 +540,25 @@ public class AddPerformanceMaxCampaign {
     mutateOperations.add(MutateOperation.newBuilder().setAssetOperation(assetOperation).build());
 
     // Creates an AssetGroupAsset to link the Asset to the AssetGroup.
-    mutateOperations.add(
-        createAssetGroupAssetMutateOperation(
-            assetFieldType,
-            assetResourceName,
-            ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID)));
-
-    return mutateOperations;
-  }
-
-  /** Creates a list of MutateOperations that create linked brand assets. */
-  List<MutateOperation> createAndLinkBrandAssets(
-      long customerId,
-      boolean brandGuidelinesEnabled,
-      String businessName,
-      String logoUrl,
-      String logoName)
-      throws IOException {
-    List<MutateOperation> mutateOperations = new ArrayList<>();
-
-    // Creates the brand name text asset.
-    String businessNameAssetResourceName = ResourceNames.asset(customerId, getNextTemporaryId());
-    Asset businessNameAsset =
-        Asset.newBuilder()
-            .setResourceName(businessNameAssetResourceName)
-            .setTextAsset(TextAsset.newBuilder().setText(businessName).build())
-            .build();
-    AssetOperation businessNameAssetOperation =
-        AssetOperation.newBuilder().setCreate(businessNameAsset).build();
-    mutateOperations.add(
-        MutateOperation.newBuilder().setAssetOperation(businessNameAssetOperation).build());
-
-    // Creates the logo image asset.
-    String logoAssetResourceName = ResourceNames.asset(customerId, getNextTemporaryId());
-    // Creates a media file.
-    byte[] logoBytes = ByteStreams.toByteArray(new URL(logoUrl).openStream());
-    Asset logoAsset =
-        Asset.newBuilder()
-            .setResourceName(logoAssetResourceName)
-            .setImageAsset(ImageAsset.newBuilder().setData(ByteString.copyFrom(logoBytes)).build())
-            // Provides a unique friendly name to identify your asset. When there is an existing
-            // image asset with the same content but a different name, the new name will be dropped
-            // silently.
-            .setName(logoName)
-            .build();
-    AssetOperation logoImageAssetOperation =
-        AssetOperation.newBuilder().setCreate(logoAsset).build();
-    mutateOperations.add(
-        MutateOperation.newBuilder().setAssetOperation(logoImageAssetOperation).build());
-
-    if (brandGuidelinesEnabled) {
-      // Creates CampaignAsset resources to link the Asset resources to the Campaign.
-      mutateOperations.add(
-          createCampaignAssetMutateOperation(
-              customerId, AssetFieldType.BUSINESS_NAME, businessNameAssetResourceName));
-      mutateOperations.add(
-          createCampaignAssetMutateOperation(
-              customerId, AssetFieldType.LOGO, logoAssetResourceName));
-    } else {
-      // Creates an AssetGroupAsset to link the Asset to the AssetGroup.
-      mutateOperations.add(
-          createAssetGroupAssetMutateOperation(
-              AssetFieldType.BUSINESS_NAME,
-              businessNameAssetResourceName,
-              ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID)));
-      mutateOperations.add(
-          createAssetGroupAssetMutateOperation(
-              AssetFieldType.LOGO,
-              logoAssetResourceName,
-              ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID)));
-    }
-
-    return mutateOperations;
-  }
-
-  /** Creates a MutateOperation to add an AssetGroupAsset. */
-  MutateOperation createAssetGroupAssetMutateOperation(
-      AssetFieldType fieldType, String assetResourceName, String assetGroupResourceName) {
     AssetGroupAsset assetGroupAsset =
         AssetGroupAsset.newBuilder()
-            .setFieldType(fieldType)
-            .setAssetGroup(assetGroupResourceName)
+            .setFieldType(assetFieldType)
+            .setAssetGroup(ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID))
             .setAsset(assetResourceName)
             .build();
     AssetGroupAssetOperation assetGroupAssetOperation =
         AssetGroupAssetOperation.newBuilder().setCreate(assetGroupAsset).build();
-    return MutateOperation.newBuilder()
-        .setAssetGroupAssetOperation(assetGroupAssetOperation)
-        .build();
-  }
+    mutateOperations.add(
+        MutateOperation.newBuilder().setAssetGroupAssetOperation(assetGroupAssetOperation).build());
 
-  /** Creates a MutateOperation to add a CampaignAsset. */
-  MutateOperation createCampaignAssetMutateOperation(
-      long customerId, AssetFieldType fieldType, String assetResourceName) {
-    CampaignAsset campaignAsset =
-        CampaignAsset.newBuilder()
-            .setFieldType(fieldType)
-            .setCampaign(ResourceNames.campaign(customerId, PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID))
-            .setAsset(assetResourceName)
-            .build();
-    CampaignAssetOperation campaignAssetOperation =
-        CampaignAssetOperation.newBuilder().setCreate(campaignAsset).build();
-    return MutateOperation.newBuilder().setCampaignAssetOperation(campaignAssetOperation).build();
+    return mutateOperations;
   }
 
   // [END add_performance_max_campaign_8]
 
   /**
    * Creates a list of MutateOperations that create {@link
-   * com.google.ads.googleads.v19.resources.AssetGroupSignal} objects.
+   * com.google.ads.googleads.v18.resources.AssetGroupSignal} objects.
    */
   private List<MutateOperation> createAssetGroupSignalOperations(
       long customerId, String assetGroupResourceName, Long audienceId) {

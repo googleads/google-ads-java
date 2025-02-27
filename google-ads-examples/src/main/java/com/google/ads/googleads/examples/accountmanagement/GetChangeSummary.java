@@ -18,12 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v19.errors.GoogleAdsError;
-import com.google.ads.googleads.v19.errors.GoogleAdsException;
-import com.google.ads.googleads.v19.resources.ChangeStatus;
-import com.google.ads.googleads.v19.services.GoogleAdsRow;
-import com.google.ads.googleads.v19.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v19.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v18.errors.GoogleAdsError;
+import com.google.ads.googleads.v18.errors.GoogleAdsException;
+import com.google.ads.googleads.v18.resources.ChangeStatus;
+import com.google.ads.googleads.v18.services.GoogleAdsRow;
+import com.google.ads.googleads.v18.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v18.services.GoogleAdsServiceClient.SearchPagedResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Optional;
@@ -93,8 +93,12 @@ public class GetChangeSummary {
             + "change_status.ad_group_ad, "
             + "change_status.ad_group_bid_modifier, "
             + "change_status.ad_group_criterion, "
+            + "change_status.ad_group_feed, "
             + "change_status.campaign, "
             + "change_status.campaign_criterion, "
+            + "change_status.campaign_feed, "
+            + "change_status.feed, "
+            + "change_status.feed_item "
             + "FROM change_status "
             + "WHERE change_status.last_change_date_time DURING LAST_14_DAYS "
             + "ORDER BY change_status.last_change_date_time "
@@ -146,11 +150,23 @@ public class GetChangeSummary {
       case AD_GROUP_CRITERION:
         resourceName = changeStatus.getAdGroupCriterion();
         break;
+      case AD_GROUP_FEED:
+        resourceName = changeStatus.getAdGroupFeed();
+        break;
       case CAMPAIGN:
         resourceName = changeStatus.getCampaign();
         break;
       case CAMPAIGN_CRITERION:
         resourceName = changeStatus.getCampaignCriterion();
+        break;
+      case CAMPAIGN_FEED:
+        resourceName = changeStatus.getCampaignFeed();
+        break;
+      case FEED:
+        resourceName = changeStatus.getFeed();
+        break;
+      case FEED_ITEM:
+        resourceName = changeStatus.getFeedItem();
         break;
     }
     return Optional.ofNullable(resourceName);
