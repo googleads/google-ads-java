@@ -20,42 +20,42 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v18.common.ListingGroupInfo;
-import com.google.ads.googleads.v18.common.ManualCpc;
-import com.google.ads.googleads.v18.common.ShoppingProductAdInfo;
-import com.google.ads.googleads.v18.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v18.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v18.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v18.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v18.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v18.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v18.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v18.enums.ListingGroupTypeEnum.ListingGroupType;
-import com.google.ads.googleads.v18.errors.GoogleAdsError;
-import com.google.ads.googleads.v18.errors.GoogleAdsException;
-import com.google.ads.googleads.v18.resources.Ad;
-import com.google.ads.googleads.v18.resources.AdGroup;
-import com.google.ads.googleads.v18.resources.AdGroupAd;
-import com.google.ads.googleads.v18.resources.AdGroupCriterion;
-import com.google.ads.googleads.v18.resources.Campaign;
-import com.google.ads.googleads.v18.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v18.resources.CampaignBudget;
-import com.google.ads.googleads.v18.services.AdGroupAdOperation;
-import com.google.ads.googleads.v18.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v18.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v18.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v18.services.AdGroupOperation;
-import com.google.ads.googleads.v18.services.AdGroupServiceClient;
-import com.google.ads.googleads.v18.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v18.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v18.services.CampaignOperation;
-import com.google.ads.googleads.v18.services.CampaignServiceClient;
-import com.google.ads.googleads.v18.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v18.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v18.services.MutateAdGroupResult;
-import com.google.ads.googleads.v18.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v18.services.MutateCampaignResult;
-import com.google.ads.googleads.v18.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v19.common.ListingGroupInfo;
+import com.google.ads.googleads.v19.common.ManualCpc;
+import com.google.ads.googleads.v19.common.ShoppingProductAdInfo;
+import com.google.ads.googleads.v19.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v19.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v19.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v19.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v19.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v19.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v19.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v19.enums.ListingGroupTypeEnum.ListingGroupType;
+import com.google.ads.googleads.v19.errors.GoogleAdsError;
+import com.google.ads.googleads.v19.errors.GoogleAdsException;
+import com.google.ads.googleads.v19.resources.Ad;
+import com.google.ads.googleads.v19.resources.AdGroup;
+import com.google.ads.googleads.v19.resources.AdGroupAd;
+import com.google.ads.googleads.v19.resources.AdGroupCriterion;
+import com.google.ads.googleads.v19.resources.Campaign;
+import com.google.ads.googleads.v19.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v19.resources.CampaignBudget;
+import com.google.ads.googleads.v19.services.AdGroupAdOperation;
+import com.google.ads.googleads.v19.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v19.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v19.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v19.services.AdGroupOperation;
+import com.google.ads.googleads.v19.services.AdGroupServiceClient;
+import com.google.ads.googleads.v19.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v19.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v19.services.CampaignOperation;
+import com.google.ads.googleads.v19.services.CampaignServiceClient;
+import com.google.ads.googleads.v19.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v19.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v19.services.MutateAdGroupResult;
+import com.google.ads.googleads.v19.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v19.services.MutateCampaignResult;
+import com.google.ads.googleads.v19.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -237,15 +237,11 @@ public class AddShoppingProductAd {
             // the ads from immediately serving. Set to ENABLED once you've added
             // targeting and the ads are ready to serve.
             .setStatus(CampaignStatus.PAUSED)
-            // Sets the bidding strategy to Manual CPC (with eCPC disabled). eCPC for standard
-            // Shopping campaigns is deprecated. If eCPC is set to true, Google Ads ignores the
-            // setting and behaves as if the setting was false. See this blog post for more
-            // information:
-            // https://ads-developers.googleblog.com/2023/09/google-ads-shopping-campaign-enhanced.html
+            // Sets the bidding strategy to Manual CPC
             // Recommendation: Use one of the automated bidding strategies for Shopping campaigns
             // to help you optimize your advertising spend. More information can be found here:
             // https://support.google.com/google-ads/answer/6309029.
-            .setManualCpc(ManualCpc.newBuilder().setEnhancedCpcEnabled(false).build())
+            .setManualCpc(ManualCpc.getDefaultInstance())
             // Sets the budget.
             .setCampaignBudget(budgetResourceName)
             .build();
