@@ -58,10 +58,6 @@ public final class ArgumentNames {
   public static final String EMAIL_ADDRESS = "--emailAddress";
   public static final String END_DATE_TIME = "--endDateTime";
   public static final String EXTERNAL_ID = "--externalId";
-  public static final String FEED_ID = "--feedId";
-  public static final String FEED_ITEM_ID = "--feedItemId";
-  public static final String FEED_ITEM_IDS = "--feedItemIds";
-  public static final String FEED_ITEM_SET_ID = "--feedItemSetId";
   public static final String FINAL_URL = "--finalUrl";
   public static final String FREE_FORM_KEYWORD_TEXT = "--freeFormKeywordText";
   public static final String GBRAID = "--gbraid";

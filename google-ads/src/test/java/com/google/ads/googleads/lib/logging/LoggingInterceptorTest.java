@@ -24,11 +24,10 @@ import com.google.ads.googleads.lib.catalog.Version;
 import com.google.ads.googleads.lib.logging.Event.Detail;
 import com.google.ads.googleads.lib.logging.Event.Summary;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v18.resources.CustomerUserAccess;
-import com.google.ads.googleads.v18.resources.Feed;
-import com.google.ads.googleads.v18.services.CreateCustomerClientRequest;
-import com.google.ads.googleads.v18.services.SearchGoogleAdsResponse;
-import com.google.ads.googleads.v18.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v19.resources.CustomerUserAccess;
+import com.google.ads.googleads.v19.services.CreateCustomerClientRequest;
+import com.google.ads.googleads.v19.services.SearchGoogleAdsResponse;
+import com.google.ads.googleads.v19.services.SearchGoogleAdsStreamResponse;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
@@ -437,66 +436,6 @@ public class LoggingInterceptorTest {
 
     // Recreates the detail message with the REDACTED text.
     builder.getResultsBuilder(0).getChangeEventBuilder().setUserEmail("REDACTED");
-    response = builder.build();
-
-    verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);
-  }
-
-  @Test
-  public void scrubsEmail_from_getFeed() {
-    Feed.Builder builder = Feed.newBuilder();
-    builder.getPlacesLocationFeedDataBuilder().setEmailAddress("foo@bar.com");
-    response = builder.build();
-
-    runDefaultCallNoVerify();
-
-    builder.getPlacesLocationFeedDataBuilder().setEmailAddress("REDACTED");
-    response = builder.build();
-
-    verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);
-  }
-
-  @Test
-  public void scrubsFeedPlacesLocationEmail_from_searchStreamResponse() {
-    SearchGoogleAdsStreamResponse.Builder builder = SearchGoogleAdsStreamResponse.newBuilder();
-    builder
-        .addResultsBuilder()
-        .getFeedBuilder()
-        .getPlacesLocationFeedDataBuilder()
-        .setEmailAddress("foo@bar.com");
-    builder.setFieldMask(FieldMasks.allSetFieldsOf(builder.getResults(0)));
-    response = builder.build();
-
-    runDefaultCallNoVerify();
-
-    builder
-        .getResultsBuilder(0)
-        .getFeedBuilder()
-        .getPlacesLocationFeedDataBuilder()
-        .setEmailAddress("REDACTED");
-    response = builder.build();
-
-    verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);
-  }
-
-  @Test
-  public void scrubsFeedPlacesLocationEmail_from_searchPagedResponse() {
-    SearchGoogleAdsResponse.Builder builder = SearchGoogleAdsResponse.newBuilder();
-    builder
-        .addResultsBuilder()
-        .getFeedBuilder()
-        .getPlacesLocationFeedDataBuilder()
-        .setEmailAddress("foo@bar.com");
-    builder.setFieldMask(FieldMasks.allSetFieldsOf(builder.getResults(0)));
-    response = builder.build();
-
-    runDefaultCallNoVerify();
-
-    builder
-        .getResultsBuilder(0)
-        .getFeedBuilder()
-        .getPlacesLocationFeedDataBuilder()
-        .setEmailAddress("REDACTED");
     response = builder.build();
 
     verifyLoggers(createDetail(), createSummary(), detailLogger, summaryLogger);

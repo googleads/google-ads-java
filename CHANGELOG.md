@@ -1,3 +1,14 @@
+36.0.0 - 2025-02-27
+-------------------
+- Add support and examples for Google Ads API v19.
+- Remove all uses of feeds.
+- Updated shoppingads/AddShoppingProductAd to remove usage of deprecated
+  enhancedCpc bidding strategy.
+- Updated shoppingads/AddPerformanceMaxRetailCampaign and
+  advancedoperations/AddPerformanceMaxCampaign examples to include brand
+  guidelines.
+- Update to version 3.44.0 of `google-cloud-shared-dependencies`.
+
 35.0.0 - 2025-01-27
 -------------------
 - Remove support for v16 of the Google Ads API.

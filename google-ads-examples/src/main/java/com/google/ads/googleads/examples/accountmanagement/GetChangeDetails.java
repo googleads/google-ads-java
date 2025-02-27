@@ -19,15 +19,15 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v18.enums.ChangeEventResourceTypeEnum.ChangeEventResourceType;
-import com.google.ads.googleads.v18.enums.ResourceChangeOperationEnum.ResourceChangeOperation;
-import com.google.ads.googleads.v18.errors.GoogleAdsError;
-import com.google.ads.googleads.v18.errors.GoogleAdsException;
-import com.google.ads.googleads.v18.resources.ChangeEvent;
-import com.google.ads.googleads.v18.resources.ChangeEvent.ChangedResource;
-import com.google.ads.googleads.v18.services.GoogleAdsRow;
-import com.google.ads.googleads.v18.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v18.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v19.enums.ChangeEventResourceTypeEnum.ChangeEventResourceType;
+import com.google.ads.googleads.v19.enums.ResourceChangeOperationEnum.ResourceChangeOperation;
+import com.google.ads.googleads.v19.errors.GoogleAdsError;
+import com.google.ads.googleads.v19.errors.GoogleAdsException;
+import com.google.ads.googleads.v19.resources.ChangeEvent;
+import com.google.ads.googleads.v19.resources.ChangeEvent.ChangedResource;
+import com.google.ads.googleads.v19.services.GoogleAdsRow;
+import com.google.ads.googleads.v19.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v19.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.protobuf.Message;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -201,14 +201,6 @@ public class GetChangeDetails {
         return Optional.of(resource.getCampaignCriterion());
       case CUSTOMER_ASSET:
         return Optional.of(resource.getCustomerAsset());
-      case AD_GROUP_FEED:
-        return Optional.of(resource.getAdGroupFeed());
-      case CAMPAIGN_FEED:
-        return Optional.of(resource.getCampaignFeed());
-      case FEED:
-        return Optional.of(resource.getFeed());
-      case FEED_ITEM:
-        return Optional.of(resource.getFeedItem());
       default:
         System.out.println("Unknown entity type: " + type);
         return Optional.empty();
