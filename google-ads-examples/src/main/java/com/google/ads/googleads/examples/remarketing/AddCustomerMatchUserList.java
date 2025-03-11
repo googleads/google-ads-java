@@ -240,8 +240,8 @@ public class AddCustomerMatchUserList {
         UserList.newBuilder()
             .setName("Customer Match list #" + getPrintableDateTime())
             .setDescription("A list of customers that originated from email addresses")
-            // Customer Match user lists can use a membership life span of 10,000 to indicate
-            // unlimited; otherwise normal values apply.
+            // Membership life span must be between 0 and 540 days inclusive. See:
+            // https://developers.google.com/google-ads/api/reference/rpc/latest/UserList#membership_life_span
             // Sets the membership life span to 30 days.
             .setMembershipLifeSpan(30)
             // Sets the upload key type to indicate the type of identifier that will be used to
