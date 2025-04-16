@@ -11,8 +11,8 @@
     <file>protobuf-java-3.25.5.jar</file>
     <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
   </dependency>
-  <dependency name='com.google.api:gax:2.62.0'>
-    <file>gax-2.62.0.jar</file>
+  <dependency name='com.google.api:gax:2.63.1'>
+    <file>gax-2.63.1.jar</file>
     <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
   </dependency>
   <dependency name='io.grpc:grpc-util:1.70.0'>
@@ -115,25 +115,21 @@
     <file>protobuf-java-util-3.25.5.jar</file>
     <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
   </dependency>
-  <dependency name='com.google.api.grpc:proto-google-common-protos:2.53.0'>
-    <file>proto-google-common-protos-2.53.0.jar</file>
-    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
-  </dependency>
   <dependency name='io.grpc:grpc-protobuf:1.70.0'>
     <file>grpc-protobuf-1.70.0.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
-  <dependency name='com.google.api:api-common:2.45.0'>
-    <file>api-common-2.45.0.jar</file>
+  <dependency name='com.google.api:api-common:2.46.1'>
+    <file>api-common-2.46.1.jar</file>
     <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
   </dependency>
   <dependency name='com.google.code.findbugs:jsr305:3.0.2'>
     <file>jsr305-3.0.2.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
-  <dependency name='com.google.api:gax-grpc:2.62.0'>
-    <file>gax-grpc-2.62.0.jar</file>
-    <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
+  <dependency name='com.google.api.grpc:proto-google-common-protos:2.54.1'>
+    <file>proto-google-common-protos-2.54.1.jar</file>
+    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
   <dependency name='commons-codec:commons-codec:1.18.0'>
     <file>commons-codec-1.18.0.jar</file>
@@ -166,6 +162,10 @@
   <dependency name='com.google.auto.service:auto-service-annotations:1.0.1'>
     <file>auto-service-annotations-1.0.1.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
+  </dependency>
+  <dependency name='com.google.api:gax-grpc:2.63.1'>
+    <file>gax-grpc-2.63.1.jar</file>
+    <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
   </dependency>
   <dependency name='com.google.guava:guava:33.4.0-jre'>
     <file>guava-33.4.0-jre.jar</file>
