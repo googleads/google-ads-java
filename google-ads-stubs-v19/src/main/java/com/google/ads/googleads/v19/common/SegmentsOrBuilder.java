@@ -2887,4 +2887,58 @@ public interface SegmentsOrBuilder extends
    * @return The newVersusReturningCustomers.
    */
   com.google.ads.googleads.v19.enums.ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket getNewVersusReturningCustomers();
+
+  /**
+   * <pre>
+   * Adjusted age range. This is the age range of the user after applying
+   * modeling to get more accurate age and gender information. Currently, both
+   * adjusted_age_range and adjusted_gender need to be selected together to get
+   * valid reach stats. These segmentations are only available for allowlisted
+   * customers.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType adjusted_age_range = 196;</code>
+   * @return The enum numeric value on the wire for adjustedAgeRange.
+   */
+  int getAdjustedAgeRangeValue();
+  /**
+   * <pre>
+   * Adjusted age range. This is the age range of the user after applying
+   * modeling to get more accurate age and gender information. Currently, both
+   * adjusted_age_range and adjusted_gender need to be selected together to get
+   * valid reach stats. These segmentations are only available for allowlisted
+   * customers.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType adjusted_age_range = 196;</code>
+   * @return The adjustedAgeRange.
+   */
+  com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType getAdjustedAgeRange();
+
+  /**
+   * <pre>
+   * Adjusted gender. This is the gender of the user after applying modeling to
+   * get more accurate age and gender information. Currently, both
+   * adjusted_age_range and adjusted_gender need to be selected together to get
+   * valid reach stats. These segmentations are only available for allowlisted
+   * customers.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType adjusted_gender = 197;</code>
+   * @return The enum numeric value on the wire for adjustedGender.
+   */
+  int getAdjustedGenderValue();
+  /**
+   * <pre>
+   * Adjusted gender. This is the gender of the user after applying modeling to
+   * get more accurate age and gender information. Currently, both
+   * adjusted_age_range and adjusted_gender need to be selected together to get
+   * valid reach stats. These segmentations are only available for allowlisted
+   * customers.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType adjusted_gender = 197;</code>
+   * @return The adjustedGender.
+   */
+  com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType getAdjustedGender();
 }

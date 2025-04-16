@@ -36,7 +36,7 @@ public final class ChangeStatusProto {
       "le/ads/googleads/v19/enums/change_status" +
       "_resource_type.proto\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\"\312\014\n\014ChangeStatus\022D\n\rresource_name\030\001 \001(\t" +
+      "\"\224\r\n\014ChangeStatus\022D\n\rresource_name\030\001 \001(\t" +
       "B-\340A\003\372A\'\n%googleads.googleapis.com/Chang" +
       "eStatus\022\'\n\025last_change_date_time\030\030 \001(\tB\003" +
       "\340A\003H\000\210\001\001\022q\n\rresource_type\030\004 \001(\0162U.google" +
@@ -70,20 +70,21 @@ public final class ChangeStatusProto {
       "_audience\030( \001(\tB1\340A\003\372A+\n)googleads.googl" +
       "eapis.com/CombinedAudience\022@\n\013asset_grou" +
       "p\030) \001(\tB+\340A\003\372A%\n#googleads.googleapis.co" +
-      "m/AssetGroup:c\352A`\n%googleads.googleapis." +
-      "com/ChangeStatus\0227customers/{customer_id" +
-      "}/changeStatus/{change_status_id}B\030\n\026_la" +
-      "st_change_date_timeB\013\n\t_campaignB\013\n\t_ad_" +
-      "groupB\016\n\014_ad_group_adB\025\n\023_ad_group_crite" +
-      "rionB\025\n\023_campaign_criterionB\030\n\026_ad_group" +
-      "_bid_modifierB\203\002\n&com.google.ads.googlea" +
-      "ds.v19.resourcesB\021ChangeStatusProtoP\001ZKg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v19/resources;resources\242\002\003GAA" +
-      "\252\002\"Google.Ads.GoogleAds.V19.Resources\312\002\"" +
-      "Google\\Ads\\GoogleAds\\V19\\Resources\352\002&Goo" +
-      "gle::Ads::GoogleAds::V19::Resourcesb\006pro" +
-      "to3"
+      "m/AssetGroup\022H\n\017campaign_budget\030* \001(\tB/\340" +
+      "A\003\372A)\n\'googleads.googleapis.com/Campaign" +
+      "Budget:c\352A`\n%googleads.googleapis.com/Ch" +
+      "angeStatus\0227customers/{customer_id}/chan" +
+      "geStatus/{change_status_id}B\030\n\026_last_cha" +
+      "nge_date_timeB\013\n\t_campaignB\013\n\t_ad_groupB" +
+      "\016\n\014_ad_group_adB\025\n\023_ad_group_criterionB\025" +
+      "\n\023_campaign_criterionB\030\n\026_ad_group_bid_m" +
+      "odifierB\203\002\n&com.google.ads.googleads.v19" +
+      ".resourcesB\021ChangeStatusProtoP\001ZKgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v19/resources;resources\242\002\003GAA\252\002\"Goo" +
+      "gle.Ads.GoogleAds.V19.Resources\312\002\"Google" +
+      "\\Ads\\GoogleAds\\V19\\Resources\352\002&Google::A" +
+      "ds::GoogleAds::V19::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -98,7 +99,7 @@ public final class ChangeStatusProto {
     internal_static_google_ads_googleads_v19_resources_ChangeStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v19_resources_ChangeStatus_descriptor,
-        new java.lang.String[] { "ResourceName", "LastChangeDateTime", "ResourceType", "Campaign", "AdGroup", "ResourceStatus", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", "AdGroupBidModifier", "SharedSet", "CampaignSharedSet", "Asset", "CustomerAsset", "CampaignAsset", "AdGroupAsset", "CombinedAudience", "AssetGroup", });
+        new java.lang.String[] { "ResourceName", "LastChangeDateTime", "ResourceType", "Campaign", "AdGroup", "ResourceStatus", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", "AdGroupBidModifier", "SharedSet", "CampaignSharedSet", "Asset", "CustomerAsset", "CampaignAsset", "AdGroupAsset", "CombinedAudience", "AssetGroup", "CampaignBudget", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

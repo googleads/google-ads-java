@@ -59,6 +59,28 @@ public class MockReachPlanServiceImpl extends ReachPlanServiceImplBase {
   }
 
   @Override
+  public void generateConversionRates(
+      GenerateConversionRatesRequest request,
+      StreamObserver<GenerateConversionRatesResponse> responseObserver) {
+    Object response = responses.poll();
+    if (response instanceof GenerateConversionRatesResponse) {
+      requests.add(request);
+      responseObserver.onNext(((GenerateConversionRatesResponse) response));
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError(((Exception) response));
+    } else {
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method GenerateConversionRates, expected %s or %s",
+                  response == null ? "null" : response.getClass().getName(),
+                  GenerateConversionRatesResponse.class.getName(),
+                  Exception.class.getName())));
+    }
+  }
+
+  @Override
   public void listPlannableLocations(
       ListPlannableLocationsRequest request,
       StreamObserver<ListPlannableLocationsResponse> responseObserver) {

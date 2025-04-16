@@ -110,21 +110,21 @@ public interface ConversionTrackingSettingOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the customer where conversions are
-   * created and managed. This field is read-only.
+   * Immutable. The resource name of the customer where conversions are created
+   * and managed. This field is read-only.
    * </pre>
    *
-   * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The googleAdsConversionCustomer.
    */
   java.lang.String getGoogleAdsConversionCustomer();
   /**
    * <pre>
-   * Output only. The resource name of the customer where conversions are
-   * created and managed. This field is read-only.
+   * Immutable. The resource name of the customer where conversions are created
+   * and managed. This field is read-only.
    * </pre>
    *
-   * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for googleAdsConversionCustomer.
    */
   com.google.protobuf.ByteString

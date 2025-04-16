@@ -35126,6 +35126,25 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getAssetGroupBytes();
+
+    /**
+     * <pre>
+     * Output only. The current ad strength score of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength ad_strength = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for adStrength.
+     */
+    int getAdStrengthValue();
+    /**
+     * <pre>
+     * Output only. The current ad strength score of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength ad_strength = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The adStrength.
+     */
+    com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength getAdStrength();
   }
   /**
    * <pre>
@@ -35146,6 +35165,7 @@ private static final long serialVersionUID = 0L;
     }
     private ImprovePerformanceMaxAdStrengthRecommendation() {
       assetGroup_ = "";
+      adStrength_ = 0;
     }
 
     @java.lang.Override
@@ -35215,6 +35235,32 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int AD_STRENGTH_FIELD_NUMBER = 2;
+    private int adStrength_ = 0;
+    /**
+     * <pre>
+     * Output only. The current ad strength score of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength ad_strength = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for adStrength.
+     */
+    @java.lang.Override public int getAdStrengthValue() {
+      return adStrength_;
+    }
+    /**
+     * <pre>
+     * Output only. The current ad strength score of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength ad_strength = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The adStrength.
+     */
+    @java.lang.Override public com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength getAdStrength() {
+      com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength.forNumber(adStrength_);
+      return result == null ? com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -35232,6 +35278,9 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assetGroup_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, assetGroup_);
       }
+      if (adStrength_ != com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength.UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, adStrength_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -35243,6 +35292,10 @@ private static final long serialVersionUID = 0L;
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assetGroup_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, assetGroup_);
+      }
+      if (adStrength_ != com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, adStrength_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -35261,6 +35314,7 @@ private static final long serialVersionUID = 0L;
 
       if (!getAssetGroup()
           .equals(other.getAssetGroup())) return false;
+      if (adStrength_ != other.adStrength_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -35274,6 +35328,8 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ASSET_GROUP_FIELD_NUMBER;
       hash = (53 * hash) + getAssetGroup().hashCode();
+      hash = (37 * hash) + AD_STRENGTH_FIELD_NUMBER;
+      hash = (53 * hash) + adStrength_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -35411,6 +35467,7 @@ private static final long serialVersionUID = 0L;
         super.clear();
         bitField0_ = 0;
         assetGroup_ = "";
+        adStrength_ = 0;
         return this;
       }
 
@@ -35446,6 +35503,9 @@ private static final long serialVersionUID = 0L;
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.assetGroup_ = assetGroup_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.adStrength_ = adStrength_;
         }
       }
 
@@ -35498,6 +35558,9 @@ private static final long serialVersionUID = 0L;
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (other.adStrength_ != 0) {
+          setAdStrengthValue(other.getAdStrengthValue());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -35529,6 +35592,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 16: {
+                adStrength_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -35634,6 +35702,79 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         assetGroup_ = value;
         bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int adStrength_ = 0;
+      /**
+       * <pre>
+       * Output only. The current ad strength score of the asset group.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength ad_strength = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The enum numeric value on the wire for adStrength.
+       */
+      @java.lang.Override public int getAdStrengthValue() {
+        return adStrength_;
+      }
+      /**
+       * <pre>
+       * Output only. The current ad strength score of the asset group.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength ad_strength = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The enum numeric value on the wire for adStrength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdStrengthValue(int value) {
+        adStrength_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The current ad strength score of the asset group.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength ad_strength = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The adStrength.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength getAdStrength() {
+        com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength.forNumber(adStrength_);
+        return result == null ? com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Output only. The current ad strength score of the asset group.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength ad_strength = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The adStrength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdStrength(com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        adStrength_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The current ad strength score of the asset group.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength ad_strength = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdStrength() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        adStrength_ = 0;
         onChanged();
         return this;
       }

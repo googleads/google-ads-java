@@ -58,6 +58,7 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v19.resources.AssetGroup.class, com.google.ads.googleads.v19.resources.AssetGroup.Builder.class);
   }
 
+  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object resourceName_ = "";
@@ -608,6 +609,44 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength.UNRECOGNIZED : result;
   }
 
+  public static final int ASSET_COVERAGE_FIELD_NUMBER = 13;
+  private com.google.ads.googleads.v19.resources.AssetCoverage assetCoverage_;
+  /**
+   * <pre>
+   * Output only. The asset coverage of this asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the assetCoverage field is set.
+   */
+  @java.lang.Override
+  public boolean hasAssetCoverage() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * Output only. The asset coverage of this asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The assetCoverage.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v19.resources.AssetCoverage getAssetCoverage() {
+    return assetCoverage_ == null ? com.google.ads.googleads.v19.resources.AssetCoverage.getDefaultInstance() : assetCoverage_;
+  }
+  /**
+   * <pre>
+   * Output only. The asset coverage of this asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v19.resources.AssetCoverageOrBuilder getAssetCoverageOrBuilder() {
+    return assetCoverage_ == null ? com.google.ads.googleads.v19.resources.AssetCoverage.getDefaultInstance() : assetCoverage_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -662,6 +701,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < primaryStatusReasons_.size(); i++) {
       output.writeEnumNoTag(primaryStatusReasons_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(13, getAssetCoverage());
     }
     getUnknownFields().writeTo(output);
   }
@@ -731,6 +773,10 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }primaryStatusReasonsMemoizedSerializedSize = dataSize;
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getAssetCoverage());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -766,6 +812,11 @@ private static final long serialVersionUID = 0L;
     if (!getPath2()
         .equals(other.getPath2())) return false;
     if (adStrength_ != other.adStrength_) return false;
+    if (hasAssetCoverage() != other.hasAssetCoverage()) return false;
+    if (hasAssetCoverage()) {
+      if (!getAssetCoverage()
+          .equals(other.getAssetCoverage())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -808,6 +859,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPath2().hashCode();
     hash = (37 * hash) + AD_STRENGTH_FIELD_NUMBER;
     hash = (53 * hash) + adStrength_;
+    if (hasAssetCoverage()) {
+      hash = (37 * hash) + ASSET_COVERAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getAssetCoverage().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -933,13 +988,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v19.resources.AssetGroup.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAssetCoverageFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -960,6 +1021,11 @@ private static final long serialVersionUID = 0L;
       path1_ = "";
       path2_ = "";
       adStrength_ = 0;
+      assetCoverage_ = null;
+      if (assetCoverageBuilder_ != null) {
+        assetCoverageBuilder_.dispose();
+        assetCoverageBuilder_ = null;
+      }
       return this;
     }
 
@@ -1037,6 +1103,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.adStrength_ = adStrength_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.assetCoverage_ = assetCoverageBuilder_ == null
+            ? assetCoverage_
+            : assetCoverageBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1150,6 +1224,9 @@ private static final long serialVersionUID = 0L;
       if (other.adStrength_ != 0) {
         setAdStrengthValue(other.getAdStrengthValue());
       }
+      if (other.hasAssetCoverage()) {
+        mergeAssetCoverage(other.getAssetCoverage());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1250,6 +1327,13 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 98
+            case 106: {
+              input.readMessage(
+                  getAssetCoverageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2561,6 +2645,163 @@ private static final long serialVersionUID = 0L;
       adStrength_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v19.resources.AssetCoverage assetCoverage_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v19.resources.AssetCoverage, com.google.ads.googleads.v19.resources.AssetCoverage.Builder, com.google.ads.googleads.v19.resources.AssetCoverageOrBuilder> assetCoverageBuilder_;
+    /**
+     * <pre>
+     * Output only. The asset coverage of this asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the assetCoverage field is set.
+     */
+    public boolean hasAssetCoverage() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The asset coverage of this asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The assetCoverage.
+     */
+    public com.google.ads.googleads.v19.resources.AssetCoverage getAssetCoverage() {
+      if (assetCoverageBuilder_ == null) {
+        return assetCoverage_ == null ? com.google.ads.googleads.v19.resources.AssetCoverage.getDefaultInstance() : assetCoverage_;
+      } else {
+        return assetCoverageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The asset coverage of this asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setAssetCoverage(com.google.ads.googleads.v19.resources.AssetCoverage value) {
+      if (assetCoverageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetCoverage_ = value;
+      } else {
+        assetCoverageBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The asset coverage of this asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setAssetCoverage(
+        com.google.ads.googleads.v19.resources.AssetCoverage.Builder builderForValue) {
+      if (assetCoverageBuilder_ == null) {
+        assetCoverage_ = builderForValue.build();
+      } else {
+        assetCoverageBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The asset coverage of this asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeAssetCoverage(com.google.ads.googleads.v19.resources.AssetCoverage value) {
+      if (assetCoverageBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0) &&
+          assetCoverage_ != null &&
+          assetCoverage_ != com.google.ads.googleads.v19.resources.AssetCoverage.getDefaultInstance()) {
+          getAssetCoverageBuilder().mergeFrom(value);
+        } else {
+          assetCoverage_ = value;
+        }
+      } else {
+        assetCoverageBuilder_.mergeFrom(value);
+      }
+      if (assetCoverage_ != null) {
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The asset coverage of this asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearAssetCoverage() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      assetCoverage_ = null;
+      if (assetCoverageBuilder_ != null) {
+        assetCoverageBuilder_.dispose();
+        assetCoverageBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The asset coverage of this asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v19.resources.AssetCoverage.Builder getAssetCoverageBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getAssetCoverageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The asset coverage of this asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v19.resources.AssetCoverageOrBuilder getAssetCoverageOrBuilder() {
+      if (assetCoverageBuilder_ != null) {
+        return assetCoverageBuilder_.getMessageOrBuilder();
+      } else {
+        return assetCoverage_ == null ?
+            com.google.ads.googleads.v19.resources.AssetCoverage.getDefaultInstance() : assetCoverage_;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The asset coverage of this asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v19.resources.AssetCoverage, com.google.ads.googleads.v19.resources.AssetCoverage.Builder, com.google.ads.googleads.v19.resources.AssetCoverageOrBuilder> 
+        getAssetCoverageFieldBuilder() {
+      if (assetCoverageBuilder_ == null) {
+        assetCoverageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v19.resources.AssetCoverage, com.google.ads.googleads.v19.resources.AssetCoverage.Builder, com.google.ads.googleads.v19.resources.AssetCoverageOrBuilder>(
+                getAssetCoverage(),
+                getParentForChildren(),
+                isClean());
+        assetCoverage_ = null;
+      }
+      return assetCoverageBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

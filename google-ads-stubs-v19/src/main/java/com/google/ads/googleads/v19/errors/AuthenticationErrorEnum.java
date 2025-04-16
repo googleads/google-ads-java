@@ -245,6 +245,14 @@ private static final long serialVersionUID = 0L;
      * <code>ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28;</code>
      */
     ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN(28),
+    /**
+     * <pre>
+     * The developer token is not valid.
+     * </pre>
+     *
+     * <code>DEVELOPER_TOKEN_INVALID = 29;</code>
+     */
+    DEVELOPER_TOKEN_INVALID(29),
     UNRECOGNIZED(-1),
     ;
 
@@ -441,6 +449,14 @@ private static final long serialVersionUID = 0L;
      * <code>ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28;</code>
      */
     public static final int ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN_VALUE = 28;
+    /**
+     * <pre>
+     * The developer token is not valid.
+     * </pre>
+     *
+     * <code>DEVELOPER_TOKEN_INVALID = 29;</code>
+     */
+    public static final int DEVELOPER_TOKEN_INVALID_VALUE = 29;
 
 
     public final int getNumber() {
@@ -490,6 +506,7 @@ private static final long serialVersionUID = 0L;
         case 26: return ORGANIZATION_NOT_RECOGNIZED;
         case 27: return ORGANIZATION_NOT_APPROVED;
         case 28: return ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN;
+        case 29: return DEVELOPER_TOKEN_INVALID;
         default: return null;
       }
     }

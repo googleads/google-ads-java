@@ -112,6 +112,14 @@ private static final long serialVersionUID = 0L;
     CAMPAIGN_CRITERION(7),
     /**
      * <pre>
+     * A CampaignBudget resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_BUDGET = 8;</code>
+     */
+    CAMPAIGN_BUDGET(8),
+    /**
+     * <pre>
      * A Feed resource change.
      * </pre>
      *
@@ -214,6 +222,22 @@ private static final long serialVersionUID = 0L;
      * <code>ASSET_GROUP = 21;</code>
      */
     ASSET_GROUP(21),
+    /**
+     * <pre>
+     * An AssetSet resource change.
+     * </pre>
+     *
+     * <code>ASSET_SET = 22;</code>
+     */
+    ASSET_SET(22),
+    /**
+     * <pre>
+     * A CampaignAssetSet resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_ASSET_SET = 23;</code>
+     */
+    CAMPAIGN_ASSET_SET(23),
     UNRECOGNIZED(-1),
     ;
 
@@ -274,6 +298,14 @@ private static final long serialVersionUID = 0L;
      * <code>CAMPAIGN_CRITERION = 7;</code>
      */
     public static final int CAMPAIGN_CRITERION_VALUE = 7;
+    /**
+     * <pre>
+     * A CampaignBudget resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_BUDGET = 8;</code>
+     */
+    public static final int CAMPAIGN_BUDGET_VALUE = 8;
     /**
      * <pre>
      * A Feed resource change.
@@ -378,6 +410,22 @@ private static final long serialVersionUID = 0L;
      * <code>ASSET_GROUP = 21;</code>
      */
     public static final int ASSET_GROUP_VALUE = 21;
+    /**
+     * <pre>
+     * An AssetSet resource change.
+     * </pre>
+     *
+     * <code>ASSET_SET = 22;</code>
+     */
+    public static final int ASSET_SET_VALUE = 22;
+    /**
+     * <pre>
+     * A CampaignAssetSet resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_ASSET_SET = 23;</code>
+     */
+    public static final int CAMPAIGN_ASSET_SET_VALUE = 23;
 
 
     public final int getNumber() {
@@ -411,6 +459,7 @@ private static final long serialVersionUID = 0L;
         case 5: return AD_GROUP_CRITERION;
         case 6: return CAMPAIGN;
         case 7: return CAMPAIGN_CRITERION;
+        case 8: return CAMPAIGN_BUDGET;
         case 9: return FEED;
         case 10: return FEED_ITEM;
         case 11: return AD_GROUP_FEED;
@@ -424,6 +473,8 @@ private static final long serialVersionUID = 0L;
         case 19: return AD_GROUP_ASSET;
         case 20: return COMBINED_AUDIENCE;
         case 21: return ASSET_GROUP;
+        case 22: return ASSET_SET;
+        case 23: return CAMPAIGN_ASSET_SET;
         default: return null;
       }
     }

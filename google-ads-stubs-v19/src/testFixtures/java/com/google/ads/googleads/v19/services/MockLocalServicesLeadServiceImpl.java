@@ -79,4 +79,26 @@ public class MockLocalServicesLeadServiceImpl extends LocalServicesLeadServiceIm
                   Exception.class.getName())));
     }
   }
+
+  @Override
+  public void provideLeadFeedback(
+      ProvideLeadFeedbackRequest request,
+      StreamObserver<ProvideLeadFeedbackResponse> responseObserver) {
+    Object response = responses.poll();
+    if (response instanceof ProvideLeadFeedbackResponse) {
+      requests.add(request);
+      responseObserver.onNext(((ProvideLeadFeedbackResponse) response));
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError(((Exception) response));
+    } else {
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method ProvideLeadFeedback, expected %s or %s",
+                  response == null ? "null" : response.getClass().getName(),
+                  ProvideLeadFeedbackResponse.class.getName(),
+                  Exception.class.getName())));
+    }
+  }
 }

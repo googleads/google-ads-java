@@ -27,18 +27,23 @@ import com.google.ads.googleads.v19.errors.GoogleAdsException;
 import com.google.ads.googleads.v19.services.ClickConversion;
 import com.google.ads.googleads.v19.services.ClickConversionResult;
 import com.google.ads.googleads.v19.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v19.services.SessionAttributeKeyValuePair;
+import com.google.ads.googleads.v19.services.SessionAttributesKeyValuePairs;
 import com.google.ads.googleads.v19.services.UploadClickConversionsRequest;
 import com.google.ads.googleads.v19.services.UploadClickConversionsResponse;
 import com.google.ads.googleads.v19.utils.ResourceNames;
 import com.google.common.collect.ImmutableMap;
+import com.google.protobuf.ByteString;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Uploads an enhanced conversion for leads by uploading a ClickConversion with hashed, first-party
@@ -47,6 +52,7 @@ import java.util.Map;
  * the lead.
  */
 public class UploadEnhancedConversionsForLeads {
+
   private static class UploadEnhancedConversionsForLeadsParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
@@ -75,6 +81,24 @@ public class UploadEnhancedConversionsForLeads {
 
     @Parameter(names = ArgumentNames.AD_USER_DATA_CONSENT, required = false)
     private ConsentStatus adUserDataConsent;
+
+    @Parameter(
+        names = ArgumentNames.SESSION_ATTRIBUTES_ENCODED,
+        required = false,
+        description =
+            "A session attributes token. Only one of sessionAttributesEncoded or sessionAttributesMap"
+                + " should be passed.")
+    private String sessionAttributesEncoded;
+
+    @Parameter(
+        names = ArgumentNames.SESSION_ATTRIBUTES_MAP,
+        required = false,
+        description =
+            "A "
+                + "space-delimited list of session attribute key value pairs. Each pair should be "
+                + "separated by an equal sign, for example: 'gad_campaignid=12345 gad_source=1'. Only "
+                + "one of sessionAttributesEncoded or sessionAttributesMap should be passed.")
+    private String sessionAttributesMap;
   }
 
   public static void main(String[] args)
@@ -94,8 +118,14 @@ public class UploadEnhancedConversionsForLeads {
       params.gclid = null;
       // Optional: specify the ad user data consent for the click.
       params.adUserDataConsent = null;
+      params.sessionAttributesEncoded = null;
+      params.sessionAttributesMap = null;
     }
 
+    if ((params.sessionAttributesEncoded != null) && (params.sessionAttributesMap != null)) {
+      throw new IllegalArgumentException(
+          "Only one of sessionAttributesEncoded or " + "sessionAttributesMap can be set.");
+    }
     GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
@@ -118,7 +148,9 @@ public class UploadEnhancedConversionsForLeads {
               params.conversionValue,
               params.orderId,
               params.gclid,
-              params.adUserDataConsent);
+              params.adUserDataConsent,
+              params.sessionAttributesEncoded,
+              params.sessionAttributesMap);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -155,7 +187,9 @@ public class UploadEnhancedConversionsForLeads {
       Double conversionValue,
       String orderId,
       String gclid,
-      ConsentStatus adUserDataConsent)
+      ConsentStatus adUserDataConsent,
+      String sessionAttributesEncoded,
+      String sessionAttributesMap)
       throws UnsupportedEncodingException, NoSuchAlgorithmException {
     // [START add_user_identifiers]
     // Creates an empty builder for constructing the click conversion.
@@ -203,6 +237,12 @@ public class UploadEnhancedConversionsForLeads {
     }
     if (adUserDataConsent != null) {
       rawRecordBuilder.put("adUserDataConsent", adUserDataConsent.name());
+    }
+    if (sessionAttributesEncoded != null) {
+      rawRecordBuilder.put("sessionAttributesEncoded", sessionAttributesEncoded);
+    }
+    if (sessionAttributesMap != null) {
+      rawRecordBuilder.put("sessionAttributesMap", sessionAttributesMap);
     }
 
     // Builds the map representing the record.
@@ -264,6 +304,35 @@ public class UploadEnhancedConversionsForLeads {
       clickConversionBuilder.setConsent(
           Consent.newBuilder()
               .setAdUserData(ConsentStatus.valueOf(rawRecord.get("adUserDataConsent"))));
+    }
+
+    // Sets one of the sessionAttributesEncoded or sessionAttributesKeyValuePairs if either is
+    // provided.
+    if (rawRecord.containsKey("sessionAttributesEncoded")) {
+      clickConversionBuilder.setSessionAttributesEncoded(
+          ByteString.copyFromUtf8(rawRecord.get("sessionAttributesEncoded")));
+    } else if (rawRecord.containsKey("sessionAttributesMap")) {
+      List<String> pairings =
+          Arrays.stream(rawRecord.get("sessionAttributesMap").split(" "))
+              .map(String::trim)
+              .collect(Collectors.toList());
+      SessionAttributesKeyValuePairs.Builder sessionAttributePairs =
+          SessionAttributesKeyValuePairs.newBuilder();
+      for (String pair : pairings) {
+        String[] parts = pair.split("=", 2);
+        if (parts.length != 2) {
+          throw new IllegalArgumentException(
+              "Failed to read the sessionAttributesMap. SessionAttributesMap must use a "
+                  + "space-delimited list of session attribute key value pairs. Each pair should be"
+                  + " separated by an equal sign, for example: 'gad_campaignid=12345 gad_source=1'");
+        }
+        sessionAttributePairs.addKeyValuePairs(
+            SessionAttributeKeyValuePair.newBuilder()
+                .setSessionAttributeKey(parts[0])
+                .setSessionAttributeValue(parts[1])
+                .build());
+      }
+      clickConversionBuilder.setSessionAttributesKeyValuePairs(sessionAttributePairs.build());
     }
 
     // Calls build to build the conversion.

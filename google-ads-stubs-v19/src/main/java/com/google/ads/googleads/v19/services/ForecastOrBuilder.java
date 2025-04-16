@@ -314,4 +314,31 @@ public interface ForecastOrBuilder extends
    * @return The views.
    */
   long getViews();
+
+  /**
+   * <pre>
+   * The number of conversions.
+   * This metric is only available for DEMAND_GEN plannable products.
+   *
+   * See https://support.google.com/google-ads/answer/2375431 for
+   * more information on conversions.
+   * </pre>
+   *
+   * <code>optional double conversions = 16;</code>
+   * @return Whether the conversions field is set.
+   */
+  boolean hasConversions();
+  /**
+   * <pre>
+   * The number of conversions.
+   * This metric is only available for DEMAND_GEN plannable products.
+   *
+   * See https://support.google.com/google-ads/answer/2375431 for
+   * more information on conversions.
+   * </pre>
+   *
+   * <code>optional double conversions = 16;</code>
+   * @return The conversions.
+   */
+  double getConversions();
 }

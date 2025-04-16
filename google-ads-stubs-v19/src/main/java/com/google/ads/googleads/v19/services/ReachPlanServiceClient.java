@@ -42,9 +42,9 @@ import javax.annotation.Generated;
  * // - It may require specifying regional endpoints when creating the service client as shown in
  * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
- *   ListPlannableLocationsRequest request = ListPlannableLocationsRequest.newBuilder().build();
- *   ListPlannableLocationsResponse response =
- *       reachPlanServiceClient.listPlannableLocations(request);
+ *   String customerId = "customerId-1581184615";
+ *   GenerateConversionRatesResponse response =
+ *       reachPlanServiceClient.generateConversionRates(customerId);
  * }
  * }</pre>
  *
@@ -58,6 +58,25 @@ import javax.annotation.Generated;
  *      <th>Method</th>
  *      <th>Description</th>
  *      <th>Method Variants</th>
+ *    </tr>
+ *    <tr>
+ *      <td><p> GenerateConversionRates</td>
+ *      <td><p> Returns a collection of conversion rate suggestions for supported plannable products.
+ * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [HeaderError]()   [InternalError]()   [QuotaError]()   [RequestError]()</td>
+ *      <td>
+ *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
+ *      <ul>
+ *           <li><p> generateConversionRates(GenerateConversionRatesRequest request)
+ *      </ul>
+ *      <p>"Flattened" method variants have converted the fields of the request object into function parameters to enable multiple ways to call the same method.</p>
+ *      <ul>
+ *           <li><p> generateConversionRates(String customerId)
+ *      </ul>
+ *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
+ *      <ul>
+ *           <li><p> generateConversionRatesCallable()
+ *      </ul>
+ *       </td>
  *    </tr>
  *    <tr>
  *      <td><p> ListPlannableLocations</td>
@@ -203,6 +222,105 @@ public class ReachPlanServiceClient implements BackgroundResource {
 
   public ReachPlanServiceStub getStub() {
     return stub;
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a collection of conversion rate suggestions for supported plannable products.
+   *
+   * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]()
+   * [InternalError]() [QuotaError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
+   *   String customerId = "customerId-1581184615";
+   *   GenerateConversionRatesResponse response =
+   *       reachPlanServiceClient.generateConversionRates(customerId);
+   * }
+   * }</pre>
+   *
+   * @param customerId Required. The ID of the customer. A conversion rate based on the historical
+   *     data of this customer may be suggested.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateConversionRatesResponse generateConversionRates(String customerId) {
+    GenerateConversionRatesRequest request =
+        GenerateConversionRatesRequest.newBuilder().setCustomerId(customerId).build();
+    return generateConversionRates(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a collection of conversion rate suggestions for supported plannable products.
+   *
+   * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]()
+   * [InternalError]() [QuotaError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
+   *   GenerateConversionRatesRequest request =
+   *       GenerateConversionRatesRequest.newBuilder()
+   *           .setCustomerId("customerId-1581184615")
+   *           .setCustomerReachGroup("customerReachGroup123255626")
+   *           .build();
+   *   GenerateConversionRatesResponse response =
+   *       reachPlanServiceClient.generateConversionRates(request);
+   * }
+   * }</pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateConversionRatesResponse generateConversionRates(
+      GenerateConversionRatesRequest request) {
+    return generateConversionRatesCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a collection of conversion rate suggestions for supported plannable products.
+   *
+   * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]()
+   * [InternalError]() [QuotaError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
+   *   GenerateConversionRatesRequest request =
+   *       GenerateConversionRatesRequest.newBuilder()
+   *           .setCustomerId("customerId-1581184615")
+   *           .setCustomerReachGroup("customerReachGroup123255626")
+   *           .build();
+   *   ApiFuture<GenerateConversionRatesResponse> future =
+   *       reachPlanServiceClient.generateConversionRatesCallable().futureCall(request);
+   *   // Do something.
+   *   GenerateConversionRatesResponse response = future.get();
+   * }
+   * }</pre>
+   */
+  public final UnaryCallable<GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+      generateConversionRatesCallable() {
+    return stub.generateConversionRatesCallable();
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.

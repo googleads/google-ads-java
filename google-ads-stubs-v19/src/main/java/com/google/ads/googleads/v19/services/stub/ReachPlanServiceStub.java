@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v19.services.stub;
 
+import com.google.ads.googleads.v19.services.GenerateConversionRatesRequest;
+import com.google.ads.googleads.v19.services.GenerateConversionRatesResponse;
 import com.google.ads.googleads.v19.services.GenerateReachForecastRequest;
 import com.google.ads.googleads.v19.services.GenerateReachForecastResponse;
 import com.google.ads.googleads.v19.services.ListPlannableLocationsRequest;
@@ -34,6 +36,11 @@ import javax.annotation.Generated;
  */
 @Generated("by gapic-generator-java")
 public abstract class ReachPlanServiceStub implements BackgroundResource {
+
+  public UnaryCallable<GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+      generateConversionRatesCallable() {
+    throw new UnsupportedOperationException("Not implemented: generateConversionRatesCallable()");
+  }
 
   public UnaryCallable<ListPlannableLocationsRequest, ListPlannableLocationsResponse>
       listPlannableLocationsCallable() {

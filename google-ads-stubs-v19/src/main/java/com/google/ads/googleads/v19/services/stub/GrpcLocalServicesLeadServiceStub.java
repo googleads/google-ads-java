@@ -18,6 +18,8 @@ package com.google.ads.googleads.v19.services.stub;
 
 import com.google.ads.googleads.v19.services.AppendLeadConversationRequest;
 import com.google.ads.googleads.v19.services.AppendLeadConversationResponse;
+import com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest;
+import com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -55,8 +57,22 @@ public class GrpcLocalServicesLeadServiceStub extends LocalServicesLeadServiceSt
                   ProtoUtils.marshaller(AppendLeadConversationResponse.getDefaultInstance()))
               .build();
 
+  private static final MethodDescriptor<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+      provideLeadFeedbackMethodDescriptor =
+          MethodDescriptor.<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v19.services.LocalServicesLeadService/ProvideLeadFeedback")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(ProvideLeadFeedbackRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(ProvideLeadFeedbackResponse.getDefaultInstance()))
+              .build();
+
   private final UnaryCallable<AppendLeadConversationRequest, AppendLeadConversationResponse>
       appendLeadConversationCallable;
+  private final UnaryCallable<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+      provideLeadFeedbackCallable;
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
@@ -115,11 +131,27 @@ public class GrpcLocalServicesLeadServiceStub extends LocalServicesLeadServiceSt
                       return builder.build();
                     })
                 .build();
+    GrpcCallSettings<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+        provideLeadFeedbackTransportSettings =
+            GrpcCallSettings.<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>newBuilder()
+                .setMethodDescriptor(provideLeadFeedbackMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("resource_name", String.valueOf(request.getResourceName()));
+                      return builder.build();
+                    })
+                .build();
 
     this.appendLeadConversationCallable =
         callableFactory.createUnaryCallable(
             appendLeadConversationTransportSettings,
             settings.appendLeadConversationSettings(),
+            clientContext);
+    this.provideLeadFeedbackCallable =
+        callableFactory.createUnaryCallable(
+            provideLeadFeedbackTransportSettings,
+            settings.provideLeadFeedbackSettings(),
             clientContext);
 
     this.backgroundResources =
@@ -134,6 +166,12 @@ public class GrpcLocalServicesLeadServiceStub extends LocalServicesLeadServiceSt
   public UnaryCallable<AppendLeadConversationRequest, AppendLeadConversationResponse>
       appendLeadConversationCallable() {
     return appendLeadConversationCallable;
+  }
+
+  @Override
+  public UnaryCallable<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+      provideLeadFeedbackCallable() {
+    return provideLeadFeedbackCallable;
   }
 
   @Override

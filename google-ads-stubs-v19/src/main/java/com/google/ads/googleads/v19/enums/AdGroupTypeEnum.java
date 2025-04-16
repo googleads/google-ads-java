@@ -200,6 +200,14 @@ private static final long serialVersionUID = 0L;
      * <code>TRAVEL_ADS = 19;</code>
      */
     TRAVEL_ADS(19),
+    /**
+     * <pre>
+     * Ad group type for YouTube Audio campaigns.
+     * </pre>
+     *
+     * <code>YOUTUBE_AUDIO = 20;</code>
+     */
+    YOUTUBE_AUDIO(20),
     UNRECOGNIZED(-1),
     ;
 
@@ -349,6 +357,14 @@ private static final long serialVersionUID = 0L;
      * <code>TRAVEL_ADS = 19;</code>
      */
     public static final int TRAVEL_ADS_VALUE = 19;
+    /**
+     * <pre>
+     * Ad group type for YouTube Audio campaigns.
+     * </pre>
+     *
+     * <code>YOUTUBE_AUDIO = 20;</code>
+     */
+    public static final int YOUTUBE_AUDIO_VALUE = 20;
 
 
     public final int getNumber() {
@@ -393,6 +409,7 @@ private static final long serialVersionUID = 0L;
         case 17: return VIDEO_EFFICIENT_REACH;
         case 18: return SMART_CAMPAIGN_ADS;
         case 19: return TRAVEL_ADS;
+        case 20: return YOUTUBE_AUDIO;
         default: return null;
       }
     }

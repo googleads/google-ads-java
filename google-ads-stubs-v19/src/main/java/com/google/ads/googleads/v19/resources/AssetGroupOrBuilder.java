@@ -343,4 +343,31 @@ public interface AssetGroupOrBuilder extends
    * @return The adStrength.
    */
   com.google.ads.googleads.v19.enums.AdStrengthEnum.AdStrength getAdStrength();
+
+  /**
+   * <pre>
+   * Output only. The asset coverage of this asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the assetCoverage field is set.
+   */
+  boolean hasAssetCoverage();
+  /**
+   * <pre>
+   * Output only. The asset coverage of this asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The assetCoverage.
+   */
+  com.google.ads.googleads.v19.resources.AssetCoverage getAssetCoverage();
+  /**
+   * <pre>
+   * Output only. The asset coverage of this asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v19.resources.AssetCoverageOrBuilder getAssetCoverageOrBuilder();
 }

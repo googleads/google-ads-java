@@ -1,3 +1,10 @@
+36.1.0 - 2025-04-16
+-------------------
+- Add support and examples for Google Ads API v19.1.
+- Update to version 3.45.1 of `google-cloud-shared-dependencies`.
+- Updated remarketing/UploadEnhancedConversionForLeads to show how to handle
+  session attributes
+
 36.0.0 - 2025-02-27
 -------------------
 - Add support and examples for Google Ads API v19.

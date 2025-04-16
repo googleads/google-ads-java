@@ -1022,4 +1022,31 @@ public interface AdGroupOrBuilder extends
    * @return The enum numeric value on the wire of primaryStatusReasons at the given index.
    */
   int getPrimaryStatusReasonsValue(int index);
+
+  /**
+   * <pre>
+   * Settings for Demand Gen ad groups.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+   * @return Whether the demandGenAdGroupSettings field is set.
+   */
+  boolean hasDemandGenAdGroupSettings();
+  /**
+   * <pre>
+   * Settings for Demand Gen ad groups.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+   * @return The demandGenAdGroupSettings.
+   */
+  com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings getDemandGenAdGroupSettings();
+  /**
+   * <pre>
+   * Settings for Demand Gen ad groups.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+   */
+  com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettingsOrBuilder getDemandGenAdGroupSettingsOrBuilder();
 }

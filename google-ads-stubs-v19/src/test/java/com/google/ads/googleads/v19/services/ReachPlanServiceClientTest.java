@@ -77,6 +77,45 @@ public class ReachPlanServiceClientTest {
   }
 
   @Test
+  public void generateConversionRatesTest() throws Exception {
+    GenerateConversionRatesResponse expectedResponse =
+        GenerateConversionRatesResponse.newBuilder()
+            .addAllConversionRateSuggestions(new ArrayList<ConversionRateSuggestion>())
+            .build();
+    mockReachPlanService.addResponse(expectedResponse);
+
+    String customerId = "customerId-1581184615";
+
+    GenerateConversionRatesResponse actualResponse = client.generateConversionRates(customerId);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockReachPlanService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GenerateConversionRatesRequest actualRequest =
+        ((GenerateConversionRatesRequest) actualRequests.get(0));
+
+    Assert.assertEquals(customerId, actualRequest.getCustomerId());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void generateConversionRatesExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockReachPlanService.addException(exception);
+
+    try {
+      String customerId = "customerId-1581184615";
+      client.generateConversionRates(customerId);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
   public void listPlannableLocationsTest() throws Exception {
     ListPlannableLocationsResponse expectedResponse =
         ListPlannableLocationsResponse.newBuilder()

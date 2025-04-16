@@ -1119,6 +1119,9 @@
           "rpcs": {
             "AppendLeadConversation": {
               "methods": ["appendLeadConversation", "appendLeadConversation", "appendLeadConversationCallable"]
+            },
+            "ProvideLeadFeedback": {
+              "methods": ["provideLeadFeedback", "provideLeadFeedbackCallable"]
             }
           }
         }
@@ -1192,6 +1195,9 @@
         "grpc": {
           "libraryClient": "ReachPlanServiceClient",
           "rpcs": {
+            "GenerateConversionRates": {
+              "methods": ["generateConversionRates", "generateConversionRates", "generateConversionRatesCallable"]
+            },
             "GenerateReachForecast": {
               "methods": ["generateReachForecast", "generateReachForecast", "generateReachForecastCallable"]
             },

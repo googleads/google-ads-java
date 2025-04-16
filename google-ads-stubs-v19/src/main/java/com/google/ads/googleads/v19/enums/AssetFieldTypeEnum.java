@@ -302,6 +302,14 @@ private static final long serialVersionUID = 0L;
      * <code>BUSINESS_MESSAGE = 31;</code>
      */
     BUSINESS_MESSAGE(31),
+    /**
+     * <pre>
+     * The asset is linked for use as a tall portrait marketing image.
+     * </pre>
+     *
+     * <code>TALL_PORTRAIT_MARKETING_IMAGE = 32;</code>
+     */
+    TALL_PORTRAIT_MARKETING_IMAGE(32),
     UNRECOGNIZED(-1),
     ;
 
@@ -555,6 +563,14 @@ private static final long serialVersionUID = 0L;
      * <code>BUSINESS_MESSAGE = 31;</code>
      */
     public static final int BUSINESS_MESSAGE_VALUE = 31;
+    /**
+     * <pre>
+     * The asset is linked for use as a tall portrait marketing image.
+     * </pre>
+     *
+     * <code>TALL_PORTRAIT_MARKETING_IMAGE = 32;</code>
+     */
+    public static final int TALL_PORTRAIT_MARKETING_IMAGE_VALUE = 32;
 
 
     public final int getNumber() {
@@ -612,6 +628,7 @@ private static final long serialVersionUID = 0L;
         case 28: return HOTEL_PROPERTY;
         case 30: return DEMAND_GEN_CAROUSEL_CARD;
         case 31: return BUSINESS_MESSAGE;
+        case 32: return TALL_PORTRAIT_MARKETING_IMAGE;
         default: return null;
       }
     }

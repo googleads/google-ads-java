@@ -441,4 +441,24 @@ public interface ChangeStatusOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAssetGroupBytes();
+
+  /**
+   * <pre>
+   * Output only. The CampaignBudget affected by this change.
+   * </pre>
+   *
+   * <code>string campaign_budget = 42 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaignBudget.
+   */
+  java.lang.String getCampaignBudget();
+  /**
+   * <pre>
+   * Output only. The CampaignBudget affected by this change.
+   * </pre>
+   *
+   * <code>string campaign_budget = 42 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for campaignBudget.
+   */
+  com.google.protobuf.ByteString
+      getCampaignBudgetBytes();
 }

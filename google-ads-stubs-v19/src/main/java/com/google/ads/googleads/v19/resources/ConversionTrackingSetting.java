@@ -185,11 +185,11 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object googleAdsConversionCustomer_ = "";
   /**
    * <pre>
-   * Output only. The resource name of the customer where conversions are
-   * created and managed. This field is read-only.
+   * Immutable. The resource name of the customer where conversions are created
+   * and managed. This field is read-only.
    * </pre>
    *
-   * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The googleAdsConversionCustomer.
    */
   @java.lang.Override
@@ -207,11 +207,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the customer where conversions are
-   * created and managed. This field is read-only.
+   * Immutable. The resource name of the customer where conversions are created
+   * and managed. This field is read-only.
    * </pre>
    *
-   * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for googleAdsConversionCustomer.
    */
   @java.lang.Override
@@ -1023,11 +1023,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object googleAdsConversionCustomer_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the customer where conversions are
-     * created and managed. This field is read-only.
+     * Immutable. The resource name of the customer where conversions are created
+     * and managed. This field is read-only.
      * </pre>
      *
-     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The googleAdsConversionCustomer.
      */
     public java.lang.String getGoogleAdsConversionCustomer() {
@@ -1044,11 +1044,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer where conversions are
-     * created and managed. This field is read-only.
+     * Immutable. The resource name of the customer where conversions are created
+     * and managed. This field is read-only.
      * </pre>
      *
-     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for googleAdsConversionCustomer.
      */
     public com.google.protobuf.ByteString
@@ -1066,11 +1066,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer where conversions are
-     * created and managed. This field is read-only.
+     * Immutable. The resource name of the customer where conversions are created
+     * and managed. This field is read-only.
      * </pre>
      *
-     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The googleAdsConversionCustomer to set.
      * @return This builder for chaining.
      */
@@ -1084,11 +1084,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer where conversions are
-     * created and managed. This field is read-only.
+     * Immutable. The resource name of the customer where conversions are created
+     * and managed. This field is read-only.
      * </pre>
      *
-     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearGoogleAdsConversionCustomer() {
@@ -1099,11 +1099,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer where conversions are
-     * created and managed. This field is read-only.
+     * Immutable. The resource name of the customer where conversions are created
+     * and managed. This field is read-only.
      * </pre>
      *
-     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for googleAdsConversionCustomer to set.
      * @return This builder for chaining.
      */

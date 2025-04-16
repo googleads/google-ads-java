@@ -6,7 +6,7 @@ package com.google.ads.googleads.v19.services;
 
 /**
  * <pre>
- * Response message for data exlusions mutate.
+ * Response message for data exclusions mutate.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v19.services.MutateBiddingDataExclusionsResponse}
@@ -330,7 +330,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for data exlusions mutate.
+   * Response message for data exclusions mutate.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v19.services.MutateBiddingDataExclusionsResponse}

@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v19.services.stub;
 
+import com.google.ads.googleads.v19.services.GenerateConversionRatesRequest;
+import com.google.ads.googleads.v19.services.GenerateConversionRatesResponse;
 import com.google.ads.googleads.v19.services.GenerateReachForecastRequest;
 import com.google.ads.googleads.v19.services.GenerateReachForecastResponse;
 import com.google.ads.googleads.v19.services.ListPlannableLocationsRequest;
@@ -45,6 +47,20 @@ import javax.annotation.Generated;
  */
 @Generated("by gapic-generator-java")
 public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
+  private static final MethodDescriptor<
+          GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+      generateConversionRatesMethodDescriptor =
+          MethodDescriptor
+              .<GenerateConversionRatesRequest, GenerateConversionRatesResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v19.services.ReachPlanService/GenerateConversionRates")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(GenerateConversionRatesRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(GenerateConversionRatesResponse.getDefaultInstance()))
+              .build();
+
   private static final MethodDescriptor<
           ListPlannableLocationsRequest, ListPlannableLocationsResponse>
       listPlannableLocationsMethodDescriptor =
@@ -83,6 +99,8 @@ public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
                   ProtoUtils.marshaller(GenerateReachForecastResponse.getDefaultInstance()))
               .build();
 
+  private final UnaryCallable<GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+      generateConversionRatesCallable;
   private final UnaryCallable<ListPlannableLocationsRequest, ListPlannableLocationsResponse>
       listPlannableLocationsCallable;
   private final UnaryCallable<ListPlannableProductsRequest, ListPlannableProductsResponse>
@@ -134,6 +152,12 @@ public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
     this.callableFactory = callableFactory;
     this.operationsStub = GrpcOperationsStub.create(clientContext, callableFactory);
 
+    GrpcCallSettings<GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+        generateConversionRatesTransportSettings =
+            GrpcCallSettings
+                .<GenerateConversionRatesRequest, GenerateConversionRatesResponse>newBuilder()
+                .setMethodDescriptor(generateConversionRatesMethodDescriptor)
+                .build();
     GrpcCallSettings<ListPlannableLocationsRequest, ListPlannableLocationsResponse>
         listPlannableLocationsTransportSettings =
             GrpcCallSettings
@@ -159,6 +183,11 @@ public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
                     })
                 .build();
 
+    this.generateConversionRatesCallable =
+        callableFactory.createUnaryCallable(
+            generateConversionRatesTransportSettings,
+            settings.generateConversionRatesSettings(),
+            clientContext);
     this.listPlannableLocationsCallable =
         callableFactory.createUnaryCallable(
             listPlannableLocationsTransportSettings,
@@ -181,6 +210,12 @@ public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
 
   public GrpcOperationsStub getOperationsStub() {
     return operationsStub;
+  }
+
+  @Override
+  public UnaryCallable<GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+      generateConversionRatesCallable() {
+    return generateConversionRatesCallable;
   }
 
   @Override

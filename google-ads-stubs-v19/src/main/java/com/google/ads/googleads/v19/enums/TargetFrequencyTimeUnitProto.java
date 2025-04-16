@@ -31,16 +31,16 @@ public final class TargetFrequencyTimeUnitProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v19/enums/target_" +
       "frequency_time_unit.proto\022\036google.ads.go" +
-      "ogleads.v19.enums\"b\n\033TargetFrequencyTime" +
-      "UnitEnum\"C\n\027TargetFrequencyTimeUnit\022\017\n\013U" +
-      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006WEEKLY\020\002B\366\001" +
-      "\n\"com.google.ads.googleads.v19.enumsB\034Ta" +
-      "rgetFrequencyTimeUnitProtoP\001ZCgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v19/enums;enums\242\002\003GAA\252\002\036Google.Ads.Goo" +
-      "gleAds.V19.Enums\312\002\036Google\\Ads\\GoogleAds\\" +
-      "V19\\Enums\352\002\"Google::Ads::GoogleAds::V19:" +
-      ":Enumsb\006proto3"
+      "ogleads.v19.enums\"o\n\033TargetFrequencyTime" +
+      "UnitEnum\"P\n\027TargetFrequencyTimeUnit\022\017\n\013U" +
+      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006WEEKLY\020\002\022\013\n" +
+      "\007MONTHLY\020\003B\366\001\n\"com.google.ads.googleads." +
+      "v19.enumsB\034TargetFrequencyTimeUnitProtoP" +
+      "\001ZCgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v19/enums;enums\242\002\003GAA\252\002\036G" +
+      "oogle.Ads.GoogleAds.V19.Enums\312\002\036Google\\A" +
+      "ds\\GoogleAds\\V19\\Enums\352\002\"Google::Ads::Go" +
+      "ogleAds::V19::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

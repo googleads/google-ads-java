@@ -49,6 +49,37 @@ public final class LocalServicesLeadServiceGrpc {
     return getAppendLeadConversationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest,
+      com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse> getProvideLeadFeedbackMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ProvideLeadFeedback",
+      requestType = com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest.class,
+      responseType = com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest,
+      com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse> getProvideLeadFeedbackMethod() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest, com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse> getProvideLeadFeedbackMethod;
+    if ((getProvideLeadFeedbackMethod = LocalServicesLeadServiceGrpc.getProvideLeadFeedbackMethod) == null) {
+      synchronized (LocalServicesLeadServiceGrpc.class) {
+        if ((getProvideLeadFeedbackMethod = LocalServicesLeadServiceGrpc.getProvideLeadFeedbackMethod) == null) {
+          LocalServicesLeadServiceGrpc.getProvideLeadFeedbackMethod = getProvideLeadFeedbackMethod =
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest, com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProvideLeadFeedback"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new LocalServicesLeadServiceMethodDescriptorSupplier("ProvideLeadFeedback"))
+              .build();
+        }
+      }
+    }
+    return getProvideLeadFeedbackMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -125,6 +156,16 @@ public final class LocalServicesLeadServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v19.services.AppendLeadConversationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAppendLeadConversationMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * RPC to provide feedback on Local Services Lead resources.
+     * </pre>
+     */
+    default void provideLeadFeedback(com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProvideLeadFeedbackMethod(), responseObserver);
+    }
   }
 
   /**
@@ -171,6 +212,17 @@ public final class LocalServicesLeadServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAppendLeadConversationMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * RPC to provide feedback on Local Services Lead resources.
+     * </pre>
+     */
+    public void provideLeadFeedback(com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getProvideLeadFeedbackMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -202,6 +254,16 @@ public final class LocalServicesLeadServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAppendLeadConversationMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * RPC to provide feedback on Local Services Lead resources.
+     * </pre>
+     */
+    public com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse provideLeadFeedback(com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getProvideLeadFeedbackMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -232,6 +294,16 @@ public final class LocalServicesLeadServiceGrpc {
     public com.google.ads.googleads.v19.services.AppendLeadConversationResponse appendLeadConversation(com.google.ads.googleads.v19.services.AppendLeadConversationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAppendLeadConversationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RPC to provide feedback on Local Services Lead resources.
+     * </pre>
+     */
+    public com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse provideLeadFeedback(com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getProvideLeadFeedbackMethod(), getCallOptions(), request);
     }
   }
 
@@ -265,9 +337,21 @@ public final class LocalServicesLeadServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAppendLeadConversationMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * RPC to provide feedback on Local Services Lead resources.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse> provideLeadFeedback(
+        com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getProvideLeadFeedbackMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_APPEND_LEAD_CONVERSATION = 0;
+  private static final int METHODID_PROVIDE_LEAD_FEEDBACK = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -289,6 +373,10 @@ public final class LocalServicesLeadServiceGrpc {
         case METHODID_APPEND_LEAD_CONVERSATION:
           serviceImpl.appendLeadConversation((com.google.ads.googleads.v19.services.AppendLeadConversationRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v19.services.AppendLeadConversationResponse>) responseObserver);
+          break;
+        case METHODID_PROVIDE_LEAD_FEEDBACK:
+          serviceImpl.provideLeadFeedback((com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -315,6 +403,13 @@ public final class LocalServicesLeadServiceGrpc {
               com.google.ads.googleads.v19.services.AppendLeadConversationRequest,
               com.google.ads.googleads.v19.services.AppendLeadConversationResponse>(
                 service, METHODID_APPEND_LEAD_CONVERSATION)))
+        .addMethod(
+          getProvideLeadFeedbackMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest,
+              com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse>(
+                service, METHODID_PROVIDE_LEAD_FEEDBACK)))
         .build();
   }
 
@@ -364,6 +459,7 @@ public final class LocalServicesLeadServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new LocalServicesLeadServiceFileDescriptorSupplier())
               .addMethod(getAppendLeadConversationMethod())
+              .addMethod(getProvideLeadFeedbackMethod())
               .build();
         }
       }

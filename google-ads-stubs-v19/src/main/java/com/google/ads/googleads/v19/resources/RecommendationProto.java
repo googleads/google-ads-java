@@ -311,7 +311,7 @@ public final class RecommendationProto {
       "urces/ad.proto\032.google/ads/googleads/v19" +
       "/resources/asset.proto\032\037google/api/field" +
       "_behavior.proto\032\031google/api/resource.pro" +
-      "to\"\317\206\001\n\016Recommendation\022F\n\rresource_name\030" +
+      "to\"\245\207\001\n\016Recommendation\022F\n\rresource_name\030" +
       "\001 \001(\tB/\340A\005\372A)\n\'googleads.googleapis.com/" +
       "Recommendation\022\\\n\004type\030\002 \001(\0162I.google.ad" +
       "s.googleads.v19.enums.RecommendationType" +
@@ -706,49 +706,51 @@ public final class RecommendationProto {
       "ros\030\001 \001(\003B\003\340A\003\022*\n\035recommended_new_amount" +
       "_micros\030\002 \001(\003B\003\340A\003\022\033\n\016new_start_date\030\003 \001" +
       "(\tB\003\340A\003\032#\n!PerformanceMaxOptInRecommenda" +
-      "tion\032I\n-ImprovePerformanceMaxAdStrengthR" +
-      "ecommendation\022\030\n\013asset_group\030\001 \001(\tB\003\340A\003\032" +
-      "X\n=MigrateDynamicSearchAdsCampaignToPerf" +
-      "ormanceMaxRecommendation\022\027\n\napply_link\030\001" +
-      " \001(\tB\003\340A\003\032\264\001\n%ForecastingSetTargetCpaRec" +
-      "ommendation\022*\n\035recommended_target_cpa_mi" +
-      "cros\030\001 \001(\003B\003\340A\003\022_\n\017campaign_budget\030\002 \001(\013" +
-      "2A.google.ads.googleads.v19.resources.Re" +
-      "commendation.CampaignBudgetB\003\340A\003\032,\n*Maxi" +
-      "mizeConversionValueOptInRecommendation\032(" +
-      "\n&ImproveGoogleTagCoverageRecommendation" +
-      "\032+\n)PerformanceMaxFinalUrlOptInRecommend" +
-      "ation\032\354\002\n&RefreshCustomerMatchListRecomm" +
-      "endation\022\031\n\014user_list_id\030\001 \001(\003B\003\340A\003\022\033\n\016u" +
-      "ser_list_name\030\002 \001(\tB\003\340A\003\022$\n\027days_since_l" +
-      "ast_refresh\030\003 \001(\003B\003\340A\003\022a\n\024top_spending_a" +
-      "ccount\030\004 \003(\0132>.google.ads.googleads.v19." +
-      "resources.Recommendation.AccountInfoB\003\340A" +
-      "\003\022%\n\030targeting_accounts_count\030\005 \001(\003B\003\340A\003" +
-      "\022Z\n\rowner_account\030\006 \001(\0132>.google.ads.goo" +
-      "gleads.v19.resources.Recommendation.Acco" +
-      "untInfoB\003\340A\003\032F\n\013AccountInfo\022\030\n\013customer_" +
-      "id\030\001 \001(\003B\003\340A\003\022\035\n\020descriptive_name\030\002 \001(\tB" +
-      "\003\340A\003\032h\n!CustomAudienceOptInRecommendatio" +
-      "n\022C\n\010keywords\030\001 \003(\0132,.google.ads.googlea" +
-      "ds.v19.common.KeywordInfoB\003\340A\003\032\035\n\033LeadFo" +
-      "rmAssetRecommendation\032\274\001\n(ImproveDemandG" +
-      "enAdStrengthRecommendation\022\017\n\002ad\030\001 \001(\tB\003" +
-      "\340A\003\022S\n\013ad_strength\030\002 \001(\01629.google.ads.go" +
-      "ogleads.v19.enums.AdStrengthEnum.AdStren" +
-      "gthB\003\340A\003\022*\n\035demand_gen_asset_action_item" +
-      "s\030\003 \003(\tB\003\340A\003:i\352Af\n\'googleads.googleapis." +
-      "com/Recommendation\022;customers/{customer_" +
-      "id}/recommendations/{recommendation_id}B" +
-      "\020\n\016recommendationB\022\n\020_campaign_budgetB\013\n" +
-      "\t_campaignB\013\n\t_ad_groupB\014\n\n_dismissedB\205\002" +
-      "\n&com.google.ads.googleads.v19.resources" +
-      "B\023RecommendationProtoP\001ZKgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v19" +
-      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
-      "GoogleAds.V19.Resources\312\002\"Google\\Ads\\Goo" +
-      "gleAds\\V19\\Resources\352\002&Google::Ads::Goog" +
-      "leAds::V19::Resourcesb\006proto3"
+      "tion\032\236\001\n-ImprovePerformanceMaxAdStrength" +
+      "Recommendation\022\030\n\013asset_group\030\001 \001(\tB\003\340A\003" +
+      "\022S\n\013ad_strength\030\002 \001(\01629.google.ads.googl" +
+      "eads.v19.enums.AdStrengthEnum.AdStrength" +
+      "B\003\340A\003\032X\n=MigrateDynamicSearchAdsCampaign" +
+      "ToPerformanceMaxRecommendation\022\027\n\napply_" +
+      "link\030\001 \001(\tB\003\340A\003\032\264\001\n%ForecastingSetTarget" +
+      "CpaRecommendation\022*\n\035recommended_target_" +
+      "cpa_micros\030\001 \001(\003B\003\340A\003\022_\n\017campaign_budget" +
+      "\030\002 \001(\0132A.google.ads.googleads.v19.resour" +
+      "ces.Recommendation.CampaignBudgetB\003\340A\003\032," +
+      "\n*MaximizeConversionValueOptInRecommenda" +
+      "tion\032(\n&ImproveGoogleTagCoverageRecommen" +
+      "dation\032+\n)PerformanceMaxFinalUrlOptInRec" +
+      "ommendation\032\354\002\n&RefreshCustomerMatchList" +
+      "Recommendation\022\031\n\014user_list_id\030\001 \001(\003B\003\340A" +
+      "\003\022\033\n\016user_list_name\030\002 \001(\tB\003\340A\003\022$\n\027days_s" +
+      "ince_last_refresh\030\003 \001(\003B\003\340A\003\022a\n\024top_spen" +
+      "ding_account\030\004 \003(\0132>.google.ads.googlead" +
+      "s.v19.resources.Recommendation.AccountIn" +
+      "foB\003\340A\003\022%\n\030targeting_accounts_count\030\005 \001(" +
+      "\003B\003\340A\003\022Z\n\rowner_account\030\006 \001(\0132>.google.a" +
+      "ds.googleads.v19.resources.Recommendatio" +
+      "n.AccountInfoB\003\340A\003\032F\n\013AccountInfo\022\030\n\013cus" +
+      "tomer_id\030\001 \001(\003B\003\340A\003\022\035\n\020descriptive_name\030" +
+      "\002 \001(\tB\003\340A\003\032h\n!CustomAudienceOptInRecomme" +
+      "ndation\022C\n\010keywords\030\001 \003(\0132,.google.ads.g" +
+      "oogleads.v19.common.KeywordInfoB\003\340A\003\032\035\n\033" +
+      "LeadFormAssetRecommendation\032\274\001\n(ImproveD" +
+      "emandGenAdStrengthRecommendation\022\017\n\002ad\030\001" +
+      " \001(\tB\003\340A\003\022S\n\013ad_strength\030\002 \001(\01629.google." +
+      "ads.googleads.v19.enums.AdStrengthEnum.A" +
+      "dStrengthB\003\340A\003\022*\n\035demand_gen_asset_actio" +
+      "n_items\030\003 \003(\tB\003\340A\003:i\352Af\n\'googleads.googl" +
+      "eapis.com/Recommendation\022;customers/{cus" +
+      "tomer_id}/recommendations/{recommendatio" +
+      "n_id}B\020\n\016recommendationB\022\n\020_campaign_bud" +
+      "getB\013\n\t_campaignB\013\n\t_ad_groupB\014\n\n_dismis" +
+      "sedB\205\002\n&com.google.ads.googleads.v19.res" +
+      "ourcesB\023RecommendationProtoP\001ZKgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v19/resources;resources\242\002\003GAA\252\002\"Googl" +
+      "e.Ads.GoogleAds.V19.Resources\312\002\"Google\\A" +
+      "ds\\GoogleAds\\V19\\Resources\352\002&Google::Ads" +
+      "::GoogleAds::V19::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1028,7 +1030,7 @@ public final class RecommendationProto {
     internal_static_google_ads_googleads_v19_resources_Recommendation_ImprovePerformanceMaxAdStrengthRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v19_resources_Recommendation_ImprovePerformanceMaxAdStrengthRecommendation_descriptor,
-        new java.lang.String[] { "AssetGroup", });
+        new java.lang.String[] { "AssetGroup", "AdStrength", });
     internal_static_google_ads_googleads_v19_resources_Recommendation_MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation_descriptor =
       internal_static_google_ads_googleads_v19_resources_Recommendation_descriptor.getNestedTypes().get(40);
     internal_static_google_ads_googleads_v19_resources_Recommendation_MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation_fieldAccessorTable = new

@@ -76,6 +76,20 @@ import javax.annotation.Generated;
  *      </ul>
  *       </td>
  *    </tr>
+ *    <tr>
+ *      <td><p> ProvideLeadFeedback</td>
+ *      <td><p> RPC to provide feedback on Local Services Lead resources.</td>
+ *      <td>
+ *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
+ *      <ul>
+ *           <li><p> provideLeadFeedback(ProvideLeadFeedbackRequest request)
+ *      </ul>
+ *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
+ *      <ul>
+ *           <li><p> provideLeadFeedbackCallable()
+ *      </ul>
+ *       </td>
+ *    </tr>
  *  </table>
  *
  * <p>See the individual methods for example code.
@@ -268,6 +282,68 @@ public class LocalServicesLeadServiceClient implements BackgroundResource {
   public final UnaryCallable<AppendLeadConversationRequest, AppendLeadConversationResponse>
       appendLeadConversationCallable() {
     return stub.appendLeadConversationCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * RPC to provide feedback on Local Services Lead resources.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (LocalServicesLeadServiceClient localServicesLeadServiceClient =
+   *     LocalServicesLeadServiceClient.create()) {
+   *   ProvideLeadFeedbackRequest request =
+   *       ProvideLeadFeedbackRequest.newBuilder()
+   *           .setResourceName(
+   *               LocalServicesLeadName.of("[CUSTOMER_ID]", "[LOCAL_SERVICES_LEAD_ID]").toString())
+   *           .build();
+   *   ProvideLeadFeedbackResponse response =
+   *       localServicesLeadServiceClient.provideLeadFeedback(request);
+   * }
+   * }</pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ProvideLeadFeedbackResponse provideLeadFeedback(ProvideLeadFeedbackRequest request) {
+    return provideLeadFeedbackCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * RPC to provide feedback on Local Services Lead resources.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (LocalServicesLeadServiceClient localServicesLeadServiceClient =
+   *     LocalServicesLeadServiceClient.create()) {
+   *   ProvideLeadFeedbackRequest request =
+   *       ProvideLeadFeedbackRequest.newBuilder()
+   *           .setResourceName(
+   *               LocalServicesLeadName.of("[CUSTOMER_ID]", "[LOCAL_SERVICES_LEAD_ID]").toString())
+   *           .build();
+   *   ApiFuture<ProvideLeadFeedbackResponse> future =
+   *       localServicesLeadServiceClient.provideLeadFeedbackCallable().futureCall(request);
+   *   // Do something.
+   *   ProvideLeadFeedbackResponse response = future.get();
+   * }
+   * }</pre>
+   */
+  public final UnaryCallable<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+      provideLeadFeedbackCallable() {
+    return stub.provideLeadFeedbackCallable();
   }
 
   @Override

@@ -270,4 +270,14 @@ public interface LocalServicesLeadOrBuilder extends
    * <code>optional .google.ads.googleads.v19.resources.CreditDetails credit_details = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v19.resources.CreditDetailsOrBuilder getCreditDetailsOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. True if the advertiser submitted feedback for the lead.
+   * </pre>
+   *
+   * <code>bool lead_feedback_submitted = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The leadFeedbackSubmitted.
+   */
+  boolean getLeadFeedbackSubmitted();
 }

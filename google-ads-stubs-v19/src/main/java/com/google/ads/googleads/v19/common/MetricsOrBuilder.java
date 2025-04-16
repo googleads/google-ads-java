@@ -915,6 +915,27 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * Participated in-app actions. The number of in app actions that come
+   * directly or indirectly from the campaign.
+   * </pre>
+   *
+   * <code>optional double biddable_cohort_app_post_install_conversions = 378;</code>
+   * @return Whether the biddableCohortAppPostInstallConversions field is set.
+   */
+  boolean hasBiddableCohortAppPostInstallConversions();
+  /**
+   * <pre>
+   * Participated in-app actions. The number of in app actions that come
+   * directly or indirectly from the campaign.
+   * </pre>
+   *
+   * <code>optional double biddable_cohort_app_post_install_conversions = 378;</code>
+   * @return The biddableCohortAppPostInstallConversions.
+   */
+  double getBiddableCohortAppPostInstallConversions();
+
+  /**
+   * <pre>
    * An indication on how other advertisers' Shopping ads for similar products
    * are performing based on how often people who see their ad click on it.
    * </pre>
@@ -5223,4 +5244,58 @@ public interface MetricsOrBuilder extends
    * @return The videoViewRateShorts.
    */
   double getVideoViewRateShorts();
+
+  /**
+   * <pre>
+   * All co-viewed impressions represent the total number of people who saw your
+   * ad. This includes people who are signed into their Google Account, as well
+   * as other people who are watching the same ad on a connected TV. This metric
+   * is only available for the Campaign resource with adjusted_age_range and
+   * adjusted_gender segments. These segmentations are mandatory to get the
+   * all coviewed impressions.
+   * </pre>
+   *
+   * <code>optional int64 coviewed_impressions = 380;</code>
+   * @return Whether the coviewedImpressions field is set.
+   */
+  boolean hasCoviewedImpressions();
+  /**
+   * <pre>
+   * All co-viewed impressions represent the total number of people who saw your
+   * ad. This includes people who are signed into their Google Account, as well
+   * as other people who are watching the same ad on a connected TV. This metric
+   * is only available for the Campaign resource with adjusted_age_range and
+   * adjusted_gender segments. These segmentations are mandatory to get the
+   * all coviewed impressions.
+   * </pre>
+   *
+   * <code>optional int64 coviewed_impressions = 380;</code>
+   * @return The coviewedImpressions.
+   */
+  long getCoviewedImpressions();
+
+  /**
+   * <pre>
+   * Primary impression is counted each time your ad is served. This metric is
+   * only available for the Campaign resource with adjusted_age_range and
+   * adjusted_gender segments. These segmentations are mandatory to get the
+   * primary impressions.
+   * </pre>
+   *
+   * <code>optional int64 primary_impressions = 381;</code>
+   * @return Whether the primaryImpressions field is set.
+   */
+  boolean hasPrimaryImpressions();
+  /**
+   * <pre>
+   * Primary impression is counted each time your ad is served. This metric is
+   * only available for the Campaign resource with adjusted_age_range and
+   * adjusted_gender segments. These segmentations are mandatory to get the
+   * primary impressions.
+   * </pre>
+   *
+   * <code>optional int64 primary_impressions = 381;</code>
+   * @return The primaryImpressions.
+   */
+  long getPrimaryImpressions();
 }
