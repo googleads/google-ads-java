@@ -326,28 +326,28 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Conversion tracking setting for a customer.
+   * Immutable. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the conversionTrackingSetting field is set.
    */
   boolean hasConversionTrackingSetting();
   /**
    * <pre>
-   * Output only. Conversion tracking setting for a customer.
+   * Immutable. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The conversionTrackingSetting.
    */
   com.google.ads.googleads.v19.resources.ConversionTrackingSetting getConversionTrackingSetting();
   /**
    * <pre>
-   * Output only. Conversion tracking setting for a customer.
+   * Immutable. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v19.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder();
 

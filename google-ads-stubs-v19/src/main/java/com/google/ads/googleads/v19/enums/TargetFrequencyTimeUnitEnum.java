@@ -76,6 +76,14 @@ private static final long serialVersionUID = 0L;
      * <code>WEEKLY = 2;</code>
      */
     WEEKLY(2),
+    /**
+     * <pre>
+     * Optimize bidding to reach Target Frequency in a month.
+     * </pre>
+     *
+     * <code>MONTHLY = 3;</code>
+     */
+    MONTHLY(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -103,6 +111,14 @@ private static final long serialVersionUID = 0L;
      * <code>WEEKLY = 2;</code>
      */
     public static final int WEEKLY_VALUE = 2;
+    /**
+     * <pre>
+     * Optimize bidding to reach Target Frequency in a month.
+     * </pre>
+     *
+     * <code>MONTHLY = 3;</code>
+     */
+    public static final int MONTHLY_VALUE = 3;
 
 
     public final int getNumber() {
@@ -132,6 +148,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return WEEKLY;
+        case 3: return MONTHLY;
         default: return null;
       }
     }

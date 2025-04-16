@@ -509,6 +509,21 @@ private static final long serialVersionUID = 0L;
     return creditDetails_ == null ? com.google.ads.googleads.v19.resources.CreditDetails.getDefaultInstance() : creditDetails_;
   }
 
+  public static final int LEAD_FEEDBACK_SUBMITTED_FIELD_NUMBER = 13;
+  private boolean leadFeedbackSubmitted_ = false;
+  /**
+   * <pre>
+   * Output only. True if the advertiser submitted feedback for the lead.
+   * </pre>
+   *
+   * <code>bool lead_feedback_submitted = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The leadFeedbackSubmitted.
+   */
+  @java.lang.Override
+  public boolean getLeadFeedbackSubmitted() {
+    return leadFeedbackSubmitted_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -558,6 +573,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(12, getCreditDetails());
+    }
+    if (leadFeedbackSubmitted_ != false) {
+      output.writeBool(13, leadFeedbackSubmitted_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -611,6 +629,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getCreditDetails());
     }
+    if (leadFeedbackSubmitted_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(13, leadFeedbackSubmitted_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -657,6 +679,8 @@ private static final long serialVersionUID = 0L;
       if (!getCreditDetails()
           .equals(other.getCreditDetails())) return false;
     }
+    if (getLeadFeedbackSubmitted()
+        != other.getLeadFeedbackSubmitted()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -700,6 +724,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CREDIT_DETAILS_FIELD_NUMBER;
       hash = (53 * hash) + getCreditDetails().hashCode();
     }
+    hash = (37 * hash) + LEAD_FEEDBACK_SUBMITTED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getLeadFeedbackSubmitted());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -870,6 +897,7 @@ private static final long serialVersionUID = 0L;
         creditDetailsBuilder_.dispose();
         creditDetailsBuilder_ = null;
       }
+      leadFeedbackSubmitted_ = false;
       return this;
     }
 
@@ -948,6 +976,9 @@ private static final long serialVersionUID = 0L;
             ? creditDetails_
             : creditDetailsBuilder_.build();
         to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.leadFeedbackSubmitted_ = leadFeedbackSubmitted_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1042,6 +1073,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasCreditDetails()) {
         mergeCreditDetails(other.getCreditDetails());
       }
+      if (other.getLeadFeedbackSubmitted() != false) {
+        setLeadFeedbackSubmitted(other.getLeadFeedbackSubmitted());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1134,6 +1168,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 98
+            case 104: {
+              leadFeedbackSubmitted_ = input.readBool();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2374,6 +2413,50 @@ private static final long serialVersionUID = 0L;
         creditDetails_ = null;
       }
       return creditDetailsBuilder_;
+    }
+
+    private boolean leadFeedbackSubmitted_ ;
+    /**
+     * <pre>
+     * Output only. True if the advertiser submitted feedback for the lead.
+     * </pre>
+     *
+     * <code>bool lead_feedback_submitted = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The leadFeedbackSubmitted.
+     */
+    @java.lang.Override
+    public boolean getLeadFeedbackSubmitted() {
+      return leadFeedbackSubmitted_;
+    }
+    /**
+     * <pre>
+     * Output only. True if the advertiser submitted feedback for the lead.
+     * </pre>
+     *
+     * <code>bool lead_feedback_submitted = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The leadFeedbackSubmitted to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLeadFeedbackSubmitted(boolean value) {
+
+      leadFeedbackSubmitted_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. True if the advertiser submitted feedback for the lead.
+     * </pre>
+     *
+     * <code>bool lead_feedback_submitted = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLeadFeedbackSubmitted() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      leadFeedbackSubmitted_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

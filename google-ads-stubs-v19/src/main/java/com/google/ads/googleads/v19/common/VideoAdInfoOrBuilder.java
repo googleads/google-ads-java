@@ -170,5 +170,32 @@ public interface VideoAdInfoOrBuilder extends
    */
   com.google.ads.googleads.v19.common.InFeedVideoAdInfoOrBuilder getInFeedOrBuilder();
 
+  /**
+   * <pre>
+   * YouTube Audio ad format.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+   * @return Whether the audio field is set.
+   */
+  boolean hasAudio();
+  /**
+   * <pre>
+   * YouTube Audio ad format.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+   * @return The audio.
+   */
+  com.google.ads.googleads.v19.common.YouTubeAudioAdInfo getAudio();
+  /**
+   * <pre>
+   * YouTube Audio ad format.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+   */
+  com.google.ads.googleads.v19.common.YouTubeAudioAdInfoOrBuilder getAudioOrBuilder();
+
   com.google.ads.googleads.v19.common.VideoAdInfo.FormatCase getFormatCase();
 }

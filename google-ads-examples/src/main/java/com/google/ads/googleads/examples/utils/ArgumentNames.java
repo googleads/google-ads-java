@@ -96,6 +96,8 @@ public final class ArgumentNames {
   public static final String RESTATEMENT_VALUE = "--restatementValue";
   public static final String RUN_JOB = "--runJob";
   public static final String SALES_COUNTRY = "--salesCountry";
+  public static final String SESSION_ATTRIBUTES_ENCODED = "--sessionAttributesEncoded";
+  public static final String SESSION_ATTRIBUTES_MAP = "--sessionAttributesMap";
   public static final String START_DATE_TIME = "--startDateTime";
   public static final String THINGS_TO_DO_CENTER_ACCOUNT_ID = "--thingsToDoCenterAccountId";
   public static final String USER_AGENT = "--userAgent";

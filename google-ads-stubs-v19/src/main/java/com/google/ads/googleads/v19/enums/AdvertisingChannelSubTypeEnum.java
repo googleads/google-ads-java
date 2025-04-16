@@ -220,6 +220,14 @@ private static final long serialVersionUID = 0L;
      * <code>TRAVEL_ACTIVITIES = 20;</code>
      */
     TRAVEL_ACTIVITIES(20),
+    /**
+     * <pre>
+     * YouTube Audio campaigns.
+     * </pre>
+     *
+     * <code>YOUTUBE_AUDIO = 22;</code>
+     */
+    YOUTUBE_AUDIO(22),
     UNRECOGNIZED(-1),
     ;
 
@@ -391,6 +399,14 @@ private static final long serialVersionUID = 0L;
      * <code>TRAVEL_ACTIVITIES = 20;</code>
      */
     public static final int TRAVEL_ACTIVITIES_VALUE = 20;
+    /**
+     * <pre>
+     * YouTube Audio campaigns.
+     * </pre>
+     *
+     * <code>YOUTUBE_AUDIO = 22;</code>
+     */
+    public static final int YOUTUBE_AUDIO_VALUE = 22;
 
 
     public final int getNumber() {
@@ -437,6 +453,7 @@ private static final long serialVersionUID = 0L;
         case 18: return APP_CAMPAIGN_FOR_PRE_REGISTRATION;
         case 19: return VIDEO_REACH_TARGET_FREQUENCY;
         case 20: return TRAVEL_ACTIVITIES;
+        case 22: return YOUTUBE_AUDIO;
         default: return null;
       }
     }

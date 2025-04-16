@@ -31,7 +31,7 @@ public final class AdGroupTypeProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v19/enums/ad_grou" +
       "p_type.proto\022\036google.ads.googleads.v19.e" +
-      "nums\"\315\003\n\017AdGroupTypeEnum\"\271\003\n\013AdGroupType" +
+      "nums\"\340\003\n\017AdGroupTypeEnum\"\314\003\n\013AdGroupType" +
       "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\023\n\017SEARCH" +
       "_STANDARD\020\002\022\024\n\020DISPLAY_STANDARD\020\003\022\030\n\024SHO" +
       "PPING_PRODUCT_ADS\020\004\022\r\n\tHOTEL_ADS\020\006\022\026\n\022SH" +
@@ -42,13 +42,14 @@ public final class AdGroupTypeProto {
       "\n\037SHOPPING_COMPARISON_LISTING_ADS\020\016\022\026\n\022P" +
       "ROMOTED_HOTEL_ADS\020\017\022\024\n\020VIDEO_RESPONSIVE\020" +
       "\020\022\031\n\025VIDEO_EFFICIENT_REACH\020\021\022\026\n\022SMART_CA" +
-      "MPAIGN_ADS\020\022\022\016\n\nTRAVEL_ADS\020\023B\352\001\n\"com.goo" +
-      "gle.ads.googleads.v19.enumsB\020AdGroupType" +
-      "ProtoP\001ZCgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v19/enums;enums\242\002\003G" +
-      "AA\252\002\036Google.Ads.GoogleAds.V19.Enums\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V19\\Enums\352\002\"Google::A" +
-      "ds::GoogleAds::V19::Enumsb\006proto3"
+      "MPAIGN_ADS\020\022\022\016\n\nTRAVEL_ADS\020\023\022\021\n\rYOUTUBE_" +
+      "AUDIO\020\024B\352\001\n\"com.google.ads.googleads.v19" +
+      ".enumsB\020AdGroupTypeProtoP\001ZCgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v19/enums;enums\242\002\003GAA\252\002\036Google.Ads.Googl" +
+      "eAds.V19.Enums\312\002\036Google\\Ads\\GoogleAds\\V1" +
+      "9\\Enums\352\002\"Google::Ads::GoogleAds::V19::E" +
+      "numsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

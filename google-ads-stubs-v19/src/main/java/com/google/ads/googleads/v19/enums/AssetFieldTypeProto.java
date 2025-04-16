@@ -31,7 +31,7 @@ public final class AssetFieldTypeProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v19/enums/asset_f" +
       "ield_type.proto\022\036google.ads.googleads.v1" +
-      "9.enums\"\342\004\n\022AssetFieldTypeEnum\"\313\004\n\016Asset" +
+      "9.enums\"\205\005\n\022AssetFieldTypeEnum\"\356\004\n\016Asset" +
       "FieldType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
       "\014\n\010HEADLINE\020\002\022\017\n\013DESCRIPTION\020\003\022\025\n\021MANDAT" +
       "ORY_AD_TEXT\020\004\022\023\n\017MARKETING_IMAGE\020\005\022\020\n\014ME" +
@@ -46,13 +46,14 @@ public final class AssetFieldTypeProto {
       "DEO\020\027\022\034\n\030CALL_TO_ACTION_SELECTION\020\031\022\014\n\010A" +
       "D_IMAGE\020\032\022\021\n\rBUSINESS_LOGO\020\033\022\022\n\016HOTEL_PR" +
       "OPERTY\020\034\022\034\n\030DEMAND_GEN_CAROUSEL_CARD\020\036\022\024" +
-      "\n\020BUSINESS_MESSAGE\020\037B\355\001\n\"com.google.ads." +
-      "googleads.v19.enumsB\023AssetFieldTypeProto" +
-      "P\001ZCgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v19/enums;enums\242\002\003GAA\252\002\036" +
-      "Google.Ads.GoogleAds.V19.Enums\312\002\036Google\\" +
-      "Ads\\GoogleAds\\V19\\Enums\352\002\"Google::Ads::G" +
-      "oogleAds::V19::Enumsb\006proto3"
+      "\n\020BUSINESS_MESSAGE\020\037\022!\n\035TALL_PORTRAIT_MA" +
+      "RKETING_IMAGE\020 B\355\001\n\"com.google.ads.googl" +
+      "eads.v19.enumsB\023AssetFieldTypeProtoP\001ZCg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v19/enums;enums\242\002\003GAA\252\002\036Googl" +
+      "e.Ads.GoogleAds.V19.Enums\312\002\036Google\\Ads\\G" +
+      "oogleAds\\V19\\Enums\352\002\"Google::Ads::Google" +
+      "Ads::V19::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

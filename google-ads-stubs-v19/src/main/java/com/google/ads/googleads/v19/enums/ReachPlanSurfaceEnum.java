@@ -72,6 +72,22 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
+     * Discover feed ad surface.
+     * </pre>
+     *
+     * <code>DISCOVER_FEED = 7;</code>
+     */
+    DISCOVER_FEED(7),
+    /**
+     * <pre>
+     * Gmail ad surface.
+     * </pre>
+     *
+     * <code>GMAIL = 8;</code>
+     */
+    GMAIL(8),
+    /**
+     * <pre>
      * In-Feed ad surface.
      * </pre>
      *
@@ -129,6 +145,22 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN = 1;</code>
      */
     public static final int UNKNOWN_VALUE = 1;
+    /**
+     * <pre>
+     * Discover feed ad surface.
+     * </pre>
+     *
+     * <code>DISCOVER_FEED = 7;</code>
+     */
+    public static final int DISCOVER_FEED_VALUE = 7;
+    /**
+     * <pre>
+     * Gmail ad surface.
+     * </pre>
+     *
+     * <code>GMAIL = 8;</code>
+     */
+    public static final int GMAIL_VALUE = 8;
     /**
      * <pre>
      * In-Feed ad surface.
@@ -197,6 +229,8 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
+        case 7: return DISCOVER_FEED;
+        case 8: return GMAIL;
         case 2: return IN_FEED;
         case 3: return IN_STREAM_BUMPER;
         case 4: return IN_STREAM_NON_SKIPPABLE;

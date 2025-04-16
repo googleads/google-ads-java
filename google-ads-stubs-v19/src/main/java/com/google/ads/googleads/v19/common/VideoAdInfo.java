@@ -55,6 +55,7 @@ private static final long serialVersionUID = 0L;
     OUT_STREAM(4),
     NON_SKIPPABLE(5),
     IN_FEED(9),
+    AUDIO(10),
     FORMAT_NOT_SET(0);
     private final int value;
     private FormatCase(int value) {
@@ -77,6 +78,7 @@ private static final long serialVersionUID = 0L;
         case 4: return OUT_STREAM;
         case 5: return NON_SKIPPABLE;
         case 9: return IN_FEED;
+        case 10: return AUDIO;
         case 0: return FORMAT_NOT_SET;
         default: return null;
       }
@@ -345,6 +347,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v19.common.InFeedVideoAdInfo.getDefaultInstance();
   }
 
+  public static final int AUDIO_FIELD_NUMBER = 10;
+  /**
+   * <pre>
+   * YouTube Audio ad format.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+   * @return Whether the audio field is set.
+   */
+  @java.lang.Override
+  public boolean hasAudio() {
+    return formatCase_ == 10;
+  }
+  /**
+   * <pre>
+   * YouTube Audio ad format.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+   * @return The audio.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v19.common.YouTubeAudioAdInfo getAudio() {
+    if (formatCase_ == 10) {
+       return (com.google.ads.googleads.v19.common.YouTubeAudioAdInfo) format_;
+    }
+    return com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * YouTube Audio ad format.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v19.common.YouTubeAudioAdInfoOrBuilder getAudioOrBuilder() {
+    if (formatCase_ == 10) {
+       return (com.google.ads.googleads.v19.common.YouTubeAudioAdInfo) format_;
+    }
+    return com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -376,6 +421,9 @@ private static final long serialVersionUID = 0L;
     }
     if (formatCase_ == 9) {
       output.writeMessage(9, (com.google.ads.googleads.v19.common.InFeedVideoAdInfo) format_);
+    }
+    if (formatCase_ == 10) {
+      output.writeMessage(10, (com.google.ads.googleads.v19.common.YouTubeAudioAdInfo) format_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -409,6 +457,10 @@ private static final long serialVersionUID = 0L;
     if (formatCase_ == 9) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, (com.google.ads.googleads.v19.common.InFeedVideoAdInfo) format_);
+    }
+    if (formatCase_ == 10) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, (com.google.ads.googleads.v19.common.YouTubeAudioAdInfo) format_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -452,6 +504,10 @@ private static final long serialVersionUID = 0L;
         if (!getInFeed()
             .equals(other.getInFeed())) return false;
         break;
+      case 10:
+        if (!getAudio()
+            .equals(other.getAudio())) return false;
+        break;
       case 0:
       default:
     }
@@ -490,6 +546,10 @@ private static final long serialVersionUID = 0L;
       case 9:
         hash = (37 * hash) + IN_FEED_FIELD_NUMBER;
         hash = (53 * hash) + getInFeed().hashCode();
+        break;
+      case 10:
+        hash = (37 * hash) + AUDIO_FIELD_NUMBER;
+        hash = (53 * hash) + getAudio().hashCode();
         break;
       case 0:
       default:
@@ -655,6 +715,9 @@ private static final long serialVersionUID = 0L;
       if (inFeedBuilder_ != null) {
         inFeedBuilder_.clear();
       }
+      if (audioBuilder_ != null) {
+        audioBuilder_.clear();
+      }
       formatCase_ = 0;
       format_ = null;
       return this;
@@ -724,6 +787,10 @@ private static final long serialVersionUID = 0L;
           inFeedBuilder_ != null) {
         result.format_ = inFeedBuilder_.build();
       }
+      if (formatCase_ == 10 &&
+          audioBuilder_ != null) {
+        result.format_ = audioBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -792,6 +859,10 @@ private static final long serialVersionUID = 0L;
         }
         case IN_FEED: {
           mergeInFeed(other.getInFeed());
+          break;
+        }
+        case AUDIO: {
+          mergeAudio(other.getAudio());
           break;
         }
         case FORMAT_NOT_SET: {
@@ -866,6 +937,13 @@ private static final long serialVersionUID = 0L;
               formatCase_ = 9;
               break;
             } // case 74
+            case 82: {
+              input.readMessage(
+                  getAudioFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              formatCase_ = 10;
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1943,6 +2021,184 @@ private static final long serialVersionUID = 0L;
       formatCase_ = 9;
       onChanged();
       return inFeedBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v19.common.YouTubeAudioAdInfo, com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.Builder, com.google.ads.googleads.v19.common.YouTubeAudioAdInfoOrBuilder> audioBuilder_;
+    /**
+     * <pre>
+     * YouTube Audio ad format.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+     * @return Whether the audio field is set.
+     */
+    @java.lang.Override
+    public boolean hasAudio() {
+      return formatCase_ == 10;
+    }
+    /**
+     * <pre>
+     * YouTube Audio ad format.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+     * @return The audio.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v19.common.YouTubeAudioAdInfo getAudio() {
+      if (audioBuilder_ == null) {
+        if (formatCase_ == 10) {
+          return (com.google.ads.googleads.v19.common.YouTubeAudioAdInfo) format_;
+        }
+        return com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.getDefaultInstance();
+      } else {
+        if (formatCase_ == 10) {
+          return audioBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * YouTube Audio ad format.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+     */
+    public Builder setAudio(com.google.ads.googleads.v19.common.YouTubeAudioAdInfo value) {
+      if (audioBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        format_ = value;
+        onChanged();
+      } else {
+        audioBuilder_.setMessage(value);
+      }
+      formatCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Audio ad format.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+     */
+    public Builder setAudio(
+        com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.Builder builderForValue) {
+      if (audioBuilder_ == null) {
+        format_ = builderForValue.build();
+        onChanged();
+      } else {
+        audioBuilder_.setMessage(builderForValue.build());
+      }
+      formatCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Audio ad format.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+     */
+    public Builder mergeAudio(com.google.ads.googleads.v19.common.YouTubeAudioAdInfo value) {
+      if (audioBuilder_ == null) {
+        if (formatCase_ == 10 &&
+            format_ != com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.getDefaultInstance()) {
+          format_ = com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.newBuilder((com.google.ads.googleads.v19.common.YouTubeAudioAdInfo) format_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          format_ = value;
+        }
+        onChanged();
+      } else {
+        if (formatCase_ == 10) {
+          audioBuilder_.mergeFrom(value);
+        } else {
+          audioBuilder_.setMessage(value);
+        }
+      }
+      formatCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Audio ad format.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+     */
+    public Builder clearAudio() {
+      if (audioBuilder_ == null) {
+        if (formatCase_ == 10) {
+          formatCase_ = 0;
+          format_ = null;
+          onChanged();
+        }
+      } else {
+        if (formatCase_ == 10) {
+          formatCase_ = 0;
+          format_ = null;
+        }
+        audioBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Audio ad format.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+     */
+    public com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.Builder getAudioBuilder() {
+      return getAudioFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * YouTube Audio ad format.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v19.common.YouTubeAudioAdInfoOrBuilder getAudioOrBuilder() {
+      if ((formatCase_ == 10) && (audioBuilder_ != null)) {
+        return audioBuilder_.getMessageOrBuilder();
+      } else {
+        if (formatCase_ == 10) {
+          return (com.google.ads.googleads.v19.common.YouTubeAudioAdInfo) format_;
+        }
+        return com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * YouTube Audio ad format.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.common.YouTubeAudioAdInfo audio = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v19.common.YouTubeAudioAdInfo, com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.Builder, com.google.ads.googleads.v19.common.YouTubeAudioAdInfoOrBuilder> 
+        getAudioFieldBuilder() {
+      if (audioBuilder_ == null) {
+        if (!(formatCase_ == 10)) {
+          format_ = com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.getDefaultInstance();
+        }
+        audioBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v19.common.YouTubeAudioAdInfo, com.google.ads.googleads.v19.common.YouTubeAudioAdInfo.Builder, com.google.ads.googleads.v19.common.YouTubeAudioAdInfoOrBuilder>(
+                (com.google.ads.googleads.v19.common.YouTubeAudioAdInfo) format_,
+                getParentForChildren(),
+                isClean());
+        format_ = null;
+      }
+      formatCase_ = 10;
+      onChanged();
+      return audioBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

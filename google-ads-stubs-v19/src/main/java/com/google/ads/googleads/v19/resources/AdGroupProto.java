@@ -25,6 +25,21 @@ public final class AdGroupProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v19_resources_AdGroup_AudienceSetting_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -50,83 +65,108 @@ public final class AdGroupProto {
       "ads/v19/enums/asset_field_type.proto\0323go" +
       "ogle/ads/googleads/v19/enums/asset_set_t" +
       "ype.proto\0323google/ads/googleads/v19/enum" +
-      "s/bidding_source.proto\0328google/ads/googl" +
-      "eads/v19/enums/targeting_dimension.proto" +
-      "\032\037google/api/field_behavior.proto\032\031googl" +
-      "e/api/resource.proto\"\360\024\n\007AdGroup\022?\n\rreso" +
-      "urce_name\030\001 \001(\tB(\340A\005\372A\"\n googleads.googl" +
-      "eapis.com/AdGroup\022\024\n\002id\030\" \001(\003B\003\340A\003H\000\210\001\001\022" +
-      "\021\n\004name\030# \001(\tH\001\210\001\001\022O\n\006status\030\005 \001(\0162?.goo" +
-      "gle.ads.googleads.v19.enums.AdGroupStatu" +
-      "sEnum.AdGroupStatus\022N\n\004type\030\014 \001(\0162;.goog" +
-      "le.ads.googleads.v19.enums.AdGroupTypeEn" +
-      "um.AdGroupTypeB\003\340A\005\022i\n\020ad_rotation_mode\030" +
-      "\026 \001(\0162O.google.ads.googleads.v19.enums.A" +
-      "dGroupAdRotationModeEnum.AdGroupAdRotati" +
-      "onMode\022D\n\rbase_ad_group\030$ \001(\tB(\340A\003\372A\"\n g" +
-      "oogleads.googleapis.com/AdGroupH\002\210\001\001\022\"\n\025" +
-      "tracking_url_template\030% \001(\tH\003\210\001\001\022O\n\025url_" +
-      "custom_parameters\030\006 \003(\01320.google.ads.goo" +
-      "gleads.v19.common.CustomParameter\022@\n\010cam" +
-      "paign\030& \001(\tB)\340A\005\372A#\n!googleads.googleapi" +
-      "s.com/CampaignH\004\210\001\001\022\033\n\016cpc_bid_micros\030\' " +
-      "\001(\003H\005\210\001\001\022*\n\030effective_cpc_bid_micros\0309 \001" +
-      "(\003B\003\340A\003H\006\210\001\001\022\033\n\016cpm_bid_micros\030( \001(\003H\007\210\001" +
-      "\001\022\036\n\021target_cpa_micros\030) \001(\003H\010\210\001\001\022\033\n\016cpv" +
-      "_bid_micros\030* \001(\003H\t\210\001\001\022\036\n\021target_cpm_mic" +
-      "ros\030+ \001(\003H\n\210\001\001\022\030\n\013target_roas\030, \001(\001H\013\210\001\001" +
-      "\022#\n\026percent_cpc_bid_micros\030- \001(\003H\014\210\001\001\022\035\n" +
-      "\020fixed_cpm_micros\030@ \001(\003H\r\210\001\001\022\036\n\021target_c" +
-      "pv_micros\030A \001(\003H\016\210\001\001\022#\n\033optimized_target" +
-      "ing_enabled\030; \001(\010\022%\n\035exclude_demographic" +
-      "_expansion\030C \001(\010\022o\n\034display_custom_bid_d" +
-      "imension\030\027 \001(\0162I.google.ads.googleads.v1" +
-      "9.enums.TargetingDimensionEnum.Targeting" +
-      "Dimension\022\035\n\020final_url_suffix\030. \001(\tH\017\210\001\001" +
-      "\022L\n\021targeting_setting\030\031 \001(\01321.google.ads" +
-      ".googleads.v19.common.TargetingSetting\022Z" +
-      "\n\020audience_setting\0308 \001(\0132;.google.ads.go" +
-      "ogleads.v19.resources.AdGroup.AudienceSe" +
-      "ttingB\003\340A\005\022-\n\033effective_target_cpa_micro" +
-      "s\030/ \001(\003B\003\340A\003H\020\210\001\001\022i\n\033effective_target_cp" +
-      "a_source\030\035 \001(\0162?.google.ads.googleads.v1" +
-      "9.enums.BiddingSourceEnum.BiddingSourceB" +
-      "\003\340A\003\022\'\n\025effective_target_roas\0300 \001(\001B\003\340A\003" +
-      "H\021\210\001\001\022j\n\034effective_target_roas_source\030  " +
-      "\001(\0162?.google.ads.googleads.v19.enums.Bid" +
-      "dingSourceEnum.BiddingSourceB\003\340A\003\022=\n\006lab" +
-      "els\0301 \003(\tB-\340A\003\372A\'\n%googleads.googleapis." +
-      "com/AdGroupLabel\022l\n!excluded_parent_asse" +
-      "t_field_types\0306 \003(\0162A.google.ads.googlea" +
-      "ds.v19.enums.AssetFieldTypeEnum.AssetFie" +
-      "ldType\022f\n\037excluded_parent_asset_set_type" +
-      "s\030: \003(\0162=.google.ads.googleads.v19.enums" +
-      ".AssetSetTypeEnum.AssetSetType\022j\n\016primar" +
-      "y_status\030> \001(\0162M.google.ads.googleads.v1" +
-      "9.enums.AdGroupPrimaryStatusEnum.AdGroup" +
-      "PrimaryStatusB\003\340A\003\022~\n\026primary_status_rea" +
-      "sons\030? \003(\0162Y.google.ads.googleads.v19.en" +
-      "ums.AdGroupPrimaryStatusReasonEnum.AdGro" +
-      "upPrimaryStatusReasonB\003\340A\003\0324\n\017AudienceSe" +
-      "tting\022!\n\024use_audience_grouped\030\001 \001(\010B\003\340A\005" +
-      ":U\352AR\n googleads.googleapis.com/AdGroup\022" +
-      ".customers/{customer_id}/adGroups/{ad_gr" +
-      "oup_id}B\005\n\003_idB\007\n\005_nameB\020\n\016_base_ad_grou" +
-      "pB\030\n\026_tracking_url_templateB\013\n\t_campaign" +
-      "B\021\n\017_cpc_bid_microsB\033\n\031_effective_cpc_bi" +
-      "d_microsB\021\n\017_cpm_bid_microsB\024\n\022_target_c" +
-      "pa_microsB\021\n\017_cpv_bid_microsB\024\n\022_target_" +
-      "cpm_microsB\016\n\014_target_roasB\031\n\027_percent_c" +
-      "pc_bid_microsB\023\n\021_fixed_cpm_microsB\024\n\022_t" +
-      "arget_cpv_microsB\023\n\021_final_url_suffixB\036\n" +
-      "\034_effective_target_cpa_microsB\030\n\026_effect" +
-      "ive_target_roasB\376\001\n&com.google.ads.googl" +
-      "eads.v19.resourcesB\014AdGroupProtoP\001ZKgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v19/resources;resources\242\002\003GAA\252\002\"" +
-      "Google.Ads.GoogleAds.V19.Resources\312\002\"Goo" +
-      "gle\\Ads\\GoogleAds\\V19\\Resources\352\002&Google" +
-      "::Ads::GoogleAds::V19::Resourcesb\006proto3"
+      "s/bidding_source.proto\032>google/ads/googl" +
+      "eads/v19/enums/demand_gen_channel_config" +
+      ".proto\032@google/ads/googleads/v19/enums/d" +
+      "emand_gen_channel_strategy.proto\0328google" +
+      "/ads/googleads/v19/enums/targeting_dimen" +
+      "sion.proto\032\037google/api/field_behavior.pr" +
+      "oto\032\031google/api/resource.proto\"\276\033\n\007AdGro" +
+      "up\022?\n\rresource_name\030\001 \001(\tB(\340A\005\372A\"\n googl" +
+      "eads.googleapis.com/AdGroup\022\024\n\002id\030\" \001(\003B" +
+      "\003\340A\003H\000\210\001\001\022\021\n\004name\030# \001(\tH\001\210\001\001\022O\n\006status\030\005" +
+      " \001(\0162?.google.ads.googleads.v19.enums.Ad" +
+      "GroupStatusEnum.AdGroupStatus\022N\n\004type\030\014 " +
+      "\001(\0162;.google.ads.googleads.v19.enums.AdG" +
+      "roupTypeEnum.AdGroupTypeB\003\340A\005\022i\n\020ad_rota" +
+      "tion_mode\030\026 \001(\0162O.google.ads.googleads.v" +
+      "19.enums.AdGroupAdRotationModeEnum.AdGro" +
+      "upAdRotationMode\022D\n\rbase_ad_group\030$ \001(\tB" +
+      "(\340A\003\372A\"\n googleads.googleapis.com/AdGrou" +
+      "pH\002\210\001\001\022\"\n\025tracking_url_template\030% \001(\tH\003\210" +
+      "\001\001\022O\n\025url_custom_parameters\030\006 \003(\01320.goog" +
+      "le.ads.googleads.v19.common.CustomParame" +
+      "ter\022@\n\010campaign\030& \001(\tB)\340A\005\372A#\n!googleads" +
+      ".googleapis.com/CampaignH\004\210\001\001\022\033\n\016cpc_bid" +
+      "_micros\030\' \001(\003H\005\210\001\001\022*\n\030effective_cpc_bid_" +
+      "micros\0309 \001(\003B\003\340A\003H\006\210\001\001\022\033\n\016cpm_bid_micros" +
+      "\030( \001(\003H\007\210\001\001\022\036\n\021target_cpa_micros\030) \001(\003H\010" +
+      "\210\001\001\022\033\n\016cpv_bid_micros\030* \001(\003H\t\210\001\001\022\036\n\021targ" +
+      "et_cpm_micros\030+ \001(\003H\n\210\001\001\022\030\n\013target_roas\030" +
+      ", \001(\001H\013\210\001\001\022#\n\026percent_cpc_bid_micros\030- \001" +
+      "(\003H\014\210\001\001\022\035\n\020fixed_cpm_micros\030@ \001(\003H\r\210\001\001\022\036" +
+      "\n\021target_cpv_micros\030A \001(\003H\016\210\001\001\022#\n\033optimi" +
+      "zed_targeting_enabled\030; \001(\010\022%\n\035exclude_d" +
+      "emographic_expansion\030C \001(\010\022o\n\034display_cu" +
+      "stom_bid_dimension\030\027 \001(\0162I.google.ads.go" +
+      "ogleads.v19.enums.TargetingDimensionEnum" +
+      ".TargetingDimension\022\035\n\020final_url_suffix\030" +
+      ". \001(\tH\017\210\001\001\022L\n\021targeting_setting\030\031 \001(\01321." +
+      "google.ads.googleads.v19.common.Targetin" +
+      "gSetting\022Z\n\020audience_setting\0308 \001(\0132;.goo" +
+      "gle.ads.googleads.v19.resources.AdGroup." +
+      "AudienceSettingB\003\340A\005\022-\n\033effective_target" +
+      "_cpa_micros\030/ \001(\003B\003\340A\003H\020\210\001\001\022i\n\033effective" +
+      "_target_cpa_source\030\035 \001(\0162?.google.ads.go" +
+      "ogleads.v19.enums.BiddingSourceEnum.Bidd" +
+      "ingSourceB\003\340A\003\022\'\n\025effective_target_roas\030" +
+      "0 \001(\001B\003\340A\003H\021\210\001\001\022j\n\034effective_target_roas" +
+      "_source\030  \001(\0162?.google.ads.googleads.v19" +
+      ".enums.BiddingSourceEnum.BiddingSourceB\003" +
+      "\340A\003\022=\n\006labels\0301 \003(\tB-\340A\003\372A\'\n%googleads.g" +
+      "oogleapis.com/AdGroupLabel\022l\n!excluded_p" +
+      "arent_asset_field_types\0306 \003(\0162A.google.a" +
+      "ds.googleads.v19.enums.AssetFieldTypeEnu" +
+      "m.AssetFieldType\022f\n\037excluded_parent_asse" +
+      "t_set_types\030: \003(\0162=.google.ads.googleads" +
+      ".v19.enums.AssetSetTypeEnum.AssetSetType" +
+      "\022j\n\016primary_status\030> \001(\0162M.google.ads.go" +
+      "ogleads.v19.enums.AdGroupPrimaryStatusEn" +
+      "um.AdGroupPrimaryStatusB\003\340A\003\022~\n\026primary_" +
+      "status_reasons\030? \003(\0162Y.google.ads.google" +
+      "ads.v19.enums.AdGroupPrimaryStatusReason" +
+      "Enum.AdGroupPrimaryStatusReasonB\003\340A\003\022j\n\034" +
+      "demand_gen_ad_group_settings\030[ \001(\0132D.goo" +
+      "gle.ads.googleads.v19.resources.AdGroup." +
+      "DemandGenAdGroupSettings\0324\n\017AudienceSett" +
+      "ing\022!\n\024use_audience_grouped\030\001 \001(\010B\003\340A\005\032\337" +
+      "\005\n\030DemandGenAdGroupSettings\022w\n\020channel_c" +
+      "ontrols\030\001 \001(\0132].google.ads.googleads.v19" +
+      ".resources.AdGroup.DemandGenAdGroupSetti" +
+      "ngs.DemandGenChannelControls\032\311\004\n\030DemandG" +
+      "enChannelControls\022n\n\016channel_config\030\001 \001(" +
+      "\0162Q.google.ads.googleads.v19.enums.Deman" +
+      "dGenChannelConfigEnum.DemandGenChannelCo" +
+      "nfigB\003\340A\003\022q\n\020channel_strategy\030\002 \001(\0162U.go" +
+      "ogle.ads.googleads.v19.enums.DemandGenCh" +
+      "annelStrategyEnum.DemandGenChannelStrate" +
+      "gyH\000\022\224\001\n\021selected_channels\030\003 \001(\0132w.googl" +
+      "e.ads.googleads.v19.resources.AdGroup.De" +
+      "mandGenAdGroupSettings.DemandGenChannelC" +
+      "ontrols.DemandGenSelectedChannelsH\000\032\231\001\n\031" +
+      "DemandGenSelectedChannels\022\031\n\021youtube_in_" +
+      "stream\030\001 \001(\010\022\027\n\017youtube_in_feed\030\002 \001(\010\022\026\n" +
+      "\016youtube_shorts\030\003 \001(\010\022\020\n\010discover\030\004 \001(\010\022" +
+      "\r\n\005gmail\030\005 \001(\010\022\017\n\007display\030\006 \001(\010B\027\n\025chann" +
+      "el_configuration:U\352AR\n googleads.googlea" +
+      "pis.com/AdGroup\022.customers/{customer_id}" +
+      "/adGroups/{ad_group_id}B\005\n\003_idB\007\n\005_nameB" +
+      "\020\n\016_base_ad_groupB\030\n\026_tracking_url_templ" +
+      "ateB\013\n\t_campaignB\021\n\017_cpc_bid_microsB\033\n\031_" +
+      "effective_cpc_bid_microsB\021\n\017_cpm_bid_mic" +
+      "rosB\024\n\022_target_cpa_microsB\021\n\017_cpv_bid_mi" +
+      "crosB\024\n\022_target_cpm_microsB\016\n\014_target_ro" +
+      "asB\031\n\027_percent_cpc_bid_microsB\023\n\021_fixed_" +
+      "cpm_microsB\024\n\022_target_cpv_microsB\023\n\021_fin" +
+      "al_url_suffixB\036\n\034_effective_target_cpa_m" +
+      "icrosB\030\n\026_effective_target_roasB\376\001\n&com." +
+      "google.ads.googleads.v19.resourcesB\014AdGr" +
+      "oupProtoP\001ZKgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v19/resources;re" +
+      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V19" +
+      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V19\\Re" +
+      "sources\352\002&Google::Ads::GoogleAds::V19::R" +
+      "esourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -141,6 +181,8 @@ public final class AdGroupProto {
           com.google.ads.googleads.v19.enums.AssetFieldTypeProto.getDescriptor(),
           com.google.ads.googleads.v19.enums.AssetSetTypeProto.getDescriptor(),
           com.google.ads.googleads.v19.enums.BiddingSourceProto.getDescriptor(),
+          com.google.ads.googleads.v19.enums.DemandGenChannelConfigProto.getDescriptor(),
+          com.google.ads.googleads.v19.enums.DemandGenChannelStrategyProto.getDescriptor(),
           com.google.ads.googleads.v19.enums.TargetingDimensionProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
@@ -150,13 +192,31 @@ public final class AdGroupProto {
     internal_static_google_ads_googleads_v19_resources_AdGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v19_resources_AdGroup_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "Type", "AdRotationMode", "BaseAdGroup", "TrackingUrlTemplate", "UrlCustomParameters", "Campaign", "CpcBidMicros", "EffectiveCpcBidMicros", "CpmBidMicros", "TargetCpaMicros", "CpvBidMicros", "TargetCpmMicros", "TargetRoas", "PercentCpcBidMicros", "FixedCpmMicros", "TargetCpvMicros", "OptimizedTargetingEnabled", "ExcludeDemographicExpansion", "DisplayCustomBidDimension", "FinalUrlSuffix", "TargetingSetting", "AudienceSetting", "EffectiveTargetCpaMicros", "EffectiveTargetCpaSource", "EffectiveTargetRoas", "EffectiveTargetRoasSource", "Labels", "ExcludedParentAssetFieldTypes", "ExcludedParentAssetSetTypes", "PrimaryStatus", "PrimaryStatusReasons", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "Type", "AdRotationMode", "BaseAdGroup", "TrackingUrlTemplate", "UrlCustomParameters", "Campaign", "CpcBidMicros", "EffectiveCpcBidMicros", "CpmBidMicros", "TargetCpaMicros", "CpvBidMicros", "TargetCpmMicros", "TargetRoas", "PercentCpcBidMicros", "FixedCpmMicros", "TargetCpvMicros", "OptimizedTargetingEnabled", "ExcludeDemographicExpansion", "DisplayCustomBidDimension", "FinalUrlSuffix", "TargetingSetting", "AudienceSetting", "EffectiveTargetCpaMicros", "EffectiveTargetCpaSource", "EffectiveTargetRoas", "EffectiveTargetRoasSource", "Labels", "ExcludedParentAssetFieldTypes", "ExcludedParentAssetSetTypes", "PrimaryStatus", "PrimaryStatusReasons", "DemandGenAdGroupSettings", });
     internal_static_google_ads_googleads_v19_resources_AdGroup_AudienceSetting_descriptor =
       internal_static_google_ads_googleads_v19_resources_AdGroup_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v19_resources_AdGroup_AudienceSetting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v19_resources_AdGroup_AudienceSetting_descriptor,
         new java.lang.String[] { "UseAudienceGrouped", });
+    internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_descriptor =
+      internal_static_google_ads_googleads_v19_resources_AdGroup_descriptor.getNestedTypes().get(1);
+    internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_descriptor,
+        new java.lang.String[] { "ChannelControls", });
+    internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_descriptor =
+      internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_descriptor.getNestedTypes().get(0);
+    internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_descriptor,
+        new java.lang.String[] { "ChannelConfig", "ChannelStrategy", "SelectedChannels", "ChannelConfiguration", });
+    internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_descriptor =
+      internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_descriptor.getNestedTypes().get(0);
+    internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_descriptor,
+        new java.lang.String[] { "YoutubeInStream", "YoutubeInFeed", "YoutubeShorts", "Discover", "Gmail", "Display", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
@@ -174,6 +234,8 @@ public final class AdGroupProto {
     com.google.ads.googleads.v19.enums.AssetFieldTypeProto.getDescriptor();
     com.google.ads.googleads.v19.enums.AssetSetTypeProto.getDescriptor();
     com.google.ads.googleads.v19.enums.BiddingSourceProto.getDescriptor();
+    com.google.ads.googleads.v19.enums.DemandGenChannelConfigProto.getDescriptor();
+    com.google.ads.googleads.v19.enums.DemandGenChannelStrategyProto.getDescriptor();
     com.google.ads.googleads.v19.enums.TargetingDimensionProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();

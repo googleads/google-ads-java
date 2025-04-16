@@ -18,6 +18,8 @@ package com.google.ads.googleads.v19.services.stub;
 
 import com.google.ads.googleads.v19.services.AppendLeadConversationRequest;
 import com.google.ads.googleads.v19.services.AppendLeadConversationResponse;
+import com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest;
+import com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.ObsoleteApi;
 import com.google.api.gax.core.GaxProperties;
@@ -102,11 +104,19 @@ public class LocalServicesLeadServiceStubSettings
 
   private final UnaryCallSettings<AppendLeadConversationRequest, AppendLeadConversationResponse>
       appendLeadConversationSettings;
+  private final UnaryCallSettings<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+      provideLeadFeedbackSettings;
 
   /** Returns the object with the settings used for calls to appendLeadConversation. */
   public UnaryCallSettings<AppendLeadConversationRequest, AppendLeadConversationResponse>
       appendLeadConversationSettings() {
     return appendLeadConversationSettings;
+  }
+
+  /** Returns the object with the settings used for calls to provideLeadFeedback. */
+  public UnaryCallSettings<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+      provideLeadFeedbackSettings() {
+    return provideLeadFeedbackSettings;
   }
 
   public LocalServicesLeadServiceStub createStub() throws IOException {
@@ -191,6 +201,7 @@ public class LocalServicesLeadServiceStubSettings
     super(settingsBuilder);
 
     appendLeadConversationSettings = settingsBuilder.appendLeadConversationSettings().build();
+    provideLeadFeedbackSettings = settingsBuilder.provideLeadFeedbackSettings().build();
   }
 
   /** Builder for LocalServicesLeadServiceStubSettings. */
@@ -200,6 +211,8 @@ public class LocalServicesLeadServiceStubSettings
     private final UnaryCallSettings.Builder<
             AppendLeadConversationRequest, AppendLeadConversationResponse>
         appendLeadConversationSettings;
+    private final UnaryCallSettings.Builder<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+        provideLeadFeedbackSettings;
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -241,9 +254,11 @@ public class LocalServicesLeadServiceStubSettings
       super(clientContext);
 
       appendLeadConversationSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+      provideLeadFeedbackSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(appendLeadConversationSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              appendLeadConversationSettings, provideLeadFeedbackSettings);
       initDefaults(this);
     }
 
@@ -251,9 +266,11 @@ public class LocalServicesLeadServiceStubSettings
       super(settings);
 
       appendLeadConversationSettings = settings.appendLeadConversationSettings.toBuilder();
+      provideLeadFeedbackSettings = settings.provideLeadFeedbackSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(appendLeadConversationSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              appendLeadConversationSettings, provideLeadFeedbackSettings);
     }
 
     private static Builder createDefault() {
@@ -271,6 +288,11 @@ public class LocalServicesLeadServiceStubSettings
     private static Builder initDefaults(Builder builder) {
       builder
           .appendLeadConversationSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .provideLeadFeedbackSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
 
@@ -296,6 +318,12 @@ public class LocalServicesLeadServiceStubSettings
     public UnaryCallSettings.Builder<AppendLeadConversationRequest, AppendLeadConversationResponse>
         appendLeadConversationSettings() {
       return appendLeadConversationSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to provideLeadFeedback. */
+    public UnaryCallSettings.Builder<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+        provideLeadFeedbackSettings() {
+      return provideLeadFeedbackSettings;
     }
 
     @Override

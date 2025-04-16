@@ -31,8 +31,8 @@ public final class AuthenticationErrorProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v19/errors/authen" +
       "tication_error.proto\022\037google.ads.googlea" +
-      "ds.v19.errors\"\336\005\n\027AuthenticationErrorEnu" +
-      "m\"\302\005\n\023AuthenticationError\022\017\n\013UNSPECIFIED" +
+      "ds.v19.errors\"\373\005\n\027AuthenticationErrorEnu" +
+      "m\"\337\005\n\023AuthenticationError\022\017\n\013UNSPECIFIED" +
       "\020\000\022\013\n\007UNKNOWN\020\001\022\030\n\024AUTHENTICATION_ERROR\020" +
       "\002\022\036\n\032CLIENT_CUSTOMER_ID_INVALID\020\005\022\026\n\022CUS" +
       "TOMER_NOT_FOUND\020\010\022\032\n\026GOOGLE_ACCOUNT_DELE" +
@@ -49,14 +49,14 @@ public final class AuthenticationErrorProto {
       "VANCED_PROTECTION_NOT_ENROLLED\020\030\022\037\n\033ORGA" +
       "NIZATION_NOT_RECOGNIZED\020\032\022\035\n\031ORGANIZATIO" +
       "N_NOT_APPROVED\020\033\0224\n0ORGANIZATION_NOT_ASS" +
-      "OCIATED_WITH_DEVELOPER_TOKEN\020\034B\370\001\n#com.g" +
-      "oogle.ads.googleads.v19.errorsB\030Authenti" +
-      "cationErrorProtoP\001ZEgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v19/erro" +
-      "rs;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V" +
-      "19.Errors\312\002\037Google\\Ads\\GoogleAds\\V19\\Err" +
-      "ors\352\002#Google::Ads::GoogleAds::V19::Error" +
-      "sb\006proto3"
+      "OCIATED_WITH_DEVELOPER_TOKEN\020\034\022\033\n\027DEVELO" +
+      "PER_TOKEN_INVALID\020\035B\370\001\n#com.google.ads.g" +
+      "oogleads.v19.errorsB\030AuthenticationError" +
+      "ProtoP\001ZEgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v19/errors;errors\242\002" +
+      "\003GAA\252\002\037Google.Ads.GoogleAds.V19.Errors\312\002" +
+      "\037Google\\Ads\\GoogleAds\\V19\\Errors\352\002#Googl" +
+      "e::Ads::GoogleAds::V19::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

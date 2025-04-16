@@ -91,7 +91,7 @@ public final class CustomerProto {
       "es.CallReportingSetting\022g\n\033conversion_tr" +
       "acking_setting\030\016 \001(\0132=.google.ads.google" +
       "ads.v19.resources.ConversionTrackingSett" +
-      "ingB\003\340A\003\022X\n\023remarketing_setting\030\017 \001(\01326." +
+      "ingB\003\340A\005\022X\n\023remarketing_setting\030\017 \001(\01326." +
       "google.ads.googleads.v19.resources.Remar" +
       "ketingSettingB\003\340A\003\022\303\001\n.pay_per_conversio" +
       "n_eligibility_failure_reasons\030\020 \003(\0162\205\001.g" +
@@ -144,7 +144,7 @@ public final class CustomerProto {
       "TrackingStatusEnum.ConversionTrackingSta" +
       "tusB\003\340A\003\0223\n&enhanced_conversions_for_lea" +
       "ds_enabled\030\007 \001(\010B\003\340A\003\022+\n\036google_ads_conv" +
-      "ersion_customer\030\010 \001(\tB\003\340A\003B\031\n\027_conversio" +
+      "ersion_customer\030\010 \001(\tB\003\340A\005B\031\n\027_conversio" +
       "n_tracking_idB\'\n%_cross_account_conversi" +
       "on_tracking_id\"Y\n\022RemarketingSetting\022(\n\026" +
       "google_global_site_tag\030\002 \001(\tB\003\340A\003H\000\210\001\001B\031" +

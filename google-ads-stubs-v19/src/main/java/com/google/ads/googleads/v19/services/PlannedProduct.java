@@ -144,6 +144,41 @@ private static final long serialVersionUID = 0L;
     return budgetMicros_;
   }
 
+  public static final int CONVERSION_RATE_FIELD_NUMBER = 6;
+  private double conversionRate_ = 0D;
+  /**
+   * <pre>
+   * Conversion rate as a decimal between 0 and 1, exclusive.
+   * For example: if 2% of ad interactions are expected to lead to conversions,
+   * conversion_rate should be 0.02.
+   * This field is required for DEMAND_GEN plannable products. It is not
+   * supported for other plannable products.
+   * </pre>
+   *
+   * <code>optional double conversion_rate = 6;</code>
+   * @return Whether the conversionRate field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionRate() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * Conversion rate as a decimal between 0 and 1, exclusive.
+   * For example: if 2% of ad interactions are expected to lead to conversions,
+   * conversion_rate should be 0.02.
+   * This field is required for DEMAND_GEN plannable products. It is not
+   * supported for other plannable products.
+   * </pre>
+   *
+   * <code>optional double conversion_rate = 6;</code>
+   * @return The conversionRate.
+   */
+  @java.lang.Override
+  public double getConversionRate() {
+    return conversionRate_;
+  }
+
   public static final int ADVANCED_PRODUCT_TARGETING_FIELD_NUMBER = 5;
   private com.google.ads.googleads.v19.services.AdvancedProductTargeting advancedProductTargeting_;
   /**
@@ -158,7 +193,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAdvancedProductTargeting() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -208,8 +243,11 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeInt64(4, budgetMicros_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(5, getAdvancedProductTargeting());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeDouble(6, conversionRate_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -227,9 +265,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, budgetMicros_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getAdvancedProductTargeting());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(6, conversionRate_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -256,6 +298,12 @@ private static final long serialVersionUID = 0L;
       if (getBudgetMicros()
           != other.getBudgetMicros()) return false;
     }
+    if (hasConversionRate() != other.hasConversionRate()) return false;
+    if (hasConversionRate()) {
+      if (java.lang.Double.doubleToLongBits(getConversionRate())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversionRate())) return false;
+    }
     if (hasAdvancedProductTargeting() != other.hasAdvancedProductTargeting()) return false;
     if (hasAdvancedProductTargeting()) {
       if (!getAdvancedProductTargeting()
@@ -280,6 +328,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BUDGET_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getBudgetMicros());
+    }
+    if (hasConversionRate()) {
+      hash = (37 * hash) + CONVERSION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversionRate()));
     }
     if (hasAdvancedProductTargeting()) {
       hash = (37 * hash) + ADVANCED_PRODUCT_TARGETING_FIELD_NUMBER;
@@ -428,6 +481,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       plannableProductCode_ = "";
       budgetMicros_ = 0L;
+      conversionRate_ = 0D;
       advancedProductTargeting_ = null;
       if (advancedProductTargetingBuilder_ != null) {
         advancedProductTargetingBuilder_.dispose();
@@ -476,10 +530,14 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.conversionRate_ = conversionRate_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.advancedProductTargeting_ = advancedProductTargetingBuilder_ == null
             ? advancedProductTargeting_
             : advancedProductTargetingBuilder_.build();
-        to_bitField0_ |= 0x00000004;
+        to_bitField0_ |= 0x00000008;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -536,6 +594,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasBudgetMicros()) {
         setBudgetMicros(other.getBudgetMicros());
       }
+      if (other.hasConversionRate()) {
+        setConversionRate(other.getConversionRate());
+      }
       if (other.hasAdvancedProductTargeting()) {
         mergeAdvancedProductTargeting(other.getAdvancedProductTargeting());
       }
@@ -579,9 +640,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getAdvancedProductTargetingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 42
+            case 49: {
+              conversionRate_ = input.readDouble();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 49
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -784,6 +850,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private double conversionRate_ ;
+    /**
+     * <pre>
+     * Conversion rate as a decimal between 0 and 1, exclusive.
+     * For example: if 2% of ad interactions are expected to lead to conversions,
+     * conversion_rate should be 0.02.
+     * This field is required for DEMAND_GEN plannable products. It is not
+     * supported for other plannable products.
+     * </pre>
+     *
+     * <code>optional double conversion_rate = 6;</code>
+     * @return Whether the conversionRate field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionRate() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Conversion rate as a decimal between 0 and 1, exclusive.
+     * For example: if 2% of ad interactions are expected to lead to conversions,
+     * conversion_rate should be 0.02.
+     * This field is required for DEMAND_GEN plannable products. It is not
+     * supported for other plannable products.
+     * </pre>
+     *
+     * <code>optional double conversion_rate = 6;</code>
+     * @return The conversionRate.
+     */
+    @java.lang.Override
+    public double getConversionRate() {
+      return conversionRate_;
+    }
+    /**
+     * <pre>
+     * Conversion rate as a decimal between 0 and 1, exclusive.
+     * For example: if 2% of ad interactions are expected to lead to conversions,
+     * conversion_rate should be 0.02.
+     * This field is required for DEMAND_GEN plannable products. It is not
+     * supported for other plannable products.
+     * </pre>
+     *
+     * <code>optional double conversion_rate = 6;</code>
+     * @param value The conversionRate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionRate(double value) {
+
+      conversionRate_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Conversion rate as a decimal between 0 and 1, exclusive.
+     * For example: if 2% of ad interactions are expected to lead to conversions,
+     * conversion_rate should be 0.02.
+     * This field is required for DEMAND_GEN plannable products. It is not
+     * supported for other plannable products.
+     * </pre>
+     *
+     * <code>optional double conversion_rate = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionRate() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      conversionRate_ = 0D;
+      onChanged();
+      return this;
+    }
+
     private com.google.ads.googleads.v19.services.AdvancedProductTargeting advancedProductTargeting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v19.services.AdvancedProductTargeting, com.google.ads.googleads.v19.services.AdvancedProductTargeting.Builder, com.google.ads.googleads.v19.services.AdvancedProductTargetingOrBuilder> advancedProductTargetingBuilder_;
@@ -798,7 +936,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the advancedProductTargeting field is set.
      */
     public boolean hasAdvancedProductTargeting() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -835,7 +973,7 @@ private static final long serialVersionUID = 0L;
       } else {
         advancedProductTargetingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -855,7 +993,7 @@ private static final long serialVersionUID = 0L;
       } else {
         advancedProductTargetingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -870,7 +1008,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAdvancedProductTargeting(com.google.ads.googleads.v19.services.AdvancedProductTargeting value) {
       if (advancedProductTargetingBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
+        if (((bitField0_ & 0x00000008) != 0) &&
           advancedProductTargeting_ != null &&
           advancedProductTargeting_ != com.google.ads.googleads.v19.services.AdvancedProductTargeting.getDefaultInstance()) {
           getAdvancedProductTargetingBuilder().mergeFrom(value);
@@ -881,7 +1019,7 @@ private static final long serialVersionUID = 0L;
         advancedProductTargetingBuilder_.mergeFrom(value);
       }
       if (advancedProductTargeting_ != null) {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       return this;
@@ -896,7 +1034,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v19.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
      */
     public Builder clearAdvancedProductTargeting() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       advancedProductTargeting_ = null;
       if (advancedProductTargetingBuilder_ != null) {
         advancedProductTargetingBuilder_.dispose();
@@ -915,7 +1053,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v19.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
      */
     public com.google.ads.googleads.v19.services.AdvancedProductTargeting.Builder getAdvancedProductTargetingBuilder() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return getAdvancedProductTargetingFieldBuilder().getBuilder();
     }

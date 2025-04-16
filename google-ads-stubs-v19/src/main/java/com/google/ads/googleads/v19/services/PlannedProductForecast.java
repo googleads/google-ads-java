@@ -340,6 +340,41 @@ private static final long serialVersionUID = 0L;
     return views_;
   }
 
+  public static final int CONVERSIONS_FIELD_NUMBER = 12;
+  private double conversions_ = 0D;
+  /**
+   * <pre>
+   * The number of conversions.
+   * This metric is only available for DEMAND_GEN plannable products.
+   *
+   * See https://support.google.com/google-ads/answer/2375431 for
+   * more information on conversions.
+   * </pre>
+   *
+   * <code>optional double conversions = 12;</code>
+   * @return Whether the conversions field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversions() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * The number of conversions.
+   * This metric is only available for DEMAND_GEN plannable products.
+   *
+   * See https://support.google.com/google-ads/answer/2375431 for
+   * more information on conversions.
+   * </pre>
+   *
+   * <code>optional double conversions = 12;</code>
+   * @return The conversions.
+   */
+  @java.lang.Override
+  public double getConversions() {
+    return conversions_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -386,6 +421,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000040) != 0)) {
       output.writeInt64(11, views_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeDouble(12, conversions_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -439,6 +477,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(11, views_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(12, conversions_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -499,6 +541,12 @@ private static final long serialVersionUID = 0L;
       if (getViews()
           != other.getViews()) return false;
     }
+    if (hasConversions() != other.hasConversions()) return false;
+    if (hasConversions()) {
+      if (java.lang.Double.doubleToLongBits(getConversions())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversions())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -556,6 +604,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VIEWS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getViews());
+    }
+    if (hasConversions()) {
+      hash = (37 * hash) + CONVERSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversions()));
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -703,6 +756,7 @@ private static final long serialVersionUID = 0L;
       totalCoviewImpressions_ = 0L;
       averageFrequency_ = 0D;
       views_ = 0L;
+      conversions_ = 0D;
       return this;
     }
 
@@ -776,6 +830,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.views_ = views_;
         to_bitField0_ |= 0x00000040;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.conversions_ = conversions_;
+        to_bitField0_ |= 0x00000080;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -856,6 +914,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasViews()) {
         setViews(other.getViews());
+      }
+      if (other.hasConversions()) {
+        setConversions(other.getConversions());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -938,6 +999,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 88
+            case 97: {
+              conversions_ = input.readDouble();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 97
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1624,6 +1690,78 @@ private static final long serialVersionUID = 0L;
     public Builder clearViews() {
       bitField0_ = (bitField0_ & ~0x00000400);
       views_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private double conversions_ ;
+    /**
+     * <pre>
+     * The number of conversions.
+     * This metric is only available for DEMAND_GEN plannable products.
+     *
+     * See https://support.google.com/google-ads/answer/2375431 for
+     * more information on conversions.
+     * </pre>
+     *
+     * <code>optional double conversions = 12;</code>
+     * @return Whether the conversions field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversions() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * The number of conversions.
+     * This metric is only available for DEMAND_GEN plannable products.
+     *
+     * See https://support.google.com/google-ads/answer/2375431 for
+     * more information on conversions.
+     * </pre>
+     *
+     * <code>optional double conversions = 12;</code>
+     * @return The conversions.
+     */
+    @java.lang.Override
+    public double getConversions() {
+      return conversions_;
+    }
+    /**
+     * <pre>
+     * The number of conversions.
+     * This metric is only available for DEMAND_GEN plannable products.
+     *
+     * See https://support.google.com/google-ads/answer/2375431 for
+     * more information on conversions.
+     * </pre>
+     *
+     * <code>optional double conversions = 12;</code>
+     * @param value The conversions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversions(double value) {
+
+      conversions_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of conversions.
+     * This metric is only available for DEMAND_GEN plannable products.
+     *
+     * See https://support.google.com/google-ads/answer/2375431 for
+     * more information on conversions.
+     * </pre>
+     *
+     * <code>optional double conversions = 12;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversions() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      conversions_ = 0D;
       onChanged();
       return this;
     }

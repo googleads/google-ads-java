@@ -524,6 +524,33 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * Settings for Performance Max campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.Campaign.PmaxCampaignSettings pmax_campaign_settings = 97;</code>
+   * @return Whether the pmaxCampaignSettings field is set.
+   */
+  boolean hasPmaxCampaignSettings();
+  /**
+   * <pre>
+   * Settings for Performance Max campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.Campaign.PmaxCampaignSettings pmax_campaign_settings = 97;</code>
+   * @return The pmaxCampaignSettings.
+   */
+  com.google.ads.googleads.v19.resources.Campaign.PmaxCampaignSettings getPmaxCampaignSettings();
+  /**
+   * <pre>
+   * Settings for Performance Max campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.Campaign.PmaxCampaignSettings pmax_campaign_settings = 97;</code>
+   */
+  com.google.ads.googleads.v19.resources.Campaign.PmaxCampaignSettingsOrBuilder getPmaxCampaignSettingsOrBuilder();
+
+  /**
+   * <pre>
    * Settings for Real-Time Bidding, a feature only available for campaigns
    * targeting the Ad Exchange network.
    * </pre>

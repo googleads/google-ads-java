@@ -93,6 +93,12 @@ public class LocalServicesLeadServiceSettings
         .appendLeadConversationSettings();
   }
 
+  /** Returns the object with the settings used for calls to provideLeadFeedback. */
+  public UnaryCallSettings<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+      provideLeadFeedbackSettings() {
+    return ((LocalServicesLeadServiceStubSettings) getStubSettings()).provideLeadFeedbackSettings();
+  }
+
   public static final LocalServicesLeadServiceSettings create(
       LocalServicesLeadServiceStubSettings stub) throws IOException {
     return new LocalServicesLeadServiceSettings.Builder(stub.toBuilder()).build();
@@ -194,6 +200,12 @@ public class LocalServicesLeadServiceSettings
     public UnaryCallSettings.Builder<AppendLeadConversationRequest, AppendLeadConversationResponse>
         appendLeadConversationSettings() {
       return getStubSettingsBuilder().appendLeadConversationSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to provideLeadFeedback. */
+    public UnaryCallSettings.Builder<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+        provideLeadFeedbackSettings() {
+      return getStubSettingsBuilder().provideLeadFeedbackSettings();
     }
 
     @Override

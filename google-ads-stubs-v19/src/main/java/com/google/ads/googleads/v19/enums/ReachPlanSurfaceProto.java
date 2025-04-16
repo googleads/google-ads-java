@@ -31,17 +31,18 @@ public final class ReachPlanSurfaceProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v19/enums/reach_p" +
       "lan_surface.proto\022\036google.ads.googleads." +
-      "v19.enums\"\256\001\n\024ReachPlanSurfaceEnum\"\225\001\n\020R" +
+      "v19.enums\"\314\001\n\024ReachPlanSurfaceEnum\"\263\001\n\020R" +
       "eachPlanSurface\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKN" +
-      "OWN\020\001\022\013\n\007IN_FEED\020\002\022\024\n\020IN_STREAM_BUMPER\020\003" +
-      "\022\033\n\027IN_STREAM_NON_SKIPPABLE\020\004\022\027\n\023IN_STRE" +
-      "AM_SKIPPABLE\020\005\022\n\n\006SHORTS\020\006B\357\001\n\"com.googl" +
-      "e.ads.googleads.v19.enumsB\025ReachPlanSurf" +
-      "aceProtoP\001ZCgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v19/enums;enums\242" +
-      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V19.Enums\312\002" +
-      "\036Google\\Ads\\GoogleAds\\V19\\Enums\352\002\"Google" +
-      "::Ads::GoogleAds::V19::Enumsb\006proto3"
+      "OWN\020\001\022\021\n\rDISCOVER_FEED\020\007\022\t\n\005GMAIL\020\010\022\013\n\007I" +
+      "N_FEED\020\002\022\024\n\020IN_STREAM_BUMPER\020\003\022\033\n\027IN_STR" +
+      "EAM_NON_SKIPPABLE\020\004\022\027\n\023IN_STREAM_SKIPPAB" +
+      "LE\020\005\022\n\n\006SHORTS\020\006B\357\001\n\"com.google.ads.goog" +
+      "leads.v19.enumsB\025ReachPlanSurfaceProtoP\001" +
+      "ZCgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v19/enums;enums\242\002\003GAA\252\002\036Go" +
+      "ogle.Ads.GoogleAds.V19.Enums\312\002\036Google\\Ad" +
+      "s\\GoogleAds\\V19\\Enums\352\002\"Google::Ads::Goo" +
+      "gleAds::V19::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

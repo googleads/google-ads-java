@@ -1953,9 +1953,9 @@
  * // - It may require specifying regional endpoints when creating the service client as shown in
  * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
- *   ListPlannableLocationsRequest request = ListPlannableLocationsRequest.newBuilder().build();
- *   ListPlannableLocationsResponse response =
- *       reachPlanServiceClient.listPlannableLocations(request);
+ *   String customerId = "customerId-1581184615";
+ *   GenerateConversionRatesResponse response =
+ *       reachPlanServiceClient.generateConversionRates(customerId);
  * }
  * }</pre>
  *

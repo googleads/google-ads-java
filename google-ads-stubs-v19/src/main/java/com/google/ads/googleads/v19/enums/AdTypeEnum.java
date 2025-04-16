@@ -319,6 +319,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEMAND_GEN_PRODUCT_AD = 39;</code>
      */
     DEMAND_GEN_PRODUCT_AD(39),
+    /**
+     * <pre>
+     * YouTube Audio ad.
+     * </pre>
+     *
+     * <code>YOUTUBE_AUDIO_AD = 44;</code>
+     */
+    YOUTUBE_AUDIO_AD(44),
     UNRECOGNIZED(-1),
     ;
 
@@ -589,6 +597,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEMAND_GEN_PRODUCT_AD = 39;</code>
      */
     public static final int DEMAND_GEN_PRODUCT_AD_VALUE = 39;
+    /**
+     * <pre>
+     * YouTube Audio ad.
+     * </pre>
+     *
+     * <code>YOUTUBE_AUDIO_AD = 44;</code>
+     */
+    public static final int YOUTUBE_AUDIO_AD_VALUE = 44;
 
 
     public final int getNumber() {
@@ -648,6 +664,7 @@ private static final long serialVersionUID = 0L;
         case 37: return TRAVEL_AD;
         case 42: return DEMAND_GEN_VIDEO_RESPONSIVE_AD;
         case 39: return DEMAND_GEN_PRODUCT_AD;
+        case 44: return YOUTUBE_AUDIO_AD;
         default: return null;
       }
     }

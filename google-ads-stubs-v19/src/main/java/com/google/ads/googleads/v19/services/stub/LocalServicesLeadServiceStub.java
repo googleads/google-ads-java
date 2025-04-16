@@ -18,6 +18,8 @@ package com.google.ads.googleads.v19.services.stub;
 
 import com.google.ads.googleads.v19.services.AppendLeadConversationRequest;
 import com.google.ads.googleads.v19.services.AppendLeadConversationResponse;
+import com.google.ads.googleads.v19.services.ProvideLeadFeedbackRequest;
+import com.google.ads.googleads.v19.services.ProvideLeadFeedbackResponse;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import javax.annotation.Generated;
@@ -34,6 +36,11 @@ public abstract class LocalServicesLeadServiceStub implements BackgroundResource
   public UnaryCallable<AppendLeadConversationRequest, AppendLeadConversationResponse>
       appendLeadConversationCallable() {
     throw new UnsupportedOperationException("Not implemented: appendLeadConversationCallable()");
+  }
+
+  public UnaryCallable<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
+      provideLeadFeedbackCallable() {
+    throw new UnsupportedOperationException("Not implemented: provideLeadFeedbackCallable()");
   }
 
   @Override

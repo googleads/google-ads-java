@@ -31,24 +31,26 @@ public final class ChangeStatusResourceTypeProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v19/enums/change_" +
       "status_resource_type.proto\022\036google.ads.g" +
-      "oogleads.v19.enums\"\250\003\n\034ChangeStatusResou" +
-      "rceTypeEnum\"\207\003\n\030ChangeStatusResourceType" +
+      "oogleads.v19.enums\"\344\003\n\034ChangeStatusResou" +
+      "rceTypeEnum\"\303\003\n\030ChangeStatusResourceType" +
       "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010AD_GRO" +
       "UP\020\003\022\017\n\013AD_GROUP_AD\020\004\022\026\n\022AD_GROUP_CRITER" +
       "ION\020\005\022\014\n\010CAMPAIGN\020\006\022\026\n\022CAMPAIGN_CRITERIO" +
-      "N\020\007\022\010\n\004FEED\020\t\022\r\n\tFEED_ITEM\020\n\022\021\n\rAD_GROUP" +
-      "_FEED\020\013\022\021\n\rCAMPAIGN_FEED\020\014\022\031\n\025AD_GROUP_B" +
-      "ID_MODIFIER\020\r\022\016\n\nSHARED_SET\020\016\022\027\n\023CAMPAIG" +
-      "N_SHARED_SET\020\017\022\t\n\005ASSET\020\020\022\022\n\016CUSTOMER_AS" +
-      "SET\020\021\022\022\n\016CAMPAIGN_ASSET\020\022\022\022\n\016AD_GROUP_AS" +
-      "SET\020\023\022\025\n\021COMBINED_AUDIENCE\020\024\022\017\n\013ASSET_GR" +
-      "OUP\020\025B\367\001\n\"com.google.ads.googleads.v19.e" +
-      "numsB\035ChangeStatusResourceTypeProtoP\001ZCg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v19/enums;enums\242\002\003GAA\252\002\036Googl" +
-      "e.Ads.GoogleAds.V19.Enums\312\002\036Google\\Ads\\G" +
-      "oogleAds\\V19\\Enums\352\002\"Google::Ads::Google" +
-      "Ads::V19::Enumsb\006proto3"
+      "N\020\007\022\023\n\017CAMPAIGN_BUDGET\020\010\022\010\n\004FEED\020\t\022\r\n\tFE" +
+      "ED_ITEM\020\n\022\021\n\rAD_GROUP_FEED\020\013\022\021\n\rCAMPAIGN" +
+      "_FEED\020\014\022\031\n\025AD_GROUP_BID_MODIFIER\020\r\022\016\n\nSH" +
+      "ARED_SET\020\016\022\027\n\023CAMPAIGN_SHARED_SET\020\017\022\t\n\005A" +
+      "SSET\020\020\022\022\n\016CUSTOMER_ASSET\020\021\022\022\n\016CAMPAIGN_A" +
+      "SSET\020\022\022\022\n\016AD_GROUP_ASSET\020\023\022\025\n\021COMBINED_A" +
+      "UDIENCE\020\024\022\017\n\013ASSET_GROUP\020\025\022\r\n\tASSET_SET\020" +
+      "\026\022\026\n\022CAMPAIGN_ASSET_SET\020\027B\367\001\n\"com.google" +
+      ".ads.googleads.v19.enumsB\035ChangeStatusRe" +
+      "sourceTypeProtoP\001ZCgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v19/enums" +
+      ";enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V19." +
+      "Enums\312\002\036Google\\Ads\\GoogleAds\\V19\\Enums\352\002" +
+      "\"Google::Ads::GoogleAds::V19::Enumsb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

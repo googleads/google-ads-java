@@ -6,7 +6,7 @@ package com.google.ads.googleads.v19.resources;
 
 /**
  * <pre>
- * A view on the usage of ad group ad asset combination.
+ * A view on the usage of asset group asset top combinations.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v19.resources.AssetGroupTopCombinationView}
@@ -328,7 +328,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A view on the usage of ad group ad asset combination.
+   * A view on the usage of asset group asset top combinations.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v19.resources.AssetGroupTopCombinationView}

@@ -603,10 +603,10 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v19.resources.ConversionTrackingSetting conversionTrackingSetting_;
   /**
    * <pre>
-   * Output only. Conversion tracking setting for a customer.
+   * Immutable. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the conversionTrackingSetting field is set.
    */
   @java.lang.Override
@@ -615,10 +615,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Conversion tracking setting for a customer.
+   * Immutable. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The conversionTrackingSetting.
    */
   @java.lang.Override
@@ -627,10 +627,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Conversion tracking setting for a customer.
+   * Immutable. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v19.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder() {
@@ -3371,10 +3371,10 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v19.resources.ConversionTrackingSetting, com.google.ads.googleads.v19.resources.ConversionTrackingSetting.Builder, com.google.ads.googleads.v19.resources.ConversionTrackingSettingOrBuilder> conversionTrackingSettingBuilder_;
     /**
      * <pre>
-     * Output only. Conversion tracking setting for a customer.
+     * Immutable. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the conversionTrackingSetting field is set.
      */
     public boolean hasConversionTrackingSetting() {
@@ -3382,10 +3382,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking setting for a customer.
+     * Immutable. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The conversionTrackingSetting.
      */
     public com.google.ads.googleads.v19.resources.ConversionTrackingSetting getConversionTrackingSetting() {
@@ -3397,10 +3397,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking setting for a customer.
+     * Immutable. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setConversionTrackingSetting(com.google.ads.googleads.v19.resources.ConversionTrackingSetting value) {
       if (conversionTrackingSettingBuilder_ == null) {
@@ -3417,10 +3417,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking setting for a customer.
+     * Immutable. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setConversionTrackingSetting(
         com.google.ads.googleads.v19.resources.ConversionTrackingSetting.Builder builderForValue) {
@@ -3435,10 +3435,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking setting for a customer.
+     * Immutable. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeConversionTrackingSetting(com.google.ads.googleads.v19.resources.ConversionTrackingSetting value) {
       if (conversionTrackingSettingBuilder_ == null) {
@@ -3460,10 +3460,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking setting for a customer.
+     * Immutable. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearConversionTrackingSetting() {
       bitField0_ = (bitField0_ & ~0x00001000);
@@ -3477,10 +3477,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking setting for a customer.
+     * Immutable. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v19.resources.ConversionTrackingSetting.Builder getConversionTrackingSettingBuilder() {
       bitField0_ |= 0x00001000;
@@ -3489,10 +3489,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking setting for a customer.
+     * Immutable. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v19.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder() {
       if (conversionTrackingSettingBuilder_ != null) {
@@ -3504,10 +3504,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking setting for a customer.
+     * Immutable. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v19.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v19.resources.ConversionTrackingSetting, com.google.ads.googleads.v19.resources.ConversionTrackingSetting.Builder, com.google.ads.googleads.v19.resources.ConversionTrackingSettingOrBuilder> 

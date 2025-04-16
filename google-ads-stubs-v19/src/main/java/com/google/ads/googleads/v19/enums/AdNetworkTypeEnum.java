@@ -118,8 +118,9 @@ private static final long serialVersionUID = 0L;
     GOOGLE_TV(9),
     /**
      * <pre>
-     * Google Owned Channels such as Discover feed, Gmail, YouTube. This network
-     * is only used by Demand Gen campaigns.
+     * Google Owned Channels such as Discover feed, Gmail,
+     * YouTube. This network is only used by Demand Gen
+     * campaigns.
      * </pre>
      *
      * <code>GOOGLE_OWNED_CHANNELS = 10;</code>
@@ -194,8 +195,9 @@ private static final long serialVersionUID = 0L;
     public static final int GOOGLE_TV_VALUE = 9;
     /**
      * <pre>
-     * Google Owned Channels such as Discover feed, Gmail, YouTube. This network
-     * is only used by Demand Gen campaigns.
+     * Google Owned Channels such as Discover feed, Gmail,
+     * YouTube. This network is only used by Demand Gen
+     * campaigns.
      * </pre>
      *
      * <code>GOOGLE_OWNED_CHANNELS = 10;</code>

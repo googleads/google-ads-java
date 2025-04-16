@@ -31,8 +31,8 @@ public final class AdvertisingChannelSubTypeProto {
     java.lang.String[] descriptorData = {
       "\nAgoogle/ads/googleads/v19/enums/adverti" +
       "sing_channel_sub_type.proto\022\036google.ads." +
-      "googleads.v19.enums\"\234\004\n\035AdvertisingChann" +
-      "elSubTypeEnum\"\372\003\n\031AdvertisingChannelSubT" +
+      "googleads.v19.enums\"\257\004\n\035AdvertisingChann" +
+      "elSubTypeEnum\"\215\004\n\031AdvertisingChannelSubT" +
       "ype\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\025\n\021SEA" +
       "RCH_MOBILE_APP\020\002\022\026\n\022DISPLAY_MOBILE_APP\020\003" +
       "\022\022\n\016SEARCH_EXPRESS\020\004\022\023\n\017DISPLAY_EXPRESS\020" +
@@ -45,13 +45,13 @@ public final class AdvertisingChannelSubTypeProto {
       "AIGN\020\020\022\022\n\016VIDEO_SEQUENCE\020\021\022%\n!APP_CAMPAI" +
       "GN_FOR_PRE_REGISTRATION\020\022\022 \n\034VIDEO_REACH" +
       "_TARGET_FREQUENCY\020\023\022\025\n\021TRAVEL_ACTIVITIES" +
-      "\020\024B\370\001\n\"com.google.ads.googleads.v19.enum" +
-      "sB\036AdvertisingChannelSubTypeProtoP\001ZCgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v19/enums;enums\242\002\003GAA\252\002\036Google." +
-      "Ads.GoogleAds.V19.Enums\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V19\\Enums\352\002\"Google::Ads::GoogleAd" +
-      "s::V19::Enumsb\006proto3"
+      "\020\024\022\021\n\rYOUTUBE_AUDIO\020\026B\370\001\n\"com.google.ads" +
+      ".googleads.v19.enumsB\036AdvertisingChannel" +
+      "SubTypeProtoP\001ZCgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v19/enums;en" +
+      "ums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V19.Enu" +
+      "ms\312\002\036Google\\Ads\\GoogleAds\\V19\\Enums\352\002\"Go" +
+      "ogle::Ads::GoogleAds::V19::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

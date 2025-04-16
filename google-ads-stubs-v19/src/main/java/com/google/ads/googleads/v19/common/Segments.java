@@ -113,6 +113,8 @@ private static final long serialVersionUID = 0L;
     skAdNetworkSourceType_ = 0;
     skAdNetworkVersion_ = "";
     newVersusReturningCustomers_ = 0;
+    adjustedAgeRange_ = 0;
+    adjustedGender_ = 0;
   }
 
   @java.lang.Override
@@ -5252,6 +5254,74 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v19.enums.ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket.UNRECOGNIZED : result;
   }
 
+  public static final int ADJUSTED_AGE_RANGE_FIELD_NUMBER = 196;
+  private int adjustedAgeRange_ = 0;
+  /**
+   * <pre>
+   * Adjusted age range. This is the age range of the user after applying
+   * modeling to get more accurate age and gender information. Currently, both
+   * adjusted_age_range and adjusted_gender need to be selected together to get
+   * valid reach stats. These segmentations are only available for allowlisted
+   * customers.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType adjusted_age_range = 196;</code>
+   * @return The enum numeric value on the wire for adjustedAgeRange.
+   */
+  @java.lang.Override public int getAdjustedAgeRangeValue() {
+    return adjustedAgeRange_;
+  }
+  /**
+   * <pre>
+   * Adjusted age range. This is the age range of the user after applying
+   * modeling to get more accurate age and gender information. Currently, both
+   * adjusted_age_range and adjusted_gender need to be selected together to get
+   * valid reach stats. These segmentations are only available for allowlisted
+   * customers.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType adjusted_age_range = 196;</code>
+   * @return The adjustedAgeRange.
+   */
+  @java.lang.Override public com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType getAdjustedAgeRange() {
+    com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType result = com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType.forNumber(adjustedAgeRange_);
+    return result == null ? com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType.UNRECOGNIZED : result;
+  }
+
+  public static final int ADJUSTED_GENDER_FIELD_NUMBER = 197;
+  private int adjustedGender_ = 0;
+  /**
+   * <pre>
+   * Adjusted gender. This is the gender of the user after applying modeling to
+   * get more accurate age and gender information. Currently, both
+   * adjusted_age_range and adjusted_gender need to be selected together to get
+   * valid reach stats. These segmentations are only available for allowlisted
+   * customers.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType adjusted_gender = 197;</code>
+   * @return The enum numeric value on the wire for adjustedGender.
+   */
+  @java.lang.Override public int getAdjustedGenderValue() {
+    return adjustedGender_;
+  }
+  /**
+   * <pre>
+   * Adjusted gender. This is the gender of the user after applying modeling to
+   * get more accurate age and gender information. Currently, both
+   * adjusted_age_range and adjusted_gender need to be selected together to get
+   * valid reach stats. These segmentations are only available for allowlisted
+   * customers.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType adjusted_gender = 197;</code>
+   * @return The adjustedGender.
+   */
+  @java.lang.Override public com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType getAdjustedGender() {
+    com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType result = com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType.forNumber(adjustedGender_);
+    return result == null ? com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5598,6 +5668,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField2_ & 0x00000010) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 195, travelDestinationRegion_);
+    }
+    if (adjustedAgeRange_ != com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(196, adjustedAgeRange_);
+    }
+    if (adjustedGender_ != com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(197, adjustedGender_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5989,6 +6065,14 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField2_ & 0x00000010) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(195, travelDestinationRegion_);
+    }
+    if (adjustedAgeRange_ != com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(196, adjustedAgeRange_);
+    }
+    if (adjustedGender_ != com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(197, adjustedGender_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -6440,6 +6524,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getAssetInteractionTarget())) return false;
     }
     if (newVersusReturningCustomers_ != other.newVersusReturningCustomers_) return false;
+    if (adjustedAgeRange_ != other.adjustedAgeRange_) return false;
+    if (adjustedGender_ != other.adjustedGender_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -6846,6 +6932,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + NEW_VERSUS_RETURNING_CUSTOMERS_FIELD_NUMBER;
     hash = (53 * hash) + newVersusReturningCustomers_;
+    hash = (37 * hash) + ADJUSTED_AGE_RANGE_FIELD_NUMBER;
+    hash = (53 * hash) + adjustedAgeRange_;
+    hash = (37 * hash) + ADJUSTED_GENDER_FIELD_NUMBER;
+    hash = (53 * hash) + adjustedGender_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -7120,6 +7210,8 @@ private static final long serialVersionUID = 0L;
         assetInteractionTargetBuilder_ = null;
       }
       newVersusReturningCustomers_ = 0;
+      adjustedAgeRange_ = 0;
+      adjustedGender_ = 0;
       return this;
     }
 
@@ -7600,6 +7692,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField3_ & 0x00004000) != 0)) {
         result.newVersusReturningCustomers_ = newVersusReturningCustomers_;
+      }
+      if (((from_bitField3_ & 0x00008000) != 0)) {
+        result.adjustedAgeRange_ = adjustedAgeRange_;
+      }
+      if (((from_bitField3_ & 0x00010000) != 0)) {
+        result.adjustedGender_ = adjustedGender_;
       }
       result.bitField2_ |= to_bitField2_;
     }
@@ -8104,6 +8202,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.newVersusReturningCustomers_ != 0) {
         setNewVersusReturningCustomersValue(other.getNewVersusReturningCustomersValue());
+      }
+      if (other.adjustedAgeRange_ != 0) {
+        setAdjustedAgeRangeValue(other.getAdjustedAgeRangeValue());
+      }
+      if (other.adjustedGender_ != 0) {
+        setAdjustedGenderValue(other.getAdjustedGenderValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -8694,6 +8798,16 @@ private static final long serialVersionUID = 0L;
               bitField2_ |= 0x00800000;
               break;
             } // case 1562
+            case 1568: {
+              adjustedAgeRange_ = input.readEnum();
+              bitField3_ |= 0x00008000;
+              break;
+            } // case 1568
+            case 1576: {
+              adjustedGender_ = input.readEnum();
+              bitField3_ |= 0x00010000;
+              break;
+            } // case 1576
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -19038,6 +19152,192 @@ private static final long serialVersionUID = 0L;
     public Builder clearNewVersusReturningCustomers() {
       bitField3_ = (bitField3_ & ~0x00004000);
       newVersusReturningCustomers_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int adjustedAgeRange_ = 0;
+    /**
+     * <pre>
+     * Adjusted age range. This is the age range of the user after applying
+     * modeling to get more accurate age and gender information. Currently, both
+     * adjusted_age_range and adjusted_gender need to be selected together to get
+     * valid reach stats. These segmentations are only available for allowlisted
+     * customers.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType adjusted_age_range = 196;</code>
+     * @return The enum numeric value on the wire for adjustedAgeRange.
+     */
+    @java.lang.Override public int getAdjustedAgeRangeValue() {
+      return adjustedAgeRange_;
+    }
+    /**
+     * <pre>
+     * Adjusted age range. This is the age range of the user after applying
+     * modeling to get more accurate age and gender information. Currently, both
+     * adjusted_age_range and adjusted_gender need to be selected together to get
+     * valid reach stats. These segmentations are only available for allowlisted
+     * customers.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType adjusted_age_range = 196;</code>
+     * @param value The enum numeric value on the wire for adjustedAgeRange to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAdjustedAgeRangeValue(int value) {
+      adjustedAgeRange_ = value;
+      bitField3_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Adjusted age range. This is the age range of the user after applying
+     * modeling to get more accurate age and gender information. Currently, both
+     * adjusted_age_range and adjusted_gender need to be selected together to get
+     * valid reach stats. These segmentations are only available for allowlisted
+     * customers.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType adjusted_age_range = 196;</code>
+     * @return The adjustedAgeRange.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType getAdjustedAgeRange() {
+      com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType result = com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType.forNumber(adjustedAgeRange_);
+      return result == null ? com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Adjusted age range. This is the age range of the user after applying
+     * modeling to get more accurate age and gender information. Currently, both
+     * adjusted_age_range and adjusted_gender need to be selected together to get
+     * valid reach stats. These segmentations are only available for allowlisted
+     * customers.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType adjusted_age_range = 196;</code>
+     * @param value The adjustedAgeRange to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAdjustedAgeRange(com.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField3_ |= 0x00008000;
+      adjustedAgeRange_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Adjusted age range. This is the age range of the user after applying
+     * modeling to get more accurate age and gender information. Currently, both
+     * adjusted_age_range and adjusted_gender need to be selected together to get
+     * valid reach stats. These segmentations are only available for allowlisted
+     * customers.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.AgeRangeTypeEnum.AgeRangeType adjusted_age_range = 196;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAdjustedAgeRange() {
+      bitField3_ = (bitField3_ & ~0x00008000);
+      adjustedAgeRange_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int adjustedGender_ = 0;
+    /**
+     * <pre>
+     * Adjusted gender. This is the gender of the user after applying modeling to
+     * get more accurate age and gender information. Currently, both
+     * adjusted_age_range and adjusted_gender need to be selected together to get
+     * valid reach stats. These segmentations are only available for allowlisted
+     * customers.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType adjusted_gender = 197;</code>
+     * @return The enum numeric value on the wire for adjustedGender.
+     */
+    @java.lang.Override public int getAdjustedGenderValue() {
+      return adjustedGender_;
+    }
+    /**
+     * <pre>
+     * Adjusted gender. This is the gender of the user after applying modeling to
+     * get more accurate age and gender information. Currently, both
+     * adjusted_age_range and adjusted_gender need to be selected together to get
+     * valid reach stats. These segmentations are only available for allowlisted
+     * customers.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType adjusted_gender = 197;</code>
+     * @param value The enum numeric value on the wire for adjustedGender to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAdjustedGenderValue(int value) {
+      adjustedGender_ = value;
+      bitField3_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Adjusted gender. This is the gender of the user after applying modeling to
+     * get more accurate age and gender information. Currently, both
+     * adjusted_age_range and adjusted_gender need to be selected together to get
+     * valid reach stats. These segmentations are only available for allowlisted
+     * customers.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType adjusted_gender = 197;</code>
+     * @return The adjustedGender.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType getAdjustedGender() {
+      com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType result = com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType.forNumber(adjustedGender_);
+      return result == null ? com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Adjusted gender. This is the gender of the user after applying modeling to
+     * get more accurate age and gender information. Currently, both
+     * adjusted_age_range and adjusted_gender need to be selected together to get
+     * valid reach stats. These segmentations are only available for allowlisted
+     * customers.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType adjusted_gender = 197;</code>
+     * @param value The adjustedGender to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAdjustedGender(com.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField3_ |= 0x00010000;
+      adjustedGender_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Adjusted gender. This is the gender of the user after applying modeling to
+     * get more accurate age and gender information. Currently, both
+     * adjusted_age_range and adjusted_gender need to be selected together to get
+     * valid reach stats. These segmentations are only available for allowlisted
+     * customers.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.GenderTypeEnum.GenderType adjusted_gender = 197;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAdjustedGender() {
+      bitField3_ = (bitField3_ & ~0x00010000);
+      adjustedGender_ = 0;
       onChanged();
       return this;
     }

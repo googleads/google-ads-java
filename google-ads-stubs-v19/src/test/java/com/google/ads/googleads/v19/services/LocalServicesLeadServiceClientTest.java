@@ -16,6 +16,7 @@
 
 package com.google.ads.googleads.v19.services;
 
+import com.google.ads.googleads.v19.resources.LocalServicesLeadName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -114,6 +115,52 @@ public class LocalServicesLeadServiceClientTest {
       String customerId = "customerId-1581184615";
       List<Conversation> conversations = new ArrayList<>();
       client.appendLeadConversation(customerId, conversations);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void provideLeadFeedbackTest() throws Exception {
+    ProvideLeadFeedbackResponse expectedResponse = ProvideLeadFeedbackResponse.newBuilder().build();
+    mockLocalServicesLeadService.addResponse(expectedResponse);
+
+    ProvideLeadFeedbackRequest request =
+        ProvideLeadFeedbackRequest.newBuilder()
+            .setResourceName(
+                LocalServicesLeadName.of("[CUSTOMER_ID]", "[LOCAL_SERVICES_LEAD_ID]").toString())
+            .build();
+
+    ProvideLeadFeedbackResponse actualResponse = client.provideLeadFeedback(request);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockLocalServicesLeadService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    ProvideLeadFeedbackRequest actualRequest = ((ProvideLeadFeedbackRequest) actualRequests.get(0));
+
+    Assert.assertEquals(request.getResourceName(), actualRequest.getResourceName());
+    Assert.assertEquals(request.getSurveyAnswer(), actualRequest.getSurveyAnswer());
+    Assert.assertEquals(request.getSurveySatisfied(), actualRequest.getSurveySatisfied());
+    Assert.assertEquals(request.getSurveyDissatisfied(), actualRequest.getSurveyDissatisfied());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void provideLeadFeedbackExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockLocalServicesLeadService.addException(exception);
+
+    try {
+      ProvideLeadFeedbackRequest request =
+          ProvideLeadFeedbackRequest.newBuilder()
+              .setResourceName(
+                  LocalServicesLeadName.of("[CUSTOMER_ID]", "[LOCAL_SERVICES_LEAD_ID]").toString())
+              .build();
+      client.provideLeadFeedback(request);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception.

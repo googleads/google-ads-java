@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v19.services.stub;
 
+import com.google.ads.googleads.v19.services.GenerateConversionRatesRequest;
+import com.google.ads.googleads.v19.services.GenerateConversionRatesResponse;
 import com.google.ads.googleads.v19.services.GenerateReachForecastRequest;
 import com.google.ads.googleads.v19.services.GenerateReachForecastResponse;
 import com.google.ads.googleads.v19.services.ListPlannableLocationsRequest;
@@ -63,7 +65,7 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the
  * [RetrySettings](https://cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings)
- * of listPlannableLocations:
+ * of generateConversionRates:
  *
  * <pre>{@code
  * // This snippet has been automatically generated and should be regarded as a code template only.
@@ -74,10 +76,10 @@ import javax.annotation.Generated;
  * ReachPlanServiceStubSettings.Builder reachPlanServiceSettingsBuilder =
  *     ReachPlanServiceStubSettings.newBuilder();
  * reachPlanServiceSettingsBuilder
- *     .listPlannableLocationsSettings()
+ *     .generateConversionRatesSettings()
  *     .setRetrySettings(
  *         reachPlanServiceSettingsBuilder
- *             .listPlannableLocationsSettings()
+ *             .generateConversionRatesSettings()
  *             .getRetrySettings()
  *             .toBuilder()
  *             .setInitialRetryDelayDuration(Duration.ofSeconds(1))
@@ -102,12 +104,20 @@ public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceS
   private static final ImmutableList<String> DEFAULT_SERVICE_SCOPES =
       ImmutableList.<String>builder().add("https://www.googleapis.com/auth/adwords").build();
 
+  private final UnaryCallSettings<GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+      generateConversionRatesSettings;
   private final UnaryCallSettings<ListPlannableLocationsRequest, ListPlannableLocationsResponse>
       listPlannableLocationsSettings;
   private final UnaryCallSettings<ListPlannableProductsRequest, ListPlannableProductsResponse>
       listPlannableProductsSettings;
   private final UnaryCallSettings<GenerateReachForecastRequest, GenerateReachForecastResponse>
       generateReachForecastSettings;
+
+  /** Returns the object with the settings used for calls to generateConversionRates. */
+  public UnaryCallSettings<GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+      generateConversionRatesSettings() {
+    return generateConversionRatesSettings;
+  }
 
   /** Returns the object with the settings used for calls to listPlannableLocations. */
   public UnaryCallSettings<ListPlannableLocationsRequest, ListPlannableLocationsResponse>
@@ -208,6 +218,7 @@ public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceS
   protected ReachPlanServiceStubSettings(Builder settingsBuilder) throws IOException {
     super(settingsBuilder);
 
+    generateConversionRatesSettings = settingsBuilder.generateConversionRatesSettings().build();
     listPlannableLocationsSettings = settingsBuilder.listPlannableLocationsSettings().build();
     listPlannableProductsSettings = settingsBuilder.listPlannableProductsSettings().build();
     generateReachForecastSettings = settingsBuilder.generateReachForecastSettings().build();
@@ -216,6 +227,9 @@ public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceS
   /** Builder for ReachPlanServiceStubSettings. */
   public static class Builder extends StubSettings.Builder<ReachPlanServiceStubSettings, Builder> {
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
+    private final UnaryCallSettings.Builder<
+            GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+        generateConversionRatesSettings;
     private final UnaryCallSettings.Builder<
             ListPlannableLocationsRequest, ListPlannableLocationsResponse>
         listPlannableLocationsSettings;
@@ -265,12 +279,14 @@ public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceS
     protected Builder(ClientContext clientContext) {
       super(clientContext);
 
+      generateConversionRatesSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
       listPlannableLocationsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
       listPlannableProductsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
       generateReachForecastSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              generateConversionRatesSettings,
               listPlannableLocationsSettings,
               listPlannableProductsSettings,
               generateReachForecastSettings);
@@ -280,12 +296,14 @@ public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceS
     protected Builder(ReachPlanServiceStubSettings settings) {
       super(settings);
 
+      generateConversionRatesSettings = settings.generateConversionRatesSettings.toBuilder();
       listPlannableLocationsSettings = settings.listPlannableLocationsSettings.toBuilder();
       listPlannableProductsSettings = settings.listPlannableProductsSettings.toBuilder();
       generateReachForecastSettings = settings.generateReachForecastSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              generateConversionRatesSettings,
               listPlannableLocationsSettings,
               listPlannableProductsSettings,
               generateReachForecastSettings);
@@ -304,6 +322,11 @@ public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceS
     }
 
     private static Builder initDefaults(Builder builder) {
+      builder
+          .generateConversionRatesSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
       builder
           .listPlannableLocationsSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
@@ -335,6 +358,13 @@ public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceS
 
     public ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders() {
       return unaryMethodSettingsBuilders;
+    }
+
+    /** Returns the builder for the settings used for calls to generateConversionRates. */
+    public UnaryCallSettings.Builder<
+            GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+        generateConversionRatesSettings() {
+      return generateConversionRatesSettings;
     }
 
     /** Returns the builder for the settings used for calls to listPlannableLocations. */

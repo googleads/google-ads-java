@@ -22,6 +22,37 @@ public final class ReachPlanServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v19.services.ReachPlanService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v19.services.GenerateConversionRatesRequest,
+      com.google.ads.googleads.v19.services.GenerateConversionRatesResponse> getGenerateConversionRatesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateConversionRates",
+      requestType = com.google.ads.googleads.v19.services.GenerateConversionRatesRequest.class,
+      responseType = com.google.ads.googleads.v19.services.GenerateConversionRatesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v19.services.GenerateConversionRatesRequest,
+      com.google.ads.googleads.v19.services.GenerateConversionRatesResponse> getGenerateConversionRatesMethod() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v19.services.GenerateConversionRatesRequest, com.google.ads.googleads.v19.services.GenerateConversionRatesResponse> getGenerateConversionRatesMethod;
+    if ((getGenerateConversionRatesMethod = ReachPlanServiceGrpc.getGenerateConversionRatesMethod) == null) {
+      synchronized (ReachPlanServiceGrpc.class) {
+        if ((getGenerateConversionRatesMethod = ReachPlanServiceGrpc.getGenerateConversionRatesMethod) == null) {
+          ReachPlanServiceGrpc.getGenerateConversionRatesMethod = getGenerateConversionRatesMethod =
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v19.services.GenerateConversionRatesRequest, com.google.ads.googleads.v19.services.GenerateConversionRatesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateConversionRates"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v19.services.GenerateConversionRatesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v19.services.GenerateConversionRatesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ReachPlanServiceMethodDescriptorSupplier("GenerateConversionRates"))
+              .build();
+        }
+      }
+    }
+    return getGenerateConversionRatesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v19.services.ListPlannableLocationsRequest,
       com.google.ads.googleads.v19.services.ListPlannableLocationsResponse> getListPlannableLocationsMethod;
 
@@ -187,6 +218,24 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
+     * Returns a collection of conversion rate suggestions for supported plannable
+     * products.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    default void generateConversionRates(com.google.ads.googleads.v19.services.GenerateConversionRatesRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v19.services.GenerateConversionRatesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateConversionRatesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns the list of plannable locations (for example, countries).
      * List of thrown errors:
      *   [AuthenticationError]()
@@ -284,6 +333,25 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
+     * Returns a collection of conversion rate suggestions for supported plannable
+     * products.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public void generateConversionRates(com.google.ads.googleads.v19.services.GenerateConversionRatesRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v19.services.GenerateConversionRatesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGenerateConversionRatesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns the list of plannable locations (for example, countries).
      * List of thrown errors:
      *   [AuthenticationError]()
@@ -362,6 +430,24 @@ public final class ReachPlanServiceGrpc {
     protected ReachPlanServiceBlockingV2Stub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ReachPlanServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns a collection of conversion rate suggestions for supported plannable
+     * products.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v19.services.GenerateConversionRatesResponse generateConversionRates(com.google.ads.googleads.v19.services.GenerateConversionRatesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateConversionRatesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -445,6 +531,24 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
+     * Returns a collection of conversion rate suggestions for supported plannable
+     * products.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v19.services.GenerateConversionRatesResponse generateConversionRates(com.google.ads.googleads.v19.services.GenerateConversionRatesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateConversionRatesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Returns the list of plannable locations (for example, countries).
      * List of thrown errors:
      *   [AuthenticationError]()
@@ -524,6 +628,25 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
+     * Returns a collection of conversion rate suggestions for supported plannable
+     * products.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v19.services.GenerateConversionRatesResponse> generateConversionRates(
+        com.google.ads.googleads.v19.services.GenerateConversionRatesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateConversionRatesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Returns the list of plannable locations (for example, countries).
      * List of thrown errors:
      *   [AuthenticationError]()
@@ -581,9 +704,10 @@ public final class ReachPlanServiceGrpc {
     }
   }
 
-  private static final int METHODID_LIST_PLANNABLE_LOCATIONS = 0;
-  private static final int METHODID_LIST_PLANNABLE_PRODUCTS = 1;
-  private static final int METHODID_GENERATE_REACH_FORECAST = 2;
+  private static final int METHODID_GENERATE_CONVERSION_RATES = 0;
+  private static final int METHODID_LIST_PLANNABLE_LOCATIONS = 1;
+  private static final int METHODID_LIST_PLANNABLE_PRODUCTS = 2;
+  private static final int METHODID_GENERATE_REACH_FORECAST = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -602,6 +726,10 @@ public final class ReachPlanServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GENERATE_CONVERSION_RATES:
+          serviceImpl.generateConversionRates((com.google.ads.googleads.v19.services.GenerateConversionRatesRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v19.services.GenerateConversionRatesResponse>) responseObserver);
+          break;
         case METHODID_LIST_PLANNABLE_LOCATIONS:
           serviceImpl.listPlannableLocations((com.google.ads.googleads.v19.services.ListPlannableLocationsRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v19.services.ListPlannableLocationsResponse>) responseObserver);
@@ -632,6 +760,13 @@ public final class ReachPlanServiceGrpc {
 
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGenerateConversionRatesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v19.services.GenerateConversionRatesRequest,
+              com.google.ads.googleads.v19.services.GenerateConversionRatesResponse>(
+                service, METHODID_GENERATE_CONVERSION_RATES)))
         .addMethod(
           getListPlannableLocationsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -701,6 +836,7 @@ public final class ReachPlanServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ReachPlanServiceFileDescriptorSupplier())
+              .addMethod(getGenerateConversionRatesMethod())
               .addMethod(getListPlannableLocationsMethod())
               .addMethod(getListPlannableProductsMethod())
               .addMethod(getGenerateReachForecastMethod())

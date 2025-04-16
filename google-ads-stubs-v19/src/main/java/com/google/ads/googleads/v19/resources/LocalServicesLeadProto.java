@@ -52,7 +52,7 @@ public final class LocalServicesLeadProto {
       "s/local_services_lead_status.proto\032=goog" +
       "le/ads/googleads/v19/enums/local_service" +
       "s_lead_type.proto\032\037google/api/field_beha" +
-      "vior.proto\032\031google/api/resource.proto\"\254\006" +
+      "vior.proto\032\031google/api/resource.proto\"\322\006" +
       "\n\021LocalServicesLead\022I\n\rresource_name\030\001 \001" +
       "(\tB2\340A\003\372A,\n*googleads.googleapis.com/Loc" +
       "alServicesLead\022\017\n\002id\030\002 \001(\003B\003\340A\003\022\030\n\013categ" +
@@ -69,26 +69,27 @@ public final class LocalServicesLeadProto {
       "leads.v19.resources.NoteB\003\340A\003H\000\210\001\001\022\031\n\014le" +
       "ad_charged\030\013 \001(\010B\003\340A\003\022S\n\016credit_details\030" +
       "\014 \001(\01321.google.ads.googleads.v19.resourc" +
-      "es.CreditDetailsB\003\340A\003H\001\210\001\001:t\352Aq\n*googlea" +
-      "ds.googleapis.com/LocalServicesLead\022Ccus" +
-      "tomers/{customer_id}/localServicesLeads/" +
-      "{local_services_lead_id}B\007\n\005_noteB\021\n\017_cr" +
-      "edit_details\"[\n\016ContactDetails\022\031\n\014phone_" +
-      "number\030\001 \001(\tB\003\340A\003\022\022\n\005email\030\002 \001(\tB\003\340A\003\022\032\n" +
-      "\rconsumer_name\030\003 \001(\tB\003\340A\003\"=\n\004Note\022\033\n\016edi" +
-      "t_date_time\030\001 \001(\tB\003\340A\003\022\030\n\013description\030\002 " +
-      "\001(\tB\003\340A\003\"\245\001\n\rCreditDetails\022c\n\014credit_sta" +
-      "te\030\001 \001(\0162H.google.ads.googleads.v19.enum" +
-      "s.LocalServicesCreditStateEnum.CreditSta" +
-      "teB\003\340A\003\022/\n\"credit_state_last_update_date" +
-      "_time\030\002 \001(\tB\003\340A\003B\210\002\n&com.google.ads.goog" +
-      "leads.v19.resourcesB\026LocalServicesLeadPr" +
-      "otoP\001ZKgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v19/resources;resourc" +
-      "es\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V19.Reso" +
-      "urces\312\002\"Google\\Ads\\GoogleAds\\V19\\Resourc" +
-      "es\352\002&Google::Ads::GoogleAds::V19::Resour" +
-      "cesb\006proto3"
+      "es.CreditDetailsB\003\340A\003H\001\210\001\001\022$\n\027lead_feedb" +
+      "ack_submitted\030\r \001(\010B\003\340A\003:t\352Aq\n*googleads" +
+      ".googleapis.com/LocalServicesLead\022Ccusto" +
+      "mers/{customer_id}/localServicesLeads/{l" +
+      "ocal_services_lead_id}B\007\n\005_noteB\021\n\017_cred" +
+      "it_details\"[\n\016ContactDetails\022\031\n\014phone_nu" +
+      "mber\030\001 \001(\tB\003\340A\003\022\022\n\005email\030\002 \001(\tB\003\340A\003\022\032\n\rc" +
+      "onsumer_name\030\003 \001(\tB\003\340A\003\"=\n\004Note\022\033\n\016edit_" +
+      "date_time\030\001 \001(\tB\003\340A\003\022\030\n\013description\030\002 \001(" +
+      "\tB\003\340A\003\"\245\001\n\rCreditDetails\022c\n\014credit_state" +
+      "\030\001 \001(\0162H.google.ads.googleads.v19.enums." +
+      "LocalServicesCreditStateEnum.CreditState" +
+      "B\003\340A\003\022/\n\"credit_state_last_update_date_t" +
+      "ime\030\002 \001(\tB\003\340A\003B\210\002\n&com.google.ads.google" +
+      "ads.v19.resourcesB\026LocalServicesLeadProt" +
+      "oP\001ZKgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v19/resources;resources" +
+      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V19.Resour" +
+      "ces\312\002\"Google\\Ads\\GoogleAds\\V19\\Resources" +
+      "\352\002&Google::Ads::GoogleAds::V19::Resource" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -104,7 +105,7 @@ public final class LocalServicesLeadProto {
     internal_static_google_ads_googleads_v19_resources_LocalServicesLead_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v19_resources_LocalServicesLead_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "CategoryId", "ServiceId", "ContactDetails", "LeadType", "LeadStatus", "CreationDateTime", "Locale", "Note", "LeadCharged", "CreditDetails", });
+        new java.lang.String[] { "ResourceName", "Id", "CategoryId", "ServiceId", "ContactDetails", "LeadType", "LeadStatus", "CreationDateTime", "Locale", "Note", "LeadCharged", "CreditDetails", "LeadFeedbackSubmitted", });
     internal_static_google_ads_googleads_v19_resources_ContactDetails_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v19_resources_ContactDetails_fieldAccessorTable = new

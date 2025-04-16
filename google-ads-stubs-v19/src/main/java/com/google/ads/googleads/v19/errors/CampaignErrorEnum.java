@@ -791,6 +791,16 @@ private static final long serialVersionUID = 0L;
     REQUIRED_LOGO_ASSET_NOT_LINKED(96),
     /**
      * <pre>
+     * This campaign does not support brand targeting overrides. Brand targeting
+     * overrides are only supported for Performance Max campaigns that have a
+     * product feed.
+     * </pre>
+     *
+     * <code>BRAND_TARGETING_OVERRIDES_NOT_SUPPORTED = 97;</code>
+     */
+    BRAND_TARGETING_OVERRIDES_NOT_SUPPORTED(97),
+    /**
+     * <pre>
      * Brand Guideline fields can only be set for campaigns that have Brand
      * Guidelines enabled.
      * </pre>
@@ -1594,6 +1604,16 @@ private static final long serialVersionUID = 0L;
     public static final int REQUIRED_LOGO_ASSET_NOT_LINKED_VALUE = 96;
     /**
      * <pre>
+     * This campaign does not support brand targeting overrides. Brand targeting
+     * overrides are only supported for Performance Max campaigns that have a
+     * product feed.
+     * </pre>
+     *
+     * <code>BRAND_TARGETING_OVERRIDES_NOT_SUPPORTED = 97;</code>
+     */
+    public static final int BRAND_TARGETING_OVERRIDES_NOT_SUPPORTED_VALUE = 97;
+    /**
+     * <pre>
      * Brand Guideline fields can only be set for campaigns that have Brand
      * Guidelines enabled.
      * </pre>
@@ -1767,6 +1787,7 @@ private static final long serialVersionUID = 0L;
         case 94: return CANNOT_ENABLE_BROAD_MATCH_FOR_PROMOTING_TRIAL_CAMPAIGN;
         case 95: return REQUIRED_BUSINESS_NAME_ASSET_NOT_LINKED;
         case 96: return REQUIRED_LOGO_ASSET_NOT_LINKED;
+        case 97: return BRAND_TARGETING_OVERRIDES_NOT_SUPPORTED;
         case 98: return BRAND_GUIDELINES_NOT_ENABLED_FOR_CAMPAIGN;
         case 99: return BRAND_GUIDELINES_MAIN_AND_ACCENT_COLORS_REQUIRED;
         case 100: return BRAND_GUIDELINES_COLOR_INVALID_FORMAT;

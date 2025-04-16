@@ -577,6 +577,2787 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface DemandGenAdGroupSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Channel controls for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+     * @return Whether the channelControls field is set.
+     */
+    boolean hasChannelControls();
+    /**
+     * <pre>
+     * Channel controls for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+     * @return The channelControls.
+     */
+    com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls getChannelControls();
+    /**
+     * <pre>
+     * Channel controls for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+     */
+    com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControlsOrBuilder getChannelControlsOrBuilder();
+  }
+  /**
+   * <pre>
+   * Settings for Demand Gen ad groups.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings}
+   */
+  public static final class DemandGenAdGroupSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings)
+      DemandGenAdGroupSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DemandGenAdGroupSettings.newBuilder() to construct.
+    private DemandGenAdGroupSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DemandGenAdGroupSettings() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DemandGenAdGroupSettings();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.class, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.Builder.class);
+    }
+
+    public interface DemandGenChannelControlsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Output only. Channel configuration reflecting which field in the oneof
+       * is populated.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig channel_config = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The enum numeric value on the wire for channelConfig.
+       */
+      int getChannelConfigValue();
+      /**
+       * <pre>
+       * Output only. Channel configuration reflecting which field in the oneof
+       * is populated.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig channel_config = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The channelConfig.
+       */
+      com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig getChannelConfig();
+
+      /**
+       * <pre>
+       * High level channel strategy.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+       * @return Whether the channelStrategy field is set.
+       */
+      boolean hasChannelStrategy();
+      /**
+       * <pre>
+       * High level channel strategy.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+       * @return The enum numeric value on the wire for channelStrategy.
+       */
+      int getChannelStrategyValue();
+      /**
+       * <pre>
+       * High level channel strategy.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+       * @return The channelStrategy.
+       */
+      com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy getChannelStrategy();
+
+      /**
+       * <pre>
+       * Explicitly selected channels. This field should be set with at
+       * least one true value when present.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+       * @return Whether the selectedChannels field is set.
+       */
+      boolean hasSelectedChannels();
+      /**
+       * <pre>
+       * Explicitly selected channels. This field should be set with at
+       * least one true value when present.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+       * @return The selectedChannels.
+       */
+      com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels getSelectedChannels();
+      /**
+       * <pre>
+       * Explicitly selected channels. This field should be set with at
+       * least one true value when present.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+       */
+      com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannelsOrBuilder getSelectedChannelsOrBuilder();
+
+      com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.ChannelConfigurationCase getChannelConfigurationCase();
+    }
+    /**
+     * <pre>
+     * Channel controls for Demand Gen ad groups.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls}
+     */
+    public static final class DemandGenChannelControls extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls)
+        DemandGenChannelControlsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DemandGenChannelControls.newBuilder() to construct.
+      private DemandGenChannelControls(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DemandGenChannelControls() {
+        channelConfig_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DemandGenChannelControls();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.class, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.Builder.class);
+      }
+
+      public interface DemandGenSelectedChannelsOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * Whether to enable ads on the YouTube In-Stream channel.
+         * </pre>
+         *
+         * <code>bool youtube_in_stream = 1;</code>
+         * @return The youtubeInStream.
+         */
+        boolean getYoutubeInStream();
+
+        /**
+         * <pre>
+         * Whether to enable ads on the YouTube In-Feed channel.
+         * </pre>
+         *
+         * <code>bool youtube_in_feed = 2;</code>
+         * @return The youtubeInFeed.
+         */
+        boolean getYoutubeInFeed();
+
+        /**
+         * <pre>
+         * Whether to enable ads on the YouTube Shorts channel.
+         * </pre>
+         *
+         * <code>bool youtube_shorts = 3;</code>
+         * @return The youtubeShorts.
+         */
+        boolean getYoutubeShorts();
+
+        /**
+         * <pre>
+         * Whether to enable ads on the Discover channel.
+         * </pre>
+         *
+         * <code>bool discover = 4;</code>
+         * @return The discover.
+         */
+        boolean getDiscover();
+
+        /**
+         * <pre>
+         * Whether to enable ads on the Gmail channel.
+         * </pre>
+         *
+         * <code>bool gmail = 5;</code>
+         * @return The gmail.
+         */
+        boolean getGmail();
+
+        /**
+         * <pre>
+         * Whether to enable ads on the Display channel.
+         * </pre>
+         *
+         * <code>bool display = 6;</code>
+         * @return The display.
+         */
+        boolean getDisplay();
+      }
+      /**
+       * <pre>
+       * Explicitly selected channels for channel controls in Demand Gen ad
+       * groups.
+       * </pre>
+       *
+       * Protobuf type {@code google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels}
+       */
+      public static final class DemandGenSelectedChannels extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels)
+          DemandGenSelectedChannelsOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use DemandGenSelectedChannels.newBuilder() to construct.
+        private DemandGenSelectedChannels(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private DemandGenSelectedChannels() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new DemandGenSelectedChannels();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.class, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.Builder.class);
+        }
+
+        public static final int YOUTUBE_IN_STREAM_FIELD_NUMBER = 1;
+        private boolean youtubeInStream_ = false;
+        /**
+         * <pre>
+         * Whether to enable ads on the YouTube In-Stream channel.
+         * </pre>
+         *
+         * <code>bool youtube_in_stream = 1;</code>
+         * @return The youtubeInStream.
+         */
+        @java.lang.Override
+        public boolean getYoutubeInStream() {
+          return youtubeInStream_;
+        }
+
+        public static final int YOUTUBE_IN_FEED_FIELD_NUMBER = 2;
+        private boolean youtubeInFeed_ = false;
+        /**
+         * <pre>
+         * Whether to enable ads on the YouTube In-Feed channel.
+         * </pre>
+         *
+         * <code>bool youtube_in_feed = 2;</code>
+         * @return The youtubeInFeed.
+         */
+        @java.lang.Override
+        public boolean getYoutubeInFeed() {
+          return youtubeInFeed_;
+        }
+
+        public static final int YOUTUBE_SHORTS_FIELD_NUMBER = 3;
+        private boolean youtubeShorts_ = false;
+        /**
+         * <pre>
+         * Whether to enable ads on the YouTube Shorts channel.
+         * </pre>
+         *
+         * <code>bool youtube_shorts = 3;</code>
+         * @return The youtubeShorts.
+         */
+        @java.lang.Override
+        public boolean getYoutubeShorts() {
+          return youtubeShorts_;
+        }
+
+        public static final int DISCOVER_FIELD_NUMBER = 4;
+        private boolean discover_ = false;
+        /**
+         * <pre>
+         * Whether to enable ads on the Discover channel.
+         * </pre>
+         *
+         * <code>bool discover = 4;</code>
+         * @return The discover.
+         */
+        @java.lang.Override
+        public boolean getDiscover() {
+          return discover_;
+        }
+
+        public static final int GMAIL_FIELD_NUMBER = 5;
+        private boolean gmail_ = false;
+        /**
+         * <pre>
+         * Whether to enable ads on the Gmail channel.
+         * </pre>
+         *
+         * <code>bool gmail = 5;</code>
+         * @return The gmail.
+         */
+        @java.lang.Override
+        public boolean getGmail() {
+          return gmail_;
+        }
+
+        public static final int DISPLAY_FIELD_NUMBER = 6;
+        private boolean display_ = false;
+        /**
+         * <pre>
+         * Whether to enable ads on the Display channel.
+         * </pre>
+         *
+         * <code>bool display = 6;</code>
+         * @return The display.
+         */
+        @java.lang.Override
+        public boolean getDisplay() {
+          return display_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (youtubeInStream_ != false) {
+            output.writeBool(1, youtubeInStream_);
+          }
+          if (youtubeInFeed_ != false) {
+            output.writeBool(2, youtubeInFeed_);
+          }
+          if (youtubeShorts_ != false) {
+            output.writeBool(3, youtubeShorts_);
+          }
+          if (discover_ != false) {
+            output.writeBool(4, discover_);
+          }
+          if (gmail_ != false) {
+            output.writeBool(5, gmail_);
+          }
+          if (display_ != false) {
+            output.writeBool(6, display_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (youtubeInStream_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(1, youtubeInStream_);
+          }
+          if (youtubeInFeed_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(2, youtubeInFeed_);
+          }
+          if (youtubeShorts_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(3, youtubeShorts_);
+          }
+          if (discover_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(4, discover_);
+          }
+          if (gmail_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(5, gmail_);
+          }
+          if (display_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(6, display_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels)) {
+            return super.equals(obj);
+          }
+          com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels other = (com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels) obj;
+
+          if (getYoutubeInStream()
+              != other.getYoutubeInStream()) return false;
+          if (getYoutubeInFeed()
+              != other.getYoutubeInFeed()) return false;
+          if (getYoutubeShorts()
+              != other.getYoutubeShorts()) return false;
+          if (getDiscover()
+              != other.getDiscover()) return false;
+          if (getGmail()
+              != other.getGmail()) return false;
+          if (getDisplay()
+              != other.getDisplay()) return false;
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + YOUTUBE_IN_STREAM_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getYoutubeInStream());
+          hash = (37 * hash) + YOUTUBE_IN_FEED_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getYoutubeInFeed());
+          hash = (37 * hash) + YOUTUBE_SHORTS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getYoutubeShorts());
+          hash = (37 * hash) + DISCOVER_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getDiscover());
+          hash = (37 * hash) + GMAIL_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getGmail());
+          hash = (37 * hash) + DISPLAY_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getDisplay());
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * <pre>
+         * Explicitly selected channels for channel controls in Demand Gen ad
+         * groups.
+         * </pre>
+         *
+         * Protobuf type {@code google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels)
+            com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannelsOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.class, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.Builder.class);
+          }
+
+          // Construct using com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.newBuilder()
+          private Builder() {
+
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            youtubeInStream_ = false;
+            youtubeInFeed_ = false;
+            youtubeShorts_ = false;
+            discover_ = false;
+            gmail_ = false;
+            display_ = false;
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_descriptor;
+          }
+
+          @java.lang.Override
+          public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels getDefaultInstanceForType() {
+            return com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels build() {
+            com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels buildPartial() {
+            com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels result = new com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels result) {
+            int from_bitField0_ = bitField0_;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.youtubeInStream_ = youtubeInStream_;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.youtubeInFeed_ = youtubeInFeed_;
+            }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              result.youtubeShorts_ = youtubeShorts_;
+            }
+            if (((from_bitField0_ & 0x00000008) != 0)) {
+              result.discover_ = discover_;
+            }
+            if (((from_bitField0_ & 0x00000010) != 0)) {
+              result.gmail_ = gmail_;
+            }
+            if (((from_bitField0_ & 0x00000020) != 0)) {
+              result.display_ = display_;
+            }
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels) {
+              return mergeFrom((com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels other) {
+            if (other == com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.getDefaultInstance()) return this;
+            if (other.getYoutubeInStream() != false) {
+              setYoutubeInStream(other.getYoutubeInStream());
+            }
+            if (other.getYoutubeInFeed() != false) {
+              setYoutubeInFeed(other.getYoutubeInFeed());
+            }
+            if (other.getYoutubeShorts() != false) {
+              setYoutubeShorts(other.getYoutubeShorts());
+            }
+            if (other.getDiscover() != false) {
+              setDiscover(other.getDiscover());
+            }
+            if (other.getGmail() != false) {
+              setGmail(other.getGmail());
+            }
+            if (other.getDisplay() != false) {
+              setDisplay(other.getDisplay());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 8: {
+                    youtubeInStream_ = input.readBool();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 8
+                  case 16: {
+                    youtubeInFeed_ = input.readBool();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 16
+                  case 24: {
+                    youtubeShorts_ = input.readBool();
+                    bitField0_ |= 0x00000004;
+                    break;
+                  } // case 24
+                  case 32: {
+                    discover_ = input.readBool();
+                    bitField0_ |= 0x00000008;
+                    break;
+                  } // case 32
+                  case 40: {
+                    gmail_ = input.readBool();
+                    bitField0_ |= 0x00000010;
+                    break;
+                  } // case 40
+                  case 48: {
+                    display_ = input.readBool();
+                    bitField0_ |= 0x00000020;
+                    break;
+                  } // case 48
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private boolean youtubeInStream_ ;
+          /**
+           * <pre>
+           * Whether to enable ads on the YouTube In-Stream channel.
+           * </pre>
+           *
+           * <code>bool youtube_in_stream = 1;</code>
+           * @return The youtubeInStream.
+           */
+          @java.lang.Override
+          public boolean getYoutubeInStream() {
+            return youtubeInStream_;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the YouTube In-Stream channel.
+           * </pre>
+           *
+           * <code>bool youtube_in_stream = 1;</code>
+           * @param value The youtubeInStream to set.
+           * @return This builder for chaining.
+           */
+          public Builder setYoutubeInStream(boolean value) {
+
+            youtubeInStream_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the YouTube In-Stream channel.
+           * </pre>
+           *
+           * <code>bool youtube_in_stream = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearYoutubeInStream() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            youtubeInStream_ = false;
+            onChanged();
+            return this;
+          }
+
+          private boolean youtubeInFeed_ ;
+          /**
+           * <pre>
+           * Whether to enable ads on the YouTube In-Feed channel.
+           * </pre>
+           *
+           * <code>bool youtube_in_feed = 2;</code>
+           * @return The youtubeInFeed.
+           */
+          @java.lang.Override
+          public boolean getYoutubeInFeed() {
+            return youtubeInFeed_;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the YouTube In-Feed channel.
+           * </pre>
+           *
+           * <code>bool youtube_in_feed = 2;</code>
+           * @param value The youtubeInFeed to set.
+           * @return This builder for chaining.
+           */
+          public Builder setYoutubeInFeed(boolean value) {
+
+            youtubeInFeed_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the YouTube In-Feed channel.
+           * </pre>
+           *
+           * <code>bool youtube_in_feed = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearYoutubeInFeed() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            youtubeInFeed_ = false;
+            onChanged();
+            return this;
+          }
+
+          private boolean youtubeShorts_ ;
+          /**
+           * <pre>
+           * Whether to enable ads on the YouTube Shorts channel.
+           * </pre>
+           *
+           * <code>bool youtube_shorts = 3;</code>
+           * @return The youtubeShorts.
+           */
+          @java.lang.Override
+          public boolean getYoutubeShorts() {
+            return youtubeShorts_;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the YouTube Shorts channel.
+           * </pre>
+           *
+           * <code>bool youtube_shorts = 3;</code>
+           * @param value The youtubeShorts to set.
+           * @return This builder for chaining.
+           */
+          public Builder setYoutubeShorts(boolean value) {
+
+            youtubeShorts_ = value;
+            bitField0_ |= 0x00000004;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the YouTube Shorts channel.
+           * </pre>
+           *
+           * <code>bool youtube_shorts = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearYoutubeShorts() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            youtubeShorts_ = false;
+            onChanged();
+            return this;
+          }
+
+          private boolean discover_ ;
+          /**
+           * <pre>
+           * Whether to enable ads on the Discover channel.
+           * </pre>
+           *
+           * <code>bool discover = 4;</code>
+           * @return The discover.
+           */
+          @java.lang.Override
+          public boolean getDiscover() {
+            return discover_;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the Discover channel.
+           * </pre>
+           *
+           * <code>bool discover = 4;</code>
+           * @param value The discover to set.
+           * @return This builder for chaining.
+           */
+          public Builder setDiscover(boolean value) {
+
+            discover_ = value;
+            bitField0_ |= 0x00000008;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the Discover channel.
+           * </pre>
+           *
+           * <code>bool discover = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearDiscover() {
+            bitField0_ = (bitField0_ & ~0x00000008);
+            discover_ = false;
+            onChanged();
+            return this;
+          }
+
+          private boolean gmail_ ;
+          /**
+           * <pre>
+           * Whether to enable ads on the Gmail channel.
+           * </pre>
+           *
+           * <code>bool gmail = 5;</code>
+           * @return The gmail.
+           */
+          @java.lang.Override
+          public boolean getGmail() {
+            return gmail_;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the Gmail channel.
+           * </pre>
+           *
+           * <code>bool gmail = 5;</code>
+           * @param value The gmail to set.
+           * @return This builder for chaining.
+           */
+          public Builder setGmail(boolean value) {
+
+            gmail_ = value;
+            bitField0_ |= 0x00000010;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the Gmail channel.
+           * </pre>
+           *
+           * <code>bool gmail = 5;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearGmail() {
+            bitField0_ = (bitField0_ & ~0x00000010);
+            gmail_ = false;
+            onChanged();
+            return this;
+          }
+
+          private boolean display_ ;
+          /**
+           * <pre>
+           * Whether to enable ads on the Display channel.
+           * </pre>
+           *
+           * <code>bool display = 6;</code>
+           * @return The display.
+           */
+          @java.lang.Override
+          public boolean getDisplay() {
+            return display_;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the Display channel.
+           * </pre>
+           *
+           * <code>bool display = 6;</code>
+           * @param value The display to set.
+           * @return This builder for chaining.
+           */
+          public Builder setDisplay(boolean value) {
+
+            display_ = value;
+            bitField0_ |= 0x00000020;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the Display channel.
+           * </pre>
+           *
+           * <code>bool display = 6;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearDisplay() {
+            bitField0_ = (bitField0_ & ~0x00000020);
+            display_ = false;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels)
+        }
+
+        // @@protoc_insertion_point(class_scope:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels)
+        private static final com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels();
+        }
+
+        public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<DemandGenSelectedChannels>
+            PARSER = new com.google.protobuf.AbstractParser<DemandGenSelectedChannels>() {
+          @java.lang.Override
+          public DemandGenSelectedChannels parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<DemandGenSelectedChannels> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<DemandGenSelectedChannels> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      private int channelConfigurationCase_ = 0;
+      @SuppressWarnings("serial")
+      private java.lang.Object channelConfiguration_;
+      public enum ChannelConfigurationCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        CHANNEL_STRATEGY(2),
+        SELECTED_CHANNELS(3),
+        CHANNELCONFIGURATION_NOT_SET(0);
+        private final int value;
+        private ChannelConfigurationCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static ChannelConfigurationCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static ChannelConfigurationCase forNumber(int value) {
+          switch (value) {
+            case 2: return CHANNEL_STRATEGY;
+            case 3: return SELECTED_CHANNELS;
+            case 0: return CHANNELCONFIGURATION_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public ChannelConfigurationCase
+      getChannelConfigurationCase() {
+        return ChannelConfigurationCase.forNumber(
+            channelConfigurationCase_);
+      }
+
+      public static final int CHANNEL_CONFIG_FIELD_NUMBER = 1;
+      private int channelConfig_ = 0;
+      /**
+       * <pre>
+       * Output only. Channel configuration reflecting which field in the oneof
+       * is populated.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig channel_config = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The enum numeric value on the wire for channelConfig.
+       */
+      @java.lang.Override public int getChannelConfigValue() {
+        return channelConfig_;
+      }
+      /**
+       * <pre>
+       * Output only. Channel configuration reflecting which field in the oneof
+       * is populated.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig channel_config = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The channelConfig.
+       */
+      @java.lang.Override public com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig getChannelConfig() {
+        com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig result = com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig.forNumber(channelConfig_);
+        return result == null ? com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig.UNRECOGNIZED : result;
+      }
+
+      public static final int CHANNEL_STRATEGY_FIELD_NUMBER = 2;
+      /**
+       * <pre>
+       * High level channel strategy.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+       * @return Whether the channelStrategy field is set.
+       */
+      public boolean hasChannelStrategy() {
+        return channelConfigurationCase_ == 2;
+      }
+      /**
+       * <pre>
+       * High level channel strategy.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+       * @return The enum numeric value on the wire for channelStrategy.
+       */
+      public int getChannelStrategyValue() {
+        if (channelConfigurationCase_ == 2) {
+          return (java.lang.Integer) channelConfiguration_;
+        }
+        return 0;
+      }
+      /**
+       * <pre>
+       * High level channel strategy.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+       * @return The channelStrategy.
+       */
+      public com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy getChannelStrategy() {
+        if (channelConfigurationCase_ == 2) {
+          com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy result = com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy.forNumber(
+              (java.lang.Integer) channelConfiguration_);
+          return result == null ? com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy.UNRECOGNIZED : result;
+        }
+        return com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy.UNSPECIFIED;
+      }
+
+      public static final int SELECTED_CHANNELS_FIELD_NUMBER = 3;
+      /**
+       * <pre>
+       * Explicitly selected channels. This field should be set with at
+       * least one true value when present.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+       * @return Whether the selectedChannels field is set.
+       */
+      @java.lang.Override
+      public boolean hasSelectedChannels() {
+        return channelConfigurationCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Explicitly selected channels. This field should be set with at
+       * least one true value when present.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+       * @return The selectedChannels.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels getSelectedChannels() {
+        if (channelConfigurationCase_ == 3) {
+           return (com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels) channelConfiguration_;
+        }
+        return com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Explicitly selected channels. This field should be set with at
+       * least one true value when present.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannelsOrBuilder getSelectedChannelsOrBuilder() {
+        if (channelConfigurationCase_ == 3) {
+           return (com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels) channelConfiguration_;
+        }
+        return com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.getDefaultInstance();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (channelConfig_ != com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig.UNSPECIFIED.getNumber()) {
+          output.writeEnum(1, channelConfig_);
+        }
+        if (channelConfigurationCase_ == 2) {
+          output.writeEnum(2, ((java.lang.Integer) channelConfiguration_));
+        }
+        if (channelConfigurationCase_ == 3) {
+          output.writeMessage(3, (com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels) channelConfiguration_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (channelConfig_ != com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig.UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, channelConfig_);
+        }
+        if (channelConfigurationCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, ((java.lang.Integer) channelConfiguration_));
+        }
+        if (channelConfigurationCase_ == 3) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, (com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels) channelConfiguration_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls)) {
+          return super.equals(obj);
+        }
+        com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls other = (com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls) obj;
+
+        if (channelConfig_ != other.channelConfig_) return false;
+        if (!getChannelConfigurationCase().equals(other.getChannelConfigurationCase())) return false;
+        switch (channelConfigurationCase_) {
+          case 2:
+            if (getChannelStrategyValue()
+                != other.getChannelStrategyValue()) return false;
+            break;
+          case 3:
+            if (!getSelectedChannels()
+                .equals(other.getSelectedChannels())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CHANNEL_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + channelConfig_;
+        switch (channelConfigurationCase_) {
+          case 2:
+            hash = (37 * hash) + CHANNEL_STRATEGY_FIELD_NUMBER;
+            hash = (53 * hash) + getChannelStrategyValue();
+            break;
+          case 3:
+            hash = (37 * hash) + SELECTED_CHANNELS_FIELD_NUMBER;
+            hash = (53 * hash) + getSelectedChannels().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Channel controls for Demand Gen ad groups.
+       * </pre>
+       *
+       * Protobuf type {@code google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls)
+          com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControlsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.class, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.Builder.class);
+        }
+
+        // Construct using com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          channelConfig_ = 0;
+          if (selectedChannelsBuilder_ != null) {
+            selectedChannelsBuilder_.clear();
+          }
+          channelConfigurationCase_ = 0;
+          channelConfiguration_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls getDefaultInstanceForType() {
+          return com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls build() {
+          com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls buildPartial() {
+          com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls result = new com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          buildPartialOneofs(result);
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.channelConfig_ = channelConfig_;
+          }
+        }
+
+        private void buildPartialOneofs(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls result) {
+          result.channelConfigurationCase_ = channelConfigurationCase_;
+          result.channelConfiguration_ = this.channelConfiguration_;
+          if (channelConfigurationCase_ == 3 &&
+              selectedChannelsBuilder_ != null) {
+            result.channelConfiguration_ = selectedChannelsBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls) {
+            return mergeFrom((com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls other) {
+          if (other == com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.getDefaultInstance()) return this;
+          if (other.channelConfig_ != 0) {
+            setChannelConfigValue(other.getChannelConfigValue());
+          }
+          switch (other.getChannelConfigurationCase()) {
+            case CHANNEL_STRATEGY: {
+              setChannelStrategyValue(other.getChannelStrategyValue());
+              break;
+            }
+            case SELECTED_CHANNELS: {
+              mergeSelectedChannels(other.getSelectedChannels());
+              break;
+            }
+            case CHANNELCONFIGURATION_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  channelConfig_ = input.readEnum();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  int rawValue = input.readEnum();
+                  channelConfigurationCase_ = 2;
+                  channelConfiguration_ = rawValue;
+                  break;
+                } // case 16
+                case 26: {
+                  input.readMessage(
+                      getSelectedChannelsFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  channelConfigurationCase_ = 3;
+                  break;
+                } // case 26
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int channelConfigurationCase_ = 0;
+        private java.lang.Object channelConfiguration_;
+        public ChannelConfigurationCase
+            getChannelConfigurationCase() {
+          return ChannelConfigurationCase.forNumber(
+              channelConfigurationCase_);
+        }
+
+        public Builder clearChannelConfiguration() {
+          channelConfigurationCase_ = 0;
+          channelConfiguration_ = null;
+          onChanged();
+          return this;
+        }
+
+        private int bitField0_;
+
+        private int channelConfig_ = 0;
+        /**
+         * <pre>
+         * Output only. Channel configuration reflecting which field in the oneof
+         * is populated.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig channel_config = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return The enum numeric value on the wire for channelConfig.
+         */
+        @java.lang.Override public int getChannelConfigValue() {
+          return channelConfig_;
+        }
+        /**
+         * <pre>
+         * Output only. Channel configuration reflecting which field in the oneof
+         * is populated.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig channel_config = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @param value The enum numeric value on the wire for channelConfig to set.
+         * @return This builder for chaining.
+         */
+        public Builder setChannelConfigValue(int value) {
+          channelConfig_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Output only. Channel configuration reflecting which field in the oneof
+         * is populated.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig channel_config = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return The channelConfig.
+         */
+        @java.lang.Override
+        public com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig getChannelConfig() {
+          com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig result = com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig.forNumber(channelConfig_);
+          return result == null ? com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Output only. Channel configuration reflecting which field in the oneof
+         * is populated.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig channel_config = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @param value The channelConfig to set.
+         * @return This builder for chaining.
+         */
+        public Builder setChannelConfig(com.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          channelConfig_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Output only. Channel configuration reflecting which field in the oneof
+         * is populated.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig channel_config = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearChannelConfig() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          channelConfig_ = 0;
+          onChanged();
+          return this;
+        }
+
+        /**
+         * <pre>
+         * High level channel strategy.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+         * @return Whether the channelStrategy field is set.
+         */
+        @java.lang.Override
+        public boolean hasChannelStrategy() {
+          return channelConfigurationCase_ == 2;
+        }
+        /**
+         * <pre>
+         * High level channel strategy.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+         * @return The enum numeric value on the wire for channelStrategy.
+         */
+        @java.lang.Override
+        public int getChannelStrategyValue() {
+          if (channelConfigurationCase_ == 2) {
+            return ((java.lang.Integer) channelConfiguration_).intValue();
+          }
+          return 0;
+        }
+        /**
+         * <pre>
+         * High level channel strategy.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+         * @param value The enum numeric value on the wire for channelStrategy to set.
+         * @return This builder for chaining.
+         */
+        public Builder setChannelStrategyValue(int value) {
+          channelConfigurationCase_ = 2;
+          channelConfiguration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * High level channel strategy.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+         * @return The channelStrategy.
+         */
+        @java.lang.Override
+        public com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy getChannelStrategy() {
+          if (channelConfigurationCase_ == 2) {
+            com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy result = com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy.forNumber(
+                (java.lang.Integer) channelConfiguration_);
+            return result == null ? com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy.UNRECOGNIZED : result;
+          }
+          return com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy.UNSPECIFIED;
+        }
+        /**
+         * <pre>
+         * High level channel strategy.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+         * @param value The channelStrategy to set.
+         * @return This builder for chaining.
+         */
+        public Builder setChannelStrategy(com.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          channelConfigurationCase_ = 2;
+          channelConfiguration_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * High level channel strategy.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy channel_strategy = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearChannelStrategy() {
+          if (channelConfigurationCase_ == 2) {
+            channelConfigurationCase_ = 0;
+            channelConfiguration_ = null;
+            onChanged();
+          }
+          return this;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.Builder, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannelsOrBuilder> selectedChannelsBuilder_;
+        /**
+         * <pre>
+         * Explicitly selected channels. This field should be set with at
+         * least one true value when present.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+         * @return Whether the selectedChannels field is set.
+         */
+        @java.lang.Override
+        public boolean hasSelectedChannels() {
+          return channelConfigurationCase_ == 3;
+        }
+        /**
+         * <pre>
+         * Explicitly selected channels. This field should be set with at
+         * least one true value when present.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+         * @return The selectedChannels.
+         */
+        @java.lang.Override
+        public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels getSelectedChannels() {
+          if (selectedChannelsBuilder_ == null) {
+            if (channelConfigurationCase_ == 3) {
+              return (com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels) channelConfiguration_;
+            }
+            return com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.getDefaultInstance();
+          } else {
+            if (channelConfigurationCase_ == 3) {
+              return selectedChannelsBuilder_.getMessage();
+            }
+            return com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Explicitly selected channels. This field should be set with at
+         * least one true value when present.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+         */
+        public Builder setSelectedChannels(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels value) {
+          if (selectedChannelsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            channelConfiguration_ = value;
+            onChanged();
+          } else {
+            selectedChannelsBuilder_.setMessage(value);
+          }
+          channelConfigurationCase_ = 3;
+          return this;
+        }
+        /**
+         * <pre>
+         * Explicitly selected channels. This field should be set with at
+         * least one true value when present.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+         */
+        public Builder setSelectedChannels(
+            com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.Builder builderForValue) {
+          if (selectedChannelsBuilder_ == null) {
+            channelConfiguration_ = builderForValue.build();
+            onChanged();
+          } else {
+            selectedChannelsBuilder_.setMessage(builderForValue.build());
+          }
+          channelConfigurationCase_ = 3;
+          return this;
+        }
+        /**
+         * <pre>
+         * Explicitly selected channels. This field should be set with at
+         * least one true value when present.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+         */
+        public Builder mergeSelectedChannels(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels value) {
+          if (selectedChannelsBuilder_ == null) {
+            if (channelConfigurationCase_ == 3 &&
+                channelConfiguration_ != com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.getDefaultInstance()) {
+              channelConfiguration_ = com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.newBuilder((com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels) channelConfiguration_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              channelConfiguration_ = value;
+            }
+            onChanged();
+          } else {
+            if (channelConfigurationCase_ == 3) {
+              selectedChannelsBuilder_.mergeFrom(value);
+            } else {
+              selectedChannelsBuilder_.setMessage(value);
+            }
+          }
+          channelConfigurationCase_ = 3;
+          return this;
+        }
+        /**
+         * <pre>
+         * Explicitly selected channels. This field should be set with at
+         * least one true value when present.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+         */
+        public Builder clearSelectedChannels() {
+          if (selectedChannelsBuilder_ == null) {
+            if (channelConfigurationCase_ == 3) {
+              channelConfigurationCase_ = 0;
+              channelConfiguration_ = null;
+              onChanged();
+            }
+          } else {
+            if (channelConfigurationCase_ == 3) {
+              channelConfigurationCase_ = 0;
+              channelConfiguration_ = null;
+            }
+            selectedChannelsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Explicitly selected channels. This field should be set with at
+         * least one true value when present.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+         */
+        public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.Builder getSelectedChannelsBuilder() {
+          return getSelectedChannelsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Explicitly selected channels. This field should be set with at
+         * least one true value when present.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+         */
+        @java.lang.Override
+        public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannelsOrBuilder getSelectedChannelsOrBuilder() {
+          if ((channelConfigurationCase_ == 3) && (selectedChannelsBuilder_ != null)) {
+            return selectedChannelsBuilder_.getMessageOrBuilder();
+          } else {
+            if (channelConfigurationCase_ == 3) {
+              return (com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels) channelConfiguration_;
+            }
+            return com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Explicitly selected channels. This field should be set with at
+         * least one true value when present.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels selected_channels = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.Builder, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannelsOrBuilder> 
+            getSelectedChannelsFieldBuilder() {
+          if (selectedChannelsBuilder_ == null) {
+            if (!(channelConfigurationCase_ == 3)) {
+              channelConfiguration_ = com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.getDefaultInstance();
+            }
+            selectedChannelsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels.Builder, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannelsOrBuilder>(
+                    (com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels) channelConfiguration_,
+                    getParentForChildren(),
+                    isClean());
+            channelConfiguration_ = null;
+          }
+          channelConfigurationCase_ = 3;
+          onChanged();
+          return selectedChannelsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls)
+      }
+
+      // @@protoc_insertion_point(class_scope:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls)
+      private static final com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls();
+      }
+
+      public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<DemandGenChannelControls>
+          PARSER = new com.google.protobuf.AbstractParser<DemandGenChannelControls>() {
+        @java.lang.Override
+        public DemandGenChannelControls parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<DemandGenChannelControls> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DemandGenChannelControls> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int CHANNEL_CONTROLS_FIELD_NUMBER = 1;
+    private com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channelControls_;
+    /**
+     * <pre>
+     * Channel controls for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+     * @return Whether the channelControls field is set.
+     */
+    @java.lang.Override
+    public boolean hasChannelControls() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Channel controls for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+     * @return The channelControls.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls getChannelControls() {
+      return channelControls_ == null ? com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.getDefaultInstance() : channelControls_;
+    }
+    /**
+     * <pre>
+     * Channel controls for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControlsOrBuilder getChannelControlsOrBuilder() {
+      return channelControls_ == null ? com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.getDefaultInstance() : channelControls_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getChannelControls());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getChannelControls());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings other = (com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings) obj;
+
+      if (hasChannelControls() != other.hasChannelControls()) return false;
+      if (hasChannelControls()) {
+        if (!getChannelControls()
+            .equals(other.getChannelControls())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasChannelControls()) {
+        hash = (37 * hash) + CHANNEL_CONTROLS_FIELD_NUMBER;
+        hash = (53 * hash) + getChannelControls().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Settings for Demand Gen ad groups.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings)
+        com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.class, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChannelControlsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        channelControls_ = null;
+        if (channelControlsBuilder_ != null) {
+          channelControlsBuilder_.dispose();
+          channelControlsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v19.resources.AdGroupProto.internal_static_google_ads_googleads_v19_resources_AdGroup_DemandGenAdGroupSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings getDefaultInstanceForType() {
+        return com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings build() {
+        com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings buildPartial() {
+        com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings result = new com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.channelControls_ = channelControlsBuilder_ == null
+              ? channelControls_
+              : channelControlsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings) {
+          return mergeFrom((com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings other) {
+        if (other == com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.getDefaultInstance()) return this;
+        if (other.hasChannelControls()) {
+          mergeChannelControls(other.getChannelControls());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getChannelControlsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channelControls_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.Builder, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControlsOrBuilder> channelControlsBuilder_;
+      /**
+       * <pre>
+       * Channel controls for Demand Gen ad groups.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+       * @return Whether the channelControls field is set.
+       */
+      public boolean hasChannelControls() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Channel controls for Demand Gen ad groups.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+       * @return The channelControls.
+       */
+      public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls getChannelControls() {
+        if (channelControlsBuilder_ == null) {
+          return channelControls_ == null ? com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.getDefaultInstance() : channelControls_;
+        } else {
+          return channelControlsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Channel controls for Demand Gen ad groups.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+       */
+      public Builder setChannelControls(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls value) {
+        if (channelControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          channelControls_ = value;
+        } else {
+          channelControlsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel controls for Demand Gen ad groups.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+       */
+      public Builder setChannelControls(
+          com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.Builder builderForValue) {
+        if (channelControlsBuilder_ == null) {
+          channelControls_ = builderForValue.build();
+        } else {
+          channelControlsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel controls for Demand Gen ad groups.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+       */
+      public Builder mergeChannelControls(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls value) {
+        if (channelControlsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            channelControls_ != null &&
+            channelControls_ != com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.getDefaultInstance()) {
+            getChannelControlsBuilder().mergeFrom(value);
+          } else {
+            channelControls_ = value;
+          }
+        } else {
+          channelControlsBuilder_.mergeFrom(value);
+        }
+        if (channelControls_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel controls for Demand Gen ad groups.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+       */
+      public Builder clearChannelControls() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        channelControls_ = null;
+        if (channelControlsBuilder_ != null) {
+          channelControlsBuilder_.dispose();
+          channelControlsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel controls for Demand Gen ad groups.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+       */
+      public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.Builder getChannelControlsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getChannelControlsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Channel controls for Demand Gen ad groups.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+       */
+      public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControlsOrBuilder getChannelControlsOrBuilder() {
+        if (channelControlsBuilder_ != null) {
+          return channelControlsBuilder_.getMessageOrBuilder();
+        } else {
+          return channelControls_ == null ?
+              com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.getDefaultInstance() : channelControls_;
+        }
+      }
+      /**
+       * <pre>
+       * Channel controls for Demand Gen ad groups.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls channel_controls = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.Builder, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControlsOrBuilder> 
+          getChannelControlsFieldBuilder() {
+        if (channelControlsBuilder_ == null) {
+          channelControlsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.Builder, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.DemandGenChannelControlsOrBuilder>(
+                  getChannelControls(),
+                  getParentForChildren(),
+                  isClean());
+          channelControls_ = null;
+        }
+        return channelControlsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings)
+    private static final com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings();
+    }
+
+    public static com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DemandGenAdGroupSettings>
+        PARSER = new com.google.protobuf.AbstractParser<DemandGenAdGroupSettings>() {
+      @java.lang.Override
+      public DemandGenAdGroupSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DemandGenAdGroupSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DemandGenAdGroupSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
@@ -2071,6 +4852,44 @@ private static final long serialVersionUID = 0L;
   }
   private int primaryStatusReasonsMemoizedSerializedSize;
 
+  public static final int DEMAND_GEN_AD_GROUP_SETTINGS_FIELD_NUMBER = 91;
+  private com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demandGenAdGroupSettings_;
+  /**
+   * <pre>
+   * Settings for Demand Gen ad groups.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+   * @return Whether the demandGenAdGroupSettings field is set.
+   */
+  @java.lang.Override
+  public boolean hasDemandGenAdGroupSettings() {
+    return ((bitField0_ & 0x00100000) != 0);
+  }
+  /**
+   * <pre>
+   * Settings for Demand Gen ad groups.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+   * @return The demandGenAdGroupSettings.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings getDemandGenAdGroupSettings() {
+    return demandGenAdGroupSettings_ == null ? com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.getDefaultInstance() : demandGenAdGroupSettings_;
+  }
+  /**
+   * <pre>
+   * Settings for Demand Gen ad groups.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettingsOrBuilder getDemandGenAdGroupSettingsOrBuilder() {
+    return demandGenAdGroupSettings_ == null ? com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.getDefaultInstance() : demandGenAdGroupSettings_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2202,6 +5021,9 @@ private static final long serialVersionUID = 0L;
     }
     if (excludeDemographicExpansion_ != false) {
       output.writeBool(67, excludeDemographicExpansion_);
+    }
+    if (((bitField0_ & 0x00100000) != 0)) {
+      output.writeMessage(91, getDemandGenAdGroupSettings());
     }
     getUnknownFields().writeTo(output);
   }
@@ -2374,6 +5196,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(67, excludeDemographicExpansion_);
     }
+    if (((bitField0_ & 0x00100000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(91, getDemandGenAdGroupSettings());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2511,6 +5337,11 @@ private static final long serialVersionUID = 0L;
     if (!excludedParentAssetSetTypes_.equals(other.excludedParentAssetSetTypes_)) return false;
     if (primaryStatus_ != other.primaryStatus_) return false;
     if (!primaryStatusReasons_.equals(other.primaryStatusReasons_)) return false;
+    if (hasDemandGenAdGroupSettings() != other.hasDemandGenAdGroupSettings()) return false;
+    if (hasDemandGenAdGroupSettings()) {
+      if (!getDemandGenAdGroupSettings()
+          .equals(other.getDemandGenAdGroupSettings())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2657,6 +5488,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PRIMARY_STATUS_REASONS_FIELD_NUMBER;
       hash = (53 * hash) + primaryStatusReasons_.hashCode();
     }
+    if (hasDemandGenAdGroupSettings()) {
+      hash = (37 * hash) + DEMAND_GEN_AD_GROUP_SETTINGS_FIELD_NUMBER;
+      hash = (53 * hash) + getDemandGenAdGroupSettings().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2794,6 +5629,7 @@ private static final long serialVersionUID = 0L;
         getUrlCustomParametersFieldBuilder();
         getTargetingSettingFieldBuilder();
         getAudienceSettingFieldBuilder();
+        getDemandGenAdGroupSettingsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -2854,6 +5690,11 @@ private static final long serialVersionUID = 0L;
       primaryStatus_ = 0;
       primaryStatusReasons_ = java.util.Collections.emptyList();
       bitField1_ = (bitField1_ & ~0x00000004);
+      demandGenAdGroupSettings_ = null;
+      if (demandGenAdGroupSettingsBuilder_ != null) {
+        demandGenAdGroupSettingsBuilder_.dispose();
+        demandGenAdGroupSettingsBuilder_ = null;
+      }
       return this;
     }
 
@@ -3040,6 +5881,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField1_ & 0x00000002) != 0)) {
         result.primaryStatus_ = primaryStatus_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField1_ & 0x00000008) != 0)) {
+        result.demandGenAdGroupSettings_ = demandGenAdGroupSettingsBuilder_ == null
+            ? demandGenAdGroupSettings_
+            : demandGenAdGroupSettingsBuilder_.build();
+        to_bitField0_ |= 0x00100000;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -3253,6 +6102,9 @@ private static final long serialVersionUID = 0L;
           primaryStatusReasons_.addAll(other.primaryStatusReasons_);
         }
         onChanged();
+      }
+      if (other.hasDemandGenAdGroupSettings()) {
+        mergeDemandGenAdGroupSettings(other.getDemandGenAdGroupSettings());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -3504,6 +6356,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00200000;
               break;
             } // case 536
+            case 730: {
+              input.readMessage(
+                  getDemandGenAdGroupSettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000008;
+              break;
+            } // case 730
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -7163,6 +10022,163 @@ private static final long serialVersionUID = 0L;
       }
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demandGenAdGroupSettings_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.Builder, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettingsOrBuilder> demandGenAdGroupSettingsBuilder_;
+    /**
+     * <pre>
+     * Settings for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+     * @return Whether the demandGenAdGroupSettings field is set.
+     */
+    public boolean hasDemandGenAdGroupSettings() {
+      return ((bitField1_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Settings for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+     * @return The demandGenAdGroupSettings.
+     */
+    public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings getDemandGenAdGroupSettings() {
+      if (demandGenAdGroupSettingsBuilder_ == null) {
+        return demandGenAdGroupSettings_ == null ? com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.getDefaultInstance() : demandGenAdGroupSettings_;
+      } else {
+        return demandGenAdGroupSettingsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Settings for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+     */
+    public Builder setDemandGenAdGroupSettings(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings value) {
+      if (demandGenAdGroupSettingsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        demandGenAdGroupSettings_ = value;
+      } else {
+        demandGenAdGroupSettingsBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+     */
+    public Builder setDemandGenAdGroupSettings(
+        com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.Builder builderForValue) {
+      if (demandGenAdGroupSettingsBuilder_ == null) {
+        demandGenAdGroupSettings_ = builderForValue.build();
+      } else {
+        demandGenAdGroupSettingsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+     */
+    public Builder mergeDemandGenAdGroupSettings(com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings value) {
+      if (demandGenAdGroupSettingsBuilder_ == null) {
+        if (((bitField1_ & 0x00000008) != 0) &&
+          demandGenAdGroupSettings_ != null &&
+          demandGenAdGroupSettings_ != com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.getDefaultInstance()) {
+          getDemandGenAdGroupSettingsBuilder().mergeFrom(value);
+        } else {
+          demandGenAdGroupSettings_ = value;
+        }
+      } else {
+        demandGenAdGroupSettingsBuilder_.mergeFrom(value);
+      }
+      if (demandGenAdGroupSettings_ != null) {
+        bitField1_ |= 0x00000008;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+     */
+    public Builder clearDemandGenAdGroupSettings() {
+      bitField1_ = (bitField1_ & ~0x00000008);
+      demandGenAdGroupSettings_ = null;
+      if (demandGenAdGroupSettingsBuilder_ != null) {
+        demandGenAdGroupSettingsBuilder_.dispose();
+        demandGenAdGroupSettingsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+     */
+    public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.Builder getDemandGenAdGroupSettingsBuilder() {
+      bitField1_ |= 0x00000008;
+      onChanged();
+      return getDemandGenAdGroupSettingsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Settings for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+     */
+    public com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettingsOrBuilder getDemandGenAdGroupSettingsOrBuilder() {
+      if (demandGenAdGroupSettingsBuilder_ != null) {
+        return demandGenAdGroupSettingsBuilder_.getMessageOrBuilder();
+      } else {
+        return demandGenAdGroupSettings_ == null ?
+            com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.getDefaultInstance() : demandGenAdGroupSettings_;
+      }
+    }
+    /**
+     * <pre>
+     * Settings for Demand Gen ad groups.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings demand_gen_ad_group_settings = 91;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.Builder, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettingsOrBuilder> 
+        getDemandGenAdGroupSettingsFieldBuilder() {
+      if (demandGenAdGroupSettingsBuilder_ == null) {
+        demandGenAdGroupSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettings.Builder, com.google.ads.googleads.v19.resources.AdGroup.DemandGenAdGroupSettingsOrBuilder>(
+                getDemandGenAdGroupSettings(),
+                getParentForChildren(),
+                isClean());
+        demandGenAdGroupSettings_ = null;
+      }
+      return demandGenAdGroupSettingsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

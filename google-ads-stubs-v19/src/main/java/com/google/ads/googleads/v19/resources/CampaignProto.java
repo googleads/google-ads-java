@@ -116,6 +116,16 @@ public final class CampaignProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v19_resources_Campaign_VideoCampaignSettings_VideoAdInventoryControl_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_BrandTargetingOverrides_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_BrandTargetingOverrides_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v19_resources_Campaign_AssetAutomationSetting_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -186,7 +196,7 @@ public final class CampaignProto {
       "arma_display_url_mode.proto\0327google/ads/" +
       "googleads/v19/enums/vanity_pharma_text.p" +
       "roto\032\037google/api/field_behavior.proto\032\031g" +
-      "oogle/api/resource.proto\"\237O\n\010Campaign\022@\n" +
+      "oogle/api/resource.proto\"\214R\n\010Campaign\022@\n" +
       "\rresource_name\030\001 \001(\tB)\340A\005\372A#\n!googleads." +
       "googleapis.com/Campaign\022\024\n\002id\030; \001(\003B\003\340A\003" +
       "H\001\210\001\001\022\021\n\004name\030: \001(\tH\002\210\001\001\022l\n\016primary_stat" +
@@ -227,226 +237,236 @@ public final class CampaignProto {
       "Campaign.DemandGenCampaignSettings\022c\n\027vi" +
       "deo_campaign_settings\030^ \001(\0132B.google.ads" +
       ".googleads.v19.resources.Campaign.VideoC" +
-      "ampaignSettings\022Z\n\031real_time_bidding_set" +
-      "ting\030\' \001(\01327.google.ads.googleads.v19.co" +
-      "mmon.RealTimeBiddingSetting\022V\n\020network_s" +
-      "ettings\030\016 \001(\0132<.google.ads.googleads.v19" +
-      ".resources.Campaign.NetworkSettings\022Y\n\rh" +
-      "otel_setting\030  \001(\0132=.google.ads.googlead" +
-      "s.v19.resources.Campaign.HotelSettingInf" +
-      "oB\003\340A\005\022h\n\032dynamic_search_ads_setting\030! \001" +
-      "(\0132D.google.ads.googleads.v19.resources." +
-      "Campaign.DynamicSearchAdsSetting\022V\n\020shop" +
-      "ping_setting\030$ \001(\0132<.google.ads.googlead" +
-      "s.v19.resources.Campaign.ShoppingSetting" +
-      "\022L\n\021targeting_setting\030+ \001(\01321.google.ads" +
-      ".googleads.v19.common.TargetingSetting\022`" +
-      "\n\020audience_setting\030I \001(\0132<.google.ads.go" +
-      "ogleads.v19.resources.Campaign.AudienceS" +
-      "ettingB\003\340A\005H\004\210\001\001\022b\n\027geo_target_type_sett" +
-      "ing\030/ \001(\0132A.google.ads.googleads.v19.res" +
-      "ources.Campaign.GeoTargetTypeSetting\022a\n\026" +
-      "local_campaign_setting\0302 \001(\0132A.google.ad" +
-      "s.googleads.v19.resources.Campaign.Local" +
-      "CampaignSetting\022]\n\024app_campaign_setting\030" +
-      "3 \001(\0132?.google.ads.googleads.v19.resourc" +
-      "es.Campaign.AppCampaignSetting\022>\n\006labels" +
-      "\030= \003(\tB.\340A\003\372A(\n&googleads.googleapis.com" +
-      "/CampaignLabel\022o\n\017experiment_type\030\021 \001(\0162" +
-      "Q.google.ads.googleads.v19.enums.Campaig" +
-      "nExperimentTypeEnum.CampaignExperimentTy" +
-      "peB\003\340A\003\022E\n\rbase_campaign\0308 \001(\tB)\340A\003\372A#\n!" +
-      "googleads.googleapis.com/CampaignH\005\210\001\001\022J" +
-      "\n\017campaign_budget\030> \001(\tB,\372A)\n\'googleads." +
-      "googleapis.com/CampaignBudgetH\006\210\001\001\022o\n\025bi" +
-      "dding_strategy_type\030\026 \001(\0162K.google.ads.g" +
-      "oogleads.v19.enums.BiddingStrategyTypeEn" +
-      "um.BiddingStrategyTypeB\003\340A\003\022_\n\033accessibl" +
-      "e_bidding_strategy\030G \001(\tB:\340A\003\372A4\n2google" +
-      "ads.googleapis.com/AccessibleBiddingStra" +
-      "tegy\022\027\n\nstart_date\030? \001(\tH\007\210\001\001\022H\n\016campaig" +
-      "n_group\030L \001(\tB+\372A(\n&googleads.googleapis" +
-      ".com/CampaignGroupH\010\210\001\001\022\025\n\010end_date\030@ \001(" +
-      "\tH\t\210\001\001\022\035\n\020final_url_suffix\030A \001(\tH\n\210\001\001\022J\n" +
-      "\016frequency_caps\030( \003(\01322.google.ads.googl" +
-      "eads.v19.common.FrequencyCapEntry\022y\n\036vid" +
-      "eo_brand_safety_suitability\030* \001(\0162Q.goog" +
-      "le.ads.googleads.v19.enums.BrandSafetySu" +
-      "itabilityEnum.BrandSafetySuitability\022P\n\r" +
-      "vanity_pharma\030, \001(\01329.google.ads.googlea" +
-      "ds.v19.resources.Campaign.VanityPharma\022b" +
-      "\n\026selective_optimization\030- \001(\0132B.google." +
-      "ads.googleads.v19.resources.Campaign.Sel" +
-      "ectiveOptimization\022g\n\031optimization_goal_" +
-      "setting\0306 \001(\0132D.google.ads.googleads.v19" +
-      ".resources.Campaign.OptimizationGoalSett" +
-      "ing\022[\n\020tracking_setting\030. \001(\0132<.google.a" +
-      "ds.googleads.v19.resources.Campaign.Trac" +
-      "kingSettingB\003\340A\003\022Q\n\014payment_mode\0304 \001(\0162;" +
-      ".google.ads.googleads.v19.enums.PaymentM" +
-      "odeEnum.PaymentMode\022$\n\022optimization_scor" +
-      "e\030B \001(\001B\003\340A\003H\013\210\001\001\022l\n!excluded_parent_ass" +
-      "et_field_types\030E \003(\0162A.google.ads.google" +
-      "ads.v19.enums.AssetFieldTypeEnum.AssetFi" +
-      "eldType\022f\n\037excluded_parent_asset_set_typ" +
-      "es\030P \003(\0162=.google.ads.googleads.v19.enum" +
-      "s.AssetSetTypeEnum.AssetSetType\022\"\n\025url_e" +
-      "xpansion_opt_out\030H \001(\010H\014\210\001\001\022h\n\027performan" +
-      "ce_max_upgrade\030M \001(\0132B.google.ads.google" +
-      "ads.v19.resources.Campaign.PerformanceMa" +
-      "xUpgradeB\003\340A\003\022P\n\030hotel_property_asset_se" +
-      "t\030S \001(\tB)\340A\005\372A#\n!googleads.googleapis.co" +
-      "m/AssetSetH\r\210\001\001\022[\n\014listing_type\030V \001(\0162;." +
-      "google.ads.googleads.v19.enums.ListingTy" +
-      "peEnum.ListingTypeB\003\340A\005H\016\210\001\001\022f\n\031asset_au" +
-      "tomation_settings\030X \003(\0132C.google.ads.goo" +
-      "gleads.v19.resources.Campaign.AssetAutom" +
-      "ationSetting\022q\n\022keyword_match_type\030Z \001(\016" +
-      "2U.google.ads.googleads.v19.enums.Campai" +
-      "gnKeywordMatchTypeEnum.CampaignKeywordMa" +
-      "tchType\022*\n\030brand_guidelines_enabled\030` \001(" +
-      "\010B\003\340A\005H\017\210\001\001\022V\n\020brand_guidelines\030b \001(\0132<." +
+      "ampaignSettings\022a\n\026pmax_campaign_setting" +
+      "s\030a \001(\0132A.google.ads.googleads.v19.resou" +
+      "rces.Campaign.PmaxCampaignSettings\022Z\n\031re" +
+      "al_time_bidding_setting\030\' \001(\01327.google.a" +
+      "ds.googleads.v19.common.RealTimeBiddingS" +
+      "etting\022V\n\020network_settings\030\016 \001(\0132<.googl" +
+      "e.ads.googleads.v19.resources.Campaign.N" +
+      "etworkSettings\022Y\n\rhotel_setting\030  \001(\0132=." +
       "google.ads.googleads.v19.resources.Campa" +
-      "ign.BrandGuidelines\022I\n\020bidding_strategy\030" +
-      "C \001(\tB-\372A*\n(googleads.googleapis.com/Bid" +
-      "dingStrategyH\000\022A\n\ncommission\0301 \001(\0132+.goo" +
-      "gle.ads.googleads.v19.common.CommissionH" +
-      "\000\022@\n\nmanual_cpa\030J \001(\0132*.google.ads.googl" +
-      "eads.v19.common.ManualCpaH\000\022@\n\nmanual_cp" +
-      "c\030\030 \001(\0132*.google.ads.googleads.v19.commo" +
-      "n.ManualCpcH\000\022@\n\nmanual_cpm\030\031 \001(\0132*.goog" +
-      "le.ads.googleads.v19.common.ManualCpmH\000\022" +
-      "@\n\nmanual_cpv\030% \001(\0132*.google.ads.googlea" +
-      "ds.v19.common.ManualCpvH\000\022T\n\024maximize_co" +
-      "nversions\030\036 \001(\01324.google.ads.googleads.v" +
-      "19.common.MaximizeConversionsH\000\022]\n\031maxim" +
-      "ize_conversion_value\030\037 \001(\01328.google.ads." +
-      "googleads.v19.common.MaximizeConversionV" +
-      "alueH\000\022@\n\ntarget_cpa\030\032 \001(\0132*.google.ads." +
-      "googleads.v19.common.TargetCpaH\000\022Y\n\027targ" +
-      "et_impression_share\0300 \001(\01326.google.ads.g" +
-      "oogleads.v19.common.TargetImpressionShar" +
-      "eH\000\022B\n\013target_roas\030\035 \001(\0132+.google.ads.go" +
-      "ogleads.v19.common.TargetRoasH\000\022D\n\014targe" +
-      "t_spend\030\033 \001(\0132,.google.ads.googleads.v19" +
-      ".common.TargetSpendH\000\022B\n\013percent_cpc\030\" \001" +
-      "(\0132+.google.ads.googleads.v19.common.Per" +
-      "centCpcH\000\022@\n\ntarget_cpm\030) \001(\0132*.google.a" +
-      "ds.googleads.v19.common.TargetCpmH\000\022>\n\tf" +
-      "ixed_cpm\030\\ \001(\0132).google.ads.googleads.v1" +
-      "9.common.FixedCpmH\000\022@\n\ntarget_cpv\030] \001(\0132" +
-      "*.google.ads.googleads.v19.common.Target" +
-      "CpvH\000\032\237\002\n\025PerformanceMaxUpgrade\022K\n\030perfo" +
-      "rmance_max_campaign\030\001 \001(\tB)\340A\003\372A#\n!googl" +
-      "eads.googleapis.com/Campaign\022G\n\024pre_upgr" +
-      "ade_campaign\030\002 \001(\tB)\340A\003\372A#\n!googleads.go" +
-      "ogleapis.com/Campaign\022p\n\006status\030\003 \001(\0162[." +
-      "google.ads.googleads.v19.enums.Performan" +
-      "ceMaxUpgradeStatusEnum.PerformanceMaxUpg" +
-      "radeStatusB\003\340A\003\032\215\003\n\017NetworkSettings\022!\n\024t" +
-      "arget_google_search\030\005 \001(\010H\000\210\001\001\022\"\n\025target" +
-      "_search_network\030\006 \001(\010H\001\210\001\001\022#\n\026target_con" +
-      "tent_network\030\007 \001(\010H\002\210\001\001\022*\n\035target_partne" +
-      "r_search_network\030\010 \001(\010H\003\210\001\001\022\033\n\016target_yo" +
-      "utube\030\t \001(\010H\004\210\001\001\022%\n\030target_google_tv_net" +
-      "work\030\n \001(\010H\005\210\001\001B\027\n\025_target_google_search" +
-      "B\030\n\026_target_search_networkB\031\n\027_target_co" +
-      "ntent_networkB \n\036_target_partner_search_" +
-      "networkB\021\n\017_target_youtubeB\033\n\031_target_go" +
-      "ogle_tv_network\032I\n\020HotelSettingInfo\022!\n\017h" +
-      "otel_center_id\030\002 \001(\003B\003\340A\005H\000\210\001\001B\022\n\020_hotel" +
-      "_center_id\032\217\001\n\027DynamicSearchAdsSetting\022\030" +
-      "\n\013domain_name\030\006 \001(\tB\003\340A\002\022\032\n\rlanguage_cod" +
-      "e\030\007 \001(\tB\003\340A\002\022#\n\026use_supplied_urls_only\030\010" +
-      " \001(\010H\000\210\001\001B\031\n\027_use_supplied_urls_only\032\267\002\n" +
-      "\017ShoppingSetting\022\030\n\013merchant_id\030\005 \001(\003H\000\210" +
-      "\001\001\022\022\n\nfeed_label\030\n \001(\t\022\036\n\021campaign_prior" +
-      "ity\030\007 \001(\005H\001\210\001\001\022\031\n\014enable_local\030\010 \001(\010H\002\210\001" +
-      "\001\022\"\n\025use_vehicle_inventory\030\t \001(\010B\003\340A\005\022$\n" +
-      "\027advertising_partner_ids\030\013 \003(\003B\003\340A\005\022!\n\024d" +
-      "isable_product_feed\030\014 \001(\010H\003\210\001\001B\016\n\014_merch" +
-      "ant_idB\024\n\022_campaign_priorityB\017\n\r_enable_" +
-      "localB\027\n\025_disable_product_feed\032B\n\017Tracki" +
-      "ngSetting\022\036\n\014tracking_url\030\002 \001(\tB\003\340A\003H\000\210\001" +
-      "\001B\017\n\r_tracking_url\032\374\001\n\024GeoTargetTypeSett" +
-      "ing\022q\n\030positive_geo_target_type\030\001 \001(\0162O." +
-      "google.ads.googleads.v19.enums.PositiveG" +
-      "eoTargetTypeEnum.PositiveGeoTargetType\022q" +
-      "\n\030negative_geo_target_type\030\002 \001(\0162O.googl" +
-      "e.ads.googleads.v19.enums.NegativeGeoTar" +
-      "getTypeEnum.NegativeGeoTargetType\032\177\n\024Loc" +
-      "alCampaignSetting\022g\n\024location_source_typ" +
-      "e\030\001 \001(\0162I.google.ads.googleads.v19.enums" +
-      ".LocationSourceTypeEnum.LocationSourceTy" +
-      "pe\032\256\002\n\022AppCampaignSetting\022\215\001\n\032bidding_st" +
-      "rategy_goal_type\030\001 \001(\0162i.google.ads.goog" +
-      "leads.v19.enums.AppCampaignBiddingStrate" +
-      "gyGoalTypeEnum.AppCampaignBiddingStrateg" +
-      "yGoalType\022\030\n\006app_id\030\004 \001(\tB\003\340A\005H\000\210\001\001\022c\n\ta" +
-      "pp_store\030\003 \001(\0162K.google.ads.googleads.v1" +
-      "9.enums.AppCampaignAppStoreEnum.AppCampa" +
-      "ignAppStoreB\003\340A\005B\t\n\007_app_id\032\365\001\n\014VanityPh" +
-      "arma\022\201\001\n\036vanity_pharma_display_url_mode\030" +
-      "\001 \001(\0162Y.google.ads.googleads.v19.enums.V" +
-      "anityPharmaDisplayUrlModeEnum.VanityPhar" +
-      "maDisplayUrlMode\022a\n\022vanity_pharma_text\030\002" +
-      " \001(\0162E.google.ads.googleads.v19.enums.Va" +
-      "nityPharmaTextEnum.VanityPharmaText\032c\n\025S" +
-      "electiveOptimization\022J\n\022conversion_actio" +
-      "ns\030\002 \003(\tB.\372A+\n)googleads.googleapis.com/" +
-      "ConversionAction\032\211\001\n\027OptimizationGoalSet" +
-      "ting\022n\n\027optimization_goal_types\030\001 \003(\0162M." +
-      "google.ads.googleads.v19.enums.Optimizat" +
-      "ionGoalTypeEnum.OptimizationGoalType\032R\n\017" +
-      "AudienceSetting\022&\n\024use_audience_grouped\030" +
-      "\001 \001(\010B\003\340A\005H\000\210\001\001B\027\n\025_use_audience_grouped" +
-      "\032p\n\035LocalServicesCampaignSettings\022O\n\rcat" +
-      "egory_bids\030\001 \003(\01328.google.ads.googleads." +
-      "v19.resources.Campaign.CategoryBid\032\263\001\n\013C" +
-      "ategoryBid\022\030\n\013category_id\030\001 \001(\tH\000\210\001\001\022\"\n\025" +
-      "manual_cpa_bid_micros\030\002 \001(\003H\001\210\001\001\022\"\n\025targ" +
-      "et_cpa_bid_micros\030\003 \001(\003H\002\210\001\001B\016\n\014_categor" +
-      "y_idB\030\n\026_manual_cpa_bid_microsB\030\n\026_targe" +
-      "t_cpa_bid_micros\032S\n\026TravelCampaignSettin" +
-      "gs\022#\n\021travel_account_id\030\001 \001(\003B\003\340A\005H\000\210\001\001B" +
-      "\024\n\022_travel_account_id\032X\n\031DemandGenCampai" +
-      "gnSettings\022$\n\022upgraded_targeting\030\001 \001(\010B\003" +
-      "\340A\005H\000\210\001\001B\025\n\023_upgraded_targeting\032\277\002\n\025Vide" +
-      "oCampaignSettings\022~\n\032video_ad_inventory_" +
-      "control\030\001 \001(\0132Z.google.ads.googleads.v19" +
-      ".resources.Campaign.VideoCampaignSetting" +
-      "s.VideoAdInventoryControl\032\245\001\n\027VideoAdInv" +
-      "entoryControl\022\034\n\017allow_in_stream\030\001 \001(\010H\000" +
-      "\210\001\001\022\032\n\rallow_in_feed\030\002 \001(\010H\001\210\001\001\022\031\n\014allow" +
-      "_shorts\030\003 \001(\010H\002\210\001\001B\022\n\020_allow_in_streamB\020" +
-      "\n\016_allow_in_feedB\017\n\r_allow_shorts\032\266\002\n\026As" +
-      "setAutomationSetting\022o\n\025asset_automation" +
-      "_type\030\001 \001(\0162K.google.ads.googleads.v19.e" +
-      "nums.AssetAutomationTypeEnum.AssetAutoma" +
-      "tionTypeH\000\210\001\001\022u\n\027asset_automation_status" +
-      "\030\002 \001(\0162O.google.ads.googleads.v19.enums." +
-      "AssetAutomationStatusEnum.AssetAutomatio" +
-      "nStatusH\001\210\001\001B\030\n\026_asset_automation_typeB\032" +
-      "\n\030_asset_automation_status\032[\n\017BrandGuide" +
-      "lines\022\022\n\nmain_color\030\001 \001(\t\022\024\n\014accent_colo" +
-      "r\030\002 \001(\t\022\036\n\026predefined_font_family\030\003 \001(\t:" +
-      "W\352AT\n!googleads.googleapis.com/Campaign\022" +
-      "/customers/{customer_id}/campaigns/{camp" +
-      "aign_id}B\033\n\031campaign_bidding_strategyB\005\n" +
-      "\003_idB\007\n\005_nameB\030\n\026_tracking_url_templateB" +
-      "\023\n\021_audience_settingB\020\n\016_base_campaignB\022" +
-      "\n\020_campaign_budgetB\r\n\013_start_dateB\021\n\017_ca" +
-      "mpaign_groupB\013\n\t_end_dateB\023\n\021_final_url_" +
-      "suffixB\025\n\023_optimization_scoreB\030\n\026_url_ex" +
-      "pansion_opt_outB\033\n\031_hotel_property_asset" +
-      "_setB\017\n\r_listing_typeB\033\n\031_brand_guidelin" +
-      "es_enabledB\377\001\n&com.google.ads.googleads." +
-      "v19.resourcesB\rCampaignProtoP\001ZKgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v19/resources;resources\242\002\003GAA\252\002\"Goog" +
-      "le.Ads.GoogleAds.V19.Resources\312\002\"Google\\" +
-      "Ads\\GoogleAds\\V19\\Resources\352\002&Google::Ad" +
-      "s::GoogleAds::V19::Resourcesb\006proto3"
+      "ign.HotelSettingInfoB\003\340A\005\022h\n\032dynamic_sea" +
+      "rch_ads_setting\030! \001(\0132D.google.ads.googl" +
+      "eads.v19.resources.Campaign.DynamicSearc" +
+      "hAdsSetting\022V\n\020shopping_setting\030$ \001(\0132<." +
+      "google.ads.googleads.v19.resources.Campa" +
+      "ign.ShoppingSetting\022L\n\021targeting_setting" +
+      "\030+ \001(\01321.google.ads.googleads.v19.common" +
+      ".TargetingSetting\022`\n\020audience_setting\030I " +
+      "\001(\0132<.google.ads.googleads.v19.resources" +
+      ".Campaign.AudienceSettingB\003\340A\005H\004\210\001\001\022b\n\027g" +
+      "eo_target_type_setting\030/ \001(\0132A.google.ad" +
+      "s.googleads.v19.resources.Campaign.GeoTa" +
+      "rgetTypeSetting\022a\n\026local_campaign_settin" +
+      "g\0302 \001(\0132A.google.ads.googleads.v19.resou" +
+      "rces.Campaign.LocalCampaignSetting\022]\n\024ap" +
+      "p_campaign_setting\0303 \001(\0132?.google.ads.go" +
+      "ogleads.v19.resources.Campaign.AppCampai" +
+      "gnSetting\022>\n\006labels\030= \003(\tB.\340A\003\372A(\n&googl" +
+      "eads.googleapis.com/CampaignLabel\022o\n\017exp" +
+      "eriment_type\030\021 \001(\0162Q.google.ads.googlead" +
+      "s.v19.enums.CampaignExperimentTypeEnum.C" +
+      "ampaignExperimentTypeB\003\340A\003\022E\n\rbase_campa" +
+      "ign\0308 \001(\tB)\340A\003\372A#\n!googleads.googleapis." +
+      "com/CampaignH\005\210\001\001\022J\n\017campaign_budget\030> \001" +
+      "(\tB,\372A)\n\'googleads.googleapis.com/Campai" +
+      "gnBudgetH\006\210\001\001\022o\n\025bidding_strategy_type\030\026" +
+      " \001(\0162K.google.ads.googleads.v19.enums.Bi" +
+      "ddingStrategyTypeEnum.BiddingStrategyTyp" +
+      "eB\003\340A\003\022_\n\033accessible_bidding_strategy\030G " +
+      "\001(\tB:\340A\003\372A4\n2googleads.googleapis.com/Ac" +
+      "cessibleBiddingStrategy\022\027\n\nstart_date\030? " +
+      "\001(\tH\007\210\001\001\022H\n\016campaign_group\030L \001(\tB+\372A(\n&g" +
+      "oogleads.googleapis.com/CampaignGroupH\010\210" +
+      "\001\001\022\025\n\010end_date\030@ \001(\tH\t\210\001\001\022\035\n\020final_url_s" +
+      "uffix\030A \001(\tH\n\210\001\001\022J\n\016frequency_caps\030( \003(\013" +
+      "22.google.ads.googleads.v19.common.Frequ" +
+      "encyCapEntry\022y\n\036video_brand_safety_suita" +
+      "bility\030* \001(\0162Q.google.ads.googleads.v19." +
+      "enums.BrandSafetySuitabilityEnum.BrandSa" +
+      "fetySuitability\022P\n\rvanity_pharma\030, \001(\01329" +
+      ".google.ads.googleads.v19.resources.Camp" +
+      "aign.VanityPharma\022b\n\026selective_optimizat" +
+      "ion\030- \001(\0132B.google.ads.googleads.v19.res" +
+      "ources.Campaign.SelectiveOptimization\022g\n" +
+      "\031optimization_goal_setting\0306 \001(\0132D.googl" +
+      "e.ads.googleads.v19.resources.Campaign.O" +
+      "ptimizationGoalSetting\022[\n\020tracking_setti" +
+      "ng\030. \001(\0132<.google.ads.googleads.v19.reso" +
+      "urces.Campaign.TrackingSettingB\003\340A\003\022Q\n\014p" +
+      "ayment_mode\0304 \001(\0162;.google.ads.googleads" +
+      ".v19.enums.PaymentModeEnum.PaymentMode\022$" +
+      "\n\022optimization_score\030B \001(\001B\003\340A\003H\013\210\001\001\022l\n!" +
+      "excluded_parent_asset_field_types\030E \003(\0162" +
+      "A.google.ads.googleads.v19.enums.AssetFi" +
+      "eldTypeEnum.AssetFieldType\022f\n\037excluded_p" +
+      "arent_asset_set_types\030P \003(\0162=.google.ads" +
+      ".googleads.v19.enums.AssetSetTypeEnum.As" +
+      "setSetType\022\"\n\025url_expansion_opt_out\030H \001(" +
+      "\010H\014\210\001\001\022h\n\027performance_max_upgrade\030M \001(\0132" +
+      "B.google.ads.googleads.v19.resources.Cam" +
+      "paign.PerformanceMaxUpgradeB\003\340A\003\022P\n\030hote" +
+      "l_property_asset_set\030S \001(\tB)\340A\005\372A#\n!goog" +
+      "leads.googleapis.com/AssetSetH\r\210\001\001\022[\n\014li" +
+      "sting_type\030V \001(\0162;.google.ads.googleads." +
+      "v19.enums.ListingTypeEnum.ListingTypeB\003\340" +
+      "A\005H\016\210\001\001\022f\n\031asset_automation_settings\030X \003" +
+      "(\0132C.google.ads.googleads.v19.resources." +
+      "Campaign.AssetAutomationSetting\022q\n\022keywo" +
+      "rd_match_type\030Z \001(\0162U.google.ads.googlea" +
+      "ds.v19.enums.CampaignKeywordMatchTypeEnu" +
+      "m.CampaignKeywordMatchType\022*\n\030brand_guid" +
+      "elines_enabled\030` \001(\010B\003\340A\005H\017\210\001\001\022V\n\020brand_" +
+      "guidelines\030b \001(\0132<.google.ads.googleads." +
+      "v19.resources.Campaign.BrandGuidelines\022I" +
+      "\n\020bidding_strategy\030C \001(\tB-\372A*\n(googleads" +
+      ".googleapis.com/BiddingStrategyH\000\022A\n\ncom" +
+      "mission\0301 \001(\0132+.google.ads.googleads.v19" +
+      ".common.CommissionH\000\022@\n\nmanual_cpa\030J \001(\013" +
+      "2*.google.ads.googleads.v19.common.Manua" +
+      "lCpaH\000\022@\n\nmanual_cpc\030\030 \001(\0132*.google.ads." +
+      "googleads.v19.common.ManualCpcH\000\022@\n\nmanu" +
+      "al_cpm\030\031 \001(\0132*.google.ads.googleads.v19." +
+      "common.ManualCpmH\000\022@\n\nmanual_cpv\030% \001(\0132*" +
+      ".google.ads.googleads.v19.common.ManualC" +
+      "pvH\000\022T\n\024maximize_conversions\030\036 \001(\01324.goo" +
+      "gle.ads.googleads.v19.common.MaximizeCon" +
+      "versionsH\000\022]\n\031maximize_conversion_value\030" +
+      "\037 \001(\01328.google.ads.googleads.v19.common." +
+      "MaximizeConversionValueH\000\022@\n\ntarget_cpa\030" +
+      "\032 \001(\0132*.google.ads.googleads.v19.common." +
+      "TargetCpaH\000\022Y\n\027target_impression_share\0300" +
+      " \001(\01326.google.ads.googleads.v19.common.T" +
+      "argetImpressionShareH\000\022B\n\013target_roas\030\035 " +
+      "\001(\0132+.google.ads.googleads.v19.common.Ta" +
+      "rgetRoasH\000\022D\n\014target_spend\030\033 \001(\0132,.googl" +
+      "e.ads.googleads.v19.common.TargetSpendH\000" +
+      "\022B\n\013percent_cpc\030\" \001(\0132+.google.ads.googl" +
+      "eads.v19.common.PercentCpcH\000\022@\n\ntarget_c" +
+      "pm\030) \001(\0132*.google.ads.googleads.v19.comm" +
+      "on.TargetCpmH\000\022>\n\tfixed_cpm\030\\ \001(\0132).goog" +
+      "le.ads.googleads.v19.common.FixedCpmH\000\022@" +
+      "\n\ntarget_cpv\030] \001(\0132*.google.ads.googlead" +
+      "s.v19.common.TargetCpvH\000\032\237\002\n\025Performance" +
+      "MaxUpgrade\022K\n\030performance_max_campaign\030\001" +
+      " \001(\tB)\340A\003\372A#\n!googleads.googleapis.com/C" +
+      "ampaign\022G\n\024pre_upgrade_campaign\030\002 \001(\tB)\340" +
+      "A\003\372A#\n!googleads.googleapis.com/Campaign" +
+      "\022p\n\006status\030\003 \001(\0162[.google.ads.googleads." +
+      "v19.enums.PerformanceMaxUpgradeStatusEnu" +
+      "m.PerformanceMaxUpgradeStatusB\003\340A\003\032\215\003\n\017N" +
+      "etworkSettings\022!\n\024target_google_search\030\005" +
+      " \001(\010H\000\210\001\001\022\"\n\025target_search_network\030\006 \001(\010" +
+      "H\001\210\001\001\022#\n\026target_content_network\030\007 \001(\010H\002\210" +
+      "\001\001\022*\n\035target_partner_search_network\030\010 \001(" +
+      "\010H\003\210\001\001\022\033\n\016target_youtube\030\t \001(\010H\004\210\001\001\022%\n\030t" +
+      "arget_google_tv_network\030\n \001(\010H\005\210\001\001B\027\n\025_t" +
+      "arget_google_searchB\030\n\026_target_search_ne" +
+      "tworkB\031\n\027_target_content_networkB \n\036_tar" +
+      "get_partner_search_networkB\021\n\017_target_yo" +
+      "utubeB\033\n\031_target_google_tv_network\032I\n\020Ho" +
+      "telSettingInfo\022!\n\017hotel_center_id\030\002 \001(\003B" +
+      "\003\340A\005H\000\210\001\001B\022\n\020_hotel_center_id\032\217\001\n\027Dynami" +
+      "cSearchAdsSetting\022\030\n\013domain_name\030\006 \001(\tB\003" +
+      "\340A\002\022\032\n\rlanguage_code\030\007 \001(\tB\003\340A\002\022#\n\026use_s" +
+      "upplied_urls_only\030\010 \001(\010H\000\210\001\001B\031\n\027_use_sup" +
+      "plied_urls_only\032\267\002\n\017ShoppingSetting\022\030\n\013m" +
+      "erchant_id\030\005 \001(\003H\000\210\001\001\022\022\n\nfeed_label\030\n \001(" +
+      "\t\022\036\n\021campaign_priority\030\007 \001(\005H\001\210\001\001\022\031\n\014ena" +
+      "ble_local\030\010 \001(\010H\002\210\001\001\022\"\n\025use_vehicle_inve" +
+      "ntory\030\t \001(\010B\003\340A\005\022$\n\027advertising_partner_" +
+      "ids\030\013 \003(\003B\003\340A\005\022!\n\024disable_product_feed\030\014" +
+      " \001(\010H\003\210\001\001B\016\n\014_merchant_idB\024\n\022_campaign_p" +
+      "riorityB\017\n\r_enable_localB\027\n\025_disable_pro" +
+      "duct_feed\032B\n\017TrackingSetting\022\036\n\014tracking" +
+      "_url\030\002 \001(\tB\003\340A\003H\000\210\001\001B\017\n\r_tracking_url\032\374\001" +
+      "\n\024GeoTargetTypeSetting\022q\n\030positive_geo_t" +
+      "arget_type\030\001 \001(\0162O.google.ads.googleads." +
+      "v19.enums.PositiveGeoTargetTypeEnum.Posi" +
+      "tiveGeoTargetType\022q\n\030negative_geo_target" +
+      "_type\030\002 \001(\0162O.google.ads.googleads.v19.e" +
+      "nums.NegativeGeoTargetTypeEnum.NegativeG" +
+      "eoTargetType\032\177\n\024LocalCampaignSetting\022g\n\024" +
+      "location_source_type\030\001 \001(\0162I.google.ads." +
+      "googleads.v19.enums.LocationSourceTypeEn" +
+      "um.LocationSourceType\032\256\002\n\022AppCampaignSet" +
+      "ting\022\215\001\n\032bidding_strategy_goal_type\030\001 \001(" +
+      "\0162i.google.ads.googleads.v19.enums.AppCa" +
+      "mpaignBiddingStrategyGoalTypeEnum.AppCam" +
+      "paignBiddingStrategyGoalType\022\030\n\006app_id\030\004" +
+      " \001(\tB\003\340A\005H\000\210\001\001\022c\n\tapp_store\030\003 \001(\0162K.goog" +
+      "le.ads.googleads.v19.enums.AppCampaignAp" +
+      "pStoreEnum.AppCampaignAppStoreB\003\340A\005B\t\n\007_" +
+      "app_id\032\365\001\n\014VanityPharma\022\201\001\n\036vanity_pharm" +
+      "a_display_url_mode\030\001 \001(\0162Y.google.ads.go" +
+      "ogleads.v19.enums.VanityPharmaDisplayUrl" +
+      "ModeEnum.VanityPharmaDisplayUrlMode\022a\n\022v" +
+      "anity_pharma_text\030\002 \001(\0162E.google.ads.goo" +
+      "gleads.v19.enums.VanityPharmaTextEnum.Va" +
+      "nityPharmaText\032c\n\025SelectiveOptimization\022" +
+      "J\n\022conversion_actions\030\002 \003(\tB.\372A+\n)google" +
+      "ads.googleapis.com/ConversionAction\032\211\001\n\027" +
+      "OptimizationGoalSetting\022n\n\027optimization_" +
+      "goal_types\030\001 \003(\0162M.google.ads.googleads." +
+      "v19.enums.OptimizationGoalTypeEnum.Optim" +
+      "izationGoalType\032R\n\017AudienceSetting\022&\n\024us" +
+      "e_audience_grouped\030\001 \001(\010B\003\340A\005H\000\210\001\001B\027\n\025_u" +
+      "se_audience_grouped\032p\n\035LocalServicesCamp" +
+      "aignSettings\022O\n\rcategory_bids\030\001 \003(\01328.go" +
+      "ogle.ads.googleads.v19.resources.Campaig" +
+      "n.CategoryBid\032\263\001\n\013CategoryBid\022\030\n\013categor" +
+      "y_id\030\001 \001(\tH\000\210\001\001\022\"\n\025manual_cpa_bid_micros" +
+      "\030\002 \001(\003H\001\210\001\001\022\"\n\025target_cpa_bid_micros\030\003 \001" +
+      "(\003H\002\210\001\001B\016\n\014_category_idB\030\n\026_manual_cpa_b" +
+      "id_microsB\030\n\026_target_cpa_bid_micros\032S\n\026T" +
+      "ravelCampaignSettings\022#\n\021travel_account_" +
+      "id\030\001 \001(\003B\003\340A\005H\000\210\001\001B\024\n\022_travel_account_id" +
+      "\032X\n\031DemandGenCampaignSettings\022$\n\022upgrade" +
+      "d_targeting\030\001 \001(\010B\003\340A\005H\000\210\001\001B\025\n\023_upgraded" +
+      "_targeting\032\277\002\n\025VideoCampaignSettings\022~\n\032" +
+      "video_ad_inventory_control\030\001 \001(\0132Z.googl" +
+      "e.ads.googleads.v19.resources.Campaign.V" +
+      "ideoCampaignSettings.VideoAdInventoryCon" +
+      "trol\032\245\001\n\027VideoAdInventoryControl\022\034\n\017allo" +
+      "w_in_stream\030\001 \001(\010H\000\210\001\001\022\032\n\rallow_in_feed\030" +
+      "\002 \001(\010H\001\210\001\001\022\031\n\014allow_shorts\030\003 \001(\010H\002\210\001\001B\022\n" +
+      "\020_allow_in_streamB\020\n\016_allow_in_feedB\017\n\r_" +
+      "allow_shorts\032\207\002\n\024PmaxCampaignSettings\022|\n" +
+      "\031brand_targeting_overrides\030\001 \001(\0132Y.googl" +
+      "e.ads.googleads.v19.resources.Campaign.P" +
+      "maxCampaignSettings.BrandTargetingOverri" +
+      "des\032q\n\027BrandTargetingOverrides\022/\n\"ignore" +
+      "_exclusions_for_shopping_ads\030\001 \001(\010H\000\210\001\001B" +
+      "%\n#_ignore_exclusions_for_shopping_ads\032\266" +
+      "\002\n\026AssetAutomationSetting\022o\n\025asset_autom" +
+      "ation_type\030\001 \001(\0162K.google.ads.googleads." +
+      "v19.enums.AssetAutomationTypeEnum.AssetA" +
+      "utomationTypeH\000\210\001\001\022u\n\027asset_automation_s" +
+      "tatus\030\002 \001(\0162O.google.ads.googleads.v19.e" +
+      "nums.AssetAutomationStatusEnum.AssetAuto" +
+      "mationStatusH\001\210\001\001B\030\n\026_asset_automation_t" +
+      "ypeB\032\n\030_asset_automation_status\032[\n\017Brand" +
+      "Guidelines\022\022\n\nmain_color\030\001 \001(\t\022\024\n\014accent" +
+      "_color\030\002 \001(\t\022\036\n\026predefined_font_family\030\003" +
+      " \001(\t:W\352AT\n!googleads.googleapis.com/Camp" +
+      "aign\022/customers/{customer_id}/campaigns/" +
+      "{campaign_id}B\033\n\031campaign_bidding_strate" +
+      "gyB\005\n\003_idB\007\n\005_nameB\030\n\026_tracking_url_temp" +
+      "lateB\023\n\021_audience_settingB\020\n\016_base_campa" +
+      "ignB\022\n\020_campaign_budgetB\r\n\013_start_dateB\021" +
+      "\n\017_campaign_groupB\013\n\t_end_dateB\023\n\021_final" +
+      "_url_suffixB\025\n\023_optimization_scoreB\030\n\026_u" +
+      "rl_expansion_opt_outB\033\n\031_hotel_property_" +
+      "asset_setB\017\n\r_listing_typeB\033\n\031_brand_gui" +
+      "delines_enabledB\377\001\n&com.google.ads.googl" +
+      "eads.v19.resourcesB\rCampaignProtoP\001ZKgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v19/resources;resources\242\002\003GAA\252\002" +
+      "\"Google.Ads.GoogleAds.V19.Resources\312\002\"Go" +
+      "ogle\\Ads\\GoogleAds\\V19\\Resources\352\002&Googl" +
+      "e::Ads::GoogleAds::V19::Resourcesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -491,7 +511,7 @@ public final class CampaignProto {
     internal_static_google_ads_googleads_v19_resources_Campaign_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v19_resources_Campaign_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "PrimaryStatus", "PrimaryStatusReasons", "Status", "ServingStatus", "BiddingStrategySystemStatus", "AdServingOptimizationStatus", "AdvertisingChannelType", "AdvertisingChannelSubType", "TrackingUrlTemplate", "UrlCustomParameters", "LocalServicesCampaignSettings", "TravelCampaignSettings", "DemandGenCampaignSettings", "VideoCampaignSettings", "RealTimeBiddingSetting", "NetworkSettings", "HotelSetting", "DynamicSearchAdsSetting", "ShoppingSetting", "TargetingSetting", "AudienceSetting", "GeoTargetTypeSetting", "LocalCampaignSetting", "AppCampaignSetting", "Labels", "ExperimentType", "BaseCampaign", "CampaignBudget", "BiddingStrategyType", "AccessibleBiddingStrategy", "StartDate", "CampaignGroup", "EndDate", "FinalUrlSuffix", "FrequencyCaps", "VideoBrandSafetySuitability", "VanityPharma", "SelectiveOptimization", "OptimizationGoalSetting", "TrackingSetting", "PaymentMode", "OptimizationScore", "ExcludedParentAssetFieldTypes", "ExcludedParentAssetSetTypes", "UrlExpansionOptOut", "PerformanceMaxUpgrade", "HotelPropertyAssetSet", "ListingType", "AssetAutomationSettings", "KeywordMatchType", "BrandGuidelinesEnabled", "BrandGuidelines", "BiddingStrategy", "Commission", "ManualCpa", "ManualCpc", "ManualCpm", "ManualCpv", "MaximizeConversions", "MaximizeConversionValue", "TargetCpa", "TargetImpressionShare", "TargetRoas", "TargetSpend", "PercentCpc", "TargetCpm", "FixedCpm", "TargetCpv", "CampaignBiddingStrategy", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "PrimaryStatus", "PrimaryStatusReasons", "Status", "ServingStatus", "BiddingStrategySystemStatus", "AdServingOptimizationStatus", "AdvertisingChannelType", "AdvertisingChannelSubType", "TrackingUrlTemplate", "UrlCustomParameters", "LocalServicesCampaignSettings", "TravelCampaignSettings", "DemandGenCampaignSettings", "VideoCampaignSettings", "PmaxCampaignSettings", "RealTimeBiddingSetting", "NetworkSettings", "HotelSetting", "DynamicSearchAdsSetting", "ShoppingSetting", "TargetingSetting", "AudienceSetting", "GeoTargetTypeSetting", "LocalCampaignSetting", "AppCampaignSetting", "Labels", "ExperimentType", "BaseCampaign", "CampaignBudget", "BiddingStrategyType", "AccessibleBiddingStrategy", "StartDate", "CampaignGroup", "EndDate", "FinalUrlSuffix", "FrequencyCaps", "VideoBrandSafetySuitability", "VanityPharma", "SelectiveOptimization", "OptimizationGoalSetting", "TrackingSetting", "PaymentMode", "OptimizationScore", "ExcludedParentAssetFieldTypes", "ExcludedParentAssetSetTypes", "UrlExpansionOptOut", "PerformanceMaxUpgrade", "HotelPropertyAssetSet", "ListingType", "AssetAutomationSettings", "KeywordMatchType", "BrandGuidelinesEnabled", "BrandGuidelines", "BiddingStrategy", "Commission", "ManualCpa", "ManualCpc", "ManualCpm", "ManualCpv", "MaximizeConversions", "MaximizeConversionValue", "TargetCpa", "TargetImpressionShare", "TargetRoas", "TargetSpend", "PercentCpc", "TargetCpm", "FixedCpm", "TargetCpv", "CampaignBiddingStrategy", });
     internal_static_google_ads_googleads_v19_resources_Campaign_PerformanceMaxUpgrade_descriptor =
       internal_static_google_ads_googleads_v19_resources_Campaign_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v19_resources_Campaign_PerformanceMaxUpgrade_fieldAccessorTable = new
@@ -606,14 +626,26 @@ public final class CampaignProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v19_resources_Campaign_VideoCampaignSettings_VideoAdInventoryControl_descriptor,
         new java.lang.String[] { "AllowInStream", "AllowInFeed", "AllowShorts", });
-    internal_static_google_ads_googleads_v19_resources_Campaign_AssetAutomationSetting_descriptor =
+    internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_descriptor =
       internal_static_google_ads_googleads_v19_resources_Campaign_descriptor.getNestedTypes().get(18);
+    internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_descriptor,
+        new java.lang.String[] { "BrandTargetingOverrides", });
+    internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_BrandTargetingOverrides_descriptor =
+      internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_descriptor.getNestedTypes().get(0);
+    internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_BrandTargetingOverrides_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v19_resources_Campaign_PmaxCampaignSettings_BrandTargetingOverrides_descriptor,
+        new java.lang.String[] { "IgnoreExclusionsForShoppingAds", });
+    internal_static_google_ads_googleads_v19_resources_Campaign_AssetAutomationSetting_descriptor =
+      internal_static_google_ads_googleads_v19_resources_Campaign_descriptor.getNestedTypes().get(19);
     internal_static_google_ads_googleads_v19_resources_Campaign_AssetAutomationSetting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v19_resources_Campaign_AssetAutomationSetting_descriptor,
         new java.lang.String[] { "AssetAutomationType", "AssetAutomationStatus", });
     internal_static_google_ads_googleads_v19_resources_Campaign_BrandGuidelines_descriptor =
-      internal_static_google_ads_googleads_v19_resources_Campaign_descriptor.getNestedTypes().get(19);
+      internal_static_google_ads_googleads_v19_resources_Campaign_descriptor.getNestedTypes().get(20);
     internal_static_google_ads_googleads_v19_resources_Campaign_BrandGuidelines_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v19_resources_Campaign_BrandGuidelines_descriptor,

@@ -6,7 +6,8 @@ package com.google.ads.googleads.v19.resources;
 
 /**
  * <pre>
- * Represents a bidding data exclusion. Cannot be used in manager accounts.
+ * Represents a bidding data exclusion. Bidding data exclusions can be set in
+ * client accounts only, and cannot be used in manager accounts.
  *
  * See "About data exclusions" at
  * https://support.google.com/google-ads/answer/10370710.
@@ -941,7 +942,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents a bidding data exclusion. Cannot be used in manager accounts.
+   * Represents a bidding data exclusion. Bidding data exclusions can be set in
+   * client accounts only, and cannot be used in manager accounts.
    *
    * See "About data exclusions" at
    * https://support.google.com/google-ads/answer/10370710.

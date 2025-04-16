@@ -35,6 +35,26 @@ public final class LocalServicesLeadServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v19_services_ConversationOrError_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v19_services_SurveySatisfied_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v19_services_SurveySatisfied_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v19_services_SurveyDissatisfied_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v19_services_SurveyDissatisfied_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v19_services_ProvideLeadFeedbackRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v19_services_ProvideLeadFeedbackRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v19_services_ProvideLeadFeedbackResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v19_services_ProvideLeadFeedbackResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -46,44 +66,86 @@ public final class LocalServicesLeadServiceProto {
     java.lang.String[] descriptorData = {
       "\nCgoogle/ads/googleads/v19/services/loca" +
       "l_services_lead_service.proto\022!google.ad" +
-      "s.googleads.v19.services\032\034google/api/ann" +
-      "otations.proto\032\027google/api/client.proto\032" +
-      "\037google/api/field_behavior.proto\032\031google" +
-      "/api/resource.proto\032\027google/rpc/status.p" +
-      "roto\"\206\001\n\035AppendLeadConversationRequest\022\030" +
-      "\n\013customer_id\030\001 \001(\tB\003\340A\002\022K\n\rconversation" +
-      "s\030\002 \003(\0132/.google.ads.googleads.v19.servi" +
-      "ces.ConversationB\003\340A\002\"p\n\036AppendLeadConve" +
-      "rsationResponse\022N\n\tresponses\030\001 \003(\01326.goo" +
-      "gle.ads.googleads.v19.services.Conversat" +
-      "ionOrErrorB\003\340A\002\"r\n\014Conversation\022O\n\023local" +
-      "_services_lead\030\001 \001(\tB2\340A\002\372A,\n*googleads." +
-      "googleapis.com/LocalServicesLead\022\021\n\004text" +
-      "\030\002 \001(\tB\003\340A\002\"\233\001\n\023ConversationOrError\022*\n l" +
-      "ocal_services_lead_conversation\030\001 \001(\tH\000\022" +
-      "3\n\025partial_failure_error\030\002 \001(\0132\022.google." +
-      "rpc.StatusH\000B#\n!append_lead_conversation" +
-      "_response2\355\002\n\030LocalServicesLeadService\022\211" +
-      "\002\n\026AppendLeadConversation\022@.google.ads.g" +
-      "oogleads.v19.services.AppendLeadConversa" +
-      "tionRequest\032A.google.ads.googleads.v19.s" +
-      "ervices.AppendLeadConversationResponse\"j" +
-      "\332A\031customer_id,conversations\202\323\344\223\002H\"C/v19" +
-      "/customers/{customer_id=*}/localServices" +
-      ":appendLeadConversation:\001*\032E\312A\030googleads" +
-      ".googleapis.com\322A\'https://www.googleapis" +
-      ".com/auth/adwordsB\211\002\n%com.google.ads.goo" +
-      "gleads.v19.servicesB\035LocalServicesLeadSe" +
-      "rviceProtoP\001ZIgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v19/services;s" +
-      "ervices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V19" +
-      ".Services\312\002!Google\\Ads\\GoogleAds\\V19\\Ser" +
-      "vices\352\002%Google::Ads::GoogleAds::V19::Ser" +
-      "vicesb\006proto3"
+      "s.googleads.v19.services\032Qgoogle/ads/goo" +
+      "gleads/v19/enums/local_services_lead_cre" +
+      "dit_issuance_decision.proto\032Fgoogle/ads/" +
+      "googleads/v19/enums/local_services_lead_" +
+      "survey_answer.proto\032Sgoogle/ads/googlead" +
+      "s/v19/enums/local_services_lead_survey_d" +
+      "issatisfied_reason.proto\032Pgoogle/ads/goo" +
+      "gleads/v19/enums/local_services_lead_sur" +
+      "vey_satisfied_reason.proto\032\034google/api/a" +
+      "nnotations.proto\032\027google/api/client.prot" +
+      "o\032\037google/api/field_behavior.proto\032\031goog" +
+      "le/api/resource.proto\032\027google/rpc/status" +
+      ".proto\"\206\001\n\035AppendLeadConversationRequest" +
+      "\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022K\n\rconversati" +
+      "ons\030\002 \003(\0132/.google.ads.googleads.v19.ser" +
+      "vices.ConversationB\003\340A\002\"p\n\036AppendLeadCon" +
+      "versationResponse\022N\n\tresponses\030\001 \003(\01326.g" +
+      "oogle.ads.googleads.v19.services.Convers" +
+      "ationOrErrorB\003\340A\002\"r\n\014Conversation\022O\n\023loc" +
+      "al_services_lead\030\001 \001(\tB2\340A\002\372A,\n*googlead" +
+      "s.googleapis.com/LocalServicesLead\022\021\n\004te" +
+      "xt\030\002 \001(\tB\003\340A\002\"\233\001\n\023ConversationOrError\022*\n" +
+      " local_services_lead_conversation\030\001 \001(\tH" +
+      "\000\0223\n\025partial_failure_error\030\002 \001(\0132\022.googl" +
+      "e.rpc.StatusH\000B#\n!append_lead_conversati" +
+      "on_response\"\275\001\n\017SurveySatisfied\022\206\001\n\027surv" +
+      "ey_satisfied_reason\030\001 \001(\0162`.google.ads.g" +
+      "oogleads.v19.enums.LocalServicesLeadSurv" +
+      "eySatisfiedReasonEnum.SurveySatisfiedRea" +
+      "sonB\003\340A\002\022!\n\024other_reason_comment\030\002 \001(\tB\003" +
+      "\340A\001\"\311\001\n\022SurveyDissatisfied\022\217\001\n\032survey_di" +
+      "ssatisfied_reason\030\001 \001(\0162f.google.ads.goo" +
+      "gleads.v19.enums.LocalServicesLeadSurvey" +
+      "DissatisfiedReasonEnum.SurveyDissatisfie" +
+      "dReasonB\003\340A\002\022!\n\024other_reason_comment\030\002 \001" +
+      "(\tB\003\340A\001\"\213\003\n\032ProvideLeadFeedbackRequest\022I" +
+      "\n\rresource_name\030\001 \001(\tB2\340A\002\372A,\n*googleads" +
+      ".googleapis.com/LocalServicesLead\022j\n\rsur" +
+      "vey_answer\030\002 \001(\0162N.google.ads.googleads." +
+      "v19.enums.LocalServicesLeadSurveyAnswerE" +
+      "num.SurveyAnswerB\003\340A\002\022N\n\020survey_satisfie" +
+      "d\030\003 \001(\01322.google.ads.googleads.v19.servi" +
+      "ces.SurveySatisfiedH\000\022T\n\023survey_dissatis" +
+      "fied\030\004 \001(\01325.google.ads.googleads.v19.se" +
+      "rvices.SurveyDissatisfiedH\000B\020\n\016survey_de" +
+      "tails\"\251\001\n\033ProvideLeadFeedbackResponse\022\211\001" +
+      "\n\030credit_issuance_decision\030\001 \001(\0162b.googl" +
+      "e.ads.googleads.v19.enums.LocalServicesL" +
+      "eadCreditIssuanceDecisionEnum.CreditIssu" +
+      "anceDecisionB\003\340A\0022\332\004\n\030LocalServicesLeadS" +
+      "ervice\022\211\002\n\026AppendLeadConversation\022@.goog" +
+      "le.ads.googleads.v19.services.AppendLead" +
+      "ConversationRequest\032A.google.ads.googlea" +
+      "ds.v19.services.AppendLeadConversationRe" +
+      "sponse\"j\332A\031customer_id,conversations\202\323\344\223" +
+      "\002H\"C/v19/customers/{customer_id=*}/local" +
+      "Services:appendLeadConversation:\001*\022\352\001\n\023P" +
+      "rovideLeadFeedback\022=.google.ads.googlead" +
+      "s.v19.services.ProvideLeadFeedbackReques" +
+      "t\032>.google.ads.googleads.v19.services.Pr" +
+      "ovideLeadFeedbackResponse\"T\202\323\344\223\002N\"I/v19/" +
+      "{resource_name=customers/*/localServices" +
+      "Leads/*}:provideLeadFeedback:\001*\032E\312A\030goog" +
+      "leads.googleapis.com\322A\'https://www.googl" +
+      "eapis.com/auth/adwordsB\211\002\n%com.google.ad" +
+      "s.googleads.v19.servicesB\035LocalServicesL" +
+      "eadServiceProtoP\001ZIgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v19/servi" +
+      "ces;services\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
+      "s.V19.Services\312\002!Google\\Ads\\GoogleAds\\V1" +
+      "9\\Services\352\002%Google::Ads::GoogleAds::V19" +
+      "::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v19.enums.LocalServicesLeadCreditIssuanceDecisionProto.getDescriptor(),
+          com.google.ads.googleads.v19.enums.LocalServicesLeadSurveyAnswerProto.getDescriptor(),
+          com.google.ads.googleads.v19.enums.LocalServicesLeadSurveyDissatisfiedReasonProto.getDescriptor(),
+          com.google.ads.googleads.v19.enums.LocalServicesLeadSurveySatisfiedReasonProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
@@ -114,6 +176,30 @@ public final class LocalServicesLeadServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v19_services_ConversationOrError_descriptor,
         new java.lang.String[] { "LocalServicesLeadConversation", "PartialFailureError", "AppendLeadConversationResponse", });
+    internal_static_google_ads_googleads_v19_services_SurveySatisfied_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_google_ads_googleads_v19_services_SurveySatisfied_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v19_services_SurveySatisfied_descriptor,
+        new java.lang.String[] { "SurveySatisfiedReason", "OtherReasonComment", });
+    internal_static_google_ads_googleads_v19_services_SurveyDissatisfied_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_google_ads_googleads_v19_services_SurveyDissatisfied_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v19_services_SurveyDissatisfied_descriptor,
+        new java.lang.String[] { "SurveyDissatisfiedReason", "OtherReasonComment", });
+    internal_static_google_ads_googleads_v19_services_ProvideLeadFeedbackRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_google_ads_googleads_v19_services_ProvideLeadFeedbackRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v19_services_ProvideLeadFeedbackRequest_descriptor,
+        new java.lang.String[] { "ResourceName", "SurveyAnswer", "SurveySatisfied", "SurveyDissatisfied", "SurveyDetails", });
+    internal_static_google_ads_googleads_v19_services_ProvideLeadFeedbackResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_google_ads_googleads_v19_services_ProvideLeadFeedbackResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v19_services_ProvideLeadFeedbackResponse_descriptor,
+        new java.lang.String[] { "CreditIssuanceDecision", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
@@ -124,6 +210,10 @@ public final class LocalServicesLeadServiceProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.ads.googleads.v19.enums.LocalServicesLeadCreditIssuanceDecisionProto.getDescriptor();
+    com.google.ads.googleads.v19.enums.LocalServicesLeadSurveyAnswerProto.getDescriptor();
+    com.google.ads.googleads.v19.enums.LocalServicesLeadSurveyDissatisfiedReasonProto.getDescriptor();
+    com.google.ads.googleads.v19.enums.LocalServicesLeadSurveySatisfiedReasonProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();

@@ -31,7 +31,7 @@ public final class CampaignErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v19/errors/campai" +
       "gn_error.proto\022\037google.ads.googleads.v19" +
-      ".errors\"\245 \n\021CampaignErrorEnum\"\217 \n\rCampai" +
+      ".errors\"\322 \n\021CampaignErrorEnum\"\274 \n\rCampai" +
       "gnError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n" +
       "\035CANNOT_TARGET_CONTENT_NETWORK\020\003\022 \n\034CANN" +
       "OT_TARGET_SEARCH_NETWORK\020\004\0226\n2CANNOT_TAR" +
@@ -126,21 +126,23 @@ public final class CampaignErrorProto {
       "BLE_BROAD_MATCH_FOR_PROMOTING_TRIAL_CAMP" +
       "AIGN\020^\022+\n\'REQUIRED_BUSINESS_NAME_ASSET_N" +
       "OT_LINKED\020_\022\"\n\036REQUIRED_LOGO_ASSET_NOT_L" +
-      "INKED\020`\022-\n)BRAND_GUIDELINES_NOT_ENABLED_" +
-      "FOR_CAMPAIGN\020b\0224\n0BRAND_GUIDELINES_MAIN_" +
-      "AND_ACCENT_COLORS_REQUIRED\020c\022)\n%BRAND_GU" +
-      "IDELINES_COLOR_INVALID_FORMAT\020d\022,\n(BRAND" +
-      "_GUIDELINES_UNSUPPORTED_FONT_FAMILY\020e\022(\n" +
-      "$BRAND_GUIDELINES_UNSUPPORTED_CHANNEL\020f\022" +
-      "3\n/CANNOT_ENABLE_BRAND_GUIDELINES_FOR_TR" +
-      "AVEL_GOALS\020g\0221\n-CUSTOMER_NOT_ALLOWLISTED" +
-      "_FOR_BRAND_GUIDELINES\020hB\362\001\n#com.google.a" +
-      "ds.googleads.v19.errorsB\022CampaignErrorPr" +
-      "otoP\001ZEgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v19/errors;errors\242\002\003G" +
-      "AA\252\002\037Google.Ads.GoogleAds.V19.Errors\312\002\037G" +
-      "oogle\\Ads\\GoogleAds\\V19\\Errors\352\002#Google:" +
-      ":Ads::GoogleAds::V19::Errorsb\006proto3"
+      "INKED\020`\022+\n\'BRAND_TARGETING_OVERRIDES_NOT" +
+      "_SUPPORTED\020a\022-\n)BRAND_GUIDELINES_NOT_ENA" +
+      "BLED_FOR_CAMPAIGN\020b\0224\n0BRAND_GUIDELINES_" +
+      "MAIN_AND_ACCENT_COLORS_REQUIRED\020c\022)\n%BRA" +
+      "ND_GUIDELINES_COLOR_INVALID_FORMAT\020d\022,\n(" +
+      "BRAND_GUIDELINES_UNSUPPORTED_FONT_FAMILY" +
+      "\020e\022(\n$BRAND_GUIDELINES_UNSUPPORTED_CHANN" +
+      "EL\020f\0223\n/CANNOT_ENABLE_BRAND_GUIDELINES_F" +
+      "OR_TRAVEL_GOALS\020g\0221\n-CUSTOMER_NOT_ALLOWL" +
+      "ISTED_FOR_BRAND_GUIDELINES\020hB\362\001\n#com.goo" +
+      "gle.ads.googleads.v19.errorsB\022CampaignEr" +
+      "rorProtoP\001ZEgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v19/errors;error" +
+      "s\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V19.Error" +
+      "s\312\002\037Google\\Ads\\GoogleAds\\V19\\Errors\352\002#Go" +
+      "ogle::Ads::GoogleAds::V19::Errorsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

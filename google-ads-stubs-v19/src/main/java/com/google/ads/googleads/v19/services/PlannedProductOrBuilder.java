@@ -71,6 +71,33 @@ public interface PlannedProductOrBuilder extends
 
   /**
    * <pre>
+   * Conversion rate as a decimal between 0 and 1, exclusive.
+   * For example: if 2% of ad interactions are expected to lead to conversions,
+   * conversion_rate should be 0.02.
+   * This field is required for DEMAND_GEN plannable products. It is not
+   * supported for other plannable products.
+   * </pre>
+   *
+   * <code>optional double conversion_rate = 6;</code>
+   * @return Whether the conversionRate field is set.
+   */
+  boolean hasConversionRate();
+  /**
+   * <pre>
+   * Conversion rate as a decimal between 0 and 1, exclusive.
+   * For example: if 2% of ad interactions are expected to lead to conversions,
+   * conversion_rate should be 0.02.
+   * This field is required for DEMAND_GEN plannable products. It is not
+   * supported for other plannable products.
+   * </pre>
+   *
+   * <code>optional double conversion_rate = 6;</code>
+   * @return The conversionRate.
+   */
+  double getConversionRate();
+
+  /**
+   * <pre>
    * Targeting settings for the selected product.
    * To list the available targeting for each product use
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v19.services.ReachPlanService.ListPlannableProducts].

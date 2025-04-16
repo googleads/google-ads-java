@@ -48,7 +48,7 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the
  * [RetrySettings](https://cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings)
- * of listPlannableLocations:
+ * of generateConversionRates:
  *
  * <pre>{@code
  * // This snippet has been automatically generated and should be regarded as a code template only.
@@ -59,10 +59,10 @@ import javax.annotation.Generated;
  * ReachPlanServiceSettings.Builder reachPlanServiceSettingsBuilder =
  *     ReachPlanServiceSettings.newBuilder();
  * reachPlanServiceSettingsBuilder
- *     .listPlannableLocationsSettings()
+ *     .generateConversionRatesSettings()
  *     .setRetrySettings(
  *         reachPlanServiceSettingsBuilder
- *             .listPlannableLocationsSettings()
+ *             .generateConversionRatesSettings()
  *             .getRetrySettings()
  *             .toBuilder()
  *             .setInitialRetryDelayDuration(Duration.ofSeconds(1))
@@ -83,6 +83,12 @@ import javax.annotation.Generated;
  */
 @Generated("by gapic-generator-java")
 public class ReachPlanServiceSettings extends ClientSettings<ReachPlanServiceSettings> {
+
+  /** Returns the object with the settings used for calls to generateConversionRates. */
+  public UnaryCallSettings<GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+      generateConversionRatesSettings() {
+    return ((ReachPlanServiceStubSettings) getStubSettings()).generateConversionRatesSettings();
+  }
 
   /** Returns the object with the settings used for calls to listPlannableLocations. */
   public UnaryCallSettings<ListPlannableLocationsRequest, ListPlannableLocationsResponse>
@@ -196,6 +202,13 @@ public class ReachPlanServiceSettings extends ClientSettings<ReachPlanServiceSet
       super.applyToAllUnaryMethods(
           getStubSettingsBuilder().unaryMethodSettingsBuilders(), settingsUpdater);
       return this;
+    }
+
+    /** Returns the builder for the settings used for calls to generateConversionRates. */
+    public UnaryCallSettings.Builder<
+            GenerateConversionRatesRequest, GenerateConversionRatesResponse>
+        generateConversionRatesSettings() {
+      return getStubSettingsBuilder().generateConversionRatesSettings();
     }
 
     /** Returns the builder for the settings used for calls to listPlannableLocations. */
