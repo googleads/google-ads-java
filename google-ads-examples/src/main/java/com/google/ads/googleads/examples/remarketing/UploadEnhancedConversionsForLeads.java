@@ -306,6 +306,7 @@ public class UploadEnhancedConversionsForLeads {
               .setAdUserData(ConsentStatus.valueOf(rawRecord.get("adUserDataConsent"))));
     }
 
+    // [START add_session_attributes]
     // Sets one of the sessionAttributesEncoded or sessionAttributesKeyValuePairs if either is
     // provided.
     if (rawRecord.containsKey("sessionAttributesEncoded")) {
@@ -334,6 +335,7 @@ public class UploadEnhancedConversionsForLeads {
       }
       clickConversionBuilder.setSessionAttributesKeyValuePairs(sessionAttributePairs.build());
     }
+    // [END add_session_attributes]
 
     // Calls build to build the conversion.
     ClickConversion clickConversion = clickConversionBuilder.build();
