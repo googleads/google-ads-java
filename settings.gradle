@@ -44,3 +44,4 @@ if (!startParameter.projectProperties.containsKey("release")) {
 include ':google-ads-stubs-v17'
 include ':google-ads-stubs-v18'
 include ':google-ads-stubs-v19'
+include ':google-ads-stubs-v20'
