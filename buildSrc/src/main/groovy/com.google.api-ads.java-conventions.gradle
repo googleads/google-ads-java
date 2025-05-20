@@ -95,7 +95,11 @@ publishing {
   }
   repositories {
     maven {
-      url 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+      def releaseRepoUrl = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2'
+      def snapshotRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+
+      // Set the URL dynamically based on the project version
+      url = project.version.endsWith('SNAPSHOT') ? snapshotRepoUrl : releaseRepoUrl
       name = "sonatype"
       credentials {
         // Avoids storing Sonatype credentials in plain-text. Specify these on
