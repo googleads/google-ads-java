@@ -29,10 +29,42 @@ plugins {
     id 'com.google.api-ads.java-conventions'
     id 'com.google.protobuf' version '0.8.15'
     id "com.github.hierynomus.license-report" version "0.16.1"
+    id 'org.jreleaser' version '1.18.0'
 }
 
 description = 'Google Ads API client library for Java'
 
+jreleaser {
+    project {
+        gitRootSearch = true // Allow JReleaser to search upwards for .git
+    }
+    signing {
+        active = 'ALWAYS'
+        armored = true
+    }
+    deploy {
+        maven {
+            mavenCentral {
+                sonatype {
+                    /** Warning: this task will auto-publish artifacts to maven
+                     without an UI intervention. Publishing to Maven cannot
+                     be undone. In order to prevent the deploymnt from
+                     auto-publishing you must run this task with the
+                     JRELEASER_MAVENCENTRAL_STAGE parameter set to 'UPLOAD'. */
+                    active = 'ALWAYS'
+                    url = 'https://central.sonatype.com/api/v1/publisher'
+                    stagingRepository('target/staging-deploy')
+                    stage = 'UPLOAD'
+                }
+            }
+            release {
+        github {
+            enabled = false
+        }
+    }
+        }
+    }
+}
 protobuf {
     protoc {
         artifact = 'com.google.protobuf:protoc:3.25.3'
