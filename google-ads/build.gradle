@@ -48,7 +48,7 @@ jreleaser {
                 sonatype {
                     /** Warning: this task will auto-publish artifacts to maven
                      without an UI intervention. Publishing to Maven cannot
-                     be undone. In order to prevent the deploymnt from
+                     be undone. In order to prevent the deployment from
                      auto-publishing you must run this task with the
                      JRELEASER_MAVENCENTRAL_STAGE parameter set to 'UPLOAD'. */
                     active = 'ALWAYS'
@@ -58,10 +58,10 @@ jreleaser {
                 }
             }
             release {
-        github {
-            enabled = false
-        }
-    }
+                github {
+                    enabled = false
+                }
+            }
         }
     }
 }
