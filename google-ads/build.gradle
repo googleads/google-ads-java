@@ -46,20 +46,20 @@ jreleaser {
         maven {
             mavenCentral {
                 sonatype {
-                    /** Warning: this task will auto-publish artifacts to maven
-                     without an UI intervention. Publishing to Maven cannot
-                     be undone. In order to prevent the deployment from
-                     auto-publishing you must run this task with the
-                     JRELEASER_MAVENCENTRAL_STAGE parameter set to 'UPLOAD'. */
+                    /** Warning: In your JReleaser config file set
+                     * JRELEASER_MAVENCENTRAL_STAGE to 'UPLOAD' in order to
+                     * prevent the deployment from automatically publishing
+                     * without any UI intervention. */
                     active = 'ALWAYS'
                     url = 'https://central.sonatype.com/api/v1/publisher'
-                    stagingRepository('target/staging-deploy')
+                    stagingRepository(layout.buildDirectory.dir("staging-deploy").get().toString())
                     stage = 'UPLOAD'
                 }
             }
             release {
                 github {
-                    enabled = false
+                    skipRelease = true
+                    skipTag = true
                 }
             }
         }

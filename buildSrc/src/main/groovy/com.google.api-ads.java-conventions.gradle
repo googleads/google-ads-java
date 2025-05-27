@@ -107,22 +107,6 @@ publishing {
 components.java.withVariantsFromConfiguration(configurations.testFixturesApiElements) { skip() }
 components.java.withVariantsFromConfiguration(configurations.testFixturesRuntimeElements) { skip() }
 
-// Provide a helpful error message for missing sonatype credentials.
-tasks.findAll {
-  if (it.name.matches("publish.+ToSonatypeRepository")) {
-    it.doFirst {
-      def user = project.properties.get("sonatypeUser")
-      def pass = project.properties.get("sonatypePassword")
-      if (user == null || user.length() == 0) {
-        throw new GradleException("Missing property for sonatype username, try -PsonatypeUser=foo")
-      }
-      if (pass == null || pass.length() == 0) {
-        throw new GradleException("Missing property for sonatype password, try -PsonatypePassword=foo")
-      }
-    }
-  }
-}
-
 ext.configurePom = { publication, nameToSet, descriptionToSet ->
   publication.pom {
     name = nameToSet
