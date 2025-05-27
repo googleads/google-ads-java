@@ -29,10 +29,42 @@ plugins {
     id 'com.google.api-ads.java-conventions'
     id 'com.google.protobuf' version '0.8.15'
     id "com.github.hierynomus.license-report" version "0.16.1"
+    id 'org.jreleaser' version '1.18.0'
 }
 
 description = 'Google Ads API client library for Java'
 
+jreleaser {
+    project {
+        gitRootSearch = true // Allow JReleaser to search upwards for .git
+    }
+    signing {
+        active = 'ALWAYS'
+        armored = true
+    }
+    deploy {
+        maven {
+            mavenCentral {
+                sonatype {
+                    /** Warning: In your JReleaser config file set
+                     * JRELEASER_MAVENCENTRAL_STAGE to 'UPLOAD' in order to
+                     * prevent the deployment from automatically publishing
+                     * without any UI intervention. */
+                    active = 'ALWAYS'
+                    url = 'https://central.sonatype.com/api/v1/publisher'
+                    stagingRepository(layout.buildDirectory.dir("staging-deploy").get().toString())
+                    stage = 'UPLOAD'
+                }
+            }
+            release {
+                github {
+                    skipRelease = true
+                    skipTag = true
+                }
+            }
+        }
+    }
+}
 protobuf {
     protoc {
         artifact = 'com.google.protobuf:protoc:3.25.3'

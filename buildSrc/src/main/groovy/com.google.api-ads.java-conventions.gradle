@@ -91,21 +91,11 @@ publishing {
               fromResolutionResult()
           }
       }
-    }
-  }
-  repositories {
-    maven {
-      def releaseRepoUrl = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2'
-      def snapshotRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-
-      // Set the URL dynamically based on the project version
-      url = project.version.endsWith('SNAPSHOT') ? snapshotRepoUrl : releaseRepoUrl
-      name = "sonatype"
-      credentials {
-        // Avoids storing Sonatype credentials in plain-text. Specify these on
-        // the command line: -PsonatypeUser=foo
-        username project.properties.get("sonatypeUser")
-        password project.properties.get("sonatypePassword")
+      repositories {
+        maven {
+          name = 'sonatype'
+          url = uri(layout.buildDirectory.dir("staging-deploy"))
+        }
       }
     }
   }
@@ -116,22 +106,6 @@ publishing {
 // https://docs.gradle.org/7.6.2/userguide/java_testing.html#publishing_test_fixtures
 components.java.withVariantsFromConfiguration(configurations.testFixturesApiElements) { skip() }
 components.java.withVariantsFromConfiguration(configurations.testFixturesRuntimeElements) { skip() }
-
-// Provide a helpful error message for missing sonatype credentials.
-tasks.findAll {
-  if (it.name.matches("publish.+ToSonatypeRepository")) {
-    it.doFirst {
-      def user = project.properties.get("sonatypeUser")
-      def pass = project.properties.get("sonatypePassword")
-      if (user == null || user.length() == 0) {
-        throw new GradleException("Missing property for sonatype username, try -PsonatypeUser=foo")
-      }
-      if (pass == null || pass.length() == 0) {
-        throw new GradleException("Missing property for sonatype password, try -PsonatypePassword=foo")
-      }
-    }
-  }
-}
 
 ext.configurePom = { publication, nameToSet, descriptionToSet ->
   publication.pom {
@@ -169,6 +143,13 @@ ext.configurePom = { publication, nameToSet, descriptionToSet ->
         id = 'devin'
         name = 'Devin Chasanoff'
         email = 'devchas@users.noreply.github.com'
+        organization = 'Google'
+        organizationUrl = 'https://www.google.com'
+      }
+      developer {
+        id = 'sarah'
+        name = 'Sarah Pollack'
+        email = 'sarahbot@users.noreply.github.com'
         organization = 'Google'
         organizationUrl = 'https://www.google.com'
       }
