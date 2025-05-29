@@ -1,3 +1,8 @@
+37.0.0 - 2025-05-30
+-------------------
+- Remove support for v17 of the Google Ads API.
+- Implemented the JReleaser plugin.
+
 36.1.0 - 2025-04-16
 -------------------
 - Add support and examples for Google Ads API v19.1.
