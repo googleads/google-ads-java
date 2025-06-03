@@ -1,3 +1,37 @@
 plugins {
   id 'com.google.api-ads.gapic-stubs'
+  id 'org.jreleaser'
+}
+
+
+jreleaser {
+  project {
+    gitRootSearch = true // Allow JReleaser to search upwards for .git
+  }
+  signing {
+    active = 'ALWAYS'
+    armored = true
+  }
+  deploy {
+    maven {
+      mavenCentral {
+        sonatype {
+          /** Warning: In your JReleaser config file set
+           * JRELEASER_MAVENCENTRAL_STAGE to 'UPLOAD' in order to
+           * prevent the deployment from automatically publishing
+           * without any UI intervention. */
+          active = 'ALWAYS'
+          url = 'https://central.sonatype.com/api/v1/publisher'
+          stagingRepository(layout.buildDirectory.dir("staging-deploy").get().toString())
+          stage = 'UPLOAD'
+        }
+      }
+      release {
+        github {
+          skipRelease = true
+          skipTag = true
+        }
+      }
+    }
+  }
 }

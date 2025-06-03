@@ -29,7 +29,7 @@ plugins {
     id 'com.google.api-ads.java-conventions'
     id 'com.google.protobuf' version '0.8.15'
     id "com.github.hierynomus.license-report" version "0.16.1"
-    id 'org.jreleaser' version '1.18.0'
+    id 'org.jreleaser'
 }
 
 description = 'Google Ads API client library for Java'
