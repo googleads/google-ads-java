@@ -16,6 +16,14 @@
  * This is the root project descriptor for the Google Ads API Java library
  * gradle project.
  */
+pluginManagement {
+  repositories {
+    gradlePluginPortal()
+  }
+  plugins {
+    id 'org.jreleaser' version '1.18.0'
+  }
+}
 
 rootProject.name = 'google-ads-parent'
 
