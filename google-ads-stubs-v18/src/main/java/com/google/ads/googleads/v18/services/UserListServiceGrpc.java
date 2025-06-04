@@ -64,6 +64,21 @@ public final class UserListServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static UserListServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<UserListServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserListServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public UserListServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserListServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return UserListServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static UserListServiceBlockingStub newBlockingStub(
@@ -200,6 +215,57 @@ public final class UserListServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service UserListService.
+   * <pre>
+   * Service to manage user lists.
+   * </pre>
+   */
+  public static final class UserListServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<UserListServiceBlockingV2Stub> {
+    private UserListServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected UserListServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new UserListServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates or updates user lists. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [DatabaseError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [NotAllowlistedError]()
+     *   [NotEmptyError]()
+     *   [OperationAccessDeniedError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     *   [UserListError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateUserListsResponse mutateUserLists(com.google.ads.googleads.v18.services.MutateUserListsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateUserListsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service UserListService.
    * <pre>
    * Service to manage user lists.
    * </pre>

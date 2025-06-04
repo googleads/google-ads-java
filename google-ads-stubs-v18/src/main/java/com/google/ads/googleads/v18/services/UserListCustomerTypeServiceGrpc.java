@@ -64,6 +64,21 @@ public final class UserListCustomerTypeServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static UserListCustomerTypeServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<UserListCustomerTypeServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserListCustomerTypeServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public UserListCustomerTypeServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserListCustomerTypeServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return UserListCustomerTypeServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static UserListCustomerTypeServiceBlockingStub newBlockingStub(
@@ -176,6 +191,45 @@ public final class UserListCustomerTypeServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service UserListCustomerTypeService.
+   * <pre>
+   * Service to manage user list customer types.
+   * </pre>
+   */
+  public static final class UserListCustomerTypeServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<UserListCustomerTypeServiceBlockingV2Stub> {
+    private UserListCustomerTypeServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected UserListCustomerTypeServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new UserListCustomerTypeServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Attach or remove user list customer types. Operation statuses
+     * are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [UserListCustomerTypeError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateUserListCustomerTypesResponse mutateUserListCustomerTypes(com.google.ads.googleads.v18.services.MutateUserListCustomerTypesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateUserListCustomerTypesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service UserListCustomerTypeService.
    * <pre>
    * Service to manage user list customer types.
    * </pre>

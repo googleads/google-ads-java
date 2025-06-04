@@ -69,6 +69,21 @@ public final class UserDataServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static UserDataServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<UserDataServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserDataServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public UserDataServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserDataServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return UserDataServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static UserDataServiceBlockingStub newBlockingStub(
@@ -202,6 +217,53 @@ public final class UserDataServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service UserDataService.
+   * <pre>
+   * Service to manage user data uploads.
+   * Any uploads made to a Customer Match list through this service will be
+   * eligible for matching as per the customer matching process. See
+   * https://support.google.com/google-ads/answer/7474263. However, the uploads
+   * made through this service will not be visible under the 'Segment members'
+   * section for the Customer Match List in the Google Ads UI.
+   * </pre>
+   */
+  public static final class UserDataServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<UserDataServiceBlockingV2Stub> {
+    private UserDataServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected UserDataServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new UserDataServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Uploads the given user data.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [OfflineUserDataJobError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     *   [UserDataError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.UploadUserDataResponse uploadUserData(com.google.ads.googleads.v18.services.UploadUserDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUploadUserDataMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service UserDataService.
    * <pre>
    * Service to manage user data uploads.
    * Any uploads made to a Customer Match list through this service will be

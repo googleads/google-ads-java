@@ -95,6 +95,21 @@ public final class GoogleAdsFieldServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static GoogleAdsFieldServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<GoogleAdsFieldServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GoogleAdsFieldServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public GoogleAdsFieldServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GoogleAdsFieldServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return GoogleAdsFieldServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static GoogleAdsFieldServiceBlockingStub newBlockingStub(
@@ -240,6 +255,61 @@ public final class GoogleAdsFieldServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service GoogleAdsFieldService.
+   * <pre>
+   * Service to fetch Google Ads API fields.
+   * </pre>
+   */
+  public static final class GoogleAdsFieldServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<GoogleAdsFieldServiceBlockingV2Stub> {
+    private GoogleAdsFieldServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected GoogleAdsFieldServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new GoogleAdsFieldServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns just the requested field.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.resources.GoogleAdsField getGoogleAdsField(com.google.ads.googleads.v18.services.GetGoogleAdsFieldRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGoogleAdsFieldMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns all fields that match the search query.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QueryError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.SearchGoogleAdsFieldsResponse searchGoogleAdsFields(com.google.ads.googleads.v18.services.SearchGoogleAdsFieldsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSearchGoogleAdsFieldsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service GoogleAdsFieldService.
    * <pre>
    * Service to fetch Google Ads API fields.
    * </pre>

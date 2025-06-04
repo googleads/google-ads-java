@@ -64,6 +64,21 @@ public final class AudienceServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AudienceServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AudienceServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AudienceServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AudienceServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AudienceServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AudienceServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AudienceServiceBlockingStub newBlockingStub(
@@ -162,6 +177,38 @@ public final class AudienceServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AudienceService.
+   * <pre>
+   * Service to manage audiences.
+   * </pre>
+   */
+  public static final class AudienceServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AudienceServiceBlockingV2Stub> {
+    private AudienceServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AudienceServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AudienceServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates audiences. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AudienceError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAudiencesResponse mutateAudiences(com.google.ads.googleads.v18.services.MutateAudiencesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAudiencesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AudienceService.
    * <pre>
    * Service to manage audiences.
    * </pre>

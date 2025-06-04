@@ -65,6 +65,21 @@ public final class CustomerUserAccessInvitationServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerUserAccessInvitationServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerUserAccessInvitationServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerUserAccessInvitationServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerUserAccessInvitationServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerUserAccessInvitationServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerUserAccessInvitationServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerUserAccessInvitationServiceBlockingStub newBlockingStub(
@@ -178,6 +193,45 @@ public final class CustomerUserAccessInvitationServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerUserAccessInvitationService.
+   * <pre>
+   * This service manages the access invitation extended to users for a given
+   * customer.
+   * </pre>
+   */
+  public static final class CustomerUserAccessInvitationServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerUserAccessInvitationServiceBlockingV2Stub> {
+    private CustomerUserAccessInvitationServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerUserAccessInvitationServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerUserAccessInvitationServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates or removes an access invitation.
+     * List of thrown errors:
+     *   [AccessInvitationError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerUserAccessInvitationResponse mutateCustomerUserAccessInvitation(com.google.ads.googleads.v18.services.MutateCustomerUserAccessInvitationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerUserAccessInvitationMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerUserAccessInvitationService.
    * <pre>
    * This service manages the access invitation extended to users for a given
    * customer.

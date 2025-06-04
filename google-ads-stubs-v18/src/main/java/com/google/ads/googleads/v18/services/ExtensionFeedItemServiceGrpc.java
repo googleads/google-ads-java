@@ -64,6 +64,21 @@ public final class ExtensionFeedItemServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ExtensionFeedItemServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ExtensionFeedItemServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExtensionFeedItemServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ExtensionFeedItemServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExtensionFeedItemServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ExtensionFeedItemServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ExtensionFeedItemServiceBlockingStub newBlockingStub(
@@ -208,6 +223,61 @@ public final class ExtensionFeedItemServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ExtensionFeedItemService.
+   * <pre>
+   * Service to manage extension feed items.
+   * </pre>
+   */
+  public static final class ExtensionFeedItemServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ExtensionFeedItemServiceBlockingV2Stub> {
+    private ExtensionFeedItemServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ExtensionFeedItemServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ExtensionFeedItemServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes extension feed items. Operation
+     * statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [CountryCodeError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DistinctError]()
+     *   [ExtensionFeedItemError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [ImageError]()
+     *   [InternalError]()
+     *   [LanguageCodeError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [OperationAccessDeniedError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [SizeLimitError]()
+     *   [StringLengthError]()
+     *   [UrlFieldError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateExtensionFeedItemsResponse mutateExtensionFeedItems(com.google.ads.googleads.v18.services.MutateExtensionFeedItemsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateExtensionFeedItemsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ExtensionFeedItemService.
    * <pre>
    * Service to manage extension feed items.
    * </pre>

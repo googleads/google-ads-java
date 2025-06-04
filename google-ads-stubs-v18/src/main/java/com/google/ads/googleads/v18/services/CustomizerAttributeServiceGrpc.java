@@ -64,6 +64,21 @@ public final class CustomizerAttributeServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomizerAttributeServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomizerAttributeServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomizerAttributeServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomizerAttributeServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomizerAttributeServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomizerAttributeServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomizerAttributeServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class CustomizerAttributeServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomizerAttributeService.
+   * <pre>
+   * Service to manage customizer attribute
+   * </pre>
+   */
+  public static final class CustomizerAttributeServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomizerAttributeServiceBlockingV2Stub> {
+    private CustomizerAttributeServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomizerAttributeServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomizerAttributeServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates or removes customizer attributes. Operation statuses are
+     * returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomizerAttributesResponse mutateCustomizerAttributes(com.google.ads.googleads.v18.services.MutateCustomizerAttributesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomizerAttributesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomizerAttributeService.
    * <pre>
    * Service to manage customizer attribute
    * </pre>

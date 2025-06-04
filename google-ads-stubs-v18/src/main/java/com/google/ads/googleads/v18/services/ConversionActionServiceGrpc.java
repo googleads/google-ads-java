@@ -64,6 +64,21 @@ public final class ConversionActionServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ConversionActionServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ConversionActionServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ConversionActionServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ConversionActionServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ConversionActionServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ConversionActionServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ConversionActionServiceBlockingStub newBlockingStub(
@@ -194,6 +209,54 @@ public final class ConversionActionServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ConversionActionService.
+   * <pre>
+   * Service to manage conversion actions.
+   * </pre>
+   */
+  public static final class ConversionActionServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ConversionActionServiceBlockingV2Stub> {
+    private ConversionActionServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ConversionActionServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ConversionActionServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates or removes conversion actions. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ConversionActionError]()
+     *   [CurrencyCodeError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateConversionActionsResponse mutateConversionActions(com.google.ads.googleads.v18.services.MutateConversionActionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateConversionActionsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ConversionActionService.
    * <pre>
    * Service to manage conversion actions.
    * </pre>

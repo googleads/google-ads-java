@@ -64,6 +64,21 @@ public final class AdGroupBidModifierServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AdGroupBidModifierServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupBidModifierServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupBidModifierServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AdGroupBidModifierServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupBidModifierServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AdGroupBidModifierServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AdGroupBidModifierServiceBlockingStub newBlockingStub(
@@ -208,6 +223,61 @@ public final class AdGroupBidModifierServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AdGroupBidModifierService.
+   * <pre>
+   * Service to manage ad group bid modifiers.
+   * </pre>
+   */
+  public static final class AdGroupBidModifierServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupBidModifierServiceBlockingV2Stub> {
+    private AdGroupBidModifierServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AdGroupBidModifierServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AdGroupBidModifierServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes ad group bid modifiers.
+     * Operation statuses are returned.
+     * List of thrown errors:
+     *   [AdGroupBidModifierError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ContextError]()
+     *   [CriterionError]()
+     *   [DatabaseError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [NotEmptyError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAdGroupBidModifiersResponse mutateAdGroupBidModifiers(com.google.ads.googleads.v18.services.MutateAdGroupBidModifiersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAdGroupBidModifiersMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AdGroupBidModifierService.
    * <pre>
    * Service to manage ad group bid modifiers.
    * </pre>

@@ -64,6 +64,21 @@ public final class LabelServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static LabelServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<LabelServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LabelServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public LabelServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LabelServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return LabelServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static LabelServiceBlockingStub newBlockingStub(
@@ -206,6 +221,60 @@ public final class LabelServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service LabelService.
+   * <pre>
+   * Service to manage labels.
+   * </pre>
+   */
+  public static final class LabelServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<LabelServiceBlockingV2Stub> {
+    private LabelServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected LabelServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new LabelServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes labels. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [LabelError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateLabelsResponse mutateLabels(com.google.ads.googleads.v18.services.MutateLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateLabelsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service LabelService.
    * <pre>
    * Service to manage labels.
    * </pre>

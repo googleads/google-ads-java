@@ -206,7 +206,7 @@ dependencies {
   api 'io.grpc:grpc-protobuf'
   api 'com.google.auth:google-auth-library-oauth2-http'
   api 'com.google.auth:google-auth-library-credentials'
-  api platform('com.google.cloud:google-cloud-shared-dependencies:3.45.1')
+  api platform('com.google.cloud:google-cloud-shared-dependencies:3.48.0')
   implementation 'com.google.guava:guava'
   implementation 'com.google.auto.service:auto-service:1.0.1'
   implementation 'javax.annotation:javax.annotation-api'

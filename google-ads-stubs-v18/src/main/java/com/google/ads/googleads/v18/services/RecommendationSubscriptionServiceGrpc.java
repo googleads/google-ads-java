@@ -64,6 +64,21 @@ public final class RecommendationSubscriptionServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static RecommendationSubscriptionServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<RecommendationSubscriptionServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecommendationSubscriptionServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public RecommendationSubscriptionServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecommendationSubscriptionServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return RecommendationSubscriptionServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static RecommendationSubscriptionServiceBlockingStub newBlockingStub(
@@ -182,6 +197,48 @@ public final class RecommendationSubscriptionServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service RecommendationSubscriptionService.
+   * <pre>
+   * Service to manage recommendation subscriptions.
+   * </pre>
+   */
+  public static final class RecommendationSubscriptionServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<RecommendationSubscriptionServiceBlockingV2Stub> {
+    private RecommendationSubscriptionServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected RecommendationSubscriptionServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new RecommendationSubscriptionServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Mutates given subscription with corresponding apply parameters.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RecommendationError]()
+     *   [RequestError]()
+     *   [UrlFieldError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateRecommendationSubscriptionResponse mutateRecommendationSubscription(com.google.ads.googleads.v18.services.MutateRecommendationSubscriptionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateRecommendationSubscriptionMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service RecommendationSubscriptionService.
    * <pre>
    * Service to manage recommendation subscriptions.
    * </pre>

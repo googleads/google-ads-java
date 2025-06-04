@@ -64,6 +64,21 @@ public final class ConversionValueRuleSetServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ConversionValueRuleSetServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ConversionValueRuleSetServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ConversionValueRuleSetServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ConversionValueRuleSetServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ConversionValueRuleSetServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ConversionValueRuleSetServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ConversionValueRuleSetServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class ConversionValueRuleSetServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ConversionValueRuleSetService.
+   * <pre>
+   * Service to manage conversion value rule sets.
+   * </pre>
+   */
+  public static final class ConversionValueRuleSetServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ConversionValueRuleSetServiceBlockingV2Stub> {
+    private ConversionValueRuleSetServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ConversionValueRuleSetServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ConversionValueRuleSetServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates or removes conversion value rule sets. Operation statuses
+     * are returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateConversionValueRuleSetsResponse mutateConversionValueRuleSets(com.google.ads.googleads.v18.services.MutateConversionValueRuleSetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateConversionValueRuleSetsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ConversionValueRuleSetService.
    * <pre>
    * Service to manage conversion value rule sets.
    * </pre>

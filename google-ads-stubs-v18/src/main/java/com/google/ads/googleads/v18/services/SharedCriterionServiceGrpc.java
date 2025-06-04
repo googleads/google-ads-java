@@ -64,6 +64,21 @@ public final class SharedCriterionServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static SharedCriterionServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<SharedCriterionServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SharedCriterionServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public SharedCriterionServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SharedCriterionServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return SharedCriterionServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static SharedCriterionServiceBlockingStub newBlockingStub(
@@ -200,6 +215,57 @@ public final class SharedCriterionServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service SharedCriterionService.
+   * <pre>
+   * Service to manage shared criteria.
+   * </pre>
+   */
+  public static final class SharedCriterionServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<SharedCriterionServiceBlockingV2Stub> {
+    private SharedCriterionServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected SharedCriterionServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new SharedCriterionServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates or removes shared criteria. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CriterionError]()
+     *   [DatabaseError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateSharedCriteriaResponse mutateSharedCriteria(com.google.ads.googleads.v18.services.MutateSharedCriteriaRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateSharedCriteriaMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service SharedCriterionService.
    * <pre>
    * Service to manage shared criteria.
    * </pre>

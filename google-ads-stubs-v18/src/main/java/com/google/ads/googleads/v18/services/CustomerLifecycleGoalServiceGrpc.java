@@ -64,6 +64,21 @@ public final class CustomerLifecycleGoalServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerLifecycleGoalServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerLifecycleGoalServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerLifecycleGoalServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerLifecycleGoalServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerLifecycleGoalServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerLifecycleGoalServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerLifecycleGoalServiceBlockingStub newBlockingStub(
@@ -174,6 +189,44 @@ public final class CustomerLifecycleGoalServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerLifecycleGoalService.
+   * <pre>
+   * Service to configure customer lifecycle goals.
+   * </pre>
+   */
+  public static final class CustomerLifecycleGoalServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerLifecycleGoalServiceBlockingV2Stub> {
+    private CustomerLifecycleGoalServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerLifecycleGoalServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerLifecycleGoalServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Process the given customer lifecycle configurations.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CustomerLifecycleGoalConfigError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ConfigureCustomerLifecycleGoalsResponse configureCustomerLifecycleGoals(com.google.ads.googleads.v18.services.ConfigureCustomerLifecycleGoalsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getConfigureCustomerLifecycleGoalsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerLifecycleGoalService.
    * <pre>
    * Service to configure customer lifecycle goals.
    * </pre>

@@ -48,7 +48,7 @@ google-ads/*/buildNumber.properties
 # Gradle build output
 .gradle/
 buildSrc/.gradle/
-*/build/
+build/
 
 # VSCode build output and settings
 .vscode/

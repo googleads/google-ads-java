@@ -64,6 +64,21 @@ public final class InvoiceServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static InvoiceServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<InvoiceServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<InvoiceServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public InvoiceServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new InvoiceServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return InvoiceServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static InvoiceServiceBlockingStub newBlockingStub(
@@ -176,6 +191,45 @@ public final class InvoiceServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service InvoiceService.
+   * <pre>
+   * A service to fetch invoices issued for a billing setup during a given month.
+   * </pre>
+   */
+  public static final class InvoiceServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<InvoiceServiceBlockingV2Stub> {
+    private InvoiceServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected InvoiceServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new InvoiceServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns all invoices associated with a billing setup, for a given month.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [InvoiceError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ListInvoicesResponse listInvoices(com.google.ads.googleads.v18.services.ListInvoicesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListInvoicesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service InvoiceService.
    * <pre>
    * A service to fetch invoices issued for a billing setup during a given month.
    * </pre>

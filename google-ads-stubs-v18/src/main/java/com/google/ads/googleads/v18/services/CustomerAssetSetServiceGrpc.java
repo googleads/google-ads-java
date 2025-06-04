@@ -64,6 +64,21 @@ public final class CustomerAssetSetServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerAssetSetServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerAssetSetServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerAssetSetServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerAssetSetServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerAssetSetServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerAssetSetServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerAssetSetServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class CustomerAssetSetServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerAssetSetService.
+   * <pre>
+   * Service to manage customer asset set
+   * </pre>
+   */
+  public static final class CustomerAssetSetServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerAssetSetServiceBlockingV2Stub> {
+    private CustomerAssetSetServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerAssetSetServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerAssetSetServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, or removes customer asset sets. Operation statuses are
+     * returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerAssetSetsResponse mutateCustomerAssetSets(com.google.ads.googleads.v18.services.MutateCustomerAssetSetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerAssetSetsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerAssetSetService.
    * <pre>
    * Service to manage customer asset set
    * </pre>

@@ -64,6 +64,21 @@ public final class CustomAudienceServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomAudienceServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomAudienceServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomAudienceServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomAudienceServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomAudienceServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomAudienceServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomAudienceServiceBlockingStub newBlockingStub(
@@ -186,6 +201,50 @@ public final class CustomAudienceServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomAudienceService.
+   * <pre>
+   * Service to manage custom audiences.
+   * </pre>
+   */
+  public static final class CustomAudienceServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomAudienceServiceBlockingV2Stub> {
+    private CustomAudienceServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomAudienceServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomAudienceServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates or updates custom audiences. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CustomAudienceError]()
+     *   [CustomInterestError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [OperationAccessDeniedError]()
+     *   [PolicyViolationError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomAudiencesResponse mutateCustomAudiences(com.google.ads.googleads.v18.services.MutateCustomAudiencesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomAudiencesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomAudienceService.
    * <pre>
    * Service to manage custom audiences.
    * </pre>

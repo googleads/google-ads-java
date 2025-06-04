@@ -64,6 +64,21 @@ public final class CampaignFeedServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CampaignFeedServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CampaignFeedServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignFeedServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CampaignFeedServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignFeedServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CampaignFeedServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CampaignFeedServiceBlockingStub newBlockingStub(
@@ -208,6 +223,61 @@ public final class CampaignFeedServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CampaignFeedService.
+   * <pre>
+   * Service to manage campaign feeds.
+   * </pre>
+   */
+  public static final class CampaignFeedServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignFeedServiceBlockingV2Stub> {
+    private CampaignFeedServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CampaignFeedServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CampaignFeedServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes campaign feeds. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CampaignFeedError]()
+     *   [CollectionSizeError]()
+     *   [DatabaseError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [FunctionError]()
+     *   [FunctionParsingError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperationAccessDeniedError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCampaignFeedsResponse mutateCampaignFeeds(com.google.ads.googleads.v18.services.MutateCampaignFeedsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCampaignFeedsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CampaignFeedService.
    * <pre>
    * Service to manage campaign feeds.
    * </pre>

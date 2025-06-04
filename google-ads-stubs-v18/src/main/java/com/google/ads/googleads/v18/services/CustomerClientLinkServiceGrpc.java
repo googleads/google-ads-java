@@ -64,6 +64,21 @@ public final class CustomerClientLinkServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerClientLinkServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerClientLinkServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerClientLinkServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerClientLinkServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerClientLinkServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerClientLinkServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerClientLinkServiceBlockingStub newBlockingStub(
@@ -184,6 +199,49 @@ public final class CustomerClientLinkServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerClientLinkService.
+   * <pre>
+   * Service to manage customer client links.
+   * </pre>
+   */
+  public static final class CustomerClientLinkServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerClientLinkServiceBlockingV2Stub> {
+    private CustomerClientLinkServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerClientLinkServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerClientLinkServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates or updates a customer client link. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [ManagerLinkError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerClientLinkResponse mutateCustomerClientLink(com.google.ads.googleads.v18.services.MutateCustomerClientLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerClientLinkMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerClientLinkService.
    * <pre>
    * Service to manage customer client links.
    * </pre>

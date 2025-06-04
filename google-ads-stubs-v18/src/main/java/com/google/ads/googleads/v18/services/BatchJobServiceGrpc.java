@@ -157,6 +157,21 @@ public final class BatchJobServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static BatchJobServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<BatchJobServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BatchJobServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public BatchJobServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BatchJobServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return BatchJobServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static BatchJobServiceBlockingStub newBlockingStub(
@@ -388,6 +403,103 @@ public final class BatchJobServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service BatchJobService.
+   * <pre>
+   * Service to manage batch jobs.
+   * </pre>
+   */
+  public static final class BatchJobServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<BatchJobServiceBlockingV2Stub> {
+    private BatchJobServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected BatchJobServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new BatchJobServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Mutates a batch job.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateBatchJobResponse mutateBatchJob(com.google.ads.googleads.v18.services.MutateBatchJobRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateBatchJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the results of the batch job. The job must be done.
+     * Supports standard list paging.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [BatchJobError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ListBatchJobResultsResponse listBatchJobResults(com.google.ads.googleads.v18.services.ListBatchJobResultsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListBatchJobResultsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Runs the batch job.
+     * The Operation.metadata field type is BatchJobMetadata. When finished, the
+     * long running operation will not contain errors or a response. Instead, use
+     * ListBatchJobResults to get the results of the job.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [BatchJobError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.longrunning.Operation runBatchJob(com.google.ads.googleads.v18.services.RunBatchJobRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRunBatchJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Add operations to the batch job.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [BatchJobError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.AddBatchJobOperationsResponse addBatchJobOperations(com.google.ads.googleads.v18.services.AddBatchJobOperationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddBatchJobOperationsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service BatchJobService.
    * <pre>
    * Service to manage batch jobs.
    * </pre>

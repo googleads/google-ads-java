@@ -66,6 +66,21 @@ public final class ContentCreatorInsightsServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ContentCreatorInsightsServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ContentCreatorInsightsServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ContentCreatorInsightsServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ContentCreatorInsightsServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ContentCreatorInsightsServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ContentCreatorInsightsServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ContentCreatorInsightsServiceBlockingStub newBlockingStub(
@@ -184,6 +199,47 @@ public final class ContentCreatorInsightsServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ContentCreatorInsightsService.
+   * <pre>
+   * Content Creator Insights Service helps users find information about YouTube
+   * Creators and their content and how these creators and their audiences can be
+   * reached with Google Ads. Accessible to allowlisted customers only.
+   * </pre>
+   */
+  public static final class ContentCreatorInsightsServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ContentCreatorInsightsServiceBlockingV2Stub> {
+    private ContentCreatorInsightsServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ContentCreatorInsightsServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ContentCreatorInsightsServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns insights for a collection of YouTube Creators and Channels.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateCreatorInsightsResponse generateCreatorInsights(com.google.ads.googleads.v18.services.GenerateCreatorInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateCreatorInsightsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ContentCreatorInsightsService.
    * <pre>
    * Content Creator Insights Service helps users find information about YouTube
    * Creators and their content and how these creators and their audiences can be

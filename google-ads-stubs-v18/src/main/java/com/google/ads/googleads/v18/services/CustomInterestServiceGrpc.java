@@ -64,6 +64,21 @@ public final class CustomInterestServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomInterestServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomInterestServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomInterestServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomInterestServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomInterestServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomInterestServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomInterestServiceBlockingStub newBlockingStub(
@@ -182,6 +197,48 @@ public final class CustomInterestServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomInterestService.
+   * <pre>
+   * Service to manage custom interests.
+   * </pre>
+   */
+  public static final class CustomInterestServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomInterestServiceBlockingV2Stub> {
+    private CustomInterestServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomInterestServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomInterestServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates or updates custom interests. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CriterionError]()
+     *   [CustomInterestError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [PolicyViolationError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomInterestsResponse mutateCustomInterests(com.google.ads.googleads.v18.services.MutateCustomInterestsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomInterestsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomInterestService.
    * <pre>
    * Service to manage custom interests.
    * </pre>

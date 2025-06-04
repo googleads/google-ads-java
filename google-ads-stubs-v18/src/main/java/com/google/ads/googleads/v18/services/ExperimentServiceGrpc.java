@@ -219,6 +219,21 @@ public final class ExperimentServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ExperimentServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ExperimentServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExperimentServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ExperimentServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExperimentServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ExperimentServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ExperimentServiceBlockingStub newBlockingStub(
@@ -560,6 +575,157 @@ public final class ExperimentServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ExperimentService.
+   * <pre>
+   * Service to manage experiments.
+   * </pre>
+   */
+  public static final class ExperimentServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ExperimentServiceBlockingV2Stub> {
+    private ExperimentServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ExperimentServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ExperimentServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes experiments. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ExperimentError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateExperimentsResponse mutateExperiments(com.google.ads.googleads.v18.services.MutateExperimentsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateExperimentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Immediately ends an experiment, changing the experiment's scheduled
+     * end date and without waiting for end of day. End date is updated to be the
+     * time of the request.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ExperimentError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.protobuf.Empty endExperiment(com.google.ads.googleads.v18.services.EndExperimentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEndExperimentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns all errors that occurred during the last Experiment update (either
+     * scheduling or promotion).
+     * Supports standard list paging.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ListExperimentAsyncErrorsResponse listExperimentAsyncErrors(com.google.ads.googleads.v18.services.ListExperimentAsyncErrorsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListExperimentAsyncErrorsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Graduates an experiment to a full campaign.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ExperimentError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.protobuf.Empty graduateExperiment(com.google.ads.googleads.v18.services.GraduateExperimentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGraduateExperimentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Schedule an experiment. The in design campaign
+     * will be converted into a real campaign (called the experiment campaign)
+     * that will begin serving ads if successfully created.
+     * The experiment is scheduled immediately with status INITIALIZING.
+     * This method returns a long running operation that tracks the forking of the
+     * in design campaign. If the forking fails, a list of errors can be retrieved
+     * using the ListExperimentAsyncErrors method. The operation's
+     * metadata will be a string containing the resource name of the created
+     * experiment.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ExperimentError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DateRangeError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.longrunning.Operation scheduleExperiment(com.google.ads.googleads.v18.services.ScheduleExperimentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getScheduleExperimentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Promotes the trial campaign thus applying changes in the trial campaign
+     * to the base campaign.
+     * This method returns a long running operation that tracks the promotion of
+     * the experiment campaign. If it fails, a list of errors can be retrieved
+     * using the ListExperimentAsyncErrors method. The operation's
+     * metadata will be a string containing the resource name of the created
+     * experiment.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ExperimentError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.longrunning.Operation promoteExperiment(com.google.ads.googleads.v18.services.PromoteExperimentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPromoteExperimentMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ExperimentService.
    * <pre>
    * Service to manage experiments.
    * </pre>

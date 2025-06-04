@@ -64,6 +64,21 @@ public final class AdGroupCustomizerServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AdGroupCustomizerServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupCustomizerServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupCustomizerServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AdGroupCustomizerServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupCustomizerServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AdGroupCustomizerServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AdGroupCustomizerServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class AdGroupCustomizerServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AdGroupCustomizerService.
+   * <pre>
+   * Service to manage ad group customizer
+   * </pre>
+   */
+  public static final class AdGroupCustomizerServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupCustomizerServiceBlockingV2Stub> {
+    private AdGroupCustomizerServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AdGroupCustomizerServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AdGroupCustomizerServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates or removes ad group customizers. Operation statuses are
+     * returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAdGroupCustomizersResponse mutateAdGroupCustomizers(com.google.ads.googleads.v18.services.MutateAdGroupCustomizersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAdGroupCustomizersMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AdGroupCustomizerService.
    * <pre>
    * Service to manage ad group customizer
    * </pre>

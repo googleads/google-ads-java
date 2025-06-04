@@ -64,6 +64,21 @@ public final class AdServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AdServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AdServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AdServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AdServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AdServiceBlockingStub newBlockingStub(
@@ -238,6 +253,76 @@ public final class AdServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AdService.
+   * <pre>
+   * Service to manage ads.
+   * </pre>
+   */
+  public static final class AdServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AdServiceBlockingV2Stub> {
+    private AdServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AdServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AdServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Updates ads. Operation statuses are returned. Updating ads is not supported
+     * for TextAd, ExpandedDynamicSearchAd, GmailAd and ImageAd.
+     * List of thrown errors:
+     *   [AdCustomizerError]()
+     *   [AdError]()
+     *   [AdSharingError]()
+     *   [AdxError]()
+     *   [AssetError]()
+     *   [AssetLinkError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DistinctError]()
+     *   [FeedAttributeReferenceError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [FunctionError]()
+     *   [FunctionParsingError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [ImageError]()
+     *   [InternalError]()
+     *   [ListOperationError]()
+     *   [MediaBundleError]()
+     *   [MediaFileError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperatorError]()
+     *   [PolicyFindingError]()
+     *   [PolicyViolationError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     *   [UrlFieldError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAdsResponse mutateAds(com.google.ads.googleads.v18.services.MutateAdsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAdsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AdService.
    * <pre>
    * Service to manage ads.
    * </pre>

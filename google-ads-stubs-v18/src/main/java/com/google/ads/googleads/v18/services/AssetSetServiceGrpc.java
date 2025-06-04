@@ -64,6 +64,21 @@ public final class AssetSetServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AssetSetServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AssetSetServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AssetSetServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AssetSetServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AssetSetServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AssetSetServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AssetSetServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class AssetSetServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AssetSetService.
+   * <pre>
+   * Service to manage asset set
+   * </pre>
+   */
+  public static final class AssetSetServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AssetSetServiceBlockingV2Stub> {
+    private AssetSetServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AssetSetServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AssetSetServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates or removes asset sets. Operation statuses are
+     * returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAssetSetsResponse mutateAssetSets(com.google.ads.googleads.v18.services.MutateAssetSetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAssetSetsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AssetSetService.
    * <pre>
    * Service to manage asset set
    * </pre>

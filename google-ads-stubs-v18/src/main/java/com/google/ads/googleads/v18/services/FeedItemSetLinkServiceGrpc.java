@@ -64,6 +64,21 @@ public final class FeedItemSetLinkServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static FeedItemSetLinkServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<FeedItemSetLinkServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FeedItemSetLinkServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public FeedItemSetLinkServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FeedItemSetLinkServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return FeedItemSetLinkServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static FeedItemSetLinkServiceBlockingStub newBlockingStub(
@@ -172,6 +187,43 @@ public final class FeedItemSetLinkServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service FeedItemSetLinkService.
+   * <pre>
+   * Service to manage feed item set links.
+   * </pre>
+   */
+  public static final class FeedItemSetLinkServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<FeedItemSetLinkServiceBlockingV2Stub> {
+    private FeedItemSetLinkServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected FeedItemSetLinkServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new FeedItemSetLinkServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes feed item set links.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateFeedItemSetLinksResponse mutateFeedItemSetLinks(com.google.ads.googleads.v18.services.MutateFeedItemSetLinksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateFeedItemSetLinksMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service FeedItemSetLinkService.
    * <pre>
    * Service to manage feed item set links.
    * </pre>

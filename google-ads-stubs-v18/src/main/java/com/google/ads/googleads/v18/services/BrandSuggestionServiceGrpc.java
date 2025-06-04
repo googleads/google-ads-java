@@ -64,6 +64,21 @@ public final class BrandSuggestionServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static BrandSuggestionServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<BrandSuggestionServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BrandSuggestionServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public BrandSuggestionServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BrandSuggestionServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return BrandSuggestionServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static BrandSuggestionServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class BrandSuggestionServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service BrandSuggestionService.
+   * <pre>
+   * This service will suggest brands based on a prefix.
+   * </pre>
+   */
+  public static final class BrandSuggestionServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<BrandSuggestionServiceBlockingV2Stub> {
+    private BrandSuggestionServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected BrandSuggestionServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new BrandSuggestionServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Rpc to return a list of matching brands based on a prefix for this
+     * customer.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.SuggestBrandsResponse suggestBrands(com.google.ads.googleads.v18.services.SuggestBrandsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuggestBrandsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service BrandSuggestionService.
    * <pre>
    * This service will suggest brands based on a prefix.
    * </pre>

@@ -64,6 +64,21 @@ public final class CustomerSkAdNetworkConversionValueSchemaServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerSkAdNetworkConversionValueSchemaServiceBlockingStub newBlockingStub(
@@ -170,6 +185,42 @@ public final class CustomerSkAdNetworkConversionValueSchemaServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerSkAdNetworkConversionValueSchemaService.
+   * <pre>
+   * Service to manage CustomerSkAdNetworkConversionValueSchema.
+   * </pre>
+   */
+  public static final class CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub> {
+    private CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerSkAdNetworkConversionValueSchemaServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates or updates the CustomerSkAdNetworkConversionValueSchema.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerSkAdNetworkConversionValueSchemaResponse mutateCustomerSkAdNetworkConversionValueSchema(com.google.ads.googleads.v18.services.MutateCustomerSkAdNetworkConversionValueSchemaRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerSkAdNetworkConversionValueSchemaMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerSkAdNetworkConversionValueSchemaService.
    * <pre>
    * Service to manage CustomerSkAdNetworkConversionValueSchema.
    * </pre>

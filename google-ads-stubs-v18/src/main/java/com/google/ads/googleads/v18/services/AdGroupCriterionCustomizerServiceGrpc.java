@@ -64,6 +64,21 @@ public final class AdGroupCriterionCustomizerServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AdGroupCriterionCustomizerServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupCriterionCustomizerServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupCriterionCustomizerServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AdGroupCriterionCustomizerServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupCriterionCustomizerServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AdGroupCriterionCustomizerServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AdGroupCriterionCustomizerServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class AdGroupCriterionCustomizerServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AdGroupCriterionCustomizerService.
+   * <pre>
+   * Service to manage ad group criterion customizer
+   * </pre>
+   */
+  public static final class AdGroupCriterionCustomizerServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupCriterionCustomizerServiceBlockingV2Stub> {
+    private AdGroupCriterionCustomizerServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AdGroupCriterionCustomizerServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AdGroupCriterionCustomizerServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates or removes ad group criterion customizers. Operation
+     * statuses are returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAdGroupCriterionCustomizersResponse mutateAdGroupCriterionCustomizers(com.google.ads.googleads.v18.services.MutateAdGroupCriterionCustomizersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAdGroupCriterionCustomizersMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AdGroupCriterionCustomizerService.
    * <pre>
    * Service to manage ad group criterion customizer
    * </pre>

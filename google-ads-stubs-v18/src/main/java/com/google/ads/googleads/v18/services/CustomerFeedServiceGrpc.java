@@ -64,6 +64,21 @@ public final class CustomerFeedServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerFeedServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerFeedServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerFeedServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerFeedServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerFeedServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerFeedServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerFeedServiceBlockingStub newBlockingStub(
@@ -206,6 +221,60 @@ public final class CustomerFeedServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerFeedService.
+   * <pre>
+   * Service to manage customer feeds.
+   * </pre>
+   */
+  public static final class CustomerFeedServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerFeedServiceBlockingV2Stub> {
+    private CustomerFeedServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerFeedServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerFeedServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes customer feeds. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [CustomerFeedError]()
+     *   [DatabaseError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [FunctionError]()
+     *   [FunctionParsingError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NotEmptyError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerFeedsResponse mutateCustomerFeeds(com.google.ads.googleads.v18.services.MutateCustomerFeedsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerFeedsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerFeedService.
    * <pre>
    * Service to manage customer feeds.
    * </pre>

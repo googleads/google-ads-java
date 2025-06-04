@@ -66,6 +66,21 @@ public final class AssetServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AssetServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AssetServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AssetServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AssetServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AssetServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AssetServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AssetServiceBlockingStub newBlockingStub(
@@ -222,6 +237,66 @@ public final class AssetServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AssetService.
+   * <pre>
+   * Service to manage assets. Asset types can be created with AssetService are
+   * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
+   * created with Ad inline.
+   * </pre>
+   */
+  public static final class AssetServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AssetServiceBlockingV2Stub> {
+    private AssetServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AssetServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AssetServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates assets. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AssetError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [CurrencyCodeError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [ListOperationError]()
+     *   [MediaUploadError]()
+     *   [MutateError]()
+     *   [NotAllowlistedError]()
+     *   [NotEmptyError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     *   [UrlFieldError]()
+     *   [YoutubeVideoRegistrationError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAssetsResponse mutateAssets(com.google.ads.googleads.v18.services.MutateAssetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAssetsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AssetService.
    * <pre>
    * Service to manage assets. Asset types can be created with AssetService are
    * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be

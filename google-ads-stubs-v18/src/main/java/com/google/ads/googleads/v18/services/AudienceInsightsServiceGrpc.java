@@ -252,6 +252,21 @@ public final class AudienceInsightsServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AudienceInsightsServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AudienceInsightsServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AudienceInsightsServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AudienceInsightsServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AudienceInsightsServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AudienceInsightsServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AudienceInsightsServiceBlockingStub newBlockingStub(
@@ -626,6 +641,172 @@ public final class AudienceInsightsServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AudienceInsightsService.
+   * <pre>
+   * Audience Insights Service helps users find information about groups of
+   * people and how they can be reached with Google Ads. Accessible to
+   * allowlisted customers only.
+   * </pre>
+   */
+  public static final class AudienceInsightsServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AudienceInsightsServiceBlockingV2Stub> {
+    private AudienceInsightsServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AudienceInsightsServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AudienceInsightsServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates a saved report that can be viewed in the Insights Finder tool.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateInsightsFinderReportResponse generateInsightsFinderReport(com.google.ads.googleads.v18.services.GenerateInsightsFinderReportRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateInsightsFinderReportMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Searches for audience attributes that can be used to generate insights.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ListAudienceInsightsAttributesResponse listAudienceInsightsAttributes(com.google.ads.googleads.v18.services.ListAudienceInsightsAttributesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAudienceInsightsAttributesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists date ranges for which audience insights data can be requested.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ListInsightsEligibleDatesResponse listInsightsEligibleDates(com.google.ads.googleads.v18.services.ListInsightsEligibleDatesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListInsightsEligibleDatesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a collection of attributes that are represented in an audience of
+     * interest, with metrics that compare each attribute's share of the audience
+     * with its share of a baseline audience.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateAudienceCompositionInsightsResponse generateAudienceCompositionInsights(com.google.ads.googleads.v18.services.GenerateAudienceCompositionInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateAudienceCompositionInsightsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a collection of targeting insights (e.g. targetable audiences) that
+     * are relevant to the requested audience.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateSuggestedTargetingInsightsResponse generateSuggestedTargetingInsights(com.google.ads.googleads.v18.services.GenerateSuggestedTargetingInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateSuggestedTargetingInsightsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a collection of audience attributes along with estimates of the
+     * overlap between their potential YouTube reach and that of a given input
+     * attribute.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateAudienceOverlapInsightsResponse generateAudienceOverlapInsights(com.google.ads.googleads.v18.services.GenerateAudienceOverlapInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateAudienceOverlapInsightsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns potential reach metrics for targetable audiences.
+     * This method helps answer questions like "How many Men aged 18+ interested
+     * in Camping can be reached on YouTube?"
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateTargetingSuggestionMetricsResponse generateTargetingSuggestionMetrics(com.google.ads.googleads.v18.services.GenerateTargetingSuggestionMetricsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateTargetingSuggestionMetricsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AudienceInsightsService.
    * <pre>
    * Audience Insights Service helps users find information about groups of
    * people and how they can be reached with Google Ads. Accessible to

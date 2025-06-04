@@ -96,6 +96,21 @@ public final class AccountLinkServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AccountLinkServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AccountLinkServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountLinkServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AccountLinkServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountLinkServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AccountLinkServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AccountLinkServiceBlockingStub newBlockingStub(
@@ -262,6 +277,71 @@ public final class AccountLinkServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AccountLinkService.
+   * <pre>
+   * This service allows management of links between Google Ads accounts and other
+   * accounts.
+   * </pre>
+   */
+  public static final class AccountLinkServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AccountLinkServiceBlockingV2Stub> {
+    private AccountLinkServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AccountLinkServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AccountLinkServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates an account link.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     *   [ThirdPartyAppAnalyticsLinkError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.CreateAccountLinkResponse createAccountLink(com.google.ads.googleads.v18.services.CreateAccountLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAccountLinkMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates or removes an account link.
+     * From V5, create is not supported through
+     * AccountLinkService.MutateAccountLink. Use
+     * AccountLinkService.CreateAccountLink instead.
+     * List of thrown errors:
+     *   [AccountLinkError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAccountLinkResponse mutateAccountLink(com.google.ads.googleads.v18.services.MutateAccountLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAccountLinkMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AccountLinkService.
    * <pre>
    * This service allows management of links between Google Ads accounts and other
    * accounts.

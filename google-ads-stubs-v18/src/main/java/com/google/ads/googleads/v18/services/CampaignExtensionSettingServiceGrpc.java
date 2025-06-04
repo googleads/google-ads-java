@@ -64,6 +64,21 @@ public final class CampaignExtensionSettingServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CampaignExtensionSettingServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CampaignExtensionSettingServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignExtensionSettingServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CampaignExtensionSettingServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignExtensionSettingServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CampaignExtensionSettingServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CampaignExtensionSettingServiceBlockingStub newBlockingStub(
@@ -216,6 +231,65 @@ public final class CampaignExtensionSettingServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CampaignExtensionSettingService.
+   * <pre>
+   * Service to manage campaign extension settings.
+   * </pre>
+   */
+  public static final class CampaignExtensionSettingServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignExtensionSettingServiceBlockingV2Stub> {
+    private CampaignExtensionSettingServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CampaignExtensionSettingServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CampaignExtensionSettingServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes campaign extension settings. Operation
+     * statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [CriterionError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DistinctError]()
+     *   [ExtensionSettingError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [ListOperationError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperationAccessDeniedError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     *   [UrlFieldError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCampaignExtensionSettingsResponse mutateCampaignExtensionSettings(com.google.ads.googleads.v18.services.MutateCampaignExtensionSettingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCampaignExtensionSettingsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CampaignExtensionSettingService.
    * <pre>
    * Service to manage campaign extension settings.
    * </pre>

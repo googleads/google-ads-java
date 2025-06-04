@@ -64,6 +64,21 @@ public final class CustomerUserAccessServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerUserAccessServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerUserAccessServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerUserAccessServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerUserAccessServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerUserAccessServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerUserAccessServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerUserAccessServiceBlockingStub newBlockingStub(
@@ -180,6 +195,47 @@ public final class CustomerUserAccessServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerUserAccessService.
+   * <pre>
+   * This service manages the permissions of a user on a given customer.
+   * </pre>
+   */
+  public static final class CustomerUserAccessServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerUserAccessServiceBlockingV2Stub> {
+    private CustomerUserAccessServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerUserAccessServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerUserAccessServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Updates, removes permission of a user on a given customer. Operation
+     * statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CustomerUserAccessError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerUserAccessResponse mutateCustomerUserAccess(com.google.ads.googleads.v18.services.MutateCustomerUserAccessRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerUserAccessMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerUserAccessService.
    * <pre>
    * This service manages the permissions of a user on a given customer.
    * </pre>

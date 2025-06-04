@@ -126,6 +126,21 @@ public final class CampaignDraftServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CampaignDraftServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CampaignDraftServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignDraftServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CampaignDraftServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignDraftServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CampaignDraftServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CampaignDraftServiceBlockingStub newBlockingStub(
@@ -334,6 +349,92 @@ public final class CampaignDraftServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CampaignDraftService.
+   * <pre>
+   * Service to manage campaign drafts.
+   * </pre>
+   */
+  public static final class CampaignDraftServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignDraftServiceBlockingV2Stub> {
+    private CampaignDraftServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CampaignDraftServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CampaignDraftServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes campaign drafts. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CampaignDraftError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCampaignDraftsResponse mutateCampaignDrafts(com.google.ads.googleads.v18.services.MutateCampaignDraftsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCampaignDraftsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Promotes the changes in a draft back to the base campaign.
+     * This method returns a Long Running Operation (LRO) indicating if the
+     * Promote is done. Use [Operations.GetOperation] to poll the LRO until it
+     * is done. Only a done status is returned in the response. See the status
+     * in the Campaign Draft resource to determine if the promotion was
+     * successful. If the LRO failed, use
+     * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v18.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
+     * to view the list of error reasons.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CampaignDraftError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.longrunning.Operation promoteCampaignDraft(com.google.ads.googleads.v18.services.PromoteCampaignDraftRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPromoteCampaignDraftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns all errors that occurred during CampaignDraft promote. Throws an
+     * error if called before campaign draft is promoted.
+     * Supports standard list paging.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ListCampaignDraftAsyncErrorsResponse listCampaignDraftAsyncErrors(com.google.ads.googleads.v18.services.ListCampaignDraftAsyncErrorsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListCampaignDraftAsyncErrorsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CampaignDraftService.
    * <pre>
    * Service to manage campaign drafts.
    * </pre>

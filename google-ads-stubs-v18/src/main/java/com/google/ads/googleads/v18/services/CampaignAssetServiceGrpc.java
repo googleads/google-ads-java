@@ -64,6 +64,21 @@ public final class CampaignAssetServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CampaignAssetServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CampaignAssetServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignAssetServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CampaignAssetServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignAssetServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CampaignAssetServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CampaignAssetServiceBlockingStub newBlockingStub(
@@ -186,6 +201,50 @@ public final class CampaignAssetServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CampaignAssetService.
+   * <pre>
+   * Service to manage campaign assets.
+   * </pre>
+   */
+  public static final class CampaignAssetServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignAssetServiceBlockingV2Stub> {
+    private CampaignAssetServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CampaignAssetServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CampaignAssetServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes campaign assets. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AssetLinkError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ContextError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NotAllowlistedError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCampaignAssetsResponse mutateCampaignAssets(com.google.ads.googleads.v18.services.MutateCampaignAssetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCampaignAssetsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CampaignAssetService.
    * <pre>
    * Service to manage campaign assets.
    * </pre>

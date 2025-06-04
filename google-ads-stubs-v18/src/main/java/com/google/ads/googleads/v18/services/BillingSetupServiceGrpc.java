@@ -70,6 +70,21 @@ public final class BillingSetupServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static BillingSetupServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<BillingSetupServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BillingSetupServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public BillingSetupServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BillingSetupServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return BillingSetupServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static BillingSetupServiceBlockingStub newBlockingStub(
@@ -204,6 +219,53 @@ public final class BillingSetupServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service BillingSetupService.
+   * <pre>
+   * A service for designating the business entity responsible for accrued costs.
+   * A billing setup is associated with a payments account.  Billing-related
+   * activity for all billing setups associated with a particular payments account
+   * will appear on a single invoice generated monthly.
+   * Mutates:
+   * The REMOVE operation cancels a pending billing setup.
+   * The CREATE operation creates a new billing setup.
+   * </pre>
+   */
+  public static final class BillingSetupServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<BillingSetupServiceBlockingV2Stub> {
+    private BillingSetupServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected BillingSetupServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new BillingSetupServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates a billing setup, or cancels an existing billing setup.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [BillingSetupError]()
+     *   [DateError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateBillingSetupResponse mutateBillingSetup(com.google.ads.googleads.v18.services.MutateBillingSetupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateBillingSetupMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service BillingSetupService.
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
    * A billing setup is associated with a payments account.  Billing-related

@@ -126,6 +126,21 @@ public final class SmartCampaignSuggestServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static SmartCampaignSuggestServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<SmartCampaignSuggestServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SmartCampaignSuggestServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public SmartCampaignSuggestServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SmartCampaignSuggestServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return SmartCampaignSuggestServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static SmartCampaignSuggestServiceBlockingStub newBlockingStub(
@@ -264,6 +279,57 @@ public final class SmartCampaignSuggestServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service SmartCampaignSuggestService.
+   * <pre>
+   * Service to get suggestions for Smart Campaigns.
+   * </pre>
+   */
+  public static final class SmartCampaignSuggestServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<SmartCampaignSuggestServiceBlockingV2Stub> {
+    private SmartCampaignSuggestServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected SmartCampaignSuggestServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new SmartCampaignSuggestServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns BudgetOption suggestions.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.SuggestSmartCampaignBudgetOptionsResponse suggestSmartCampaignBudgetOptions(com.google.ads.googleads.v18.services.SuggestSmartCampaignBudgetOptionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuggestSmartCampaignBudgetOptionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Suggests a Smart campaign ad compatible with the Ad family of resources,
+     * based on data points such as targeting and the business to advertise.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.SuggestSmartCampaignAdResponse suggestSmartCampaignAd(com.google.ads.googleads.v18.services.SuggestSmartCampaignAdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuggestSmartCampaignAdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Suggests keyword themes to advertise on.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.SuggestKeywordThemesResponse suggestKeywordThemes(com.google.ads.googleads.v18.services.SuggestKeywordThemesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuggestKeywordThemesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service SmartCampaignSuggestService.
    * <pre>
    * Service to get suggestions for Smart Campaigns.
    * </pre>
