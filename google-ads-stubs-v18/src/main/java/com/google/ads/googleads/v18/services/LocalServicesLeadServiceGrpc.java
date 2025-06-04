@@ -64,6 +64,21 @@ public final class LocalServicesLeadServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static LocalServicesLeadServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<LocalServicesLeadServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LocalServicesLeadServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public LocalServicesLeadServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LocalServicesLeadServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return LocalServicesLeadServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static LocalServicesLeadServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class LocalServicesLeadServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service LocalServicesLeadService.
+   * <pre>
+   * This service allows management of LocalServicesLead resources.
+   * </pre>
+   */
+  public static final class LocalServicesLeadServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<LocalServicesLeadServiceBlockingV2Stub> {
+    private LocalServicesLeadServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected LocalServicesLeadServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new LocalServicesLeadServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * RPC to append Local Services Lead Conversation resources to Local Services
+     * Lead resources.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.AppendLeadConversationResponse appendLeadConversation(com.google.ads.googleads.v18.services.AppendLeadConversationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAppendLeadConversationMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service LocalServicesLeadService.
    * <pre>
    * This service allows management of LocalServicesLead resources.
    * </pre>

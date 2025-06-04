@@ -64,6 +64,21 @@ public final class RemarketingActionServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static RemarketingActionServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<RemarketingActionServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RemarketingActionServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public RemarketingActionServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RemarketingActionServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return RemarketingActionServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static RemarketingActionServiceBlockingStub newBlockingStub(
@@ -174,6 +189,44 @@ public final class RemarketingActionServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service RemarketingActionService.
+   * <pre>
+   * Service to manage remarketing actions.
+   * </pre>
+   */
+  public static final class RemarketingActionServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<RemarketingActionServiceBlockingV2Stub> {
+    private RemarketingActionServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected RemarketingActionServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new RemarketingActionServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates or updates remarketing actions. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ConversionActionError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateRemarketingActionsResponse mutateRemarketingActions(com.google.ads.googleads.v18.services.MutateRemarketingActionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateRemarketingActionsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service RemarketingActionService.
    * <pre>
    * Service to manage remarketing actions.
    * </pre>

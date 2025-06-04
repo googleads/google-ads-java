@@ -64,6 +64,21 @@ public final class ShareablePreviewServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ShareablePreviewServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ShareablePreviewServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ShareablePreviewServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ShareablePreviewServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ShareablePreviewServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ShareablePreviewServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ShareablePreviewServiceBlockingStub newBlockingStub(
@@ -158,6 +173,36 @@ public final class ShareablePreviewServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ShareablePreviewService.
+   * <pre>
+   * Service to generate Shareable Previews.
+   * </pre>
+   */
+  public static final class ShareablePreviewServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ShareablePreviewServiceBlockingV2Stub> {
+    private ShareablePreviewServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ShareablePreviewServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ShareablePreviewServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns the requested Shareable Preview.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateShareablePreviewsResponse generateShareablePreviews(com.google.ads.googleads.v18.services.GenerateShareablePreviewsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateShareablePreviewsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ShareablePreviewService.
    * <pre>
    * Service to generate Shareable Previews.
    * </pre>

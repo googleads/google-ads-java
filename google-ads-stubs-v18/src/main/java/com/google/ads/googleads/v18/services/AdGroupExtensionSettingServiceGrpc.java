@@ -64,6 +64,21 @@ public final class AdGroupExtensionSettingServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AdGroupExtensionSettingServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupExtensionSettingServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupExtensionSettingServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AdGroupExtensionSettingServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupExtensionSettingServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AdGroupExtensionSettingServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AdGroupExtensionSettingServiceBlockingStub newBlockingStub(
@@ -218,6 +233,66 @@ public final class AdGroupExtensionSettingServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AdGroupExtensionSettingService.
+   * <pre>
+   * Service to manage ad group extension settings.
+   * </pre>
+   */
+  public static final class AdGroupExtensionSettingServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupExtensionSettingServiceBlockingV2Stub> {
+    private AdGroupExtensionSettingServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AdGroupExtensionSettingServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AdGroupExtensionSettingServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes ad group extension settings. Operation
+     * statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [CriterionError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DistinctError]()
+     *   [ExtensionSettingError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [ListOperationError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperationAccessDeniedError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     *   [UrlFieldError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAdGroupExtensionSettingsResponse mutateAdGroupExtensionSettings(com.google.ads.googleads.v18.services.MutateAdGroupExtensionSettingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAdGroupExtensionSettingsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AdGroupExtensionSettingService.
    * <pre>
    * Service to manage ad group extension settings.
    * </pre>

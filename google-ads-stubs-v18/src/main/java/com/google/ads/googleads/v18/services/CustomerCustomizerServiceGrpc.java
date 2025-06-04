@@ -64,6 +64,21 @@ public final class CustomerCustomizerServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerCustomizerServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerCustomizerServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerCustomizerServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerCustomizerServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerCustomizerServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerCustomizerServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerCustomizerServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class CustomerCustomizerServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerCustomizerService.
+   * <pre>
+   * Service to manage customer customizer
+   * </pre>
+   */
+  public static final class CustomerCustomizerServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerCustomizerServiceBlockingV2Stub> {
+    private CustomerCustomizerServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerCustomizerServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerCustomizerServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates or removes customer customizers. Operation statuses are
+     * returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerCustomizersResponse mutateCustomerCustomizers(com.google.ads.googleads.v18.services.MutateCustomerCustomizersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerCustomizersMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerCustomizerService.
    * <pre>
    * Service to manage customer customizer
    * </pre>

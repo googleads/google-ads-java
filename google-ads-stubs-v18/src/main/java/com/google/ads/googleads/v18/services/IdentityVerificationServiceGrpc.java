@@ -95,6 +95,21 @@ public final class IdentityVerificationServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static IdentityVerificationServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<IdentityVerificationServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IdentityVerificationServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public IdentityVerificationServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IdentityVerificationServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return IdentityVerificationServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static IdentityVerificationServiceBlockingStub newBlockingStub(
@@ -240,6 +255,61 @@ public final class IdentityVerificationServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service IdentityVerificationService.
+   * <pre>
+   * A service for managing Identity Verification Service.
+   * </pre>
+   */
+  public static final class IdentityVerificationServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<IdentityVerificationServiceBlockingV2Stub> {
+    private IdentityVerificationServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected IdentityVerificationServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new IdentityVerificationServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Starts Identity Verification for a given verification program type.
+     *  Statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.protobuf.Empty startIdentityVerification(com.google.ads.googleads.v18.services.StartIdentityVerificationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStartIdentityVerificationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns Identity Verification information.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GetIdentityVerificationResponse getIdentityVerification(com.google.ads.googleads.v18.services.GetIdentityVerificationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetIdentityVerificationMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service IdentityVerificationService.
    * <pre>
    * A service for managing Identity Verification Service.
    * </pre>

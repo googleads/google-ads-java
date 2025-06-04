@@ -64,6 +64,21 @@ public final class CampaignLifecycleGoalServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CampaignLifecycleGoalServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CampaignLifecycleGoalServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignLifecycleGoalServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CampaignLifecycleGoalServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignLifecycleGoalServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CampaignLifecycleGoalServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CampaignLifecycleGoalServiceBlockingStub newBlockingStub(
@@ -174,6 +189,44 @@ public final class CampaignLifecycleGoalServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CampaignLifecycleGoalService.
+   * <pre>
+   * Service to configure campaign lifecycle goals.
+   * </pre>
+   */
+  public static final class CampaignLifecycleGoalServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignLifecycleGoalServiceBlockingV2Stub> {
+    private CampaignLifecycleGoalServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CampaignLifecycleGoalServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CampaignLifecycleGoalServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Process the given campaign lifecycle configurations.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CampaignLifecycleGoalConfigError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ConfigureCampaignLifecycleGoalsResponse configureCampaignLifecycleGoals(com.google.ads.googleads.v18.services.ConfigureCampaignLifecycleGoalsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getConfigureCampaignLifecycleGoalsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CampaignLifecycleGoalService.
    * <pre>
    * Service to configure campaign lifecycle goals.
    * </pre>

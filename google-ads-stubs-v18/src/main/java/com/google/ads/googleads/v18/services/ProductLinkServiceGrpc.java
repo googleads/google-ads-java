@@ -96,6 +96,21 @@ public final class ProductLinkServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ProductLinkServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ProductLinkServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProductLinkServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ProductLinkServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProductLinkServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ProductLinkServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ProductLinkServiceBlockingStub newBlockingStub(
@@ -252,6 +267,66 @@ public final class ProductLinkServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ProductLinkService.
+   * <pre>
+   * This service allows management of links between  a Google
+   * Ads customer and another product.
+   * </pre>
+   */
+  public static final class ProductLinkServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ProductLinkServiceBlockingV2Stub> {
+    private ProductLinkServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ProductLinkServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ProductLinkServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates a product link.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.CreateProductLinkResponse createProductLink(com.google.ads.googleads.v18.services.CreateProductLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateProductLinkMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Removes a product link.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.RemoveProductLinkResponse removeProductLink(com.google.ads.googleads.v18.services.RemoveProductLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveProductLinkMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ProductLinkService.
    * <pre>
    * This service allows management of links between  a Google
    * Ads customer and another product.

@@ -64,6 +64,21 @@ public final class CustomerConversionGoalServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerConversionGoalServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerConversionGoalServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerConversionGoalServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerConversionGoalServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerConversionGoalServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerConversionGoalServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerConversionGoalServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class CustomerConversionGoalServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerConversionGoalService.
+   * <pre>
+   * Service to manage customer conversion goal.
+   * </pre>
+   */
+  public static final class CustomerConversionGoalServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerConversionGoalServiceBlockingV2Stub> {
+    private CustomerConversionGoalServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerConversionGoalServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerConversionGoalServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates or removes customer conversion goals. Operation statuses
+     * are returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerConversionGoalsResponse mutateCustomerConversionGoals(com.google.ads.googleads.v18.services.MutateCustomerConversionGoalsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerConversionGoalsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerConversionGoalService.
    * <pre>
    * Service to manage customer conversion goal.
    * </pre>

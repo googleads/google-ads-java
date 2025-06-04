@@ -126,6 +126,21 @@ public final class CustomerServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerServiceBlockingStub newBlockingStub(
@@ -322,6 +337,86 @@ public final class CustomerServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerService.
+   * <pre>
+   * Service to manage customers.
+   * </pre>
+   */
+  public static final class CustomerServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerServiceBlockingV2Stub> {
+    private CustomerServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Updates a customer. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     *   [UrlFieldError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerResponse mutateCustomer(com.google.ads.googleads.v18.services.MutateCustomerRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns resource names of customers directly accessible by the
+     * user authenticating the call.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ListAccessibleCustomersResponse listAccessibleCustomers(com.google.ads.googleads.v18.services.ListAccessibleCustomersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAccessibleCustomersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a new client under manager. The new client customer is returned.
+     * List of thrown errors:
+     *   [AccessInvitationError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CurrencyCodeError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [ManagerLinkError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     *   [StringLengthError]()
+     *   [TimeZoneError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.CreateCustomerClientResponse createCustomerClient(com.google.ads.googleads.v18.services.CreateCustomerClientRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateCustomerClientMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerService.
    * <pre>
    * Service to manage customers.
    * </pre>

@@ -64,6 +64,21 @@ public final class CustomerLabelServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerLabelServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerLabelServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerLabelServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerLabelServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerLabelServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerLabelServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerLabelServiceBlockingStub newBlockingStub(
@@ -180,6 +195,47 @@ public final class CustomerLabelServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerLabelService.
+   * <pre>
+   * Service to manage labels on customers.
+   * </pre>
+   */
+  public static final class CustomerLabelServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerLabelServiceBlockingV2Stub> {
+    private CustomerLabelServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerLabelServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerLabelServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates and removes customer-label relationships.
+     * Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [LabelError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerLabelsResponse mutateCustomerLabels(com.google.ads.googleads.v18.services.MutateCustomerLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerLabelsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerLabelService.
    * <pre>
    * Service to manage labels on customers.
    * </pre>

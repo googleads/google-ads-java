@@ -65,6 +65,21 @@ public final class DataLinkServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static DataLinkServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<DataLinkServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataLinkServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public DataLinkServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataLinkServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return DataLinkServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static DataLinkServiceBlockingStub newBlockingStub(
@@ -190,6 +205,51 @@ public final class DataLinkServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DataLinkService.
+   * <pre>
+   * This service allows management of data links between  a Google
+   * Ads customer and another data entity.
+   * </pre>
+   */
+  public static final class DataLinkServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<DataLinkServiceBlockingV2Stub> {
+    private DataLinkServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected DataLinkServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new DataLinkServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates a data link. The requesting Google Ads account name and account ID
+     * will be shared with the third party (such as YouTube creators for video
+     * links) to whom you are creating the link with. Only customers on the
+     * allow-list can create data links.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [DataLinkError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.CreateDataLinkResponse createDataLink(com.google.ads.googleads.v18.services.CreateDataLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateDataLinkMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service DataLinkService.
    * <pre>
    * This service allows management of data links between  a Google
    * Ads customer and another data entity.

@@ -64,6 +64,21 @@ public final class CampaignBidModifierServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CampaignBidModifierServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CampaignBidModifierServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignBidModifierServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CampaignBidModifierServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignBidModifierServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CampaignBidModifierServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CampaignBidModifierServiceBlockingStub newBlockingStub(
@@ -206,6 +221,60 @@ public final class CampaignBidModifierServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CampaignBidModifierService.
+   * <pre>
+   * Service to manage campaign bid modifiers.
+   * </pre>
+   */
+  public static final class CampaignBidModifierServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignBidModifierServiceBlockingV2Stub> {
+    private CampaignBidModifierServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CampaignBidModifierServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CampaignBidModifierServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes campaign bid modifiers.
+     * Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ContextError]()
+     *   [CriterionError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCampaignBidModifiersResponse mutateCampaignBidModifiers(com.google.ads.googleads.v18.services.MutateCampaignBidModifiersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCampaignBidModifiersMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CampaignBidModifierService.
    * <pre>
    * Service to manage campaign bid modifiers.
    * </pre>

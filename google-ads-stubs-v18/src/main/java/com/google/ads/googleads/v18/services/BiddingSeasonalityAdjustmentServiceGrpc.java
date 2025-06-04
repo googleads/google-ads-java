@@ -64,6 +64,21 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static BiddingSeasonalityAdjustmentServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<BiddingSeasonalityAdjustmentServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BiddingSeasonalityAdjustmentServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public BiddingSeasonalityAdjustmentServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BiddingSeasonalityAdjustmentServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return BiddingSeasonalityAdjustmentServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static BiddingSeasonalityAdjustmentServiceBlockingStub newBlockingStub(
@@ -160,6 +175,37 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service BiddingSeasonalityAdjustmentService.
+   * <pre>
+   * Service to manage bidding seasonality adjustments.
+   * </pre>
+   */
+  public static final class BiddingSeasonalityAdjustmentServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<BiddingSeasonalityAdjustmentServiceBlockingV2Stub> {
+    private BiddingSeasonalityAdjustmentServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected BiddingSeasonalityAdjustmentServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new BiddingSeasonalityAdjustmentServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes seasonality adjustments.
+     * Operation statuses are returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateBiddingSeasonalityAdjustmentsResponse mutateBiddingSeasonalityAdjustments(com.google.ads.googleads.v18.services.MutateBiddingSeasonalityAdjustmentsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateBiddingSeasonalityAdjustmentsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service BiddingSeasonalityAdjustmentService.
    * <pre>
    * Service to manage bidding seasonality adjustments.
    * </pre>

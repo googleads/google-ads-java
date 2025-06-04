@@ -64,6 +64,21 @@ public final class CampaignBudgetServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CampaignBudgetServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CampaignBudgetServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignBudgetServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CampaignBudgetServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignBudgetServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CampaignBudgetServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CampaignBudgetServiceBlockingStub newBlockingStub(
@@ -196,6 +211,55 @@ public final class CampaignBudgetServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CampaignBudgetService.
+   * <pre>
+   * Service to manage campaign budgets.
+   * </pre>
+   */
+  public static final class CampaignBudgetServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignBudgetServiceBlockingV2Stub> {
+    private CampaignBudgetServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CampaignBudgetServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CampaignBudgetServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes campaign budgets. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CampaignBudgetError]()
+     *   [DatabaseError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [OperationAccessDeniedError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCampaignBudgetsResponse mutateCampaignBudgets(com.google.ads.googleads.v18.services.MutateCampaignBudgetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCampaignBudgetsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CampaignBudgetService.
    * <pre>
    * Service to manage campaign budgets.
    * </pre>

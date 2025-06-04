@@ -67,6 +67,21 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static KeywordPlanCampaignKeywordServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanCampaignKeywordServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanCampaignKeywordServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public KeywordPlanCampaignKeywordServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanCampaignKeywordServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return KeywordPlanCampaignKeywordServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static KeywordPlanCampaignKeywordServiceBlockingStub newBlockingStub(
@@ -196,6 +211,52 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service KeywordPlanCampaignKeywordService.
+   * <pre>
+   * Service to manage Keyword Plan campaign keywords. KeywordPlanCampaign is
+   * required to add the campaign keywords. Only negative keywords are supported.
+   * A maximum of 1000 negative keywords are allowed per plan. This includes both
+   * campaign negative keywords and ad group negative keywords.
+   * </pre>
+   */
+  public static final class KeywordPlanCampaignKeywordServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<KeywordPlanCampaignKeywordServiceBlockingV2Stub> {
+    private KeywordPlanCampaignKeywordServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected KeywordPlanCampaignKeywordServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new KeywordPlanCampaignKeywordServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes Keyword Plan campaign keywords. Operation
+     * statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [KeywordPlanAdGroupKeywordError]()
+     *   [KeywordPlanCampaignKeywordError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateKeywordPlanCampaignKeywordsResponse mutateKeywordPlanCampaignKeywords(com.google.ads.googleads.v18.services.MutateKeywordPlanCampaignKeywordsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateKeywordPlanCampaignKeywordsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service KeywordPlanCampaignKeywordService.
    * <pre>
    * Service to manage Keyword Plan campaign keywords. KeywordPlanCampaign is
    * required to add the campaign keywords. Only negative keywords are supported.

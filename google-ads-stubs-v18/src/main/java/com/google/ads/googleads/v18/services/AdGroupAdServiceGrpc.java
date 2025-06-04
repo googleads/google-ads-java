@@ -95,6 +95,21 @@ public final class AdGroupAdServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AdGroupAdServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupAdServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupAdServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AdGroupAdServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupAdServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AdGroupAdServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AdGroupAdServiceBlockingStub newBlockingStub(
@@ -318,6 +333,100 @@ public final class AdGroupAdServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AdGroupAdService.
+   * <pre>
+   * Service to manage ads in an ad group.
+   * </pre>
+   */
+  public static final class AdGroupAdServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupAdServiceBlockingV2Stub> {
+    private AdGroupAdServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AdGroupAdServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AdGroupAdServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes ads. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AdCustomizerError]()
+     *   [AdError]()
+     *   [AdGroupAdError]()
+     *   [AdSharingError]()
+     *   [AdxError]()
+     *   [AssetError]()
+     *   [AssetLinkError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [ContextError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DistinctError]()
+     *   [FeedAttributeReferenceError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [FunctionError]()
+     *   [FunctionParsingError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [ImageError]()
+     *   [InternalError]()
+     *   [ListOperationError]()
+     *   [MediaBundleError]()
+     *   [MediaFileError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperationAccessDeniedError]()
+     *   [OperatorError]()
+     *   [PolicyFindingError]()
+     *   [PolicyValidationParameterError]()
+     *   [PolicyViolationError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     *   [UrlFieldError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAdGroupAdsResponse mutateAdGroupAds(com.google.ads.googleads.v18.services.MutateAdGroupAdsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAdGroupAdsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Remove automatically created assets from an ad.
+     * List of thrown errors:
+     *   [AdError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [AutomaticallyCreatedAssetRemovalError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.protobuf.Empty removeAutomaticallyCreatedAssets(com.google.ads.googleads.v18.services.RemoveAutomaticallyCreatedAssetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveAutomaticallyCreatedAssetsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AdGroupAdService.
    * <pre>
    * Service to manage ads in an ad group.
    * </pre>

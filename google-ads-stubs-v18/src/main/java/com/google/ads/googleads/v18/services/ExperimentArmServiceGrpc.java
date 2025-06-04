@@ -64,6 +64,21 @@ public final class ExperimentArmServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ExperimentArmServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ExperimentArmServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExperimentArmServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ExperimentArmServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExperimentArmServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ExperimentArmServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ExperimentArmServiceBlockingStub newBlockingStub(
@@ -176,6 +191,45 @@ public final class ExperimentArmServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ExperimentArmService.
+   * <pre>
+   * Service to manage experiment arms.
+   * </pre>
+   */
+  public static final class ExperimentArmServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ExperimentArmServiceBlockingV2Stub> {
+    private ExperimentArmServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ExperimentArmServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ExperimentArmServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes experiment arms. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ExperimentArmError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateExperimentArmsResponse mutateExperimentArms(com.google.ads.googleads.v18.services.MutateExperimentArmsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateExperimentArmsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ExperimentArmService.
    * <pre>
    * Service to manage experiment arms.
    * </pre>

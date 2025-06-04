@@ -65,6 +65,21 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ThirdPartyAppAnalyticsLinkServiceBlockingStub newBlockingStub(
@@ -178,6 +193,45 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ThirdPartyAppAnalyticsLinkService.
+   * <pre>
+   * This service allows management of links between Google Ads and third party
+   * app analytics.
+   * </pre>
+   */
+  public static final class ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub> {
+    private ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ThirdPartyAppAnalyticsLinkServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Regenerate ThirdPartyAppAnalyticsLink.shareable_link_id that should be
+     * provided to the third party when setting up app analytics.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.RegenerateShareableLinkIdResponse regenerateShareableLinkId(com.google.ads.googleads.v18.services.RegenerateShareableLinkIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRegenerateShareableLinkIdMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ThirdPartyAppAnalyticsLinkService.
    * <pre>
    * This service allows management of links between Google Ads and third party
    * app analytics.

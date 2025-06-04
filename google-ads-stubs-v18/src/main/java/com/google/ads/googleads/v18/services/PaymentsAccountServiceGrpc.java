@@ -65,6 +65,21 @@ public final class PaymentsAccountServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static PaymentsAccountServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<PaymentsAccountServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PaymentsAccountServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public PaymentsAccountServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PaymentsAccountServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return PaymentsAccountServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static PaymentsAccountServiceBlockingStub newBlockingStub(
@@ -182,6 +197,47 @@ public final class PaymentsAccountServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service PaymentsAccountService.
+   * <pre>
+   * Service to provide payments accounts that can be used to set up consolidated
+   * billing.
+   * </pre>
+   */
+  public static final class PaymentsAccountServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<PaymentsAccountServiceBlockingV2Stub> {
+    private PaymentsAccountServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected PaymentsAccountServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new PaymentsAccountServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns all payments accounts associated with all managers
+     * between the login customer ID and specified serving customer in the
+     * hierarchy, inclusive.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [PaymentsAccountError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ListPaymentsAccountsResponse listPaymentsAccounts(com.google.ads.googleads.v18.services.ListPaymentsAccountsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPaymentsAccountsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service PaymentsAccountService.
    * <pre>
    * Service to provide payments accounts that can be used to set up consolidated
    * billing.

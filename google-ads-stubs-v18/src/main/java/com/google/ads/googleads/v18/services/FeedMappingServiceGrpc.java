@@ -64,6 +64,21 @@ public final class FeedMappingServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static FeedMappingServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<FeedMappingServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FeedMappingServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public FeedMappingServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FeedMappingServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return FeedMappingServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static FeedMappingServiceBlockingStub newBlockingStub(
@@ -200,6 +215,57 @@ public final class FeedMappingServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service FeedMappingService.
+   * <pre>
+   * Service to manage feed mappings.
+   * </pre>
+   */
+  public static final class FeedMappingServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<FeedMappingServiceBlockingV2Stub> {
+    private FeedMappingServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected FeedMappingServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new FeedMappingServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates or removes feed mappings. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [DistinctError]()
+     *   [FeedMappingError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NotEmptyError]()
+     *   [OperationAccessDeniedError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateFeedMappingsResponse mutateFeedMappings(com.google.ads.googleads.v18.services.MutateFeedMappingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateFeedMappingsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service FeedMappingService.
    * <pre>
    * Service to manage feed mappings.
    * </pre>

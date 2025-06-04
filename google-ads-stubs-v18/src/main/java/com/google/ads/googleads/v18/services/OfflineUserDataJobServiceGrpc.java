@@ -126,6 +126,21 @@ public final class OfflineUserDataJobServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static OfflineUserDataJobServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<OfflineUserDataJobServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OfflineUserDataJobServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public OfflineUserDataJobServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OfflineUserDataJobServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return OfflineUserDataJobServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static OfflineUserDataJobServiceBlockingStub newBlockingStub(
@@ -328,6 +343,89 @@ public final class OfflineUserDataJobServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service OfflineUserDataJobService.
+   * <pre>
+   * Service to manage offline user data jobs.
+   * </pre>
+   */
+  public static final class OfflineUserDataJobServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<OfflineUserDataJobServiceBlockingV2Stub> {
+    private OfflineUserDataJobServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected OfflineUserDataJobServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new OfflineUserDataJobServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates an offline user data job.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [NotAllowlistedError]()
+     *   [OfflineUserDataJobError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.CreateOfflineUserDataJobResponse createOfflineUserDataJob(com.google.ads.googleads.v18.services.CreateOfflineUserDataJobRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOfflineUserDataJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Adds operations to the offline user data job.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [OfflineUserDataJobError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.AddOfflineUserDataJobOperationsResponse addOfflineUserDataJobOperations(com.google.ads.googleads.v18.services.AddOfflineUserDataJobOperationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddOfflineUserDataJobOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Runs the offline user data job.
+     * When finished, the long running operation will contain the processing
+     * result or failure information, if any.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [OfflineUserDataJobError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.longrunning.Operation runOfflineUserDataJob(com.google.ads.googleads.v18.services.RunOfflineUserDataJobRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRunOfflineUserDataJobMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service OfflineUserDataJobService.
    * <pre>
    * Service to manage offline user data jobs.
    * </pre>

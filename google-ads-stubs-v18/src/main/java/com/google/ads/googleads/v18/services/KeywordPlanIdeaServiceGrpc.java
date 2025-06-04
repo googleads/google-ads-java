@@ -157,6 +157,21 @@ public final class KeywordPlanIdeaServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static KeywordPlanIdeaServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanIdeaServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanIdeaServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public KeywordPlanIdeaServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanIdeaServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return KeywordPlanIdeaServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static KeywordPlanIdeaServiceBlockingStub newBlockingStub(
@@ -384,6 +399,101 @@ public final class KeywordPlanIdeaServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service KeywordPlanIdeaService.
+   * <pre>
+   * Service to generate keyword ideas.
+   * </pre>
+   */
+  public static final class KeywordPlanIdeaServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<KeywordPlanIdeaServiceBlockingV2Stub> {
+    private KeywordPlanIdeaServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected KeywordPlanIdeaServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new KeywordPlanIdeaServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of keyword ideas.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [KeywordPlanIdeaError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateKeywordIdeaResponse generateKeywordIdeas(com.google.ads.googleads.v18.services.GenerateKeywordIdeasRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateKeywordIdeasMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of keyword historical metrics.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateKeywordHistoricalMetricsResponse generateKeywordHistoricalMetrics(com.google.ads.googleads.v18.services.GenerateKeywordHistoricalMetricsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateKeywordHistoricalMetricsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of suggested AdGroups and suggested modifications
+     * (text, match type) for the given keywords.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateAdGroupThemesResponse generateAdGroupThemes(com.google.ads.googleads.v18.services.GenerateAdGroupThemesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateAdGroupThemesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns metrics (such as impressions, clicks, total cost) of a keyword
+     * forecast for the given campaign.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateKeywordForecastMetricsResponse generateKeywordForecastMetrics(com.google.ads.googleads.v18.services.GenerateKeywordForecastMetricsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateKeywordForecastMetricsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service KeywordPlanIdeaService.
    * <pre>
    * Service to generate keyword ideas.
    * </pre>

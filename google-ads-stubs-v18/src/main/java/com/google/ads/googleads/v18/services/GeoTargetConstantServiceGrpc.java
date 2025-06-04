@@ -64,6 +64,21 @@ public final class GeoTargetConstantServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static GeoTargetConstantServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<GeoTargetConstantServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GeoTargetConstantServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public GeoTargetConstantServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GeoTargetConstantServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return GeoTargetConstantServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static GeoTargetConstantServiceBlockingStub newBlockingStub(
@@ -174,6 +189,44 @@ public final class GeoTargetConstantServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service GeoTargetConstantService.
+   * <pre>
+   * Service to fetch geo target constants.
+   * </pre>
+   */
+  public static final class GeoTargetConstantServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<GeoTargetConstantServiceBlockingV2Stub> {
+    private GeoTargetConstantServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected GeoTargetConstantServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new GeoTargetConstantServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns GeoTargetConstant suggestions by location name or by resource name.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [GeoTargetConstantSuggestionError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.SuggestGeoTargetConstantsResponse suggestGeoTargetConstants(com.google.ads.googleads.v18.services.SuggestGeoTargetConstantsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuggestGeoTargetConstantsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service GeoTargetConstantService.
    * <pre>
    * Service to fetch geo target constants.
    * </pre>

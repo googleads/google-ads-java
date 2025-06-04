@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -431,7 +431,10 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    * }</pre>
    *
    * @param customerId Required. The ID of the customer.
-   * @param dimensions Required. The types of attributes to be returned.
+   * @param dimensions Required. The types of attributes to be returned. Supported dimensions are
+   *     CATEGORY, KNOWLEDGE_GRAPH, GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION,
+   *     YOUTUBE_DYNAMIC_LINEUP, AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, PARENTAL_STATUS,
+   *     INCOME_RANGE, AGE_RANGE, and GENDER.
    * @param queryText Required. A free text query. If the requested dimensions include Attributes
    *     CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for those dimensions will match
    *     or be related to this string. For other dimensions, this field is ignored and all available
@@ -628,7 +631,9 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    * @param customerId Required. The ID of the customer.
    * @param audience Required. The audience of interest for which insights are being requested.
    * @param dimensions Required. The audience dimensions for which composition insights should be
-   *     returned.
+   *     returned. Supported dimensions are KNOWLEDGE_GRAPH, GEO_TARGET_COUNTRY,
+   *     SUB_COUNTRY_LOCATION, YOUTUBE_CHANNEL, YOUTUBE_DYNAMIC_LINEUP, AFFINITY_USER_INTEREST,
+   *     IN_MARKET_USER_INTEREST, PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateAudienceCompositionInsightsResponse generateAudienceCompositionInsights(

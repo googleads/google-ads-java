@@ -64,6 +64,21 @@ public final class AdParameterServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AdParameterServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AdParameterServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdParameterServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AdParameterServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdParameterServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AdParameterServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AdParameterServiceBlockingStub newBlockingStub(
@@ -186,6 +201,50 @@ public final class AdParameterServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AdParameterService.
+   * <pre>
+   * Service to manage ad parameters.
+   * </pre>
+   */
+  public static final class AdParameterServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AdParameterServiceBlockingV2Stub> {
+    private AdParameterServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AdParameterServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AdParameterServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes ad parameters. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AdParameterError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [ContextError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAdParametersResponse mutateAdParameters(com.google.ads.googleads.v18.services.MutateAdParametersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAdParametersMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AdParameterService.
    * <pre>
    * Service to manage ad parameters.
    * </pre>

@@ -64,6 +64,21 @@ public final class CustomerNegativeCriterionServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerNegativeCriterionServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerNegativeCriterionServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerNegativeCriterionServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerNegativeCriterionServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerNegativeCriterionServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerNegativeCriterionServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerNegativeCriterionServiceBlockingStub newBlockingStub(
@@ -180,6 +195,47 @@ public final class CustomerNegativeCriterionServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerNegativeCriterionService.
+   * <pre>
+   * Service to manage customer negative criteria.
+   * </pre>
+   */
+  public static final class CustomerNegativeCriterionServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerNegativeCriterionServiceBlockingV2Stub> {
+    private CustomerNegativeCriterionServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerNegativeCriterionServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerNegativeCriterionServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates or removes criteria. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CriterionError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerNegativeCriteriaResponse mutateCustomerNegativeCriteria(com.google.ads.googleads.v18.services.MutateCustomerNegativeCriteriaRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerNegativeCriteriaMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerNegativeCriterionService.
    * <pre>
    * Service to manage customer negative criteria.
    * </pre>

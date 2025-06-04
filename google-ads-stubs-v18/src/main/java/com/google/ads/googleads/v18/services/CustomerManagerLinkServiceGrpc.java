@@ -95,6 +95,21 @@ public final class CustomerManagerLinkServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CustomerManagerLinkServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CustomerManagerLinkServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomerManagerLinkServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CustomerManagerLinkServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomerManagerLinkServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CustomerManagerLinkServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CustomerManagerLinkServiceBlockingStub newBlockingStub(
@@ -262,6 +277,72 @@ public final class CustomerManagerLinkServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerManagerLinkService.
+   * <pre>
+   * Service to manage customer-manager links.
+   * </pre>
+   */
+  public static final class CustomerManagerLinkServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerManagerLinkServiceBlockingV2Stub> {
+    private CustomerManagerLinkServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CustomerManagerLinkServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CustomerManagerLinkServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Updates customer manager links. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [ManagerLinkError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCustomerManagerLinkResponse mutateCustomerManagerLink(com.google.ads.googleads.v18.services.MutateCustomerManagerLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCustomerManagerLinkMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Moves a client customer to a new manager customer.
+     * This simplifies the complex request that requires two operations to move
+     * a client customer to a new manager, for example:
+     * 1. Update operation with Status INACTIVE (previous manager) and,
+     * 2. Update operation with Status ACTIVE (new manager).
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MoveManagerLinkResponse moveManagerLink(com.google.ads.googleads.v18.services.MoveManagerLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMoveManagerLinkMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CustomerManagerLinkService.
    * <pre>
    * Service to manage customer-manager links.
    * </pre>

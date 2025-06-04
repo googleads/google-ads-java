@@ -126,6 +126,21 @@ public final class RecommendationServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static RecommendationServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<RecommendationServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecommendationServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public RecommendationServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecommendationServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return RecommendationServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static RecommendationServiceBlockingStub newBlockingStub(
@@ -318,6 +333,84 @@ public final class RecommendationServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service RecommendationService.
+   * <pre>
+   * Service to manage recommendations.
+   * </pre>
+   */
+  public static final class RecommendationServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<RecommendationServiceBlockingV2Stub> {
+    private RecommendationServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected RecommendationServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new RecommendationServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Applies given recommendations with corresponding apply parameters.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [QuotaError]()
+     *   [RecommendationError]()
+     *   [RequestError]()
+     *   [UrlFieldError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ApplyRecommendationResponse applyRecommendation(com.google.ads.googleads.v18.services.ApplyRecommendationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getApplyRecommendationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Dismisses given recommendations.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RecommendationError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.DismissRecommendationResponse dismissRecommendation(com.google.ads.googleads.v18.services.DismissRecommendationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDismissRecommendationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Generates Recommendations based off the requested recommendation_types.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RecommendationError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateRecommendationsResponse generateRecommendations(com.google.ads.googleads.v18.services.GenerateRecommendationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateRecommendationsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service RecommendationService.
    * <pre>
    * Service to manage recommendations.
    * </pre>

@@ -64,6 +64,21 @@ public final class CampaignServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CampaignServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CampaignServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CampaignServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CampaignServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CampaignServiceBlockingStub newBlockingStub(
@@ -230,6 +245,72 @@ public final class CampaignServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CampaignService.
+   * <pre>
+   * Service to manage campaigns.
+   * </pre>
+   */
+  public static final class CampaignServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignServiceBlockingV2Stub> {
+    private CampaignServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CampaignServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CampaignServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes campaigns. Operation statuses are returned.
+     * List of thrown errors:
+     *   [AdxError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [BiddingError]()
+     *   [BiddingStrategyError]()
+     *   [CampaignBudgetError]()
+     *   [CampaignError]()
+     *   [ContextError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DateRangeError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [ListOperationError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [NotAllowlistedError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperationAccessDeniedError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RegionCodeError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     *   [SettingError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     *   [UrlFieldError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateCampaignsResponse mutateCampaigns(com.google.ads.googleads.v18.services.MutateCampaignsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateCampaignsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CampaignService.
    * <pre>
    * Service to manage campaigns.
    * </pre>

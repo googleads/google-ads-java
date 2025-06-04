@@ -130,6 +130,21 @@ public final class ReachPlanServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ReachPlanServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ReachPlanServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ReachPlanServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ReachPlanServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ReachPlanServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ReachPlanServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ReachPlanServiceBlockingStub newBlockingStub(
@@ -328,6 +343,85 @@ public final class ReachPlanServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ReachPlanService.
+   * <pre>
+   * Reach Plan Service gives users information about audience size that can
+   * be reached through advertisement on YouTube. In particular,
+   * GenerateReachForecast provides estimated number of people of specified
+   * demographics that can be reached by an ad in a given market by a campaign of
+   * certain duration with a defined budget.
+   * </pre>
+   */
+  public static final class ReachPlanServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ReachPlanServiceBlockingV2Stub> {
+    private ReachPlanServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ReachPlanServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ReachPlanServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns the list of plannable locations (for example, countries).
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ListPlannableLocationsResponse listPlannableLocations(com.google.ads.googleads.v18.services.ListPlannableLocationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPlannableLocationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the list of per-location plannable YouTube ad formats with allowed
+     * targeting.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.ListPlannableProductsResponse listPlannableProducts(com.google.ads.googleads.v18.services.ListPlannableProductsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPlannableProductsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Generates a reach forecast for a given targeting / product mix.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [ReachPlanError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.GenerateReachForecastResponse generateReachForecast(com.google.ads.googleads.v18.services.GenerateReachForecastRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateReachForecastMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ReachPlanService.
    * <pre>
    * Reach Plan Service gives users information about audience size that can
    * be reached through advertisement on YouTube. In particular,

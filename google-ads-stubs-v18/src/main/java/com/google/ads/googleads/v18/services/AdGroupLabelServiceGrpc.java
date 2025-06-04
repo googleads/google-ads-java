@@ -64,6 +64,21 @@ public final class AdGroupLabelServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AdGroupLabelServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupLabelServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupLabelServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AdGroupLabelServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupLabelServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AdGroupLabelServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AdGroupLabelServiceBlockingStub newBlockingStub(
@@ -184,6 +199,49 @@ public final class AdGroupLabelServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AdGroupLabelService.
+   * <pre>
+   * Service to manage labels on ad groups.
+   * </pre>
+   */
+  public static final class AdGroupLabelServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupLabelServiceBlockingV2Stub> {
+    private AdGroupLabelServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AdGroupLabelServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AdGroupLabelServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates and removes ad group labels.
+     * Operation statuses are returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [LabelError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAdGroupLabelsResponse mutateAdGroupLabels(com.google.ads.googleads.v18.services.MutateAdGroupLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAdGroupLabelsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AdGroupLabelService.
    * <pre>
    * Service to manage labels on ad groups.
    * </pre>

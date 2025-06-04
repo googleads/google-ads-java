@@ -127,6 +127,21 @@ public final class ProductLinkInvitationServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ProductLinkInvitationServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ProductLinkInvitationServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProductLinkInvitationServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ProductLinkInvitationServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProductLinkInvitationServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ProductLinkInvitationServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ProductLinkInvitationServiceBlockingStub newBlockingStub(
@@ -266,6 +281,57 @@ public final class ProductLinkInvitationServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ProductLinkInvitationService.
+   * <pre>
+   * This service allows management of product link invitations from Google Ads
+   * accounts to other accounts.
+   * </pre>
+   */
+  public static final class ProductLinkInvitationServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ProductLinkInvitationServiceBlockingV2Stub> {
+    private ProductLinkInvitationServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ProductLinkInvitationServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ProductLinkInvitationServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates a product link invitation.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.CreateProductLinkInvitationResponse createProductLinkInvitation(com.google.ads.googleads.v18.services.CreateProductLinkInvitationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateProductLinkInvitationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update a product link invitation.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.UpdateProductLinkInvitationResponse updateProductLinkInvitation(com.google.ads.googleads.v18.services.UpdateProductLinkInvitationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateProductLinkInvitationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Remove a product link invitation.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.RemoveProductLinkInvitationResponse removeProductLinkInvitation(com.google.ads.googleads.v18.services.RemoveProductLinkInvitationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveProductLinkInvitationMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ProductLinkInvitationService.
    * <pre>
    * This service allows management of product link invitations from Google Ads
    * accounts to other accounts.

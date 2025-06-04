@@ -64,6 +64,21 @@ public final class AdGroupFeedServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AdGroupFeedServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupFeedServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupFeedServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AdGroupFeedServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupFeedServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AdGroupFeedServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AdGroupFeedServiceBlockingStub newBlockingStub(
@@ -206,6 +221,60 @@ public final class AdGroupFeedServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AdGroupFeedService.
+   * <pre>
+   * Service to manage ad group feeds.
+   * </pre>
+   */
+  public static final class AdGroupFeedServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupFeedServiceBlockingV2Stub> {
+    private AdGroupFeedServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AdGroupFeedServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AdGroupFeedServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes ad group feeds. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AdGroupFeedError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [DatabaseError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [FunctionError]()
+     *   [FunctionParsingError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateAdGroupFeedsResponse mutateAdGroupFeeds(com.google.ads.googleads.v18.services.MutateAdGroupFeedsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateAdGroupFeedsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AdGroupFeedService.
    * <pre>
    * Service to manage ad group feeds.
    * </pre>

@@ -64,6 +64,21 @@ public final class BiddingStrategyServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static BiddingStrategyServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<BiddingStrategyServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BiddingStrategyServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public BiddingStrategyServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BiddingStrategyServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return BiddingStrategyServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static BiddingStrategyServiceBlockingStub newBlockingStub(
@@ -214,6 +229,64 @@ public final class BiddingStrategyServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service BiddingStrategyService.
+   * <pre>
+   * Service to manage bidding strategies.
+   * </pre>
+   */
+  public static final class BiddingStrategyServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<BiddingStrategyServiceBlockingV2Stub> {
+    private BiddingStrategyServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected BiddingStrategyServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new BiddingStrategyServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes bidding strategies. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AdxError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [BiddingError]()
+     *   [BiddingStrategyError]()
+     *   [ContextError]()
+     *   [DatabaseError]()
+     *   [DateError]()
+     *   [DistinctError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [IdError]()
+     *   [InternalError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [NotEmptyError]()
+     *   [NullError]()
+     *   [OperationAccessDeniedError]()
+     *   [OperatorError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     *   [SizeLimitError]()
+     *   [StringFormatError]()
+     *   [StringLengthError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateBiddingStrategiesResponse mutateBiddingStrategies(com.google.ads.googleads.v18.services.MutateBiddingStrategiesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateBiddingStrategiesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service BiddingStrategyService.
    * <pre>
    * Service to manage bidding strategies.
    * </pre>

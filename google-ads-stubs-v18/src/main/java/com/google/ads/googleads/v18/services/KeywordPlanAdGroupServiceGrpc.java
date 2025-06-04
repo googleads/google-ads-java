@@ -64,6 +64,21 @@ public final class KeywordPlanAdGroupServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static KeywordPlanAdGroupServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanAdGroupServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanAdGroupServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public KeywordPlanAdGroupServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanAdGroupServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return KeywordPlanAdGroupServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static KeywordPlanAdGroupServiceBlockingStub newBlockingStub(
@@ -190,6 +205,52 @@ public final class KeywordPlanAdGroupServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service KeywordPlanAdGroupService.
+   * <pre>
+   * Service to manage Keyword Plan ad groups.
+   * </pre>
+   */
+  public static final class KeywordPlanAdGroupServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<KeywordPlanAdGroupServiceBlockingV2Stub> {
+    private KeywordPlanAdGroupServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected KeywordPlanAdGroupServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new KeywordPlanAdGroupServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes Keyword Plan ad groups. Operation statuses are
+     * returned.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [DatabaseError]()
+     *   [FieldError]()
+     *   [FieldMaskError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [KeywordPlanAdGroupError]()
+     *   [KeywordPlanError]()
+     *   [MutateError]()
+     *   [NewResourceCreationError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     *   [ResourceCountLimitExceededError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.MutateKeywordPlanAdGroupsResponse mutateKeywordPlanAdGroups(com.google.ads.googleads.v18.services.MutateKeywordPlanAdGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMutateKeywordPlanAdGroupsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service KeywordPlanAdGroupService.
    * <pre>
    * Service to manage Keyword Plan ad groups.
    * </pre>

@@ -64,6 +64,21 @@ public final class TravelAssetSuggestionServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static TravelAssetSuggestionServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<TravelAssetSuggestionServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TravelAssetSuggestionServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public TravelAssetSuggestionServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TravelAssetSuggestionServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return TravelAssetSuggestionServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static TravelAssetSuggestionServiceBlockingStub newBlockingStub(
@@ -164,6 +179,39 @@ public final class TravelAssetSuggestionServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service TravelAssetSuggestionService.
+   * <pre>
+   * Service to retrieve Travel asset suggestions.
+   * </pre>
+   */
+  public static final class TravelAssetSuggestionServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<TravelAssetSuggestionServiceBlockingV2Stub> {
+    private TravelAssetSuggestionServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected TravelAssetSuggestionServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new TravelAssetSuggestionServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns Travel Asset suggestions. Asset
+     * suggestions are returned on a best-effort basis. There are no guarantees
+     * that all possible asset types will be returned for any given hotel
+     * property.
+     * </pre>
+     */
+    public com.google.ads.googleads.v18.services.SuggestTravelAssetsResponse suggestTravelAssets(com.google.ads.googleads.v18.services.SuggestTravelAssetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuggestTravelAssetsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service TravelAssetSuggestionService.
    * <pre>
    * Service to retrieve Travel asset suggestions.
    * </pre>
