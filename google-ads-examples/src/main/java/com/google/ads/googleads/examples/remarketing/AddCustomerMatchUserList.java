@@ -82,7 +82,7 @@ import java.util.Set;
  *   <li>It may take up to several hours for the list to be populated with members.
  *   <li>Email addresses must be associated with a Google account.
  *   <li>For privacy purposes, the user list size will show as zero until the list has at least
- *       1,000 members. After that, the size will be rounded to the two most significant digits.
+ *       100 members. After that, the size will be rounded to the two most significant digits.
  * </ul>
  */
 public class AddCustomerMatchUserList {
