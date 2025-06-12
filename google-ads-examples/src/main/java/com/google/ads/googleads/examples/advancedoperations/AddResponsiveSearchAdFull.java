@@ -21,6 +21,7 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v20.common.LocationInfo;
+import com.google.ads.googleads.v20.common.ManualCpc;
 import com.google.ads.googleads.v20.resources.CampaignCriterion;
 import com.google.ads.googleads.v20.services.CampaignCriterionOperation;
 import com.google.ads.googleads.v20.services.CampaignCriterionServiceClient;
@@ -120,6 +121,7 @@ public class AddResponsiveSearchAdFull {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
+
       // Optional: To use a different customizer attribute name from the default ("Price"),
       // uncomment the line below and insert the desired customizer attribute name.
       // params.customizerAttributeName = "INSERT_CUSTOMIZER_ATTRIBUTE_NAME_HERE";
@@ -273,8 +275,13 @@ public class AddResponsiveSearchAdFull {
    */
   private static AdTextAsset createAdTextAssetWithCustomizer(String customizerAttributeResourceName) {
 
-    // Create this particular description using the ad customizer. Visit https://developers.google.com/google-ads/api/docs/ads/customize-responsive-search-ads#ad_customizers_in_responsive_search_ads for details about the placeholder format. The ad customizer replaces the placeholder with the value we previously created and linked to the customer using CustomerCustomizer.
-    AdTextAsset.Builder adTextAsset = AdTextAsset.newBuilder().setText(String.format("Just {CUSTOMIZER.%s:10USD}", customizerAttributeResourceName));
+    // Create this particular description using the ad customizer. Visit
+    // https://developers.google.com/google-ads/api/docs/ads/customize-responsive-search-ads#ad_customizers_in_responsive_search_ads
+    // for details about the placeholder format. The ad customizer replaces the placeholder with
+    // the value we previously created and linked to the customer using CustomerCustomizer.
+    AdTextAsset.Builder adTextAsset =
+        AdTextAsset.newBuilder()
+            .setText(String.format("Just {CUSTOMIZER.%s:10USD}", customizerAttributeResourceName));
 
     return adTextAsset.build();
   }
@@ -286,14 +293,30 @@ public class AddResponsiveSearchAdFull {
    * @param customerId: A client customer ID.
    */
   private static String createCampaignBudget(GoogleAdsClient googleAdsClient, Long customerId) {
-    CampaignBudget budget = CampaignBudget.newBuilder().setName("Interplanetary Cruise Budget #" + getPrintableDateTime()).setDeliveryMethod(
-        BudgetDeliveryMethod.STANDARD).setAmountMicros(500000).build();
+    // Create the budget.
+    CampaignBudget budget =
+        CampaignBudget.newBuilder()
+            .setName("Interplanetary Cruise Budget #" + getPrintableDateTime())
+            .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
+            .setAmountMicros(500000)
+            .build();
 
-    CampaignBudgetOperation operation = CampaignBudgetOperation.newBuilder().setCreate(budget).build();
+    // Create the operation.
+    CampaignBudgetOperation operation =
+        CampaignBudgetOperation.newBuilder().setCreate(budget).build();
 
-    try (CampaignBudgetServiceClient campaignBudgetServiceClient = googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
-      MutateCampaignBudgetsResponse response = campaignBudgetServiceClient.mutateCampaignBudgets(Long.toString(customerId), ImmutableList.of(operation));
-      return response.getResults(0).getResourceName();
+    // Get the CampaignBudgetService.
+    try (CampaignBudgetServiceClient campaignBudgetServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
+      // Add the campaign budget.
+      MutateCampaignBudgetsResponse response =
+          campaignBudgetServiceClient.mutateCampaignBudgets(
+              Long.toString(customerId), ImmutableList.of(operation));
+
+      // Display the results.
+      String resourceName = response.getResults(0).getResourceName();
+      System.out.printf("Added budget with resource name %s.", resourceName);
+      return resourceName;
     }
   }
 
@@ -307,9 +330,11 @@ public class AddResponsiveSearchAdFull {
   private static String createCampaign(
       GoogleAdsClient googleAdsClient, Long customerId, String campaignBudget) {
 
+    // Create the campaign.
     Campaign.Builder campaignBuilder = Campaign.newBuilder();
     campaignBuilder.setName("Testing RSA via API #" + getPrintableDateTime());
     campaignBuilder.setAdvertisingChannelType(AdvertisingChannelType.SEARCH);
+    campaignBuilder.setManualCpc(ManualCpc.getDefaultInstance());
 
     // Recommendation: Set the campaign to PAUSED when creating it to prevent the ads from
     // immediately serving. Set to ENABLED once you've added targeting and the ads are ready to
@@ -342,66 +367,113 @@ public class AddResponsiveSearchAdFull {
     // DateTime endTime = startTime.plusWeeks(4);
     // campaignBuilder.setEndDate(endTime.toDate().toString());
 
+    // Create the operation.
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaignBuilder.build()).build();
 
-    try(CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+    // Get the CampaignService.
+    try (CampaignServiceClient campaignServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
 
-      MutateCampaignsResponse response = campaignServiceClient.mutateCampaigns(Long.toString(customerId), ImmutableList.of(operation));
-      return response.getResults(0).getResourceName();
+      // Add the campaign.
+      MutateCampaignsResponse response =
+          campaignServiceClient.mutateCampaigns(
+              Long.toString(customerId), ImmutableList.of(operation));
+
+      String resourceName = response.getResults(0).getResourceName();
+
+      // Display the result.
+      System.out.printf("Added campaign with resource name %s", resourceName);
+      return resourceName;
     }
   }
 
-  /** Creates an ad group.
+  /**
+   * Creates an ad group.
    *
    * @param googleAdsClient: An initialized GoogleAdsClient instance.
    * @param customerId: A client customer ID.
    * @param campaignResourceName: An campaign resource name.
-   * */
-  private static String createAdGroup(GoogleAdsClient googleAdsClient, Long customerId, String campaignResourceName) {
+   */
+  private static String createAdGroup(
+      GoogleAdsClient googleAdsClient, Long customerId, String campaignResourceName) {
 
-    AdGroup adGroup = AdGroup.newBuilder().setName("Testing RSA via API " + getPrintableDateTime()).setStatus(
-        AdGroupStatus.ENABLED).setCampaign(campaignResourceName).setType(AdGroupType.SEARCH_STANDARD).build();
+    // Create the ad group.
+    AdGroup adGroup =
+        AdGroup.newBuilder()
+            .setName("Testing RSA via API " + getPrintableDateTime())
+            .setStatus(AdGroupStatus.ENABLED)
+            .setCampaign(campaignResourceName)
+            .setType(AdGroupType.SEARCH_STANDARD)
+            .build();
 
     // If you want to set up a max CPC bid, uncomment the line below;
     // adGroup = adGroup.toBuilder().setCpcBidMicros(10000000).build();
 
+    // Create the operation.
     AdGroupOperation operation = AdGroupOperation.newBuilder().setCreate(adGroup).build();
 
-    try(AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()){
-      MutateAdGroupsResponse response = adGroupServiceClient.mutateAdGroups(Long.toString(customerId), ImmutableList.of(operation));
-      return response.getResults(0).getResourceName();
+    // Get the AdGroupService.
+    try (AdGroupServiceClient adGroupServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+      // Add the ad group.
+      MutateAdGroupsResponse response =
+          adGroupServiceClient.mutateAdGroups(
+              Long.toString(customerId), ImmutableList.of(operation));
+
+      //Display the result.
+      String resourceName = response.getResults(0).getResourceName();
+      System.out.printf("Added ad group with resource name %s.", resourceName);
+      return resourceName;
     }
   }
 
-  /** Creates an ad group ad.
+  /**
+   * Creates an ad group ad.
    *
    * @param googleAdsClient: An initialized GoogleAdsClient instance.
    * @param customerId: A client customer ID.
    * @param adGroupResourceName: An ad group resource name.
-   * @param customizerAttributeName: (optional) If present, indicates the resource name of the cusotmizer attribute to use in one of the descriptions.
+   * @param customizerAttributeName: (optional) If present, indicates the resource name of the
+   *     custoimizer attribute to use in one of the descriptions.
    */
-  private static void createAdGroupAd(GoogleAdsClient googleAdsClient, Long customerId, String adGroupResourceName, String customizerAttributeName) {
+  private static void createAdGroupAd(
+      GoogleAdsClient googleAdsClient,
+      Long customerId,
+      String adGroupResourceName,
+      String customizerAttributeName) {
 
+    // Creates an ad group ad to hold the ad.
     AdGroupAd.Builder adGroupAdBuilder = AdGroupAd.newBuilder().setStatus(AdGroupAdStatus.ENABLED);
     adGroupAdBuilder.setAdGroup(adGroupResourceName);
 
-    // Set responsive search ad info. https://developers.google.com/google-ads/api/reference/rpc/latest/ResponsiveSearchAdInfo
+    // Create the ad and set responsive search ad info.
+
     // The list of possible final URLs after all cross-domain redirects for the ad.
     Ad.Builder adBuilder = Ad.newBuilder().addFinalUrls("https://www.example.com/");
 
-    // Set a pinning to always choose this asset for HEADLINE_1. Pinning is optional; if no pinning is set, then headlines and descriptions will be rotated and the ones that perform best will be used more often.
+    // Set a pinning to always choose this asset for HEADLINE_1. Pinning is optional; if no pinning
+    // is set, then headlines and descriptions will be rotated and the ones that perform best will
+    // be used more often.
 
     // Headline 1
-    AdTextAsset pinned_headline = createAdTextAsset("Headline 1 testing", ServedAssetFieldType.HEADLINE_1);
+    AdTextAsset pinned_headline =
+        createAdTextAsset("Headline 1 testing", ServedAssetFieldType.HEADLINE_1);
 
     // Headline 2 and 3
-    ResponsiveSearchAdInfo.Builder responsiveSearchAdBuilder = ResponsiveSearchAdInfo.newBuilder().addAllHeadlines(ImmutableList.of(pinned_headline, createAdTextAsset("Headline 2 testing", null), createAdTextAsset("Headline 3 testing", null)));
+    ResponsiveSearchAdInfo.Builder responsiveSearchAdBuilder =
+        ResponsiveSearchAdInfo.newBuilder()
+            .addAllHeadlines(
+                ImmutableList.of(
+                    pinned_headline,
+                    createAdTextAsset("Headline 2 testing", null),
+                    createAdTextAsset("Headline 3 testing", null)));
 
-    // Description 1 and 2
+    // Description 1.
     AdTextAsset description1 = createAdTextAsset("Desc 1 testing", null);
-    AdTextAsset description2 = null;
 
-    if(customizerAttributeName != null) {
+    // Creates this particular description using the ad customizer.
+    AdTextAsset description2 = null;
+    if (customizerAttributeName != null) {
       description2 = createAdTextAssetWithCustomizer(customizerAttributeName);
     } else {
       description2 = createAdTextAsset("Desc 2 testing", null);
@@ -417,37 +489,54 @@ public class AddResponsiveSearchAdFull {
     adBuilder.setResponsiveSearchAd(responsiveSearchAdBuilder);
     adGroupAdBuilder.setAd(adBuilder);
 
-    AdGroupAdOperation operation = AdGroupAdOperation.newBuilder().setCreate(adGroupAdBuilder).build();
+    // Creates an ad group ad operation.
+    AdGroupAdOperation operation =
+        AdGroupAdOperation.newBuilder().setCreate(adGroupAdBuilder).build();
 
-    try(AdGroupAdServiceClient adGroupAdServiceClient = googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
-      //Send a request to the server to add a responsive search ad
-      MutateAdGroupAdsResponse response = adGroupAdServiceClient.mutateAdGroupAds(Long.toString(customerId), ImmutableList.of(operation));
+    // Get the AdGroupAdService.
+    try (AdGroupAdServiceClient adGroupAdServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
+
+      // Send a request to the server to add a responsive search ad
+      MutateAdGroupAdsResponse response =
+          adGroupAdServiceClient.mutateAdGroupAds(
+              Long.toString(customerId), ImmutableList.of(operation));
+
+      // Display the result.
       System.out.printf(
           "Created responsive search ad with resource name '%s'.%n",
           response.getResults(0).getResourceName());
     }
   }
 
-  /** Creates keywords.
+  /**
+   * Creates keywords.
    *
-   * <p> Creates 3 keyword match types: EXACT, PHRASE, BROAD.
+   * <p>Creates 3 keyword match types: EXACT, PHRASE, BROAD.
    *
-   * EXACT: Ads may show on searches that ARE the same meaning as your keyword.
-   * PHRASE: Ads may show on searches that INCLUDE the meaning of your keyword.
-   * BROAD: Ads may show on searches that RELATE to your keyword.
+   * <p>EXACT: Ads may show on searches that ARE the same meaning as your keyword. PHRASE: Ads may
+   * show on searches that INCLUDE the meaning of your keyword. BROAD: Ads may show on searches that
+   * RELATE to your keyword.
    *
-   * For smart bidding, BROAD is the recommended one.
+   * <p>For smart bidding, BROAD is the recommended match type.
    *
    * @param googleAdsClient: An initialized GoogleAdsClient instance.
    * @param customerId: A client customer ID.
    * @param adGroupResourceName: An ad group resource name.
    */
-  private static void addKeywords(GoogleAdsClient googleAdsClient, Long customerId, String adGroupResourceName) {
+  private static void addKeywords(
+      GoogleAdsClient googleAdsClient, Long customerId, String adGroupResourceName) {
 
     // Create keyword 1.
-    AdGroupCriterion.Builder keyword1 = AdGroupCriterion.newBuilder().setAdGroup(adGroupResourceName).setStatus(
-        AdGroupCriterionStatus.ENABLED).setKeyword(KeywordInfo.newBuilder().setText("example of exact match").setMatchType(
-        KeywordMatchType.EXACT).build());
+    AdGroupCriterion.Builder keyword1 =
+        AdGroupCriterion.newBuilder()
+            .setAdGroup(adGroupResourceName)
+            .setStatus(AdGroupCriterionStatus.ENABLED)
+            .setKeyword(
+                KeywordInfo.newBuilder()
+                    .setText("example of exact match")
+                    .setMatchType(KeywordMatchType.EXACT)
+                    .build());
 
     // Uncomment the below line if you want to change this keyword to a negative target.
     // keyword1.setNegative(true);
@@ -455,36 +544,59 @@ public class AddResponsiveSearchAdFull {
     // Optional repeated field
     // keyword1.setFinalUrls(0, "https://www.example.com");
 
-    AdGroupCriterionOperation operation1 = AdGroupCriterionOperation.newBuilder().setCreate(keyword1).build();
+    AdGroupCriterionOperation operation1 =
+        AdGroupCriterionOperation.newBuilder().setCreate(keyword1).build();
 
     // Create keyword 2.
-    AdGroupCriterion.Builder keyword2 = AdGroupCriterion.newBuilder().setAdGroup(adGroupResourceName).setStatus(AdGroupCriterionStatus.ENABLED).setKeyword(KeywordInfo.newBuilder().setText("example of phrase match").setMatchType(KeywordMatchType.PHRASE));
+    AdGroupCriterion.Builder keyword2 =
+        AdGroupCriterion.newBuilder()
+            .setAdGroup(adGroupResourceName)
+            .setStatus(AdGroupCriterionStatus.ENABLED)
+            .setKeyword(
+                KeywordInfo.newBuilder()
+                    .setText("example of phrase match")
+                    .setMatchType(KeywordMatchType.PHRASE));
 
     // Uncomment the below line if you want to change this keyword to a negative target.
     // keyword2.setNegative(true);
 
-    //Optional repeated field
+    // Optional repeated field
     // keyword2.setFinalUrls(0, "https://www.example.com");
 
-    AdGroupCriterionOperation operation2 = AdGroupCriterionOperation.newBuilder().setCreate(keyword2).build();
+    AdGroupCriterionOperation operation2 =
+        AdGroupCriterionOperation.newBuilder().setCreate(keyword2).build();
 
     // Create keyword 3.
-    AdGroupCriterion.Builder keyword3 = AdGroupCriterion.newBuilder().setAdGroup(adGroupResourceName).setStatus(AdGroupCriterionStatus.ENABLED).setKeyword(KeywordInfo.newBuilder().setText("example of broad match").setMatchType(KeywordMatchType.BROAD));
+    AdGroupCriterion.Builder keyword3 =
+        AdGroupCriterion.newBuilder()
+            .setAdGroup(adGroupResourceName)
+            .setStatus(AdGroupCriterionStatus.ENABLED)
+            .setKeyword(
+                KeywordInfo.newBuilder()
+                    .setText("example of broad match")
+                    .setMatchType(KeywordMatchType.BROAD));
 
     // Uncomment the below line if you want to change this keyword to a negative target.
     // keyword3.setNegative(true);
 
-    //Optional repeated field
+    // Optional repeated field
     // keyword3.setFinalUrls(0, "https://www.example.com");
 
-    AdGroupCriterionOperation operation3 = AdGroupCriterionOperation.newBuilder().setCreate(keyword3).build();
+    AdGroupCriterionOperation operation3 =
+        AdGroupCriterionOperation.newBuilder().setCreate(keyword3).build();
 
-    try(AdGroupCriterionServiceClient adGroupCriterionServiceClient = googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
-      MutateAdGroupCriteriaResponse response = adGroupCriterionServiceClient.mutateAdGroupCriteria(Long.toString(customerId), ImmutableList.of(operation1, operation2, operation3));
-      for(MutateAdGroupCriterionResult result : response.getResultsList()) {
-        System.out.printf(
-            "Created keyword '%s'.%n",
-            result.getResourceName());
+    // Get the AdGroupCriterionService.
+    try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
+
+      // Add the keywords.
+      MutateAdGroupCriteriaResponse response =
+          adGroupCriterionServiceClient.mutateAdGroupCriteria(
+              Long.toString(customerId), ImmutableList.of(operation1, operation2, operation3));
+
+      // Display the results.
+      for (MutateAdGroupCriterionResult result : response.getResultsList()) {
+        System.out.printf("Created keyword '%s'.%n", result.getResourceName());
       }
     }
   }
@@ -496,32 +608,58 @@ public class AddResponsiveSearchAdFull {
    * @param customerId: A client customer ID.
    * @param campaignResourceName: A campaign resource name.
    */
-  private static void addGeoTargeting(GoogleAdsClient googleAdsClient, Long customerId, String campaignResourceName) {
+  private static void addGeoTargeting(
+      GoogleAdsClient googleAdsClient, Long customerId, String campaignResourceName) {
 
-    // Search by location names from GeoTargetConstantService.suggestGeoTargetConstants() and directly apply GeoTargetConstant.resourceName.
-    SuggestGeoTargetConstantsRequest.Builder gtcRequestBuilder = SuggestGeoTargetConstantsRequest.newBuilder().setLocale("es").setCountryCode("AR");
+    // Search by location names from GeoTargetConstantService.suggestGeoTargetConstants() and
+    // directly apply GeoTargetConstant.resourceName.
+    SuggestGeoTargetConstantsRequest.Builder gtcRequestBuilder =
+        SuggestGeoTargetConstantsRequest.newBuilder().setLocale("es").setCountryCode("AR");
 
     // The location names to get suggested geo target constants.
-    gtcRequestBuilder.setLocationNames(LocationNames.newBuilder().addAllNames(ImmutableList.of("Buenos Aires", "San Isidro", "Mar del Plata")).build());
+    gtcRequestBuilder.setLocationNames(
+        LocationNames.newBuilder()
+            .addAllNames(ImmutableList.of("Buenos Aires", "San Isidro", "Mar del Plata"))
+            .build());
 
-    try(GeoTargetConstantServiceClient geoTargetConstantServiceClient = googleAdsClient.getLatestVersion().createGeoTargetConstantServiceClient()) {
-      SuggestGeoTargetConstantsResponse results = geoTargetConstantServiceClient.suggestGeoTargetConstants(gtcRequestBuilder.build());
+    try (GeoTargetConstantServiceClient geoTargetConstantServiceClient =
+        googleAdsClient.getLatestVersion().createGeoTargetConstantServiceClient()) {
+      SuggestGeoTargetConstantsResponse results =
+          geoTargetConstantServiceClient.suggestGeoTargetConstants(gtcRequestBuilder.build());
 
-      ArrayList<CampaignCriterionOperation> operations = new ArrayList<CampaignCriterionOperation>();
-      for(GeoTargetConstantSuggestion suggestion : results.getGeoTargetConstantSuggestionsList()) {
-        System.out.printf("geoTargetConstant: %s is found in LOCALE %s with reach %s from search term %s.", suggestion.getGeoTargetConstant().getResourceName(), suggestion.getLocale(), suggestion.getReach(), suggestion.getSearchTerm());
+      ArrayList<CampaignCriterionOperation> operations =
+          new ArrayList<CampaignCriterionOperation>();
+      for (GeoTargetConstantSuggestion suggestion : results.getGeoTargetConstantSuggestionsList()) {
+        System.out.printf(
+            "geoTargetConstant: %s is found in LOCALE %s with reach %s from search term %s.",
+            suggestion.getGeoTargetConstant().getResourceName(),
+            suggestion.getLocale(),
+            suggestion.getReach(),
+            suggestion.getSearchTerm());
 
         // Create the campaign criterion for loaction targeting.
-        CampaignCriterion campaignCriterion = CampaignCriterion.newBuilder().setCampaign(campaignResourceName).setLocation(
-            LocationInfo.newBuilder().setGeoTargetConstant(suggestion.getGeoTargetConstant().getResourceName()).build()).build();
+        CampaignCriterion campaignCriterion =
+            CampaignCriterion.newBuilder()
+                .setCampaign(campaignResourceName)
+                .setLocation(
+                    LocationInfo.newBuilder()
+                        .setGeoTargetConstant(suggestion.getGeoTargetConstant().getResourceName())
+                        .build())
+                .build();
 
-        CampaignCriterionOperation operation = CampaignCriterionOperation.newBuilder().setCreate(campaignCriterion).build();
+        CampaignCriterionOperation operation =
+            CampaignCriterionOperation.newBuilder().setCreate(campaignCriterion).build();
         operations.add(operation);
       }
 
-      try(CampaignCriterionServiceClient campaignCriterionServiceClient = googleAdsClient.getLatestVersion().createCampaignCriterionServiceClient()) {
-        MutateCampaignCriteriaResponse response = campaignCriterionServiceClient.mutateCampaignCriteria(Long.toString(customerId), operations);
+      // Get the CampaignCriterionServide.
+      try (CampaignCriterionServiceClient campaignCriterionServiceClient =
+          googleAdsClient.getLatestVersion().createCampaignCriterionServiceClient()) {
+        MutateCampaignCriteriaResponse response =
+            campaignCriterionServiceClient.mutateCampaignCriteria(
+                Long.toString(customerId), operations);
 
+        // Display the results.
         for (MutateCampaignCriterionResult result : response.getResultsList()) {
           System.out.printf("Added campaign criterion %s", result.getResourceName());
         }
