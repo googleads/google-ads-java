@@ -157,7 +157,8 @@ public class AddDemandGenCampaign {
    * @param videoId the YouTube video ID for the ad.
    * @throws IOException if an I/O error occurs, for example, when downloading the logo image.
    */
-  private void run(GoogleAdsClient googleAdsClient, long customerId, String videoId)
+  // Changed from private to package-private for testing purposes.
+  void run(GoogleAdsClient googleAdsClient, long customerId, String videoId)
       throws IOException {
     String budgetResourceName =
         ResourceNames.campaignBudget(customerId, BUDGET_TEMPORARY_ID);
