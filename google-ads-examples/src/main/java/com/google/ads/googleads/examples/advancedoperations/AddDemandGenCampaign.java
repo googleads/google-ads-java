@@ -1,4 +1,4 @@
-// Copyright 2024 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,7 @@
 package com.google.ads.googleads.examples.advancedoperations;
 
 import com.beust.jcommander.Parameter;
-import com.google.ads.googleads.examples.utils.ArgumentNames;
-import com.google.ads.googleads.examples.utils.CodeSampleHelper;
+import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.examples.utils.MediaUtils;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v20.common.AdImageAsset;
@@ -25,7 +24,7 @@ import com.google.ads.googleads.v20.common.AdVideoAsset;
 import com.google.ads.googleads.v20.common.DemandGenAdGroupSettings;
 import com.google.ads.googleads.v20.common.DemandGenVideoResponsiveAdInfo;
 import com.google.ads.googleads.v20.common.ImageAsset;
-import com.google.ads.googleads.v20.common.VideoAsset;
+import com.google.ads.googleads.v20.common.YoutubeVideoAsset; // Changed from VideoAsset
 import com.google.ads.googleads.v20.enums.AdGroupStatusEnum.AdGroupStatus;
 import com.google.ads.googleads.v20.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
 import com.google.ads.googleads.v20.enums.AssetTypeEnum.AssetType;
@@ -62,7 +61,7 @@ import java.util.List;
  * Creates a Demand Gen campaign, which features a fully automated campaign construction and bidding
  * process. It aims to achieve your advertising goals by serving your ads across YouTube, Gmail and
  * Discover. For more information about Demand Gen campaigns, see the <a
- * href="https://support.google.com/google-ads/answer/13935200">Demand Gen campaigns</a> help page.
+ * href="https://developers.google.com/google-ads/api/docs/demand-gen/overview">Demand Gen campaigns overview</a>.
  *
  * <p>This example uses the Google Ads API V20.
  *
@@ -92,13 +91,13 @@ public class AddDemandGenCampaign {
       "https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png";
 
   /** Contains command line argument formats for running this example. */
-  private static class Options extends ArgumentNames {
+  private static class Options extends CodeSampleParams {
 
-    @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true, description = "The Google Ads customer ID.")
+    @Parameter(names = CodeSampleParams.CUSTOMER_ID_FLAG, required = true, description = "The Google Ads customer ID.")
     private Long customerId;
 
     @Parameter(
-        names = ArgumentNames.VIDEO_ID,
+        names = CodeSampleParams.VIDEO_ID_FLAG,
         required = true,
         description = "The YouTube video ID to use in the Demand Gen ad (e.g., 'videoid123').")
     private String videoId;
@@ -112,7 +111,8 @@ public class AddDemandGenCampaign {
    */
   public static void main(String[] args) throws IOException {
     Options options = new Options();
-    if (!CodeSampleHelper.parseArguments(args, options, System.out)) {
+    if (!options.parseArguments(args)) {
+      // Error message is printed by parseArguments if parsing fails or help is requested.
       return;
     }
 
@@ -324,12 +324,13 @@ public class AddDemandGenCampaign {
         Asset.newBuilder()
             .setResourceName(assetResourceName)
             .setName("Demand Gen Logo Asset #" + System.currentTimeMillis())
-            .setType(AssetType.IMAGE)
+            // The AssetType is automatically inferred from the data field specific asset type.
+            // For example, if imageAsset is set, then AssetType is IMAGE.
             .setImageAsset(ImageAsset.newBuilder().setData(ByteString.copyFrom(imageBytes)))
             .build();
 
     return MutateOperation.newBuilder()
-        .setAssetOperation(AssetOperation.newBuilder().setCreate(imageAsset))
+        .setAssetOperation(AssetOperation.newBuilder().setCreate(imageAsset).build())
         .build();
   }
 
@@ -347,11 +348,11 @@ public class AddDemandGenCampaign {
             .setResourceName(assetResourceName)
             .setName("Demand Gen Video Asset #" + System.currentTimeMillis())
             .setType(AssetType.YOUTUBE_VIDEO)
-            .setYoutubeVideoAsset(VideoAsset.newBuilder().setYoutubeVideoId(youtubeVideoId))
+            .setYoutubeVideoAsset(YoutubeVideoAsset.newBuilder().setYoutubeVideoId(youtubeVideoId))
             .build();
 
     return MutateOperation.newBuilder()
-        .setAssetOperation(AssetOperation.newBuilder().setCreate(videoAsset))
+        .setAssetOperation(AssetOperation.newBuilder().setCreate(videoAsset).build())
         .build();
   }
 
