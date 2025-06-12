@@ -539,7 +539,7 @@ public class AddResponsiveSearchAdFull {
     // keyword.setNegative(true);
 
     // Optional repeated field
-    // keyword.setFinalUrls(0, "https://www.example.com");
+    // keyword.setFinalUrls("https://www.example.com");
 
     AdGroupCriterionOperation operation =
         AdGroupCriterionOperation.newBuilder().setCreate(keyword).build();
