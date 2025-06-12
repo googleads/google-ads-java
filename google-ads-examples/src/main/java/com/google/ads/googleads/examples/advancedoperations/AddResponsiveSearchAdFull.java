@@ -111,7 +111,7 @@ public class AddResponsiveSearchAdFull {
     //
     // Specify the customizer attribute name here or the default specified below will be used.
     @Parameter(names = ArgumentNames.CUSTOMIZER_ATTRIBUTE_NAME)
-    private final String customizerAttributeName = "Price";
+    private String customizerAttributeName = "Price";
   }
 
   public static void main(String[] args) {
@@ -338,7 +338,6 @@ public class AddResponsiveSearchAdFull {
     Campaign.Builder campaignBuilder = Campaign.newBuilder();
     campaignBuilder.setName("Testing RSA via API #" + getPrintableDateTime());
     campaignBuilder.setAdvertisingChannelType(AdvertisingChannelType.SEARCH);
-    campaignBuilder.setManualCpc(ManualCpc.getDefaultInstance());
 
     // Recommendation: Set the campaign to PAUSED when creating it to prevent the ads from
     // immediately serving. Set to ENABLED once you've added targeting and the ads are ready to
@@ -517,12 +516,6 @@ public class AddResponsiveSearchAdFull {
   /**
    * Creates keywords.
    *
-   * <p>Creates 3 keyword match types: EXACT, PHRASE, BROAD.
-   *
-   * <p>EXACT: Ads may show on searches that ARE the same meaning as your keyword. PHRASE: Ads may
-   * show on searches that INCLUDE the meaning of your keyword. BROAD: Ads may show on searches that
-   * RELATE to your keyword.
-   *
    * <p>For smart bidding, BROAD is the recommended match type.
    *
    * @param googleAdsClient: An initialized GoogleAdsClient instance.
@@ -532,47 +525,8 @@ public class AddResponsiveSearchAdFull {
   private static void addKeywords(
       GoogleAdsClient googleAdsClient, Long customerId, String adGroupResourceName) {
 
-    // Creates keyword 1.
-    AdGroupCriterion.Builder keyword1 =
-        AdGroupCriterion.newBuilder()
-            .setAdGroup(adGroupResourceName)
-            .setStatus(AdGroupCriterionStatus.ENABLED)
-            .setKeyword(
-                KeywordInfo.newBuilder()
-                    .setText("example of exact match")
-                    .setMatchType(KeywordMatchType.EXACT)
-                    .build());
-
-    // Uncomment the below line if you want to change this keyword to a negative target.
-    // keyword1.setNegative(true);
-
-    // Optional repeated field
-    // keyword1.setFinalUrls(0, "https://www.example.com");
-
-    AdGroupCriterionOperation operation1 =
-        AdGroupCriterionOperation.newBuilder().setCreate(keyword1).build();
-
-    // Creates keyword 2.
-    AdGroupCriterion.Builder keyword2 =
-        AdGroupCriterion.newBuilder()
-            .setAdGroup(adGroupResourceName)
-            .setStatus(AdGroupCriterionStatus.ENABLED)
-            .setKeyword(
-                KeywordInfo.newBuilder()
-                    .setText("example of phrase match")
-                    .setMatchType(KeywordMatchType.PHRASE));
-
-    // Uncomment the below line if you want to change this keyword to a negative target.
-    // keyword2.setNegative(true);
-
-    // Optional repeated field
-    // keyword2.setFinalUrls(0, "https://www.example.com");
-
-    AdGroupCriterionOperation operation2 =
-        AdGroupCriterionOperation.newBuilder().setCreate(keyword2).build();
-
-    // Creates keyword 3.
-    AdGroupCriterion.Builder keyword3 =
+    // Creates keyword.
+    AdGroupCriterion.Builder keyword =
         AdGroupCriterion.newBuilder()
             .setAdGroup(adGroupResourceName)
             .setStatus(AdGroupCriterionStatus.ENABLED)
@@ -582,22 +536,22 @@ public class AddResponsiveSearchAdFull {
                     .setMatchType(KeywordMatchType.BROAD));
 
     // Uncomment the below line if you want to change this keyword to a negative target.
-    // keyword3.setNegative(true);
+    // keyword.setNegative(true);
 
     // Optional repeated field
-    // keyword3.setFinalUrls(0, "https://www.example.com");
+    // keyword.setFinalUrls(0, "https://www.example.com");
 
-    AdGroupCriterionOperation operation3 =
-        AdGroupCriterionOperation.newBuilder().setCreate(keyword3).build();
+    AdGroupCriterionOperation operation =
+        AdGroupCriterionOperation.newBuilder().setCreate(keyword).build();
 
     // Gets the AdGroupCriterionService.
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
         googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
 
-      // Adds the keywords.
+      // Adds the keyword.
       MutateAdGroupCriteriaResponse response =
           adGroupCriterionServiceClient.mutateAdGroupCriteria(
-              Long.toString(customerId), ImmutableList.of(operation1, operation2, operation3));
+              Long.toString(customerId), ImmutableList.of(operation));
 
       // Displays the results.
       for (MutateAdGroupCriterionResult result : response.getResultsList()) {
