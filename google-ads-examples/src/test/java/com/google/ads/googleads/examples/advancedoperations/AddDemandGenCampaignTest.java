@@ -138,14 +138,14 @@ public class AddDemandGenCampaignTest {
                         AdGroupAdResult.newBuilder().setResourceName(expectedAdGroupAdResourceName)))
             .build();
 
-    when(googleAdsServiceClient.mutateGoogleAds(any(MutateGoogleAdsRequest.class)))
+    when(googleAdsServiceClient.mutate(any(MutateGoogleAdsRequest.class)))
         .thenReturn(mockResponse);
 
     // Act
     addDemandGenCampaign.run(googleAdsClient, TEST_CUSTOMER_ID, TEST_VIDEO_ID);
 
     // Assert
-    verify(googleAdsServiceClient).mutateGoogleAds(requestCaptor.capture());
+    verify(googleAdsServiceClient).mutate(requestCaptor.capture());
     MutateGoogleAdsRequest actualRequest = requestCaptor.getValue();
 
     assertEquals(String.valueOf(TEST_CUSTOMER_ID), actualRequest.getCustomerId());

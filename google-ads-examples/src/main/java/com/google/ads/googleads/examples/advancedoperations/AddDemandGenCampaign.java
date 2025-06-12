@@ -191,7 +191,7 @@ public class AddDemandGenCampaign {
               .addAllMutateOperations(operations)
               .build();
 
-      MutateGoogleAdsResponse response = googleAdsServiceClient.mutateGoogleAds(request);
+      MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(request);
 
       System.out.printf(
           "Created Demand Gen campaign with %d operations:%n", operations.size());
