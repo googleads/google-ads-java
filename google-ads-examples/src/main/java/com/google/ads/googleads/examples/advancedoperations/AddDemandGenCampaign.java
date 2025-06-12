@@ -376,21 +376,21 @@ public class AddDemandGenCampaign {
                     .addFinalUrls("https://www.example.com")
                     .setDemandGenVideoResponsiveAd(
                         DemandGenVideoResponsiveAdInfo.newBuilder()
-                            .addVideos(AdVideoAsset.newBuilder().setAsset(videoAssetResourceName))
+                            .addVideos(AdVideoAsset.newBuilder().setAsset(videoAssetResourceName).build())
                             .addLogoImages(
-                                AdImageAsset.newBuilder().setAsset(logoAssetResourceName))
-                            .addHeadlines(AdTextAsset.newBuilder().setText("Headline 1 - Experience the Magic"))
-                            .addHeadlines(AdTextAsset.newBuilder().setText("Headline 2 - Discover New Horizons"))
-                            .addHeadlines(AdTextAsset.newBuilder().setText("Headline 3 - Your Adventure Awaits"))
-                            .addLongHeadlines(AdTextAsset.newBuilder().setText("Long Headline 1 - Unlock Exclusive Content and Explore a World of Possibilities Today!"))
-                            .addLongHeadlines(AdTextAsset.newBuilder().setText("Long Headline 2 - Join Our Community and Get Access to Premium Features and Support."))
-                            .addDescriptions(AdTextAsset.newBuilder().setText("Description 1 - Sign up now and transform your experience."))
-                            .addDescriptions(AdTextAsset.newBuilder().setText("Description 2 - Limited time offer: Don't miss out!"))
+                                AdImageAsset.newBuilder().setAsset(logoAssetResourceName).build())
+                            .addHeadlines(AdTextAsset.newBuilder().setText("Headline 1 - Experience the Magic").build())
+                            .addHeadlines(AdTextAsset.newBuilder().setText("Headline 2 - Discover New Horizons").build())
+                            .addHeadlines(AdTextAsset.newBuilder().setText("Headline 3 - Your Adventure Awaits").build())
+                            .addLongHeadlines(AdTextAsset.newBuilder().setText("Long Headline 1 - Unlock Exclusive Content and Explore a World of Possibilities Today!").build())
+                            .addLongHeadlines(AdTextAsset.newBuilder().setText("Long Headline 2 - Join Our Community and Get Access to Premium Features and Support.").build())
+                            .addDescriptions(AdTextAsset.newBuilder().setText("Description 1 - Sign up now and transform your experience.").build())
+                            .addDescriptions(AdTextAsset.newBuilder().setText("Description 2 - Limited time offer: Don't miss out!").build())
                             .setBusinessName("Your Awesome Company Inc.")
                             .setCallToAction("LEARN_MORE") // See CallToActionType in the API reference
                             // Optional: Set a different call to action for non-video ads.
                             // .setCallToActionNonVideo("INSTALL") // Example for non-video
-                            ))
+                            .build())) // Added .build() here
             .build();
 
     return MutateOperation.newBuilder()
