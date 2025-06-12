@@ -1,4 +1,4 @@
-// Copyright 2021 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -109,7 +109,7 @@ public class AddResponsiveSearchAdFull {
     //
     // Specify the customizer attribute name here or the default specified below will be used.
     @Parameter(names = ArgumentNames.CUSTOMIZER_ATTRIBUTE_NAME)
-    private String customizerAttributeName = "Price";
+    private final String customizerAttributeName = "Price";
   }
 
   public static void main(String[] args) {
@@ -297,25 +297,30 @@ public class AddResponsiveSearchAdFull {
     }
   }
 
-  /** Creates a campaign resource.
+  /**
+   * Creates a campaign resource.
    *
    * @param googleAdsClient: An initialized GoogleAdsClient instance.
    * @param customerId: A client customer ID.
    * @param campaignBudget: A budget resource name.
-   * */
-  private static String createCampaign(GoogleAdsClient googleAdsClient, Long customerId, String campaignBudget){
+   */
+  private static String createCampaign(
+      GoogleAdsClient googleAdsClient, Long customerId, String campaignBudget) {
 
     Campaign.Builder campaignBuilder = Campaign.newBuilder();
     campaignBuilder.setName("Testing RSA via API #" + getPrintableDateTime());
     campaignBuilder.setAdvertisingChannelType(AdvertisingChannelType.SEARCH);
 
-    // Recommendation: Set the campaign to PAUSED when creating it to prevent the ads from immediately serving. Set to ENABLED once you've added targeting and the ads are ready to serve.
+    // Recommendation: Set the campaign to PAUSED when creating it to prevent the ads from
+    // immediately serving. Set to ENABLED once you've added targeting and the ads are ready to
+    // serve.
     campaignBuilder.setStatus(CampaignStatus.PAUSED);
 
-    // Set the bidding strategy and budget. The bidding strategy for Maximize Clicks is TargetSpend. The targetSpendMicros is deprecated so don't put any value. See other bidding strategies you can select in the link below.
+    // Set the bidding strategy and budget. The bidding strategy for Maximize Clicks is TargetSpend.
+    // The targetSpendMicros is deprecated so don't put any value. See other bidding strategies you
+    // can select in the link below.
     // https://developers.google.com/google-ads/api/reference/rpc/latest/Campaign#campaign_bidding_strategy
-    campaignBuilder.setTargetSpend(
-        TargetSpend.newBuilder().setTargetSpendMicros(0).build());
+    campaignBuilder.setTargetSpend(TargetSpend.newBuilder().setTargetSpendMicros(0).build());
     campaignBuilder.setCampaignBudget(campaignBudget);
 
     // Set the campaign network operations.
@@ -324,7 +329,8 @@ public class AddResponsiveSearchAdFull {
             .setTargetGoogleSearch(true)
             .setTargetSearchNetwork(true)
             .setTargetPartnerSearchNetwork(false)
-            // Enable Display Expansion on Search campaigns. For more details see: https://support.google.com/google-ads/answer/7193800
+            // Enable Display Expansion on Search campaigns. For more details see:
+            // https://support.google.com/google-ads/answer/7193800
             .setTargetContentNetwork(true)
             .build());
 
