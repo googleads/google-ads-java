@@ -15,6 +15,8 @@
 package com.google.ads.googleads.examples.advancedoperations;
 
 import com.beust.jcommander.Parameter;
+import com.google.ads.googleads.examples.utils.ArgumentNames;
+import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.examples.utils.MediaUtils;
 import com.google.ads.googleads.lib.GoogleAdsClient;
@@ -51,7 +53,7 @@ import com.google.ads.googleads.v20.services.MutateOperationResponse;
 import com.google.ads.googleads.v20.utils.ResourceNames;
 import com.google.protobuf.ByteString;
 import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.IOException; // Ensure IOException is listed
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -62,8 +64,6 @@ import java.util.List;
  * process. It aims to achieve your advertising goals by serving your ads across YouTube, Gmail and
  * Discover. For more information about Demand Gen campaigns, see the <a
  * href="https://developers.google.com/google-ads/api/docs/demand-gen/overview">Demand Gen campaigns overview</a>.
- *
- * <p>This example uses the Google Ads API V20.
  *
  * <p>Prerequisites:
  *
@@ -93,12 +93,12 @@ public class AddDemandGenCampaign {
   /** Contains command line argument formats for running this example. */
   private static class Options extends CodeSampleParams {
 
-    @Parameter(names = CodeSampleParams.CUSTOMER_ID_FLAG, required = true, description = "The Google Ads customer ID.")
+    @Parameter(names = ArgumentNames.CUSTOMER_ID_FLAG, required = false, description = "The Google Ads customer ID.")
     private Long customerId;
 
     @Parameter(
-        names = CodeSampleParams.VIDEO_ID_FLAG,
-        required = true,
+        names = ArgumentNames.VIDEO_ID_FLAG,
+        required = false,
         description = "The YouTube video ID to use in the Demand Gen ad (e.g., 'videoid123').")
     private String videoId;
   }
@@ -107,27 +107,38 @@ public class AddDemandGenCampaign {
    * Main method.
    *
    * @param args command line arguments for running the example.
-   * @throws IOException if the Google Ads client could not be created.
+   * @throws IOException if the Google Ads client could not be created or if there is an error reading input.
    */
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException { // IOException already here
     Options options = new Options();
     if (!options.parseArguments(args)) {
       // Error message is printed by parseArguments if parsing fails or help is requested.
-      return;
+      // We don't return here to allow hardcoding parameters.
     }
 
-    GoogleAdsClient googleAdsClient;
+    // Gets the customer ID and video ID from the command line if not provided via flags.
+    if (options.customerId == null) {
+      System.out.print("Enter customer ID: ");
+      options.customerId = Long.parseLong(System.console().readLine());
+    }
+    if (options.videoId == null || options.videoId.isEmpty()) {
+      System.out.print("Enter YouTube video ID: ");
+      options.videoId = System.console().readLine();
+    }
+
+    // Initializes the GoogleAdsClient with null. It will be assigned later.
+    GoogleAdsClient googleAdsClient = null;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       System.exit(1);
-      return;
+      // return; // Removed unnecessary return
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
       System.exit(1);
-      return;
+      // return; // Removed unnecessary return
     }
 
     try {
@@ -172,14 +183,14 @@ public class AddDemandGenCampaign {
         ResourceNames.asset(customerId, VIDEO_ASSET_TEMPORARY_ID);
 
     List<MutateOperation> operations = new ArrayList<>();
-    operations.add(createCampaignBudgetOperation(budgetResourceName));
+    operations.add(AddDemandGenCampaign.createCampaignBudgetOperation(budgetResourceName));
     operations.add(
-        createDemandGenCampaignOperation(campaignResourceName, budgetResourceName));
-    operations.add(createAdGroupOperation(adGroupResourceName, campaignResourceName));
-    operations.add(createImageAssetOperation(logoAssetResourceName, LOGO_IMAGE_URL));
-    operations.add(createVideoAssetOperation(videoAssetResourceName, videoId));
+        AddDemandGenCampaign.createDemandGenCampaignOperation(campaignResourceName, budgetResourceName));
+    operations.add(AddDemandGenCampaign.createAdGroupOperation(adGroupResourceName, campaignResourceName));
+    operations.add(AddDemandGenCampaign.createImageAssetOperation(logoAssetResourceName, LOGO_IMAGE_URL));
+    operations.add(AddDemandGenCampaign.createVideoAssetOperation(videoAssetResourceName, videoId));
     operations.add(
-        createDemandGenAdOperation(
+        AddDemandGenCampaign.createDemandGenAdOperation(
             adGroupResourceName, logoAssetResourceName, videoAssetResourceName));
 
     // Issues a single mutate request to create all entities.
@@ -228,7 +239,7 @@ public class AddDemandGenCampaign {
    * @param budgetResourceName the resource name for the campaign budget.
    * @return a {@link MutateOperation} to create the campaign budget.
    */
-  private MutateOperation createCampaignBudgetOperation(String budgetResourceName) {
+  private static MutateOperation createCampaignBudgetOperation(String budgetResourceName) { // Added static
     CampaignBudget budget =
         CampaignBudget.newBuilder()
             .setResourceName(budgetResourceName)
@@ -252,7 +263,7 @@ public class AddDemandGenCampaign {
    * @param budgetResourceName the resource name of the budget to associate with this campaign.
    * @return a {@link MutateOperation} to create the Demand Gen campaign.
    */
-  private MutateOperation createDemandGenCampaignOperation(
+  private static MutateOperation createDemandGenCampaignOperation( // Added static
       String campaignResourceName, String budgetResourceName) {
     Campaign campaign =
         Campaign.newBuilder()
@@ -281,7 +292,7 @@ public class AddDemandGenCampaign {
    * @param campaignResourceName the resource name of the campaign to associate with this ad group.
    * @return a {@link MutateOperation} to create the ad group.
    */
-  private MutateOperation createAdGroupOperation(
+  private static MutateOperation createAdGroupOperation( // Added static
       String adGroupResourceName, String campaignResourceName) {
     AdGroup adGroup =
         AdGroup.newBuilder()
@@ -317,7 +328,7 @@ public class AddDemandGenCampaign {
    * @return a {@link MutateOperation} to create the image asset.
    * @throws IOException if the image data cannot be fetched from the URL.
    */
-  private MutateOperation createImageAssetOperation(String assetResourceName, String imageUrl)
+  private static MutateOperation createImageAssetOperation(String assetResourceName, String imageUrl) // Added static
       throws IOException {
     byte[] imageBytes = MediaUtils.getAsByteArray(new URL(imageUrl));
     Asset imageAsset =
@@ -341,7 +352,7 @@ public class AddDemandGenCampaign {
    * @param youtubeVideoId the ID of the YouTube video.
    * @return a {@link MutateOperation} to create the video asset.
    */
-  private MutateOperation createVideoAssetOperation(
+  private static MutateOperation createVideoAssetOperation( // Added static
       String assetResourceName, String youtubeVideoId) {
     Asset videoAsset =
         Asset.newBuilder()
@@ -364,7 +375,7 @@ public class AddDemandGenCampaign {
    * @param videoAssetResourceName the resource name of the video asset.
    * @return a {@link MutateOperation} to create the Demand Gen ad.
    */
-  private MutateOperation createDemandGenAdOperation(
+  private static MutateOperation createDemandGenAdOperation( // Added static
       String adGroupResourceName, String logoAssetResourceName, String videoAssetResourceName) {
     AdGroupAd adGroupAd =
         AdGroupAd.newBuilder()
@@ -373,6 +384,7 @@ public class AddDemandGenCampaign {
             // For example, if the ad group is PAUSED, the ad group ad status is also PAUSED.
             .setAd(
                 Ad.newBuilder()
+                    .setName("Demand Gen Video Ad #" + CodeSampleHelper.getShortPrintableDateTime()) // Set Ad Name
                     .addFinalUrls("https://www.example.com")
                     .setDemandGenVideoResponsiveAd(
                         DemandGenVideoResponsiveAdInfo.newBuilder()
@@ -386,15 +398,16 @@ public class AddDemandGenCampaign {
                             .addLongHeadlines(AdTextAsset.newBuilder().setText("Long Headline 2 - Join Our Community and Get Access to Premium Features and Support.").build())
                             .addDescriptions(AdTextAsset.newBuilder().setText("Description 1 - Sign up now and transform your experience.").build())
                             .addDescriptions(AdTextAsset.newBuilder().setText("Description 2 - Limited time offer: Don't miss out!").build())
-                            .setBusinessName("Your Awesome Company Inc.")
+                            // .setBusinessName("Your Awesome Company Inc.") // Removed
                             .setCallToAction("LEARN_MORE") // See CallToActionType in the API reference
                             // Optional: Set a different call to action for non-video ads.
                             // .setCallToActionNonVideo("INSTALL") // Example for non-video
-                            .build())) // Added .build() here
+                            // .setCallToActionText("Visit Now") // Removed
+                            .build()))
             .build();
 
     return MutateOperation.newBuilder()
-        .setAdGroupAdOperation(AdGroupAdOperation.newBuilder().setCreate(adGroupAd))
+        .setAdGroupAdOperation(AdGroupAdOperation.newBuilder().setCreate(adGroupAd).build()) // Ensured .build() is present
         .build();
   }
 }
