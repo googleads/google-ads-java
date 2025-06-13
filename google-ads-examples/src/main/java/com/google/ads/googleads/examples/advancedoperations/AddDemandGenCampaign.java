@@ -79,11 +79,11 @@ public class AddDemandGenCampaign {
   // Temporary IDs for resources created in this example.
   // These are negative numbers, which are used internally by the API to reference previously
   // created resources in the same request.
-  private static final long BUDGET_TEMPORARY_ID = -1L;
-  private static final long CAMPAIGN_TEMPORARY_ID = -2L;
-  private static final long AD_GROUP_TEMPORARY_ID = -3L;
-  private static final long LOGO_ASSET_TEMPORARY_ID = -4L;
-  private static final long VIDEO_ASSET_TEMPORARY_ID = -5L;
+  public static final long BUDGET_TEMPORARY_ID = -1L;
+  public static final long CAMPAIGN_TEMPORARY_ID = -2L;
+  public static final long AD_GROUP_TEMPORARY_ID = -3L;
+  public static final long LOGO_ASSET_TEMPORARY_ID = -4L;
+  public static final long VIDEO_ASSET_TEMPORARY_ID = -5L;
 
   // This is a logo image URL that will be used for the Demand Gen ad.
   // Using a common Google logo for demonstration purposes.

@@ -1,5 +1,6 @@
 package com.google.ads.googleads.examples.advancedoperations;
 
+import com.google.ads.googleads.examples.advancedoperations.AddDemandGenCampaign;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -72,13 +73,7 @@ public class AddDemandGenCampaignTest {
   private static final String TEST_VIDEO_ID = "videoId123";
   private static final String TEST_LOGO_IMAGE_URL = "https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png";
 
-
-  // Temporary IDs used in AddDemandGenCampaign
-  private static final long BUDGET_TEMPORARY_ID = -1L;
-  private static final long CAMPAIGN_TEMPORARY_ID = -2L;
-  private static final long AD_GROUP_TEMPORARY_ID = -3L;
-  private static final long LOGO_ASSET_TEMPORARY_ID = -4L;
-  private static final long VIDEO_ASSET_TEMPORARY_ID = -5L;
+  // Temporary IDs are now referenced from AddDemandGenCampaign.java
 
   private String expectedBudgetResourceName;
   private String expectedCampaignResourceName;
@@ -96,11 +91,11 @@ public class AddDemandGenCampaignTest {
     when(versions.createGoogleAdsServiceClient()).thenReturn(googleAdsServiceClient);
 
     // Define expected resource names
-    expectedBudgetResourceName = ResourceNames.campaignBudget(TEST_CUSTOMER_ID, BUDGET_TEMPORARY_ID);
-    expectedCampaignResourceName = ResourceNames.campaign(TEST_CUSTOMER_ID, CAMPAIGN_TEMPORARY_ID);
-    expectedAdGroupResourceName = ResourceNames.adGroup(TEST_CUSTOMER_ID, AD_GROUP_TEMPORARY_ID);
-    expectedLogoAssetResourceName = ResourceNames.asset(TEST_CUSTOMER_ID, LOGO_ASSET_TEMPORARY_ID);
-    expectedVideoAssetResourceName = ResourceNames.asset(TEST_CUSTOMER_ID, VIDEO_ASSET_TEMPORARY_ID);
+    expectedBudgetResourceName = ResourceNames.campaignBudget(TEST_CUSTOMER_ID, AddDemandGenCampaign.BUDGET_TEMPORARY_ID);
+    expectedCampaignResourceName = ResourceNames.campaign(TEST_CUSTOMER_ID, AddDemandGenCampaign.CAMPAIGN_TEMPORARY_ID);
+    expectedAdGroupResourceName = ResourceNames.adGroup(TEST_CUSTOMER_ID, AddDemandGenCampaign.AD_GROUP_TEMPORARY_ID);
+    expectedLogoAssetResourceName = ResourceNames.asset(TEST_CUSTOMER_ID, AddDemandGenCampaign.LOGO_ASSET_TEMPORARY_ID);
+    expectedVideoAssetResourceName = ResourceNames.asset(TEST_CUSTOMER_ID, AddDemandGenCampaign.VIDEO_ASSET_TEMPORARY_ID);
     // AdGroupAd doesn't have a temporary ID in the main code, but its result will have a resource name.
     // We can use a placeholder if needed for the response, or rely on the SUT to not need a specific temp ID for it.
     expectedAdGroupAdResourceName = ResourceNames.adGroupAd(TEST_CUSTOMER_ID, 12345L); // Dummy ad ID
