@@ -93,7 +93,7 @@ public class AddDemandGenCampaign {
   /** Contains command line argument formats for running this example. */
   private static class Options extends CodeSampleParams {
 
-    @Parameter(names = ArgumentNames.CUSTOMER_ID_FLAG, required = false, description = "The Google Ads customer ID.")
+    @Parameter(names = ArgumentNames.CUSTOMER_ID, required = false, description = "The Google Ads customer ID.")
     private Long customerId;
 
     @Parameter(
@@ -109,7 +109,7 @@ public class AddDemandGenCampaign {
    * @param args command line arguments for running the example.
    * @throws IOException if the Google Ads client could not be created or if there is an error reading input.
    */
-  public static void main(String[] args) throws IOException { // IOException already here
+  public static void main(String[] args) throws IOException {
     Options options = new Options();
     if (!options.parseArguments(args)) {
       // Error message is printed by parseArguments if parsing fails or help is requested.
@@ -118,12 +118,10 @@ public class AddDemandGenCampaign {
 
     // Gets the customer ID and video ID from the command line if not provided via flags.
     if (options.customerId == null) {
-      System.out.print("Enter customer ID: ");
-      options.customerId = Long.parseLong(System.console().readLine());
+      options.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
     if (options.videoId == null || options.videoId.isEmpty()) {
-      System.out.print("Enter YouTube video ID: ");
-      options.videoId = System.console().readLine();
+      options.videoId = "INSERT_VIDEO_ID_HERE";
     }
 
     // Initializes the GoogleAdsClient with null. It will be assigned later.
@@ -134,11 +132,9 @@ public class AddDemandGenCampaign {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       System.exit(1);
-      // return; // Removed unnecessary return
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
       System.exit(1);
-      // return; // Removed unnecessary return
     }
 
     try {
@@ -337,7 +333,7 @@ public class AddDemandGenCampaign {
             .setName("Demand Gen Logo Asset #" + System.currentTimeMillis())
             // The AssetType is automatically inferred from the data field specific asset type.
             // For example, if imageAsset is set, then AssetType is IMAGE.
-            .setImageAsset(ImageAsset.newBuilder().setData(ByteString.copyFrom(imageBytes)))
+            .setImageAsset(ImageAsset.newBuilder().setData(ByteString.copyFrom(imageBytes)).build())
             .build();
 
     return MutateOperation.newBuilder()
@@ -359,7 +355,7 @@ public class AddDemandGenCampaign {
             .setResourceName(assetResourceName)
             .setName("Demand Gen Video Asset #" + System.currentTimeMillis())
             .setType(AssetType.YOUTUBE_VIDEO)
-            .setYoutubeVideoAsset(YoutubeVideoAsset.newBuilder().setYoutubeVideoId(youtubeVideoId))
+            .setYoutubeVideoAsset(YoutubeVideoAsset.newBuilder().setYoutubeVideoId(youtubeVideoId).build())
             .build();
 
     return MutateOperation.newBuilder()
@@ -398,13 +394,8 @@ public class AddDemandGenCampaign {
                             .addLongHeadlines(AdTextAsset.newBuilder().setText("Long Headline 2 - Join Our Community and Get Access to Premium Features and Support.").build())
                             .addDescriptions(AdTextAsset.newBuilder().setText("Description 1 - Sign up now and transform your experience.").build())
                             .addDescriptions(AdTextAsset.newBuilder().setText("Description 2 - Limited time offer: Don't miss out!").build())
-                            // .setBusinessName("Your Awesome Company Inc.") // Removed
-                            .setCallToAction("LEARN_MORE") // See CallToActionType in the API reference
-                            // Optional: Set a different call to action for non-video ads.
-                            // .setCallToActionNonVideo("INSTALL") // Example for non-video
-                            // .setCallToActionText("Visit Now") // Removed
-                            .build()))
-            .build();
+                            .build()) // This build is for DemandGenVideoResponsiveAdInfo
+            .build()); // This build is for Ad
 
     return MutateOperation.newBuilder()
         .setAdGroupAdOperation(AdGroupAdOperation.newBuilder().setCreate(adGroupAd).build()) // Ensured .build() is present
