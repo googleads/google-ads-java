@@ -18,7 +18,6 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
-import com.google.ads.googleads.examples.utils.MediaUtils;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v20.common.AdImageAsset;
 import com.google.ads.googleads.v20.common.AdTextAsset;
@@ -54,6 +53,7 @@ import com.google.ads.googleads.v20.utils.ResourceNames;
 import com.google.protobuf.ByteString;
 import java.io.FileNotFoundException;
 import java.io.IOException; // Ensure IOException is listed
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -93,11 +93,11 @@ public class AddDemandGenCampaign {
   /** Contains command line argument formats for running this example. */
   private static class Options extends CodeSampleParams {
 
-    @Parameter(names = ArgumentNames.CUSTOMER_ID_FLAG, required = false, description = "The Google Ads customer ID.")
+    @Parameter(names = ArgumentNames.CUSTOMER_ID, required = false, description = "The Google Ads customer ID.")
     private Long customerId;
 
     @Parameter(
-        names = ArgumentNames.VIDEO_ID_FLAG,
+        names = ArgumentNames.VIDEO_ID,
         required = false,
         description = "The YouTube video ID to use in the Demand Gen ad (e.g., 'videoid123').")
     private String videoId;
@@ -330,7 +330,10 @@ public class AddDemandGenCampaign {
    */
   private static MutateOperation createImageAssetOperation(String assetResourceName, String imageUrl) // Added static
       throws IOException {
-    byte[] imageBytes = MediaUtils.getAsByteArray(new URL(imageUrl));
+    byte[] imageBytes;
+    try (InputStream in = new URL(imageUrl).openStream()) {
+      imageBytes = in.readAllBytes();
+    }
     Asset imageAsset =
         Asset.newBuilder()
             .setResourceName(assetResourceName)

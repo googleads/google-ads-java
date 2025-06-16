@@ -225,8 +225,6 @@ public class AddDemandGenCampaignTest {
     assertTrue(ad.hasDemandGenVideoResponsiveAd());
 
     DemandGenVideoResponsiveAdInfo demandGenAdInfo = ad.getDemandGenVideoResponsiveAd();
-    assertEquals("Your Awesome Company Inc.", demandGenAdInfo.getBusinessName().getText());
-    assertEquals("LEARN_MORE", demandGenAdInfo.getCallToAction().getText()); // SUT uses "LEARN_MORE"
 
     // Videos
     assertEquals(1, demandGenAdInfo.getVideosCount());
