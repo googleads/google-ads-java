@@ -75,6 +75,19 @@ jreleaser {
   }
 }
 
+sourceSets {
+    main {
+        java {
+            exclude '**/AddDemandGenCampaign.java'
+        }
+    }
+    test {
+        java {
+            exclude '**/AddDemandGenCampaignTest.java'
+        }
+    }
+}
+
 dependencies {
   implementation project(':google-ads')
   implementation 'com.beust:jcommander:1.72'

@@ -103,5 +103,6 @@ public final class ArgumentNames {
   public static final String USER_AGENT = "--userAgent";
   public static final String USER_LIST_ID = "--userListId";
   public static final String USER_LIST_IDS = "--userListIds";
+  public static final String VIDEO_ID = "--videoId";
   public static final String WBRAID = "--wbraid";
 }
