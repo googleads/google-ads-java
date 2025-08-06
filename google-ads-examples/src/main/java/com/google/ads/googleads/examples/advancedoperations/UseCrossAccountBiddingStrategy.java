@@ -15,32 +15,33 @@
 package com.google.ads.googleads.examples.advancedoperations;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+import static com.google.ads.googleads.v21.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v20.common.TargetSpend;
-import com.google.ads.googleads.v20.errors.GoogleAdsError;
-import com.google.ads.googleads.v20.errors.GoogleAdsException;
-import com.google.ads.googleads.v20.resources.AccessibleBiddingStrategy;
-import com.google.ads.googleads.v20.resources.BiddingStrategy;
-import com.google.ads.googleads.v20.resources.BiddingStrategyName;
-import com.google.ads.googleads.v20.resources.Campaign;
-import com.google.ads.googleads.v20.services.BiddingStrategyOperation;
-import com.google.ads.googleads.v20.services.BiddingStrategyServiceClient;
-import com.google.ads.googleads.v20.services.CampaignOperation;
-import com.google.ads.googleads.v20.services.CampaignServiceClient;
-import com.google.ads.googleads.v20.services.GoogleAdsRow;
-import com.google.ads.googleads.v20.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v20.services.MutateBiddingStrategiesResponse;
-import com.google.ads.googleads.v20.services.MutateBiddingStrategyResult;
-import com.google.ads.googleads.v20.services.MutateCampaignResult;
-import com.google.ads.googleads.v20.services.MutateCampaignsResponse;
-import com.google.ads.googleads.v20.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v20.services.SearchGoogleAdsStreamResponse;
-import com.google.ads.googleads.v20.utils.ResourceNames;
+import com.google.ads.googleads.v21.common.TargetSpend;
+import com.google.ads.googleads.v21.errors.GoogleAdsError;
+import com.google.ads.googleads.v21.errors.GoogleAdsException;
+import com.google.ads.googleads.v21.resources.AccessibleBiddingStrategy;
+import com.google.ads.googleads.v21.resources.BiddingStrategy;
+import com.google.ads.googleads.v21.resources.BiddingStrategyName;
+import com.google.ads.googleads.v21.resources.Campaign;
+import com.google.ads.googleads.v21.services.BiddingStrategyOperation;
+import com.google.ads.googleads.v21.services.BiddingStrategyServiceClient;
+import com.google.ads.googleads.v21.services.CampaignOperation;
+import com.google.ads.googleads.v21.services.CampaignServiceClient;
+import com.google.ads.googleads.v21.services.GoogleAdsRow;
+import com.google.ads.googleads.v21.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v21.services.MutateBiddingStrategiesResponse;
+import com.google.ads.googleads.v21.services.MutateBiddingStrategyResult;
+import com.google.ads.googleads.v21.services.MutateCampaignResult;
+import com.google.ads.googleads.v21.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v21.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v21.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v21.utils.ResourceNames;
 import com.google.api.gax.rpc.ServerStream;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
@@ -291,6 +292,8 @@ public class UseCrossAccountBiddingStrategy {
           Campaign.newBuilder()
               .setResourceName(ResourceNames.campaign(clientCustomerId, campaignId))
               .setBiddingStrategy(biddingStrategyResourceName)
+              // Declares whether this campaign serves political ads targeting the EU.
+              .setContainsEuPoliticalAdvertising(DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING)
               .build();
       CampaignOperation operation =
           CampaignOperation.newBuilder()

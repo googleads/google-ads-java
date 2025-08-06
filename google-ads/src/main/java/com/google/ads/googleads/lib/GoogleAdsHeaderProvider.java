@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.lib;
 
-import com.google.ads.googleads.v20.services.stub.GoogleAdsServiceStubSettings;
+import com.google.ads.googleads.v21.services.stub.GoogleAdsServiceStubSettings;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;

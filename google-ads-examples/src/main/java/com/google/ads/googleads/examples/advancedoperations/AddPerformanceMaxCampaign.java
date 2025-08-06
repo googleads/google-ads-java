@@ -15,46 +15,47 @@
 package com.google.ads.googleads.examples.advancedoperations;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+import static com.google.ads.googleads.v21.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v20.common.AudienceInfo;
-import com.google.ads.googleads.v20.common.ImageAsset;
-import com.google.ads.googleads.v20.common.LanguageInfo;
-import com.google.ads.googleads.v20.common.LocationInfo;
-import com.google.ads.googleads.v20.common.MaximizeConversionValue;
-import com.google.ads.googleads.v20.common.SearchThemeInfo;
-import com.google.ads.googleads.v20.common.TextAsset;
-import com.google.ads.googleads.v20.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v20.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v20.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v20.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v20.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v20.errors.GoogleAdsError;
-import com.google.ads.googleads.v20.errors.GoogleAdsException;
-import com.google.ads.googleads.v20.resources.Asset;
-import com.google.ads.googleads.v20.resources.AssetGroup;
-import com.google.ads.googleads.v20.resources.AssetGroupAsset;
-import com.google.ads.googleads.v20.resources.AssetGroupSignal;
-import com.google.ads.googleads.v20.resources.Campaign;
-import com.google.ads.googleads.v20.resources.CampaignAsset;
-import com.google.ads.googleads.v20.resources.CampaignBudget;
-import com.google.ads.googleads.v20.resources.CampaignCriterion;
-import com.google.ads.googleads.v20.services.AssetGroupAssetOperation;
-import com.google.ads.googleads.v20.services.AssetGroupOperation;
-import com.google.ads.googleads.v20.services.AssetGroupSignalOperation;
-import com.google.ads.googleads.v20.services.AssetOperation;
-import com.google.ads.googleads.v20.services.CampaignAssetOperation;
-import com.google.ads.googleads.v20.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v20.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v20.services.CampaignOperation;
-import com.google.ads.googleads.v20.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v20.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v20.services.MutateOperation;
-import com.google.ads.googleads.v20.services.MutateOperationResponse;
-import com.google.ads.googleads.v20.utils.ResourceNames;
+import com.google.ads.googleads.v21.common.AudienceInfo;
+import com.google.ads.googleads.v21.common.ImageAsset;
+import com.google.ads.googleads.v21.common.LanguageInfo;
+import com.google.ads.googleads.v21.common.LocationInfo;
+import com.google.ads.googleads.v21.common.MaximizeConversionValue;
+import com.google.ads.googleads.v21.common.SearchThemeInfo;
+import com.google.ads.googleads.v21.common.TextAsset;
+import com.google.ads.googleads.v21.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v21.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v21.enums.AssetGroupStatusEnum.AssetGroupStatus;
+import com.google.ads.googleads.v21.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v21.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v21.errors.GoogleAdsError;
+import com.google.ads.googleads.v21.errors.GoogleAdsException;
+import com.google.ads.googleads.v21.resources.Asset;
+import com.google.ads.googleads.v21.resources.AssetGroup;
+import com.google.ads.googleads.v21.resources.AssetGroupAsset;
+import com.google.ads.googleads.v21.resources.AssetGroupSignal;
+import com.google.ads.googleads.v21.resources.Campaign;
+import com.google.ads.googleads.v21.resources.CampaignAsset;
+import com.google.ads.googleads.v21.resources.CampaignBudget;
+import com.google.ads.googleads.v21.resources.CampaignCriterion;
+import com.google.ads.googleads.v21.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v21.services.AssetGroupOperation;
+import com.google.ads.googleads.v21.services.AssetGroupSignalOperation;
+import com.google.ads.googleads.v21.services.AssetOperation;
+import com.google.ads.googleads.v21.services.CampaignAssetOperation;
+import com.google.ads.googleads.v21.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v21.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v21.services.CampaignOperation;
+import com.google.ads.googleads.v21.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v21.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v21.services.MutateOperation;
+import com.google.ads.googleads.v21.services.MutateOperationResponse;
+import com.google.ads.googleads.v21.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -288,6 +289,8 @@ public class AddPerformanceMaxCampaign {
                 ResourceNames.campaign(customerId, PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID))
             // Sets the budget using the given budget resource name.
             .setCampaignBudget(ResourceNames.campaignBudget(customerId, BUDGET_TEMPORARY_ID))
+            // Declares whether this campaign serves political ads targeting the EU.
+            .setContainsEuPoliticalAdvertising(DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING)
             // Optional fields.
             .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
             .setEndDate(new DateTime().plusDays(365).toString("yyyyMMdd"))
@@ -645,7 +648,7 @@ public class AddPerformanceMaxCampaign {
 
   /**
    * Creates a list of MutateOperations that create {@link
-   * com.google.ads.googleads.v20.resources.AssetGroupSignal} objects.
+   * com.google.ads.googleads.v21.resources.AssetGroupSignal} objects.
    */
   private List<MutateOperation> createAssetGroupSignalOperations(
       long customerId, String assetGroupResourceName, Long audienceId) {

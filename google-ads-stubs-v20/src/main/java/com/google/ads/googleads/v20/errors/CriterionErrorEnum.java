@@ -1305,6 +1305,15 @@ private static final long serialVersionUID = 0L;
      * <code>LOCATION_TARGETING_NOT_ELIGIBLE_FOR_RESTRICTED_CAMPAIGN = 166;</code>
      */
     LOCATION_TARGETING_NOT_ELIGIBLE_FOR_RESTRICTED_CAMPAIGN(166),
+    /**
+     * <pre>
+     * The operation failed because the campaign is missing the
+     * self-declaration on political advertising status in the EU.
+     * </pre>
+     *
+     * <code>MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION = 176;</code>
+     */
+    MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION(176),
     UNRECOGNIZED(-1),
     ;
 
@@ -2561,6 +2570,15 @@ private static final long serialVersionUID = 0L;
      * <code>LOCATION_TARGETING_NOT_ELIGIBLE_FOR_RESTRICTED_CAMPAIGN = 166;</code>
      */
     public static final int LOCATION_TARGETING_NOT_ELIGIBLE_FOR_RESTRICTED_CAMPAIGN_VALUE = 166;
+    /**
+     * <pre>
+     * The operation failed because the campaign is missing the
+     * self-declaration on political advertising status in the EU.
+     * </pre>
+     *
+     * <code>MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION = 176;</code>
+     */
+    public static final int MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION_VALUE = 176;
 
 
     public final int getNumber() {
@@ -2738,6 +2756,7 @@ private static final long serialVersionUID = 0L;
         case 157: return CANNOT_ADD_REMOVED_BRAND_SHARED_SET;
         case 158: return ONLY_EXCLUSION_BRAND_LIST_ALLOWED_FOR_CAMPAIGN_TYPE;
         case 166: return LOCATION_TARGETING_NOT_ELIGIBLE_FOR_RESTRICTED_CAMPAIGN;
+        case 176: return MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION;
         default: return null;
       }
     }

@@ -53,6 +53,7 @@ private static final long serialVersionUID = 0L;
     listingType_ = 0;
     assetAutomationSettings_ = java.util.Collections.emptyList();
     keywordMatchType_ = 0;
+    containsEuPoliticalAdvertising_ = 0;
   }
 
   @java.lang.Override
@@ -3853,8 +3854,11 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. The ads account IDs of advertising partners cooperating within
-     * the campaign.
+     * Immutable. The list of Google Ads accounts IDs of advertising partners
+     * cooperating within the campaign. This feature is currently available only
+     * for accounts having an advertising partner link. This feature is
+     * currently supported only for Performance Max, Shopping, Search and Demand
+     * Gen campaign types.
      * </pre>
      *
      * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3863,8 +3867,11 @@ private static final long serialVersionUID = 0L;
     java.util.List<java.lang.Long> getAdvertisingPartnerIdsList();
     /**
      * <pre>
-     * Immutable. The ads account IDs of advertising partners cooperating within
-     * the campaign.
+     * Immutable. The list of Google Ads accounts IDs of advertising partners
+     * cooperating within the campaign. This feature is currently available only
+     * for accounts having an advertising partner link. This feature is
+     * currently supported only for Performance Max, Shopping, Search and Demand
+     * Gen campaign types.
      * </pre>
      *
      * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3873,8 +3880,11 @@ private static final long serialVersionUID = 0L;
     int getAdvertisingPartnerIdsCount();
     /**
      * <pre>
-     * Immutable. The ads account IDs of advertising partners cooperating within
-     * the campaign.
+     * Immutable. The list of Google Ads accounts IDs of advertising partners
+     * cooperating within the campaign. This feature is currently available only
+     * for accounts having an advertising partner link. This feature is
+     * currently supported only for Performance Max, Shopping, Search and Demand
+     * Gen campaign types.
      * </pre>
      *
      * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4127,8 +4137,11 @@ private static final long serialVersionUID = 0L;
         emptyLongList();
     /**
      * <pre>
-     * Immutable. The ads account IDs of advertising partners cooperating within
-     * the campaign.
+     * Immutable. The list of Google Ads accounts IDs of advertising partners
+     * cooperating within the campaign. This feature is currently available only
+     * for accounts having an advertising partner link. This feature is
+     * currently supported only for Performance Max, Shopping, Search and Demand
+     * Gen campaign types.
      * </pre>
      *
      * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4141,8 +4154,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The ads account IDs of advertising partners cooperating within
-     * the campaign.
+     * Immutable. The list of Google Ads accounts IDs of advertising partners
+     * cooperating within the campaign. This feature is currently available only
+     * for accounts having an advertising partner link. This feature is
+     * currently supported only for Performance Max, Shopping, Search and Demand
+     * Gen campaign types.
      * </pre>
      *
      * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4153,8 +4169,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The ads account IDs of advertising partners cooperating within
-     * the campaign.
+     * Immutable. The list of Google Ads accounts IDs of advertising partners
+     * cooperating within the campaign. This feature is currently available only
+     * for accounts having an advertising partner link. This feature is
+     * currently supported only for Performance Max, Shopping, Search and Demand
+     * Gen campaign types.
      * </pre>
      *
      * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5108,8 +5127,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. The ads account IDs of advertising partners cooperating within
-       * the campaign.
+       * Immutable. The list of Google Ads accounts IDs of advertising partners
+       * cooperating within the campaign. This feature is currently available only
+       * for accounts having an advertising partner link. This feature is
+       * currently supported only for Performance Max, Shopping, Search and Demand
+       * Gen campaign types.
        * </pre>
        *
        * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5122,8 +5144,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. The ads account IDs of advertising partners cooperating within
-       * the campaign.
+       * Immutable. The list of Google Ads accounts IDs of advertising partners
+       * cooperating within the campaign. This feature is currently available only
+       * for accounts having an advertising partner link. This feature is
+       * currently supported only for Performance Max, Shopping, Search and Demand
+       * Gen campaign types.
        * </pre>
        *
        * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5134,8 +5159,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. The ads account IDs of advertising partners cooperating within
-       * the campaign.
+       * Immutable. The list of Google Ads accounts IDs of advertising partners
+       * cooperating within the campaign. This feature is currently available only
+       * for accounts having an advertising partner link. This feature is
+       * currently supported only for Performance Max, Shopping, Search and Demand
+       * Gen campaign types.
        * </pre>
        *
        * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5147,8 +5175,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. The ads account IDs of advertising partners cooperating within
-       * the campaign.
+       * Immutable. The list of Google Ads accounts IDs of advertising partners
+       * cooperating within the campaign. This feature is currently available only
+       * for accounts having an advertising partner link. This feature is
+       * currently supported only for Performance Max, Shopping, Search and Demand
+       * Gen campaign types.
        * </pre>
        *
        * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5167,8 +5198,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. The ads account IDs of advertising partners cooperating within
-       * the campaign.
+       * Immutable. The list of Google Ads accounts IDs of advertising partners
+       * cooperating within the campaign. This feature is currently available only
+       * for accounts having an advertising partner link. This feature is
+       * currently supported only for Performance Max, Shopping, Search and Demand
+       * Gen campaign types.
        * </pre>
        *
        * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5185,8 +5219,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. The ads account IDs of advertising partners cooperating within
-       * the campaign.
+       * Immutable. The list of Google Ads accounts IDs of advertising partners
+       * cooperating within the campaign. This feature is currently available only
+       * for accounts having an advertising partner link. This feature is
+       * currently supported only for Performance Max, Shopping, Search and Demand
+       * Gen campaign types.
        * </pre>
        *
        * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5204,8 +5241,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. The ads account IDs of advertising partners cooperating within
-       * the campaign.
+       * Immutable. The list of Google Ads accounts IDs of advertising partners
+       * cooperating within the campaign. This feature is currently available only
+       * for accounts having an advertising partner link. This feature is
+       * currently supported only for Performance Max, Shopping, Search and Demand
+       * Gen campaign types.
        * </pre>
        *
        * <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -13910,7 +13950,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Inventory control for Video Responsive ads in reach campaigns.
+     * Inventory control for video responsive ads in reach campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -13919,7 +13959,7 @@ private static final long serialVersionUID = 0L;
     boolean hasVideoAdInventoryControl();
     /**
      * <pre>
-     * Inventory control for Video Responsive ads in reach campaigns.
+     * Inventory control for video responsive ads in reach campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -13928,7 +13968,7 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl getVideoAdInventoryControl();
     /**
      * <pre>
-     * Inventory control for Video Responsive ads in reach campaigns.
+     * Inventory control for video responsive ads in reach campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -13980,7 +14020,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used for in-stream video ads.
+       * Determine if video responsive ads can be used for in-stream video ads.
        * </pre>
        *
        * <code>optional bool allow_in_stream = 1;</code>
@@ -13989,7 +14029,7 @@ private static final long serialVersionUID = 0L;
       boolean hasAllowInStream();
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used for in-stream video ads.
+       * Determine if video responsive ads can be used for in-stream video ads.
        * </pre>
        *
        * <code>optional bool allow_in_stream = 1;</code>
@@ -13999,7 +14039,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used for in-feed video ads.
+       * Determine if video responsive ads can be used for in-feed video ads.
        * </pre>
        *
        * <code>optional bool allow_in_feed = 2;</code>
@@ -14008,7 +14048,7 @@ private static final long serialVersionUID = 0L;
       boolean hasAllowInFeed();
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used for in-feed video ads.
+       * Determine if video responsive ads can be used for in-feed video ads.
        * </pre>
        *
        * <code>optional bool allow_in_feed = 2;</code>
@@ -14018,7 +14058,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used as shorts format.
+       * Determine if video responsive ads can be used as shorts format.
        * </pre>
        *
        * <code>optional bool allow_shorts = 3;</code>
@@ -14027,7 +14067,7 @@ private static final long serialVersionUID = 0L;
       boolean hasAllowShorts();
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used as shorts format.
+       * Determine if video responsive ads can be used as shorts format.
        * </pre>
        *
        * <code>optional bool allow_shorts = 3;</code>
@@ -14037,7 +14077,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * For campaigns using Video Responsive ads inventory controls determine on
+     * For campaigns using video responsive ads inventory controls determine on
      * which inventories the ads can be shown. This only applies for campaigns
      * with the bidding strategies TARGET_CPM and FIXED_CPM.
      * </pre>
@@ -14081,7 +14121,7 @@ private static final long serialVersionUID = 0L;
       private boolean allowInStream_ = false;
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used for in-stream video ads.
+       * Determine if video responsive ads can be used for in-stream video ads.
        * </pre>
        *
        * <code>optional bool allow_in_stream = 1;</code>
@@ -14093,7 +14133,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used for in-stream video ads.
+       * Determine if video responsive ads can be used for in-stream video ads.
        * </pre>
        *
        * <code>optional bool allow_in_stream = 1;</code>
@@ -14108,7 +14148,7 @@ private static final long serialVersionUID = 0L;
       private boolean allowInFeed_ = false;
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used for in-feed video ads.
+       * Determine if video responsive ads can be used for in-feed video ads.
        * </pre>
        *
        * <code>optional bool allow_in_feed = 2;</code>
@@ -14120,7 +14160,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used for in-feed video ads.
+       * Determine if video responsive ads can be used for in-feed video ads.
        * </pre>
        *
        * <code>optional bool allow_in_feed = 2;</code>
@@ -14135,7 +14175,7 @@ private static final long serialVersionUID = 0L;
       private boolean allowShorts_ = false;
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used as shorts format.
+       * Determine if video responsive ads can be used as shorts format.
        * </pre>
        *
        * <code>optional bool allow_shorts = 3;</code>
@@ -14147,7 +14187,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Determine if Video Responsive ads can be used as shorts format.
+       * Determine if video responsive ads can be used as shorts format.
        * </pre>
        *
        * <code>optional bool allow_shorts = 3;</code>
@@ -14357,7 +14397,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * For campaigns using Video Responsive ads inventory controls determine on
+       * For campaigns using video responsive ads inventory controls determine on
        * which inventories the ads can be shown. This only applies for campaigns
        * with the bidding strategies TARGET_CPM and FIXED_CPM.
        * </pre>
@@ -14561,7 +14601,7 @@ private static final long serialVersionUID = 0L;
         private boolean allowInStream_ ;
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used for in-stream video ads.
+         * Determine if video responsive ads can be used for in-stream video ads.
          * </pre>
          *
          * <code>optional bool allow_in_stream = 1;</code>
@@ -14573,7 +14613,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used for in-stream video ads.
+         * Determine if video responsive ads can be used for in-stream video ads.
          * </pre>
          *
          * <code>optional bool allow_in_stream = 1;</code>
@@ -14585,7 +14625,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used for in-stream video ads.
+         * Determine if video responsive ads can be used for in-stream video ads.
          * </pre>
          *
          * <code>optional bool allow_in_stream = 1;</code>
@@ -14601,7 +14641,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used for in-stream video ads.
+         * Determine if video responsive ads can be used for in-stream video ads.
          * </pre>
          *
          * <code>optional bool allow_in_stream = 1;</code>
@@ -14617,7 +14657,7 @@ private static final long serialVersionUID = 0L;
         private boolean allowInFeed_ ;
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used for in-feed video ads.
+         * Determine if video responsive ads can be used for in-feed video ads.
          * </pre>
          *
          * <code>optional bool allow_in_feed = 2;</code>
@@ -14629,7 +14669,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used for in-feed video ads.
+         * Determine if video responsive ads can be used for in-feed video ads.
          * </pre>
          *
          * <code>optional bool allow_in_feed = 2;</code>
@@ -14641,7 +14681,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used for in-feed video ads.
+         * Determine if video responsive ads can be used for in-feed video ads.
          * </pre>
          *
          * <code>optional bool allow_in_feed = 2;</code>
@@ -14657,7 +14697,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used for in-feed video ads.
+         * Determine if video responsive ads can be used for in-feed video ads.
          * </pre>
          *
          * <code>optional bool allow_in_feed = 2;</code>
@@ -14673,7 +14713,7 @@ private static final long serialVersionUID = 0L;
         private boolean allowShorts_ ;
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used as shorts format.
+         * Determine if video responsive ads can be used as shorts format.
          * </pre>
          *
          * <code>optional bool allow_shorts = 3;</code>
@@ -14685,7 +14725,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used as shorts format.
+         * Determine if video responsive ads can be used as shorts format.
          * </pre>
          *
          * <code>optional bool allow_shorts = 3;</code>
@@ -14697,7 +14737,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used as shorts format.
+         * Determine if video responsive ads can be used as shorts format.
          * </pre>
          *
          * <code>optional bool allow_shorts = 3;</code>
@@ -14713,7 +14753,7 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Determine if Video Responsive ads can be used as shorts format.
+         * Determine if video responsive ads can be used as shorts format.
          * </pre>
          *
          * <code>optional bool allow_shorts = 3;</code>
@@ -14794,7 +14834,7 @@ private static final long serialVersionUID = 0L;
     private com.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl videoAdInventoryControl_;
     /**
      * <pre>
-     * Inventory control for Video Responsive ads in reach campaigns.
+     * Inventory control for video responsive ads in reach campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -14806,7 +14846,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Inventory control for Video Responsive ads in reach campaigns.
+     * Inventory control for video responsive ads in reach campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -14818,7 +14858,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Inventory control for Video Responsive ads in reach campaigns.
+     * Inventory control for video responsive ads in reach campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -15184,7 +15224,7 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl, com.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl.Builder, com.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControlOrBuilder> videoAdInventoryControlBuilder_;
       /**
        * <pre>
-       * Inventory control for Video Responsive ads in reach campaigns.
+       * Inventory control for video responsive ads in reach campaigns.
        * </pre>
        *
        * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -15195,7 +15235,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Inventory control for Video Responsive ads in reach campaigns.
+       * Inventory control for video responsive ads in reach campaigns.
        * </pre>
        *
        * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -15210,7 +15250,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Inventory control for Video Responsive ads in reach campaigns.
+       * Inventory control for video responsive ads in reach campaigns.
        * </pre>
        *
        * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -15230,7 +15270,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Inventory control for Video Responsive ads in reach campaigns.
+       * Inventory control for video responsive ads in reach campaigns.
        * </pre>
        *
        * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -15248,7 +15288,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Inventory control for Video Responsive ads in reach campaigns.
+       * Inventory control for video responsive ads in reach campaigns.
        * </pre>
        *
        * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -15273,7 +15313,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Inventory control for Video Responsive ads in reach campaigns.
+       * Inventory control for video responsive ads in reach campaigns.
        * </pre>
        *
        * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -15290,7 +15330,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Inventory control for Video Responsive ads in reach campaigns.
+       * Inventory control for video responsive ads in reach campaigns.
        * </pre>
        *
        * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -15302,7 +15342,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Inventory control for Video Responsive ads in reach campaigns.
+       * Inventory control for video responsive ads in reach campaigns.
        * </pre>
        *
        * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -15317,7 +15357,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Inventory control for Video Responsive ads in reach campaigns.
+       * Inventory control for video responsive ads in reach campaigns.
        * </pre>
        *
        * <code>.google.ads.googleads.v19.resources.Campaign.VideoCampaignSettings.VideoAdInventoryControl video_ad_inventory_control = 1;</code>
@@ -21125,6 +21165,34 @@ private static final long serialVersionUID = 0L;
     return brandGuidelines_ == null ? com.google.ads.googleads.v19.resources.Campaign.BrandGuidelines.getDefaultInstance() : brandGuidelines_;
   }
 
+  public static final int CONTAINS_EU_POLITICAL_ADVERTISING_FIELD_NUMBER = 102;
+  private int containsEuPoliticalAdvertising_ = 0;
+  /**
+   * <pre>
+   * The advertiser should self-declare whether this campaign contains
+   * political advertising content targeted towards the European Union.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+   * @return The enum numeric value on the wire for containsEuPoliticalAdvertising.
+   */
+  @java.lang.Override public int getContainsEuPoliticalAdvertisingValue() {
+    return containsEuPoliticalAdvertising_;
+  }
+  /**
+   * <pre>
+   * The advertiser should self-declare whether this campaign contains
+   * political advertising content targeted towards the European Union.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+   * @return The containsEuPoliticalAdvertising.
+   */
+  @java.lang.Override public com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus getContainsEuPoliticalAdvertising() {
+    com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus result = com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.forNumber(containsEuPoliticalAdvertising_);
+    return result == null ? com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNRECOGNIZED : result;
+  }
+
   public static final int BIDDING_STRATEGY_FIELD_NUMBER = 67;
   /**
    * <pre>
@@ -22125,6 +22193,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x00000004) != 0)) {
       output.writeMessage(98, getBrandGuidelines());
     }
+    if (containsEuPoliticalAdvertising_ != com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNSPECIFIED.getNumber()) {
+      output.writeEnum(102, containsEuPoliticalAdvertising_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -22438,6 +22509,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(98, getBrandGuidelines());
     }
+    if (containsEuPoliticalAdvertising_ != com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(102, containsEuPoliticalAdvertising_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -22655,6 +22730,7 @@ private static final long serialVersionUID = 0L;
       if (!getBrandGuidelines()
           .equals(other.getBrandGuidelines())) return false;
     }
+    if (containsEuPoliticalAdvertising_ != other.containsEuPoliticalAdvertising_) return false;
     if (!getCampaignBiddingStrategyCase().equals(other.getCampaignBiddingStrategyCase())) return false;
     switch (campaignBiddingStrategyCase_) {
       case 67:
@@ -22935,6 +23011,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BRAND_GUIDELINES_FIELD_NUMBER;
       hash = (53 * hash) + getBrandGuidelines().hashCode();
     }
+    hash = (37 * hash) + CONTAINS_EU_POLITICAL_ADVERTISING_FIELD_NUMBER;
+    hash = (53 * hash) + containsEuPoliticalAdvertising_;
     switch (campaignBiddingStrategyCase_) {
       case 67:
         hash = (37 * hash) + BIDDING_STRATEGY_FIELD_NUMBER;
@@ -23331,6 +23409,7 @@ private static final long serialVersionUID = 0L;
         brandGuidelinesBuilder_.dispose();
         brandGuidelinesBuilder_ = null;
       }
+      containsEuPoliticalAdvertising_ = 0;
       if (commissionBuilder_ != null) {
         commissionBuilder_.clear();
       }
@@ -23695,6 +23774,9 @@ private static final long serialVersionUID = 0L;
             ? brandGuidelines_
             : brandGuidelinesBuilder_.build();
         to_bitField1_ |= 0x00000004;
+      }
+      if (((from_bitField1_ & 0x01000000) != 0)) {
+        result.containsEuPoliticalAdvertising_ = containsEuPoliticalAdvertising_;
       }
       result.bitField0_ |= to_bitField0_;
       result.bitField1_ |= to_bitField1_;
@@ -24099,6 +24181,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBrandGuidelines()) {
         mergeBrandGuidelines(other.getBrandGuidelines());
+      }
+      if (other.containsEuPoliticalAdvertising_ != 0) {
+        setContainsEuPoliticalAdvertisingValue(other.getContainsEuPoliticalAdvertisingValue());
       }
       switch (other.getCampaignBiddingStrategyCase()) {
         case BIDDING_STRATEGY: {
@@ -24691,6 +24776,11 @@ private static final long serialVersionUID = 0L;
               bitField1_ |= 0x00800000;
               break;
             } // case 786
+            case 816: {
+              containsEuPoliticalAdvertising_ = input.readEnum();
+              bitField1_ |= 0x01000000;
+              break;
+            } // case 816
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -32676,6 +32766,84 @@ private static final long serialVersionUID = 0L;
         brandGuidelines_ = null;
       }
       return brandGuidelinesBuilder_;
+    }
+
+    private int containsEuPoliticalAdvertising_ = 0;
+    /**
+     * <pre>
+     * The advertiser should self-declare whether this campaign contains
+     * political advertising content targeted towards the European Union.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+     * @return The enum numeric value on the wire for containsEuPoliticalAdvertising.
+     */
+    @java.lang.Override public int getContainsEuPoliticalAdvertisingValue() {
+      return containsEuPoliticalAdvertising_;
+    }
+    /**
+     * <pre>
+     * The advertiser should self-declare whether this campaign contains
+     * political advertising content targeted towards the European Union.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+     * @param value The enum numeric value on the wire for containsEuPoliticalAdvertising to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContainsEuPoliticalAdvertisingValue(int value) {
+      containsEuPoliticalAdvertising_ = value;
+      bitField1_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The advertiser should self-declare whether this campaign contains
+     * political advertising content targeted towards the European Union.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+     * @return The containsEuPoliticalAdvertising.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus getContainsEuPoliticalAdvertising() {
+      com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus result = com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.forNumber(containsEuPoliticalAdvertising_);
+      return result == null ? com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The advertiser should self-declare whether this campaign contains
+     * political advertising content targeted towards the European Union.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+     * @param value The containsEuPoliticalAdvertising to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContainsEuPoliticalAdvertising(com.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField1_ |= 0x01000000;
+      containsEuPoliticalAdvertising_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The advertiser should self-declare whether this campaign contains
+     * political advertising content targeted towards the European Union.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v19.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearContainsEuPoliticalAdvertising() {
+      bitField1_ = (bitField1_ & ~0x01000000);
+      containsEuPoliticalAdvertising_ = 0;
+      onChanged();
+      return this;
     }
 
     /**

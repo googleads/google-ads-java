@@ -133,7 +133,7 @@ import javax.annotation.Generated;
  *    </tr>
  *    <tr>
  *      <td><p> ListPlannableUserLists</td>
- *      <td><p> Returns the list of plannable user lists with their plannable status.
+ *      <td><p> Returns the list of plannable user lists with their plannable status. User lists may not be plannable for a number of reasons, including: - They are less than 10 days old. - They have a membership lifespan that is less than 30 days - They have less than 10,000 or more than 700,000 users.
  * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [FieldError]()   [HeaderError]()   [InternalError]()   [QuotaError]()   [RangeError]()   [ReachPlanError]()   [RequestError]()</td>
  *      <td>
  *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
@@ -645,7 +645,10 @@ public class ReachPlanServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Returns the list of plannable user lists with their plannable status.
+   * Returns the list of plannable user lists with their plannable status. User lists may not be
+   * plannable for a number of reasons, including: - They are less than 10 days old. - They have a
+   * membership lifespan that is less than 30 days - They have less than 10,000 or more than 700,000
+   * users.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [FieldError]()
    * [HeaderError]() [InternalError]() [QuotaError]() [RangeError]() [ReachPlanError]()
@@ -677,7 +680,10 @@ public class ReachPlanServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Returns the list of plannable user lists with their plannable status.
+   * Returns the list of plannable user lists with their plannable status. User lists may not be
+   * plannable for a number of reasons, including: - They are less than 10 days old. - They have a
+   * membership lifespan that is less than 30 days - They have less than 10,000 or more than 700,000
+   * users.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [FieldError]()
    * [HeaderError]() [InternalError]() [QuotaError]() [RangeError]() [ReachPlanError]()
@@ -712,7 +718,10 @@ public class ReachPlanServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Returns the list of plannable user lists with their plannable status.
+   * Returns the list of plannable user lists with their plannable status. User lists may not be
+   * plannable for a number of reasons, including: - They are less than 10 days old. - They have a
+   * membership lifespan that is less than 30 days - They have less than 10,000 or more than 700,000
+   * users.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [FieldError]()
    * [HeaderError]() [InternalError]() [QuotaError]() [RangeError]() [ReachPlanError]()
