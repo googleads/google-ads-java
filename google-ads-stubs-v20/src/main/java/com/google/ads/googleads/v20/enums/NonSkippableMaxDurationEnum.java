@@ -7,7 +7,7 @@ package com.google.ads.googleads.v20.enums;
 /**
  * <pre>
  * Container for enum describing the allowed maximum duration values for videos
- * used in non-skippable Responsive Video Ads.
+ * used in non-skippable video responsive ads.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v20.enums.NonSkippableMaxDurationEnum}
@@ -47,7 +47,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Enum describing the allowed maximum duration values for videos used in
-   * non-skippable Responsive Video Ads.
+   * non-skippable video responsive ads.
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v20.enums.NonSkippableMaxDurationEnum.NonSkippableMaxDuration}
@@ -373,7 +373,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Container for enum describing the allowed maximum duration values for videos
-   * used in non-skippable Responsive Video Ads.
+   * used in non-skippable video responsive ads.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v20.enums.NonSkippableMaxDurationEnum}

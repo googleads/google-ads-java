@@ -15,47 +15,48 @@
 package com.google.ads.googleads.examples.shoppingads;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+import static com.google.ads.googleads.v21.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v20.common.ListingGroupInfo;
-import com.google.ads.googleads.v20.common.ManualCpc;
-import com.google.ads.googleads.v20.common.ShoppingProductAdInfo;
-import com.google.ads.googleads.v20.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v20.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v20.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v20.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v20.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v20.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v20.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v20.enums.ListingGroupTypeEnum.ListingGroupType;
-import com.google.ads.googleads.v20.errors.GoogleAdsError;
-import com.google.ads.googleads.v20.errors.GoogleAdsException;
-import com.google.ads.googleads.v20.resources.Ad;
-import com.google.ads.googleads.v20.resources.AdGroup;
-import com.google.ads.googleads.v20.resources.AdGroupAd;
-import com.google.ads.googleads.v20.resources.AdGroupCriterion;
-import com.google.ads.googleads.v20.resources.Campaign;
-import com.google.ads.googleads.v20.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v20.resources.CampaignBudget;
-import com.google.ads.googleads.v20.services.AdGroupAdOperation;
-import com.google.ads.googleads.v20.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v20.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v20.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v20.services.AdGroupOperation;
-import com.google.ads.googleads.v20.services.AdGroupServiceClient;
-import com.google.ads.googleads.v20.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v20.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v20.services.CampaignOperation;
-import com.google.ads.googleads.v20.services.CampaignServiceClient;
-import com.google.ads.googleads.v20.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v20.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v20.services.MutateAdGroupResult;
-import com.google.ads.googleads.v20.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v20.services.MutateCampaignResult;
-import com.google.ads.googleads.v20.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v21.common.ListingGroupInfo;
+import com.google.ads.googleads.v21.common.ManualCpc;
+import com.google.ads.googleads.v21.common.ShoppingProductAdInfo;
+import com.google.ads.googleads.v21.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v21.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v21.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v21.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v21.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v21.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v21.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v21.enums.ListingGroupTypeEnum.ListingGroupType;
+import com.google.ads.googleads.v21.errors.GoogleAdsError;
+import com.google.ads.googleads.v21.errors.GoogleAdsException;
+import com.google.ads.googleads.v21.resources.Ad;
+import com.google.ads.googleads.v21.resources.AdGroup;
+import com.google.ads.googleads.v21.resources.AdGroupAd;
+import com.google.ads.googleads.v21.resources.AdGroupCriterion;
+import com.google.ads.googleads.v21.resources.Campaign;
+import com.google.ads.googleads.v21.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v21.resources.CampaignBudget;
+import com.google.ads.googleads.v21.services.AdGroupAdOperation;
+import com.google.ads.googleads.v21.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v21.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v21.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v21.services.AdGroupOperation;
+import com.google.ads.googleads.v21.services.AdGroupServiceClient;
+import com.google.ads.googleads.v21.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v21.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v21.services.CampaignOperation;
+import com.google.ads.googleads.v21.services.CampaignServiceClient;
+import com.google.ads.googleads.v21.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v21.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v21.services.MutateAdGroupResult;
+import com.google.ads.googleads.v21.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v21.services.MutateCampaignResult;
+import com.google.ads.googleads.v21.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -244,6 +245,8 @@ public class AddShoppingProductAd {
             .setManualCpc(ManualCpc.getDefaultInstance())
             // Sets the budget.
             .setCampaignBudget(budgetResourceName)
+            // Declares whether this campaign serves political ads targeting the EU.
+            .setContainsEuPoliticalAdvertising(DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING)
             .build();
 
     // Creates a campaign operation.

@@ -15,47 +15,49 @@
 package com.google.ads.googleads.examples.campaignmanagement;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
+import static com.google.ads.googleads.v21.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.CONTAINS_EU_POLITICAL_ADVERTISING;
+import static com.google.ads.googleads.v21.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v20.common.ExpandedTextAdInfo;
-import com.google.ads.googleads.v20.common.KeywordInfo;
-import com.google.ads.googleads.v20.common.ManualCpc;
-import com.google.ads.googleads.v20.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v20.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v20.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v20.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v20.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v20.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v20.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v20.errors.GoogleAdsError;
-import com.google.ads.googleads.v20.errors.GoogleAdsException;
-import com.google.ads.googleads.v20.resources.Ad;
-import com.google.ads.googleads.v20.resources.AdGroup;
-import com.google.ads.googleads.v20.resources.AdGroupAd;
-import com.google.ads.googleads.v20.resources.AdGroupCriterion;
-import com.google.ads.googleads.v20.resources.BatchJob;
-import com.google.ads.googleads.v20.resources.Campaign;
-import com.google.ads.googleads.v20.resources.CampaignBudget;
-import com.google.ads.googleads.v20.resources.CampaignCriterion;
-import com.google.ads.googleads.v20.services.AdGroupAdOperation;
-import com.google.ads.googleads.v20.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v20.services.AdGroupOperation;
-import com.google.ads.googleads.v20.services.AddBatchJobOperationsRequest;
-import com.google.ads.googleads.v20.services.AddBatchJobOperationsResponse;
-import com.google.ads.googleads.v20.services.BatchJobOperation;
-import com.google.ads.googleads.v20.services.BatchJobResult;
-import com.google.ads.googleads.v20.services.BatchJobServiceClient;
-import com.google.ads.googleads.v20.services.BatchJobServiceClient.ListBatchJobResultsPagedResponse;
-import com.google.ads.googleads.v20.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v20.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v20.services.CampaignOperation;
-import com.google.ads.googleads.v20.services.ListBatchJobResultsRequest;
-import com.google.ads.googleads.v20.services.MutateOperation;
-import com.google.ads.googleads.v20.services.MutateOperationResponse.ResponseCase;
-import com.google.ads.googleads.v20.utils.ResourceNames;
+import com.google.ads.googleads.v21.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v21.common.KeywordInfo;
+import com.google.ads.googleads.v21.common.ManualCpc;
+import com.google.ads.googleads.v21.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v21.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v21.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v21.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v21.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v21.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v21.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v21.errors.GoogleAdsError;
+import com.google.ads.googleads.v21.errors.GoogleAdsException;
+import com.google.ads.googleads.v21.resources.Ad;
+import com.google.ads.googleads.v21.resources.AdGroup;
+import com.google.ads.googleads.v21.resources.AdGroupAd;
+import com.google.ads.googleads.v21.resources.AdGroupCriterion;
+import com.google.ads.googleads.v21.resources.BatchJob;
+import com.google.ads.googleads.v21.resources.Campaign;
+import com.google.ads.googleads.v21.resources.CampaignBudget;
+import com.google.ads.googleads.v21.resources.CampaignCriterion;
+import com.google.ads.googleads.v21.services.AdGroupAdOperation;
+import com.google.ads.googleads.v21.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v21.services.AdGroupOperation;
+import com.google.ads.googleads.v21.services.AddBatchJobOperationsRequest;
+import com.google.ads.googleads.v21.services.AddBatchJobOperationsResponse;
+import com.google.ads.googleads.v21.services.BatchJobOperation;
+import com.google.ads.googleads.v21.services.BatchJobResult;
+import com.google.ads.googleads.v21.services.BatchJobServiceClient;
+import com.google.ads.googleads.v21.services.BatchJobServiceClient.ListBatchJobResultsPagedResponse;
+import com.google.ads.googleads.v21.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v21.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v21.services.CampaignOperation;
+import com.google.ads.googleads.v21.services.ListBatchJobResultsRequest;
+import com.google.ads.googleads.v21.services.MutateOperation;
+import com.google.ads.googleads.v21.services.MutateOperationResponse.ResponseCase;
+import com.google.ads.googleads.v21.utils.ResourceNames;
 import com.google.api.gax.longrunning.OperationFuture;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -384,6 +386,8 @@ public class AddCompleteCampaignsUsingBatchJob {
               // Sets the bidding strategy and budget.
               .setManualCpc(ManualCpc.newBuilder().build())
               .setCampaignBudget(campaignBudgetResourceName)
+              // Declares whether this campaign serves political ads targeting the EU.
+              .setContainsEuPoliticalAdvertising(DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING)
               .build();
 
       // Creates a campaign operation and adds it to the operations list.

@@ -1830,6 +1830,27 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * The advertiser should self-declare whether this campaign contains
+   * political advertising content targeted towards the European Union.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+   * @return The enum numeric value on the wire for containsEuPoliticalAdvertising.
+   */
+  int getContainsEuPoliticalAdvertisingValue();
+  /**
+   * <pre>
+   * The advertiser should self-declare whether this campaign contains
+   * political advertising content targeted towards the European Union.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+   * @return The containsEuPoliticalAdvertising.
+   */
+  com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus getContainsEuPoliticalAdvertising();
+
+  /**
+   * <pre>
    * The resource name of the portfolio bidding strategy used by the campaign.
    * </pre>
    *

@@ -7,7 +7,7 @@ package com.google.ads.googleads.v19.resources;
 /**
  * <pre>
  * A link between an AdGroupAd and an Asset. AdGroupAdAssetView supports AppAds,
- * Demand Gen camapaigns, and Responsive Search Ads.
+ * Demand Gen campaigns, and Responsive Search Ads.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v19.resources.AdGroupAdAssetView}
@@ -668,7 +668,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A link between an AdGroupAd and an Asset. AdGroupAdAssetView supports AppAds,
-   * Demand Gen camapaigns, and Responsive Search Ads.
+   * Demand Gen campaigns, and Responsive Search Ads.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v19.resources.AdGroupAdAssetView}

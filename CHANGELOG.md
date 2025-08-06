@@ -1,3 +1,12 @@
+39.0.0 - 2025-08-06
+-------------------
+- Add support and examples for v21 of the Google Ads API.
+- Remove support for v18 of the Google Ads API.
+- Add the advancedoperations/AddResponsiveSearchAddFull example.
+- Add the advancedoperations/AddDemandGenCampaign example.
+- Updated multiple examples to include the containsEuPoliticalAdvertising field
+  on campaign creation.
+
 38.0.0 - 2025-06-04
 -------------------
 - Add support for v20 of the Google Ads API.

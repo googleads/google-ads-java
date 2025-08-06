@@ -31,7 +31,7 @@ public final class CriterionErrorProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v20/errors/criter" +
       "ion_error.proto\022\037google.ads.googleads.v2" +
-      "0.errors\"\2360\n\022CriterionErrorEnum\"\2070\n\016Crit" +
+      "0.errors\"\3260\n\022CriterionErrorEnum\"\2770\n\016Crit" +
       "erionError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
       "\022\032\n\026CONCRETE_TYPE_REQUIRED\020\002\022\035\n\031INVALID_" +
       "EXCLUDED_CATEGORY\020\003\022\030\n\024INVALID_KEYWORD_T" +
@@ -185,13 +185,15 @@ public final class CriterionErrorProto {
       "MOVED_BRAND_SHARED_SET\020\235\001\0228\n3ONLY_EXCLUS" +
       "ION_BRAND_LIST_ALLOWED_FOR_CAMPAIGN_TYPE" +
       "\020\236\001\022<\n7LOCATION_TARGETING_NOT_ELIGIBLE_F" +
-      "OR_RESTRICTED_CAMPAIGN\020\246\001B\363\001\n#com.google" +
-      ".ads.googleads.v20.errorsB\023CriterionErro" +
-      "rProtoP\001ZEgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v20/errors;errors\242" +
-      "\002\003GAA\252\002\037Google.Ads.GoogleAds.V20.Errors\312" +
-      "\002\037Google\\Ads\\GoogleAds\\V20\\Errors\352\002#Goog" +
-      "le::Ads::GoogleAds::V20::Errorsb\006proto3"
+      "OR_RESTRICTED_CAMPAIGN\020\246\001\0226\n1MISSING_EU_" +
+      "POLITICAL_ADVERTISING_SELF_DECLARATION\020\260" +
+      "\001B\363\001\n#com.google.ads.googleads.v20.error" +
+      "sB\023CriterionErrorProtoP\001ZEgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v2" +
+      "0/errors;errors\242\002\003GAA\252\002\037Google.Ads.Googl" +
+      "eAds.V20.Errors\312\002\037Google\\Ads\\GoogleAds\\V" +
+      "20\\Errors\352\002#Google::Ads::GoogleAds::V20:" +
+      ":Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

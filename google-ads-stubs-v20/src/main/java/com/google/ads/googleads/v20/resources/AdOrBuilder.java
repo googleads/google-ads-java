@@ -460,7 +460,8 @@ public interface AdOrBuilder extends
    * Immutable. The name of the ad. This is only used to be able to identify the
    * ad. It does not need to be unique and does not affect the served ad. The
    * name field is currently only supported for DisplayUploadAd, ImageAd,
-   * ShoppingComparisonListingAd and VideoAd.
+   * LegacyAppInstallAd, ShoppingComparisonListingAd, VideoAd, VideoResponsiveAd
+   * and DemandGen ads.
    * </pre>
    *
    * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -472,7 +473,8 @@ public interface AdOrBuilder extends
    * Immutable. The name of the ad. This is only used to be able to identify the
    * ad. It does not need to be unique and does not affect the served ad. The
    * name field is currently only supported for DisplayUploadAd, ImageAd,
-   * ShoppingComparisonListingAd and VideoAd.
+   * LegacyAppInstallAd, ShoppingComparisonListingAd, VideoAd, VideoResponsiveAd
+   * and DemandGen ads.
    * </pre>
    *
    * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -484,7 +486,8 @@ public interface AdOrBuilder extends
    * Immutable. The name of the ad. This is only used to be able to identify the
    * ad. It does not need to be unique and does not affect the served ad. The
    * name field is currently only supported for DisplayUploadAd, ImageAd,
-   * ShoppingComparisonListingAd and VideoAd.
+   * LegacyAppInstallAd, ShoppingComparisonListingAd, VideoAd, VideoResponsiveAd
+   * and DemandGen ads.
    * </pre>
    *
    * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>

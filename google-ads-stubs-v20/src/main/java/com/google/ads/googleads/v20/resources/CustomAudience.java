@@ -7,6 +7,9 @@ package com.google.ads.googleads.v20.resources;
 /**
  * <pre>
  * A custom audience. This is a list of users by interest.
+ * The unique key of a custom audience consists of the following fields: name.
+ * Violating the unique key constraint produces error:
+ * CustomAudienceError.NAME_ALREADY_USED
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v20.resources.CustomAudience}
@@ -568,6 +571,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A custom audience. This is a list of users by interest.
+   * The unique key of a custom audience consists of the following fields: name.
+   * Violating the unique key constraint produces error:
+   * CustomAudienceError.NAME_ALREADY_USED
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v20.resources.CustomAudience}

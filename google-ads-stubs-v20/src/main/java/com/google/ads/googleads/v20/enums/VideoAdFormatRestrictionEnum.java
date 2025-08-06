@@ -6,7 +6,7 @@ package com.google.ads.googleads.v20.enums;
 
 /**
  * <pre>
- * Container for enum describing format restrictions for Video Responsive Ads in
+ * Container for enum describing format restrictions for video responsive ads in
  * video campaigns.
  * </pre>
  *
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Non-skippable in-stream Video Responsive Ad.
+     * Non-skippable in-stream video responsive ad.
      * </pre>
      *
      * <code>NON_SKIPPABLE_IN_STREAM = 2;</code>
@@ -98,7 +98,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Non-skippable in-stream Video Responsive Ad.
+     * Non-skippable in-stream video responsive ad.
      * </pre>
      *
      * <code>NON_SKIPPABLE_IN_STREAM = 2;</code>
@@ -337,7 +337,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Container for enum describing format restrictions for Video Responsive Ads in
+   * Container for enum describing format restrictions for video responsive ads in
    * video campaigns.
    * </pre>
    *

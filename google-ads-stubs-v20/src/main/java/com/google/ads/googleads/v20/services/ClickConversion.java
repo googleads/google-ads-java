@@ -852,7 +852,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The IP address of the customer when they arrived on the landing page after
    * an ad click but before a conversion event. This is the IP address of the
-   * customer's device, not the advertiser's server.
+   * customer's device, not the advertiser's server. Google Ads does not support
+   * IP address matching for end users in the European Economic Area (EEA),
+   * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+   * exclude sharing IP addresses from users from these regions and ensure that
+   * you provide users with clear and comprehensive information about the data
+   * you collect on your sites, apps, and other properties and get consent where
+   * required by law or any applicable Google policies. See the
+   * https://support.google.com/google-ads/answer/2998031 page for more details.
    * </pre>
    *
    * <code>optional string user_ip_address = 27 [(.google.api.field_info) = { ... }</code>
@@ -866,7 +873,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The IP address of the customer when they arrived on the landing page after
    * an ad click but before a conversion event. This is the IP address of the
-   * customer's device, not the advertiser's server.
+   * customer's device, not the advertiser's server. Google Ads does not support
+   * IP address matching for end users in the European Economic Area (EEA),
+   * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+   * exclude sharing IP addresses from users from these regions and ensure that
+   * you provide users with clear and comprehensive information about the data
+   * you collect on your sites, apps, and other properties and get consent where
+   * required by law or any applicable Google policies. See the
+   * https://support.google.com/google-ads/answer/2998031 page for more details.
    * </pre>
    *
    * <code>optional string user_ip_address = 27 [(.google.api.field_info) = { ... }</code>
@@ -889,7 +903,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The IP address of the customer when they arrived on the landing page after
    * an ad click but before a conversion event. This is the IP address of the
-   * customer's device, not the advertiser's server.
+   * customer's device, not the advertiser's server. Google Ads does not support
+   * IP address matching for end users in the European Economic Area (EEA),
+   * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+   * exclude sharing IP addresses from users from these regions and ensure that
+   * you provide users with clear and comprehensive information about the data
+   * you collect on your sites, apps, and other properties and get consent where
+   * required by law or any applicable Google policies. See the
+   * https://support.google.com/google-ads/answer/2998031 page for more details.
    * </pre>
    *
    * <code>optional string user_ip_address = 27 [(.google.api.field_info) = { ... }</code>
@@ -4068,7 +4089,14 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The IP address of the customer when they arrived on the landing page after
      * an ad click but before a conversion event. This is the IP address of the
-     * customer's device, not the advertiser's server.
+     * customer's device, not the advertiser's server. Google Ads does not support
+     * IP address matching for end users in the European Economic Area (EEA),
+     * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+     * exclude sharing IP addresses from users from these regions and ensure that
+     * you provide users with clear and comprehensive information about the data
+     * you collect on your sites, apps, and other properties and get consent where
+     * required by law or any applicable Google policies. See the
+     * https://support.google.com/google-ads/answer/2998031 page for more details.
      * </pre>
      *
      * <code>optional string user_ip_address = 27 [(.google.api.field_info) = { ... }</code>
@@ -4081,7 +4109,14 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The IP address of the customer when they arrived on the landing page after
      * an ad click but before a conversion event. This is the IP address of the
-     * customer's device, not the advertiser's server.
+     * customer's device, not the advertiser's server. Google Ads does not support
+     * IP address matching for end users in the European Economic Area (EEA),
+     * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+     * exclude sharing IP addresses from users from these regions and ensure that
+     * you provide users with clear and comprehensive information about the data
+     * you collect on your sites, apps, and other properties and get consent where
+     * required by law or any applicable Google policies. See the
+     * https://support.google.com/google-ads/answer/2998031 page for more details.
      * </pre>
      *
      * <code>optional string user_ip_address = 27 [(.google.api.field_info) = { ... }</code>
@@ -4103,7 +4138,14 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The IP address of the customer when they arrived on the landing page after
      * an ad click but before a conversion event. This is the IP address of the
-     * customer's device, not the advertiser's server.
+     * customer's device, not the advertiser's server. Google Ads does not support
+     * IP address matching for end users in the European Economic Area (EEA),
+     * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+     * exclude sharing IP addresses from users from these regions and ensure that
+     * you provide users with clear and comprehensive information about the data
+     * you collect on your sites, apps, and other properties and get consent where
+     * required by law or any applicable Google policies. See the
+     * https://support.google.com/google-ads/answer/2998031 page for more details.
      * </pre>
      *
      * <code>optional string user_ip_address = 27 [(.google.api.field_info) = { ... }</code>
@@ -4126,7 +4168,14 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The IP address of the customer when they arrived on the landing page after
      * an ad click but before a conversion event. This is the IP address of the
-     * customer's device, not the advertiser's server.
+     * customer's device, not the advertiser's server. Google Ads does not support
+     * IP address matching for end users in the European Economic Area (EEA),
+     * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+     * exclude sharing IP addresses from users from these regions and ensure that
+     * you provide users with clear and comprehensive information about the data
+     * you collect on your sites, apps, and other properties and get consent where
+     * required by law or any applicable Google policies. See the
+     * https://support.google.com/google-ads/answer/2998031 page for more details.
      * </pre>
      *
      * <code>optional string user_ip_address = 27 [(.google.api.field_info) = { ... }</code>
@@ -4145,7 +4194,14 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The IP address of the customer when they arrived on the landing page after
      * an ad click but before a conversion event. This is the IP address of the
-     * customer's device, not the advertiser's server.
+     * customer's device, not the advertiser's server. Google Ads does not support
+     * IP address matching for end users in the European Economic Area (EEA),
+     * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+     * exclude sharing IP addresses from users from these regions and ensure that
+     * you provide users with clear and comprehensive information about the data
+     * you collect on your sites, apps, and other properties and get consent where
+     * required by law or any applicable Google policies. See the
+     * https://support.google.com/google-ads/answer/2998031 page for more details.
      * </pre>
      *
      * <code>optional string user_ip_address = 27 [(.google.api.field_info) = { ... }</code>
@@ -4161,7 +4217,14 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The IP address of the customer when they arrived on the landing page after
      * an ad click but before a conversion event. This is the IP address of the
-     * customer's device, not the advertiser's server.
+     * customer's device, not the advertiser's server. Google Ads does not support
+     * IP address matching for end users in the European Economic Area (EEA),
+     * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+     * exclude sharing IP addresses from users from these regions and ensure that
+     * you provide users with clear and comprehensive information about the data
+     * you collect on your sites, apps, and other properties and get consent where
+     * required by law or any applicable Google policies. See the
+     * https://support.google.com/google-ads/answer/2998031 page for more details.
      * </pre>
      *
      * <code>optional string user_ip_address = 27 [(.google.api.field_info) = { ... }</code>
