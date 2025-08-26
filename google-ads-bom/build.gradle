@@ -1,0 +1,177 @@
+/*
+ * Copyright 2025 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * A Bill of Materials (BOM) for the Google Ads API client library for Java.
+ *
+ * This BOM ensures that all Google Ads API library artifacts and their
+ * transitive dependencies are using compatible versions.
+ *
+ * To use this BOM, add the following to the dependencyManagement section of your
+ * pom.xml file and replace REPLACE_WITH_CURRENT-VERSION with the current
+ * version of google-ads-bom:
+ *
+ * <dependencyManagement>
+ *   <dependencies>
+ *     <dependency>
+ *       <groupId>com.google.api-ads</groupId>
+ *       <artifactId>google-ads-bom</artifactId>
+ *       <version>REPLACE-WITH-CURRENT-VERSION</version>
+ *       <type>pom</type>
+ *       <scope>import</scope>
+ *     </dependency>
+ *   </dependencies>
+ * </dependencyManagement>
+ *
+ * Then, add dependencies on the Google Ads API library artifacts without
+ * specifying their versions.
+ *
+ * <dependencies>
+ *  <!-- Add google-ads WITHOUT a version -->
+ *  <dependency>
+ *    <groupId>com.google.api-ads</groupId>
+ *    <artifactId>google-ads</artifactId>
+ *  </dependency>
+ * </dependencies>
+ *
+ */
+
+plugins {
+    id 'java-platform'
+    id 'maven-publish'
+    id 'org.jreleaser'
+}
+
+// Creates an empty JAR to be published alongside the BOM's POM file.
+// JReleaser requires at least one JAR to publish, and will not publish a
+// standalone POM file.
+task emptyJar(type: Jar) {
+    archiveClassifier = "empty"
+}
+
+// The code below is used to create a staging directory for jreleaser to deploy to.
+// This is required because the jreleaser task does not create the directory itself.
+task prepareJReleaser {
+    doLast {
+        mkdir "${buildDir}/staging-deploy"
+    }
+}
+
+// The jreleaser task depends on the prepareJReleaser task to ensure that the
+// staging directory is created before it runs.
+tasks.named("jreleaserConfig").configure {
+    dependsOn prepareJReleaser
+    dependsOn emptyJar
+    dependsOn generatePomFileForMavenPublication
+}
+
+jreleaser {
+    project {
+        gitRootSearch = true // Allow JReleaser to search upwards for .git
+        copyright = 'Google LLC'
+        description = 'Bill of Materials for the Google Ads API Client Library'
+        links {
+            homepage = 'https://github.com/googleads/google-ads-java'
+            documentation = 'https://developers.google.com/google-ads/api/docs/client-libs/java'
+        }
+        license = 'Apache-2.0'
+        authors = ['Josh Radcliff', 'Sarah Botwinick Pollack']
+    }
+    signing {
+        active = 'ALWAYS'
+        armored = true
+    }
+    deploy {
+        maven {
+            mavenCentral {
+                sonatype {
+                    active = 'ALWAYS'
+                    url = 'https://central.sonatype.com/api/v1/publisher'
+                    stagingRepository(layout.buildDirectory.dir("staging-deploy").get().toString())
+                    stage = 'UPLOAD'
+                }
+            }
+
+            release {
+                github {
+                    skipRelease = true
+                    skipTag = true
+                }
+            }
+        }
+    }
+}
+
+
+javaPlatform {
+    // Allows importing other BOMs, like the Google Cloud BOM below.
+    allowDependencies()
+}
+
+dependencies {
+    // This makes this BOM inherit all dependency versions from the Google Cloud
+    // BOM. This version is determined based on the current used version of
+    // google-cloud-shared-dependencies.
+    api(platform("com.google.cloud:libraries-bom:26.65.0"))
+
+    // Add constraints for all of this project's artifacts.
+    constraints {
+        api "com.google.api-ads:google-ads:${version}"
+        api "com.google.api-ads:google-ads-codegen:${version}"
+        api "com.google.api-ads:google-ads-shadowjar:${version}"
+        api "com.google.api-ads:google-ads-stubs-v19:${version}"
+        api "com.google.api-ads:google-ads-stubs-v20:${version}"
+        api "com.google.api-ads:google-ads-stubs-v21:${version}"
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.javaPlatform
+            pom {
+                name = 'Google Ads API Client BOM'
+                description = 'Bill of Materials for the Google Ads API Client Library'
+                url = 'https://github.com/googleads/google-ads-java'
+                licenses {
+                    license {
+                        name = 'Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0'
+                    }
+                }
+                scm {
+                    url = 'https://github.com/googleads/google-ads-java'
+                    connection = 'scm:git:https://github.com/googleads/google-ads-java.git'
+                    developerConnection = 'scm:git:git@github.com:googleads/google-ads-java.git'
+                }
+                developers {
+                    developer {
+                        name = 'Josh Radcliff'
+                        url = 'https://github.com/jradcliff'
+                    }
+                    developer {
+                        name = 'Sarah Botwinick Pollack'
+                        url = 'https://github.com/sarahcaseybot'
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'sonatype'
+            url = uri(layout.buildDirectory.dir("staging-deploy"))
+        }
+    }
+}

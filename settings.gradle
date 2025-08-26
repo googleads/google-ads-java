@@ -27,6 +27,7 @@ pluginManagement {
 
 rootProject.name = 'google-ads-parent'
 
+include ':google-ads-bom'
 include ':google-ads-codegen'
 include ':google-ads'
 if (startParameter.projectProperties.containsKey("fastbuild")) {
