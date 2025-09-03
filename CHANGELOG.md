@@ -1,3 +1,7 @@
+40.0.0 - 2025-09-03
+-------------------
+- Add the google-ads-bom module to assist users with dependency management.
+
 39.0.0 - 2025-08-06
 -------------------
 - Add support and examples for v21 of the Google Ads API.
