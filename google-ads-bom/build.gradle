@@ -181,7 +181,7 @@ publishing {
 
 // Lists all dependencies available in this BOM, including transitive dependencies.
 // This is useful for users to see what dependencies they can use without specifying a version.
-task listFlattenedRuntimeDependencies {
+task listAllDependencyConstraints {
     doLast {
         println "Flattened runtime dependencies:"
         def resolvable = configurations.create("resolvable")
