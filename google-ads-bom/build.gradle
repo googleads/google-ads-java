@@ -113,6 +113,9 @@ jreleaser {
     }
 }
 
+repositories {
+    mavenCentral()
+}
 
 javaPlatform {
     // Allows importing other BOMs, like the Google Cloud BOM below.
@@ -173,5 +176,24 @@ publishing {
             name = 'sonatype'
             url = uri(layout.buildDirectory.dir("staging-deploy"))
         }
+    }
+}
+
+// Lists all dependencies available in this BOM, including transitive dependencies.
+// This is useful for users to see what dependencies they can use without specifying a version.
+task listAllDependencyConstraints {
+    doLast {
+        println "Dependency constraints:"
+        def resolvable = configurations.create("resolvable")
+        resolvable.dependencies.add(dependencies.platform(project))
+        resolvable.dependencies.add(dependencies.project(path: ":google-ads"))
+
+        def allDeps = new TreeSet<String>()
+        resolvable.incoming.resolutionResult.allComponents.each { component ->
+            if (component.moduleVersion != null) {
+                allDeps.add(component.moduleVersion.id.toString())
+            }
+        }
+        allDeps.each { String dep -> println dep }
     }
 }
