@@ -183,7 +183,7 @@ publishing {
 // This is useful for users to see what dependencies they can use without specifying a version.
 task listAllDependencyConstraints {
     doLast {
-        println "Flattened runtime dependencies:"
+        println "Dependency constraints:"
         def resolvable = configurations.create("resolvable")
         resolvable.dependencies.add(dependencies.platform(project))
         resolvable.dependencies.add(dependencies.project(path: ":google-ads"))
