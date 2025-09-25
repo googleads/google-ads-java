@@ -549,6 +549,7 @@ public class AddPerformanceMaxCampaign {
     return mutateOperations;
   }
 
+  // [START create_and_link_brand_assets]
   /** Creates a list of MutateOperations that create linked brand assets. */
   List<MutateOperation> createAndLinkBrandAssets(
       long customerId,
@@ -643,6 +644,7 @@ public class AddPerformanceMaxCampaign {
         CampaignAssetOperation.newBuilder().setCreate(campaignAsset).build();
     return MutateOperation.newBuilder().setCampaignAssetOperation(campaignAssetOperation).build();
   }
+  // [END create_and_link_brand_assets]
 
   // [END add_performance_max_campaign_8]
 
