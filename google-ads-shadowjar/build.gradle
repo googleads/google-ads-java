@@ -40,6 +40,7 @@ shadowJar {
 
     // Removes the default -all classifier.
     archiveClassifier = ''
+    zip64 = true
 
     // Updates the META-INF/services directory with the services from dependencies
     mergeServiceFiles()
