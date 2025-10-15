@@ -54,6 +54,7 @@ public class GrpcThirdPartyAppAnalyticsLinkServiceStub
                   ProtoUtils.marshaller(RegenerateShareableLinkIdRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(RegenerateShareableLinkIdResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<RegenerateShareableLinkIdRequest, RegenerateShareableLinkIdResponse>

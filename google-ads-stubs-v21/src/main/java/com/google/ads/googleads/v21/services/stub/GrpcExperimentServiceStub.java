@@ -64,6 +64,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
                   ProtoUtils.marshaller(MutateExperimentsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateExperimentsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<EndExperimentRequest, Empty> endExperimentMethodDescriptor =
@@ -72,6 +73,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
           .setFullMethodName("google.ads.googleads.v21.services.ExperimentService/EndExperiment")
           .setRequestMarshaller(ProtoUtils.marshaller(EndExperimentRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
+          .setSampledToLocalTracing(true)
           .build();
 
   private static final MethodDescriptor<
@@ -86,6 +88,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
                   ProtoUtils.marshaller(ListExperimentAsyncErrorsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListExperimentAsyncErrorsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<GraduateExperimentRequest, Empty>
@@ -97,6 +100,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
               .setRequestMarshaller(
                   ProtoUtils.marshaller(GraduateExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<ScheduleExperimentRequest, Operation>
@@ -108,6 +112,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
               .setRequestMarshaller(
                   ProtoUtils.marshaller(ScheduleExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<PromoteExperimentRequest, Operation>
@@ -119,6 +124,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
               .setRequestMarshaller(
                   ProtoUtils.marshaller(PromoteExperimentRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateExperimentsRequest, MutateExperimentsResponse>

@@ -109,8 +109,8 @@ private static final long serialVersionUID = 0L;
     return budgetPerDayMinimumMicros_;
   }
 
-  public static final int MINIMUM_BUGDET_AMOUNT_MICROS_FIELD_NUMBER = 3;
-  private long minimumBugdetAmountMicros_ = 0L;
+  public static final int MINIMUM_BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 3;
+  private long minimumBudgetAmountMicros_ = 0L;
   /**
    * <pre>
    * The minimum value for the budget's amount field required by the campaign,
@@ -118,12 +118,12 @@ private static final long serialVersionUID = 0L;
    * the amount field value.
    * </pre>
    *
-   * <code>int64 minimum_bugdet_amount_micros = 3;</code>
-   * @return The minimumBugdetAmountMicros.
+   * <code>int64 minimum_budget_amount_micros = 3;</code>
+   * @return The minimumBudgetAmountMicros.
    */
   @java.lang.Override
-  public long getMinimumBugdetAmountMicros() {
-    return minimumBugdetAmountMicros_;
+  public long getMinimumBudgetAmountMicros() {
+    return minimumBudgetAmountMicros_;
   }
 
   public static final int MINIMUM_BUDGET_TOTAL_AMOUNT_MICROS_FIELD_NUMBER = 4;
@@ -198,8 +198,8 @@ private static final long serialVersionUID = 0L;
     if (budgetPerDayMinimumMicros_ != 0L) {
       output.writeInt64(2, budgetPerDayMinimumMicros_);
     }
-    if (minimumBugdetAmountMicros_ != 0L) {
-      output.writeInt64(3, minimumBugdetAmountMicros_);
+    if (minimumBudgetAmountMicros_ != 0L) {
+      output.writeInt64(3, minimumBudgetAmountMicros_);
     }
     if (minimumBudgetTotalAmountMicros_ != 0L) {
       output.writeInt64(4, minimumBudgetTotalAmountMicros_);
@@ -226,9 +226,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, budgetPerDayMinimumMicros_);
     }
-    if (minimumBugdetAmountMicros_ != 0L) {
+    if (minimumBudgetAmountMicros_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, minimumBugdetAmountMicros_);
+        .computeInt64Size(3, minimumBudgetAmountMicros_);
     }
     if (minimumBudgetTotalAmountMicros_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -261,8 +261,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCurrencyCode())) return false;
     if (getBudgetPerDayMinimumMicros()
         != other.getBudgetPerDayMinimumMicros()) return false;
-    if (getMinimumBugdetAmountMicros()
-        != other.getMinimumBugdetAmountMicros()) return false;
+    if (getMinimumBudgetAmountMicros()
+        != other.getMinimumBudgetAmountMicros()) return false;
     if (getMinimumBudgetTotalAmountMicros()
         != other.getMinimumBudgetTotalAmountMicros()) return false;
     if (getFailedBudgetAmountMicros()
@@ -285,9 +285,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + BUDGET_PER_DAY_MINIMUM_MICROS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getBudgetPerDayMinimumMicros());
-    hash = (37 * hash) + MINIMUM_BUGDET_AMOUNT_MICROS_FIELD_NUMBER;
+    hash = (37 * hash) + MINIMUM_BUDGET_AMOUNT_MICROS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getMinimumBugdetAmountMicros());
+        getMinimumBudgetAmountMicros());
     hash = (37 * hash) + MINIMUM_BUDGET_TOTAL_AMOUNT_MICROS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getMinimumBudgetTotalAmountMicros());
@@ -434,7 +434,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       currencyCode_ = "";
       budgetPerDayMinimumMicros_ = 0L;
-      minimumBugdetAmountMicros_ = 0L;
+      minimumBudgetAmountMicros_ = 0L;
       minimumBudgetTotalAmountMicros_ = 0L;
       failedBudgetAmountMicros_ = 0L;
       failedBudgetTotalAmountMicros_ = 0L;
@@ -478,7 +478,7 @@ private static final long serialVersionUID = 0L;
         result.budgetPerDayMinimumMicros_ = budgetPerDayMinimumMicros_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.minimumBugdetAmountMicros_ = minimumBugdetAmountMicros_;
+        result.minimumBudgetAmountMicros_ = minimumBudgetAmountMicros_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.minimumBudgetTotalAmountMicros_ = minimumBudgetTotalAmountMicros_;
@@ -543,8 +543,8 @@ private static final long serialVersionUID = 0L;
       if (other.getBudgetPerDayMinimumMicros() != 0L) {
         setBudgetPerDayMinimumMicros(other.getBudgetPerDayMinimumMicros());
       }
-      if (other.getMinimumBugdetAmountMicros() != 0L) {
-        setMinimumBugdetAmountMicros(other.getMinimumBugdetAmountMicros());
+      if (other.getMinimumBudgetAmountMicros() != 0L) {
+        setMinimumBudgetAmountMicros(other.getMinimumBudgetAmountMicros());
       }
       if (other.getMinimumBudgetTotalAmountMicros() != 0L) {
         setMinimumBudgetTotalAmountMicros(other.getMinimumBudgetTotalAmountMicros());
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 16
             case 24: {
-              minimumBugdetAmountMicros_ = input.readInt64();
+              minimumBudgetAmountMicros_ = input.readInt64();
               bitField0_ |= 0x00000004;
               break;
             } // case 24
@@ -772,7 +772,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long minimumBugdetAmountMicros_ ;
+    private long minimumBudgetAmountMicros_ ;
     /**
      * <pre>
      * The minimum value for the budget's amount field required by the campaign,
@@ -780,12 +780,12 @@ private static final long serialVersionUID = 0L;
      * the amount field value.
      * </pre>
      *
-     * <code>int64 minimum_bugdet_amount_micros = 3;</code>
-     * @return The minimumBugdetAmountMicros.
+     * <code>int64 minimum_budget_amount_micros = 3;</code>
+     * @return The minimumBudgetAmountMicros.
      */
     @java.lang.Override
-    public long getMinimumBugdetAmountMicros() {
-      return minimumBugdetAmountMicros_;
+    public long getMinimumBudgetAmountMicros() {
+      return minimumBudgetAmountMicros_;
     }
     /**
      * <pre>
@@ -794,13 +794,13 @@ private static final long serialVersionUID = 0L;
      * the amount field value.
      * </pre>
      *
-     * <code>int64 minimum_bugdet_amount_micros = 3;</code>
-     * @param value The minimumBugdetAmountMicros to set.
+     * <code>int64 minimum_budget_amount_micros = 3;</code>
+     * @param value The minimumBudgetAmountMicros to set.
      * @return This builder for chaining.
      */
-    public Builder setMinimumBugdetAmountMicros(long value) {
+    public Builder setMinimumBudgetAmountMicros(long value) {
 
-      minimumBugdetAmountMicros_ = value;
+      minimumBudgetAmountMicros_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
@@ -812,12 +812,12 @@ private static final long serialVersionUID = 0L;
      * the amount field value.
      * </pre>
      *
-     * <code>int64 minimum_bugdet_amount_micros = 3;</code>
+     * <code>int64 minimum_budget_amount_micros = 3;</code>
      * @return This builder for chaining.
      */
-    public Builder clearMinimumBugdetAmountMicros() {
+    public Builder clearMinimumBudgetAmountMicros() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      minimumBugdetAmountMicros_ = 0L;
+      minimumBudgetAmountMicros_ = 0L;
       onChanged();
       return this;
     }

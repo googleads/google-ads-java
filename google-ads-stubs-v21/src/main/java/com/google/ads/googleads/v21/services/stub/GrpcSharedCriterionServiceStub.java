@@ -51,6 +51,7 @@ public class GrpcSharedCriterionServiceStub extends SharedCriterionServiceStub {
                   ProtoUtils.marshaller(MutateSharedCriteriaRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateSharedCriteriaResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateSharedCriteriaRequest, MutateSharedCriteriaResponse>

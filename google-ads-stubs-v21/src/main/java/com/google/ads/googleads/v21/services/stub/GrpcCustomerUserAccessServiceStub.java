@@ -53,6 +53,7 @@ public class GrpcCustomerUserAccessServiceStub extends CustomerUserAccessService
                   ProtoUtils.marshaller(MutateCustomerUserAccessRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomerUserAccessResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCustomerUserAccessRequest, MutateCustomerUserAccessResponse>

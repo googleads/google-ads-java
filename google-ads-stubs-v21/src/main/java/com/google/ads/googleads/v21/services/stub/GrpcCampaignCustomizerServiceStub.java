@@ -53,6 +53,7 @@ public class GrpcCampaignCustomizerServiceStub extends CampaignCustomizerService
                   ProtoUtils.marshaller(MutateCampaignCustomizersRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignCustomizersResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCampaignCustomizersRequest, MutateCampaignCustomizersResponse>

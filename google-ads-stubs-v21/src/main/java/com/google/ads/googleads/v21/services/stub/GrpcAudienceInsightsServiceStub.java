@@ -66,6 +66,7 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
                   ProtoUtils.marshaller(GenerateInsightsFinderReportRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateInsightsFinderReportResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -82,6 +83,7 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       ListAudienceInsightsAttributesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -96,6 +98,7 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
                   ProtoUtils.marshaller(ListInsightsEligibleDatesRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListInsightsEligibleDatesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -114,6 +117,7 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       GenerateAudienceCompositionInsightsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -132,6 +136,7 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       GenerateSuggestedTargetingInsightsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -149,6 +154,7 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       GenerateAudienceOverlapInsightsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -167,6 +173,7 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       GenerateTargetingSuggestionMetricsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

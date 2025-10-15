@@ -48,10 +48,10 @@ public interface BudgetPerDayMinimumErrorDetailsOrBuilder extends
    * the amount field value.
    * </pre>
    *
-   * <code>int64 minimum_bugdet_amount_micros = 3;</code>
-   * @return The minimumBugdetAmountMicros.
+   * <code>int64 minimum_budget_amount_micros = 3;</code>
+   * @return The minimumBudgetAmountMicros.
    */
-  long getMinimumBugdetAmountMicros();
+  long getMinimumBudgetAmountMicros();
 
   /**
    * <pre>

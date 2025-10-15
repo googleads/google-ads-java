@@ -59,6 +59,7 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
                   ProtoUtils.marshaller(GenerateKeywordIdeasRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateKeywordIdeaResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -76,6 +77,7 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       GenerateKeywordHistoricalMetricsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<GenerateAdGroupThemesRequest, GenerateAdGroupThemesResponse>
@@ -88,6 +90,7 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
                   ProtoUtils.marshaller(GenerateAdGroupThemesRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateAdGroupThemesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -104,6 +107,7 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       GenerateKeywordForecastMetricsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>

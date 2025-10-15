@@ -53,6 +53,7 @@ public class GrpcCustomerAssetSetServiceStub extends CustomerAssetSetServiceStub
                   ProtoUtils.marshaller(MutateCustomerAssetSetsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomerAssetSetsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCustomerAssetSetsRequest, MutateCustomerAssetSetsResponse>

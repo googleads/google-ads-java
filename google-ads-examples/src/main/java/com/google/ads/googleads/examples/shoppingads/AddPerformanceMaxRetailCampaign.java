@@ -15,56 +15,59 @@
 package com.google.ads.googleads.examples.shoppingads;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
-import static com.google.ads.googleads.v21.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
+import static com.google.ads.googleads.v22.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v21.common.ImageAsset;
-import com.google.ads.googleads.v21.common.LanguageInfo;
-import com.google.ads.googleads.v21.common.LocationInfo;
-import com.google.ads.googleads.v21.common.MaximizeConversionValue;
-import com.google.ads.googleads.v21.common.TextAsset;
-import com.google.ads.googleads.v21.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v21.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v21.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v21.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v21.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v21.enums.ConversionActionCategoryEnum.ConversionActionCategory;
-import com.google.ads.googleads.v21.enums.ConversionOriginEnum.ConversionOrigin;
-import com.google.ads.googleads.v21.enums.ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource;
-import com.google.ads.googleads.v21.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
-import com.google.ads.googleads.v21.errors.GoogleAdsError;
-import com.google.ads.googleads.v21.errors.GoogleAdsException;
-import com.google.ads.googleads.v21.resources.Asset;
-import com.google.ads.googleads.v21.resources.AssetGroup;
-import com.google.ads.googleads.v21.resources.AssetGroupAsset;
-import com.google.ads.googleads.v21.resources.AssetGroupListingGroupFilter;
-import com.google.ads.googleads.v21.resources.Campaign;
-import com.google.ads.googleads.v21.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v21.resources.CampaignAsset;
-import com.google.ads.googleads.v21.resources.CampaignBudget;
-import com.google.ads.googleads.v21.resources.CampaignConversionGoal;
-import com.google.ads.googleads.v21.resources.CampaignCriterion;
-import com.google.ads.googleads.v21.resources.CustomerConversionGoal;
-import com.google.ads.googleads.v21.services.AssetGroupAssetOperation;
-import com.google.ads.googleads.v21.services.AssetGroupListingGroupFilterOperation;
-import com.google.ads.googleads.v21.services.AssetGroupOperation;
-import com.google.ads.googleads.v21.services.AssetOperation;
-import com.google.ads.googleads.v21.services.CampaignAssetOperation;
-import com.google.ads.googleads.v21.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v21.services.CampaignConversionGoalOperation;
-import com.google.ads.googleads.v21.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v21.services.CampaignOperation;
-import com.google.ads.googleads.v21.services.GoogleAdsRow;
-import com.google.ads.googleads.v21.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v21.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v21.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v21.services.MutateOperation;
-import com.google.ads.googleads.v21.services.MutateOperationResponse;
-import com.google.ads.googleads.v21.utils.ResourceNames;
+import com.google.ads.googleads.v22.common.ImageAsset;
+import com.google.ads.googleads.v22.common.LanguageInfo;
+import com.google.ads.googleads.v22.common.LocationInfo;
+import com.google.ads.googleads.v22.common.MaximizeConversionValue;
+import com.google.ads.googleads.v22.common.TextAsset;
+import com.google.ads.googleads.v22.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v22.enums.AssetAutomationStatusEnum.AssetAutomationStatus;
+import com.google.ads.googleads.v22.enums.AssetAutomationTypeEnum.AssetAutomationType;
+import com.google.ads.googleads.v22.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v22.enums.AssetGroupStatusEnum.AssetGroupStatus;
+import com.google.ads.googleads.v22.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v22.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v22.enums.ConversionActionCategoryEnum.ConversionActionCategory;
+import com.google.ads.googleads.v22.enums.ConversionOriginEnum.ConversionOrigin;
+import com.google.ads.googleads.v22.enums.ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource;
+import com.google.ads.googleads.v22.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
+import com.google.ads.googleads.v22.errors.GoogleAdsError;
+import com.google.ads.googleads.v22.errors.GoogleAdsException;
+import com.google.ads.googleads.v22.resources.Asset;
+import com.google.ads.googleads.v22.resources.AssetGroup;
+import com.google.ads.googleads.v22.resources.AssetGroupAsset;
+import com.google.ads.googleads.v22.resources.AssetGroupListingGroupFilter;
+import com.google.ads.googleads.v22.resources.Campaign;
+import com.google.ads.googleads.v22.resources.Campaign.AssetAutomationSetting;
+import com.google.ads.googleads.v22.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v22.resources.CampaignAsset;
+import com.google.ads.googleads.v22.resources.CampaignBudget;
+import com.google.ads.googleads.v22.resources.CampaignConversionGoal;
+import com.google.ads.googleads.v22.resources.CampaignCriterion;
+import com.google.ads.googleads.v22.resources.CustomerConversionGoal;
+import com.google.ads.googleads.v22.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v22.services.AssetGroupListingGroupFilterOperation;
+import com.google.ads.googleads.v22.services.AssetGroupOperation;
+import com.google.ads.googleads.v22.services.AssetOperation;
+import com.google.ads.googleads.v22.services.CampaignAssetOperation;
+import com.google.ads.googleads.v22.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v22.services.CampaignConversionGoalOperation;
+import com.google.ads.googleads.v22.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v22.services.CampaignOperation;
+import com.google.ads.googleads.v22.services.GoogleAdsRow;
+import com.google.ads.googleads.v22.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v22.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v22.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v22.services.MutateOperation;
+import com.google.ads.googleads.v22.services.MutateOperationResponse;
+import com.google.ads.googleads.v22.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -125,11 +128,6 @@ public class AddPerformanceMaxRetailCampaign {
     private long merchantCenterAccountId;
 
     @Parameter(
-        names = ArgumentNames.SALES_COUNTRY,
-        description = "The sales country of products to include in the campaign.")
-    private String salesCountry = "US";
-
-    @Parameter(
         names = ArgumentNames.FINAL_URL,
         required = true,
         description =
@@ -138,11 +136,11 @@ public class AddPerformanceMaxRetailCampaign {
     private String finalUrl;
 
     @Parameter(
-        names = "--brandGuidelinesEnabled",
+        names = ArgumentNames.BRAND_GUIDELINES_ENABLED,
         arity = 1,
         description =
             "A boolean value indicating if the created campaign is enabled for brand guidelines")
-    private boolean brandGuidelinesEnabled = false;
+    private boolean brandGuidelinesEnabled = true;
   }
 
   public static void main(String[] args) throws IOException {
@@ -154,9 +152,6 @@ public class AddPerformanceMaxRetailCampaign {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.merchantCenterAccountId = Long.parseLong("INSERT_MERCHANT_CENTER_ACCOUNT_ID_HERE");
       params.finalUrl = "INSERT_FINAL_URL_HERE";
-
-      // Optionally set the sales country.
-      // params.salesCountry = "INSERT_SALES_COUNTRY_HERE";
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -177,7 +172,6 @@ public class AddPerformanceMaxRetailCampaign {
               googleAdsClient,
               params.customerId,
               params.merchantCenterAccountId,
-              params.salesCountry,
               params.finalUrl,
               params.brandGuidelinesEnabled);
     } catch (GoogleAdsException gae) {
@@ -203,7 +197,6 @@ public class AddPerformanceMaxRetailCampaign {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param merchantCenterAccountId the Merchant Center account ID.
-   * @param salesCountry sales country of products to include in the campaign.
    * @param finalUrl final URL for the asset group of the campaign.
    * @param brandGuidelinesEnabled indicates if the campaign is enabled for brand guidelines.
    */
@@ -211,7 +204,6 @@ public class AddPerformanceMaxRetailCampaign {
       GoogleAdsClient googleAdsClient,
       long customerId,
       long merchantCenterAccountId,
-      String salesCountry,
       String finalUrl,
       boolean brandGuidelinesEnabled)
       throws IOException {
@@ -247,7 +239,7 @@ public class AddPerformanceMaxRetailCampaign {
     mutateOperations.add(createCampaignBudgetOperation(customerId));
     mutateOperations.add(
         createPerformanceMaxCampaignOperation(
-            customerId, merchantCenterAccountId, salesCountry, brandGuidelinesEnabled));
+            customerId, merchantCenterAccountId, brandGuidelinesEnabled));
     mutateOperations.addAll(createCampaignCriterionOperations(customerId));
     String assetGroupResourceName = ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID);
     mutateOperations.add(createAssetGroupOperation(customerId, assetGroupResourceName, finalUrl));
@@ -301,7 +293,6 @@ public class AddPerformanceMaxRetailCampaign {
   private MutateOperation createPerformanceMaxCampaignOperation(
       long customerId,
       long merchantCenterAccountId,
-      String salesCountry,
       boolean brandGuidelinesEnabled) {
     Campaign performanceMaxCampaign =
         Campaign.newBuilder()
@@ -346,18 +337,6 @@ public class AddPerformanceMaxRetailCampaign {
                     // Removing the feedLabel field will use products from all feeds.
                     // .setFeedLabel("INSERT_FEED_LABEL_HERE")
                     .build())
-            // Sets the Final URL expansion opt out. This flag is specific to
-            // Performance Max campaigns. If opted out (true), only the final URLs in
-            // the asset group or URLs specified in the advertiser's Google Merchant
-            // Center or business data feeds are targeted.
-            //
-            // If opted in (false), the entire domain will be targeted. For best
-            // results, set this value to false to opt in and allow URL expansions. You
-            // can optionally add exclusions to limit traffic to parts of your website.
-            //
-            // Sets to true for this Retail campaign so the final URLs will be limited to those
-            // explicitly surfaced via Google Merchant Center.
-            .setUrlExpansionOptOut(true)
             // Sets if the campaign is enabled for brand guidelines. For more information on brand
             // guidelines, see https://support.google.com/google-ads/answer/14934472.
             .setBrandGuidelinesEnabled(brandGuidelinesEnabled)
@@ -371,6 +350,24 @@ public class AddPerformanceMaxRetailCampaign {
             // Optional fields.
             .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
             .setEndDate(new DateTime().plusDays(365).toString("yyyyMMdd"))
+            // Configures the optional opt-in/out status for asset automation settings.
+            .addAllAssetAutomationSettings(ImmutableList.of(
+                AssetAutomationSetting.newBuilder()
+                    .setAssetAutomationType(AssetAutomationType.GENERATE_IMAGE_EXTRACTION)
+                    .setAssetAutomationStatus(AssetAutomationStatus.OPTED_IN).build(),
+                AssetAutomationSetting.newBuilder()
+                    .setAssetAutomationType(
+                        AssetAutomationType.FINAL_URL_EXPANSION_TEXT_ASSET_AUTOMATION)
+                    .setAssetAutomationStatus(AssetAutomationStatus.OPTED_IN).build(),
+                AssetAutomationSetting.newBuilder()
+                    .setAssetAutomationType(AssetAutomationType.TEXT_ASSET_AUTOMATION)
+                    .setAssetAutomationStatus(AssetAutomationStatus.OPTED_IN).build(),
+                AssetAutomationSetting.newBuilder()
+                    .setAssetAutomationType(AssetAutomationType.GENERATE_ENHANCED_YOUTUBE_VIDEOS)
+                    .setAssetAutomationStatus(AssetAutomationStatus.OPTED_IN).build(),
+                AssetAutomationSetting.newBuilder()
+                    .setAssetAutomationType(AssetAutomationType.GENERATE_IMAGE_ENHANCEMENT)
+                    .setAssetAutomationStatus(AssetAutomationStatus.OPTED_IN).build()))
             .build();
 
     return MutateOperation.newBuilder()

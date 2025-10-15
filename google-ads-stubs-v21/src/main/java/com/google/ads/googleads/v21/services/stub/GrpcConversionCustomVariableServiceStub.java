@@ -56,6 +56,7 @@ public class GrpcConversionCustomVariableServiceStub extends ConversionCustomVar
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       MutateConversionCustomVariablesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

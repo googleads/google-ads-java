@@ -57,6 +57,7 @@ public class GrpcRecommendationSubscriptionServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       MutateRecommendationSubscriptionResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

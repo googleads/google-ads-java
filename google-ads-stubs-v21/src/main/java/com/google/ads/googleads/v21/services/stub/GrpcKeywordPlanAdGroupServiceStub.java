@@ -53,6 +53,7 @@ public class GrpcKeywordPlanAdGroupServiceStub extends KeywordPlanAdGroupService
                   ProtoUtils.marshaller(MutateKeywordPlanAdGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateKeywordPlanAdGroupsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateKeywordPlanAdGroupsRequest, MutateKeywordPlanAdGroupsResponse>

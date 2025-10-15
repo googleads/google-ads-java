@@ -59,6 +59,7 @@ public class GrpcAutomaticallyCreatedAssetRemovalServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       RemoveCampaignAutomaticallyCreatedAssetResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

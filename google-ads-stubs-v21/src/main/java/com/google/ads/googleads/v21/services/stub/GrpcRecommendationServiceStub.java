@@ -55,6 +55,7 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
                   ProtoUtils.marshaller(ApplyRecommendationRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ApplyRecommendationResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<DismissRecommendationRequest, DismissRecommendationResponse>
@@ -67,6 +68,7 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
                   ProtoUtils.marshaller(DismissRecommendationRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(DismissRecommendationResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -81,6 +83,7 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
                   ProtoUtils.marshaller(GenerateRecommendationsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateRecommendationsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<ApplyRecommendationRequest, ApplyRecommendationResponse>

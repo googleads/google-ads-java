@@ -51,6 +51,7 @@ public class GrpcAdGroupCriterionServiceStub extends AdGroupCriterionServiceStub
                   ProtoUtils.marshaller(MutateAdGroupCriteriaRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateAdGroupCriteriaResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateAdGroupCriteriaRequest, MutateAdGroupCriteriaResponse>

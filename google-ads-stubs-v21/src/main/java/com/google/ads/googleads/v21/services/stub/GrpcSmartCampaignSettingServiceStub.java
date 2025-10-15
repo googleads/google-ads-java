@@ -55,6 +55,7 @@ public class GrpcSmartCampaignSettingServiceStub extends SmartCampaignSettingSer
                   ProtoUtils.marshaller(GetSmartCampaignStatusRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GetSmartCampaignStatusResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -69,6 +70,7 @@ public class GrpcSmartCampaignSettingServiceStub extends SmartCampaignSettingSer
                   ProtoUtils.marshaller(MutateSmartCampaignSettingsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateSmartCampaignSettingsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<GetSmartCampaignStatusRequest, GetSmartCampaignStatusResponse>

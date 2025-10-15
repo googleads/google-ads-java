@@ -55,6 +55,7 @@ public class GrpcContentCreatorInsightsServiceStub extends ContentCreatorInsight
                   ProtoUtils.marshaller(GenerateCreatorInsightsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateCreatorInsightsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -69,6 +70,7 @@ public class GrpcContentCreatorInsightsServiceStub extends ContentCreatorInsight
                   ProtoUtils.marshaller(GenerateTrendingInsightsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateTrendingInsightsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<GenerateCreatorInsightsRequest, GenerateCreatorInsightsResponse>

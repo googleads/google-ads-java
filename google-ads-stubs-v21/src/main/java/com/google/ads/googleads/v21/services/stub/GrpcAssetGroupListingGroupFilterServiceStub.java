@@ -58,6 +58,7 @@ public class GrpcAssetGroupListingGroupFilterServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       MutateAssetGroupListingGroupFiltersResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

@@ -57,6 +57,7 @@ public class GrpcKeywordPlanCampaignKeywordServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       MutateKeywordPlanCampaignKeywordsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

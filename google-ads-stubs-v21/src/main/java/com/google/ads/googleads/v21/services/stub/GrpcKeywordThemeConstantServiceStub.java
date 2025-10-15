@@ -52,6 +52,7 @@ public class GrpcKeywordThemeConstantServiceStub extends KeywordThemeConstantSer
                   ProtoUtils.marshaller(SuggestKeywordThemeConstantsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(SuggestKeywordThemeConstantsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

@@ -51,6 +51,7 @@ public class GrpcCustomInterestServiceStub extends CustomInterestServiceStub {
                   ProtoUtils.marshaller(MutateCustomInterestsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomInterestsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCustomInterestsRequest, MutateCustomInterestsResponse>

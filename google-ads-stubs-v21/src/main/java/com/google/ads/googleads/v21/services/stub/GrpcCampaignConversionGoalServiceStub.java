@@ -54,6 +54,7 @@ public class GrpcCampaignConversionGoalServiceStub extends CampaignConversionGoa
                   ProtoUtils.marshaller(MutateCampaignConversionGoalsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignConversionGoalsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

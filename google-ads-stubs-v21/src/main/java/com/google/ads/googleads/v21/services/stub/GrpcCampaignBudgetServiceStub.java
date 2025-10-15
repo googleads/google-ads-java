@@ -51,6 +51,7 @@ public class GrpcCampaignBudgetServiceStub extends CampaignBudgetServiceStub {
                   ProtoUtils.marshaller(MutateCampaignBudgetsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignBudgetsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCampaignBudgetsRequest, MutateCampaignBudgetsResponse>

@@ -54,6 +54,7 @@ public class GrpcGoogleAdsFieldServiceStub extends GoogleAdsFieldServiceStub {
               .setRequestMarshaller(
                   ProtoUtils.marshaller(GetGoogleAdsFieldRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(GoogleAdsField.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse>
@@ -66,6 +67,7 @@ public class GrpcGoogleAdsFieldServiceStub extends GoogleAdsFieldServiceStub {
                   ProtoUtils.marshaller(SearchGoogleAdsFieldsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(SearchGoogleAdsFieldsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<GetGoogleAdsFieldRequest, GoogleAdsField> getGoogleAdsFieldCallable;

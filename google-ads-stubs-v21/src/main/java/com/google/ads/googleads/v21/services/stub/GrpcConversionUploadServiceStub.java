@@ -55,6 +55,7 @@ public class GrpcConversionUploadServiceStub extends ConversionUploadServiceStub
                   ProtoUtils.marshaller(UploadClickConversionsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(UploadClickConversionsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<UploadCallConversionsRequest, UploadCallConversionsResponse>
@@ -67,6 +68,7 @@ public class GrpcConversionUploadServiceStub extends ConversionUploadServiceStub
                   ProtoUtils.marshaller(UploadCallConversionsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(UploadCallConversionsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<UploadClickConversionsRequest, UploadClickConversionsResponse>

@@ -53,6 +53,7 @@ public class GrpcAccountLinkServiceStub extends AccountLinkServiceStub {
                   ProtoUtils.marshaller(CreateAccountLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(CreateAccountLinkResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<MutateAccountLinkRequest, MutateAccountLinkResponse>
@@ -65,6 +66,7 @@ public class GrpcAccountLinkServiceStub extends AccountLinkServiceStub {
                   ProtoUtils.marshaller(MutateAccountLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateAccountLinkResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<CreateAccountLinkRequest, CreateAccountLinkResponse>

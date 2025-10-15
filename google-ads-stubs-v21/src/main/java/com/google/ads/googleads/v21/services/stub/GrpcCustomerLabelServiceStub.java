@@ -51,6 +51,7 @@ public class GrpcCustomerLabelServiceStub extends CustomerLabelServiceStub {
                   ProtoUtils.marshaller(MutateCustomerLabelsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomerLabelsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCustomerLabelsRequest, MutateCustomerLabelsResponse>

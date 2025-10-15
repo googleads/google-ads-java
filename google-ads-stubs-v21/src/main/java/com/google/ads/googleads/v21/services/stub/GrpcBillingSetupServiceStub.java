@@ -51,6 +51,7 @@ public class GrpcBillingSetupServiceStub extends BillingSetupServiceStub {
                   ProtoUtils.marshaller(MutateBillingSetupRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateBillingSetupResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateBillingSetupRequest, MutateBillingSetupResponse>

@@ -823,7 +823,7 @@ public final class ErrorsProto {
       "e\022\026\n\016existing_count\030\004 \001(\005\"\201\002\n\037BudgetPerD" +
       "ayMinimumErrorDetails\022\025\n\rcurrency_code\030\001" +
       " \001(\t\022%\n\035budget_per_day_minimum_micros\030\002 " +
-      "\001(\003\022$\n\034minimum_bugdet_amount_micros\030\003 \001(" +
+      "\001(\003\022$\n\034minimum_budget_amount_micros\030\003 \001(" +
       "\003\022*\n\"minimum_budget_total_amount_micros\030" +
       "\004 \001(\003\022#\n\033failed_budget_amount_micros\030\005 \001" +
       "(\003\022)\n!failed_budget_total_amount_micros\030" +
@@ -1068,7 +1068,7 @@ public final class ErrorsProto {
     internal_static_google_ads_googleads_v21_errors_BudgetPerDayMinimumErrorDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v21_errors_BudgetPerDayMinimumErrorDetails_descriptor,
-        new java.lang.String[] { "CurrencyCode", "BudgetPerDayMinimumMicros", "MinimumBugdetAmountMicros", "MinimumBudgetTotalAmountMicros", "FailedBudgetAmountMicros", "FailedBudgetTotalAmountMicros", });
+        new java.lang.String[] { "CurrencyCode", "BudgetPerDayMinimumMicros", "MinimumBudgetAmountMicros", "MinimumBudgetTotalAmountMicros", "FailedBudgetAmountMicros", "FailedBudgetTotalAmountMicros", });
     com.google.ads.googleads.v21.common.PolicyProto.getDescriptor();
     com.google.ads.googleads.v21.common.ValueProto.getDescriptor();
     com.google.ads.googleads.v21.enums.ResourceLimitTypeProto.getDescriptor();

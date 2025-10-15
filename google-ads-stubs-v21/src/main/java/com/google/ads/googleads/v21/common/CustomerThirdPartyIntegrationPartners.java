@@ -7,7 +7,6 @@ package com.google.ads.googleads.v21.common;
 /**
  * <pre>
  * Container for Customer level third party integration partners.
- * Next Id = 5
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v21.common.CustomerThirdPartyIntegrationPartners}
@@ -498,7 +497,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Container for Customer level third party integration partners.
-   * Next Id = 5
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v21.common.CustomerThirdPartyIntegrationPartners}

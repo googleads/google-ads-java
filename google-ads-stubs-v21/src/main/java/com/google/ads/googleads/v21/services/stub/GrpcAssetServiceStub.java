@@ -49,6 +49,7 @@ public class GrpcAssetServiceStub extends AssetServiceStub {
               .setRequestMarshaller(ProtoUtils.marshaller(MutateAssetsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateAssetsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateAssetsRequest, MutateAssetsResponse> mutateAssetsCallable;

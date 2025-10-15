@@ -51,6 +51,7 @@ public class GrpcCustomAudienceServiceStub extends CustomAudienceServiceStub {
                   ProtoUtils.marshaller(MutateCustomAudiencesRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomAudiencesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCustomAudiencesRequest, MutateCustomAudiencesResponse>

@@ -51,6 +51,7 @@ public class GrpcCampaignLabelServiceStub extends CampaignLabelServiceStub {
                   ProtoUtils.marshaller(MutateCampaignLabelsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignLabelsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCampaignLabelsRequest, MutateCampaignLabelsResponse>

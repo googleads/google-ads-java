@@ -53,6 +53,7 @@ public class GrpcCustomConversionGoalServiceStub extends CustomConversionGoalSer
                   ProtoUtils.marshaller(MutateCustomConversionGoalsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomConversionGoalsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

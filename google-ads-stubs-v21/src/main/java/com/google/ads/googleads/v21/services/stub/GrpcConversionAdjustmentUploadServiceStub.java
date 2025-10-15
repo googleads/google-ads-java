@@ -54,6 +54,7 @@ public class GrpcConversionAdjustmentUploadServiceStub
                   ProtoUtils.marshaller(UploadConversionAdjustmentsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(UploadConversionAdjustmentsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

@@ -53,6 +53,7 @@ public class GrpcCampaignSharedSetServiceStub extends CampaignSharedSetServiceSt
                   ProtoUtils.marshaller(MutateCampaignSharedSetsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignSharedSetsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCampaignSharedSetsRequest, MutateCampaignSharedSetsResponse>

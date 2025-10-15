@@ -51,6 +51,7 @@ public class GrpcBrandSuggestionServiceStub extends BrandSuggestionServiceStub {
                   ProtoUtils.marshaller(SuggestBrandsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(SuggestBrandsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<SuggestBrandsRequest, SuggestBrandsResponse> suggestBrandsCallable;

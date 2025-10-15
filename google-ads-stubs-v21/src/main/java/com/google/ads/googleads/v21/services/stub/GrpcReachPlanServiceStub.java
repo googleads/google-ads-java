@@ -63,6 +63,7 @@ public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
                   ProtoUtils.marshaller(GenerateConversionRatesRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateConversionRatesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -77,6 +78,7 @@ public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
                   ProtoUtils.marshaller(ListPlannableLocationsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListPlannableLocationsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<ListPlannableProductsRequest, ListPlannableProductsResponse>
@@ -89,6 +91,7 @@ public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
                   ProtoUtils.marshaller(ListPlannableProductsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListPlannableProductsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<GenerateReachForecastRequest, GenerateReachForecastResponse>
@@ -101,6 +104,7 @@ public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
                   ProtoUtils.marshaller(GenerateReachForecastRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateReachForecastResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -115,6 +119,7 @@ public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
                   ProtoUtils.marshaller(ListPlannableUserListsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListPlannableUserListsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -129,6 +134,7 @@ public class GrpcReachPlanServiceStub extends ReachPlanServiceStub {
                   ProtoUtils.marshaller(ListPlannableUserInterestsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListPlannableUserInterestsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<GenerateConversionRatesRequest, GenerateConversionRatesResponse>

@@ -58,6 +58,7 @@ public class GrpcCustomerUserAccessInvitationServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       MutateCustomerUserAccessInvitationResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

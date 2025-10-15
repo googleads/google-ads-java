@@ -50,6 +50,7 @@ public class GrpcAdGroupServiceStub extends AdGroupServiceStub {
                   ProtoUtils.marshaller(MutateAdGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateAdGroupsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateAdGroupsRequest, MutateAdGroupsResponse> mutateAdGroupsCallable;

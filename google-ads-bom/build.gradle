@@ -126,7 +126,7 @@ dependencies {
     // This makes this BOM inherit all dependency versions from the Google Cloud
     // BOM. This version is determined based on the current used version of
     // google-cloud-shared-dependencies.
-    api(platform("com.google.cloud:libraries-bom:26.65.0"))
+    api(platform("com.google.cloud:libraries-bom:26.69.0"))
 
     // Add constraints for all of this project's artifacts.
     constraints {
