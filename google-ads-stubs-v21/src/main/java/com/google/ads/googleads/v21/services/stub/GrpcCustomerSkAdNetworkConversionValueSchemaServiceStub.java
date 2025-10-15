@@ -59,6 +59,7 @@ public class GrpcCustomerSkAdNetworkConversionValueSchemaServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       MutateCustomerSkAdNetworkConversionValueSchemaResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

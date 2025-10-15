@@ -51,6 +51,7 @@ public class GrpcGeoTargetConstantServiceStub extends GeoTargetConstantServiceSt
                   ProtoUtils.marshaller(SuggestGeoTargetConstantsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(SuggestGeoTargetConstantsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>

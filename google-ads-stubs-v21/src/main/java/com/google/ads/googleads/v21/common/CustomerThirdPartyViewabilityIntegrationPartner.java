@@ -7,7 +7,6 @@ package com.google.ads.googleads.v21.common;
 /**
  * <pre>
  * Container for third party viewability integration data for Customer.
- * Next Id = 3
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v21.common.CustomerThirdPartyViewabilityIntegrationPartner}
@@ -259,7 +258,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Container for third party viewability integration data for Customer.
-   * Next Id = 3
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v21.common.CustomerThirdPartyViewabilityIntegrationPartner}

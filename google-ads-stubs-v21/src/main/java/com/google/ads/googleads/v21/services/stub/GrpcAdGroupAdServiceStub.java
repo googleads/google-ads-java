@@ -53,6 +53,7 @@ public class GrpcAdGroupAdServiceStub extends AdGroupAdServiceStub {
                   ProtoUtils.marshaller(MutateAdGroupAdsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateAdGroupAdsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<RemoveAutomaticallyCreatedAssetsRequest, Empty>
@@ -65,6 +66,7 @@ public class GrpcAdGroupAdServiceStub extends AdGroupAdServiceStub {
                   ProtoUtils.marshaller(
                       RemoveAutomaticallyCreatedAssetsRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>

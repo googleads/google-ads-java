@@ -56,6 +56,7 @@ public class GrpcCustomerLifecycleGoalServiceStub extends CustomerLifecycleGoalS
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       ConfigureCustomerLifecycleGoalsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

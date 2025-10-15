@@ -53,6 +53,7 @@ public class GrpcCustomerCustomizerServiceStub extends CustomerCustomizerService
                   ProtoUtils.marshaller(MutateCustomerCustomizersRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomerCustomizersResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCustomerCustomizersRequest, MutateCustomerCustomizersResponse>

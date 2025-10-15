@@ -58,6 +58,7 @@ public class GrpcBiddingSeasonalityAdjustmentServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       MutateBiddingSeasonalityAdjustmentsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

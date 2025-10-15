@@ -53,6 +53,7 @@ public class GrpcConversionActionServiceStub extends ConversionActionServiceStub
                   ProtoUtils.marshaller(MutateConversionActionsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateConversionActionsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateConversionActionsRequest, MutateConversionActionsResponse>

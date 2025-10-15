@@ -53,6 +53,7 @@ public class GrpcShareablePreviewServiceStub extends ShareablePreviewServiceStub
                   ProtoUtils.marshaller(GenerateShareablePreviewsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateShareablePreviewsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<GenerateShareablePreviewsRequest, GenerateShareablePreviewsResponse>

@@ -60,6 +60,7 @@ public class GrpcOfflineUserDataJobServiceStub extends OfflineUserDataJobService
                   ProtoUtils.marshaller(CreateOfflineUserDataJobRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(CreateOfflineUserDataJobResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -77,6 +78,7 @@ public class GrpcOfflineUserDataJobServiceStub extends OfflineUserDataJobService
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       AddOfflineUserDataJobOperationsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<RunOfflineUserDataJobRequest, Operation>
@@ -88,6 +90,7 @@ public class GrpcOfflineUserDataJobServiceStub extends OfflineUserDataJobService
               .setRequestMarshaller(
                   ProtoUtils.marshaller(RunOfflineUserDataJobRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<CreateOfflineUserDataJobRequest, CreateOfflineUserDataJobResponse>

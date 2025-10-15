@@ -51,6 +51,7 @@ public class GrpcTravelAssetSuggestionServiceStub extends TravelAssetSuggestionS
                   ProtoUtils.marshaller(SuggestTravelAssetsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(SuggestTravelAssetsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<SuggestTravelAssetsRequest, SuggestTravelAssetsResponse>

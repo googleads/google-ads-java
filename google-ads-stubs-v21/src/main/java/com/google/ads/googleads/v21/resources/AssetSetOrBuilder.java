@@ -133,10 +133,10 @@ public interface AssetSetOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. Parent asset set id for the asset set where the elements of this
+   * Immutable. Parent asset set ID for the asset set where the elements of this
    * asset set come from. For example: the sync level location AssetSet id where
-   * the the elements in LocationGroup AssetSet come from. This field is
-   * required and only applicable for Location Group typed AssetSet.
+   * the elements in LocationGroup AssetSet come from. This field is required
+   * and only applicable for Location Group typed AssetSet.
    * </pre>
    *
    * <code>int64 location_group_parent_asset_set_id = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>

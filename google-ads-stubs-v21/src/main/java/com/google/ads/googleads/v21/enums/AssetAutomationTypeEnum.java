@@ -125,8 +125,8 @@ private static final long serialVersionUID = 0L;
      * Controls automation for text assets related to Final URL expansion. This
      * includes automatically creating dynamic landing pages from the final URL
      * and generating text assets from the content of those landing pages. This
-     * setting only applies to Search campaigns, and advertisers are opted-out
-     * by default.
+     * setting is turned OFF by default for Search campaigns, but it is turned
+     * ON by default for Performance Max campaigns.
      * </pre>
      *
      * <code>FINAL_URL_EXPANSION_TEXT_ASSET_AUTOMATION = 11;</code>
@@ -208,8 +208,8 @@ private static final long serialVersionUID = 0L;
      * Controls automation for text assets related to Final URL expansion. This
      * includes automatically creating dynamic landing pages from the final URL
      * and generating text assets from the content of those landing pages. This
-     * setting only applies to Search campaigns, and advertisers are opted-out
-     * by default.
+     * setting is turned OFF by default for Search campaigns, but it is turned
+     * ON by default for Performance Max campaigns.
      * </pre>
      *
      * <code>FINAL_URL_EXPANSION_TEXT_ASSET_AUTOMATION = 11;</code>

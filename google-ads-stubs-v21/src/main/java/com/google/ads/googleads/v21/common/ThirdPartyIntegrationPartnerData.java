@@ -7,7 +7,6 @@ package com.google.ads.googleads.v21.common;
 /**
  * <pre>
  * Contains third party measurement partner related data for video campaigns.
- * Next Id = 3
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v21.common.ThirdPartyIntegrationPartnerData}
@@ -313,7 +312,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Contains third party measurement partner related data for video campaigns.
-   * Next Id = 3
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v21.common.ThirdPartyIntegrationPartnerData}

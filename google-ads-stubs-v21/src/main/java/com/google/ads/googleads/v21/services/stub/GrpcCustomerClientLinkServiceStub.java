@@ -53,6 +53,7 @@ public class GrpcCustomerClientLinkServiceStub extends CustomerClientLinkService
                   ProtoUtils.marshaller(MutateCustomerClientLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomerClientLinkResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>

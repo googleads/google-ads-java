@@ -57,6 +57,7 @@ public class GrpcProductLinkInvitationServiceStub extends ProductLinkInvitationS
                   ProtoUtils.marshaller(CreateProductLinkInvitationRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(CreateProductLinkInvitationResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -71,6 +72,7 @@ public class GrpcProductLinkInvitationServiceStub extends ProductLinkInvitationS
                   ProtoUtils.marshaller(UpdateProductLinkInvitationRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(UpdateProductLinkInvitationResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -85,6 +87,7 @@ public class GrpcProductLinkInvitationServiceStub extends ProductLinkInvitationS
                   ProtoUtils.marshaller(RemoveProductLinkInvitationRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(RemoveProductLinkInvitationResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

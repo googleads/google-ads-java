@@ -29,12 +29,16 @@ package com.google.ads.googleads.v21.resources;
  *   - Only products that are included by the specified campaign are returned.
  *   - Metrics and some fields (see the per-field documentation) are restricted
  *     to the specified campaign.
+ *   - Only the following metrics are supported for Demand Gen and Video
+ *     campaigns: impressions, clicks, ctr.
  * Ad group:
  *   - An equality filter on `ad group` and `campaign` is specified. Supported
  *     campaign types are Shopping, Demand Gen, Video.
  *   - Only products that are included by the specified campaign are returned.
  *   - Metrics and some fields (see the per-field documentation) are restricted
  *     to the specified ad group.
+ *   - Only the following metrics are supported for Demand Gen and Video
+ *     campaigns: impressions, clicks, ctr.
  * Note that segmentation by date segments is not permitted and will return
  * UNSUPPORTED_DATE_SEGMENTATION error. On the other hand, filtering on date
  * segments is allowed.
@@ -4424,12 +4428,16 @@ private static final long serialVersionUID = 0L;
    *   - Only products that are included by the specified campaign are returned.
    *   - Metrics and some fields (see the per-field documentation) are restricted
    *     to the specified campaign.
+   *   - Only the following metrics are supported for Demand Gen and Video
+   *     campaigns: impressions, clicks, ctr.
    * Ad group:
    *   - An equality filter on `ad group` and `campaign` is specified. Supported
    *     campaign types are Shopping, Demand Gen, Video.
    *   - Only products that are included by the specified campaign are returned.
    *   - Metrics and some fields (see the per-field documentation) are restricted
    *     to the specified ad group.
+   *   - Only the following metrics are supported for Demand Gen and Video
+   *     campaigns: impressions, clicks, ctr.
    * Note that segmentation by date segments is not permitted and will return
    * UNSUPPORTED_DATE_SEGMENTATION error. On the other hand, filtering on date
    * segments is allowed.

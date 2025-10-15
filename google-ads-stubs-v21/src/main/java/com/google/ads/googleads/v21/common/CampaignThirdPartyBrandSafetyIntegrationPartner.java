@@ -7,7 +7,6 @@ package com.google.ads.googleads.v21.common;
 /**
  * <pre>
  * Container for third party brand safety integration data for Campaign.
- * Next Id = 3
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v21.common.CampaignThirdPartyBrandSafetyIntegrationPartner}
@@ -288,7 +287,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Container for third party brand safety integration data for Campaign.
-   * Next Id = 3
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v21.common.CampaignThirdPartyBrandSafetyIntegrationPartner}

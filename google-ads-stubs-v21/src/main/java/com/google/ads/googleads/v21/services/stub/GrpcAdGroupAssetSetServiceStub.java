@@ -53,6 +53,7 @@ public class GrpcAdGroupAssetSetServiceStub extends AdGroupAssetSetServiceStub {
                   ProtoUtils.marshaller(MutateAdGroupAssetSetsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateAdGroupAssetSetsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateAdGroupAssetSetsRequest, MutateAdGroupAssetSetsResponse>

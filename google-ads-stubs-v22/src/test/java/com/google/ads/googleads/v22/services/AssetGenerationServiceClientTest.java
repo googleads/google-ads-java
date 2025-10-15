@@ -1,0 +1,193 @@
+/*
+ * Copyright 2025 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.google.ads.googleads.v22.services;
+
+import com.google.ads.googleads.v22.enums.AssetFieldTypeEnum;
+import com.google.api.gax.core.NoCredentialsProvider;
+import com.google.api.gax.grpc.GaxGrpcProperties;
+import com.google.api.gax.grpc.testing.LocalChannelProvider;
+import com.google.api.gax.grpc.testing.MockGrpcService;
+import com.google.api.gax.grpc.testing.MockServiceHelper;
+import com.google.api.gax.rpc.ApiClientHeaderProvider;
+import com.google.api.gax.rpc.InvalidArgumentException;
+import com.google.protobuf.AbstractMessage;
+import io.grpc.StatusRuntimeException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
+import javax.annotation.Generated;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+@Generated("by gapic-generator-java")
+public class AssetGenerationServiceClientTest {
+  private static MockAssetGenerationService mockAssetGenerationService;
+  private static MockServiceHelper mockServiceHelper;
+  private LocalChannelProvider channelProvider;
+  private AssetGenerationServiceClient client;
+
+  @BeforeClass
+  public static void startStaticServer() {
+    mockAssetGenerationService = new MockAssetGenerationService();
+    mockServiceHelper =
+        new MockServiceHelper(
+            UUID.randomUUID().toString(),
+            Arrays.<MockGrpcService>asList(mockAssetGenerationService));
+    mockServiceHelper.start();
+  }
+
+  @AfterClass
+  public static void stopServer() {
+    mockServiceHelper.stop();
+  }
+
+  @Before
+  public void setUp() throws IOException {
+    mockServiceHelper.reset();
+    channelProvider = mockServiceHelper.createChannelProvider();
+    AssetGenerationServiceSettings settings =
+        AssetGenerationServiceSettings.newBuilder()
+            .setTransportChannelProvider(channelProvider)
+            .setCredentialsProvider(NoCredentialsProvider.create())
+            .build();
+    client = AssetGenerationServiceClient.create(settings);
+  }
+
+  @After
+  public void tearDown() throws Exception {
+    client.close();
+  }
+
+  @Test
+  public void generateTextTest() throws Exception {
+    GenerateTextResponse expectedResponse =
+        GenerateTextResponse.newBuilder()
+            .addAllGeneratedText(new ArrayList<GeneratedText>())
+            .build();
+    mockAssetGenerationService.addResponse(expectedResponse);
+
+    GenerateTextRequest request =
+        GenerateTextRequest.newBuilder()
+            .setCustomerId("customerId-1581184615")
+            .addAllAssetFieldTypes(new ArrayList<AssetFieldTypeEnum.AssetFieldType>())
+            .setFinalUrl("finalUrl-681275367")
+            .setFreeformPrompt("freeformPrompt-230510924")
+            .addAllKeywords(new ArrayList<String>())
+            .build();
+
+    GenerateTextResponse actualResponse = client.generateText(request);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAssetGenerationService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GenerateTextRequest actualRequest = ((GenerateTextRequest) actualRequests.get(0));
+
+    Assert.assertEquals(request.getCustomerId(), actualRequest.getCustomerId());
+    Assert.assertEquals(request.getAssetFieldTypesList(), actualRequest.getAssetFieldTypesList());
+    Assert.assertEquals(request.getFinalUrl(), actualRequest.getFinalUrl());
+    Assert.assertEquals(request.getFreeformPrompt(), actualRequest.getFreeformPrompt());
+    Assert.assertEquals(request.getKeywordsList(), actualRequest.getKeywordsList());
+    Assert.assertEquals(
+        request.getExistingGenerationContext(), actualRequest.getExistingGenerationContext());
+    Assert.assertEquals(
+        request.getAdvertisingChannelType(), actualRequest.getAdvertisingChannelType());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void generateTextExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAssetGenerationService.addException(exception);
+
+    try {
+      GenerateTextRequest request =
+          GenerateTextRequest.newBuilder()
+              .setCustomerId("customerId-1581184615")
+              .addAllAssetFieldTypes(new ArrayList<AssetFieldTypeEnum.AssetFieldType>())
+              .setFinalUrl("finalUrl-681275367")
+              .setFreeformPrompt("freeformPrompt-230510924")
+              .addAllKeywords(new ArrayList<String>())
+              .build();
+      client.generateText(request);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void generateImagesTest() throws Exception {
+    GenerateImagesResponse expectedResponse =
+        GenerateImagesResponse.newBuilder()
+            .addAllGeneratedImages(new ArrayList<GeneratedImage>())
+            .build();
+    mockAssetGenerationService.addResponse(expectedResponse);
+
+    GenerateImagesRequest request =
+        GenerateImagesRequest.newBuilder()
+            .setCustomerId("customerId-1581184615")
+            .addAllAssetFieldTypes(new ArrayList<AssetFieldTypeEnum.AssetFieldType>())
+            .build();
+
+    GenerateImagesResponse actualResponse = client.generateImages(request);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAssetGenerationService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GenerateImagesRequest actualRequest = ((GenerateImagesRequest) actualRequests.get(0));
+
+    Assert.assertEquals(request.getCustomerId(), actualRequest.getCustomerId());
+    Assert.assertEquals(request.getAssetFieldTypesList(), actualRequest.getAssetFieldTypesList());
+    Assert.assertEquals(
+        request.getAdvertisingChannelType(), actualRequest.getAdvertisingChannelType());
+    Assert.assertEquals(request.getFinalUrlGeneration(), actualRequest.getFinalUrlGeneration());
+    Assert.assertEquals(request.getFreeformGeneration(), actualRequest.getFreeformGeneration());
+    Assert.assertEquals(
+        request.getProductRecontextGeneration(), actualRequest.getProductRecontextGeneration());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void generateImagesExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAssetGenerationService.addException(exception);
+
+    try {
+      GenerateImagesRequest request =
+          GenerateImagesRequest.newBuilder()
+              .setCustomerId("customerId-1581184615")
+              .addAllAssetFieldTypes(new ArrayList<AssetFieldTypeEnum.AssetFieldType>())
+              .build();
+      client.generateImages(request);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+}

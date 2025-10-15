@@ -53,6 +53,7 @@ public class GrpcCampaignCriterionServiceStub extends CampaignCriterionServiceSt
                   ProtoUtils.marshaller(MutateCampaignCriteriaRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignCriteriaResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCampaignCriteriaRequest, MutateCampaignCriteriaResponse>

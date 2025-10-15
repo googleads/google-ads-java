@@ -51,6 +51,7 @@ public class GrpcCampaignGroupServiceStub extends CampaignGroupServiceStub {
                   ProtoUtils.marshaller(MutateCampaignGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignGroupsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCampaignGroupsRequest, MutateCampaignGroupsResponse>

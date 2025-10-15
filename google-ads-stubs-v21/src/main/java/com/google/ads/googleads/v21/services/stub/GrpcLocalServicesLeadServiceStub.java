@@ -55,6 +55,7 @@ public class GrpcLocalServicesLeadServiceStub extends LocalServicesLeadServiceSt
                   ProtoUtils.marshaller(AppendLeadConversationRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(AppendLeadConversationResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<ProvideLeadFeedbackRequest, ProvideLeadFeedbackResponse>
@@ -67,6 +68,7 @@ public class GrpcLocalServicesLeadServiceStub extends LocalServicesLeadServiceSt
                   ProtoUtils.marshaller(ProvideLeadFeedbackRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ProvideLeadFeedbackResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<AppendLeadConversationRequest, AppendLeadConversationResponse>

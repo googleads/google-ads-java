@@ -54,6 +54,7 @@ public class GrpcConversionValueRuleSetServiceStub extends ConversionValueRuleSe
                   ProtoUtils.marshaller(MutateConversionValueRuleSetsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateConversionValueRuleSetsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

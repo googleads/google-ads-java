@@ -50,6 +50,7 @@ public class GrpcUserDataServiceStub extends UserDataServiceStub {
                   ProtoUtils.marshaller(UploadUserDataRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(UploadUserDataResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<UploadUserDataRequest, UploadUserDataResponse> uploadUserDataCallable;

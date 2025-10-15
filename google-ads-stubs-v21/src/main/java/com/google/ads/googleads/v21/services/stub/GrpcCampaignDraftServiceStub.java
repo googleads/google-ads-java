@@ -59,6 +59,7 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                   ProtoUtils.marshaller(MutateCampaignDraftsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignDraftsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<PromoteCampaignDraftRequest, Operation>
@@ -70,6 +71,7 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
               .setRequestMarshaller(
                   ProtoUtils.marshaller(PromoteCampaignDraftRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -85,6 +87,7 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                   ProtoUtils.marshaller(ListCampaignDraftAsyncErrorsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListCampaignDraftAsyncErrorsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>

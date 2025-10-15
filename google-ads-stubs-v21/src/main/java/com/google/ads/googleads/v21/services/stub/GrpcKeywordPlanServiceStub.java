@@ -51,6 +51,7 @@ public class GrpcKeywordPlanServiceStub extends KeywordPlanServiceStub {
                   ProtoUtils.marshaller(MutateKeywordPlansRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateKeywordPlansResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateKeywordPlansRequest, MutateKeywordPlansResponse>

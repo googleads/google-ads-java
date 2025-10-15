@@ -7,7 +7,6 @@ package com.google.ads.googleads.v21.common;
 /**
  * <pre>
  * Container for third party reach integration data for Campaign.
- * Next Id = 4
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v21.common.CampaignThirdPartyReachIntegrationPartner}
@@ -315,7 +314,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Container for third party reach integration data for Campaign.
-   * Next Id = 4
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v21.common.CampaignThirdPartyReachIntegrationPartner}

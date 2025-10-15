@@ -51,6 +51,7 @@ public class GrpcAdParameterServiceStub extends AdParameterServiceStub {
                   ProtoUtils.marshaller(MutateAdParametersRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateAdParametersResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateAdParametersRequest, MutateAdParametersResponse>

@@ -57,6 +57,7 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
                   ProtoUtils.marshaller(SearchGoogleAdsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(SearchGoogleAdsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<SearchGoogleAdsStreamRequest, SearchGoogleAdsStreamResponse>
@@ -68,6 +69,7 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
                   ProtoUtils.marshaller(SearchGoogleAdsStreamRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(SearchGoogleAdsStreamResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<MutateGoogleAdsRequest, MutateGoogleAdsResponse>
@@ -79,6 +81,7 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
                   ProtoUtils.marshaller(MutateGoogleAdsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateGoogleAdsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<SearchGoogleAdsRequest, SearchGoogleAdsResponse> searchCallable;

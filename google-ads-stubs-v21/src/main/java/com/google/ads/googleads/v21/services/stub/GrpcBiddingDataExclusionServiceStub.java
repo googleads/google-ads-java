@@ -53,6 +53,7 @@ public class GrpcBiddingDataExclusionServiceStub extends BiddingDataExclusionSer
                   ProtoUtils.marshaller(MutateBiddingDataExclusionsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateBiddingDataExclusionsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

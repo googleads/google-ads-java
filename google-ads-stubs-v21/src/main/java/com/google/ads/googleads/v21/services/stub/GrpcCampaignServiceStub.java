@@ -53,6 +53,7 @@ public class GrpcCampaignServiceStub extends CampaignServiceStub {
                   ProtoUtils.marshaller(MutateCampaignsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -67,6 +68,7 @@ public class GrpcCampaignServiceStub extends CampaignServiceStub {
                   ProtoUtils.marshaller(EnablePMaxBrandGuidelinesRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(EnablePMaxBrandGuidelinesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCampaignsRequest, MutateCampaignsResponse>

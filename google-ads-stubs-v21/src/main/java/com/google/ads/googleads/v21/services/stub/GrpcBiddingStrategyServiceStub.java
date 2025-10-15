@@ -53,6 +53,7 @@ public class GrpcBiddingStrategyServiceStub extends BiddingStrategyServiceStub {
                   ProtoUtils.marshaller(MutateBiddingStrategiesRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateBiddingStrategiesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateBiddingStrategiesRequest, MutateBiddingStrategiesResponse>

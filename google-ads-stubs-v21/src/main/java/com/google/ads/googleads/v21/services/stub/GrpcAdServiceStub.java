@@ -48,6 +48,7 @@ public class GrpcAdServiceStub extends AdServiceStub {
               .setFullMethodName("google.ads.googleads.v21.services.AdService/MutateAds")
               .setRequestMarshaller(ProtoUtils.marshaller(MutateAdsRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(MutateAdsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateAdsRequest, MutateAdsResponse> mutateAdsCallable;

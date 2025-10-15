@@ -53,6 +53,7 @@ public class GrpcRemarketingActionServiceStub extends RemarketingActionServiceSt
                   ProtoUtils.marshaller(MutateRemarketingActionsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateRemarketingActionsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateRemarketingActionsRequest, MutateRemarketingActionsResponse>

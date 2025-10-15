@@ -53,6 +53,7 @@ public class GrpcUserListCustomerTypeServiceStub extends UserListCustomerTypeSer
                   ProtoUtils.marshaller(MutateUserListCustomerTypesRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateUserListCustomerTypesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

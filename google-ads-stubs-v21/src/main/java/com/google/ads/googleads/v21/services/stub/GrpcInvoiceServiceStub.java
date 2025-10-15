@@ -49,6 +49,7 @@ public class GrpcInvoiceServiceStub extends InvoiceServiceStub {
               .setRequestMarshaller(ProtoUtils.marshaller(ListInvoicesRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListInvoicesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<ListInvoicesRequest, ListInvoicesResponse> listInvoicesCallable;

@@ -55,6 +55,7 @@ public class GrpcCustomerManagerLinkServiceStub extends CustomerManagerLinkServi
                   ProtoUtils.marshaller(MutateCustomerManagerLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomerManagerLinkResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<MoveManagerLinkRequest, MoveManagerLinkResponse>
@@ -67,6 +68,7 @@ public class GrpcCustomerManagerLinkServiceStub extends CustomerManagerLinkServi
                   ProtoUtils.marshaller(MoveManagerLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MoveManagerLinkResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>

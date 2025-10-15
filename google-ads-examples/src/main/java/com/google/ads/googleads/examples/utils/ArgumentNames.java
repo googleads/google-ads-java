@@ -31,6 +31,7 @@ public final class ArgumentNames {
   public static final String BASE_CAMPAIGN_ID = "--baseCampaignId";
   public static final String BID_MODIFIER_VALUE = "--bidModifierValue";
   public static final String BILLING_SETUP_ID = "--billingSetupId";
+  public static final String BRAND_GUIDELINES_ENABLED = "--brandGuidelinesEnabled";
   public static final String BRIDGE_MAP_VERSION_ID = "--bridgeMapVersionId";
   public static final String BUSINESS_NAME = "--businessName";
   public static final String BUSINESS_PROFILE_LOCATION = "--businessProfileLocation";

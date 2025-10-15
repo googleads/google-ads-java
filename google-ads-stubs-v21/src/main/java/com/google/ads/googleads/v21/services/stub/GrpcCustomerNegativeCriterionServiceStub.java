@@ -55,6 +55,7 @@ public class GrpcCustomerNegativeCriterionServiceStub extends CustomerNegativeCr
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       MutateCustomerNegativeCriteriaResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

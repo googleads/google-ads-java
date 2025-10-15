@@ -53,6 +53,7 @@ public class GrpcAccountBudgetProposalServiceStub extends AccountBudgetProposalS
                   ProtoUtils.marshaller(MutateAccountBudgetProposalRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateAccountBudgetProposalResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

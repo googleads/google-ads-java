@@ -51,6 +51,7 @@ public class GrpcExperimentArmServiceStub extends ExperimentArmServiceStub {
                   ProtoUtils.marshaller(MutateExperimentArmsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateExperimentArmsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateExperimentArmsRequest, MutateExperimentArmsResponse>

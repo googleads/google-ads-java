@@ -51,6 +51,7 @@ public class GrpcPaymentsAccountServiceStub extends PaymentsAccountServiceStub {
                   ProtoUtils.marshaller(ListPaymentsAccountsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListPaymentsAccountsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<ListPaymentsAccountsRequest, ListPaymentsAccountsResponse>

@@ -53,6 +53,7 @@ public class GrpcCustomizerAttributeServiceStub extends CustomizerAttributeServi
                   ProtoUtils.marshaller(MutateCustomizerAttributesRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomizerAttributesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCustomizerAttributesRequest, MutateCustomizerAttributesResponse>

@@ -7,7 +7,6 @@ package com.google.ads.googleads.v21.resources;
 /**
  * <pre>
  * A detail content suitability placement view.
- * {-- next tag to use: 6 --}
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v21.resources.DetailContentSuitabilityPlacementView}
@@ -478,7 +477,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A detail content suitability placement view.
-   * {-- next tag to use: 6 --}
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v21.resources.DetailContentSuitabilityPlacementView}

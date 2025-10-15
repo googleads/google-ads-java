@@ -15,47 +15,51 @@
 package com.google.ads.googleads.examples.advancedoperations;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
-import static com.google.ads.googleads.v21.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
+import static com.google.ads.googleads.v22.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v21.common.AudienceInfo;
-import com.google.ads.googleads.v21.common.ImageAsset;
-import com.google.ads.googleads.v21.common.LanguageInfo;
-import com.google.ads.googleads.v21.common.LocationInfo;
-import com.google.ads.googleads.v21.common.MaximizeConversionValue;
-import com.google.ads.googleads.v21.common.SearchThemeInfo;
-import com.google.ads.googleads.v21.common.TextAsset;
-import com.google.ads.googleads.v21.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v21.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v21.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v21.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v21.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v21.errors.GoogleAdsError;
-import com.google.ads.googleads.v21.errors.GoogleAdsException;
-import com.google.ads.googleads.v21.resources.Asset;
-import com.google.ads.googleads.v21.resources.AssetGroup;
-import com.google.ads.googleads.v21.resources.AssetGroupAsset;
-import com.google.ads.googleads.v21.resources.AssetGroupSignal;
-import com.google.ads.googleads.v21.resources.Campaign;
-import com.google.ads.googleads.v21.resources.CampaignAsset;
-import com.google.ads.googleads.v21.resources.CampaignBudget;
-import com.google.ads.googleads.v21.resources.CampaignCriterion;
-import com.google.ads.googleads.v21.services.AssetGroupAssetOperation;
-import com.google.ads.googleads.v21.services.AssetGroupOperation;
-import com.google.ads.googleads.v21.services.AssetGroupSignalOperation;
-import com.google.ads.googleads.v21.services.AssetOperation;
-import com.google.ads.googleads.v21.services.CampaignAssetOperation;
-import com.google.ads.googleads.v21.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v21.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v21.services.CampaignOperation;
-import com.google.ads.googleads.v21.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v21.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v21.services.MutateOperation;
-import com.google.ads.googleads.v21.services.MutateOperationResponse;
-import com.google.ads.googleads.v21.utils.ResourceNames;
+import com.google.ads.googleads.v22.common.AudienceInfo;
+import com.google.ads.googleads.v22.common.ImageAsset;
+import com.google.ads.googleads.v22.common.LanguageInfo;
+import com.google.ads.googleads.v22.common.LocationInfo;
+import com.google.ads.googleads.v22.common.MaximizeConversionValue;
+import com.google.ads.googleads.v22.common.SearchThemeInfo;
+import com.google.ads.googleads.v22.common.TextAsset;
+import com.google.ads.googleads.v22.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v22.enums.AssetAutomationStatusEnum.AssetAutomationStatus;
+import com.google.ads.googleads.v22.enums.AssetAutomationTypeEnum.AssetAutomationType;
+import com.google.ads.googleads.v22.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v22.enums.AssetGroupStatusEnum.AssetGroupStatus;
+import com.google.ads.googleads.v22.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v22.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v22.errors.GoogleAdsError;
+import com.google.ads.googleads.v22.errors.GoogleAdsException;
+import com.google.ads.googleads.v22.resources.Asset;
+import com.google.ads.googleads.v22.resources.AssetGroup;
+import com.google.ads.googleads.v22.resources.AssetGroupAsset;
+import com.google.ads.googleads.v22.resources.AssetGroupSignal;
+import com.google.ads.googleads.v22.resources.Campaign;
+import com.google.ads.googleads.v22.resources.Campaign.AssetAutomationSetting;
+import com.google.ads.googleads.v22.resources.Campaign.AssetAutomationSettingOrBuilder;
+import com.google.ads.googleads.v22.resources.CampaignAsset;
+import com.google.ads.googleads.v22.resources.CampaignBudget;
+import com.google.ads.googleads.v22.resources.CampaignCriterion;
+import com.google.ads.googleads.v22.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v22.services.AssetGroupOperation;
+import com.google.ads.googleads.v22.services.AssetGroupSignalOperation;
+import com.google.ads.googleads.v22.services.AssetOperation;
+import com.google.ads.googleads.v22.services.CampaignAssetOperation;
+import com.google.ads.googleads.v22.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v22.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v22.services.CampaignOperation;
+import com.google.ads.googleads.v22.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v22.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v22.services.MutateOperation;
+import com.google.ads.googleads.v22.services.MutateOperationResponse;
+import com.google.ads.googleads.v22.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -112,11 +116,11 @@ public class AddPerformanceMaxCampaign {
     private Long audienceId;
 
     @Parameter(
-        names = "--brandGuidelinesEnabled",
+        names = ArgumentNames.BRAND_GUIDELINES_ENABLED,
         arity = 1,
         description =
             "A boolean value indicating if the created campaign is enabled for brand guidelines")
-    private boolean brandGuidelinesEnabled = false;
+    private boolean brandGuidelinesEnabled = true;
   }
 
   public static void main(String[] args) throws IOException {
@@ -273,14 +277,6 @@ public class AddPerformanceMaxCampaign {
             // A targetRoas of 3.5 corresponds to a 350% return on ad spend.
             .setMaximizeConversionValue(
                 MaximizeConversionValue.newBuilder().setTargetRoas(3.5).build())
-            // Sets the Final URL expansion opt out. This flag is specific to
-            // Performance Max campaigns. If opted out (True), only the final URLs in
-            // the asset group or URLs specified in the advertiser's Google Merchant
-            // Center or business data feeds are targeted.
-            // If opted in (False), the entire domain will be targeted. For best
-            // results, set this value to false to opt in and allow URL expansions. You
-            // can optionally add exclusions to limit traffic to parts of your website.
-            .setUrlExpansionOptOut(false)
             // Sets if the campaign is enabled for brand guidelines. For more information on brand
             // guidelines, see https://support.google.com/google-ads/answer/14934472.
             .setBrandGuidelinesEnabled(brandGuidelinesEnabled)
@@ -294,6 +290,26 @@ public class AddPerformanceMaxCampaign {
             // Optional fields.
             .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
             .setEndDate(new DateTime().plusDays(365).toString("yyyyMMdd"))
+            // [START add_pmax_asset_automation_settings]
+            // Configures the optional opt-in/out status for asset automation settings.
+            .addAllAssetAutomationSettings(ImmutableList.of(
+                AssetAutomationSetting.newBuilder()
+                    .setAssetAutomationType(AssetAutomationType.GENERATE_IMAGE_EXTRACTION)
+                    .setAssetAutomationStatus(AssetAutomationStatus.OPTED_IN).build(),
+                AssetAutomationSetting.newBuilder()
+                    .setAssetAutomationType(
+                        AssetAutomationType.FINAL_URL_EXPANSION_TEXT_ASSET_AUTOMATION)
+                    .setAssetAutomationStatus(AssetAutomationStatus.OPTED_IN).build(),
+                AssetAutomationSetting.newBuilder()
+                    .setAssetAutomationType(AssetAutomationType.TEXT_ASSET_AUTOMATION)
+                    .setAssetAutomationStatus(AssetAutomationStatus.OPTED_IN).build(),
+                AssetAutomationSetting.newBuilder()
+                    .setAssetAutomationType(AssetAutomationType.GENERATE_ENHANCED_YOUTUBE_VIDEOS)
+                    .setAssetAutomationStatus(AssetAutomationStatus.OPTED_IN).build(),
+                AssetAutomationSetting.newBuilder()
+                    .setAssetAutomationType(AssetAutomationType.GENERATE_IMAGE_ENHANCEMENT)
+                    .setAssetAutomationStatus(AssetAutomationStatus.OPTED_IN).build()))
+            // [END add_pmax_asset_automation_settings]
             .build();
 
     return MutateOperation.newBuilder()
@@ -650,7 +666,7 @@ public class AddPerformanceMaxCampaign {
 
   /**
    * Creates a list of MutateOperations that create {@link
-   * com.google.ads.googleads.v21.resources.AssetGroupSignal} objects.
+   * com.google.ads.googleads.v22.resources.AssetGroupSignal} objects.
    */
   private List<MutateOperation> createAssetGroupSignalOperations(
       long customerId, String assetGroupResourceName, Long audienceId) {

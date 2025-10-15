@@ -54,6 +54,7 @@ public class GrpcCustomerConversionGoalServiceStub extends CustomerConversionGoa
                   ProtoUtils.marshaller(MutateCustomerConversionGoalsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomerConversionGoalsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

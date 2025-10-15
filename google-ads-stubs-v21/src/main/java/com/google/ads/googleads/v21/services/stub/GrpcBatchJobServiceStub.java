@@ -61,6 +61,7 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
                   ProtoUtils.marshaller(MutateBatchJobRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateBatchJobResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<ListBatchJobResultsRequest, ListBatchJobResultsResponse>
@@ -73,6 +74,7 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
                   ProtoUtils.marshaller(ListBatchJobResultsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListBatchJobResultsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<RunBatchJobRequest, Operation> runBatchJobMethodDescriptor =
@@ -81,6 +83,7 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
           .setFullMethodName("google.ads.googleads.v21.services.BatchJobService/RunBatchJob")
           .setRequestMarshaller(ProtoUtils.marshaller(RunBatchJobRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
+          .setSampledToLocalTracing(true)
           .build();
 
   private static final MethodDescriptor<AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>
@@ -93,6 +96,7 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
                   ProtoUtils.marshaller(AddBatchJobOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(AddBatchJobOperationsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateBatchJobRequest, MutateBatchJobResponse> mutateBatchJobCallable;

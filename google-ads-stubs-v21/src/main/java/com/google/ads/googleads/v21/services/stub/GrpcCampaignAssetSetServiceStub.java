@@ -53,6 +53,7 @@ public class GrpcCampaignAssetSetServiceStub extends CampaignAssetSetServiceStub
                   ProtoUtils.marshaller(MutateCampaignAssetSetsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignAssetSetsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCampaignAssetSetsRequest, MutateCampaignAssetSetsResponse>

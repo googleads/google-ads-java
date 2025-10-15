@@ -51,6 +51,7 @@ public class GrpcSharedSetServiceStub extends SharedSetServiceStub {
                   ProtoUtils.marshaller(MutateSharedSetsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateSharedSetsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateSharedSetsRequest, MutateSharedSetsResponse>

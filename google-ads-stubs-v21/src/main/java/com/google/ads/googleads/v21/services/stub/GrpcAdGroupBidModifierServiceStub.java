@@ -53,6 +53,7 @@ public class GrpcAdGroupBidModifierServiceStub extends AdGroupBidModifierService
                   ProtoUtils.marshaller(MutateAdGroupBidModifiersRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateAdGroupBidModifiersResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateAdGroupBidModifiersRequest, MutateAdGroupBidModifiersResponse>

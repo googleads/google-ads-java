@@ -1,3 +1,9 @@
+41.0.0 - 2025-10-15
+-------------------
+- Add support and examples for v22 of the Google Ads API.
+- Updated the AddPerformanceMaxCampaign and AddPerformanceMaxRetailCampaign
+  examples to set available asset automation settings.
+
 40.0.0 - 2025-09-03
 -------------------
 - Add the google-ads-bom module to assist users with dependency management.

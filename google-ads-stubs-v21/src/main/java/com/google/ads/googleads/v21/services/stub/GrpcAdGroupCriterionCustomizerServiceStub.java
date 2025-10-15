@@ -57,6 +57,7 @@ public class GrpcAdGroupCriterionCustomizerServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       MutateAdGroupCriterionCustomizersResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

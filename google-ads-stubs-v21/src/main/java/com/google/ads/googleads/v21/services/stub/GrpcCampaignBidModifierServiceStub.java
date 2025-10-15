@@ -53,6 +53,7 @@ public class GrpcCampaignBidModifierServiceStub extends CampaignBidModifierServi
                   ProtoUtils.marshaller(MutateCampaignBidModifiersRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCampaignBidModifiersResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCampaignBidModifiersRequest, MutateCampaignBidModifiersResponse>

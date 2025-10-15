@@ -58,6 +58,7 @@ public class GrpcConversionGoalCampaignConfigServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       MutateConversionGoalCampaignConfigsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<
