@@ -404,6 +404,42 @@ public class GoogleAdsClientTest {
   }
 
   @Test
+  public void build_withEnableApplicationDefaultCredentials_succeeds() {
+    // Note: this test will fail if run in an environment where ADC are not configured.
+    // For tests, this is configured via the build system.
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .enableApplicationDefaultCredentials()
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .build();
+    assertNotNull(client.getCredentials());
+  }
+
+  @Test
+  public void buildFromProperties_withUseApplicationDefaultCredentials_succeeds() {
+    // Note: this test will fail if run in an environment where ADC are not configured.
+    // For tests, this is configured via the build system.
+    testProperties.remove(ConfigPropertyKey.CLIENT_ID.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey());
+    testProperties.remove(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey());
+    testProperties.setProperty(
+        ConfigPropertyKey.USE_APPLICATION_DEFAULT_CREDENTIALS.getPropertyKey(), "true");
+    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+    assertNotNull(client.getCredentials());
+  }
+
+  @Test
+  public void buildFromProperties_withUseApplicationDefaultCredentialsAndOtherCredentials_fails() {
+    testProperties.setProperty(
+        ConfigPropertyKey.USE_APPLICATION_DEFAULT_CREDENTIALS.getPropertyKey(), "true");
+    IllegalArgumentException exception =
+        assertThrows(
+            IllegalArgumentException.class,
+            () -> GoogleAdsClient.newBuilder().fromProperties(testProperties));
+    assertThat(exception.getMessage(), Matchers.containsString("other credential types"));
+  }
+
+  @Test
   public void buildFromEnvironment_mergeWithProperties_withUserCredentials() throws IOException {
     Map<String, String> environment =
         ImmutableMap.<String, String>builder()
