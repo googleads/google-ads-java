@@ -6,7 +6,7 @@
 # https://developers.google.com/google-ads/api/docs/client-libs/java/quick-start
 #
 # - By default this is searched for in ~/ads.properties.
-#   e.g. GoogleAdsClient.newBuilder().fromPropertiesFile() 
+#   e.g. GoogleAdsClient.newBuilder().fromPropertiesFile()
 #
 # - Can load from an arbitrary path.
 #   e.g. GoogleAdsClient.newBuilder().fromPropertiesFile("some/path")
@@ -16,7 +16,11 @@
 #          .fromPropertiesFile() // optionally load from config file.
 #          .setDeveloperToken("your_token")
 
-# ------------------------------- OAuth ---------------------------------------
+# ------------------------------- OAuth 2.0 ---------------------------------------
+#
+# The following properties are required for OAuth 2.0 and not required for
+# Application Default Credentials. See comments below for Application Default
+# Credentials.
 
 # OAuth client ID
 #
@@ -29,7 +33,7 @@
 
 # OAuth client secret
 #
-# Specifies the client secret that is used for Google's OAuth 2 API. 
+# Specifies the client secret that is used for Google's OAuth 2 API.
 #
 # - Must be the secret associated with the OAuth clientId.
 # - Created and managed via http://console.developers.google.com.
@@ -37,20 +41,33 @@
 
 # OAuth refresh token
 #
-# Credential which authorizes access to a Google account. 
+# Credential which authorizes access to a Google account.
 #
 # - See guide for instructions on how to obtain a refresh token.
 #   https://developers.google.com/google-ads/api/docs/oauth/client-library
 # - Provides access to all Google Ads accounts on which the associated Google
 #   account is a user.
-# - Ad account is specified by the customerId in each request. 
+# - Ad account is specified by the customerId in each request.
 #api.googleads.refreshToken=
+
+# ------------------- Application Default Credentials --------------------------
+#
+# Specifies whether to use application default credentials.
+#
+# - If true, the library will attempt to authenticate using application default
+#   credentials.
+# - If false or not specified, the library will use the OAuth credentials
+#   specified above.
+# - See https://developers.google.com/identity/protocols/application-default-credentials
+#   for more information on how to configure ADC.
+#
+#api.googleads.useApplicationDefaultCredentials=false
 
 # -------------------------- Google Ads API -----------------------------------
 
 # Developer token
-# 
-# Specifies the credential used to access the Google Ads API. 
+#
+# Specifies the credential used to access the Google Ads API.
 #
 # - Grants access to the API, not any Google account or Google Ads account.
 # - Associated with a Google Ads manager accoount.
@@ -65,7 +82,7 @@
 # Specifies an ad account which grants access to ad accounts.
 #
 # - Must be specified if your access to an ad account is via a manager account.
-# - May be specified in all requests if your Google user has direct access to 
+# - May be specified in all requests if your Google user has direct access to
 #   the ad account.
 # - Ad account access can be managed via http://ads.google.com and navigating
 #   to Tools & Settings -> Account Access

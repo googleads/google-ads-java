@@ -217,6 +217,9 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
      */
     private Optional<GoogleCredentials.Builder> credentialsBuilder = Optional.empty();
 
+    /** Specifies whether to use application default credentials. */
+    private boolean useApplicationDefaultCredentials = false;
+
     /** Returns the credentials currently configured. */
     public abstract Credentials getCredentials();
 
@@ -230,61 +233,81 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
      */
     public abstract Builder setCredentials(Credentials credentials);
 
+    public Builder enableApplicationDefaultCredentials() {
+      this.useApplicationDefaultCredentials = true;
+      return this;
+    }
+
     private void setCredentials(Properties properties) throws IOException {
-      // Validates that entries are present for exactly one of installed app/web flow credentials or
-      // service account credentials.
+      boolean useAdc =
+          Boolean.parseBoolean(
+              ConfigPropertyKey.USE_APPLICATION_DEFAULT_CREDENTIALS.getPropertyValue(properties));
+
       boolean hasInstalledAppKeys =
           INSTALLED_APP_OAUTH_KEYS.stream().anyMatch(k -> k.getPropertyValue(properties) != null);
       boolean hasServiceAccountKeys =
           SERVICE_ACCOUNT_OAUTH_KEYS.stream().anyMatch(k -> k.getPropertyValue(properties) != null);
-      if (!(hasInstalledAppKeys || hasServiceAccountKeys)) {
-        // Entries missing for both types of credentials. Skips any further processing so user can
-        // merge this builder if needed.
-        return;
-      }
 
-      if (hasInstalledAppKeys && hasServiceAccountKeys) {
-        // Entries specified for both types of credentials.
-        throw new IllegalArgumentException(
-            String.format(
-                "Entries found in properties for both %s and %s. Please modify properties to either"
-                    + " include entries for %s if using installed application/web flow credentials,"
-                    + " or %s if using service account credentials.",
-                ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH,
-                ConfigPropertyKey.REFRESH_TOKEN,
-                INSTALLED_APP_OAUTH_KEYS,
-                SERVICE_ACCOUNT_OAUTH_KEYS));
-      }
-
-      if (credentialsBuilder.isPresent()) {
-        if ((credentialsBuilder.get() instanceof UserCredentials.Builder)
-            && hasServiceAccountKeys) {
+      if (useAdc) {
+        if (hasInstalledAppKeys || hasServiceAccountKeys) {
           throw new IllegalArgumentException(
-              "Entries found in properties for service account credentials, "
-                  + "but this builder is already partially configured for installed application/"
-                  + "web flow credentials.");
-        } else if ((credentialsBuilder.get() instanceof ServiceAccountCredentials.Builder)
-            && hasInstalledAppKeys) {
-          throw new IllegalArgumentException(
-              "Entries found in properties for installed application/web flow credentials, but"
-                  + " this builder is already partially configured for service account"
-                  + " credentials.");
+              "Cannot use application default credentials when other credential types are"
+                  + " specified in the configuration. Please remove other credential keys or set"
+                  + " useApplicationDefaultCredentials to false.");
         }
-      }
-
-      // Clears the explicitly set credentials. This ensures that the credentials configured here
-      // will be used, even if the user previously explicitly set credentials. See build() for
-      // details.
-      setCredentials((Credentials) null);
-
-      // Updates the credentials builder using the appropriate set of properties.
-      GoogleCredentials.Builder updatedBuilder;
-      if (hasInstalledAppKeys) {
-        updatedBuilder = configureUserCredentials(properties, credentialsBuilder);
+        enableApplicationDefaultCredentials();
       } else {
-        updatedBuilder = configureServiceAccountCredentials(properties, credentialsBuilder);
+        // Validates that entries are present for exactly one of installed app/web flow credentials
+        // or service account credentials.
+        if (!(hasInstalledAppKeys || hasServiceAccountKeys)) {
+          // Entries missing for all types of credentials. Skips any further processing so user can
+          // merge this builder if needed.
+          return;
+        }
+
+        if (hasInstalledAppKeys && hasServiceAccountKeys) {
+          // Entries specified for both types of credentials.
+          throw new IllegalArgumentException(
+              String.format(
+                  "Entries found in properties for both %s and %s. Please modify properties to either"
+                      + " include entries for %s if using installed application/web flow credentials,"
+                      + " or %s if using service account credentials.",
+                  ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH,
+                  ConfigPropertyKey.REFRESH_TOKEN,
+                  INSTALLED_APP_OAUTH_KEYS,
+                  SERVICE_ACCOUNT_OAUTH_KEYS));
+        }
+
+        if (credentialsBuilder.isPresent()) {
+          if ((credentialsBuilder.get() instanceof UserCredentials.Builder)
+              && hasServiceAccountKeys) {
+            throw new IllegalArgumentException(
+                "Entries found in properties for service account credentials, "
+                    + "but this builder is already partially configured for installed application/"
+                    + "web flow credentials.");
+          } else if ((credentialsBuilder.get() instanceof ServiceAccountCredentials.Builder)
+              && hasInstalledAppKeys) {
+            throw new IllegalArgumentException(
+                "Entries found in properties for installed application/web flow credentials, but"
+                    + " this builder is already partially configured for service account"
+                    + " credentials.");
+          }
+        }
+
+        // Clears the explicitly set credentials. This ensures that the credentials configured here
+        // will be used, even if the user previously explicitly set credentials. See build() for
+        // details.
+        setCredentials((Credentials) null);
+
+        // Updates the credentials builder using the appropriate set of properties.
+        GoogleCredentials.Builder updatedBuilder;
+        if (hasInstalledAppKeys) {
+          updatedBuilder = configureUserCredentials(properties, credentialsBuilder);
+        } else {
+          updatedBuilder = configureServiceAccountCredentials(properties, credentialsBuilder);
+        }
+        credentialsBuilder = Optional.of(updatedBuilder);
       }
-      credentialsBuilder = Optional.of(updatedBuilder);
     }
 
     /**
@@ -342,8 +365,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
         builder = (ServiceAccountCredentials.Builder) optionalBuilder.get();
       } else {
         builder =
-            ServiceAccountCredentials.newBuilder()
-                .setScopes(Collections.singleton(GOOGLE_ADS_API_SCOPE));
+            ServiceAccountCredentials.newBuilder().setScopes(Collections.singleton(GOOGLE_ADS_API_SCOPE));
       }
 
       String serviceAccountSecretsPath =
@@ -614,14 +636,23 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       //   with properties/environment variables that include credential settings. Note that
       //   fromProperties() will set credentials to null in this case.
       // - The user explicitly set credentials via setCredentials(Credentials).
-      if (getCredentials() == null) {
-        if (credentialsBuilder.isPresent()) {
-          // Sets the credentials using the credentials builder.
-          setCredentials(credentialsBuilder.get().build());
-        } else {
-          throw new IllegalStateException("Property \"credentials\" has not been set");
+      if (useApplicationDefaultCredentials) {
+        try {
+          GoogleCredentials credentials =
+              GoogleCredentials.getApplicationDefault().createScoped(Collections.singleton(GOOGLE_ADS_API_SCOPE));
+          setCredentials(credentials);
+        } catch (IOException e) {
+          throw new RuntimeException("Failed to get application default credentials", e);
         }
       } else {
+        if (getCredentials() == null) {
+          if (credentialsBuilder.isPresent()) {
+            // Sets the credentials using the credentials builder.
+            setCredentials(credentialsBuilder.get().build());
+          } else {
+            throw new IllegalStateException("Property \"credentials\" has not been set");
+          }
+        }
         // The last action by the user was to invoke setCredentials(Credentials), so no further
         // action is needed.
       }
@@ -777,7 +808,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       // Service account keys
       SERVICE_ACCOUNT_SECRETS_PATH("api.googleads.serviceAccountSecretsPath"),
       SERVICE_ACCOUNT_USER("api.googleads.serviceAccountUser"),
-      MAX_INBOUND_MESSAGE_BYTES("api.googleads.maxInboundMessageSize");
+      MAX_INBOUND_MESSAGE_BYTES("api.googleads.maxInboundMessageSize"),
+      USE_APPLICATION_DEFAULT_CREDENTIALS("api.googleads.useApplicationDefaultCredentials");
 
       private final String key;
 
