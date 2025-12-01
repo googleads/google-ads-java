@@ -778,8 +778,11 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       GOOGLE_ADS_LINKED_CUSTOMER_ID(ConfigPropertyKey.LINKED_CUSTOMER_ID),
       /** Google Ads API endpoint. Overrides the default endpoint of {@value DEFAULT_ENDPOINT}. */
       GOOGLE_ADS_ENDPOINT(ConfigPropertyKey.ENDPOINT),
-      /** Maximum size of inbound gRPC messages, in bytes */
-      GOOGLE_ADS_MAX_INBOUND_MESSAGE_BYTES(ConfigPropertyKey.MAX_INBOUND_MESSAGE_BYTES);
+      /** Maximum size of inbound gRPC messages, in bytes. */
+      GOOGLE_ADS_MAX_INBOUND_MESSAGE_BYTES(ConfigPropertyKey.MAX_INBOUND_MESSAGE_BYTES),
+      /** Specifies if application default credentials should be used. */
+      GOOGLE_ADS_USE_APPLICATION_DEFAULT_CREDENTIALS(
+          ConfigPropertyKey.USE_APPLICATION_DEFAULT_CREDENTIALS);
 
       /**
        * The {@link ConfigPropertyKey} that this environment variable maps to, if such a mapping
