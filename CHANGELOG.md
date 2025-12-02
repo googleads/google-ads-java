@@ -1,4 +1,4 @@
-41.1.0 - 2025-11-03
+41.1.0 - 2025-12-03
 -------------------
 - Add support for application default credentials. 
 - Upgrade netty version to remove vulnerability.
