@@ -1,3 +1,8 @@
+41.1.0 - 2025-11-03
+-------------------
+- Add support for application default credentials. 
+- Upgrade netty version to remove vulnerability.
+
 41.0.0 - 2025-10-15
 -------------------
 - Add support and examples for v22 of the Google Ads API.
