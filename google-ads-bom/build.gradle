@@ -126,7 +126,7 @@ dependencies {
     // This makes this BOM inherit all dependency versions from the Google Cloud
     // BOM. This version is determined based on the current used version of
     // google-cloud-shared-dependencies.
-    api(platform("com.google.cloud:libraries-bom:26.69.0"))
+    api(platform("com.google.cloud:libraries-bom:26.72.0"))
 
     // Add constraints for all of this project's artifacts.
     constraints {
@@ -136,6 +136,7 @@ dependencies {
         api "com.google.api-ads:google-ads-stubs-v19:${version}"
         api "com.google.api-ads:google-ads-stubs-v20:${version}"
         api "com.google.api-ads:google-ads-stubs-v21:${version}"
+        api "com.google.api-ads:google-ads-stubs-v22:${version}"
     }
 }
 
