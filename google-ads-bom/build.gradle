@@ -136,6 +136,7 @@ dependencies {
         api "com.google.api-ads:google-ads-stubs-v19:${version}"
         api "com.google.api-ads:google-ads-stubs-v20:${version}"
         api "com.google.api-ads:google-ads-stubs-v21:${version}"
+        api "com.google.api-ads:google-ads-stubs-v22:${version}"
     }
 }
 
