@@ -15,59 +15,59 @@
 package com.google.ads.googleads.examples.shoppingads;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
-import static com.google.ads.googleads.v22.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
+import static com.google.ads.googleads.v23.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v22.common.ImageAsset;
-import com.google.ads.googleads.v22.common.LanguageInfo;
-import com.google.ads.googleads.v22.common.LocationInfo;
-import com.google.ads.googleads.v22.common.MaximizeConversionValue;
-import com.google.ads.googleads.v22.common.TextAsset;
-import com.google.ads.googleads.v22.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v22.enums.AssetAutomationStatusEnum.AssetAutomationStatus;
-import com.google.ads.googleads.v22.enums.AssetAutomationTypeEnum.AssetAutomationType;
-import com.google.ads.googleads.v22.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v22.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v22.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v22.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v22.enums.ConversionActionCategoryEnum.ConversionActionCategory;
-import com.google.ads.googleads.v22.enums.ConversionOriginEnum.ConversionOrigin;
-import com.google.ads.googleads.v22.enums.ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource;
-import com.google.ads.googleads.v22.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
-import com.google.ads.googleads.v22.errors.GoogleAdsError;
-import com.google.ads.googleads.v22.errors.GoogleAdsException;
-import com.google.ads.googleads.v22.resources.Asset;
-import com.google.ads.googleads.v22.resources.AssetGroup;
-import com.google.ads.googleads.v22.resources.AssetGroupAsset;
-import com.google.ads.googleads.v22.resources.AssetGroupListingGroupFilter;
-import com.google.ads.googleads.v22.resources.Campaign;
-import com.google.ads.googleads.v22.resources.Campaign.AssetAutomationSetting;
-import com.google.ads.googleads.v22.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v22.resources.CampaignAsset;
-import com.google.ads.googleads.v22.resources.CampaignBudget;
-import com.google.ads.googleads.v22.resources.CampaignConversionGoal;
-import com.google.ads.googleads.v22.resources.CampaignCriterion;
-import com.google.ads.googleads.v22.resources.CustomerConversionGoal;
-import com.google.ads.googleads.v22.services.AssetGroupAssetOperation;
-import com.google.ads.googleads.v22.services.AssetGroupListingGroupFilterOperation;
-import com.google.ads.googleads.v22.services.AssetGroupOperation;
-import com.google.ads.googleads.v22.services.AssetOperation;
-import com.google.ads.googleads.v22.services.CampaignAssetOperation;
-import com.google.ads.googleads.v22.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v22.services.CampaignConversionGoalOperation;
-import com.google.ads.googleads.v22.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v22.services.CampaignOperation;
-import com.google.ads.googleads.v22.services.GoogleAdsRow;
-import com.google.ads.googleads.v22.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v22.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v22.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v22.services.MutateOperation;
-import com.google.ads.googleads.v22.services.MutateOperationResponse;
-import com.google.ads.googleads.v22.utils.ResourceNames;
+import com.google.ads.googleads.v23.common.ImageAsset;
+import com.google.ads.googleads.v23.common.LanguageInfo;
+import com.google.ads.googleads.v23.common.LocationInfo;
+import com.google.ads.googleads.v23.common.MaximizeConversionValue;
+import com.google.ads.googleads.v23.common.TextAsset;
+import com.google.ads.googleads.v23.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v23.enums.AssetAutomationStatusEnum.AssetAutomationStatus;
+import com.google.ads.googleads.v23.enums.AssetAutomationTypeEnum.AssetAutomationType;
+import com.google.ads.googleads.v23.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v23.enums.AssetGroupStatusEnum.AssetGroupStatus;
+import com.google.ads.googleads.v23.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v23.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v23.enums.ConversionActionCategoryEnum.ConversionActionCategory;
+import com.google.ads.googleads.v23.enums.ConversionOriginEnum.ConversionOrigin;
+import com.google.ads.googleads.v23.enums.ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource;
+import com.google.ads.googleads.v23.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
+import com.google.ads.googleads.v23.errors.GoogleAdsError;
+import com.google.ads.googleads.v23.errors.GoogleAdsException;
+import com.google.ads.googleads.v23.resources.Asset;
+import com.google.ads.googleads.v23.resources.AssetGroup;
+import com.google.ads.googleads.v23.resources.AssetGroupAsset;
+import com.google.ads.googleads.v23.resources.AssetGroupListingGroupFilter;
+import com.google.ads.googleads.v23.resources.Campaign;
+import com.google.ads.googleads.v23.resources.Campaign.AssetAutomationSetting;
+import com.google.ads.googleads.v23.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v23.resources.CampaignAsset;
+import com.google.ads.googleads.v23.resources.CampaignBudget;
+import com.google.ads.googleads.v23.resources.CampaignConversionGoal;
+import com.google.ads.googleads.v23.resources.CampaignCriterion;
+import com.google.ads.googleads.v23.resources.CustomerConversionGoal;
+import com.google.ads.googleads.v23.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v23.services.AssetGroupListingGroupFilterOperation;
+import com.google.ads.googleads.v23.services.AssetGroupOperation;
+import com.google.ads.googleads.v23.services.AssetOperation;
+import com.google.ads.googleads.v23.services.CampaignAssetOperation;
+import com.google.ads.googleads.v23.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v23.services.CampaignConversionGoalOperation;
+import com.google.ads.googleads.v23.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v23.services.CampaignOperation;
+import com.google.ads.googleads.v23.services.GoogleAdsRow;
+import com.google.ads.googleads.v23.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v23.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v23.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v23.services.MutateOperation;
+import com.google.ads.googleads.v23.services.MutateOperationResponse;
+import com.google.ads.googleads.v23.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -348,8 +348,8 @@ public class AddPerformanceMaxRetailCampaign {
             // Declares whether this campaign serves political ads targeting the EU.
             .setContainsEuPoliticalAdvertising(DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING)
             // Optional fields.
-            .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
-            .setEndDate(new DateTime().plusDays(365).toString("yyyyMMdd"))
+            .setStartDateTime(new DateTime().plusDays(1).toString("yyyy-MM-dd 00:00:00"))
+            .setEndDateTime(new DateTime().plusDays(365).toString("yyyy-MM-dd 23:59:59"))
             // Configures the optional opt-in/out status for asset automation settings.
             .addAllAssetAutomationSettings(ImmutableList.of(
                 AssetAutomationSetting.newBuilder()

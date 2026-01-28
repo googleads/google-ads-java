@@ -15,51 +15,51 @@
 package com.google.ads.googleads.examples.advancedoperations;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
-import static com.google.ads.googleads.v22.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
+import static com.google.ads.googleads.v23.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v22.common.AdTextAsset;
-import com.google.ads.googleads.v22.common.AppAdInfo;
-import com.google.ads.googleads.v22.common.LanguageInfo;
-import com.google.ads.googleads.v22.common.LocationInfo;
-import com.google.ads.googleads.v22.common.TargetCpa;
-import com.google.ads.googleads.v22.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v22.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v22.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
-import com.google.ads.googleads.v22.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v22.enums.AppCampaignAppStoreEnum.AppCampaignAppStore;
-import com.google.ads.googleads.v22.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType;
-import com.google.ads.googleads.v22.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v22.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v22.errors.GoogleAdsError;
-import com.google.ads.googleads.v22.errors.GoogleAdsException;
-import com.google.ads.googleads.v22.resources.Ad;
-import com.google.ads.googleads.v22.resources.AdGroup;
-import com.google.ads.googleads.v22.resources.AdGroupAd;
-import com.google.ads.googleads.v22.resources.Campaign;
-import com.google.ads.googleads.v22.resources.Campaign.AppCampaignSetting;
-import com.google.ads.googleads.v22.resources.CampaignBudget;
-import com.google.ads.googleads.v22.resources.CampaignCriterion;
-import com.google.ads.googleads.v22.services.AdGroupAdOperation;
-import com.google.ads.googleads.v22.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v22.services.AdGroupOperation;
-import com.google.ads.googleads.v22.services.AdGroupServiceClient;
-import com.google.ads.googleads.v22.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v22.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v22.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v22.services.CampaignCriterionServiceClient;
-import com.google.ads.googleads.v22.services.CampaignOperation;
-import com.google.ads.googleads.v22.services.CampaignServiceClient;
-import com.google.ads.googleads.v22.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v22.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v22.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v22.services.MutateCampaignCriteriaResponse;
-import com.google.ads.googleads.v22.services.MutateCampaignCriterionResult;
-import com.google.ads.googleads.v22.services.MutateCampaignsResponse;
-import com.google.ads.googleads.v22.utils.ResourceNames;
+import com.google.ads.googleads.v23.common.AdTextAsset;
+import com.google.ads.googleads.v23.common.AppAdInfo;
+import com.google.ads.googleads.v23.common.LanguageInfo;
+import com.google.ads.googleads.v23.common.LocationInfo;
+import com.google.ads.googleads.v23.common.TargetCpa;
+import com.google.ads.googleads.v23.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v23.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v23.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
+import com.google.ads.googleads.v23.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v23.enums.AppCampaignAppStoreEnum.AppCampaignAppStore;
+import com.google.ads.googleads.v23.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType;
+import com.google.ads.googleads.v23.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v23.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v23.errors.GoogleAdsError;
+import com.google.ads.googleads.v23.errors.GoogleAdsException;
+import com.google.ads.googleads.v23.resources.Ad;
+import com.google.ads.googleads.v23.resources.AdGroup;
+import com.google.ads.googleads.v23.resources.AdGroupAd;
+import com.google.ads.googleads.v23.resources.Campaign;
+import com.google.ads.googleads.v23.resources.Campaign.AppCampaignSetting;
+import com.google.ads.googleads.v23.resources.CampaignBudget;
+import com.google.ads.googleads.v23.resources.CampaignCriterion;
+import com.google.ads.googleads.v23.services.AdGroupAdOperation;
+import com.google.ads.googleads.v23.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v23.services.AdGroupOperation;
+import com.google.ads.googleads.v23.services.AdGroupServiceClient;
+import com.google.ads.googleads.v23.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v23.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v23.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v23.services.CampaignCriterionServiceClient;
+import com.google.ads.googleads.v23.services.CampaignOperation;
+import com.google.ads.googleads.v23.services.CampaignServiceClient;
+import com.google.ads.googleads.v23.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v23.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v23.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v23.services.MutateCampaignCriteriaResponse;
+import com.google.ads.googleads.v23.services.MutateCampaignCriterionResult;
+import com.google.ads.googleads.v23.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v23.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -213,8 +213,8 @@ public class AddAppCampaign {
             // Declares whether this campaign serves political ads targeting the EU.
             .setContainsEuPoliticalAdvertising(DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING)
             // Optional fields.
-            .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
-            .setEndDate(new DateTime().plusDays(365).toString("yyyyMMdd"))
+            .setStartDateTime(new DateTime().plusDays(1).toString("yyyy-MM-dd 00:00:00"))
+            .setEndDateTime(new DateTime().plusDays(365).toString("yyyy-MM-dd 23:59:59"))
             // If you select the
             // OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST goal type, then also
             // specify your in-app conversion types so the Google Ads API can focus

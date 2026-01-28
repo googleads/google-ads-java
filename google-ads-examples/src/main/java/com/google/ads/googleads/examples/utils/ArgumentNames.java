@@ -64,6 +64,7 @@ public final class ArgumentNames {
   public static final String GBRAID = "--gbraid";
   public static final String GCLID = "--gclid";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
+  public static final String INCENTIVE_ID = "--incentiveId";
   public static final String ITEM_ID = "--itemId";
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String KEYWORD_TEXTS = "--keywordTexts";

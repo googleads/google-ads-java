@@ -1,3 +1,7 @@
+42.0.0 - 2026-01-28
+-------------------
+- Add support and examples for v23 of the Google Ads API.
+
 41.1.0 - 2025-12-04
 -------------------
 - Add support for application default credentials. 

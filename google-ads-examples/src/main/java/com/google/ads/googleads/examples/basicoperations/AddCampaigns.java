@@ -15,28 +15,28 @@
 package com.google.ads.googleads.examples.basicoperations;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
-import static com.google.ads.googleads.v22.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
+import static com.google.ads.googleads.v23.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v22.common.ManualCpc;
-import com.google.ads.googleads.v22.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v22.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v22.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v22.errors.GoogleAdsError;
-import com.google.ads.googleads.v22.errors.GoogleAdsException;
-import com.google.ads.googleads.v22.resources.Campaign;
-import com.google.ads.googleads.v22.resources.Campaign.NetworkSettings;
-import com.google.ads.googleads.v22.resources.CampaignBudget;
-import com.google.ads.googleads.v22.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v22.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v22.services.CampaignOperation;
-import com.google.ads.googleads.v22.services.CampaignServiceClient;
-import com.google.ads.googleads.v22.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v22.services.MutateCampaignResult;
-import com.google.ads.googleads.v22.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v23.common.ManualCpc;
+import com.google.ads.googleads.v23.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v23.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v23.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v23.errors.GoogleAdsError;
+import com.google.ads.googleads.v23.errors.GoogleAdsException;
+import com.google.ads.googleads.v23.resources.Campaign;
+import com.google.ads.googleads.v23.resources.Campaign.NetworkSettings;
+import com.google.ads.googleads.v23.resources.CampaignBudget;
+import com.google.ads.googleads.v23.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v23.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v23.services.CampaignOperation;
+import com.google.ads.googleads.v23.services.CampaignServiceClient;
+import com.google.ads.googleads.v23.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v23.services.MutateCampaignResult;
+import com.google.ads.googleads.v23.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -170,8 +170,8 @@ public class AddCampaigns {
               // Declares whether this campaign serves political ads targeting the EU.
               .setContainsEuPoliticalAdvertising(DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING)
               // Optional: Sets the start & end dates.
-              .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
-              .setEndDate(new DateTime().plusDays(30).toString("yyyyMMdd"))
+              .setStartDateTime(new DateTime().plusDays(1).toString("yyyy-MM-dd 00:00:00"))
+              .setEndDateTime(new DateTime().plusDays(30).toString("yyyy-MM-dd 23:59:59"))
               .build();
       // [END add_campaigns_1]
 

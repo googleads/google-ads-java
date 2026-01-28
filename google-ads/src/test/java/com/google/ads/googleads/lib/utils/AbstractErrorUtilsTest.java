@@ -23,24 +23,25 @@ import com.google.ads.googleads.lib.test.errors.MockError;
 import com.google.ads.googleads.lib.test.errors.MockFailure;
 import com.google.ads.googleads.lib.test.errors.MockPath;
 import com.google.ads.googleads.lib.utils.AbstractErrorUtils.ErrorPath;
-import com.google.ads.googleads.v22.services.GenerateAdGroupThemesRequest;
-import com.google.ads.googleads.v22.services.GenerateAudienceCompositionInsightsRequest;
-import com.google.ads.googleads.v22.services.GenerateAudienceOverlapInsightsRequest;
-import com.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest;
-import com.google.ads.googleads.v22.services.GenerateImagesRequest;
-import com.google.ads.googleads.v22.services.GenerateKeywordHistoricalMetricsRequest;
-import com.google.ads.googleads.v22.services.GenerateKeywordIdeasRequest;
-import com.google.ads.googleads.v22.services.GenerateReachForecastRequest;
-import com.google.ads.googleads.v22.services.GenerateRecommendationsRequest;
-import com.google.ads.googleads.v22.services.GenerateShareablePreviewsRequest;
-import com.google.ads.googleads.v22.services.GenerateTargetingSuggestionMetricsRequest;
-import com.google.ads.googleads.v22.services.GenerateTextRequest;
-import com.google.ads.googleads.v22.services.GraduateExperimentRequest;
-import com.google.ads.googleads.v22.services.ListAudienceInsightsAttributesRequest;
-import com.google.ads.googleads.v22.services.ListPlannableUserInterestsRequest;
-import com.google.ads.googleads.v22.services.RemoveAutomaticallyCreatedAssetsRequest;
-import com.google.ads.googleads.v22.services.SuggestBrandsRequest;
-import com.google.ads.googleads.v22.services.SuggestTravelAssetsRequest;
+import com.google.ads.googleads.v23.services.GenerateAdGroupThemesRequest;
+import com.google.ads.googleads.v23.services.GenerateAudienceCompositionInsightsRequest;
+import com.google.ads.googleads.v23.services.GenerateAudienceOverlapInsightsRequest;
+import com.google.ads.googleads.v23.services.GenerateCreatorInsightsRequest;
+import com.google.ads.googleads.v23.services.GenerateImagesRequest;
+import com.google.ads.googleads.v23.services.GenerateKeywordHistoricalMetricsRequest;
+import com.google.ads.googleads.v23.services.GenerateKeywordIdeasRequest;
+import com.google.ads.googleads.v23.services.GenerateReachForecastRequest;
+import com.google.ads.googleads.v23.services.GenerateRecommendationsRequest;
+import com.google.ads.googleads.v23.services.GenerateShareablePreviewsRequest;
+import com.google.ads.googleads.v23.services.GenerateTargetingSuggestionMetricsRequest;
+import com.google.ads.googleads.v23.services.GenerateTextRequest;
+import com.google.ads.googleads.v23.services.GraduateExperimentRequest;
+import com.google.ads.googleads.v23.services.ListAudienceInsightsAttributesRequest;
+import com.google.ads.googleads.v23.services.ListBenchmarksSourcesRequest;
+import com.google.ads.googleads.v23.services.ListPlannableUserInterestsRequest;
+import com.google.ads.googleads.v23.services.RemoveAutomaticallyCreatedAssetsRequest;
+import com.google.ads.googleads.v23.services.SuggestBrandsRequest;
+import com.google.ads.googleads.v23.services.SuggestTravelAssetsRequest;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
@@ -270,6 +271,7 @@ public class AbstractErrorUtilsTest {
             .add(ListPlannableUserInterestsRequest.getDescriptor())
             .add(GenerateTextRequest.getDescriptor())
             .add(GenerateImagesRequest.getDescriptor())
+            .add(ListBenchmarksSourcesRequest.getDescriptor())
             .build();
 
     // Gets the class for the latest version of the Google Ads API.
