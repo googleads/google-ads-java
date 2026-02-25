@@ -35,6 +35,7 @@ import com.google.ads.googleads.v23.enums.AssetFieldTypeEnum.AssetFieldType;
 import com.google.ads.googleads.v23.enums.AssetGroupStatusEnum.AssetGroupStatus;
 import com.google.ads.googleads.v23.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v23.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType;
 import com.google.ads.googleads.v23.errors.GoogleAdsError;
 import com.google.ads.googleads.v23.errors.GoogleAdsException;
 import com.google.ads.googleads.v23.resources.Asset;
@@ -43,7 +44,8 @@ import com.google.ads.googleads.v23.resources.AssetGroupAsset;
 import com.google.ads.googleads.v23.resources.AssetGroupSignal;
 import com.google.ads.googleads.v23.resources.Campaign;
 import com.google.ads.googleads.v23.resources.Campaign.AssetAutomationSetting;
-import com.google.ads.googleads.v23.resources.Campaign.AssetAutomationSettingOrBuilder;
+import com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction;
+import com.google.ads.googleads.v23.resources.Campaign.TextGuidelines;
 import com.google.ads.googleads.v23.resources.CampaignAsset;
 import com.google.ads.googleads.v23.resources.CampaignBudget;
 import com.google.ads.googleads.v23.resources.CampaignCriterion;
@@ -256,6 +258,22 @@ public class AddPerformanceMaxCampaign {
   /** Creates a MutateOperation that creates a new Performance Max campaign. */
   private MutateOperation createPerformanceMaxCampaignOperation(
       long customerId, boolean brandGuidelinesEnabled) {
+    // [START add_performance_max_text_guidelines]
+    TextGuidelines textGuidelines =
+        TextGuidelines.newBuilder()
+            // Specifies a list of terms that should not be used in any auto-generated
+            // text assets.
+            .addAllTermExclusions(ImmutableList.of("cheap", "free"))
+            // Specifies freeform messaging restriction prompts that will apply to all
+            // auto-generated text assets.
+            .addMessagingRestrictions(
+                MessagingRestriction.newBuilder()
+                    .setRestrictionText("Don't mention competitor names")
+                    .setRestrictionType(
+                        MessagingRestrictionType.RESTRICTION_BASED_EXCLUSION)
+                    .build())
+            .build();
+    // [END add_performance_max_text_guidelines]
     Campaign performanceMaxCampaign =
         Campaign.newBuilder()
             .setName("Performance Max campaign #" + getPrintableDateTime())
@@ -280,6 +298,8 @@ public class AddPerformanceMaxCampaign {
             // Sets if the campaign is enabled for brand guidelines. For more information on brand
             // guidelines, see https://support.google.com/google-ads/answer/14934472.
             .setBrandGuidelinesEnabled(brandGuidelinesEnabled)
+            // Sets the text guidelines.
+            .setTextGuidelines(textGuidelines)
             // Assigns the resource name with a temporary ID.
             .setResourceName(
                 ResourceNames.campaign(customerId, PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID))

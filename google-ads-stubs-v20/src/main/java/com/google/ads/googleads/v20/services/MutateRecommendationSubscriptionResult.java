@@ -7,7 +7,7 @@ package com.google.ads.googleads.v20.services;
 /**
  * <pre>
  * Result message for
- * [RecommendationSubscriptionService.MutateRecommendationSubscription]
+ * [RecommendationSubscriptionService.MutateRecommendationSubscription][google.ads.googleads.v20.services.RecommendationSubscriptionService.MutateRecommendationSubscription]
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v20.services.MutateRecommendationSubscriptionResult}
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Result message for
-   * [RecommendationSubscriptionService.MutateRecommendationSubscription]
+   * [RecommendationSubscriptionService.MutateRecommendationSubscription][google.ads.googleads.v20.services.RecommendationSubscriptionService.MutateRecommendationSubscription]
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v20.services.MutateRecommendationSubscriptionResult}

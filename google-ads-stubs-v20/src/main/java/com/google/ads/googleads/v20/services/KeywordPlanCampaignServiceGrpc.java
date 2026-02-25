@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage Keyword Plan campaigns.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/keyword_plan_campaign_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class KeywordPlanCampaignServiceGrpc {
 
@@ -246,8 +243,8 @@ public final class KeywordPlanCampaignServiceGrpc {
      *   [ResourceCountLimitExceededError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateKeywordPlanCampaignsResponse mutateKeywordPlanCampaigns(com.google.ads.googleads.v20.services.MutateKeywordPlanCampaignsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateKeywordPlanCampaignsResponse mutateKeywordPlanCampaigns(com.google.ads.googleads.v20.services.MutateKeywordPlanCampaignsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateKeywordPlanCampaignsMethod(), getCallOptions(), request);
     }
   }

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage customer asset set
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/customer_asset_set_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerAssetSetServiceGrpc {
 
@@ -198,8 +195,8 @@ public final class CustomerAssetSetServiceGrpc {
      * returned.
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateCustomerAssetSetsResponse mutateCustomerAssetSets(com.google.ads.googleads.v20.services.MutateCustomerAssetSetsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateCustomerAssetSetsResponse mutateCustomerAssetSets(com.google.ads.googleads.v20.services.MutateCustomerAssetSetsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomerAssetSetsMethod(), getCallOptions(), request);
     }
   }

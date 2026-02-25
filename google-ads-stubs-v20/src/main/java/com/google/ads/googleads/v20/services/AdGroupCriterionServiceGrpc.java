@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage ad group criteria.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/ad_group_criterion_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AdGroupCriterionServiceGrpc {
 
@@ -297,8 +294,8 @@ public final class AdGroupCriterionServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateAdGroupCriteriaResponse mutateAdGroupCriteria(com.google.ads.googleads.v20.services.MutateAdGroupCriteriaRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateAdGroupCriteriaResponse mutateAdGroupCriteria(com.google.ads.googleads.v20.services.MutateAdGroupCriteriaRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateAdGroupCriteriaMethod(), getCallOptions(), request);
     }
   }

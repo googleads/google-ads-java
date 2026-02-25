@@ -526,9 +526,9 @@ private static final long serialVersionUID = 0L;
   private double allConversionsFromClickToCall_ = 0D;
   /**
    * <pre>
-   * The number of times people clicked the "Call" button to call a store during
-   * or after clicking an ad. This number doesn't include whether or not calls
-   * were connected, or the duration of any calls.
+   * The number of times people clicked the "Call" button to call a business
+   * during or after clicking an ad. This number doesn't include whether or not
+   * calls were connected, or the duration of any calls.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -542,9 +542,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times people clicked the "Call" button to call a store during
-   * or after clicking an ad. This number doesn't include whether or not calls
-   * were connected, or the duration of any calls.
+   * The number of times people clicked the "Call" button to call a business
+   * during or after clicking an ad. This number doesn't include whether or not
+   * calls were connected, or the duration of any calls.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -562,7 +562,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The number of times people clicked a "Get directions" button to navigate to
-   * a store after clicking an ad.
+   * a business after clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The number of times people clicked a "Get directions" button to navigate to
-   * a store after clicking an ad.
+   * a business after clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -623,7 +623,7 @@ private static final long serialVersionUID = 0L;
   private double allConversionsFromMenu_ = 0D;
   /**
    * <pre>
-   * The number of times people clicked a link to view a store's menu after
+   * The number of times people clicked a link to view a business's menu after
    * clicking an ad.
    *
    * This metric applies to feed items only.
@@ -638,7 +638,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times people clicked a link to view a store's menu after
+   * The number of times people clicked a link to view a business's menu after
    * clicking an ad.
    *
    * This metric applies to feed items only.
@@ -656,7 +656,8 @@ private static final long serialVersionUID = 0L;
   private double allConversionsFromOrder_ = 0D;
   /**
    * <pre>
-   * The number of times people placed an order at a store after clicking an ad.
+   * The number of times people placed an order at a business after clicking an
+   * ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -670,7 +671,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times people placed an order at a store after clicking an ad.
+   * The number of times people placed an order at a business after clicking an
+   * ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -688,7 +690,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The number of other conversions (for example, posting a review or saving a
-   * location for a store) that occurred after people clicked an ad.
+   * location for a business) that occurred after people clicked an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -703,7 +705,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The number of other conversions (for example, posting a review or saving a
-   * location for a store) that occurred after people clicked an ad.
+   * location for a business) that occurred after people clicked an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -720,7 +722,7 @@ private static final long serialVersionUID = 0L;
   private double allConversionsFromStoreVisit_ = 0D;
   /**
    * <pre>
-   * Estimated number of times people visited a store after clicking an ad.
+   * Estimated number of times people visited a business after clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -734,7 +736,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Estimated number of times people visited a store after clicking an ad.
+   * Estimated number of times people visited a business after clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -751,8 +753,8 @@ private static final long serialVersionUID = 0L;
   private double allConversionsFromStoreWebsite_ = 0D;
   /**
    * <pre>
-   * The number of times that people were taken to a store's URL after clicking
-   * an ad.
+   * The number of times that people were taken to a business's URL after
+   * clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -766,8 +768,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times that people were taken to a store's URL after clicking
-   * an ad.
+   * The number of times that people were taken to a business's URL after
+   * clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -2796,7 +2798,7 @@ private static final long serialVersionUID = 0L;
   private long impressionsFromStoreReach_ = 0L;
   /**
    * <pre>
-   * The number of times a store's location-based ad was shown.
+   * The number of times a business's location-based ad was shown.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -2810,7 +2812,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times a store's location-based ad was shown.
+   * The number of times a business's location-based ad was shown.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -4810,7 +4812,7 @@ private static final long serialVersionUID = 0L;
   private double allConversionsFromLocationAssetStoreVisits_ = 0D;
   /**
    * <pre>
-   * Estimated number of visits to the store after a chargeable
+   * Estimated number of visits to the business after a chargeable
    * ad event (click or impression). This measure is coming from Asset
    * based location.
    * </pre>
@@ -4824,7 +4826,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Estimated number of visits to the store after a chargeable
+   * Estimated number of visits to the business after a chargeable
    * ad event (click or impression). This measure is coming from Asset
    * based location.
    * </pre>
@@ -4872,8 +4874,8 @@ private static final long serialVersionUID = 0L;
   private long eligibleImpressionsFromLocationAssetStoreReach_ = 0L;
   /**
    * <pre>
-   * Number of impressions in which the store location was shown or the location
-   * was used for targeting. This measure is coming from Asset based
+   * Number of impressions in which the business location was shown or the
+   * location was used for targeting. This measure is coming from Asset based
    * location.
    * </pre>
    *
@@ -4886,8 +4888,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Number of impressions in which the store location was shown or the location
-   * was used for targeting. This measure is coming from Asset based
+   * Number of impressions in which the business location was shown or the
+   * location was used for targeting. This measure is coming from Asset based
    * location.
    * </pre>
    *
@@ -5048,7 +5050,7 @@ private static final long serialVersionUID = 0L;
   private double viewThroughConversionsFromLocationAssetStoreVisits_ = 0D;
   /**
    * <pre>
-   * Estimated number of visits to the store after an impression.
+   * Estimated number of visits to the business after an impression.
    * This measure is coming from Asset based location.
    * </pre>
    *
@@ -5061,7 +5063,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Estimated number of visits to the store after an impression.
+   * Estimated number of visits to the business after an impression.
    * This measure is coming from Asset based location.
    * </pre>
    *
@@ -6905,7 +6907,7 @@ private static final long serialVersionUID = 0L;
   private double storeVisitsLastClickModelAttributedConversions_ = 0D;
   /**
    * <pre>
-   * The amount of store visits attributed by the last click model.
+   * The amount of business visits attributed by the last click model.
    * </pre>
    *
    * <code>optional double store_visits_last_click_model_attributed_conversions = 365;</code>
@@ -6917,7 +6919,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The amount of store visits attributed by the last click model.
+   * The amount of business visits attributed by the last click model.
    * </pre>
    *
    * <code>optional double store_visits_last_click_model_attributed_conversions = 365;</code>
@@ -15531,9 +15533,9 @@ private static final long serialVersionUID = 0L;
     private double allConversionsFromClickToCall_ ;
     /**
      * <pre>
-     * The number of times people clicked the "Call" button to call a store during
-     * or after clicking an ad. This number doesn't include whether or not calls
-     * were connected, or the duration of any calls.
+     * The number of times people clicked the "Call" button to call a business
+     * during or after clicking an ad. This number doesn't include whether or not
+     * calls were connected, or the duration of any calls.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15547,9 +15549,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the "Call" button to call a store during
-     * or after clicking an ad. This number doesn't include whether or not calls
-     * were connected, or the duration of any calls.
+     * The number of times people clicked the "Call" button to call a business
+     * during or after clicking an ad. This number doesn't include whether or not
+     * calls were connected, or the duration of any calls.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15563,9 +15565,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the "Call" button to call a store during
-     * or after clicking an ad. This number doesn't include whether or not calls
-     * were connected, or the duration of any calls.
+     * The number of times people clicked the "Call" button to call a business
+     * during or after clicking an ad. This number doesn't include whether or not
+     * calls were connected, or the duration of any calls.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15583,9 +15585,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the "Call" button to call a store during
-     * or after clicking an ad. This number doesn't include whether or not calls
-     * were connected, or the duration of any calls.
+     * The number of times people clicked the "Call" button to call a business
+     * during or after clicking an ad. This number doesn't include whether or not
+     * calls were connected, or the duration of any calls.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15604,7 +15606,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times people clicked a "Get directions" button to navigate to
-     * a store after clicking an ad.
+     * a business after clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15619,7 +15621,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times people clicked a "Get directions" button to navigate to
-     * a store after clicking an ad.
+     * a business after clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15634,7 +15636,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times people clicked a "Get directions" button to navigate to
-     * a store after clicking an ad.
+     * a business after clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15653,7 +15655,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times people clicked a "Get directions" button to navigate to
-     * a store after clicking an ad.
+     * a business after clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15731,7 +15733,7 @@ private static final long serialVersionUID = 0L;
     private double allConversionsFromMenu_ ;
     /**
      * <pre>
-     * The number of times people clicked a link to view a store's menu after
+     * The number of times people clicked a link to view a business's menu after
      * clicking an ad.
      *
      * This metric applies to feed items only.
@@ -15746,7 +15748,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store's menu after
+     * The number of times people clicked a link to view a business's menu after
      * clicking an ad.
      *
      * This metric applies to feed items only.
@@ -15761,7 +15763,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store's menu after
+     * The number of times people clicked a link to view a business's menu after
      * clicking an ad.
      *
      * This metric applies to feed items only.
@@ -15780,7 +15782,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store's menu after
+     * The number of times people clicked a link to view a business's menu after
      * clicking an ad.
      *
      * This metric applies to feed items only.
@@ -15799,7 +15801,8 @@ private static final long serialVersionUID = 0L;
     private double allConversionsFromOrder_ ;
     /**
      * <pre>
-     * The number of times people placed an order at a store after clicking an ad.
+     * The number of times people placed an order at a business after clicking an
+     * ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15813,7 +15816,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people placed an order at a store after clicking an ad.
+     * The number of times people placed an order at a business after clicking an
+     * ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15827,7 +15831,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people placed an order at a store after clicking an ad.
+     * The number of times people placed an order at a business after clicking an
+     * ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15845,7 +15850,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people placed an order at a store after clicking an ad.
+     * The number of times people placed an order at a business after clicking an
+     * ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15864,7 +15870,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of other conversions (for example, posting a review or saving a
-     * location for a store) that occurred after people clicked an ad.
+     * location for a business) that occurred after people clicked an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15879,7 +15885,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of other conversions (for example, posting a review or saving a
-     * location for a store) that occurred after people clicked an ad.
+     * location for a business) that occurred after people clicked an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15894,7 +15900,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of other conversions (for example, posting a review or saving a
-     * location for a store) that occurred after people clicked an ad.
+     * location for a business) that occurred after people clicked an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15913,7 +15919,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of other conversions (for example, posting a review or saving a
-     * location for a store) that occurred after people clicked an ad.
+     * location for a business) that occurred after people clicked an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15931,7 +15937,7 @@ private static final long serialVersionUID = 0L;
     private double allConversionsFromStoreVisit_ ;
     /**
      * <pre>
-     * Estimated number of times people visited a store after clicking an ad.
+     * Estimated number of times people visited a business after clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15945,7 +15951,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of times people visited a store after clicking an ad.
+     * Estimated number of times people visited a business after clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15959,7 +15965,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of times people visited a store after clicking an ad.
+     * Estimated number of times people visited a business after clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15977,7 +15983,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of times people visited a store after clicking an ad.
+     * Estimated number of times people visited a business after clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -15995,8 +16001,8 @@ private static final long serialVersionUID = 0L;
     private double allConversionsFromStoreWebsite_ ;
     /**
      * <pre>
-     * The number of times that people were taken to a store's URL after clicking
-     * an ad.
+     * The number of times that people were taken to a business's URL after
+     * clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -16010,8 +16016,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times that people were taken to a store's URL after clicking
-     * an ad.
+     * The number of times that people were taken to a business's URL after
+     * clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -16025,8 +16031,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times that people were taken to a store's URL after clicking
-     * an ad.
+     * The number of times that people were taken to a business's URL after
+     * clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -16044,8 +16050,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times that people were taken to a store's URL after clicking
-     * an ad.
+     * The number of times that people were taken to a business's URL after
+     * clicking an ad.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -20234,7 +20240,7 @@ private static final long serialVersionUID = 0L;
     private long impressionsFromStoreReach_ ;
     /**
      * <pre>
-     * The number of times a store's location-based ad was shown.
+     * The number of times a business's location-based ad was shown.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -20248,7 +20254,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times a store's location-based ad was shown.
+     * The number of times a business's location-based ad was shown.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -20262,7 +20268,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times a store's location-based ad was shown.
+     * The number of times a business's location-based ad was shown.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -20280,7 +20286,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times a store's location-based ad was shown.
+     * The number of times a business's location-based ad was shown.
      *
      * This metric applies to feed items only.
      * </pre>
@@ -24545,7 +24551,7 @@ private static final long serialVersionUID = 0L;
     private double allConversionsFromLocationAssetStoreVisits_ ;
     /**
      * <pre>
-     * Estimated number of visits to the store after a chargeable
+     * Estimated number of visits to the business after a chargeable
      * ad event (click or impression). This measure is coming from Asset
      * based location.
      * </pre>
@@ -24559,7 +24565,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of visits to the store after a chargeable
+     * Estimated number of visits to the business after a chargeable
      * ad event (click or impression). This measure is coming from Asset
      * based location.
      * </pre>
@@ -24573,7 +24579,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of visits to the store after a chargeable
+     * Estimated number of visits to the business after a chargeable
      * ad event (click or impression). This measure is coming from Asset
      * based location.
      * </pre>
@@ -24591,7 +24597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of visits to the store after a chargeable
+     * Estimated number of visits to the business after a chargeable
      * ad event (click or impression). This measure is coming from Asset
      * based location.
      * </pre>
@@ -24673,8 +24679,8 @@ private static final long serialVersionUID = 0L;
     private long eligibleImpressionsFromLocationAssetStoreReach_ ;
     /**
      * <pre>
-     * Number of impressions in which the store location was shown or the location
-     * was used for targeting. This measure is coming from Asset based
+     * Number of impressions in which the business location was shown or the
+     * location was used for targeting. This measure is coming from Asset based
      * location.
      * </pre>
      *
@@ -24687,8 +24693,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Number of impressions in which the store location was shown or the location
-     * was used for targeting. This measure is coming from Asset based
+     * Number of impressions in which the business location was shown or the
+     * location was used for targeting. This measure is coming from Asset based
      * location.
      * </pre>
      *
@@ -24701,8 +24707,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Number of impressions in which the store location was shown or the location
-     * was used for targeting. This measure is coming from Asset based
+     * Number of impressions in which the business location was shown or the
+     * location was used for targeting. This measure is coming from Asset based
      * location.
      * </pre>
      *
@@ -24719,8 +24725,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Number of impressions in which the store location was shown or the location
-     * was used for targeting. This measure is coming from Asset based
+     * Number of impressions in which the business location was shown or the
+     * location was used for targeting. This measure is coming from Asset based
      * location.
      * </pre>
      *
@@ -25037,7 +25043,7 @@ private static final long serialVersionUID = 0L;
     private double viewThroughConversionsFromLocationAssetStoreVisits_ ;
     /**
      * <pre>
-     * Estimated number of visits to the store after an impression.
+     * Estimated number of visits to the business after an impression.
      * This measure is coming from Asset based location.
      * </pre>
      *
@@ -25050,7 +25056,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of visits to the store after an impression.
+     * Estimated number of visits to the business after an impression.
      * This measure is coming from Asset based location.
      * </pre>
      *
@@ -25063,7 +25069,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of visits to the store after an impression.
+     * Estimated number of visits to the business after an impression.
      * This measure is coming from Asset based location.
      * </pre>
      *
@@ -25080,7 +25086,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of visits to the store after an impression.
+     * Estimated number of visits to the business after an impression.
      * This measure is coming from Asset based location.
      * </pre>
      *
@@ -29090,7 +29096,7 @@ private static final long serialVersionUID = 0L;
     private double storeVisitsLastClickModelAttributedConversions_ ;
     /**
      * <pre>
-     * The amount of store visits attributed by the last click model.
+     * The amount of business visits attributed by the last click model.
      * </pre>
      *
      * <code>optional double store_visits_last_click_model_attributed_conversions = 365;</code>
@@ -29102,7 +29108,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The amount of store visits attributed by the last click model.
+     * The amount of business visits attributed by the last click model.
      * </pre>
      *
      * <code>optional double store_visits_last_click_model_attributed_conversions = 365;</code>
@@ -29114,7 +29120,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The amount of store visits attributed by the last click model.
+     * The amount of business visits attributed by the last click model.
      * </pre>
      *
      * <code>optional double store_visits_last_click_model_attributed_conversions = 365;</code>
@@ -29130,7 +29136,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The amount of store visits attributed by the last click model.
+     * The amount of business visits attributed by the last click model.
      * </pre>
      *
      * <code>optional double store_visits_last_click_model_attributed_conversions = 365;</code>

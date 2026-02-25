@@ -141,6 +141,15 @@ private static final long serialVersionUID = 0L;
      * <code>RESOURCE_READ_ONLY = 13;</code>
      */
     RESOURCE_READ_ONLY(13),
+    /**
+     * <pre>
+     * Mutates are generally not allowed if the customer contains non-exempt
+     * campaigns without the EU political advertising declaration.
+     * </pre>
+     *
+     * <code>EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED = 17;</code>
+     */
+    EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED(17),
     UNRECOGNIZED(-1),
     ;
 
@@ -233,6 +242,15 @@ private static final long serialVersionUID = 0L;
      * <code>RESOURCE_READ_ONLY = 13;</code>
      */
     public static final int RESOURCE_READ_ONLY_VALUE = 13;
+    /**
+     * <pre>
+     * Mutates are generally not allowed if the customer contains non-exempt
+     * campaigns without the EU political advertising declaration.
+     * </pre>
+     *
+     * <code>EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED = 17;</code>
+     */
+    public static final int EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED_VALUE = 17;
 
 
     public final int getNumber() {
@@ -270,6 +288,7 @@ private static final long serialVersionUID = 0L;
         case 12: return RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY;
         case 16: return OPERATION_DOES_NOT_SUPPORT_PARTIAL_FAILURE;
         case 13: return RESOURCE_READ_ONLY;
+        case 17: return EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED;
         default: return null;
       }
     }

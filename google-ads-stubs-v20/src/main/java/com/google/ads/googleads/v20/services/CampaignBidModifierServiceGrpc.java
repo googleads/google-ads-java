@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage campaign bid modifiers.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/campaign_bid_modifier_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CampaignBidModifierServiceGrpc {
 
@@ -267,8 +264,8 @@ public final class CampaignBidModifierServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateCampaignBidModifiersResponse mutateCampaignBidModifiers(com.google.ads.googleads.v20.services.MutateCampaignBidModifiersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateCampaignBidModifiersResponse mutateCampaignBidModifiers(com.google.ads.googleads.v20.services.MutateCampaignBidModifiersRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCampaignBidModifiersMethod(), getCallOptions(), request);
     }
   }

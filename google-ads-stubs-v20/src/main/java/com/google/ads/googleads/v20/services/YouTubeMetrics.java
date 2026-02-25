@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The lifetime engagement rate of this channel. The value is computed as the
    * total number of likes, shares, and comments across all videos divided by
-   * the total number of videos.
+   * the total number of video views.
    * </pre>
    *
    * <code>double engagement_rate = 8;</code>
@@ -1214,7 +1214,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The lifetime engagement rate of this channel. The value is computed as the
      * total number of likes, shares, and comments across all videos divided by
-     * the total number of videos.
+     * the total number of video views.
      * </pre>
      *
      * <code>double engagement_rate = 8;</code>
@@ -1228,7 +1228,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The lifetime engagement rate of this channel. The value is computed as the
      * total number of likes, shares, and comments across all videos divided by
-     * the total number of videos.
+     * the total number of video views.
      * </pre>
      *
      * <code>double engagement_rate = 8;</code>
@@ -1246,7 +1246,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The lifetime engagement rate of this channel. The value is computed as the
      * total number of likes, shares, and comments across all videos divided by
-     * the total number of videos.
+     * the total number of video views.
      * </pre>
      *
      * <code>double engagement_rate = 8;</code>

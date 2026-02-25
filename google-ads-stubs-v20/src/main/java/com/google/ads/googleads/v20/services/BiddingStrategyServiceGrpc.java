@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage bidding strategies.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/bidding_strategy_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BiddingStrategyServiceGrpc {
 
@@ -279,8 +276,8 @@ public final class BiddingStrategyServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateBiddingStrategiesResponse mutateBiddingStrategies(com.google.ads.googleads.v20.services.MutateBiddingStrategiesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateBiddingStrategiesResponse mutateBiddingStrategies(com.google.ads.googleads.v20.services.MutateBiddingStrategiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateBiddingStrategiesMethod(), getCallOptions(), request);
     }
   }

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage asset group listing group filter.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/asset_group_listing_group_filter_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AssetGroupListingGroupFilterServiceGrpc {
 
@@ -198,8 +195,8 @@ public final class AssetGroupListingGroupFilterServiceGrpc {
      * statuses are returned.
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateAssetGroupListingGroupFiltersResponse mutateAssetGroupListingGroupFilters(com.google.ads.googleads.v22.services.MutateAssetGroupListingGroupFiltersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateAssetGroupListingGroupFiltersResponse mutateAssetGroupListingGroupFilters(com.google.ads.googleads.v22.services.MutateAssetGroupListingGroupFiltersRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateAssetGroupListingGroupFiltersMethod(), getCallOptions(), request);
     }
   }

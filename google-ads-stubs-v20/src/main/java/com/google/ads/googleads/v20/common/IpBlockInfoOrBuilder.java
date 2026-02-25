@@ -10,7 +10,7 @@ public interface IpBlockInfoOrBuilder extends
 
   /**
    * <pre>
-   * The IP address of this IP block.
+   * The IP address or the CIDR block to be excluded.
    * </pre>
    *
    * <code>optional string ip_address = 2;</code>
@@ -19,7 +19,7 @@ public interface IpBlockInfoOrBuilder extends
   boolean hasIpAddress();
   /**
    * <pre>
-   * The IP address of this IP block.
+   * The IP address or the CIDR block to be excluded.
    * </pre>
    *
    * <code>optional string ip_address = 2;</code>
@@ -28,7 +28,7 @@ public interface IpBlockInfoOrBuilder extends
   java.lang.String getIpAddress();
   /**
    * <pre>
-   * The IP address of this IP block.
+   * The IP address or the CIDR block to be excluded.
    * </pre>
    *
    * <code>optional string ip_address = 2;</code>

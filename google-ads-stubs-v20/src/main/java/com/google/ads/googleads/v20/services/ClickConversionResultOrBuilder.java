@@ -39,8 +39,7 @@ public interface ClickConversionResultOrBuilder extends
 
   /**
    * <pre>
-   * The click identifier for clicks associated with app conversions and
-   * originating from iOS devices starting with iOS14.
+   * The URL parameter for clicks associated with app conversions.
    * </pre>
    *
    * <code>string gbraid = 8;</code>
@@ -49,8 +48,7 @@ public interface ClickConversionResultOrBuilder extends
   java.lang.String getGbraid();
   /**
    * <pre>
-   * The click identifier for clicks associated with app conversions and
-   * originating from iOS devices starting with iOS14.
+   * The URL parameter for clicks associated with app conversions.
    * </pre>
    *
    * <code>string gbraid = 8;</code>
@@ -61,8 +59,7 @@ public interface ClickConversionResultOrBuilder extends
 
   /**
    * <pre>
-   * The click identifier for clicks associated with web conversions and
-   * originating from iOS devices starting with iOS14.
+   * The URL parameter for clicks associated with web conversions.
    * </pre>
    *
    * <code>string wbraid = 9;</code>
@@ -71,8 +68,7 @@ public interface ClickConversionResultOrBuilder extends
   java.lang.String getWbraid();
   /**
    * <pre>
-   * The click identifier for clicks associated with web conversions and
-   * originating from iOS devices starting with iOS14.
+   * The URL parameter for clicks associated with web conversions.
    * </pre>
    *
    * <code>string wbraid = 9;</code>

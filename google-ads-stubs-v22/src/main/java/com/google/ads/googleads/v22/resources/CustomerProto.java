@@ -80,116 +80,121 @@ public final class CustomerProto {
       "nums/customer_pay_per_conversion_eligibi" +
       "lity_failure_reason.proto\0324google/ads/go" +
       "ogleads/v22/enums/customer_status.proto\032" +
-      "Ggoogle/ads/googleads/v22/enums/local_se" +
-      "rvices_verification_status.proto\032\037google" +
-      "/api/field_behavior.proto\032\031google/api/re" +
-      "source.proto\"\275\020\n\010Customer\022@\n\rresource_na" +
-      "me\030\001 \001(\tB)\340A\005\372A#\n!googleads.googleapis.c" +
-      "om/Customer\022\024\n\002id\030\023 \001(\003B\003\340A\003H\000\210\001\001\022\035\n\020des" +
-      "criptive_name\030\024 \001(\tH\001\210\001\001\022\037\n\rcurrency_cod" +
-      "e\030\025 \001(\tB\003\340A\005H\002\210\001\001\022\033\n\ttime_zone\030\026 \001(\tB\003\340A" +
-      "\005H\003\210\001\001\022\"\n\025tracking_url_template\030\027 \001(\tH\004\210" +
-      "\001\001\022\035\n\020final_url_suffix\030\030 \001(\tH\005\210\001\001\022!\n\024aut" +
-      "o_tagging_enabled\030\031 \001(\010H\006\210\001\001\022$\n\022has_part" +
-      "ners_badge\030\032 \001(\010B\003\340A\003H\007\210\001\001\022\031\n\007manager\030\033 " +
-      "\001(\010B\003\340A\003H\010\210\001\001\022\036\n\014test_account\030\034 \001(\010B\003\340A\003" +
-      "H\t\210\001\001\022X\n\026call_reporting_setting\030\n \001(\01328." +
-      "google.ads.googleads.v22.resources.CallR" +
-      "eportingSetting\022b\n\033conversion_tracking_s" +
-      "etting\030\016 \001(\0132=.google.ads.googleads.v22." +
-      "resources.ConversionTrackingSetting\022X\n\023r" +
-      "emarketing_setting\030\017 \001(\01326.google.ads.go" +
-      "ogleads.v22.resources.RemarketingSetting" +
-      "B\003\340A\003\022\303\001\n.pay_per_conversion_eligibility" +
-      "_failure_reasons\030\020 \003(\0162\205\001.google.ads.goo" +
-      "gleads.v22.enums.CustomerPayPerConversio" +
-      "nEligibilityFailureReasonEnum.CustomerPa" +
-      "yPerConversionEligibilityFailureReasonB\003" +
-      "\340A\003\022$\n\022optimization_score\030\035 \001(\001B\003\340A\003H\n\210\001" +
-      "\001\022&\n\031optimization_score_weight\030\036 \001(\001B\003\340A" +
-      "\003\022V\n\006status\030$ \001(\0162A.google.ads.googleads" +
-      ".v22.enums.CustomerStatusEnum.CustomerSt" +
-      "atusB\003\340A\003\0224\n\"location_asset_auto_migrati" +
-      "on_done\030& \001(\010B\003\340A\003H\013\210\001\001\0221\n\037image_asset_a" +
-      "uto_migration_done\030\' \001(\010B\003\340A\003H\014\210\001\001\022>\n,lo" +
-      "cation_asset_auto_migration_done_date_ti" +
-      "me\030( \001(\tB\003\340A\003H\r\210\001\001\022;\n)image_asset_auto_m" +
-      "igration_done_date_time\030) \001(\tB\003\340A\003H\016\210\001\001\022" +
-      "e\n\032customer_agreement_setting\030, \001(\0132<.go" +
-      "ogle.ads.googleads.v22.resources.Custome" +
-      "rAgreementSettingB\003\340A\003\022_\n\027local_services" +
-      "_settings\030- \001(\01329.google.ads.googleads.v" +
-      "22.resources.LocalServicesSettingsB\003\340A\003\022" +
-      "~\n\036video_brand_safety_suitability\030. \001(\0162" +
-      "Q.google.ads.googleads.v22.enums.BrandSa" +
-      "fetySuitabilityEnum.BrandSafetySuitabili" +
-      "tyB\003\340A\003\022I\n\016video_customer\0306 \001(\01321.google" +
-      ".ads.googleads.v22.resources.VideoCustom" +
-      "er:?\352A<\n!googleads.googleapis.com/Custom" +
-      "er\022\027customers/{customer_id}B\005\n\003_idB\023\n\021_d" +
-      "escriptive_nameB\020\n\016_currency_codeB\014\n\n_ti" +
-      "me_zoneB\030\n\026_tracking_url_templateB\023\n\021_fi" +
-      "nal_url_suffixB\027\n\025_auto_tagging_enabledB" +
-      "\025\n\023_has_partners_badgeB\n\n\010_managerB\017\n\r_t" +
-      "est_accountB\025\n\023_optimization_scoreB%\n#_l" +
-      "ocation_asset_auto_migration_doneB\"\n _im" +
-      "age_asset_auto_migration_doneB/\n-_locati" +
-      "on_asset_auto_migration_done_date_timeB," +
-      "\n*_image_asset_auto_migration_done_date_" +
-      "time\"\234\002\n\024CallReportingSetting\022#\n\026call_re" +
-      "porting_enabled\030\n \001(\010H\000\210\001\001\022.\n!call_conve" +
-      "rsion_reporting_enabled\030\013 \001(\010H\001\210\001\001\022S\n\026ca" +
-      "ll_conversion_action\030\014 \001(\tB.\372A+\n)googlea" +
-      "ds.googleapis.com/ConversionActionH\002\210\001\001B" +
-      "\031\n\027_call_reporting_enabledB$\n\"_call_conv" +
-      "ersion_reporting_enabledB\031\n\027_call_conver" +
-      "sion_action\"\311\003\n\031ConversionTrackingSettin" +
-      "g\022(\n\026conversion_tracking_id\030\003 \001(\003B\003\340A\003H\000" +
-      "\210\001\001\0226\n$cross_account_conversion_tracking" +
-      "_id\030\004 \001(\003B\003\340A\003H\001\210\001\001\022)\n\034accepted_customer" +
-      "_data_terms\030\005 \001(\010B\003\340A\003\022~\n\032conversion_tra" +
-      "cking_status\030\006 \001(\0162U.google.ads.googlead" +
-      "s.v22.enums.ConversionTrackingStatusEnum" +
-      ".ConversionTrackingStatusB\003\340A\003\0223\n&enhanc" +
-      "ed_conversions_for_leads_enabled\030\007 \001(\010B\003" +
-      "\340A\003\022&\n\036google_ads_conversion_customer\030\010 " +
-      "\001(\tB\031\n\027_conversion_tracking_idB\'\n%_cross" +
-      "_account_conversion_tracking_id\"Y\n\022Remar" +
-      "ketingSetting\022(\n\026google_global_site_tag\030" +
-      "\002 \001(\tB\003\340A\003H\000\210\001\001B\031\n\027_google_global_site_t" +
-      "ag\"A\n\030CustomerAgreementSetting\022%\n\030accept" +
-      "ed_lead_form_terms\030\001 \001(\010B\003\340A\003\"\341\001\n\025LocalS" +
-      "ervicesSettings\022a\n\031granular_license_stat" +
-      "uses\030\001 \003(\01329.google.ads.googleads.v22.re" +
-      "sources.GranularLicenseStatusB\003\340A\003\022e\n\033gr" +
-      "anular_insurance_statuses\030\002 \003(\0132;.google" +
-      ".ads.googleads.v22.resources.GranularIns" +
-      "uranceStatusB\003\340A\003\"\244\002\n\025GranularLicenseSta" +
-      "tus\022\"\n\020geo_criterion_id\030\001 \001(\003B\003\340A\003H\000\210\001\001\022" +
-      "\035\n\013category_id\030\002 \001(\tB\003\340A\003H\001\210\001\001\022\212\001\n\023verif" +
-      "ication_status\030\003 \001(\0162c.google.ads.google" +
-      "ads.v22.enums.LocalServicesVerificationS" +
-      "tatusEnum.LocalServicesVerificationStatu" +
-      "sB\003\340A\003H\002\210\001\001B\023\n\021_geo_criterion_idB\016\n\014_cat" +
-      "egory_idB\026\n\024_verification_status\"\246\002\n\027Gra" +
-      "nularInsuranceStatus\022\"\n\020geo_criterion_id" +
-      "\030\001 \001(\003B\003\340A\003H\000\210\001\001\022\035\n\013category_id\030\002 \001(\tB\003\340" +
-      "A\003H\001\210\001\001\022\212\001\n\023verification_status\030\003 \001(\0162c." +
-      "google.ads.googleads.v22.enums.LocalServ" +
-      "icesVerificationStatusEnum.LocalServices" +
-      "VerificationStatusB\003\340A\003H\002\210\001\001B\023\n\021_geo_cri" +
-      "terion_idB\016\n\014_category_idB\026\n\024_verificati" +
-      "on_status\"\201\001\n\rVideoCustomer\022p\n third_par" +
-      "ty_integration_partners\030\001 \001(\0132F.google.a" +
-      "ds.googleads.v22.common.CustomerThirdPar" +
-      "tyIntegrationPartnersB\377\001\n&com.google.ads" +
-      ".googleads.v22.resourcesB\rCustomerProtoP" +
-      "\001ZKgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v22/resources;resources\242\002" +
-      "\003GAA\252\002\"Google.Ads.GoogleAds.V22.Resource" +
-      "s\312\002\"Google\\Ads\\GoogleAds\\V22\\Resources\352\002" +
-      "&Google::Ads::GoogleAds::V22::Resourcesb" +
-      "\006proto3"
+      "Dgoogle/ads/googleads/v22/enums/eu_polit" +
+      "ical_advertising_status.proto\032Ggoogle/ad" +
+      "s/googleads/v22/enums/local_services_ver" +
+      "ification_status.proto\032\037google/api/field" +
+      "_behavior.proto\032\031google/api/resource.pro" +
+      "to\"\315\021\n\010Customer\022@\n\rresource_name\030\001 \001(\tB)" +
+      "\340A\005\372A#\n!googleads.googleapis.com/Custome" +
+      "r\022\024\n\002id\030\023 \001(\003B\003\340A\003H\000\210\001\001\022\035\n\020descriptive_n" +
+      "ame\030\024 \001(\tH\001\210\001\001\022\037\n\rcurrency_code\030\025 \001(\tB\003\340" +
+      "A\005H\002\210\001\001\022\033\n\ttime_zone\030\026 \001(\tB\003\340A\005H\003\210\001\001\022\"\n\025" +
+      "tracking_url_template\030\027 \001(\tH\004\210\001\001\022\035\n\020fina" +
+      "l_url_suffix\030\030 \001(\tH\005\210\001\001\022!\n\024auto_tagging_" +
+      "enabled\030\031 \001(\010H\006\210\001\001\022$\n\022has_partners_badge" +
+      "\030\032 \001(\010B\003\340A\003H\007\210\001\001\022\031\n\007manager\030\033 \001(\010B\003\340A\003H\010" +
+      "\210\001\001\022\036\n\014test_account\030\034 \001(\010B\003\340A\003H\t\210\001\001\022X\n\026c" +
+      "all_reporting_setting\030\n \001(\01328.google.ads" +
+      ".googleads.v22.resources.CallReportingSe" +
+      "tting\022b\n\033conversion_tracking_setting\030\016 \001" +
+      "(\0132=.google.ads.googleads.v22.resources." +
+      "ConversionTrackingSetting\022X\n\023remarketing" +
+      "_setting\030\017 \001(\01326.google.ads.googleads.v2" +
+      "2.resources.RemarketingSettingB\003\340A\003\022\303\001\n." +
+      "pay_per_conversion_eligibility_failure_r" +
+      "easons\030\020 \003(\0162\205\001.google.ads.googleads.v22" +
+      ".enums.CustomerPayPerConversionEligibili" +
+      "tyFailureReasonEnum.CustomerPayPerConver" +
+      "sionEligibilityFailureReasonB\003\340A\003\022$\n\022opt" +
+      "imization_score\030\035 \001(\001B\003\340A\003H\n\210\001\001\022&\n\031optim" +
+      "ization_score_weight\030\036 \001(\001B\003\340A\003\022V\n\006statu" +
+      "s\030$ \001(\0162A.google.ads.googleads.v22.enums" +
+      ".CustomerStatusEnum.CustomerStatusB\003\340A\003\022" +
+      "4\n\"location_asset_auto_migration_done\030& " +
+      "\001(\010B\003\340A\003H\013\210\001\001\0221\n\037image_asset_auto_migrat" +
+      "ion_done\030\' \001(\010B\003\340A\003H\014\210\001\001\022>\n,location_ass" +
+      "et_auto_migration_done_date_time\030( \001(\tB\003" +
+      "\340A\003H\r\210\001\001\022;\n)image_asset_auto_migration_d" +
+      "one_date_time\030) \001(\tB\003\340A\003H\016\210\001\001\022e\n\032custome" +
+      "r_agreement_setting\030, \001(\0132<.google.ads.g" +
+      "oogleads.v22.resources.CustomerAgreement" +
+      "SettingB\003\340A\003\022_\n\027local_services_settings\030" +
+      "- \001(\01329.google.ads.googleads.v22.resourc" +
+      "es.LocalServicesSettingsB\003\340A\003\022~\n\036video_b" +
+      "rand_safety_suitability\030. \001(\0162Q.google.a" +
+      "ds.googleads.v22.enums.BrandSafetySuitab" +
+      "ilityEnum.BrandSafetySuitabilityB\003\340A\003\022I\n" +
+      "\016video_customer\0306 \001(\01321.google.ads.googl" +
+      "eads.v22.resources.VideoCustomer\022\215\001\n!con" +
+      "tains_eu_political_advertising\0307 \001(\0162].g" +
+      "oogle.ads.googleads.v22.enums.EuPolitica" +
+      "lAdvertisingStatusEnum.EuPoliticalAdvert" +
+      "isingStatusB\003\340A\003:?\352A<\n!googleads.googlea" +
+      "pis.com/Customer\022\027customers/{customer_id" +
+      "}B\005\n\003_idB\023\n\021_descriptive_nameB\020\n\016_curren" +
+      "cy_codeB\014\n\n_time_zoneB\030\n\026_tracking_url_t" +
+      "emplateB\023\n\021_final_url_suffixB\027\n\025_auto_ta" +
+      "gging_enabledB\025\n\023_has_partners_badgeB\n\n\010" +
+      "_managerB\017\n\r_test_accountB\025\n\023_optimizati" +
+      "on_scoreB%\n#_location_asset_auto_migrati" +
+      "on_doneB\"\n _image_asset_auto_migration_d" +
+      "oneB/\n-_location_asset_auto_migration_do" +
+      "ne_date_timeB,\n*_image_asset_auto_migrat" +
+      "ion_done_date_time\"\234\002\n\024CallReportingSett" +
+      "ing\022#\n\026call_reporting_enabled\030\n \001(\010H\000\210\001\001" +
+      "\022.\n!call_conversion_reporting_enabled\030\013 " +
+      "\001(\010H\001\210\001\001\022S\n\026call_conversion_action\030\014 \001(\t" +
+      "B.\372A+\n)googleads.googleapis.com/Conversi" +
+      "onActionH\002\210\001\001B\031\n\027_call_reporting_enabled" +
+      "B$\n\"_call_conversion_reporting_enabledB\031" +
+      "\n\027_call_conversion_action\"\311\003\n\031Conversion" +
+      "TrackingSetting\022(\n\026conversion_tracking_i" +
+      "d\030\003 \001(\003B\003\340A\003H\000\210\001\001\0226\n$cross_account_conve" +
+      "rsion_tracking_id\030\004 \001(\003B\003\340A\003H\001\210\001\001\022)\n\034acc" +
+      "epted_customer_data_terms\030\005 \001(\010B\003\340A\003\022~\n\032" +
+      "conversion_tracking_status\030\006 \001(\0162U.googl" +
+      "e.ads.googleads.v22.enums.ConversionTrac" +
+      "kingStatusEnum.ConversionTrackingStatusB" +
+      "\003\340A\003\0223\n&enhanced_conversions_for_leads_e" +
+      "nabled\030\007 \001(\010B\003\340A\003\022&\n\036google_ads_conversi" +
+      "on_customer\030\010 \001(\tB\031\n\027_conversion_trackin" +
+      "g_idB\'\n%_cross_account_conversion_tracki" +
+      "ng_id\"Y\n\022RemarketingSetting\022(\n\026google_gl" +
+      "obal_site_tag\030\002 \001(\tB\003\340A\003H\000\210\001\001B\031\n\027_google" +
+      "_global_site_tag\"A\n\030CustomerAgreementSet" +
+      "ting\022%\n\030accepted_lead_form_terms\030\001 \001(\010B\003" +
+      "\340A\003\"\341\001\n\025LocalServicesSettings\022a\n\031granula" +
+      "r_license_statuses\030\001 \003(\01329.google.ads.go" +
+      "ogleads.v22.resources.GranularLicenseSta" +
+      "tusB\003\340A\003\022e\n\033granular_insurance_statuses\030" +
+      "\002 \003(\0132;.google.ads.googleads.v22.resourc" +
+      "es.GranularInsuranceStatusB\003\340A\003\"\244\002\n\025Gran" +
+      "ularLicenseStatus\022\"\n\020geo_criterion_id\030\001 " +
+      "\001(\003B\003\340A\003H\000\210\001\001\022\035\n\013category_id\030\002 \001(\tB\003\340A\003H" +
+      "\001\210\001\001\022\212\001\n\023verification_status\030\003 \001(\0162c.goo" +
+      "gle.ads.googleads.v22.enums.LocalService" +
+      "sVerificationStatusEnum.LocalServicesVer" +
+      "ificationStatusB\003\340A\003H\002\210\001\001B\023\n\021_geo_criter" +
+      "ion_idB\016\n\014_category_idB\026\n\024_verification_" +
+      "status\"\246\002\n\027GranularInsuranceStatus\022\"\n\020ge" +
+      "o_criterion_id\030\001 \001(\003B\003\340A\003H\000\210\001\001\022\035\n\013catego" +
+      "ry_id\030\002 \001(\tB\003\340A\003H\001\210\001\001\022\212\001\n\023verification_s" +
+      "tatus\030\003 \001(\0162c.google.ads.googleads.v22.e" +
+      "nums.LocalServicesVerificationStatusEnum" +
+      ".LocalServicesVerificationStatusB\003\340A\003H\002\210" +
+      "\001\001B\023\n\021_geo_criterion_idB\016\n\014_category_idB" +
+      "\026\n\024_verification_status\"\201\001\n\rVideoCustome" +
+      "r\022p\n third_party_integration_partners\030\001 " +
+      "\001(\0132F.google.ads.googleads.v22.common.Cu" +
+      "stomerThirdPartyIntegrationPartnersB\377\001\n&" +
+      "com.google.ads.googleads.v22.resourcesB\r" +
+      "CustomerProtoP\001ZKgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v22/resourc" +
+      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
+      "s.V22.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
+      "22\\Resources\352\002&Google::Ads::GoogleAds::V" +
+      "22::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -199,6 +204,7 @@ public final class CustomerProto {
           com.google.ads.googleads.v22.enums.ConversionTrackingStatusEnumProto.getDescriptor(),
           com.google.ads.googleads.v22.enums.CustomerPayPerConversionEligibilityFailureReasonProto.getDescriptor(),
           com.google.ads.googleads.v22.enums.CustomerStatusProto.getDescriptor(),
+          com.google.ads.googleads.v22.enums.EuPoliticalAdvertisingStatusProto.getDescriptor(),
           com.google.ads.googleads.v22.enums.LocalServicesVerificationStatusProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
@@ -208,7 +214,7 @@ public final class CustomerProto {
     internal_static_google_ads_googleads_v22_resources_Customer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v22_resources_Customer_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "DescriptiveName", "CurrencyCode", "TimeZone", "TrackingUrlTemplate", "FinalUrlSuffix", "AutoTaggingEnabled", "HasPartnersBadge", "Manager", "TestAccount", "CallReportingSetting", "ConversionTrackingSetting", "RemarketingSetting", "PayPerConversionEligibilityFailureReasons", "OptimizationScore", "OptimizationScoreWeight", "Status", "LocationAssetAutoMigrationDone", "ImageAssetAutoMigrationDone", "LocationAssetAutoMigrationDoneDateTime", "ImageAssetAutoMigrationDoneDateTime", "CustomerAgreementSetting", "LocalServicesSettings", "VideoBrandSafetySuitability", "VideoCustomer", });
+        new java.lang.String[] { "ResourceName", "Id", "DescriptiveName", "CurrencyCode", "TimeZone", "TrackingUrlTemplate", "FinalUrlSuffix", "AutoTaggingEnabled", "HasPartnersBadge", "Manager", "TestAccount", "CallReportingSetting", "ConversionTrackingSetting", "RemarketingSetting", "PayPerConversionEligibilityFailureReasons", "OptimizationScore", "OptimizationScoreWeight", "Status", "LocationAssetAutoMigrationDone", "ImageAssetAutoMigrationDone", "LocationAssetAutoMigrationDoneDateTime", "ImageAssetAutoMigrationDoneDateTime", "CustomerAgreementSetting", "LocalServicesSettings", "VideoBrandSafetySuitability", "VideoCustomer", "ContainsEuPoliticalAdvertising", });
     internal_static_google_ads_googleads_v22_resources_CallReportingSetting_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v22_resources_CallReportingSetting_fieldAccessorTable = new
@@ -269,6 +275,7 @@ public final class CustomerProto {
     com.google.ads.googleads.v22.enums.ConversionTrackingStatusEnumProto.getDescriptor();
     com.google.ads.googleads.v22.enums.CustomerPayPerConversionEligibilityFailureReasonProto.getDescriptor();
     com.google.ads.googleads.v22.enums.CustomerStatusProto.getDescriptor();
+    com.google.ads.googleads.v22.enums.EuPoliticalAdvertisingStatusProto.getDescriptor();
     com.google.ads.googleads.v22.enums.LocalServicesVerificationStatusProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();

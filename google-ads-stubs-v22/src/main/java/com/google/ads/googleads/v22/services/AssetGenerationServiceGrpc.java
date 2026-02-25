@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service for generating new assets with generative AI.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/asset_generation_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AssetGenerationServiceGrpc {
 
@@ -292,8 +289,8 @@ public final class AssetGenerationServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.GenerateTextResponse generateText(com.google.ads.googleads.v22.services.GenerateTextRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.GenerateTextResponse generateText(com.google.ads.googleads.v22.services.GenerateTextRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateTextMethod(), getCallOptions(), request);
     }
 
@@ -311,8 +308,8 @@ public final class AssetGenerationServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.GenerateImagesResponse generateImages(com.google.ads.googleads.v22.services.GenerateImagesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.GenerateImagesResponse generateImages(com.google.ads.googleads.v22.services.GenerateImagesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateImagesMethod(), getCallOptions(), request);
     }
   }

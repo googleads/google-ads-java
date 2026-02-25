@@ -10,14 +10,25 @@ public interface TrendInsightMetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of views for this trend. This is only populated for SearchTopics
-   * requests.
+   * The number of views for this trend. This is only populated for the latest
+   * month of data for SearchTopics requests.
    * </pre>
    *
    * <code>int64 views_count = 1;</code>
    * @return The viewsCount.
    */
   long getViewsCount();
+
+  /**
+   * <pre>
+   * Views value normalized to be in the range 0-100. This is only populated for
+   * SearchTopics requests.
+   * </pre>
+   *
+   * <code>int64 views_indexed_value = 4;</code>
+   * @return The viewsIndexedValue.
+   */
+  long getViewsIndexedValue();
 
   /**
    * <pre>
@@ -34,8 +45,8 @@ public interface TrendInsightMetricsOrBuilder extends
   /**
    * <pre>
    * The percentage of the change in the trend's value over the comparison
-   * period, where 1.0 represents 100%. If this is not set, it means that the
-   * trend is emerging.
+   * period, where 1.0 represents 100%. If this is 0, it means that the trend is
+   * emerging (new) or sustained (existing but unchanged).
    * </pre>
    *
    * <code>double trend_change_percent = 3;</code>

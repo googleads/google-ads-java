@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage audiences.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/audience_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AudienceServiceGrpc {
 
@@ -201,8 +198,8 @@ public final class AudienceServiceGrpc {
      *   [AudienceError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateAudiencesResponse mutateAudiences(com.google.ads.googleads.v21.services.MutateAudiencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateAudiencesResponse mutateAudiences(com.google.ads.googleads.v21.services.MutateAudiencesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateAudiencesMethod(), getCallOptions(), request);
     }
   }

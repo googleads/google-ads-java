@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage conversion value rule sets.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/conversion_value_rule_set_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ConversionValueRuleSetServiceGrpc {
 
@@ -198,8 +195,8 @@ public final class ConversionValueRuleSetServiceGrpc {
      * are returned.
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateConversionValueRuleSetsResponse mutateConversionValueRuleSets(com.google.ads.googleads.v22.services.MutateConversionValueRuleSetsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateConversionValueRuleSetsResponse mutateConversionValueRuleSets(com.google.ads.googleads.v22.services.MutateConversionValueRuleSetsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateConversionValueRuleSetsMethod(), getCallOptions(), request);
     }
   }

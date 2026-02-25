@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage ad group customizer
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/ad_group_customizer_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AdGroupCustomizerServiceGrpc {
 
@@ -198,8 +195,8 @@ public final class AdGroupCustomizerServiceGrpc {
      * returned.
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateAdGroupCustomizersResponse mutateAdGroupCustomizers(com.google.ads.googleads.v20.services.MutateAdGroupCustomizersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateAdGroupCustomizersResponse mutateAdGroupCustomizers(com.google.ads.googleads.v20.services.MutateAdGroupCustomizersRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateAdGroupCustomizersMethod(), getCallOptions(), request);
     }
   }

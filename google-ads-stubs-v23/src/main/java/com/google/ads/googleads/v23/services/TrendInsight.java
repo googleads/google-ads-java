@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   }
   private TrendInsight() {
     trend_ = 0;
+    trendDataPoints_ = java.util.Collections.emptyList();
     relatedVideos_ = java.util.Collections.emptyList();
     relatedCreators_ = java.util.Collections.emptyList();
   }
@@ -89,7 +90,8 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v23.services.TrendInsightMetrics trendMetrics_;
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -101,7 +103,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -113,7 +116,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -147,6 +151,87 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override public com.google.ads.googleads.v23.enums.InsightsTrendEnum.InsightsTrend getTrend() {
     com.google.ads.googleads.v23.enums.InsightsTrendEnum.InsightsTrend result = com.google.ads.googleads.v23.enums.InsightsTrendEnum.InsightsTrend.forNumber(trend_);
     return result == null ? com.google.ads.googleads.v23.enums.InsightsTrendEnum.InsightsTrend.UNRECOGNIZED : result;
+  }
+
+  public static final int TREND_DATA_POINTS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.ads.googleads.v23.services.TrendInsightDataPoint> trendDataPoints_;
+  /**
+   * <pre>
+   * 12 months of historical data for the trend, including the most recent month
+   * the TrendInsight represents. Each data point represents 1 month of data and
+   * the comparison period is 1 month. The data points are ordered from most
+   * recent month to least recent month. Only populated for trends using
+   * search_topics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v23.services.TrendInsightDataPoint> getTrendDataPointsList() {
+    return trendDataPoints_;
+  }
+  /**
+   * <pre>
+   * 12 months of historical data for the trend, including the most recent month
+   * the TrendInsight represents. Each data point represents 1 month of data and
+   * the comparison period is 1 month. The data points are ordered from most
+   * recent month to least recent month. Only populated for trends using
+   * search_topics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v23.services.TrendInsightDataPointOrBuilder> 
+      getTrendDataPointsOrBuilderList() {
+    return trendDataPoints_;
+  }
+  /**
+   * <pre>
+   * 12 months of historical data for the trend, including the most recent month
+   * the TrendInsight represents. Each data point represents 1 month of data and
+   * the comparison period is 1 month. The data points are ordered from most
+   * recent month to least recent month. Only populated for trends using
+   * search_topics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+   */
+  @java.lang.Override
+  public int getTrendDataPointsCount() {
+    return trendDataPoints_.size();
+  }
+  /**
+   * <pre>
+   * 12 months of historical data for the trend, including the most recent month
+   * the TrendInsight represents. Each data point represents 1 month of data and
+   * the comparison period is 1 month. The data points are ordered from most
+   * recent month to least recent month. Only populated for trends using
+   * search_topics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.services.TrendInsightDataPoint getTrendDataPoints(int index) {
+    return trendDataPoints_.get(index);
+  }
+  /**
+   * <pre>
+   * 12 months of historical data for the trend, including the most recent month
+   * the TrendInsight represents. Each data point represents 1 month of data and
+   * the comparison period is 1 month. The data points are ordered from most
+   * recent month to least recent month. Only populated for trends using
+   * search_topics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.services.TrendInsightDataPointOrBuilder getTrendDataPointsOrBuilder(
+      int index) {
+    return trendDataPoints_.get(index);
   }
 
   public static final int RELATED_VIDEOS_FIELD_NUMBER = 4;
@@ -310,6 +395,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < relatedCreators_.size(); i++) {
       output.writeMessage(5, relatedCreators_.get(i));
     }
+    for (int i = 0; i < trendDataPoints_.size(); i++) {
+      output.writeMessage(6, trendDataPoints_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -339,6 +427,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, relatedCreators_.get(i));
     }
+    for (int i = 0; i < trendDataPoints_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, trendDataPoints_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -365,6 +457,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getTrendMetrics())) return false;
     }
     if (trend_ != other.trend_) return false;
+    if (!getTrendDataPointsList()
+        .equals(other.getTrendDataPointsList())) return false;
     if (!getRelatedVideosList()
         .equals(other.getRelatedVideosList())) return false;
     if (!getRelatedCreatorsList()
@@ -390,6 +484,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TREND_FIELD_NUMBER;
     hash = (53 * hash) + trend_;
+    if (getTrendDataPointsCount() > 0) {
+      hash = (37 * hash) + TREND_DATA_POINTS_FIELD_NUMBER;
+      hash = (53 * hash) + getTrendDataPointsList().hashCode();
+    }
     if (getRelatedVideosCount() > 0) {
       hash = (37 * hash) + RELATED_VIDEOS_FIELD_NUMBER;
       hash = (53 * hash) + getRelatedVideosList().hashCode();
@@ -534,6 +632,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getTrendAttributeFieldBuilder();
         getTrendMetricsFieldBuilder();
+        getTrendDataPointsFieldBuilder();
         getRelatedVideosFieldBuilder();
         getRelatedCreatorsFieldBuilder();
       }
@@ -553,20 +652,27 @@ private static final long serialVersionUID = 0L;
         trendMetricsBuilder_ = null;
       }
       trend_ = 0;
+      if (trendDataPointsBuilder_ == null) {
+        trendDataPoints_ = java.util.Collections.emptyList();
+      } else {
+        trendDataPoints_ = null;
+        trendDataPointsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
       if (relatedVideosBuilder_ == null) {
         relatedVideos_ = java.util.Collections.emptyList();
       } else {
         relatedVideos_ = null;
         relatedVideosBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       if (relatedCreatorsBuilder_ == null) {
         relatedCreators_ = java.util.Collections.emptyList();
       } else {
         relatedCreators_ = null;
         relatedCreatorsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -600,19 +706,28 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v23.services.TrendInsight result) {
-      if (relatedVideosBuilder_ == null) {
+      if (trendDataPointsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
-          relatedVideos_ = java.util.Collections.unmodifiableList(relatedVideos_);
+          trendDataPoints_ = java.util.Collections.unmodifiableList(trendDataPoints_);
           bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.trendDataPoints_ = trendDataPoints_;
+      } else {
+        result.trendDataPoints_ = trendDataPointsBuilder_.build();
+      }
+      if (relatedVideosBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          relatedVideos_ = java.util.Collections.unmodifiableList(relatedVideos_);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.relatedVideos_ = relatedVideos_;
       } else {
         result.relatedVideos_ = relatedVideosBuilder_.build();
       }
       if (relatedCreatorsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           relatedCreators_ = java.util.Collections.unmodifiableList(relatedCreators_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.relatedCreators_ = relatedCreators_;
       } else {
@@ -694,11 +809,37 @@ private static final long serialVersionUID = 0L;
       if (other.trend_ != 0) {
         setTrendValue(other.getTrendValue());
       }
+      if (trendDataPointsBuilder_ == null) {
+        if (!other.trendDataPoints_.isEmpty()) {
+          if (trendDataPoints_.isEmpty()) {
+            trendDataPoints_ = other.trendDataPoints_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureTrendDataPointsIsMutable();
+            trendDataPoints_.addAll(other.trendDataPoints_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.trendDataPoints_.isEmpty()) {
+          if (trendDataPointsBuilder_.isEmpty()) {
+            trendDataPointsBuilder_.dispose();
+            trendDataPointsBuilder_ = null;
+            trendDataPoints_ = other.trendDataPoints_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            trendDataPointsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getTrendDataPointsFieldBuilder() : null;
+          } else {
+            trendDataPointsBuilder_.addAllMessages(other.trendDataPoints_);
+          }
+        }
+      }
       if (relatedVideosBuilder_ == null) {
         if (!other.relatedVideos_.isEmpty()) {
           if (relatedVideos_.isEmpty()) {
             relatedVideos_ = other.relatedVideos_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureRelatedVideosIsMutable();
             relatedVideos_.addAll(other.relatedVideos_);
@@ -711,7 +852,7 @@ private static final long serialVersionUID = 0L;
             relatedVideosBuilder_.dispose();
             relatedVideosBuilder_ = null;
             relatedVideos_ = other.relatedVideos_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
             relatedVideosBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getRelatedVideosFieldBuilder() : null;
@@ -724,7 +865,7 @@ private static final long serialVersionUID = 0L;
         if (!other.relatedCreators_.isEmpty()) {
           if (relatedCreators_.isEmpty()) {
             relatedCreators_ = other.relatedCreators_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureRelatedCreatorsIsMutable();
             relatedCreators_.addAll(other.relatedCreators_);
@@ -737,7 +878,7 @@ private static final long serialVersionUID = 0L;
             relatedCreatorsBuilder_.dispose();
             relatedCreatorsBuilder_ = null;
             relatedCreators_ = other.relatedCreators_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
             relatedCreatorsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getRelatedCreatorsFieldBuilder() : null;
@@ -817,6 +958,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 42
+            case 50: {
+              com.google.ads.googleads.v23.services.TrendInsightDataPoint m =
+                  input.readMessage(
+                      com.google.ads.googleads.v23.services.TrendInsightDataPoint.parser(),
+                      extensionRegistry);
+              if (trendDataPointsBuilder_ == null) {
+                ensureTrendDataPointsIsMutable();
+                trendDataPoints_.add(m);
+              } else {
+                trendDataPointsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -996,7 +1150,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v23.services.TrendInsightMetrics, com.google.ads.googleads.v23.services.TrendInsightMetrics.Builder, com.google.ads.googleads.v23.services.TrendInsightMetricsOrBuilder> trendMetricsBuilder_;
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -1007,7 +1162,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -1022,7 +1178,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -1042,7 +1199,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -1060,7 +1218,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -1085,7 +1244,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -1102,7 +1262,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -1114,7 +1275,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -1129,7 +1291,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -1221,12 +1384,396 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.util.List<com.google.ads.googleads.v23.services.TrendInsightDataPoint> trendDataPoints_ =
+      java.util.Collections.emptyList();
+    private void ensureTrendDataPointsIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        trendDataPoints_ = new java.util.ArrayList<com.google.ads.googleads.v23.services.TrendInsightDataPoint>(trendDataPoints_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v23.services.TrendInsightDataPoint, com.google.ads.googleads.v23.services.TrendInsightDataPoint.Builder, com.google.ads.googleads.v23.services.TrendInsightDataPointOrBuilder> trendDataPointsBuilder_;
+
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v23.services.TrendInsightDataPoint> getTrendDataPointsList() {
+      if (trendDataPointsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(trendDataPoints_);
+      } else {
+        return trendDataPointsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public int getTrendDataPointsCount() {
+      if (trendDataPointsBuilder_ == null) {
+        return trendDataPoints_.size();
+      } else {
+        return trendDataPointsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public com.google.ads.googleads.v23.services.TrendInsightDataPoint getTrendDataPoints(int index) {
+      if (trendDataPointsBuilder_ == null) {
+        return trendDataPoints_.get(index);
+      } else {
+        return trendDataPointsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public Builder setTrendDataPoints(
+        int index, com.google.ads.googleads.v23.services.TrendInsightDataPoint value) {
+      if (trendDataPointsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTrendDataPointsIsMutable();
+        trendDataPoints_.set(index, value);
+        onChanged();
+      } else {
+        trendDataPointsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public Builder setTrendDataPoints(
+        int index, com.google.ads.googleads.v23.services.TrendInsightDataPoint.Builder builderForValue) {
+      if (trendDataPointsBuilder_ == null) {
+        ensureTrendDataPointsIsMutable();
+        trendDataPoints_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        trendDataPointsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public Builder addTrendDataPoints(com.google.ads.googleads.v23.services.TrendInsightDataPoint value) {
+      if (trendDataPointsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTrendDataPointsIsMutable();
+        trendDataPoints_.add(value);
+        onChanged();
+      } else {
+        trendDataPointsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public Builder addTrendDataPoints(
+        int index, com.google.ads.googleads.v23.services.TrendInsightDataPoint value) {
+      if (trendDataPointsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTrendDataPointsIsMutable();
+        trendDataPoints_.add(index, value);
+        onChanged();
+      } else {
+        trendDataPointsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public Builder addTrendDataPoints(
+        com.google.ads.googleads.v23.services.TrendInsightDataPoint.Builder builderForValue) {
+      if (trendDataPointsBuilder_ == null) {
+        ensureTrendDataPointsIsMutable();
+        trendDataPoints_.add(builderForValue.build());
+        onChanged();
+      } else {
+        trendDataPointsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public Builder addTrendDataPoints(
+        int index, com.google.ads.googleads.v23.services.TrendInsightDataPoint.Builder builderForValue) {
+      if (trendDataPointsBuilder_ == null) {
+        ensureTrendDataPointsIsMutable();
+        trendDataPoints_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        trendDataPointsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public Builder addAllTrendDataPoints(
+        java.lang.Iterable<? extends com.google.ads.googleads.v23.services.TrendInsightDataPoint> values) {
+      if (trendDataPointsBuilder_ == null) {
+        ensureTrendDataPointsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, trendDataPoints_);
+        onChanged();
+      } else {
+        trendDataPointsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public Builder clearTrendDataPoints() {
+      if (trendDataPointsBuilder_ == null) {
+        trendDataPoints_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        trendDataPointsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public Builder removeTrendDataPoints(int index) {
+      if (trendDataPointsBuilder_ == null) {
+        ensureTrendDataPointsIsMutable();
+        trendDataPoints_.remove(index);
+        onChanged();
+      } else {
+        trendDataPointsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public com.google.ads.googleads.v23.services.TrendInsightDataPoint.Builder getTrendDataPointsBuilder(
+        int index) {
+      return getTrendDataPointsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public com.google.ads.googleads.v23.services.TrendInsightDataPointOrBuilder getTrendDataPointsOrBuilder(
+        int index) {
+      if (trendDataPointsBuilder_ == null) {
+        return trendDataPoints_.get(index);  } else {
+        return trendDataPointsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v23.services.TrendInsightDataPointOrBuilder> 
+         getTrendDataPointsOrBuilderList() {
+      if (trendDataPointsBuilder_ != null) {
+        return trendDataPointsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(trendDataPoints_);
+      }
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public com.google.ads.googleads.v23.services.TrendInsightDataPoint.Builder addTrendDataPointsBuilder() {
+      return getTrendDataPointsFieldBuilder().addBuilder(
+          com.google.ads.googleads.v23.services.TrendInsightDataPoint.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public com.google.ads.googleads.v23.services.TrendInsightDataPoint.Builder addTrendDataPointsBuilder(
+        int index) {
+      return getTrendDataPointsFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v23.services.TrendInsightDataPoint.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * 12 months of historical data for the trend, including the most recent month
+     * the TrendInsight represents. Each data point represents 1 month of data and
+     * the comparison period is 1 month. The data points are ordered from most
+     * recent month to least recent month. Only populated for trends using
+     * search_topics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v23.services.TrendInsightDataPoint.Builder> 
+         getTrendDataPointsBuilderList() {
+      return getTrendDataPointsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v23.services.TrendInsightDataPoint, com.google.ads.googleads.v23.services.TrendInsightDataPoint.Builder, com.google.ads.googleads.v23.services.TrendInsightDataPointOrBuilder> 
+        getTrendDataPointsFieldBuilder() {
+      if (trendDataPointsBuilder_ == null) {
+        trendDataPointsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v23.services.TrendInsightDataPoint, com.google.ads.googleads.v23.services.TrendInsightDataPoint.Builder, com.google.ads.googleads.v23.services.TrendInsightDataPointOrBuilder>(
+                trendDataPoints_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        trendDataPoints_ = null;
+      }
+      return trendDataPointsBuilder_;
+    }
+
     private java.util.List<com.google.ads.googleads.v23.common.AudienceInsightsAttributeMetadata> relatedVideos_ =
       java.util.Collections.emptyList();
     private void ensureRelatedVideosIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         relatedVideos_ = new java.util.ArrayList<com.google.ads.googleads.v23.common.AudienceInsightsAttributeMetadata>(relatedVideos_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1431,7 +1978,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearRelatedVideos() {
       if (relatedVideosBuilder_ == null) {
         relatedVideos_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         relatedVideosBuilder_.clear();
@@ -1543,7 +2090,7 @@ private static final long serialVersionUID = 0L;
         relatedVideosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v23.common.AudienceInsightsAttributeMetadata, com.google.ads.googleads.v23.common.AudienceInsightsAttributeMetadata.Builder, com.google.ads.googleads.v23.common.AudienceInsightsAttributeMetadataOrBuilder>(
                 relatedVideos_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         relatedVideos_ = null;
@@ -1554,9 +2101,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v23.services.YouTubeCreatorInsights> relatedCreators_ =
       java.util.Collections.emptyList();
     private void ensureRelatedCreatorsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         relatedCreators_ = new java.util.ArrayList<com.google.ads.googleads.v23.services.YouTubeCreatorInsights>(relatedCreators_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -1761,7 +2308,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearRelatedCreators() {
       if (relatedCreatorsBuilder_ == null) {
         relatedCreators_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         relatedCreatorsBuilder_.clear();
@@ -1873,7 +2420,7 @@ private static final long serialVersionUID = 0L;
         relatedCreatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v23.services.YouTubeCreatorInsights, com.google.ads.googleads.v23.services.YouTubeCreatorInsights.Builder, com.google.ads.googleads.v23.services.YouTubeCreatorInsightsOrBuilder>(
                 relatedCreators_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         relatedCreators_ = null;

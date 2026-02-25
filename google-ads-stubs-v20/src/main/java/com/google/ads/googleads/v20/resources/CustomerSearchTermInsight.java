@@ -6,7 +6,9 @@ package com.google.ads.googleads.v20.resources;
 
 /**
  * <pre>
- * A Customer search term view.
+ * This report provides a high-level view of search demand at the customer
+ * level by grouping similar search terms into categories and showing their
+ * search volume.
  * Historical data is available starting March 2023.
  * </pre>
  *
@@ -379,7 +381,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A Customer search term view.
+   * This report provides a high-level view of search demand at the customer
+   * level by grouping similar search terms into categories and showing their
+   * search volume.
    * Historical data is available starting March 2023.
    * </pre>
    *

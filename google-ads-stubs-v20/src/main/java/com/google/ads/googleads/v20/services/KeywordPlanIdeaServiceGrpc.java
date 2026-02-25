@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to generate keyword ideas.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/keyword_plan_idea_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class KeywordPlanIdeaServiceGrpc {
 
@@ -430,8 +427,8 @@ public final class KeywordPlanIdeaServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.GenerateKeywordIdeaResponse generateKeywordIdeas(com.google.ads.googleads.v20.services.GenerateKeywordIdeasRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.GenerateKeywordIdeaResponse generateKeywordIdeas(com.google.ads.googleads.v20.services.GenerateKeywordIdeasRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateKeywordIdeasMethod(), getCallOptions(), request);
     }
 
@@ -448,8 +445,8 @@ public final class KeywordPlanIdeaServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.GenerateKeywordHistoricalMetricsResponse generateKeywordHistoricalMetrics(com.google.ads.googleads.v20.services.GenerateKeywordHistoricalMetricsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.GenerateKeywordHistoricalMetricsResponse generateKeywordHistoricalMetrics(com.google.ads.googleads.v20.services.GenerateKeywordHistoricalMetricsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateKeywordHistoricalMetricsMethod(), getCallOptions(), request);
     }
 
@@ -467,8 +464,8 @@ public final class KeywordPlanIdeaServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.GenerateAdGroupThemesResponse generateAdGroupThemes(com.google.ads.googleads.v20.services.GenerateAdGroupThemesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.GenerateAdGroupThemesResponse generateAdGroupThemes(com.google.ads.googleads.v20.services.GenerateAdGroupThemesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateAdGroupThemesMethod(), getCallOptions(), request);
     }
 
@@ -486,8 +483,8 @@ public final class KeywordPlanIdeaServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.GenerateKeywordForecastMetricsResponse generateKeywordForecastMetrics(com.google.ads.googleads.v20.services.GenerateKeywordForecastMetricsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.GenerateKeywordForecastMetricsResponse generateKeywordForecastMetrics(com.google.ads.googleads.v20.services.GenerateKeywordForecastMetricsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateKeywordForecastMetricsMethod(), getCallOptions(), request);
     }
   }

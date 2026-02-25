@@ -182,5 +182,37 @@ public interface ProductLinkOrBuilder extends
    */
   com.google.ads.googleads.v23.resources.AdvertisingPartnerIdentifierOrBuilder getAdvertisingPartnerOrBuilder();
 
+  /**
+   * <pre>
+   * Output only. Advertising Partner link properties. These properties are
+   * only applicable when the link is for an Advertising Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the advertisingPartnerProperties field is set.
+   */
+  boolean hasAdvertisingPartnerProperties();
+  /**
+   * <pre>
+   * Output only. Advertising Partner link properties. These properties are
+   * only applicable when the link is for an Advertising Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The advertisingPartnerProperties.
+   */
+  com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties getAdvertisingPartnerProperties();
+  /**
+   * <pre>
+   * Output only. Advertising Partner link properties. These properties are
+   * only applicable when the link is for an Advertising Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v23.resources.AdvertisingPartnerPropertiesOrBuilder getAdvertisingPartnerPropertiesOrBuilder();
+
   com.google.ads.googleads.v23.resources.ProductLink.LinkedProductCase getLinkedProductCase();
+
+  com.google.ads.googleads.v23.resources.ProductLink.ProductLinkPropertiesCase getProductLinkPropertiesCase();
 }

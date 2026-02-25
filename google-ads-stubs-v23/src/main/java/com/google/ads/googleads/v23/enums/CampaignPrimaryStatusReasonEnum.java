@@ -382,6 +382,46 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_LOCATION_TARGETING = 39;</code>
      */
     MISSING_LOCATION_TARGETING(39),
+    /**
+     * <pre>
+     * The campaign is a campaign with the FIXED_CPM bidding strategy but is not
+     * booked. Contributes to CampaignPrimaryStatus.NOT_ELIGIBLE when the
+     * campaign is not paused, and CampaignPrimaryStatus.PAUSED when the
+     * campaign is paused.
+     * </pre>
+     *
+     * <code>CAMPAIGN_NOT_BOOKED = 40;</code>
+     */
+    CAMPAIGN_NOT_BOOKED(40),
+    /**
+     * <pre>
+     * The campaign is a campaign with the FIXED_CPM bidding strategy for which
+     * inventory was held, with the hold expiring. The hold expiry time can be
+     * read from Campaign.booking_details.hold_expiration_date_time. Contributes
+     * to CampaignPrimaryStatus.PAUSED.
+     * </pre>
+     *
+     * <code>BOOKING_HOLD_EXPIRING = 41;</code>
+     */
+    BOOKING_HOLD_EXPIRING(41),
+    /**
+     * <pre>
+     * The campaign is a campaign with the FIXED_CPM bidding strategy with the
+     * inventory hold expired. Contributes to CampaignPrimaryStatus.PAUSED.
+     * </pre>
+     *
+     * <code>BOOKING_HOLD_EXPIRED = 42;</code>
+     */
+    BOOKING_HOLD_EXPIRED(42),
+    /**
+     * <pre>
+     * The campaign is a campaign with the FIXED_CPM bidding strategy that has
+     * been auto-cancelled. Contributes to CampaignPrimaryStatus.NOT_ELIGIBLE.
+     * </pre>
+     *
+     * <code>BOOKING_CANCELLED = 43;</code>
+     */
+    BOOKING_CANCELLED(43),
     UNRECOGNIZED(-1),
     ;
 
@@ -713,6 +753,46 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_LOCATION_TARGETING = 39;</code>
      */
     public static final int MISSING_LOCATION_TARGETING_VALUE = 39;
+    /**
+     * <pre>
+     * The campaign is a campaign with the FIXED_CPM bidding strategy but is not
+     * booked. Contributes to CampaignPrimaryStatus.NOT_ELIGIBLE when the
+     * campaign is not paused, and CampaignPrimaryStatus.PAUSED when the
+     * campaign is paused.
+     * </pre>
+     *
+     * <code>CAMPAIGN_NOT_BOOKED = 40;</code>
+     */
+    public static final int CAMPAIGN_NOT_BOOKED_VALUE = 40;
+    /**
+     * <pre>
+     * The campaign is a campaign with the FIXED_CPM bidding strategy for which
+     * inventory was held, with the hold expiring. The hold expiry time can be
+     * read from Campaign.booking_details.hold_expiration_date_time. Contributes
+     * to CampaignPrimaryStatus.PAUSED.
+     * </pre>
+     *
+     * <code>BOOKING_HOLD_EXPIRING = 41;</code>
+     */
+    public static final int BOOKING_HOLD_EXPIRING_VALUE = 41;
+    /**
+     * <pre>
+     * The campaign is a campaign with the FIXED_CPM bidding strategy with the
+     * inventory hold expired. Contributes to CampaignPrimaryStatus.PAUSED.
+     * </pre>
+     *
+     * <code>BOOKING_HOLD_EXPIRED = 42;</code>
+     */
+    public static final int BOOKING_HOLD_EXPIRED_VALUE = 42;
+    /**
+     * <pre>
+     * The campaign is a campaign with the FIXED_CPM bidding strategy that has
+     * been auto-cancelled. Contributes to CampaignPrimaryStatus.NOT_ELIGIBLE.
+     * </pre>
+     *
+     * <code>BOOKING_CANCELLED = 43;</code>
+     */
+    public static final int BOOKING_CANCELLED_VALUE = 43;
 
 
     public final int getNumber() {
@@ -779,6 +859,10 @@ private static final long serialVersionUID = 0L;
         case 37: return NO_ASSET_GROUPS;
         case 38: return ASSET_GROUPS_PAUSED;
         case 39: return MISSING_LOCATION_TARGETING;
+        case 40: return CAMPAIGN_NOT_BOOKED;
+        case 41: return BOOKING_HOLD_EXPIRING;
+        case 42: return BOOKING_HOLD_EXPIRED;
+        case 43: return BOOKING_CANCELLED;
         default: return null;
       }
     }

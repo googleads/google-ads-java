@@ -77,6 +77,23 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_INCENTIVE_ID = 2;</code>
      */
     INVALID_INCENTIVE_ID(2),
+    /**
+     * <pre>
+     * The maximum number of coupons has been redeemed.
+     * </pre>
+     *
+     * <code>MAX_INCENTIVES_REDEEMED = 3;</code>
+     */
+    MAX_INCENTIVES_REDEEMED(3),
+    /**
+     * <pre>
+     * This incentive cannot be applied because too much time has passed since
+     * the account's first ad impression.
+     * </pre>
+     *
+     * <code>ACCOUNT_TOO_OLD = 4;</code>
+     */
+    ACCOUNT_TOO_OLD(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -105,6 +122,23 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_INCENTIVE_ID = 2;</code>
      */
     public static final int INVALID_INCENTIVE_ID_VALUE = 2;
+    /**
+     * <pre>
+     * The maximum number of coupons has been redeemed.
+     * </pre>
+     *
+     * <code>MAX_INCENTIVES_REDEEMED = 3;</code>
+     */
+    public static final int MAX_INCENTIVES_REDEEMED_VALUE = 3;
+    /**
+     * <pre>
+     * This incentive cannot be applied because too much time has passed since
+     * the account's first ad impression.
+     * </pre>
+     *
+     * <code>ACCOUNT_TOO_OLD = 4;</code>
+     */
+    public static final int ACCOUNT_TOO_OLD_VALUE = 4;
 
 
     public final int getNumber() {
@@ -134,6 +168,8 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return INVALID_INCENTIVE_ID;
+        case 3: return MAX_INCENTIVES_REDEEMED;
+        case 4: return ACCOUNT_TOO_OLD;
         default: return null;
       }
     }

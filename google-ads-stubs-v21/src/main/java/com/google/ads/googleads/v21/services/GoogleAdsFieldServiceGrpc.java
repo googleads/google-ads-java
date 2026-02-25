@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to fetch Google Ads API fields.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/google_ads_field_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class GoogleAdsFieldServiceGrpc {
 
@@ -284,8 +281,8 @@ public final class GoogleAdsFieldServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.resources.GoogleAdsField getGoogleAdsField(com.google.ads.googleads.v21.services.GetGoogleAdsFieldRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.resources.GoogleAdsField getGoogleAdsField(com.google.ads.googleads.v21.services.GetGoogleAdsFieldRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetGoogleAdsFieldMethod(), getCallOptions(), request);
     }
 
@@ -302,8 +299,8 @@ public final class GoogleAdsFieldServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.SearchGoogleAdsFieldsResponse searchGoogleAdsFields(com.google.ads.googleads.v21.services.SearchGoogleAdsFieldsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.SearchGoogleAdsFieldsResponse searchGoogleAdsFields(com.google.ads.googleads.v21.services.SearchGoogleAdsFieldsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getSearchGoogleAdsFieldsMethod(), getCallOptions(), request);
     }
   }

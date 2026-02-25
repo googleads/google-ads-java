@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage recommendation subscriptions.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/recommendation_subscription_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RecommendationSubscriptionServiceGrpc {
 
@@ -128,6 +125,7 @@ public final class RecommendationSubscriptionServiceGrpc {
      *   [MutateError]()
      *   [QuotaError]()
      *   [RecommendationError]()
+     *   [RecommendationSubscriptionError]()
      *   [RequestError]()
      *   [UrlFieldError]()
      * </pre>
@@ -184,6 +182,7 @@ public final class RecommendationSubscriptionServiceGrpc {
      *   [MutateError]()
      *   [QuotaError]()
      *   [RecommendationError]()
+     *   [RecommendationSubscriptionError]()
      *   [RequestError]()
      *   [UrlFieldError]()
      * </pre>
@@ -227,12 +226,13 @@ public final class RecommendationSubscriptionServiceGrpc {
      *   [MutateError]()
      *   [QuotaError]()
      *   [RecommendationError]()
+     *   [RecommendationSubscriptionError]()
      *   [RequestError]()
      *   [UrlFieldError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateRecommendationSubscriptionResponse mutateRecommendationSubscription(com.google.ads.googleads.v22.services.MutateRecommendationSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateRecommendationSubscriptionResponse mutateRecommendationSubscription(com.google.ads.googleads.v22.services.MutateRecommendationSubscriptionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateRecommendationSubscriptionMethod(), getCallOptions(), request);
     }
   }
@@ -269,6 +269,7 @@ public final class RecommendationSubscriptionServiceGrpc {
      *   [MutateError]()
      *   [QuotaError]()
      *   [RecommendationError]()
+     *   [RecommendationSubscriptionError]()
      *   [RequestError]()
      *   [UrlFieldError]()
      * </pre>
@@ -311,6 +312,7 @@ public final class RecommendationSubscriptionServiceGrpc {
      *   [MutateError]()
      *   [QuotaError]()
      *   [RecommendationError]()
+     *   [RecommendationSubscriptionError]()
      *   [RequestError]()
      *   [UrlFieldError]()
      * </pre>

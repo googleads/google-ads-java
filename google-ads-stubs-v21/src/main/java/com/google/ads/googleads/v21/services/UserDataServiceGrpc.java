@@ -12,9 +12,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * section for the Customer Match List in the Google Ads UI.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/user_data_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class UserDataServiceGrpc {
 
@@ -256,8 +253,8 @@ public final class UserDataServiceGrpc {
      *   [UserDataError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.UploadUserDataResponse uploadUserData(com.google.ads.googleads.v21.services.UploadUserDataRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.UploadUserDataResponse uploadUserData(com.google.ads.googleads.v21.services.UploadUserDataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getUploadUserDataMethod(), getCallOptions(), request);
     }
   }

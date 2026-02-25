@@ -51,7 +51,10 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object phoneNumber_ = "";
   /**
    * <pre>
-   * Output only. Consumer phone number in E164 format.
+   * Output only. Phone number of the consumer for the lead. This can be a real
+   * phone number or a tracking number. The phone number is returned in E164
+   * format. See https://support.google.com/google-ads/answer/16355235?hl=en to
+   * learn more. Example: +16504519489.
    * </pre>
    *
    * <code>string phone_number = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -72,7 +75,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Consumer phone number in E164 format.
+   * Output only. Phone number of the consumer for the lead. This can be a real
+   * phone number or a tracking number. The phone number is returned in E164
+   * format. See https://support.google.com/google-ads/answer/16355235?hl=en to
+   * learn more. Example: +16504519489.
    * </pre>
    *
    * <code>string phone_number = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -570,7 +576,10 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object phoneNumber_ = "";
     /**
      * <pre>
-     * Output only. Consumer phone number in E164 format.
+     * Output only. Phone number of the consumer for the lead. This can be a real
+     * phone number or a tracking number. The phone number is returned in E164
+     * format. See https://support.google.com/google-ads/answer/16355235?hl=en to
+     * learn more. Example: +16504519489.
      * </pre>
      *
      * <code>string phone_number = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -590,7 +599,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Consumer phone number in E164 format.
+     * Output only. Phone number of the consumer for the lead. This can be a real
+     * phone number or a tracking number. The phone number is returned in E164
+     * format. See https://support.google.com/google-ads/answer/16355235?hl=en to
+     * learn more. Example: +16504519489.
      * </pre>
      *
      * <code>string phone_number = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -611,7 +623,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Consumer phone number in E164 format.
+     * Output only. Phone number of the consumer for the lead. This can be a real
+     * phone number or a tracking number. The phone number is returned in E164
+     * format. See https://support.google.com/google-ads/answer/16355235?hl=en to
+     * learn more. Example: +16504519489.
      * </pre>
      *
      * <code>string phone_number = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -628,7 +643,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Consumer phone number in E164 format.
+     * Output only. Phone number of the consumer for the lead. This can be a real
+     * phone number or a tracking number. The phone number is returned in E164
+     * format. See https://support.google.com/google-ads/answer/16355235?hl=en to
+     * learn more. Example: +16504519489.
      * </pre>
      *
      * <code>string phone_number = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -642,7 +660,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Consumer phone number in E164 format.
+     * Output only. Phone number of the consumer for the lead. This can be a real
+     * phone number or a tracking number. The phone number is returned in E164
+     * format. See https://support.google.com/google-ads/answer/16355235?hl=en to
+     * learn more. Example: +16504519489.
      * </pre>
      *
      * <code>string phone_number = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

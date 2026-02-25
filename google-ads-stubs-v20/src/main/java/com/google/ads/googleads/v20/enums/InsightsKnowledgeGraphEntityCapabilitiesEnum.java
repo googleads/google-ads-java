@@ -72,7 +72,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An entity that is supported to use as a trending topic in
-     * [ContentCreatorInsightsService.GenerateTrendingInsights].
+     * [ContentCreatorInsightsService.GenerateTrendingInsights][google.ads.googleads.v20.services.ContentCreatorInsightsService.GenerateTrendingInsights].
      * </pre>
      *
      * <code>CONTENT_TRENDING_INSIGHTS = 2;</code>
@@ -81,7 +81,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An entity that is supported to use as a creator attribute in
-     * [ContentCreatorInsightsService.GenerateCreatorInsights].
+     * [ContentCreatorInsightsService.GenerateCreatorInsights][google.ads.googleads.v20.services.ContentCreatorInsightsService.GenerateCreatorInsights].
      * </pre>
      *
      * <code>CREATOR_ATTRIBUTE = 3;</code>
@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An entity that is supported to use as a trending topic in
-     * [ContentCreatorInsightsService.GenerateTrendingInsights].
+     * [ContentCreatorInsightsService.GenerateTrendingInsights][google.ads.googleads.v20.services.ContentCreatorInsightsService.GenerateTrendingInsights].
      * </pre>
      *
      * <code>CONTENT_TRENDING_INSIGHTS = 2;</code>
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An entity that is supported to use as a creator attribute in
-     * [ContentCreatorInsightsService.GenerateCreatorInsights].
+     * [ContentCreatorInsightsService.GenerateCreatorInsights][google.ads.googleads.v20.services.ContentCreatorInsightsService.GenerateCreatorInsights].
      * </pre>
      *
      * <code>CREATOR_ATTRIBUTE = 3;</code>

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage customer negative criteria.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/customer_negative_criterion_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerNegativeCriterionServiceGrpc {
 
@@ -228,8 +225,8 @@ public final class CustomerNegativeCriterionServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateCustomerNegativeCriteriaResponse mutateCustomerNegativeCriteria(com.google.ads.googleads.v20.services.MutateCustomerNegativeCriteriaRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateCustomerNegativeCriteriaResponse mutateCustomerNegativeCriteria(com.google.ads.googleads.v20.services.MutateCustomerNegativeCriteriaRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomerNegativeCriteriaMethod(), getCallOptions(), request);
     }
   }

@@ -7,7 +7,7 @@ package com.google.ads.googleads.v21.services;
 /**
  * <pre>
  * Request message for
- * [AdGroupAdService.RemoveAutomaticallyCreatedAssetsRequest][].
+ * [AdGroupAdService.RemoveAutomaticallyCreatedAssets][google.ads.googleads.v21.services.AdGroupAdService.RemoveAutomaticallyCreatedAssets].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v21.services.RemoveAutomaticallyCreatedAssetsRequest}
@@ -328,7 +328,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for
-   * [AdGroupAdService.RemoveAutomaticallyCreatedAssetsRequest][].
+   * [AdGroupAdService.RemoveAutomaticallyCreatedAssets][google.ads.googleads.v21.services.AdGroupAdService.RemoveAutomaticallyCreatedAssets].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v21.services.RemoveAutomaticallyCreatedAssetsRequest}

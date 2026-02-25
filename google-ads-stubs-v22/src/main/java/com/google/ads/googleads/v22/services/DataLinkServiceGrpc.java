@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Ads customer and another data entity.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/data_link_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataLinkServiceGrpc {
 
@@ -390,8 +387,8 @@ public final class DataLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.CreateDataLinkResponse createDataLink(com.google.ads.googleads.v22.services.CreateDataLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.CreateDataLinkResponse createDataLink(com.google.ads.googleads.v22.services.CreateDataLinkRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getCreateDataLinkMethod(), getCallOptions(), request);
     }
 
@@ -411,8 +408,8 @@ public final class DataLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.RemoveDataLinkResponse removeDataLink(com.google.ads.googleads.v22.services.RemoveDataLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.RemoveDataLinkResponse removeDataLink(com.google.ads.googleads.v22.services.RemoveDataLinkRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getRemoveDataLinkMethod(), getCallOptions(), request);
     }
 
@@ -432,8 +429,8 @@ public final class DataLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.UpdateDataLinkResponse updateDataLink(com.google.ads.googleads.v22.services.UpdateDataLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.UpdateDataLinkResponse updateDataLink(com.google.ads.googleads.v22.services.UpdateDataLinkRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getUpdateDataLinkMethod(), getCallOptions(), request);
     }
   }

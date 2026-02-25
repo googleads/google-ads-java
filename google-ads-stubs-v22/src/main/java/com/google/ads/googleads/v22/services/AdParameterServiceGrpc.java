@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage ad parameters.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/ad_parameter_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AdParameterServiceGrpc {
 
@@ -237,8 +234,8 @@ public final class AdParameterServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateAdParametersResponse mutateAdParameters(com.google.ads.googleads.v22.services.MutateAdParametersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateAdParametersResponse mutateAdParameters(com.google.ads.googleads.v22.services.MutateAdParametersRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateAdParametersMethod(), getCallOptions(), request);
     }
   }

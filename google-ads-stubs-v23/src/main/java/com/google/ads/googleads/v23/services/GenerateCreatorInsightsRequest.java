@@ -1804,8 +1804,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Optional. When true, we will expand the search to beyond just the
-     * entities specified in [brand_entities] to other related knowledge graph
-     * entities similar to the brand. The default value is `false`.
+     * entities specified in
+     * [brand_entities][google.ads.googleads.v23.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+     * to other related knowledge graph entities similar to the brand. The
+     * default value is `false`.
      * </pre>
      *
      * <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1924,8 +1926,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Optional. When true, we will expand the search to beyond just the
-     * entities specified in [brand_entities] to other related knowledge graph
-     * entities similar to the brand. The default value is `false`.
+     * entities specified in
+     * [brand_entities][google.ads.googleads.v23.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+     * to other related knowledge graph entities similar to the brand. The
+     * default value is `false`.
      * </pre>
      *
      * <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2672,8 +2676,10 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Optional. When true, we will expand the search to beyond just the
-       * entities specified in [brand_entities] to other related knowledge graph
-       * entities similar to the brand. The default value is `false`.
+       * entities specified in
+       * [brand_entities][google.ads.googleads.v23.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+       * to other related knowledge graph entities similar to the brand. The
+       * default value is `false`.
        * </pre>
        *
        * <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2686,8 +2692,10 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Optional. When true, we will expand the search to beyond just the
-       * entities specified in [brand_entities] to other related knowledge graph
-       * entities similar to the brand. The default value is `false`.
+       * entities specified in
+       * [brand_entities][google.ads.googleads.v23.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+       * to other related knowledge graph entities similar to the brand. The
+       * default value is `false`.
        * </pre>
        *
        * <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2704,8 +2712,10 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Optional. When true, we will expand the search to beyond just the
-       * entities specified in [brand_entities] to other related knowledge graph
-       * entities similar to the brand. The default value is `false`.
+       * entities specified in
+       * [brand_entities][google.ads.googleads.v23.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+       * to other related knowledge graph entities similar to the brand. The
+       * default value is `false`.
        * </pre>
        *
        * <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>

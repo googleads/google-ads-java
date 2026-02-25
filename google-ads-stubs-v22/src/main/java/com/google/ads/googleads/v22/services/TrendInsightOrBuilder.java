@@ -37,7 +37,8 @@ public interface TrendInsightOrBuilder extends
 
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -46,7 +47,8 @@ public interface TrendInsightOrBuilder extends
   boolean hasTrendMetrics();
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -55,7 +57,8 @@ public interface TrendInsightOrBuilder extends
   com.google.ads.googleads.v22.services.TrendInsightMetrics getTrendMetrics();
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.TrendInsightMetrics trend_metrics = 2;</code>

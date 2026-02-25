@@ -9,9 +9,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * reached with Google Ads. Accessible to allowlisted customers only.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/content_creator_insights_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ContentCreatorInsightsServiceGrpc {
 
@@ -302,8 +299,8 @@ public final class ContentCreatorInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.GenerateCreatorInsightsResponse generateCreatorInsights(com.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.GenerateCreatorInsightsResponse generateCreatorInsights(com.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateCreatorInsightsMethod(), getCallOptions(), request);
     }
 
@@ -321,8 +318,8 @@ public final class ContentCreatorInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.GenerateTrendingInsightsResponse generateTrendingInsights(com.google.ads.googleads.v22.services.GenerateTrendingInsightsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.GenerateTrendingInsightsResponse generateTrendingInsights(com.google.ads.googleads.v22.services.GenerateTrendingInsightsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateTrendingInsightsMethod(), getCallOptions(), request);
     }
   }

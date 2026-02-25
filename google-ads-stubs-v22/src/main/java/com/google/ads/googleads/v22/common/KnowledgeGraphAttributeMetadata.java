@@ -59,7 +59,8 @@ private static final long serialVersionUID = 0L;
           };
   /**
    * <pre>
-   * The capabilities of the entity used in [ContentCreatorInsightsService][].
+   * The capabilities of the entity used in
+   * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -72,7 +73,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The capabilities of the entity used in [ContentCreatorInsightsService][].
+   * The capabilities of the entity used in
+   * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -84,7 +86,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The capabilities of the entity used in [ContentCreatorInsightsService][].
+   * The capabilities of the entity used in
+   * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -97,7 +100,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The capabilities of the entity used in [ContentCreatorInsightsService][].
+   * The capabilities of the entity used in
+   * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -110,7 +114,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The capabilities of the entity used in [ContentCreatorInsightsService][].
+   * The capabilities of the entity used in
+   * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -631,7 +636,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -643,7 +649,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -654,7 +661,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -666,7 +674,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -686,7 +695,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -704,7 +714,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -722,7 +733,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -736,7 +748,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -748,7 +761,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -760,7 +774,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -777,7 +792,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -792,7 +808,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The capabilities of the entity used in [ContentCreatorInsightsService][].
+     * The capabilities of the entity used in
+     * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>

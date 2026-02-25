@@ -31,8 +31,8 @@ public final class CampaignPrimaryStatusReasonProto {
     java.lang.String[] descriptorData = {
       "\nCgoogle/ads/googleads/v23/enums/campaig" +
       "n_primary_status_reason.proto\022\036google.ad" +
-      "s.googleads.v23.enums\"\222\t\n\037CampaignPrimar" +
-      "yStatusReasonEnum\"\356\010\n\033CampaignPrimarySta" +
+      "s.googleads.v23.enums\"\367\t\n\037CampaignPrimar" +
+      "yStatusReasonEnum\"\323\t\n\033CampaignPrimarySta" +
       "tusReason\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
       "\024\n\020CAMPAIGN_REMOVED\020\002\022\023\n\017CAMPAIGN_PAUSED" +
       "\020\003\022\024\n\020CAMPAIGN_PENDING\020\004\022\022\n\016CAMPAIGN_END" +
@@ -60,14 +60,16 @@ public final class CampaignPrimaryStatusReasonProto {
       "\022&\n\"HAS_ASSET_GROUPS_LIMITED_BY_POLICY\020#" +
       "\022\"\n\036MOST_ASSET_GROUPS_UNDER_REVIEW\020$\022\023\n\017" +
       "NO_ASSET_GROUPS\020%\022\027\n\023ASSET_GROUPS_PAUSED" +
-      "\020&\022\036\n\032MISSING_LOCATION_TARGETING\020\'B\372\001\n\"c" +
-      "om.google.ads.googleads.v23.enumsB Campa" +
-      "ignPrimaryStatusReasonProtoP\001ZCgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v23/enums;enums\242\002\003GAA\252\002\036Google.Ads.Go" +
-      "ogleAds.V23.Enums\312\002\036Google\\Ads\\GoogleAds" +
-      "\\V23\\Enums\352\002\"Google::Ads::GoogleAds::V23" +
-      "::Enumsb\006proto3"
+      "\020&\022\036\n\032MISSING_LOCATION_TARGETING\020\'\022\027\n\023CA" +
+      "MPAIGN_NOT_BOOKED\020(\022\031\n\025BOOKING_HOLD_EXPI" +
+      "RING\020)\022\030\n\024BOOKING_HOLD_EXPIRED\020*\022\025\n\021BOOK" +
+      "ING_CANCELLED\020+B\372\001\n\"com.google.ads.googl" +
+      "eads.v23.enumsB CampaignPrimaryStatusRea" +
+      "sonProtoP\001ZCgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v23/enums;enums\242" +
+      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V23.Enums\312\002" +
+      "\036Google\\Ads\\GoogleAds\\V23\\Enums\352\002\"Google" +
+      "::Ads::GoogleAds::V23::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

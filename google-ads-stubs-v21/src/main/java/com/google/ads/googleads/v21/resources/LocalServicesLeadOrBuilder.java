@@ -10,25 +10,25 @@ public interface LocalServicesLeadOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the local services lead data.
+   * Immutable. The resource name of the local services lead data.
    * Local Services Lead resource name have the form
    *
    * `customers/{customer_id}/localServicesLead/{local_services_lead_id}`
    * </pre>
    *
-   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * Output only. The resource name of the local services lead data.
+   * Immutable. The resource name of the local services lead data.
    * Local Services Lead resource name have the form
    *
    * `customers/{customer_id}/localServicesLead/{local_services_lead_id}`
    * </pre>
    *
-   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString

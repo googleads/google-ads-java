@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,7 +62,7 @@ import javax.annotation.Generated;
  *    <tr>
  *      <td><p> MutateRecommendationSubscription</td>
  *      <td><p> Mutates given subscription with corresponding apply parameters.
- * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [DatabaseError]()   [FieldError]()   [HeaderError]()   [InternalError]()   [MutateError]()   [QuotaError]()   [RecommendationError]()   [RequestError]()   [UrlFieldError]()</td>
+ * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [DatabaseError]()   [FieldError]()   [HeaderError]()   [InternalError]()   [MutateError]()   [QuotaError]()   [RecommendationError]()   [RecommendationSubscriptionError]()   [RequestError]()   [UrlFieldError]()</td>
  *      <td>
  *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
  *      <ul>
@@ -182,7 +182,7 @@ public class RecommendationSubscriptionServiceClient implements BackgroundResour
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [FieldError]() [HeaderError]() [InternalError]() [MutateError]() [QuotaError]()
-   * [RecommendationError]() [RequestError]() [UrlFieldError]()
+   * [RecommendationError]() [RecommendationSubscriptionError]() [RequestError]() [UrlFieldError]()
    *
    * <p>Sample code:
    *
@@ -222,7 +222,7 @@ public class RecommendationSubscriptionServiceClient implements BackgroundResour
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [FieldError]() [HeaderError]() [InternalError]() [MutateError]() [QuotaError]()
-   * [RecommendationError]() [RequestError]() [UrlFieldError]()
+   * [RecommendationError]() [RecommendationSubscriptionError]() [RequestError]() [UrlFieldError]()
    *
    * <p>Sample code:
    *
@@ -260,7 +260,7 @@ public class RecommendationSubscriptionServiceClient implements BackgroundResour
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [FieldError]() [HeaderError]() [InternalError]() [MutateError]() [QuotaError]()
-   * [RecommendationError]() [RequestError]() [UrlFieldError]()
+   * [RecommendationError]() [RecommendationSubscriptionError]() [RequestError]() [UrlFieldError]()
    *
    * <p>Sample code:
    *

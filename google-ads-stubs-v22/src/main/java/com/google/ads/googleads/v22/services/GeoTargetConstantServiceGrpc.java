@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to fetch geo target constants.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/geo_target_constant_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class GeoTargetConstantServiceGrpc {
 
@@ -219,8 +216,8 @@ public final class GeoTargetConstantServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.SuggestGeoTargetConstantsResponse suggestGeoTargetConstants(com.google.ads.googleads.v22.services.SuggestGeoTargetConstantsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.SuggestGeoTargetConstantsResponse suggestGeoTargetConstants(com.google.ads.googleads.v22.services.SuggestGeoTargetConstantsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getSuggestGeoTargetConstantsMethod(), getCallOptions(), request);
     }
   }

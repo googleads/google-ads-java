@@ -32,6 +32,7 @@ private static final long serialVersionUID = 0L;
     locationAssetAutoMigrationDoneDateTime_ = "";
     imageAssetAutoMigrationDoneDateTime_ = "";
     videoBrandSafetySuitability_ = 0;
+    containsEuPoliticalAdvertising_ = 0;
   }
 
   @java.lang.Override
@@ -1148,6 +1149,40 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v20.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.UNRECOGNIZED : result;
   }
 
+  public static final int CONTAINS_EU_POLITICAL_ADVERTISING_FIELD_NUMBER = 55;
+  private int containsEuPoliticalAdvertising_ = 0;
+  /**
+   * <pre>
+   * Output only. Returns the advertiser self-declaration status of whether this
+   * customer contains political advertising content targeted towards the
+   * European Union. You can use the Google Ads UI to update this account-level
+   * declaration, or use the API to update the self-declaration status of
+   * individual campaigns.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for containsEuPoliticalAdvertising.
+   */
+  @java.lang.Override public int getContainsEuPoliticalAdvertisingValue() {
+    return containsEuPoliticalAdvertising_;
+  }
+  /**
+   * <pre>
+   * Output only. Returns the advertiser self-declaration status of whether this
+   * customer contains political advertising content targeted towards the
+   * European Union. You can use the Google Ads UI to update this account-level
+   * declaration, or use the API to update the self-declaration status of
+   * individual campaigns.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The containsEuPoliticalAdvertising.
+   */
+  @java.lang.Override public com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus getContainsEuPoliticalAdvertising() {
+    com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus result = com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.forNumber(containsEuPoliticalAdvertising_);
+    return result == null ? com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1241,6 +1276,9 @@ private static final long serialVersionUID = 0L;
     }
     if (videoBrandSafetySuitability_ != com.google.ads.googleads.v20.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.UNSPECIFIED.getNumber()) {
       output.writeEnum(46, videoBrandSafetySuitability_);
+    }
+    if (containsEuPoliticalAdvertising_ != com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNSPECIFIED.getNumber()) {
+      output.writeEnum(55, containsEuPoliticalAdvertising_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1350,6 +1388,10 @@ private static final long serialVersionUID = 0L;
     if (videoBrandSafetySuitability_ != com.google.ads.googleads.v20.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(46, videoBrandSafetySuitability_);
+    }
+    if (containsEuPoliticalAdvertising_ != com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(55, containsEuPoliticalAdvertising_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1475,6 +1517,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getLocalServicesSettings())) return false;
     }
     if (videoBrandSafetySuitability_ != other.videoBrandSafetySuitability_) return false;
+    if (containsEuPoliticalAdvertising_ != other.containsEuPoliticalAdvertising_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1587,6 +1630,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + VIDEO_BRAND_SAFETY_SUITABILITY_FIELD_NUMBER;
     hash = (53 * hash) + videoBrandSafetySuitability_;
+    hash = (37 * hash) + CONTAINS_EU_POLITICAL_ADVERTISING_FIELD_NUMBER;
+    hash = (53 * hash) + containsEuPoliticalAdvertising_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1778,6 +1823,7 @@ private static final long serialVersionUID = 0L;
         localServicesSettingsBuilder_ = null;
       }
       videoBrandSafetySuitability_ = 0;
+      containsEuPoliticalAdvertising_ = 0;
       return this;
     }
 
@@ -1923,6 +1969,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x01000000) != 0)) {
         result.videoBrandSafetySuitability_ = videoBrandSafetySuitability_;
       }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
+        result.containsEuPoliticalAdvertising_ = containsEuPoliticalAdvertising_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -2067,6 +2116,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.videoBrandSafetySuitability_ != 0) {
         setVideoBrandSafetySuitabilityValue(other.getVideoBrandSafetySuitabilityValue());
+      }
+      if (other.containsEuPoliticalAdvertising_ != 0) {
+        setContainsEuPoliticalAdvertisingValue(other.getContainsEuPoliticalAdvertisingValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2241,6 +2293,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x01000000;
               break;
             } // case 368
+            case 440: {
+              containsEuPoliticalAdvertising_ = input.readEnum();
+              bitField0_ |= 0x02000000;
+              break;
+            } // case 440
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4864,6 +4921,99 @@ private static final long serialVersionUID = 0L;
     public Builder clearVideoBrandSafetySuitability() {
       bitField0_ = (bitField0_ & ~0x01000000);
       videoBrandSafetySuitability_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int containsEuPoliticalAdvertising_ = 0;
+    /**
+     * <pre>
+     * Output only. Returns the advertiser self-declaration status of whether this
+     * customer contains political advertising content targeted towards the
+     * European Union. You can use the Google Ads UI to update this account-level
+     * declaration, or use the API to update the self-declaration status of
+     * individual campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for containsEuPoliticalAdvertising.
+     */
+    @java.lang.Override public int getContainsEuPoliticalAdvertisingValue() {
+      return containsEuPoliticalAdvertising_;
+    }
+    /**
+     * <pre>
+     * Output only. Returns the advertiser self-declaration status of whether this
+     * customer contains political advertising content targeted towards the
+     * European Union. You can use the Google Ads UI to update this account-level
+     * declaration, or use the API to update the self-declaration status of
+     * individual campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for containsEuPoliticalAdvertising to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContainsEuPoliticalAdvertisingValue(int value) {
+      containsEuPoliticalAdvertising_ = value;
+      bitField0_ |= 0x02000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Returns the advertiser self-declaration status of whether this
+     * customer contains political advertising content targeted towards the
+     * European Union. You can use the Google Ads UI to update this account-level
+     * declaration, or use the API to update the self-declaration status of
+     * individual campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The containsEuPoliticalAdvertising.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus getContainsEuPoliticalAdvertising() {
+      com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus result = com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.forNumber(containsEuPoliticalAdvertising_);
+      return result == null ? com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Output only. Returns the advertiser self-declaration status of whether this
+     * customer contains political advertising content targeted towards the
+     * European Union. You can use the Google Ads UI to update this account-level
+     * declaration, or use the API to update the self-declaration status of
+     * individual campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The containsEuPoliticalAdvertising to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContainsEuPoliticalAdvertising(com.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x02000000;
+      containsEuPoliticalAdvertising_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Returns the advertiser self-declaration status of whether this
+     * customer contains political advertising content targeted towards the
+     * European Union. You can use the Google Ads UI to update this account-level
+     * declaration, or use the API to update the self-declaration status of
+     * individual campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearContainsEuPoliticalAdvertising() {
+      bitField0_ = (bitField0_ & ~0x02000000);
+      containsEuPoliticalAdvertising_ = 0;
       onChanged();
       return this;
     }

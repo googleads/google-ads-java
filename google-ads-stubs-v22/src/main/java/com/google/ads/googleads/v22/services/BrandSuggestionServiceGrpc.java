@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * This service will suggest brands based on a prefix.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/brand_suggestion_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BrandSuggestionServiceGrpc {
 
@@ -198,8 +195,8 @@ public final class BrandSuggestionServiceGrpc {
      * customer.
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.SuggestBrandsResponse suggestBrands(com.google.ads.googleads.v22.services.SuggestBrandsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.SuggestBrandsResponse suggestBrands(com.google.ads.googleads.v22.services.SuggestBrandsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getSuggestBrandsMethod(), getCallOptions(), request);
     }
   }

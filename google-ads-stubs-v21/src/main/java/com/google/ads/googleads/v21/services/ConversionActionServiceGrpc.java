@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage conversion actions.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/conversion_action_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ConversionActionServiceGrpc {
 
@@ -249,8 +246,8 @@ public final class ConversionActionServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateConversionActionsResponse mutateConversionActions(com.google.ads.googleads.v21.services.MutateConversionActionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateConversionActionsResponse mutateConversionActions(com.google.ads.googleads.v21.services.MutateConversionActionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateConversionActionsMethod(), getCallOptions(), request);
     }
   }

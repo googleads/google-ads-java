@@ -3868,7 +3868,10 @@ private static final long serialVersionUID = 0L;
   private long cpcBidMicros_ = 0L;
   /**
    * <pre>
-   * The maximum CPC (cost-per-click) bid.
+   * The maximum CPC (cost-per-click) bid. This field is used when the
+   * ad group's effective bidding strategy is Manual CPC. This field is not
+   * applicable and will be ignored if the ad group's campaign is using a
+   * portfolio bidding strategy.
    * </pre>
    *
    * <code>optional int64 cpc_bid_micros = 39;</code>
@@ -3880,7 +3883,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The maximum CPC (cost-per-click) bid.
+   * The maximum CPC (cost-per-click) bid. This field is used when the
+   * ad group's effective bidding strategy is Manual CPC. This field is not
+   * applicable and will be ignored if the ad group's campaign is using a
+   * portfolio bidding strategy.
    * </pre>
    *
    * <code>optional int64 cpc_bid_micros = 39;</code>
@@ -4044,11 +4050,21 @@ private static final long serialVersionUID = 0L;
   private double targetRoas_ = 0D;
   /**
    * <pre>
-   * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-   * bidding strategy is TargetRoas or MaximizeConversionValue (with its
-   * target_roas field set), then this field overrides the target ROAS specified
-   * in the campaign's bidding strategy.
-   * Otherwise, this value is ignored.
+   * The target ROAS (return-on-ad-spend) for this ad group.
+   *
+   * This field lets you override the target ROAS specified in the
+   * campaign's bidding strategy, but only if the campaign is using a
+   * standard (not portfolio) `TargetRoas` strategy or a standard
+   * `MaximizeConversionValue` strategy with its `target_roas` field set.
+   *
+   * If the campaign is using a portfolio bidding strategy, this field
+   * cannot be set and attempting to do so will result in an error.
+   *
+   * For any other bidding strategies, this value is ignored.
+   *
+   * To see the actual target ROAS being used by the ad group, considering
+   * potential overrides, query the `effective_target_roas` and
+   * `effective_target_roas_source` fields.
    * </pre>
    *
    * <code>optional double target_roas = 44;</code>
@@ -4060,11 +4076,21 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-   * bidding strategy is TargetRoas or MaximizeConversionValue (with its
-   * target_roas field set), then this field overrides the target ROAS specified
-   * in the campaign's bidding strategy.
-   * Otherwise, this value is ignored.
+   * The target ROAS (return-on-ad-spend) for this ad group.
+   *
+   * This field lets you override the target ROAS specified in the
+   * campaign's bidding strategy, but only if the campaign is using a
+   * standard (not portfolio) `TargetRoas` strategy or a standard
+   * `MaximizeConversionValue` strategy with its `target_roas` field set.
+   *
+   * If the campaign is using a portfolio bidding strategy, this field
+   * cannot be set and attempting to do so will result in an error.
+   *
+   * For any other bidding strategies, this value is ignored.
+   *
+   * To see the actual target ROAS being used by the ad group, considering
+   * potential overrides, query the `effective_target_roas` and
+   * `effective_target_roas_source` fields.
    * </pre>
    *
    * <code>optional double target_roas = 44;</code>
@@ -4202,7 +4228,7 @@ private static final long serialVersionUID = 0L;
   private int displayCustomBidDimension_ = 0;
   /**
    * <pre>
-   * Allows advertisers to specify a targeting dimension on which to place
+   * Lets advertisers specify a targeting dimension on which to place
    * absolute bids. This is only applicable for campaigns that target only the
    * display network and not search.
    * </pre>
@@ -4215,7 +4241,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Allows advertisers to specify a targeting dimension on which to place
+   * Lets advertisers specify a targeting dimension on which to place
    * absolute bids. This is only applicable for campaigns that target only the
    * display network and not search.
    * </pre>
@@ -7598,7 +7624,10 @@ private static final long serialVersionUID = 0L;
     private long cpcBidMicros_ ;
     /**
      * <pre>
-     * The maximum CPC (cost-per-click) bid.
+     * The maximum CPC (cost-per-click) bid. This field is used when the
+     * ad group's effective bidding strategy is Manual CPC. This field is not
+     * applicable and will be ignored if the ad group's campaign is using a
+     * portfolio bidding strategy.
      * </pre>
      *
      * <code>optional int64 cpc_bid_micros = 39;</code>
@@ -7610,7 +7639,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The maximum CPC (cost-per-click) bid.
+     * The maximum CPC (cost-per-click) bid. This field is used when the
+     * ad group's effective bidding strategy is Manual CPC. This field is not
+     * applicable and will be ignored if the ad group's campaign is using a
+     * portfolio bidding strategy.
      * </pre>
      *
      * <code>optional int64 cpc_bid_micros = 39;</code>
@@ -7622,7 +7654,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The maximum CPC (cost-per-click) bid.
+     * The maximum CPC (cost-per-click) bid. This field is used when the
+     * ad group's effective bidding strategy is Manual CPC. This field is not
+     * applicable and will be ignored if the ad group's campaign is using a
+     * portfolio bidding strategy.
      * </pre>
      *
      * <code>optional int64 cpc_bid_micros = 39;</code>
@@ -7638,7 +7673,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The maximum CPC (cost-per-click) bid.
+     * The maximum CPC (cost-per-click) bid. This field is used when the
+     * ad group's effective bidding strategy is Manual CPC. This field is not
+     * applicable and will be ignored if the ad group's campaign is using a
+     * portfolio bidding strategy.
      * </pre>
      *
      * <code>optional int64 cpc_bid_micros = 39;</code>
@@ -7962,11 +8000,21 @@ private static final long serialVersionUID = 0L;
     private double targetRoas_ ;
     /**
      * <pre>
-     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-     * bidding strategy is TargetRoas or MaximizeConversionValue (with its
-     * target_roas field set), then this field overrides the target ROAS specified
-     * in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * The target ROAS (return-on-ad-spend) for this ad group.
+     *
+     * This field lets you override the target ROAS specified in the
+     * campaign's bidding strategy, but only if the campaign is using a
+     * standard (not portfolio) `TargetRoas` strategy or a standard
+     * `MaximizeConversionValue` strategy with its `target_roas` field set.
+     *
+     * If the campaign is using a portfolio bidding strategy, this field
+     * cannot be set and attempting to do so will result in an error.
+     *
+     * For any other bidding strategies, this value is ignored.
+     *
+     * To see the actual target ROAS being used by the ad group, considering
+     * potential overrides, query the `effective_target_roas` and
+     * `effective_target_roas_source` fields.
      * </pre>
      *
      * <code>optional double target_roas = 44;</code>
@@ -7978,11 +8026,21 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-     * bidding strategy is TargetRoas or MaximizeConversionValue (with its
-     * target_roas field set), then this field overrides the target ROAS specified
-     * in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * The target ROAS (return-on-ad-spend) for this ad group.
+     *
+     * This field lets you override the target ROAS specified in the
+     * campaign's bidding strategy, but only if the campaign is using a
+     * standard (not portfolio) `TargetRoas` strategy or a standard
+     * `MaximizeConversionValue` strategy with its `target_roas` field set.
+     *
+     * If the campaign is using a portfolio bidding strategy, this field
+     * cannot be set and attempting to do so will result in an error.
+     *
+     * For any other bidding strategies, this value is ignored.
+     *
+     * To see the actual target ROAS being used by the ad group, considering
+     * potential overrides, query the `effective_target_roas` and
+     * `effective_target_roas_source` fields.
      * </pre>
      *
      * <code>optional double target_roas = 44;</code>
@@ -7994,11 +8052,21 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-     * bidding strategy is TargetRoas or MaximizeConversionValue (with its
-     * target_roas field set), then this field overrides the target ROAS specified
-     * in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * The target ROAS (return-on-ad-spend) for this ad group.
+     *
+     * This field lets you override the target ROAS specified in the
+     * campaign's bidding strategy, but only if the campaign is using a
+     * standard (not portfolio) `TargetRoas` strategy or a standard
+     * `MaximizeConversionValue` strategy with its `target_roas` field set.
+     *
+     * If the campaign is using a portfolio bidding strategy, this field
+     * cannot be set and attempting to do so will result in an error.
+     *
+     * For any other bidding strategies, this value is ignored.
+     *
+     * To see the actual target ROAS being used by the ad group, considering
+     * potential overrides, query the `effective_target_roas` and
+     * `effective_target_roas_source` fields.
      * </pre>
      *
      * <code>optional double target_roas = 44;</code>
@@ -8014,11 +8082,21 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-     * bidding strategy is TargetRoas or MaximizeConversionValue (with its
-     * target_roas field set), then this field overrides the target ROAS specified
-     * in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * The target ROAS (return-on-ad-spend) for this ad group.
+     *
+     * This field lets you override the target ROAS specified in the
+     * campaign's bidding strategy, but only if the campaign is using a
+     * standard (not portfolio) `TargetRoas` strategy or a standard
+     * `MaximizeConversionValue` strategy with its `target_roas` field set.
+     *
+     * If the campaign is using a portfolio bidding strategy, this field
+     * cannot be set and attempting to do so will result in an error.
+     *
+     * For any other bidding strategies, this value is ignored.
+     *
+     * To see the actual target ROAS being used by the ad group, considering
+     * potential overrides, query the `effective_target_roas` and
+     * `effective_target_roas_source` fields.
      * </pre>
      *
      * <code>optional double target_roas = 44;</code>
@@ -8318,7 +8396,7 @@ private static final long serialVersionUID = 0L;
     private int displayCustomBidDimension_ = 0;
     /**
      * <pre>
-     * Allows advertisers to specify a targeting dimension on which to place
+     * Lets advertisers specify a targeting dimension on which to place
      * absolute bids. This is only applicable for campaigns that target only the
      * display network and not search.
      * </pre>
@@ -8331,7 +8409,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Allows advertisers to specify a targeting dimension on which to place
+     * Lets advertisers specify a targeting dimension on which to place
      * absolute bids. This is only applicable for campaigns that target only the
      * display network and not search.
      * </pre>
@@ -8348,7 +8426,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Allows advertisers to specify a targeting dimension on which to place
+     * Lets advertisers specify a targeting dimension on which to place
      * absolute bids. This is only applicable for campaigns that target only the
      * display network and not search.
      * </pre>
@@ -8363,7 +8441,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Allows advertisers to specify a targeting dimension on which to place
+     * Lets advertisers specify a targeting dimension on which to place
      * absolute bids. This is only applicable for campaigns that target only the
      * display network and not search.
      * </pre>
@@ -8383,7 +8461,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Allows advertisers to specify a targeting dimension on which to place
+     * Lets advertisers specify a targeting dimension on which to place
      * absolute bids. This is only applicable for campaigns that target only the
      * display network and not search.
      * </pre>

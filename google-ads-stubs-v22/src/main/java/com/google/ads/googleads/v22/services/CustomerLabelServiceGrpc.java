@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage labels on customers.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/customer_label_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerLabelServiceGrpc {
 
@@ -228,8 +225,8 @@ public final class CustomerLabelServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateCustomerLabelsResponse mutateCustomerLabels(com.google.ads.googleads.v22.services.MutateCustomerLabelsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateCustomerLabelsResponse mutateCustomerLabels(com.google.ads.googleads.v22.services.MutateCustomerLabelsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomerLabelsMethod(), getCallOptions(), request);
     }
   }

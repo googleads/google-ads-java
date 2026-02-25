@@ -91,6 +91,46 @@ private static final long serialVersionUID = 0L;
         invitedAccountCase_);
   }
 
+  private int invitedAccountPropertiesCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object invitedAccountProperties_;
+  public enum InvitedAccountPropertiesCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    ADVERTISING_PARTNER_PROPERTIES(8),
+    INVITEDACCOUNTPROPERTIES_NOT_SET(0);
+    private final int value;
+    private InvitedAccountPropertiesCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static InvitedAccountPropertiesCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static InvitedAccountPropertiesCase forNumber(int value) {
+      switch (value) {
+        case 8: return ADVERTISING_PARTNER_PROPERTIES;
+        case 0: return INVITEDACCOUNTPROPERTIES_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public InvitedAccountPropertiesCase
+  getInvitedAccountPropertiesCase() {
+    return InvitedAccountPropertiesCase.forNumber(
+        invitedAccountPropertiesCase_);
+  }
+
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object resourceName_ = "";
@@ -347,6 +387,55 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationIdentifier.getDefaultInstance();
   }
 
+  public static final int ADVERTISING_PARTNER_PROPERTIES_FIELD_NUMBER = 8;
+  /**
+   * <pre>
+   * Output only. Advertising Partner link invitation properties. These
+   * properties are only applicable when the link is for an Advertising
+   * Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the advertisingPartnerProperties field is set.
+   */
+  @java.lang.Override
+  public boolean hasAdvertisingPartnerProperties() {
+    return invitedAccountPropertiesCase_ == 8;
+  }
+  /**
+   * <pre>
+   * Output only. Advertising Partner link invitation properties. These
+   * properties are only applicable when the link is for an Advertising
+   * Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The advertisingPartnerProperties.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties getAdvertisingPartnerProperties() {
+    if (invitedAccountPropertiesCase_ == 8) {
+       return (com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties) invitedAccountProperties_;
+    }
+    return com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. Advertising Partner link invitation properties. These
+   * properties are only applicable when the link is for an Advertising
+   * Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationPropertiesOrBuilder getAdvertisingPartnerPropertiesOrBuilder() {
+    if (invitedAccountPropertiesCase_ == 8) {
+       return (com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties) invitedAccountProperties_;
+    }
+    return com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -381,6 +470,9 @@ private static final long serialVersionUID = 0L;
     }
     if (invitedAccountCase_ == 7) {
       output.writeMessage(7, (com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationIdentifier) invitedAccount_);
+    }
+    if (invitedAccountPropertiesCase_ == 8) {
+      output.writeMessage(8, (com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties) invitedAccountProperties_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -417,6 +509,10 @@ private static final long serialVersionUID = 0L;
     if (invitedAccountCase_ == 7) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, (com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationIdentifier) invitedAccount_);
+    }
+    if (invitedAccountPropertiesCase_ == 8) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, (com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties) invitedAccountProperties_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -456,6 +552,15 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
+    if (!getInvitedAccountPropertiesCase().equals(other.getInvitedAccountPropertiesCase())) return false;
+    switch (invitedAccountPropertiesCase_) {
+      case 8:
+        if (!getAdvertisingPartnerProperties()
+            .equals(other.getAdvertisingPartnerProperties())) return false;
+        break;
+      case 0:
+      default:
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -488,6 +593,14 @@ private static final long serialVersionUID = 0L;
       case 7:
         hash = (37 * hash) + ADVERTISING_PARTNER_FIELD_NUMBER;
         hash = (53 * hash) + getAdvertisingPartner().hashCode();
+        break;
+      case 0:
+      default:
+    }
+    switch (invitedAccountPropertiesCase_) {
+      case 8:
+        hash = (37 * hash) + ADVERTISING_PARTNER_PROPERTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getAdvertisingPartnerProperties().hashCode();
         break;
       case 0:
       default:
@@ -641,8 +754,13 @@ private static final long serialVersionUID = 0L;
       if (advertisingPartnerBuilder_ != null) {
         advertisingPartnerBuilder_.clear();
       }
+      if (advertisingPartnerPropertiesBuilder_ != null) {
+        advertisingPartnerPropertiesBuilder_.clear();
+      }
       invitedAccountCase_ = 0;
       invitedAccount_ = null;
+      invitedAccountPropertiesCase_ = 0;
+      invitedAccountProperties_ = null;
       return this;
     }
 
@@ -705,6 +823,12 @@ private static final long serialVersionUID = 0L;
       if (invitedAccountCase_ == 7 &&
           advertisingPartnerBuilder_ != null) {
         result.invitedAccount_ = advertisingPartnerBuilder_.build();
+      }
+      result.invitedAccountPropertiesCase_ = invitedAccountPropertiesCase_;
+      result.invitedAccountProperties_ = this.invitedAccountProperties_;
+      if (invitedAccountPropertiesCase_ == 8 &&
+          advertisingPartnerPropertiesBuilder_ != null) {
+        result.invitedAccountProperties_ = advertisingPartnerPropertiesBuilder_.build();
       }
     }
 
@@ -783,6 +907,15 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
+      switch (other.getInvitedAccountPropertiesCase()) {
+        case ADVERTISING_PARTNER_PROPERTIES: {
+          mergeAdvertisingPartnerProperties(other.getAdvertisingPartnerProperties());
+          break;
+        }
+        case INVITEDACCOUNTPROPERTIES_NOT_SET: {
+          break;
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -850,6 +983,13 @@ private static final long serialVersionUID = 0L;
               invitedAccountCase_ = 7;
               break;
             } // case 58
+            case 66: {
+              input.readMessage(
+                  getAdvertisingPartnerPropertiesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              invitedAccountPropertiesCase_ = 8;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -876,6 +1016,21 @@ private static final long serialVersionUID = 0L;
     public Builder clearInvitedAccount() {
       invitedAccountCase_ = 0;
       invitedAccount_ = null;
+      onChanged();
+      return this;
+    }
+
+    private int invitedAccountPropertiesCase_ = 0;
+    private java.lang.Object invitedAccountProperties_;
+    public InvitedAccountPropertiesCase
+        getInvitedAccountPropertiesCase() {
+      return InvitedAccountPropertiesCase.forNumber(
+          invitedAccountPropertiesCase_);
+    }
+
+    public Builder clearInvitedAccountProperties() {
+      invitedAccountPropertiesCase_ = 0;
+      invitedAccountProperties_ = null;
       onChanged();
       return this;
     }
@@ -1729,6 +1884,202 @@ private static final long serialVersionUID = 0L;
       invitedAccountCase_ = 7;
       onChanged();
       return advertisingPartnerBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties, com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.Builder, com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationPropertiesOrBuilder> advertisingPartnerPropertiesBuilder_;
+    /**
+     * <pre>
+     * Output only. Advertising Partner link invitation properties. These
+     * properties are only applicable when the link is for an Advertising
+     * Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the advertisingPartnerProperties field is set.
+     */
+    @java.lang.Override
+    public boolean hasAdvertisingPartnerProperties() {
+      return invitedAccountPropertiesCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link invitation properties. These
+     * properties are only applicable when the link is for an Advertising
+     * Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The advertisingPartnerProperties.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties getAdvertisingPartnerProperties() {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        if (invitedAccountPropertiesCase_ == 8) {
+          return (com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties) invitedAccountProperties_;
+        }
+        return com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.getDefaultInstance();
+      } else {
+        if (invitedAccountPropertiesCase_ == 8) {
+          return advertisingPartnerPropertiesBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link invitation properties. These
+     * properties are only applicable when the link is for an Advertising
+     * Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setAdvertisingPartnerProperties(com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties value) {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        invitedAccountProperties_ = value;
+        onChanged();
+      } else {
+        advertisingPartnerPropertiesBuilder_.setMessage(value);
+      }
+      invitedAccountPropertiesCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link invitation properties. These
+     * properties are only applicable when the link is for an Advertising
+     * Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setAdvertisingPartnerProperties(
+        com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.Builder builderForValue) {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        invitedAccountProperties_ = builderForValue.build();
+        onChanged();
+      } else {
+        advertisingPartnerPropertiesBuilder_.setMessage(builderForValue.build());
+      }
+      invitedAccountPropertiesCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link invitation properties. These
+     * properties are only applicable when the link is for an Advertising
+     * Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeAdvertisingPartnerProperties(com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties value) {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        if (invitedAccountPropertiesCase_ == 8 &&
+            invitedAccountProperties_ != com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.getDefaultInstance()) {
+          invitedAccountProperties_ = com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.newBuilder((com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties) invitedAccountProperties_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          invitedAccountProperties_ = value;
+        }
+        onChanged();
+      } else {
+        if (invitedAccountPropertiesCase_ == 8) {
+          advertisingPartnerPropertiesBuilder_.mergeFrom(value);
+        } else {
+          advertisingPartnerPropertiesBuilder_.setMessage(value);
+        }
+      }
+      invitedAccountPropertiesCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link invitation properties. These
+     * properties are only applicable when the link is for an Advertising
+     * Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearAdvertisingPartnerProperties() {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        if (invitedAccountPropertiesCase_ == 8) {
+          invitedAccountPropertiesCase_ = 0;
+          invitedAccountProperties_ = null;
+          onChanged();
+        }
+      } else {
+        if (invitedAccountPropertiesCase_ == 8) {
+          invitedAccountPropertiesCase_ = 0;
+          invitedAccountProperties_ = null;
+        }
+        advertisingPartnerPropertiesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link invitation properties. These
+     * properties are only applicable when the link is for an Advertising
+     * Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.Builder getAdvertisingPartnerPropertiesBuilder() {
+      return getAdvertisingPartnerPropertiesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link invitation properties. These
+     * properties are only applicable when the link is for an Advertising
+     * Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationPropertiesOrBuilder getAdvertisingPartnerPropertiesOrBuilder() {
+      if ((invitedAccountPropertiesCase_ == 8) && (advertisingPartnerPropertiesBuilder_ != null)) {
+        return advertisingPartnerPropertiesBuilder_.getMessageOrBuilder();
+      } else {
+        if (invitedAccountPropertiesCase_ == 8) {
+          return (com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties) invitedAccountProperties_;
+        }
+        return com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link invitation properties. These
+     * properties are only applicable when the link is for an Advertising
+     * Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties, com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.Builder, com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationPropertiesOrBuilder> 
+        getAdvertisingPartnerPropertiesFieldBuilder() {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        if (!(invitedAccountPropertiesCase_ == 8)) {
+          invitedAccountProperties_ = com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.getDefaultInstance();
+        }
+        advertisingPartnerPropertiesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties, com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties.Builder, com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationPropertiesOrBuilder>(
+                (com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties) invitedAccountProperties_,
+                getParentForChildren(),
+                isClean());
+        invitedAccountProperties_ = null;
+      }
+      invitedAccountPropertiesCase_ = 8;
+      onChanged();
+      return advertisingPartnerPropertiesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

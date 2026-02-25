@@ -6775,6 +6775,44 @@ private static final long serialVersionUID = 0L;
     return androidPrivacySharedKeyGoogleNetworkType_ == null ? com.google.ads.googleads.v23.resources.AndroidPrivacySharedKeyGoogleNetworkType.getDefaultInstance() : androidPrivacySharedKeyGoogleNetworkType_;
   }
 
+  public static final int YOU_TUBE_VIDEO_UPLOAD_FIELD_NUMBER = 245;
+  private com.google.ads.googleads.v23.resources.YouTubeVideoUpload youTubeVideoUpload_;
+  /**
+   * <pre>
+   * The YouTube video upload referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+   * @return Whether the youTubeVideoUpload field is set.
+   */
+  @java.lang.Override
+  public boolean hasYouTubeVideoUpload() {
+    return ((bitField5_ & 0x00020000) != 0);
+  }
+  /**
+   * <pre>
+   * The YouTube video upload referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+   * @return The youTubeVideoUpload.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.resources.YouTubeVideoUpload getYouTubeVideoUpload() {
+    return youTubeVideoUpload_ == null ? com.google.ads.googleads.v23.resources.YouTubeVideoUpload.getDefaultInstance() : youTubeVideoUpload_;
+  }
+  /**
+   * <pre>
+   * The YouTube video upload referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.resources.YouTubeVideoUploadOrBuilder getYouTubeVideoUploadOrBuilder() {
+    return youTubeVideoUpload_ == null ? com.google.ads.googleads.v23.resources.YouTubeVideoUpload.getDefaultInstance() : youTubeVideoUpload_;
+  }
+
   public static final int APPLIED_INCENTIVE_FIELD_NUMBER = 246;
   private com.google.ads.googleads.v23.resources.AppliedIncentive appliedIncentive_;
   /**
@@ -6787,7 +6825,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAppliedIncentive() {
-    return ((bitField5_ & 0x00020000) != 0);
+    return ((bitField5_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -6825,7 +6863,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMetrics() {
-    return ((bitField5_ & 0x00040000) != 0);
+    return ((bitField5_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -6863,7 +6901,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSegments() {
-    return ((bitField5_ & 0x00080000) != 0);
+    return ((bitField5_ & 0x00100000) != 0);
   }
   /**
    * <pre>
@@ -6912,7 +6950,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(3, getAdGroup());
     }
-    if (((bitField5_ & 0x00040000) != 0)) {
+    if (((bitField5_ & 0x00080000) != 0)) {
       output.writeMessage(4, getMetrics());
     }
     if (((bitField0_ & 0x00000020) != 0)) {
@@ -7071,7 +7109,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField4_ & 0x00000010) != 0)) {
       output.writeMessage(98, getMobileDeviceConstant());
     }
-    if (((bitField5_ & 0x00080000) != 0)) {
+    if (((bitField5_ & 0x00100000) != 0)) {
       output.writeMessage(102, getSegments());
     }
     if (((bitField2_ & 0x00000010) != 0)) {
@@ -7438,6 +7476,9 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(244, getTargetingExpansionView());
     }
     if (((bitField5_ & 0x00020000) != 0)) {
+      output.writeMessage(245, getYouTubeVideoUpload());
+    }
+    if (((bitField5_ & 0x00040000) != 0)) {
       output.writeMessage(246, getAppliedIncentive());
     }
     if (((bitField3_ & 0x40000000) != 0)) {
@@ -7464,7 +7505,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getAdGroup());
     }
-    if (((bitField5_ & 0x00040000) != 0)) {
+    if (((bitField5_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getMetrics());
     }
@@ -7676,7 +7717,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(98, getMobileDeviceConstant());
     }
-    if (((bitField5_ & 0x00080000) != 0)) {
+    if (((bitField5_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(102, getSegments());
     }
@@ -8165,6 +8206,10 @@ private static final long serialVersionUID = 0L;
         .computeMessageSize(244, getTargetingExpansionView());
     }
     if (((bitField5_ & 0x00020000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(245, getYouTubeVideoUpload());
+    }
+    if (((bitField5_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(246, getAppliedIncentive());
     }
@@ -9072,6 +9117,11 @@ private static final long serialVersionUID = 0L;
       if (!getAndroidPrivacySharedKeyGoogleNetworkType()
           .equals(other.getAndroidPrivacySharedKeyGoogleNetworkType())) return false;
     }
+    if (hasYouTubeVideoUpload() != other.hasYouTubeVideoUpload()) return false;
+    if (hasYouTubeVideoUpload()) {
+      if (!getYouTubeVideoUpload()
+          .equals(other.getYouTubeVideoUpload())) return false;
+    }
     if (hasAppliedIncentive() != other.hasAppliedIncentive()) return false;
     if (hasAppliedIncentive()) {
       if (!getAppliedIncentive()
@@ -9806,6 +9856,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ANDROID_PRIVACY_SHARED_KEY_GOOGLE_NETWORK_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getAndroidPrivacySharedKeyGoogleNetworkType().hashCode();
     }
+    if (hasYouTubeVideoUpload()) {
+      hash = (37 * hash) + YOU_TUBE_VIDEO_UPLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getYouTubeVideoUpload().hashCode();
+    }
     if (hasAppliedIncentive()) {
       hash = (37 * hash) + APPLIED_INCENTIVE_FIELD_NUMBER;
       hash = (53 * hash) + getAppliedIncentive().hashCode();
@@ -10129,6 +10183,7 @@ private static final long serialVersionUID = 0L;
         getAndroidPrivacySharedKeyGoogleAdGroupFieldBuilder();
         getAndroidPrivacySharedKeyGoogleCampaignFieldBuilder();
         getAndroidPrivacySharedKeyGoogleNetworkTypeFieldBuilder();
+        getYouTubeVideoUploadFieldBuilder();
         getAppliedIncentiveFieldBuilder();
         getMetricsFieldBuilder();
         getSegmentsFieldBuilder();
@@ -11027,6 +11082,11 @@ private static final long serialVersionUID = 0L;
       if (androidPrivacySharedKeyGoogleNetworkTypeBuilder_ != null) {
         androidPrivacySharedKeyGoogleNetworkTypeBuilder_.dispose();
         androidPrivacySharedKeyGoogleNetworkTypeBuilder_ = null;
+      }
+      youTubeVideoUpload_ = null;
+      if (youTubeVideoUploadBuilder_ != null) {
+        youTubeVideoUploadBuilder_.dispose();
+        youTubeVideoUploadBuilder_ = null;
       }
       appliedIncentive_ = null;
       if (appliedIncentiveBuilder_ != null) {
@@ -12175,22 +12235,28 @@ private static final long serialVersionUID = 0L;
         to_bitField5_ |= 0x00010000;
       }
       if (((from_bitField5_ & 0x00020000) != 0)) {
-        result.appliedIncentive_ = appliedIncentiveBuilder_ == null
-            ? appliedIncentive_
-            : appliedIncentiveBuilder_.build();
+        result.youTubeVideoUpload_ = youTubeVideoUploadBuilder_ == null
+            ? youTubeVideoUpload_
+            : youTubeVideoUploadBuilder_.build();
         to_bitField5_ |= 0x00020000;
       }
       if (((from_bitField5_ & 0x00040000) != 0)) {
-        result.metrics_ = metricsBuilder_ == null
-            ? metrics_
-            : metricsBuilder_.build();
+        result.appliedIncentive_ = appliedIncentiveBuilder_ == null
+            ? appliedIncentive_
+            : appliedIncentiveBuilder_.build();
         to_bitField5_ |= 0x00040000;
       }
       if (((from_bitField5_ & 0x00080000) != 0)) {
+        result.metrics_ = metricsBuilder_ == null
+            ? metrics_
+            : metricsBuilder_.build();
+        to_bitField5_ |= 0x00080000;
+      }
+      if (((from_bitField5_ & 0x00100000) != 0)) {
         result.segments_ = segmentsBuilder_ == null
             ? segments_
             : segmentsBuilder_.build();
-        to_bitField5_ |= 0x00080000;
+        to_bitField5_ |= 0x00100000;
       }
       result.bitField5_ |= to_bitField5_;
     }
@@ -12770,6 +12836,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasAndroidPrivacySharedKeyGoogleNetworkType()) {
         mergeAndroidPrivacySharedKeyGoogleNetworkType(other.getAndroidPrivacySharedKeyGoogleNetworkType());
       }
+      if (other.hasYouTubeVideoUpload()) {
+        mergeYouTubeVideoUpload(other.getYouTubeVideoUpload());
+      }
       if (other.hasAppliedIncentive()) {
         mergeAppliedIncentive(other.getAppliedIncentive());
       }
@@ -12830,7 +12899,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getMetricsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField5_ |= 0x00040000;
+              bitField5_ |= 0x00080000;
               break;
             } // case 34
             case 130: {
@@ -13201,7 +13270,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getSegmentsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField5_ |= 0x00080000;
+              bitField5_ |= 0x00100000;
               break;
             } // case 818
             case 826: {
@@ -14051,11 +14120,18 @@ private static final long serialVersionUID = 0L;
               bitField4_ |= 0x08000000;
               break;
             } // case 1954
+            case 1962: {
+              input.readMessage(
+                  getYouTubeVideoUploadFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField5_ |= 0x00020000;
+              break;
+            } // case 1962
             case 1970: {
               input.readMessage(
                   getAppliedIncentiveFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField5_ |= 0x00020000;
+              bitField5_ |= 0x00040000;
               break;
             } // case 1970
             case 1986: {
@@ -41876,6 +41952,163 @@ private static final long serialVersionUID = 0L;
       return androidPrivacySharedKeyGoogleNetworkTypeBuilder_;
     }
 
+    private com.google.ads.googleads.v23.resources.YouTubeVideoUpload youTubeVideoUpload_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v23.resources.YouTubeVideoUpload, com.google.ads.googleads.v23.resources.YouTubeVideoUpload.Builder, com.google.ads.googleads.v23.resources.YouTubeVideoUploadOrBuilder> youTubeVideoUploadBuilder_;
+    /**
+     * <pre>
+     * The YouTube video upload referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+     * @return Whether the youTubeVideoUpload field is set.
+     */
+    public boolean hasYouTubeVideoUpload() {
+      return ((bitField5_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * The YouTube video upload referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+     * @return The youTubeVideoUpload.
+     */
+    public com.google.ads.googleads.v23.resources.YouTubeVideoUpload getYouTubeVideoUpload() {
+      if (youTubeVideoUploadBuilder_ == null) {
+        return youTubeVideoUpload_ == null ? com.google.ads.googleads.v23.resources.YouTubeVideoUpload.getDefaultInstance() : youTubeVideoUpload_;
+      } else {
+        return youTubeVideoUploadBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The YouTube video upload referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+     */
+    public Builder setYouTubeVideoUpload(com.google.ads.googleads.v23.resources.YouTubeVideoUpload value) {
+      if (youTubeVideoUploadBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        youTubeVideoUpload_ = value;
+      } else {
+        youTubeVideoUploadBuilder_.setMessage(value);
+      }
+      bitField5_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The YouTube video upload referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+     */
+    public Builder setYouTubeVideoUpload(
+        com.google.ads.googleads.v23.resources.YouTubeVideoUpload.Builder builderForValue) {
+      if (youTubeVideoUploadBuilder_ == null) {
+        youTubeVideoUpload_ = builderForValue.build();
+      } else {
+        youTubeVideoUploadBuilder_.setMessage(builderForValue.build());
+      }
+      bitField5_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The YouTube video upload referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+     */
+    public Builder mergeYouTubeVideoUpload(com.google.ads.googleads.v23.resources.YouTubeVideoUpload value) {
+      if (youTubeVideoUploadBuilder_ == null) {
+        if (((bitField5_ & 0x00020000) != 0) &&
+          youTubeVideoUpload_ != null &&
+          youTubeVideoUpload_ != com.google.ads.googleads.v23.resources.YouTubeVideoUpload.getDefaultInstance()) {
+          getYouTubeVideoUploadBuilder().mergeFrom(value);
+        } else {
+          youTubeVideoUpload_ = value;
+        }
+      } else {
+        youTubeVideoUploadBuilder_.mergeFrom(value);
+      }
+      if (youTubeVideoUpload_ != null) {
+        bitField5_ |= 0x00020000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The YouTube video upload referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+     */
+    public Builder clearYouTubeVideoUpload() {
+      bitField5_ = (bitField5_ & ~0x00020000);
+      youTubeVideoUpload_ = null;
+      if (youTubeVideoUploadBuilder_ != null) {
+        youTubeVideoUploadBuilder_.dispose();
+        youTubeVideoUploadBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The YouTube video upload referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+     */
+    public com.google.ads.googleads.v23.resources.YouTubeVideoUpload.Builder getYouTubeVideoUploadBuilder() {
+      bitField5_ |= 0x00020000;
+      onChanged();
+      return getYouTubeVideoUploadFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The YouTube video upload referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+     */
+    public com.google.ads.googleads.v23.resources.YouTubeVideoUploadOrBuilder getYouTubeVideoUploadOrBuilder() {
+      if (youTubeVideoUploadBuilder_ != null) {
+        return youTubeVideoUploadBuilder_.getMessageOrBuilder();
+      } else {
+        return youTubeVideoUpload_ == null ?
+            com.google.ads.googleads.v23.resources.YouTubeVideoUpload.getDefaultInstance() : youTubeVideoUpload_;
+      }
+    }
+    /**
+     * <pre>
+     * The YouTube video upload referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v23.resources.YouTubeVideoUpload, com.google.ads.googleads.v23.resources.YouTubeVideoUpload.Builder, com.google.ads.googleads.v23.resources.YouTubeVideoUploadOrBuilder> 
+        getYouTubeVideoUploadFieldBuilder() {
+      if (youTubeVideoUploadBuilder_ == null) {
+        youTubeVideoUploadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v23.resources.YouTubeVideoUpload, com.google.ads.googleads.v23.resources.YouTubeVideoUpload.Builder, com.google.ads.googleads.v23.resources.YouTubeVideoUploadOrBuilder>(
+                getYouTubeVideoUpload(),
+                getParentForChildren(),
+                isClean());
+        youTubeVideoUpload_ = null;
+      }
+      return youTubeVideoUploadBuilder_;
+    }
+
     private com.google.ads.googleads.v23.resources.AppliedIncentive appliedIncentive_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v23.resources.AppliedIncentive, com.google.ads.googleads.v23.resources.AppliedIncentive.Builder, com.google.ads.googleads.v23.resources.AppliedIncentiveOrBuilder> appliedIncentiveBuilder_;
@@ -41888,7 +42121,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the appliedIncentive field is set.
      */
     public boolean hasAppliedIncentive() {
-      return ((bitField5_ & 0x00020000) != 0);
+      return ((bitField5_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -41921,7 +42154,7 @@ private static final long serialVersionUID = 0L;
       } else {
         appliedIncentiveBuilder_.setMessage(value);
       }
-      bitField5_ |= 0x00020000;
+      bitField5_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -41939,7 +42172,7 @@ private static final long serialVersionUID = 0L;
       } else {
         appliedIncentiveBuilder_.setMessage(builderForValue.build());
       }
-      bitField5_ |= 0x00020000;
+      bitField5_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -41952,7 +42185,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAppliedIncentive(com.google.ads.googleads.v23.resources.AppliedIncentive value) {
       if (appliedIncentiveBuilder_ == null) {
-        if (((bitField5_ & 0x00020000) != 0) &&
+        if (((bitField5_ & 0x00040000) != 0) &&
           appliedIncentive_ != null &&
           appliedIncentive_ != com.google.ads.googleads.v23.resources.AppliedIncentive.getDefaultInstance()) {
           getAppliedIncentiveBuilder().mergeFrom(value);
@@ -41963,7 +42196,7 @@ private static final long serialVersionUID = 0L;
         appliedIncentiveBuilder_.mergeFrom(value);
       }
       if (appliedIncentive_ != null) {
-        bitField5_ |= 0x00020000;
+        bitField5_ |= 0x00040000;
         onChanged();
       }
       return this;
@@ -41976,7 +42209,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.resources.AppliedIncentive applied_incentive = 246;</code>
      */
     public Builder clearAppliedIncentive() {
-      bitField5_ = (bitField5_ & ~0x00020000);
+      bitField5_ = (bitField5_ & ~0x00040000);
       appliedIncentive_ = null;
       if (appliedIncentiveBuilder_ != null) {
         appliedIncentiveBuilder_.dispose();
@@ -41993,7 +42226,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.resources.AppliedIncentive applied_incentive = 246;</code>
      */
     public com.google.ads.googleads.v23.resources.AppliedIncentive.Builder getAppliedIncentiveBuilder() {
-      bitField5_ |= 0x00020000;
+      bitField5_ |= 0x00040000;
       onChanged();
       return getAppliedIncentiveFieldBuilder().getBuilder();
     }
@@ -42045,7 +42278,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the metrics field is set.
      */
     public boolean hasMetrics() {
-      return ((bitField5_ & 0x00040000) != 0);
+      return ((bitField5_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -42078,7 +42311,7 @@ private static final long serialVersionUID = 0L;
       } else {
         metricsBuilder_.setMessage(value);
       }
-      bitField5_ |= 0x00040000;
+      bitField5_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -42096,7 +42329,7 @@ private static final long serialVersionUID = 0L;
       } else {
         metricsBuilder_.setMessage(builderForValue.build());
       }
-      bitField5_ |= 0x00040000;
+      bitField5_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -42109,7 +42342,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMetrics(com.google.ads.googleads.v23.common.Metrics value) {
       if (metricsBuilder_ == null) {
-        if (((bitField5_ & 0x00040000) != 0) &&
+        if (((bitField5_ & 0x00080000) != 0) &&
           metrics_ != null &&
           metrics_ != com.google.ads.googleads.v23.common.Metrics.getDefaultInstance()) {
           getMetricsBuilder().mergeFrom(value);
@@ -42120,7 +42353,7 @@ private static final long serialVersionUID = 0L;
         metricsBuilder_.mergeFrom(value);
       }
       if (metrics_ != null) {
-        bitField5_ |= 0x00040000;
+        bitField5_ |= 0x00080000;
         onChanged();
       }
       return this;
@@ -42133,7 +42366,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.common.Metrics metrics = 4;</code>
      */
     public Builder clearMetrics() {
-      bitField5_ = (bitField5_ & ~0x00040000);
+      bitField5_ = (bitField5_ & ~0x00080000);
       metrics_ = null;
       if (metricsBuilder_ != null) {
         metricsBuilder_.dispose();
@@ -42150,7 +42383,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.common.Metrics metrics = 4;</code>
      */
     public com.google.ads.googleads.v23.common.Metrics.Builder getMetricsBuilder() {
-      bitField5_ |= 0x00040000;
+      bitField5_ |= 0x00080000;
       onChanged();
       return getMetricsFieldBuilder().getBuilder();
     }
@@ -42202,7 +42435,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the segments field is set.
      */
     public boolean hasSegments() {
-      return ((bitField5_ & 0x00080000) != 0);
+      return ((bitField5_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -42235,7 +42468,7 @@ private static final long serialVersionUID = 0L;
       } else {
         segmentsBuilder_.setMessage(value);
       }
-      bitField5_ |= 0x00080000;
+      bitField5_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -42253,7 +42486,7 @@ private static final long serialVersionUID = 0L;
       } else {
         segmentsBuilder_.setMessage(builderForValue.build());
       }
-      bitField5_ |= 0x00080000;
+      bitField5_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -42266,7 +42499,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSegments(com.google.ads.googleads.v23.common.Segments value) {
       if (segmentsBuilder_ == null) {
-        if (((bitField5_ & 0x00080000) != 0) &&
+        if (((bitField5_ & 0x00100000) != 0) &&
           segments_ != null &&
           segments_ != com.google.ads.googleads.v23.common.Segments.getDefaultInstance()) {
           getSegmentsBuilder().mergeFrom(value);
@@ -42277,7 +42510,7 @@ private static final long serialVersionUID = 0L;
         segmentsBuilder_.mergeFrom(value);
       }
       if (segments_ != null) {
-        bitField5_ |= 0x00080000;
+        bitField5_ |= 0x00100000;
         onChanged();
       }
       return this;
@@ -42290,7 +42523,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.common.Segments segments = 102;</code>
      */
     public Builder clearSegments() {
-      bitField5_ = (bitField5_ & ~0x00080000);
+      bitField5_ = (bitField5_ & ~0x00100000);
       segments_ = null;
       if (segmentsBuilder_ != null) {
         segmentsBuilder_.dispose();
@@ -42307,7 +42540,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.common.Segments segments = 102;</code>
      */
     public com.google.ads.googleads.v23.common.Segments.Builder getSegmentsBuilder() {
-      bitField5_ |= 0x00080000;
+      bitField5_ |= 0x00100000;
       onChanged();
       return getSegmentsFieldBuilder().getBuilder();
     }

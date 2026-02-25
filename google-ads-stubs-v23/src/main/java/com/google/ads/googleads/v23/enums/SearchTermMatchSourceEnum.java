@@ -109,6 +109,15 @@ private static final long serialVersionUID = 0L;
      * <code>PERFORMANCE_MAX = 6;</code>
      */
     PERFORMANCE_MAX(6),
+    /**
+     * <pre>
+     * The match is from a vertical ads data feed (e.g. Travel Ads entity
+     * targeting).
+     * </pre>
+     *
+     * <code>VERTICAL_ADS_DATA_FEED = 7;</code>
+     */
+    VERTICAL_ADS_DATA_FEED(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -168,6 +177,15 @@ private static final long serialVersionUID = 0L;
      * <code>PERFORMANCE_MAX = 6;</code>
      */
     public static final int PERFORMANCE_MAX_VALUE = 6;
+    /**
+     * <pre>
+     * The match is from a vertical ads data feed (e.g. Travel Ads entity
+     * targeting).
+     * </pre>
+     *
+     * <code>VERTICAL_ADS_DATA_FEED = 7;</code>
+     */
+    public static final int VERTICAL_ADS_DATA_FEED_VALUE = 7;
 
 
     public final int getNumber() {
@@ -201,6 +219,7 @@ private static final long serialVersionUID = 0L;
         case 4: return AI_MAX_BROAD_MATCH;
         case 5: return DYNAMIC_SEARCH_ADS;
         case 6: return PERFORMANCE_MAX;
+        case 7: return VERTICAL_ADS_DATA_FEED;
         default: return null;
       }
     }

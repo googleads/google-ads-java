@@ -37,7 +37,8 @@ public interface TrendInsightOrBuilder extends
 
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -46,7 +47,8 @@ public interface TrendInsightOrBuilder extends
   boolean hasTrendMetrics();
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -55,7 +57,8 @@ public interface TrendInsightOrBuilder extends
   com.google.ads.googleads.v23.services.TrendInsightMetrics getTrendMetrics();
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -80,6 +83,70 @@ public interface TrendInsightOrBuilder extends
    * @return The trend.
    */
   com.google.ads.googleads.v23.enums.InsightsTrendEnum.InsightsTrend getTrend();
+
+  /**
+   * <pre>
+   * 12 months of historical data for the trend, including the most recent month
+   * the TrendInsight represents. Each data point represents 1 month of data and
+   * the comparison period is 1 month. The data points are ordered from most
+   * recent month to least recent month. Only populated for trends using
+   * search_topics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+   */
+  java.util.List<com.google.ads.googleads.v23.services.TrendInsightDataPoint> 
+      getTrendDataPointsList();
+  /**
+   * <pre>
+   * 12 months of historical data for the trend, including the most recent month
+   * the TrendInsight represents. Each data point represents 1 month of data and
+   * the comparison period is 1 month. The data points are ordered from most
+   * recent month to least recent month. Only populated for trends using
+   * search_topics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+   */
+  com.google.ads.googleads.v23.services.TrendInsightDataPoint getTrendDataPoints(int index);
+  /**
+   * <pre>
+   * 12 months of historical data for the trend, including the most recent month
+   * the TrendInsight represents. Each data point represents 1 month of data and
+   * the comparison period is 1 month. The data points are ordered from most
+   * recent month to least recent month. Only populated for trends using
+   * search_topics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+   */
+  int getTrendDataPointsCount();
+  /**
+   * <pre>
+   * 12 months of historical data for the trend, including the most recent month
+   * the TrendInsight represents. Each data point represents 1 month of data and
+   * the comparison period is 1 month. The data points are ordered from most
+   * recent month to least recent month. Only populated for trends using
+   * search_topics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v23.services.TrendInsightDataPointOrBuilder> 
+      getTrendDataPointsOrBuilderList();
+  /**
+   * <pre>
+   * 12 months of historical data for the trend, including the most recent month
+   * the TrendInsight represents. Each data point represents 1 month of data and
+   * the comparison period is 1 month. The data points are ordered from most
+   * recent month to least recent month. Only populated for trends using
+   * search_topics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.TrendInsightDataPoint trend_data_points = 6;</code>
+   */
+  com.google.ads.googleads.v23.services.TrendInsightDataPointOrBuilder getTrendDataPointsOrBuilder(
+      int index);
 
   /**
    * <pre>

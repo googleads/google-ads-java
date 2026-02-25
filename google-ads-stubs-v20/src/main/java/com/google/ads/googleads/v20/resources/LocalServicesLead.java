@@ -59,13 +59,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
-   * Output only. The resource name of the local services lead data.
+   * Immutable. The resource name of the local services lead data.
    * Local Services Lead resource name have the form
    *
    * `customers/{customer_id}/localServicesLead/{local_services_lead_id}`
    * </pre>
    *
-   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
   @java.lang.Override
@@ -83,13 +83,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the local services lead data.
+   * Immutable. The resource name of the local services lead data.
    * Local Services Lead resource name have the form
    *
    * `customers/{customer_id}/localServicesLead/{local_services_lead_id}`
    * </pre>
    *
-   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
   @java.lang.Override
@@ -1193,13 +1193,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the local services lead data.
+     * Immutable. The resource name of the local services lead data.
      * Local Services Lead resource name have the form
      *
      * `customers/{customer_id}/localServicesLead/{local_services_lead_id}`
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The resourceName.
      */
     public java.lang.String getResourceName() {
@@ -1216,13 +1216,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the local services lead data.
+     * Immutable. The resource name of the local services lead data.
      * Local Services Lead resource name have the form
      *
      * `customers/{customer_id}/localServicesLead/{local_services_lead_id}`
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
@@ -1240,13 +1240,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the local services lead data.
+     * Immutable. The resource name of the local services lead data.
      * Local Services Lead resource name have the form
      *
      * `customers/{customer_id}/localServicesLead/{local_services_lead_id}`
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The resourceName to set.
      * @return This builder for chaining.
      */
@@ -1260,13 +1260,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the local services lead data.
+     * Immutable. The resource name of the local services lead data.
      * Local Services Lead resource name have the form
      *
      * `customers/{customer_id}/localServicesLead/{local_services_lead_id}`
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
@@ -1277,13 +1277,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the local services lead data.
+     * Immutable. The resource name of the local services lead data.
      * Local Services Lead resource name have the form
      *
      * `customers/{customer_id}/localServicesLead/{local_services_lead_id}`
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for resourceName to set.
      * @return This builder for chaining.
      */

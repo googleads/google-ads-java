@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to configure campaign lifecycle goals.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/campaign_lifecycle_goal_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CampaignLifecycleGoalServiceGrpc {
 
@@ -219,8 +216,8 @@ public final class CampaignLifecycleGoalServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.ConfigureCampaignLifecycleGoalsResponse configureCampaignLifecycleGoals(com.google.ads.googleads.v20.services.ConfigureCampaignLifecycleGoalsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.ConfigureCampaignLifecycleGoalsResponse configureCampaignLifecycleGoals(com.google.ads.googleads.v20.services.ConfigureCampaignLifecycleGoalsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getConfigureCampaignLifecycleGoalsMethod(), getCallOptions(), request);
     }
   }

@@ -86,6 +86,11 @@ public final class ContentCreatorInsightsServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v23_services_TrendInsightMetrics_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v23_services_TrendInsightDataPoint_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v23_services_TrendInsightDataPoint_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v23_services_LanguageDistribution_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -196,43 +201,49 @@ public final class ContentCreatorInsightsServiceProto {
       "enceInsightsAttributeB\003\340A\002\"^\n\014SearchTopi" +
       "cs\022N\n\010entities\030\001 \003(\01327.google.ads.google" +
       "ads.v23.common.AudienceInsightsEntityB\003\340" +
-      "A\002\"\273\003\n\014TrendInsight\022[\n\017trend_attribute\030\001" +
+      "A\002\"\220\004\n\014TrendInsight\022[\n\017trend_attribute\030\001" +
       " \001(\0132B.google.ads.googleads.v23.common.A" +
       "udienceInsightsAttributeMetadata\022M\n\rtren" +
       "d_metrics\030\002 \001(\01326.google.ads.googleads.v" +
       "23.services.TrendInsightMetrics\022N\n\005trend" +
       "\030\003 \001(\0162?.google.ads.googleads.v23.enums." +
-      "InsightsTrendEnum.InsightsTrend\022Z\n\016relat" +
-      "ed_videos\030\004 \003(\0132B.google.ads.googleads.v" +
-      "23.common.AudienceInsightsAttributeMetad" +
-      "ata\022S\n\020related_creators\030\005 \003(\01329.google.a" +
-      "ds.googleads.v23.services.YouTubeCreator" +
-      "Insights\"`\n\023TrendInsightMetrics\022\023\n\013views" +
-      "_count\030\001 \001(\003\022\026\n\016audience_share\030\002 \001(\001\022\034\n\024" +
-      "trend_change_percent\030\003 \001(\001\"A\n\024LanguageDi" +
-      "stribution\022\025\n\rlanguage_code\030\001 \001(\t\022\022\n\npro" +
-      "portion\030\002 \001(\0012\266\004\n\035ContentCreatorInsights" +
-      "Service\022\343\001\n\027GenerateCreatorInsights\022A.go" +
-      "ogle.ads.googleads.v23.services.Generate" +
-      "CreatorInsightsRequest\032B.google.ads.goog" +
-      "leads.v23.services.GenerateCreatorInsigh" +
-      "tsResponse\"A\202\323\344\223\002;\"6/v23/customers/{cust" +
-      "omer_id=*}:generateCreatorInsights:\001*\022\347\001" +
-      "\n\030GenerateTrendingInsights\022B.google.ads." +
-      "googleads.v23.services.GenerateTrendingI" +
-      "nsightsRequest\032C.google.ads.googleads.v2" +
-      "3.services.GenerateTrendingInsightsRespo" +
-      "nse\"B\202\323\344\223\002<\"7/v23/customers/{customer_id" +
-      "=*}:generateTrendingInsights:\001*\032E\312A\030goog" +
-      "leads.googleapis.com\322A\'https://www.googl" +
-      "eapis.com/auth/adwordsB\216\002\n%com.google.ad" +
-      "s.googleads.v23.servicesB\"ContentCreator" +
-      "InsightsServiceProtoP\001ZIgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v23/" +
-      "services;services\242\002\003GAA\252\002!Google.Ads.Goo" +
-      "gleAds.V23.Services\312\002!Google\\Ads\\GoogleA" +
-      "ds\\V23\\Services\352\002%Google::Ads::GoogleAds" +
-      "::V23::Servicesb\006proto3"
+      "InsightsTrendEnum.InsightsTrend\022S\n\021trend" +
+      "_data_points\030\006 \003(\01328.google.ads.googlead" +
+      "s.v23.services.TrendInsightDataPoint\022Z\n\016" +
+      "related_videos\030\004 \003(\0132B.google.ads.google" +
+      "ads.v23.common.AudienceInsightsAttribute" +
+      "Metadata\022S\n\020related_creators\030\005 \003(\01329.goo" +
+      "gle.ads.googleads.v23.services.YouTubeCr" +
+      "eatorInsights\"}\n\023TrendInsightMetrics\022\023\n\013" +
+      "views_count\030\001 \001(\003\022\033\n\023views_indexed_value" +
+      "\030\004 \001(\003\022\026\n\016audience_share\030\002 \001(\001\022\034\n\024trend_" +
+      "change_percent\030\003 \001(\001\"u\n\025TrendInsightData" +
+      "Point\022\r\n\005month\030\001 \001(\t\022M\n\rtrend_metrics\030\002 " +
+      "\001(\01326.google.ads.googleads.v23.services." +
+      "TrendInsightMetrics\"A\n\024LanguageDistribut" +
+      "ion\022\025\n\rlanguage_code\030\001 \001(\t\022\022\n\nproportion" +
+      "\030\002 \001(\0012\266\004\n\035ContentCreatorInsightsService" +
+      "\022\343\001\n\027GenerateCreatorInsights\022A.google.ad" +
+      "s.googleads.v23.services.GenerateCreator" +
+      "InsightsRequest\032B.google.ads.googleads.v" +
+      "23.services.GenerateCreatorInsightsRespo" +
+      "nse\"A\202\323\344\223\002;\"6/v23/customers/{customer_id" +
+      "=*}:generateCreatorInsights:\001*\022\347\001\n\030Gener" +
+      "ateTrendingInsights\022B.google.ads.googlea" +
+      "ds.v23.services.GenerateTrendingInsights" +
+      "Request\032C.google.ads.googleads.v23.servi" +
+      "ces.GenerateTrendingInsightsResponse\"B\202\323" +
+      "\344\223\002<\"7/v23/customers/{customer_id=*}:gen" +
+      "erateTrendingInsights:\001*\032E\312A\030googleads.g" +
+      "oogleapis.com\322A\'https://www.googleapis.c" +
+      "om/auth/adwordsB\216\002\n%com.google.ads.googl" +
+      "eads.v23.servicesB\"ContentCreatorInsight" +
+      "sServiceProtoP\001ZIgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v23/service" +
+      "s;services\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
+      "V23.Services\312\002!Google\\Ads\\GoogleAds\\V23\\" +
+      "Services\352\002%Google::Ads::GoogleAds::V23::" +
+      "Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -322,15 +333,21 @@ public final class ContentCreatorInsightsServiceProto {
     internal_static_google_ads_googleads_v23_services_TrendInsight_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_services_TrendInsight_descriptor,
-        new java.lang.String[] { "TrendAttribute", "TrendMetrics", "Trend", "RelatedVideos", "RelatedCreators", });
+        new java.lang.String[] { "TrendAttribute", "TrendMetrics", "Trend", "TrendDataPoints", "RelatedVideos", "RelatedCreators", });
     internal_static_google_ads_googleads_v23_services_TrendInsightMetrics_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_google_ads_googleads_v23_services_TrendInsightMetrics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_services_TrendInsightMetrics_descriptor,
-        new java.lang.String[] { "ViewsCount", "AudienceShare", "TrendChangePercent", });
-    internal_static_google_ads_googleads_v23_services_LanguageDistribution_descriptor =
+        new java.lang.String[] { "ViewsCount", "ViewsIndexedValue", "AudienceShare", "TrendChangePercent", });
+    internal_static_google_ads_googleads_v23_services_TrendInsightDataPoint_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_google_ads_googleads_v23_services_TrendInsightDataPoint_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v23_services_TrendInsightDataPoint_descriptor,
+        new java.lang.String[] { "Month", "TrendMetrics", });
+    internal_static_google_ads_googleads_v23_services_LanguageDistribution_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_google_ads_googleads_v23_services_LanguageDistribution_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_services_LanguageDistribution_descriptor,

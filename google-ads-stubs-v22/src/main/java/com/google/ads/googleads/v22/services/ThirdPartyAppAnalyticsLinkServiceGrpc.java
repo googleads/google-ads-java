@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * app analytics.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/third_party_app_analytics_link_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
 
@@ -224,8 +221,8 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.RegenerateShareableLinkIdResponse regenerateShareableLinkId(com.google.ads.googleads.v22.services.RegenerateShareableLinkIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.RegenerateShareableLinkIdResponse regenerateShareableLinkId(com.google.ads.googleads.v22.services.RegenerateShareableLinkIdRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getRegenerateShareableLinkIdMethod(), getCallOptions(), request);
     }
   }

@@ -170,5 +170,40 @@ public interface ProductLinkInvitationOrBuilder extends
    */
   com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationIdentifierOrBuilder getAdvertisingPartnerOrBuilder();
 
+  /**
+   * <pre>
+   * Output only. Advertising Partner link invitation properties. These
+   * properties are only applicable when the link is for an Advertising
+   * Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the advertisingPartnerProperties field is set.
+   */
+  boolean hasAdvertisingPartnerProperties();
+  /**
+   * <pre>
+   * Output only. Advertising Partner link invitation properties. These
+   * properties are only applicable when the link is for an Advertising
+   * Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The advertisingPartnerProperties.
+   */
+  com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties getAdvertisingPartnerProperties();
+  /**
+   * <pre>
+   * Output only. Advertising Partner link invitation properties. These
+   * properties are only applicable when the link is for an Advertising
+   * Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationProperties advertising_partner_properties = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v23.resources.AdvertisingPartnerLinkInvitationPropertiesOrBuilder getAdvertisingPartnerPropertiesOrBuilder();
+
   com.google.ads.googleads.v23.resources.ProductLinkInvitation.InvitedAccountCase getInvitedAccountCase();
+
+  com.google.ads.googleads.v23.resources.ProductLinkInvitation.InvitedAccountPropertiesCase getInvitedAccountPropertiesCase();
 }

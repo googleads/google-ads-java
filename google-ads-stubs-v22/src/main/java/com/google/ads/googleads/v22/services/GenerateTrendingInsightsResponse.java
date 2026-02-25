@@ -6,7 +6,8 @@ package com.google.ads.googleads.v22.services;
 
 /**
  * <pre>
- * Response message for [ContentCreatorInsightsService.GenerateTrendingInsights]
+ * Response message for
+ * [ContentCreatorInsightsService.GenerateTrendingInsights][google.ads.googleads.v22.services.ContentCreatorInsightsService.GenerateTrendingInsights].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v22.services.GenerateTrendingInsightsResponse}
@@ -266,7 +267,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [ContentCreatorInsightsService.GenerateTrendingInsights]
+   * Response message for
+   * [ContentCreatorInsightsService.GenerateTrendingInsights][google.ads.googleads.v22.services.ContentCreatorInsightsService.GenerateTrendingInsights].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v22.services.GenerateTrendingInsightsResponse}

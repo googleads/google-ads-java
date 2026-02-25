@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage bidding data exclusions.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/bidding_data_exclusion_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BiddingDataExclusionServiceGrpc {
 
@@ -198,8 +195,8 @@ public final class BiddingDataExclusionServiceGrpc {
      * Operation statuses are returned.
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateBiddingDataExclusionsResponse mutateBiddingDataExclusions(com.google.ads.googleads.v21.services.MutateBiddingDataExclusionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateBiddingDataExclusionsResponse mutateBiddingDataExclusions(com.google.ads.googleads.v21.services.MutateBiddingDataExclusionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateBiddingDataExclusionsMethod(), getCallOptions(), request);
     }
   }

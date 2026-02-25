@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage labels on ad groups.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/ad_group_label_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AdGroupLabelServiceGrpc {
 
@@ -234,8 +231,8 @@ public final class AdGroupLabelServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateAdGroupLabelsResponse mutateAdGroupLabels(com.google.ads.googleads.v20.services.MutateAdGroupLabelsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateAdGroupLabelsResponse mutateAdGroupLabels(com.google.ads.googleads.v20.services.MutateAdGroupLabelsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateAdGroupLabelsMethod(), getCallOptions(), request);
     }
   }

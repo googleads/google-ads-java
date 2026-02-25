@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * accounts to other accounts.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/product_link_invitation_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ProductLinkInvitationServiceGrpc {
 
@@ -304,8 +301,8 @@ public final class ProductLinkInvitationServiceGrpc {
      * Creates a product link invitation.
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.CreateProductLinkInvitationResponse createProductLinkInvitation(com.google.ads.googleads.v21.services.CreateProductLinkInvitationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.CreateProductLinkInvitationResponse createProductLinkInvitation(com.google.ads.googleads.v21.services.CreateProductLinkInvitationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getCreateProductLinkInvitationMethod(), getCallOptions(), request);
     }
 
@@ -314,8 +311,8 @@ public final class ProductLinkInvitationServiceGrpc {
      * Update a product link invitation.
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.UpdateProductLinkInvitationResponse updateProductLinkInvitation(com.google.ads.googleads.v21.services.UpdateProductLinkInvitationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.UpdateProductLinkInvitationResponse updateProductLinkInvitation(com.google.ads.googleads.v21.services.UpdateProductLinkInvitationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getUpdateProductLinkInvitationMethod(), getCallOptions(), request);
     }
 
@@ -324,8 +321,8 @@ public final class ProductLinkInvitationServiceGrpc {
      * Remove a product link invitation.
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.RemoveProductLinkInvitationResponse removeProductLinkInvitation(com.google.ads.googleads.v21.services.RemoveProductLinkInvitationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.RemoveProductLinkInvitationResponse removeProductLinkInvitation(com.google.ads.googleads.v21.services.RemoveProductLinkInvitationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getRemoveProductLinkInvitationMethod(), getCallOptions(), request);
     }
   }

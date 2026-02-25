@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage offline user data jobs.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/offline_user_data_job_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class OfflineUserDataJobServiceGrpc {
 
@@ -376,8 +373,8 @@ public final class OfflineUserDataJobServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.CreateOfflineUserDataJobResponse createOfflineUserDataJob(com.google.ads.googleads.v20.services.CreateOfflineUserDataJobRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.CreateOfflineUserDataJobResponse createOfflineUserDataJob(com.google.ads.googleads.v20.services.CreateOfflineUserDataJobRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getCreateOfflineUserDataJobMethod(), getCallOptions(), request);
     }
 
@@ -397,8 +394,8 @@ public final class OfflineUserDataJobServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.AddOfflineUserDataJobOperationsResponse addOfflineUserDataJobOperations(com.google.ads.googleads.v20.services.AddOfflineUserDataJobOperationsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.AddOfflineUserDataJobOperationsResponse addOfflineUserDataJobOperations(com.google.ads.googleads.v20.services.AddOfflineUserDataJobOperationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getAddOfflineUserDataJobOperationsMethod(), getCallOptions(), request);
     }
 
@@ -418,8 +415,8 @@ public final class OfflineUserDataJobServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.longrunning.Operation runOfflineUserDataJob(com.google.ads.googleads.v20.services.RunOfflineUserDataJobRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.longrunning.Operation runOfflineUserDataJob(com.google.ads.googleads.v20.services.RunOfflineUserDataJobRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getRunOfflineUserDataJobMethod(), getCallOptions(), request);
     }
   }

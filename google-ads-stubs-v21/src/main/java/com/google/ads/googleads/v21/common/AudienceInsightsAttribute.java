@@ -8,7 +8,7 @@ package com.google.ads.googleads.v21.common;
  * <pre>
  * An audience attribute that can be used to request insights about the
  * audience. Valid inputs for these fields are available from
- * [AudienceInsightsService.ListAudienceInsightsAttributes][].
+ * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v21.services.AudienceInsightsService.ListAudienceInsightsAttributes].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v21.common.AudienceInsightsAttribute}
@@ -1028,7 +1028,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * An audience attribute that can be used to request insights about the
    * audience. Valid inputs for these fields are available from
-   * [AudienceInsightsService.ListAudienceInsightsAttributes][].
+   * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v21.services.AudienceInsightsService.ListAudienceInsightsAttributes].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v21.common.AudienceInsightsAttribute}

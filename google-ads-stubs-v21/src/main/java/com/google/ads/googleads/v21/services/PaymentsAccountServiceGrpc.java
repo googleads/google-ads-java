@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * billing.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/payments_account_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class PaymentsAccountServiceGrpc {
 
@@ -230,8 +227,8 @@ public final class PaymentsAccountServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.ListPaymentsAccountsResponse listPaymentsAccounts(com.google.ads.googleads.v21.services.ListPaymentsAccountsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.ListPaymentsAccountsResponse listPaymentsAccounts(com.google.ads.googleads.v21.services.ListPaymentsAccountsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListPaymentsAccountsMethod(), getCallOptions(), request);
     }
   }

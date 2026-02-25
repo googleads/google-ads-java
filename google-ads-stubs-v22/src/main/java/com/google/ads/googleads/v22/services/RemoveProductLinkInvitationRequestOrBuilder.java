@@ -33,7 +33,8 @@ public interface RemoveProductLinkInvitationRequestOrBuilder extends
    * Required. The resource name of the product link invitation being removed.
    * expected, in this format:
    *
-   * ` `
+   * `customers/{customer_id}/productLinkInvitations/{product_link_invitation_id}
+   * `
    * </pre>
    *
    * <code>string resource_name = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -45,7 +46,8 @@ public interface RemoveProductLinkInvitationRequestOrBuilder extends
    * Required. The resource name of the product link invitation being removed.
    * expected, in this format:
    *
-   * ` `
+   * `customers/{customer_id}/productLinkInvitations/{product_link_invitation_id}
+   * `
    * </pre>
    *
    * <code>string resource_name = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>

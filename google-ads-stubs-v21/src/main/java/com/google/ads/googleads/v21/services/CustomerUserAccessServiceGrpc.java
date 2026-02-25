@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * This service manages the permissions of a user on a given customer.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/customer_user_access_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerUserAccessServiceGrpc {
 
@@ -228,8 +225,8 @@ public final class CustomerUserAccessServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateCustomerUserAccessResponse mutateCustomerUserAccess(com.google.ads.googleads.v21.services.MutateCustomerUserAccessRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateCustomerUserAccessResponse mutateCustomerUserAccess(com.google.ads.googleads.v21.services.MutateCustomerUserAccessRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomerUserAccessMethod(), getCallOptions(), request);
     }
   }

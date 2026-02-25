@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -59,6 +59,7 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
                   ProtoUtils.marshaller(GenerateKeywordIdeasRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateKeywordIdeaResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -76,6 +77,7 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       GenerateKeywordHistoricalMetricsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<GenerateAdGroupThemesRequest, GenerateAdGroupThemesResponse>
@@ -88,6 +90,7 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
                   ProtoUtils.marshaller(GenerateAdGroupThemesRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(GenerateAdGroupThemesResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -104,6 +107,7 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(
                       GenerateKeywordForecastMetricsResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>

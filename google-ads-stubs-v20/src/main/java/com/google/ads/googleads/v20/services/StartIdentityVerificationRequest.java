@@ -7,7 +7,7 @@ package com.google.ads.googleads.v20.services;
 /**
  * <pre>
  * Request message for
- *  [IdentityVerificationService.StartIdentityVerification].
+ *  [StartIdentityVerification][google.ads.googleads.v20.services.IdentityVerificationService.StartIdentityVerification].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v20.services.StartIdentityVerificationRequest}
@@ -292,7 +292,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for
-   *  [IdentityVerificationService.StartIdentityVerification].
+   *  [StartIdentityVerification][google.ads.googleads.v20.services.IdentityVerificationService.StartIdentityVerification].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v20.services.StartIdentityVerificationRequest}

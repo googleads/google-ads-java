@@ -35,6 +35,11 @@ public final class ProductLinkInvitationProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerLinkInvitationIdentifier_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerLinkInvitationProperties_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerLinkInvitationProperties_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -51,7 +56,7 @@ public final class ProductLinkInvitationProto {
       "\032Cgoogle/ads/googleads/v23/enums/product" +
       "_link_invitation_status.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\264\006\n\025ProductLinkInvitation\022M\n\rr" +
+      "rce.proto\"\321\007\n\025ProductLinkInvitation\022M\n\rr" +
       "esource_name\030\001 \001(\tB6\340A\005\372A0\n.googleads.go" +
       "ogleapis.com/ProductLinkInvitation\022\'\n\032pr" +
       "oduct_link_invitation_id\030\002 \001(\003B\003\340A\003\022p\n\006s" +
@@ -68,24 +73,30 @@ public final class ProductLinkInvitationProto {
       "fierB\003\340A\003H\000\022r\n\023advertising_partner\030\007 \001(\013" +
       "2N.google.ads.googleads.v23.resources.Ad" +
       "vertisingPartnerLinkInvitationIdentifier" +
-      "B\003\340A\003H\000:|\352Ay\n.googleads.googleapis.com/P" +
-      "roductLinkInvitation\022Gcustomers/{custome" +
-      "r_id}/productLinkInvitations/{customer_i" +
-      "nvitation_id}B\021\n\017invited_account\"C\n#Hote" +
-      "lCenterLinkInvitationIdentifier\022\034\n\017hotel" +
-      "_center_id\030\001 \001(\003B\003\340A\003\"I\n&MerchantCenterL" +
-      "inkInvitationIdentifier\022\037\n\022merchant_cent" +
-      "er_id\030\001 \001(\003B\003\340A\003\"{\n*AdvertisingPartnerLi" +
-      "nkInvitationIdentifier\022@\n\010customer\030\001 \001(\t" +
-      "B)\340A\005\372A#\n!googleads.googleapis.com/Custo" +
-      "merH\000\210\001\001B\013\n\t_customerB\214\002\n&com.google.ads" +
-      ".googleads.v23.resourcesB\032ProductLinkInv" +
-      "itationProtoP\001ZKgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v23/resource" +
-      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
-      ".V23.Resources\312\002\"Google\\Ads\\GoogleAds\\V2" +
-      "3\\Resources\352\002&Google::Ads::GoogleAds::V2" +
-      "3::Resourcesb\006proto3"
+      "B\003\340A\003H\000\022}\n\036advertising_partner_propertie" +
+      "s\030\010 \001(\0132N.google.ads.googleads.v23.resou" +
+      "rces.AdvertisingPartnerLinkInvitationPro" +
+      "pertiesB\003\340A\003H\001:|\352Ay\n.googleads.googleapi" +
+      "s.com/ProductLinkInvitation\022Gcustomers/{" +
+      "customer_id}/productLinkInvitations/{cus" +
+      "tomer_invitation_id}B\021\n\017invited_accountB" +
+      "\034\n\032invited_account_properties\"C\n#HotelCe" +
+      "nterLinkInvitationIdentifier\022\034\n\017hotel_ce" +
+      "nter_id\030\001 \001(\003B\003\340A\003\"I\n&MerchantCenterLink" +
+      "InvitationIdentifier\022\037\n\022merchant_center_" +
+      "id\030\001 \001(\003B\003\340A\003\"{\n*AdvertisingPartnerLinkI" +
+      "nvitationIdentifier\022@\n\010customer\030\001 \001(\tB)\340" +
+      "A\005\372A#\n!googleads.googleapis.com/Customer" +
+      "H\000\210\001\001B\013\n\t_customer\"a\n*AdvertisingPartner" +
+      "LinkInvitationProperties\022 \n\016allowed_doma" +
+      "in\030\001 \001(\tB\003\340A\005H\000\210\001\001B\021\n\017_allowed_domainB\214\002" +
+      "\n&com.google.ads.googleads.v23.resources" +
+      "B\032ProductLinkInvitationProtoP\001ZKgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v23/resources;resources\242\002\003GAA\252\002\"Goog" +
+      "le.Ads.GoogleAds.V23.Resources\312\002\"Google\\" +
+      "Ads\\GoogleAds\\V23\\Resources\352\002&Google::Ad" +
+      "s::GoogleAds::V23::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -100,7 +111,7 @@ public final class ProductLinkInvitationProto {
     internal_static_google_ads_googleads_v23_resources_ProductLinkInvitation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_resources_ProductLinkInvitation_descriptor,
-        new java.lang.String[] { "ResourceName", "ProductLinkInvitationId", "Status", "Type", "HotelCenter", "MerchantCenter", "AdvertisingPartner", "InvitedAccount", });
+        new java.lang.String[] { "ResourceName", "ProductLinkInvitationId", "Status", "Type", "HotelCenter", "MerchantCenter", "AdvertisingPartner", "AdvertisingPartnerProperties", "InvitedAccount", "InvitedAccountProperties", });
     internal_static_google_ads_googleads_v23_resources_HotelCenterLinkInvitationIdentifier_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v23_resources_HotelCenterLinkInvitationIdentifier_fieldAccessorTable = new
@@ -119,6 +130,12 @@ public final class ProductLinkInvitationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerLinkInvitationIdentifier_descriptor,
         new java.lang.String[] { "Customer", });
+    internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerLinkInvitationProperties_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerLinkInvitationProperties_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerLinkInvitationProperties_descriptor,
+        new java.lang.String[] { "AllowedDomain", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,6 +57,7 @@ public class GrpcProductLinkInvitationServiceStub extends ProductLinkInvitationS
                   ProtoUtils.marshaller(CreateProductLinkInvitationRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(CreateProductLinkInvitationResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -71,6 +72,7 @@ public class GrpcProductLinkInvitationServiceStub extends ProductLinkInvitationS
                   ProtoUtils.marshaller(UpdateProductLinkInvitationRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(UpdateProductLinkInvitationResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -85,6 +87,7 @@ public class GrpcProductLinkInvitationServiceStub extends ProductLinkInvitationS
                   ProtoUtils.marshaller(RemoveProductLinkInvitationRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(RemoveProductLinkInvitationResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<

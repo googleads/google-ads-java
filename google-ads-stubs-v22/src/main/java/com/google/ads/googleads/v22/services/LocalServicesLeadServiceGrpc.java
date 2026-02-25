@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * This service allows management of LocalServicesLead resources.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/local_services_lead_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class LocalServicesLeadServiceGrpc {
 
@@ -250,8 +247,8 @@ public final class LocalServicesLeadServiceGrpc {
      * Lead resources.
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.AppendLeadConversationResponse appendLeadConversation(com.google.ads.googleads.v22.services.AppendLeadConversationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.AppendLeadConversationResponse appendLeadConversation(com.google.ads.googleads.v22.services.AppendLeadConversationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getAppendLeadConversationMethod(), getCallOptions(), request);
     }
 
@@ -260,8 +257,8 @@ public final class LocalServicesLeadServiceGrpc {
      * RPC to provide feedback on Local Services Lead resources.
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.ProvideLeadFeedbackResponse provideLeadFeedback(com.google.ads.googleads.v22.services.ProvideLeadFeedbackRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.ProvideLeadFeedbackResponse provideLeadFeedback(com.google.ads.googleads.v22.services.ProvideLeadFeedbackRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getProvideLeadFeedbackMethod(), getCallOptions(), request);
     }
   }

@@ -4789,6 +4789,33 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The YouTube video upload referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+   * @return Whether the youTubeVideoUpload field is set.
+   */
+  boolean hasYouTubeVideoUpload();
+  /**
+   * <pre>
+   * The YouTube video upload referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+   * @return The youTubeVideoUpload.
+   */
+  com.google.ads.googleads.v23.resources.YouTubeVideoUpload getYouTubeVideoUpload();
+  /**
+   * <pre>
+   * The YouTube video upload referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.YouTubeVideoUpload you_tube_video_upload = 245;</code>
+   */
+  com.google.ads.googleads.v23.resources.YouTubeVideoUploadOrBuilder getYouTubeVideoUploadOrBuilder();
+
+  /**
+   * <pre>
    * The applied incentive referenced in the query.
    * </pre>
    *

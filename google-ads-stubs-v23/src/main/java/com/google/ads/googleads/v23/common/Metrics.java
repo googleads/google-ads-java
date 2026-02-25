@@ -6887,6 +6887,161 @@ private static final long serialVersionUID = 0L;
     return costConvertedCurrencyPerPlatformComparableConversion_;
   }
 
+  public static final int UNIQUE_USERS_TWO_PLUS_FIELD_NUMBER = 393;
+  private long uniqueUsersTwoPlus_ = 0L;
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad two
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_two_plus = 393;</code>
+   * @return Whether the uniqueUsersTwoPlus field is set.
+   */
+  @java.lang.Override
+  public boolean hasUniqueUsersTwoPlus() {
+    return ((bitField6_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad two
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_two_plus = 393;</code>
+   * @return The uniqueUsersTwoPlus.
+   */
+  @java.lang.Override
+  public long getUniqueUsersTwoPlus() {
+    return uniqueUsersTwoPlus_;
+  }
+
+  public static final int UNIQUE_USERS_THREE_PLUS_FIELD_NUMBER = 394;
+  private long uniqueUsersThreePlus_ = 0L;
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad
+   * three or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_three_plus = 394;</code>
+   * @return Whether the uniqueUsersThreePlus field is set.
+   */
+  @java.lang.Override
+  public boolean hasUniqueUsersThreePlus() {
+    return ((bitField6_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad
+   * three or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_three_plus = 394;</code>
+   * @return The uniqueUsersThreePlus.
+   */
+  @java.lang.Override
+  public long getUniqueUsersThreePlus() {
+    return uniqueUsersThreePlus_;
+  }
+
+  public static final int UNIQUE_USERS_FOUR_PLUS_FIELD_NUMBER = 395;
+  private long uniqueUsersFourPlus_ = 0L;
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad four
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_four_plus = 395;</code>
+   * @return Whether the uniqueUsersFourPlus field is set.
+   */
+  @java.lang.Override
+  public boolean hasUniqueUsersFourPlus() {
+    return ((bitField6_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad four
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_four_plus = 395;</code>
+   * @return The uniqueUsersFourPlus.
+   */
+  @java.lang.Override
+  public long getUniqueUsersFourPlus() {
+    return uniqueUsersFourPlus_;
+  }
+
+  public static final int UNIQUE_USERS_FIVE_PLUS_FIELD_NUMBER = 396;
+  private long uniqueUsersFivePlus_ = 0L;
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad five
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_five_plus = 396;</code>
+   * @return Whether the uniqueUsersFivePlus field is set.
+   */
+  @java.lang.Override
+  public boolean hasUniqueUsersFivePlus() {
+    return ((bitField6_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad five
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_five_plus = 396;</code>
+   * @return The uniqueUsersFivePlus.
+   */
+  @java.lang.Override
+  public long getUniqueUsersFivePlus() {
+    return uniqueUsersFivePlus_;
+  }
+
+  public static final int UNIQUE_USERS_TEN_PLUS_FIELD_NUMBER = 397;
+  private long uniqueUsersTenPlus_ = 0L;
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad ten
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_ten_plus = 397;</code>
+   * @return Whether the uniqueUsersTenPlus field is set.
+   */
+  @java.lang.Override
+  public boolean hasUniqueUsersTenPlus() {
+    return ((bitField6_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad ten
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_ten_plus = 397;</code>
+   * @return The uniqueUsersTenPlus.
+   */
+  @java.lang.Override
+  public long getUniqueUsersTenPlus() {
+    return uniqueUsersTenPlus_;
+  }
+
   public static final int VALUE_ADJUSTMENT_FIELD_NUMBER = 398;
   private double valueAdjustment_ = 0D;
   /**
@@ -6900,7 +7055,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValueAdjustment() {
-    return ((bitField6_ & 0x00000010) != 0);
+    return ((bitField6_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -6929,7 +7084,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllValueAdjustment() {
-    return ((bitField6_ & 0x00000020) != 0);
+    return ((bitField6_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -6957,7 +7112,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasClicksUniqueQueryClusters() {
-    return ((bitField6_ & 0x00000040) != 0);
+    return ((bitField6_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -6984,7 +7139,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversionsUniqueQueryClusters() {
-    return ((bitField6_ & 0x00000080) != 0);
+    return ((bitField6_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -7011,7 +7166,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasImpressionsUniqueQueryClusters() {
-    return ((bitField6_ & 0x00000100) != 0);
+    return ((bitField6_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -7042,7 +7197,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoWatchTimeDurationMillis() {
-    return ((bitField6_ & 0x00000200) != 0);
+    return ((bitField6_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -7074,7 +7229,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageVideoWatchTimeDurationMillis() {
-    return ((bitField6_ & 0x00000400) != 0);
+    return ((bitField6_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -7102,7 +7257,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSvr() {
-    return ((bitField6_ & 0x00000800) != 0);
+    return ((bitField6_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -7130,7 +7285,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibilityMeasurableImpressions() {
-    return ((bitField6_ & 0x00001000) != 0);
+    return ((bitField6_ & 0x00020000) != 0);
   }
   /**
    * <pre>
@@ -7160,7 +7315,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibilityMeasurableImpressionsRate() {
-    return ((bitField6_ & 0x00002000) != 0);
+    return ((bitField6_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -7191,7 +7346,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibilityInvalidMeasurableImpressionsRate() {
-    return ((bitField6_ & 0x00004000) != 0);
+    return ((bitField6_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -7223,7 +7378,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibilityInvalidGivtMeasurableImpressionsRate() {
-    return ((bitField6_ & 0x00008000) != 0);
+    return ((bitField6_ & 0x00100000) != 0);
   }
   /**
    * <pre>
@@ -7254,7 +7409,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleImpressions() {
-    return ((bitField6_ & 0x00010000) != 0);
+    return ((bitField6_ & 0x00200000) != 0);
   }
   /**
    * <pre>
@@ -7284,7 +7439,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleImpressionsRate() {
-    return ((bitField6_ & 0x00020000) != 0);
+    return ((bitField6_ & 0x00400000) != 0);
   }
   /**
    * <pre>
@@ -7314,7 +7469,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleTwoSecondsImpressions() {
-    return ((bitField6_ & 0x00040000) != 0);
+    return ((bitField6_ & 0x00800000) != 0);
   }
   /**
    * <pre>
@@ -7344,7 +7499,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleTwoSecondsImpressionsRate() {
-    return ((bitField6_ & 0x00080000) != 0);
+    return ((bitField6_ & 0x01000000) != 0);
   }
   /**
    * <pre>
@@ -7374,7 +7529,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleThirtySecondsImpressions() {
-    return ((bitField6_ & 0x00100000) != 0);
+    return ((bitField6_ & 0x02000000) != 0);
   }
   /**
    * <pre>
@@ -7404,7 +7559,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleThirtySecondsImpressionsRate() {
-    return ((bitField6_ & 0x00200000) != 0);
+    return ((bitField6_ & 0x04000000) != 0);
   }
   /**
    * <pre>
@@ -7435,7 +7590,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleQuartileP25Rate() {
-    return ((bitField6_ & 0x00400000) != 0);
+    return ((bitField6_ & 0x08000000) != 0);
   }
   /**
    * <pre>
@@ -7466,7 +7621,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleQuartileP50Rate() {
-    return ((bitField6_ & 0x00800000) != 0);
+    return ((bitField6_ & 0x10000000) != 0);
   }
   /**
    * <pre>
@@ -7497,7 +7652,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleQuartileP75Rate() {
-    return ((bitField6_ & 0x01000000) != 0);
+    return ((bitField6_ & 0x20000000) != 0);
   }
   /**
    * <pre>
@@ -7528,7 +7683,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleQuartileP100Rate() {
-    return ((bitField6_ & 0x02000000) != 0);
+    return ((bitField6_ & 0x40000000) != 0);
   }
   /**
    * <pre>
@@ -8165,24 +8320,39 @@ private static final long serialVersionUID = 0L;
       output.writeDouble(392, costConvertedCurrencyPerPlatformComparableConversion_);
     }
     if (((bitField6_ & 0x00000010) != 0)) {
-      output.writeDouble(398, valueAdjustment_);
+      output.writeInt64(393, uniqueUsersTwoPlus_);
     }
     if (((bitField6_ & 0x00000020) != 0)) {
-      output.writeDouble(399, allValueAdjustment_);
+      output.writeInt64(394, uniqueUsersThreePlus_);
     }
     if (((bitField6_ & 0x00000040) != 0)) {
-      output.writeInt64(400, clicksUniqueQueryClusters_);
+      output.writeInt64(395, uniqueUsersFourPlus_);
     }
     if (((bitField6_ & 0x00000080) != 0)) {
-      output.writeInt64(401, conversionsUniqueQueryClusters_);
+      output.writeInt64(396, uniqueUsersFivePlus_);
     }
     if (((bitField6_ & 0x00000100) != 0)) {
-      output.writeInt64(402, impressionsUniqueQueryClusters_);
+      output.writeInt64(397, uniqueUsersTenPlus_);
     }
     if (((bitField6_ & 0x00000200) != 0)) {
-      output.writeInt64(403, videoWatchTimeDurationMillis_);
+      output.writeDouble(398, valueAdjustment_);
     }
     if (((bitField6_ & 0x00000400) != 0)) {
+      output.writeDouble(399, allValueAdjustment_);
+    }
+    if (((bitField6_ & 0x00000800) != 0)) {
+      output.writeInt64(400, clicksUniqueQueryClusters_);
+    }
+    if (((bitField6_ & 0x00001000) != 0)) {
+      output.writeInt64(401, conversionsUniqueQueryClusters_);
+    }
+    if (((bitField6_ & 0x00002000) != 0)) {
+      output.writeInt64(402, impressionsUniqueQueryClusters_);
+    }
+    if (((bitField6_ & 0x00004000) != 0)) {
+      output.writeInt64(403, videoWatchTimeDurationMillis_);
+    }
+    if (((bitField6_ & 0x00008000) != 0)) {
       output.writeInt64(404, averageVideoWatchTimeDurationMillis_);
     }
     if (((bitField1_ & 0x00000002) != 0)) {
@@ -8203,49 +8373,49 @@ private static final long serialVersionUID = 0L;
     if (((bitField5_ & 0x00400000) != 0)) {
       output.writeDouble(410, videoTrueviewViewRateShorts_);
     }
-    if (((bitField6_ & 0x00000800) != 0)) {
+    if (((bitField6_ & 0x00010000) != 0)) {
       output.writeInt64(411, svr_);
     }
-    if (((bitField6_ & 0x00001000) != 0)) {
+    if (((bitField6_ & 0x00020000) != 0)) {
       output.writeInt64(412, activeViewAudibilityMeasurableImpressions_);
     }
-    if (((bitField6_ & 0x00002000) != 0)) {
+    if (((bitField6_ & 0x00040000) != 0)) {
       output.writeDouble(413, activeViewAudibilityMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00004000) != 0)) {
+    if (((bitField6_ & 0x00080000) != 0)) {
       output.writeDouble(414, activeViewAudibilityInvalidMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00008000) != 0)) {
+    if (((bitField6_ & 0x00100000) != 0)) {
       output.writeDouble(415, activeViewAudibilityInvalidGivtMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00010000) != 0)) {
+    if (((bitField6_ & 0x00200000) != 0)) {
       output.writeInt64(416, activeViewAudibleImpressions_);
     }
-    if (((bitField6_ & 0x00020000) != 0)) {
+    if (((bitField6_ & 0x00400000) != 0)) {
       output.writeDouble(417, activeViewAudibleImpressionsRate_);
     }
-    if (((bitField6_ & 0x00040000) != 0)) {
+    if (((bitField6_ & 0x00800000) != 0)) {
       output.writeInt64(418, activeViewAudibleTwoSecondsImpressions_);
     }
-    if (((bitField6_ & 0x00080000) != 0)) {
+    if (((bitField6_ & 0x01000000) != 0)) {
       output.writeDouble(419, activeViewAudibleTwoSecondsImpressionsRate_);
     }
-    if (((bitField6_ & 0x00100000) != 0)) {
+    if (((bitField6_ & 0x02000000) != 0)) {
       output.writeInt64(420, activeViewAudibleThirtySecondsImpressions_);
     }
-    if (((bitField6_ & 0x00200000) != 0)) {
+    if (((bitField6_ & 0x04000000) != 0)) {
       output.writeDouble(421, activeViewAudibleThirtySecondsImpressionsRate_);
     }
-    if (((bitField6_ & 0x00400000) != 0)) {
+    if (((bitField6_ & 0x08000000) != 0)) {
       output.writeDouble(422, activeViewAudibleQuartileP25Rate_);
     }
-    if (((bitField6_ & 0x00800000) != 0)) {
+    if (((bitField6_ & 0x10000000) != 0)) {
       output.writeDouble(423, activeViewAudibleQuartileP50Rate_);
     }
-    if (((bitField6_ & 0x01000000) != 0)) {
+    if (((bitField6_ & 0x20000000) != 0)) {
       output.writeDouble(424, activeViewAudibleQuartileP75Rate_);
     }
-    if (((bitField6_ & 0x02000000) != 0)) {
+    if (((bitField6_ & 0x40000000) != 0)) {
       output.writeDouble(425, activeViewAudibleQuartileP100Rate_);
     }
     getUnknownFields().writeTo(output);
@@ -9068,29 +9238,49 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField6_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(398, valueAdjustment_);
+        .computeInt64Size(393, uniqueUsersTwoPlus_);
     }
     if (((bitField6_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(399, allValueAdjustment_);
+        .computeInt64Size(394, uniqueUsersThreePlus_);
     }
     if (((bitField6_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(400, clicksUniqueQueryClusters_);
+        .computeInt64Size(395, uniqueUsersFourPlus_);
     }
     if (((bitField6_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(401, conversionsUniqueQueryClusters_);
+        .computeInt64Size(396, uniqueUsersFivePlus_);
     }
     if (((bitField6_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(402, impressionsUniqueQueryClusters_);
+        .computeInt64Size(397, uniqueUsersTenPlus_);
     }
     if (((bitField6_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(403, videoWatchTimeDurationMillis_);
+        .computeDoubleSize(398, valueAdjustment_);
     }
     if (((bitField6_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(399, allValueAdjustment_);
+    }
+    if (((bitField6_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(400, clicksUniqueQueryClusters_);
+    }
+    if (((bitField6_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(401, conversionsUniqueQueryClusters_);
+    }
+    if (((bitField6_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(402, impressionsUniqueQueryClusters_);
+    }
+    if (((bitField6_ & 0x00004000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(403, videoWatchTimeDurationMillis_);
+    }
+    if (((bitField6_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(404, averageVideoWatchTimeDurationMillis_);
     }
@@ -9118,63 +9308,63 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(410, videoTrueviewViewRateShorts_);
     }
-    if (((bitField6_ & 0x00000800) != 0)) {
+    if (((bitField6_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(411, svr_);
     }
-    if (((bitField6_ & 0x00001000) != 0)) {
+    if (((bitField6_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(412, activeViewAudibilityMeasurableImpressions_);
     }
-    if (((bitField6_ & 0x00002000) != 0)) {
+    if (((bitField6_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(413, activeViewAudibilityMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00004000) != 0)) {
+    if (((bitField6_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(414, activeViewAudibilityInvalidMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00008000) != 0)) {
+    if (((bitField6_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(415, activeViewAudibilityInvalidGivtMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00010000) != 0)) {
+    if (((bitField6_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(416, activeViewAudibleImpressions_);
     }
-    if (((bitField6_ & 0x00020000) != 0)) {
+    if (((bitField6_ & 0x00400000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(417, activeViewAudibleImpressionsRate_);
     }
-    if (((bitField6_ & 0x00040000) != 0)) {
+    if (((bitField6_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(418, activeViewAudibleTwoSecondsImpressions_);
     }
-    if (((bitField6_ & 0x00080000) != 0)) {
+    if (((bitField6_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(419, activeViewAudibleTwoSecondsImpressionsRate_);
     }
-    if (((bitField6_ & 0x00100000) != 0)) {
+    if (((bitField6_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(420, activeViewAudibleThirtySecondsImpressions_);
     }
-    if (((bitField6_ & 0x00200000) != 0)) {
+    if (((bitField6_ & 0x04000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(421, activeViewAudibleThirtySecondsImpressionsRate_);
     }
-    if (((bitField6_ & 0x00400000) != 0)) {
+    if (((bitField6_ & 0x08000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(422, activeViewAudibleQuartileP25Rate_);
     }
-    if (((bitField6_ & 0x00800000) != 0)) {
+    if (((bitField6_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(423, activeViewAudibleQuartileP50Rate_);
     }
-    if (((bitField6_ & 0x01000000) != 0)) {
+    if (((bitField6_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(424, activeViewAudibleQuartileP75Rate_);
     }
-    if (((bitField6_ & 0x02000000) != 0)) {
+    if (((bitField6_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(425, activeViewAudibleQuartileP100Rate_);
     }
@@ -10329,6 +10519,31 @@ private static final long serialVersionUID = 0L;
           != java.lang.Double.doubleToLongBits(
               other.getCostConvertedCurrencyPerPlatformComparableConversion())) return false;
     }
+    if (hasUniqueUsersTwoPlus() != other.hasUniqueUsersTwoPlus()) return false;
+    if (hasUniqueUsersTwoPlus()) {
+      if (getUniqueUsersTwoPlus()
+          != other.getUniqueUsersTwoPlus()) return false;
+    }
+    if (hasUniqueUsersThreePlus() != other.hasUniqueUsersThreePlus()) return false;
+    if (hasUniqueUsersThreePlus()) {
+      if (getUniqueUsersThreePlus()
+          != other.getUniqueUsersThreePlus()) return false;
+    }
+    if (hasUniqueUsersFourPlus() != other.hasUniqueUsersFourPlus()) return false;
+    if (hasUniqueUsersFourPlus()) {
+      if (getUniqueUsersFourPlus()
+          != other.getUniqueUsersFourPlus()) return false;
+    }
+    if (hasUniqueUsersFivePlus() != other.hasUniqueUsersFivePlus()) return false;
+    if (hasUniqueUsersFivePlus()) {
+      if (getUniqueUsersFivePlus()
+          != other.getUniqueUsersFivePlus()) return false;
+    }
+    if (hasUniqueUsersTenPlus() != other.hasUniqueUsersTenPlus()) return false;
+    if (hasUniqueUsersTenPlus()) {
+      if (getUniqueUsersTenPlus()
+          != other.getUniqueUsersTenPlus()) return false;
+    }
     if (hasValueAdjustment() != other.hasValueAdjustment()) return false;
     if (hasValueAdjustment()) {
       if (java.lang.Double.doubleToLongBits(getValueAdjustment())
@@ -11467,6 +11682,31 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getCostConvertedCurrencyPerPlatformComparableConversion()));
     }
+    if (hasUniqueUsersTwoPlus()) {
+      hash = (37 * hash) + UNIQUE_USERS_TWO_PLUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUniqueUsersTwoPlus());
+    }
+    if (hasUniqueUsersThreePlus()) {
+      hash = (37 * hash) + UNIQUE_USERS_THREE_PLUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUniqueUsersThreePlus());
+    }
+    if (hasUniqueUsersFourPlus()) {
+      hash = (37 * hash) + UNIQUE_USERS_FOUR_PLUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUniqueUsersFourPlus());
+    }
+    if (hasUniqueUsersFivePlus()) {
+      hash = (37 * hash) + UNIQUE_USERS_FIVE_PLUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUniqueUsersFivePlus());
+    }
+    if (hasUniqueUsersTenPlus()) {
+      hash = (37 * hash) + UNIQUE_USERS_TEN_PLUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUniqueUsersTenPlus());
+    }
     if (hasValueAdjustment()) {
       hash = (37 * hash) + VALUE_ADJUSTMENT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -11937,6 +12177,11 @@ private static final long serialVersionUID = 0L;
       valuePerPlatformComparableConversion_ = 0D;
       valuePerPlatformComparableConversionsByConversionDate_ = 0D;
       costConvertedCurrencyPerPlatformComparableConversion_ = 0D;
+      uniqueUsersTwoPlus_ = 0L;
+      uniqueUsersThreePlus_ = 0L;
+      uniqueUsersFourPlus_ = 0L;
+      uniqueUsersFivePlus_ = 0L;
+      uniqueUsersTenPlus_ = 0L;
       valueAdjustment_ = 0D;
       allValueAdjustment_ = 0D;
       clicksUniqueQueryClusters_ = 0L;
@@ -12867,75 +13112,75 @@ private static final long serialVersionUID = 0L;
         to_bitField6_ |= 0x00000008;
       }
       if (((from_bitField6_ & 0x00004000) != 0)) {
-        result.valueAdjustment_ = valueAdjustment_;
+        result.uniqueUsersTwoPlus_ = uniqueUsersTwoPlus_;
         to_bitField6_ |= 0x00000010;
       }
       if (((from_bitField6_ & 0x00008000) != 0)) {
-        result.allValueAdjustment_ = allValueAdjustment_;
+        result.uniqueUsersThreePlus_ = uniqueUsersThreePlus_;
         to_bitField6_ |= 0x00000020;
       }
       if (((from_bitField6_ & 0x00010000) != 0)) {
-        result.clicksUniqueQueryClusters_ = clicksUniqueQueryClusters_;
+        result.uniqueUsersFourPlus_ = uniqueUsersFourPlus_;
         to_bitField6_ |= 0x00000040;
       }
       if (((from_bitField6_ & 0x00020000) != 0)) {
-        result.conversionsUniqueQueryClusters_ = conversionsUniqueQueryClusters_;
+        result.uniqueUsersFivePlus_ = uniqueUsersFivePlus_;
         to_bitField6_ |= 0x00000080;
       }
       if (((from_bitField6_ & 0x00040000) != 0)) {
-        result.impressionsUniqueQueryClusters_ = impressionsUniqueQueryClusters_;
+        result.uniqueUsersTenPlus_ = uniqueUsersTenPlus_;
         to_bitField6_ |= 0x00000100;
       }
       if (((from_bitField6_ & 0x00080000) != 0)) {
-        result.videoWatchTimeDurationMillis_ = videoWatchTimeDurationMillis_;
+        result.valueAdjustment_ = valueAdjustment_;
         to_bitField6_ |= 0x00000200;
       }
       if (((from_bitField6_ & 0x00100000) != 0)) {
-        result.averageVideoWatchTimeDurationMillis_ = averageVideoWatchTimeDurationMillis_;
+        result.allValueAdjustment_ = allValueAdjustment_;
         to_bitField6_ |= 0x00000400;
       }
       if (((from_bitField6_ & 0x00200000) != 0)) {
-        result.svr_ = svr_;
+        result.clicksUniqueQueryClusters_ = clicksUniqueQueryClusters_;
         to_bitField6_ |= 0x00000800;
       }
       if (((from_bitField6_ & 0x00400000) != 0)) {
-        result.activeViewAudibilityMeasurableImpressions_ = activeViewAudibilityMeasurableImpressions_;
+        result.conversionsUniqueQueryClusters_ = conversionsUniqueQueryClusters_;
         to_bitField6_ |= 0x00001000;
       }
       if (((from_bitField6_ & 0x00800000) != 0)) {
-        result.activeViewAudibilityMeasurableImpressionsRate_ = activeViewAudibilityMeasurableImpressionsRate_;
+        result.impressionsUniqueQueryClusters_ = impressionsUniqueQueryClusters_;
         to_bitField6_ |= 0x00002000;
       }
       if (((from_bitField6_ & 0x01000000) != 0)) {
-        result.activeViewAudibilityInvalidMeasurableImpressionsRate_ = activeViewAudibilityInvalidMeasurableImpressionsRate_;
+        result.videoWatchTimeDurationMillis_ = videoWatchTimeDurationMillis_;
         to_bitField6_ |= 0x00004000;
       }
       if (((from_bitField6_ & 0x02000000) != 0)) {
-        result.activeViewAudibilityInvalidGivtMeasurableImpressionsRate_ = activeViewAudibilityInvalidGivtMeasurableImpressionsRate_;
+        result.averageVideoWatchTimeDurationMillis_ = averageVideoWatchTimeDurationMillis_;
         to_bitField6_ |= 0x00008000;
       }
       if (((from_bitField6_ & 0x04000000) != 0)) {
-        result.activeViewAudibleImpressions_ = activeViewAudibleImpressions_;
+        result.svr_ = svr_;
         to_bitField6_ |= 0x00010000;
       }
       if (((from_bitField6_ & 0x08000000) != 0)) {
-        result.activeViewAudibleImpressionsRate_ = activeViewAudibleImpressionsRate_;
+        result.activeViewAudibilityMeasurableImpressions_ = activeViewAudibilityMeasurableImpressions_;
         to_bitField6_ |= 0x00020000;
       }
       if (((from_bitField6_ & 0x10000000) != 0)) {
-        result.activeViewAudibleTwoSecondsImpressions_ = activeViewAudibleTwoSecondsImpressions_;
+        result.activeViewAudibilityMeasurableImpressionsRate_ = activeViewAudibilityMeasurableImpressionsRate_;
         to_bitField6_ |= 0x00040000;
       }
       if (((from_bitField6_ & 0x20000000) != 0)) {
-        result.activeViewAudibleTwoSecondsImpressionsRate_ = activeViewAudibleTwoSecondsImpressionsRate_;
+        result.activeViewAudibilityInvalidMeasurableImpressionsRate_ = activeViewAudibilityInvalidMeasurableImpressionsRate_;
         to_bitField6_ |= 0x00080000;
       }
       if (((from_bitField6_ & 0x40000000) != 0)) {
-        result.activeViewAudibleThirtySecondsImpressions_ = activeViewAudibleThirtySecondsImpressions_;
+        result.activeViewAudibilityInvalidGivtMeasurableImpressionsRate_ = activeViewAudibilityInvalidGivtMeasurableImpressionsRate_;
         to_bitField6_ |= 0x00100000;
       }
       if (((from_bitField6_ & 0x80000000) != 0)) {
-        result.activeViewAudibleThirtySecondsImpressionsRate_ = activeViewAudibleThirtySecondsImpressionsRate_;
+        result.activeViewAudibleImpressions_ = activeViewAudibleImpressions_;
         to_bitField6_ |= 0x00200000;
       }
       result.bitField5_ |= to_bitField5_;
@@ -12946,20 +13191,40 @@ private static final long serialVersionUID = 0L;
       int from_bitField7_ = bitField7_;
       int to_bitField6_ = 0;
       if (((from_bitField7_ & 0x00000001) != 0)) {
-        result.activeViewAudibleQuartileP25Rate_ = activeViewAudibleQuartileP25Rate_;
+        result.activeViewAudibleImpressionsRate_ = activeViewAudibleImpressionsRate_;
         to_bitField6_ |= 0x00400000;
       }
       if (((from_bitField7_ & 0x00000002) != 0)) {
-        result.activeViewAudibleQuartileP50Rate_ = activeViewAudibleQuartileP50Rate_;
+        result.activeViewAudibleTwoSecondsImpressions_ = activeViewAudibleTwoSecondsImpressions_;
         to_bitField6_ |= 0x00800000;
       }
       if (((from_bitField7_ & 0x00000004) != 0)) {
-        result.activeViewAudibleQuartileP75Rate_ = activeViewAudibleQuartileP75Rate_;
+        result.activeViewAudibleTwoSecondsImpressionsRate_ = activeViewAudibleTwoSecondsImpressionsRate_;
         to_bitField6_ |= 0x01000000;
       }
       if (((from_bitField7_ & 0x00000008) != 0)) {
-        result.activeViewAudibleQuartileP100Rate_ = activeViewAudibleQuartileP100Rate_;
+        result.activeViewAudibleThirtySecondsImpressions_ = activeViewAudibleThirtySecondsImpressions_;
         to_bitField6_ |= 0x02000000;
+      }
+      if (((from_bitField7_ & 0x00000010) != 0)) {
+        result.activeViewAudibleThirtySecondsImpressionsRate_ = activeViewAudibleThirtySecondsImpressionsRate_;
+        to_bitField6_ |= 0x04000000;
+      }
+      if (((from_bitField7_ & 0x00000020) != 0)) {
+        result.activeViewAudibleQuartileP25Rate_ = activeViewAudibleQuartileP25Rate_;
+        to_bitField6_ |= 0x08000000;
+      }
+      if (((from_bitField7_ & 0x00000040) != 0)) {
+        result.activeViewAudibleQuartileP50Rate_ = activeViewAudibleQuartileP50Rate_;
+        to_bitField6_ |= 0x10000000;
+      }
+      if (((from_bitField7_ & 0x00000080) != 0)) {
+        result.activeViewAudibleQuartileP75Rate_ = activeViewAudibleQuartileP75Rate_;
+        to_bitField6_ |= 0x20000000;
+      }
+      if (((from_bitField7_ & 0x00000100) != 0)) {
+        result.activeViewAudibleQuartileP100Rate_ = activeViewAudibleQuartileP100Rate_;
+        to_bitField6_ |= 0x40000000;
       }
       result.bitField6_ |= to_bitField6_;
     }
@@ -13645,6 +13910,21 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCostConvertedCurrencyPerPlatformComparableConversion()) {
         setCostConvertedCurrencyPerPlatformComparableConversion(other.getCostConvertedCurrencyPerPlatformComparableConversion());
+      }
+      if (other.hasUniqueUsersTwoPlus()) {
+        setUniqueUsersTwoPlus(other.getUniqueUsersTwoPlus());
+      }
+      if (other.hasUniqueUsersThreePlus()) {
+        setUniqueUsersThreePlus(other.getUniqueUsersThreePlus());
+      }
+      if (other.hasUniqueUsersFourPlus()) {
+        setUniqueUsersFourPlus(other.getUniqueUsersFourPlus());
+      }
+      if (other.hasUniqueUsersFivePlus()) {
+        setUniqueUsersFivePlus(other.getUniqueUsersFivePlus());
+      }
+      if (other.hasUniqueUsersTenPlus()) {
+        setUniqueUsersTenPlus(other.getUniqueUsersTenPlus());
       }
       if (other.hasValueAdjustment()) {
         setValueAdjustment(other.getValueAdjustment());
@@ -14753,39 +15033,64 @@ private static final long serialVersionUID = 0L;
               bitField6_ |= 0x00002000;
               break;
             } // case 3137
+            case 3144: {
+              uniqueUsersTwoPlus_ = input.readInt64();
+              bitField6_ |= 0x00004000;
+              break;
+            } // case 3144
+            case 3152: {
+              uniqueUsersThreePlus_ = input.readInt64();
+              bitField6_ |= 0x00008000;
+              break;
+            } // case 3152
+            case 3160: {
+              uniqueUsersFourPlus_ = input.readInt64();
+              bitField6_ |= 0x00010000;
+              break;
+            } // case 3160
+            case 3168: {
+              uniqueUsersFivePlus_ = input.readInt64();
+              bitField6_ |= 0x00020000;
+              break;
+            } // case 3168
+            case 3176: {
+              uniqueUsersTenPlus_ = input.readInt64();
+              bitField6_ |= 0x00040000;
+              break;
+            } // case 3176
             case 3185: {
               valueAdjustment_ = input.readDouble();
-              bitField6_ |= 0x00004000;
+              bitField6_ |= 0x00080000;
               break;
             } // case 3185
             case 3193: {
               allValueAdjustment_ = input.readDouble();
-              bitField6_ |= 0x00008000;
+              bitField6_ |= 0x00100000;
               break;
             } // case 3193
             case 3200: {
               clicksUniqueQueryClusters_ = input.readInt64();
-              bitField6_ |= 0x00010000;
+              bitField6_ |= 0x00200000;
               break;
             } // case 3200
             case 3208: {
               conversionsUniqueQueryClusters_ = input.readInt64();
-              bitField6_ |= 0x00020000;
+              bitField6_ |= 0x00400000;
               break;
             } // case 3208
             case 3216: {
               impressionsUniqueQueryClusters_ = input.readInt64();
-              bitField6_ |= 0x00040000;
+              bitField6_ |= 0x00800000;
               break;
             } // case 3216
             case 3224: {
               videoWatchTimeDurationMillis_ = input.readInt64();
-              bitField6_ |= 0x00080000;
+              bitField6_ |= 0x01000000;
               break;
             } // case 3224
             case 3232: {
               averageVideoWatchTimeDurationMillis_ = input.readInt64();
-              bitField6_ |= 0x00100000;
+              bitField6_ |= 0x02000000;
               break;
             } // case 3232
             case 3241: {
@@ -14820,77 +15125,77 @@ private static final long serialVersionUID = 0L;
             } // case 3281
             case 3288: {
               svr_ = input.readInt64();
-              bitField6_ |= 0x00200000;
+              bitField6_ |= 0x04000000;
               break;
             } // case 3288
             case 3296: {
               activeViewAudibilityMeasurableImpressions_ = input.readInt64();
-              bitField6_ |= 0x00400000;
+              bitField6_ |= 0x08000000;
               break;
             } // case 3296
             case 3305: {
               activeViewAudibilityMeasurableImpressionsRate_ = input.readDouble();
-              bitField6_ |= 0x00800000;
+              bitField6_ |= 0x10000000;
               break;
             } // case 3305
             case 3313: {
               activeViewAudibilityInvalidMeasurableImpressionsRate_ = input.readDouble();
-              bitField6_ |= 0x01000000;
+              bitField6_ |= 0x20000000;
               break;
             } // case 3313
             case 3321: {
               activeViewAudibilityInvalidGivtMeasurableImpressionsRate_ = input.readDouble();
-              bitField6_ |= 0x02000000;
+              bitField6_ |= 0x40000000;
               break;
             } // case 3321
             case 3328: {
               activeViewAudibleImpressions_ = input.readInt64();
-              bitField6_ |= 0x04000000;
+              bitField6_ |= 0x80000000;
               break;
             } // case 3328
             case 3337: {
               activeViewAudibleImpressionsRate_ = input.readDouble();
-              bitField6_ |= 0x08000000;
+              bitField7_ |= 0x00000001;
               break;
             } // case 3337
             case 3344: {
               activeViewAudibleTwoSecondsImpressions_ = input.readInt64();
-              bitField6_ |= 0x10000000;
+              bitField7_ |= 0x00000002;
               break;
             } // case 3344
             case 3353: {
               activeViewAudibleTwoSecondsImpressionsRate_ = input.readDouble();
-              bitField6_ |= 0x20000000;
+              bitField7_ |= 0x00000004;
               break;
             } // case 3353
             case 3360: {
               activeViewAudibleThirtySecondsImpressions_ = input.readInt64();
-              bitField6_ |= 0x40000000;
+              bitField7_ |= 0x00000008;
               break;
             } // case 3360
             case 3369: {
               activeViewAudibleThirtySecondsImpressionsRate_ = input.readDouble();
-              bitField6_ |= 0x80000000;
+              bitField7_ |= 0x00000010;
               break;
             } // case 3369
             case 3377: {
               activeViewAudibleQuartileP25Rate_ = input.readDouble();
-              bitField7_ |= 0x00000001;
+              bitField7_ |= 0x00000020;
               break;
             } // case 3377
             case 3385: {
               activeViewAudibleQuartileP50Rate_ = input.readDouble();
-              bitField7_ |= 0x00000002;
+              bitField7_ |= 0x00000040;
               break;
             } // case 3385
             case 3393: {
               activeViewAudibleQuartileP75Rate_ = input.readDouble();
-              bitField7_ |= 0x00000004;
+              bitField7_ |= 0x00000080;
               break;
             } // case 3393
             case 3401: {
               activeViewAudibleQuartileP100Rate_ = input.readDouble();
-              bitField7_ |= 0x00000008;
+              bitField7_ |= 0x00000100;
               break;
             } // case 3401
             default: {
@@ -29204,6 +29509,326 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long uniqueUsersTwoPlus_ ;
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad two
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_two_plus = 393;</code>
+     * @return Whether the uniqueUsersTwoPlus field is set.
+     */
+    @java.lang.Override
+    public boolean hasUniqueUsersTwoPlus() {
+      return ((bitField6_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad two
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_two_plus = 393;</code>
+     * @return The uniqueUsersTwoPlus.
+     */
+    @java.lang.Override
+    public long getUniqueUsersTwoPlus() {
+      return uniqueUsersTwoPlus_;
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad two
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_two_plus = 393;</code>
+     * @param value The uniqueUsersTwoPlus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUniqueUsersTwoPlus(long value) {
+
+      uniqueUsersTwoPlus_ = value;
+      bitField6_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad two
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_two_plus = 393;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUniqueUsersTwoPlus() {
+      bitField6_ = (bitField6_ & ~0x00004000);
+      uniqueUsersTwoPlus_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long uniqueUsersThreePlus_ ;
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad
+     * three or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_three_plus = 394;</code>
+     * @return Whether the uniqueUsersThreePlus field is set.
+     */
+    @java.lang.Override
+    public boolean hasUniqueUsersThreePlus() {
+      return ((bitField6_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad
+     * three or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_three_plus = 394;</code>
+     * @return The uniqueUsersThreePlus.
+     */
+    @java.lang.Override
+    public long getUniqueUsersThreePlus() {
+      return uniqueUsersThreePlus_;
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad
+     * three or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_three_plus = 394;</code>
+     * @param value The uniqueUsersThreePlus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUniqueUsersThreePlus(long value) {
+
+      uniqueUsersThreePlus_ = value;
+      bitField6_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad
+     * three or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_three_plus = 394;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUniqueUsersThreePlus() {
+      bitField6_ = (bitField6_ & ~0x00008000);
+      uniqueUsersThreePlus_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long uniqueUsersFourPlus_ ;
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad four
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_four_plus = 395;</code>
+     * @return Whether the uniqueUsersFourPlus field is set.
+     */
+    @java.lang.Override
+    public boolean hasUniqueUsersFourPlus() {
+      return ((bitField6_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad four
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_four_plus = 395;</code>
+     * @return The uniqueUsersFourPlus.
+     */
+    @java.lang.Override
+    public long getUniqueUsersFourPlus() {
+      return uniqueUsersFourPlus_;
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad four
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_four_plus = 395;</code>
+     * @param value The uniqueUsersFourPlus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUniqueUsersFourPlus(long value) {
+
+      uniqueUsersFourPlus_ = value;
+      bitField6_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad four
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_four_plus = 395;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUniqueUsersFourPlus() {
+      bitField6_ = (bitField6_ & ~0x00010000);
+      uniqueUsersFourPlus_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long uniqueUsersFivePlus_ ;
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad five
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_five_plus = 396;</code>
+     * @return Whether the uniqueUsersFivePlus field is set.
+     */
+    @java.lang.Override
+    public boolean hasUniqueUsersFivePlus() {
+      return ((bitField6_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad five
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_five_plus = 396;</code>
+     * @return The uniqueUsersFivePlus.
+     */
+    @java.lang.Override
+    public long getUniqueUsersFivePlus() {
+      return uniqueUsersFivePlus_;
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad five
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_five_plus = 396;</code>
+     * @param value The uniqueUsersFivePlus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUniqueUsersFivePlus(long value) {
+
+      uniqueUsersFivePlus_ = value;
+      bitField6_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad five
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_five_plus = 396;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUniqueUsersFivePlus() {
+      bitField6_ = (bitField6_ & ~0x00020000);
+      uniqueUsersFivePlus_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long uniqueUsersTenPlus_ ;
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad ten
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_ten_plus = 397;</code>
+     * @return Whether the uniqueUsersTenPlus field is set.
+     */
+    @java.lang.Override
+    public boolean hasUniqueUsersTenPlus() {
+      return ((bitField6_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad ten
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_ten_plus = 397;</code>
+     * @return The uniqueUsersTenPlus.
+     */
+    @java.lang.Override
+    public long getUniqueUsersTenPlus() {
+      return uniqueUsersTenPlus_;
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad ten
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_ten_plus = 397;</code>
+     * @param value The uniqueUsersTenPlus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUniqueUsersTenPlus(long value) {
+
+      uniqueUsersTenPlus_ = value;
+      bitField6_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * This metric counts the unique individuals who were shown your video ad ten
+     * or more times within the selected date range. This metric cannot be
+     * aggregated, and can only be requested for date ranges of 31 days or less.
+     * </pre>
+     *
+     * <code>optional int64 unique_users_ten_plus = 397;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUniqueUsersTenPlus() {
+      bitField6_ = (bitField6_ & ~0x00040000);
+      uniqueUsersTenPlus_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private double valueAdjustment_ ;
     /**
      * <pre>
@@ -29216,7 +29841,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValueAdjustment() {
-      return ((bitField6_ & 0x00004000) != 0);
+      return ((bitField6_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -29244,7 +29869,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValueAdjustment(double value) {
 
       valueAdjustment_ = value;
-      bitField6_ |= 0x00004000;
+      bitField6_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -29258,7 +29883,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValueAdjustment() {
-      bitField6_ = (bitField6_ & ~0x00004000);
+      bitField6_ = (bitField6_ & ~0x00080000);
       valueAdjustment_ = 0D;
       onChanged();
       return this;
@@ -29276,7 +29901,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllValueAdjustment() {
-      return ((bitField6_ & 0x00008000) != 0);
+      return ((bitField6_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -29304,7 +29929,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllValueAdjustment(double value) {
 
       allValueAdjustment_ = value;
-      bitField6_ |= 0x00008000;
+      bitField6_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -29318,7 +29943,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllValueAdjustment() {
-      bitField6_ = (bitField6_ & ~0x00008000);
+      bitField6_ = (bitField6_ & ~0x00100000);
       allValueAdjustment_ = 0D;
       onChanged();
       return this;
@@ -29335,7 +29960,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasClicksUniqueQueryClusters() {
-      return ((bitField6_ & 0x00010000) != 0);
+      return ((bitField6_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -29361,7 +29986,7 @@ private static final long serialVersionUID = 0L;
     public Builder setClicksUniqueQueryClusters(long value) {
 
       clicksUniqueQueryClusters_ = value;
-      bitField6_ |= 0x00010000;
+      bitField6_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -29374,7 +29999,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClicksUniqueQueryClusters() {
-      bitField6_ = (bitField6_ & ~0x00010000);
+      bitField6_ = (bitField6_ & ~0x00200000);
       clicksUniqueQueryClusters_ = 0L;
       onChanged();
       return this;
@@ -29391,7 +30016,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConversionsUniqueQueryClusters() {
-      return ((bitField6_ & 0x00020000) != 0);
+      return ((bitField6_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -29417,7 +30042,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversionsUniqueQueryClusters(long value) {
 
       conversionsUniqueQueryClusters_ = value;
-      bitField6_ |= 0x00020000;
+      bitField6_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -29430,7 +30055,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionsUniqueQueryClusters() {
-      bitField6_ = (bitField6_ & ~0x00020000);
+      bitField6_ = (bitField6_ & ~0x00400000);
       conversionsUniqueQueryClusters_ = 0L;
       onChanged();
       return this;
@@ -29447,7 +30072,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasImpressionsUniqueQueryClusters() {
-      return ((bitField6_ & 0x00040000) != 0);
+      return ((bitField6_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -29473,7 +30098,7 @@ private static final long serialVersionUID = 0L;
     public Builder setImpressionsUniqueQueryClusters(long value) {
 
       impressionsUniqueQueryClusters_ = value;
-      bitField6_ |= 0x00040000;
+      bitField6_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -29486,7 +30111,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearImpressionsUniqueQueryClusters() {
-      bitField6_ = (bitField6_ & ~0x00040000);
+      bitField6_ = (bitField6_ & ~0x00800000);
       impressionsUniqueQueryClusters_ = 0L;
       onChanged();
       return this;
@@ -29507,7 +30132,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoWatchTimeDurationMillis() {
-      return ((bitField6_ & 0x00080000) != 0);
+      return ((bitField6_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -29541,7 +30166,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoWatchTimeDurationMillis(long value) {
 
       videoWatchTimeDurationMillis_ = value;
-      bitField6_ |= 0x00080000;
+      bitField6_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -29558,7 +30183,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoWatchTimeDurationMillis() {
-      bitField6_ = (bitField6_ & ~0x00080000);
+      bitField6_ = (bitField6_ & ~0x01000000);
       videoWatchTimeDurationMillis_ = 0L;
       onChanged();
       return this;
@@ -29576,7 +30201,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAverageVideoWatchTimeDurationMillis() {
-      return ((bitField6_ & 0x00100000) != 0);
+      return ((bitField6_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -29604,7 +30229,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAverageVideoWatchTimeDurationMillis(long value) {
 
       averageVideoWatchTimeDurationMillis_ = value;
-      bitField6_ |= 0x00100000;
+      bitField6_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -29618,7 +30243,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageVideoWatchTimeDurationMillis() {
-      bitField6_ = (bitField6_ & ~0x00100000);
+      bitField6_ = (bitField6_ & ~0x02000000);
       averageVideoWatchTimeDurationMillis_ = 0L;
       onChanged();
       return this;
@@ -29635,7 +30260,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSvr() {
-      return ((bitField6_ & 0x00200000) != 0);
+      return ((bitField6_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -29661,7 +30286,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSvr(long value) {
 
       svr_ = value;
-      bitField6_ |= 0x00200000;
+      bitField6_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -29674,7 +30299,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSvr() {
-      bitField6_ = (bitField6_ & ~0x00200000);
+      bitField6_ = (bitField6_ & ~0x04000000);
       svr_ = 0L;
       onChanged();
       return this;
@@ -29692,7 +30317,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibilityMeasurableImpressions() {
-      return ((bitField6_ & 0x00400000) != 0);
+      return ((bitField6_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -29720,7 +30345,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibilityMeasurableImpressions(long value) {
 
       activeViewAudibilityMeasurableImpressions_ = value;
-      bitField6_ |= 0x00400000;
+      bitField6_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -29734,7 +30359,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibilityMeasurableImpressions() {
-      bitField6_ = (bitField6_ & ~0x00400000);
+      bitField6_ = (bitField6_ & ~0x08000000);
       activeViewAudibilityMeasurableImpressions_ = 0L;
       onChanged();
       return this;
@@ -29753,7 +30378,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibilityMeasurableImpressionsRate() {
-      return ((bitField6_ & 0x00800000) != 0);
+      return ((bitField6_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -29783,7 +30408,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibilityMeasurableImpressionsRate(double value) {
 
       activeViewAudibilityMeasurableImpressionsRate_ = value;
-      bitField6_ |= 0x00800000;
+      bitField6_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -29798,7 +30423,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibilityMeasurableImpressionsRate() {
-      bitField6_ = (bitField6_ & ~0x00800000);
+      bitField6_ = (bitField6_ & ~0x10000000);
       activeViewAudibilityMeasurableImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -29817,7 +30442,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibilityInvalidMeasurableImpressionsRate() {
-      return ((bitField6_ & 0x01000000) != 0);
+      return ((bitField6_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -29847,7 +30472,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibilityInvalidMeasurableImpressionsRate(double value) {
 
       activeViewAudibilityInvalidMeasurableImpressionsRate_ = value;
-      bitField6_ |= 0x01000000;
+      bitField6_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -29862,7 +30487,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibilityInvalidMeasurableImpressionsRate() {
-      bitField6_ = (bitField6_ & ~0x01000000);
+      bitField6_ = (bitField6_ & ~0x20000000);
       activeViewAudibilityInvalidMeasurableImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -29882,7 +30507,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibilityInvalidGivtMeasurableImpressionsRate() {
-      return ((bitField6_ & 0x02000000) != 0);
+      return ((bitField6_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -29914,7 +30539,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibilityInvalidGivtMeasurableImpressionsRate(double value) {
 
       activeViewAudibilityInvalidGivtMeasurableImpressionsRate_ = value;
-      bitField6_ |= 0x02000000;
+      bitField6_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -29930,7 +30555,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibilityInvalidGivtMeasurableImpressionsRate() {
-      bitField6_ = (bitField6_ & ~0x02000000);
+      bitField6_ = (bitField6_ & ~0x40000000);
       activeViewAudibilityInvalidGivtMeasurableImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -29948,7 +30573,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleImpressions() {
-      return ((bitField6_ & 0x04000000) != 0);
+      return ((bitField6_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -29976,7 +30601,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleImpressions(long value) {
 
       activeViewAudibleImpressions_ = value;
-      bitField6_ |= 0x04000000;
+      bitField6_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -29990,7 +30615,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleImpressions() {
-      bitField6_ = (bitField6_ & ~0x04000000);
+      bitField6_ = (bitField6_ & ~0x80000000);
       activeViewAudibleImpressions_ = 0L;
       onChanged();
       return this;
@@ -30009,7 +30634,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleImpressionsRate() {
-      return ((bitField6_ & 0x08000000) != 0);
+      return ((bitField7_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -30039,7 +30664,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleImpressionsRate(double value) {
 
       activeViewAudibleImpressionsRate_ = value;
-      bitField6_ |= 0x08000000;
+      bitField7_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -30054,7 +30679,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleImpressionsRate() {
-      bitField6_ = (bitField6_ & ~0x08000000);
+      bitField7_ = (bitField7_ & ~0x00000001);
       activeViewAudibleImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -30072,7 +30697,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleTwoSecondsImpressions() {
-      return ((bitField6_ & 0x10000000) != 0);
+      return ((bitField7_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -30100,7 +30725,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleTwoSecondsImpressions(long value) {
 
       activeViewAudibleTwoSecondsImpressions_ = value;
-      bitField6_ |= 0x10000000;
+      bitField7_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -30114,7 +30739,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleTwoSecondsImpressions() {
-      bitField6_ = (bitField6_ & ~0x10000000);
+      bitField7_ = (bitField7_ & ~0x00000002);
       activeViewAudibleTwoSecondsImpressions_ = 0L;
       onChanged();
       return this;
@@ -30133,7 +30758,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleTwoSecondsImpressionsRate() {
-      return ((bitField6_ & 0x20000000) != 0);
+      return ((bitField7_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -30163,7 +30788,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleTwoSecondsImpressionsRate(double value) {
 
       activeViewAudibleTwoSecondsImpressionsRate_ = value;
-      bitField6_ |= 0x20000000;
+      bitField7_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -30178,7 +30803,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleTwoSecondsImpressionsRate() {
-      bitField6_ = (bitField6_ & ~0x20000000);
+      bitField7_ = (bitField7_ & ~0x00000004);
       activeViewAudibleTwoSecondsImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -30196,7 +30821,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleThirtySecondsImpressions() {
-      return ((bitField6_ & 0x40000000) != 0);
+      return ((bitField7_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -30224,7 +30849,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleThirtySecondsImpressions(long value) {
 
       activeViewAudibleThirtySecondsImpressions_ = value;
-      bitField6_ |= 0x40000000;
+      bitField7_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -30238,7 +30863,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleThirtySecondsImpressions() {
-      bitField6_ = (bitField6_ & ~0x40000000);
+      bitField7_ = (bitField7_ & ~0x00000008);
       activeViewAudibleThirtySecondsImpressions_ = 0L;
       onChanged();
       return this;
@@ -30257,7 +30882,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleThirtySecondsImpressionsRate() {
-      return ((bitField6_ & 0x80000000) != 0);
+      return ((bitField7_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -30287,7 +30912,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleThirtySecondsImpressionsRate(double value) {
 
       activeViewAudibleThirtySecondsImpressionsRate_ = value;
-      bitField6_ |= 0x80000000;
+      bitField7_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -30302,7 +30927,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleThirtySecondsImpressionsRate() {
-      bitField6_ = (bitField6_ & ~0x80000000);
+      bitField7_ = (bitField7_ & ~0x00000010);
       activeViewAudibleThirtySecondsImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -30321,7 +30946,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleQuartileP25Rate() {
-      return ((bitField7_ & 0x00000001) != 0);
+      return ((bitField7_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -30351,7 +30976,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleQuartileP25Rate(double value) {
 
       activeViewAudibleQuartileP25Rate_ = value;
-      bitField7_ |= 0x00000001;
+      bitField7_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -30366,7 +30991,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleQuartileP25Rate() {
-      bitField7_ = (bitField7_ & ~0x00000001);
+      bitField7_ = (bitField7_ & ~0x00000020);
       activeViewAudibleQuartileP25Rate_ = 0D;
       onChanged();
       return this;
@@ -30385,7 +31010,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleQuartileP50Rate() {
-      return ((bitField7_ & 0x00000002) != 0);
+      return ((bitField7_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -30415,7 +31040,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleQuartileP50Rate(double value) {
 
       activeViewAudibleQuartileP50Rate_ = value;
-      bitField7_ |= 0x00000002;
+      bitField7_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -30430,7 +31055,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleQuartileP50Rate() {
-      bitField7_ = (bitField7_ & ~0x00000002);
+      bitField7_ = (bitField7_ & ~0x00000040);
       activeViewAudibleQuartileP50Rate_ = 0D;
       onChanged();
       return this;
@@ -30449,7 +31074,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleQuartileP75Rate() {
-      return ((bitField7_ & 0x00000004) != 0);
+      return ((bitField7_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -30479,7 +31104,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleQuartileP75Rate(double value) {
 
       activeViewAudibleQuartileP75Rate_ = value;
-      bitField7_ |= 0x00000004;
+      bitField7_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -30494,7 +31119,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleQuartileP75Rate() {
-      bitField7_ = (bitField7_ & ~0x00000004);
+      bitField7_ = (bitField7_ & ~0x00000080);
       activeViewAudibleQuartileP75Rate_ = 0D;
       onChanged();
       return this;
@@ -30513,7 +31138,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleQuartileP100Rate() {
-      return ((bitField7_ & 0x00000008) != 0);
+      return ((bitField7_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -30543,7 +31168,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleQuartileP100Rate(double value) {
 
       activeViewAudibleQuartileP100Rate_ = value;
-      bitField7_ |= 0x00000008;
+      bitField7_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -30558,7 +31183,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleQuartileP100Rate() {
-      bitField7_ = (bitField7_ & ~0x00000008);
+      bitField7_ = (bitField7_ & ~0x00000100);
       activeViewAudibleQuartileP100Rate_ = 0D;
       onChanged();
       return this;

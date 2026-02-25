@@ -11,9 +11,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * includes campaign negative keywords and ad group negative keywords.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/keyword_plan_ad_group_keyword_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class KeywordPlanAdGroupKeywordServiceGrpc {
 
@@ -257,8 +254,8 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
      *   [ResourceCountLimitExceededError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateKeywordPlanAdGroupKeywordsResponse mutateKeywordPlanAdGroupKeywords(com.google.ads.googleads.v20.services.MutateKeywordPlanAdGroupKeywordsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateKeywordPlanAdGroupKeywordsResponse mutateKeywordPlanAdGroupKeywords(com.google.ads.googleads.v20.services.MutateKeywordPlanAdGroupKeywordsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateKeywordPlanAdGroupKeywordsMethod(), getCallOptions(), request);
     }
   }

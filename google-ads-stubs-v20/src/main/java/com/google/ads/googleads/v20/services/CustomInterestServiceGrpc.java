@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage custom interests.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/custom_interest_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomInterestServiceGrpc {
 
@@ -231,8 +228,8 @@ public final class CustomInterestServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateCustomInterestsResponse mutateCustomInterests(com.google.ads.googleads.v20.services.MutateCustomInterestsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateCustomInterestsResponse mutateCustomInterests(com.google.ads.googleads.v20.services.MutateCustomInterestsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomInterestsMethod(), getCallOptions(), request);
     }
   }

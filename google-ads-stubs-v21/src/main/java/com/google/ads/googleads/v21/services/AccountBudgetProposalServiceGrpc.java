@@ -13,9 +13,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * The REMOVE operation cancels a pending proposal.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/account_budget_proposal_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AccountBudgetProposalServiceGrpc {
 
@@ -270,8 +267,8 @@ public final class AccountBudgetProposalServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateAccountBudgetProposalResponse mutateAccountBudgetProposal(com.google.ads.googleads.v21.services.MutateAccountBudgetProposalRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateAccountBudgetProposalResponse mutateAccountBudgetProposal(com.google.ads.googleads.v21.services.MutateAccountBudgetProposalRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateAccountBudgetProposalMethod(), getCallOptions(), request);
     }
   }

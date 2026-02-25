@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to upload conversion adjustments.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/conversion_adjustment_upload_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ConversionAdjustmentUploadServiceGrpc {
 
@@ -219,8 +216,8 @@ public final class ConversionAdjustmentUploadServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.UploadConversionAdjustmentsResponse uploadConversionAdjustments(com.google.ads.googleads.v21.services.UploadConversionAdjustmentsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.UploadConversionAdjustmentsResponse uploadConversionAdjustments(com.google.ads.googleads.v21.services.UploadConversionAdjustmentsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getUploadConversionAdjustmentsMethod(), getCallOptions(), request);
     }
   }

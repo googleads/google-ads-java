@@ -1235,6 +1235,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1247,6 +1249,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1262,6 +1266,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -7384,6 +7390,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -7396,6 +7404,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -7418,6 +7428,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -7438,6 +7450,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -7456,6 +7470,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -7483,6 +7499,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -7506,6 +7524,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -7516,6 +7536,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -7534,6 +7556,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>

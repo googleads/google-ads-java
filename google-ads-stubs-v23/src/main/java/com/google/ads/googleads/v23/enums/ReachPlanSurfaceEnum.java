@@ -126,6 +126,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHORTS = 6;</code>
      */
     SHORTS(6),
+    /**
+     * <pre>
+     * Google Display Network ad surface.
+     * </pre>
+     *
+     * <code>GOOGLE_DISPLAY_NETWORK = 9;</code>
+     */
+    GOOGLE_DISPLAY_NETWORK(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -201,6 +209,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHORTS = 6;</code>
      */
     public static final int SHORTS_VALUE = 6;
+    /**
+     * <pre>
+     * Google Display Network ad surface.
+     * </pre>
+     *
+     * <code>GOOGLE_DISPLAY_NETWORK = 9;</code>
+     */
+    public static final int GOOGLE_DISPLAY_NETWORK_VALUE = 9;
 
 
     public final int getNumber() {
@@ -236,6 +252,7 @@ private static final long serialVersionUID = 0L;
         case 4: return IN_STREAM_NON_SKIPPABLE;
         case 5: return IN_STREAM_SKIPPABLE;
         case 6: return SHORTS;
+        case 9: return GOOGLE_DISPLAY_NETWORK;
         default: return null;
       }
     }

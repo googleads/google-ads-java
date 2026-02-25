@@ -7,7 +7,7 @@ package com.google.ads.googleads.v21.services;
 /**
  * <pre>
  * Request message for
- * [CustomerLifecycleGoalService.configureCustomerLifecycleGoals][].
+ * [CustomerLifecycleGoalService.ConfigureCustomerLifecycleGoals][google.ads.googleads.v21.services.CustomerLifecycleGoalService.ConfigureCustomerLifecycleGoals].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v21.services.ConfigureCustomerLifecycleGoalsRequest}
@@ -334,7 +334,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for
-   * [CustomerLifecycleGoalService.configureCustomerLifecycleGoals][].
+   * [CustomerLifecycleGoalService.ConfigureCustomerLifecycleGoals][google.ads.googleads.v21.services.CustomerLifecycleGoalService.ConfigureCustomerLifecycleGoals].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v21.services.ConfigureCustomerLifecycleGoalsRequest}

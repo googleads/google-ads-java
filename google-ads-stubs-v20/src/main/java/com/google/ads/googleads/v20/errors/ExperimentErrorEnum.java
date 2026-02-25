@@ -309,6 +309,15 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_DURATION_FOR_AN_EXPERIMENT = 30;</code>
      */
     INVALID_DURATION_FOR_AN_EXPERIMENT(30),
+    /**
+     * <pre>
+     * The experiment's campaigns must self-declare whether they contain
+     * political advertising that targets the European Union.
+     * </pre>
+     *
+     * <code>MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION = 31;</code>
+     */
+    MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION(31),
     UNRECOGNIZED(-1),
     ;
 
@@ -569,6 +578,15 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_DURATION_FOR_AN_EXPERIMENT = 30;</code>
      */
     public static final int INVALID_DURATION_FOR_AN_EXPERIMENT_VALUE = 30;
+    /**
+     * <pre>
+     * The experiment's campaigns must self-declare whether they contain
+     * political advertising that targets the European Union.
+     * </pre>
+     *
+     * <code>MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION = 31;</code>
+     */
+    public static final int MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION_VALUE = 31;
 
 
     public final int getNumber() {
@@ -626,6 +644,7 @@ private static final long serialVersionUID = 0L;
         case 28: return CANNOT_ADD_CAMPAIGN_WITH_DEPRECATED_AD_TYPES;
         case 29: return CANNOT_ENABLE_SYNC_FOR_UNSUPPORTED_EXPERIMENT_TYPE;
         case 30: return INVALID_DURATION_FOR_AN_EXPERIMENT;
+        case 31: return MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION;
         default: return null;
       }
     }

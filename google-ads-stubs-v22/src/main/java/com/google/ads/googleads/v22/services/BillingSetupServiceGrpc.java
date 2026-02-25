@@ -13,9 +13,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * The CREATE operation creates a new billing setup.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/billing_setup_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BillingSetupServiceGrpc {
 
@@ -258,8 +255,8 @@ public final class BillingSetupServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateBillingSetupResponse mutateBillingSetup(com.google.ads.googleads.v22.services.MutateBillingSetupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateBillingSetupResponse mutateBillingSetup(com.google.ads.googleads.v22.services.MutateBillingSetupRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateBillingSetupMethod(), getCallOptions(), request);
     }
   }

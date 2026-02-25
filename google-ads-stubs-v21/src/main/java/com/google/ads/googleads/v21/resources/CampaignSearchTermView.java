@@ -7,7 +7,8 @@ package com.google.ads.googleads.v21.resources;
 /**
  * <pre>
  * This report provides granular performance data, including cost metrics, for
- * each individual search term that triggered your ads.
+ * each individual search term that triggered your ads. If keyword-related
+ * segments are used, Performance Max data will be excluded from the results.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v21.resources.CampaignSearchTermView}
@@ -408,7 +409,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * This report provides granular performance data, including cost metrics, for
-   * each individual search term that triggered your ads.
+   * each individual search term that triggered your ads. If keyword-related
+   * segments are used, Performance Max data will be excluded from the results.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v21.resources.CampaignSearchTermView}

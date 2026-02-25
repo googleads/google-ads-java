@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage campaign drafts.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/campaign_draft_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CampaignDraftServiceGrpc {
 
@@ -203,10 +200,11 @@ public final class CampaignDraftServiceGrpc {
      * <pre>
      * Promotes the changes in a draft back to the base campaign.
      * This method returns a Long Running Operation (LRO) indicating if the
-     * Promote is done. Use [Operations.GetOperation] to poll the LRO until it
-     * is done. Only a done status is returned in the response. See the status
-     * in the Campaign Draft resource to determine if the promotion was
-     * successful. If the LRO failed, use
+     * Promote is done. Use
+     * [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
+     * to poll the LRO until it is done. Only a done status is returned in the
+     * response. See the status in the Campaign Draft resource to determine if the
+     * promotion was successful. If the LRO failed, use
      * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v20.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
      * to view the list of error reasons.
      * List of thrown errors:
@@ -304,10 +302,11 @@ public final class CampaignDraftServiceGrpc {
      * <pre>
      * Promotes the changes in a draft back to the base campaign.
      * This method returns a Long Running Operation (LRO) indicating if the
-     * Promote is done. Use [Operations.GetOperation] to poll the LRO until it
-     * is done. Only a done status is returned in the response. See the status
-     * in the Campaign Draft resource to determine if the promotion was
-     * successful. If the LRO failed, use
+     * Promote is done. Use
+     * [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
+     * to poll the LRO until it is done. Only a done status is returned in the
+     * response. See the status in the Campaign Draft resource to determine if the
+     * promotion was successful. If the LRO failed, use
      * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v20.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
      * to view the list of error reasons.
      * List of thrown errors:
@@ -383,8 +382,8 @@ public final class CampaignDraftServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateCampaignDraftsResponse mutateCampaignDrafts(com.google.ads.googleads.v20.services.MutateCampaignDraftsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateCampaignDraftsResponse mutateCampaignDrafts(com.google.ads.googleads.v20.services.MutateCampaignDraftsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCampaignDraftsMethod(), getCallOptions(), request);
     }
 
@@ -392,10 +391,11 @@ public final class CampaignDraftServiceGrpc {
      * <pre>
      * Promotes the changes in a draft back to the base campaign.
      * This method returns a Long Running Operation (LRO) indicating if the
-     * Promote is done. Use [Operations.GetOperation] to poll the LRO until it
-     * is done. Only a done status is returned in the response. See the status
-     * in the Campaign Draft resource to determine if the promotion was
-     * successful. If the LRO failed, use
+     * Promote is done. Use
+     * [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
+     * to poll the LRO until it is done. Only a done status is returned in the
+     * response. See the status in the Campaign Draft resource to determine if the
+     * promotion was successful. If the LRO failed, use
      * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v20.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
      * to view the list of error reasons.
      * List of thrown errors:
@@ -408,8 +408,8 @@ public final class CampaignDraftServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.longrunning.Operation promoteCampaignDraft(com.google.ads.googleads.v20.services.PromoteCampaignDraftRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.longrunning.Operation promoteCampaignDraft(com.google.ads.googleads.v20.services.PromoteCampaignDraftRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getPromoteCampaignDraftMethod(), getCallOptions(), request);
     }
 
@@ -427,8 +427,8 @@ public final class CampaignDraftServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.ListCampaignDraftAsyncErrorsResponse listCampaignDraftAsyncErrors(com.google.ads.googleads.v20.services.ListCampaignDraftAsyncErrorsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.ListCampaignDraftAsyncErrorsResponse listCampaignDraftAsyncErrors(com.google.ads.googleads.v20.services.ListCampaignDraftAsyncErrorsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListCampaignDraftAsyncErrorsMethod(), getCallOptions(), request);
     }
   }
@@ -478,10 +478,11 @@ public final class CampaignDraftServiceGrpc {
      * <pre>
      * Promotes the changes in a draft back to the base campaign.
      * This method returns a Long Running Operation (LRO) indicating if the
-     * Promote is done. Use [Operations.GetOperation] to poll the LRO until it
-     * is done. Only a done status is returned in the response. See the status
-     * in the Campaign Draft resource to determine if the promotion was
-     * successful. If the LRO failed, use
+     * Promote is done. Use
+     * [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
+     * to poll the LRO until it is done. Only a done status is returned in the
+     * response. See the status in the Campaign Draft resource to determine if the
+     * promotion was successful. If the LRO failed, use
      * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v20.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
      * to view the list of error reasons.
      * List of thrown errors:
@@ -565,10 +566,11 @@ public final class CampaignDraftServiceGrpc {
      * <pre>
      * Promotes the changes in a draft back to the base campaign.
      * This method returns a Long Running Operation (LRO) indicating if the
-     * Promote is done. Use [Operations.GetOperation] to poll the LRO until it
-     * is done. Only a done status is returned in the response. See the status
-     * in the Campaign Draft resource to determine if the promotion was
-     * successful. If the LRO failed, use
+     * Promote is done. Use
+     * [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
+     * to poll the LRO until it is done. Only a done status is returned in the
+     * response. See the status in the Campaign Draft resource to determine if the
+     * promotion was successful. If the LRO failed, use
      * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v20.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
      * to view the list of error reasons.
      * List of thrown errors:

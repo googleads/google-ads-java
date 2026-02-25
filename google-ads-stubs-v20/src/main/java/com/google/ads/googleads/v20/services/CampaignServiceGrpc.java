@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage campaigns.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/campaign_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CampaignServiceGrpc {
 
@@ -381,8 +378,8 @@ public final class CampaignServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateCampaignsResponse mutateCampaigns(com.google.ads.googleads.v20.services.MutateCampaignsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateCampaignsResponse mutateCampaigns(com.google.ads.googleads.v20.services.MutateCampaignsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCampaignsMethod(), getCallOptions(), request);
     }
 
@@ -404,8 +401,8 @@ public final class CampaignServiceGrpc {
      *   [ResourceCountLimitExceededError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.EnablePMaxBrandGuidelinesResponse enablePMaxBrandGuidelines(com.google.ads.googleads.v20.services.EnablePMaxBrandGuidelinesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.EnablePMaxBrandGuidelinesResponse enablePMaxBrandGuidelines(com.google.ads.googleads.v20.services.EnablePMaxBrandGuidelinesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getEnablePMaxBrandGuidelinesMethod(), getCallOptions(), request);
     }
   }

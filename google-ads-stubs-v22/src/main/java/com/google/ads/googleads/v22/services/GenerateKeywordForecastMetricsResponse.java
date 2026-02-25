@@ -6,7 +6,8 @@ package com.google.ads.googleads.v22.services;
 
 /**
  * <pre>
- * Response message for [KeywordPlanIdeaService.GenerateKeywordForecastMetrics].
+ * Response message for
+ * [KeywordPlanIdeaService.GenerateKeywordForecastMetrics][google.ads.googleads.v22.services.KeywordPlanIdeaService.GenerateKeywordForecastMetrics].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v22.services.GenerateKeywordForecastMetricsResponse}
@@ -246,7 +247,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [KeywordPlanIdeaService.GenerateKeywordForecastMetrics].
+   * Response message for
+   * [KeywordPlanIdeaService.GenerateKeywordForecastMetrics][google.ads.googleads.v22.services.KeywordPlanIdeaService.GenerateKeywordForecastMetrics].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v22.services.GenerateKeywordForecastMetricsResponse}

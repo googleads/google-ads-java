@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to upload conversions.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/conversion_upload_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ConversionUploadServiceGrpc {
 
@@ -290,8 +287,8 @@ public final class ConversionUploadServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.UploadClickConversionsResponse uploadClickConversions(com.google.ads.googleads.v21.services.UploadClickConversionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.UploadClickConversionsResponse uploadClickConversions(com.google.ads.googleads.v21.services.UploadClickConversionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getUploadClickConversionsMethod(), getCallOptions(), request);
     }
 
@@ -308,8 +305,8 @@ public final class ConversionUploadServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.UploadCallConversionsResponse uploadCallConversions(com.google.ads.googleads.v21.services.UploadCallConversionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.UploadCallConversionsResponse uploadCallConversions(com.google.ads.googleads.v21.services.UploadCallConversionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getUploadCallConversionsMethod(), getCallOptions(), request);
     }
   }

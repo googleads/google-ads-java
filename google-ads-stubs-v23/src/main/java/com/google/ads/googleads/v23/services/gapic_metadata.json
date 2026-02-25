@@ -1480,6 +1480,24 @@
           }
         }
       }
+    },
+    "YouTubeVideoUploadService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "YouTubeVideoUploadServiceClient",
+          "rpcs": {
+            "CreateYouTubeVideoUpload": {
+              "methods": ["createYouTubeVideoUpload", "createYouTubeVideoUpload", "createYouTubeVideoUploadCallable"]
+            },
+            "RemoveYouTubeVideoUpload": {
+              "methods": ["removeYouTubeVideoUpload", "removeYouTubeVideoUpload", "removeYouTubeVideoUploadCallable"]
+            },
+            "UpdateYouTubeVideoUpload": {
+              "methods": ["updateYouTubeVideoUpload", "updateYouTubeVideoUpload", "updateYouTubeVideoUploadCallable"]
+            }
+          }
+        }
+      }
     }
   }
 }

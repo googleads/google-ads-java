@@ -263,6 +263,47 @@ private static final long serialVersionUID = 0L;
     return productFilter_ == null ? com.google.ads.googleads.v23.services.ProductFilter.getDefaultInstance() : productFilter_;
   }
 
+  public static final int BREAKDOWN_DEFINITION_FIELD_NUMBER = 9;
+  private com.google.ads.googleads.v23.services.BreakdownDefinition breakdownDefinition_;
+  /**
+   * <pre>
+   * Optional. The set of dimensions to group metrics by. If multiple dimensions
+   * are selected, cross-dimension breakdowns are returned.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return Whether the breakdownDefinition field is set.
+   */
+  @java.lang.Override
+  public boolean hasBreakdownDefinition() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * Optional. The set of dimensions to group metrics by. If multiple dimensions
+   * are selected, cross-dimension breakdowns are returned.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The breakdownDefinition.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.services.BreakdownDefinition getBreakdownDefinition() {
+    return breakdownDefinition_ == null ? com.google.ads.googleads.v23.services.BreakdownDefinition.getDefaultInstance() : breakdownDefinition_;
+  }
+  /**
+   * <pre>
+   * Optional. The set of dimensions to group metrics by. If multiple dimensions
+   * are selected, cross-dimension breakdowns are returned.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.services.BreakdownDefinitionOrBuilder getBreakdownDefinitionOrBuilder() {
+    return breakdownDefinition_ == null ? com.google.ads.googleads.v23.services.BreakdownDefinition.getDefaultInstance() : breakdownDefinition_;
+  }
+
   public static final int CURRENCY_CODE_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
   private volatile java.lang.Object currencyCode_ = "";
@@ -371,7 +412,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasApplicationInfo() {
-    return ((bitField0_ & 0x00000010) != 0);
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -432,8 +473,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerBenchmarksGroup_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, customerBenchmarksGroup_);
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(8, getApplicationInfo());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeMessage(9, getBreakdownDefinition());
     }
     getUnknownFields().writeTo(output);
   }
@@ -469,9 +513,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerBenchmarksGroup_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, customerBenchmarksGroup_);
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getApplicationInfo());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getBreakdownDefinition());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -510,6 +558,11 @@ private static final long serialVersionUID = 0L;
       if (!getProductFilter()
           .equals(other.getProductFilter())) return false;
     }
+    if (hasBreakdownDefinition() != other.hasBreakdownDefinition()) return false;
+    if (hasBreakdownDefinition()) {
+      if (!getBreakdownDefinition()
+          .equals(other.getBreakdownDefinition())) return false;
+    }
     if (!getCurrencyCode()
         .equals(other.getCurrencyCode())) return false;
     if (!getCustomerBenchmarksGroup()
@@ -547,6 +600,10 @@ private static final long serialVersionUID = 0L;
     if (hasProductFilter()) {
       hash = (37 * hash) + PRODUCT_FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getProductFilter().hashCode();
+    }
+    if (hasBreakdownDefinition()) {
+      hash = (37 * hash) + BREAKDOWN_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getBreakdownDefinition().hashCode();
     }
     hash = (37 * hash) + CURRENCY_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getCurrencyCode().hashCode();
@@ -695,6 +752,7 @@ private static final long serialVersionUID = 0L;
         getLocationFieldBuilder();
         getBenchmarksSourceFieldBuilder();
         getProductFilterFieldBuilder();
+        getBreakdownDefinitionFieldBuilder();
         getApplicationInfoFieldBuilder();
       }
     }
@@ -722,6 +780,11 @@ private static final long serialVersionUID = 0L;
       if (productFilterBuilder_ != null) {
         productFilterBuilder_.dispose();
         productFilterBuilder_ = null;
+      }
+      breakdownDefinition_ = null;
+      if (breakdownDefinitionBuilder_ != null) {
+        breakdownDefinitionBuilder_.dispose();
+        breakdownDefinitionBuilder_ = null;
       }
       currencyCode_ = "";
       customerBenchmarksGroup_ = "";
@@ -792,16 +855,22 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.currencyCode_ = currencyCode_;
+        result.breakdownDefinition_ = breakdownDefinitionBuilder_ == null
+            ? breakdownDefinition_
+            : breakdownDefinitionBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.customerBenchmarksGroup_ = customerBenchmarksGroup_;
+        result.currencyCode_ = currencyCode_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.customerBenchmarksGroup_ = customerBenchmarksGroup_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.applicationInfo_ = applicationInfoBuilder_ == null
             ? applicationInfo_
             : applicationInfoBuilder_.build();
-        to_bitField0_ |= 0x00000010;
+        to_bitField0_ |= 0x00000020;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -867,14 +936,17 @@ private static final long serialVersionUID = 0L;
       if (other.hasProductFilter()) {
         mergeProductFilter(other.getProductFilter());
       }
+      if (other.hasBreakdownDefinition()) {
+        mergeBreakdownDefinition(other.getBreakdownDefinition());
+      }
       if (!other.getCurrencyCode().isEmpty()) {
         currencyCode_ = other.currencyCode_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getCustomerBenchmarksGroup().isEmpty()) {
         customerBenchmarksGroup_ = other.customerBenchmarksGroup_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.hasApplicationInfo()) {
@@ -941,21 +1013,28 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               currencyCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 50
             case 58: {
               customerBenchmarksGroup_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 58
             case 66: {
               input.readMessage(
                   getApplicationInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  getBreakdownDefinitionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1739,6 +1818,172 @@ private static final long serialVersionUID = 0L;
       return productFilterBuilder_;
     }
 
+    private com.google.ads.googleads.v23.services.BreakdownDefinition breakdownDefinition_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v23.services.BreakdownDefinition, com.google.ads.googleads.v23.services.BreakdownDefinition.Builder, com.google.ads.googleads.v23.services.BreakdownDefinitionOrBuilder> breakdownDefinitionBuilder_;
+    /**
+     * <pre>
+     * Optional. The set of dimensions to group metrics by. If multiple dimensions
+     * are selected, cross-dimension breakdowns are returned.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the breakdownDefinition field is set.
+     */
+    public boolean hasBreakdownDefinition() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. The set of dimensions to group metrics by. If multiple dimensions
+     * are selected, cross-dimension breakdowns are returned.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The breakdownDefinition.
+     */
+    public com.google.ads.googleads.v23.services.BreakdownDefinition getBreakdownDefinition() {
+      if (breakdownDefinitionBuilder_ == null) {
+        return breakdownDefinition_ == null ? com.google.ads.googleads.v23.services.BreakdownDefinition.getDefaultInstance() : breakdownDefinition_;
+      } else {
+        return breakdownDefinitionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The set of dimensions to group metrics by. If multiple dimensions
+     * are selected, cross-dimension breakdowns are returned.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setBreakdownDefinition(com.google.ads.googleads.v23.services.BreakdownDefinition value) {
+      if (breakdownDefinitionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        breakdownDefinition_ = value;
+      } else {
+        breakdownDefinitionBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The set of dimensions to group metrics by. If multiple dimensions
+     * are selected, cross-dimension breakdowns are returned.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setBreakdownDefinition(
+        com.google.ads.googleads.v23.services.BreakdownDefinition.Builder builderForValue) {
+      if (breakdownDefinitionBuilder_ == null) {
+        breakdownDefinition_ = builderForValue.build();
+      } else {
+        breakdownDefinitionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The set of dimensions to group metrics by. If multiple dimensions
+     * are selected, cross-dimension breakdowns are returned.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder mergeBreakdownDefinition(com.google.ads.googleads.v23.services.BreakdownDefinition value) {
+      if (breakdownDefinitionBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          breakdownDefinition_ != null &&
+          breakdownDefinition_ != com.google.ads.googleads.v23.services.BreakdownDefinition.getDefaultInstance()) {
+          getBreakdownDefinitionBuilder().mergeFrom(value);
+        } else {
+          breakdownDefinition_ = value;
+        }
+      } else {
+        breakdownDefinitionBuilder_.mergeFrom(value);
+      }
+      if (breakdownDefinition_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The set of dimensions to group metrics by. If multiple dimensions
+     * are selected, cross-dimension breakdowns are returned.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder clearBreakdownDefinition() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      breakdownDefinition_ = null;
+      if (breakdownDefinitionBuilder_ != null) {
+        breakdownDefinitionBuilder_.dispose();
+        breakdownDefinitionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The set of dimensions to group metrics by. If multiple dimensions
+     * are selected, cross-dimension breakdowns are returned.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v23.services.BreakdownDefinition.Builder getBreakdownDefinitionBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getBreakdownDefinitionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. The set of dimensions to group metrics by. If multiple dimensions
+     * are selected, cross-dimension breakdowns are returned.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v23.services.BreakdownDefinitionOrBuilder getBreakdownDefinitionOrBuilder() {
+      if (breakdownDefinitionBuilder_ != null) {
+        return breakdownDefinitionBuilder_.getMessageOrBuilder();
+      } else {
+        return breakdownDefinition_ == null ?
+            com.google.ads.googleads.v23.services.BreakdownDefinition.getDefaultInstance() : breakdownDefinition_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The set of dimensions to group metrics by. If multiple dimensions
+     * are selected, cross-dimension breakdowns are returned.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v23.services.BreakdownDefinition, com.google.ads.googleads.v23.services.BreakdownDefinition.Builder, com.google.ads.googleads.v23.services.BreakdownDefinitionOrBuilder> 
+        getBreakdownDefinitionFieldBuilder() {
+      if (breakdownDefinitionBuilder_ == null) {
+        breakdownDefinitionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v23.services.BreakdownDefinition, com.google.ads.googleads.v23.services.BreakdownDefinition.Builder, com.google.ads.googleads.v23.services.BreakdownDefinitionOrBuilder>(
+                getBreakdownDefinition(),
+                getParentForChildren(),
+                isClean());
+        breakdownDefinition_ = null;
+      }
+      return breakdownDefinitionBuilder_;
+    }
+
     private java.lang.Object currencyCode_ = "";
     /**
      * <pre>
@@ -1797,7 +2042,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       currencyCode_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1812,7 +2057,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCurrencyCode() {
       currencyCode_ = getDefaultInstance().getCurrencyCode();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1831,7 +2076,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       currencyCode_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1891,7 +2136,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       customerBenchmarksGroup_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1905,7 +2150,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCustomerBenchmarksGroup() {
       customerBenchmarksGroup_ = getDefaultInstance().getCustomerBenchmarksGroup();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1923,7 +2168,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       customerBenchmarksGroup_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1940,7 +2185,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the applicationInfo field is set.
      */
     public boolean hasApplicationInfo() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -1973,7 +2218,7 @@ private static final long serialVersionUID = 0L;
       } else {
         applicationInfoBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1991,7 +2236,7 @@ private static final long serialVersionUID = 0L;
       } else {
         applicationInfoBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2004,7 +2249,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeApplicationInfo(com.google.ads.googleads.v23.common.AdditionalApplicationInfo value) {
       if (applicationInfoBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
+        if (((bitField0_ & 0x00000100) != 0) &&
           applicationInfo_ != null &&
           applicationInfo_ != com.google.ads.googleads.v23.common.AdditionalApplicationInfo.getDefaultInstance()) {
           getApplicationInfoBuilder().mergeFrom(value);
@@ -2015,7 +2260,7 @@ private static final long serialVersionUID = 0L;
         applicationInfoBuilder_.mergeFrom(value);
       }
       if (applicationInfo_ != null) {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       return this;
@@ -2028,7 +2273,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.common.AdditionalApplicationInfo application_info = 8;</code>
      */
     public Builder clearApplicationInfo() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       applicationInfo_ = null;
       if (applicationInfoBuilder_ != null) {
         applicationInfoBuilder_.dispose();
@@ -2045,7 +2290,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.common.AdditionalApplicationInfo application_info = 8;</code>
      */
     public com.google.ads.googleads.v23.common.AdditionalApplicationInfo.Builder getApplicationInfoBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return getApplicationInfoFieldBuilder().getBuilder();
     }

@@ -261,6 +261,7 @@ public class BenchmarksServiceClientTest {
         GenerateBenchmarksMetricsResponse.newBuilder()
             .setCustomerMetrics(Metrics.newBuilder().build())
             .setAverageBenchmarksMetrics(Metrics.newBuilder().build())
+            .addAllBreakdownMetrics(new ArrayList<BreakdownMetrics>())
             .build();
     mockBenchmarksService.addResponse(expectedResponse);
 

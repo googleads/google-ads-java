@@ -11,8 +11,8 @@ public interface GenerateTargetingSuggestionMetricsResponseOrBuilder extends
   /**
    * <pre>
    * Suggested targetable audiences. There will be one suggestion for each
-   * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-   * the order requested.
+   * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v21.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+   * requested, matching the order requested.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v21.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -22,8 +22,8 @@ public interface GenerateTargetingSuggestionMetricsResponseOrBuilder extends
   /**
    * <pre>
    * Suggested targetable audiences. There will be one suggestion for each
-   * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-   * the order requested.
+   * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v21.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+   * requested, matching the order requested.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v21.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -32,8 +32,8 @@ public interface GenerateTargetingSuggestionMetricsResponseOrBuilder extends
   /**
    * <pre>
    * Suggested targetable audiences. There will be one suggestion for each
-   * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-   * the order requested.
+   * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v21.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+   * requested, matching the order requested.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v21.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -42,8 +42,8 @@ public interface GenerateTargetingSuggestionMetricsResponseOrBuilder extends
   /**
    * <pre>
    * Suggested targetable audiences. There will be one suggestion for each
-   * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-   * the order requested.
+   * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v21.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+   * requested, matching the order requested.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v21.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -53,8 +53,8 @@ public interface GenerateTargetingSuggestionMetricsResponseOrBuilder extends
   /**
    * <pre>
    * Suggested targetable audiences. There will be one suggestion for each
-   * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-   * the order requested.
+   * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v21.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+   * requested, matching the order requested.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v21.services.TargetingSuggestionMetrics suggestions = 1;</code>

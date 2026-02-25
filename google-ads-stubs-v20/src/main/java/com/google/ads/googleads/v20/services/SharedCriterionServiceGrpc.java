@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage shared criteria.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/shared_criterion_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SharedCriterionServiceGrpc {
 
@@ -258,8 +255,8 @@ public final class SharedCriterionServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateSharedCriteriaResponse mutateSharedCriteria(com.google.ads.googleads.v20.services.MutateSharedCriteriaRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateSharedCriteriaResponse mutateSharedCriteria(com.google.ads.googleads.v20.services.MutateSharedCriteriaRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateSharedCriteriaMethod(), getCallOptions(), request);
     }
   }

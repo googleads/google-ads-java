@@ -7,7 +7,7 @@ package com.google.ads.googleads.v22.services;
 /**
  * <pre>
  * Request message for
- *  [IdentityVerificationService.GetIdentityVerification].
+ *  [GetIdentityVerification][google.ads.googleads.v22.services.IdentityVerificationService.GetIdentityVerification].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v22.services.GetIdentityVerificationRequest}
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for
-   *  [IdentityVerificationService.GetIdentityVerification].
+   *  [GetIdentityVerification][google.ads.googleads.v22.services.IdentityVerificationService.GetIdentityVerification].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v22.services.GetIdentityVerificationRequest}

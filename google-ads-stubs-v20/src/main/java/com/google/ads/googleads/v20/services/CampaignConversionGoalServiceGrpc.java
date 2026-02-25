@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage campaign conversion goal.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/campaign_conversion_goal_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CampaignConversionGoalServiceGrpc {
 
@@ -198,8 +195,8 @@ public final class CampaignConversionGoalServiceGrpc {
      * are returned.
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateCampaignConversionGoalsResponse mutateCampaignConversionGoals(com.google.ads.googleads.v20.services.MutateCampaignConversionGoalsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateCampaignConversionGoalsResponse mutateCampaignConversionGoals(com.google.ads.googleads.v20.services.MutateCampaignConversionGoalsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCampaignConversionGoalsMethod(), getCallOptions(), request);
     }
   }

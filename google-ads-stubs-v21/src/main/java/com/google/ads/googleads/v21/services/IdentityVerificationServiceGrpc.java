@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A service for managing Identity Verification Service.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/identity_verification_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class IdentityVerificationServiceGrpc {
 
@@ -285,8 +282,8 @@ public final class IdentityVerificationServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.protobuf.Empty startIdentityVerification(com.google.ads.googleads.v21.services.StartIdentityVerificationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.protobuf.Empty startIdentityVerification(com.google.ads.googleads.v21.services.StartIdentityVerificationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getStartIdentityVerificationMethod(), getCallOptions(), request);
     }
 
@@ -302,8 +299,8 @@ public final class IdentityVerificationServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.GetIdentityVerificationResponse getIdentityVerification(com.google.ads.googleads.v21.services.GetIdentityVerificationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.GetIdentityVerificationResponse getIdentityVerification(com.google.ads.googleads.v21.services.GetIdentityVerificationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetIdentityVerificationMethod(), getCallOptions(), request);
     }
   }

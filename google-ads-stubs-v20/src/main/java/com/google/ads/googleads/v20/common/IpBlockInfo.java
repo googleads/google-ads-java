@@ -6,11 +6,29 @@ package com.google.ads.googleads.v20.common;
 
 /**
  * <pre>
- * An IpBlock criterion used for IP exclusions. We allow:
- *  - IPv4 and IPv6 addresses
- *  - individual addresses (192.168.0.1)
- *  - masks for individual addresses (192.168.0.1/32)
- *  - masks for Class C networks (192.168.0.1/24)
+ * An IpBlock criterion used for excluding IP addresses.
+ *
+ * We support excluding individual IP addresses or CIDR blocks. Create one
+ * IpBlockInfo criterion for each individual IP address or CIDR block you want
+ * to exclude. You can exclude up to 500 IP addresses per campaign. For more
+ * details, see
+ * [Exclude IP addresses](//support.google.com/google-ads/answer/2456098).
+ *
+ * IPv4 examples:
+ *
+ *  * Individual address: 192.168.0.1
+ *
+ *  * Individual address as CIDR block: 192.168.0.1/32
+ *
+ *  * CIDR block: 192.168.0.0/24
+ *
+ * IPv6 examples:
+ *
+ *  * Individual address: 2001:db8:a0b:12f0::1
+ *
+ *  * Individual address as CIDR block: 2001:db8:a0b:12f0::1/128
+ *
+ *  * CIDR block: 2001:db8::/48
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v20.common.IpBlockInfo}
@@ -54,7 +72,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object ipAddress_ = "";
   /**
    * <pre>
-   * The IP address of this IP block.
+   * The IP address or the CIDR block to be excluded.
    * </pre>
    *
    * <code>optional string ip_address = 2;</code>
@@ -66,7 +84,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The IP address of this IP block.
+   * The IP address or the CIDR block to be excluded.
    * </pre>
    *
    * <code>optional string ip_address = 2;</code>
@@ -87,7 +105,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The IP address of this IP block.
+   * The IP address or the CIDR block to be excluded.
    * </pre>
    *
    * <code>optional string ip_address = 2;</code>
@@ -271,11 +289,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An IpBlock criterion used for IP exclusions. We allow:
-   *  - IPv4 and IPv6 addresses
-   *  - individual addresses (192.168.0.1)
-   *  - masks for individual addresses (192.168.0.1/32)
-   *  - masks for Class C networks (192.168.0.1/24)
+   * An IpBlock criterion used for excluding IP addresses.
+   *
+   * We support excluding individual IP addresses or CIDR blocks. Create one
+   * IpBlockInfo criterion for each individual IP address or CIDR block you want
+   * to exclude. You can exclude up to 500 IP addresses per campaign. For more
+   * details, see
+   * [Exclude IP addresses](//support.google.com/google-ads/answer/2456098).
+   *
+   * IPv4 examples:
+   *
+   *  * Individual address: 192.168.0.1
+   *
+   *  * Individual address as CIDR block: 192.168.0.1/32
+   *
+   *  * CIDR block: 192.168.0.0/24
+   *
+   * IPv6 examples:
+   *
+   *  * Individual address: 2001:db8:a0b:12f0::1
+   *
+   *  * Individual address as CIDR block: 2001:db8:a0b:12f0::1/128
+   *
+   *  * CIDR block: 2001:db8::/48
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v20.common.IpBlockInfo}
@@ -453,7 +489,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object ipAddress_ = "";
     /**
      * <pre>
-     * The IP address of this IP block.
+     * The IP address or the CIDR block to be excluded.
      * </pre>
      *
      * <code>optional string ip_address = 2;</code>
@@ -464,7 +500,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The IP address of this IP block.
+     * The IP address or the CIDR block to be excluded.
      * </pre>
      *
      * <code>optional string ip_address = 2;</code>
@@ -484,7 +520,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The IP address of this IP block.
+     * The IP address or the CIDR block to be excluded.
      * </pre>
      *
      * <code>optional string ip_address = 2;</code>
@@ -505,7 +541,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The IP address of this IP block.
+     * The IP address or the CIDR block to be excluded.
      * </pre>
      *
      * <code>optional string ip_address = 2;</code>
@@ -522,7 +558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The IP address of this IP block.
+     * The IP address or the CIDR block to be excluded.
      * </pre>
      *
      * <code>optional string ip_address = 2;</code>
@@ -536,7 +572,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The IP address of this IP block.
+     * The IP address or the CIDR block to be excluded.
      * </pre>
      *
      * <code>optional string ip_address = 2;</code>

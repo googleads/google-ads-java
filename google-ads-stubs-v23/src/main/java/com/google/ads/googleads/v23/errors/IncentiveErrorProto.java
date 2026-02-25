@@ -31,15 +31,17 @@ public final class IncentiveErrorProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v23/errors/incent" +
       "ive_error.proto\022\037google.ads.googleads.v2" +
-      "3.errors\"^\n\022IncentiveErrorEnum\"H\n\016Incent" +
-      "iveError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\030" +
-      "\n\024INVALID_INCENTIVE_ID\020\002B\363\001\n#com.google." +
-      "ads.googleads.v23.errorsB\023IncentiveError" +
-      "ProtoP\001ZEgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v23/errors;errors\242\002" +
-      "\003GAA\252\002\037Google.Ads.GoogleAds.V23.Errors\312\002" +
-      "\037Google\\Ads\\GoogleAds\\V23\\Errors\352\002#Googl" +
-      "e::Ads::GoogleAds::V23::Errorsb\006proto3"
+      "3.errors\"\220\001\n\022IncentiveErrorEnum\"z\n\016Incen" +
+      "tiveError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
+      "\030\n\024INVALID_INCENTIVE_ID\020\002\022\033\n\027MAX_INCENTI" +
+      "VES_REDEEMED\020\003\022\023\n\017ACCOUNT_TOO_OLD\020\004B\363\001\n#" +
+      "com.google.ads.googleads.v23.errorsB\023Inc" +
+      "entiveErrorProtoP\001ZEgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v23/erro" +
+      "rs;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V" +
+      "23.Errors\312\002\037Google\\Ads\\GoogleAds\\V23\\Err" +
+      "ors\352\002#Google::Ads::GoogleAds::V23::Error" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

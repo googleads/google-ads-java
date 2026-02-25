@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to get suggestions for Smart Campaigns.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/smart_campaign_suggest_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SmartCampaignSuggestServiceGrpc {
 
@@ -301,8 +298,8 @@ public final class SmartCampaignSuggestServiceGrpc {
      * Returns BudgetOption suggestions.
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.SuggestSmartCampaignBudgetOptionsResponse suggestSmartCampaignBudgetOptions(com.google.ads.googleads.v21.services.SuggestSmartCampaignBudgetOptionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.SuggestSmartCampaignBudgetOptionsResponse suggestSmartCampaignBudgetOptions(com.google.ads.googleads.v21.services.SuggestSmartCampaignBudgetOptionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getSuggestSmartCampaignBudgetOptionsMethod(), getCallOptions(), request);
     }
 
@@ -312,8 +309,8 @@ public final class SmartCampaignSuggestServiceGrpc {
      * based on data points such as targeting and the business to advertise.
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.SuggestSmartCampaignAdResponse suggestSmartCampaignAd(com.google.ads.googleads.v21.services.SuggestSmartCampaignAdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.SuggestSmartCampaignAdResponse suggestSmartCampaignAd(com.google.ads.googleads.v21.services.SuggestSmartCampaignAdRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getSuggestSmartCampaignAdMethod(), getCallOptions(), request);
     }
 
@@ -322,8 +319,8 @@ public final class SmartCampaignSuggestServiceGrpc {
      * Suggests keyword themes to advertise on.
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.SuggestKeywordThemesResponse suggestKeywordThemes(com.google.ads.googleads.v21.services.SuggestKeywordThemesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.SuggestKeywordThemesResponse suggestKeywordThemes(com.google.ads.googleads.v21.services.SuggestKeywordThemesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getSuggestKeywordThemesMethod(), getCallOptions(), request);
     }
   }

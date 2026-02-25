@@ -1315,6 +1315,15 @@ private static final long serialVersionUID = 0L;
     ONLY_EXCLUSION_BRAND_LIST_ALLOWED_FOR_CAMPAIGN_TYPE(158),
     /**
      * <pre>
+     * The combination of demographic criteria would result in only targeting
+     * the "undetermined" segment, which is prohibited.
+     * </pre>
+     *
+     * <code>CANNOT_TARGET_ONLY_UNDETERMINED = 165;</code>
+     */
+    CANNOT_TARGET_ONLY_UNDETERMINED(165),
+    /**
+     * <pre>
      * Cannot positively target locations outside of restricted area for
      * campaign.
      * </pre>
@@ -2699,6 +2708,15 @@ private static final long serialVersionUID = 0L;
     public static final int ONLY_EXCLUSION_BRAND_LIST_ALLOWED_FOR_CAMPAIGN_TYPE_VALUE = 158;
     /**
      * <pre>
+     * The combination of demographic criteria would result in only targeting
+     * the "undetermined" segment, which is prohibited.
+     * </pre>
+     *
+     * <code>CANNOT_TARGET_ONLY_UNDETERMINED = 165;</code>
+     */
+    public static final int CANNOT_TARGET_ONLY_UNDETERMINED_VALUE = 165;
+    /**
+     * <pre>
      * Cannot positively target locations outside of restricted area for
      * campaign.
      * </pre>
@@ -2995,6 +3013,7 @@ private static final long serialVersionUID = 0L;
         case 156: return BRAND_SHARED_SET_DOES_NOT_EXIST;
         case 157: return CANNOT_ADD_REMOVED_BRAND_SHARED_SET;
         case 158: return ONLY_EXCLUSION_BRAND_LIST_ALLOWED_FOR_CAMPAIGN_TYPE;
+        case 165: return CANNOT_TARGET_ONLY_UNDETERMINED;
         case 166: return LOCATION_TARGETING_NOT_ELIGIBLE_FOR_RESTRICTED_CAMPAIGN;
         case 171: return ONLY_INCLUSION_BRAND_LIST_ALLOWED_FOR_AD_GROUPS;
         case 172: return CANNOT_ADD_REMOVED_PLACEMENT_LIST_SHARED_SET;

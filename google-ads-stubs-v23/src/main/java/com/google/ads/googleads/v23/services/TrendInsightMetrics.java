@@ -47,8 +47,8 @@ private static final long serialVersionUID = 0L;
   private long viewsCount_ = 0L;
   /**
    * <pre>
-   * The number of views for this trend. This is only populated for SearchTopics
-   * requests.
+   * The number of views for this trend. This is only populated for the latest
+   * month of data for SearchTopics requests.
    * </pre>
    *
    * <code>int64 views_count = 1;</code>
@@ -57,6 +57,22 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getViewsCount() {
     return viewsCount_;
+  }
+
+  public static final int VIEWS_INDEXED_VALUE_FIELD_NUMBER = 4;
+  private long viewsIndexedValue_ = 0L;
+  /**
+   * <pre>
+   * Views value normalized to be in the range 0-100. This is only populated for
+   * SearchTopics requests.
+   * </pre>
+   *
+   * <code>int64 views_indexed_value = 4;</code>
+   * @return The viewsIndexedValue.
+   */
+  @java.lang.Override
+  public long getViewsIndexedValue() {
+    return viewsIndexedValue_;
   }
 
   public static final int AUDIENCE_SHARE_FIELD_NUMBER = 2;
@@ -81,8 +97,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The percentage of the change in the trend's value over the comparison
-   * period, where 1.0 represents 100%. If this is not set, it means that the
-   * trend is emerging.
+   * period, where 1.0 represents 100%. If this is 0, it means that the trend is
+   * emerging (new) or sustained (existing but unchanged).
    * </pre>
    *
    * <code>double trend_change_percent = 3;</code>
@@ -116,6 +132,9 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToRawLongBits(trendChangePercent_) != 0) {
       output.writeDouble(3, trendChangePercent_);
     }
+    if (viewsIndexedValue_ != 0L) {
+      output.writeInt64(4, viewsIndexedValue_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -137,6 +156,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(3, trendChangePercent_);
     }
+    if (viewsIndexedValue_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, viewsIndexedValue_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -154,6 +177,8 @@ private static final long serialVersionUID = 0L;
 
     if (getViewsCount()
         != other.getViewsCount()) return false;
+    if (getViewsIndexedValue()
+        != other.getViewsIndexedValue()) return false;
     if (java.lang.Double.doubleToLongBits(getAudienceShare())
         != java.lang.Double.doubleToLongBits(
             other.getAudienceShare())) return false;
@@ -174,6 +199,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + VIEWS_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getViewsCount());
+    hash = (37 * hash) + VIEWS_INDEXED_VALUE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getViewsIndexedValue());
     hash = (37 * hash) + AUDIENCE_SHARE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getAudienceShare()));
@@ -316,6 +344,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       viewsCount_ = 0L;
+      viewsIndexedValue_ = 0L;
       audienceShare_ = 0D;
       trendChangePercent_ = 0D;
       return this;
@@ -355,9 +384,12 @@ private static final long serialVersionUID = 0L;
         result.viewsCount_ = viewsCount_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.audienceShare_ = audienceShare_;
+        result.viewsIndexedValue_ = viewsIndexedValue_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.audienceShare_ = audienceShare_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.trendChangePercent_ = trendChangePercent_;
       }
     }
@@ -409,6 +441,9 @@ private static final long serialVersionUID = 0L;
       if (other.getViewsCount() != 0L) {
         setViewsCount(other.getViewsCount());
       }
+      if (other.getViewsIndexedValue() != 0L) {
+        setViewsIndexedValue(other.getViewsIndexedValue());
+      }
       if (other.getAudienceShare() != 0D) {
         setAudienceShare(other.getAudienceShare());
       }
@@ -448,14 +483,19 @@ private static final long serialVersionUID = 0L;
             } // case 8
             case 17: {
               audienceShare_ = input.readDouble();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 17
             case 25: {
               trendChangePercent_ = input.readDouble();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 25
+            case 32: {
+              viewsIndexedValue_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -476,8 +516,8 @@ private static final long serialVersionUID = 0L;
     private long viewsCount_ ;
     /**
      * <pre>
-     * The number of views for this trend. This is only populated for SearchTopics
-     * requests.
+     * The number of views for this trend. This is only populated for the latest
+     * month of data for SearchTopics requests.
      * </pre>
      *
      * <code>int64 views_count = 1;</code>
@@ -489,8 +529,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of views for this trend. This is only populated for SearchTopics
-     * requests.
+     * The number of views for this trend. This is only populated for the latest
+     * month of data for SearchTopics requests.
      * </pre>
      *
      * <code>int64 views_count = 1;</code>
@@ -506,8 +546,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of views for this trend. This is only populated for SearchTopics
-     * requests.
+     * The number of views for this trend. This is only populated for the latest
+     * month of data for SearchTopics requests.
      * </pre>
      *
      * <code>int64 views_count = 1;</code>
@@ -516,6 +556,53 @@ private static final long serialVersionUID = 0L;
     public Builder clearViewsCount() {
       bitField0_ = (bitField0_ & ~0x00000001);
       viewsCount_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long viewsIndexedValue_ ;
+    /**
+     * <pre>
+     * Views value normalized to be in the range 0-100. This is only populated for
+     * SearchTopics requests.
+     * </pre>
+     *
+     * <code>int64 views_indexed_value = 4;</code>
+     * @return The viewsIndexedValue.
+     */
+    @java.lang.Override
+    public long getViewsIndexedValue() {
+      return viewsIndexedValue_;
+    }
+    /**
+     * <pre>
+     * Views value normalized to be in the range 0-100. This is only populated for
+     * SearchTopics requests.
+     * </pre>
+     *
+     * <code>int64 views_indexed_value = 4;</code>
+     * @param value The viewsIndexedValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setViewsIndexedValue(long value) {
+
+      viewsIndexedValue_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Views value normalized to be in the range 0-100. This is only populated for
+     * SearchTopics requests.
+     * </pre>
+     *
+     * <code>int64 views_indexed_value = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearViewsIndexedValue() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      viewsIndexedValue_ = 0L;
       onChanged();
       return this;
     }
@@ -549,7 +636,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAudienceShare(double value) {
 
       audienceShare_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -564,7 +651,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAudienceShare() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       audienceShare_ = 0D;
       onChanged();
       return this;
@@ -574,8 +661,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The percentage of the change in the trend's value over the comparison
-     * period, where 1.0 represents 100%. If this is not set, it means that the
-     * trend is emerging.
+     * period, where 1.0 represents 100%. If this is 0, it means that the trend is
+     * emerging (new) or sustained (existing but unchanged).
      * </pre>
      *
      * <code>double trend_change_percent = 3;</code>
@@ -588,8 +675,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The percentage of the change in the trend's value over the comparison
-     * period, where 1.0 represents 100%. If this is not set, it means that the
-     * trend is emerging.
+     * period, where 1.0 represents 100%. If this is 0, it means that the trend is
+     * emerging (new) or sustained (existing but unchanged).
      * </pre>
      *
      * <code>double trend_change_percent = 3;</code>
@@ -599,22 +686,22 @@ private static final long serialVersionUID = 0L;
     public Builder setTrendChangePercent(double value) {
 
       trendChangePercent_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * The percentage of the change in the trend's value over the comparison
-     * period, where 1.0 represents 100%. If this is not set, it means that the
-     * trend is emerging.
+     * period, where 1.0 represents 100%. If this is 0, it means that the trend is
+     * emerging (new) or sustained (existing but unchanged).
      * </pre>
      *
      * <code>double trend_change_percent = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearTrendChangePercent() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       trendChangePercent_ = 0D;
       onChanged();
       return this;

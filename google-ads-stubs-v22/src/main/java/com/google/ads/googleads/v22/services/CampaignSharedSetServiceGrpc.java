@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage campaign shared sets.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/campaign_shared_set_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CampaignSharedSetServiceGrpc {
 
@@ -264,8 +261,8 @@ public final class CampaignSharedSetServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateCampaignSharedSetsResponse mutateCampaignSharedSets(com.google.ads.googleads.v22.services.MutateCampaignSharedSetsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateCampaignSharedSetsResponse mutateCampaignSharedSets(com.google.ads.googleads.v22.services.MutateCampaignSharedSetsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCampaignSharedSetsMethod(), getCallOptions(), request);
     }
   }

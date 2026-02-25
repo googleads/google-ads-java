@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage remarketing actions.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/remarketing_action_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RemarketingActionServiceGrpc {
 
@@ -219,8 +216,8 @@ public final class RemarketingActionServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateRemarketingActionsResponse mutateRemarketingActions(com.google.ads.googleads.v20.services.MutateRemarketingActionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateRemarketingActionsResponse mutateRemarketingActions(com.google.ads.googleads.v20.services.MutateRemarketingActionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateRemarketingActionsMethod(), getCallOptions(), request);
     }
   }

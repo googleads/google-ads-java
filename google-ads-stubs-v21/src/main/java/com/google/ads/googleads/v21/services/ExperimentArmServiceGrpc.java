@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage experiment arms.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/experiment_arm_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ExperimentArmServiceGrpc {
 
@@ -222,8 +219,8 @@ public final class ExperimentArmServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateExperimentArmsResponse mutateExperimentArms(com.google.ads.googleads.v21.services.MutateExperimentArmsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateExperimentArmsResponse mutateExperimentArms(com.google.ads.googleads.v21.services.MutateExperimentArmsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateExperimentArmsMethod(), getCallOptions(), request);
     }
   }

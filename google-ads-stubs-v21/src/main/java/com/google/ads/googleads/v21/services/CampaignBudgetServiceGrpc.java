@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage campaign budgets.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/campaign_budget_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CampaignBudgetServiceGrpc {
 
@@ -252,8 +249,8 @@ public final class CampaignBudgetServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateCampaignBudgetsResponse mutateCampaignBudgets(com.google.ads.googleads.v21.services.MutateCampaignBudgetsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateCampaignBudgetsResponse mutateCampaignBudgets(com.google.ads.googleads.v21.services.MutateCampaignBudgetsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCampaignBudgetsMethod(), getCallOptions(), request);
     }
   }

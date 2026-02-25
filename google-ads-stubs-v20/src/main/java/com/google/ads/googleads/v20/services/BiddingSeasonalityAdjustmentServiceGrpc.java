@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage bidding seasonality adjustments.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/bidding_seasonality_adjustment_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BiddingSeasonalityAdjustmentServiceGrpc {
 
@@ -198,8 +195,8 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
      * Operation statuses are returned.
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateBiddingSeasonalityAdjustmentsResponse mutateBiddingSeasonalityAdjustments(com.google.ads.googleads.v20.services.MutateBiddingSeasonalityAdjustmentsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateBiddingSeasonalityAdjustmentsResponse mutateBiddingSeasonalityAdjustments(com.google.ads.googleads.v20.services.MutateBiddingSeasonalityAdjustmentsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateBiddingSeasonalityAdjustmentsMethod(), getCallOptions(), request);
     }
   }

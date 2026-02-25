@@ -12,6 +12,9 @@ package com.google.ads.googleads.v20.resources;
  * Queries including ClickView must have a filter limiting the results to one
  * day and can be requested for dates back to 90 days before the time of the
  * request.
+ *
+ * GCLIDs are not available in this report for App Campaigns for Installs (ACi)
+ * and App Campaigns for Pre-registration (ACpre).
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v20.resources.ClickView}
@@ -839,6 +842,9 @@ private static final long serialVersionUID = 0L;
    * Queries including ClickView must have a filter limiting the results to one
    * day and can be requested for dates back to 90 days before the time of the
    * request.
+   *
+   * GCLIDs are not available in this report for App Campaigns for Installs (ACi)
+   * and App Campaigns for Pre-registration (ACpre).
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v20.resources.ClickView}

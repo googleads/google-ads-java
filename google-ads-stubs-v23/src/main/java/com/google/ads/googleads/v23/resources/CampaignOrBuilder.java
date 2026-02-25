@@ -1810,6 +1810,39 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * Settings to control automatically generated text assets. Only available
+   * in Performance Max and Search campaigns (Brand Guidelines does not need
+   * to be enabled).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+   * @return Whether the textGuidelines field is set.
+   */
+  boolean hasTextGuidelines();
+  /**
+   * <pre>
+   * Settings to control automatically generated text assets. Only available
+   * in Performance Max and Search campaigns (Brand Guidelines does not need
+   * to be enabled).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+   * @return The textGuidelines.
+   */
+  com.google.ads.googleads.v23.resources.Campaign.TextGuidelines getTextGuidelines();
+  /**
+   * <pre>
+   * Settings to control automatically generated text assets. Only available
+   * in Performance Max and Search campaigns (Brand Guidelines does not need
+   * to be enabled).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+   */
+  com.google.ads.googleads.v23.resources.Campaign.TextGuidelinesOrBuilder getTextGuidelinesOrBuilder();
+
+  /**
+   * <pre>
    * Third-Party integration partners.
    * </pre>
    *
@@ -1931,6 +1964,21 @@ public interface CampaignOrBuilder extends
    * @return The enum numeric value on the wire of feedTypes at the given index.
    */
   int getFeedTypesValue(int index);
+
+  /**
+   * <pre>
+   * Output only. Indicates whether this campaign is missing a declaration about
+   * whether it contains political advertising targeted towards the EU and is
+   * ineligible for any exemptions. If this field is true, use the
+   * contains_eu_political_advertising field to add the required declaration.
+   *
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The missingEuPoliticalAdvertisingDeclaration.
+   */
+  boolean getMissingEuPoliticalAdvertisingDeclaration();
 
   /**
    * <pre>

@@ -723,4 +723,31 @@ public interface CustomerOrBuilder extends
    * <code>.google.ads.googleads.v22.resources.VideoCustomer video_customer = 54;</code>
    */
   com.google.ads.googleads.v22.resources.VideoCustomerOrBuilder getVideoCustomerOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. Returns the advertiser self-declaration status of whether this
+   * customer contains political advertising content targeted towards the
+   * European Union. You can use the Google Ads UI to update this account-level
+   * declaration, or use the API to update the self-declaration status of
+   * individual campaigns.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v22.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for containsEuPoliticalAdvertising.
+   */
+  int getContainsEuPoliticalAdvertisingValue();
+  /**
+   * <pre>
+   * Output only. Returns the advertiser self-declaration status of whether this
+   * customer contains political advertising content targeted towards the
+   * European Union. You can use the Google Ads UI to update this account-level
+   * declaration, or use the API to update the self-declaration status of
+   * individual campaigns.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v22.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The containsEuPoliticalAdvertising.
+   */
+  com.google.ads.googleads.v22.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus getContainsEuPoliticalAdvertising();
 }

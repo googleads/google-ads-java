@@ -263,7 +263,9 @@ public interface CustomerNegativeCriterionOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. IPBLock
+   * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per account.
    * </pre>
    *
    * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -272,7 +274,9 @@ public interface CustomerNegativeCriterionOrBuilder extends
   boolean hasIpBlock();
   /**
    * <pre>
-   * Immutable. IPBLock
+   * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per account.
    * </pre>
    *
    * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -281,7 +285,9 @@ public interface CustomerNegativeCriterionOrBuilder extends
   com.google.ads.googleads.v20.common.IpBlockInfo getIpBlock();
   /**
    * <pre>
-   * Immutable. IPBLock
+   * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per account.
    * </pre>
    *
    * <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to fetch data and metrics across resources.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/google_ads_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class GoogleAdsServiceGrpc {
 
@@ -550,8 +547,8 @@ public final class GoogleAdsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.SearchGoogleAdsResponse search(com.google.ads.googleads.v20.services.SearchGoogleAdsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.SearchGoogleAdsResponse search(com.google.ads.googleads.v20.services.SearchGoogleAdsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getSearchMethod(), getCallOptions(), request);
     }
 
@@ -681,8 +678,8 @@ public final class GoogleAdsServiceGrpc {
      *   [YoutubeVideoRegistrationError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateGoogleAdsResponse mutate(com.google.ads.googleads.v20.services.MutateGoogleAdsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateGoogleAdsResponse mutate(com.google.ads.googleads.v20.services.MutateGoogleAdsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateMethod(), getCallOptions(), request);
     }
   }

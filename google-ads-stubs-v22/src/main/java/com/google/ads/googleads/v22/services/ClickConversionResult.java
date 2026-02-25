@@ -114,8 +114,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object gbraid_ = "";
   /**
    * <pre>
-   * The click identifier for clicks associated with app conversions and
-   * originating from iOS devices starting with iOS14.
+   * The URL parameter for clicks associated with app conversions.
    * </pre>
    *
    * <code>string gbraid = 8;</code>
@@ -136,8 +135,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The click identifier for clicks associated with app conversions and
-   * originating from iOS devices starting with iOS14.
+   * The URL parameter for clicks associated with app conversions.
    * </pre>
    *
    * <code>string gbraid = 8;</code>
@@ -163,8 +161,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object wbraid_ = "";
   /**
    * <pre>
-   * The click identifier for clicks associated with web conversions and
-   * originating from iOS devices starting with iOS14.
+   * The URL parameter for clicks associated with web conversions.
    * </pre>
    *
    * <code>string wbraid = 9;</code>
@@ -185,8 +182,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The click identifier for clicks associated with web conversions and
-   * originating from iOS devices starting with iOS14.
+   * The URL parameter for clicks associated with web conversions.
    * </pre>
    *
    * <code>string wbraid = 9;</code>
@@ -1023,8 +1019,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object gbraid_ = "";
     /**
      * <pre>
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      * </pre>
      *
      * <code>string gbraid = 8;</code>
@@ -1044,8 +1039,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      * </pre>
      *
      * <code>string gbraid = 8;</code>
@@ -1066,8 +1060,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      * </pre>
      *
      * <code>string gbraid = 8;</code>
@@ -1084,8 +1077,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      * </pre>
      *
      * <code>string gbraid = 8;</code>
@@ -1099,8 +1091,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      * </pre>
      *
      * <code>string gbraid = 8;</code>
@@ -1120,8 +1111,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object wbraid_ = "";
     /**
      * <pre>
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      * </pre>
      *
      * <code>string wbraid = 9;</code>
@@ -1141,8 +1131,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      * </pre>
      *
      * <code>string wbraid = 9;</code>
@@ -1163,8 +1152,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      * </pre>
      *
      * <code>string wbraid = 9;</code>
@@ -1181,8 +1169,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      * </pre>
      *
      * <code>string wbraid = 9;</code>
@@ -1196,8 +1183,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      * </pre>
      *
      * <code>string wbraid = 9;</code>

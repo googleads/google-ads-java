@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage experiments.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/experiment_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ExperimentServiceGrpc {
 
@@ -605,8 +602,8 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateExperimentsResponse mutateExperiments(com.google.ads.googleads.v20.services.MutateExperimentsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateExperimentsResponse mutateExperiments(com.google.ads.googleads.v20.services.MutateExperimentsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateExperimentsMethod(), getCallOptions(), request);
     }
 
@@ -625,8 +622,8 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.protobuf.Empty endExperiment(com.google.ads.googleads.v20.services.EndExperimentRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.protobuf.Empty endExperiment(com.google.ads.googleads.v20.services.EndExperimentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getEndExperimentMethod(), getCallOptions(), request);
     }
 
@@ -644,8 +641,8 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.ListExperimentAsyncErrorsResponse listExperimentAsyncErrors(com.google.ads.googleads.v20.services.ListExperimentAsyncErrorsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.ListExperimentAsyncErrorsResponse listExperimentAsyncErrors(com.google.ads.googleads.v20.services.ListExperimentAsyncErrorsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListExperimentAsyncErrorsMethod(), getCallOptions(), request);
     }
 
@@ -663,8 +660,8 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.protobuf.Empty graduateExperiment(com.google.ads.googleads.v20.services.GraduateExperimentRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.protobuf.Empty graduateExperiment(com.google.ads.googleads.v20.services.GraduateExperimentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGraduateExperimentMethod(), getCallOptions(), request);
     }
 
@@ -694,8 +691,8 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.longrunning.Operation scheduleExperiment(com.google.ads.googleads.v20.services.ScheduleExperimentRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.longrunning.Operation scheduleExperiment(com.google.ads.googleads.v20.services.ScheduleExperimentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getScheduleExperimentMethod(), getCallOptions(), request);
     }
 
@@ -718,8 +715,8 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.longrunning.Operation promoteExperiment(com.google.ads.googleads.v20.services.PromoteExperimentRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.longrunning.Operation promoteExperiment(com.google.ads.googleads.v20.services.PromoteExperimentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getPromoteExperimentMethod(), getCallOptions(), request);
     }
   }

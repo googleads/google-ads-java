@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage batch jobs.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/batch_job_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BatchJobServiceGrpc {
 
@@ -433,8 +430,8 @@ public final class BatchJobServiceGrpc {
      *   [ResourceCountLimitExceededError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateBatchJobResponse mutateBatchJob(com.google.ads.googleads.v22.services.MutateBatchJobRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateBatchJobResponse mutateBatchJob(com.google.ads.googleads.v22.services.MutateBatchJobRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateBatchJobMethod(), getCallOptions(), request);
     }
 
@@ -452,8 +449,8 @@ public final class BatchJobServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.ListBatchJobResultsResponse listBatchJobResults(com.google.ads.googleads.v22.services.ListBatchJobResultsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.ListBatchJobResultsResponse listBatchJobResults(com.google.ads.googleads.v22.services.ListBatchJobResultsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListBatchJobResultsMethod(), getCallOptions(), request);
     }
 
@@ -473,8 +470,8 @@ public final class BatchJobServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.longrunning.Operation runBatchJob(com.google.ads.googleads.v22.services.RunBatchJobRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.longrunning.Operation runBatchJob(com.google.ads.googleads.v22.services.RunBatchJobRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getRunBatchJobMethod(), getCallOptions(), request);
     }
 
@@ -492,8 +489,8 @@ public final class BatchJobServiceGrpc {
      *   [ResourceCountLimitExceededError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.AddBatchJobOperationsResponse addBatchJobOperations(com.google.ads.googleads.v22.services.AddBatchJobOperationsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.AddBatchJobOperationsResponse addBatchJobOperations(com.google.ads.googleads.v22.services.AddBatchJobOperationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getAddBatchJobOperationsMethod(), getCallOptions(), request);
     }
   }

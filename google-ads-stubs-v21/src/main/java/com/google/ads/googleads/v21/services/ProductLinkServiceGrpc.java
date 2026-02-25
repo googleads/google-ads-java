@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Ads customer and another product.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/product_link_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ProductLinkServiceGrpc {
 
@@ -300,8 +297,8 @@ public final class ProductLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.CreateProductLinkResponse createProductLink(com.google.ads.googleads.v21.services.CreateProductLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.CreateProductLinkResponse createProductLink(com.google.ads.googleads.v21.services.CreateProductLinkRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getCreateProductLinkMethod(), getCallOptions(), request);
     }
 
@@ -319,8 +316,8 @@ public final class ProductLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.RemoveProductLinkResponse removeProductLink(com.google.ads.googleads.v21.services.RemoveProductLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.RemoveProductLinkResponse removeProductLink(com.google.ads.googleads.v21.services.RemoveProductLinkRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getRemoveProductLinkMethod(), getCallOptions(), request);
     }
   }

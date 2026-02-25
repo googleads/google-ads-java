@@ -40,6 +40,7 @@ import com.google.ads.googleads.v23.services.ListAudienceInsightsAttributesReque
 import com.google.ads.googleads.v23.services.ListBenchmarksSourcesRequest;
 import com.google.ads.googleads.v23.services.ListPlannableUserInterestsRequest;
 import com.google.ads.googleads.v23.services.RemoveAutomaticallyCreatedAssetsRequest;
+import com.google.ads.googleads.v23.services.RemoveYouTubeVideoUploadRequest;
 import com.google.ads.googleads.v23.services.SuggestBrandsRequest;
 import com.google.ads.googleads.v23.services.SuggestTravelAssetsRequest;
 import com.google.common.collect.ImmutableSet;
@@ -272,6 +273,7 @@ public class AbstractErrorUtilsTest {
             .add(GenerateTextRequest.getDescriptor())
             .add(GenerateImagesRequest.getDescriptor())
             .add(ListBenchmarksSourcesRequest.getDescriptor())
+            .add(RemoveYouTubeVideoUploadRequest.getDescriptor())
             .build();
 
     // Gets the class for the latest version of the Google Ads API.

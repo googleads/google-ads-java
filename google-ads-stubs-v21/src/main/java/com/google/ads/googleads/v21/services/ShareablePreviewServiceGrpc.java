@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to generate Shareable Previews.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/shareable_preview_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ShareablePreviewServiceGrpc {
 
@@ -195,8 +192,8 @@ public final class ShareablePreviewServiceGrpc {
      * Returns the requested Shareable Preview.
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.GenerateShareablePreviewsResponse generateShareablePreviews(com.google.ads.googleads.v21.services.GenerateShareablePreviewsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.GenerateShareablePreviewsResponse generateShareablePreviews(com.google.ads.googleads.v21.services.GenerateShareablePreviewsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateShareablePreviewsMethod(), getCallOptions(), request);
     }
   }

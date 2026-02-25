@@ -343,9 +343,9 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of times people clicked the "Call" button to call a store during
-   * or after clicking an ad. This number doesn't include whether or not calls
-   * were connected, or the duration of any calls.
+   * The number of times people clicked the "Call" button to call a business
+   * during or after clicking an ad. This number doesn't include whether or not
+   * calls were connected, or the duration of any calls.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -356,9 +356,9 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversionsFromClickToCall();
   /**
    * <pre>
-   * The number of times people clicked the "Call" button to call a store during
-   * or after clicking an ad. This number doesn't include whether or not calls
-   * were connected, or the duration of any calls.
+   * The number of times people clicked the "Call" button to call a business
+   * during or after clicking an ad. This number doesn't include whether or not
+   * calls were connected, or the duration of any calls.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -371,7 +371,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The number of times people clicked a "Get directions" button to navigate to
-   * a store after clicking an ad.
+   * a business after clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -383,7 +383,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The number of times people clicked a "Get directions" button to navigate to
-   * a store after clicking an ad.
+   * a business after clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -416,7 +416,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of times people clicked a link to view a store's menu after
+   * The number of times people clicked a link to view a business's menu after
    * clicking an ad.
    *
    * This metric applies to feed items only.
@@ -428,7 +428,7 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversionsFromMenu();
   /**
    * <pre>
-   * The number of times people clicked a link to view a store's menu after
+   * The number of times people clicked a link to view a business's menu after
    * clicking an ad.
    *
    * This metric applies to feed items only.
@@ -441,7 +441,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of times people placed an order at a store after clicking an ad.
+   * The number of times people placed an order at a business after clicking an
+   * ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -452,7 +453,8 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversionsFromOrder();
   /**
    * <pre>
-   * The number of times people placed an order at a store after clicking an ad.
+   * The number of times people placed an order at a business after clicking an
+   * ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -465,7 +467,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The number of other conversions (for example, posting a review or saving a
-   * location for a store) that occurred after people clicked an ad.
+   * location for a business) that occurred after people clicked an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -477,7 +479,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The number of other conversions (for example, posting a review or saving a
-   * location for a store) that occurred after people clicked an ad.
+   * location for a business) that occurred after people clicked an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -489,7 +491,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * Estimated number of times people visited a store after clicking an ad.
+   * Estimated number of times people visited a business after clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -500,7 +502,7 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversionsFromStoreVisit();
   /**
    * <pre>
-   * Estimated number of times people visited a store after clicking an ad.
+   * Estimated number of times people visited a business after clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -512,8 +514,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of times that people were taken to a store's URL after clicking
-   * an ad.
+   * The number of times that people were taken to a business's URL after
+   * clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -524,8 +526,8 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversionsFromStoreWebsite();
   /**
    * <pre>
-   * The number of times that people were taken to a store's URL after clicking
-   * an ad.
+   * The number of times that people were taken to a business's URL after
+   * clicking an ad.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -2012,7 +2014,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of times a store's location-based ad was shown.
+   * The number of times a business's location-based ad was shown.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -2023,7 +2025,7 @@ public interface MetricsOrBuilder extends
   boolean hasImpressionsFromStoreReach();
   /**
    * <pre>
-   * The number of times a store's location-based ad was shown.
+   * The number of times a business's location-based ad was shown.
    *
    * This metric applies to feed items only.
    * </pre>
@@ -3483,7 +3485,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * Estimated number of visits to the store after a chargeable
+   * Estimated number of visits to the business after a chargeable
    * ad event (click or impression). This measure is coming from Asset
    * based location.
    * </pre>
@@ -3494,7 +3496,7 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversionsFromLocationAssetStoreVisits();
   /**
    * <pre>
-   * Estimated number of visits to the store after a chargeable
+   * Estimated number of visits to the business after a chargeable
    * ad event (click or impression). This measure is coming from Asset
    * based location.
    * </pre>
@@ -3529,8 +3531,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * Number of impressions in which the store location was shown or the location
-   * was used for targeting. This measure is coming from Asset based
+   * Number of impressions in which the business location was shown or the
+   * location was used for targeting. This measure is coming from Asset based
    * location.
    * </pre>
    *
@@ -3540,8 +3542,8 @@ public interface MetricsOrBuilder extends
   boolean hasEligibleImpressionsFromLocationAssetStoreReach();
   /**
    * <pre>
-   * Number of impressions in which the store location was shown or the location
-   * was used for targeting. This measure is coming from Asset based
+   * Number of impressions in which the business location was shown or the
+   * location was used for targeting. This measure is coming from Asset based
    * location.
    * </pre>
    *
@@ -3657,7 +3659,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * Estimated number of visits to the store after an impression.
+   * Estimated number of visits to the business after an impression.
    * This measure is coming from Asset based location.
    * </pre>
    *
@@ -3667,7 +3669,7 @@ public interface MetricsOrBuilder extends
   boolean hasViewThroughConversionsFromLocationAssetStoreVisits();
   /**
    * <pre>
-   * Estimated number of visits to the store after an impression.
+   * Estimated number of visits to the business after an impression.
    * This measure is coming from Asset based location.
    * </pre>
    *
@@ -5146,7 +5148,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The amount of store visits attributed by the last click model.
+   * The amount of business visits attributed by the last click model.
    * </pre>
    *
    * <code>optional double store_visits_last_click_model_attributed_conversions = 365;</code>
@@ -5155,7 +5157,7 @@ public interface MetricsOrBuilder extends
   boolean hasStoreVisitsLastClickModelAttributedConversions();
   /**
    * <pre>
-   * The amount of store visits attributed by the last click model.
+   * The amount of business visits attributed by the last click model.
    * </pre>
    *
    * <code>optional double store_visits_last_click_model_attributed_conversions = 365;</code>

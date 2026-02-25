@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage goals.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/goal_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class GoalServiceGrpc {
 
@@ -222,8 +219,8 @@ public final class GoalServiceGrpc {
      *   [GoalServicesError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateGoalsResponse mutateGoals(com.google.ads.googleads.v22.services.MutateGoalsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateGoalsResponse mutateGoals(com.google.ads.googleads.v22.services.MutateGoalsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateGoalsMethod(), getCallOptions(), request);
     }
   }

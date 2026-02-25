@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to remove automatically created assets.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/automatically_created_asset_removal_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
 
@@ -225,8 +222,8 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.RemoveCampaignAutomaticallyCreatedAssetResponse removeCampaignAutomaticallyCreatedAsset(com.google.ads.googleads.v21.services.RemoveCampaignAutomaticallyCreatedAssetRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.RemoveCampaignAutomaticallyCreatedAssetResponse removeCampaignAutomaticallyCreatedAsset(com.google.ads.googleads.v21.services.RemoveCampaignAutomaticallyCreatedAssetRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getRemoveCampaignAutomaticallyCreatedAssetMethod(), getCallOptions(), request);
     }
   }

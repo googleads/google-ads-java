@@ -9,9 +9,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * allowlisted customers only.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/audience_insights_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AudienceInsightsServiceGrpc {
 
@@ -674,8 +671,8 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.GenerateInsightsFinderReportResponse generateInsightsFinderReport(com.google.ads.googleads.v22.services.GenerateInsightsFinderReportRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.GenerateInsightsFinderReportResponse generateInsightsFinderReport(com.google.ads.googleads.v22.services.GenerateInsightsFinderReportRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateInsightsFinderReportMethod(), getCallOptions(), request);
     }
 
@@ -693,8 +690,8 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.ListAudienceInsightsAttributesResponse listAudienceInsightsAttributes(com.google.ads.googleads.v22.services.ListAudienceInsightsAttributesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.ListAudienceInsightsAttributesResponse listAudienceInsightsAttributes(com.google.ads.googleads.v22.services.ListAudienceInsightsAttributesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListAudienceInsightsAttributesMethod(), getCallOptions(), request);
     }
 
@@ -712,8 +709,8 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.ListInsightsEligibleDatesResponse listInsightsEligibleDates(com.google.ads.googleads.v22.services.ListInsightsEligibleDatesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.ListInsightsEligibleDatesResponse listInsightsEligibleDates(com.google.ads.googleads.v22.services.ListInsightsEligibleDatesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListInsightsEligibleDatesMethod(), getCallOptions(), request);
     }
 
@@ -734,8 +731,8 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.GenerateAudienceCompositionInsightsResponse generateAudienceCompositionInsights(com.google.ads.googleads.v22.services.GenerateAudienceCompositionInsightsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.GenerateAudienceCompositionInsightsResponse generateAudienceCompositionInsights(com.google.ads.googleads.v22.services.GenerateAudienceCompositionInsightsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateAudienceCompositionInsightsMethod(), getCallOptions(), request);
     }
 
@@ -755,8 +752,8 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.GenerateSuggestedTargetingInsightsResponse generateSuggestedTargetingInsights(com.google.ads.googleads.v22.services.GenerateSuggestedTargetingInsightsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.GenerateSuggestedTargetingInsightsResponse generateSuggestedTargetingInsights(com.google.ads.googleads.v22.services.GenerateSuggestedTargetingInsightsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateSuggestedTargetingInsightsMethod(), getCallOptions(), request);
     }
 
@@ -777,8 +774,8 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.GenerateAudienceOverlapInsightsResponse generateAudienceOverlapInsights(com.google.ads.googleads.v22.services.GenerateAudienceOverlapInsightsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.GenerateAudienceOverlapInsightsResponse generateAudienceOverlapInsights(com.google.ads.googleads.v22.services.GenerateAudienceOverlapInsightsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateAudienceOverlapInsightsMethod(), getCallOptions(), request);
     }
 
@@ -799,8 +796,8 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.GenerateTargetingSuggestionMetricsResponse generateTargetingSuggestionMetrics(com.google.ads.googleads.v22.services.GenerateTargetingSuggestionMetricsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.GenerateTargetingSuggestionMetricsResponse generateTargetingSuggestionMetrics(com.google.ads.googleads.v22.services.GenerateTargetingSuggestionMetricsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateTargetingSuggestionMetricsMethod(), getCallOptions(), request);
     }
   }

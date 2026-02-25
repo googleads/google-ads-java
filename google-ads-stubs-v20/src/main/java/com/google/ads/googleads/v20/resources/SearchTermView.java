@@ -7,7 +7,8 @@ package com.google.ads.googleads.v20.resources;
 /**
  * <pre>
  * A search term view with metrics aggregated by search term at the ad group
- * level.
+ * level. This view does not include Performance Max data. If you are looking
+ * for Performance Max search term data, use the CampaignSearchTermView instead.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v20.resources.SearchTermView}
@@ -447,7 +448,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A search term view with metrics aggregated by search term at the ad group
-   * level.
+   * level. This view does not include Performance Max data. If you are looking
+   * for Performance Max search term data, use the CampaignSearchTermView instead.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v20.resources.SearchTermView}

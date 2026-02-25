@@ -154,6 +154,36 @@ public interface GenerateBenchmarksMetricsRequestOrBuilder extends
 
   /**
    * <pre>
+   * Optional. The set of dimensions to group metrics by. If multiple dimensions
+   * are selected, cross-dimension breakdowns are returned.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return Whether the breakdownDefinition field is set.
+   */
+  boolean hasBreakdownDefinition();
+  /**
+   * <pre>
+   * Optional. The set of dimensions to group metrics by. If multiple dimensions
+   * are selected, cross-dimension breakdowns are returned.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The breakdownDefinition.
+   */
+  com.google.ads.googleads.v23.services.BreakdownDefinition getBreakdownDefinition();
+  /**
+   * <pre>
+   * Optional. The set of dimensions to group metrics by. If multiple dimensions
+   * are selected, cross-dimension breakdowns are returned.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.services.BreakdownDefinition breakdown_definition = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.google.ads.googleads.v23.services.BreakdownDefinitionOrBuilder getBreakdownDefinitionOrBuilder();
+
+  /**
+   * <pre>
    * Optional. The three-character ISO 4217 currency code. If unspecified, the
    * default currency for monetary values is USD.
    * </pre>

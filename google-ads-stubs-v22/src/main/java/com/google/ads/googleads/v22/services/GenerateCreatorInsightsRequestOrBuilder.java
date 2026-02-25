@@ -124,7 +124,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * The sub-country geographic locations to search that apply to the criteria.
-   * Only supported for [SearchAttributes] criteria.
+   * Only supported for
+   * [SearchAttributes][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchAttributes]
+   * criteria.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.common.LocationInfo sub_country_locations = 7;</code>
@@ -134,7 +136,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * The sub-country geographic locations to search that apply to the criteria.
-   * Only supported for [SearchAttributes] criteria.
+   * Only supported for
+   * [SearchAttributes][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchAttributes]
+   * criteria.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.common.LocationInfo sub_country_locations = 7;</code>
@@ -143,7 +147,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * The sub-country geographic locations to search that apply to the criteria.
-   * Only supported for [SearchAttributes] criteria.
+   * Only supported for
+   * [SearchAttributes][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchAttributes]
+   * criteria.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.common.LocationInfo sub_country_locations = 7;</code>
@@ -152,7 +158,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * The sub-country geographic locations to search that apply to the criteria.
-   * Only supported for [SearchAttributes] criteria.
+   * Only supported for
+   * [SearchAttributes][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchAttributes]
+   * criteria.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.common.LocationInfo sub_country_locations = 7;</code>
@@ -162,7 +170,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * The sub-country geographic locations to search that apply to the criteria.
-   * Only supported for [SearchAttributes] criteria.
+   * Only supported for
+   * [SearchAttributes][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchAttributes]
+   * criteria.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.common.LocationInfo sub_country_locations = 7;</code>
@@ -174,7 +184,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
    * <pre>
    * The attributes used to identify top creators. Data fetched is based on
    * the list of countries or sub-country locations specified in
-   * [country_locations] or [sub_country_locations].
+   * [country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.country_locations]
+   * or
+   * [sub_country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -185,7 +197,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
    * <pre>
    * The attributes used to identify top creators. Data fetched is based on
    * the list of countries or sub-country locations specified in
-   * [country_locations] or [sub_country_locations].
+   * [country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.country_locations]
+   * or
+   * [sub_country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -196,7 +210,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
    * <pre>
    * The attributes used to identify top creators. Data fetched is based on
    * the list of countries or sub-country locations specified in
-   * [country_locations] or [sub_country_locations].
+   * [country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.country_locations]
+   * or
+   * [sub_country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -206,7 +222,8 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
-   * list of countries specified in [country_locations].
+   * list of countries specified in
+   * [country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -216,7 +233,8 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
-   * list of countries specified in [country_locations].
+   * list of countries specified in
+   * [country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -226,7 +244,8 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
-   * list of countries specified in [country_locations].
+   * list of countries specified in
+   * [country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -236,7 +255,8 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in [country_locations].
+   * based on the list of countries specified in
+   * [country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -246,7 +266,8 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in [country_locations].
+   * based on the list of countries specified in
+   * [country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -256,7 +277,8 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   /**
    * <pre>
    * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in [country_locations].
+   * based on the list of countries specified in
+   * [country_locations][google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v22.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>

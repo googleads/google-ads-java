@@ -3765,11 +3765,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Feed label of products to include in the campaign.
-     * Only one of feed_label or sales_country can be set.
-     * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format for example: 'XX'.
-     * Otherwise can be any string used for feed label in Google Merchant
-     * Center.
+     * Valid feed labels may contain a maximum of 20 characters including
+     * uppercase letters, numbers, hyphens, and underscores.
+     * If you previously used the deprecated `sales_country` in the two-letter
+     * country code (`XX`) format, the `feed_label` field should be used
+     * instead. For more information see the
+     * [feed label](//support.google.com/merchants/answer/12453549)
+     * support article.
      * </pre>
      *
      * <code>string feed_label = 10;</code>
@@ -3779,11 +3781,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Feed label of products to include in the campaign.
-     * Only one of feed_label or sales_country can be set.
-     * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format for example: 'XX'.
-     * Otherwise can be any string used for feed label in Google Merchant
-     * Center.
+     * Valid feed labels may contain a maximum of 20 characters including
+     * uppercase letters, numbers, hyphens, and underscores.
+     * If you previously used the deprecated `sales_country` in the two-letter
+     * country code (`XX`) format, the `feed_label` field should be used
+     * instead. For more information see the
+     * [feed label](//support.google.com/merchants/answer/12453549)
+     * support article.
      * </pre>
      *
      * <code>string feed_label = 10;</code>
@@ -4002,11 +4006,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Feed label of products to include in the campaign.
-     * Only one of feed_label or sales_country can be set.
-     * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format for example: 'XX'.
-     * Otherwise can be any string used for feed label in Google Merchant
-     * Center.
+     * Valid feed labels may contain a maximum of 20 characters including
+     * uppercase letters, numbers, hyphens, and underscores.
+     * If you previously used the deprecated `sales_country` in the two-letter
+     * country code (`XX`) format, the `feed_label` field should be used
+     * instead. For more information see the
+     * [feed label](//support.google.com/merchants/answer/12453549)
+     * support article.
      * </pre>
      *
      * <code>string feed_label = 10;</code>
@@ -4028,11 +4034,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Feed label of products to include in the campaign.
-     * Only one of feed_label or sales_country can be set.
-     * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format for example: 'XX'.
-     * Otherwise can be any string used for feed label in Google Merchant
-     * Center.
+     * Valid feed labels may contain a maximum of 20 characters including
+     * uppercase letters, numbers, hyphens, and underscores.
+     * If you previously used the deprecated `sales_country` in the two-letter
+     * country code (`XX`) format, the `feed_label` field should be used
+     * instead. For more information see the
+     * [feed label](//support.google.com/merchants/answer/12453549)
+     * support article.
      * </pre>
      *
      * <code>string feed_label = 10;</code>
@@ -4829,11 +4837,13 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Feed label of products to include in the campaign.
-       * Only one of feed_label or sales_country can be set.
-       * If used instead of sales_country, the feed_label field accepts country
-       * codes in the same format for example: 'XX'.
-       * Otherwise can be any string used for feed label in Google Merchant
-       * Center.
+       * Valid feed labels may contain a maximum of 20 characters including
+       * uppercase letters, numbers, hyphens, and underscores.
+       * If you previously used the deprecated `sales_country` in the two-letter
+       * country code (`XX`) format, the `feed_label` field should be used
+       * instead. For more information see the
+       * [feed label](//support.google.com/merchants/answer/12453549)
+       * support article.
        * </pre>
        *
        * <code>string feed_label = 10;</code>
@@ -4854,11 +4864,13 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Feed label of products to include in the campaign.
-       * Only one of feed_label or sales_country can be set.
-       * If used instead of sales_country, the feed_label field accepts country
-       * codes in the same format for example: 'XX'.
-       * Otherwise can be any string used for feed label in Google Merchant
-       * Center.
+       * Valid feed labels may contain a maximum of 20 characters including
+       * uppercase letters, numbers, hyphens, and underscores.
+       * If you previously used the deprecated `sales_country` in the two-letter
+       * country code (`XX`) format, the `feed_label` field should be used
+       * instead. For more information see the
+       * [feed label](//support.google.com/merchants/answer/12453549)
+       * support article.
        * </pre>
        *
        * <code>string feed_label = 10;</code>
@@ -4880,11 +4892,13 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Feed label of products to include in the campaign.
-       * Only one of feed_label or sales_country can be set.
-       * If used instead of sales_country, the feed_label field accepts country
-       * codes in the same format for example: 'XX'.
-       * Otherwise can be any string used for feed label in Google Merchant
-       * Center.
+       * Valid feed labels may contain a maximum of 20 characters including
+       * uppercase letters, numbers, hyphens, and underscores.
+       * If you previously used the deprecated `sales_country` in the two-letter
+       * country code (`XX`) format, the `feed_label` field should be used
+       * instead. For more information see the
+       * [feed label](//support.google.com/merchants/answer/12453549)
+       * support article.
        * </pre>
        *
        * <code>string feed_label = 10;</code>
@@ -4902,11 +4916,13 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Feed label of products to include in the campaign.
-       * Only one of feed_label or sales_country can be set.
-       * If used instead of sales_country, the feed_label field accepts country
-       * codes in the same format for example: 'XX'.
-       * Otherwise can be any string used for feed label in Google Merchant
-       * Center.
+       * Valid feed labels may contain a maximum of 20 characters including
+       * uppercase letters, numbers, hyphens, and underscores.
+       * If you previously used the deprecated `sales_country` in the two-letter
+       * country code (`XX`) format, the `feed_label` field should be used
+       * instead. For more information see the
+       * [feed label](//support.google.com/merchants/answer/12453549)
+       * support article.
        * </pre>
        *
        * <code>string feed_label = 10;</code>
@@ -4921,11 +4937,13 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Feed label of products to include in the campaign.
-       * Only one of feed_label or sales_country can be set.
-       * If used instead of sales_country, the feed_label field accepts country
-       * codes in the same format for example: 'XX'.
-       * Otherwise can be any string used for feed label in Google Merchant
-       * Center.
+       * Valid feed labels may contain a maximum of 20 characters including
+       * uppercase letters, numbers, hyphens, and underscores.
+       * If you previously used the deprecated `sales_country` in the two-letter
+       * country code (`XX`) format, the `feed_label` field should be used
+       * instead. For more information see the
+       * [feed label](//support.google.com/merchants/answer/12453549)
+       * support article.
        * </pre>
        *
        * <code>string feed_label = 10;</code>
@@ -26655,6 +26673,26 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v21.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNRECOGNIZED : result;
   }
 
+  public static final int MISSING_EU_POLITICAL_ADVERTISING_DECLARATION_FIELD_NUMBER = 108;
+  private boolean missingEuPoliticalAdvertisingDeclaration_ = false;
+  /**
+   * <pre>
+   * Output only. Indicates whether this campaign is missing a declaration about
+   * whether it contains political advertising targeted towards the EU and is
+   * ineligible for any exemptions. If this field is true, use the
+   * contains_eu_political_advertising field to add the required declaration.
+   *
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The missingEuPoliticalAdvertisingDeclaration.
+   */
+  @java.lang.Override
+  public boolean getMissingEuPoliticalAdvertisingDeclaration() {
+    return missingEuPoliticalAdvertisingDeclaration_;
+  }
+
   public static final int BIDDING_STRATEGY_FIELD_NUMBER = 67;
   /**
    * <pre>
@@ -27664,6 +27702,9 @@ private static final long serialVersionUID = 0L;
     if (containsEuPoliticalAdvertising_ != com.google.ads.googleads.v21.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNSPECIFIED.getNumber()) {
       output.writeEnum(102, containsEuPoliticalAdvertising_);
     }
+    if (missingEuPoliticalAdvertisingDeclaration_ != false) {
+      output.writeBool(108, missingEuPoliticalAdvertisingDeclaration_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -27989,6 +28030,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(102, containsEuPoliticalAdvertising_);
     }
+    if (missingEuPoliticalAdvertisingDeclaration_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(108, missingEuPoliticalAdvertisingDeclaration_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -28217,6 +28262,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getAiMaxSetting())) return false;
     }
     if (containsEuPoliticalAdvertising_ != other.containsEuPoliticalAdvertising_) return false;
+    if (getMissingEuPoliticalAdvertisingDeclaration()
+        != other.getMissingEuPoliticalAdvertisingDeclaration()) return false;
     if (!getCampaignBiddingStrategyCase().equals(other.getCampaignBiddingStrategyCase())) return false;
     switch (campaignBiddingStrategyCase_) {
       case 67:
@@ -28507,6 +28554,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CONTAINS_EU_POLITICAL_ADVERTISING_FIELD_NUMBER;
     hash = (53 * hash) + containsEuPoliticalAdvertising_;
+    hash = (37 * hash) + MISSING_EU_POLITICAL_ADVERTISING_DECLARATION_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getMissingEuPoliticalAdvertisingDeclaration());
     switch (campaignBiddingStrategyCase_) {
       case 67:
         hash = (37 * hash) + BIDDING_STRATEGY_FIELD_NUMBER;
@@ -28916,6 +28966,7 @@ private static final long serialVersionUID = 0L;
         aiMaxSettingBuilder_ = null;
       }
       containsEuPoliticalAdvertising_ = 0;
+      missingEuPoliticalAdvertisingDeclaration_ = false;
       if (commissionBuilder_ != null) {
         commissionBuilder_.clear();
       }
@@ -29295,6 +29346,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField1_ & 0x04000000) != 0)) {
         result.containsEuPoliticalAdvertising_ = containsEuPoliticalAdvertising_;
+      }
+      if (((from_bitField1_ & 0x08000000) != 0)) {
+        result.missingEuPoliticalAdvertisingDeclaration_ = missingEuPoliticalAdvertisingDeclaration_;
       }
       result.bitField0_ |= to_bitField0_;
       result.bitField1_ |= to_bitField1_;
@@ -29708,6 +29762,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.containsEuPoliticalAdvertising_ != 0) {
         setContainsEuPoliticalAdvertisingValue(other.getContainsEuPoliticalAdvertisingValue());
+      }
+      if (other.getMissingEuPoliticalAdvertisingDeclaration() != false) {
+        setMissingEuPoliticalAdvertisingDeclaration(other.getMissingEuPoliticalAdvertisingDeclaration());
       }
       switch (other.getCampaignBiddingStrategyCase()) {
         case BIDDING_STRATEGY: {
@@ -30319,6 +30376,11 @@ private static final long serialVersionUID = 0L;
               bitField1_ |= 0x04000000;
               break;
             } // case 816
+            case 864: {
+              missingEuPoliticalAdvertisingDeclaration_ = input.readBool();
+              bitField1_ |= 0x08000000;
+              break;
+            } // case 864
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -38694,6 +38756,65 @@ private static final long serialVersionUID = 0L;
     public Builder clearContainsEuPoliticalAdvertising() {
       bitField1_ = (bitField1_ & ~0x04000000);
       containsEuPoliticalAdvertising_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean missingEuPoliticalAdvertisingDeclaration_ ;
+    /**
+     * <pre>
+     * Output only. Indicates whether this campaign is missing a declaration about
+     * whether it contains political advertising targeted towards the EU and is
+     * ineligible for any exemptions. If this field is true, use the
+     * contains_eu_political_advertising field to add the required declaration.
+     *
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The missingEuPoliticalAdvertisingDeclaration.
+     */
+    @java.lang.Override
+    public boolean getMissingEuPoliticalAdvertisingDeclaration() {
+      return missingEuPoliticalAdvertisingDeclaration_;
+    }
+    /**
+     * <pre>
+     * Output only. Indicates whether this campaign is missing a declaration about
+     * whether it contains political advertising targeted towards the EU and is
+     * ineligible for any exemptions. If this field is true, use the
+     * contains_eu_political_advertising field to add the required declaration.
+     *
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The missingEuPoliticalAdvertisingDeclaration to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMissingEuPoliticalAdvertisingDeclaration(boolean value) {
+
+      missingEuPoliticalAdvertisingDeclaration_ = value;
+      bitField1_ |= 0x08000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Indicates whether this campaign is missing a declaration about
+     * whether it contains political advertising targeted towards the EU and is
+     * ineligible for any exemptions. If this field is true, use the
+     * contains_eu_political_advertising field to add the required declaration.
+     *
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMissingEuPoliticalAdvertisingDeclaration() {
+      bitField1_ = (bitField1_ & ~0x08000000);
+      missingEuPoliticalAdvertisingDeclaration_ = false;
       onChanged();
       return this;
     }

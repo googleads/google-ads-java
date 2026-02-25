@@ -348,5 +348,8 @@ public interface GoogleAdsVersion {
          
         @ServiceClientDescriptor(settingsClass = UserListServiceSettings.class)
         UserListServiceClient createUserListServiceClient();
+         
+        @ServiceClientDescriptor(settingsClass = YouTubeVideoUploadServiceSettings.class)
+        YouTubeVideoUploadServiceClient createYouTubeVideoUploadServiceClient();
         
 }

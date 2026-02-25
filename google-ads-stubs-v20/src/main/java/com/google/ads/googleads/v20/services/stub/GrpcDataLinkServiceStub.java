@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,6 +54,7 @@ public class GrpcDataLinkServiceStub extends DataLinkServiceStub {
                   ProtoUtils.marshaller(CreateDataLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(CreateDataLinkResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<RemoveDataLinkRequest, RemoveDataLinkResponse>
@@ -65,6 +66,7 @@ public class GrpcDataLinkServiceStub extends DataLinkServiceStub {
                   ProtoUtils.marshaller(RemoveDataLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(RemoveDataLinkResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<UpdateDataLinkRequest, UpdateDataLinkResponse>
@@ -76,6 +78,7 @@ public class GrpcDataLinkServiceStub extends DataLinkServiceStub {
                   ProtoUtils.marshaller(UpdateDataLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(UpdateDataLinkResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<CreateDataLinkRequest, CreateDataLinkResponse> createDataLinkCallable;

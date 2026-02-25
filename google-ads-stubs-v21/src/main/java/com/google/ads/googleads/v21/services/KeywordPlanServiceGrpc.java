@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage keyword plans.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/keyword_plan_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class KeywordPlanServiceGrpc {
 
@@ -240,8 +237,8 @@ public final class KeywordPlanServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateKeywordPlansResponse mutateKeywordPlans(com.google.ads.googleads.v21.services.MutateKeywordPlansRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateKeywordPlansResponse mutateKeywordPlans(com.google.ads.googleads.v21.services.MutateKeywordPlansRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateKeywordPlansMethod(), getCallOptions(), request);
     }
   }

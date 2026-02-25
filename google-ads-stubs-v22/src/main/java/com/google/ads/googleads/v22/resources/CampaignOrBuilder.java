@@ -1925,6 +1925,21 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * Output only. Indicates whether this campaign is missing a declaration about
+   * whether it contains political advertising targeted towards the EU and is
+   * ineligible for any exemptions. If this field is true, use the
+   * contains_eu_political_advertising field to add the required declaration.
+   *
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The missingEuPoliticalAdvertisingDeclaration.
+   */
+  boolean getMissingEuPoliticalAdvertisingDeclaration();
+
+  /**
+   * <pre>
    * The resource name of the portfolio bidding strategy used by the campaign.
    * </pre>
    *

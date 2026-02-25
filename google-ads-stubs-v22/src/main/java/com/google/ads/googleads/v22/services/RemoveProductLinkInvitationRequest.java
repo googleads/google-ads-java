@@ -7,7 +7,7 @@ package com.google.ads.googleads.v22.services;
 /**
  * <pre>
  * Request message for
- * [ProductLinkinvitationService.RemoveProductLinkInvitation][].
+ * [ProductLinkInvitationService.RemoveProductLinkInvitation][google.ads.googleads.v22.services.ProductLinkInvitationService.RemoveProductLinkInvitation].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v22.services.RemoveProductLinkInvitationRequest}
@@ -101,7 +101,8 @@ private static final long serialVersionUID = 0L;
    * Required. The resource name of the product link invitation being removed.
    * expected, in this format:
    *
-   * ` `
+   * `customers/{customer_id}/productLinkInvitations/{product_link_invitation_id}
+   * `
    * </pre>
    *
    * <code>string resource_name = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -125,7 +126,8 @@ private static final long serialVersionUID = 0L;
    * Required. The resource name of the product link invitation being removed.
    * expected, in this format:
    *
-   * ` `
+   * `customers/{customer_id}/productLinkInvitations/{product_link_invitation_id}
+   * `
    * </pre>
    *
    * <code>string resource_name = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -315,7 +317,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for
-   * [ProductLinkinvitationService.RemoveProductLinkInvitation][].
+   * [ProductLinkInvitationService.RemoveProductLinkInvitation][google.ads.googleads.v22.services.ProductLinkInvitationService.RemoveProductLinkInvitation].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v22.services.RemoveProductLinkInvitationRequest}
@@ -599,7 +601,8 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the product link invitation being removed.
      * expected, in this format:
      *
-     * ` `
+     * `customers/{customer_id}/productLinkInvitations/{product_link_invitation_id}
+     * `
      * </pre>
      *
      * <code>string resource_name = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -622,7 +625,8 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the product link invitation being removed.
      * expected, in this format:
      *
-     * ` `
+     * `customers/{customer_id}/productLinkInvitations/{product_link_invitation_id}
+     * `
      * </pre>
      *
      * <code>string resource_name = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -646,7 +650,8 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the product link invitation being removed.
      * expected, in this format:
      *
-     * ` `
+     * `customers/{customer_id}/productLinkInvitations/{product_link_invitation_id}
+     * `
      * </pre>
      *
      * <code>string resource_name = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -666,7 +671,8 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the product link invitation being removed.
      * expected, in this format:
      *
-     * ` `
+     * `customers/{customer_id}/productLinkInvitations/{product_link_invitation_id}
+     * `
      * </pre>
      *
      * <code>string resource_name = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -683,7 +689,8 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the product link invitation being removed.
      * expected, in this format:
      *
-     * ` `
+     * `customers/{customer_id}/productLinkInvitations/{product_link_invitation_id}
+     * `
      * </pre>
      *
      * <code>string resource_name = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>

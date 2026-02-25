@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage customer client links.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/customer_client_link_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerClientLinkServiceGrpc {
 
@@ -234,8 +231,8 @@ public final class CustomerClientLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateCustomerClientLinkResponse mutateCustomerClientLink(com.google.ads.googleads.v22.services.MutateCustomerClientLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateCustomerClientLinkResponse mutateCustomerClientLink(com.google.ads.googleads.v22.services.MutateCustomerClientLinkRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomerClientLinkMethod(), getCallOptions(), request);
     }
   }

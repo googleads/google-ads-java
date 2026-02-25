@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage customers.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/customer_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerServiceGrpc {
 
@@ -369,8 +366,8 @@ public final class CustomerServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateCustomerResponse mutateCustomer(com.google.ads.googleads.v20.services.MutateCustomerRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateCustomerResponse mutateCustomer(com.google.ads.googleads.v20.services.MutateCustomerRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomerMethod(), getCallOptions(), request);
     }
 
@@ -387,8 +384,8 @@ public final class CustomerServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.ListAccessibleCustomersResponse listAccessibleCustomers(com.google.ads.googleads.v20.services.ListAccessibleCustomersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.ListAccessibleCustomersResponse listAccessibleCustomers(com.google.ads.googleads.v20.services.ListAccessibleCustomersRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListAccessibleCustomersMethod(), getCallOptions(), request);
     }
 
@@ -409,8 +406,8 @@ public final class CustomerServiceGrpc {
      *   [TimeZoneError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.CreateCustomerClientResponse createCustomerClient(com.google.ads.googleads.v20.services.CreateCustomerClientRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.CreateCustomerClientResponse createCustomerClient(com.google.ads.googleads.v20.services.CreateCustomerClientRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getCreateCustomerClientMethod(), getCallOptions(), request);
     }
   }

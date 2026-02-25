@@ -202,7 +202,8 @@ private static final long serialVersionUID = 0L;
    * was found for the provided `user_identifiers`.
    *
    * This setting only affects Enhanced conversions for leads uploads that use
-   * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
+   * `user_identifiers` instead of `GCLID`, or the `GBRAID` or `WBRAID` URL
+   * parameters. When
    * uploading enhanced conversions for leads, you should upload all conversion
    * events to the API, including those that may not come from Google Ads
    * campaigns. The upload of an event that is not from a Google Ads campaign
@@ -1287,7 +1288,8 @@ private static final long serialVersionUID = 0L;
      * was found for the provided `user_identifiers`.
      *
      * This setting only affects Enhanced conversions for leads uploads that use
-     * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
+     * `user_identifiers` instead of `GCLID`, or the `GBRAID` or `WBRAID` URL
+     * parameters. When
      * uploading enhanced conversions for leads, you should upload all conversion
      * events to the API, including those that may not come from Google Ads
      * campaigns. The upload of an event that is not from a Google Ads campaign
@@ -1316,7 +1318,8 @@ private static final long serialVersionUID = 0L;
      * was found for the provided `user_identifiers`.
      *
      * This setting only affects Enhanced conversions for leads uploads that use
-     * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
+     * `user_identifiers` instead of `GCLID`, or the `GBRAID` or `WBRAID` URL
+     * parameters. When
      * uploading enhanced conversions for leads, you should upload all conversion
      * events to the API, including those that may not come from Google Ads
      * campaigns. The upload of an event that is not from a Google Ads campaign
@@ -1349,7 +1352,8 @@ private static final long serialVersionUID = 0L;
      * was found for the provided `user_identifiers`.
      *
      * This setting only affects Enhanced conversions for leads uploads that use
-     * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
+     * `user_identifiers` instead of `GCLID`, or the `GBRAID` or `WBRAID` URL
+     * parameters. When
      * uploading enhanced conversions for leads, you should upload all conversion
      * events to the API, including those that may not come from Google Ads
      * campaigns. The upload of an event that is not from a Google Ads campaign

@@ -51,8 +51,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Suggested targetable audiences. There will be one suggestion for each
-   * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-   * the order requested.
+   * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+   * requested, matching the order requested.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -64,8 +64,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Suggested targetable audiences. There will be one suggestion for each
-   * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-   * the order requested.
+   * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+   * requested, matching the order requested.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -78,8 +78,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Suggested targetable audiences. There will be one suggestion for each
-   * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-   * the order requested.
+   * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+   * requested, matching the order requested.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -91,8 +91,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Suggested targetable audiences. There will be one suggestion for each
-   * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-   * the order requested.
+   * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+   * requested, matching the order requested.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Suggested targetable audiences. There will be one suggestion for each
-   * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-   * the order requested.
+   * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+   * requested, matching the order requested.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -510,8 +510,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -526,8 +526,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -542,8 +542,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -558,8 +558,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -581,8 +581,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -601,8 +601,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -623,8 +623,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -646,8 +646,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -666,8 +666,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -686,8 +686,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -707,8 +707,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -726,8 +726,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -745,8 +745,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -758,8 +758,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -774,8 +774,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -791,8 +791,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -804,8 +804,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>
@@ -818,8 +818,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Suggested targetable audiences. There will be one suggestion for each
-     * [GenerateTargetingSuggestionMetricsRequest.audiences] requested, matching
-     * the order requested.
+     * [GenerateTargetingSuggestionMetricsRequest.audiences][google.ads.googleads.v20.services.GenerateTargetingSuggestionMetricsRequest.audiences]
+     * requested, matching the order requested.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.services.TargetingSuggestionMetrics suggestions = 1;</code>

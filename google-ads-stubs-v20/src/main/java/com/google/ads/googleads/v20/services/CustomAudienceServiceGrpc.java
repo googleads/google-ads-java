@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage custom audiences.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/custom_audience_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomAudienceServiceGrpc {
 
@@ -237,8 +234,8 @@ public final class CustomAudienceServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateCustomAudiencesResponse mutateCustomAudiences(com.google.ads.googleads.v20.services.MutateCustomAudiencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateCustomAudiencesResponse mutateCustomAudiences(com.google.ads.googleads.v20.services.MutateCustomAudiencesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomAudiencesMethod(), getCallOptions(), request);
     }
   }

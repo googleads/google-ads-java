@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage Smart campaign settings.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/smart_campaign_setting_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SmartCampaignSettingServiceGrpc {
 
@@ -247,8 +244,8 @@ public final class SmartCampaignSettingServiceGrpc {
      * Returns the status of the requested Smart campaign.
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.GetSmartCampaignStatusResponse getSmartCampaignStatus(com.google.ads.googleads.v21.services.GetSmartCampaignStatusRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.GetSmartCampaignStatusResponse getSmartCampaignStatus(com.google.ads.googleads.v21.services.GetSmartCampaignStatusRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetSmartCampaignStatusMethod(), getCallOptions(), request);
     }
 
@@ -257,8 +254,8 @@ public final class SmartCampaignSettingServiceGrpc {
      * Updates Smart campaign settings for campaigns.
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateSmartCampaignSettingsResponse mutateSmartCampaignSettings(com.google.ads.googleads.v21.services.MutateSmartCampaignSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateSmartCampaignSettingsResponse mutateSmartCampaignSettings(com.google.ads.googleads.v21.services.MutateSmartCampaignSettingsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateSmartCampaignSettingsMethod(), getCallOptions(), request);
     }
   }

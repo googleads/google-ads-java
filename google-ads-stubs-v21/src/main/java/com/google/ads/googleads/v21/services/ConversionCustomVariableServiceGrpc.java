@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage conversion custom variables.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/conversion_custom_variable_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ConversionCustomVariableServiceGrpc {
 
@@ -225,8 +222,8 @@ public final class ConversionCustomVariableServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateConversionCustomVariablesResponse mutateConversionCustomVariables(com.google.ads.googleads.v21.services.MutateConversionCustomVariablesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateConversionCustomVariablesResponse mutateConversionCustomVariables(com.google.ads.googleads.v21.services.MutateConversionCustomVariablesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateConversionCustomVariablesMethod(), getCallOptions(), request);
     }
   }

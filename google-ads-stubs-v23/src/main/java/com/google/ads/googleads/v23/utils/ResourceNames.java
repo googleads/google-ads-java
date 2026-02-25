@@ -211,6 +211,7 @@ import com.google.ads.googleads.v23.resources.UserListName;
 import com.google.ads.googleads.v23.resources.UserLocationViewName;
 import com.google.ads.googleads.v23.resources.VideoName;
 import com.google.ads.googleads.v23.resources.WebpageViewName;
+import com.google.ads.googleads.v23.resources.YouTubeVideoUploadName;
 
 /**
  * Utilities for generating resource names. Offers several advantages over the utilities in the
@@ -1497,5 +1498,10 @@ public class ResourceNames {
   public static String webpageView(long customerId, long adGroupId, long criterionId) {
     return WebpageViewName.format(
         String.valueOf(customerId), String.valueOf(adGroupId), String.valueOf(criterionId));
+  }
+
+  /** Returns the Youtube Video Upload resource name for the specified components. */
+  public static String youtubeVideoUpload(long customerId, long videoUploadId) {
+    return YouTubeVideoUploadName.format(String.valueOf(customerId), String.valueOf(videoUploadId));
   }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -94,7 +94,7 @@ import javax.annotation.Generated;
  *    <tr>
  *      <td><p> PromoteCampaignDraft</td>
  *      <td><p> Promotes the changes in a draft back to the base campaign.
- * <p>  This method returns a Long Running Operation (LRO) indicating if the Promote is done. Use [Operations.GetOperation] to poll the LRO until it is done. Only a done status is returned in the response. See the status in the Campaign Draft resource to determine if the promotion was successful. If the LRO failed, use [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v22.services.CampaignDraftService.ListCampaignDraftAsyncErrors] to view the list of error reasons.
+ * <p>  This method returns a Long Running Operation (LRO) indicating if the Promote is done. Use [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] to poll the LRO until it is done. Only a done status is returned in the response. See the status in the Campaign Draft resource to determine if the promotion was successful. If the LRO failed, use [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v22.services.CampaignDraftService.ListCampaignDraftAsyncErrors] to view the list of error reasons.
  * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [CampaignDraftError]()   [HeaderError]()   [InternalError]()   [QuotaError]()   [RequestError]()</td>
  *      <td>
  *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
@@ -357,9 +357,10 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * Promotes the changes in a draft back to the base campaign.
    *
    * <p>This method returns a Long Running Operation (LRO) indicating if the Promote is done. Use
-   * [Operations.GetOperation] to poll the LRO until it is done. Only a done status is returned in
-   * the response. See the status in the Campaign Draft resource to determine if the promotion was
-   * successful. If the LRO failed, use
+   * [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] to
+   * poll the LRO until it is done. Only a done status is returned in the response. See the status
+   * in the Campaign Draft resource to determine if the promotion was successful. If the LRO failed,
+   * use
    * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v22.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
    * to view the list of error reasons.
    *
@@ -399,9 +400,10 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * Promotes the changes in a draft back to the base campaign.
    *
    * <p>This method returns a Long Running Operation (LRO) indicating if the Promote is done. Use
-   * [Operations.GetOperation] to poll the LRO until it is done. Only a done status is returned in
-   * the response. See the status in the Campaign Draft resource to determine if the promotion was
-   * successful. If the LRO failed, use
+   * [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] to
+   * poll the LRO until it is done. Only a done status is returned in the response. See the status
+   * in the Campaign Draft resource to determine if the promotion was successful. If the LRO failed,
+   * use
    * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v22.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
    * to view the list of error reasons.
    *
@@ -438,9 +440,10 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * Promotes the changes in a draft back to the base campaign.
    *
    * <p>This method returns a Long Running Operation (LRO) indicating if the Promote is done. Use
-   * [Operations.GetOperation] to poll the LRO until it is done. Only a done status is returned in
-   * the response. See the status in the Campaign Draft resource to determine if the promotion was
-   * successful. If the LRO failed, use
+   * [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] to
+   * poll the LRO until it is done. Only a done status is returned in the response. See the status
+   * in the Campaign Draft resource to determine if the promotion was successful. If the LRO failed,
+   * use
    * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v22.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
    * to view the list of error reasons.
    *
@@ -481,9 +484,10 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * Promotes the changes in a draft back to the base campaign.
    *
    * <p>This method returns a Long Running Operation (LRO) indicating if the Promote is done. Use
-   * [Operations.GetOperation] to poll the LRO until it is done. Only a done status is returned in
-   * the response. See the status in the Campaign Draft resource to determine if the promotion was
-   * successful. If the LRO failed, use
+   * [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] to
+   * poll the LRO until it is done. Only a done status is returned in the response. See the status
+   * in the Campaign Draft resource to determine if the promotion was successful. If the LRO failed,
+   * use
    * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v22.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
    * to view the list of error reasons.
    *
@@ -524,9 +528,10 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * Promotes the changes in a draft back to the base campaign.
    *
    * <p>This method returns a Long Running Operation (LRO) indicating if the Promote is done. Use
-   * [Operations.GetOperation] to poll the LRO until it is done. Only a done status is returned in
-   * the response. See the status in the Campaign Draft resource to determine if the promotion was
-   * successful. If the LRO failed, use
+   * [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] to
+   * poll the LRO until it is done. Only a done status is returned in the response. See the status
+   * in the Campaign Draft resource to determine if the promotion was successful. If the LRO failed,
+   * use
    * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v22.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
    * to view the list of error reasons.
    *

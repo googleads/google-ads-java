@@ -7,8 +7,11 @@ package com.google.ads.googleads.v23.common;
 /**
  * <pre>
  * Additional information about the application/tool issuing the request. This
- * field is only used by [ContentCreatorInsightsService],
- * [AudienceInsightsService], and [ReachPlanService] APIs.
+ * field is only used by
+ * [ContentCreatorInsightsService][google.ads.googleads.v23.services.ContentCreatorInsightsService],
+ * [AudienceInsightsService][google.ads.googleads.v23.services.AudienceInsightsService],
+ * and [ReachPlanService][google.ads.googleads.v23.services.ReachPlanService]
+ * APIs.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v23.common.AdditionalApplicationInfo}
@@ -293,8 +296,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Additional information about the application/tool issuing the request. This
-   * field is only used by [ContentCreatorInsightsService],
-   * [AudienceInsightsService], and [ReachPlanService] APIs.
+   * field is only used by
+   * [ContentCreatorInsightsService][google.ads.googleads.v23.services.ContentCreatorInsightsService],
+   * [AudienceInsightsService][google.ads.googleads.v23.services.AudienceInsightsService],
+   * and [ReachPlanService][google.ads.googleads.v23.services.ReachPlanService]
+   * APIs.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v23.common.AdditionalApplicationInfo}

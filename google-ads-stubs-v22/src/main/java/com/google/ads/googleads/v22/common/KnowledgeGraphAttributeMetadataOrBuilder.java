@@ -10,7 +10,8 @@ public interface KnowledgeGraphAttributeMetadataOrBuilder extends
 
   /**
    * <pre>
-   * The capabilities of the entity used in [ContentCreatorInsightsService][].
+   * The capabilities of the entity used in
+   * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -19,7 +20,8 @@ public interface KnowledgeGraphAttributeMetadataOrBuilder extends
   java.util.List<com.google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities> getEntityCapabilitiesList();
   /**
    * <pre>
-   * The capabilities of the entity used in [ContentCreatorInsightsService][].
+   * The capabilities of the entity used in
+   * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -28,7 +30,8 @@ public interface KnowledgeGraphAttributeMetadataOrBuilder extends
   int getEntityCapabilitiesCount();
   /**
    * <pre>
-   * The capabilities of the entity used in [ContentCreatorInsightsService][].
+   * The capabilities of the entity used in
+   * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -38,7 +41,8 @@ public interface KnowledgeGraphAttributeMetadataOrBuilder extends
   com.google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities getEntityCapabilities(int index);
   /**
    * <pre>
-   * The capabilities of the entity used in [ContentCreatorInsightsService][].
+   * The capabilities of the entity used in
+   * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>
@@ -48,7 +52,8 @@ public interface KnowledgeGraphAttributeMetadataOrBuilder extends
   getEntityCapabilitiesValueList();
   /**
    * <pre>
-   * The capabilities of the entity used in [ContentCreatorInsightsService][].
+   * The capabilities of the entity used in
+   * [ContentCreatorInsightsService][google.ads.googleads.v22.services.ContentCreatorInsightsService].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities entity_capabilities = 1;</code>

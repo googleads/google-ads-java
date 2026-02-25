@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage ads in an ad group.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/ad_group_ad_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AdGroupAdServiceGrpc {
 
@@ -399,8 +396,8 @@ public final class AdGroupAdServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateAdGroupAdsResponse mutateAdGroupAds(com.google.ads.googleads.v21.services.MutateAdGroupAdsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateAdGroupAdsResponse mutateAdGroupAds(com.google.ads.googleads.v21.services.MutateAdGroupAdsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateAdGroupAdsMethod(), getCallOptions(), request);
     }
 
@@ -419,8 +416,8 @@ public final class AdGroupAdServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.protobuf.Empty removeAutomaticallyCreatedAssets(com.google.ads.googleads.v21.services.RemoveAutomaticallyCreatedAssetsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.protobuf.Empty removeAutomaticallyCreatedAssets(com.google.ads.googleads.v21.services.RemoveAutomaticallyCreatedAssetsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getRemoveAutomaticallyCreatedAssetsMethod(), getCallOptions(), request);
     }
   }

@@ -54,7 +54,7 @@ public final class LocalServicesLeadProto {
       "s_lead_type.proto\032\037google/api/field_beha" +
       "vior.proto\032\031google/api/resource.proto\"\322\006" +
       "\n\021LocalServicesLead\022I\n\rresource_name\030\001 \001" +
-      "(\tB2\340A\003\372A,\n*googleads.googleapis.com/Loc" +
+      "(\tB2\340A\005\372A,\n*googleads.googleapis.com/Loc" +
       "alServicesLead\022\017\n\002id\030\002 \001(\003B\003\340A\003\022\030\n\013categ" +
       "ory_id\030\003 \001(\tB\003\340A\003\022\027\n\nservice_id\030\004 \001(\tB\003\340" +
       "A\003\022P\n\017contact_details\030\005 \001(\01322.google.ads" +

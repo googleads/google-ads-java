@@ -102,6 +102,14 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOMER_NOT_PERMITTED_TO_CREATE_INVITATION = 5;</code>
      */
     CUSTOMER_NOT_PERMITTED_TO_CREATE_INVITATION(5),
+    /**
+     * <pre>
+     * The `allowed_domain` property for the advertising partner is invalid.
+     * </pre>
+     *
+     * <code>INVALID_ADVERTISING_PARTNER_ALLOWED_DOMAIN = 6;</code>
+     */
+    INVALID_ADVERTISING_PARTNER_ALLOWED_DOMAIN(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -155,6 +163,14 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOMER_NOT_PERMITTED_TO_CREATE_INVITATION = 5;</code>
      */
     public static final int CUSTOMER_NOT_PERMITTED_TO_CREATE_INVITATION_VALUE = 5;
+    /**
+     * <pre>
+     * The `allowed_domain` property for the advertising partner is invalid.
+     * </pre>
+     *
+     * <code>INVALID_ADVERTISING_PARTNER_ALLOWED_DOMAIN = 6;</code>
+     */
+    public static final int INVALID_ADVERTISING_PARTNER_ALLOWED_DOMAIN_VALUE = 6;
 
 
     public final int getNumber() {
@@ -187,6 +203,7 @@ private static final long serialVersionUID = 0L;
         case 3: return PERMISSION_DENIED;
         case 4: return NO_INVITATION_REQUIRED;
         case 5: return CUSTOMER_NOT_PERMITTED_TO_CREATE_INVITATION;
+        case 6: return INVALID_ADVERTISING_PARTNER_ALLOWED_DOMAIN;
         default: return null;
       }
     }

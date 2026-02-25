@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A service to fetch invoices issued for a billing setup during a given month.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/invoice_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class InvoiceServiceGrpc {
 
@@ -222,8 +219,8 @@ public final class InvoiceServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.ListInvoicesResponse listInvoices(com.google.ads.googleads.v20.services.ListInvoicesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.ListInvoicesResponse listInvoices(com.google.ads.googleads.v20.services.ListInvoicesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListInvoicesMethod(), getCallOptions(), request);
     }
   }

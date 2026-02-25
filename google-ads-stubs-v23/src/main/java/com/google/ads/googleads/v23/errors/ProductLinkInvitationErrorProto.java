@@ -31,19 +31,20 @@ public final class ProductLinkInvitationErrorProto {
     java.lang.String[] descriptorData = {
       "\nCgoogle/ads/googleads/v23/errors/produc" +
       "t_link_invitation_error.proto\022\037google.ad" +
-      "s.googleads.v23.errors\"\325\001\n\036ProductLinkIn" +
-      "vitationErrorEnum\"\262\001\n\032ProductLinkInvitat" +
+      "s.googleads.v23.errors\"\205\002\n\036ProductLinkIn" +
+      "vitationErrorEnum\"\342\001\n\032ProductLinkInvitat" +
       "ionError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022" +
       "\n\016INVALID_STATUS\020\002\022\025\n\021PERMISSION_DENIED\020" +
       "\003\022\032\n\026NO_INVITATION_REQUIRED\020\004\022/\n+CUSTOME" +
-      "R_NOT_PERMITTED_TO_CREATE_INVITATION\020\005B\377" +
-      "\001\n#com.google.ads.googleads.v23.errorsB\037" +
-      "ProductLinkInvitationErrorProtoP\001ZEgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v23/errors;errors\242\002\003GAA\252\002\037Google." +
-      "Ads.GoogleAds.V23.Errors\312\002\037Google\\Ads\\Go" +
-      "ogleAds\\V23\\Errors\352\002#Google::Ads::Google" +
-      "Ads::V23::Errorsb\006proto3"
+      "R_NOT_PERMITTED_TO_CREATE_INVITATION\020\005\022." +
+      "\n*INVALID_ADVERTISING_PARTNER_ALLOWED_DO" +
+      "MAIN\020\006B\377\001\n#com.google.ads.googleads.v23." +
+      "errorsB\037ProductLinkInvitationErrorProtoP" +
+      "\001ZEgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v23/errors;errors\242\002\003GAA\252\002" +
+      "\037Google.Ads.GoogleAds.V23.Errors\312\002\037Googl" +
+      "e\\Ads\\GoogleAds\\V23\\Errors\352\002#Google::Ads" +
+      "::GoogleAds::V23::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

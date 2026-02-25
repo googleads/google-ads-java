@@ -9,9 +9,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * created with Ad inline.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/asset_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AssetServiceGrpc {
 
@@ -289,8 +286,8 @@ public final class AssetServiceGrpc {
      *   [YoutubeVideoRegistrationError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateAssetsResponse mutateAssets(com.google.ads.googleads.v21.services.MutateAssetsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateAssetsResponse mutateAssets(com.google.ads.googleads.v21.services.MutateAssetsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateAssetsMethod(), getCallOptions(), request);
     }
   }

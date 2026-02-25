@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage campaign criteria.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/campaign_criterion_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CampaignCriterionServiceGrpc {
 
@@ -285,8 +282,8 @@ public final class CampaignCriterionServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateCampaignCriteriaResponse mutateCampaignCriteria(com.google.ads.googleads.v22.services.MutateCampaignCriteriaRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateCampaignCriteriaResponse mutateCampaignCriteria(com.google.ads.googleads.v22.services.MutateCampaignCriteriaRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCampaignCriteriaMethod(), getCallOptions(), request);
     }
   }

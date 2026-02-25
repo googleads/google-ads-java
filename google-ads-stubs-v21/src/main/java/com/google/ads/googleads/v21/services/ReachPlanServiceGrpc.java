@@ -11,9 +11,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * certain duration with a defined budget.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/reach_plan_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ReachPlanServiceGrpc {
 
@@ -603,8 +600,8 @@ public final class ReachPlanServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.GenerateConversionRatesResponse generateConversionRates(com.google.ads.googleads.v21.services.GenerateConversionRatesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.GenerateConversionRatesResponse generateConversionRates(com.google.ads.googleads.v21.services.GenerateConversionRatesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateConversionRatesMethod(), getCallOptions(), request);
     }
 
@@ -620,8 +617,8 @@ public final class ReachPlanServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.ListPlannableLocationsResponse listPlannableLocations(com.google.ads.googleads.v21.services.ListPlannableLocationsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.ListPlannableLocationsResponse listPlannableLocations(com.google.ads.googleads.v21.services.ListPlannableLocationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListPlannableLocationsMethod(), getCallOptions(), request);
     }
 
@@ -638,8 +635,8 @@ public final class ReachPlanServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.ListPlannableProductsResponse listPlannableProducts(com.google.ads.googleads.v21.services.ListPlannableProductsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.ListPlannableProductsResponse listPlannableProducts(com.google.ads.googleads.v21.services.ListPlannableProductsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListPlannableProductsMethod(), getCallOptions(), request);
     }
 
@@ -658,8 +655,8 @@ public final class ReachPlanServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.GenerateReachForecastResponse generateReachForecast(com.google.ads.googleads.v21.services.GenerateReachForecastRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.GenerateReachForecastResponse generateReachForecast(com.google.ads.googleads.v21.services.GenerateReachForecastRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateReachForecastMethod(), getCallOptions(), request);
     }
 
@@ -682,8 +679,8 @@ public final class ReachPlanServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.ListPlannableUserListsResponse listPlannableUserLists(com.google.ads.googleads.v21.services.ListPlannableUserListsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.ListPlannableUserListsResponse listPlannableUserLists(com.google.ads.googleads.v21.services.ListPlannableUserListsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListPlannableUserListsMethod(), getCallOptions(), request);
     }
 
@@ -705,8 +702,8 @@ public final class ReachPlanServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.ListPlannableUserInterestsResponse listPlannableUserInterests(com.google.ads.googleads.v21.services.ListPlannableUserInterestsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.ListPlannableUserInterestsResponse listPlannableUserInterests(com.google.ads.googleads.v21.services.ListPlannableUserInterestsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListPlannableUserInterestsMethod(), getCallOptions(), request);
     }
   }

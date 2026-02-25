@@ -679,6 +679,8 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v21.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -688,6 +690,8 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v21.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -697,6 +701,8 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v21.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>

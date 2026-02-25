@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage customizer attribute
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/customizer_attribute_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomizerAttributeServiceGrpc {
 
@@ -198,8 +195,8 @@ public final class CustomizerAttributeServiceGrpc {
      * returned.
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateCustomizerAttributesResponse mutateCustomizerAttributes(com.google.ads.googleads.v22.services.MutateCustomizerAttributesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateCustomizerAttributesResponse mutateCustomizerAttributes(com.google.ads.googleads.v22.services.MutateCustomizerAttributesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomizerAttributesMethod(), getCallOptions(), request);
     }
   }

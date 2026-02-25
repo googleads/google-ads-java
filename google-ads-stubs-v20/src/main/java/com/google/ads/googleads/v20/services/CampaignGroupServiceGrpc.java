@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage campaign groups.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/campaign_group_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CampaignGroupServiceGrpc {
 
@@ -198,8 +195,8 @@ public final class CampaignGroupServiceGrpc {
      * returned.
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateCampaignGroupsResponse mutateCampaignGroups(com.google.ads.googleads.v20.services.MutateCampaignGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateCampaignGroupsResponse mutateCampaignGroups(com.google.ads.googleads.v20.services.MutateCampaignGroupsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCampaignGroupsMethod(), getCallOptions(), request);
     }
   }

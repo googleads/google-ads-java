@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage CustomerSkAdNetworkConversionValueSchema.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/customer_sk_ad_network_conversion_value_schema_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerSkAdNetworkConversionValueSchemaServiceGrpc {
 
@@ -213,8 +210,8 @@ public final class CustomerSkAdNetworkConversionValueSchemaServiceGrpc {
      *   [MutateError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateCustomerSkAdNetworkConversionValueSchemaResponse mutateCustomerSkAdNetworkConversionValueSchema(com.google.ads.googleads.v21.services.MutateCustomerSkAdNetworkConversionValueSchemaRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateCustomerSkAdNetworkConversionValueSchemaResponse mutateCustomerSkAdNetworkConversionValueSchema(com.google.ads.googleads.v21.services.MutateCustomerSkAdNetworkConversionValueSchemaRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomerSkAdNetworkConversionValueSchemaMethod(), getCallOptions(), request);
     }
   }

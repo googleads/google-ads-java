@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * customer.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/customer_user_access_invitation_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerUserAccessInvitationServiceGrpc {
 
@@ -224,8 +221,8 @@ public final class CustomerUserAccessInvitationServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateCustomerUserAccessInvitationResponse mutateCustomerUserAccessInvitation(com.google.ads.googleads.v21.services.MutateCustomerUserAccessInvitationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateCustomerUserAccessInvitationResponse mutateCustomerUserAccessInvitation(com.google.ads.googleads.v21.services.MutateCustomerUserAccessInvitationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomerUserAccessInvitationMethod(), getCallOptions(), request);
     }
   }

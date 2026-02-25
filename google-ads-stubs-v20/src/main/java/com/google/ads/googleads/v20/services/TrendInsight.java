@@ -87,7 +87,8 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v20.services.TrendInsightMetrics trendMetrics_;
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -99,7 +100,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -111,7 +113,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Metrics associated with this trend.
+   * Metrics associated with this trend. These metrics are for the latest
+   * available month and the comparison period is 3 months.
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -720,7 +723,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v20.services.TrendInsightMetrics, com.google.ads.googleads.v20.services.TrendInsightMetrics.Builder, com.google.ads.googleads.v20.services.TrendInsightMetricsOrBuilder> trendMetricsBuilder_;
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -731,7 +735,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -746,7 +751,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -766,7 +772,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -784,7 +791,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -809,7 +817,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -826,7 +835,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -838,7 +848,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>
@@ -853,7 +864,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics associated with this trend.
+     * Metrics associated with this trend. These metrics are for the latest
+     * available month and the comparison period is 3 months.
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.TrendInsightMetrics trend_metrics = 2;</code>

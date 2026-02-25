@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * accounts.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v22/services/account_link_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AccountLinkServiceGrpc {
 
@@ -311,8 +308,8 @@ public final class AccountLinkServiceGrpc {
      *   [ThirdPartyAppAnalyticsLinkError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.CreateAccountLinkResponse createAccountLink(com.google.ads.googleads.v22.services.CreateAccountLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.CreateAccountLinkResponse createAccountLink(com.google.ads.googleads.v22.services.CreateAccountLinkRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getCreateAccountLinkMethod(), getCallOptions(), request);
     }
 
@@ -334,8 +331,8 @@ public final class AccountLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v22.services.MutateAccountLinkResponse mutateAccountLink(com.google.ads.googleads.v22.services.MutateAccountLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v22.services.MutateAccountLinkResponse mutateAccountLink(com.google.ads.googleads.v22.services.MutateAccountLinkRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateAccountLinkMethod(), getCallOptions(), request);
     }
   }

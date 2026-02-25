@@ -14009,6 +14009,66 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Ad category self-disclosure for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+     * @return Whether the reservationAdCategorySelfDisclosure field is set.
+     */
+    boolean hasReservationAdCategorySelfDisclosure();
+    /**
+     * <pre>
+     * Ad category self-disclosure for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+     * @return The reservationAdCategorySelfDisclosure.
+     */
+    com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure getReservationAdCategorySelfDisclosure();
+    /**
+     * <pre>
+     * Ad category self-disclosure for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+     */
+    com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosureOrBuilder getReservationAdCategorySelfDisclosureOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. Booking information for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the bookingDetails field is set.
+     */
+    boolean hasBookingDetails();
+    /**
+     * <pre>
+     * Output only. Booking information for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bookingDetails.
+     */
+    com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails getBookingDetails();
+    /**
+     * <pre>
+     * Output only. Booking information for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetailsOrBuilder getBookingDetailsOrBuilder();
+
+    /**
+     * <pre>
      * Inventory control for video responsive ads in reach campaigns.
      * </pre>
      *
@@ -18651,6 +18711,1676 @@ private static final long serialVersionUID = 0L;
 
     }
 
+    public interface ReservationAdCategorySelfDisclosureOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The campaign is expected to contain gambling-related ads.
+       * </pre>
+       *
+       * <code>bool gambling = 1;</code>
+       * @return The gambling.
+       */
+      boolean getGambling();
+
+      /**
+       * <pre>
+       * The campaign is expected to contain alcohol-related ads.
+       * </pre>
+       *
+       * <code>bool alcohol = 2;</code>
+       * @return The alcohol.
+       */
+      boolean getAlcohol();
+
+      /**
+       * <pre>
+       * The campaign is expected to contain politics-related ads.
+       * </pre>
+       *
+       * <code>bool politics = 3;</code>
+       * @return The politics.
+       */
+      boolean getPolitics();
+    }
+    /**
+     * <pre>
+     * Container for ad category self-disclosure for campaigns with the
+     * FIXED_CPM or FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure}
+     */
+    public static final class ReservationAdCategorySelfDisclosure extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure)
+        ReservationAdCategorySelfDisclosureOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ReservationAdCategorySelfDisclosure.newBuilder() to construct.
+      private ReservationAdCategorySelfDisclosure(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ReservationAdCategorySelfDisclosure() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ReservationAdCategorySelfDisclosure();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_VideoCampaignSettings_ReservationAdCategorySelfDisclosure_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_VideoCampaignSettings_ReservationAdCategorySelfDisclosure_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.class, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.Builder.class);
+      }
+
+      public static final int GAMBLING_FIELD_NUMBER = 1;
+      private boolean gambling_ = false;
+      /**
+       * <pre>
+       * The campaign is expected to contain gambling-related ads.
+       * </pre>
+       *
+       * <code>bool gambling = 1;</code>
+       * @return The gambling.
+       */
+      @java.lang.Override
+      public boolean getGambling() {
+        return gambling_;
+      }
+
+      public static final int ALCOHOL_FIELD_NUMBER = 2;
+      private boolean alcohol_ = false;
+      /**
+       * <pre>
+       * The campaign is expected to contain alcohol-related ads.
+       * </pre>
+       *
+       * <code>bool alcohol = 2;</code>
+       * @return The alcohol.
+       */
+      @java.lang.Override
+      public boolean getAlcohol() {
+        return alcohol_;
+      }
+
+      public static final int POLITICS_FIELD_NUMBER = 3;
+      private boolean politics_ = false;
+      /**
+       * <pre>
+       * The campaign is expected to contain politics-related ads.
+       * </pre>
+       *
+       * <code>bool politics = 3;</code>
+       * @return The politics.
+       */
+      @java.lang.Override
+      public boolean getPolitics() {
+        return politics_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (gambling_ != false) {
+          output.writeBool(1, gambling_);
+        }
+        if (alcohol_ != false) {
+          output.writeBool(2, alcohol_);
+        }
+        if (politics_ != false) {
+          output.writeBool(3, politics_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (gambling_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, gambling_);
+        }
+        if (alcohol_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, alcohol_);
+        }
+        if (politics_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, politics_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure)) {
+          return super.equals(obj);
+        }
+        com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure other = (com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure) obj;
+
+        if (getGambling()
+            != other.getGambling()) return false;
+        if (getAlcohol()
+            != other.getAlcohol()) return false;
+        if (getPolitics()
+            != other.getPolitics()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + GAMBLING_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getGambling());
+        hash = (37 * hash) + ALCOHOL_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getAlcohol());
+        hash = (37 * hash) + POLITICS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPolitics());
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Container for ad category self-disclosure for campaigns with the
+       * FIXED_CPM or FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * Protobuf type {@code google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure)
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosureOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_VideoCampaignSettings_ReservationAdCategorySelfDisclosure_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_VideoCampaignSettings_ReservationAdCategorySelfDisclosure_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.class, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.Builder.class);
+        }
+
+        // Construct using com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          gambling_ = false;
+          alcohol_ = false;
+          politics_ = false;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_VideoCampaignSettings_ReservationAdCategorySelfDisclosure_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure getDefaultInstanceForType() {
+          return com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure build() {
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure buildPartial() {
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure result = new com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.gambling_ = gambling_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.alcohol_ = alcohol_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.politics_ = politics_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure) {
+            return mergeFrom((com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure other) {
+          if (other == com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.getDefaultInstance()) return this;
+          if (other.getGambling() != false) {
+            setGambling(other.getGambling());
+          }
+          if (other.getAlcohol() != false) {
+            setAlcohol(other.getAlcohol());
+          }
+          if (other.getPolitics() != false) {
+            setPolitics(other.getPolitics());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  gambling_ = input.readBool();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  alcohol_ = input.readBool();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  politics_ = input.readBool();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean gambling_ ;
+        /**
+         * <pre>
+         * The campaign is expected to contain gambling-related ads.
+         * </pre>
+         *
+         * <code>bool gambling = 1;</code>
+         * @return The gambling.
+         */
+        @java.lang.Override
+        public boolean getGambling() {
+          return gambling_;
+        }
+        /**
+         * <pre>
+         * The campaign is expected to contain gambling-related ads.
+         * </pre>
+         *
+         * <code>bool gambling = 1;</code>
+         * @param value The gambling to set.
+         * @return This builder for chaining.
+         */
+        public Builder setGambling(boolean value) {
+
+          gambling_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The campaign is expected to contain gambling-related ads.
+         * </pre>
+         *
+         * <code>bool gambling = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearGambling() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          gambling_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean alcohol_ ;
+        /**
+         * <pre>
+         * The campaign is expected to contain alcohol-related ads.
+         * </pre>
+         *
+         * <code>bool alcohol = 2;</code>
+         * @return The alcohol.
+         */
+        @java.lang.Override
+        public boolean getAlcohol() {
+          return alcohol_;
+        }
+        /**
+         * <pre>
+         * The campaign is expected to contain alcohol-related ads.
+         * </pre>
+         *
+         * <code>bool alcohol = 2;</code>
+         * @param value The alcohol to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAlcohol(boolean value) {
+
+          alcohol_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The campaign is expected to contain alcohol-related ads.
+         * </pre>
+         *
+         * <code>bool alcohol = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAlcohol() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          alcohol_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean politics_ ;
+        /**
+         * <pre>
+         * The campaign is expected to contain politics-related ads.
+         * </pre>
+         *
+         * <code>bool politics = 3;</code>
+         * @return The politics.
+         */
+        @java.lang.Override
+        public boolean getPolitics() {
+          return politics_;
+        }
+        /**
+         * <pre>
+         * The campaign is expected to contain politics-related ads.
+         * </pre>
+         *
+         * <code>bool politics = 3;</code>
+         * @param value The politics to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPolitics(boolean value) {
+
+          politics_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The campaign is expected to contain politics-related ads.
+         * </pre>
+         *
+         * <code>bool politics = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPolitics() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          politics_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure)
+      }
+
+      // @@protoc_insertion_point(class_scope:google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure)
+      private static final com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure();
+      }
+
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ReservationAdCategorySelfDisclosure>
+          PARSER = new com.google.protobuf.AbstractParser<ReservationAdCategorySelfDisclosure>() {
+        @java.lang.Override
+        public ReservationAdCategorySelfDisclosure parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<ReservationAdCategorySelfDisclosure> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ReservationAdCategorySelfDisclosure> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface BookingDetailsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Output only. The status of the booking.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus status = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      int getStatusValue();
+      /**
+       * <pre>
+       * Output only. The status of the booking.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus status = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The status.
+       */
+      com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus getStatus();
+
+      /**
+       * <pre>
+       * Output only. Time until which booked inventory will be held or has been
+       * held for this campaign. Available for status HELD and HOLD_EXPIRED.
+       * Format is "yyyy-MM-dd HH:mm:ss" in the customer's time zone.
+       * </pre>
+       *
+       * <code>string hold_expiration_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The holdExpirationDateTime.
+       */
+      java.lang.String getHoldExpirationDateTime();
+      /**
+       * <pre>
+       * Output only. Time until which booked inventory will be held or has been
+       * held for this campaign. Available for status HELD and HOLD_EXPIRED.
+       * Format is "yyyy-MM-dd HH:mm:ss" in the customer's time zone.
+       * </pre>
+       *
+       * <code>string hold_expiration_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for holdExpirationDateTime.
+       */
+      com.google.protobuf.ByteString
+          getHoldExpirationDateTimeBytes();
+
+      /**
+       * <pre>
+       * Output only. Time when the booked inventory of this campaign will be
+       * cancelled or has been cancelled. Available for primary status
+       * NOT_ELIGIBLE if the campaign will be cancelled and for primary status
+       * reason BOOKING_CANCELLED. Format is "yyyy-MM-dd HH:mm:ss" in the
+       * customer's time zone.
+       * </pre>
+       *
+       * <code>string cancellation_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The cancellationDateTime.
+       */
+      java.lang.String getCancellationDateTime();
+      /**
+       * <pre>
+       * Output only. Time when the booked inventory of this campaign will be
+       * cancelled or has been cancelled. Available for primary status
+       * NOT_ELIGIBLE if the campaign will be cancelled and for primary status
+       * reason BOOKING_CANCELLED. Format is "yyyy-MM-dd HH:mm:ss" in the
+       * customer's time zone.
+       * </pre>
+       *
+       * <code>string cancellation_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for cancellationDateTime.
+       */
+      com.google.protobuf.ByteString
+          getCancellationDateTimeBytes();
+    }
+    /**
+     * <pre>
+     * Container for booking details for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails}
+     */
+    public static final class BookingDetails extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails)
+        BookingDetailsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use BookingDetails.newBuilder() to construct.
+      private BookingDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private BookingDetails() {
+        status_ = 0;
+        holdExpirationDateTime_ = "";
+        cancellationDateTime_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new BookingDetails();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_VideoCampaignSettings_BookingDetails_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_VideoCampaignSettings_BookingDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.class, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.Builder.class);
+      }
+
+      public static final int STATUS_FIELD_NUMBER = 1;
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Output only. The status of the booking.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus status = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Output only. The status of the booking.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus status = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The status.
+       */
+      @java.lang.Override public com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus getStatus() {
+        com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus result = com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus.forNumber(status_);
+        return result == null ? com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus.UNRECOGNIZED : result;
+      }
+
+      public static final int HOLD_EXPIRATION_DATE_TIME_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object holdExpirationDateTime_ = "";
+      /**
+       * <pre>
+       * Output only. Time until which booked inventory will be held or has been
+       * held for this campaign. Available for status HELD and HOLD_EXPIRED.
+       * Format is "yyyy-MM-dd HH:mm:ss" in the customer's time zone.
+       * </pre>
+       *
+       * <code>string hold_expiration_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The holdExpirationDateTime.
+       */
+      @java.lang.Override
+      public java.lang.String getHoldExpirationDateTime() {
+        java.lang.Object ref = holdExpirationDateTime_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          holdExpirationDateTime_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Time until which booked inventory will be held or has been
+       * held for this campaign. Available for status HELD and HOLD_EXPIRED.
+       * Format is "yyyy-MM-dd HH:mm:ss" in the customer's time zone.
+       * </pre>
+       *
+       * <code>string hold_expiration_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for holdExpirationDateTime.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getHoldExpirationDateTimeBytes() {
+        java.lang.Object ref = holdExpirationDateTime_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          holdExpirationDateTime_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int CANCELLATION_DATE_TIME_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object cancellationDateTime_ = "";
+      /**
+       * <pre>
+       * Output only. Time when the booked inventory of this campaign will be
+       * cancelled or has been cancelled. Available for primary status
+       * NOT_ELIGIBLE if the campaign will be cancelled and for primary status
+       * reason BOOKING_CANCELLED. Format is "yyyy-MM-dd HH:mm:ss" in the
+       * customer's time zone.
+       * </pre>
+       *
+       * <code>string cancellation_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The cancellationDateTime.
+       */
+      @java.lang.Override
+      public java.lang.String getCancellationDateTime() {
+        java.lang.Object ref = cancellationDateTime_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cancellationDateTime_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Time when the booked inventory of this campaign will be
+       * cancelled or has been cancelled. Available for primary status
+       * NOT_ELIGIBLE if the campaign will be cancelled and for primary status
+       * reason BOOKING_CANCELLED. Format is "yyyy-MM-dd HH:mm:ss" in the
+       * customer's time zone.
+       * </pre>
+       *
+       * <code>string cancellation_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for cancellationDateTime.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCancellationDateTimeBytes() {
+        java.lang.Object ref = cancellationDateTime_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cancellationDateTime_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (status_ != com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus.UNSPECIFIED.getNumber()) {
+          output.writeEnum(1, status_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(holdExpirationDateTime_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, holdExpirationDateTime_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cancellationDateTime_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cancellationDateTime_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (status_ != com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus.UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, status_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(holdExpirationDateTime_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, holdExpirationDateTime_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cancellationDateTime_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cancellationDateTime_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails)) {
+          return super.equals(obj);
+        }
+        com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails other = (com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails) obj;
+
+        if (status_ != other.status_) return false;
+        if (!getHoldExpirationDateTime()
+            .equals(other.getHoldExpirationDateTime())) return false;
+        if (!getCancellationDateTime()
+            .equals(other.getCancellationDateTime())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + status_;
+        hash = (37 * hash) + HOLD_EXPIRATION_DATE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getHoldExpirationDateTime().hashCode();
+        hash = (37 * hash) + CANCELLATION_DATE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getCancellationDateTime().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Container for booking details for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * Protobuf type {@code google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails)
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetailsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_VideoCampaignSettings_BookingDetails_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_VideoCampaignSettings_BookingDetails_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.class, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.Builder.class);
+        }
+
+        // Construct using com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          status_ = 0;
+          holdExpirationDateTime_ = "";
+          cancellationDateTime_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_VideoCampaignSettings_BookingDetails_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails getDefaultInstanceForType() {
+          return com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails build() {
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails buildPartial() {
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails result = new com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.status_ = status_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.holdExpirationDateTime_ = holdExpirationDateTime_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.cancellationDateTime_ = cancellationDateTime_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails) {
+            return mergeFrom((com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails other) {
+          if (other == com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.getDefaultInstance()) return this;
+          if (other.status_ != 0) {
+            setStatusValue(other.getStatusValue());
+          }
+          if (!other.getHoldExpirationDateTime().isEmpty()) {
+            holdExpirationDateTime_ = other.holdExpirationDateTime_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          if (!other.getCancellationDateTime().isEmpty()) {
+            cancellationDateTime_ = other.cancellationDateTime_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  status_ = input.readEnum();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 18: {
+                  holdExpirationDateTime_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  cancellationDateTime_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int status_ = 0;
+        /**
+         * <pre>
+         * Output only. The status of the booking.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus status = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return The enum numeric value on the wire for status.
+         */
+        @java.lang.Override public int getStatusValue() {
+          return status_;
+        }
+        /**
+         * <pre>
+         * Output only. The status of the booking.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus status = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @param value The enum numeric value on the wire for status to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStatusValue(int value) {
+          status_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Output only. The status of the booking.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus status = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return The status.
+         */
+        @java.lang.Override
+        public com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus getStatus() {
+          com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus result = com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus.forNumber(status_);
+          return result == null ? com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Output only. The status of the booking.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus status = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @param value The status to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStatus(com.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          status_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Output only. The status of the booking.
+         * </pre>
+         *
+         * <code>.google.ads.googleads.v23.enums.BookingStatusEnum.BookingStatus status = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearStatus() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          status_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object holdExpirationDateTime_ = "";
+        /**
+         * <pre>
+         * Output only. Time until which booked inventory will be held or has been
+         * held for this campaign. Available for status HELD and HOLD_EXPIRED.
+         * Format is "yyyy-MM-dd HH:mm:ss" in the customer's time zone.
+         * </pre>
+         *
+         * <code>string hold_expiration_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return The holdExpirationDateTime.
+         */
+        public java.lang.String getHoldExpirationDateTime() {
+          java.lang.Object ref = holdExpirationDateTime_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            holdExpirationDateTime_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Output only. Time until which booked inventory will be held or has been
+         * held for this campaign. Available for status HELD and HOLD_EXPIRED.
+         * Format is "yyyy-MM-dd HH:mm:ss" in the customer's time zone.
+         * </pre>
+         *
+         * <code>string hold_expiration_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return The bytes for holdExpirationDateTime.
+         */
+        public com.google.protobuf.ByteString
+            getHoldExpirationDateTimeBytes() {
+          java.lang.Object ref = holdExpirationDateTime_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            holdExpirationDateTime_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Output only. Time until which booked inventory will be held or has been
+         * held for this campaign. Available for status HELD and HOLD_EXPIRED.
+         * Format is "yyyy-MM-dd HH:mm:ss" in the customer's time zone.
+         * </pre>
+         *
+         * <code>string hold_expiration_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @param value The holdExpirationDateTime to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHoldExpirationDateTime(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          holdExpirationDateTime_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Output only. Time until which booked inventory will be held or has been
+         * held for this campaign. Available for status HELD and HOLD_EXPIRED.
+         * Format is "yyyy-MM-dd HH:mm:ss" in the customer's time zone.
+         * </pre>
+         *
+         * <code>string hold_expiration_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHoldExpirationDateTime() {
+          holdExpirationDateTime_ = getDefaultInstance().getHoldExpirationDateTime();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Output only. Time until which booked inventory will be held or has been
+         * held for this campaign. Available for status HELD and HOLD_EXPIRED.
+         * Format is "yyyy-MM-dd HH:mm:ss" in the customer's time zone.
+         * </pre>
+         *
+         * <code>string hold_expiration_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @param value The bytes for holdExpirationDateTime to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHoldExpirationDateTimeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          holdExpirationDateTime_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object cancellationDateTime_ = "";
+        /**
+         * <pre>
+         * Output only. Time when the booked inventory of this campaign will be
+         * cancelled or has been cancelled. Available for primary status
+         * NOT_ELIGIBLE if the campaign will be cancelled and for primary status
+         * reason BOOKING_CANCELLED. Format is "yyyy-MM-dd HH:mm:ss" in the
+         * customer's time zone.
+         * </pre>
+         *
+         * <code>string cancellation_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return The cancellationDateTime.
+         */
+        public java.lang.String getCancellationDateTime() {
+          java.lang.Object ref = cancellationDateTime_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            cancellationDateTime_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Output only. Time when the booked inventory of this campaign will be
+         * cancelled or has been cancelled. Available for primary status
+         * NOT_ELIGIBLE if the campaign will be cancelled and for primary status
+         * reason BOOKING_CANCELLED. Format is "yyyy-MM-dd HH:mm:ss" in the
+         * customer's time zone.
+         * </pre>
+         *
+         * <code>string cancellation_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return The bytes for cancellationDateTime.
+         */
+        public com.google.protobuf.ByteString
+            getCancellationDateTimeBytes() {
+          java.lang.Object ref = cancellationDateTime_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            cancellationDateTime_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Output only. Time when the booked inventory of this campaign will be
+         * cancelled or has been cancelled. Available for primary status
+         * NOT_ELIGIBLE if the campaign will be cancelled and for primary status
+         * reason BOOKING_CANCELLED. Format is "yyyy-MM-dd HH:mm:ss" in the
+         * customer's time zone.
+         * </pre>
+         *
+         * <code>string cancellation_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @param value The cancellationDateTime to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCancellationDateTime(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          cancellationDateTime_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Output only. Time when the booked inventory of this campaign will be
+         * cancelled or has been cancelled. Available for primary status
+         * NOT_ELIGIBLE if the campaign will be cancelled and for primary status
+         * reason BOOKING_CANCELLED. Format is "yyyy-MM-dd HH:mm:ss" in the
+         * customer's time zone.
+         * </pre>
+         *
+         * <code>string cancellation_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCancellationDateTime() {
+          cancellationDateTime_ = getDefaultInstance().getCancellationDateTime();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Output only. Time when the booked inventory of this campaign will be
+         * cancelled or has been cancelled. Available for primary status
+         * NOT_ELIGIBLE if the campaign will be cancelled and for primary status
+         * reason BOOKING_CANCELLED. Format is "yyyy-MM-dd HH:mm:ss" in the
+         * customer's time zone.
+         * </pre>
+         *
+         * <code>string cancellation_date_time = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+         * @param value The bytes for cancellationDateTime to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCancellationDateTimeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          cancellationDateTime_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails)
+      }
+
+      // @@protoc_insertion_point(class_scope:google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails)
+      private static final com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails();
+      }
+
+      public static com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<BookingDetails>
+          PARSER = new com.google.protobuf.AbstractParser<BookingDetails>() {
+        @java.lang.Override
+        public BookingDetails parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<BookingDetails> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<BookingDetails> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int bitField0_;
     private int fluidityControlCase_ = 0;
     @SuppressWarnings("serial")
@@ -18730,6 +20460,88 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.VideoAdSequenceOrBuilder getVideoAdSequenceOrBuilder() {
       return videoAdSequence_ == null ? com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.VideoAdSequence.getDefaultInstance() : videoAdSequence_;
+    }
+
+    public static final int RESERVATION_AD_CATEGORY_SELF_DISCLOSURE_FIELD_NUMBER = 5;
+    private com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservationAdCategorySelfDisclosure_;
+    /**
+     * <pre>
+     * Ad category self-disclosure for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+     * @return Whether the reservationAdCategorySelfDisclosure field is set.
+     */
+    @java.lang.Override
+    public boolean hasReservationAdCategorySelfDisclosure() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Ad category self-disclosure for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+     * @return The reservationAdCategorySelfDisclosure.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure getReservationAdCategorySelfDisclosure() {
+      return reservationAdCategorySelfDisclosure_ == null ? com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.getDefaultInstance() : reservationAdCategorySelfDisclosure_;
+    }
+    /**
+     * <pre>
+     * Ad category self-disclosure for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosureOrBuilder getReservationAdCategorySelfDisclosureOrBuilder() {
+      return reservationAdCategorySelfDisclosure_ == null ? com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.getDefaultInstance() : reservationAdCategorySelfDisclosure_;
+    }
+
+    public static final int BOOKING_DETAILS_FIELD_NUMBER = 6;
+    private com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails bookingDetails_;
+    /**
+     * <pre>
+     * Output only. Booking information for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the bookingDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasBookingDetails() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. Booking information for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bookingDetails.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails getBookingDetails() {
+      return bookingDetails_ == null ? com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.getDefaultInstance() : bookingDetails_;
+    }
+    /**
+     * <pre>
+     * Output only. Booking information for campaigns with the FIXED_CPM or
+     * FIXED_SHARE_OF_VOICE bidding strategies.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetailsOrBuilder getBookingDetailsOrBuilder() {
+      return bookingDetails_ == null ? com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.getDefaultInstance() : bookingDetails_;
     }
 
     public static final int VIDEO_AD_INVENTORY_CONTROL_FIELD_NUMBER = 2;
@@ -18844,6 +20656,12 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getVideoAdSequence());
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(5, getReservationAdCategorySelfDisclosure());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(6, getBookingDetails());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -18865,6 +20683,14 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getVideoAdSequence());
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getReservationAdCategorySelfDisclosure());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getBookingDetails());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -18884,6 +20710,16 @@ private static final long serialVersionUID = 0L;
       if (hasVideoAdSequence()) {
         if (!getVideoAdSequence()
             .equals(other.getVideoAdSequence())) return false;
+      }
+      if (hasReservationAdCategorySelfDisclosure() != other.hasReservationAdCategorySelfDisclosure()) return false;
+      if (hasReservationAdCategorySelfDisclosure()) {
+        if (!getReservationAdCategorySelfDisclosure()
+            .equals(other.getReservationAdCategorySelfDisclosure())) return false;
+      }
+      if (hasBookingDetails() != other.hasBookingDetails()) return false;
+      if (hasBookingDetails()) {
+        if (!getBookingDetails()
+            .equals(other.getBookingDetails())) return false;
       }
       if (!getFluidityControlCase().equals(other.getFluidityControlCase())) return false;
       switch (fluidityControlCase_) {
@@ -18912,6 +20748,14 @@ private static final long serialVersionUID = 0L;
       if (hasVideoAdSequence()) {
         hash = (37 * hash) + VIDEO_AD_SEQUENCE_FIELD_NUMBER;
         hash = (53 * hash) + getVideoAdSequence().hashCode();
+      }
+      if (hasReservationAdCategorySelfDisclosure()) {
+        hash = (37 * hash) + RESERVATION_AD_CATEGORY_SELF_DISCLOSURE_FIELD_NUMBER;
+        hash = (53 * hash) + getReservationAdCategorySelfDisclosure().hashCode();
+      }
+      if (hasBookingDetails()) {
+        hash = (37 * hash) + BOOKING_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getBookingDetails().hashCode();
       }
       switch (fluidityControlCase_) {
         case 2:
@@ -19060,6 +20904,8 @@ private static final long serialVersionUID = 0L;
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getVideoAdSequenceFieldBuilder();
+          getReservationAdCategorySelfDisclosureFieldBuilder();
+          getBookingDetailsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -19070,6 +20916,16 @@ private static final long serialVersionUID = 0L;
         if (videoAdSequenceBuilder_ != null) {
           videoAdSequenceBuilder_.dispose();
           videoAdSequenceBuilder_ = null;
+        }
+        reservationAdCategorySelfDisclosure_ = null;
+        if (reservationAdCategorySelfDisclosureBuilder_ != null) {
+          reservationAdCategorySelfDisclosureBuilder_.dispose();
+          reservationAdCategorySelfDisclosureBuilder_ = null;
+        }
+        bookingDetails_ = null;
+        if (bookingDetailsBuilder_ != null) {
+          bookingDetailsBuilder_.dispose();
+          bookingDetailsBuilder_ = null;
         }
         if (videoAdInventoryControlBuilder_ != null) {
           videoAdInventoryControlBuilder_.clear();
@@ -19119,6 +20975,18 @@ private static final long serialVersionUID = 0L;
               ? videoAdSequence_
               : videoAdSequenceBuilder_.build();
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.reservationAdCategorySelfDisclosure_ = reservationAdCategorySelfDisclosureBuilder_ == null
+              ? reservationAdCategorySelfDisclosure_
+              : reservationAdCategorySelfDisclosureBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.bookingDetails_ = bookingDetailsBuilder_ == null
+              ? bookingDetails_
+              : bookingDetailsBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -19183,6 +21051,12 @@ private static final long serialVersionUID = 0L;
         if (other.hasVideoAdSequence()) {
           mergeVideoAdSequence(other.getVideoAdSequence());
         }
+        if (other.hasReservationAdCategorySelfDisclosure()) {
+          mergeReservationAdCategorySelfDisclosure(other.getReservationAdCategorySelfDisclosure());
+        }
+        if (other.hasBookingDetails()) {
+          mergeBookingDetails(other.getBookingDetails());
+        }
         switch (other.getFluidityControlCase()) {
           case VIDEO_AD_INVENTORY_CONTROL: {
             mergeVideoAdInventoryControl(other.getVideoAdInventoryControl());
@@ -19243,6 +21117,20 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    getReservationAdCategorySelfDisclosureFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getBookingDetailsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -19430,6 +21318,338 @@ private static final long serialVersionUID = 0L;
           videoAdSequence_ = null;
         }
         return videoAdSequenceBuilder_;
+      }
+
+      private com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservationAdCategorySelfDisclosure_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.Builder, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosureOrBuilder> reservationAdCategorySelfDisclosureBuilder_;
+      /**
+       * <pre>
+       * Ad category self-disclosure for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+       * @return Whether the reservationAdCategorySelfDisclosure field is set.
+       */
+      public boolean hasReservationAdCategorySelfDisclosure() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Ad category self-disclosure for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+       * @return The reservationAdCategorySelfDisclosure.
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure getReservationAdCategorySelfDisclosure() {
+        if (reservationAdCategorySelfDisclosureBuilder_ == null) {
+          return reservationAdCategorySelfDisclosure_ == null ? com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.getDefaultInstance() : reservationAdCategorySelfDisclosure_;
+        } else {
+          return reservationAdCategorySelfDisclosureBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Ad category self-disclosure for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+       */
+      public Builder setReservationAdCategorySelfDisclosure(com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure value) {
+        if (reservationAdCategorySelfDisclosureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reservationAdCategorySelfDisclosure_ = value;
+        } else {
+          reservationAdCategorySelfDisclosureBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ad category self-disclosure for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+       */
+      public Builder setReservationAdCategorySelfDisclosure(
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.Builder builderForValue) {
+        if (reservationAdCategorySelfDisclosureBuilder_ == null) {
+          reservationAdCategorySelfDisclosure_ = builderForValue.build();
+        } else {
+          reservationAdCategorySelfDisclosureBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ad category self-disclosure for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+       */
+      public Builder mergeReservationAdCategorySelfDisclosure(com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure value) {
+        if (reservationAdCategorySelfDisclosureBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            reservationAdCategorySelfDisclosure_ != null &&
+            reservationAdCategorySelfDisclosure_ != com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.getDefaultInstance()) {
+            getReservationAdCategorySelfDisclosureBuilder().mergeFrom(value);
+          } else {
+            reservationAdCategorySelfDisclosure_ = value;
+          }
+        } else {
+          reservationAdCategorySelfDisclosureBuilder_.mergeFrom(value);
+        }
+        if (reservationAdCategorySelfDisclosure_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Ad category self-disclosure for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+       */
+      public Builder clearReservationAdCategorySelfDisclosure() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        reservationAdCategorySelfDisclosure_ = null;
+        if (reservationAdCategorySelfDisclosureBuilder_ != null) {
+          reservationAdCategorySelfDisclosureBuilder_.dispose();
+          reservationAdCategorySelfDisclosureBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ad category self-disclosure for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.Builder getReservationAdCategorySelfDisclosureBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getReservationAdCategorySelfDisclosureFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Ad category self-disclosure for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosureOrBuilder getReservationAdCategorySelfDisclosureOrBuilder() {
+        if (reservationAdCategorySelfDisclosureBuilder_ != null) {
+          return reservationAdCategorySelfDisclosureBuilder_.getMessageOrBuilder();
+        } else {
+          return reservationAdCategorySelfDisclosure_ == null ?
+              com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.getDefaultInstance() : reservationAdCategorySelfDisclosure_;
+        }
+      }
+      /**
+       * <pre>
+       * Ad category self-disclosure for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure reservation_ad_category_self_disclosure = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.Builder, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosureOrBuilder> 
+          getReservationAdCategorySelfDisclosureFieldBuilder() {
+        if (reservationAdCategorySelfDisclosureBuilder_ == null) {
+          reservationAdCategorySelfDisclosureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure.Builder, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosureOrBuilder>(
+                  getReservationAdCategorySelfDisclosure(),
+                  getParentForChildren(),
+                  isClean());
+          reservationAdCategorySelfDisclosure_ = null;
+        }
+        return reservationAdCategorySelfDisclosureBuilder_;
+      }
+
+      private com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails bookingDetails_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.Builder, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetailsOrBuilder> bookingDetailsBuilder_;
+      /**
+       * <pre>
+       * Output only. Booking information for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the bookingDetails field is set.
+       */
+      public boolean hasBookingDetails() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. Booking information for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bookingDetails.
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails getBookingDetails() {
+        if (bookingDetailsBuilder_ == null) {
+          return bookingDetails_ == null ? com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.getDefaultInstance() : bookingDetails_;
+        } else {
+          return bookingDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Booking information for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setBookingDetails(com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails value) {
+        if (bookingDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bookingDetails_ = value;
+        } else {
+          bookingDetailsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Booking information for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setBookingDetails(
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.Builder builderForValue) {
+        if (bookingDetailsBuilder_ == null) {
+          bookingDetails_ = builderForValue.build();
+        } else {
+          bookingDetailsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Booking information for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeBookingDetails(com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails value) {
+        if (bookingDetailsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            bookingDetails_ != null &&
+            bookingDetails_ != com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.getDefaultInstance()) {
+            getBookingDetailsBuilder().mergeFrom(value);
+          } else {
+            bookingDetails_ = value;
+          }
+        } else {
+          bookingDetailsBuilder_.mergeFrom(value);
+        }
+        if (bookingDetails_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Booking information for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearBookingDetails() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        bookingDetails_ = null;
+        if (bookingDetailsBuilder_ != null) {
+          bookingDetailsBuilder_.dispose();
+          bookingDetailsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Booking information for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.Builder getBookingDetailsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getBookingDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. Booking information for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetailsOrBuilder getBookingDetailsOrBuilder() {
+        if (bookingDetailsBuilder_ != null) {
+          return bookingDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return bookingDetails_ == null ?
+              com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.getDefaultInstance() : bookingDetails_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Booking information for campaigns with the FIXED_CPM or
+       * FIXED_SHARE_OF_VOICE bidding strategies.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails booking_details = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.Builder, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetailsOrBuilder> 
+          getBookingDetailsFieldBuilder() {
+        if (bookingDetailsBuilder_ == null) {
+          bookingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetails.Builder, com.google.ads.googleads.v23.resources.Campaign.VideoCampaignSettings.BookingDetailsOrBuilder>(
+                  getBookingDetails(),
+                  getParentForChildren(),
+                  isClean());
+          bookingDetails_ = null;
+        }
+        return bookingDetailsBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -22859,6 +25079,2009 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v23.resources.Campaign.BrandGuidelines getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TextGuidelinesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v23.resources.Campaign.TextGuidelines)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Exact words or phrases that will be excluded from generated text
+     * assets. At most 25 exclusions may be provided. Valid exclusions may
+     * contain a maximum of 30 characters.
+     * </pre>
+     *
+     * <code>repeated string term_exclusions = 1;</code>
+     * @return A list containing the termExclusions.
+     */
+    java.util.List<java.lang.String>
+        getTermExclusionsList();
+    /**
+     * <pre>
+     * Exact words or phrases that will be excluded from generated text
+     * assets. At most 25 exclusions may be provided. Valid exclusions may
+     * contain a maximum of 30 characters.
+     * </pre>
+     *
+     * <code>repeated string term_exclusions = 1;</code>
+     * @return The count of termExclusions.
+     */
+    int getTermExclusionsCount();
+    /**
+     * <pre>
+     * Exact words or phrases that will be excluded from generated text
+     * assets. At most 25 exclusions may be provided. Valid exclusions may
+     * contain a maximum of 30 characters.
+     * </pre>
+     *
+     * <code>repeated string term_exclusions = 1;</code>
+     * @param index The index of the element to return.
+     * @return The termExclusions at the given index.
+     */
+    java.lang.String getTermExclusions(int index);
+    /**
+     * <pre>
+     * Exact words or phrases that will be excluded from generated text
+     * assets. At most 25 exclusions may be provided. Valid exclusions may
+     * contain a maximum of 30 characters.
+     * </pre>
+     *
+     * <code>repeated string term_exclusions = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the termExclusions at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTermExclusionsBytes(int index);
+
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference. At most 40 restrictions may be provided.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+     */
+    java.util.List<com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction> 
+        getMessagingRestrictionsList();
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference. At most 40 restrictions may be provided.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+     */
+    com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction getMessagingRestrictions(int index);
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference. At most 40 restrictions may be provided.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+     */
+    int getMessagingRestrictionsCount();
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference. At most 40 restrictions may be provided.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+     */
+    java.util.List<? extends com.google.ads.googleads.v23.resources.Campaign.MessagingRestrictionOrBuilder> 
+        getMessagingRestrictionsOrBuilderList();
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference. At most 40 restrictions may be provided.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+     */
+    com.google.ads.googleads.v23.resources.Campaign.MessagingRestrictionOrBuilder getMessagingRestrictionsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Settings to control automatically generated text assets.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v23.resources.Campaign.TextGuidelines}
+   */
+  public static final class TextGuidelines extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v23.resources.Campaign.TextGuidelines)
+      TextGuidelinesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TextGuidelines.newBuilder() to construct.
+    private TextGuidelines(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TextGuidelines() {
+      termExclusions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      messagingRestrictions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextGuidelines();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_TextGuidelines_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_TextGuidelines_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.class, com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.Builder.class);
+    }
+
+    public static final int TERM_EXCLUSIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList termExclusions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Exact words or phrases that will be excluded from generated text
+     * assets. At most 25 exclusions may be provided. Valid exclusions may
+     * contain a maximum of 30 characters.
+     * </pre>
+     *
+     * <code>repeated string term_exclusions = 1;</code>
+     * @return A list containing the termExclusions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTermExclusionsList() {
+      return termExclusions_;
+    }
+    /**
+     * <pre>
+     * Exact words or phrases that will be excluded from generated text
+     * assets. At most 25 exclusions may be provided. Valid exclusions may
+     * contain a maximum of 30 characters.
+     * </pre>
+     *
+     * <code>repeated string term_exclusions = 1;</code>
+     * @return The count of termExclusions.
+     */
+    public int getTermExclusionsCount() {
+      return termExclusions_.size();
+    }
+    /**
+     * <pre>
+     * Exact words or phrases that will be excluded from generated text
+     * assets. At most 25 exclusions may be provided. Valid exclusions may
+     * contain a maximum of 30 characters.
+     * </pre>
+     *
+     * <code>repeated string term_exclusions = 1;</code>
+     * @param index The index of the element to return.
+     * @return The termExclusions at the given index.
+     */
+    public java.lang.String getTermExclusions(int index) {
+      return termExclusions_.get(index);
+    }
+    /**
+     * <pre>
+     * Exact words or phrases that will be excluded from generated text
+     * assets. At most 25 exclusions may be provided. Valid exclusions may
+     * contain a maximum of 30 characters.
+     * </pre>
+     *
+     * <code>repeated string term_exclusions = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the termExclusions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTermExclusionsBytes(int index) {
+      return termExclusions_.getByteString(index);
+    }
+
+    public static final int MESSAGING_RESTRICTIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction> messagingRestrictions_;
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference. At most 40 restrictions may be provided.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction> getMessagingRestrictionsList() {
+      return messagingRestrictions_;
+    }
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference. At most 40 restrictions may be provided.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.ads.googleads.v23.resources.Campaign.MessagingRestrictionOrBuilder> 
+        getMessagingRestrictionsOrBuilderList() {
+      return messagingRestrictions_;
+    }
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference. At most 40 restrictions may be provided.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public int getMessagingRestrictionsCount() {
+      return messagingRestrictions_.size();
+    }
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference. At most 40 restrictions may be provided.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction getMessagingRestrictions(int index) {
+      return messagingRestrictions_.get(index);
+    }
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference. At most 40 restrictions may be provided.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.Campaign.MessagingRestrictionOrBuilder getMessagingRestrictionsOrBuilder(
+        int index) {
+      return messagingRestrictions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < termExclusions_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, termExclusions_.getRaw(i));
+      }
+      for (int i = 0; i < messagingRestrictions_.size(); i++) {
+        output.writeMessage(2, messagingRestrictions_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < termExclusions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(termExclusions_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTermExclusionsList().size();
+      }
+      for (int i = 0; i < messagingRestrictions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, messagingRestrictions_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v23.resources.Campaign.TextGuidelines)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v23.resources.Campaign.TextGuidelines other = (com.google.ads.googleads.v23.resources.Campaign.TextGuidelines) obj;
+
+      if (!getTermExclusionsList()
+          .equals(other.getTermExclusionsList())) return false;
+      if (!getMessagingRestrictionsList()
+          .equals(other.getMessagingRestrictionsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTermExclusionsCount() > 0) {
+        hash = (37 * hash) + TERM_EXCLUSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getTermExclusionsList().hashCode();
+      }
+      if (getMessagingRestrictionsCount() > 0) {
+        hash = (37 * hash) + MESSAGING_RESTRICTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMessagingRestrictionsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v23.resources.Campaign.TextGuidelines prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Settings to control automatically generated text assets.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v23.resources.Campaign.TextGuidelines}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v23.resources.Campaign.TextGuidelines)
+        com.google.ads.googleads.v23.resources.Campaign.TextGuidelinesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_TextGuidelines_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_TextGuidelines_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.class, com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        termExclusions_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        if (messagingRestrictionsBuilder_ == null) {
+          messagingRestrictions_ = java.util.Collections.emptyList();
+        } else {
+          messagingRestrictions_ = null;
+          messagingRestrictionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_TextGuidelines_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v23.resources.Campaign.TextGuidelines getDefaultInstanceForType() {
+        return com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v23.resources.Campaign.TextGuidelines build() {
+        com.google.ads.googleads.v23.resources.Campaign.TextGuidelines result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v23.resources.Campaign.TextGuidelines buildPartial() {
+        com.google.ads.googleads.v23.resources.Campaign.TextGuidelines result = new com.google.ads.googleads.v23.resources.Campaign.TextGuidelines(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v23.resources.Campaign.TextGuidelines result) {
+        if (messagingRestrictionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            messagingRestrictions_ = java.util.Collections.unmodifiableList(messagingRestrictions_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.messagingRestrictions_ = messagingRestrictions_;
+        } else {
+          result.messagingRestrictions_ = messagingRestrictionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v23.resources.Campaign.TextGuidelines result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          termExclusions_.makeImmutable();
+          result.termExclusions_ = termExclusions_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v23.resources.Campaign.TextGuidelines) {
+          return mergeFrom((com.google.ads.googleads.v23.resources.Campaign.TextGuidelines)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v23.resources.Campaign.TextGuidelines other) {
+        if (other == com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.getDefaultInstance()) return this;
+        if (!other.termExclusions_.isEmpty()) {
+          if (termExclusions_.isEmpty()) {
+            termExclusions_ = other.termExclusions_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureTermExclusionsIsMutable();
+            termExclusions_.addAll(other.termExclusions_);
+          }
+          onChanged();
+        }
+        if (messagingRestrictionsBuilder_ == null) {
+          if (!other.messagingRestrictions_.isEmpty()) {
+            if (messagingRestrictions_.isEmpty()) {
+              messagingRestrictions_ = other.messagingRestrictions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureMessagingRestrictionsIsMutable();
+              messagingRestrictions_.addAll(other.messagingRestrictions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.messagingRestrictions_.isEmpty()) {
+            if (messagingRestrictionsBuilder_.isEmpty()) {
+              messagingRestrictionsBuilder_.dispose();
+              messagingRestrictionsBuilder_ = null;
+              messagingRestrictions_ = other.messagingRestrictions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              messagingRestrictionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMessagingRestrictionsFieldBuilder() : null;
+            } else {
+              messagingRestrictionsBuilder_.addAllMessages(other.messagingRestrictions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTermExclusionsIsMutable();
+                termExclusions_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction m =
+                    input.readMessage(
+                        com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.parser(),
+                        extensionRegistry);
+                if (messagingRestrictionsBuilder_ == null) {
+                  ensureMessagingRestrictionsIsMutable();
+                  messagingRestrictions_.add(m);
+                } else {
+                  messagingRestrictionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList termExclusions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureTermExclusionsIsMutable() {
+        if (!termExclusions_.isModifiable()) {
+          termExclusions_ = new com.google.protobuf.LazyStringArrayList(termExclusions_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Exact words or phrases that will be excluded from generated text
+       * assets. At most 25 exclusions may be provided. Valid exclusions may
+       * contain a maximum of 30 characters.
+       * </pre>
+       *
+       * <code>repeated string term_exclusions = 1;</code>
+       * @return A list containing the termExclusions.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTermExclusionsList() {
+        termExclusions_.makeImmutable();
+        return termExclusions_;
+      }
+      /**
+       * <pre>
+       * Exact words or phrases that will be excluded from generated text
+       * assets. At most 25 exclusions may be provided. Valid exclusions may
+       * contain a maximum of 30 characters.
+       * </pre>
+       *
+       * <code>repeated string term_exclusions = 1;</code>
+       * @return The count of termExclusions.
+       */
+      public int getTermExclusionsCount() {
+        return termExclusions_.size();
+      }
+      /**
+       * <pre>
+       * Exact words or phrases that will be excluded from generated text
+       * assets. At most 25 exclusions may be provided. Valid exclusions may
+       * contain a maximum of 30 characters.
+       * </pre>
+       *
+       * <code>repeated string term_exclusions = 1;</code>
+       * @param index The index of the element to return.
+       * @return The termExclusions at the given index.
+       */
+      public java.lang.String getTermExclusions(int index) {
+        return termExclusions_.get(index);
+      }
+      /**
+       * <pre>
+       * Exact words or phrases that will be excluded from generated text
+       * assets. At most 25 exclusions may be provided. Valid exclusions may
+       * contain a maximum of 30 characters.
+       * </pre>
+       *
+       * <code>repeated string term_exclusions = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the termExclusions at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTermExclusionsBytes(int index) {
+        return termExclusions_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Exact words or phrases that will be excluded from generated text
+       * assets. At most 25 exclusions may be provided. Valid exclusions may
+       * contain a maximum of 30 characters.
+       * </pre>
+       *
+       * <code>repeated string term_exclusions = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The termExclusions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTermExclusions(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTermExclusionsIsMutable();
+        termExclusions_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Exact words or phrases that will be excluded from generated text
+       * assets. At most 25 exclusions may be provided. Valid exclusions may
+       * contain a maximum of 30 characters.
+       * </pre>
+       *
+       * <code>repeated string term_exclusions = 1;</code>
+       * @param value The termExclusions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTermExclusions(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTermExclusionsIsMutable();
+        termExclusions_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Exact words or phrases that will be excluded from generated text
+       * assets. At most 25 exclusions may be provided. Valid exclusions may
+       * contain a maximum of 30 characters.
+       * </pre>
+       *
+       * <code>repeated string term_exclusions = 1;</code>
+       * @param values The termExclusions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTermExclusions(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTermExclusionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, termExclusions_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Exact words or phrases that will be excluded from generated text
+       * assets. At most 25 exclusions may be provided. Valid exclusions may
+       * contain a maximum of 30 characters.
+       * </pre>
+       *
+       * <code>repeated string term_exclusions = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTermExclusions() {
+        termExclusions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Exact words or phrases that will be excluded from generated text
+       * assets. At most 25 exclusions may be provided. Valid exclusions may
+       * contain a maximum of 30 characters.
+       * </pre>
+       *
+       * <code>repeated string term_exclusions = 1;</code>
+       * @param value The bytes of the termExclusions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTermExclusionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureTermExclusionsIsMutable();
+        termExclusions_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction> messagingRestrictions_ =
+        java.util.Collections.emptyList();
+      private void ensureMessagingRestrictionsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          messagingRestrictions_ = new java.util.ArrayList<com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction>(messagingRestrictions_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction, com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder, com.google.ads.googleads.v23.resources.Campaign.MessagingRestrictionOrBuilder> messagingRestrictionsBuilder_;
+
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public java.util.List<com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction> getMessagingRestrictionsList() {
+        if (messagingRestrictionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(messagingRestrictions_);
+        } else {
+          return messagingRestrictionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public int getMessagingRestrictionsCount() {
+        if (messagingRestrictionsBuilder_ == null) {
+          return messagingRestrictions_.size();
+        } else {
+          return messagingRestrictionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction getMessagingRestrictions(int index) {
+        if (messagingRestrictionsBuilder_ == null) {
+          return messagingRestrictions_.get(index);
+        } else {
+          return messagingRestrictionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public Builder setMessagingRestrictions(
+          int index, com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction value) {
+        if (messagingRestrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMessagingRestrictionsIsMutable();
+          messagingRestrictions_.set(index, value);
+          onChanged();
+        } else {
+          messagingRestrictionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public Builder setMessagingRestrictions(
+          int index, com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder builderForValue) {
+        if (messagingRestrictionsBuilder_ == null) {
+          ensureMessagingRestrictionsIsMutable();
+          messagingRestrictions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          messagingRestrictionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public Builder addMessagingRestrictions(com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction value) {
+        if (messagingRestrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMessagingRestrictionsIsMutable();
+          messagingRestrictions_.add(value);
+          onChanged();
+        } else {
+          messagingRestrictionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public Builder addMessagingRestrictions(
+          int index, com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction value) {
+        if (messagingRestrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMessagingRestrictionsIsMutable();
+          messagingRestrictions_.add(index, value);
+          onChanged();
+        } else {
+          messagingRestrictionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public Builder addMessagingRestrictions(
+          com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder builderForValue) {
+        if (messagingRestrictionsBuilder_ == null) {
+          ensureMessagingRestrictionsIsMutable();
+          messagingRestrictions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          messagingRestrictionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public Builder addMessagingRestrictions(
+          int index, com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder builderForValue) {
+        if (messagingRestrictionsBuilder_ == null) {
+          ensureMessagingRestrictionsIsMutable();
+          messagingRestrictions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          messagingRestrictionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public Builder addAllMessagingRestrictions(
+          java.lang.Iterable<? extends com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction> values) {
+        if (messagingRestrictionsBuilder_ == null) {
+          ensureMessagingRestrictionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, messagingRestrictions_);
+          onChanged();
+        } else {
+          messagingRestrictionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public Builder clearMessagingRestrictions() {
+        if (messagingRestrictionsBuilder_ == null) {
+          messagingRestrictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          messagingRestrictionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public Builder removeMessagingRestrictions(int index) {
+        if (messagingRestrictionsBuilder_ == null) {
+          ensureMessagingRestrictionsIsMutable();
+          messagingRestrictions_.remove(index);
+          onChanged();
+        } else {
+          messagingRestrictionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder getMessagingRestrictionsBuilder(
+          int index) {
+        return getMessagingRestrictionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.MessagingRestrictionOrBuilder getMessagingRestrictionsOrBuilder(
+          int index) {
+        if (messagingRestrictionsBuilder_ == null) {
+          return messagingRestrictions_.get(index);  } else {
+          return messagingRestrictionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public java.util.List<? extends com.google.ads.googleads.v23.resources.Campaign.MessagingRestrictionOrBuilder> 
+           getMessagingRestrictionsOrBuilderList() {
+        if (messagingRestrictionsBuilder_ != null) {
+          return messagingRestrictionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(messagingRestrictions_);
+        }
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder addMessagingRestrictionsBuilder() {
+        return getMessagingRestrictionsFieldBuilder().addBuilder(
+            com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder addMessagingRestrictionsBuilder(
+          int index) {
+        return getMessagingRestrictionsFieldBuilder().addBuilder(
+            index, com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Freeform instructions that will be used to guide text asset generation
+       * using LLM inference. At most 40 restrictions may be provided.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v23.resources.Campaign.MessagingRestriction messaging_restrictions = 2;</code>
+       */
+      public java.util.List<com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder> 
+           getMessagingRestrictionsBuilderList() {
+        return getMessagingRestrictionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction, com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder, com.google.ads.googleads.v23.resources.Campaign.MessagingRestrictionOrBuilder> 
+          getMessagingRestrictionsFieldBuilder() {
+        if (messagingRestrictionsBuilder_ == null) {
+          messagingRestrictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction, com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder, com.google.ads.googleads.v23.resources.Campaign.MessagingRestrictionOrBuilder>(
+                  messagingRestrictions_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          messagingRestrictions_ = null;
+        }
+        return messagingRestrictionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v23.resources.Campaign.TextGuidelines)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v23.resources.Campaign.TextGuidelines)
+    private static final com.google.ads.googleads.v23.resources.Campaign.TextGuidelines DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v23.resources.Campaign.TextGuidelines();
+    }
+
+    public static com.google.ads.googleads.v23.resources.Campaign.TextGuidelines getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TextGuidelines>
+        PARSER = new com.google.protobuf.AbstractParser<TextGuidelines>() {
+      @java.lang.Override
+      public TextGuidelines parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TextGuidelines> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TextGuidelines> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.Campaign.TextGuidelines getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MessagingRestrictionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v23.resources.Campaign.MessagingRestriction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Freeform instructions to guide text asset generation using LLM
+     * inference. Valid instructions may contain a maximum of 300 characters.
+     * </pre>
+     *
+     * <code>string restriction_text = 1;</code>
+     * @return The restrictionText.
+     */
+    java.lang.String getRestrictionText();
+    /**
+     * <pre>
+     * Freeform instructions to guide text asset generation using LLM
+     * inference. Valid instructions may contain a maximum of 300 characters.
+     * </pre>
+     *
+     * <code>string restriction_text = 1;</code>
+     * @return The bytes for restrictionText.
+     */
+    com.google.protobuf.ByteString
+        getRestrictionTextBytes();
+
+    /**
+     * <pre>
+     * Determines how the guideline is applied. Only
+     * `RESTRICTION_BASED_EXCLUSION` is currently supported.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType restriction_type = 2;</code>
+     * @return The enum numeric value on the wire for restrictionType.
+     */
+    int getRestrictionTypeValue();
+    /**
+     * <pre>
+     * Determines how the guideline is applied. Only
+     * `RESTRICTION_BASED_EXCLUSION` is currently supported.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType restriction_type = 2;</code>
+     * @return The restrictionType.
+     */
+    com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType getRestrictionType();
+  }
+  /**
+   * <pre>
+   * Freeform instructions that will be used to guide text asset generation
+   * using LLM inference.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v23.resources.Campaign.MessagingRestriction}
+   */
+  public static final class MessagingRestriction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v23.resources.Campaign.MessagingRestriction)
+      MessagingRestrictionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MessagingRestriction.newBuilder() to construct.
+    private MessagingRestriction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MessagingRestriction() {
+      restrictionText_ = "";
+      restrictionType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessagingRestriction();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_MessagingRestriction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_MessagingRestriction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.class, com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder.class);
+    }
+
+    public static final int RESTRICTION_TEXT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object restrictionText_ = "";
+    /**
+     * <pre>
+     * Freeform instructions to guide text asset generation using LLM
+     * inference. Valid instructions may contain a maximum of 300 characters.
+     * </pre>
+     *
+     * <code>string restriction_text = 1;</code>
+     * @return The restrictionText.
+     */
+    @java.lang.Override
+    public java.lang.String getRestrictionText() {
+      java.lang.Object ref = restrictionText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        restrictionText_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Freeform instructions to guide text asset generation using LLM
+     * inference. Valid instructions may contain a maximum of 300 characters.
+     * </pre>
+     *
+     * <code>string restriction_text = 1;</code>
+     * @return The bytes for restrictionText.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRestrictionTextBytes() {
+      java.lang.Object ref = restrictionText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        restrictionText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESTRICTION_TYPE_FIELD_NUMBER = 2;
+    private int restrictionType_ = 0;
+    /**
+     * <pre>
+     * Determines how the guideline is applied. Only
+     * `RESTRICTION_BASED_EXCLUSION` is currently supported.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType restriction_type = 2;</code>
+     * @return The enum numeric value on the wire for restrictionType.
+     */
+    @java.lang.Override public int getRestrictionTypeValue() {
+      return restrictionType_;
+    }
+    /**
+     * <pre>
+     * Determines how the guideline is applied. Only
+     * `RESTRICTION_BASED_EXCLUSION` is currently supported.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType restriction_type = 2;</code>
+     * @return The restrictionType.
+     */
+    @java.lang.Override public com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType getRestrictionType() {
+      com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType result = com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType.forNumber(restrictionType_);
+      return result == null ? com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(restrictionText_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, restrictionText_);
+      }
+      if (restrictionType_ != com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType.UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, restrictionType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(restrictionText_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, restrictionText_);
+      }
+      if (restrictionType_ != com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, restrictionType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction other = (com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction) obj;
+
+      if (!getRestrictionText()
+          .equals(other.getRestrictionText())) return false;
+      if (restrictionType_ != other.restrictionType_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESTRICTION_TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getRestrictionText().hashCode();
+      hash = (37 * hash) + RESTRICTION_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + restrictionType_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Freeform instructions that will be used to guide text asset generation
+     * using LLM inference.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v23.resources.Campaign.MessagingRestriction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v23.resources.Campaign.MessagingRestriction)
+        com.google.ads.googleads.v23.resources.Campaign.MessagingRestrictionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_MessagingRestriction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_MessagingRestriction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.class, com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        restrictionText_ = "";
+        restrictionType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v23.resources.CampaignProto.internal_static_google_ads_googleads_v23_resources_Campaign_MessagingRestriction_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction getDefaultInstanceForType() {
+        return com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction build() {
+        com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction buildPartial() {
+        com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction result = new com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.restrictionText_ = restrictionText_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.restrictionType_ = restrictionType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction) {
+          return mergeFrom((com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction other) {
+        if (other == com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction.getDefaultInstance()) return this;
+        if (!other.getRestrictionText().isEmpty()) {
+          restrictionText_ = other.restrictionText_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.restrictionType_ != 0) {
+          setRestrictionTypeValue(other.getRestrictionTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                restrictionText_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                restrictionType_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object restrictionText_ = "";
+      /**
+       * <pre>
+       * Freeform instructions to guide text asset generation using LLM
+       * inference. Valid instructions may contain a maximum of 300 characters.
+       * </pre>
+       *
+       * <code>string restriction_text = 1;</code>
+       * @return The restrictionText.
+       */
+      public java.lang.String getRestrictionText() {
+        java.lang.Object ref = restrictionText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          restrictionText_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Freeform instructions to guide text asset generation using LLM
+       * inference. Valid instructions may contain a maximum of 300 characters.
+       * </pre>
+       *
+       * <code>string restriction_text = 1;</code>
+       * @return The bytes for restrictionText.
+       */
+      public com.google.protobuf.ByteString
+          getRestrictionTextBytes() {
+        java.lang.Object ref = restrictionText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          restrictionText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Freeform instructions to guide text asset generation using LLM
+       * inference. Valid instructions may contain a maximum of 300 characters.
+       * </pre>
+       *
+       * <code>string restriction_text = 1;</code>
+       * @param value The restrictionText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRestrictionText(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        restrictionText_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions to guide text asset generation using LLM
+       * inference. Valid instructions may contain a maximum of 300 characters.
+       * </pre>
+       *
+       * <code>string restriction_text = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRestrictionText() {
+        restrictionText_ = getDefaultInstance().getRestrictionText();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Freeform instructions to guide text asset generation using LLM
+       * inference. Valid instructions may contain a maximum of 300 characters.
+       * </pre>
+       *
+       * <code>string restriction_text = 1;</code>
+       * @param value The bytes for restrictionText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRestrictionTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        restrictionText_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int restrictionType_ = 0;
+      /**
+       * <pre>
+       * Determines how the guideline is applied. Only
+       * `RESTRICTION_BASED_EXCLUSION` is currently supported.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType restriction_type = 2;</code>
+       * @return The enum numeric value on the wire for restrictionType.
+       */
+      @java.lang.Override public int getRestrictionTypeValue() {
+        return restrictionType_;
+      }
+      /**
+       * <pre>
+       * Determines how the guideline is applied. Only
+       * `RESTRICTION_BASED_EXCLUSION` is currently supported.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType restriction_type = 2;</code>
+       * @param value The enum numeric value on the wire for restrictionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRestrictionTypeValue(int value) {
+        restrictionType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Determines how the guideline is applied. Only
+       * `RESTRICTION_BASED_EXCLUSION` is currently supported.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType restriction_type = 2;</code>
+       * @return The restrictionType.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType getRestrictionType() {
+        com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType result = com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType.forNumber(restrictionType_);
+        return result == null ? com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Determines how the guideline is applied. Only
+       * `RESTRICTION_BASED_EXCLUSION` is currently supported.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType restriction_type = 2;</code>
+       * @param value The restrictionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRestrictionType(com.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        restrictionType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Determines how the guideline is applied. Only
+       * `RESTRICTION_BASED_EXCLUSION` is currently supported.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v23.enums.MessagingRestrictionTypeEnum.MessagingRestrictionType restriction_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRestrictionType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        restrictionType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v23.resources.Campaign.MessagingRestriction)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v23.resources.Campaign.MessagingRestriction)
+    private static final com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction();
+    }
+
+    public static com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessagingRestriction>
+        PARSER = new com.google.protobuf.AbstractParser<MessagingRestriction>() {
+      @java.lang.Override
+      public MessagingRestriction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessagingRestriction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessagingRestriction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.Campaign.MessagingRestriction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -26544,6 +30767,50 @@ private static final long serialVersionUID = 0L;
     return brandGuidelines_ == null ? com.google.ads.googleads.v23.resources.Campaign.BrandGuidelines.getDefaultInstance() : brandGuidelines_;
   }
 
+  public static final int TEXT_GUIDELINES_FIELD_NUMBER = 107;
+  private com.google.ads.googleads.v23.resources.Campaign.TextGuidelines textGuidelines_;
+  /**
+   * <pre>
+   * Settings to control automatically generated text assets. Only available
+   * in Performance Max and Search campaigns (Brand Guidelines does not need
+   * to be enabled).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+   * @return Whether the textGuidelines field is set.
+   */
+  @java.lang.Override
+  public boolean hasTextGuidelines() {
+    return ((bitField1_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * Settings to control automatically generated text assets. Only available
+   * in Performance Max and Search campaigns (Brand Guidelines does not need
+   * to be enabled).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+   * @return The textGuidelines.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.resources.Campaign.TextGuidelines getTextGuidelines() {
+    return textGuidelines_ == null ? com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.getDefaultInstance() : textGuidelines_;
+  }
+  /**
+   * <pre>
+   * Settings to control automatically generated text assets. Only available
+   * in Performance Max and Search campaigns (Brand Guidelines does not need
+   * to be enabled).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.resources.Campaign.TextGuidelinesOrBuilder getTextGuidelinesOrBuilder() {
+    return textGuidelines_ == null ? com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.getDefaultInstance() : textGuidelines_;
+  }
+
   public static final int THIRD_PARTY_INTEGRATION_PARTNERS_FIELD_NUMBER = 100;
   private com.google.ads.googleads.v23.common.CampaignThirdPartyIntegrationPartners thirdPartyIntegrationPartners_;
   /**
@@ -26556,7 +30823,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasThirdPartyIntegrationPartners() {
-    return ((bitField1_ & 0x00000004) != 0);
+    return ((bitField1_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -26594,7 +30861,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAiMaxSetting() {
-    return ((bitField1_ & 0x00000008) != 0);
+    return ((bitField1_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -26725,6 +30992,26 @@ private static final long serialVersionUID = 0L;
     return feedTypes_.get(index);
   }
   private int feedTypesMemoizedSerializedSize;
+
+  public static final int MISSING_EU_POLITICAL_ADVERTISING_DECLARATION_FIELD_NUMBER = 108;
+  private boolean missingEuPoliticalAdvertisingDeclaration_ = false;
+  /**
+   * <pre>
+   * Output only. Indicates whether this campaign is missing a declaration about
+   * whether it contains political advertising targeted towards the EU and is
+   * ineligible for any exemptions. If this field is true, use the
+   * contains_eu_political_advertising field to add the required declaration.
+   *
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The missingEuPoliticalAdvertisingDeclaration.
+   */
+  @java.lang.Override
+  public boolean getMissingEuPoliticalAdvertisingDeclaration() {
+    return missingEuPoliticalAdvertisingDeclaration_;
+  }
 
   public static final int BIDDING_STRATEGY_FIELD_NUMBER = 67;
   /**
@@ -27766,10 +32053,10 @@ private static final long serialVersionUID = 0L;
     if (campaignBiddingStrategyCase_ == 99) {
       output.writeMessage(99, (com.google.ads.googleads.v23.common.TargetCpc) campaignBiddingStrategy_);
     }
-    if (((bitField1_ & 0x00000004) != 0)) {
+    if (((bitField1_ & 0x00000008) != 0)) {
       output.writeMessage(100, getThirdPartyIntegrationPartners());
     }
-    if (((bitField1_ & 0x00000008) != 0)) {
+    if (((bitField1_ & 0x00000010) != 0)) {
       output.writeMessage(101, getAiMaxSetting());
     }
     if (containsEuPoliticalAdvertising_ != com.google.ads.googleads.v23.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus.UNSPECIFIED.getNumber()) {
@@ -27787,6 +32074,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00400000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 105, endDateTime_);
+    }
+    if (((bitField1_ & 0x00000004) != 0)) {
+      output.writeMessage(107, getTextGuidelines());
+    }
+    if (missingEuPoliticalAdvertisingDeclaration_ != false) {
+      output.writeBool(108, missingEuPoliticalAdvertisingDeclaration_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -28095,11 +32388,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(99, (com.google.ads.googleads.v23.common.TargetCpc) campaignBiddingStrategy_);
     }
-    if (((bitField1_ & 0x00000004) != 0)) {
+    if (((bitField1_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(100, getThirdPartyIntegrationPartners());
     }
-    if (((bitField1_ & 0x00000008) != 0)) {
+    if (((bitField1_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(101, getAiMaxSetting());
     }
@@ -28124,6 +32417,14 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00400000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(105, endDateTime_);
+    }
+    if (((bitField1_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(107, getTextGuidelines());
+    }
+    if (missingEuPoliticalAdvertisingDeclaration_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(108, missingEuPoliticalAdvertisingDeclaration_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -28337,6 +32638,11 @@ private static final long serialVersionUID = 0L;
       if (!getBrandGuidelines()
           .equals(other.getBrandGuidelines())) return false;
     }
+    if (hasTextGuidelines() != other.hasTextGuidelines()) return false;
+    if (hasTextGuidelines()) {
+      if (!getTextGuidelines()
+          .equals(other.getTextGuidelines())) return false;
+    }
     if (hasThirdPartyIntegrationPartners() != other.hasThirdPartyIntegrationPartners()) return false;
     if (hasThirdPartyIntegrationPartners()) {
       if (!getThirdPartyIntegrationPartners()
@@ -28349,6 +32655,8 @@ private static final long serialVersionUID = 0L;
     }
     if (containsEuPoliticalAdvertising_ != other.containsEuPoliticalAdvertising_) return false;
     if (!feedTypes_.equals(other.feedTypes_)) return false;
+    if (getMissingEuPoliticalAdvertisingDeclaration()
+        != other.getMissingEuPoliticalAdvertisingDeclaration()) return false;
     if (!getCampaignBiddingStrategyCase().equals(other.getCampaignBiddingStrategyCase())) return false;
     switch (campaignBiddingStrategyCase_) {
       case 67:
@@ -28628,6 +32936,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BRAND_GUIDELINES_FIELD_NUMBER;
       hash = (53 * hash) + getBrandGuidelines().hashCode();
     }
+    if (hasTextGuidelines()) {
+      hash = (37 * hash) + TEXT_GUIDELINES_FIELD_NUMBER;
+      hash = (53 * hash) + getTextGuidelines().hashCode();
+    }
     if (hasThirdPartyIntegrationPartners()) {
       hash = (37 * hash) + THIRD_PARTY_INTEGRATION_PARTNERS_FIELD_NUMBER;
       hash = (53 * hash) + getThirdPartyIntegrationPartners().hashCode();
@@ -28642,6 +32954,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FEED_TYPES_FIELD_NUMBER;
       hash = (53 * hash) + feedTypes_.hashCode();
     }
+    hash = (37 * hash) + MISSING_EU_POLITICAL_ADVERTISING_DECLARATION_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getMissingEuPoliticalAdvertisingDeclaration());
     switch (campaignBiddingStrategyCase_) {
       case 67:
         hash = (37 * hash) + BIDDING_STRATEGY_FIELD_NUMBER;
@@ -28872,6 +33187,7 @@ private static final long serialVersionUID = 0L;
         getPerformanceMaxUpgradeFieldBuilder();
         getAssetAutomationSettingsFieldBuilder();
         getBrandGuidelinesFieldBuilder();
+        getTextGuidelinesFieldBuilder();
         getThirdPartyIntegrationPartnersFieldBuilder();
         getAiMaxSettingFieldBuilder();
       }
@@ -29043,6 +33359,11 @@ private static final long serialVersionUID = 0L;
         brandGuidelinesBuilder_.dispose();
         brandGuidelinesBuilder_ = null;
       }
+      textGuidelines_ = null;
+      if (textGuidelinesBuilder_ != null) {
+        textGuidelinesBuilder_.dispose();
+        textGuidelinesBuilder_ = null;
+      }
       thirdPartyIntegrationPartners_ = null;
       if (thirdPartyIntegrationPartnersBuilder_ != null) {
         thirdPartyIntegrationPartnersBuilder_.dispose();
@@ -29055,7 +33376,8 @@ private static final long serialVersionUID = 0L;
       }
       containsEuPoliticalAdvertising_ = 0;
       feedTypes_ = java.util.Collections.emptyList();
-      bitField1_ = (bitField1_ & ~0x04000000);
+      bitField1_ = (bitField1_ & ~0x08000000);
+      missingEuPoliticalAdvertisingDeclaration_ = false;
       if (commissionBuilder_ != null) {
         commissionBuilder_.clear();
       }
@@ -29184,9 +33506,9 @@ private static final long serialVersionUID = 0L;
       } else {
         result.assetAutomationSettings_ = assetAutomationSettingsBuilder_.build();
       }
-      if (((bitField1_ & 0x04000000) != 0)) {
+      if (((bitField1_ & 0x08000000) != 0)) {
         feedTypes_ = java.util.Collections.unmodifiableList(feedTypes_);
-        bitField1_ = (bitField1_ & ~0x04000000);
+        bitField1_ = (bitField1_ & ~0x08000000);
       }
       result.feedTypes_ = feedTypes_;
     }
@@ -29426,19 +33748,28 @@ private static final long serialVersionUID = 0L;
         to_bitField1_ |= 0x00000002;
       }
       if (((from_bitField1_ & 0x00800000) != 0)) {
-        result.thirdPartyIntegrationPartners_ = thirdPartyIntegrationPartnersBuilder_ == null
-            ? thirdPartyIntegrationPartners_
-            : thirdPartyIntegrationPartnersBuilder_.build();
+        result.textGuidelines_ = textGuidelinesBuilder_ == null
+            ? textGuidelines_
+            : textGuidelinesBuilder_.build();
         to_bitField1_ |= 0x00000004;
       }
       if (((from_bitField1_ & 0x01000000) != 0)) {
-        result.aiMaxSetting_ = aiMaxSettingBuilder_ == null
-            ? aiMaxSetting_
-            : aiMaxSettingBuilder_.build();
+        result.thirdPartyIntegrationPartners_ = thirdPartyIntegrationPartnersBuilder_ == null
+            ? thirdPartyIntegrationPartners_
+            : thirdPartyIntegrationPartnersBuilder_.build();
         to_bitField1_ |= 0x00000008;
       }
       if (((from_bitField1_ & 0x02000000) != 0)) {
+        result.aiMaxSetting_ = aiMaxSettingBuilder_ == null
+            ? aiMaxSetting_
+            : aiMaxSettingBuilder_.build();
+        to_bitField1_ |= 0x00000010;
+      }
+      if (((from_bitField1_ & 0x04000000) != 0)) {
         result.containsEuPoliticalAdvertising_ = containsEuPoliticalAdvertising_;
+      }
+      if (((from_bitField1_ & 0x10000000) != 0)) {
+        result.missingEuPoliticalAdvertisingDeclaration_ = missingEuPoliticalAdvertisingDeclaration_;
       }
       result.bitField0_ |= to_bitField0_;
       result.bitField1_ |= to_bitField1_;
@@ -29845,6 +34176,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasBrandGuidelines()) {
         mergeBrandGuidelines(other.getBrandGuidelines());
       }
+      if (other.hasTextGuidelines()) {
+        mergeTextGuidelines(other.getTextGuidelines());
+      }
       if (other.hasThirdPartyIntegrationPartners()) {
         mergeThirdPartyIntegrationPartners(other.getThirdPartyIntegrationPartners());
       }
@@ -29857,12 +34191,15 @@ private static final long serialVersionUID = 0L;
       if (!other.feedTypes_.isEmpty()) {
         if (feedTypes_.isEmpty()) {
           feedTypes_ = other.feedTypes_;
-          bitField1_ = (bitField1_ & ~0x04000000);
+          bitField1_ = (bitField1_ & ~0x08000000);
         } else {
           ensureFeedTypesIsMutable();
           feedTypes_.addAll(other.feedTypes_);
         }
         onChanged();
+      }
+      if (other.getMissingEuPoliticalAdvertisingDeclaration() != false) {
+        setMissingEuPoliticalAdvertisingDeclaration(other.getMissingEuPoliticalAdvertisingDeclaration());
       }
       switch (other.getCampaignBiddingStrategyCase()) {
         case BIDDING_STRATEGY: {
@@ -30455,19 +34792,19 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getThirdPartyIntegrationPartnersFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00800000;
+              bitField1_ |= 0x01000000;
               break;
             } // case 802
             case 810: {
               input.readMessage(
                   getAiMaxSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x01000000;
+              bitField1_ |= 0x02000000;
               break;
             } // case 810
             case 816: {
               containsEuPoliticalAdvertising_ = input.readEnum();
-              bitField1_ |= 0x02000000;
+              bitField1_ |= 0x04000000;
               break;
             } // case 816
             case 824: {
@@ -30497,6 +34834,18 @@ private static final long serialVersionUID = 0L;
               bitField1_ |= 0x00000010;
               break;
             } // case 842
+            case 858: {
+              input.readMessage(
+                  getTextGuidelinesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00800000;
+              break;
+            } // case 858
+            case 864: {
+              missingEuPoliticalAdvertisingDeclaration_ = input.readBool();
+              bitField1_ |= 0x10000000;
+              break;
+            } // case 864
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -38426,6 +42775,181 @@ private static final long serialVersionUID = 0L;
       return brandGuidelinesBuilder_;
     }
 
+    private com.google.ads.googleads.v23.resources.Campaign.TextGuidelines textGuidelines_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v23.resources.Campaign.TextGuidelines, com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.Builder, com.google.ads.googleads.v23.resources.Campaign.TextGuidelinesOrBuilder> textGuidelinesBuilder_;
+    /**
+     * <pre>
+     * Settings to control automatically generated text assets. Only available
+     * in Performance Max and Search campaigns (Brand Guidelines does not need
+     * to be enabled).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+     * @return Whether the textGuidelines field is set.
+     */
+    public boolean hasTextGuidelines() {
+      return ((bitField1_ & 0x00800000) != 0);
+    }
+    /**
+     * <pre>
+     * Settings to control automatically generated text assets. Only available
+     * in Performance Max and Search campaigns (Brand Guidelines does not need
+     * to be enabled).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+     * @return The textGuidelines.
+     */
+    public com.google.ads.googleads.v23.resources.Campaign.TextGuidelines getTextGuidelines() {
+      if (textGuidelinesBuilder_ == null) {
+        return textGuidelines_ == null ? com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.getDefaultInstance() : textGuidelines_;
+      } else {
+        return textGuidelinesBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Settings to control automatically generated text assets. Only available
+     * in Performance Max and Search campaigns (Brand Guidelines does not need
+     * to be enabled).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+     */
+    public Builder setTextGuidelines(com.google.ads.googleads.v23.resources.Campaign.TextGuidelines value) {
+      if (textGuidelinesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        textGuidelines_ = value;
+      } else {
+        textGuidelinesBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings to control automatically generated text assets. Only available
+     * in Performance Max and Search campaigns (Brand Guidelines does not need
+     * to be enabled).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+     */
+    public Builder setTextGuidelines(
+        com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.Builder builderForValue) {
+      if (textGuidelinesBuilder_ == null) {
+        textGuidelines_ = builderForValue.build();
+      } else {
+        textGuidelinesBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings to control automatically generated text assets. Only available
+     * in Performance Max and Search campaigns (Brand Guidelines does not need
+     * to be enabled).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+     */
+    public Builder mergeTextGuidelines(com.google.ads.googleads.v23.resources.Campaign.TextGuidelines value) {
+      if (textGuidelinesBuilder_ == null) {
+        if (((bitField1_ & 0x00800000) != 0) &&
+          textGuidelines_ != null &&
+          textGuidelines_ != com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.getDefaultInstance()) {
+          getTextGuidelinesBuilder().mergeFrom(value);
+        } else {
+          textGuidelines_ = value;
+        }
+      } else {
+        textGuidelinesBuilder_.mergeFrom(value);
+      }
+      if (textGuidelines_ != null) {
+        bitField1_ |= 0x00800000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings to control automatically generated text assets. Only available
+     * in Performance Max and Search campaigns (Brand Guidelines does not need
+     * to be enabled).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+     */
+    public Builder clearTextGuidelines() {
+      bitField1_ = (bitField1_ & ~0x00800000);
+      textGuidelines_ = null;
+      if (textGuidelinesBuilder_ != null) {
+        textGuidelinesBuilder_.dispose();
+        textGuidelinesBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings to control automatically generated text assets. Only available
+     * in Performance Max and Search campaigns (Brand Guidelines does not need
+     * to be enabled).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+     */
+    public com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.Builder getTextGuidelinesBuilder() {
+      bitField1_ |= 0x00800000;
+      onChanged();
+      return getTextGuidelinesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Settings to control automatically generated text assets. Only available
+     * in Performance Max and Search campaigns (Brand Guidelines does not need
+     * to be enabled).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+     */
+    public com.google.ads.googleads.v23.resources.Campaign.TextGuidelinesOrBuilder getTextGuidelinesOrBuilder() {
+      if (textGuidelinesBuilder_ != null) {
+        return textGuidelinesBuilder_.getMessageOrBuilder();
+      } else {
+        return textGuidelines_ == null ?
+            com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.getDefaultInstance() : textGuidelines_;
+      }
+    }
+    /**
+     * <pre>
+     * Settings to control automatically generated text assets. Only available
+     * in Performance Max and Search campaigns (Brand Guidelines does not need
+     * to be enabled).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.Campaign.TextGuidelines text_guidelines = 107;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v23.resources.Campaign.TextGuidelines, com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.Builder, com.google.ads.googleads.v23.resources.Campaign.TextGuidelinesOrBuilder> 
+        getTextGuidelinesFieldBuilder() {
+      if (textGuidelinesBuilder_ == null) {
+        textGuidelinesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v23.resources.Campaign.TextGuidelines, com.google.ads.googleads.v23.resources.Campaign.TextGuidelines.Builder, com.google.ads.googleads.v23.resources.Campaign.TextGuidelinesOrBuilder>(
+                getTextGuidelines(),
+                getParentForChildren(),
+                isClean());
+        textGuidelines_ = null;
+      }
+      return textGuidelinesBuilder_;
+    }
+
     private com.google.ads.googleads.v23.common.CampaignThirdPartyIntegrationPartners thirdPartyIntegrationPartners_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v23.common.CampaignThirdPartyIntegrationPartners, com.google.ads.googleads.v23.common.CampaignThirdPartyIntegrationPartners.Builder, com.google.ads.googleads.v23.common.CampaignThirdPartyIntegrationPartnersOrBuilder> thirdPartyIntegrationPartnersBuilder_;
@@ -38438,7 +42962,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the thirdPartyIntegrationPartners field is set.
      */
     public boolean hasThirdPartyIntegrationPartners() {
-      return ((bitField1_ & 0x00800000) != 0);
+      return ((bitField1_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -38471,7 +42995,7 @@ private static final long serialVersionUID = 0L;
       } else {
         thirdPartyIntegrationPartnersBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00800000;
+      bitField1_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -38489,7 +43013,7 @@ private static final long serialVersionUID = 0L;
       } else {
         thirdPartyIntegrationPartnersBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00800000;
+      bitField1_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -38502,7 +43026,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeThirdPartyIntegrationPartners(com.google.ads.googleads.v23.common.CampaignThirdPartyIntegrationPartners value) {
       if (thirdPartyIntegrationPartnersBuilder_ == null) {
-        if (((bitField1_ & 0x00800000) != 0) &&
+        if (((bitField1_ & 0x01000000) != 0) &&
           thirdPartyIntegrationPartners_ != null &&
           thirdPartyIntegrationPartners_ != com.google.ads.googleads.v23.common.CampaignThirdPartyIntegrationPartners.getDefaultInstance()) {
           getThirdPartyIntegrationPartnersBuilder().mergeFrom(value);
@@ -38513,7 +43037,7 @@ private static final long serialVersionUID = 0L;
         thirdPartyIntegrationPartnersBuilder_.mergeFrom(value);
       }
       if (thirdPartyIntegrationPartners_ != null) {
-        bitField1_ |= 0x00800000;
+        bitField1_ |= 0x01000000;
         onChanged();
       }
       return this;
@@ -38526,7 +43050,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.common.CampaignThirdPartyIntegrationPartners third_party_integration_partners = 100;</code>
      */
     public Builder clearThirdPartyIntegrationPartners() {
-      bitField1_ = (bitField1_ & ~0x00800000);
+      bitField1_ = (bitField1_ & ~0x01000000);
       thirdPartyIntegrationPartners_ = null;
       if (thirdPartyIntegrationPartnersBuilder_ != null) {
         thirdPartyIntegrationPartnersBuilder_.dispose();
@@ -38543,7 +43067,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.common.CampaignThirdPartyIntegrationPartners third_party_integration_partners = 100;</code>
      */
     public com.google.ads.googleads.v23.common.CampaignThirdPartyIntegrationPartners.Builder getThirdPartyIntegrationPartnersBuilder() {
-      bitField1_ |= 0x00800000;
+      bitField1_ |= 0x01000000;
       onChanged();
       return getThirdPartyIntegrationPartnersFieldBuilder().getBuilder();
     }
@@ -38595,7 +43119,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the aiMaxSetting field is set.
      */
     public boolean hasAiMaxSetting() {
-      return ((bitField1_ & 0x01000000) != 0);
+      return ((bitField1_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -38628,7 +43152,7 @@ private static final long serialVersionUID = 0L;
       } else {
         aiMaxSettingBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x01000000;
+      bitField1_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -38646,7 +43170,7 @@ private static final long serialVersionUID = 0L;
       } else {
         aiMaxSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x01000000;
+      bitField1_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -38659,7 +43183,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAiMaxSetting(com.google.ads.googleads.v23.resources.Campaign.AiMaxSetting value) {
       if (aiMaxSettingBuilder_ == null) {
-        if (((bitField1_ & 0x01000000) != 0) &&
+        if (((bitField1_ & 0x02000000) != 0) &&
           aiMaxSetting_ != null &&
           aiMaxSetting_ != com.google.ads.googleads.v23.resources.Campaign.AiMaxSetting.getDefaultInstance()) {
           getAiMaxSettingBuilder().mergeFrom(value);
@@ -38670,7 +43194,7 @@ private static final long serialVersionUID = 0L;
         aiMaxSettingBuilder_.mergeFrom(value);
       }
       if (aiMaxSetting_ != null) {
-        bitField1_ |= 0x01000000;
+        bitField1_ |= 0x02000000;
         onChanged();
       }
       return this;
@@ -38683,7 +43207,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
      */
     public Builder clearAiMaxSetting() {
-      bitField1_ = (bitField1_ & ~0x01000000);
+      bitField1_ = (bitField1_ & ~0x02000000);
       aiMaxSetting_ = null;
       if (aiMaxSettingBuilder_ != null) {
         aiMaxSettingBuilder_.dispose();
@@ -38700,7 +43224,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v23.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
      */
     public com.google.ads.googleads.v23.resources.Campaign.AiMaxSetting.Builder getAiMaxSettingBuilder() {
-      bitField1_ |= 0x01000000;
+      bitField1_ |= 0x02000000;
       onChanged();
       return getAiMaxSettingFieldBuilder().getBuilder();
     }
@@ -38765,7 +43289,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContainsEuPoliticalAdvertisingValue(int value) {
       containsEuPoliticalAdvertising_ = value;
-      bitField1_ |= 0x02000000;
+      bitField1_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -38797,7 +43321,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x02000000;
+      bitField1_ |= 0x04000000;
       containsEuPoliticalAdvertising_ = value.getNumber();
       onChanged();
       return this;
@@ -38812,7 +43336,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContainsEuPoliticalAdvertising() {
-      bitField1_ = (bitField1_ & ~0x02000000);
+      bitField1_ = (bitField1_ & ~0x04000000);
       containsEuPoliticalAdvertising_ = 0;
       onChanged();
       return this;
@@ -38821,9 +43345,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> feedTypes_ =
       java.util.Collections.emptyList();
     private void ensureFeedTypesIsMutable() {
-      if (!((bitField1_ & 0x04000000) != 0)) {
+      if (!((bitField1_ & 0x08000000) != 0)) {
         feedTypes_ = new java.util.ArrayList<java.lang.Integer>(feedTypes_);
-        bitField1_ |= 0x04000000;
+        bitField1_ |= 0x08000000;
       }
     }
     /**
@@ -38927,7 +43451,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFeedTypes() {
       feedTypes_ = java.util.Collections.emptyList();
-      bitField1_ = (bitField1_ & ~0x04000000);
+      bitField1_ = (bitField1_ & ~0x08000000);
       onChanged();
       return this;
     }
@@ -39002,6 +43526,65 @@ private static final long serialVersionUID = 0L;
       for (int value : values) {
         feedTypes_.add(value);
       }
+      onChanged();
+      return this;
+    }
+
+    private boolean missingEuPoliticalAdvertisingDeclaration_ ;
+    /**
+     * <pre>
+     * Output only. Indicates whether this campaign is missing a declaration about
+     * whether it contains political advertising targeted towards the EU and is
+     * ineligible for any exemptions. If this field is true, use the
+     * contains_eu_political_advertising field to add the required declaration.
+     *
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The missingEuPoliticalAdvertisingDeclaration.
+     */
+    @java.lang.Override
+    public boolean getMissingEuPoliticalAdvertisingDeclaration() {
+      return missingEuPoliticalAdvertisingDeclaration_;
+    }
+    /**
+     * <pre>
+     * Output only. Indicates whether this campaign is missing a declaration about
+     * whether it contains political advertising targeted towards the EU and is
+     * ineligible for any exemptions. If this field is true, use the
+     * contains_eu_political_advertising field to add the required declaration.
+     *
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The missingEuPoliticalAdvertisingDeclaration to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMissingEuPoliticalAdvertisingDeclaration(boolean value) {
+
+      missingEuPoliticalAdvertisingDeclaration_ = value;
+      bitField1_ |= 0x10000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Indicates whether this campaign is missing a declaration about
+     * whether it contains political advertising targeted towards the EU and is
+     * ineligible for any exemptions. If this field is true, use the
+     * contains_eu_political_advertising field to add the required declaration.
+     *
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMissingEuPoliticalAdvertisingDeclaration() {
+      bitField1_ = (bitField1_ & ~0x10000000);
+      missingEuPoliticalAdvertisingDeclaration_ = false;
       onChanged();
       return this;
     }

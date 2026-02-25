@@ -93,6 +93,46 @@ private static final long serialVersionUID = 0L;
         linkedProductCase_);
   }
 
+  private int productLinkPropertiesCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object productLinkProperties_;
+  public enum ProductLinkPropertiesCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    ADVERTISING_PARTNER_PROPERTIES(15),
+    PRODUCTLINKPROPERTIES_NOT_SET(0);
+    private final int value;
+    private ProductLinkPropertiesCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ProductLinkPropertiesCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ProductLinkPropertiesCase forNumber(int value) {
+      switch (value) {
+        case 15: return ADVERTISING_PARTNER_PROPERTIES;
+        case 0: return PRODUCTLINKPROPERTIES_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public ProductLinkPropertiesCase
+  getProductLinkPropertiesCase() {
+    return ProductLinkPropertiesCase.forNumber(
+        productLinkPropertiesCase_);
+  }
+
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object resourceName_ = "";
@@ -373,6 +413,52 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v23.resources.AdvertisingPartnerIdentifier.getDefaultInstance();
   }
 
+  public static final int ADVERTISING_PARTNER_PROPERTIES_FIELD_NUMBER = 15;
+  /**
+   * <pre>
+   * Output only. Advertising Partner link properties. These properties are
+   * only applicable when the link is for an Advertising Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the advertisingPartnerProperties field is set.
+   */
+  @java.lang.Override
+  public boolean hasAdvertisingPartnerProperties() {
+    return productLinkPropertiesCase_ == 15;
+  }
+  /**
+   * <pre>
+   * Output only. Advertising Partner link properties. These properties are
+   * only applicable when the link is for an Advertising Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The advertisingPartnerProperties.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties getAdvertisingPartnerProperties() {
+    if (productLinkPropertiesCase_ == 15) {
+       return (com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties) productLinkProperties_;
+    }
+    return com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. Advertising Partner link properties. These properties are
+   * only applicable when the link is for an Advertising Partner.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.resources.AdvertisingPartnerPropertiesOrBuilder getAdvertisingPartnerPropertiesOrBuilder() {
+    if (productLinkPropertiesCase_ == 15) {
+       return (com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties) productLinkProperties_;
+    }
+    return com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -407,6 +493,9 @@ private static final long serialVersionUID = 0L;
     }
     if (linkedProductCase_ == 13) {
       output.writeMessage(13, (com.google.ads.googleads.v23.resources.AdvertisingPartnerIdentifier) linkedProduct_);
+    }
+    if (productLinkPropertiesCase_ == 15) {
+      output.writeMessage(15, (com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties) productLinkProperties_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -443,6 +532,10 @@ private static final long serialVersionUID = 0L;
     if (linkedProductCase_ == 13) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, (com.google.ads.googleads.v23.resources.AdvertisingPartnerIdentifier) linkedProduct_);
+    }
+    if (productLinkPropertiesCase_ == 15) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, (com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties) productLinkProperties_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -488,6 +581,15 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
+    if (!getProductLinkPropertiesCase().equals(other.getProductLinkPropertiesCase())) return false;
+    switch (productLinkPropertiesCase_) {
+      case 15:
+        if (!getAdvertisingPartnerProperties()
+            .equals(other.getAdvertisingPartnerProperties())) return false;
+        break;
+      case 0:
+      default:
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -524,6 +626,14 @@ private static final long serialVersionUID = 0L;
       case 13:
         hash = (37 * hash) + ADVERTISING_PARTNER_FIELD_NUMBER;
         hash = (53 * hash) + getAdvertisingPartner().hashCode();
+        break;
+      case 0:
+      default:
+    }
+    switch (productLinkPropertiesCase_) {
+      case 15:
+        hash = (37 * hash) + ADVERTISING_PARTNER_PROPERTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getAdvertisingPartnerProperties().hashCode();
         break;
       case 0:
       default:
@@ -679,8 +789,13 @@ private static final long serialVersionUID = 0L;
       if (advertisingPartnerBuilder_ != null) {
         advertisingPartnerBuilder_.clear();
       }
+      if (advertisingPartnerPropertiesBuilder_ != null) {
+        advertisingPartnerPropertiesBuilder_.clear();
+      }
       linkedProductCase_ = 0;
       linkedProduct_ = null;
+      productLinkPropertiesCase_ = 0;
+      productLinkProperties_ = null;
       return this;
     }
 
@@ -747,6 +862,12 @@ private static final long serialVersionUID = 0L;
       if (linkedProductCase_ == 13 &&
           advertisingPartnerBuilder_ != null) {
         result.linkedProduct_ = advertisingPartnerBuilder_.build();
+      }
+      result.productLinkPropertiesCase_ = productLinkPropertiesCase_;
+      result.productLinkProperties_ = this.productLinkProperties_;
+      if (productLinkPropertiesCase_ == 15 &&
+          advertisingPartnerPropertiesBuilder_ != null) {
+        result.productLinkProperties_ = advertisingPartnerPropertiesBuilder_.build();
       }
     }
 
@@ -826,6 +947,15 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
+      switch (other.getProductLinkPropertiesCase()) {
+        case ADVERTISING_PARTNER_PROPERTIES: {
+          mergeAdvertisingPartnerProperties(other.getAdvertisingPartnerProperties());
+          break;
+        }
+        case PRODUCTLINKPROPERTIES_NOT_SET: {
+          break;
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -895,6 +1025,13 @@ private static final long serialVersionUID = 0L;
               linkedProductCase_ = 13;
               break;
             } // case 106
+            case 122: {
+              input.readMessage(
+                  getAdvertisingPartnerPropertiesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              productLinkPropertiesCase_ = 15;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -921,6 +1058,21 @@ private static final long serialVersionUID = 0L;
     public Builder clearLinkedProduct() {
       linkedProductCase_ = 0;
       linkedProduct_ = null;
+      onChanged();
+      return this;
+    }
+
+    private int productLinkPropertiesCase_ = 0;
+    private java.lang.Object productLinkProperties_;
+    public ProductLinkPropertiesCase
+        getProductLinkPropertiesCase() {
+      return ProductLinkPropertiesCase.forNumber(
+          productLinkPropertiesCase_);
+    }
+
+    public Builder clearProductLinkProperties() {
+      productLinkPropertiesCase_ = 0;
+      productLinkProperties_ = null;
       onChanged();
       return this;
     }
@@ -1877,6 +2029,193 @@ private static final long serialVersionUID = 0L;
       linkedProductCase_ = 13;
       onChanged();
       return advertisingPartnerBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties, com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.Builder, com.google.ads.googleads.v23.resources.AdvertisingPartnerPropertiesOrBuilder> advertisingPartnerPropertiesBuilder_;
+    /**
+     * <pre>
+     * Output only. Advertising Partner link properties. These properties are
+     * only applicable when the link is for an Advertising Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the advertisingPartnerProperties field is set.
+     */
+    @java.lang.Override
+    public boolean hasAdvertisingPartnerProperties() {
+      return productLinkPropertiesCase_ == 15;
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link properties. These properties are
+     * only applicable when the link is for an Advertising Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The advertisingPartnerProperties.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties getAdvertisingPartnerProperties() {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        if (productLinkPropertiesCase_ == 15) {
+          return (com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties) productLinkProperties_;
+        }
+        return com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.getDefaultInstance();
+      } else {
+        if (productLinkPropertiesCase_ == 15) {
+          return advertisingPartnerPropertiesBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link properties. These properties are
+     * only applicable when the link is for an Advertising Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setAdvertisingPartnerProperties(com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties value) {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        productLinkProperties_ = value;
+        onChanged();
+      } else {
+        advertisingPartnerPropertiesBuilder_.setMessage(value);
+      }
+      productLinkPropertiesCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link properties. These properties are
+     * only applicable when the link is for an Advertising Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setAdvertisingPartnerProperties(
+        com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.Builder builderForValue) {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        productLinkProperties_ = builderForValue.build();
+        onChanged();
+      } else {
+        advertisingPartnerPropertiesBuilder_.setMessage(builderForValue.build());
+      }
+      productLinkPropertiesCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link properties. These properties are
+     * only applicable when the link is for an Advertising Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeAdvertisingPartnerProperties(com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties value) {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        if (productLinkPropertiesCase_ == 15 &&
+            productLinkProperties_ != com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.getDefaultInstance()) {
+          productLinkProperties_ = com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.newBuilder((com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties) productLinkProperties_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          productLinkProperties_ = value;
+        }
+        onChanged();
+      } else {
+        if (productLinkPropertiesCase_ == 15) {
+          advertisingPartnerPropertiesBuilder_.mergeFrom(value);
+        } else {
+          advertisingPartnerPropertiesBuilder_.setMessage(value);
+        }
+      }
+      productLinkPropertiesCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link properties. These properties are
+     * only applicable when the link is for an Advertising Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearAdvertisingPartnerProperties() {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        if (productLinkPropertiesCase_ == 15) {
+          productLinkPropertiesCase_ = 0;
+          productLinkProperties_ = null;
+          onChanged();
+        }
+      } else {
+        if (productLinkPropertiesCase_ == 15) {
+          productLinkPropertiesCase_ = 0;
+          productLinkProperties_ = null;
+        }
+        advertisingPartnerPropertiesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link properties. These properties are
+     * only applicable when the link is for an Advertising Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.Builder getAdvertisingPartnerPropertiesBuilder() {
+      return getAdvertisingPartnerPropertiesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link properties. These properties are
+     * only applicable when the link is for an Advertising Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v23.resources.AdvertisingPartnerPropertiesOrBuilder getAdvertisingPartnerPropertiesOrBuilder() {
+      if ((productLinkPropertiesCase_ == 15) && (advertisingPartnerPropertiesBuilder_ != null)) {
+        return advertisingPartnerPropertiesBuilder_.getMessageOrBuilder();
+      } else {
+        if (productLinkPropertiesCase_ == 15) {
+          return (com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties) productLinkProperties_;
+        }
+        return com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Advertising Partner link properties. These properties are
+     * only applicable when the link is for an Advertising Partner.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v23.resources.AdvertisingPartnerProperties advertising_partner_properties = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties, com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.Builder, com.google.ads.googleads.v23.resources.AdvertisingPartnerPropertiesOrBuilder> 
+        getAdvertisingPartnerPropertiesFieldBuilder() {
+      if (advertisingPartnerPropertiesBuilder_ == null) {
+        if (!(productLinkPropertiesCase_ == 15)) {
+          productLinkProperties_ = com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.getDefaultInstance();
+        }
+        advertisingPartnerPropertiesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties, com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties.Builder, com.google.ads.googleads.v23.resources.AdvertisingPartnerPropertiesOrBuilder>(
+                (com.google.ads.googleads.v23.resources.AdvertisingPartnerProperties) productLinkProperties_,
+                getParentForChildren(),
+                isClean());
+        productLinkProperties_ = null;
+      }
+      productLinkPropertiesCase_ = 15;
+      onChanged();
+      return advertisingPartnerPropertiesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,6 +54,7 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
                   ProtoUtils.marshaller(MutateCustomerRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(MutateCustomerResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<
@@ -68,6 +69,7 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
                   ProtoUtils.marshaller(ListAccessibleCustomersRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListAccessibleCustomersResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<CreateCustomerClientRequest, CreateCustomerClientResponse>
@@ -80,6 +82,7 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
                   ProtoUtils.marshaller(CreateCustomerClientRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(CreateCustomerClientResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<MutateCustomerRequest, MutateCustomerResponse> mutateCustomerCallable;

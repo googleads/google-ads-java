@@ -61,4 +61,48 @@ public interface GenerateBenchmarksMetricsResponseOrBuilder extends
    * <code>.google.ads.googleads.v23.services.Metrics average_benchmarks_metrics = 2;</code>
    */
   com.google.ads.googleads.v23.services.MetricsOrBuilder getAverageBenchmarksMetricsOrBuilder();
+
+  /**
+   * <pre>
+   * Breakdown metrics grouped by dimensions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+   */
+  java.util.List<com.google.ads.googleads.v23.services.BreakdownMetrics> 
+      getBreakdownMetricsList();
+  /**
+   * <pre>
+   * Breakdown metrics grouped by dimensions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+   */
+  com.google.ads.googleads.v23.services.BreakdownMetrics getBreakdownMetrics(int index);
+  /**
+   * <pre>
+   * Breakdown metrics grouped by dimensions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+   */
+  int getBreakdownMetricsCount();
+  /**
+   * <pre>
+   * Breakdown metrics grouped by dimensions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v23.services.BreakdownMetricsOrBuilder> 
+      getBreakdownMetricsOrBuilderList();
+  /**
+   * <pre>
+   * Breakdown metrics grouped by dimensions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+   */
+  com.google.ads.googleads.v23.services.BreakdownMetricsOrBuilder getBreakdownMetricsOrBuilder(
+      int index);
 }

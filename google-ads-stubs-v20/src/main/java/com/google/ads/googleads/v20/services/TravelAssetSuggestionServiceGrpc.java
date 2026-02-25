@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to retrieve Travel asset suggestions.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/travel_asset_suggestion_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class TravelAssetSuggestionServiceGrpc {
 
@@ -204,8 +201,8 @@ public final class TravelAssetSuggestionServiceGrpc {
      * property.
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.SuggestTravelAssetsResponse suggestTravelAssets(com.google.ads.googleads.v20.services.SuggestTravelAssetsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.SuggestTravelAssetsResponse suggestTravelAssets(com.google.ads.googleads.v20.services.SuggestTravelAssetsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getSuggestTravelAssetsMethod(), getCallOptions(), request);
     }
   }

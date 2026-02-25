@@ -6,7 +6,8 @@ package com.google.ads.googleads.v20.services;
 
 /**
  * <pre>
- * Request message for [KeywordPlanIdeaService.GenerateKeywordForecastMetrics].
+ * Request message for
+ * [KeywordPlanIdeaService.GenerateKeywordForecastMetrics][google.ads.googleads.v20.services.KeywordPlanIdeaService.GenerateKeywordForecastMetrics].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v20.services.GenerateKeywordForecastMetricsRequest}
@@ -454,7 +455,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [KeywordPlanIdeaService.GenerateKeywordForecastMetrics].
+   * Request message for
+   * [KeywordPlanIdeaService.GenerateKeywordForecastMetrics][google.ads.googleads.v20.services.KeywordPlanIdeaService.GenerateKeywordForecastMetrics].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v20.services.GenerateKeywordForecastMetricsRequest}

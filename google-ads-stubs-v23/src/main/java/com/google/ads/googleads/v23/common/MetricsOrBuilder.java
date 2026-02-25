@@ -5114,6 +5114,121 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * This metric counts the unique individuals who were shown your video ad two
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_two_plus = 393;</code>
+   * @return Whether the uniqueUsersTwoPlus field is set.
+   */
+  boolean hasUniqueUsersTwoPlus();
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad two
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_two_plus = 393;</code>
+   * @return The uniqueUsersTwoPlus.
+   */
+  long getUniqueUsersTwoPlus();
+
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad
+   * three or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_three_plus = 394;</code>
+   * @return Whether the uniqueUsersThreePlus field is set.
+   */
+  boolean hasUniqueUsersThreePlus();
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad
+   * three or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_three_plus = 394;</code>
+   * @return The uniqueUsersThreePlus.
+   */
+  long getUniqueUsersThreePlus();
+
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad four
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_four_plus = 395;</code>
+   * @return Whether the uniqueUsersFourPlus field is set.
+   */
+  boolean hasUniqueUsersFourPlus();
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad four
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_four_plus = 395;</code>
+   * @return The uniqueUsersFourPlus.
+   */
+  long getUniqueUsersFourPlus();
+
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad five
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_five_plus = 396;</code>
+   * @return Whether the uniqueUsersFivePlus field is set.
+   */
+  boolean hasUniqueUsersFivePlus();
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad five
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_five_plus = 396;</code>
+   * @return The uniqueUsersFivePlus.
+   */
+  long getUniqueUsersFivePlus();
+
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad ten
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_ten_plus = 397;</code>
+   * @return Whether the uniqueUsersTenPlus field is set.
+   */
+  boolean hasUniqueUsersTenPlus();
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad ten
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_ten_plus = 397;</code>
+   * @return The uniqueUsersTenPlus.
+   */
+  long getUniqueUsersTenPlus();
+
+  /**
+   * <pre>
    * The conversion value rule adjustment from biddable conversions in all
    * conversion categories.
    * </pre>

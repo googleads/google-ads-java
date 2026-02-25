@@ -101,10 +101,25 @@ public final class BenchmarksServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v23_services_ProductFilter_MarketingObjectiveList_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v23_services_BreakdownDefinition_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v23_services_BreakdownDefinition_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v23_services_GenerateBenchmarksMetricsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v23_services_GenerateBenchmarksMetricsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v23_services_BreakdownMetrics_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v23_services_BreakdownMetrics_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v23_services_BreakdownKey_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v23_services_BreakdownKey_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v23_services_Metrics_descriptor;
   static final 
@@ -133,135 +148,152 @@ public final class BenchmarksServiceProto {
       "mon/dates.proto\032Cgoogle/ads/googleads/v2" +
       "3/enums/benchmarks_marketing_objective.p" +
       "roto\032;google/ads/googleads/v23/enums/ben" +
-      "chmarks_source_type.proto\032\034google/api/an" +
-      "notations.proto\032\027google/api/client.proto" +
-      "\032\037google/api/field_behavior.proto\"{\n#Lis" +
-      "tBenchmarksAvailableDatesRequest\022T\n\020appl" +
-      "ication_info\030\001 \001(\0132:.google.ads.googlead" +
-      "s.v23.common.AdditionalApplicationInfo\"k" +
-      "\n$ListBenchmarksAvailableDatesResponse\022C" +
-      "\n\017supported_dates\030\001 \001(\0132*.google.ads.goo" +
-      "gleads.v23.common.DateRange\"v\n\036ListBench" +
-      "marksLocationsRequest\022T\n\020application_inf" +
-      "o\030\001 \001(\0132:.google.ads.googleads.v23.commo" +
-      "n.AdditionalApplicationInfo\"v\n\037ListBench" +
-      "marksLocationsResponse\022S\n\024benchmarks_loc" +
-      "ations\030\001 \003(\01325.google.ads.googleads.v23." +
-      "services.BenchmarksLocation\"\210\001\n\022Benchmar" +
-      "ksLocation\022\025\n\rlocation_name\030\001 \001(\t\022\025\n\rloc" +
-      "ation_type\030\002 \001(\t\022D\n\rlocation_info\030\003 \001(\0132" +
-      "-.google.ads.googleads.v23.common.Locati" +
-      "onInfo\"u\n\035ListBenchmarksProductsRequest\022" +
-      "T\n\020application_info\030\001 \001(\0132:.google.ads.g" +
-      "oogleads.v23.common.AdditionalApplicatio" +
-      "nInfo\"{\n\036ListBenchmarksProductsResponse\022" +
-      "Y\n\023benchmarks_products\030\001 \003(\0132<.google.ad" +
-      "s.googleads.v23.services.BenchmarksProdu" +
-      "ctMetadata\"\303\001\n\031BenchmarksProductMetadata" +
-      "\022\024\n\014product_name\030\001 \001(\t\022\024\n\014product_code\030\002" +
-      " \001(\t\022z\n\023marketing_objective\030\003 \001(\0162].goog" +
-      "le.ads.googleads.v23.enums.BenchmarksMar" +
-      "ketingObjectiveEnum.BenchmarksMarketingO" +
-      "bjective\"\344\001\n\034ListBenchmarksSourcesReques" +
-      "t\022n\n\022benchmarks_sources\030\001 \003(\0162M.google.a" +
-      "ds.googleads.v23.enums.BenchmarksSourceT" +
-      "ypeEnum.BenchmarksSourceTypeB\003\340A\002\022T\n\020app" +
-      "lication_info\030\002 \001(\0132:.google.ads.googlea" +
-      "ds.v23.common.AdditionalApplicationInfo\"" +
-      "x\n\035ListBenchmarksSourcesResponse\022W\n\022benc" +
-      "hmarks_sources\030\001 \003(\0132;.google.ads.google" +
-      "ads.v23.services.BenchmarksSourceMetadat" +
-      "a\"\376\001\n\030BenchmarksSourceMetadata\022m\n\026benchm" +
-      "arks_source_type\030\001 \001(\0162M.google.ads.goog" +
-      "leads.v23.enums.BenchmarksSourceTypeEnum" +
-      ".BenchmarksSourceType\022Y\n\026industry_vertic" +
-      "al_info\030\002 \001(\01327.google.ads.googleads.v23" +
-      ".services.IndustryVerticalInfoH\000B\030\n\026benc" +
-      "hmarks_source_info\"y\n\024IndustryVerticalIn" +
-      "fo\022\036\n\026industry_vertical_name\030\001 \001(\t\022\034\n\024in" +
-      "dustry_vertical_id\030\002 \001(\003\022#\n\033parent_indus" +
-      "try_vertical_id\030\003 \001(\003\"\373\003\n GenerateBenchm" +
-      "arksMetricsRequest\022\030\n\013customer_id\030\001 \001(\tB" +
-      "\003\340A\002\022>\n\ndate_range\030\002 \001(\0132*.google.ads.go" +
-      "ogleads.v23.common.DateRange\022D\n\010location" +
-      "\030\003 \001(\0132-.google.ads.googleads.v23.common" +
-      ".LocationInfoB\003\340A\002\022S\n\021benchmarks_source\030" +
-      "\004 \001(\01323.google.ads.googleads.v23.service" +
-      "s.BenchmarksSourceB\003\340A\002\022M\n\016product_filte" +
-      "r\030\005 \001(\01320.google.ads.googleads.v23.servi" +
-      "ces.ProductFilterB\003\340A\002\022\032\n\rcurrency_code\030" +
-      "\006 \001(\tB\003\340A\001\022!\n\031customer_benchmarks_group\030" +
-      "\007 \001(\t\022T\n\020application_info\030\010 \001(\0132:.google" +
-      ".ads.googleads.v23.common.AdditionalAppl" +
-      "icationInfo\"J\n\020BenchmarksSource\022\036\n\024indus" +
-      "try_vertical_id\030\001 \001(\003H\000B\026\n\024benchmarks_so" +
-      "urce_id\"\256\003\n\rProductFilter\022T\n\014product_lis" +
-      "t\030\001 \001(\0132<.google.ads.googleads.v23.servi" +
-      "ces.ProductFilter.ProductListH\000\022k\n\030marke" +
-      "ting_objective_list\030\002 \001(\0132G.google.ads.g" +
-      "oogleads.v23.services.ProductFilter.Mark" +
-      "etingObjectiveListH\000\032)\n\013ProductList\022\032\n\rp" +
-      "roduct_codes\030\001 \003(\tB\003\340A\002\032\233\001\n\026MarketingObj" +
-      "ectiveList\022\200\001\n\024marketing_objectives\030\001 \003(" +
-      "\0162].google.ads.googleads.v23.enums.Bench" +
-      "marksMarketingObjectiveEnum.BenchmarksMa" +
-      "rketingObjectiveB\003\340A\002B\021\n\017filter_settings" +
-      "\"\271\001\n!GenerateBenchmarksMetricsResponse\022D" +
-      "\n\020customer_metrics\030\001 \001(\0132*.google.ads.go" +
-      "ogleads.v23.services.Metrics\022N\n\032average_" +
-      "benchmarks_metrics\030\002 \001(\0132*.google.ads.go" +
-      "ogleads.v23.services.Metrics\"W\n\007Metrics\022" +
-      "L\n\024average_rate_metrics\030\001 \001(\0132..google.a" +
-      "ds.googleads.v23.services.RateMetrics\"\271\003" +
-      "\n\013RateMetrics\022\023\n\013average_cpm\030\001 \001(\001\022\037\n\027av" +
-      "erage_active_view_cpm\030\002 \001(\001\022\034\n\024trueview_" +
-      "average_cpv\030\003 \001(\001\022\023\n\013average_cpc\030\004 \001(\001\022\023" +
-      "\n\013average_cpi\030\005 \001(\001\022\023\n\013average_cpe\030\006 \001(\001" +
-      "\022\030\n\020interaction_rate\030\007 \001(\001\022\027\n\017engagement" +
-      "_rate\030\010 \001(\001\022\037\n\027active_view_viewability\030\t" +
-      " \001(\001\022\032\n\022trueview_view_rate\030\n \001(\001\022\032\n\022clic" +
-      "k_through_rate\030\013 \001(\001\022!\n\031video_completion" +
-      "_p25_rate\030\014 \001(\001\022!\n\031video_completion_p50_" +
-      "rate\030\r \001(\001\022!\n\031video_completion_p75_rate\030" +
-      "\016 \001(\001\022\"\n\032video_completion_p100_rate\030\017 \001(" +
-      "\0012\315\t\n\021BenchmarksService\022\335\001\n\034ListBenchmar" +
-      "ksAvailableDates\022F.google.ads.googleads." +
-      "v23.services.ListBenchmarksAvailableDate" +
-      "sRequest\032G.google.ads.googleads.v23.serv" +
-      "ices.ListBenchmarksAvailableDatesRespons" +
-      "e\",\202\323\344\223\002&\"!/v23:listBenchmarksAvailableD" +
-      "ates:\001*\022\311\001\n\027ListBenchmarksLocations\022A.go" +
-      "ogle.ads.googleads.v23.services.ListBenc" +
-      "hmarksLocationsRequest\032B.google.ads.goog" +
-      "leads.v23.services.ListBenchmarksLocatio" +
-      "nsResponse\"\'\202\323\344\223\002!\"\034/v23:listBenchmarksL" +
-      "ocations:\001*\022\305\001\n\026ListBenchmarksProducts\022@" +
-      ".google.ads.googleads.v23.services.ListB" +
-      "enchmarksProductsRequest\032A.google.ads.go" +
-      "ogleads.v23.services.ListBenchmarksProdu" +
-      "ctsResponse\"&\202\323\344\223\002 \"\033/v23:listBenchmarks" +
-      "Products:\001*\022\326\001\n\025ListBenchmarksSources\022?." +
-      "google.ads.googleads.v23.services.ListBe" +
-      "nchmarksSourcesRequest\032@.google.ads.goog" +
-      "leads.v23.services.ListBenchmarksSources" +
-      "Response\":\332A\022benchmarks_sources\202\323\344\223\002\037\"\032/" +
-      "v23:listBenchmarksSources:\001*\022\243\002\n\031Generat" +
-      "eBenchmarksMetrics\022C.google.ads.googlead" +
-      "s.v23.services.GenerateBenchmarksMetrics" +
-      "Request\032D.google.ads.googleads.v23.servi" +
-      "ces.GenerateBenchmarksMetricsResponse\"{\332" +
-      "A5customer_id,location,benchmarks_source" +
-      ",product_filter\202\323\344\223\002=\"8/v23/customers/{c" +
-      "ustomer_id=*}:generateBenchmarksMetrics:" +
-      "\001*\032E\312A\030googleads.googleapis.com\322A\'https:" +
-      "//www.googleapis.com/auth/adwordsB\202\002\n%co" +
-      "m.google.ads.googleads.v23.servicesB\026Ben" +
-      "chmarksServiceProtoP\001ZIgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v23/s" +
-      "ervices;services\242\002\003GAA\252\002!Google.Ads.Goog" +
-      "leAds.V23.Services\312\002!Google\\Ads\\GoogleAd" +
-      "s\\V23\\Services\352\002%Google::Ads::GoogleAds:" +
-      ":V23::Servicesb\006proto3"
+      "chmarks_source_type.proto\032@google/ads/go" +
+      "ogleads/v23/enums/benchmarks_time_granul" +
+      "arity.proto\032\034google/api/annotations.prot" +
+      "o\032\027google/api/client.proto\032\037google/api/f" +
+      "ield_behavior.proto\"{\n#ListBenchmarksAva" +
+      "ilableDatesRequest\022T\n\020application_info\030\001" +
+      " \001(\0132:.google.ads.googleads.v23.common.A" +
+      "dditionalApplicationInfo\"k\n$ListBenchmar" +
+      "ksAvailableDatesResponse\022C\n\017supported_da" +
+      "tes\030\001 \001(\0132*.google.ads.googleads.v23.com" +
+      "mon.DateRange\"v\n\036ListBenchmarksLocations" +
+      "Request\022T\n\020application_info\030\001 \001(\0132:.goog" +
+      "le.ads.googleads.v23.common.AdditionalAp" +
+      "plicationInfo\"v\n\037ListBenchmarksLocations" +
+      "Response\022S\n\024benchmarks_locations\030\001 \003(\01325" +
+      ".google.ads.googleads.v23.services.Bench" +
+      "marksLocation\"\210\001\n\022BenchmarksLocation\022\025\n\r" +
+      "location_name\030\001 \001(\t\022\025\n\rlocation_type\030\002 \001" +
+      "(\t\022D\n\rlocation_info\030\003 \001(\0132-.google.ads.g" +
+      "oogleads.v23.common.LocationInfo\"u\n\035List" +
+      "BenchmarksProductsRequest\022T\n\020application" +
+      "_info\030\001 \001(\0132:.google.ads.googleads.v23.c" +
+      "ommon.AdditionalApplicationInfo\"{\n\036ListB" +
+      "enchmarksProductsResponse\022Y\n\023benchmarks_" +
+      "products\030\001 \003(\0132<.google.ads.googleads.v2" +
+      "3.services.BenchmarksProductMetadata\"\303\001\n" +
+      "\031BenchmarksProductMetadata\022\024\n\014product_na" +
+      "me\030\001 \001(\t\022\024\n\014product_code\030\002 \001(\t\022z\n\023market" +
+      "ing_objective\030\003 \001(\0162].google.ads.googlea" +
+      "ds.v23.enums.BenchmarksMarketingObjectiv" +
+      "eEnum.BenchmarksMarketingObjective\"\344\001\n\034L" +
+      "istBenchmarksSourcesRequest\022n\n\022benchmark" +
+      "s_sources\030\001 \003(\0162M.google.ads.googleads.v" +
+      "23.enums.BenchmarksSourceTypeEnum.Benchm" +
+      "arksSourceTypeB\003\340A\002\022T\n\020application_info\030" +
+      "\002 \001(\0132:.google.ads.googleads.v23.common." +
+      "AdditionalApplicationInfo\"x\n\035ListBenchma" +
+      "rksSourcesResponse\022W\n\022benchmarks_sources" +
+      "\030\001 \003(\0132;.google.ads.googleads.v23.servic" +
+      "es.BenchmarksSourceMetadata\"\376\001\n\030Benchmar" +
+      "ksSourceMetadata\022m\n\026benchmarks_source_ty" +
+      "pe\030\001 \001(\0162M.google.ads.googleads.v23.enum" +
+      "s.BenchmarksSourceTypeEnum.BenchmarksSou" +
+      "rceType\022Y\n\026industry_vertical_info\030\002 \001(\0132" +
+      "7.google.ads.googleads.v23.services.Indu" +
+      "stryVerticalInfoH\000B\030\n\026benchmarks_source_" +
+      "info\"y\n\024IndustryVerticalInfo\022\036\n\026industry" +
+      "_vertical_name\030\001 \001(\t\022\034\n\024industry_vertica" +
+      "l_id\030\002 \001(\003\022#\n\033parent_industry_vertical_i" +
+      "d\030\003 \001(\003\"\326\004\n GenerateBenchmarksMetricsReq" +
+      "uest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022>\n\ndate_r" +
+      "ange\030\002 \001(\0132*.google.ads.googleads.v23.co" +
+      "mmon.DateRange\022D\n\010location\030\003 \001(\0132-.googl" +
+      "e.ads.googleads.v23.common.LocationInfoB" +
+      "\003\340A\002\022S\n\021benchmarks_source\030\004 \001(\01323.google" +
+      ".ads.googleads.v23.services.BenchmarksSo" +
+      "urceB\003\340A\002\022M\n\016product_filter\030\005 \001(\01320.goog" +
+      "le.ads.googleads.v23.services.ProductFil" +
+      "terB\003\340A\002\022Y\n\024breakdown_definition\030\t \001(\01326" +
+      ".google.ads.googleads.v23.services.Break" +
+      "downDefinitionB\003\340A\001\022\032\n\rcurrency_code\030\006 \001" +
+      "(\tB\003\340A\001\022!\n\031customer_benchmarks_group\030\007 \001" +
+      "(\t\022T\n\020application_info\030\010 \001(\0132:.google.ad" +
+      "s.googleads.v23.common.AdditionalApplica" +
+      "tionInfo\"J\n\020BenchmarksSource\022\036\n\024industry" +
+      "_vertical_id\030\001 \001(\003H\000B\026\n\024benchmarks_sourc" +
+      "e_id\"\256\003\n\rProductFilter\022T\n\014product_list\030\001" +
+      " \001(\0132<.google.ads.googleads.v23.services" +
+      ".ProductFilter.ProductListH\000\022k\n\030marketin" +
+      "g_objective_list\030\002 \001(\0132G.google.ads.goog" +
+      "leads.v23.services.ProductFilter.Marketi" +
+      "ngObjectiveListH\000\032)\n\013ProductList\022\032\n\rprod" +
+      "uct_codes\030\001 \003(\tB\003\340A\002\032\233\001\n\026MarketingObject" +
+      "iveList\022\200\001\n\024marketing_objectives\030\001 \003(\0162]" +
+      ".google.ads.googleads.v23.enums.Benchmar" +
+      "ksMarketingObjectiveEnum.BenchmarksMarke" +
+      "tingObjectiveB\003\340A\002B\021\n\017filter_settings\"\206\001" +
+      "\n\023BreakdownDefinition\022o\n\016date_breakdown\030" +
+      "\001 \001(\0162W.google.ads.googleads.v23.enums.B" +
+      "enchmarksTimeGranularityEnum.BenchmarksT" +
+      "imeGranularity\"\211\002\n!GenerateBenchmarksMet" +
+      "ricsResponse\022D\n\020customer_metrics\030\001 \001(\0132*" +
+      ".google.ads.googleads.v23.services.Metri" +
+      "cs\022N\n\032average_benchmarks_metrics\030\002 \001(\0132*" +
+      ".google.ads.googleads.v23.services.Metri" +
+      "cs\022N\n\021breakdown_metrics\030\003 \003(\01323.google.a" +
+      "ds.googleads.v23.services.BreakdownMetri" +
+      "cs\"\360\001\n\020BreakdownMetrics\022F\n\rbreakdown_key" +
+      "\030\001 \001(\0132/.google.ads.googleads.v23.servic" +
+      "es.BreakdownKey\022D\n\020customer_metrics\030\002 \001(" +
+      "\0132*.google.ads.googleads.v23.services.Me" +
+      "trics\022N\n\032average_benchmarks_metrics\030\003 \001(" +
+      "\0132*.google.ads.googleads.v23.services.Me" +
+      "trics\"I\n\014BreakdownKey\0229\n\005dates\030\001 \001(\0132*.g" +
+      "oogle.ads.googleads.v23.common.DateRange" +
+      "\"W\n\007Metrics\022L\n\024average_rate_metrics\030\001 \001(" +
+      "\0132..google.ads.googleads.v23.services.Ra" +
+      "teMetrics\"\271\003\n\013RateMetrics\022\023\n\013average_cpm" +
+      "\030\001 \001(\001\022\037\n\027average_active_view_cpm\030\002 \001(\001\022" +
+      "\034\n\024trueview_average_cpv\030\003 \001(\001\022\023\n\013average" +
+      "_cpc\030\004 \001(\001\022\023\n\013average_cpi\030\005 \001(\001\022\023\n\013avera" +
+      "ge_cpe\030\006 \001(\001\022\030\n\020interaction_rate\030\007 \001(\001\022\027" +
+      "\n\017engagement_rate\030\010 \001(\001\022\037\n\027active_view_v" +
+      "iewability\030\t \001(\001\022\032\n\022trueview_view_rate\030\n" +
+      " \001(\001\022\032\n\022click_through_rate\030\013 \001(\001\022!\n\031vide" +
+      "o_completion_p25_rate\030\014 \001(\001\022!\n\031video_com" +
+      "pletion_p50_rate\030\r \001(\001\022!\n\031video_completi" +
+      "on_p75_rate\030\016 \001(\001\022\"\n\032video_completion_p1" +
+      "00_rate\030\017 \001(\0012\315\t\n\021BenchmarksService\022\335\001\n\034" +
+      "ListBenchmarksAvailableDates\022F.google.ad" +
+      "s.googleads.v23.services.ListBenchmarksA" +
+      "vailableDatesRequest\032G.google.ads.google" +
+      "ads.v23.services.ListBenchmarksAvailable" +
+      "DatesResponse\",\202\323\344\223\002&\"!/v23:listBenchmar" +
+      "ksAvailableDates:\001*\022\311\001\n\027ListBenchmarksLo" +
+      "cations\022A.google.ads.googleads.v23.servi" +
+      "ces.ListBenchmarksLocationsRequest\032B.goo" +
+      "gle.ads.googleads.v23.services.ListBench" +
+      "marksLocationsResponse\"\'\202\323\344\223\002!\"\034/v23:lis" +
+      "tBenchmarksLocations:\001*\022\305\001\n\026ListBenchmar" +
+      "ksProducts\022@.google.ads.googleads.v23.se" +
+      "rvices.ListBenchmarksProductsRequest\032A.g" +
+      "oogle.ads.googleads.v23.services.ListBen" +
+      "chmarksProductsResponse\"&\202\323\344\223\002 \"\033/v23:li" +
+      "stBenchmarksProducts:\001*\022\326\001\n\025ListBenchmar" +
+      "ksSources\022?.google.ads.googleads.v23.ser" +
+      "vices.ListBenchmarksSourcesRequest\032@.goo" +
+      "gle.ads.googleads.v23.services.ListBench" +
+      "marksSourcesResponse\":\332A\022benchmarks_sour" +
+      "ces\202\323\344\223\002\037\"\032/v23:listBenchmarksSources:\001*" +
+      "\022\243\002\n\031GenerateBenchmarksMetrics\022C.google." +
+      "ads.googleads.v23.services.GenerateBench" +
+      "marksMetricsRequest\032D.google.ads.googlea" +
+      "ds.v23.services.GenerateBenchmarksMetric" +
+      "sResponse\"{\332A5customer_id,location,bench" +
+      "marks_source,product_filter\202\323\344\223\002=\"8/v23/" +
+      "customers/{customer_id=*}:generateBenchm" +
+      "arksMetrics:\001*\032E\312A\030googleads.googleapis." +
+      "com\322A\'https://www.googleapis.com/auth/ad" +
+      "wordsB\202\002\n%com.google.ads.googleads.v23.s" +
+      "ervicesB\026BenchmarksServiceProtoP\001ZIgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v23/services;services\242\002\003GAA\252\002!Goo" +
+      "gle.Ads.GoogleAds.V23.Services\312\002!Google\\" +
+      "Ads\\GoogleAds\\V23\\Services\352\002%Google::Ads" +
+      "::GoogleAds::V23::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -271,6 +303,7 @@ public final class BenchmarksServiceProto {
           com.google.ads.googleads.v23.common.DatesProto.getDescriptor(),
           com.google.ads.googleads.v23.enums.BenchmarksMarketingObjectiveProto.getDescriptor(),
           com.google.ads.googleads.v23.enums.BenchmarksSourceTypeProto.getDescriptor(),
+          com.google.ads.googleads.v23.enums.BenchmarksTimeGranularityProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
@@ -352,7 +385,7 @@ public final class BenchmarksServiceProto {
     internal_static_google_ads_googleads_v23_services_GenerateBenchmarksMetricsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_services_GenerateBenchmarksMetricsRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "DateRange", "Location", "BenchmarksSource", "ProductFilter", "CurrencyCode", "CustomerBenchmarksGroup", "ApplicationInfo", });
+        new java.lang.String[] { "CustomerId", "DateRange", "Location", "BenchmarksSource", "ProductFilter", "BreakdownDefinition", "CurrencyCode", "CustomerBenchmarksGroup", "ApplicationInfo", });
     internal_static_google_ads_googleads_v23_services_BenchmarksSource_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_google_ads_googleads_v23_services_BenchmarksSource_fieldAccessorTable = new
@@ -377,20 +410,38 @@ public final class BenchmarksServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_services_ProductFilter_MarketingObjectiveList_descriptor,
         new java.lang.String[] { "MarketingObjectives", });
-    internal_static_google_ads_googleads_v23_services_GenerateBenchmarksMetricsResponse_descriptor =
+    internal_static_google_ads_googleads_v23_services_BreakdownDefinition_descriptor =
       getDescriptor().getMessageTypes().get(15);
+    internal_static_google_ads_googleads_v23_services_BreakdownDefinition_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v23_services_BreakdownDefinition_descriptor,
+        new java.lang.String[] { "DateBreakdown", });
+    internal_static_google_ads_googleads_v23_services_GenerateBenchmarksMetricsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(16);
     internal_static_google_ads_googleads_v23_services_GenerateBenchmarksMetricsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_services_GenerateBenchmarksMetricsResponse_descriptor,
-        new java.lang.String[] { "CustomerMetrics", "AverageBenchmarksMetrics", });
+        new java.lang.String[] { "CustomerMetrics", "AverageBenchmarksMetrics", "BreakdownMetrics", });
+    internal_static_google_ads_googleads_v23_services_BreakdownMetrics_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_google_ads_googleads_v23_services_BreakdownMetrics_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v23_services_BreakdownMetrics_descriptor,
+        new java.lang.String[] { "BreakdownKey", "CustomerMetrics", "AverageBenchmarksMetrics", });
+    internal_static_google_ads_googleads_v23_services_BreakdownKey_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_google_ads_googleads_v23_services_BreakdownKey_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v23_services_BreakdownKey_descriptor,
+        new java.lang.String[] { "Dates", });
     internal_static_google_ads_googleads_v23_services_Metrics_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_google_ads_googleads_v23_services_Metrics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_services_Metrics_descriptor,
         new java.lang.String[] { "AverageRateMetrics", });
     internal_static_google_ads_googleads_v23_services_RateMetrics_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_google_ads_googleads_v23_services_RateMetrics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_services_RateMetrics_descriptor,
@@ -409,6 +460,7 @@ public final class BenchmarksServiceProto {
     com.google.ads.googleads.v23.common.DatesProto.getDescriptor();
     com.google.ads.googleads.v23.enums.BenchmarksMarketingObjectiveProto.getDescriptor();
     com.google.ads.googleads.v23.enums.BenchmarksSourceTypeProto.getDescriptor();
+    com.google.ads.googleads.v23.enums.BenchmarksTimeGranularityProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();

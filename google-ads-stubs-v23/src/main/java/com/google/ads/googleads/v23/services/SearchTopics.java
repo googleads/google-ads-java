@@ -52,6 +52,9 @@ private static final long serialVersionUID = 0L;
    * Required. A list of knowledge graph entities to retrieve trend information
    * for. Supported entities are tagged with
    * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Use
+   * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+   * to get the list of supported entities.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -65,6 +68,9 @@ private static final long serialVersionUID = 0L;
    * Required. A list of knowledge graph entities to retrieve trend information
    * for. Supported entities are tagged with
    * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Use
+   * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+   * to get the list of supported entities.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -79,6 +85,9 @@ private static final long serialVersionUID = 0L;
    * Required. A list of knowledge graph entities to retrieve trend information
    * for. Supported entities are tagged with
    * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Use
+   * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+   * to get the list of supported entities.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -92,6 +101,9 @@ private static final long serialVersionUID = 0L;
    * Required. A list of knowledge graph entities to retrieve trend information
    * for. Supported entities are tagged with
    * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Use
+   * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+   * to get the list of supported entities.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -105,6 +117,9 @@ private static final long serialVersionUID = 0L;
    * Required. A list of knowledge graph entities to retrieve trend information
    * for. Supported entities are tagged with
    * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Use
+   * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+   * to get the list of supported entities.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -510,6 +525,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -526,6 +544,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -542,6 +563,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -558,6 +582,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -581,6 +608,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -601,6 +631,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -623,6 +656,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -646,6 +682,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -666,6 +705,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -686,6 +728,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -707,6 +752,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -726,6 +774,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -745,6 +796,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -758,6 +812,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -774,6 +831,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -791,6 +851,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -804,6 +867,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -818,6 +884,9 @@ private static final long serialVersionUID = 0L;
      * Required. A list of knowledge graph entities to retrieve trend information
      * for. Supported entities are tagged with
      * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v23.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Use
+     * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v23.services.AudienceInsightsService.ListAudienceInsightsAttributes]
+     * to get the list of supported entities.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.common.AudienceInsightsEntity entities = 1 [(.google.api.field_behavior) = REQUIRED];</code>

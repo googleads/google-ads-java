@@ -82,8 +82,9 @@ public interface UserListOrBuilder extends
 
   /**
    * <pre>
-   * Name of this user list. Depending on its access_reason, the user list name
-   * may not be unique (for example, if access_reason=SHARED)
+   * Name of this user list.
+   * Unique per user list, except in some cases where a user list of the same
+   * name has `access_reason` set to `SHARED`.
    * </pre>
    *
    * <code>optional string name = 27;</code>
@@ -92,8 +93,9 @@ public interface UserListOrBuilder extends
   boolean hasName();
   /**
    * <pre>
-   * Name of this user list. Depending on its access_reason, the user list name
-   * may not be unique (for example, if access_reason=SHARED)
+   * Name of this user list.
+   * Unique per user list, except in some cases where a user list of the same
+   * name has `access_reason` set to `SHARED`.
    * </pre>
    *
    * <code>optional string name = 27;</code>
@@ -102,8 +104,9 @@ public interface UserListOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Name of this user list. Depending on its access_reason, the user list name
-   * may not be unique (for example, if access_reason=SHARED)
+   * Name of this user list.
+   * Unique per user list, except in some cases where a user list of the same
+   * name has `access_reason` set to `SHARED`.
    * </pre>
    *
    * <code>optional string name = 27;</code>

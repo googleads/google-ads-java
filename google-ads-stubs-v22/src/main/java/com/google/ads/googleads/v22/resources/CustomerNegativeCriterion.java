@@ -512,7 +512,9 @@ private static final long serialVersionUID = 0L;
   public static final int IP_BLOCK_FIELD_NUMBER = 12;
   /**
    * <pre>
-   * Immutable. IPBLock
+   * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per account.
    * </pre>
    *
    * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -524,7 +526,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. IPBLock
+   * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per account.
    * </pre>
    *
    * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -539,7 +543,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. IPBLock
+   * Immutable. IpBlock.
+   *
+   * You can exclude up to 500 IP addresses per account.
    * </pre>
    *
    * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2799,7 +2805,9 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v22.common.IpBlockInfo, com.google.ads.googleads.v22.common.IpBlockInfo.Builder, com.google.ads.googleads.v22.common.IpBlockInfoOrBuilder> ipBlockBuilder_;
     /**
      * <pre>
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per account.
      * </pre>
      *
      * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2811,7 +2819,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per account.
      * </pre>
      *
      * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2833,7 +2843,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per account.
      * </pre>
      *
      * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2853,7 +2865,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per account.
      * </pre>
      *
      * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2871,7 +2885,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per account.
      * </pre>
      *
      * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2898,7 +2914,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per account.
      * </pre>
      *
      * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2921,7 +2939,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per account.
      * </pre>
      *
      * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2931,7 +2951,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per account.
      * </pre>
      *
      * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2949,7 +2971,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     *
+     * You can exclude up to 500 IP addresses per account.
      * </pre>
      *
      * <code>.google.ads.googleads.v22.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>

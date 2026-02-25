@@ -6,7 +6,9 @@ package com.google.ads.googleads.v20.resources;
 
 /**
  * <pre>
- * A conversion value rule set
+ * A conversion value rule set is a collection of conversion value rules that
+ * lets you adjust conversion values based on the dimensions specified in
+ * the `dimensions` field.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v20.resources.ConversionValueRuleSet}
@@ -795,7 +797,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A conversion value rule set
+   * A conversion value rule set is a collection of conversion value rules that
+   * lets you adjust conversion values based on the dimensions specified in
+   * the `dimensions` field.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v20.resources.ConversionValueRuleSet}

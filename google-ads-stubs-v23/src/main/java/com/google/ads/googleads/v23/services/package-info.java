@@ -2380,6 +2380,27 @@
  *       userListServiceClient.mutateUserLists(customerId, operations);
  * }
  * }</pre>
+ *
+ * <p>======================= YouTubeVideoUploadServiceClient =======================
+ *
+ * <p>Service Description: Service to manage YouTube video uploads.
+ *
+ * <p>Sample for YouTubeVideoUploadServiceClient:
+ *
+ * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+ * try (YouTubeVideoUploadServiceClient youTubeVideoUploadServiceClient =
+ *     YouTubeVideoUploadServiceClient.create()) {
+ *   String customerId = "customerId-1581184615";
+ *   YouTubeVideoUpload youTubeVideoUpload = YouTubeVideoUpload.newBuilder().build();
+ *   CreateYouTubeVideoUploadResponse response =
+ *       youTubeVideoUploadServiceClient.createYouTubeVideoUpload(customerId, youTubeVideoUpload);
+ * }
+ * }</pre>
  */
 @Generated("by gapic-generator-java")
 package com.google.ads.googleads.v23.services;

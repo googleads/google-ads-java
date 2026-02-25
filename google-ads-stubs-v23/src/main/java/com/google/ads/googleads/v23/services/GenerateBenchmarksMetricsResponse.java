@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GenerateBenchmarksMetricsResponse() {
+    breakdownMetrics_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -121,6 +122,67 @@ private static final long serialVersionUID = 0L;
     return averageBenchmarksMetrics_ == null ? com.google.ads.googleads.v23.services.Metrics.getDefaultInstance() : averageBenchmarksMetrics_;
   }
 
+  public static final int BREAKDOWN_METRICS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.ads.googleads.v23.services.BreakdownMetrics> breakdownMetrics_;
+  /**
+   * <pre>
+   * Breakdown metrics grouped by dimensions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v23.services.BreakdownMetrics> getBreakdownMetricsList() {
+    return breakdownMetrics_;
+  }
+  /**
+   * <pre>
+   * Breakdown metrics grouped by dimensions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v23.services.BreakdownMetricsOrBuilder> 
+      getBreakdownMetricsOrBuilderList() {
+    return breakdownMetrics_;
+  }
+  /**
+   * <pre>
+   * Breakdown metrics grouped by dimensions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+   */
+  @java.lang.Override
+  public int getBreakdownMetricsCount() {
+    return breakdownMetrics_.size();
+  }
+  /**
+   * <pre>
+   * Breakdown metrics grouped by dimensions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.services.BreakdownMetrics getBreakdownMetrics(int index) {
+    return breakdownMetrics_.get(index);
+  }
+  /**
+   * <pre>
+   * Breakdown metrics grouped by dimensions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v23.services.BreakdownMetricsOrBuilder getBreakdownMetricsOrBuilder(
+      int index) {
+    return breakdownMetrics_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -141,6 +203,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getAverageBenchmarksMetrics());
     }
+    for (int i = 0; i < breakdownMetrics_.size(); i++) {
+      output.writeMessage(3, breakdownMetrics_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -157,6 +222,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getAverageBenchmarksMetrics());
+    }
+    for (int i = 0; i < breakdownMetrics_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, breakdownMetrics_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -183,6 +252,8 @@ private static final long serialVersionUID = 0L;
       if (!getAverageBenchmarksMetrics()
           .equals(other.getAverageBenchmarksMetrics())) return false;
     }
+    if (!getBreakdownMetricsList()
+        .equals(other.getBreakdownMetricsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -201,6 +272,10 @@ private static final long serialVersionUID = 0L;
     if (hasAverageBenchmarksMetrics()) {
       hash = (37 * hash) + AVERAGE_BENCHMARKS_METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getAverageBenchmarksMetrics().hashCode();
+    }
+    if (getBreakdownMetricsCount() > 0) {
+      hash = (37 * hash) + BREAKDOWN_METRICS_FIELD_NUMBER;
+      hash = (53 * hash) + getBreakdownMetricsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -339,6 +414,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getCustomerMetricsFieldBuilder();
         getAverageBenchmarksMetricsFieldBuilder();
+        getBreakdownMetricsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -355,6 +431,13 @@ private static final long serialVersionUID = 0L;
         averageBenchmarksMetricsBuilder_.dispose();
         averageBenchmarksMetricsBuilder_ = null;
       }
+      if (breakdownMetricsBuilder_ == null) {
+        breakdownMetrics_ = java.util.Collections.emptyList();
+      } else {
+        breakdownMetrics_ = null;
+        breakdownMetricsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -381,9 +464,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v23.services.GenerateBenchmarksMetricsResponse buildPartial() {
       com.google.ads.googleads.v23.services.GenerateBenchmarksMetricsResponse result = new com.google.ads.googleads.v23.services.GenerateBenchmarksMetricsResponse(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v23.services.GenerateBenchmarksMetricsResponse result) {
+      if (breakdownMetricsBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          breakdownMetrics_ = java.util.Collections.unmodifiableList(breakdownMetrics_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.breakdownMetrics_ = breakdownMetrics_;
+      } else {
+        result.breakdownMetrics_ = breakdownMetricsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.google.ads.googleads.v23.services.GenerateBenchmarksMetricsResponse result) {
@@ -454,6 +550,32 @@ private static final long serialVersionUID = 0L;
       if (other.hasAverageBenchmarksMetrics()) {
         mergeAverageBenchmarksMetrics(other.getAverageBenchmarksMetrics());
       }
+      if (breakdownMetricsBuilder_ == null) {
+        if (!other.breakdownMetrics_.isEmpty()) {
+          if (breakdownMetrics_.isEmpty()) {
+            breakdownMetrics_ = other.breakdownMetrics_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureBreakdownMetricsIsMutable();
+            breakdownMetrics_.addAll(other.breakdownMetrics_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.breakdownMetrics_.isEmpty()) {
+          if (breakdownMetricsBuilder_.isEmpty()) {
+            breakdownMetricsBuilder_.dispose();
+            breakdownMetricsBuilder_ = null;
+            breakdownMetrics_ = other.breakdownMetrics_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            breakdownMetricsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getBreakdownMetricsFieldBuilder() : null;
+          } else {
+            breakdownMetricsBuilder_.addAllMessages(other.breakdownMetrics_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -494,6 +616,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              com.google.ads.googleads.v23.services.BreakdownMetrics m =
+                  input.readMessage(
+                      com.google.ads.googleads.v23.services.BreakdownMetrics.parser(),
+                      extensionRegistry);
+              if (breakdownMetricsBuilder_ == null) {
+                ensureBreakdownMetricsIsMutable();
+                breakdownMetrics_.add(m);
+              } else {
+                breakdownMetricsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -823,6 +958,318 @@ private static final long serialVersionUID = 0L;
         averageBenchmarksMetrics_ = null;
       }
       return averageBenchmarksMetricsBuilder_;
+    }
+
+    private java.util.List<com.google.ads.googleads.v23.services.BreakdownMetrics> breakdownMetrics_ =
+      java.util.Collections.emptyList();
+    private void ensureBreakdownMetricsIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        breakdownMetrics_ = new java.util.ArrayList<com.google.ads.googleads.v23.services.BreakdownMetrics>(breakdownMetrics_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v23.services.BreakdownMetrics, com.google.ads.googleads.v23.services.BreakdownMetrics.Builder, com.google.ads.googleads.v23.services.BreakdownMetricsOrBuilder> breakdownMetricsBuilder_;
+
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v23.services.BreakdownMetrics> getBreakdownMetricsList() {
+      if (breakdownMetricsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(breakdownMetrics_);
+      } else {
+        return breakdownMetricsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public int getBreakdownMetricsCount() {
+      if (breakdownMetricsBuilder_ == null) {
+        return breakdownMetrics_.size();
+      } else {
+        return breakdownMetricsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public com.google.ads.googleads.v23.services.BreakdownMetrics getBreakdownMetrics(int index) {
+      if (breakdownMetricsBuilder_ == null) {
+        return breakdownMetrics_.get(index);
+      } else {
+        return breakdownMetricsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public Builder setBreakdownMetrics(
+        int index, com.google.ads.googleads.v23.services.BreakdownMetrics value) {
+      if (breakdownMetricsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureBreakdownMetricsIsMutable();
+        breakdownMetrics_.set(index, value);
+        onChanged();
+      } else {
+        breakdownMetricsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public Builder setBreakdownMetrics(
+        int index, com.google.ads.googleads.v23.services.BreakdownMetrics.Builder builderForValue) {
+      if (breakdownMetricsBuilder_ == null) {
+        ensureBreakdownMetricsIsMutable();
+        breakdownMetrics_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        breakdownMetricsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public Builder addBreakdownMetrics(com.google.ads.googleads.v23.services.BreakdownMetrics value) {
+      if (breakdownMetricsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureBreakdownMetricsIsMutable();
+        breakdownMetrics_.add(value);
+        onChanged();
+      } else {
+        breakdownMetricsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public Builder addBreakdownMetrics(
+        int index, com.google.ads.googleads.v23.services.BreakdownMetrics value) {
+      if (breakdownMetricsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureBreakdownMetricsIsMutable();
+        breakdownMetrics_.add(index, value);
+        onChanged();
+      } else {
+        breakdownMetricsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public Builder addBreakdownMetrics(
+        com.google.ads.googleads.v23.services.BreakdownMetrics.Builder builderForValue) {
+      if (breakdownMetricsBuilder_ == null) {
+        ensureBreakdownMetricsIsMutable();
+        breakdownMetrics_.add(builderForValue.build());
+        onChanged();
+      } else {
+        breakdownMetricsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public Builder addBreakdownMetrics(
+        int index, com.google.ads.googleads.v23.services.BreakdownMetrics.Builder builderForValue) {
+      if (breakdownMetricsBuilder_ == null) {
+        ensureBreakdownMetricsIsMutable();
+        breakdownMetrics_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        breakdownMetricsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public Builder addAllBreakdownMetrics(
+        java.lang.Iterable<? extends com.google.ads.googleads.v23.services.BreakdownMetrics> values) {
+      if (breakdownMetricsBuilder_ == null) {
+        ensureBreakdownMetricsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, breakdownMetrics_);
+        onChanged();
+      } else {
+        breakdownMetricsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public Builder clearBreakdownMetrics() {
+      if (breakdownMetricsBuilder_ == null) {
+        breakdownMetrics_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        breakdownMetricsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public Builder removeBreakdownMetrics(int index) {
+      if (breakdownMetricsBuilder_ == null) {
+        ensureBreakdownMetricsIsMutable();
+        breakdownMetrics_.remove(index);
+        onChanged();
+      } else {
+        breakdownMetricsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public com.google.ads.googleads.v23.services.BreakdownMetrics.Builder getBreakdownMetricsBuilder(
+        int index) {
+      return getBreakdownMetricsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public com.google.ads.googleads.v23.services.BreakdownMetricsOrBuilder getBreakdownMetricsOrBuilder(
+        int index) {
+      if (breakdownMetricsBuilder_ == null) {
+        return breakdownMetrics_.get(index);  } else {
+        return breakdownMetricsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v23.services.BreakdownMetricsOrBuilder> 
+         getBreakdownMetricsOrBuilderList() {
+      if (breakdownMetricsBuilder_ != null) {
+        return breakdownMetricsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(breakdownMetrics_);
+      }
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public com.google.ads.googleads.v23.services.BreakdownMetrics.Builder addBreakdownMetricsBuilder() {
+      return getBreakdownMetricsFieldBuilder().addBuilder(
+          com.google.ads.googleads.v23.services.BreakdownMetrics.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public com.google.ads.googleads.v23.services.BreakdownMetrics.Builder addBreakdownMetricsBuilder(
+        int index) {
+      return getBreakdownMetricsFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v23.services.BreakdownMetrics.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Breakdown metrics grouped by dimensions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v23.services.BreakdownMetrics breakdown_metrics = 3;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v23.services.BreakdownMetrics.Builder> 
+         getBreakdownMetricsBuilderList() {
+      return getBreakdownMetricsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v23.services.BreakdownMetrics, com.google.ads.googleads.v23.services.BreakdownMetrics.Builder, com.google.ads.googleads.v23.services.BreakdownMetricsOrBuilder> 
+        getBreakdownMetricsFieldBuilder() {
+      if (breakdownMetricsBuilder_ == null) {
+        breakdownMetricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v23.services.BreakdownMetrics, com.google.ads.googleads.v23.services.BreakdownMetrics.Builder, com.google.ads.googleads.v23.services.BreakdownMetricsOrBuilder>(
+                breakdownMetrics_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        breakdownMetrics_ = null;
+      }
+      return breakdownMetricsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -121,8 +121,9 @@ private static final long serialVersionUID = 0L;
      * Optional. Creator attributes that describe a collection of types of
      * content. This is used to search for creators whose content matches the
      * input creator attributes. Attribute entity tagged with
-     * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-     * supported. Other attributes including location are not supported.
+     * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+     * is supported. Other attributes including location are not
+     * supported.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -134,8 +135,9 @@ private static final long serialVersionUID = 0L;
      * Optional. Creator attributes that describe a collection of types of
      * content. This is used to search for creators whose content matches the
      * input creator attributes. Attribute entity tagged with
-     * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-     * supported. Other attributes including location are not supported.
+     * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+     * is supported. Other attributes including location are not
+     * supported.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -146,8 +148,9 @@ private static final long serialVersionUID = 0L;
      * Optional. Creator attributes that describe a collection of types of
      * content. This is used to search for creators whose content matches the
      * input creator attributes. Attribute entity tagged with
-     * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-     * supported. Other attributes including location are not supported.
+     * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+     * is supported. Other attributes including location are not
+     * supported.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -158,8 +161,9 @@ private static final long serialVersionUID = 0L;
      * Optional. Creator attributes that describe a collection of types of
      * content. This is used to search for creators whose content matches the
      * input creator attributes. Attribute entity tagged with
-     * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-     * supported. Other attributes including location are not supported.
+     * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+     * is supported. Other attributes including location are not
+     * supported.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -171,8 +175,9 @@ private static final long serialVersionUID = 0L;
      * Optional. Creator attributes that describe a collection of types of
      * content. This is used to search for creators whose content matches the
      * input creator attributes. Attribute entity tagged with
-     * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-     * supported. Other attributes including location are not supported.
+     * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+     * is supported. Other attributes including location are not
+     * supported.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -312,8 +317,9 @@ private static final long serialVersionUID = 0L;
      * Optional. Creator attributes that describe a collection of types of
      * content. This is used to search for creators whose content matches the
      * input creator attributes. Attribute entity tagged with
-     * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-     * supported. Other attributes including location are not supported.
+     * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+     * is supported. Other attributes including location are not
+     * supported.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -327,8 +333,9 @@ private static final long serialVersionUID = 0L;
      * Optional. Creator attributes that describe a collection of types of
      * content. This is used to search for creators whose content matches the
      * input creator attributes. Attribute entity tagged with
-     * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-     * supported. Other attributes including location are not supported.
+     * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+     * is supported. Other attributes including location are not
+     * supported.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -343,8 +350,9 @@ private static final long serialVersionUID = 0L;
      * Optional. Creator attributes that describe a collection of types of
      * content. This is used to search for creators whose content matches the
      * input creator attributes. Attribute entity tagged with
-     * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-     * supported. Other attributes including location are not supported.
+     * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+     * is supported. Other attributes including location are not
+     * supported.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -358,8 +366,9 @@ private static final long serialVersionUID = 0L;
      * Optional. Creator attributes that describe a collection of types of
      * content. This is used to search for creators whose content matches the
      * input creator attributes. Attribute entity tagged with
-     * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-     * supported. Other attributes including location are not supported.
+     * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+     * is supported. Other attributes including location are not
+     * supported.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -373,8 +382,9 @@ private static final long serialVersionUID = 0L;
      * Optional. Creator attributes that describe a collection of types of
      * content. This is used to search for creators whose content matches the
      * input creator attributes. Attribute entity tagged with
-     * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-     * supported. Other attributes including location are not supported.
+     * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+     * is supported. Other attributes including location are not
+     * supported.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1234,8 +1244,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1252,8 +1263,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1270,8 +1282,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1288,8 +1301,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1313,8 +1327,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1335,8 +1350,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1359,8 +1375,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1384,8 +1401,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1406,8 +1424,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1428,8 +1447,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1451,8 +1471,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1472,8 +1493,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1493,8 +1515,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1508,8 +1531,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1526,8 +1550,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1545,8 +1570,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1560,8 +1586,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1576,8 +1603,9 @@ private static final long serialVersionUID = 0L;
        * Optional. Creator attributes that describe a collection of types of
        * content. This is used to search for creators whose content matches the
        * input creator attributes. Attribute entity tagged with
-       * [InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE][] is
-       * supported. Other attributes including location are not supported.
+       * [CREATOR_ATTRIBUTE][google.ads.googleads.v20.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_ATTRIBUTE]
+       * is supported. Other attributes including location are not
+       * supported.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute creator_attributes = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1720,8 +1748,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Optional. When true, we will expand the search to beyond just the
-     * entities specified in [brand_entities] to other related knowledge graph
-     * entities similar to the brand. The default value is `false`.
+     * entities specified in
+     * [brand_entities][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+     * to other related knowledge graph entities similar to the brand. The
+     * default value is `false`.
      * </pre>
      *
      * <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1840,8 +1870,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Optional. When true, we will expand the search to beyond just the
-     * entities specified in [brand_entities] to other related knowledge graph
-     * entities similar to the brand. The default value is `false`.
+     * entities specified in
+     * [brand_entities][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+     * to other related knowledge graph entities similar to the brand. The
+     * default value is `false`.
      * </pre>
      *
      * <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2588,8 +2620,10 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Optional. When true, we will expand the search to beyond just the
-       * entities specified in [brand_entities] to other related knowledge graph
-       * entities similar to the brand. The default value is `false`.
+       * entities specified in
+       * [brand_entities][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+       * to other related knowledge graph entities similar to the brand. The
+       * default value is `false`.
        * </pre>
        *
        * <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2602,8 +2636,10 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Optional. When true, we will expand the search to beyond just the
-       * entities specified in [brand_entities] to other related knowledge graph
-       * entities similar to the brand. The default value is `false`.
+       * entities specified in
+       * [brand_entities][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+       * to other related knowledge graph entities similar to the brand. The
+       * default value is `false`.
        * </pre>
        *
        * <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2620,8 +2656,10 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Optional. When true, we will expand the search to beyond just the
-       * entities specified in [brand_entities] to other related knowledge graph
-       * entities similar to the brand. The default value is `false`.
+       * entities specified in
+       * [brand_entities][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+       * to other related knowledge graph entities similar to the brand. The
+       * default value is `false`.
        * </pre>
        *
        * <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -3845,7 +3883,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The sub-country geographic locations to search that apply to the criteria.
-   * Only supported for [SearchAttributes] criteria.
+   * Only supported for
+   * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+   * criteria.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -3857,7 +3897,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The sub-country geographic locations to search that apply to the criteria.
-   * Only supported for [SearchAttributes] criteria.
+   * Only supported for
+   * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+   * criteria.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -3870,7 +3912,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The sub-country geographic locations to search that apply to the criteria.
-   * Only supported for [SearchAttributes] criteria.
+   * Only supported for
+   * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+   * criteria.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -3882,7 +3926,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The sub-country geographic locations to search that apply to the criteria.
-   * Only supported for [SearchAttributes] criteria.
+   * Only supported for
+   * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+   * criteria.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -3894,7 +3940,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The sub-country geographic locations to search that apply to the criteria.
-   * Only supported for [SearchAttributes] criteria.
+   * Only supported for
+   * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+   * criteria.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -3910,7 +3958,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The attributes used to identify top creators. Data fetched is based on
    * the list of countries or sub-country locations specified in
-   * [country_locations] or [sub_country_locations].
+   * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+   * or
+   * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -3924,7 +3974,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The attributes used to identify top creators. Data fetched is based on
    * the list of countries or sub-country locations specified in
-   * [country_locations] or [sub_country_locations].
+   * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+   * or
+   * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -3941,7 +3993,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The attributes used to identify top creators. Data fetched is based on
    * the list of countries or sub-country locations specified in
-   * [country_locations] or [sub_country_locations].
+   * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+   * or
+   * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -3958,7 +4012,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
-   * list of countries specified in [country_locations].
+   * list of countries specified in
+   * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -3971,7 +4026,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
-   * list of countries specified in [country_locations].
+   * list of countries specified in
+   * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -3987,7 +4043,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
-   * list of countries specified in [country_locations].
+   * list of countries specified in
+   * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -4004,7 +4061,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in [country_locations].
+   * based on the list of countries specified in
+   * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -4017,7 +4075,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in [country_locations].
+   * based on the list of countries specified in
+   * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -4033,7 +4092,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in [country_locations].
+   * based on the list of countries specified in
+   * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -5397,7 +5457,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5412,7 +5474,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5427,7 +5491,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5442,7 +5508,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5464,7 +5532,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5483,7 +5553,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5504,7 +5576,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5526,7 +5600,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5545,7 +5621,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5564,7 +5642,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5584,7 +5664,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5602,7 +5684,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5620,7 +5704,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5632,7 +5718,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5647,7 +5735,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5663,7 +5753,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5675,7 +5767,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5688,7 +5782,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The sub-country geographic locations to search that apply to the criteria.
-     * Only supported for [SearchAttributes] criteria.
+     * Only supported for
+     * [SearchAttributes][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes]
+     * criteria.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v20.common.LocationInfo sub_country_locations = 7;</code>
@@ -5718,7 +5814,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The attributes used to identify top creators. Data fetched is based on
      * the list of countries or sub-country locations specified in
-     * [country_locations] or [sub_country_locations].
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+     * or
+     * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -5732,7 +5830,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The attributes used to identify top creators. Data fetched is based on
      * the list of countries or sub-country locations specified in
-     * [country_locations] or [sub_country_locations].
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+     * or
+     * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -5756,7 +5856,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The attributes used to identify top creators. Data fetched is based on
      * the list of countries or sub-country locations specified in
-     * [country_locations] or [sub_country_locations].
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+     * or
+     * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -5778,7 +5880,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The attributes used to identify top creators. Data fetched is based on
      * the list of countries or sub-country locations specified in
-     * [country_locations] or [sub_country_locations].
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+     * or
+     * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -5798,7 +5902,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The attributes used to identify top creators. Data fetched is based on
      * the list of countries or sub-country locations specified in
-     * [country_locations] or [sub_country_locations].
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+     * or
+     * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -5827,7 +5933,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The attributes used to identify top creators. Data fetched is based on
      * the list of countries or sub-country locations specified in
-     * [country_locations] or [sub_country_locations].
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+     * or
+     * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -5852,7 +5960,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The attributes used to identify top creators. Data fetched is based on
      * the list of countries or sub-country locations specified in
-     * [country_locations] or [sub_country_locations].
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+     * or
+     * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -5864,7 +5974,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The attributes used to identify top creators. Data fetched is based on
      * the list of countries or sub-country locations specified in
-     * [country_locations] or [sub_country_locations].
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+     * or
+     * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -5884,7 +5996,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The attributes used to identify top creators. Data fetched is based on
      * the list of countries or sub-country locations specified in
-     * [country_locations] or [sub_country_locations].
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations]
+     * or
+     * [sub_country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchAttributes search_attributes = 3;</code>
@@ -5913,7 +6027,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
-     * list of countries specified in [country_locations].
+     * list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -5926,7 +6041,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
-     * list of countries specified in [country_locations].
+     * list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -5949,7 +6065,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
-     * list of countries specified in [country_locations].
+     * list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -5970,7 +6087,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
-     * list of countries specified in [country_locations].
+     * list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -5989,7 +6107,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
-     * list of countries specified in [country_locations].
+     * list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -6017,7 +6136,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
-     * list of countries specified in [country_locations].
+     * list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -6041,7 +6161,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
-     * list of countries specified in [country_locations].
+     * list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -6052,7 +6173,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
-     * list of countries specified in [country_locations].
+     * list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -6071,7 +6193,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
-     * list of countries specified in [country_locations].
+     * list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -6100,7 +6223,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in [country_locations].
+     * based on the list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -6113,7 +6237,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in [country_locations].
+     * based on the list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -6136,7 +6261,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in [country_locations].
+     * based on the list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -6157,7 +6283,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in [country_locations].
+     * based on the list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -6176,7 +6303,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in [country_locations].
+     * based on the list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -6204,7 +6332,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in [country_locations].
+     * based on the list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -6228,7 +6357,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in [country_locations].
+     * based on the list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -6239,7 +6369,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in [country_locations].
+     * based on the list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
@@ -6258,7 +6389,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in [country_locations].
+     * based on the list of countries specified in
+     * [country_locations][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>

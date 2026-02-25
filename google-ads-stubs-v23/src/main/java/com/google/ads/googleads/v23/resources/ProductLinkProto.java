@@ -40,6 +40,11 @@ public final class ProductLinkProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerIdentifier_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerProperties_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerProperties_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -54,10 +59,10 @@ public final class ProductLinkProto {
       "3.resources\0328google/ads/googleads/v23/en" +
       "ums/linked_product_type.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\312\005\n\013ProductLink\022C\n\rresource_na" +
+      "rce.proto\"\326\006\n\013ProductLink\022C\n\rresource_na" +
       "me\030\001 \001(\tB,\340A\005\372A&\n$googleads.googleapis.c" +
       "om/ProductLink\022!\n\017product_link_id\030\002 \001(\003B" +
-      "\003\340A\003H\001\210\001\001\022Z\n\004type\030\003 \001(\0162G.google.ads.goo" +
+      "\003\340A\003H\002\210\001\001\022Z\n\004type\030\003 \001(\0162G.google.ads.goo" +
       "gleads.v23.enums.LinkedProductTypeEnum.L" +
       "inkedProductTypeB\003\340A\003\022V\n\014data_partner\030\004 " +
       "\001(\01329.google.ads.googleads.v23.resources" +
@@ -68,27 +73,33 @@ public final class ProductLinkProto {
       "s.v23.resources.MerchantCenterIdentifier" +
       "B\003\340A\005H\000\022d\n\023advertising_partner\030\r \001(\0132@.g" +
       "oogle.ads.googleads.v23.resources.Advert" +
-      "isingPartnerIdentifierB\003\340A\003H\000:a\352A^\n$goog" +
-      "leads.googleapis.com/ProductLink\0226custom" +
-      "ers/{customer_id}/productLinks/{product_" +
-      "link_id}B\020\n\016linked_productB\022\n\020_product_l" +
-      "ink_id\"N\n\025DataPartnerIdentifier\022!\n\017data_" +
-      "partner_id\030\001 \001(\003B\003\340A\005H\000\210\001\001B\022\n\020_data_part" +
-      "ner_id\"d\n\023GoogleAdsIdentifier\022@\n\010custome" +
-      "r\030\001 \001(\tB)\340A\005\372A#\n!googleads.googleapis.co" +
-      "m/CustomerH\000\210\001\001B\013\n\t_customer\"W\n\030Merchant" +
-      "CenterIdentifier\022$\n\022merchant_center_id\030\001" +
-      " \001(\003B\003\340A\005H\000\210\001\001B\025\n\023_merchant_center_id\"m\n" +
-      "\034AdvertisingPartnerIdentifier\022@\n\010custome" +
-      "r\030\001 \001(\tB)\340A\003\372A#\n!googleads.googleapis.co" +
-      "m/CustomerH\000\210\001\001B\013\n\t_customerB\202\002\n&com.goo" +
-      "gle.ads.googleads.v23.resourcesB\020Product" +
-      "LinkProtoP\001ZKgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v23/resources;r" +
-      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V2" +
-      "3.Resources\312\002\"Google\\Ads\\GoogleAds\\V23\\R" +
-      "esources\352\002&Google::Ads::GoogleAds::V23::" +
-      "Resourcesb\006proto3"
+      "isingPartnerIdentifierB\003\340A\003H\000\022o\n\036adverti" +
+      "sing_partner_properties\030\017 \001(\0132@.google.a" +
+      "ds.googleads.v23.resources.AdvertisingPa" +
+      "rtnerPropertiesB\003\340A\003H\001:a\352A^\n$googleads.g" +
+      "oogleapis.com/ProductLink\0226customers/{cu" +
+      "stomer_id}/productLinks/{product_link_id" +
+      "}B\020\n\016linked_productB\031\n\027product_link_prop" +
+      "ertiesB\022\n\020_product_link_id\"N\n\025DataPartne" +
+      "rIdentifier\022!\n\017data_partner_id\030\001 \001(\003B\003\340A" +
+      "\005H\000\210\001\001B\022\n\020_data_partner_id\"d\n\023GoogleAdsI" +
+      "dentifier\022@\n\010customer\030\001 \001(\tB)\340A\005\372A#\n!goo" +
+      "gleads.googleapis.com/CustomerH\000\210\001\001B\013\n\t_" +
+      "customer\"W\n\030MerchantCenterIdentifier\022$\n\022" +
+      "merchant_center_id\030\001 \001(\003B\003\340A\005H\000\210\001\001B\025\n\023_m" +
+      "erchant_center_id\"m\n\034AdvertisingPartnerI" +
+      "dentifier\022@\n\010customer\030\001 \001(\tB)\340A\003\372A#\n!goo" +
+      "gleads.googleapis.com/CustomerH\000\210\001\001B\013\n\t_" +
+      "customer\"S\n\034AdvertisingPartnerProperties" +
+      "\022 \n\016allowed_domain\030\001 \001(\tB\003\340A\003H\000\210\001\001B\021\n\017_a" +
+      "llowed_domainB\202\002\n&com.google.ads.googlea" +
+      "ds.v23.resourcesB\020ProductLinkProtoP\001ZKgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v23/resources;resources\242\002\003GAA\252" +
+      "\002\"Google.Ads.GoogleAds.V23.Resources\312\002\"G" +
+      "oogle\\Ads\\GoogleAds\\V23\\Resources\352\002&Goog" +
+      "le::Ads::GoogleAds::V23::Resourcesb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -102,7 +113,7 @@ public final class ProductLinkProto {
     internal_static_google_ads_googleads_v23_resources_ProductLink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_resources_ProductLink_descriptor,
-        new java.lang.String[] { "ResourceName", "ProductLinkId", "Type", "DataPartner", "GoogleAds", "MerchantCenter", "AdvertisingPartner", "LinkedProduct", });
+        new java.lang.String[] { "ResourceName", "ProductLinkId", "Type", "DataPartner", "GoogleAds", "MerchantCenter", "AdvertisingPartner", "AdvertisingPartnerProperties", "LinkedProduct", "ProductLinkProperties", });
     internal_static_google_ads_googleads_v23_resources_DataPartnerIdentifier_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v23_resources_DataPartnerIdentifier_fieldAccessorTable = new
@@ -127,6 +138,12 @@ public final class ProductLinkProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerIdentifier_descriptor,
         new java.lang.String[] { "Customer", });
+    internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerProperties_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerProperties_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v23_resources_AdvertisingPartnerProperties_descriptor,
+        new java.lang.String[] { "AllowedDomain", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

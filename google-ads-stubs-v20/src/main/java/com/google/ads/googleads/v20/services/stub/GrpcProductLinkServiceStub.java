@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -53,6 +53,7 @@ public class GrpcProductLinkServiceStub extends ProductLinkServiceStub {
                   ProtoUtils.marshaller(CreateProductLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(CreateProductLinkResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private static final MethodDescriptor<RemoveProductLinkRequest, RemoveProductLinkResponse>
@@ -65,6 +66,7 @@ public class GrpcProductLinkServiceStub extends ProductLinkServiceStub {
                   ProtoUtils.marshaller(RemoveProductLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(RemoveProductLinkResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
               .build();
 
   private final UnaryCallable<CreateProductLinkRequest, CreateProductLinkResponse>

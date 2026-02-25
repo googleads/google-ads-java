@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage customer-manager links.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v21/services/customer_manager_link_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerManagerLinkServiceGrpc {
 
@@ -311,8 +308,8 @@ public final class CustomerManagerLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MutateCustomerManagerLinkResponse mutateCustomerManagerLink(com.google.ads.googleads.v21.services.MutateCustomerManagerLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MutateCustomerManagerLinkResponse mutateCustomerManagerLink(com.google.ads.googleads.v21.services.MutateCustomerManagerLinkRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateCustomerManagerLinkMethod(), getCallOptions(), request);
     }
 
@@ -335,8 +332,8 @@ public final class CustomerManagerLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v21.services.MoveManagerLinkResponse moveManagerLink(com.google.ads.googleads.v21.services.MoveManagerLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v21.services.MoveManagerLinkResponse moveManagerLink(com.google.ads.googleads.v21.services.MoveManagerLinkRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMoveManagerLinkMethod(), getCallOptions(), request);
     }
   }

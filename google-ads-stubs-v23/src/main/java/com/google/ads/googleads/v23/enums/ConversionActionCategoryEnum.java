@@ -247,6 +247,15 @@ private static final long serialVersionUID = 0L;
      * <code>CONVERTED_LEAD = 23;</code>
      */
     CONVERTED_LEAD(23),
+    /**
+     * <pre>
+     * User watches an ad from a channel and later watches either the same video
+     * or a video from the same channel as the ad.
+     * </pre>
+     *
+     * <code>YOUTUBE_FOLLOW_ON_VIEWS = 24;</code>
+     */
+    YOUTUBE_FOLLOW_ON_VIEWS(24),
     UNRECOGNIZED(-1),
     ;
 
@@ -444,6 +453,15 @@ private static final long serialVersionUID = 0L;
      * <code>CONVERTED_LEAD = 23;</code>
      */
     public static final int CONVERTED_LEAD_VALUE = 23;
+    /**
+     * <pre>
+     * User watches an ad from a channel and later watches either the same video
+     * or a video from the same channel as the ad.
+     * </pre>
+     *
+     * <code>YOUTUBE_FOLLOW_ON_VIEWS = 24;</code>
+     */
+    public static final int YOUTUBE_FOLLOW_ON_VIEWS_VALUE = 24;
 
 
     public final int getNumber() {
@@ -493,6 +511,7 @@ private static final long serialVersionUID = 0L;
         case 21: return STORE_SALE;
         case 22: return QUALIFIED_LEAD;
         case 23: return CONVERTED_LEAD;
+        case 24: return YOUTUBE_FOLLOW_ON_VIEWS;
         default: return null;
       }
     }

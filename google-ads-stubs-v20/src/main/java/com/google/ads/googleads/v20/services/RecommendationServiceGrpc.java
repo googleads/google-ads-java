@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage recommendations.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/recommendation_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RecommendationServiceGrpc {
 
@@ -367,8 +364,8 @@ public final class RecommendationServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.ApplyRecommendationResponse applyRecommendation(com.google.ads.googleads.v20.services.ApplyRecommendationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.ApplyRecommendationResponse applyRecommendation(com.google.ads.googleads.v20.services.ApplyRecommendationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getApplyRecommendationMethod(), getCallOptions(), request);
     }
 
@@ -385,8 +382,8 @@ public final class RecommendationServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.DismissRecommendationResponse dismissRecommendation(com.google.ads.googleads.v20.services.DismissRecommendationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.DismissRecommendationResponse dismissRecommendation(com.google.ads.googleads.v20.services.DismissRecommendationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getDismissRecommendationMethod(), getCallOptions(), request);
     }
 
@@ -403,8 +400,8 @@ public final class RecommendationServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.GenerateRecommendationsResponse generateRecommendations(com.google.ads.googleads.v20.services.GenerateRecommendationsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.GenerateRecommendationsResponse generateRecommendations(com.google.ads.googleads.v20.services.GenerateRecommendationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGenerateRecommendationsMethod(), getCallOptions(), request);
     }
   }

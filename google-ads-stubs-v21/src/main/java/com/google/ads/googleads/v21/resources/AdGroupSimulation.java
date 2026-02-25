@@ -10,12 +10,19 @@ package com.google.ads.googleads.v21.resources;
  * channel type, simulation type and simulation modification method is
  * detailed below respectively.
  *
+ *
  * 1. SEARCH - CPC_BID - DEFAULT
+ *
  * 2. SEARCH - CPC_BID - UNIFORM
+ *
  * 3. SEARCH - TARGET_CPA - UNIFORM
+ *
  * 4. SEARCH - TARGET_ROAS - UNIFORM
+ *
  * 5. DISPLAY - CPC_BID - DEFAULT
+ *
  * 6. DISPLAY - CPC_BID - UNIFORM
+ *
  * 7. DISPLAY - TARGET_CPA - UNIFORM
  * </pre>
  *
@@ -831,12 +838,19 @@ private static final long serialVersionUID = 0L;
    * channel type, simulation type and simulation modification method is
    * detailed below respectively.
    *
+   *
    * 1. SEARCH - CPC_BID - DEFAULT
+   *
    * 2. SEARCH - CPC_BID - UNIFORM
+   *
    * 3. SEARCH - TARGET_CPA - UNIFORM
+   *
    * 4. SEARCH - TARGET_ROAS - UNIFORM
+   *
    * 5. DISPLAY - CPC_BID - DEFAULT
+   *
    * 6. DISPLAY - CPC_BID - UNIFORM
+   *
    * 7. DISPLAY - TARGET_CPA - UNIFORM
    * </pre>
    *

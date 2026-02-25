@@ -86,7 +86,10 @@ private static final long serialVersionUID = 0L;
     RUNNING(3),
     /**
      * <pre>
-     * Uploaded data has been successfully processed.
+     * Uploaded data has been successfully processed. The job might have no
+     * operations, which can happen if the job was run without any operations
+     * added, or if all operations failed validation individually when
+     * attempting to add them to the job.
      * </pre>
      *
      * <code>SUCCESS = 4;</code>
@@ -94,7 +97,8 @@ private static final long serialVersionUID = 0L;
     SUCCESS(4),
     /**
      * <pre>
-     * Uploaded data has failed to be processed.
+     * Uploaded data has failed to be processed. Some operations may have been
+     * successfully processed.
      * </pre>
      *
      * <code>FAILED = 5;</code>
@@ -137,7 +141,10 @@ private static final long serialVersionUID = 0L;
     public static final int RUNNING_VALUE = 3;
     /**
      * <pre>
-     * Uploaded data has been successfully processed.
+     * Uploaded data has been successfully processed. The job might have no
+     * operations, which can happen if the job was run without any operations
+     * added, or if all operations failed validation individually when
+     * attempting to add them to the job.
      * </pre>
      *
      * <code>SUCCESS = 4;</code>
@@ -145,7 +152,8 @@ private static final long serialVersionUID = 0L;
     public static final int SUCCESS_VALUE = 4;
     /**
      * <pre>
-     * Uploaded data has failed to be processed.
+     * Uploaded data has failed to be processed. Some operations may have been
+     * successfully processed.
      * </pre>
      *
      * <code>FAILED = 5;</code>

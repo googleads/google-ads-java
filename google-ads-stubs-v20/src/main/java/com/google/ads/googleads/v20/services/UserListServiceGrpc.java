@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Service to manage user lists.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler",
-    comments = "Source: google/ads/googleads/v20/services/user_list_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class UserListServiceGrpc {
 
@@ -258,8 +255,8 @@ public final class UserListServiceGrpc {
      *   [UserListError]()
      * </pre>
      */
-    public com.google.ads.googleads.v20.services.MutateUserListsResponse mutateUserLists(com.google.ads.googleads.v20.services.MutateUserListsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public com.google.ads.googleads.v20.services.MutateUserListsResponse mutateUserLists(com.google.ads.googleads.v20.services.MutateUserListsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateUserListsMethod(), getCallOptions(), request);
     }
   }
