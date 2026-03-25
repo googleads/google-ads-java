@@ -19,7 +19,6 @@ import com.google.common.base.Preconditions;
 import com.google.protobuf.Descriptors.Descriptor;
 import com.google.protobuf.Descriptors.FieldDescriptor;
 import com.google.protobuf.FieldMask;
-import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.Message;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +44,7 @@ public class FieldMasks {
    * @param modified The modified protobuf message object.
    * @return A FieldMask reflecting the changes between the original and modified objects.
    */
-  public static <T extends GeneratedMessageV3> FieldMask compare(T original, T modified) {
+  public static FieldMask compare(Message original, Message modified) {
     Preconditions.checkNotNull(original, "original is null");
     Preconditions.checkNotNull(modified, "modified is null");
 
@@ -71,9 +70,9 @@ public class FieldMasks {
    * <p>For a message object {@code foo}, {@code FieldMasks.allSetFieldsOf(foo)} is equivalent to
    * {@code FieldMasks.compare(foo.getDefaultInstanceForType(), foo)}
    */
-  public static <T extends GeneratedMessageV3> FieldMask allSetFieldsOf(T message) {
+  public static FieldMask allSetFieldsOf(Message message) {
     Preconditions.checkNotNull(message, "message is null");
-    return compare((T) message.getDefaultInstanceForType(), message);
+    return compare(message.getDefaultInstanceForType(), message);
   }
 
   private static void compare(

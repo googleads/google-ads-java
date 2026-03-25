@@ -1,3 +1,7 @@
+42.2.0 - 2026-03-25
+-------------------
+- Add support for v23_2 of the Google Ads API.
+
 42.1.0 - 2026-02-25
 -------------------
 - Add support and examples for v23_1 of the Google Ads API.

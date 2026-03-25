@@ -58,6 +58,8 @@ import com.google.ads.googleads.v23.resources.AiMaxSearchTermAdCombinationViewNa
 import com.google.ads.googleads.v23.resources.AndroidPrivacySharedKeyGoogleAdGroupName;
 import com.google.ads.googleads.v23.resources.AndroidPrivacySharedKeyGoogleCampaignName;
 import com.google.ads.googleads.v23.resources.AndroidPrivacySharedKeyGoogleNetworkTypeName;
+import com.google.ads.googleads.v23.resources.AppTopCombinationView;
+import com.google.ads.googleads.v23.resources.AppTopCombinationViewName;
 import com.google.ads.googleads.v23.resources.AppliedIncentiveName;
 import com.google.ads.googleads.v23.resources.AssetFieldTypeViewName;
 import com.google.ads.googleads.v23.resources.AssetGroupAssetName;
@@ -209,6 +211,7 @@ import com.google.ads.googleads.v23.resources.UserInterestName;
 import com.google.ads.googleads.v23.resources.UserListCustomerTypeName;
 import com.google.ads.googleads.v23.resources.UserListName;
 import com.google.ads.googleads.v23.resources.UserLocationViewName;
+import com.google.ads.googleads.v23.resources.VideoEnhancementName;
 import com.google.ads.googleads.v23.resources.VideoName;
 import com.google.ads.googleads.v23.resources.WebpageViewName;
 import com.google.ads.googleads.v23.resources.YouTubeVideoUploadName;
@@ -500,6 +503,15 @@ public class ResourceNames {
    */
   public static String appliedIncentive(long customerId, String couponCode) {
     return AppliedIncentiveName.format(String.valueOf(customerId), couponCode);
+  }
+
+  /**
+   * Returns the app top combination view resource name for the specified components.
+   */
+  public static String appTopCombinationView(long customerId, long adGroupId, long adId,
+      String assetCombinationCategory) {
+    return AppTopCombinationViewName.format(String.valueOf(customerId), String.valueOf(adGroupId),
+        String.valueOf(adId), assetCombinationCategory);
   }
 
   /** Returns the Asset resource name for the specified components. */
@@ -1492,6 +1504,13 @@ public class ResourceNames {
   /** Returns the video resource name for the specified components. */
   public static String video(long customerId, String videoId) {
     return VideoName.format(String.valueOf(customerId), videoId);
+  }
+
+  /**
+   * Returns the video enhancement resource name for the specified components.
+   */
+  public static String videoEnhancement(long customerId, String videoId) {
+    return VideoEnhancementName.format(String.valueOf(customerId), videoId);
   }
 
   /** Returns the Webpage View resource name for the specified components. */

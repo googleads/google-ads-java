@@ -98,7 +98,7 @@ import javax.annotation.Generated;
  *    </tr>
  *    <tr>
  *      <td><p> Mutate</td>
- *      <td><p> Creates, updates, or removes resources. This method supports atomic transactions with multiple types of resources. For example, you can atomically create a campaign and a campaign budget, or perform up to thousands of mutates atomically.
+ *      <td><p> Executes mutate and actions operations. Mutate operations create, update, or remove resources. Actions perform custom operations. This method supports atomic transactions with multiple types of resources and actions. For example, you can atomically create a campaign and a campaign budget, or perform up to thousands of mutates atomically.
  * <p>  This method is essentially a wrapper around a series of mutate methods. The only features it offers over calling those methods directly are:
  * <p>  - Atomic transactions - Temp resource names (described below) - Somewhat reduced latency over making a series of mutate calls
  * <p>  Note: Only resources that support atomic transactions are included, so this method can't replace all calls to individual services.
@@ -415,9 +415,10 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Creates, updates, or removes resources. This method supports atomic transactions with multiple
-   * types of resources. For example, you can atomically create a campaign and a campaign budget, or
-   * perform up to thousands of mutates atomically.
+   * Executes mutate and actions operations. Mutate operations create, update, or remove resources.
+   * Actions perform custom operations. This method supports atomic transactions with multiple types
+   * of resources and actions. For example, you can atomically create a campaign and a campaign
+   * budget, or perform up to thousands of mutates atomically.
    *
    * <p>This method is essentially a wrapper around a series of mutate methods. The only features it
    * offers over calling those methods directly are:
@@ -508,9 +509,10 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Creates, updates, or removes resources. This method supports atomic transactions with multiple
-   * types of resources. For example, you can atomically create a campaign and a campaign budget, or
-   * perform up to thousands of mutates atomically.
+   * Executes mutate and actions operations. Mutate operations create, update, or remove resources.
+   * Actions perform custom operations. This method supports atomic transactions with multiple types
+   * of resources and actions. For example, you can atomically create a campaign and a campaign
+   * budget, or perform up to thousands of mutates atomically.
    *
    * <p>This method is essentially a wrapper around a series of mutate methods. The only features it
    * offers over calling those methods directly are:
@@ -598,9 +600,10 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Creates, updates, or removes resources. This method supports atomic transactions with multiple
-   * types of resources. For example, you can atomically create a campaign and a campaign budget, or
-   * perform up to thousands of mutates atomically.
+   * Executes mutate and actions operations. Mutate operations create, update, or remove resources.
+   * Actions perform custom operations. This method supports atomic transactions with multiple types
+   * of resources and actions. For example, you can atomically create a campaign and a campaign
+   * budget, or perform up to thousands of mutates atomically.
    *
    * <p>This method is essentially a wrapper around a series of mutate methods. The only features it
    * offers over calling those methods directly are:

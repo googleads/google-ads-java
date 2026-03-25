@@ -1352,6 +1352,21 @@
         }
       }
     },
+    "ReservationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReservationServiceClient",
+          "rpcs": {
+            "BookCampaigns": {
+              "methods": ["bookCampaigns", "bookCampaigns", "bookCampaignsCallable"]
+            },
+            "QuoteCampaigns": {
+              "methods": ["quoteCampaigns", "quoteCampaigns", "quoteCampaignsCallable"]
+            }
+          }
+        }
+      }
+    },
     "ShareablePreviewService": {
       "clients": {
         "grpc": {

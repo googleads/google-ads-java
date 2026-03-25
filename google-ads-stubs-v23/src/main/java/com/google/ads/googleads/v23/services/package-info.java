@@ -2161,6 +2161,25 @@
  * }
  * }</pre>
  *
+ * <p>======================= ReservationServiceClient =======================
+ *
+ * <p>Service Description: Service for reservation related operations. This service is not publicly
+ * available.
+ *
+ * <p>Sample for ReservationServiceClient:
+ *
+ * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+ * try (ReservationServiceClient reservationServiceClient = ReservationServiceClient.create()) {
+ *   String customerId = "customerId-1581184615";
+ *   QuoteCampaignsResponse response = reservationServiceClient.quoteCampaigns(customerId);
+ * }
+ * }</pre>
+ *
  * <p>======================= ShareablePreviewServiceClient =======================
  *
  * <p>Service Description: Service to generate Shareable Previews.
