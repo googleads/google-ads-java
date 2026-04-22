@@ -18,23 +18,20 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v23.common.DateRange;
-import com.google.ads.googleads.v23.common.KeywordInfo;
-import com.google.ads.googleads.v23.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v23.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
-import com.google.ads.googleads.v23.errors.GoogleAdsError;
-import com.google.ads.googleads.v23.errors.GoogleAdsException;
-import com.google.ads.googleads.v23.services.BiddableKeyword;
-import com.google.ads.googleads.v23.services.CampaignToForecast;
-import com.google.ads.googleads.v23.services.CampaignToForecast.CampaignBiddingStrategy;
-import com.google.ads.googleads.v23.services.CriterionBidModifier;
-import com.google.ads.googleads.v23.services.ForecastAdGroup;
-import com.google.ads.googleads.v23.services.GenerateKeywordForecastMetricsRequest;
-import com.google.ads.googleads.v23.services.GenerateKeywordForecastMetricsResponse;
-import com.google.ads.googleads.v23.services.KeywordForecastMetrics;
-import com.google.ads.googleads.v23.services.KeywordPlanIdeaServiceClient;
-import com.google.ads.googleads.v23.services.ManualCpcBiddingStrategy;
-import com.google.ads.googleads.v23.utils.ResourceNames;
+import com.google.ads.googleads.v24.common.DateRange;
+import com.google.ads.googleads.v24.common.KeywordInfo;
+import com.google.ads.googleads.v24.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v24.errors.GoogleAdsError;
+import com.google.ads.googleads.v24.errors.GoogleAdsException;
+import com.google.ads.googleads.v24.services.CampaignToForecast;
+import com.google.ads.googleads.v24.services.CampaignToForecast.CampaignBiddingStrategy;
+import com.google.ads.googleads.v24.services.ForecastAdGroup;
+import com.google.ads.googleads.v24.services.GenerateKeywordForecastMetricsRequest;
+import com.google.ads.googleads.v24.services.GenerateKeywordForecastMetricsResponse;
+import com.google.ads.googleads.v24.services.KeywordForecastMetrics;
+import com.google.ads.googleads.v24.services.KeywordPlanIdeaServiceClient;
+import com.google.ads.googleads.v24.services.ManualCpcBiddingStrategy;
+import com.google.ads.googleads.v24.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import org.joda.time.DateTime;
@@ -118,9 +115,6 @@ public class GenerateForecastMetrics {
       System.out.printf(
           "Estimated daily clicks: %s%n", metrics.hasClicks() ? metrics.getClicks() : null);
       System.out.printf(
-          "Estimated daily impressions: %s%n",
-          metrics.hasImpressions() ? metrics.getImpressions() : null);
-      System.out.printf(
           "Estimated average CPC (micros): %s%n",
           metrics.hasAverageCpcMicros() ? metrics.getAverageCpcMicros() : null);
     }
@@ -133,25 +127,18 @@ public class GenerateForecastMetrics {
    * account with similar values and keywords. For more details, see:
    *
    * <p>https://support.google.com/google-ads/answer/3022575
-   *
-   * @param googleAdsClient
-   * @return
    */
   private CampaignToForecast createCampaignToForecast(GoogleAdsClient googleAdsClient) {
     CampaignToForecast.Builder campaignToForecastBuilder =
         CampaignToForecast.newBuilder()
-            .setKeywordPlanNetwork(KeywordPlanNetwork.GOOGLE_SEARCH)
             .setBiddingStrategy(
                 CampaignBiddingStrategy.newBuilder()
                     .setManualCpcBiddingStrategy(
                         ManualCpcBiddingStrategy.newBuilder().setMaxCpcBidMicros(1_000_000L)));
 
     // See https://developers.google.com/google-ads/api/reference/data/geotargets for the list of
-    // geo target IDs.
-    campaignToForecastBuilder.addGeoModifiers(
-        CriterionBidModifier.newBuilder()
-            // Geo target constant 2840 is for USA.
-            .setGeoTargetConstant(ResourceNames.geoTargetConstant(2840)));
+    // geo target IDs. Geo target constant 2840 is for USA.
+    campaignToForecastBuilder.addGeoTargetConstants(ResourceNames.geoTargetConstant(2840));
 
     // See https://developers.google.com/google-ads/api/reference/data/codes-formats#languages for
     // the list of language criteria IDs. Language constant 1000 is for English.
@@ -160,32 +147,20 @@ public class GenerateForecastMetrics {
     // Create forecast ad group based on themes such as creative relevance, product category, or
     // cost per click.
     ForecastAdGroup.Builder forecastAdGroupBuilder = ForecastAdGroup.newBuilder();
-    forecastAdGroupBuilder.addBiddableKeywords(
-        BiddableKeyword.newBuilder()
-            .setMaxCpcBidMicros(2_500_000)
-            .setKeyword(
-                KeywordInfo.newBuilder()
-                    .setText("mars cruise")
-                    .setMatchType(KeywordMatchType.BROAD)));
+    forecastAdGroupBuilder.addKeywords(
+        KeywordInfo.newBuilder()
+            .setText("mars cruise")
+            .setMatchType(KeywordMatchType.BROAD));
 
-    forecastAdGroupBuilder.addBiddableKeywords(
-        BiddableKeyword.newBuilder()
-            .setMaxCpcBidMicros(1_500_000)
-            .setKeyword(
-                KeywordInfo.newBuilder()
-                    .setText("cheap cruise")
-                    .setMatchType(KeywordMatchType.PHRASE)));
+    forecastAdGroupBuilder.addKeywords(
+        KeywordInfo.newBuilder()
+            .setText("cheap cruise")
+            .setMatchType(KeywordMatchType.PHRASE));
 
-    forecastAdGroupBuilder.addBiddableKeywords(
-        BiddableKeyword.newBuilder()
-            .setMaxCpcBidMicros(1_990_000)
-            .setKeyword(
-                KeywordInfo.newBuilder()
-                    .setText("jupiter cruise")
-                    .setMatchType(KeywordMatchType.BROAD)));
-
-    forecastAdGroupBuilder.addNegativeKeywords(
-        KeywordInfo.newBuilder().setText("moon walk").setMatchType(KeywordMatchType.BROAD));
+    forecastAdGroupBuilder.addKeywords(
+        KeywordInfo.newBuilder()
+            .setText("jupiter cruise")
+            .setMatchType(KeywordMatchType.BROAD));
 
     campaignToForecastBuilder.addAdGroups(forecastAdGroupBuilder.build());
     return campaignToForecastBuilder.build();
