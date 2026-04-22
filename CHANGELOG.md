@@ -1,3 +1,8 @@
+43.0.0 - 2026-034-22
+-------------------
+- Add support for v24 of the Google Ads API.
+- Remove support for v20 of the Google Ads API.
+
 42.2.0 - 2026-03-25
 -------------------
 - Add support for v23_2 of the Google Ads API.
