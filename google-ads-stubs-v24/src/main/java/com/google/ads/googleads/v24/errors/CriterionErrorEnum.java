@@ -1463,6 +1463,14 @@ private static final long serialVersionUID = 0L;
      * <code>RETAIL_FILTER_TAGS_REFERRING_TO_EXPRESSION = 185;</code>
      */
     RETAIL_FILTER_TAGS_REFERRING_TO_EXPRESSION(185),
+    /**
+     * <pre>
+     * Cannot exclude all demographic targets.
+     * </pre>
+     *
+     * <code>CANNOT_EXCLUDE_ALL_TARGETS = 186;</code>
+     */
+    CANNOT_EXCLUDE_ALL_TARGETS(186),
     UNRECOGNIZED(-1),
     ;
 
@@ -2882,6 +2890,14 @@ private static final long serialVersionUID = 0L;
      * <code>RETAIL_FILTER_TAGS_REFERRING_TO_EXPRESSION = 185;</code>
      */
     public static final int RETAIL_FILTER_TAGS_REFERRING_TO_EXPRESSION_VALUE = 185;
+    /**
+     * <pre>
+     * Cannot exclude all demographic targets.
+     * </pre>
+     *
+     * <code>CANNOT_EXCLUDE_ALL_TARGETS = 186;</code>
+     */
+    public static final int CANNOT_EXCLUDE_ALL_TARGETS_VALUE = 186;
 
 
     public final int getNumber() {
@@ -3077,6 +3093,7 @@ private static final long serialVersionUID = 0L;
         case 183: return VERTICAL_ADS_ITEM_GROUP_RULE_NOT_SUPPORTED_FOR_THE_VERTICAL_TYPE;
         case 184: return RETAIL_FILTER_EXPRESSION_DOES_NOT_EXIST;
         case 185: return RETAIL_FILTER_TAGS_REFERRING_TO_EXPRESSION;
+        case 186: return CANNOT_EXCLUDE_ALL_TARGETS;
         default: return null;
       }
     }

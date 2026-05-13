@@ -42,7 +42,7 @@ public final class ExperimentTypeProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v24/enums/experim" +
       "ent_type.proto\022\036google.ads.googleads.v24" +
-      ".enums\"\313\002\n\022ExperimentTypeEnum\"\264\002\n\016Experi" +
+      ".enums\"\261\003\n\022ExperimentTypeEnum\"\232\003\n\016Experi" +
       "mentType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\031" +
       "\n\025DISPLAY_AND_VIDEO_360\020\002\022\020\n\014AD_VARIATIO" +
       "N\020\003\022\022\n\016YOUTUBE_CUSTOM\020\005\022\022\n\016DISPLAY_CUSTO" +
@@ -50,13 +50,16 @@ public final class ExperimentTypeProto {
       "TED_BIDDING_STRATEGY\020\010\022%\n!SEARCH_AUTOMAT" +
       "ED_BIDDING_STRATEGY\020\t\022\'\n#SHOPPING_AUTOMA" +
       "TED_BIDDING_STRATEGY\020\n\022\022\n\016SMART_MATCHING" +
-      "\020\013\022\020\n\014HOTEL_CUSTOM\020\014B\355\001\n\"com.google.ads." +
-      "googleads.v24.enumsB\023ExperimentTypeProto" +
-      "P\001ZCgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v24/enums;enums\242\002\003GAA\252\002\036" +
-      "Google.Ads.GoogleAds.V24.Enums\312\002\036Google\\" +
-      "Ads\\GoogleAds\\V24\\Enums\352\002\"Google::Ads::G" +
-      "oogleAds::V24::Enumsb\006proto3"
+      "\020\013\022\020\n\014HOTEL_CUSTOM\020\014\022\023\n\017OPTIMIZE_ASSETS\020" +
+      "\r\022\020\n\014ADOPT_AI_MAX\020\016\022\036\n\032ADOPT_BROAD_MATCH" +
+      "_KEYWORDS\020\017\022\035\n\031PMAX_REPLACEMENT_SHOPPING" +
+      "\020\020B\355\001\n\"com.google.ads.googleads.v24.enum" +
+      "sB\023ExperimentTypeProtoP\001ZCgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v2" +
+      "4/enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
+      "ds.V24.Enums\312\002\036Google\\Ads\\GoogleAds\\V24\\" +
+      "Enums\352\002\"Google::Ads::GoogleAds::V24::Enu" +
+      "msb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

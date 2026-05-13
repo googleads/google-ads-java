@@ -181,4 +181,120 @@ public interface ExperimentArmOrBuilder extends
    */
   com.google.protobuf.ByteString
       getInDesignCampaignsBytes(int index);
+
+  /**
+   * <pre>
+   * Details of assets under experiment.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+   * @return Whether the assetTestingInfo field is set.
+   */
+  boolean hasAssetTestingInfo();
+  /**
+   * <pre>
+   * Details of assets under experiment.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+   * @return The assetTestingInfo.
+   */
+  com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo getAssetTestingInfo();
+  /**
+   * <pre>
+   * Details of assets under experiment.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+   */
+  com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfoOrBuilder getAssetTestingInfoOrBuilder();
+
+  /**
+   * <pre>
+   * List of asset groups in the experiment arm.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+   */
+  java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo> 
+      getAssetGroupsList();
+  /**
+   * <pre>
+   * List of asset groups in the experiment arm.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+   */
+  com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo getAssetGroups(int index);
+  /**
+   * <pre>
+   * List of asset groups in the experiment arm.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+   */
+  int getAssetGroupsCount();
+  /**
+   * <pre>
+   * List of asset groups in the experiment arm.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfoOrBuilder> 
+      getAssetGroupsOrBuilderList();
+  /**
+   * <pre>
+   * List of asset groups in the experiment arm.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+   */
+  com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfoOrBuilder getAssetGroupsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Immutable. Information specific to the control or treatment campaign of a
+   * Performance Max experiment.
+   *
+   * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+   * For example, the treatment experiment arm contains the
+   * information of treatment Performance Max campaign settings for
+   * PMAX_REPLACEMENT_SHOPPING experiments.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the performanceMaxExperimentArmInfo field is set.
+   */
+  boolean hasPerformanceMaxExperimentArmInfo();
+  /**
+   * <pre>
+   * Immutable. Information specific to the control or treatment campaign of a
+   * Performance Max experiment.
+   *
+   * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+   * For example, the treatment experiment arm contains the
+   * information of treatment Performance Max campaign settings for
+   * PMAX_REPLACEMENT_SHOPPING experiments.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The performanceMaxExperimentArmInfo.
+   */
+  com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo getPerformanceMaxExperimentArmInfo();
+  /**
+   * <pre>
+   * Immutable. Information specific to the control or treatment campaign of a
+   * Performance Max experiment.
+   *
+   * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+   * For example, the treatment experiment arm contains the
+   * information of treatment Performance Max campaign settings for
+   * PMAX_REPLACEMENT_SHOPPING experiments.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfoOrBuilder getPerformanceMaxExperimentArmInfoOrBuilder();
 }

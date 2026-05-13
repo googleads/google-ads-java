@@ -322,6 +322,22 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION = 31;</code>
      */
     MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION(31),
+    /**
+     * <pre>
+     * Cannot create an experiment with no arms.
+     * </pre>
+     *
+     * <code>MISSING_EXPERIMENT_ARMS = 32;</code>
+     */
+    MISSING_EXPERIMENT_ARMS(32),
+    /**
+     * <pre>
+     * The video experiment subtype is missing.
+     * </pre>
+     *
+     * <code>MISSING_VIDEO_EXPERIMENT_SUBTYPE = 34;</code>
+     */
+    MISSING_VIDEO_EXPERIMENT_SUBTYPE(34),
     UNRECOGNIZED(-1),
     ;
 
@@ -600,6 +616,22 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION = 31;</code>
      */
     public static final int MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION_VALUE = 31;
+    /**
+     * <pre>
+     * Cannot create an experiment with no arms.
+     * </pre>
+     *
+     * <code>MISSING_EXPERIMENT_ARMS = 32;</code>
+     */
+    public static final int MISSING_EXPERIMENT_ARMS_VALUE = 32;
+    /**
+     * <pre>
+     * The video experiment subtype is missing.
+     * </pre>
+     *
+     * <code>MISSING_VIDEO_EXPERIMENT_SUBTYPE = 34;</code>
+     */
+    public static final int MISSING_VIDEO_EXPERIMENT_SUBTYPE_VALUE = 34;
 
 
     public final int getNumber() {
@@ -658,6 +690,8 @@ private static final long serialVersionUID = 0L;
         case 29: return CANNOT_ENABLE_SYNC_FOR_UNSUPPORTED_EXPERIMENT_TYPE;
         case 30: return INVALID_DURATION_FOR_AN_EXPERIMENT;
         case 31: return MISSING_EU_POLITICAL_ADVERTISING_SELF_DECLARATION;
+        case 32: return MISSING_EXPERIMENT_ARMS;
+        case 34: return MISSING_VIDEO_EXPERIMENT_SUBTYPE;
         default: return null;
       }
     }

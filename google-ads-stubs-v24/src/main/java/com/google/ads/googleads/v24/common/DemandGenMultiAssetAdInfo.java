@@ -37,6 +37,7 @@ private static final long serialVersionUID = 0L;
     portraitMarketingImages_ = java.util.Collections.emptyList();
     tallPortraitMarketingImages_ = java.util.Collections.emptyList();
     logoImages_ = java.util.Collections.emptyList();
+    classicDisplayImages_ = java.util.Collections.emptyList();
     headlines_ = java.util.Collections.emptyList();
     descriptions_ = java.util.Collections.emptyList();
     businessName_ = "";
@@ -457,6 +458,77 @@ private static final long serialVersionUID = 0L;
     return logoImages_.get(index);
   }
 
+  public static final int CLASSIC_DISPLAY_IMAGES_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.ads.googleads.v24.common.AdImageAsset> classicDisplayImages_;
+  /**
+   * <pre>
+   * Classic display image assets to be used in the ad. Valid image types are
+   * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+   * ad.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v24.common.AdImageAsset> getClassicDisplayImagesList() {
+    return classicDisplayImages_;
+  }
+  /**
+   * <pre>
+   * Classic display image assets to be used in the ad. Valid image types are
+   * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+   * ad.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v24.common.AdImageAssetOrBuilder> 
+      getClassicDisplayImagesOrBuilderList() {
+    return classicDisplayImages_;
+  }
+  /**
+   * <pre>
+   * Classic display image assets to be used in the ad. Valid image types are
+   * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+   * ad.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+   */
+  @java.lang.Override
+  public int getClassicDisplayImagesCount() {
+    return classicDisplayImages_.size();
+  }
+  /**
+   * <pre>
+   * Classic display image assets to be used in the ad. Valid image types are
+   * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+   * ad.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.AdImageAsset getClassicDisplayImages(int index) {
+    return classicDisplayImages_.get(index);
+  }
+  /**
+   * <pre>
+   * Classic display image assets to be used in the ad. Valid image types are
+   * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+   * ad.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.AdImageAssetOrBuilder getClassicDisplayImagesOrBuilder(
+      int index) {
+    return classicDisplayImages_.get(index);
+  }
+
   public static final int HEADLINES_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v24.common.AdTextAsset> headlines_;
@@ -748,6 +820,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < tallPortraitMarketingImages_.size(); i++) {
       output.writeMessage(10, tallPortraitMarketingImages_.get(i));
     }
+    for (int i = 0; i < classicDisplayImages_.size(); i++) {
+      output.writeMessage(11, classicDisplayImages_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -791,6 +866,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, tallPortraitMarketingImages_.get(i));
     }
+    for (int i = 0; i < classicDisplayImages_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, classicDisplayImages_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -816,6 +895,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTallPortraitMarketingImagesList())) return false;
     if (!getLogoImagesList()
         .equals(other.getLogoImagesList())) return false;
+    if (!getClassicDisplayImagesList()
+        .equals(other.getClassicDisplayImagesList())) return false;
     if (!getHeadlinesList()
         .equals(other.getHeadlinesList())) return false;
     if (!getDescriptionsList()
@@ -860,6 +941,10 @@ private static final long serialVersionUID = 0L;
     if (getLogoImagesCount() > 0) {
       hash = (37 * hash) + LOGO_IMAGES_FIELD_NUMBER;
       hash = (53 * hash) + getLogoImagesList().hashCode();
+    }
+    if (getClassicDisplayImagesCount() > 0) {
+      hash = (37 * hash) + CLASSIC_DISPLAY_IMAGES_FIELD_NUMBER;
+      hash = (53 * hash) + getClassicDisplayImagesList().hashCode();
     }
     if (getHeadlinesCount() > 0) {
       hash = (37 * hash) + HEADLINES_FIELD_NUMBER;
@@ -1047,20 +1132,27 @@ private static final long serialVersionUID = 0L;
         logoImagesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
+      if (classicDisplayImagesBuilder_ == null) {
+        classicDisplayImages_ = java.util.Collections.emptyList();
+      } else {
+        classicDisplayImages_ = null;
+        classicDisplayImagesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000020);
       if (headlinesBuilder_ == null) {
         headlines_ = java.util.Collections.emptyList();
       } else {
         headlines_ = null;
         headlinesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       if (descriptionsBuilder_ == null) {
         descriptions_ = java.util.Collections.emptyList();
       } else {
         descriptions_ = null;
         descriptionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       businessName_ = "";
       callToActionText_ = "";
       return this;
@@ -1141,19 +1233,28 @@ private static final long serialVersionUID = 0L;
       } else {
         result.logoImages_ = logoImagesBuilder_.build();
       }
-      if (headlinesBuilder_ == null) {
+      if (classicDisplayImagesBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0)) {
-          headlines_ = java.util.Collections.unmodifiableList(headlines_);
+          classicDisplayImages_ = java.util.Collections.unmodifiableList(classicDisplayImages_);
           bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.classicDisplayImages_ = classicDisplayImages_;
+      } else {
+        result.classicDisplayImages_ = classicDisplayImagesBuilder_.build();
+      }
+      if (headlinesBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          headlines_ = java.util.Collections.unmodifiableList(headlines_);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.headlines_ = headlines_;
       } else {
         result.headlines_ = headlinesBuilder_.build();
       }
       if (descriptionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           descriptions_ = java.util.Collections.unmodifiableList(descriptions_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.descriptions_ = descriptions_;
       } else {
@@ -1164,11 +1265,11 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.google.ads.googleads.v24.common.DemandGenMultiAssetAdInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.businessName_ = businessName_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.callToActionText_ = callToActionText_;
         to_bitField0_ |= 0x00000002;
       }
@@ -1317,11 +1418,37 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (classicDisplayImagesBuilder_ == null) {
+        if (!other.classicDisplayImages_.isEmpty()) {
+          if (classicDisplayImages_.isEmpty()) {
+            classicDisplayImages_ = other.classicDisplayImages_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureClassicDisplayImagesIsMutable();
+            classicDisplayImages_.addAll(other.classicDisplayImages_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.classicDisplayImages_.isEmpty()) {
+          if (classicDisplayImagesBuilder_.isEmpty()) {
+            classicDisplayImagesBuilder_.dispose();
+            classicDisplayImagesBuilder_ = null;
+            classicDisplayImages_ = other.classicDisplayImages_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            classicDisplayImagesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetClassicDisplayImagesFieldBuilder() : null;
+          } else {
+            classicDisplayImagesBuilder_.addAllMessages(other.classicDisplayImages_);
+          }
+        }
+      }
       if (headlinesBuilder_ == null) {
         if (!other.headlines_.isEmpty()) {
           if (headlines_.isEmpty()) {
             headlines_ = other.headlines_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureHeadlinesIsMutable();
             headlines_.addAll(other.headlines_);
@@ -1334,7 +1461,7 @@ private static final long serialVersionUID = 0L;
             headlinesBuilder_.dispose();
             headlinesBuilder_ = null;
             headlines_ = other.headlines_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
             headlinesBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                  internalGetHeadlinesFieldBuilder() : null;
@@ -1347,7 +1474,7 @@ private static final long serialVersionUID = 0L;
         if (!other.descriptions_.isEmpty()) {
           if (descriptions_.isEmpty()) {
             descriptions_ = other.descriptions_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureDescriptionsIsMutable();
             descriptions_.addAll(other.descriptions_);
@@ -1360,7 +1487,7 @@ private static final long serialVersionUID = 0L;
             descriptionsBuilder_.dispose();
             descriptionsBuilder_ = null;
             descriptions_ = other.descriptions_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
             descriptionsBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                  internalGetDescriptionsFieldBuilder() : null;
@@ -1371,12 +1498,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBusinessName()) {
         businessName_ = other.businessName_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.hasCallToActionText()) {
         callToActionText_ = other.callToActionText_;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1485,12 +1612,12 @@ private static final long serialVersionUID = 0L;
             } // case 50
             case 58: {
               businessName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 58
             case 66: {
               callToActionText_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 66
             case 82: {
@@ -1506,6 +1633,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 82
+            case 90: {
+              com.google.ads.googleads.v24.common.AdImageAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v24.common.AdImageAsset.parser(),
+                      extensionRegistry);
+              if (classicDisplayImagesBuilder_ == null) {
+                ensureClassicDisplayImagesIsMutable();
+                classicDisplayImages_.add(m);
+              } else {
+                classicDisplayImagesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3425,12 +3565,360 @@ private static final long serialVersionUID = 0L;
       return logoImagesBuilder_;
     }
 
+    private java.util.List<com.google.ads.googleads.v24.common.AdImageAsset> classicDisplayImages_ =
+      java.util.Collections.emptyList();
+    private void ensureClassicDisplayImagesIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        classicDisplayImages_ = new java.util.ArrayList<com.google.ads.googleads.v24.common.AdImageAsset>(classicDisplayImages_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.google.ads.googleads.v24.common.AdImageAsset, com.google.ads.googleads.v24.common.AdImageAsset.Builder, com.google.ads.googleads.v24.common.AdImageAssetOrBuilder> classicDisplayImagesBuilder_;
+
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v24.common.AdImageAsset> getClassicDisplayImagesList() {
+      if (classicDisplayImagesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(classicDisplayImages_);
+      } else {
+        return classicDisplayImagesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public int getClassicDisplayImagesCount() {
+      if (classicDisplayImagesBuilder_ == null) {
+        return classicDisplayImages_.size();
+      } else {
+        return classicDisplayImagesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public com.google.ads.googleads.v24.common.AdImageAsset getClassicDisplayImages(int index) {
+      if (classicDisplayImagesBuilder_ == null) {
+        return classicDisplayImages_.get(index);
+      } else {
+        return classicDisplayImagesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public Builder setClassicDisplayImages(
+        int index, com.google.ads.googleads.v24.common.AdImageAsset value) {
+      if (classicDisplayImagesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureClassicDisplayImagesIsMutable();
+        classicDisplayImages_.set(index, value);
+        onChanged();
+      } else {
+        classicDisplayImagesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public Builder setClassicDisplayImages(
+        int index, com.google.ads.googleads.v24.common.AdImageAsset.Builder builderForValue) {
+      if (classicDisplayImagesBuilder_ == null) {
+        ensureClassicDisplayImagesIsMutable();
+        classicDisplayImages_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        classicDisplayImagesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public Builder addClassicDisplayImages(com.google.ads.googleads.v24.common.AdImageAsset value) {
+      if (classicDisplayImagesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureClassicDisplayImagesIsMutable();
+        classicDisplayImages_.add(value);
+        onChanged();
+      } else {
+        classicDisplayImagesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public Builder addClassicDisplayImages(
+        int index, com.google.ads.googleads.v24.common.AdImageAsset value) {
+      if (classicDisplayImagesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureClassicDisplayImagesIsMutable();
+        classicDisplayImages_.add(index, value);
+        onChanged();
+      } else {
+        classicDisplayImagesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public Builder addClassicDisplayImages(
+        com.google.ads.googleads.v24.common.AdImageAsset.Builder builderForValue) {
+      if (classicDisplayImagesBuilder_ == null) {
+        ensureClassicDisplayImagesIsMutable();
+        classicDisplayImages_.add(builderForValue.build());
+        onChanged();
+      } else {
+        classicDisplayImagesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public Builder addClassicDisplayImages(
+        int index, com.google.ads.googleads.v24.common.AdImageAsset.Builder builderForValue) {
+      if (classicDisplayImagesBuilder_ == null) {
+        ensureClassicDisplayImagesIsMutable();
+        classicDisplayImages_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        classicDisplayImagesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public Builder addAllClassicDisplayImages(
+        java.lang.Iterable<? extends com.google.ads.googleads.v24.common.AdImageAsset> values) {
+      if (classicDisplayImagesBuilder_ == null) {
+        ensureClassicDisplayImagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, classicDisplayImages_);
+        onChanged();
+      } else {
+        classicDisplayImagesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public Builder clearClassicDisplayImages() {
+      if (classicDisplayImagesBuilder_ == null) {
+        classicDisplayImages_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        classicDisplayImagesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public Builder removeClassicDisplayImages(int index) {
+      if (classicDisplayImagesBuilder_ == null) {
+        ensureClassicDisplayImagesIsMutable();
+        classicDisplayImages_.remove(index);
+        onChanged();
+      } else {
+        classicDisplayImagesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public com.google.ads.googleads.v24.common.AdImageAsset.Builder getClassicDisplayImagesBuilder(
+        int index) {
+      return internalGetClassicDisplayImagesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public com.google.ads.googleads.v24.common.AdImageAssetOrBuilder getClassicDisplayImagesOrBuilder(
+        int index) {
+      if (classicDisplayImagesBuilder_ == null) {
+        return classicDisplayImages_.get(index);  } else {
+        return classicDisplayImagesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v24.common.AdImageAssetOrBuilder> 
+         getClassicDisplayImagesOrBuilderList() {
+      if (classicDisplayImagesBuilder_ != null) {
+        return classicDisplayImagesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(classicDisplayImages_);
+      }
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public com.google.ads.googleads.v24.common.AdImageAsset.Builder addClassicDisplayImagesBuilder() {
+      return internalGetClassicDisplayImagesFieldBuilder().addBuilder(
+          com.google.ads.googleads.v24.common.AdImageAsset.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public com.google.ads.googleads.v24.common.AdImageAsset.Builder addClassicDisplayImagesBuilder(
+        int index) {
+      return internalGetClassicDisplayImagesFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v24.common.AdImageAsset.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Classic display image assets to be used in the ad. Valid image types are
+     * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v24.common.AdImageAsset.Builder> 
+         getClassicDisplayImagesBuilderList() {
+      return internalGetClassicDisplayImagesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.google.ads.googleads.v24.common.AdImageAsset, com.google.ads.googleads.v24.common.AdImageAsset.Builder, com.google.ads.googleads.v24.common.AdImageAssetOrBuilder> 
+        internalGetClassicDisplayImagesFieldBuilder() {
+      if (classicDisplayImagesBuilder_ == null) {
+        classicDisplayImagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.ads.googleads.v24.common.AdImageAsset, com.google.ads.googleads.v24.common.AdImageAsset.Builder, com.google.ads.googleads.v24.common.AdImageAssetOrBuilder>(
+                classicDisplayImages_,
+                ((bitField0_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        classicDisplayImages_ = null;
+      }
+      return classicDisplayImagesBuilder_;
+    }
+
     private java.util.List<com.google.ads.googleads.v24.common.AdTextAsset> headlines_ =
       java.util.Collections.emptyList();
     private void ensureHeadlinesIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         headlines_ = new java.util.ArrayList<com.google.ads.googleads.v24.common.AdTextAsset>(headlines_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
        }
     }
 
@@ -3635,7 +4123,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearHeadlines() {
       if (headlinesBuilder_ == null) {
         headlines_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
       } else {
         headlinesBuilder_.clear();
@@ -3747,7 +4235,7 @@ private static final long serialVersionUID = 0L;
         headlinesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             com.google.ads.googleads.v24.common.AdTextAsset, com.google.ads.googleads.v24.common.AdTextAsset.Builder, com.google.ads.googleads.v24.common.AdTextAssetOrBuilder>(
                 headlines_,
-                ((bitField0_ & 0x00000020) != 0),
+                ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
                 isClean());
         headlines_ = null;
@@ -3758,9 +4246,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v24.common.AdTextAsset> descriptions_ =
       java.util.Collections.emptyList();
     private void ensureDescriptionsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         descriptions_ = new java.util.ArrayList<com.google.ads.googleads.v24.common.AdTextAsset>(descriptions_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -3965,7 +4453,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDescriptions() {
       if (descriptionsBuilder_ == null) {
         descriptions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         descriptionsBuilder_.clear();
@@ -4077,7 +4565,7 @@ private static final long serialVersionUID = 0L;
         descriptionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             com.google.ads.googleads.v24.common.AdTextAsset, com.google.ads.googleads.v24.common.AdTextAsset.Builder, com.google.ads.googleads.v24.common.AdTextAssetOrBuilder>(
                 descriptions_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         descriptions_ = null;
@@ -4095,7 +4583,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the businessName field is set.
      */
     public boolean hasBusinessName() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -4151,7 +4639,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       businessName_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -4165,7 +4653,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearBusinessName() {
       businessName_ = getDefaultInstance().getBusinessName();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -4183,7 +4671,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       businessName_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -4198,7 +4686,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the callToActionText field is set.
      */
     public boolean hasCallToActionText() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -4254,7 +4742,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       callToActionText_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -4268,7 +4756,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCallToActionText() {
       callToActionText_ = getDefaultInstance().getCallToActionText();
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -4286,7 +4774,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       callToActionText_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }

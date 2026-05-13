@@ -64,6 +64,7 @@ private static final long serialVersionUID = 0L;
   private int bitField5_;
   private int bitField6_;
   private int bitField7_;
+  private int bitField8_;
   public static final int ABSOLUTE_TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER = 183;
   private double absoluteTopImpressionPercentage_ = 0D;
   /**
@@ -1397,6 +1398,35 @@ private static final long serialVersionUID = 0L;
     return clicks_;
   }
 
+  public static final int CONTROL_CLICKS_FIELD_NUMBER = 443;
+  private long controlClicks_ = 0L;
+  /**
+   * <pre>
+   * The number of clicks on the control arm of an experiment.
+   * The treatment clicks value can be selected by using `clicks`.
+   * </pre>
+   *
+   * <code>optional int64 control_clicks = 443;</code>
+   * @return Whether the controlClicks field is set.
+   */
+  @java.lang.Override
+  public boolean hasControlClicks() {
+    return ((bitField1_ & 0x00000800) != 0);
+  }
+  /**
+   * <pre>
+   * The number of clicks on the control arm of an experiment.
+   * The treatment clicks value can be selected by using `clicks`.
+   * </pre>
+   *
+   * <code>optional int64 control_clicks = 443;</code>
+   * @return The controlClicks.
+   */
+  @java.lang.Override
+  public long getControlClicks() {
+    return controlClicks_;
+  }
+
   public static final int COMBINED_CLICKS_FIELD_NUMBER = 156;
   private long combinedClicks_ = 0L;
   /**
@@ -1411,7 +1441,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCombinedClicks() {
-    return ((bitField1_ & 0x00000800) != 0);
+    return ((bitField1_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -1443,7 +1473,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCombinedClicksPerQuery() {
-    return ((bitField1_ & 0x00001000) != 0);
+    return ((bitField1_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -1475,7 +1505,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCombinedQueries() {
-    return ((bitField1_ & 0x00002000) != 0);
+    return ((bitField1_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -1507,7 +1537,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasContentBudgetLostImpressionShare() {
-    return ((bitField1_ & 0x00004000) != 0);
+    return ((bitField1_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -1540,7 +1570,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasContentImpressionShare() {
-    return ((bitField1_ & 0x00008000) != 0);
+    return ((bitField1_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -1575,7 +1605,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversionLastReceivedRequestDateTime() {
-    return ((bitField1_ & 0x00010000) != 0);
+    return ((bitField1_ & 0x00020000) != 0);
   }
   /**
    * <pre>
@@ -1643,7 +1673,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversionLastConversionDate() {
-    return ((bitField1_ & 0x00020000) != 0);
+    return ((bitField1_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -1706,7 +1736,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasContentRankLostImpressionShare() {
-    return ((bitField1_ & 0x00040000) != 0);
+    return ((bitField1_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -1740,7 +1770,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversionsFromInteractionsRate() {
-    return ((bitField1_ & 0x00080000) != 0);
+    return ((bitField1_ & 0x00100000) != 0);
   }
   /**
    * <pre>
@@ -1774,7 +1804,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversionsValue() {
-    return ((bitField1_ & 0x00100000) != 0);
+    return ((bitField1_ & 0x00200000) != 0);
   }
   /**
    * <pre>
@@ -1810,7 +1840,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversionsValueByConversionDate() {
-    return ((bitField1_ & 0x00200000) != 0);
+    return ((bitField1_ & 0x00400000) != 0);
   }
   /**
    * <pre>
@@ -1849,7 +1879,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNewCustomerLifetimeValue() {
-    return ((bitField1_ & 0x00400000) != 0);
+    return ((bitField1_ & 0x00800000) != 0);
   }
   /**
    * <pre>
@@ -1885,7 +1915,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversionsValuePerCost() {
-    return ((bitField1_ & 0x00800000) != 0);
+    return ((bitField1_ & 0x01000000) != 0);
   }
   /**
    * <pre>
@@ -1919,7 +1949,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversionsFromInteractionsValuePerInteraction() {
-    return ((bitField1_ & 0x01000000) != 0);
+    return ((bitField1_ & 0x02000000) != 0);
   }
   /**
    * <pre>
@@ -1953,7 +1983,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversions() {
-    return ((bitField1_ & 0x02000000) != 0);
+    return ((bitField1_ & 0x04000000) != 0);
   }
   /**
    * <pre>
@@ -1989,7 +2019,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversionsByConversionDate() {
-    return ((bitField1_ & 0x04000000) != 0);
+    return ((bitField1_ & 0x08000000) != 0);
   }
   /**
    * <pre>
@@ -2023,7 +2053,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCostMicros() {
-    return ((bitField1_ & 0x08000000) != 0);
+    return ((bitField1_ & 0x10000000) != 0);
   }
   /**
    * <pre>
@@ -2051,7 +2081,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCostPerAllConversions() {
-    return ((bitField1_ & 0x10000000) != 0);
+    return ((bitField1_ & 0x20000000) != 0);
   }
   /**
    * <pre>
@@ -2081,7 +2111,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCostPerConversion() {
-    return ((bitField1_ & 0x20000000) != 0);
+    return ((bitField1_ & 0x40000000) != 0);
   }
   /**
    * <pre>
@@ -2115,7 +2145,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCostPerCurrentModelAttributedConversion() {
-    return ((bitField1_ & 0x40000000) != 0);
+    return ((bitField1_ & 0x80000000) != 0);
   }
   /**
    * <pre>
@@ -2148,7 +2178,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCrossDeviceConversions() {
-    return ((bitField1_ & 0x80000000) != 0);
+    return ((bitField2_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -2179,7 +2209,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCrossDeviceConversionsByConversionDate() {
-    return ((bitField2_ & 0x00000001) != 0);
+    return ((bitField2_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -2208,7 +2238,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCrossDeviceConversionsValue() {
-    return ((bitField2_ & 0x00000002) != 0);
+    return ((bitField2_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -2235,7 +2265,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCrossDeviceConversionsValueMicros() {
-    return ((bitField2_ & 0x00000004) != 0);
+    return ((bitField2_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -2264,7 +2294,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCrossDeviceConversionsValueByConversionDate() {
-    return ((bitField2_ & 0x00000008) != 0);
+    return ((bitField2_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -2294,7 +2324,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCtr() {
-    return ((bitField2_ & 0x00000010) != 0);
+    return ((bitField2_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -2326,7 +2356,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCurrentModelAttributedConversions() {
-    return ((bitField2_ & 0x00000020) != 0);
+    return ((bitField2_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -2362,7 +2392,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCurrentModelAttributedConversionsFromInteractionsRate() {
-    return ((bitField2_ & 0x00000040) != 0);
+    return ((bitField2_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -2398,7 +2428,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
-    return ((bitField2_ & 0x00000080) != 0);
+    return ((bitField2_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -2432,7 +2462,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCurrentModelAttributedConversionsValue() {
-    return ((bitField2_ & 0x00000100) != 0);
+    return ((bitField2_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -2466,7 +2496,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCurrentModelAttributedConversionsValuePerCost() {
-    return ((bitField2_ & 0x00000200) != 0);
+    return ((bitField2_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -2498,7 +2528,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEngagementRate() {
-    return ((bitField2_ & 0x00000400) != 0);
+    return ((bitField2_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -2528,7 +2558,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEngagements() {
-    return ((bitField2_ & 0x00000800) != 0);
+    return ((bitField2_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -2557,7 +2587,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHotelAverageLeadValueMicros() {
-    return ((bitField2_ & 0x00001000) != 0);
+    return ((bitField2_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -2585,7 +2615,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHotelCommissionRateMicros() {
-    return ((bitField2_ & 0x00002000) != 0);
+    return ((bitField2_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -2614,7 +2644,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHotelExpectedCommissionCost() {
-    return ((bitField2_ & 0x00004000) != 0);
+    return ((bitField2_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -2643,7 +2673,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHotelPriceDifferencePercentage() {
-    return ((bitField2_ & 0x00008000) != 0);
+    return ((bitField2_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -2672,7 +2702,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHotelEligibleImpressions() {
-    return ((bitField2_ & 0x00010000) != 0);
+    return ((bitField2_ & 0x00020000) != 0);
   }
   /**
    * <pre>
@@ -2752,7 +2782,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHistoricalQualityScore() {
-    return ((bitField2_ & 0x00020000) != 0);
+    return ((bitField2_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -2805,7 +2835,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGmailForwards() {
-    return ((bitField2_ & 0x00040000) != 0);
+    return ((bitField2_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -2833,7 +2863,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGmailSaves() {
-    return ((bitField2_ & 0x00080000) != 0);
+    return ((bitField2_ & 0x00100000) != 0);
   }
   /**
    * <pre>
@@ -2862,7 +2892,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGmailSecondaryClicks() {
-    return ((bitField2_ & 0x00100000) != 0);
+    return ((bitField2_ & 0x00200000) != 0);
   }
   /**
    * <pre>
@@ -2892,7 +2922,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasImpressionsFromStoreReach() {
-    return ((bitField2_ & 0x00200000) != 0);
+    return ((bitField2_ & 0x00400000) != 0);
   }
   /**
    * <pre>
@@ -2922,7 +2952,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasImpressions() {
-    return ((bitField2_ & 0x00400000) != 0);
+    return ((bitField2_ & 0x00800000) != 0);
   }
   /**
    * <pre>
@@ -2952,7 +2982,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInteractionRate() {
-    return ((bitField2_ & 0x00800000) != 0);
+    return ((bitField2_ & 0x01000000) != 0);
   }
   /**
    * <pre>
@@ -2983,7 +3013,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInteractions() {
-    return ((bitField2_ & 0x01000000) != 0);
+    return ((bitField2_ & 0x02000000) != 0);
   }
   /**
    * <pre>
@@ -3092,7 +3122,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInvalidClickRate() {
-    return ((bitField2_ & 0x02000000) != 0);
+    return ((bitField2_ & 0x04000000) != 0);
   }
   /**
    * <pre>
@@ -3120,7 +3150,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInvalidClicks() {
-    return ((bitField2_ & 0x04000000) != 0);
+    return ((bitField2_ & 0x08000000) != 0);
   }
   /**
    * <pre>
@@ -3155,7 +3185,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGeneralInvalidClickRate() {
-    return ((bitField2_ & 0x08000000) != 0);
+    return ((bitField2_ & 0x10000000) != 0);
   }
   /**
    * <pre>
@@ -3196,7 +3226,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGeneralInvalidClicks() {
-    return ((bitField2_ & 0x10000000) != 0);
+    return ((bitField2_ & 0x20000000) != 0);
   }
   /**
    * <pre>
@@ -3230,7 +3260,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMessageChats() {
-    return ((bitField2_ & 0x20000000) != 0);
+    return ((bitField2_ & 0x40000000) != 0);
   }
   /**
    * <pre>
@@ -3258,7 +3288,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMessageImpressions() {
-    return ((bitField2_ & 0x40000000) != 0);
+    return ((bitField2_ & 0x80000000) != 0);
   }
   /**
    * <pre>
@@ -3289,7 +3319,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMessageChatRate() {
-    return ((bitField2_ & 0x80000000) != 0);
+    return ((bitField3_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -3320,7 +3350,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMobileFriendlyClicksPercentage() {
-    return ((bitField3_ & 0x00000001) != 0);
+    return ((bitField3_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -3347,7 +3377,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOptimizationScoreUplift() {
-    return ((bitField3_ & 0x00000002) != 0);
+    return ((bitField3_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -3380,7 +3410,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOptimizationScoreUrl() {
-    return ((bitField3_ & 0x00000004) != 0);
+    return ((bitField3_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -3450,7 +3480,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOrganicClicks() {
-    return ((bitField3_ & 0x00000008) != 0);
+    return ((bitField3_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -3482,7 +3512,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOrganicClicksPerQuery() {
-    return ((bitField3_ & 0x00000010) != 0);
+    return ((bitField3_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -3514,7 +3544,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOrganicImpressions() {
-    return ((bitField3_ & 0x00000020) != 0);
+    return ((bitField3_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -3546,7 +3576,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOrganicImpressionsPerQuery() {
-    return ((bitField3_ & 0x00000040) != 0);
+    return ((bitField3_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -3578,7 +3608,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOrganicQueries() {
-    return ((bitField3_ & 0x00000080) != 0);
+    return ((bitField3_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -3608,7 +3638,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPercentNewVisitors() {
-    return ((bitField3_ & 0x00000100) != 0);
+    return ((bitField3_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -3636,7 +3666,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPhoneCalls() {
-    return ((bitField3_ & 0x00000200) != 0);
+    return ((bitField3_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -3663,7 +3693,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPhoneImpressions() {
-    return ((bitField3_ & 0x00000400) != 0);
+    return ((bitField3_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -3691,7 +3721,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPhoneThroughRate() {
-    return ((bitField3_ & 0x00000800) != 0);
+    return ((bitField3_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -3721,7 +3751,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRelativeCtr() {
-    return ((bitField3_ & 0x00001000) != 0);
+    return ((bitField3_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -3753,7 +3783,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchAbsoluteTopImpressionShare() {
-    return ((bitField3_ & 0x00002000) != 0);
+    return ((bitField3_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -3786,7 +3816,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchBudgetLostAbsoluteTopImpressionShare() {
-    return ((bitField3_ & 0x00004000) != 0);
+    return ((bitField3_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -3819,7 +3849,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchBudgetLostImpressionShare() {
-    return ((bitField3_ & 0x00008000) != 0);
+    return ((bitField3_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -3852,7 +3882,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchBudgetLostTopImpressionShare() {
-    return ((bitField3_ & 0x00010000) != 0);
+    return ((bitField3_ & 0x00020000) != 0);
   }
   /**
    * <pre>
@@ -3885,7 +3915,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchClickShare() {
-    return ((bitField3_ & 0x00020000) != 0);
+    return ((bitField3_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -3920,7 +3950,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchExactMatchImpressionShare() {
-    return ((bitField3_ & 0x00040000) != 0);
+    return ((bitField3_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -3955,7 +3985,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchImpressionShare() {
-    return ((bitField3_ & 0x00080000) != 0);
+    return ((bitField3_ & 0x00100000) != 0);
   }
   /**
    * <pre>
@@ -3988,7 +4018,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchRankLostAbsoluteTopImpressionShare() {
-    return ((bitField3_ & 0x00100000) != 0);
+    return ((bitField3_ & 0x00200000) != 0);
   }
   /**
    * <pre>
@@ -4021,7 +4051,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchRankLostImpressionShare() {
-    return ((bitField3_ & 0x00200000) != 0);
+    return ((bitField3_ & 0x00400000) != 0);
   }
   /**
    * <pre>
@@ -4054,7 +4084,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchRankLostTopImpressionShare() {
-    return ((bitField3_ & 0x00400000) != 0);
+    return ((bitField3_ & 0x00800000) != 0);
   }
   /**
    * <pre>
@@ -4090,7 +4120,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchTopImpressionShare() {
-    return ((bitField3_ & 0x00800000) != 0);
+    return ((bitField3_ & 0x01000000) != 0);
   }
   /**
    * <pre>
@@ -4123,7 +4153,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearchVolume() {
-    return ((bitField3_ & 0x01000000) != 0);
+    return ((bitField3_ & 0x02000000) != 0);
   }
   /**
    * <pre>
@@ -4162,7 +4192,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSpeedScore() {
-    return ((bitField3_ & 0x02000000) != 0);
+    return ((bitField3_ & 0x04000000) != 0);
   }
   /**
    * <pre>
@@ -4191,7 +4221,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageTargetCpaMicros() {
-    return ((bitField3_ & 0x04000000) != 0);
+    return ((bitField3_ & 0x08000000) != 0);
   }
   /**
    * <pre>
@@ -4220,7 +4250,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageTargetRoas() {
-    return ((bitField3_ & 0x08000000) != 0);
+    return ((bitField3_ & 0x10000000) != 0);
   }
   /**
    * <pre>
@@ -4249,7 +4279,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTopImpressionPercentage() {
-    return ((bitField3_ & 0x10000000) != 0);
+    return ((bitField3_ & 0x20000000) != 0);
   }
   /**
    * <pre>
@@ -4278,7 +4308,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValidAcceleratedMobilePagesClicksPercentage() {
-    return ((bitField3_ & 0x20000000) != 0);
+    return ((bitField3_ & 0x40000000) != 0);
   }
   /**
    * <pre>
@@ -4306,7 +4336,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerAllConversions() {
-    return ((bitField3_ & 0x40000000) != 0);
+    return ((bitField3_ & 0x80000000) != 0);
   }
   /**
    * <pre>
@@ -4336,7 +4366,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerAllConversionsByConversionDate() {
-    return ((bitField3_ & 0x80000000) != 0);
+    return ((bitField4_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -4369,7 +4399,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerConversion() {
-    return ((bitField4_ & 0x00000001) != 0);
+    return ((bitField4_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -4405,7 +4435,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerConversionsByConversionDate() {
-    return ((bitField4_ & 0x00000002) != 0);
+    return ((bitField4_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -4442,7 +4472,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerCurrentModelAttributedConversion() {
-    return ((bitField4_ & 0x00000004) != 0);
+    return ((bitField4_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -4473,7 +4503,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP100Rate() {
-    return ((bitField4_ & 0x00000008) != 0);
+    return ((bitField4_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -4500,7 +4530,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP25Rate() {
-    return ((bitField4_ & 0x00000010) != 0);
+    return ((bitField4_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -4527,7 +4557,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP50Rate() {
-    return ((bitField4_ & 0x00000020) != 0);
+    return ((bitField4_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -4554,7 +4584,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP75Rate() {
-    return ((bitField4_ & 0x00000040) != 0);
+    return ((bitField4_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -4583,7 +4613,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoTrueviewViewRate() {
-    return ((bitField4_ & 0x00000080) != 0);
+    return ((bitField4_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -4612,7 +4642,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoTrueviewViews() {
-    return ((bitField4_ & 0x00000100) != 0);
+    return ((bitField4_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -4642,7 +4672,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversions() {
-    return ((bitField4_ & 0x00000200) != 0);
+    return ((bitField4_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -4752,7 +4782,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetClickToCall() {
-    return ((bitField4_ & 0x00000400) != 0);
+    return ((bitField4_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -4783,7 +4813,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetDirections() {
-    return ((bitField4_ & 0x00000800) != 0);
+    return ((bitField4_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -4814,7 +4844,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetMenu() {
-    return ((bitField4_ & 0x00001000) != 0);
+    return ((bitField4_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -4845,7 +4875,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetOrder() {
-    return ((bitField4_ & 0x00002000) != 0);
+    return ((bitField4_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -4876,7 +4906,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetOtherEngagement() {
-    return ((bitField4_ & 0x00004000) != 0);
+    return ((bitField4_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -4907,7 +4937,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetStoreVisits() {
-    return ((bitField4_ & 0x00008000) != 0);
+    return ((bitField4_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -4938,7 +4968,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetWebsite() {
-    return ((bitField4_ & 0x00010000) != 0);
+    return ((bitField4_ & 0x00020000) != 0);
   }
   /**
    * <pre>
@@ -4969,7 +4999,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEligibleImpressionsFromLocationAssetStoreReach() {
-    return ((bitField4_ & 0x00020000) != 0);
+    return ((bitField4_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -4999,7 +5029,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetClickToCall() {
-    return ((bitField4_ & 0x00040000) != 0);
+    return ((bitField4_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -5028,7 +5058,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetDirections() {
-    return ((bitField4_ & 0x00080000) != 0);
+    return ((bitField4_ & 0x00100000) != 0);
   }
   /**
    * <pre>
@@ -5057,7 +5087,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetMenu() {
-    return ((bitField4_ & 0x00100000) != 0);
+    return ((bitField4_ & 0x00200000) != 0);
   }
   /**
    * <pre>
@@ -5086,7 +5116,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetOrder() {
-    return ((bitField4_ & 0x00200000) != 0);
+    return ((bitField4_ & 0x00400000) != 0);
   }
   /**
    * <pre>
@@ -5115,7 +5145,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetOtherEngagement() {
-    return ((bitField4_ & 0x00400000) != 0);
+    return ((bitField4_ & 0x00800000) != 0);
   }
   /**
    * <pre>
@@ -5144,7 +5174,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetStoreVisits() {
-    return ((bitField4_ & 0x00800000) != 0);
+    return ((bitField4_ & 0x01000000) != 0);
   }
   /**
    * <pre>
@@ -5173,7 +5203,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetWebsite() {
-    return ((bitField4_ & 0x01000000) != 0);
+    return ((bitField4_ & 0x02000000) != 0);
   }
   /**
    * <pre>
@@ -5210,7 +5240,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOrders() {
-    return ((bitField4_ & 0x02000000) != 0);
+    return ((bitField4_ & 0x04000000) != 0);
   }
   /**
    * <pre>
@@ -5253,7 +5283,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageOrderValueMicros() {
-    return ((bitField4_ & 0x04000000) != 0);
+    return ((bitField4_ & 0x08000000) != 0);
   }
   /**
    * <pre>
@@ -5294,7 +5324,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageCartSize() {
-    return ((bitField4_ & 0x08000000) != 0);
+    return ((bitField4_ & 0x10000000) != 0);
   }
   /**
    * <pre>
@@ -5338,7 +5368,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCostOfGoodsSoldMicros() {
-    return ((bitField4_ & 0x10000000) != 0);
+    return ((bitField4_ & 0x20000000) != 0);
   }
   /**
    * <pre>
@@ -5385,7 +5415,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGrossProfitMicros() {
-    return ((bitField4_ & 0x20000000) != 0);
+    return ((bitField4_ & 0x40000000) != 0);
   }
   /**
    * <pre>
@@ -5434,7 +5464,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGrossProfitMargin() {
-    return ((bitField4_ & 0x40000000) != 0);
+    return ((bitField4_ & 0x80000000) != 0);
   }
   /**
    * <pre>
@@ -5481,7 +5511,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRevenueMicros() {
-    return ((bitField4_ & 0x80000000) != 0);
+    return ((bitField5_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -5523,7 +5553,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUnitsSold() {
-    return ((bitField5_ & 0x00000001) != 0);
+    return ((bitField5_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -5570,7 +5600,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCrossSellCostOfGoodsSoldMicros() {
-    return ((bitField5_ & 0x00000002) != 0);
+    return ((bitField5_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -5622,7 +5652,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCrossSellGrossProfitMicros() {
-    return ((bitField5_ & 0x00000004) != 0);
+    return ((bitField5_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -5673,7 +5703,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCrossSellRevenueMicros() {
-    return ((bitField5_ & 0x00000008) != 0);
+    return ((bitField5_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -5723,7 +5753,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCrossSellUnitsSold() {
-    return ((bitField5_ & 0x00000010) != 0);
+    return ((bitField5_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -5773,7 +5803,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLeadCostOfGoodsSoldMicros() {
-    return ((bitField5_ & 0x00000020) != 0);
+    return ((bitField5_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -5824,7 +5854,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLeadGrossProfitMicros() {
-    return ((bitField5_ & 0x00000040) != 0);
+    return ((bitField5_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -5875,7 +5905,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLeadRevenueMicros() {
-    return ((bitField5_ & 0x00000080) != 0);
+    return ((bitField5_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -5924,7 +5954,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLeadUnitsSold() {
-    return ((bitField5_ & 0x00000100) != 0);
+    return ((bitField5_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -5964,7 +5994,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUniqueUsers() {
-    return ((bitField5_ & 0x00000200) != 0);
+    return ((bitField5_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -5997,7 +6027,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageImpressionFrequencyPerUser() {
-    return ((bitField5_ & 0x00000400) != 0);
+    return ((bitField5_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -6029,7 +6059,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLinkedEntitiesCount() {
-    return ((bitField5_ & 0x00000800) != 0);
+    return ((bitField5_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -6122,7 +6152,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAssetPinnedTotalCount() {
-    return ((bitField5_ & 0x00001000) != 0);
+    return ((bitField5_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -6155,7 +6185,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAssetPinnedAsHeadlinePositionOneCount() {
-    return ((bitField5_ & 0x00002000) != 0);
+    return ((bitField5_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -6188,7 +6218,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAssetPinnedAsHeadlinePositionTwoCount() {
-    return ((bitField5_ & 0x00004000) != 0);
+    return ((bitField5_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -6221,7 +6251,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAssetPinnedAsHeadlinePositionThreeCount() {
-    return ((bitField5_ & 0x00008000) != 0);
+    return ((bitField5_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -6254,7 +6284,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAssetPinnedAsDescriptionPositionOneCount() {
-    return ((bitField5_ & 0x00010000) != 0);
+    return ((bitField5_ & 0x00020000) != 0);
   }
   /**
    * <pre>
@@ -6287,7 +6317,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAssetPinnedAsDescriptionPositionTwoCount() {
-    return ((bitField5_ & 0x00020000) != 0);
+    return ((bitField5_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -6317,7 +6347,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStoreVisitsLastClickModelAttributedConversions() {
-    return ((bitField5_ & 0x00040000) != 0);
+    return ((bitField5_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -6344,7 +6374,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasResultsConversionsPurchase() {
-    return ((bitField5_ & 0x00080000) != 0);
+    return ((bitField5_ & 0x00100000) != 0);
   }
   /**
    * <pre>
@@ -6372,7 +6402,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoTrueviewViewRateInFeed() {
-    return ((bitField5_ & 0x00100000) != 0);
+    return ((bitField5_ & 0x00200000) != 0);
   }
   /**
    * <pre>
@@ -6401,7 +6431,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoTrueviewViewRateInStream() {
-    return ((bitField5_ & 0x00200000) != 0);
+    return ((bitField5_ & 0x00400000) != 0);
   }
   /**
    * <pre>
@@ -6430,7 +6460,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoTrueviewViewRateShorts() {
-    return ((bitField5_ & 0x00400000) != 0);
+    return ((bitField5_ & 0x00800000) != 0);
   }
   /**
    * <pre>
@@ -6463,7 +6493,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCoviewedImpressions() {
-    return ((bitField5_ & 0x00800000) != 0);
+    return ((bitField5_ & 0x01000000) != 0);
   }
   /**
    * <pre>
@@ -6498,7 +6528,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPrimaryImpressions() {
-    return ((bitField5_ & 0x01000000) != 0);
+    return ((bitField5_ & 0x02000000) != 0);
   }
   /**
    * <pre>
@@ -6532,7 +6562,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPlatformComparableConversionsFromInteractionsRate() {
-    return ((bitField5_ & 0x02000000) != 0);
+    return ((bitField5_ & 0x04000000) != 0);
   }
   /**
    * <pre>
@@ -6566,7 +6596,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPlatformComparableConversions() {
-    return ((bitField5_ & 0x04000000) != 0);
+    return ((bitField5_ & 0x08000000) != 0);
   }
   /**
    * <pre>
@@ -6599,7 +6629,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPlatformComparableConversionsValue() {
-    return ((bitField5_ & 0x08000000) != 0);
+    return ((bitField5_ & 0x10000000) != 0);
   }
   /**
    * <pre>
@@ -6632,7 +6662,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPlatformComparableConversionsValuePerCost() {
-    return ((bitField5_ & 0x10000000) != 0);
+    return ((bitField5_ & 0x20000000) != 0);
   }
   /**
    * <pre>
@@ -6667,7 +6697,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPlatformComparableConversionsByConversionDate() {
-    return ((bitField5_ & 0x20000000) != 0);
+    return ((bitField5_ & 0x40000000) != 0);
   }
   /**
    * <pre>
@@ -6703,7 +6733,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPlatformComparableConversionsValueByConversionDate() {
-    return ((bitField5_ & 0x40000000) != 0);
+    return ((bitField5_ & 0x80000000) != 0);
   }
   /**
    * <pre>
@@ -6738,7 +6768,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPlatformComparableConversionsFromInteractionsValuePerInteraction() {
-    return ((bitField5_ & 0x80000000) != 0);
+    return ((bitField6_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -6773,7 +6803,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCostPerPlatformComparableConversion() {
-    return ((bitField6_ & 0x00000001) != 0);
+    return ((bitField6_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -6808,7 +6838,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerPlatformComparableConversion() {
-    return ((bitField6_ & 0x00000002) != 0);
+    return ((bitField6_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -6844,7 +6874,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerPlatformComparableConversionsByConversionDate() {
-    return ((bitField6_ & 0x00000004) != 0);
+    return ((bitField6_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -6877,7 +6907,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCostConvertedCurrencyPerPlatformComparableConversion() {
-    return ((bitField6_ & 0x00000008) != 0);
+    return ((bitField6_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -6907,7 +6937,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUniqueUsersTwoPlus() {
-    return ((bitField6_ & 0x00000010) != 0);
+    return ((bitField6_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -6938,7 +6968,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUniqueUsersThreePlus() {
-    return ((bitField6_ & 0x00000020) != 0);
+    return ((bitField6_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -6969,7 +6999,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUniqueUsersFourPlus() {
-    return ((bitField6_ & 0x00000040) != 0);
+    return ((bitField6_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -7000,7 +7030,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUniqueUsersFivePlus() {
-    return ((bitField6_ & 0x00000080) != 0);
+    return ((bitField6_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -7031,7 +7061,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUniqueUsersTenPlus() {
-    return ((bitField6_ & 0x00000100) != 0);
+    return ((bitField6_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -7061,7 +7091,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValueAdjustment() {
-    return ((bitField6_ & 0x00000200) != 0);
+    return ((bitField6_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -7090,7 +7120,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllValueAdjustment() {
-    return ((bitField6_ & 0x00000400) != 0);
+    return ((bitField6_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -7118,7 +7148,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasClicksUniqueQueryClusters() {
-    return ((bitField6_ & 0x00000800) != 0);
+    return ((bitField6_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -7145,7 +7175,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversionsUniqueQueryClusters() {
-    return ((bitField6_ & 0x00001000) != 0);
+    return ((bitField6_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -7172,7 +7202,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasImpressionsUniqueQueryClusters() {
-    return ((bitField6_ & 0x00002000) != 0);
+    return ((bitField6_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -7203,7 +7233,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoWatchTimeDurationMillis() {
-    return ((bitField6_ & 0x00004000) != 0);
+    return ((bitField6_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -7235,7 +7265,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageVideoWatchTimeDurationMillis() {
-    return ((bitField6_ & 0x00008000) != 0);
+    return ((bitField6_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -7263,7 +7293,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSvr() {
-    return ((bitField6_ & 0x00010000) != 0);
+    return ((bitField6_ & 0x00020000) != 0);
   }
   /**
    * <pre>
@@ -7291,7 +7321,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibilityMeasurableImpressions() {
-    return ((bitField6_ & 0x00020000) != 0);
+    return ((bitField6_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -7321,7 +7351,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibilityMeasurableImpressionsRate() {
-    return ((bitField6_ & 0x00040000) != 0);
+    return ((bitField6_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -7352,7 +7382,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibilityInvalidMeasurableImpressionsRate() {
-    return ((bitField6_ & 0x00080000) != 0);
+    return ((bitField6_ & 0x00100000) != 0);
   }
   /**
    * <pre>
@@ -7384,7 +7414,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibilityInvalidGivtMeasurableImpressionsRate() {
-    return ((bitField6_ & 0x00100000) != 0);
+    return ((bitField6_ & 0x00200000) != 0);
   }
   /**
    * <pre>
@@ -7415,7 +7445,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleImpressions() {
-    return ((bitField6_ & 0x00200000) != 0);
+    return ((bitField6_ & 0x00400000) != 0);
   }
   /**
    * <pre>
@@ -7445,7 +7475,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleImpressionsRate() {
-    return ((bitField6_ & 0x00400000) != 0);
+    return ((bitField6_ & 0x00800000) != 0);
   }
   /**
    * <pre>
@@ -7475,7 +7505,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleTwoSecondsImpressions() {
-    return ((bitField6_ & 0x00800000) != 0);
+    return ((bitField6_ & 0x01000000) != 0);
   }
   /**
    * <pre>
@@ -7505,7 +7535,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleTwoSecondsImpressionsRate() {
-    return ((bitField6_ & 0x01000000) != 0);
+    return ((bitField6_ & 0x02000000) != 0);
   }
   /**
    * <pre>
@@ -7535,7 +7565,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleThirtySecondsImpressions() {
-    return ((bitField6_ & 0x02000000) != 0);
+    return ((bitField6_ & 0x04000000) != 0);
   }
   /**
    * <pre>
@@ -7565,7 +7595,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleThirtySecondsImpressionsRate() {
-    return ((bitField6_ & 0x04000000) != 0);
+    return ((bitField6_ & 0x08000000) != 0);
   }
   /**
    * <pre>
@@ -7596,7 +7626,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleQuartileP25Rate() {
-    return ((bitField6_ & 0x08000000) != 0);
+    return ((bitField6_ & 0x10000000) != 0);
   }
   /**
    * <pre>
@@ -7627,7 +7657,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleQuartileP50Rate() {
-    return ((bitField6_ & 0x10000000) != 0);
+    return ((bitField6_ & 0x20000000) != 0);
   }
   /**
    * <pre>
@@ -7658,7 +7688,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleQuartileP75Rate() {
-    return ((bitField6_ & 0x20000000) != 0);
+    return ((bitField6_ & 0x40000000) != 0);
   }
   /**
    * <pre>
@@ -7689,7 +7719,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActiveViewAudibleQuartileP100Rate() {
-    return ((bitField6_ & 0x40000000) != 0);
+    return ((bitField6_ & 0x80000000) != 0);
   }
   /**
    * <pre>
@@ -7719,7 +7749,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasBiddableIndirectInstallFirstInAppConversionMicros() {
-    return ((bitField6_ & 0x80000000) != 0);
+    return ((bitField7_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -7752,7 +7782,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllAverageCartSize() {
-    return ((bitField7_ & 0x00000001) != 0);
+    return ((bitField7_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -7789,7 +7819,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllAverageOrderValueMicros() {
-    return ((bitField7_ & 0x00000002) != 0);
+    return ((bitField7_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -7826,7 +7856,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllCostOfGoodsSoldMicros() {
-    return ((bitField7_ & 0x00000004) != 0);
+    return ((bitField7_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -7864,7 +7894,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllCrossSellCostOfGoodsSoldMicros() {
-    return ((bitField7_ & 0x00000008) != 0);
+    return ((bitField7_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -7903,7 +7933,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllCrossSellGrossProfitMicros() {
-    return ((bitField7_ & 0x00000010) != 0);
+    return ((bitField7_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -7941,7 +7971,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllCrossSellRevenueMicros() {
-    return ((bitField7_ & 0x00000020) != 0);
+    return ((bitField7_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -7979,7 +8009,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllCrossSellUnitsSold() {
-    return ((bitField7_ & 0x00000040) != 0);
+    return ((bitField7_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -8019,7 +8049,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllGrossProfitMargin() {
-    return ((bitField7_ & 0x00000080) != 0);
+    return ((bitField7_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -8058,7 +8088,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllGrossProfitMicros() {
-    return ((bitField7_ & 0x00000100) != 0);
+    return ((bitField7_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -8096,7 +8126,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllLeadCostOfGoodsSoldMicros() {
-    return ((bitField7_ & 0x00000200) != 0);
+    return ((bitField7_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -8135,7 +8165,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllLeadGrossProfitMicros() {
-    return ((bitField7_ & 0x00000400) != 0);
+    return ((bitField7_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -8173,7 +8203,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllLeadRevenueMicros() {
-    return ((bitField7_ & 0x00000800) != 0);
+    return ((bitField7_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -8210,7 +8240,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllLeadUnitsSold() {
-    return ((bitField7_ & 0x00001000) != 0);
+    return ((bitField7_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -8247,7 +8277,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllOrders() {
-    return ((bitField7_ & 0x00002000) != 0);
+    return ((bitField7_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -8284,7 +8314,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllRevenueMicros() {
-    return ((bitField7_ & 0x00004000) != 0);
+    return ((bitField7_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -8321,7 +8351,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllUnitsSold() {
-    return ((bitField7_ & 0x00008000) != 0);
+    return ((bitField7_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -8339,6 +8369,1053 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public double getAllUnitsSold() {
     return allUnitsSold_;
+  }
+
+  public static final int CONTROL_COST_PER_CONVERSION_FIELD_NUMBER = 446;
+  private double controlCostPerConversion_ = 0D;
+  /**
+   * <pre>
+   * The cost per conversion metric on the control arm of the
+   * experiment. The treatment cost per conversion value can be
+   * selected by using `cost_per_conversion`.
+   * </pre>
+   *
+   * <code>optional double control_cost_per_conversion = 446;</code>
+   * @return Whether the controlCostPerConversion field is set.
+   */
+  @java.lang.Override
+  public boolean hasControlCostPerConversion() {
+    return ((bitField7_ & 0x00020000) != 0);
+  }
+  /**
+   * <pre>
+   * The cost per conversion metric on the control arm of the
+   * experiment. The treatment cost per conversion value can be
+   * selected by using `cost_per_conversion`.
+   * </pre>
+   *
+   * <code>optional double control_cost_per_conversion = 446;</code>
+   * @return The controlCostPerConversion.
+   */
+  @java.lang.Override
+  public double getControlCostPerConversion() {
+    return controlCostPerConversion_;
+  }
+
+  public static final int COST_PER_CONVERSION_MARGIN_OF_ERROR_FIELD_NUMBER = 447;
+  private double costPerConversionMarginOfError_ = 0D;
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on cost per
+   * conversion.
+   *
+   * Together with `cost_per_conversion_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `cost_per_conversion_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_margin_of_error = 447;</code>
+   * @return Whether the costPerConversionMarginOfError field is set.
+   */
+  @java.lang.Override
+  public boolean hasCostPerConversionMarginOfError() {
+    return ((bitField7_ & 0x00040000) != 0);
+  }
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on cost per
+   * conversion.
+   *
+   * Together with `cost_per_conversion_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `cost_per_conversion_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_margin_of_error = 447;</code>
+   * @return The costPerConversionMarginOfError.
+   */
+  @java.lang.Override
+  public double getCostPerConversionMarginOfError() {
+    return costPerConversionMarginOfError_;
+  }
+
+  public static final int COST_PER_CONVERSION_P_VALUE_FIELD_NUMBER = 448;
+  private double costPerConversionPValue_ = 0D;
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * cost per conversion. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on cost per conversion, is 3%.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_p_value = 448;</code>
+   * @return Whether the costPerConversionPValue field is set.
+   */
+  @java.lang.Override
+  public boolean hasCostPerConversionPValue() {
+    return ((bitField7_ & 0x00080000) != 0);
+  }
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * cost per conversion. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on cost per conversion, is 3%.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_p_value = 448;</code>
+   * @return The costPerConversionPValue.
+   */
+  @java.lang.Override
+  public double getCostPerConversionPValue() {
+    return costPerConversionPValue_;
+  }
+
+  public static final int COST_PER_CONVERSION_CHANGE_POINT_ESTIMATE_FIELD_NUMBER = 449;
+  private double costPerConversionChangePointEstimate_ = 0D;
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on cost per
+   * conversion change.
+   *
+   * Together with `cost_per_conversion_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(cost_per_conversion_change_point_estimate -
+   * cost_per_conversion_margin_of_error,
+   * cost_per_conversion_change_point_estimate +
+   * cost_per_conversion_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_change_point_estimate = 449;</code>
+   * @return Whether the costPerConversionChangePointEstimate field is set.
+   */
+  @java.lang.Override
+  public boolean hasCostPerConversionChangePointEstimate() {
+    return ((bitField7_ & 0x00100000) != 0);
+  }
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on cost per
+   * conversion change.
+   *
+   * Together with `cost_per_conversion_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(cost_per_conversion_change_point_estimate -
+   * cost_per_conversion_margin_of_error,
+   * cost_per_conversion_change_point_estimate +
+   * cost_per_conversion_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_change_point_estimate = 449;</code>
+   * @return The costPerConversionChangePointEstimate.
+   */
+  @java.lang.Override
+  public double getCostPerConversionChangePointEstimate() {
+    return costPerConversionChangePointEstimate_;
+  }
+
+  public static final int CONTROL_CONVERSIONS_FIELD_NUMBER = 450;
+  private double controlConversions_ = 0D;
+  /**
+   * <pre>
+   * The conversions metric on the control arm of the experiment.
+   * The treatment conversions value can be selected by using
+   * `conversions`.
+   * </pre>
+   *
+   * <code>optional double control_conversions = 450;</code>
+   * @return Whether the controlConversions field is set.
+   */
+  @java.lang.Override
+  public boolean hasControlConversions() {
+    return ((bitField7_ & 0x00200000) != 0);
+  }
+  /**
+   * <pre>
+   * The conversions metric on the control arm of the experiment.
+   * The treatment conversions value can be selected by using
+   * `conversions`.
+   * </pre>
+   *
+   * <code>optional double control_conversions = 450;</code>
+   * @return The controlConversions.
+   */
+  @java.lang.Override
+  public double getControlConversions() {
+    return controlConversions_;
+  }
+
+  public static final int CONVERSIONS_ABSOLUTE_CHANGE_MARGIN_OF_ERROR_FIELD_NUMBER = 451;
+  private double conversionsAbsoluteChangeMarginOfError_ = 0D;
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on conversions
+   * absolute change.
+   *
+   * Together with `conversions_absolute_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment - control). This field specifies the radius of the confidence
+   * interval, which is centered at
+   * `conversions_absolute_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_margin_of_error = 451;</code>
+   * @return Whether the conversionsAbsoluteChangeMarginOfError field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionsAbsoluteChangeMarginOfError() {
+    return ((bitField7_ & 0x00400000) != 0);
+  }
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on conversions
+   * absolute change.
+   *
+   * Together with `conversions_absolute_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment - control). This field specifies the radius of the confidence
+   * interval, which is centered at
+   * `conversions_absolute_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_margin_of_error = 451;</code>
+   * @return The conversionsAbsoluteChangeMarginOfError.
+   */
+  @java.lang.Override
+  public double getConversionsAbsoluteChangeMarginOfError() {
+    return conversionsAbsoluteChangeMarginOfError_;
+  }
+
+  public static final int CONVERSIONS_ABSOLUTE_CHANGE_P_VALUE_FIELD_NUMBER = 452;
+  private double conversionsAbsoluteChangePValue_ = 0D;
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversions absolute change. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversions absolute change, is
+   * 3%.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_p_value = 452;</code>
+   * @return Whether the conversionsAbsoluteChangePValue field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionsAbsoluteChangePValue() {
+    return ((bitField7_ & 0x00800000) != 0);
+  }
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversions absolute change. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversions absolute change, is
+   * 3%.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_p_value = 452;</code>
+   * @return The conversionsAbsoluteChangePValue.
+   */
+  @java.lang.Override
+  public double getConversionsAbsoluteChangePValue() {
+    return conversionsAbsoluteChangePValue_;
+  }
+
+  public static final int CONVERSIONS_ABSOLUTE_CHANGE_POINT_ESTIMATE_FIELD_NUMBER = 453;
+  private double conversionsAbsoluteChangePointEstimate_ = 0D;
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on conversions
+   * absolute change.
+   *
+   * Together with `conversions_absolute_change_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment - control). This field specifies the point estimate, which is
+   * the center of the confidence interval:
+   * `(conversions_absolute_change_point_estimate -
+   * conversions_absolute_change_margin_of_error,
+   * conversions_absolute_change_point_estimate +
+   * conversions_absolute_change_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_point_estimate = 453;</code>
+   * @return Whether the conversionsAbsoluteChangePointEstimate field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionsAbsoluteChangePointEstimate() {
+    return ((bitField7_ & 0x01000000) != 0);
+  }
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on conversions
+   * absolute change.
+   *
+   * Together with `conversions_absolute_change_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment - control). This field specifies the point estimate, which is
+   * the center of the confidence interval:
+   * `(conversions_absolute_change_point_estimate -
+   * conversions_absolute_change_margin_of_error,
+   * conversions_absolute_change_point_estimate +
+   * conversions_absolute_change_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_point_estimate = 453;</code>
+   * @return The conversionsAbsoluteChangePointEstimate.
+   */
+  @java.lang.Override
+  public double getConversionsAbsoluteChangePointEstimate() {
+    return conversionsAbsoluteChangePointEstimate_;
+  }
+
+  public static final int CONTROL_CONVERSION_VALUE_PER_COST_FIELD_NUMBER = 454;
+  private double controlConversionValuePerCost_ = 0D;
+  /**
+   * <pre>
+   * The conversion value per cost metric on the control arm of the
+   * experiment. The treatment conversion value per cost value can be
+   * selected by using `conversions_value_per_cost`.
+   * </pre>
+   *
+   * <code>optional double control_conversion_value_per_cost = 454;</code>
+   * @return Whether the controlConversionValuePerCost field is set.
+   */
+  @java.lang.Override
+  public boolean hasControlConversionValuePerCost() {
+    return ((bitField7_ & 0x02000000) != 0);
+  }
+  /**
+   * <pre>
+   * The conversion value per cost metric on the control arm of the
+   * experiment. The treatment conversion value per cost value can be
+   * selected by using `conversions_value_per_cost`.
+   * </pre>
+   *
+   * <code>optional double control_conversion_value_per_cost = 454;</code>
+   * @return The controlConversionValuePerCost.
+   */
+  @java.lang.Override
+  public double getControlConversionValuePerCost() {
+    return controlConversionValuePerCost_;
+  }
+
+  public static final int CONVERSION_VALUE_PER_COST_MARGIN_OF_ERROR_FIELD_NUMBER = 455;
+  private double conversionValuePerCostMarginOfError_ = 0D;
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on
+   * conversion value per cost.
+   *
+   * Together with `conversion_value_per_cost_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `conversion_value_per_cost_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_margin_of_error = 455;</code>
+   * @return Whether the conversionValuePerCostMarginOfError field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionValuePerCostMarginOfError() {
+    return ((bitField7_ & 0x04000000) != 0);
+  }
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on
+   * conversion value per cost.
+   *
+   * Together with `conversion_value_per_cost_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `conversion_value_per_cost_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_margin_of_error = 455;</code>
+   * @return The conversionValuePerCostMarginOfError.
+   */
+  @java.lang.Override
+  public double getConversionValuePerCostMarginOfError() {
+    return conversionValuePerCostMarginOfError_;
+  }
+
+  public static final int CONVERSION_VALUE_PER_COST_P_VALUE_FIELD_NUMBER = 456;
+  private double conversionValuePerCostPValue_ = 0D;
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversion value per cost. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversion value per cost, is 3%.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_p_value = 456;</code>
+   * @return Whether the conversionValuePerCostPValue field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionValuePerCostPValue() {
+    return ((bitField7_ & 0x08000000) != 0);
+  }
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversion value per cost. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversion value per cost, is 3%.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_p_value = 456;</code>
+   * @return The conversionValuePerCostPValue.
+   */
+  @java.lang.Override
+  public double getConversionValuePerCostPValue() {
+    return conversionValuePerCostPValue_;
+  }
+
+  public static final int CONVERSION_VALUE_PER_COST_CHANGE_POINT_ESTIMATE_FIELD_NUMBER = 457;
+  private double conversionValuePerCostChangePointEstimate_ = 0D;
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on
+   * conversion value per cost change.
+   *
+   * Together with `conversion_value_per_cost_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(conversion_value_per_cost_change_point_estimate -
+   * conversion_value_per_cost_margin_of_error,
+   * conversion_value_per_cost_change_point_estimate +
+   * conversion_value_per_cost_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_change_point_estimate = 457;</code>
+   * @return Whether the conversionValuePerCostChangePointEstimate field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionValuePerCostChangePointEstimate() {
+    return ((bitField7_ & 0x10000000) != 0);
+  }
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on
+   * conversion value per cost change.
+   *
+   * Together with `conversion_value_per_cost_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(conversion_value_per_cost_change_point_estimate -
+   * conversion_value_per_cost_margin_of_error,
+   * conversion_value_per_cost_change_point_estimate +
+   * conversion_value_per_cost_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_change_point_estimate = 457;</code>
+   * @return The conversionValuePerCostChangePointEstimate.
+   */
+  @java.lang.Override
+  public double getConversionValuePerCostChangePointEstimate() {
+    return conversionValuePerCostChangePointEstimate_;
+  }
+
+  public static final int CONTROL_COST_MICROS_FIELD_NUMBER = 458;
+  private long controlCostMicros_ = 0L;
+  /**
+   * <pre>
+   * The cost metric on the control arm of the experiment.
+   * The treatment cost value can be selected by using `cost_micros`.
+   * </pre>
+   *
+   * <code>optional int64 control_cost_micros = 458;</code>
+   * @return Whether the controlCostMicros field is set.
+   */
+  @java.lang.Override
+  public boolean hasControlCostMicros() {
+    return ((bitField7_ & 0x20000000) != 0);
+  }
+  /**
+   * <pre>
+   * The cost metric on the control arm of the experiment.
+   * The treatment cost value can be selected by using `cost_micros`.
+   * </pre>
+   *
+   * <code>optional int64 control_cost_micros = 458;</code>
+   * @return The controlCostMicros.
+   */
+  @java.lang.Override
+  public long getControlCostMicros() {
+    return controlCostMicros_;
+  }
+
+  public static final int COST_MICROS_MARGIN_OF_ERROR_FIELD_NUMBER = 459;
+  private double costMicrosMarginOfError_ = 0D;
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on cost.
+   *
+   * Together with `cost_micros_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `cost_micros_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double cost_micros_margin_of_error = 459;</code>
+   * @return Whether the costMicrosMarginOfError field is set.
+   */
+  @java.lang.Override
+  public boolean hasCostMicrosMarginOfError() {
+    return ((bitField7_ & 0x40000000) != 0);
+  }
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on cost.
+   *
+   * Together with `cost_micros_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `cost_micros_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double cost_micros_margin_of_error = 459;</code>
+   * @return The costMicrosMarginOfError.
+   */
+  @java.lang.Override
+  public double getCostMicrosMarginOfError() {
+    return costMicrosMarginOfError_;
+  }
+
+  public static final int COST_MICROS_P_VALUE_FIELD_NUMBER = 460;
+  private double costMicrosPValue_ = 0D;
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * cost. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on cost, is 3%.
+   * </pre>
+   *
+   * <code>optional double cost_micros_p_value = 460;</code>
+   * @return Whether the costMicrosPValue field is set.
+   */
+  @java.lang.Override
+  public boolean hasCostMicrosPValue() {
+    return ((bitField7_ & 0x80000000) != 0);
+  }
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * cost. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on cost, is 3%.
+   * </pre>
+   *
+   * <code>optional double cost_micros_p_value = 460;</code>
+   * @return The costMicrosPValue.
+   */
+  @java.lang.Override
+  public double getCostMicrosPValue() {
+    return costMicrosPValue_;
+  }
+
+  public static final int COST_MICROS_CHANGE_POINT_ESTIMATE_FIELD_NUMBER = 461;
+  private double costMicrosChangePointEstimate_ = 0D;
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on cost change.
+   *
+   * Together with `cost_micros_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(cost_micros_change_point_estimate - cost_micros_margin_of_error,
+   * cost_micros_change_point_estimate + cost_micros_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double cost_micros_change_point_estimate = 461;</code>
+   * @return Whether the costMicrosChangePointEstimate field is set.
+   */
+  @java.lang.Override
+  public boolean hasCostMicrosChangePointEstimate() {
+    return ((bitField8_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on cost change.
+   *
+   * Together with `cost_micros_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(cost_micros_change_point_estimate - cost_micros_margin_of_error,
+   * cost_micros_change_point_estimate + cost_micros_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double cost_micros_change_point_estimate = 461;</code>
+   * @return The costMicrosChangePointEstimate.
+   */
+  @java.lang.Override
+  public double getCostMicrosChangePointEstimate() {
+    return costMicrosChangePointEstimate_;
+  }
+
+  public static final int CONTROL_IMPRESSIONS_FIELD_NUMBER = 462;
+  private long controlImpressions_ = 0L;
+  /**
+   * <pre>
+   * The impressions metric on the control arm of the experiment.
+   * The treatment impressions value can be selected by using `impressions`.
+   * </pre>
+   *
+   * <code>optional int64 control_impressions = 462;</code>
+   * @return Whether the controlImpressions field is set.
+   */
+  @java.lang.Override
+  public boolean hasControlImpressions() {
+    return ((bitField8_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * The impressions metric on the control arm of the experiment.
+   * The treatment impressions value can be selected by using `impressions`.
+   * </pre>
+   *
+   * <code>optional int64 control_impressions = 462;</code>
+   * @return The controlImpressions.
+   */
+  @java.lang.Override
+  public long getControlImpressions() {
+    return controlImpressions_;
+  }
+
+  public static final int IMPRESSIONS_MARGIN_OF_ERROR_FIELD_NUMBER = 463;
+  private double impressionsMarginOfError_ = 0D;
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on impressions.
+   *
+   * Together with `impressions_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `impressions_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double impressions_margin_of_error = 463;</code>
+   * @return Whether the impressionsMarginOfError field is set.
+   */
+  @java.lang.Override
+  public boolean hasImpressionsMarginOfError() {
+    return ((bitField8_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on impressions.
+   *
+   * Together with `impressions_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `impressions_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double impressions_margin_of_error = 463;</code>
+   * @return The impressionsMarginOfError.
+   */
+  @java.lang.Override
+  public double getImpressionsMarginOfError() {
+    return impressionsMarginOfError_;
+  }
+
+  public static final int IMPRESSIONS_P_VALUE_FIELD_NUMBER = 464;
+  private double impressionsPValue_ = 0D;
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * impressions. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on impressions, is 3%.
+   * </pre>
+   *
+   * <code>optional double impressions_p_value = 464;</code>
+   * @return Whether the impressionsPValue field is set.
+   */
+  @java.lang.Override
+  public boolean hasImpressionsPValue() {
+    return ((bitField8_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * impressions. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on impressions, is 3%.
+   * </pre>
+   *
+   * <code>optional double impressions_p_value = 464;</code>
+   * @return The impressionsPValue.
+   */
+  @java.lang.Override
+  public double getImpressionsPValue() {
+    return impressionsPValue_;
+  }
+
+  public static final int IMPRESSIONS_POINT_ESTIMATE_FIELD_NUMBER = 465;
+  private double impressionsPointEstimate_ = 0D;
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on impressions.
+   *
+   * Together with `impressions_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(impressions_point_estimate - impressions_margin_of_error,
+   * impressions_point_estimate + impressions_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double impressions_point_estimate = 465;</code>
+   * @return Whether the impressionsPointEstimate field is set.
+   */
+  @java.lang.Override
+  public boolean hasImpressionsPointEstimate() {
+    return ((bitField8_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on impressions.
+   *
+   * Together with `impressions_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(impressions_point_estimate - impressions_margin_of_error,
+   * impressions_point_estimate + impressions_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double impressions_point_estimate = 465;</code>
+   * @return The impressionsPointEstimate.
+   */
+  @java.lang.Override
+  public double getImpressionsPointEstimate() {
+    return impressionsPointEstimate_;
+  }
+
+  public static final int CLICKS_MARGIN_OF_ERROR_FIELD_NUMBER = 466;
+  private double clicksMarginOfError_ = 0D;
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on clicks.
+   *
+   * Together with `clicks_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at `clicks_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double clicks_margin_of_error = 466;</code>
+   * @return Whether the clicksMarginOfError field is set.
+   */
+  @java.lang.Override
+  public boolean hasClicksMarginOfError() {
+    return ((bitField8_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on clicks.
+   *
+   * Together with `clicks_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at `clicks_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double clicks_margin_of_error = 466;</code>
+   * @return The clicksMarginOfError.
+   */
+  @java.lang.Override
+  public double getClicksMarginOfError() {
+    return clicksMarginOfError_;
+  }
+
+  public static final int CLICKS_P_VALUE_FIELD_NUMBER = 467;
+  private double clicksPValue_ = 0D;
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * clicks. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on clicks, is 3%.
+   * </pre>
+   *
+   * <code>optional double clicks_p_value = 467;</code>
+   * @return Whether the clicksPValue field is set.
+   */
+  @java.lang.Override
+  public boolean hasClicksPValue() {
+    return ((bitField8_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * clicks. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on clicks, is 3%.
+   * </pre>
+   *
+   * <code>optional double clicks_p_value = 467;</code>
+   * @return The clicksPValue.
+   */
+  @java.lang.Override
+  public double getClicksPValue() {
+    return clicksPValue_;
+  }
+
+  public static final int CLICKS_POINT_ESTIMATE_FIELD_NUMBER = 468;
+  private double clicksPointEstimate_ = 0D;
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on clicks.
+   *
+   * Together with `clicks_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval: `(clicks_point_estimate -
+   * clicks_margin_of_error,
+   * clicks_point_estimate + clicks_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double clicks_point_estimate = 468;</code>
+   * @return Whether the clicksPointEstimate field is set.
+   */
+  @java.lang.Override
+  public boolean hasClicksPointEstimate() {
+    return ((bitField8_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on clicks.
+   *
+   * Together with `clicks_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval: `(clicks_point_estimate -
+   * clicks_margin_of_error,
+   * clicks_point_estimate + clicks_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double clicks_point_estimate = 468;</code>
+   * @return The clicksPointEstimate.
+   */
+  @java.lang.Override
+  public double getClicksPointEstimate() {
+    return clicksPointEstimate_;
+  }
+
+  public static final int CONTROL_CONVERSION_VALUE_FIELD_NUMBER = 469;
+  private double controlConversionValue_ = 0D;
+  /**
+   * <pre>
+   * The conversion value metric on the control arm of the experiment.
+   * The treatment conversion value can be selected by using
+   * `conversions_value`.
+   * </pre>
+   *
+   * <code>optional double control_conversion_value = 469;</code>
+   * @return Whether the controlConversionValue field is set.
+   */
+  @java.lang.Override
+  public boolean hasControlConversionValue() {
+    return ((bitField8_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * The conversion value metric on the control arm of the experiment.
+   * The treatment conversion value can be selected by using
+   * `conversions_value`.
+   * </pre>
+   *
+   * <code>optional double control_conversion_value = 469;</code>
+   * @return The controlConversionValue.
+   */
+  @java.lang.Override
+  public double getControlConversionValue() {
+    return controlConversionValue_;
+  }
+
+  public static final int CONVERSION_VALUE_MARGIN_OF_ERROR_FIELD_NUMBER = 470;
+  private double conversionValueMarginOfError_ = 0D;
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on
+   * conversion value.
+   *
+   * Together with `conversion_value_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `conversion_value_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_margin_of_error = 470;</code>
+   * @return Whether the conversionValueMarginOfError field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionValueMarginOfError() {
+    return ((bitField8_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on
+   * conversion value.
+   *
+   * Together with `conversion_value_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `conversion_value_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_margin_of_error = 470;</code>
+   * @return The conversionValueMarginOfError.
+   */
+  @java.lang.Override
+  public double getConversionValueMarginOfError() {
+    return conversionValueMarginOfError_;
+  }
+
+  public static final int CONVERSION_VALUE_P_VALUE_FIELD_NUMBER = 471;
+  private double conversionValuePValue_ = 0D;
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversion value. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversion value, is 3%.
+   * </pre>
+   *
+   * <code>optional double conversion_value_p_value = 471;</code>
+   * @return Whether the conversionValuePValue field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionValuePValue() {
+    return ((bitField8_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversion value. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversion value, is 3%.
+   * </pre>
+   *
+   * <code>optional double conversion_value_p_value = 471;</code>
+   * @return The conversionValuePValue.
+   */
+  @java.lang.Override
+  public double getConversionValuePValue() {
+    return conversionValuePValue_;
+  }
+
+  public static final int CONVERSION_VALUE_CHANGE_POINT_ESTIMATE_FIELD_NUMBER = 472;
+  private double conversionValueChangePointEstimate_ = 0D;
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on
+   * conversion value change.
+   *
+   * Together with `conversion_value_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(conversion_value_change_point_estimate -
+   * conversion_value_margin_of_error,
+   * conversion_value_change_point_estimate +
+   * conversion_value_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_change_point_estimate = 472;</code>
+   * @return Whether the conversionValueChangePointEstimate field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversionValueChangePointEstimate() {
+    return ((bitField8_ & 0x00000800) != 0);
+  }
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on
+   * conversion value change.
+   *
+   * Together with `conversion_value_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(conversion_value_change_point_estimate -
+   * conversion_value_margin_of_error,
+   * conversion_value_change_point_estimate +
+   * conversion_value_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_change_point_estimate = 472;</code>
+   * @return The conversionValueChangePointEstimate.
+   */
+  @java.lang.Override
+  public double getConversionValueChangePointEstimate() {
+    return conversionValueChangePointEstimate_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -8375,148 +9452,148 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x00000400) != 0)) {
       output.writeInt64(131, clicks_);
     }
-    if (((bitField4_ & 0x00000008) != 0)) {
+    if (((bitField4_ & 0x00000010) != 0)) {
       output.writeDouble(132, videoQuartileP100Rate_);
     }
-    if (((bitField4_ & 0x00000010) != 0)) {
+    if (((bitField4_ & 0x00000020) != 0)) {
       output.writeDouble(133, videoQuartileP25Rate_);
     }
-    if (((bitField4_ & 0x00000020) != 0)) {
+    if (((bitField4_ & 0x00000040) != 0)) {
       output.writeDouble(134, videoQuartileP50Rate_);
     }
-    if (((bitField4_ & 0x00000040) != 0)) {
+    if (((bitField4_ & 0x00000080) != 0)) {
       output.writeDouble(135, videoQuartileP75Rate_);
     }
-    if (((bitField3_ & 0x00002000) != 0)) {
+    if (((bitField3_ & 0x00004000) != 0)) {
       output.writeDouble(136, searchAbsoluteTopImpressionShare_);
     }
-    if (((bitField3_ & 0x00004000) != 0)) {
+    if (((bitField3_ & 0x00008000) != 0)) {
       output.writeDouble(137, searchBudgetLostAbsoluteTopImpressionShare_);
     }
-    if (((bitField3_ & 0x00008000) != 0)) {
+    if (((bitField3_ & 0x00010000) != 0)) {
       output.writeDouble(138, searchBudgetLostImpressionShare_);
     }
-    if (((bitField3_ & 0x00010000) != 0)) {
+    if (((bitField3_ & 0x00020000) != 0)) {
       output.writeDouble(139, searchBudgetLostTopImpressionShare_);
     }
-    if (((bitField3_ & 0x00020000) != 0)) {
+    if (((bitField3_ & 0x00040000) != 0)) {
       output.writeDouble(140, searchClickShare_);
     }
-    if (((bitField3_ & 0x00040000) != 0)) {
+    if (((bitField3_ & 0x00080000) != 0)) {
       output.writeDouble(141, searchExactMatchImpressionShare_);
     }
-    if (((bitField3_ & 0x00080000) != 0)) {
+    if (((bitField3_ & 0x00100000) != 0)) {
       output.writeDouble(142, searchImpressionShare_);
     }
-    if (((bitField3_ & 0x00100000) != 0)) {
+    if (((bitField3_ & 0x00200000) != 0)) {
       output.writeDouble(143, searchRankLostAbsoluteTopImpressionShare_);
     }
-    if (((bitField3_ & 0x00200000) != 0)) {
+    if (((bitField3_ & 0x00400000) != 0)) {
       output.writeDouble(144, searchRankLostImpressionShare_);
     }
-    if (((bitField3_ & 0x00400000) != 0)) {
+    if (((bitField3_ & 0x00800000) != 0)) {
       output.writeDouble(145, searchRankLostTopImpressionShare_);
     }
-    if (((bitField3_ & 0x00800000) != 0)) {
+    if (((bitField3_ & 0x01000000) != 0)) {
       output.writeDouble(146, searchTopImpressionShare_);
     }
-    if (((bitField3_ & 0x02000000) != 0)) {
+    if (((bitField3_ & 0x04000000) != 0)) {
       output.writeInt64(147, speedScore_);
     }
-    if (((bitField3_ & 0x10000000) != 0)) {
+    if (((bitField3_ & 0x20000000) != 0)) {
       output.writeDouble(148, topImpressionPercentage_);
     }
-    if (((bitField3_ & 0x20000000) != 0)) {
+    if (((bitField3_ & 0x40000000) != 0)) {
       output.writeDouble(149, validAcceleratedMobilePagesClicksPercentage_);
     }
-    if (((bitField3_ & 0x40000000) != 0)) {
+    if (((bitField3_ & 0x80000000) != 0)) {
       output.writeDouble(150, valuePerAllConversions_);
     }
-    if (((bitField4_ & 0x00000001) != 0)) {
+    if (((bitField4_ & 0x00000002) != 0)) {
       output.writeDouble(151, valuePerConversion_);
     }
-    if (((bitField4_ & 0x00000004) != 0)) {
+    if (((bitField4_ & 0x00000008) != 0)) {
       output.writeDouble(152, valuePerCurrentModelAttributedConversion_);
     }
-    if (((bitField4_ & 0x00000200) != 0)) {
+    if (((bitField4_ & 0x00000400) != 0)) {
       output.writeInt64(155, viewThroughConversions_);
     }
-    if (((bitField1_ & 0x00000800) != 0)) {
+    if (((bitField1_ & 0x00001000) != 0)) {
       output.writeInt64(156, combinedClicks_);
     }
-    if (((bitField1_ & 0x00001000) != 0)) {
+    if (((bitField1_ & 0x00002000) != 0)) {
       output.writeDouble(157, combinedClicksPerQuery_);
     }
-    if (((bitField1_ & 0x00002000) != 0)) {
+    if (((bitField1_ & 0x00004000) != 0)) {
       output.writeInt64(158, combinedQueries_);
     }
-    if (((bitField1_ & 0x00004000) != 0)) {
+    if (((bitField1_ & 0x00008000) != 0)) {
       output.writeDouble(159, contentBudgetLostImpressionShare_);
     }
-    if (((bitField1_ & 0x00008000) != 0)) {
+    if (((bitField1_ & 0x00010000) != 0)) {
       output.writeDouble(160, contentImpressionShare_);
     }
-    if (((bitField1_ & 0x00010000) != 0)) {
+    if (((bitField1_ & 0x00020000) != 0)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 161, conversionLastReceivedRequestDateTime_);
     }
-    if (((bitField1_ & 0x00020000) != 0)) {
+    if (((bitField1_ & 0x00040000) != 0)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 162, conversionLastConversionDate_);
     }
-    if (((bitField1_ & 0x00040000) != 0)) {
+    if (((bitField1_ & 0x00080000) != 0)) {
       output.writeDouble(163, contentRankLostImpressionShare_);
     }
-    if (((bitField1_ & 0x00080000) != 0)) {
+    if (((bitField1_ & 0x00100000) != 0)) {
       output.writeDouble(164, conversionsFromInteractionsRate_);
     }
-    if (((bitField1_ & 0x00100000) != 0)) {
+    if (((bitField1_ & 0x00200000) != 0)) {
       output.writeDouble(165, conversionsValue_);
     }
-    if (((bitField1_ & 0x00800000) != 0)) {
+    if (((bitField1_ & 0x01000000) != 0)) {
       output.writeDouble(166, conversionsValuePerCost_);
     }
-    if (((bitField1_ & 0x01000000) != 0)) {
+    if (((bitField1_ & 0x02000000) != 0)) {
       output.writeDouble(167, conversionsFromInteractionsValuePerInteraction_);
     }
-    if (((bitField1_ & 0x02000000) != 0)) {
+    if (((bitField1_ & 0x04000000) != 0)) {
       output.writeDouble(168, conversions_);
     }
-    if (((bitField1_ & 0x08000000) != 0)) {
+    if (((bitField1_ & 0x10000000) != 0)) {
       output.writeInt64(169, costMicros_);
     }
-    if (((bitField1_ & 0x10000000) != 0)) {
+    if (((bitField1_ & 0x20000000) != 0)) {
       output.writeDouble(170, costPerAllConversions_);
     }
-    if (((bitField1_ & 0x20000000) != 0)) {
+    if (((bitField1_ & 0x40000000) != 0)) {
       output.writeDouble(171, costPerConversion_);
     }
-    if (((bitField1_ & 0x40000000) != 0)) {
+    if (((bitField1_ & 0x80000000) != 0)) {
       output.writeDouble(172, costPerCurrentModelAttributedConversion_);
     }
-    if (((bitField1_ & 0x80000000) != 0)) {
+    if (((bitField2_ & 0x00000001) != 0)) {
       output.writeDouble(173, crossDeviceConversions_);
     }
-    if (((bitField2_ & 0x00000010) != 0)) {
+    if (((bitField2_ & 0x00000020) != 0)) {
       output.writeDouble(174, ctr_);
     }
-    if (((bitField2_ & 0x00000020) != 0)) {
+    if (((bitField2_ & 0x00000040) != 0)) {
       output.writeDouble(175, currentModelAttributedConversions_);
     }
-    if (((bitField2_ & 0x00000040) != 0)) {
+    if (((bitField2_ & 0x00000080) != 0)) {
       output.writeDouble(176, currentModelAttributedConversionsFromInteractionsRate_);
     }
-    if (((bitField2_ & 0x00000080) != 0)) {
+    if (((bitField2_ & 0x00000100) != 0)) {
       output.writeDouble(177, currentModelAttributedConversionsFromInteractionsValuePerInteraction_);
     }
-    if (((bitField2_ & 0x00000100) != 0)) {
+    if (((bitField2_ & 0x00000200) != 0)) {
       output.writeDouble(178, currentModelAttributedConversionsValue_);
     }
-    if (((bitField2_ & 0x00000200) != 0)) {
+    if (((bitField2_ & 0x00000400) != 0)) {
       output.writeDouble(179, currentModelAttributedConversionsValuePerCost_);
     }
-    if (((bitField2_ & 0x00000400) != 0)) {
+    if (((bitField2_ & 0x00000800) != 0)) {
       output.writeDouble(180, engagementRate_);
     }
-    if (((bitField2_ & 0x00000800) != 0)) {
+    if (((bitField2_ & 0x00001000) != 0)) {
       output.writeInt64(181, engagements_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -8606,85 +9683,85 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x00000200) != 0)) {
       output.writeDouble(212, bounceRate_);
     }
-    if (((bitField2_ & 0x00001000) != 0)) {
+    if (((bitField2_ & 0x00002000) != 0)) {
       output.writeDouble(213, hotelAverageLeadValueMicros_);
     }
-    if (((bitField2_ & 0x00008000) != 0)) {
+    if (((bitField2_ & 0x00010000) != 0)) {
       output.writeDouble(214, hotelPriceDifferencePercentage_);
     }
-    if (((bitField2_ & 0x00010000) != 0)) {
+    if (((bitField2_ & 0x00020000) != 0)) {
       output.writeInt64(215, hotelEligibleImpressions_);
     }
-    if (((bitField2_ & 0x00020000) != 0)) {
+    if (((bitField2_ & 0x00040000) != 0)) {
       output.writeInt64(216, historicalQualityScore_);
     }
-    if (((bitField2_ & 0x00040000) != 0)) {
+    if (((bitField2_ & 0x00080000) != 0)) {
       output.writeInt64(217, gmailForwards_);
     }
-    if (((bitField2_ & 0x00080000) != 0)) {
+    if (((bitField2_ & 0x00100000) != 0)) {
       output.writeInt64(218, gmailSaves_);
     }
-    if (((bitField2_ & 0x00100000) != 0)) {
+    if (((bitField2_ & 0x00200000) != 0)) {
       output.writeInt64(219, gmailSecondaryClicks_);
     }
-    if (((bitField2_ & 0x00200000) != 0)) {
+    if (((bitField2_ & 0x00400000) != 0)) {
       output.writeInt64(220, impressionsFromStoreReach_);
     }
-    if (((bitField2_ & 0x00400000) != 0)) {
+    if (((bitField2_ & 0x00800000) != 0)) {
       output.writeInt64(221, impressions_);
     }
-    if (((bitField2_ & 0x00800000) != 0)) {
+    if (((bitField2_ & 0x01000000) != 0)) {
       output.writeDouble(222, interactionRate_);
     }
-    if (((bitField2_ & 0x01000000) != 0)) {
+    if (((bitField2_ & 0x02000000) != 0)) {
       output.writeInt64(223, interactions_);
     }
-    if (((bitField2_ & 0x02000000) != 0)) {
+    if (((bitField2_ & 0x04000000) != 0)) {
       output.writeDouble(224, invalidClickRate_);
     }
-    if (((bitField2_ & 0x04000000) != 0)) {
+    if (((bitField2_ & 0x08000000) != 0)) {
       output.writeInt64(225, invalidClicks_);
     }
-    if (((bitField2_ & 0x20000000) != 0)) {
+    if (((bitField2_ & 0x40000000) != 0)) {
       output.writeInt64(226, messageChats_);
     }
-    if (((bitField2_ & 0x40000000) != 0)) {
+    if (((bitField2_ & 0x80000000) != 0)) {
       output.writeInt64(227, messageImpressions_);
     }
-    if (((bitField2_ & 0x80000000) != 0)) {
+    if (((bitField3_ & 0x00000001) != 0)) {
       output.writeDouble(228, messageChatRate_);
     }
-    if (((bitField3_ & 0x00000001) != 0)) {
+    if (((bitField3_ & 0x00000002) != 0)) {
       output.writeDouble(229, mobileFriendlyClicksPercentage_);
     }
-    if (((bitField3_ & 0x00000008) != 0)) {
+    if (((bitField3_ & 0x00000010) != 0)) {
       output.writeInt64(230, organicClicks_);
     }
-    if (((bitField3_ & 0x00000010) != 0)) {
+    if (((bitField3_ & 0x00000020) != 0)) {
       output.writeDouble(231, organicClicksPerQuery_);
     }
-    if (((bitField3_ & 0x00000020) != 0)) {
+    if (((bitField3_ & 0x00000040) != 0)) {
       output.writeInt64(232, organicImpressions_);
     }
-    if (((bitField3_ & 0x00000040) != 0)) {
+    if (((bitField3_ & 0x00000080) != 0)) {
       output.writeDouble(233, organicImpressionsPerQuery_);
     }
-    if (((bitField3_ & 0x00000080) != 0)) {
+    if (((bitField3_ & 0x00000100) != 0)) {
       output.writeInt64(234, organicQueries_);
     }
-    if (((bitField3_ & 0x00000100) != 0)) {
+    if (((bitField3_ & 0x00000200) != 0)) {
       output.writeDouble(235, percentNewVisitors_);
     }
-    if (((bitField3_ & 0x00000200) != 0)) {
+    if (((bitField3_ & 0x00000400) != 0)) {
       output.writeInt64(236, phoneCalls_);
     }
-    if (((bitField3_ & 0x00000400) != 0)) {
+    if (((bitField3_ & 0x00000800) != 0)) {
       output.writeInt64(237, phoneImpressions_);
     }
-    if (((bitField3_ & 0x00000800) != 0)) {
+    if (((bitField3_ & 0x00001000) != 0)) {
       output.writeDouble(238, phoneThroughRate_);
     }
-    if (((bitField3_ & 0x00001000) != 0)) {
+    if (((bitField3_ & 0x00002000) != 0)) {
       output.writeDouble(239, relativeCtr_);
     }
     if (((bitField0_ & 0x00000400) != 0)) {
@@ -8693,31 +9770,31 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00002000) != 0)) {
       output.writeDouble(241, allConversionsByConversionDate_);
     }
-    if (((bitField1_ & 0x00200000) != 0)) {
+    if (((bitField1_ & 0x00400000) != 0)) {
       output.writeDouble(242, conversionsValueByConversionDate_);
     }
-    if (((bitField1_ & 0x04000000) != 0)) {
+    if (((bitField1_ & 0x08000000) != 0)) {
       output.writeDouble(243, conversionsByConversionDate_);
     }
-    if (((bitField3_ & 0x80000000) != 0)) {
+    if (((bitField4_ & 0x00000001) != 0)) {
       output.writeDouble(244, valuePerAllConversionsByConversionDate_);
     }
-    if (((bitField4_ & 0x00000002) != 0)) {
+    if (((bitField4_ & 0x00000004) != 0)) {
       output.writeDouble(245, valuePerConversionsByConversionDate_);
     }
     if (skAdNetworkInstalls_ != 0L) {
       output.writeInt64(246, skAdNetworkInstalls_);
     }
-    if (((bitField3_ & 0x00000002) != 0)) {
+    if (((bitField3_ & 0x00000004) != 0)) {
       output.writeDouble(247, optimizationScoreUplift_);
     }
-    if (((bitField3_ & 0x00000004) != 0)) {
+    if (((bitField3_ & 0x00000008) != 0)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 248, optimizationScoreUrl_);
     }
-    if (((bitField3_ & 0x08000000) != 0)) {
+    if (((bitField3_ & 0x10000000) != 0)) {
       output.writeDouble(250, averageTargetRoas_);
     }
-    if (((bitField2_ & 0x00000002) != 0)) {
+    if (((bitField2_ & 0x00000004) != 0)) {
       output.writeDouble(253, crossDeviceConversionsValue_);
     }
     if (((bitField1_ & 0x00000020) != 0)) {
@@ -8726,10 +9803,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x00000040) != 0)) {
       output.writeDouble(255, biddableAppPostInstallConversions_);
     }
-    if (((bitField2_ & 0x00002000) != 0)) {
+    if (((bitField2_ & 0x00004000) != 0)) {
       output.writeInt64(256, hotelCommissionRateMicros_);
     }
-    if (((bitField2_ & 0x00004000) != 0)) {
+    if (((bitField2_ & 0x00008000) != 0)) {
       output.writeDouble(257, hotelExpectedCommissionCost_);
     }
     if (((bitField0_ & 0x00800000) != 0)) {
@@ -8759,356 +9836,440 @@ private static final long serialVersionUID = 0L;
     if (publisherUnknownClicks_ != 0L) {
       output.writeInt64(266, publisherUnknownClicks_);
     }
-    if (((bitField4_ & 0x00000400) != 0)) {
+    if (((bitField4_ & 0x00000800) != 0)) {
       output.writeDouble(267, allConversionsFromLocationAssetClickToCall_);
     }
-    if (((bitField4_ & 0x00000800) != 0)) {
+    if (((bitField4_ & 0x00001000) != 0)) {
       output.writeDouble(268, allConversionsFromLocationAssetDirections_);
     }
-    if (((bitField4_ & 0x00001000) != 0)) {
+    if (((bitField4_ & 0x00002000) != 0)) {
       output.writeDouble(269, allConversionsFromLocationAssetMenu_);
     }
-    if (((bitField4_ & 0x00002000) != 0)) {
+    if (((bitField4_ & 0x00004000) != 0)) {
       output.writeDouble(270, allConversionsFromLocationAssetOrder_);
     }
-    if (((bitField4_ & 0x00004000) != 0)) {
+    if (((bitField4_ & 0x00008000) != 0)) {
       output.writeDouble(271, allConversionsFromLocationAssetOtherEngagement_);
     }
-    if (((bitField4_ & 0x00008000) != 0)) {
+    if (((bitField4_ & 0x00010000) != 0)) {
       output.writeDouble(272, allConversionsFromLocationAssetStoreVisits_);
     }
-    if (((bitField4_ & 0x00010000) != 0)) {
+    if (((bitField4_ & 0x00020000) != 0)) {
       output.writeDouble(273, allConversionsFromLocationAssetWebsite_);
     }
-    if (((bitField4_ & 0x00020000) != 0)) {
+    if (((bitField4_ & 0x00040000) != 0)) {
       output.writeInt64(274, eligibleImpressionsFromLocationAssetStoreReach_);
     }
-    if (((bitField4_ & 0x00040000) != 0)) {
+    if (((bitField4_ & 0x00080000) != 0)) {
       output.writeDouble(275, viewThroughConversionsFromLocationAssetClickToCall_);
     }
-    if (((bitField4_ & 0x00080000) != 0)) {
+    if (((bitField4_ & 0x00100000) != 0)) {
       output.writeDouble(276, viewThroughConversionsFromLocationAssetDirections_);
     }
-    if (((bitField4_ & 0x00100000) != 0)) {
+    if (((bitField4_ & 0x00200000) != 0)) {
       output.writeDouble(277, viewThroughConversionsFromLocationAssetMenu_);
     }
-    if (((bitField4_ & 0x00200000) != 0)) {
+    if (((bitField4_ & 0x00400000) != 0)) {
       output.writeDouble(278, viewThroughConversionsFromLocationAssetOrder_);
     }
-    if (((bitField4_ & 0x00400000) != 0)) {
+    if (((bitField4_ & 0x00800000) != 0)) {
       output.writeDouble(279, viewThroughConversionsFromLocationAssetOtherEngagement_);
     }
-    if (((bitField4_ & 0x00800000) != 0)) {
+    if (((bitField4_ & 0x01000000) != 0)) {
       output.writeDouble(280, viewThroughConversionsFromLocationAssetStoreVisits_);
     }
-    if (((bitField4_ & 0x01000000) != 0)) {
+    if (((bitField4_ & 0x02000000) != 0)) {
       output.writeDouble(281, viewThroughConversionsFromLocationAssetWebsite_);
     }
-    if (((bitField3_ & 0x04000000) != 0)) {
+    if (((bitField3_ & 0x08000000) != 0)) {
       output.writeInt64(290, averageTargetCpaMicros_);
     }
     if (skAdNetworkTotalConversions_ != 0L) {
       output.writeInt64(292, skAdNetworkTotalConversions_);
     }
-    if (((bitField1_ & 0x00400000) != 0)) {
+    if (((bitField1_ & 0x00800000) != 0)) {
       output.writeDouble(293, newCustomerLifetimeValue_);
     }
     if (((bitField0_ & 0x00000800) != 0)) {
       output.writeDouble(294, allNewCustomerLifetimeValue_);
     }
-    if (((bitField3_ & 0x01000000) != 0)) {
+    if (((bitField3_ & 0x02000000) != 0)) {
       output.writeMessage(295, getSearchVolume());
     }
-    if (((bitField4_ & 0x02000000) != 0)) {
+    if (((bitField4_ & 0x04000000) != 0)) {
       output.writeDouble(296, orders_);
     }
-    if (((bitField4_ & 0x04000000) != 0)) {
+    if (((bitField4_ & 0x08000000) != 0)) {
       output.writeInt64(297, averageOrderValueMicros_);
     }
-    if (((bitField4_ & 0x08000000) != 0)) {
+    if (((bitField4_ & 0x10000000) != 0)) {
       output.writeDouble(298, averageCartSize_);
     }
-    if (((bitField4_ & 0x10000000) != 0)) {
+    if (((bitField4_ & 0x20000000) != 0)) {
       output.writeInt64(299, costOfGoodsSoldMicros_);
     }
-    if (((bitField4_ & 0x20000000) != 0)) {
+    if (((bitField4_ & 0x40000000) != 0)) {
       output.writeInt64(300, grossProfitMicros_);
     }
-    if (((bitField4_ & 0x40000000) != 0)) {
+    if (((bitField4_ & 0x80000000) != 0)) {
       output.writeDouble(301, grossProfitMargin_);
     }
-    if (((bitField4_ & 0x80000000) != 0)) {
+    if (((bitField5_ & 0x00000001) != 0)) {
       output.writeInt64(302, revenueMicros_);
     }
-    if (((bitField5_ & 0x00000001) != 0)) {
+    if (((bitField5_ & 0x00000002) != 0)) {
       output.writeDouble(303, unitsSold_);
     }
-    if (((bitField5_ & 0x00000002) != 0)) {
+    if (((bitField5_ & 0x00000004) != 0)) {
       output.writeInt64(304, crossSellCostOfGoodsSoldMicros_);
     }
-    if (((bitField5_ & 0x00000004) != 0)) {
+    if (((bitField5_ & 0x00000008) != 0)) {
       output.writeInt64(305, crossSellGrossProfitMicros_);
     }
-    if (((bitField5_ & 0x00000008) != 0)) {
+    if (((bitField5_ & 0x00000010) != 0)) {
       output.writeInt64(306, crossSellRevenueMicros_);
     }
-    if (((bitField5_ & 0x00000010) != 0)) {
+    if (((bitField5_ & 0x00000020) != 0)) {
       output.writeDouble(307, crossSellUnitsSold_);
     }
-    if (((bitField5_ & 0x00000020) != 0)) {
+    if (((bitField5_ & 0x00000040) != 0)) {
       output.writeInt64(308, leadCostOfGoodsSoldMicros_);
     }
-    if (((bitField5_ & 0x00000040) != 0)) {
+    if (((bitField5_ & 0x00000080) != 0)) {
       output.writeInt64(309, leadGrossProfitMicros_);
     }
-    if (((bitField5_ & 0x00000080) != 0)) {
+    if (((bitField5_ & 0x00000100) != 0)) {
       output.writeInt64(310, leadRevenueMicros_);
     }
-    if (((bitField5_ & 0x00000100) != 0)) {
+    if (((bitField5_ & 0x00000200) != 0)) {
       output.writeDouble(311, leadUnitsSold_);
     }
-    if (((bitField2_ & 0x00000004) != 0)) {
+    if (((bitField2_ & 0x00000008) != 0)) {
       output.writeInt64(312, crossDeviceConversionsValueMicros_);
     }
-    if (((bitField5_ & 0x00000200) != 0)) {
+    if (((bitField5_ & 0x00000400) != 0)) {
       output.writeInt64(319, uniqueUsers_);
     }
-    if (((bitField5_ & 0x00000400) != 0)) {
+    if (((bitField5_ & 0x00000800) != 0)) {
       output.writeDouble(320, averageImpressionFrequencyPerUser_);
     }
-    if (((bitField5_ & 0x00000800) != 0)) {
+    if (((bitField5_ & 0x00001000) != 0)) {
       output.writeInt64(341, linkedEntitiesCount_);
     }
     for (int i = 0; i < linkedSampleEntities_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 342, linkedSampleEntities_.getRaw(i));
     }
-    if (((bitField5_ & 0x00001000) != 0)) {
+    if (((bitField5_ & 0x00002000) != 0)) {
       output.writeInt64(348, assetPinnedTotalCount_);
     }
-    if (((bitField5_ & 0x00002000) != 0)) {
+    if (((bitField5_ & 0x00004000) != 0)) {
       output.writeInt64(349, assetPinnedAsHeadlinePositionOneCount_);
     }
-    if (((bitField5_ & 0x00004000) != 0)) {
+    if (((bitField5_ & 0x00008000) != 0)) {
       output.writeInt64(350, assetPinnedAsHeadlinePositionTwoCount_);
     }
-    if (((bitField5_ & 0x00008000) != 0)) {
+    if (((bitField5_ & 0x00010000) != 0)) {
       output.writeInt64(351, assetPinnedAsHeadlinePositionThreeCount_);
     }
-    if (((bitField5_ & 0x00010000) != 0)) {
+    if (((bitField5_ & 0x00020000) != 0)) {
       output.writeInt64(352, assetPinnedAsDescriptionPositionOneCount_);
     }
-    if (((bitField5_ & 0x00020000) != 0)) {
+    if (((bitField5_ & 0x00040000) != 0)) {
       output.writeInt64(353, assetPinnedAsDescriptionPositionTwoCount_);
     }
-    if (((bitField5_ & 0x00040000) != 0)) {
+    if (((bitField5_ & 0x00080000) != 0)) {
       output.writeDouble(365, storeVisitsLastClickModelAttributedConversions_);
     }
-    if (((bitField5_ & 0x00080000) != 0)) {
+    if (((bitField5_ & 0x00100000) != 0)) {
       output.writeDouble(366, resultsConversionsPurchase_);
     }
-    if (((bitField2_ & 0x08000000) != 0)) {
+    if (((bitField2_ & 0x10000000) != 0)) {
       output.writeDouble(370, generalInvalidClickRate_);
     }
-    if (((bitField2_ & 0x10000000) != 0)) {
+    if (((bitField2_ & 0x20000000) != 0)) {
       output.writeInt64(371, generalInvalidClicks_);
     }
-    if (((bitField2_ & 0x00000001) != 0)) {
+    if (((bitField2_ & 0x00000002) != 0)) {
       output.writeDouble(372, crossDeviceConversionsByConversionDate_);
     }
-    if (((bitField2_ & 0x00000008) != 0)) {
+    if (((bitField2_ & 0x00000010) != 0)) {
       output.writeDouble(373, crossDeviceConversionsValueByConversionDate_);
     }
     if (((bitField1_ & 0x00000080) != 0)) {
       output.writeDouble(378, biddableCohortAppPostInstallConversions_);
     }
-    if (((bitField5_ & 0x00800000) != 0)) {
+    if (((bitField5_ & 0x01000000) != 0)) {
       output.writeInt64(380, coviewedImpressions_);
     }
-    if (((bitField5_ & 0x01000000) != 0)) {
+    if (((bitField5_ & 0x02000000) != 0)) {
       output.writeInt64(381, primaryImpressions_);
     }
-    if (((bitField5_ & 0x02000000) != 0)) {
+    if (((bitField5_ & 0x04000000) != 0)) {
       output.writeDouble(382, platformComparableConversionsFromInteractionsRate_);
     }
-    if (((bitField5_ & 0x04000000) != 0)) {
+    if (((bitField5_ & 0x08000000) != 0)) {
       output.writeDouble(383, platformComparableConversions_);
     }
-    if (((bitField5_ & 0x08000000) != 0)) {
+    if (((bitField5_ & 0x10000000) != 0)) {
       output.writeDouble(384, platformComparableConversionsValue_);
     }
-    if (((bitField5_ & 0x10000000) != 0)) {
+    if (((bitField5_ & 0x20000000) != 0)) {
       output.writeDouble(385, platformComparableConversionsValuePerCost_);
     }
-    if (((bitField5_ & 0x20000000) != 0)) {
+    if (((bitField5_ & 0x40000000) != 0)) {
       output.writeDouble(386, platformComparableConversionsByConversionDate_);
     }
-    if (((bitField5_ & 0x40000000) != 0)) {
+    if (((bitField5_ & 0x80000000) != 0)) {
       output.writeDouble(387, platformComparableConversionsValueByConversionDate_);
     }
-    if (((bitField5_ & 0x80000000) != 0)) {
+    if (((bitField6_ & 0x00000001) != 0)) {
       output.writeDouble(388, platformComparableConversionsFromInteractionsValuePerInteraction_);
     }
-    if (((bitField6_ & 0x00000001) != 0)) {
+    if (((bitField6_ & 0x00000002) != 0)) {
       output.writeDouble(389, costPerPlatformComparableConversion_);
     }
-    if (((bitField6_ & 0x00000002) != 0)) {
+    if (((bitField6_ & 0x00000004) != 0)) {
       output.writeDouble(390, valuePerPlatformComparableConversion_);
     }
-    if (((bitField6_ & 0x00000004) != 0)) {
+    if (((bitField6_ & 0x00000008) != 0)) {
       output.writeDouble(391, valuePerPlatformComparableConversionsByConversionDate_);
     }
-    if (((bitField6_ & 0x00000008) != 0)) {
+    if (((bitField6_ & 0x00000010) != 0)) {
       output.writeDouble(392, costConvertedCurrencyPerPlatformComparableConversion_);
     }
-    if (((bitField6_ & 0x00000010) != 0)) {
+    if (((bitField6_ & 0x00000020) != 0)) {
       output.writeInt64(393, uniqueUsersTwoPlus_);
     }
-    if (((bitField6_ & 0x00000020) != 0)) {
+    if (((bitField6_ & 0x00000040) != 0)) {
       output.writeInt64(394, uniqueUsersThreePlus_);
     }
-    if (((bitField6_ & 0x00000040) != 0)) {
+    if (((bitField6_ & 0x00000080) != 0)) {
       output.writeInt64(395, uniqueUsersFourPlus_);
     }
-    if (((bitField6_ & 0x00000080) != 0)) {
+    if (((bitField6_ & 0x00000100) != 0)) {
       output.writeInt64(396, uniqueUsersFivePlus_);
     }
-    if (((bitField6_ & 0x00000100) != 0)) {
+    if (((bitField6_ & 0x00000200) != 0)) {
       output.writeInt64(397, uniqueUsersTenPlus_);
     }
-    if (((bitField6_ & 0x00000200) != 0)) {
+    if (((bitField6_ & 0x00000400) != 0)) {
       output.writeDouble(398, valueAdjustment_);
     }
-    if (((bitField6_ & 0x00000400) != 0)) {
+    if (((bitField6_ & 0x00000800) != 0)) {
       output.writeDouble(399, allValueAdjustment_);
     }
-    if (((bitField6_ & 0x00000800) != 0)) {
+    if (((bitField6_ & 0x00001000) != 0)) {
       output.writeInt64(400, clicksUniqueQueryClusters_);
     }
-    if (((bitField6_ & 0x00001000) != 0)) {
+    if (((bitField6_ & 0x00002000) != 0)) {
       output.writeInt64(401, conversionsUniqueQueryClusters_);
     }
-    if (((bitField6_ & 0x00002000) != 0)) {
+    if (((bitField6_ & 0x00004000) != 0)) {
       output.writeInt64(402, impressionsUniqueQueryClusters_);
     }
-    if (((bitField6_ & 0x00004000) != 0)) {
+    if (((bitField6_ & 0x00008000) != 0)) {
       output.writeInt64(403, videoWatchTimeDurationMillis_);
     }
-    if (((bitField6_ & 0x00008000) != 0)) {
+    if (((bitField6_ & 0x00010000) != 0)) {
       output.writeInt64(404, averageVideoWatchTimeDurationMillis_);
     }
     if (((bitField1_ & 0x00000002) != 0)) {
       output.writeDouble(405, trueviewAverageCpv_);
     }
-    if (((bitField4_ & 0x00000080) != 0)) {
+    if (((bitField4_ & 0x00000100) != 0)) {
       output.writeDouble(406, videoTrueviewViewRate_);
     }
-    if (((bitField4_ & 0x00000100) != 0)) {
+    if (((bitField4_ & 0x00000200) != 0)) {
       output.writeInt64(407, videoTrueviewViews_);
     }
-    if (((bitField5_ & 0x00100000) != 0)) {
+    if (((bitField5_ & 0x00200000) != 0)) {
       output.writeDouble(408, videoTrueviewViewRateInFeed_);
     }
-    if (((bitField5_ & 0x00200000) != 0)) {
+    if (((bitField5_ & 0x00400000) != 0)) {
       output.writeDouble(409, videoTrueviewViewRateInStream_);
     }
-    if (((bitField5_ & 0x00400000) != 0)) {
+    if (((bitField5_ & 0x00800000) != 0)) {
       output.writeDouble(410, videoTrueviewViewRateShorts_);
     }
-    if (((bitField6_ & 0x00010000) != 0)) {
+    if (((bitField6_ & 0x00020000) != 0)) {
       output.writeInt64(411, svr_);
     }
-    if (((bitField6_ & 0x00020000) != 0)) {
+    if (((bitField6_ & 0x00040000) != 0)) {
       output.writeInt64(412, activeViewAudibilityMeasurableImpressions_);
     }
-    if (((bitField6_ & 0x00040000) != 0)) {
+    if (((bitField6_ & 0x00080000) != 0)) {
       output.writeDouble(413, activeViewAudibilityMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00080000) != 0)) {
+    if (((bitField6_ & 0x00100000) != 0)) {
       output.writeDouble(414, activeViewAudibilityInvalidMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00100000) != 0)) {
+    if (((bitField6_ & 0x00200000) != 0)) {
       output.writeDouble(415, activeViewAudibilityInvalidGivtMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00200000) != 0)) {
+    if (((bitField6_ & 0x00400000) != 0)) {
       output.writeInt64(416, activeViewAudibleImpressions_);
     }
-    if (((bitField6_ & 0x00400000) != 0)) {
+    if (((bitField6_ & 0x00800000) != 0)) {
       output.writeDouble(417, activeViewAudibleImpressionsRate_);
     }
-    if (((bitField6_ & 0x00800000) != 0)) {
+    if (((bitField6_ & 0x01000000) != 0)) {
       output.writeInt64(418, activeViewAudibleTwoSecondsImpressions_);
     }
-    if (((bitField6_ & 0x01000000) != 0)) {
+    if (((bitField6_ & 0x02000000) != 0)) {
       output.writeDouble(419, activeViewAudibleTwoSecondsImpressionsRate_);
     }
-    if (((bitField6_ & 0x02000000) != 0)) {
+    if (((bitField6_ & 0x04000000) != 0)) {
       output.writeInt64(420, activeViewAudibleThirtySecondsImpressions_);
     }
-    if (((bitField6_ & 0x04000000) != 0)) {
+    if (((bitField6_ & 0x08000000) != 0)) {
       output.writeDouble(421, activeViewAudibleThirtySecondsImpressionsRate_);
     }
-    if (((bitField6_ & 0x08000000) != 0)) {
+    if (((bitField6_ & 0x10000000) != 0)) {
       output.writeDouble(422, activeViewAudibleQuartileP25Rate_);
     }
-    if (((bitField6_ & 0x10000000) != 0)) {
+    if (((bitField6_ & 0x20000000) != 0)) {
       output.writeDouble(423, activeViewAudibleQuartileP50Rate_);
     }
-    if (((bitField6_ & 0x20000000) != 0)) {
+    if (((bitField6_ & 0x40000000) != 0)) {
       output.writeDouble(424, activeViewAudibleQuartileP75Rate_);
     }
-    if (((bitField6_ & 0x40000000) != 0)) {
+    if (((bitField6_ & 0x80000000) != 0)) {
       output.writeDouble(425, activeViewAudibleQuartileP100Rate_);
     }
-    if (((bitField6_ & 0x80000000) != 0)) {
+    if (((bitField7_ & 0x00000001) != 0)) {
       output.writeInt64(426, biddableIndirectInstallFirstInAppConversionMicros_);
     }
-    if (((bitField7_ & 0x00000001) != 0)) {
+    if (((bitField7_ & 0x00000002) != 0)) {
       output.writeDouble(427, allAverageCartSize_);
     }
-    if (((bitField7_ & 0x00000002) != 0)) {
+    if (((bitField7_ & 0x00000004) != 0)) {
       output.writeInt64(428, allAverageOrderValueMicros_);
     }
-    if (((bitField7_ & 0x00000004) != 0)) {
+    if (((bitField7_ & 0x00000008) != 0)) {
       output.writeInt64(429, allCostOfGoodsSoldMicros_);
     }
-    if (((bitField7_ & 0x00000008) != 0)) {
+    if (((bitField7_ & 0x00000010) != 0)) {
       output.writeInt64(430, allCrossSellCostOfGoodsSoldMicros_);
     }
-    if (((bitField7_ & 0x00000010) != 0)) {
+    if (((bitField7_ & 0x00000020) != 0)) {
       output.writeInt64(431, allCrossSellGrossProfitMicros_);
     }
-    if (((bitField7_ & 0x00000020) != 0)) {
+    if (((bitField7_ & 0x00000040) != 0)) {
       output.writeInt64(432, allCrossSellRevenueMicros_);
     }
-    if (((bitField7_ & 0x00000040) != 0)) {
+    if (((bitField7_ & 0x00000080) != 0)) {
       output.writeDouble(433, allCrossSellUnitsSold_);
     }
-    if (((bitField7_ & 0x00000080) != 0)) {
+    if (((bitField7_ & 0x00000100) != 0)) {
       output.writeDouble(434, allGrossProfitMargin_);
     }
-    if (((bitField7_ & 0x00000100) != 0)) {
+    if (((bitField7_ & 0x00000200) != 0)) {
       output.writeInt64(435, allGrossProfitMicros_);
     }
-    if (((bitField7_ & 0x00000200) != 0)) {
+    if (((bitField7_ & 0x00000400) != 0)) {
       output.writeInt64(436, allLeadCostOfGoodsSoldMicros_);
     }
-    if (((bitField7_ & 0x00000400) != 0)) {
+    if (((bitField7_ & 0x00000800) != 0)) {
       output.writeInt64(437, allLeadGrossProfitMicros_);
     }
-    if (((bitField7_ & 0x00000800) != 0)) {
+    if (((bitField7_ & 0x00001000) != 0)) {
       output.writeInt64(438, allLeadRevenueMicros_);
     }
-    if (((bitField7_ & 0x00001000) != 0)) {
+    if (((bitField7_ & 0x00002000) != 0)) {
       output.writeDouble(439, allLeadUnitsSold_);
     }
-    if (((bitField7_ & 0x00002000) != 0)) {
+    if (((bitField7_ & 0x00004000) != 0)) {
       output.writeDouble(440, allOrders_);
     }
-    if (((bitField7_ & 0x00004000) != 0)) {
+    if (((bitField7_ & 0x00008000) != 0)) {
       output.writeInt64(441, allRevenueMicros_);
     }
-    if (((bitField7_ & 0x00008000) != 0)) {
+    if (((bitField7_ & 0x00010000) != 0)) {
       output.writeDouble(442, allUnitsSold_);
+    }
+    if (((bitField1_ & 0x00000800) != 0)) {
+      output.writeInt64(443, controlClicks_);
+    }
+    if (((bitField7_ & 0x00020000) != 0)) {
+      output.writeDouble(446, controlCostPerConversion_);
+    }
+    if (((bitField7_ & 0x00040000) != 0)) {
+      output.writeDouble(447, costPerConversionMarginOfError_);
+    }
+    if (((bitField7_ & 0x00080000) != 0)) {
+      output.writeDouble(448, costPerConversionPValue_);
+    }
+    if (((bitField7_ & 0x00100000) != 0)) {
+      output.writeDouble(449, costPerConversionChangePointEstimate_);
+    }
+    if (((bitField7_ & 0x00200000) != 0)) {
+      output.writeDouble(450, controlConversions_);
+    }
+    if (((bitField7_ & 0x00400000) != 0)) {
+      output.writeDouble(451, conversionsAbsoluteChangeMarginOfError_);
+    }
+    if (((bitField7_ & 0x00800000) != 0)) {
+      output.writeDouble(452, conversionsAbsoluteChangePValue_);
+    }
+    if (((bitField7_ & 0x01000000) != 0)) {
+      output.writeDouble(453, conversionsAbsoluteChangePointEstimate_);
+    }
+    if (((bitField7_ & 0x02000000) != 0)) {
+      output.writeDouble(454, controlConversionValuePerCost_);
+    }
+    if (((bitField7_ & 0x04000000) != 0)) {
+      output.writeDouble(455, conversionValuePerCostMarginOfError_);
+    }
+    if (((bitField7_ & 0x08000000) != 0)) {
+      output.writeDouble(456, conversionValuePerCostPValue_);
+    }
+    if (((bitField7_ & 0x10000000) != 0)) {
+      output.writeDouble(457, conversionValuePerCostChangePointEstimate_);
+    }
+    if (((bitField7_ & 0x20000000) != 0)) {
+      output.writeInt64(458, controlCostMicros_);
+    }
+    if (((bitField7_ & 0x40000000) != 0)) {
+      output.writeDouble(459, costMicrosMarginOfError_);
+    }
+    if (((bitField7_ & 0x80000000) != 0)) {
+      output.writeDouble(460, costMicrosPValue_);
+    }
+    if (((bitField8_ & 0x00000001) != 0)) {
+      output.writeDouble(461, costMicrosChangePointEstimate_);
+    }
+    if (((bitField8_ & 0x00000002) != 0)) {
+      output.writeInt64(462, controlImpressions_);
+    }
+    if (((bitField8_ & 0x00000004) != 0)) {
+      output.writeDouble(463, impressionsMarginOfError_);
+    }
+    if (((bitField8_ & 0x00000008) != 0)) {
+      output.writeDouble(464, impressionsPValue_);
+    }
+    if (((bitField8_ & 0x00000010) != 0)) {
+      output.writeDouble(465, impressionsPointEstimate_);
+    }
+    if (((bitField8_ & 0x00000020) != 0)) {
+      output.writeDouble(466, clicksMarginOfError_);
+    }
+    if (((bitField8_ & 0x00000040) != 0)) {
+      output.writeDouble(467, clicksPValue_);
+    }
+    if (((bitField8_ & 0x00000080) != 0)) {
+      output.writeDouble(468, clicksPointEstimate_);
+    }
+    if (((bitField8_ & 0x00000100) != 0)) {
+      output.writeDouble(469, controlConversionValue_);
+    }
+    if (((bitField8_ & 0x00000200) != 0)) {
+      output.writeDouble(470, conversionValueMarginOfError_);
+    }
+    if (((bitField8_ & 0x00000400) != 0)) {
+      output.writeDouble(471, conversionValuePValue_);
+    }
+    if (((bitField8_ & 0x00000800) != 0)) {
+      output.writeDouble(472, conversionValueChangePointEstimate_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -9147,193 +10308,193 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(131, clicks_);
     }
-    if (((bitField4_ & 0x00000008) != 0)) {
+    if (((bitField4_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(132, videoQuartileP100Rate_);
     }
-    if (((bitField4_ & 0x00000010) != 0)) {
+    if (((bitField4_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(133, videoQuartileP25Rate_);
     }
-    if (((bitField4_ & 0x00000020) != 0)) {
+    if (((bitField4_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(134, videoQuartileP50Rate_);
     }
-    if (((bitField4_ & 0x00000040) != 0)) {
+    if (((bitField4_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(135, videoQuartileP75Rate_);
     }
-    if (((bitField3_ & 0x00002000) != 0)) {
+    if (((bitField3_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(136, searchAbsoluteTopImpressionShare_);
     }
-    if (((bitField3_ & 0x00004000) != 0)) {
+    if (((bitField3_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(137, searchBudgetLostAbsoluteTopImpressionShare_);
     }
-    if (((bitField3_ & 0x00008000) != 0)) {
+    if (((bitField3_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(138, searchBudgetLostImpressionShare_);
     }
-    if (((bitField3_ & 0x00010000) != 0)) {
+    if (((bitField3_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(139, searchBudgetLostTopImpressionShare_);
     }
-    if (((bitField3_ & 0x00020000) != 0)) {
+    if (((bitField3_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(140, searchClickShare_);
     }
-    if (((bitField3_ & 0x00040000) != 0)) {
+    if (((bitField3_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(141, searchExactMatchImpressionShare_);
     }
-    if (((bitField3_ & 0x00080000) != 0)) {
+    if (((bitField3_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(142, searchImpressionShare_);
     }
-    if (((bitField3_ & 0x00100000) != 0)) {
+    if (((bitField3_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(143, searchRankLostAbsoluteTopImpressionShare_);
     }
-    if (((bitField3_ & 0x00200000) != 0)) {
+    if (((bitField3_ & 0x00400000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(144, searchRankLostImpressionShare_);
     }
-    if (((bitField3_ & 0x00400000) != 0)) {
+    if (((bitField3_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(145, searchRankLostTopImpressionShare_);
     }
-    if (((bitField3_ & 0x00800000) != 0)) {
+    if (((bitField3_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(146, searchTopImpressionShare_);
     }
-    if (((bitField3_ & 0x02000000) != 0)) {
+    if (((bitField3_ & 0x04000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(147, speedScore_);
     }
-    if (((bitField3_ & 0x10000000) != 0)) {
+    if (((bitField3_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(148, topImpressionPercentage_);
     }
-    if (((bitField3_ & 0x20000000) != 0)) {
+    if (((bitField3_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(149, validAcceleratedMobilePagesClicksPercentage_);
     }
-    if (((bitField3_ & 0x40000000) != 0)) {
+    if (((bitField3_ & 0x80000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(150, valuePerAllConversions_);
     }
-    if (((bitField4_ & 0x00000001) != 0)) {
+    if (((bitField4_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(151, valuePerConversion_);
     }
-    if (((bitField4_ & 0x00000004) != 0)) {
+    if (((bitField4_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(152, valuePerCurrentModelAttributedConversion_);
     }
-    if (((bitField4_ & 0x00000200) != 0)) {
+    if (((bitField4_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(155, viewThroughConversions_);
     }
-    if (((bitField1_ & 0x00000800) != 0)) {
+    if (((bitField1_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(156, combinedClicks_);
     }
-    if (((bitField1_ & 0x00001000) != 0)) {
+    if (((bitField1_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(157, combinedClicksPerQuery_);
     }
-    if (((bitField1_ & 0x00002000) != 0)) {
+    if (((bitField1_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(158, combinedQueries_);
     }
-    if (((bitField1_ & 0x00004000) != 0)) {
+    if (((bitField1_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(159, contentBudgetLostImpressionShare_);
     }
-    if (((bitField1_ & 0x00008000) != 0)) {
+    if (((bitField1_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(160, contentImpressionShare_);
     }
-    if (((bitField1_ & 0x00010000) != 0)) {
+    if (((bitField1_ & 0x00020000) != 0)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(161, conversionLastReceivedRequestDateTime_);
     }
-    if (((bitField1_ & 0x00020000) != 0)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(162, conversionLastConversionDate_);
-    }
     if (((bitField1_ & 0x00040000) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(163, contentRankLostImpressionShare_);
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(162, conversionLastConversionDate_);
     }
     if (((bitField1_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(164, conversionsFromInteractionsRate_);
+        .computeDoubleSize(163, contentRankLostImpressionShare_);
     }
     if (((bitField1_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(165, conversionsValue_);
+        .computeDoubleSize(164, conversionsFromInteractionsRate_);
     }
-    if (((bitField1_ & 0x00800000) != 0)) {
+    if (((bitField1_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(166, conversionsValuePerCost_);
+        .computeDoubleSize(165, conversionsValue_);
     }
     if (((bitField1_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(167, conversionsFromInteractionsValuePerInteraction_);
+        .computeDoubleSize(166, conversionsValuePerCost_);
     }
     if (((bitField1_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(168, conversions_);
+        .computeDoubleSize(167, conversionsFromInteractionsValuePerInteraction_);
     }
-    if (((bitField1_ & 0x08000000) != 0)) {
+    if (((bitField1_ & 0x04000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(169, costMicros_);
+        .computeDoubleSize(168, conversions_);
     }
     if (((bitField1_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(170, costPerAllConversions_);
+        .computeInt64Size(169, costMicros_);
     }
     if (((bitField1_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(171, costPerConversion_);
+        .computeDoubleSize(170, costPerAllConversions_);
     }
     if (((bitField1_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(172, costPerCurrentModelAttributedConversion_);
+        .computeDoubleSize(171, costPerConversion_);
     }
     if (((bitField1_ & 0x80000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(173, crossDeviceConversions_);
+        .computeDoubleSize(172, costPerCurrentModelAttributedConversion_);
     }
-    if (((bitField2_ & 0x00000010) != 0)) {
+    if (((bitField2_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(174, ctr_);
+        .computeDoubleSize(173, crossDeviceConversions_);
     }
     if (((bitField2_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(175, currentModelAttributedConversions_);
+        .computeDoubleSize(174, ctr_);
     }
     if (((bitField2_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(176, currentModelAttributedConversionsFromInteractionsRate_);
+        .computeDoubleSize(175, currentModelAttributedConversions_);
     }
     if (((bitField2_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(177, currentModelAttributedConversionsFromInteractionsValuePerInteraction_);
+        .computeDoubleSize(176, currentModelAttributedConversionsFromInteractionsRate_);
     }
     if (((bitField2_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(178, currentModelAttributedConversionsValue_);
+        .computeDoubleSize(177, currentModelAttributedConversionsFromInteractionsValuePerInteraction_);
     }
     if (((bitField2_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(179, currentModelAttributedConversionsValuePerCost_);
+        .computeDoubleSize(178, currentModelAttributedConversionsValue_);
     }
     if (((bitField2_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(180, engagementRate_);
+        .computeDoubleSize(179, currentModelAttributedConversionsValuePerCost_);
     }
     if (((bitField2_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(180, engagementRate_);
+    }
+    if (((bitField2_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(181, engagements_);
     }
@@ -9453,111 +10614,111 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(212, bounceRate_);
     }
-    if (((bitField2_ & 0x00001000) != 0)) {
+    if (((bitField2_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(213, hotelAverageLeadValueMicros_);
     }
-    if (((bitField2_ & 0x00008000) != 0)) {
+    if (((bitField2_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(214, hotelPriceDifferencePercentage_);
     }
-    if (((bitField2_ & 0x00010000) != 0)) {
+    if (((bitField2_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(215, hotelEligibleImpressions_);
     }
-    if (((bitField2_ & 0x00020000) != 0)) {
+    if (((bitField2_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(216, historicalQualityScore_);
     }
-    if (((bitField2_ & 0x00040000) != 0)) {
+    if (((bitField2_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(217, gmailForwards_);
     }
-    if (((bitField2_ & 0x00080000) != 0)) {
+    if (((bitField2_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(218, gmailSaves_);
     }
-    if (((bitField2_ & 0x00100000) != 0)) {
+    if (((bitField2_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(219, gmailSecondaryClicks_);
     }
-    if (((bitField2_ & 0x00200000) != 0)) {
+    if (((bitField2_ & 0x00400000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(220, impressionsFromStoreReach_);
     }
-    if (((bitField2_ & 0x00400000) != 0)) {
+    if (((bitField2_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(221, impressions_);
     }
-    if (((bitField2_ & 0x00800000) != 0)) {
+    if (((bitField2_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(222, interactionRate_);
     }
-    if (((bitField2_ & 0x01000000) != 0)) {
+    if (((bitField2_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(223, interactions_);
     }
-    if (((bitField2_ & 0x02000000) != 0)) {
+    if (((bitField2_ & 0x04000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(224, invalidClickRate_);
     }
-    if (((bitField2_ & 0x04000000) != 0)) {
+    if (((bitField2_ & 0x08000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(225, invalidClicks_);
     }
-    if (((bitField2_ & 0x20000000) != 0)) {
+    if (((bitField2_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(226, messageChats_);
     }
-    if (((bitField2_ & 0x40000000) != 0)) {
+    if (((bitField2_ & 0x80000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(227, messageImpressions_);
     }
-    if (((bitField2_ & 0x80000000) != 0)) {
+    if (((bitField3_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(228, messageChatRate_);
     }
-    if (((bitField3_ & 0x00000001) != 0)) {
+    if (((bitField3_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(229, mobileFriendlyClicksPercentage_);
     }
-    if (((bitField3_ & 0x00000008) != 0)) {
+    if (((bitField3_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(230, organicClicks_);
     }
-    if (((bitField3_ & 0x00000010) != 0)) {
+    if (((bitField3_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(231, organicClicksPerQuery_);
     }
-    if (((bitField3_ & 0x00000020) != 0)) {
+    if (((bitField3_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(232, organicImpressions_);
     }
-    if (((bitField3_ & 0x00000040) != 0)) {
+    if (((bitField3_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(233, organicImpressionsPerQuery_);
     }
-    if (((bitField3_ & 0x00000080) != 0)) {
+    if (((bitField3_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(234, organicQueries_);
     }
-    if (((bitField3_ & 0x00000100) != 0)) {
+    if (((bitField3_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(235, percentNewVisitors_);
     }
-    if (((bitField3_ & 0x00000200) != 0)) {
+    if (((bitField3_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(236, phoneCalls_);
     }
-    if (((bitField3_ & 0x00000400) != 0)) {
+    if (((bitField3_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(237, phoneImpressions_);
     }
-    if (((bitField3_ & 0x00000800) != 0)) {
+    if (((bitField3_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(238, phoneThroughRate_);
     }
-    if (((bitField3_ & 0x00001000) != 0)) {
+    if (((bitField3_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(239, relativeCtr_);
     }
@@ -9569,19 +10730,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(241, allConversionsByConversionDate_);
     }
-    if (((bitField1_ & 0x00200000) != 0)) {
+    if (((bitField1_ & 0x00400000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(242, conversionsValueByConversionDate_);
     }
-    if (((bitField1_ & 0x04000000) != 0)) {
+    if (((bitField1_ & 0x08000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(243, conversionsByConversionDate_);
     }
-    if (((bitField3_ & 0x80000000) != 0)) {
+    if (((bitField4_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(244, valuePerAllConversionsByConversionDate_);
     }
-    if (((bitField4_ & 0x00000002) != 0)) {
+    if (((bitField4_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(245, valuePerConversionsByConversionDate_);
     }
@@ -9589,18 +10750,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(246, skAdNetworkInstalls_);
     }
-    if (((bitField3_ & 0x00000002) != 0)) {
+    if (((bitField3_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(247, optimizationScoreUplift_);
     }
-    if (((bitField3_ & 0x00000004) != 0)) {
+    if (((bitField3_ & 0x00000008) != 0)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(248, optimizationScoreUrl_);
     }
-    if (((bitField3_ & 0x08000000) != 0)) {
+    if (((bitField3_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(250, averageTargetRoas_);
     }
-    if (((bitField2_ & 0x00000002) != 0)) {
+    if (((bitField2_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(253, crossDeviceConversionsValue_);
     }
@@ -9612,11 +10773,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(255, biddableAppPostInstallConversions_);
     }
-    if (((bitField2_ & 0x00002000) != 0)) {
+    if (((bitField2_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(256, hotelCommissionRateMicros_);
     }
-    if (((bitField2_ & 0x00004000) != 0)) {
+    if (((bitField2_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(257, hotelExpectedCommissionCost_);
     }
@@ -9656,67 +10817,67 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(266, publisherUnknownClicks_);
     }
-    if (((bitField4_ & 0x00000400) != 0)) {
+    if (((bitField4_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(267, allConversionsFromLocationAssetClickToCall_);
     }
-    if (((bitField4_ & 0x00000800) != 0)) {
+    if (((bitField4_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(268, allConversionsFromLocationAssetDirections_);
     }
-    if (((bitField4_ & 0x00001000) != 0)) {
+    if (((bitField4_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(269, allConversionsFromLocationAssetMenu_);
     }
-    if (((bitField4_ & 0x00002000) != 0)) {
+    if (((bitField4_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(270, allConversionsFromLocationAssetOrder_);
     }
-    if (((bitField4_ & 0x00004000) != 0)) {
+    if (((bitField4_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(271, allConversionsFromLocationAssetOtherEngagement_);
     }
-    if (((bitField4_ & 0x00008000) != 0)) {
+    if (((bitField4_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(272, allConversionsFromLocationAssetStoreVisits_);
     }
-    if (((bitField4_ & 0x00010000) != 0)) {
+    if (((bitField4_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(273, allConversionsFromLocationAssetWebsite_);
     }
-    if (((bitField4_ & 0x00020000) != 0)) {
+    if (((bitField4_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(274, eligibleImpressionsFromLocationAssetStoreReach_);
     }
-    if (((bitField4_ & 0x00040000) != 0)) {
+    if (((bitField4_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(275, viewThroughConversionsFromLocationAssetClickToCall_);
     }
-    if (((bitField4_ & 0x00080000) != 0)) {
+    if (((bitField4_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(276, viewThroughConversionsFromLocationAssetDirections_);
     }
-    if (((bitField4_ & 0x00100000) != 0)) {
+    if (((bitField4_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(277, viewThroughConversionsFromLocationAssetMenu_);
     }
-    if (((bitField4_ & 0x00200000) != 0)) {
+    if (((bitField4_ & 0x00400000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(278, viewThroughConversionsFromLocationAssetOrder_);
     }
-    if (((bitField4_ & 0x00400000) != 0)) {
+    if (((bitField4_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(279, viewThroughConversionsFromLocationAssetOtherEngagement_);
     }
-    if (((bitField4_ & 0x00800000) != 0)) {
+    if (((bitField4_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(280, viewThroughConversionsFromLocationAssetStoreVisits_);
     }
-    if (((bitField4_ & 0x01000000) != 0)) {
+    if (((bitField4_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(281, viewThroughConversionsFromLocationAssetWebsite_);
     }
-    if (((bitField3_ & 0x04000000) != 0)) {
+    if (((bitField3_ & 0x08000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(290, averageTargetCpaMicros_);
     }
@@ -9724,7 +10885,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(292, skAdNetworkTotalConversions_);
     }
-    if (((bitField1_ & 0x00400000) != 0)) {
+    if (((bitField1_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(293, newCustomerLifetimeValue_);
     }
@@ -9732,87 +10893,87 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(294, allNewCustomerLifetimeValue_);
     }
-    if (((bitField3_ & 0x01000000) != 0)) {
+    if (((bitField3_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(295, getSearchVolume());
     }
-    if (((bitField4_ & 0x02000000) != 0)) {
+    if (((bitField4_ & 0x04000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(296, orders_);
     }
-    if (((bitField4_ & 0x04000000) != 0)) {
+    if (((bitField4_ & 0x08000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(297, averageOrderValueMicros_);
     }
-    if (((bitField4_ & 0x08000000) != 0)) {
+    if (((bitField4_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(298, averageCartSize_);
     }
-    if (((bitField4_ & 0x10000000) != 0)) {
+    if (((bitField4_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(299, costOfGoodsSoldMicros_);
     }
-    if (((bitField4_ & 0x20000000) != 0)) {
+    if (((bitField4_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(300, grossProfitMicros_);
     }
-    if (((bitField4_ & 0x40000000) != 0)) {
+    if (((bitField4_ & 0x80000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(301, grossProfitMargin_);
     }
-    if (((bitField4_ & 0x80000000) != 0)) {
+    if (((bitField5_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(302, revenueMicros_);
     }
-    if (((bitField5_ & 0x00000001) != 0)) {
+    if (((bitField5_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(303, unitsSold_);
     }
-    if (((bitField5_ & 0x00000002) != 0)) {
+    if (((bitField5_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(304, crossSellCostOfGoodsSoldMicros_);
     }
-    if (((bitField5_ & 0x00000004) != 0)) {
+    if (((bitField5_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(305, crossSellGrossProfitMicros_);
     }
-    if (((bitField5_ & 0x00000008) != 0)) {
+    if (((bitField5_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(306, crossSellRevenueMicros_);
     }
-    if (((bitField5_ & 0x00000010) != 0)) {
+    if (((bitField5_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(307, crossSellUnitsSold_);
     }
-    if (((bitField5_ & 0x00000020) != 0)) {
+    if (((bitField5_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(308, leadCostOfGoodsSoldMicros_);
     }
-    if (((bitField5_ & 0x00000040) != 0)) {
+    if (((bitField5_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(309, leadGrossProfitMicros_);
     }
-    if (((bitField5_ & 0x00000080) != 0)) {
+    if (((bitField5_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(310, leadRevenueMicros_);
     }
-    if (((bitField5_ & 0x00000100) != 0)) {
+    if (((bitField5_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(311, leadUnitsSold_);
     }
-    if (((bitField2_ & 0x00000004) != 0)) {
+    if (((bitField2_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(312, crossDeviceConversionsValueMicros_);
     }
-    if (((bitField5_ & 0x00000200) != 0)) {
+    if (((bitField5_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(319, uniqueUsers_);
     }
-    if (((bitField5_ & 0x00000400) != 0)) {
+    if (((bitField5_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(320, averageImpressionFrequencyPerUser_);
     }
-    if (((bitField5_ & 0x00000800) != 0)) {
+    if (((bitField5_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(341, linkedEntitiesCount_);
     }
@@ -9824,51 +10985,51 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 2 * getLinkedSampleEntitiesList().size();
     }
-    if (((bitField5_ & 0x00001000) != 0)) {
+    if (((bitField5_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(348, assetPinnedTotalCount_);
     }
-    if (((bitField5_ & 0x00002000) != 0)) {
+    if (((bitField5_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(349, assetPinnedAsHeadlinePositionOneCount_);
     }
-    if (((bitField5_ & 0x00004000) != 0)) {
+    if (((bitField5_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(350, assetPinnedAsHeadlinePositionTwoCount_);
     }
-    if (((bitField5_ & 0x00008000) != 0)) {
+    if (((bitField5_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(351, assetPinnedAsHeadlinePositionThreeCount_);
     }
-    if (((bitField5_ & 0x00010000) != 0)) {
+    if (((bitField5_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(352, assetPinnedAsDescriptionPositionOneCount_);
     }
-    if (((bitField5_ & 0x00020000) != 0)) {
+    if (((bitField5_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(353, assetPinnedAsDescriptionPositionTwoCount_);
     }
-    if (((bitField5_ & 0x00040000) != 0)) {
+    if (((bitField5_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(365, storeVisitsLastClickModelAttributedConversions_);
     }
-    if (((bitField5_ & 0x00080000) != 0)) {
+    if (((bitField5_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(366, resultsConversionsPurchase_);
     }
-    if (((bitField2_ & 0x08000000) != 0)) {
+    if (((bitField2_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(370, generalInvalidClickRate_);
     }
-    if (((bitField2_ & 0x10000000) != 0)) {
+    if (((bitField2_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(371, generalInvalidClicks_);
     }
-    if (((bitField2_ & 0x00000001) != 0)) {
+    if (((bitField2_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(372, crossDeviceConversionsByConversionDate_);
     }
-    if (((bitField2_ & 0x00000008) != 0)) {
+    if (((bitField2_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(373, crossDeviceConversionsValueByConversionDate_);
     }
@@ -9876,103 +11037,103 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(378, biddableCohortAppPostInstallConversions_);
     }
-    if (((bitField5_ & 0x00800000) != 0)) {
+    if (((bitField5_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(380, coviewedImpressions_);
     }
-    if (((bitField5_ & 0x01000000) != 0)) {
+    if (((bitField5_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(381, primaryImpressions_);
     }
-    if (((bitField5_ & 0x02000000) != 0)) {
+    if (((bitField5_ & 0x04000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(382, platformComparableConversionsFromInteractionsRate_);
     }
-    if (((bitField5_ & 0x04000000) != 0)) {
+    if (((bitField5_ & 0x08000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(383, platformComparableConversions_);
     }
-    if (((bitField5_ & 0x08000000) != 0)) {
+    if (((bitField5_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(384, platformComparableConversionsValue_);
     }
-    if (((bitField5_ & 0x10000000) != 0)) {
+    if (((bitField5_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(385, platformComparableConversionsValuePerCost_);
     }
-    if (((bitField5_ & 0x20000000) != 0)) {
+    if (((bitField5_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(386, platformComparableConversionsByConversionDate_);
     }
-    if (((bitField5_ & 0x40000000) != 0)) {
+    if (((bitField5_ & 0x80000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(387, platformComparableConversionsValueByConversionDate_);
     }
-    if (((bitField5_ & 0x80000000) != 0)) {
+    if (((bitField6_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(388, platformComparableConversionsFromInteractionsValuePerInteraction_);
     }
-    if (((bitField6_ & 0x00000001) != 0)) {
+    if (((bitField6_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(389, costPerPlatformComparableConversion_);
     }
-    if (((bitField6_ & 0x00000002) != 0)) {
+    if (((bitField6_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(390, valuePerPlatformComparableConversion_);
     }
-    if (((bitField6_ & 0x00000004) != 0)) {
+    if (((bitField6_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(391, valuePerPlatformComparableConversionsByConversionDate_);
     }
-    if (((bitField6_ & 0x00000008) != 0)) {
+    if (((bitField6_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(392, costConvertedCurrencyPerPlatformComparableConversion_);
     }
-    if (((bitField6_ & 0x00000010) != 0)) {
+    if (((bitField6_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(393, uniqueUsersTwoPlus_);
     }
-    if (((bitField6_ & 0x00000020) != 0)) {
+    if (((bitField6_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(394, uniqueUsersThreePlus_);
     }
-    if (((bitField6_ & 0x00000040) != 0)) {
+    if (((bitField6_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(395, uniqueUsersFourPlus_);
     }
-    if (((bitField6_ & 0x00000080) != 0)) {
+    if (((bitField6_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(396, uniqueUsersFivePlus_);
     }
-    if (((bitField6_ & 0x00000100) != 0)) {
+    if (((bitField6_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(397, uniqueUsersTenPlus_);
     }
-    if (((bitField6_ & 0x00000200) != 0)) {
+    if (((bitField6_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(398, valueAdjustment_);
     }
-    if (((bitField6_ & 0x00000400) != 0)) {
+    if (((bitField6_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(399, allValueAdjustment_);
     }
-    if (((bitField6_ & 0x00000800) != 0)) {
+    if (((bitField6_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(400, clicksUniqueQueryClusters_);
     }
-    if (((bitField6_ & 0x00001000) != 0)) {
+    if (((bitField6_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(401, conversionsUniqueQueryClusters_);
     }
-    if (((bitField6_ & 0x00002000) != 0)) {
+    if (((bitField6_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(402, impressionsUniqueQueryClusters_);
     }
-    if (((bitField6_ & 0x00004000) != 0)) {
+    if (((bitField6_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(403, videoWatchTimeDurationMillis_);
     }
-    if (((bitField6_ & 0x00008000) != 0)) {
+    if (((bitField6_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(404, averageVideoWatchTimeDurationMillis_);
     }
@@ -9980,153 +11141,265 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(405, trueviewAverageCpv_);
     }
-    if (((bitField4_ & 0x00000080) != 0)) {
+    if (((bitField4_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(406, videoTrueviewViewRate_);
     }
-    if (((bitField4_ & 0x00000100) != 0)) {
+    if (((bitField4_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(407, videoTrueviewViews_);
     }
-    if (((bitField5_ & 0x00100000) != 0)) {
+    if (((bitField5_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(408, videoTrueviewViewRateInFeed_);
     }
-    if (((bitField5_ & 0x00200000) != 0)) {
+    if (((bitField5_ & 0x00400000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(409, videoTrueviewViewRateInStream_);
     }
-    if (((bitField5_ & 0x00400000) != 0)) {
+    if (((bitField5_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(410, videoTrueviewViewRateShorts_);
     }
-    if (((bitField6_ & 0x00010000) != 0)) {
+    if (((bitField6_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(411, svr_);
     }
-    if (((bitField6_ & 0x00020000) != 0)) {
+    if (((bitField6_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(412, activeViewAudibilityMeasurableImpressions_);
     }
-    if (((bitField6_ & 0x00040000) != 0)) {
+    if (((bitField6_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(413, activeViewAudibilityMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00080000) != 0)) {
+    if (((bitField6_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(414, activeViewAudibilityInvalidMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00100000) != 0)) {
+    if (((bitField6_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(415, activeViewAudibilityInvalidGivtMeasurableImpressionsRate_);
     }
-    if (((bitField6_ & 0x00200000) != 0)) {
+    if (((bitField6_ & 0x00400000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(416, activeViewAudibleImpressions_);
     }
-    if (((bitField6_ & 0x00400000) != 0)) {
+    if (((bitField6_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(417, activeViewAudibleImpressionsRate_);
     }
-    if (((bitField6_ & 0x00800000) != 0)) {
+    if (((bitField6_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(418, activeViewAudibleTwoSecondsImpressions_);
     }
-    if (((bitField6_ & 0x01000000) != 0)) {
+    if (((bitField6_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(419, activeViewAudibleTwoSecondsImpressionsRate_);
     }
-    if (((bitField6_ & 0x02000000) != 0)) {
+    if (((bitField6_ & 0x04000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(420, activeViewAudibleThirtySecondsImpressions_);
     }
-    if (((bitField6_ & 0x04000000) != 0)) {
+    if (((bitField6_ & 0x08000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(421, activeViewAudibleThirtySecondsImpressionsRate_);
     }
-    if (((bitField6_ & 0x08000000) != 0)) {
+    if (((bitField6_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(422, activeViewAudibleQuartileP25Rate_);
     }
-    if (((bitField6_ & 0x10000000) != 0)) {
+    if (((bitField6_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(423, activeViewAudibleQuartileP50Rate_);
     }
-    if (((bitField6_ & 0x20000000) != 0)) {
+    if (((bitField6_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(424, activeViewAudibleQuartileP75Rate_);
     }
-    if (((bitField6_ & 0x40000000) != 0)) {
+    if (((bitField6_ & 0x80000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(425, activeViewAudibleQuartileP100Rate_);
     }
-    if (((bitField6_ & 0x80000000) != 0)) {
+    if (((bitField7_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(426, biddableIndirectInstallFirstInAppConversionMicros_);
     }
-    if (((bitField7_ & 0x00000001) != 0)) {
+    if (((bitField7_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(427, allAverageCartSize_);
     }
-    if (((bitField7_ & 0x00000002) != 0)) {
+    if (((bitField7_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(428, allAverageOrderValueMicros_);
     }
-    if (((bitField7_ & 0x00000004) != 0)) {
+    if (((bitField7_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(429, allCostOfGoodsSoldMicros_);
     }
-    if (((bitField7_ & 0x00000008) != 0)) {
+    if (((bitField7_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(430, allCrossSellCostOfGoodsSoldMicros_);
     }
-    if (((bitField7_ & 0x00000010) != 0)) {
+    if (((bitField7_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(431, allCrossSellGrossProfitMicros_);
     }
-    if (((bitField7_ & 0x00000020) != 0)) {
+    if (((bitField7_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(432, allCrossSellRevenueMicros_);
     }
-    if (((bitField7_ & 0x00000040) != 0)) {
+    if (((bitField7_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(433, allCrossSellUnitsSold_);
     }
-    if (((bitField7_ & 0x00000080) != 0)) {
+    if (((bitField7_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(434, allGrossProfitMargin_);
     }
-    if (((bitField7_ & 0x00000100) != 0)) {
+    if (((bitField7_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(435, allGrossProfitMicros_);
     }
-    if (((bitField7_ & 0x00000200) != 0)) {
+    if (((bitField7_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(436, allLeadCostOfGoodsSoldMicros_);
     }
-    if (((bitField7_ & 0x00000400) != 0)) {
+    if (((bitField7_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(437, allLeadGrossProfitMicros_);
     }
-    if (((bitField7_ & 0x00000800) != 0)) {
+    if (((bitField7_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(438, allLeadRevenueMicros_);
     }
-    if (((bitField7_ & 0x00001000) != 0)) {
+    if (((bitField7_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(439, allLeadUnitsSold_);
     }
-    if (((bitField7_ & 0x00002000) != 0)) {
+    if (((bitField7_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(440, allOrders_);
     }
-    if (((bitField7_ & 0x00004000) != 0)) {
+    if (((bitField7_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(441, allRevenueMicros_);
     }
-    if (((bitField7_ & 0x00008000) != 0)) {
+    if (((bitField7_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(442, allUnitsSold_);
+    }
+    if (((bitField1_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(443, controlClicks_);
+    }
+    if (((bitField7_ & 0x00020000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(446, controlCostPerConversion_);
+    }
+    if (((bitField7_ & 0x00040000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(447, costPerConversionMarginOfError_);
+    }
+    if (((bitField7_ & 0x00080000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(448, costPerConversionPValue_);
+    }
+    if (((bitField7_ & 0x00100000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(449, costPerConversionChangePointEstimate_);
+    }
+    if (((bitField7_ & 0x00200000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(450, controlConversions_);
+    }
+    if (((bitField7_ & 0x00400000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(451, conversionsAbsoluteChangeMarginOfError_);
+    }
+    if (((bitField7_ & 0x00800000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(452, conversionsAbsoluteChangePValue_);
+    }
+    if (((bitField7_ & 0x01000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(453, conversionsAbsoluteChangePointEstimate_);
+    }
+    if (((bitField7_ & 0x02000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(454, controlConversionValuePerCost_);
+    }
+    if (((bitField7_ & 0x04000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(455, conversionValuePerCostMarginOfError_);
+    }
+    if (((bitField7_ & 0x08000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(456, conversionValuePerCostPValue_);
+    }
+    if (((bitField7_ & 0x10000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(457, conversionValuePerCostChangePointEstimate_);
+    }
+    if (((bitField7_ & 0x20000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(458, controlCostMicros_);
+    }
+    if (((bitField7_ & 0x40000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(459, costMicrosMarginOfError_);
+    }
+    if (((bitField7_ & 0x80000000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(460, costMicrosPValue_);
+    }
+    if (((bitField8_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(461, costMicrosChangePointEstimate_);
+    }
+    if (((bitField8_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(462, controlImpressions_);
+    }
+    if (((bitField8_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(463, impressionsMarginOfError_);
+    }
+    if (((bitField8_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(464, impressionsPValue_);
+    }
+    if (((bitField8_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(465, impressionsPointEstimate_);
+    }
+    if (((bitField8_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(466, clicksMarginOfError_);
+    }
+    if (((bitField8_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(467, clicksPValue_);
+    }
+    if (((bitField8_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(468, clicksPointEstimate_);
+    }
+    if (((bitField8_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(469, controlConversionValue_);
+    }
+    if (((bitField8_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(470, conversionValueMarginOfError_);
+    }
+    if (((bitField8_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(471, conversionValuePValue_);
+    }
+    if (((bitField8_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(472, conversionValueChangePointEstimate_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -10396,6 +11669,11 @@ private static final long serialVersionUID = 0L;
     if (hasClicks()) {
       if (getClicks()
           != other.getClicks()) return false;
+    }
+    if (hasControlClicks() != other.hasControlClicks()) return false;
+    if (hasControlClicks()) {
+      if (getControlClicks()
+          != other.getControlClicks()) return false;
     }
     if (hasCombinedClicks() != other.hasCombinedClicks()) return false;
     if (hasCombinedClicks()) {
@@ -11517,6 +12795,166 @@ private static final long serialVersionUID = 0L;
           != java.lang.Double.doubleToLongBits(
               other.getAllUnitsSold())) return false;
     }
+    if (hasControlCostPerConversion() != other.hasControlCostPerConversion()) return false;
+    if (hasControlCostPerConversion()) {
+      if (java.lang.Double.doubleToLongBits(getControlCostPerConversion())
+          != java.lang.Double.doubleToLongBits(
+              other.getControlCostPerConversion())) return false;
+    }
+    if (hasCostPerConversionMarginOfError() != other.hasCostPerConversionMarginOfError()) return false;
+    if (hasCostPerConversionMarginOfError()) {
+      if (java.lang.Double.doubleToLongBits(getCostPerConversionMarginOfError())
+          != java.lang.Double.doubleToLongBits(
+              other.getCostPerConversionMarginOfError())) return false;
+    }
+    if (hasCostPerConversionPValue() != other.hasCostPerConversionPValue()) return false;
+    if (hasCostPerConversionPValue()) {
+      if (java.lang.Double.doubleToLongBits(getCostPerConversionPValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getCostPerConversionPValue())) return false;
+    }
+    if (hasCostPerConversionChangePointEstimate() != other.hasCostPerConversionChangePointEstimate()) return false;
+    if (hasCostPerConversionChangePointEstimate()) {
+      if (java.lang.Double.doubleToLongBits(getCostPerConversionChangePointEstimate())
+          != java.lang.Double.doubleToLongBits(
+              other.getCostPerConversionChangePointEstimate())) return false;
+    }
+    if (hasControlConversions() != other.hasControlConversions()) return false;
+    if (hasControlConversions()) {
+      if (java.lang.Double.doubleToLongBits(getControlConversions())
+          != java.lang.Double.doubleToLongBits(
+              other.getControlConversions())) return false;
+    }
+    if (hasConversionsAbsoluteChangeMarginOfError() != other.hasConversionsAbsoluteChangeMarginOfError()) return false;
+    if (hasConversionsAbsoluteChangeMarginOfError()) {
+      if (java.lang.Double.doubleToLongBits(getConversionsAbsoluteChangeMarginOfError())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversionsAbsoluteChangeMarginOfError())) return false;
+    }
+    if (hasConversionsAbsoluteChangePValue() != other.hasConversionsAbsoluteChangePValue()) return false;
+    if (hasConversionsAbsoluteChangePValue()) {
+      if (java.lang.Double.doubleToLongBits(getConversionsAbsoluteChangePValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversionsAbsoluteChangePValue())) return false;
+    }
+    if (hasConversionsAbsoluteChangePointEstimate() != other.hasConversionsAbsoluteChangePointEstimate()) return false;
+    if (hasConversionsAbsoluteChangePointEstimate()) {
+      if (java.lang.Double.doubleToLongBits(getConversionsAbsoluteChangePointEstimate())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversionsAbsoluteChangePointEstimate())) return false;
+    }
+    if (hasControlConversionValuePerCost() != other.hasControlConversionValuePerCost()) return false;
+    if (hasControlConversionValuePerCost()) {
+      if (java.lang.Double.doubleToLongBits(getControlConversionValuePerCost())
+          != java.lang.Double.doubleToLongBits(
+              other.getControlConversionValuePerCost())) return false;
+    }
+    if (hasConversionValuePerCostMarginOfError() != other.hasConversionValuePerCostMarginOfError()) return false;
+    if (hasConversionValuePerCostMarginOfError()) {
+      if (java.lang.Double.doubleToLongBits(getConversionValuePerCostMarginOfError())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversionValuePerCostMarginOfError())) return false;
+    }
+    if (hasConversionValuePerCostPValue() != other.hasConversionValuePerCostPValue()) return false;
+    if (hasConversionValuePerCostPValue()) {
+      if (java.lang.Double.doubleToLongBits(getConversionValuePerCostPValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversionValuePerCostPValue())) return false;
+    }
+    if (hasConversionValuePerCostChangePointEstimate() != other.hasConversionValuePerCostChangePointEstimate()) return false;
+    if (hasConversionValuePerCostChangePointEstimate()) {
+      if (java.lang.Double.doubleToLongBits(getConversionValuePerCostChangePointEstimate())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversionValuePerCostChangePointEstimate())) return false;
+    }
+    if (hasControlCostMicros() != other.hasControlCostMicros()) return false;
+    if (hasControlCostMicros()) {
+      if (getControlCostMicros()
+          != other.getControlCostMicros()) return false;
+    }
+    if (hasCostMicrosMarginOfError() != other.hasCostMicrosMarginOfError()) return false;
+    if (hasCostMicrosMarginOfError()) {
+      if (java.lang.Double.doubleToLongBits(getCostMicrosMarginOfError())
+          != java.lang.Double.doubleToLongBits(
+              other.getCostMicrosMarginOfError())) return false;
+    }
+    if (hasCostMicrosPValue() != other.hasCostMicrosPValue()) return false;
+    if (hasCostMicrosPValue()) {
+      if (java.lang.Double.doubleToLongBits(getCostMicrosPValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getCostMicrosPValue())) return false;
+    }
+    if (hasCostMicrosChangePointEstimate() != other.hasCostMicrosChangePointEstimate()) return false;
+    if (hasCostMicrosChangePointEstimate()) {
+      if (java.lang.Double.doubleToLongBits(getCostMicrosChangePointEstimate())
+          != java.lang.Double.doubleToLongBits(
+              other.getCostMicrosChangePointEstimate())) return false;
+    }
+    if (hasControlImpressions() != other.hasControlImpressions()) return false;
+    if (hasControlImpressions()) {
+      if (getControlImpressions()
+          != other.getControlImpressions()) return false;
+    }
+    if (hasImpressionsMarginOfError() != other.hasImpressionsMarginOfError()) return false;
+    if (hasImpressionsMarginOfError()) {
+      if (java.lang.Double.doubleToLongBits(getImpressionsMarginOfError())
+          != java.lang.Double.doubleToLongBits(
+              other.getImpressionsMarginOfError())) return false;
+    }
+    if (hasImpressionsPValue() != other.hasImpressionsPValue()) return false;
+    if (hasImpressionsPValue()) {
+      if (java.lang.Double.doubleToLongBits(getImpressionsPValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getImpressionsPValue())) return false;
+    }
+    if (hasImpressionsPointEstimate() != other.hasImpressionsPointEstimate()) return false;
+    if (hasImpressionsPointEstimate()) {
+      if (java.lang.Double.doubleToLongBits(getImpressionsPointEstimate())
+          != java.lang.Double.doubleToLongBits(
+              other.getImpressionsPointEstimate())) return false;
+    }
+    if (hasClicksMarginOfError() != other.hasClicksMarginOfError()) return false;
+    if (hasClicksMarginOfError()) {
+      if (java.lang.Double.doubleToLongBits(getClicksMarginOfError())
+          != java.lang.Double.doubleToLongBits(
+              other.getClicksMarginOfError())) return false;
+    }
+    if (hasClicksPValue() != other.hasClicksPValue()) return false;
+    if (hasClicksPValue()) {
+      if (java.lang.Double.doubleToLongBits(getClicksPValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getClicksPValue())) return false;
+    }
+    if (hasClicksPointEstimate() != other.hasClicksPointEstimate()) return false;
+    if (hasClicksPointEstimate()) {
+      if (java.lang.Double.doubleToLongBits(getClicksPointEstimate())
+          != java.lang.Double.doubleToLongBits(
+              other.getClicksPointEstimate())) return false;
+    }
+    if (hasControlConversionValue() != other.hasControlConversionValue()) return false;
+    if (hasControlConversionValue()) {
+      if (java.lang.Double.doubleToLongBits(getControlConversionValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getControlConversionValue())) return false;
+    }
+    if (hasConversionValueMarginOfError() != other.hasConversionValueMarginOfError()) return false;
+    if (hasConversionValueMarginOfError()) {
+      if (java.lang.Double.doubleToLongBits(getConversionValueMarginOfError())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversionValueMarginOfError())) return false;
+    }
+    if (hasConversionValuePValue() != other.hasConversionValuePValue()) return false;
+    if (hasConversionValuePValue()) {
+      if (java.lang.Double.doubleToLongBits(getConversionValuePValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversionValuePValue())) return false;
+    }
+    if (hasConversionValueChangePointEstimate() != other.hasConversionValueChangePointEstimate()) return false;
+    if (hasConversionValueChangePointEstimate()) {
+      if (java.lang.Double.doubleToLongBits(getConversionValueChangePointEstimate())
+          != java.lang.Double.doubleToLongBits(
+              other.getConversionValueChangePointEstimate())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -11742,6 +13180,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CLICKS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getClicks());
+    }
+    if (hasControlClicks()) {
+      hash = (37 * hash) + CONTROL_CLICKS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getControlClicks());
     }
     if (hasCombinedClicks()) {
       hash = (37 * hash) + COMBINED_CLICKS_FIELD_NUMBER;
@@ -12753,6 +14196,141 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getAllUnitsSold()));
     }
+    if (hasControlCostPerConversion()) {
+      hash = (37 * hash) + CONTROL_COST_PER_CONVERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getControlCostPerConversion()));
+    }
+    if (hasCostPerConversionMarginOfError()) {
+      hash = (37 * hash) + COST_PER_CONVERSION_MARGIN_OF_ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCostPerConversionMarginOfError()));
+    }
+    if (hasCostPerConversionPValue()) {
+      hash = (37 * hash) + COST_PER_CONVERSION_P_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCostPerConversionPValue()));
+    }
+    if (hasCostPerConversionChangePointEstimate()) {
+      hash = (37 * hash) + COST_PER_CONVERSION_CHANGE_POINT_ESTIMATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCostPerConversionChangePointEstimate()));
+    }
+    if (hasControlConversions()) {
+      hash = (37 * hash) + CONTROL_CONVERSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getControlConversions()));
+    }
+    if (hasConversionsAbsoluteChangeMarginOfError()) {
+      hash = (37 * hash) + CONVERSIONS_ABSOLUTE_CHANGE_MARGIN_OF_ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversionsAbsoluteChangeMarginOfError()));
+    }
+    if (hasConversionsAbsoluteChangePValue()) {
+      hash = (37 * hash) + CONVERSIONS_ABSOLUTE_CHANGE_P_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversionsAbsoluteChangePValue()));
+    }
+    if (hasConversionsAbsoluteChangePointEstimate()) {
+      hash = (37 * hash) + CONVERSIONS_ABSOLUTE_CHANGE_POINT_ESTIMATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversionsAbsoluteChangePointEstimate()));
+    }
+    if (hasControlConversionValuePerCost()) {
+      hash = (37 * hash) + CONTROL_CONVERSION_VALUE_PER_COST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getControlConversionValuePerCost()));
+    }
+    if (hasConversionValuePerCostMarginOfError()) {
+      hash = (37 * hash) + CONVERSION_VALUE_PER_COST_MARGIN_OF_ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversionValuePerCostMarginOfError()));
+    }
+    if (hasConversionValuePerCostPValue()) {
+      hash = (37 * hash) + CONVERSION_VALUE_PER_COST_P_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversionValuePerCostPValue()));
+    }
+    if (hasConversionValuePerCostChangePointEstimate()) {
+      hash = (37 * hash) + CONVERSION_VALUE_PER_COST_CHANGE_POINT_ESTIMATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversionValuePerCostChangePointEstimate()));
+    }
+    if (hasControlCostMicros()) {
+      hash = (37 * hash) + CONTROL_COST_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getControlCostMicros());
+    }
+    if (hasCostMicrosMarginOfError()) {
+      hash = (37 * hash) + COST_MICROS_MARGIN_OF_ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCostMicrosMarginOfError()));
+    }
+    if (hasCostMicrosPValue()) {
+      hash = (37 * hash) + COST_MICROS_P_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCostMicrosPValue()));
+    }
+    if (hasCostMicrosChangePointEstimate()) {
+      hash = (37 * hash) + COST_MICROS_CHANGE_POINT_ESTIMATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCostMicrosChangePointEstimate()));
+    }
+    if (hasControlImpressions()) {
+      hash = (37 * hash) + CONTROL_IMPRESSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getControlImpressions());
+    }
+    if (hasImpressionsMarginOfError()) {
+      hash = (37 * hash) + IMPRESSIONS_MARGIN_OF_ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getImpressionsMarginOfError()));
+    }
+    if (hasImpressionsPValue()) {
+      hash = (37 * hash) + IMPRESSIONS_P_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getImpressionsPValue()));
+    }
+    if (hasImpressionsPointEstimate()) {
+      hash = (37 * hash) + IMPRESSIONS_POINT_ESTIMATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getImpressionsPointEstimate()));
+    }
+    if (hasClicksMarginOfError()) {
+      hash = (37 * hash) + CLICKS_MARGIN_OF_ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getClicksMarginOfError()));
+    }
+    if (hasClicksPValue()) {
+      hash = (37 * hash) + CLICKS_P_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getClicksPValue()));
+    }
+    if (hasClicksPointEstimate()) {
+      hash = (37 * hash) + CLICKS_POINT_ESTIMATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getClicksPointEstimate()));
+    }
+    if (hasControlConversionValue()) {
+      hash = (37 * hash) + CONTROL_CONVERSION_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getControlConversionValue()));
+    }
+    if (hasConversionValueMarginOfError()) {
+      hash = (37 * hash) + CONVERSION_VALUE_MARGIN_OF_ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversionValueMarginOfError()));
+    }
+    if (hasConversionValuePValue()) {
+      hash = (37 * hash) + CONVERSION_VALUE_P_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversionValuePValue()));
+    }
+    if (hasConversionValueChangePointEstimate()) {
+      hash = (37 * hash) + CONVERSION_VALUE_CHANGE_POINT_ESTIMATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConversionValueChangePointEstimate()));
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -12901,6 +14479,7 @@ private static final long serialVersionUID = 0L;
       bitField5_ = 0;
       bitField6_ = 0;
       bitField7_ = 0;
+      bitField8_ = 0;
       absoluteTopImpressionPercentage_ = 0D;
       activeViewCpm_ = 0D;
       activeViewCtr_ = 0D;
@@ -12944,6 +14523,7 @@ private static final long serialVersionUID = 0L;
       benchmarkCtr_ = 0D;
       bounceRate_ = 0D;
       clicks_ = 0L;
+      controlClicks_ = 0L;
       combinedClicks_ = 0L;
       combinedClicksPerQuery_ = 0D;
       combinedQueries_ = 0L;
@@ -13156,6 +14736,33 @@ private static final long serialVersionUID = 0L;
       allOrders_ = 0D;
       allRevenueMicros_ = 0L;
       allUnitsSold_ = 0D;
+      controlCostPerConversion_ = 0D;
+      costPerConversionMarginOfError_ = 0D;
+      costPerConversionPValue_ = 0D;
+      costPerConversionChangePointEstimate_ = 0D;
+      controlConversions_ = 0D;
+      conversionsAbsoluteChangeMarginOfError_ = 0D;
+      conversionsAbsoluteChangePValue_ = 0D;
+      conversionsAbsoluteChangePointEstimate_ = 0D;
+      controlConversionValuePerCost_ = 0D;
+      conversionValuePerCostMarginOfError_ = 0D;
+      conversionValuePerCostPValue_ = 0D;
+      conversionValuePerCostChangePointEstimate_ = 0D;
+      controlCostMicros_ = 0L;
+      costMicrosMarginOfError_ = 0D;
+      costMicrosPValue_ = 0D;
+      costMicrosChangePointEstimate_ = 0D;
+      controlImpressions_ = 0L;
+      impressionsMarginOfError_ = 0D;
+      impressionsPValue_ = 0D;
+      impressionsPointEstimate_ = 0D;
+      clicksMarginOfError_ = 0D;
+      clicksPValue_ = 0D;
+      clicksPointEstimate_ = 0D;
+      controlConversionValue_ = 0D;
+      conversionValueMarginOfError_ = 0D;
+      conversionValuePValue_ = 0D;
+      conversionValueChangePointEstimate_ = 0D;
       return this;
     }
 
@@ -13190,6 +14797,7 @@ private static final long serialVersionUID = 0L;
       if (bitField5_ != 0) { buildPartial5(result); }
       if (bitField6_ != 0) { buildPartial6(result); }
       if (bitField7_ != 0) { buildPartial7(result); }
+      if (bitField8_ != 0) { buildPartial8(result); }
       onBuilt();
       return result;
     }
@@ -13376,87 +14984,87 @@ private static final long serialVersionUID = 0L;
         to_bitField1_ |= 0x00000400;
       }
       if (((from_bitField1_ & 0x00000800) != 0)) {
-        result.combinedClicks_ = combinedClicks_;
+        result.controlClicks_ = controlClicks_;
         to_bitField1_ |= 0x00000800;
       }
       if (((from_bitField1_ & 0x00001000) != 0)) {
-        result.combinedClicksPerQuery_ = combinedClicksPerQuery_;
+        result.combinedClicks_ = combinedClicks_;
         to_bitField1_ |= 0x00001000;
       }
       if (((from_bitField1_ & 0x00002000) != 0)) {
-        result.combinedQueries_ = combinedQueries_;
+        result.combinedClicksPerQuery_ = combinedClicksPerQuery_;
         to_bitField1_ |= 0x00002000;
       }
       if (((from_bitField1_ & 0x00004000) != 0)) {
-        result.contentBudgetLostImpressionShare_ = contentBudgetLostImpressionShare_;
+        result.combinedQueries_ = combinedQueries_;
         to_bitField1_ |= 0x00004000;
       }
       if (((from_bitField1_ & 0x00008000) != 0)) {
-        result.contentImpressionShare_ = contentImpressionShare_;
+        result.contentBudgetLostImpressionShare_ = contentBudgetLostImpressionShare_;
         to_bitField1_ |= 0x00008000;
       }
       if (((from_bitField1_ & 0x00010000) != 0)) {
-        result.conversionLastReceivedRequestDateTime_ = conversionLastReceivedRequestDateTime_;
+        result.contentImpressionShare_ = contentImpressionShare_;
         to_bitField1_ |= 0x00010000;
       }
       if (((from_bitField1_ & 0x00020000) != 0)) {
-        result.conversionLastConversionDate_ = conversionLastConversionDate_;
+        result.conversionLastReceivedRequestDateTime_ = conversionLastReceivedRequestDateTime_;
         to_bitField1_ |= 0x00020000;
       }
       if (((from_bitField1_ & 0x00040000) != 0)) {
-        result.contentRankLostImpressionShare_ = contentRankLostImpressionShare_;
+        result.conversionLastConversionDate_ = conversionLastConversionDate_;
         to_bitField1_ |= 0x00040000;
       }
       if (((from_bitField1_ & 0x00080000) != 0)) {
-        result.conversionsFromInteractionsRate_ = conversionsFromInteractionsRate_;
+        result.contentRankLostImpressionShare_ = contentRankLostImpressionShare_;
         to_bitField1_ |= 0x00080000;
       }
       if (((from_bitField1_ & 0x00100000) != 0)) {
-        result.conversionsValue_ = conversionsValue_;
+        result.conversionsFromInteractionsRate_ = conversionsFromInteractionsRate_;
         to_bitField1_ |= 0x00100000;
       }
       if (((from_bitField1_ & 0x00200000) != 0)) {
-        result.conversionsValueByConversionDate_ = conversionsValueByConversionDate_;
+        result.conversionsValue_ = conversionsValue_;
         to_bitField1_ |= 0x00200000;
       }
       if (((from_bitField1_ & 0x00400000) != 0)) {
-        result.newCustomerLifetimeValue_ = newCustomerLifetimeValue_;
+        result.conversionsValueByConversionDate_ = conversionsValueByConversionDate_;
         to_bitField1_ |= 0x00400000;
       }
       if (((from_bitField1_ & 0x00800000) != 0)) {
-        result.conversionsValuePerCost_ = conversionsValuePerCost_;
+        result.newCustomerLifetimeValue_ = newCustomerLifetimeValue_;
         to_bitField1_ |= 0x00800000;
       }
       if (((from_bitField1_ & 0x01000000) != 0)) {
-        result.conversionsFromInteractionsValuePerInteraction_ = conversionsFromInteractionsValuePerInteraction_;
+        result.conversionsValuePerCost_ = conversionsValuePerCost_;
         to_bitField1_ |= 0x01000000;
       }
       if (((from_bitField1_ & 0x02000000) != 0)) {
-        result.conversions_ = conversions_;
+        result.conversionsFromInteractionsValuePerInteraction_ = conversionsFromInteractionsValuePerInteraction_;
         to_bitField1_ |= 0x02000000;
       }
       if (((from_bitField1_ & 0x04000000) != 0)) {
-        result.conversionsByConversionDate_ = conversionsByConversionDate_;
+        result.conversions_ = conversions_;
         to_bitField1_ |= 0x04000000;
       }
       if (((from_bitField1_ & 0x08000000) != 0)) {
-        result.costMicros_ = costMicros_;
+        result.conversionsByConversionDate_ = conversionsByConversionDate_;
         to_bitField1_ |= 0x08000000;
       }
       if (((from_bitField1_ & 0x10000000) != 0)) {
-        result.costPerAllConversions_ = costPerAllConversions_;
+        result.costMicros_ = costMicros_;
         to_bitField1_ |= 0x10000000;
       }
       if (((from_bitField1_ & 0x20000000) != 0)) {
-        result.costPerConversion_ = costPerConversion_;
+        result.costPerAllConversions_ = costPerAllConversions_;
         to_bitField1_ |= 0x20000000;
       }
       if (((from_bitField1_ & 0x40000000) != 0)) {
-        result.costPerCurrentModelAttributedConversion_ = costPerCurrentModelAttributedConversion_;
+        result.costPerConversion_ = costPerConversion_;
         to_bitField1_ |= 0x40000000;
       }
       if (((from_bitField1_ & 0x80000000) != 0)) {
-        result.crossDeviceConversions_ = crossDeviceConversions_;
+        result.costPerCurrentModelAttributedConversion_ = costPerCurrentModelAttributedConversion_;
         to_bitField1_ |= 0x80000000;
       }
       result.bitField1_ |= to_bitField1_;
@@ -13466,128 +15074,128 @@ private static final long serialVersionUID = 0L;
       int from_bitField2_ = bitField2_;
       int to_bitField2_ = 0;
       if (((from_bitField2_ & 0x00000001) != 0)) {
-        result.crossDeviceConversionsByConversionDate_ = crossDeviceConversionsByConversionDate_;
+        result.crossDeviceConversions_ = crossDeviceConversions_;
         to_bitField2_ |= 0x00000001;
       }
       if (((from_bitField2_ & 0x00000002) != 0)) {
-        result.crossDeviceConversionsValue_ = crossDeviceConversionsValue_;
+        result.crossDeviceConversionsByConversionDate_ = crossDeviceConversionsByConversionDate_;
         to_bitField2_ |= 0x00000002;
       }
       if (((from_bitField2_ & 0x00000004) != 0)) {
-        result.crossDeviceConversionsValueMicros_ = crossDeviceConversionsValueMicros_;
+        result.crossDeviceConversionsValue_ = crossDeviceConversionsValue_;
         to_bitField2_ |= 0x00000004;
       }
       if (((from_bitField2_ & 0x00000008) != 0)) {
-        result.crossDeviceConversionsValueByConversionDate_ = crossDeviceConversionsValueByConversionDate_;
+        result.crossDeviceConversionsValueMicros_ = crossDeviceConversionsValueMicros_;
         to_bitField2_ |= 0x00000008;
       }
       if (((from_bitField2_ & 0x00000010) != 0)) {
-        result.ctr_ = ctr_;
+        result.crossDeviceConversionsValueByConversionDate_ = crossDeviceConversionsValueByConversionDate_;
         to_bitField2_ |= 0x00000010;
       }
       if (((from_bitField2_ & 0x00000020) != 0)) {
-        result.currentModelAttributedConversions_ = currentModelAttributedConversions_;
+        result.ctr_ = ctr_;
         to_bitField2_ |= 0x00000020;
       }
       if (((from_bitField2_ & 0x00000040) != 0)) {
-        result.currentModelAttributedConversionsFromInteractionsRate_ = currentModelAttributedConversionsFromInteractionsRate_;
+        result.currentModelAttributedConversions_ = currentModelAttributedConversions_;
         to_bitField2_ |= 0x00000040;
       }
       if (((from_bitField2_ & 0x00000080) != 0)) {
-        result.currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = currentModelAttributedConversionsFromInteractionsValuePerInteraction_;
+        result.currentModelAttributedConversionsFromInteractionsRate_ = currentModelAttributedConversionsFromInteractionsRate_;
         to_bitField2_ |= 0x00000080;
       }
       if (((from_bitField2_ & 0x00000100) != 0)) {
-        result.currentModelAttributedConversionsValue_ = currentModelAttributedConversionsValue_;
+        result.currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = currentModelAttributedConversionsFromInteractionsValuePerInteraction_;
         to_bitField2_ |= 0x00000100;
       }
       if (((from_bitField2_ & 0x00000200) != 0)) {
-        result.currentModelAttributedConversionsValuePerCost_ = currentModelAttributedConversionsValuePerCost_;
+        result.currentModelAttributedConversionsValue_ = currentModelAttributedConversionsValue_;
         to_bitField2_ |= 0x00000200;
       }
       if (((from_bitField2_ & 0x00000400) != 0)) {
-        result.engagementRate_ = engagementRate_;
+        result.currentModelAttributedConversionsValuePerCost_ = currentModelAttributedConversionsValuePerCost_;
         to_bitField2_ |= 0x00000400;
       }
       if (((from_bitField2_ & 0x00000800) != 0)) {
-        result.engagements_ = engagements_;
+        result.engagementRate_ = engagementRate_;
         to_bitField2_ |= 0x00000800;
       }
       if (((from_bitField2_ & 0x00001000) != 0)) {
-        result.hotelAverageLeadValueMicros_ = hotelAverageLeadValueMicros_;
+        result.engagements_ = engagements_;
         to_bitField2_ |= 0x00001000;
       }
       if (((from_bitField2_ & 0x00002000) != 0)) {
-        result.hotelCommissionRateMicros_ = hotelCommissionRateMicros_;
+        result.hotelAverageLeadValueMicros_ = hotelAverageLeadValueMicros_;
         to_bitField2_ |= 0x00002000;
       }
       if (((from_bitField2_ & 0x00004000) != 0)) {
-        result.hotelExpectedCommissionCost_ = hotelExpectedCommissionCost_;
+        result.hotelCommissionRateMicros_ = hotelCommissionRateMicros_;
         to_bitField2_ |= 0x00004000;
       }
       if (((from_bitField2_ & 0x00008000) != 0)) {
-        result.hotelPriceDifferencePercentage_ = hotelPriceDifferencePercentage_;
+        result.hotelExpectedCommissionCost_ = hotelExpectedCommissionCost_;
         to_bitField2_ |= 0x00008000;
       }
       if (((from_bitField2_ & 0x00010000) != 0)) {
-        result.hotelEligibleImpressions_ = hotelEligibleImpressions_;
+        result.hotelPriceDifferencePercentage_ = hotelPriceDifferencePercentage_;
         to_bitField2_ |= 0x00010000;
       }
       if (((from_bitField2_ & 0x00020000) != 0)) {
-        result.historicalCreativeQualityScore_ = historicalCreativeQualityScore_;
-      }
-      if (((from_bitField2_ & 0x00040000) != 0)) {
-        result.historicalLandingPageQualityScore_ = historicalLandingPageQualityScore_;
-      }
-      if (((from_bitField2_ & 0x00080000) != 0)) {
-        result.historicalQualityScore_ = historicalQualityScore_;
+        result.hotelEligibleImpressions_ = hotelEligibleImpressions_;
         to_bitField2_ |= 0x00020000;
       }
-      if (((from_bitField2_ & 0x00100000) != 0)) {
-        result.historicalSearchPredictedCtr_ = historicalSearchPredictedCtr_;
+      if (((from_bitField2_ & 0x00040000) != 0)) {
+        result.historicalCreativeQualityScore_ = historicalCreativeQualityScore_;
       }
-      if (((from_bitField2_ & 0x00200000) != 0)) {
-        result.gmailForwards_ = gmailForwards_;
+      if (((from_bitField2_ & 0x00080000) != 0)) {
+        result.historicalLandingPageQualityScore_ = historicalLandingPageQualityScore_;
+      }
+      if (((from_bitField2_ & 0x00100000) != 0)) {
+        result.historicalQualityScore_ = historicalQualityScore_;
         to_bitField2_ |= 0x00040000;
       }
+      if (((from_bitField2_ & 0x00200000) != 0)) {
+        result.historicalSearchPredictedCtr_ = historicalSearchPredictedCtr_;
+      }
       if (((from_bitField2_ & 0x00400000) != 0)) {
-        result.gmailSaves_ = gmailSaves_;
+        result.gmailForwards_ = gmailForwards_;
         to_bitField2_ |= 0x00080000;
       }
       if (((from_bitField2_ & 0x00800000) != 0)) {
-        result.gmailSecondaryClicks_ = gmailSecondaryClicks_;
+        result.gmailSaves_ = gmailSaves_;
         to_bitField2_ |= 0x00100000;
       }
       if (((from_bitField2_ & 0x01000000) != 0)) {
-        result.impressionsFromStoreReach_ = impressionsFromStoreReach_;
+        result.gmailSecondaryClicks_ = gmailSecondaryClicks_;
         to_bitField2_ |= 0x00200000;
       }
       if (((from_bitField2_ & 0x02000000) != 0)) {
-        result.impressions_ = impressions_;
+        result.impressionsFromStoreReach_ = impressionsFromStoreReach_;
         to_bitField2_ |= 0x00400000;
       }
       if (((from_bitField2_ & 0x04000000) != 0)) {
-        result.interactionRate_ = interactionRate_;
+        result.impressions_ = impressions_;
         to_bitField2_ |= 0x00800000;
       }
       if (((from_bitField2_ & 0x08000000) != 0)) {
-        result.interactions_ = interactions_;
+        result.interactionRate_ = interactionRate_;
         to_bitField2_ |= 0x01000000;
       }
       if (((from_bitField2_ & 0x10000000) != 0)) {
+        result.interactions_ = interactions_;
+        to_bitField2_ |= 0x02000000;
+      }
+      if (((from_bitField2_ & 0x20000000) != 0)) {
         interactionEventTypes_.makeImmutable();
         result.interactionEventTypes_ = interactionEventTypes_;
       }
-      if (((from_bitField2_ & 0x20000000) != 0)) {
-        result.invalidClickRate_ = invalidClickRate_;
-        to_bitField2_ |= 0x02000000;
-      }
       if (((from_bitField2_ & 0x40000000) != 0)) {
-        result.invalidClicks_ = invalidClicks_;
+        result.invalidClickRate_ = invalidClickRate_;
         to_bitField2_ |= 0x04000000;
       }
       if (((from_bitField2_ & 0x80000000) != 0)) {
-        result.generalInvalidClickRate_ = generalInvalidClickRate_;
+        result.invalidClicks_ = invalidClicks_;
         to_bitField2_ |= 0x08000000;
       }
       result.bitField2_ |= to_bitField2_;
@@ -13597,134 +15205,134 @@ private static final long serialVersionUID = 0L;
       int from_bitField3_ = bitField3_;
       int to_bitField2_ = 0;
       if (((from_bitField3_ & 0x00000001) != 0)) {
-        result.generalInvalidClicks_ = generalInvalidClicks_;
+        result.generalInvalidClickRate_ = generalInvalidClickRate_;
         to_bitField2_ |= 0x10000000;
       }
       if (((from_bitField3_ & 0x00000002) != 0)) {
-        result.messageChats_ = messageChats_;
+        result.generalInvalidClicks_ = generalInvalidClicks_;
         to_bitField2_ |= 0x20000000;
       }
       if (((from_bitField3_ & 0x00000004) != 0)) {
-        result.messageImpressions_ = messageImpressions_;
+        result.messageChats_ = messageChats_;
         to_bitField2_ |= 0x40000000;
       }
       if (((from_bitField3_ & 0x00000008) != 0)) {
-        result.messageChatRate_ = messageChatRate_;
+        result.messageImpressions_ = messageImpressions_;
         to_bitField2_ |= 0x80000000;
       }
       int to_bitField3_ = 0;
       if (((from_bitField3_ & 0x00000010) != 0)) {
-        result.mobileFriendlyClicksPercentage_ = mobileFriendlyClicksPercentage_;
+        result.messageChatRate_ = messageChatRate_;
         to_bitField3_ |= 0x00000001;
       }
       if (((from_bitField3_ & 0x00000020) != 0)) {
-        result.optimizationScoreUplift_ = optimizationScoreUplift_;
+        result.mobileFriendlyClicksPercentage_ = mobileFriendlyClicksPercentage_;
         to_bitField3_ |= 0x00000002;
       }
       if (((from_bitField3_ & 0x00000040) != 0)) {
-        result.optimizationScoreUrl_ = optimizationScoreUrl_;
+        result.optimizationScoreUplift_ = optimizationScoreUplift_;
         to_bitField3_ |= 0x00000004;
       }
       if (((from_bitField3_ & 0x00000080) != 0)) {
-        result.organicClicks_ = organicClicks_;
+        result.optimizationScoreUrl_ = optimizationScoreUrl_;
         to_bitField3_ |= 0x00000008;
       }
       if (((from_bitField3_ & 0x00000100) != 0)) {
-        result.organicClicksPerQuery_ = organicClicksPerQuery_;
+        result.organicClicks_ = organicClicks_;
         to_bitField3_ |= 0x00000010;
       }
       if (((from_bitField3_ & 0x00000200) != 0)) {
-        result.organicImpressions_ = organicImpressions_;
+        result.organicClicksPerQuery_ = organicClicksPerQuery_;
         to_bitField3_ |= 0x00000020;
       }
       if (((from_bitField3_ & 0x00000400) != 0)) {
-        result.organicImpressionsPerQuery_ = organicImpressionsPerQuery_;
+        result.organicImpressions_ = organicImpressions_;
         to_bitField3_ |= 0x00000040;
       }
       if (((from_bitField3_ & 0x00000800) != 0)) {
-        result.organicQueries_ = organicQueries_;
+        result.organicImpressionsPerQuery_ = organicImpressionsPerQuery_;
         to_bitField3_ |= 0x00000080;
       }
       if (((from_bitField3_ & 0x00001000) != 0)) {
-        result.percentNewVisitors_ = percentNewVisitors_;
+        result.organicQueries_ = organicQueries_;
         to_bitField3_ |= 0x00000100;
       }
       if (((from_bitField3_ & 0x00002000) != 0)) {
-        result.phoneCalls_ = phoneCalls_;
+        result.percentNewVisitors_ = percentNewVisitors_;
         to_bitField3_ |= 0x00000200;
       }
       if (((from_bitField3_ & 0x00004000) != 0)) {
-        result.phoneImpressions_ = phoneImpressions_;
+        result.phoneCalls_ = phoneCalls_;
         to_bitField3_ |= 0x00000400;
       }
       if (((from_bitField3_ & 0x00008000) != 0)) {
-        result.phoneThroughRate_ = phoneThroughRate_;
+        result.phoneImpressions_ = phoneImpressions_;
         to_bitField3_ |= 0x00000800;
       }
       if (((from_bitField3_ & 0x00010000) != 0)) {
-        result.relativeCtr_ = relativeCtr_;
+        result.phoneThroughRate_ = phoneThroughRate_;
         to_bitField3_ |= 0x00001000;
       }
       if (((from_bitField3_ & 0x00020000) != 0)) {
-        result.searchAbsoluteTopImpressionShare_ = searchAbsoluteTopImpressionShare_;
+        result.relativeCtr_ = relativeCtr_;
         to_bitField3_ |= 0x00002000;
       }
       if (((from_bitField3_ & 0x00040000) != 0)) {
-        result.searchBudgetLostAbsoluteTopImpressionShare_ = searchBudgetLostAbsoluteTopImpressionShare_;
+        result.searchAbsoluteTopImpressionShare_ = searchAbsoluteTopImpressionShare_;
         to_bitField3_ |= 0x00004000;
       }
       if (((from_bitField3_ & 0x00080000) != 0)) {
-        result.searchBudgetLostImpressionShare_ = searchBudgetLostImpressionShare_;
+        result.searchBudgetLostAbsoluteTopImpressionShare_ = searchBudgetLostAbsoluteTopImpressionShare_;
         to_bitField3_ |= 0x00008000;
       }
       if (((from_bitField3_ & 0x00100000) != 0)) {
-        result.searchBudgetLostTopImpressionShare_ = searchBudgetLostTopImpressionShare_;
+        result.searchBudgetLostImpressionShare_ = searchBudgetLostImpressionShare_;
         to_bitField3_ |= 0x00010000;
       }
       if (((from_bitField3_ & 0x00200000) != 0)) {
-        result.searchClickShare_ = searchClickShare_;
+        result.searchBudgetLostTopImpressionShare_ = searchBudgetLostTopImpressionShare_;
         to_bitField3_ |= 0x00020000;
       }
       if (((from_bitField3_ & 0x00400000) != 0)) {
-        result.searchExactMatchImpressionShare_ = searchExactMatchImpressionShare_;
+        result.searchClickShare_ = searchClickShare_;
         to_bitField3_ |= 0x00040000;
       }
       if (((from_bitField3_ & 0x00800000) != 0)) {
-        result.searchImpressionShare_ = searchImpressionShare_;
+        result.searchExactMatchImpressionShare_ = searchExactMatchImpressionShare_;
         to_bitField3_ |= 0x00080000;
       }
       if (((from_bitField3_ & 0x01000000) != 0)) {
-        result.searchRankLostAbsoluteTopImpressionShare_ = searchRankLostAbsoluteTopImpressionShare_;
+        result.searchImpressionShare_ = searchImpressionShare_;
         to_bitField3_ |= 0x00100000;
       }
       if (((from_bitField3_ & 0x02000000) != 0)) {
-        result.searchRankLostImpressionShare_ = searchRankLostImpressionShare_;
+        result.searchRankLostAbsoluteTopImpressionShare_ = searchRankLostAbsoluteTopImpressionShare_;
         to_bitField3_ |= 0x00200000;
       }
       if (((from_bitField3_ & 0x04000000) != 0)) {
-        result.searchRankLostTopImpressionShare_ = searchRankLostTopImpressionShare_;
+        result.searchRankLostImpressionShare_ = searchRankLostImpressionShare_;
         to_bitField3_ |= 0x00400000;
       }
       if (((from_bitField3_ & 0x08000000) != 0)) {
-        result.searchTopImpressionShare_ = searchTopImpressionShare_;
+        result.searchRankLostTopImpressionShare_ = searchRankLostTopImpressionShare_;
         to_bitField3_ |= 0x00800000;
       }
       if (((from_bitField3_ & 0x10000000) != 0)) {
-        result.searchVolume_ = searchVolumeBuilder_ == null
-            ? searchVolume_
-            : searchVolumeBuilder_.build();
+        result.searchTopImpressionShare_ = searchTopImpressionShare_;
         to_bitField3_ |= 0x01000000;
       }
       if (((from_bitField3_ & 0x20000000) != 0)) {
-        result.speedScore_ = speedScore_;
+        result.searchVolume_ = searchVolumeBuilder_ == null
+            ? searchVolume_
+            : searchVolumeBuilder_.build();
         to_bitField3_ |= 0x02000000;
       }
       if (((from_bitField3_ & 0x40000000) != 0)) {
-        result.averageTargetCpaMicros_ = averageTargetCpaMicros_;
+        result.speedScore_ = speedScore_;
         to_bitField3_ |= 0x04000000;
       }
       if (((from_bitField3_ & 0x80000000) != 0)) {
-        result.averageTargetRoas_ = averageTargetRoas_;
+        result.averageTargetCpaMicros_ = averageTargetCpaMicros_;
         to_bitField3_ |= 0x08000000;
       }
       result.bitField2_ |= to_bitField2_;
@@ -13735,127 +15343,127 @@ private static final long serialVersionUID = 0L;
       int from_bitField4_ = bitField4_;
       int to_bitField3_ = 0;
       if (((from_bitField4_ & 0x00000001) != 0)) {
-        result.topImpressionPercentage_ = topImpressionPercentage_;
+        result.averageTargetRoas_ = averageTargetRoas_;
         to_bitField3_ |= 0x10000000;
       }
       if (((from_bitField4_ & 0x00000002) != 0)) {
-        result.validAcceleratedMobilePagesClicksPercentage_ = validAcceleratedMobilePagesClicksPercentage_;
+        result.topImpressionPercentage_ = topImpressionPercentage_;
         to_bitField3_ |= 0x20000000;
       }
       if (((from_bitField4_ & 0x00000004) != 0)) {
-        result.valuePerAllConversions_ = valuePerAllConversions_;
+        result.validAcceleratedMobilePagesClicksPercentage_ = validAcceleratedMobilePagesClicksPercentage_;
         to_bitField3_ |= 0x40000000;
       }
       if (((from_bitField4_ & 0x00000008) != 0)) {
-        result.valuePerAllConversionsByConversionDate_ = valuePerAllConversionsByConversionDate_;
+        result.valuePerAllConversions_ = valuePerAllConversions_;
         to_bitField3_ |= 0x80000000;
       }
       int to_bitField4_ = 0;
       if (((from_bitField4_ & 0x00000010) != 0)) {
-        result.valuePerConversion_ = valuePerConversion_;
+        result.valuePerAllConversionsByConversionDate_ = valuePerAllConversionsByConversionDate_;
         to_bitField4_ |= 0x00000001;
       }
       if (((from_bitField4_ & 0x00000020) != 0)) {
-        result.valuePerConversionsByConversionDate_ = valuePerConversionsByConversionDate_;
+        result.valuePerConversion_ = valuePerConversion_;
         to_bitField4_ |= 0x00000002;
       }
       if (((from_bitField4_ & 0x00000040) != 0)) {
-        result.valuePerCurrentModelAttributedConversion_ = valuePerCurrentModelAttributedConversion_;
+        result.valuePerConversionsByConversionDate_ = valuePerConversionsByConversionDate_;
         to_bitField4_ |= 0x00000004;
       }
       if (((from_bitField4_ & 0x00000080) != 0)) {
-        result.videoQuartileP100Rate_ = videoQuartileP100Rate_;
+        result.valuePerCurrentModelAttributedConversion_ = valuePerCurrentModelAttributedConversion_;
         to_bitField4_ |= 0x00000008;
       }
       if (((from_bitField4_ & 0x00000100) != 0)) {
-        result.videoQuartileP25Rate_ = videoQuartileP25Rate_;
+        result.videoQuartileP100Rate_ = videoQuartileP100Rate_;
         to_bitField4_ |= 0x00000010;
       }
       if (((from_bitField4_ & 0x00000200) != 0)) {
-        result.videoQuartileP50Rate_ = videoQuartileP50Rate_;
+        result.videoQuartileP25Rate_ = videoQuartileP25Rate_;
         to_bitField4_ |= 0x00000020;
       }
       if (((from_bitField4_ & 0x00000400) != 0)) {
-        result.videoQuartileP75Rate_ = videoQuartileP75Rate_;
+        result.videoQuartileP50Rate_ = videoQuartileP50Rate_;
         to_bitField4_ |= 0x00000040;
       }
       if (((from_bitField4_ & 0x00000800) != 0)) {
-        result.videoTrueviewViewRate_ = videoTrueviewViewRate_;
+        result.videoQuartileP75Rate_ = videoQuartileP75Rate_;
         to_bitField4_ |= 0x00000080;
       }
       if (((from_bitField4_ & 0x00001000) != 0)) {
-        result.videoTrueviewViews_ = videoTrueviewViews_;
+        result.videoTrueviewViewRate_ = videoTrueviewViewRate_;
         to_bitField4_ |= 0x00000100;
       }
       if (((from_bitField4_ & 0x00002000) != 0)) {
-        result.viewThroughConversions_ = viewThroughConversions_;
+        result.videoTrueviewViews_ = videoTrueviewViews_;
         to_bitField4_ |= 0x00000200;
       }
       if (((from_bitField4_ & 0x00004000) != 0)) {
-        result.skAdNetworkInstalls_ = skAdNetworkInstalls_;
-      }
-      if (((from_bitField4_ & 0x00008000) != 0)) {
-        result.skAdNetworkTotalConversions_ = skAdNetworkTotalConversions_;
-      }
-      if (((from_bitField4_ & 0x00010000) != 0)) {
-        result.publisherPurchasedClicks_ = publisherPurchasedClicks_;
-      }
-      if (((from_bitField4_ & 0x00020000) != 0)) {
-        result.publisherOrganicClicks_ = publisherOrganicClicks_;
-      }
-      if (((from_bitField4_ & 0x00040000) != 0)) {
-        result.publisherUnknownClicks_ = publisherUnknownClicks_;
-      }
-      if (((from_bitField4_ & 0x00080000) != 0)) {
-        result.allConversionsFromLocationAssetClickToCall_ = allConversionsFromLocationAssetClickToCall_;
+        result.viewThroughConversions_ = viewThroughConversions_;
         to_bitField4_ |= 0x00000400;
       }
+      if (((from_bitField4_ & 0x00008000) != 0)) {
+        result.skAdNetworkInstalls_ = skAdNetworkInstalls_;
+      }
+      if (((from_bitField4_ & 0x00010000) != 0)) {
+        result.skAdNetworkTotalConversions_ = skAdNetworkTotalConversions_;
+      }
+      if (((from_bitField4_ & 0x00020000) != 0)) {
+        result.publisherPurchasedClicks_ = publisherPurchasedClicks_;
+      }
+      if (((from_bitField4_ & 0x00040000) != 0)) {
+        result.publisherOrganicClicks_ = publisherOrganicClicks_;
+      }
+      if (((from_bitField4_ & 0x00080000) != 0)) {
+        result.publisherUnknownClicks_ = publisherUnknownClicks_;
+      }
       if (((from_bitField4_ & 0x00100000) != 0)) {
-        result.allConversionsFromLocationAssetDirections_ = allConversionsFromLocationAssetDirections_;
+        result.allConversionsFromLocationAssetClickToCall_ = allConversionsFromLocationAssetClickToCall_;
         to_bitField4_ |= 0x00000800;
       }
       if (((from_bitField4_ & 0x00200000) != 0)) {
-        result.allConversionsFromLocationAssetMenu_ = allConversionsFromLocationAssetMenu_;
+        result.allConversionsFromLocationAssetDirections_ = allConversionsFromLocationAssetDirections_;
         to_bitField4_ |= 0x00001000;
       }
       if (((from_bitField4_ & 0x00400000) != 0)) {
-        result.allConversionsFromLocationAssetOrder_ = allConversionsFromLocationAssetOrder_;
+        result.allConversionsFromLocationAssetMenu_ = allConversionsFromLocationAssetMenu_;
         to_bitField4_ |= 0x00002000;
       }
       if (((from_bitField4_ & 0x00800000) != 0)) {
-        result.allConversionsFromLocationAssetOtherEngagement_ = allConversionsFromLocationAssetOtherEngagement_;
+        result.allConversionsFromLocationAssetOrder_ = allConversionsFromLocationAssetOrder_;
         to_bitField4_ |= 0x00004000;
       }
       if (((from_bitField4_ & 0x01000000) != 0)) {
-        result.allConversionsFromLocationAssetStoreVisits_ = allConversionsFromLocationAssetStoreVisits_;
+        result.allConversionsFromLocationAssetOtherEngagement_ = allConversionsFromLocationAssetOtherEngagement_;
         to_bitField4_ |= 0x00008000;
       }
       if (((from_bitField4_ & 0x02000000) != 0)) {
-        result.allConversionsFromLocationAssetWebsite_ = allConversionsFromLocationAssetWebsite_;
+        result.allConversionsFromLocationAssetStoreVisits_ = allConversionsFromLocationAssetStoreVisits_;
         to_bitField4_ |= 0x00010000;
       }
       if (((from_bitField4_ & 0x04000000) != 0)) {
-        result.eligibleImpressionsFromLocationAssetStoreReach_ = eligibleImpressionsFromLocationAssetStoreReach_;
+        result.allConversionsFromLocationAssetWebsite_ = allConversionsFromLocationAssetWebsite_;
         to_bitField4_ |= 0x00020000;
       }
       if (((from_bitField4_ & 0x08000000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetClickToCall_ = viewThroughConversionsFromLocationAssetClickToCall_;
+        result.eligibleImpressionsFromLocationAssetStoreReach_ = eligibleImpressionsFromLocationAssetStoreReach_;
         to_bitField4_ |= 0x00040000;
       }
       if (((from_bitField4_ & 0x10000000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetDirections_ = viewThroughConversionsFromLocationAssetDirections_;
+        result.viewThroughConversionsFromLocationAssetClickToCall_ = viewThroughConversionsFromLocationAssetClickToCall_;
         to_bitField4_ |= 0x00080000;
       }
       if (((from_bitField4_ & 0x20000000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetMenu_ = viewThroughConversionsFromLocationAssetMenu_;
+        result.viewThroughConversionsFromLocationAssetDirections_ = viewThroughConversionsFromLocationAssetDirections_;
         to_bitField4_ |= 0x00100000;
       }
       if (((from_bitField4_ & 0x40000000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetOrder_ = viewThroughConversionsFromLocationAssetOrder_;
+        result.viewThroughConversionsFromLocationAssetMenu_ = viewThroughConversionsFromLocationAssetMenu_;
         to_bitField4_ |= 0x00200000;
       }
       if (((from_bitField4_ & 0x80000000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetOtherEngagement_ = viewThroughConversionsFromLocationAssetOtherEngagement_;
+        result.viewThroughConversionsFromLocationAssetOrder_ = viewThroughConversionsFromLocationAssetOrder_;
         to_bitField4_ |= 0x00400000;
       }
       result.bitField3_ |= to_bitField3_;
@@ -13866,132 +15474,132 @@ private static final long serialVersionUID = 0L;
       int from_bitField5_ = bitField5_;
       int to_bitField4_ = 0;
       if (((from_bitField5_ & 0x00000001) != 0)) {
-        result.viewThroughConversionsFromLocationAssetStoreVisits_ = viewThroughConversionsFromLocationAssetStoreVisits_;
+        result.viewThroughConversionsFromLocationAssetOtherEngagement_ = viewThroughConversionsFromLocationAssetOtherEngagement_;
         to_bitField4_ |= 0x00800000;
       }
       if (((from_bitField5_ & 0x00000002) != 0)) {
-        result.viewThroughConversionsFromLocationAssetWebsite_ = viewThroughConversionsFromLocationAssetWebsite_;
+        result.viewThroughConversionsFromLocationAssetStoreVisits_ = viewThroughConversionsFromLocationAssetStoreVisits_;
         to_bitField4_ |= 0x01000000;
       }
       if (((from_bitField5_ & 0x00000004) != 0)) {
-        result.orders_ = orders_;
+        result.viewThroughConversionsFromLocationAssetWebsite_ = viewThroughConversionsFromLocationAssetWebsite_;
         to_bitField4_ |= 0x02000000;
       }
       if (((from_bitField5_ & 0x00000008) != 0)) {
-        result.averageOrderValueMicros_ = averageOrderValueMicros_;
+        result.orders_ = orders_;
         to_bitField4_ |= 0x04000000;
       }
       if (((from_bitField5_ & 0x00000010) != 0)) {
-        result.averageCartSize_ = averageCartSize_;
+        result.averageOrderValueMicros_ = averageOrderValueMicros_;
         to_bitField4_ |= 0x08000000;
       }
       if (((from_bitField5_ & 0x00000020) != 0)) {
-        result.costOfGoodsSoldMicros_ = costOfGoodsSoldMicros_;
+        result.averageCartSize_ = averageCartSize_;
         to_bitField4_ |= 0x10000000;
       }
       if (((from_bitField5_ & 0x00000040) != 0)) {
-        result.grossProfitMicros_ = grossProfitMicros_;
+        result.costOfGoodsSoldMicros_ = costOfGoodsSoldMicros_;
         to_bitField4_ |= 0x20000000;
       }
       if (((from_bitField5_ & 0x00000080) != 0)) {
-        result.grossProfitMargin_ = grossProfitMargin_;
+        result.grossProfitMicros_ = grossProfitMicros_;
         to_bitField4_ |= 0x40000000;
       }
       if (((from_bitField5_ & 0x00000100) != 0)) {
-        result.revenueMicros_ = revenueMicros_;
+        result.grossProfitMargin_ = grossProfitMargin_;
         to_bitField4_ |= 0x80000000;
       }
       int to_bitField5_ = 0;
       if (((from_bitField5_ & 0x00000200) != 0)) {
-        result.unitsSold_ = unitsSold_;
+        result.revenueMicros_ = revenueMicros_;
         to_bitField5_ |= 0x00000001;
       }
       if (((from_bitField5_ & 0x00000400) != 0)) {
-        result.crossSellCostOfGoodsSoldMicros_ = crossSellCostOfGoodsSoldMicros_;
+        result.unitsSold_ = unitsSold_;
         to_bitField5_ |= 0x00000002;
       }
       if (((from_bitField5_ & 0x00000800) != 0)) {
-        result.crossSellGrossProfitMicros_ = crossSellGrossProfitMicros_;
+        result.crossSellCostOfGoodsSoldMicros_ = crossSellCostOfGoodsSoldMicros_;
         to_bitField5_ |= 0x00000004;
       }
       if (((from_bitField5_ & 0x00001000) != 0)) {
-        result.crossSellRevenueMicros_ = crossSellRevenueMicros_;
+        result.crossSellGrossProfitMicros_ = crossSellGrossProfitMicros_;
         to_bitField5_ |= 0x00000008;
       }
       if (((from_bitField5_ & 0x00002000) != 0)) {
-        result.crossSellUnitsSold_ = crossSellUnitsSold_;
+        result.crossSellRevenueMicros_ = crossSellRevenueMicros_;
         to_bitField5_ |= 0x00000010;
       }
       if (((from_bitField5_ & 0x00004000) != 0)) {
-        result.leadCostOfGoodsSoldMicros_ = leadCostOfGoodsSoldMicros_;
+        result.crossSellUnitsSold_ = crossSellUnitsSold_;
         to_bitField5_ |= 0x00000020;
       }
       if (((from_bitField5_ & 0x00008000) != 0)) {
-        result.leadGrossProfitMicros_ = leadGrossProfitMicros_;
+        result.leadCostOfGoodsSoldMicros_ = leadCostOfGoodsSoldMicros_;
         to_bitField5_ |= 0x00000040;
       }
       if (((from_bitField5_ & 0x00010000) != 0)) {
-        result.leadRevenueMicros_ = leadRevenueMicros_;
+        result.leadGrossProfitMicros_ = leadGrossProfitMicros_;
         to_bitField5_ |= 0x00000080;
       }
       if (((from_bitField5_ & 0x00020000) != 0)) {
-        result.leadUnitsSold_ = leadUnitsSold_;
+        result.leadRevenueMicros_ = leadRevenueMicros_;
         to_bitField5_ |= 0x00000100;
       }
       if (((from_bitField5_ & 0x00040000) != 0)) {
-        result.uniqueUsers_ = uniqueUsers_;
+        result.leadUnitsSold_ = leadUnitsSold_;
         to_bitField5_ |= 0x00000200;
       }
       if (((from_bitField5_ & 0x00080000) != 0)) {
-        result.averageImpressionFrequencyPerUser_ = averageImpressionFrequencyPerUser_;
+        result.uniqueUsers_ = uniqueUsers_;
         to_bitField5_ |= 0x00000400;
       }
       if (((from_bitField5_ & 0x00100000) != 0)) {
-        result.linkedEntitiesCount_ = linkedEntitiesCount_;
+        result.averageImpressionFrequencyPerUser_ = averageImpressionFrequencyPerUser_;
         to_bitField5_ |= 0x00000800;
       }
       if (((from_bitField5_ & 0x00200000) != 0)) {
+        result.linkedEntitiesCount_ = linkedEntitiesCount_;
+        to_bitField5_ |= 0x00001000;
+      }
+      if (((from_bitField5_ & 0x00400000) != 0)) {
         linkedSampleEntities_.makeImmutable();
         result.linkedSampleEntities_ = linkedSampleEntities_;
       }
-      if (((from_bitField5_ & 0x00400000) != 0)) {
-        result.assetPinnedTotalCount_ = assetPinnedTotalCount_;
-        to_bitField5_ |= 0x00001000;
-      }
       if (((from_bitField5_ & 0x00800000) != 0)) {
-        result.assetPinnedAsHeadlinePositionOneCount_ = assetPinnedAsHeadlinePositionOneCount_;
+        result.assetPinnedTotalCount_ = assetPinnedTotalCount_;
         to_bitField5_ |= 0x00002000;
       }
       if (((from_bitField5_ & 0x01000000) != 0)) {
-        result.assetPinnedAsHeadlinePositionTwoCount_ = assetPinnedAsHeadlinePositionTwoCount_;
+        result.assetPinnedAsHeadlinePositionOneCount_ = assetPinnedAsHeadlinePositionOneCount_;
         to_bitField5_ |= 0x00004000;
       }
       if (((from_bitField5_ & 0x02000000) != 0)) {
-        result.assetPinnedAsHeadlinePositionThreeCount_ = assetPinnedAsHeadlinePositionThreeCount_;
+        result.assetPinnedAsHeadlinePositionTwoCount_ = assetPinnedAsHeadlinePositionTwoCount_;
         to_bitField5_ |= 0x00008000;
       }
       if (((from_bitField5_ & 0x04000000) != 0)) {
-        result.assetPinnedAsDescriptionPositionOneCount_ = assetPinnedAsDescriptionPositionOneCount_;
+        result.assetPinnedAsHeadlinePositionThreeCount_ = assetPinnedAsHeadlinePositionThreeCount_;
         to_bitField5_ |= 0x00010000;
       }
       if (((from_bitField5_ & 0x08000000) != 0)) {
-        result.assetPinnedAsDescriptionPositionTwoCount_ = assetPinnedAsDescriptionPositionTwoCount_;
+        result.assetPinnedAsDescriptionPositionOneCount_ = assetPinnedAsDescriptionPositionOneCount_;
         to_bitField5_ |= 0x00020000;
       }
       if (((from_bitField5_ & 0x10000000) != 0)) {
-        result.storeVisitsLastClickModelAttributedConversions_ = storeVisitsLastClickModelAttributedConversions_;
+        result.assetPinnedAsDescriptionPositionTwoCount_ = assetPinnedAsDescriptionPositionTwoCount_;
         to_bitField5_ |= 0x00040000;
       }
       if (((from_bitField5_ & 0x20000000) != 0)) {
-        result.resultsConversionsPurchase_ = resultsConversionsPurchase_;
+        result.storeVisitsLastClickModelAttributedConversions_ = storeVisitsLastClickModelAttributedConversions_;
         to_bitField5_ |= 0x00080000;
       }
       if (((from_bitField5_ & 0x40000000) != 0)) {
-        result.videoTrueviewViewRateInFeed_ = videoTrueviewViewRateInFeed_;
+        result.resultsConversionsPurchase_ = resultsConversionsPurchase_;
         to_bitField5_ |= 0x00100000;
       }
       if (((from_bitField5_ & 0x80000000) != 0)) {
-        result.videoTrueviewViewRateInStream_ = videoTrueviewViewRateInStream_;
+        result.videoTrueviewViewRateInFeed_ = videoTrueviewViewRateInFeed_;
         to_bitField5_ |= 0x00200000;
       }
       result.bitField4_ |= to_bitField4_;
@@ -14002,132 +15610,132 @@ private static final long serialVersionUID = 0L;
       int from_bitField6_ = bitField6_;
       int to_bitField5_ = 0;
       if (((from_bitField6_ & 0x00000001) != 0)) {
-        result.videoTrueviewViewRateShorts_ = videoTrueviewViewRateShorts_;
+        result.videoTrueviewViewRateInStream_ = videoTrueviewViewRateInStream_;
         to_bitField5_ |= 0x00400000;
       }
       if (((from_bitField6_ & 0x00000002) != 0)) {
-        result.coviewedImpressions_ = coviewedImpressions_;
+        result.videoTrueviewViewRateShorts_ = videoTrueviewViewRateShorts_;
         to_bitField5_ |= 0x00800000;
       }
       if (((from_bitField6_ & 0x00000004) != 0)) {
-        result.primaryImpressions_ = primaryImpressions_;
+        result.coviewedImpressions_ = coviewedImpressions_;
         to_bitField5_ |= 0x01000000;
       }
       if (((from_bitField6_ & 0x00000008) != 0)) {
-        result.platformComparableConversionsFromInteractionsRate_ = platformComparableConversionsFromInteractionsRate_;
+        result.primaryImpressions_ = primaryImpressions_;
         to_bitField5_ |= 0x02000000;
       }
       if (((from_bitField6_ & 0x00000010) != 0)) {
-        result.platformComparableConversions_ = platformComparableConversions_;
+        result.platformComparableConversionsFromInteractionsRate_ = platformComparableConversionsFromInteractionsRate_;
         to_bitField5_ |= 0x04000000;
       }
       if (((from_bitField6_ & 0x00000020) != 0)) {
-        result.platformComparableConversionsValue_ = platformComparableConversionsValue_;
+        result.platformComparableConversions_ = platformComparableConversions_;
         to_bitField5_ |= 0x08000000;
       }
       if (((from_bitField6_ & 0x00000040) != 0)) {
-        result.platformComparableConversionsValuePerCost_ = platformComparableConversionsValuePerCost_;
+        result.platformComparableConversionsValue_ = platformComparableConversionsValue_;
         to_bitField5_ |= 0x10000000;
       }
       if (((from_bitField6_ & 0x00000080) != 0)) {
-        result.platformComparableConversionsByConversionDate_ = platformComparableConversionsByConversionDate_;
+        result.platformComparableConversionsValuePerCost_ = platformComparableConversionsValuePerCost_;
         to_bitField5_ |= 0x20000000;
       }
       if (((from_bitField6_ & 0x00000100) != 0)) {
-        result.platformComparableConversionsValueByConversionDate_ = platformComparableConversionsValueByConversionDate_;
+        result.platformComparableConversionsByConversionDate_ = platformComparableConversionsByConversionDate_;
         to_bitField5_ |= 0x40000000;
       }
       if (((from_bitField6_ & 0x00000200) != 0)) {
-        result.platformComparableConversionsFromInteractionsValuePerInteraction_ = platformComparableConversionsFromInteractionsValuePerInteraction_;
+        result.platformComparableConversionsValueByConversionDate_ = platformComparableConversionsValueByConversionDate_;
         to_bitField5_ |= 0x80000000;
       }
       int to_bitField6_ = 0;
       if (((from_bitField6_ & 0x00000400) != 0)) {
-        result.costPerPlatformComparableConversion_ = costPerPlatformComparableConversion_;
+        result.platformComparableConversionsFromInteractionsValuePerInteraction_ = platformComparableConversionsFromInteractionsValuePerInteraction_;
         to_bitField6_ |= 0x00000001;
       }
       if (((from_bitField6_ & 0x00000800) != 0)) {
-        result.valuePerPlatformComparableConversion_ = valuePerPlatformComparableConversion_;
+        result.costPerPlatformComparableConversion_ = costPerPlatformComparableConversion_;
         to_bitField6_ |= 0x00000002;
       }
       if (((from_bitField6_ & 0x00001000) != 0)) {
-        result.valuePerPlatformComparableConversionsByConversionDate_ = valuePerPlatformComparableConversionsByConversionDate_;
+        result.valuePerPlatformComparableConversion_ = valuePerPlatformComparableConversion_;
         to_bitField6_ |= 0x00000004;
       }
       if (((from_bitField6_ & 0x00002000) != 0)) {
-        result.costConvertedCurrencyPerPlatformComparableConversion_ = costConvertedCurrencyPerPlatformComparableConversion_;
+        result.valuePerPlatformComparableConversionsByConversionDate_ = valuePerPlatformComparableConversionsByConversionDate_;
         to_bitField6_ |= 0x00000008;
       }
       if (((from_bitField6_ & 0x00004000) != 0)) {
-        result.uniqueUsersTwoPlus_ = uniqueUsersTwoPlus_;
+        result.costConvertedCurrencyPerPlatformComparableConversion_ = costConvertedCurrencyPerPlatformComparableConversion_;
         to_bitField6_ |= 0x00000010;
       }
       if (((from_bitField6_ & 0x00008000) != 0)) {
-        result.uniqueUsersThreePlus_ = uniqueUsersThreePlus_;
+        result.uniqueUsersTwoPlus_ = uniqueUsersTwoPlus_;
         to_bitField6_ |= 0x00000020;
       }
       if (((from_bitField6_ & 0x00010000) != 0)) {
-        result.uniqueUsersFourPlus_ = uniqueUsersFourPlus_;
+        result.uniqueUsersThreePlus_ = uniqueUsersThreePlus_;
         to_bitField6_ |= 0x00000040;
       }
       if (((from_bitField6_ & 0x00020000) != 0)) {
-        result.uniqueUsersFivePlus_ = uniqueUsersFivePlus_;
+        result.uniqueUsersFourPlus_ = uniqueUsersFourPlus_;
         to_bitField6_ |= 0x00000080;
       }
       if (((from_bitField6_ & 0x00040000) != 0)) {
-        result.uniqueUsersTenPlus_ = uniqueUsersTenPlus_;
+        result.uniqueUsersFivePlus_ = uniqueUsersFivePlus_;
         to_bitField6_ |= 0x00000100;
       }
       if (((from_bitField6_ & 0x00080000) != 0)) {
-        result.valueAdjustment_ = valueAdjustment_;
+        result.uniqueUsersTenPlus_ = uniqueUsersTenPlus_;
         to_bitField6_ |= 0x00000200;
       }
       if (((from_bitField6_ & 0x00100000) != 0)) {
-        result.allValueAdjustment_ = allValueAdjustment_;
+        result.valueAdjustment_ = valueAdjustment_;
         to_bitField6_ |= 0x00000400;
       }
       if (((from_bitField6_ & 0x00200000) != 0)) {
-        result.clicksUniqueQueryClusters_ = clicksUniqueQueryClusters_;
+        result.allValueAdjustment_ = allValueAdjustment_;
         to_bitField6_ |= 0x00000800;
       }
       if (((from_bitField6_ & 0x00400000) != 0)) {
-        result.conversionsUniqueQueryClusters_ = conversionsUniqueQueryClusters_;
+        result.clicksUniqueQueryClusters_ = clicksUniqueQueryClusters_;
         to_bitField6_ |= 0x00001000;
       }
       if (((from_bitField6_ & 0x00800000) != 0)) {
-        result.impressionsUniqueQueryClusters_ = impressionsUniqueQueryClusters_;
+        result.conversionsUniqueQueryClusters_ = conversionsUniqueQueryClusters_;
         to_bitField6_ |= 0x00002000;
       }
       if (((from_bitField6_ & 0x01000000) != 0)) {
-        result.videoWatchTimeDurationMillis_ = videoWatchTimeDurationMillis_;
+        result.impressionsUniqueQueryClusters_ = impressionsUniqueQueryClusters_;
         to_bitField6_ |= 0x00004000;
       }
       if (((from_bitField6_ & 0x02000000) != 0)) {
-        result.averageVideoWatchTimeDurationMillis_ = averageVideoWatchTimeDurationMillis_;
+        result.videoWatchTimeDurationMillis_ = videoWatchTimeDurationMillis_;
         to_bitField6_ |= 0x00008000;
       }
       if (((from_bitField6_ & 0x04000000) != 0)) {
-        result.svr_ = svr_;
+        result.averageVideoWatchTimeDurationMillis_ = averageVideoWatchTimeDurationMillis_;
         to_bitField6_ |= 0x00010000;
       }
       if (((from_bitField6_ & 0x08000000) != 0)) {
-        result.activeViewAudibilityMeasurableImpressions_ = activeViewAudibilityMeasurableImpressions_;
+        result.svr_ = svr_;
         to_bitField6_ |= 0x00020000;
       }
       if (((from_bitField6_ & 0x10000000) != 0)) {
-        result.activeViewAudibilityMeasurableImpressionsRate_ = activeViewAudibilityMeasurableImpressionsRate_;
+        result.activeViewAudibilityMeasurableImpressions_ = activeViewAudibilityMeasurableImpressions_;
         to_bitField6_ |= 0x00040000;
       }
       if (((from_bitField6_ & 0x20000000) != 0)) {
-        result.activeViewAudibilityInvalidMeasurableImpressionsRate_ = activeViewAudibilityInvalidMeasurableImpressionsRate_;
+        result.activeViewAudibilityMeasurableImpressionsRate_ = activeViewAudibilityMeasurableImpressionsRate_;
         to_bitField6_ |= 0x00080000;
       }
       if (((from_bitField6_ & 0x40000000) != 0)) {
-        result.activeViewAudibilityInvalidGivtMeasurableImpressionsRate_ = activeViewAudibilityInvalidGivtMeasurableImpressionsRate_;
+        result.activeViewAudibilityInvalidMeasurableImpressionsRate_ = activeViewAudibilityInvalidMeasurableImpressionsRate_;
         to_bitField6_ |= 0x00100000;
       }
       if (((from_bitField6_ & 0x80000000) != 0)) {
-        result.activeViewAudibleImpressions_ = activeViewAudibleImpressions_;
+        result.activeViewAudibilityInvalidGivtMeasurableImpressionsRate_ = activeViewAudibilityInvalidGivtMeasurableImpressionsRate_;
         to_bitField6_ |= 0x00200000;
       }
       result.bitField5_ |= to_bitField5_;
@@ -14138,112 +15746,232 @@ private static final long serialVersionUID = 0L;
       int from_bitField7_ = bitField7_;
       int to_bitField6_ = 0;
       if (((from_bitField7_ & 0x00000001) != 0)) {
-        result.activeViewAudibleImpressionsRate_ = activeViewAudibleImpressionsRate_;
+        result.activeViewAudibleImpressions_ = activeViewAudibleImpressions_;
         to_bitField6_ |= 0x00400000;
       }
       if (((from_bitField7_ & 0x00000002) != 0)) {
-        result.activeViewAudibleTwoSecondsImpressions_ = activeViewAudibleTwoSecondsImpressions_;
+        result.activeViewAudibleImpressionsRate_ = activeViewAudibleImpressionsRate_;
         to_bitField6_ |= 0x00800000;
       }
       if (((from_bitField7_ & 0x00000004) != 0)) {
-        result.activeViewAudibleTwoSecondsImpressionsRate_ = activeViewAudibleTwoSecondsImpressionsRate_;
+        result.activeViewAudibleTwoSecondsImpressions_ = activeViewAudibleTwoSecondsImpressions_;
         to_bitField6_ |= 0x01000000;
       }
       if (((from_bitField7_ & 0x00000008) != 0)) {
-        result.activeViewAudibleThirtySecondsImpressions_ = activeViewAudibleThirtySecondsImpressions_;
+        result.activeViewAudibleTwoSecondsImpressionsRate_ = activeViewAudibleTwoSecondsImpressionsRate_;
         to_bitField6_ |= 0x02000000;
       }
       if (((from_bitField7_ & 0x00000010) != 0)) {
-        result.activeViewAudibleThirtySecondsImpressionsRate_ = activeViewAudibleThirtySecondsImpressionsRate_;
+        result.activeViewAudibleThirtySecondsImpressions_ = activeViewAudibleThirtySecondsImpressions_;
         to_bitField6_ |= 0x04000000;
       }
       if (((from_bitField7_ & 0x00000020) != 0)) {
-        result.activeViewAudibleQuartileP25Rate_ = activeViewAudibleQuartileP25Rate_;
+        result.activeViewAudibleThirtySecondsImpressionsRate_ = activeViewAudibleThirtySecondsImpressionsRate_;
         to_bitField6_ |= 0x08000000;
       }
       if (((from_bitField7_ & 0x00000040) != 0)) {
-        result.activeViewAudibleQuartileP50Rate_ = activeViewAudibleQuartileP50Rate_;
+        result.activeViewAudibleQuartileP25Rate_ = activeViewAudibleQuartileP25Rate_;
         to_bitField6_ |= 0x10000000;
       }
       if (((from_bitField7_ & 0x00000080) != 0)) {
-        result.activeViewAudibleQuartileP75Rate_ = activeViewAudibleQuartileP75Rate_;
+        result.activeViewAudibleQuartileP50Rate_ = activeViewAudibleQuartileP50Rate_;
         to_bitField6_ |= 0x20000000;
       }
       if (((from_bitField7_ & 0x00000100) != 0)) {
-        result.activeViewAudibleQuartileP100Rate_ = activeViewAudibleQuartileP100Rate_;
+        result.activeViewAudibleQuartileP75Rate_ = activeViewAudibleQuartileP75Rate_;
         to_bitField6_ |= 0x40000000;
       }
       if (((from_bitField7_ & 0x00000200) != 0)) {
-        result.biddableIndirectInstallFirstInAppConversionMicros_ = biddableIndirectInstallFirstInAppConversionMicros_;
+        result.activeViewAudibleQuartileP100Rate_ = activeViewAudibleQuartileP100Rate_;
         to_bitField6_ |= 0x80000000;
       }
       int to_bitField7_ = 0;
       if (((from_bitField7_ & 0x00000400) != 0)) {
-        result.allAverageCartSize_ = allAverageCartSize_;
+        result.biddableIndirectInstallFirstInAppConversionMicros_ = biddableIndirectInstallFirstInAppConversionMicros_;
         to_bitField7_ |= 0x00000001;
       }
       if (((from_bitField7_ & 0x00000800) != 0)) {
-        result.allAverageOrderValueMicros_ = allAverageOrderValueMicros_;
+        result.allAverageCartSize_ = allAverageCartSize_;
         to_bitField7_ |= 0x00000002;
       }
       if (((from_bitField7_ & 0x00001000) != 0)) {
-        result.allCostOfGoodsSoldMicros_ = allCostOfGoodsSoldMicros_;
+        result.allAverageOrderValueMicros_ = allAverageOrderValueMicros_;
         to_bitField7_ |= 0x00000004;
       }
       if (((from_bitField7_ & 0x00002000) != 0)) {
-        result.allCrossSellCostOfGoodsSoldMicros_ = allCrossSellCostOfGoodsSoldMicros_;
+        result.allCostOfGoodsSoldMicros_ = allCostOfGoodsSoldMicros_;
         to_bitField7_ |= 0x00000008;
       }
       if (((from_bitField7_ & 0x00004000) != 0)) {
-        result.allCrossSellGrossProfitMicros_ = allCrossSellGrossProfitMicros_;
+        result.allCrossSellCostOfGoodsSoldMicros_ = allCrossSellCostOfGoodsSoldMicros_;
         to_bitField7_ |= 0x00000010;
       }
       if (((from_bitField7_ & 0x00008000) != 0)) {
-        result.allCrossSellRevenueMicros_ = allCrossSellRevenueMicros_;
+        result.allCrossSellGrossProfitMicros_ = allCrossSellGrossProfitMicros_;
         to_bitField7_ |= 0x00000020;
       }
       if (((from_bitField7_ & 0x00010000) != 0)) {
-        result.allCrossSellUnitsSold_ = allCrossSellUnitsSold_;
+        result.allCrossSellRevenueMicros_ = allCrossSellRevenueMicros_;
         to_bitField7_ |= 0x00000040;
       }
       if (((from_bitField7_ & 0x00020000) != 0)) {
-        result.allGrossProfitMargin_ = allGrossProfitMargin_;
+        result.allCrossSellUnitsSold_ = allCrossSellUnitsSold_;
         to_bitField7_ |= 0x00000080;
       }
       if (((from_bitField7_ & 0x00040000) != 0)) {
-        result.allGrossProfitMicros_ = allGrossProfitMicros_;
+        result.allGrossProfitMargin_ = allGrossProfitMargin_;
         to_bitField7_ |= 0x00000100;
       }
       if (((from_bitField7_ & 0x00080000) != 0)) {
-        result.allLeadCostOfGoodsSoldMicros_ = allLeadCostOfGoodsSoldMicros_;
+        result.allGrossProfitMicros_ = allGrossProfitMicros_;
         to_bitField7_ |= 0x00000200;
       }
       if (((from_bitField7_ & 0x00100000) != 0)) {
-        result.allLeadGrossProfitMicros_ = allLeadGrossProfitMicros_;
+        result.allLeadCostOfGoodsSoldMicros_ = allLeadCostOfGoodsSoldMicros_;
         to_bitField7_ |= 0x00000400;
       }
       if (((from_bitField7_ & 0x00200000) != 0)) {
-        result.allLeadRevenueMicros_ = allLeadRevenueMicros_;
+        result.allLeadGrossProfitMicros_ = allLeadGrossProfitMicros_;
         to_bitField7_ |= 0x00000800;
       }
       if (((from_bitField7_ & 0x00400000) != 0)) {
-        result.allLeadUnitsSold_ = allLeadUnitsSold_;
+        result.allLeadRevenueMicros_ = allLeadRevenueMicros_;
         to_bitField7_ |= 0x00001000;
       }
       if (((from_bitField7_ & 0x00800000) != 0)) {
-        result.allOrders_ = allOrders_;
+        result.allLeadUnitsSold_ = allLeadUnitsSold_;
         to_bitField7_ |= 0x00002000;
       }
       if (((from_bitField7_ & 0x01000000) != 0)) {
-        result.allRevenueMicros_ = allRevenueMicros_;
+        result.allOrders_ = allOrders_;
         to_bitField7_ |= 0x00004000;
       }
       if (((from_bitField7_ & 0x02000000) != 0)) {
-        result.allUnitsSold_ = allUnitsSold_;
+        result.allRevenueMicros_ = allRevenueMicros_;
         to_bitField7_ |= 0x00008000;
+      }
+      if (((from_bitField7_ & 0x04000000) != 0)) {
+        result.allUnitsSold_ = allUnitsSold_;
+        to_bitField7_ |= 0x00010000;
+      }
+      if (((from_bitField7_ & 0x08000000) != 0)) {
+        result.controlCostPerConversion_ = controlCostPerConversion_;
+        to_bitField7_ |= 0x00020000;
+      }
+      if (((from_bitField7_ & 0x10000000) != 0)) {
+        result.costPerConversionMarginOfError_ = costPerConversionMarginOfError_;
+        to_bitField7_ |= 0x00040000;
+      }
+      if (((from_bitField7_ & 0x20000000) != 0)) {
+        result.costPerConversionPValue_ = costPerConversionPValue_;
+        to_bitField7_ |= 0x00080000;
+      }
+      if (((from_bitField7_ & 0x40000000) != 0)) {
+        result.costPerConversionChangePointEstimate_ = costPerConversionChangePointEstimate_;
+        to_bitField7_ |= 0x00100000;
+      }
+      if (((from_bitField7_ & 0x80000000) != 0)) {
+        result.controlConversions_ = controlConversions_;
+        to_bitField7_ |= 0x00200000;
       }
       result.bitField6_ |= to_bitField6_;
       result.bitField7_ |= to_bitField7_;
+    }
+
+    private void buildPartial8(com.google.ads.googleads.v24.common.Metrics result) {
+      int from_bitField8_ = bitField8_;
+      int to_bitField7_ = 0;
+      if (((from_bitField8_ & 0x00000001) != 0)) {
+        result.conversionsAbsoluteChangeMarginOfError_ = conversionsAbsoluteChangeMarginOfError_;
+        to_bitField7_ |= 0x00400000;
+      }
+      if (((from_bitField8_ & 0x00000002) != 0)) {
+        result.conversionsAbsoluteChangePValue_ = conversionsAbsoluteChangePValue_;
+        to_bitField7_ |= 0x00800000;
+      }
+      if (((from_bitField8_ & 0x00000004) != 0)) {
+        result.conversionsAbsoluteChangePointEstimate_ = conversionsAbsoluteChangePointEstimate_;
+        to_bitField7_ |= 0x01000000;
+      }
+      if (((from_bitField8_ & 0x00000008) != 0)) {
+        result.controlConversionValuePerCost_ = controlConversionValuePerCost_;
+        to_bitField7_ |= 0x02000000;
+      }
+      if (((from_bitField8_ & 0x00000010) != 0)) {
+        result.conversionValuePerCostMarginOfError_ = conversionValuePerCostMarginOfError_;
+        to_bitField7_ |= 0x04000000;
+      }
+      if (((from_bitField8_ & 0x00000020) != 0)) {
+        result.conversionValuePerCostPValue_ = conversionValuePerCostPValue_;
+        to_bitField7_ |= 0x08000000;
+      }
+      if (((from_bitField8_ & 0x00000040) != 0)) {
+        result.conversionValuePerCostChangePointEstimate_ = conversionValuePerCostChangePointEstimate_;
+        to_bitField7_ |= 0x10000000;
+      }
+      if (((from_bitField8_ & 0x00000080) != 0)) {
+        result.controlCostMicros_ = controlCostMicros_;
+        to_bitField7_ |= 0x20000000;
+      }
+      if (((from_bitField8_ & 0x00000100) != 0)) {
+        result.costMicrosMarginOfError_ = costMicrosMarginOfError_;
+        to_bitField7_ |= 0x40000000;
+      }
+      if (((from_bitField8_ & 0x00000200) != 0)) {
+        result.costMicrosPValue_ = costMicrosPValue_;
+        to_bitField7_ |= 0x80000000;
+      }
+      int to_bitField8_ = 0;
+      if (((from_bitField8_ & 0x00000400) != 0)) {
+        result.costMicrosChangePointEstimate_ = costMicrosChangePointEstimate_;
+        to_bitField8_ |= 0x00000001;
+      }
+      if (((from_bitField8_ & 0x00000800) != 0)) {
+        result.controlImpressions_ = controlImpressions_;
+        to_bitField8_ |= 0x00000002;
+      }
+      if (((from_bitField8_ & 0x00001000) != 0)) {
+        result.impressionsMarginOfError_ = impressionsMarginOfError_;
+        to_bitField8_ |= 0x00000004;
+      }
+      if (((from_bitField8_ & 0x00002000) != 0)) {
+        result.impressionsPValue_ = impressionsPValue_;
+        to_bitField8_ |= 0x00000008;
+      }
+      if (((from_bitField8_ & 0x00004000) != 0)) {
+        result.impressionsPointEstimate_ = impressionsPointEstimate_;
+        to_bitField8_ |= 0x00000010;
+      }
+      if (((from_bitField8_ & 0x00008000) != 0)) {
+        result.clicksMarginOfError_ = clicksMarginOfError_;
+        to_bitField8_ |= 0x00000020;
+      }
+      if (((from_bitField8_ & 0x00010000) != 0)) {
+        result.clicksPValue_ = clicksPValue_;
+        to_bitField8_ |= 0x00000040;
+      }
+      if (((from_bitField8_ & 0x00020000) != 0)) {
+        result.clicksPointEstimate_ = clicksPointEstimate_;
+        to_bitField8_ |= 0x00000080;
+      }
+      if (((from_bitField8_ & 0x00040000) != 0)) {
+        result.controlConversionValue_ = controlConversionValue_;
+        to_bitField8_ |= 0x00000100;
+      }
+      if (((from_bitField8_ & 0x00080000) != 0)) {
+        result.conversionValueMarginOfError_ = conversionValueMarginOfError_;
+        to_bitField8_ |= 0x00000200;
+      }
+      if (((from_bitField8_ & 0x00100000) != 0)) {
+        result.conversionValuePValue_ = conversionValuePValue_;
+        to_bitField8_ |= 0x00000400;
+      }
+      if (((from_bitField8_ & 0x00200000) != 0)) {
+        result.conversionValueChangePointEstimate_ = conversionValueChangePointEstimate_;
+        to_bitField8_ |= 0x00000800;
+      }
+      result.bitField7_ |= to_bitField7_;
+      result.bitField8_ |= to_bitField8_;
     }
 
     @java.lang.Override
@@ -14387,6 +16115,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasClicks()) {
         setClicks(other.getClicks());
       }
+      if (other.hasControlClicks()) {
+        setControlClicks(other.getControlClicks());
+      }
       if (other.hasCombinedClicks()) {
         setCombinedClicks(other.getCombinedClicks());
       }
@@ -14404,12 +16135,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasConversionLastReceivedRequestDateTime()) {
         conversionLastReceivedRequestDateTime_ = other.conversionLastReceivedRequestDateTime_;
-        bitField1_ |= 0x00010000;
+        bitField1_ |= 0x00020000;
         onChanged();
       }
       if (other.hasConversionLastConversionDate()) {
         conversionLastConversionDate_ = other.conversionLastConversionDate_;
-        bitField1_ |= 0x00020000;
+        bitField1_ |= 0x00040000;
         onChanged();
       }
       if (other.hasContentRankLostImpressionShare()) {
@@ -14542,7 +16273,7 @@ private static final long serialVersionUID = 0L;
         if (interactionEventTypes_.isEmpty()) {
           interactionEventTypes_ = other.interactionEventTypes_;
           interactionEventTypes_.makeImmutable();
-          bitField2_ |= 0x10000000;
+          bitField2_ |= 0x20000000;
         } else {
           ensureInteractionEventTypesIsMutable();
           interactionEventTypes_.addAll(other.interactionEventTypes_);
@@ -14578,7 +16309,7 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasOptimizationScoreUrl()) {
         optimizationScoreUrl_ = other.optimizationScoreUrl_;
-        bitField3_ |= 0x00000040;
+        bitField3_ |= 0x00000080;
         onChanged();
       }
       if (other.hasOrganicClicks()) {
@@ -14818,7 +16549,7 @@ private static final long serialVersionUID = 0L;
       if (!other.linkedSampleEntities_.isEmpty()) {
         if (linkedSampleEntities_.isEmpty()) {
           linkedSampleEntities_ = other.linkedSampleEntities_;
-          bitField5_ |= 0x00200000;
+          bitField5_ |= 0x00400000;
         } else {
           ensureLinkedSampleEntitiesIsMutable();
           linkedSampleEntities_.addAll(other.linkedSampleEntities_);
@@ -15029,6 +16760,87 @@ private static final long serialVersionUID = 0L;
       if (other.hasAllUnitsSold()) {
         setAllUnitsSold(other.getAllUnitsSold());
       }
+      if (other.hasControlCostPerConversion()) {
+        setControlCostPerConversion(other.getControlCostPerConversion());
+      }
+      if (other.hasCostPerConversionMarginOfError()) {
+        setCostPerConversionMarginOfError(other.getCostPerConversionMarginOfError());
+      }
+      if (other.hasCostPerConversionPValue()) {
+        setCostPerConversionPValue(other.getCostPerConversionPValue());
+      }
+      if (other.hasCostPerConversionChangePointEstimate()) {
+        setCostPerConversionChangePointEstimate(other.getCostPerConversionChangePointEstimate());
+      }
+      if (other.hasControlConversions()) {
+        setControlConversions(other.getControlConversions());
+      }
+      if (other.hasConversionsAbsoluteChangeMarginOfError()) {
+        setConversionsAbsoluteChangeMarginOfError(other.getConversionsAbsoluteChangeMarginOfError());
+      }
+      if (other.hasConversionsAbsoluteChangePValue()) {
+        setConversionsAbsoluteChangePValue(other.getConversionsAbsoluteChangePValue());
+      }
+      if (other.hasConversionsAbsoluteChangePointEstimate()) {
+        setConversionsAbsoluteChangePointEstimate(other.getConversionsAbsoluteChangePointEstimate());
+      }
+      if (other.hasControlConversionValuePerCost()) {
+        setControlConversionValuePerCost(other.getControlConversionValuePerCost());
+      }
+      if (other.hasConversionValuePerCostMarginOfError()) {
+        setConversionValuePerCostMarginOfError(other.getConversionValuePerCostMarginOfError());
+      }
+      if (other.hasConversionValuePerCostPValue()) {
+        setConversionValuePerCostPValue(other.getConversionValuePerCostPValue());
+      }
+      if (other.hasConversionValuePerCostChangePointEstimate()) {
+        setConversionValuePerCostChangePointEstimate(other.getConversionValuePerCostChangePointEstimate());
+      }
+      if (other.hasControlCostMicros()) {
+        setControlCostMicros(other.getControlCostMicros());
+      }
+      if (other.hasCostMicrosMarginOfError()) {
+        setCostMicrosMarginOfError(other.getCostMicrosMarginOfError());
+      }
+      if (other.hasCostMicrosPValue()) {
+        setCostMicrosPValue(other.getCostMicrosPValue());
+      }
+      if (other.hasCostMicrosChangePointEstimate()) {
+        setCostMicrosChangePointEstimate(other.getCostMicrosChangePointEstimate());
+      }
+      if (other.hasControlImpressions()) {
+        setControlImpressions(other.getControlImpressions());
+      }
+      if (other.hasImpressionsMarginOfError()) {
+        setImpressionsMarginOfError(other.getImpressionsMarginOfError());
+      }
+      if (other.hasImpressionsPValue()) {
+        setImpressionsPValue(other.getImpressionsPValue());
+      }
+      if (other.hasImpressionsPointEstimate()) {
+        setImpressionsPointEstimate(other.getImpressionsPointEstimate());
+      }
+      if (other.hasClicksMarginOfError()) {
+        setClicksMarginOfError(other.getClicksMarginOfError());
+      }
+      if (other.hasClicksPValue()) {
+        setClicksPValue(other.getClicksPValue());
+      }
+      if (other.hasClicksPointEstimate()) {
+        setClicksPointEstimate(other.getClicksPointEstimate());
+      }
+      if (other.hasControlConversionValue()) {
+        setControlConversionValue(other.getControlConversionValue());
+      }
+      if (other.hasConversionValueMarginOfError()) {
+        setConversionValueMarginOfError(other.getConversionValueMarginOfError());
+      }
+      if (other.hasConversionValuePValue()) {
+        setConversionValuePValue(other.getConversionValuePValue());
+      }
+      if (other.hasConversionValueChangePointEstimate()) {
+        setConversionValueChangePointEstimate(other.getConversionValueChangePointEstimate());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -15057,17 +16869,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 640: {
               historicalCreativeQualityScore_ = input.readEnum();
-              bitField2_ |= 0x00020000;
+              bitField2_ |= 0x00040000;
               break;
             } // case 640
             case 648: {
               historicalLandingPageQualityScore_ = input.readEnum();
-              bitField2_ |= 0x00040000;
+              bitField2_ |= 0x00080000;
               break;
             } // case 648
             case 664: {
               historicalSearchPredictedCtr_ = input.readEnum();
-              bitField2_ |= 0x00100000;
+              bitField2_ |= 0x00200000;
               break;
             } // case 664
             case 800: {
@@ -15093,242 +16905,242 @@ private static final long serialVersionUID = 0L;
             } // case 1048
             case 1057: {
               videoQuartileP100Rate_ = input.readDouble();
-              bitField4_ |= 0x00000080;
+              bitField4_ |= 0x00000100;
               break;
             } // case 1057
             case 1065: {
               videoQuartileP25Rate_ = input.readDouble();
-              bitField4_ |= 0x00000100;
+              bitField4_ |= 0x00000200;
               break;
             } // case 1065
             case 1073: {
               videoQuartileP50Rate_ = input.readDouble();
-              bitField4_ |= 0x00000200;
+              bitField4_ |= 0x00000400;
               break;
             } // case 1073
             case 1081: {
               videoQuartileP75Rate_ = input.readDouble();
-              bitField4_ |= 0x00000400;
+              bitField4_ |= 0x00000800;
               break;
             } // case 1081
             case 1089: {
               searchAbsoluteTopImpressionShare_ = input.readDouble();
-              bitField3_ |= 0x00020000;
+              bitField3_ |= 0x00040000;
               break;
             } // case 1089
             case 1097: {
               searchBudgetLostAbsoluteTopImpressionShare_ = input.readDouble();
-              bitField3_ |= 0x00040000;
+              bitField3_ |= 0x00080000;
               break;
             } // case 1097
             case 1105: {
               searchBudgetLostImpressionShare_ = input.readDouble();
-              bitField3_ |= 0x00080000;
+              bitField3_ |= 0x00100000;
               break;
             } // case 1105
             case 1113: {
               searchBudgetLostTopImpressionShare_ = input.readDouble();
-              bitField3_ |= 0x00100000;
+              bitField3_ |= 0x00200000;
               break;
             } // case 1113
             case 1121: {
               searchClickShare_ = input.readDouble();
-              bitField3_ |= 0x00200000;
+              bitField3_ |= 0x00400000;
               break;
             } // case 1121
             case 1129: {
               searchExactMatchImpressionShare_ = input.readDouble();
-              bitField3_ |= 0x00400000;
+              bitField3_ |= 0x00800000;
               break;
             } // case 1129
             case 1137: {
               searchImpressionShare_ = input.readDouble();
-              bitField3_ |= 0x00800000;
+              bitField3_ |= 0x01000000;
               break;
             } // case 1137
             case 1145: {
               searchRankLostAbsoluteTopImpressionShare_ = input.readDouble();
-              bitField3_ |= 0x01000000;
+              bitField3_ |= 0x02000000;
               break;
             } // case 1145
             case 1153: {
               searchRankLostImpressionShare_ = input.readDouble();
-              bitField3_ |= 0x02000000;
+              bitField3_ |= 0x04000000;
               break;
             } // case 1153
             case 1161: {
               searchRankLostTopImpressionShare_ = input.readDouble();
-              bitField3_ |= 0x04000000;
+              bitField3_ |= 0x08000000;
               break;
             } // case 1161
             case 1169: {
               searchTopImpressionShare_ = input.readDouble();
-              bitField3_ |= 0x08000000;
+              bitField3_ |= 0x10000000;
               break;
             } // case 1169
             case 1176: {
               speedScore_ = input.readInt64();
-              bitField3_ |= 0x20000000;
+              bitField3_ |= 0x40000000;
               break;
             } // case 1176
             case 1185: {
               topImpressionPercentage_ = input.readDouble();
-              bitField4_ |= 0x00000001;
+              bitField4_ |= 0x00000002;
               break;
             } // case 1185
             case 1193: {
               validAcceleratedMobilePagesClicksPercentage_ = input.readDouble();
-              bitField4_ |= 0x00000002;
+              bitField4_ |= 0x00000004;
               break;
             } // case 1193
             case 1201: {
               valuePerAllConversions_ = input.readDouble();
-              bitField4_ |= 0x00000004;
+              bitField4_ |= 0x00000008;
               break;
             } // case 1201
             case 1209: {
               valuePerConversion_ = input.readDouble();
-              bitField4_ |= 0x00000010;
+              bitField4_ |= 0x00000020;
               break;
             } // case 1209
             case 1217: {
               valuePerCurrentModelAttributedConversion_ = input.readDouble();
-              bitField4_ |= 0x00000040;
+              bitField4_ |= 0x00000080;
               break;
             } // case 1217
             case 1240: {
               viewThroughConversions_ = input.readInt64();
-              bitField4_ |= 0x00002000;
+              bitField4_ |= 0x00004000;
               break;
             } // case 1240
             case 1248: {
               combinedClicks_ = input.readInt64();
-              bitField1_ |= 0x00000800;
+              bitField1_ |= 0x00001000;
               break;
             } // case 1248
             case 1257: {
               combinedClicksPerQuery_ = input.readDouble();
-              bitField1_ |= 0x00001000;
+              bitField1_ |= 0x00002000;
               break;
             } // case 1257
             case 1264: {
               combinedQueries_ = input.readInt64();
-              bitField1_ |= 0x00002000;
+              bitField1_ |= 0x00004000;
               break;
             } // case 1264
             case 1273: {
               contentBudgetLostImpressionShare_ = input.readDouble();
-              bitField1_ |= 0x00004000;
+              bitField1_ |= 0x00008000;
               break;
             } // case 1273
             case 1281: {
               contentImpressionShare_ = input.readDouble();
-              bitField1_ |= 0x00008000;
+              bitField1_ |= 0x00010000;
               break;
             } // case 1281
             case 1290: {
               conversionLastReceivedRequestDateTime_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00010000;
+              bitField1_ |= 0x00020000;
               break;
             } // case 1290
             case 1298: {
               conversionLastConversionDate_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00020000;
+              bitField1_ |= 0x00040000;
               break;
             } // case 1298
             case 1305: {
               contentRankLostImpressionShare_ = input.readDouble();
-              bitField1_ |= 0x00040000;
+              bitField1_ |= 0x00080000;
               break;
             } // case 1305
             case 1313: {
               conversionsFromInteractionsRate_ = input.readDouble();
-              bitField1_ |= 0x00080000;
+              bitField1_ |= 0x00100000;
               break;
             } // case 1313
             case 1321: {
               conversionsValue_ = input.readDouble();
-              bitField1_ |= 0x00100000;
+              bitField1_ |= 0x00200000;
               break;
             } // case 1321
             case 1329: {
               conversionsValuePerCost_ = input.readDouble();
-              bitField1_ |= 0x00800000;
+              bitField1_ |= 0x01000000;
               break;
             } // case 1329
             case 1337: {
               conversionsFromInteractionsValuePerInteraction_ = input.readDouble();
-              bitField1_ |= 0x01000000;
+              bitField1_ |= 0x02000000;
               break;
             } // case 1337
             case 1345: {
               conversions_ = input.readDouble();
-              bitField1_ |= 0x02000000;
+              bitField1_ |= 0x04000000;
               break;
             } // case 1345
             case 1352: {
               costMicros_ = input.readInt64();
-              bitField1_ |= 0x08000000;
+              bitField1_ |= 0x10000000;
               break;
             } // case 1352
             case 1361: {
               costPerAllConversions_ = input.readDouble();
-              bitField1_ |= 0x10000000;
+              bitField1_ |= 0x20000000;
               break;
             } // case 1361
             case 1369: {
               costPerConversion_ = input.readDouble();
-              bitField1_ |= 0x20000000;
+              bitField1_ |= 0x40000000;
               break;
             } // case 1369
             case 1377: {
               costPerCurrentModelAttributedConversion_ = input.readDouble();
-              bitField1_ |= 0x40000000;
+              bitField1_ |= 0x80000000;
               break;
             } // case 1377
             case 1385: {
               crossDeviceConversions_ = input.readDouble();
-              bitField1_ |= 0x80000000;
+              bitField2_ |= 0x00000001;
               break;
             } // case 1385
             case 1393: {
               ctr_ = input.readDouble();
-              bitField2_ |= 0x00000010;
+              bitField2_ |= 0x00000020;
               break;
             } // case 1393
             case 1401: {
               currentModelAttributedConversions_ = input.readDouble();
-              bitField2_ |= 0x00000020;
+              bitField2_ |= 0x00000040;
               break;
             } // case 1401
             case 1409: {
               currentModelAttributedConversionsFromInteractionsRate_ = input.readDouble();
-              bitField2_ |= 0x00000040;
+              bitField2_ |= 0x00000080;
               break;
             } // case 1409
             case 1417: {
               currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = input.readDouble();
-              bitField2_ |= 0x00000080;
+              bitField2_ |= 0x00000100;
               break;
             } // case 1417
             case 1425: {
               currentModelAttributedConversionsValue_ = input.readDouble();
-              bitField2_ |= 0x00000100;
+              bitField2_ |= 0x00000200;
               break;
             } // case 1425
             case 1433: {
               currentModelAttributedConversionsValuePerCost_ = input.readDouble();
-              bitField2_ |= 0x00000200;
+              bitField2_ |= 0x00000400;
               break;
             } // case 1433
             case 1441: {
               engagementRate_ = input.readDouble();
-              bitField2_ |= 0x00000400;
+              bitField2_ |= 0x00000800;
               break;
             } // case 1441
             case 1448: {
               engagements_ = input.readInt64();
-              bitField2_ |= 0x00000800;
+              bitField2_ |= 0x00001000;
               break;
             } // case 1448
             case 1465: {
@@ -15478,137 +17290,137 @@ private static final long serialVersionUID = 0L;
             } // case 1697
             case 1705: {
               hotelAverageLeadValueMicros_ = input.readDouble();
-              bitField2_ |= 0x00001000;
+              bitField2_ |= 0x00002000;
               break;
             } // case 1705
             case 1713: {
               hotelPriceDifferencePercentage_ = input.readDouble();
-              bitField2_ |= 0x00008000;
+              bitField2_ |= 0x00010000;
               break;
             } // case 1713
             case 1720: {
               hotelEligibleImpressions_ = input.readInt64();
-              bitField2_ |= 0x00010000;
+              bitField2_ |= 0x00020000;
               break;
             } // case 1720
             case 1728: {
               historicalQualityScore_ = input.readInt64();
-              bitField2_ |= 0x00080000;
+              bitField2_ |= 0x00100000;
               break;
             } // case 1728
             case 1736: {
               gmailForwards_ = input.readInt64();
-              bitField2_ |= 0x00200000;
+              bitField2_ |= 0x00400000;
               break;
             } // case 1736
             case 1744: {
               gmailSaves_ = input.readInt64();
-              bitField2_ |= 0x00400000;
+              bitField2_ |= 0x00800000;
               break;
             } // case 1744
             case 1752: {
               gmailSecondaryClicks_ = input.readInt64();
-              bitField2_ |= 0x00800000;
+              bitField2_ |= 0x01000000;
               break;
             } // case 1752
             case 1760: {
               impressionsFromStoreReach_ = input.readInt64();
-              bitField2_ |= 0x01000000;
+              bitField2_ |= 0x02000000;
               break;
             } // case 1760
             case 1768: {
               impressions_ = input.readInt64();
-              bitField2_ |= 0x02000000;
+              bitField2_ |= 0x04000000;
               break;
             } // case 1768
             case 1777: {
               interactionRate_ = input.readDouble();
-              bitField2_ |= 0x04000000;
+              bitField2_ |= 0x08000000;
               break;
             } // case 1777
             case 1784: {
               interactions_ = input.readInt64();
-              bitField2_ |= 0x08000000;
+              bitField2_ |= 0x10000000;
               break;
             } // case 1784
             case 1793: {
               invalidClickRate_ = input.readDouble();
-              bitField2_ |= 0x20000000;
+              bitField2_ |= 0x40000000;
               break;
             } // case 1793
             case 1800: {
               invalidClicks_ = input.readInt64();
-              bitField2_ |= 0x40000000;
+              bitField2_ |= 0x80000000;
               break;
             } // case 1800
             case 1808: {
               messageChats_ = input.readInt64();
-              bitField3_ |= 0x00000002;
+              bitField3_ |= 0x00000004;
               break;
             } // case 1808
             case 1816: {
               messageImpressions_ = input.readInt64();
-              bitField3_ |= 0x00000004;
+              bitField3_ |= 0x00000008;
               break;
             } // case 1816
             case 1825: {
               messageChatRate_ = input.readDouble();
-              bitField3_ |= 0x00000008;
+              bitField3_ |= 0x00000010;
               break;
             } // case 1825
             case 1833: {
               mobileFriendlyClicksPercentage_ = input.readDouble();
-              bitField3_ |= 0x00000010;
+              bitField3_ |= 0x00000020;
               break;
             } // case 1833
             case 1840: {
               organicClicks_ = input.readInt64();
-              bitField3_ |= 0x00000080;
+              bitField3_ |= 0x00000100;
               break;
             } // case 1840
             case 1849: {
               organicClicksPerQuery_ = input.readDouble();
-              bitField3_ |= 0x00000100;
+              bitField3_ |= 0x00000200;
               break;
             } // case 1849
             case 1856: {
               organicImpressions_ = input.readInt64();
-              bitField3_ |= 0x00000200;
+              bitField3_ |= 0x00000400;
               break;
             } // case 1856
             case 1865: {
               organicImpressionsPerQuery_ = input.readDouble();
-              bitField3_ |= 0x00000400;
+              bitField3_ |= 0x00000800;
               break;
             } // case 1865
             case 1872: {
               organicQueries_ = input.readInt64();
-              bitField3_ |= 0x00000800;
+              bitField3_ |= 0x00001000;
               break;
             } // case 1872
             case 1881: {
               percentNewVisitors_ = input.readDouble();
-              bitField3_ |= 0x00001000;
+              bitField3_ |= 0x00002000;
               break;
             } // case 1881
             case 1888: {
               phoneCalls_ = input.readInt64();
-              bitField3_ |= 0x00002000;
+              bitField3_ |= 0x00004000;
               break;
             } // case 1888
             case 1896: {
               phoneImpressions_ = input.readInt64();
-              bitField3_ |= 0x00004000;
+              bitField3_ |= 0x00008000;
               break;
             } // case 1896
             case 1905: {
               phoneThroughRate_ = input.readDouble();
-              bitField3_ |= 0x00008000;
+              bitField3_ |= 0x00010000;
               break;
             } // case 1905
             case 1913: {
               relativeCtr_ = input.readDouble();
-              bitField3_ |= 0x00010000;
+              bitField3_ |= 0x00020000;
               break;
             } // case 1913
             case 1921: {
@@ -15623,47 +17435,47 @@ private static final long serialVersionUID = 0L;
             } // case 1929
             case 1937: {
               conversionsValueByConversionDate_ = input.readDouble();
-              bitField1_ |= 0x00200000;
+              bitField1_ |= 0x00400000;
               break;
             } // case 1937
             case 1945: {
               conversionsByConversionDate_ = input.readDouble();
-              bitField1_ |= 0x04000000;
+              bitField1_ |= 0x08000000;
               break;
             } // case 1945
             case 1953: {
               valuePerAllConversionsByConversionDate_ = input.readDouble();
-              bitField4_ |= 0x00000008;
+              bitField4_ |= 0x00000010;
               break;
             } // case 1953
             case 1961: {
               valuePerConversionsByConversionDate_ = input.readDouble();
-              bitField4_ |= 0x00000020;
+              bitField4_ |= 0x00000040;
               break;
             } // case 1961
             case 1968: {
               skAdNetworkInstalls_ = input.readInt64();
-              bitField4_ |= 0x00004000;
+              bitField4_ |= 0x00008000;
               break;
             } // case 1968
             case 1977: {
               optimizationScoreUplift_ = input.readDouble();
-              bitField3_ |= 0x00000020;
+              bitField3_ |= 0x00000040;
               break;
             } // case 1977
             case 1986: {
               optimizationScoreUrl_ = input.readStringRequireUtf8();
-              bitField3_ |= 0x00000040;
+              bitField3_ |= 0x00000080;
               break;
             } // case 1986
             case 2001: {
               averageTargetRoas_ = input.readDouble();
-              bitField3_ |= 0x80000000;
+              bitField4_ |= 0x00000001;
               break;
             } // case 2001
             case 2025: {
               crossDeviceConversionsValue_ = input.readDouble();
-              bitField2_ |= 0x00000002;
+              bitField2_ |= 0x00000004;
               break;
             } // case 2025
             case 2033: {
@@ -15678,12 +17490,12 @@ private static final long serialVersionUID = 0L;
             } // case 2041
             case 2048: {
               hotelCommissionRateMicros_ = input.readInt64();
-              bitField2_ |= 0x00002000;
+              bitField2_ |= 0x00004000;
               break;
             } // case 2048
             case 2057: {
               hotelExpectedCommissionCost_ = input.readDouble();
-              bitField2_ |= 0x00004000;
+              bitField2_ |= 0x00008000;
               break;
             } // case 2057
             case 2065: {
@@ -15718,107 +17530,107 @@ private static final long serialVersionUID = 0L;
             } // case 2105
             case 2112: {
               publisherPurchasedClicks_ = input.readInt64();
-              bitField4_ |= 0x00010000;
+              bitField4_ |= 0x00020000;
               break;
             } // case 2112
             case 2120: {
               publisherOrganicClicks_ = input.readInt64();
-              bitField4_ |= 0x00020000;
+              bitField4_ |= 0x00040000;
               break;
             } // case 2120
             case 2128: {
               publisherUnknownClicks_ = input.readInt64();
-              bitField4_ |= 0x00040000;
+              bitField4_ |= 0x00080000;
               break;
             } // case 2128
             case 2137: {
               allConversionsFromLocationAssetClickToCall_ = input.readDouble();
-              bitField4_ |= 0x00080000;
+              bitField4_ |= 0x00100000;
               break;
             } // case 2137
             case 2145: {
               allConversionsFromLocationAssetDirections_ = input.readDouble();
-              bitField4_ |= 0x00100000;
+              bitField4_ |= 0x00200000;
               break;
             } // case 2145
             case 2153: {
               allConversionsFromLocationAssetMenu_ = input.readDouble();
-              bitField4_ |= 0x00200000;
+              bitField4_ |= 0x00400000;
               break;
             } // case 2153
             case 2161: {
               allConversionsFromLocationAssetOrder_ = input.readDouble();
-              bitField4_ |= 0x00400000;
+              bitField4_ |= 0x00800000;
               break;
             } // case 2161
             case 2169: {
               allConversionsFromLocationAssetOtherEngagement_ = input.readDouble();
-              bitField4_ |= 0x00800000;
+              bitField4_ |= 0x01000000;
               break;
             } // case 2169
             case 2177: {
               allConversionsFromLocationAssetStoreVisits_ = input.readDouble();
-              bitField4_ |= 0x01000000;
+              bitField4_ |= 0x02000000;
               break;
             } // case 2177
             case 2185: {
               allConversionsFromLocationAssetWebsite_ = input.readDouble();
-              bitField4_ |= 0x02000000;
+              bitField4_ |= 0x04000000;
               break;
             } // case 2185
             case 2192: {
               eligibleImpressionsFromLocationAssetStoreReach_ = input.readInt64();
-              bitField4_ |= 0x04000000;
+              bitField4_ |= 0x08000000;
               break;
             } // case 2192
             case 2201: {
               viewThroughConversionsFromLocationAssetClickToCall_ = input.readDouble();
-              bitField4_ |= 0x08000000;
+              bitField4_ |= 0x10000000;
               break;
             } // case 2201
             case 2209: {
               viewThroughConversionsFromLocationAssetDirections_ = input.readDouble();
-              bitField4_ |= 0x10000000;
+              bitField4_ |= 0x20000000;
               break;
             } // case 2209
             case 2217: {
               viewThroughConversionsFromLocationAssetMenu_ = input.readDouble();
-              bitField4_ |= 0x20000000;
+              bitField4_ |= 0x40000000;
               break;
             } // case 2217
             case 2225: {
               viewThroughConversionsFromLocationAssetOrder_ = input.readDouble();
-              bitField4_ |= 0x40000000;
+              bitField4_ |= 0x80000000;
               break;
             } // case 2225
             case 2233: {
               viewThroughConversionsFromLocationAssetOtherEngagement_ = input.readDouble();
-              bitField4_ |= 0x80000000;
+              bitField5_ |= 0x00000001;
               break;
             } // case 2233
             case 2241: {
               viewThroughConversionsFromLocationAssetStoreVisits_ = input.readDouble();
-              bitField5_ |= 0x00000001;
+              bitField5_ |= 0x00000002;
               break;
             } // case 2241
             case 2249: {
               viewThroughConversionsFromLocationAssetWebsite_ = input.readDouble();
-              bitField5_ |= 0x00000002;
+              bitField5_ |= 0x00000004;
               break;
             } // case 2249
             case 2320: {
               averageTargetCpaMicros_ = input.readInt64();
-              bitField3_ |= 0x40000000;
+              bitField3_ |= 0x80000000;
               break;
             } // case 2320
             case 2336: {
               skAdNetworkTotalConversions_ = input.readInt64();
-              bitField4_ |= 0x00008000;
+              bitField4_ |= 0x00010000;
               break;
             } // case 2336
             case 2345: {
               newCustomerLifetimeValue_ = input.readDouble();
-              bitField1_ |= 0x00400000;
+              bitField1_ |= 0x00800000;
               break;
             } // case 2345
             case 2353: {
@@ -15830,107 +17642,107 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   internalGetSearchVolumeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x10000000;
+              bitField3_ |= 0x20000000;
               break;
             } // case 2362
             case 2369: {
               orders_ = input.readDouble();
-              bitField5_ |= 0x00000004;
+              bitField5_ |= 0x00000008;
               break;
             } // case 2369
             case 2376: {
               averageOrderValueMicros_ = input.readInt64();
-              bitField5_ |= 0x00000008;
+              bitField5_ |= 0x00000010;
               break;
             } // case 2376
             case 2385: {
               averageCartSize_ = input.readDouble();
-              bitField5_ |= 0x00000010;
+              bitField5_ |= 0x00000020;
               break;
             } // case 2385
             case 2392: {
               costOfGoodsSoldMicros_ = input.readInt64();
-              bitField5_ |= 0x00000020;
+              bitField5_ |= 0x00000040;
               break;
             } // case 2392
             case 2400: {
               grossProfitMicros_ = input.readInt64();
-              bitField5_ |= 0x00000040;
+              bitField5_ |= 0x00000080;
               break;
             } // case 2400
             case 2409: {
               grossProfitMargin_ = input.readDouble();
-              bitField5_ |= 0x00000080;
+              bitField5_ |= 0x00000100;
               break;
             } // case 2409
             case 2416: {
               revenueMicros_ = input.readInt64();
-              bitField5_ |= 0x00000100;
+              bitField5_ |= 0x00000200;
               break;
             } // case 2416
             case 2425: {
               unitsSold_ = input.readDouble();
-              bitField5_ |= 0x00000200;
+              bitField5_ |= 0x00000400;
               break;
             } // case 2425
             case 2432: {
               crossSellCostOfGoodsSoldMicros_ = input.readInt64();
-              bitField5_ |= 0x00000400;
+              bitField5_ |= 0x00000800;
               break;
             } // case 2432
             case 2440: {
               crossSellGrossProfitMicros_ = input.readInt64();
-              bitField5_ |= 0x00000800;
+              bitField5_ |= 0x00001000;
               break;
             } // case 2440
             case 2448: {
               crossSellRevenueMicros_ = input.readInt64();
-              bitField5_ |= 0x00001000;
+              bitField5_ |= 0x00002000;
               break;
             } // case 2448
             case 2457: {
               crossSellUnitsSold_ = input.readDouble();
-              bitField5_ |= 0x00002000;
+              bitField5_ |= 0x00004000;
               break;
             } // case 2457
             case 2464: {
               leadCostOfGoodsSoldMicros_ = input.readInt64();
-              bitField5_ |= 0x00004000;
+              bitField5_ |= 0x00008000;
               break;
             } // case 2464
             case 2472: {
               leadGrossProfitMicros_ = input.readInt64();
-              bitField5_ |= 0x00008000;
+              bitField5_ |= 0x00010000;
               break;
             } // case 2472
             case 2480: {
               leadRevenueMicros_ = input.readInt64();
-              bitField5_ |= 0x00010000;
+              bitField5_ |= 0x00020000;
               break;
             } // case 2480
             case 2489: {
               leadUnitsSold_ = input.readDouble();
-              bitField5_ |= 0x00020000;
+              bitField5_ |= 0x00040000;
               break;
             } // case 2489
             case 2496: {
               crossDeviceConversionsValueMicros_ = input.readInt64();
-              bitField2_ |= 0x00000004;
+              bitField2_ |= 0x00000008;
               break;
             } // case 2496
             case 2552: {
               uniqueUsers_ = input.readInt64();
-              bitField5_ |= 0x00040000;
+              bitField5_ |= 0x00080000;
               break;
             } // case 2552
             case 2561: {
               averageImpressionFrequencyPerUser_ = input.readDouble();
-              bitField5_ |= 0x00080000;
+              bitField5_ |= 0x00100000;
               break;
             } // case 2561
             case 2728: {
               linkedEntitiesCount_ = input.readInt64();
-              bitField5_ |= 0x00100000;
+              bitField5_ |= 0x00200000;
               break;
             } // case 2728
             case 2738: {
@@ -15941,62 +17753,62 @@ private static final long serialVersionUID = 0L;
             } // case 2738
             case 2784: {
               assetPinnedTotalCount_ = input.readInt64();
-              bitField5_ |= 0x00400000;
+              bitField5_ |= 0x00800000;
               break;
             } // case 2784
             case 2792: {
               assetPinnedAsHeadlinePositionOneCount_ = input.readInt64();
-              bitField5_ |= 0x00800000;
+              bitField5_ |= 0x01000000;
               break;
             } // case 2792
             case 2800: {
               assetPinnedAsHeadlinePositionTwoCount_ = input.readInt64();
-              bitField5_ |= 0x01000000;
+              bitField5_ |= 0x02000000;
               break;
             } // case 2800
             case 2808: {
               assetPinnedAsHeadlinePositionThreeCount_ = input.readInt64();
-              bitField5_ |= 0x02000000;
+              bitField5_ |= 0x04000000;
               break;
             } // case 2808
             case 2816: {
               assetPinnedAsDescriptionPositionOneCount_ = input.readInt64();
-              bitField5_ |= 0x04000000;
+              bitField5_ |= 0x08000000;
               break;
             } // case 2816
             case 2824: {
               assetPinnedAsDescriptionPositionTwoCount_ = input.readInt64();
-              bitField5_ |= 0x08000000;
+              bitField5_ |= 0x10000000;
               break;
             } // case 2824
             case 2921: {
               storeVisitsLastClickModelAttributedConversions_ = input.readDouble();
-              bitField5_ |= 0x10000000;
+              bitField5_ |= 0x20000000;
               break;
             } // case 2921
             case 2929: {
               resultsConversionsPurchase_ = input.readDouble();
-              bitField5_ |= 0x20000000;
+              bitField5_ |= 0x40000000;
               break;
             } // case 2929
             case 2961: {
               generalInvalidClickRate_ = input.readDouble();
-              bitField2_ |= 0x80000000;
+              bitField3_ |= 0x00000001;
               break;
             } // case 2961
             case 2968: {
               generalInvalidClicks_ = input.readInt64();
-              bitField3_ |= 0x00000001;
+              bitField3_ |= 0x00000002;
               break;
             } // case 2968
             case 2977: {
               crossDeviceConversionsByConversionDate_ = input.readDouble();
-              bitField2_ |= 0x00000001;
+              bitField2_ |= 0x00000002;
               break;
             } // case 2977
             case 2985: {
               crossDeviceConversionsValueByConversionDate_ = input.readDouble();
-              bitField2_ |= 0x00000008;
+              bitField2_ |= 0x00000010;
               break;
             } // case 2985
             case 3025: {
@@ -16006,127 +17818,127 @@ private static final long serialVersionUID = 0L;
             } // case 3025
             case 3040: {
               coviewedImpressions_ = input.readInt64();
-              bitField6_ |= 0x00000002;
+              bitField6_ |= 0x00000004;
               break;
             } // case 3040
             case 3048: {
               primaryImpressions_ = input.readInt64();
-              bitField6_ |= 0x00000004;
+              bitField6_ |= 0x00000008;
               break;
             } // case 3048
             case 3057: {
               platformComparableConversionsFromInteractionsRate_ = input.readDouble();
-              bitField6_ |= 0x00000008;
+              bitField6_ |= 0x00000010;
               break;
             } // case 3057
             case 3065: {
               platformComparableConversions_ = input.readDouble();
-              bitField6_ |= 0x00000010;
+              bitField6_ |= 0x00000020;
               break;
             } // case 3065
             case 3073: {
               platformComparableConversionsValue_ = input.readDouble();
-              bitField6_ |= 0x00000020;
+              bitField6_ |= 0x00000040;
               break;
             } // case 3073
             case 3081: {
               platformComparableConversionsValuePerCost_ = input.readDouble();
-              bitField6_ |= 0x00000040;
+              bitField6_ |= 0x00000080;
               break;
             } // case 3081
             case 3089: {
               platformComparableConversionsByConversionDate_ = input.readDouble();
-              bitField6_ |= 0x00000080;
+              bitField6_ |= 0x00000100;
               break;
             } // case 3089
             case 3097: {
               platformComparableConversionsValueByConversionDate_ = input.readDouble();
-              bitField6_ |= 0x00000100;
+              bitField6_ |= 0x00000200;
               break;
             } // case 3097
             case 3105: {
               platformComparableConversionsFromInteractionsValuePerInteraction_ = input.readDouble();
-              bitField6_ |= 0x00000200;
+              bitField6_ |= 0x00000400;
               break;
             } // case 3105
             case 3113: {
               costPerPlatformComparableConversion_ = input.readDouble();
-              bitField6_ |= 0x00000400;
+              bitField6_ |= 0x00000800;
               break;
             } // case 3113
             case 3121: {
               valuePerPlatformComparableConversion_ = input.readDouble();
-              bitField6_ |= 0x00000800;
+              bitField6_ |= 0x00001000;
               break;
             } // case 3121
             case 3129: {
               valuePerPlatformComparableConversionsByConversionDate_ = input.readDouble();
-              bitField6_ |= 0x00001000;
+              bitField6_ |= 0x00002000;
               break;
             } // case 3129
             case 3137: {
               costConvertedCurrencyPerPlatformComparableConversion_ = input.readDouble();
-              bitField6_ |= 0x00002000;
+              bitField6_ |= 0x00004000;
               break;
             } // case 3137
             case 3144: {
               uniqueUsersTwoPlus_ = input.readInt64();
-              bitField6_ |= 0x00004000;
+              bitField6_ |= 0x00008000;
               break;
             } // case 3144
             case 3152: {
               uniqueUsersThreePlus_ = input.readInt64();
-              bitField6_ |= 0x00008000;
+              bitField6_ |= 0x00010000;
               break;
             } // case 3152
             case 3160: {
               uniqueUsersFourPlus_ = input.readInt64();
-              bitField6_ |= 0x00010000;
+              bitField6_ |= 0x00020000;
               break;
             } // case 3160
             case 3168: {
               uniqueUsersFivePlus_ = input.readInt64();
-              bitField6_ |= 0x00020000;
+              bitField6_ |= 0x00040000;
               break;
             } // case 3168
             case 3176: {
               uniqueUsersTenPlus_ = input.readInt64();
-              bitField6_ |= 0x00040000;
+              bitField6_ |= 0x00080000;
               break;
             } // case 3176
             case 3185: {
               valueAdjustment_ = input.readDouble();
-              bitField6_ |= 0x00080000;
+              bitField6_ |= 0x00100000;
               break;
             } // case 3185
             case 3193: {
               allValueAdjustment_ = input.readDouble();
-              bitField6_ |= 0x00100000;
+              bitField6_ |= 0x00200000;
               break;
             } // case 3193
             case 3200: {
               clicksUniqueQueryClusters_ = input.readInt64();
-              bitField6_ |= 0x00200000;
+              bitField6_ |= 0x00400000;
               break;
             } // case 3200
             case 3208: {
               conversionsUniqueQueryClusters_ = input.readInt64();
-              bitField6_ |= 0x00400000;
+              bitField6_ |= 0x00800000;
               break;
             } // case 3208
             case 3216: {
               impressionsUniqueQueryClusters_ = input.readInt64();
-              bitField6_ |= 0x00800000;
+              bitField6_ |= 0x01000000;
               break;
             } // case 3216
             case 3224: {
               videoWatchTimeDurationMillis_ = input.readInt64();
-              bitField6_ |= 0x01000000;
+              bitField6_ |= 0x02000000;
               break;
             } // case 3224
             case 3232: {
               averageVideoWatchTimeDurationMillis_ = input.readInt64();
-              bitField6_ |= 0x02000000;
+              bitField6_ |= 0x04000000;
               break;
             } // case 3232
             case 3241: {
@@ -16136,189 +17948,329 @@ private static final long serialVersionUID = 0L;
             } // case 3241
             case 3249: {
               videoTrueviewViewRate_ = input.readDouble();
-              bitField4_ |= 0x00000800;
+              bitField4_ |= 0x00001000;
               break;
             } // case 3249
             case 3256: {
               videoTrueviewViews_ = input.readInt64();
-              bitField4_ |= 0x00001000;
+              bitField4_ |= 0x00002000;
               break;
             } // case 3256
             case 3265: {
               videoTrueviewViewRateInFeed_ = input.readDouble();
-              bitField5_ |= 0x40000000;
+              bitField5_ |= 0x80000000;
               break;
             } // case 3265
             case 3273: {
               videoTrueviewViewRateInStream_ = input.readDouble();
-              bitField5_ |= 0x80000000;
+              bitField6_ |= 0x00000001;
               break;
             } // case 3273
             case 3281: {
               videoTrueviewViewRateShorts_ = input.readDouble();
-              bitField6_ |= 0x00000001;
+              bitField6_ |= 0x00000002;
               break;
             } // case 3281
             case 3288: {
               svr_ = input.readInt64();
-              bitField6_ |= 0x04000000;
+              bitField6_ |= 0x08000000;
               break;
             } // case 3288
             case 3296: {
               activeViewAudibilityMeasurableImpressions_ = input.readInt64();
-              bitField6_ |= 0x08000000;
+              bitField6_ |= 0x10000000;
               break;
             } // case 3296
             case 3305: {
               activeViewAudibilityMeasurableImpressionsRate_ = input.readDouble();
-              bitField6_ |= 0x10000000;
+              bitField6_ |= 0x20000000;
               break;
             } // case 3305
             case 3313: {
               activeViewAudibilityInvalidMeasurableImpressionsRate_ = input.readDouble();
-              bitField6_ |= 0x20000000;
+              bitField6_ |= 0x40000000;
               break;
             } // case 3313
             case 3321: {
               activeViewAudibilityInvalidGivtMeasurableImpressionsRate_ = input.readDouble();
-              bitField6_ |= 0x40000000;
+              bitField6_ |= 0x80000000;
               break;
             } // case 3321
             case 3328: {
               activeViewAudibleImpressions_ = input.readInt64();
-              bitField6_ |= 0x80000000;
+              bitField7_ |= 0x00000001;
               break;
             } // case 3328
             case 3337: {
               activeViewAudibleImpressionsRate_ = input.readDouble();
-              bitField7_ |= 0x00000001;
+              bitField7_ |= 0x00000002;
               break;
             } // case 3337
             case 3344: {
               activeViewAudibleTwoSecondsImpressions_ = input.readInt64();
-              bitField7_ |= 0x00000002;
+              bitField7_ |= 0x00000004;
               break;
             } // case 3344
             case 3353: {
               activeViewAudibleTwoSecondsImpressionsRate_ = input.readDouble();
-              bitField7_ |= 0x00000004;
+              bitField7_ |= 0x00000008;
               break;
             } // case 3353
             case 3360: {
               activeViewAudibleThirtySecondsImpressions_ = input.readInt64();
-              bitField7_ |= 0x00000008;
+              bitField7_ |= 0x00000010;
               break;
             } // case 3360
             case 3369: {
               activeViewAudibleThirtySecondsImpressionsRate_ = input.readDouble();
-              bitField7_ |= 0x00000010;
+              bitField7_ |= 0x00000020;
               break;
             } // case 3369
             case 3377: {
               activeViewAudibleQuartileP25Rate_ = input.readDouble();
-              bitField7_ |= 0x00000020;
+              bitField7_ |= 0x00000040;
               break;
             } // case 3377
             case 3385: {
               activeViewAudibleQuartileP50Rate_ = input.readDouble();
-              bitField7_ |= 0x00000040;
+              bitField7_ |= 0x00000080;
               break;
             } // case 3385
             case 3393: {
               activeViewAudibleQuartileP75Rate_ = input.readDouble();
-              bitField7_ |= 0x00000080;
+              bitField7_ |= 0x00000100;
               break;
             } // case 3393
             case 3401: {
               activeViewAudibleQuartileP100Rate_ = input.readDouble();
-              bitField7_ |= 0x00000100;
+              bitField7_ |= 0x00000200;
               break;
             } // case 3401
             case 3408: {
               biddableIndirectInstallFirstInAppConversionMicros_ = input.readInt64();
-              bitField7_ |= 0x00000200;
+              bitField7_ |= 0x00000400;
               break;
             } // case 3408
             case 3417: {
               allAverageCartSize_ = input.readDouble();
-              bitField7_ |= 0x00000400;
+              bitField7_ |= 0x00000800;
               break;
             } // case 3417
             case 3424: {
               allAverageOrderValueMicros_ = input.readInt64();
-              bitField7_ |= 0x00000800;
+              bitField7_ |= 0x00001000;
               break;
             } // case 3424
             case 3432: {
               allCostOfGoodsSoldMicros_ = input.readInt64();
-              bitField7_ |= 0x00001000;
+              bitField7_ |= 0x00002000;
               break;
             } // case 3432
             case 3440: {
               allCrossSellCostOfGoodsSoldMicros_ = input.readInt64();
-              bitField7_ |= 0x00002000;
+              bitField7_ |= 0x00004000;
               break;
             } // case 3440
             case 3448: {
               allCrossSellGrossProfitMicros_ = input.readInt64();
-              bitField7_ |= 0x00004000;
+              bitField7_ |= 0x00008000;
               break;
             } // case 3448
             case 3456: {
               allCrossSellRevenueMicros_ = input.readInt64();
-              bitField7_ |= 0x00008000;
+              bitField7_ |= 0x00010000;
               break;
             } // case 3456
             case 3465: {
               allCrossSellUnitsSold_ = input.readDouble();
-              bitField7_ |= 0x00010000;
+              bitField7_ |= 0x00020000;
               break;
             } // case 3465
             case 3473: {
               allGrossProfitMargin_ = input.readDouble();
-              bitField7_ |= 0x00020000;
+              bitField7_ |= 0x00040000;
               break;
             } // case 3473
             case 3480: {
               allGrossProfitMicros_ = input.readInt64();
-              bitField7_ |= 0x00040000;
+              bitField7_ |= 0x00080000;
               break;
             } // case 3480
             case 3488: {
               allLeadCostOfGoodsSoldMicros_ = input.readInt64();
-              bitField7_ |= 0x00080000;
+              bitField7_ |= 0x00100000;
               break;
             } // case 3488
             case 3496: {
               allLeadGrossProfitMicros_ = input.readInt64();
-              bitField7_ |= 0x00100000;
+              bitField7_ |= 0x00200000;
               break;
             } // case 3496
             case 3504: {
               allLeadRevenueMicros_ = input.readInt64();
-              bitField7_ |= 0x00200000;
+              bitField7_ |= 0x00400000;
               break;
             } // case 3504
             case 3513: {
               allLeadUnitsSold_ = input.readDouble();
-              bitField7_ |= 0x00400000;
+              bitField7_ |= 0x00800000;
               break;
             } // case 3513
             case 3521: {
               allOrders_ = input.readDouble();
-              bitField7_ |= 0x00800000;
+              bitField7_ |= 0x01000000;
               break;
             } // case 3521
             case 3528: {
               allRevenueMicros_ = input.readInt64();
-              bitField7_ |= 0x01000000;
+              bitField7_ |= 0x02000000;
               break;
             } // case 3528
             case 3537: {
               allUnitsSold_ = input.readDouble();
-              bitField7_ |= 0x02000000;
+              bitField7_ |= 0x04000000;
               break;
             } // case 3537
+            case 3544: {
+              controlClicks_ = input.readInt64();
+              bitField1_ |= 0x00000800;
+              break;
+            } // case 3544
+            case 3569: {
+              controlCostPerConversion_ = input.readDouble();
+              bitField7_ |= 0x08000000;
+              break;
+            } // case 3569
+            case 3577: {
+              costPerConversionMarginOfError_ = input.readDouble();
+              bitField7_ |= 0x10000000;
+              break;
+            } // case 3577
+            case 3585: {
+              costPerConversionPValue_ = input.readDouble();
+              bitField7_ |= 0x20000000;
+              break;
+            } // case 3585
+            case 3593: {
+              costPerConversionChangePointEstimate_ = input.readDouble();
+              bitField7_ |= 0x40000000;
+              break;
+            } // case 3593
+            case 3601: {
+              controlConversions_ = input.readDouble();
+              bitField7_ |= 0x80000000;
+              break;
+            } // case 3601
+            case 3609: {
+              conversionsAbsoluteChangeMarginOfError_ = input.readDouble();
+              bitField8_ |= 0x00000001;
+              break;
+            } // case 3609
+            case 3617: {
+              conversionsAbsoluteChangePValue_ = input.readDouble();
+              bitField8_ |= 0x00000002;
+              break;
+            } // case 3617
+            case 3625: {
+              conversionsAbsoluteChangePointEstimate_ = input.readDouble();
+              bitField8_ |= 0x00000004;
+              break;
+            } // case 3625
+            case 3633: {
+              controlConversionValuePerCost_ = input.readDouble();
+              bitField8_ |= 0x00000008;
+              break;
+            } // case 3633
+            case 3641: {
+              conversionValuePerCostMarginOfError_ = input.readDouble();
+              bitField8_ |= 0x00000010;
+              break;
+            } // case 3641
+            case 3649: {
+              conversionValuePerCostPValue_ = input.readDouble();
+              bitField8_ |= 0x00000020;
+              break;
+            } // case 3649
+            case 3657: {
+              conversionValuePerCostChangePointEstimate_ = input.readDouble();
+              bitField8_ |= 0x00000040;
+              break;
+            } // case 3657
+            case 3664: {
+              controlCostMicros_ = input.readInt64();
+              bitField8_ |= 0x00000080;
+              break;
+            } // case 3664
+            case 3673: {
+              costMicrosMarginOfError_ = input.readDouble();
+              bitField8_ |= 0x00000100;
+              break;
+            } // case 3673
+            case 3681: {
+              costMicrosPValue_ = input.readDouble();
+              bitField8_ |= 0x00000200;
+              break;
+            } // case 3681
+            case 3689: {
+              costMicrosChangePointEstimate_ = input.readDouble();
+              bitField8_ |= 0x00000400;
+              break;
+            } // case 3689
+            case 3696: {
+              controlImpressions_ = input.readInt64();
+              bitField8_ |= 0x00000800;
+              break;
+            } // case 3696
+            case 3705: {
+              impressionsMarginOfError_ = input.readDouble();
+              bitField8_ |= 0x00001000;
+              break;
+            } // case 3705
+            case 3713: {
+              impressionsPValue_ = input.readDouble();
+              bitField8_ |= 0x00002000;
+              break;
+            } // case 3713
+            case 3721: {
+              impressionsPointEstimate_ = input.readDouble();
+              bitField8_ |= 0x00004000;
+              break;
+            } // case 3721
+            case 3729: {
+              clicksMarginOfError_ = input.readDouble();
+              bitField8_ |= 0x00008000;
+              break;
+            } // case 3729
+            case 3737: {
+              clicksPValue_ = input.readDouble();
+              bitField8_ |= 0x00010000;
+              break;
+            } // case 3737
+            case 3745: {
+              clicksPointEstimate_ = input.readDouble();
+              bitField8_ |= 0x00020000;
+              break;
+            } // case 3745
+            case 3753: {
+              controlConversionValue_ = input.readDouble();
+              bitField8_ |= 0x00040000;
+              break;
+            } // case 3753
+            case 3761: {
+              conversionValueMarginOfError_ = input.readDouble();
+              bitField8_ |= 0x00080000;
+              break;
+            } // case 3761
+            case 3769: {
+              conversionValuePValue_ = input.readDouble();
+              bitField8_ |= 0x00100000;
+              break;
+            } // case 3769
+            case 3777: {
+              conversionValueChangePointEstimate_ = input.readDouble();
+              bitField8_ |= 0x00200000;
+              break;
+            } // case 3777
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -16342,6 +18294,7 @@ private static final long serialVersionUID = 0L;
     private int bitField5_;
     private int bitField6_;
     private int bitField7_;
+    private int bitField8_;
 
     private double absoluteTopImpressionPercentage_ ;
     /**
@@ -19095,6 +21048,66 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long controlClicks_ ;
+    /**
+     * <pre>
+     * The number of clicks on the control arm of an experiment.
+     * The treatment clicks value can be selected by using `clicks`.
+     * </pre>
+     *
+     * <code>optional int64 control_clicks = 443;</code>
+     * @return Whether the controlClicks field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlClicks() {
+      return ((bitField1_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * The number of clicks on the control arm of an experiment.
+     * The treatment clicks value can be selected by using `clicks`.
+     * </pre>
+     *
+     * <code>optional int64 control_clicks = 443;</code>
+     * @return The controlClicks.
+     */
+    @java.lang.Override
+    public long getControlClicks() {
+      return controlClicks_;
+    }
+    /**
+     * <pre>
+     * The number of clicks on the control arm of an experiment.
+     * The treatment clicks value can be selected by using `clicks`.
+     * </pre>
+     *
+     * <code>optional int64 control_clicks = 443;</code>
+     * @param value The controlClicks to set.
+     * @return This builder for chaining.
+     */
+    public Builder setControlClicks(long value) {
+
+      controlClicks_ = value;
+      bitField1_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of clicks on the control arm of an experiment.
+     * The treatment clicks value can be selected by using `clicks`.
+     * </pre>
+     *
+     * <code>optional int64 control_clicks = 443;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearControlClicks() {
+      bitField1_ = (bitField1_ & ~0x00000800);
+      controlClicks_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private long combinedClicks_ ;
     /**
      * <pre>
@@ -19108,7 +21121,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCombinedClicks() {
-      return ((bitField1_ & 0x00000800) != 0);
+      return ((bitField1_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -19138,7 +21151,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCombinedClicks(long value) {
 
       combinedClicks_ = value;
-      bitField1_ |= 0x00000800;
+      bitField1_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -19153,7 +21166,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCombinedClicks() {
-      bitField1_ = (bitField1_ & ~0x00000800);
+      bitField1_ = (bitField1_ & ~0x00001000);
       combinedClicks_ = 0L;
       onChanged();
       return this;
@@ -19173,7 +21186,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCombinedClicksPerQuery() {
-      return ((bitField1_ & 0x00001000) != 0);
+      return ((bitField1_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -19205,7 +21218,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCombinedClicksPerQuery(double value) {
 
       combinedClicksPerQuery_ = value;
-      bitField1_ |= 0x00001000;
+      bitField1_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -19221,7 +21234,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCombinedClicksPerQuery() {
-      bitField1_ = (bitField1_ & ~0x00001000);
+      bitField1_ = (bitField1_ & ~0x00002000);
       combinedClicksPerQuery_ = 0D;
       onChanged();
       return this;
@@ -19240,7 +21253,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCombinedQueries() {
-      return ((bitField1_ & 0x00002000) != 0);
+      return ((bitField1_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -19270,7 +21283,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCombinedQueries(long value) {
 
       combinedQueries_ = value;
-      bitField1_ |= 0x00002000;
+      bitField1_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -19285,7 +21298,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCombinedQueries() {
-      bitField1_ = (bitField1_ & ~0x00002000);
+      bitField1_ = (bitField1_ & ~0x00004000);
       combinedQueries_ = 0L;
       onChanged();
       return this;
@@ -19305,7 +21318,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasContentBudgetLostImpressionShare() {
-      return ((bitField1_ & 0x00004000) != 0);
+      return ((bitField1_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -19337,7 +21350,7 @@ private static final long serialVersionUID = 0L;
     public Builder setContentBudgetLostImpressionShare(double value) {
 
       contentBudgetLostImpressionShare_ = value;
-      bitField1_ |= 0x00004000;
+      bitField1_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -19353,7 +21366,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContentBudgetLostImpressionShare() {
-      bitField1_ = (bitField1_ & ~0x00004000);
+      bitField1_ = (bitField1_ & ~0x00008000);
       contentBudgetLostImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -19373,7 +21386,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasContentImpressionShare() {
-      return ((bitField1_ & 0x00008000) != 0);
+      return ((bitField1_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -19405,7 +21418,7 @@ private static final long serialVersionUID = 0L;
     public Builder setContentImpressionShare(double value) {
 
       contentImpressionShare_ = value;
-      bitField1_ |= 0x00008000;
+      bitField1_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -19421,7 +21434,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContentImpressionShare() {
-      bitField1_ = (bitField1_ & ~0x00008000);
+      bitField1_ = (bitField1_ & ~0x00010000);
       contentImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -19441,7 +21454,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionLastReceivedRequestDateTime field is set.
      */
     public boolean hasConversionLastReceivedRequestDateTime() {
-      return ((bitField1_ & 0x00010000) != 0);
+      return ((bitField1_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -19509,7 +21522,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       conversionLastReceivedRequestDateTime_ = value;
-      bitField1_ |= 0x00010000;
+      bitField1_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -19527,7 +21540,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearConversionLastReceivedRequestDateTime() {
       conversionLastReceivedRequestDateTime_ = getDefaultInstance().getConversionLastReceivedRequestDateTime();
-      bitField1_ = (bitField1_ & ~0x00010000);
+      bitField1_ = (bitField1_ & ~0x00020000);
       onChanged();
       return this;
     }
@@ -19549,7 +21562,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       conversionLastReceivedRequestDateTime_ = value;
-      bitField1_ |= 0x00010000;
+      bitField1_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -19565,7 +21578,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionLastConversionDate field is set.
      */
     public boolean hasConversionLastConversionDate() {
-      return ((bitField1_ & 0x00020000) != 0);
+      return ((bitField1_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -19624,7 +21637,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       conversionLastConversionDate_ = value;
-      bitField1_ |= 0x00020000;
+      bitField1_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -19639,7 +21652,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearConversionLastConversionDate() {
       conversionLastConversionDate_ = getDefaultInstance().getConversionLastConversionDate();
-      bitField1_ = (bitField1_ & ~0x00020000);
+      bitField1_ = (bitField1_ & ~0x00040000);
       onChanged();
       return this;
     }
@@ -19658,7 +21671,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       conversionLastConversionDate_ = value;
-      bitField1_ |= 0x00020000;
+      bitField1_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -19677,7 +21690,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasContentRankLostImpressionShare() {
-      return ((bitField1_ & 0x00040000) != 0);
+      return ((bitField1_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -19709,7 +21722,7 @@ private static final long serialVersionUID = 0L;
     public Builder setContentRankLostImpressionShare(double value) {
 
       contentRankLostImpressionShare_ = value;
-      bitField1_ |= 0x00040000;
+      bitField1_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -19725,7 +21738,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContentRankLostImpressionShare() {
-      bitField1_ = (bitField1_ & ~0x00040000);
+      bitField1_ = (bitField1_ & ~0x00080000);
       contentRankLostImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -19746,7 +21759,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConversionsFromInteractionsRate() {
-      return ((bitField1_ & 0x00080000) != 0);
+      return ((bitField1_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -19780,7 +21793,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversionsFromInteractionsRate(double value) {
 
       conversionsFromInteractionsRate_ = value;
-      bitField1_ |= 0x00080000;
+      bitField1_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -19797,7 +21810,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionsFromInteractionsRate() {
-      bitField1_ = (bitField1_ & ~0x00080000);
+      bitField1_ = (bitField1_ & ~0x00100000);
       conversionsFromInteractionsRate_ = 0D;
       onChanged();
       return this;
@@ -19817,7 +21830,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConversionsValue() {
-      return ((bitField1_ & 0x00100000) != 0);
+      return ((bitField1_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -19849,7 +21862,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversionsValue(double value) {
 
       conversionsValue_ = value;
-      bitField1_ |= 0x00100000;
+      bitField1_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -19865,7 +21878,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionsValue() {
-      bitField1_ = (bitField1_ & ~0x00100000);
+      bitField1_ = (bitField1_ & ~0x00200000);
       conversionsValue_ = 0D;
       onChanged();
       return this;
@@ -19888,7 +21901,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConversionsValueByConversionDate() {
-      return ((bitField1_ & 0x00200000) != 0);
+      return ((bitField1_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -19926,7 +21939,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversionsValueByConversionDate(double value) {
 
       conversionsValueByConversionDate_ = value;
-      bitField1_ |= 0x00200000;
+      bitField1_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -19945,7 +21958,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionsValueByConversionDate() {
-      bitField1_ = (bitField1_ & ~0x00200000);
+      bitField1_ = (bitField1_ & ~0x00400000);
       conversionsValueByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -19968,7 +21981,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasNewCustomerLifetimeValue() {
-      return ((bitField1_ & 0x00400000) != 0);
+      return ((bitField1_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -20006,7 +22019,7 @@ private static final long serialVersionUID = 0L;
     public Builder setNewCustomerLifetimeValue(double value) {
 
       newCustomerLifetimeValue_ = value;
-      bitField1_ |= 0x00400000;
+      bitField1_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -20025,7 +22038,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNewCustomerLifetimeValue() {
-      bitField1_ = (bitField1_ & ~0x00400000);
+      bitField1_ = (bitField1_ & ~0x00800000);
       newCustomerLifetimeValue_ = 0D;
       onChanged();
       return this;
@@ -20045,7 +22058,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConversionsValuePerCost() {
-      return ((bitField1_ & 0x00800000) != 0);
+      return ((bitField1_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -20077,7 +22090,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversionsValuePerCost(double value) {
 
       conversionsValuePerCost_ = value;
-      bitField1_ |= 0x00800000;
+      bitField1_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -20093,7 +22106,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionsValuePerCost() {
-      bitField1_ = (bitField1_ & ~0x00800000);
+      bitField1_ = (bitField1_ & ~0x01000000);
       conversionsValuePerCost_ = 0D;
       onChanged();
       return this;
@@ -20114,7 +22127,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConversionsFromInteractionsValuePerInteraction() {
-      return ((bitField1_ & 0x01000000) != 0);
+      return ((bitField1_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -20148,7 +22161,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversionsFromInteractionsValuePerInteraction(double value) {
 
       conversionsFromInteractionsValuePerInteraction_ = value;
-      bitField1_ |= 0x01000000;
+      bitField1_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -20165,7 +22178,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionsFromInteractionsValuePerInteraction() {
-      bitField1_ = (bitField1_ & ~0x01000000);
+      bitField1_ = (bitField1_ & ~0x02000000);
       conversionsFromInteractionsValuePerInteraction_ = 0D;
       onChanged();
       return this;
@@ -20185,7 +22198,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConversions() {
-      return ((bitField1_ & 0x02000000) != 0);
+      return ((bitField1_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -20217,7 +22230,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversions(double value) {
 
       conversions_ = value;
-      bitField1_ |= 0x02000000;
+      bitField1_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -20233,7 +22246,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversions() {
-      bitField1_ = (bitField1_ & ~0x02000000);
+      bitField1_ = (bitField1_ & ~0x04000000);
       conversions_ = 0D;
       onChanged();
       return this;
@@ -20256,7 +22269,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConversionsByConversionDate() {
-      return ((bitField1_ & 0x04000000) != 0);
+      return ((bitField1_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -20294,7 +22307,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversionsByConversionDate(double value) {
 
       conversionsByConversionDate_ = value;
-      bitField1_ |= 0x04000000;
+      bitField1_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -20313,7 +22326,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionsByConversionDate() {
-      bitField1_ = (bitField1_ & ~0x04000000);
+      bitField1_ = (bitField1_ & ~0x08000000);
       conversionsByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -20331,7 +22344,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCostMicros() {
-      return ((bitField1_ & 0x08000000) != 0);
+      return ((bitField1_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -20359,7 +22372,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCostMicros(long value) {
 
       costMicros_ = value;
-      bitField1_ |= 0x08000000;
+      bitField1_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -20373,7 +22386,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCostMicros() {
-      bitField1_ = (bitField1_ & ~0x08000000);
+      bitField1_ = (bitField1_ & ~0x10000000);
       costMicros_ = 0L;
       onChanged();
       return this;
@@ -20390,7 +22403,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCostPerAllConversions() {
-      return ((bitField1_ & 0x10000000) != 0);
+      return ((bitField1_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -20416,7 +22429,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCostPerAllConversions(double value) {
 
       costPerAllConversions_ = value;
-      bitField1_ |= 0x10000000;
+      bitField1_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -20429,7 +22442,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCostPerAllConversions() {
-      bitField1_ = (bitField1_ & ~0x10000000);
+      bitField1_ = (bitField1_ & ~0x20000000);
       costPerAllConversions_ = 0D;
       onChanged();
       return this;
@@ -20449,7 +22462,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCostPerConversion() {
-      return ((bitField1_ & 0x20000000) != 0);
+      return ((bitField1_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -20481,7 +22494,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCostPerConversion(double value) {
 
       costPerConversion_ = value;
-      bitField1_ |= 0x20000000;
+      bitField1_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -20497,7 +22510,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCostPerConversion() {
-      bitField1_ = (bitField1_ & ~0x20000000);
+      bitField1_ = (bitField1_ & ~0x40000000);
       costPerConversion_ = 0D;
       onChanged();
       return this;
@@ -20518,7 +22531,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCostPerCurrentModelAttributedConversion() {
-      return ((bitField1_ & 0x40000000) != 0);
+      return ((bitField1_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -20552,7 +22565,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCostPerCurrentModelAttributedConversion(double value) {
 
       costPerCurrentModelAttributedConversion_ = value;
-      bitField1_ |= 0x40000000;
+      bitField1_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -20569,7 +22582,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCostPerCurrentModelAttributedConversion() {
-      bitField1_ = (bitField1_ & ~0x40000000);
+      bitField1_ = (bitField1_ & ~0x80000000);
       costPerCurrentModelAttributedConversion_ = 0D;
       onChanged();
       return this;
@@ -20588,7 +22601,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCrossDeviceConversions() {
-      return ((bitField1_ & 0x80000000) != 0);
+      return ((bitField2_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -20618,7 +22631,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCrossDeviceConversions(double value) {
 
       crossDeviceConversions_ = value;
-      bitField1_ |= 0x80000000;
+      bitField2_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -20633,7 +22646,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCrossDeviceConversions() {
-      bitField1_ = (bitField1_ & ~0x80000000);
+      bitField2_ = (bitField2_ & ~0x00000001);
       crossDeviceConversions_ = 0D;
       onChanged();
       return this;
@@ -20652,7 +22665,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCrossDeviceConversionsByConversionDate() {
-      return ((bitField2_ & 0x00000001) != 0);
+      return ((bitField2_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -20682,7 +22695,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCrossDeviceConversionsByConversionDate(double value) {
 
       crossDeviceConversionsByConversionDate_ = value;
-      bitField2_ |= 0x00000001;
+      bitField2_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -20697,7 +22710,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCrossDeviceConversionsByConversionDate() {
-      bitField2_ = (bitField2_ & ~0x00000001);
+      bitField2_ = (bitField2_ & ~0x00000002);
       crossDeviceConversionsByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -20714,7 +22727,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCrossDeviceConversionsValue() {
-      return ((bitField2_ & 0x00000002) != 0);
+      return ((bitField2_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -20740,7 +22753,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCrossDeviceConversionsValue(double value) {
 
       crossDeviceConversionsValue_ = value;
-      bitField2_ |= 0x00000002;
+      bitField2_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -20753,7 +22766,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCrossDeviceConversionsValue() {
-      bitField2_ = (bitField2_ & ~0x00000002);
+      bitField2_ = (bitField2_ & ~0x00000004);
       crossDeviceConversionsValue_ = 0D;
       onChanged();
       return this;
@@ -20770,7 +22783,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCrossDeviceConversionsValueMicros() {
-      return ((bitField2_ & 0x00000004) != 0);
+      return ((bitField2_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -20796,7 +22809,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCrossDeviceConversionsValueMicros(long value) {
 
       crossDeviceConversionsValueMicros_ = value;
-      bitField2_ |= 0x00000004;
+      bitField2_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -20809,7 +22822,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCrossDeviceConversionsValueMicros() {
-      bitField2_ = (bitField2_ & ~0x00000004);
+      bitField2_ = (bitField2_ & ~0x00000008);
       crossDeviceConversionsValueMicros_ = 0L;
       onChanged();
       return this;
@@ -20828,7 +22841,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCrossDeviceConversionsValueByConversionDate() {
-      return ((bitField2_ & 0x00000008) != 0);
+      return ((bitField2_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -20858,7 +22871,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCrossDeviceConversionsValueByConversionDate(double value) {
 
       crossDeviceConversionsValueByConversionDate_ = value;
-      bitField2_ |= 0x00000008;
+      bitField2_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -20873,7 +22886,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCrossDeviceConversionsValueByConversionDate() {
-      bitField2_ = (bitField2_ & ~0x00000008);
+      bitField2_ = (bitField2_ & ~0x00000010);
       crossDeviceConversionsValueByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -20891,7 +22904,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCtr() {
-      return ((bitField2_ & 0x00000010) != 0);
+      return ((bitField2_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -20919,7 +22932,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCtr(double value) {
 
       ctr_ = value;
-      bitField2_ |= 0x00000010;
+      bitField2_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -20933,7 +22946,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCtr() {
-      bitField2_ = (bitField2_ & ~0x00000010);
+      bitField2_ = (bitField2_ & ~0x00000020);
       ctr_ = 0D;
       onChanged();
       return this;
@@ -20954,7 +22967,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCurrentModelAttributedConversions() {
-      return ((bitField2_ & 0x00000020) != 0);
+      return ((bitField2_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -20988,7 +23001,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCurrentModelAttributedConversions(double value) {
 
       currentModelAttributedConversions_ = value;
-      bitField2_ |= 0x00000020;
+      bitField2_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -21005,7 +23018,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrentModelAttributedConversions() {
-      bitField2_ = (bitField2_ & ~0x00000020);
+      bitField2_ = (bitField2_ & ~0x00000040);
       currentModelAttributedConversions_ = 0D;
       onChanged();
       return this;
@@ -21027,7 +23040,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCurrentModelAttributedConversionsFromInteractionsRate() {
-      return ((bitField2_ & 0x00000040) != 0);
+      return ((bitField2_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -21063,7 +23076,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCurrentModelAttributedConversionsFromInteractionsRate(double value) {
 
       currentModelAttributedConversionsFromInteractionsRate_ = value;
-      bitField2_ |= 0x00000040;
+      bitField2_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -21081,7 +23094,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrentModelAttributedConversionsFromInteractionsRate() {
-      bitField2_ = (bitField2_ & ~0x00000040);
+      bitField2_ = (bitField2_ & ~0x00000080);
       currentModelAttributedConversionsFromInteractionsRate_ = 0D;
       onChanged();
       return this;
@@ -21102,7 +23115,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
-      return ((bitField2_ & 0x00000080) != 0);
+      return ((bitField2_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -21136,7 +23149,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCurrentModelAttributedConversionsFromInteractionsValuePerInteraction(double value) {
 
       currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = value;
-      bitField2_ |= 0x00000080;
+      bitField2_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -21153,7 +23166,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
-      bitField2_ = (bitField2_ & ~0x00000080);
+      bitField2_ = (bitField2_ & ~0x00000100);
       currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = 0D;
       onChanged();
       return this;
@@ -21173,7 +23186,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCurrentModelAttributedConversionsValue() {
-      return ((bitField2_ & 0x00000100) != 0);
+      return ((bitField2_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -21205,7 +23218,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCurrentModelAttributedConversionsValue(double value) {
 
       currentModelAttributedConversionsValue_ = value;
-      bitField2_ |= 0x00000100;
+      bitField2_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -21221,7 +23234,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrentModelAttributedConversionsValue() {
-      bitField2_ = (bitField2_ & ~0x00000100);
+      bitField2_ = (bitField2_ & ~0x00000200);
       currentModelAttributedConversionsValue_ = 0D;
       onChanged();
       return this;
@@ -21242,7 +23255,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCurrentModelAttributedConversionsValuePerCost() {
-      return ((bitField2_ & 0x00000200) != 0);
+      return ((bitField2_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -21276,7 +23289,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCurrentModelAttributedConversionsValuePerCost(double value) {
 
       currentModelAttributedConversionsValuePerCost_ = value;
-      bitField2_ |= 0x00000200;
+      bitField2_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -21293,7 +23306,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrentModelAttributedConversionsValuePerCost() {
-      bitField2_ = (bitField2_ & ~0x00000200);
+      bitField2_ = (bitField2_ & ~0x00000400);
       currentModelAttributedConversionsValuePerCost_ = 0D;
       onChanged();
       return this;
@@ -21311,7 +23324,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEngagementRate() {
-      return ((bitField2_ & 0x00000400) != 0);
+      return ((bitField2_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -21339,7 +23352,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEngagementRate(double value) {
 
       engagementRate_ = value;
-      bitField2_ |= 0x00000400;
+      bitField2_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -21353,7 +23366,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEngagementRate() {
-      bitField2_ = (bitField2_ & ~0x00000400);
+      bitField2_ = (bitField2_ & ~0x00000800);
       engagementRate_ = 0D;
       onChanged();
       return this;
@@ -21372,7 +23385,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEngagements() {
-      return ((bitField2_ & 0x00000800) != 0);
+      return ((bitField2_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -21402,7 +23415,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEngagements(long value) {
 
       engagements_ = value;
-      bitField2_ |= 0x00000800;
+      bitField2_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -21417,7 +23430,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEngagements() {
-      bitField2_ = (bitField2_ & ~0x00000800);
+      bitField2_ = (bitField2_ & ~0x00001000);
       engagements_ = 0L;
       onChanged();
       return this;
@@ -21434,7 +23447,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHotelAverageLeadValueMicros() {
-      return ((bitField2_ & 0x00001000) != 0);
+      return ((bitField2_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -21460,7 +23473,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHotelAverageLeadValueMicros(double value) {
 
       hotelAverageLeadValueMicros_ = value;
-      bitField2_ |= 0x00001000;
+      bitField2_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -21473,7 +23486,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelAverageLeadValueMicros() {
-      bitField2_ = (bitField2_ & ~0x00001000);
+      bitField2_ = (bitField2_ & ~0x00002000);
       hotelAverageLeadValueMicros_ = 0D;
       onChanged();
       return this;
@@ -21491,7 +23504,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHotelCommissionRateMicros() {
-      return ((bitField2_ & 0x00002000) != 0);
+      return ((bitField2_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -21519,7 +23532,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHotelCommissionRateMicros(long value) {
 
       hotelCommissionRateMicros_ = value;
-      bitField2_ |= 0x00002000;
+      bitField2_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -21533,7 +23546,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelCommissionRateMicros() {
-      bitField2_ = (bitField2_ & ~0x00002000);
+      bitField2_ = (bitField2_ & ~0x00004000);
       hotelCommissionRateMicros_ = 0L;
       onChanged();
       return this;
@@ -21551,7 +23564,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHotelExpectedCommissionCost() {
-      return ((bitField2_ & 0x00004000) != 0);
+      return ((bitField2_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -21579,7 +23592,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHotelExpectedCommissionCost(double value) {
 
       hotelExpectedCommissionCost_ = value;
-      bitField2_ |= 0x00004000;
+      bitField2_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -21593,7 +23606,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelExpectedCommissionCost() {
-      bitField2_ = (bitField2_ & ~0x00004000);
+      bitField2_ = (bitField2_ & ~0x00008000);
       hotelExpectedCommissionCost_ = 0D;
       onChanged();
       return this;
@@ -21611,7 +23624,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHotelPriceDifferencePercentage() {
-      return ((bitField2_ & 0x00008000) != 0);
+      return ((bitField2_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -21639,7 +23652,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHotelPriceDifferencePercentage(double value) {
 
       hotelPriceDifferencePercentage_ = value;
-      bitField2_ |= 0x00008000;
+      bitField2_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -21653,7 +23666,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelPriceDifferencePercentage() {
-      bitField2_ = (bitField2_ & ~0x00008000);
+      bitField2_ = (bitField2_ & ~0x00010000);
       hotelPriceDifferencePercentage_ = 0D;
       onChanged();
       return this;
@@ -21671,7 +23684,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHotelEligibleImpressions() {
-      return ((bitField2_ & 0x00010000) != 0);
+      return ((bitField2_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -21699,7 +23712,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHotelEligibleImpressions(long value) {
 
       hotelEligibleImpressions_ = value;
-      bitField2_ |= 0x00010000;
+      bitField2_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -21713,7 +23726,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHotelEligibleImpressions() {
-      bitField2_ = (bitField2_ & ~0x00010000);
+      bitField2_ = (bitField2_ & ~0x00020000);
       hotelEligibleImpressions_ = 0L;
       onChanged();
       return this;
@@ -21742,7 +23755,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHistoricalCreativeQualityScoreValue(int value) {
       historicalCreativeQualityScore_ = value;
-      bitField2_ |= 0x00020000;
+      bitField2_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -21770,7 +23783,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHistoricalCreativeQualityScore(com.google.ads.googleads.v24.enums.QualityScoreBucketEnum.QualityScoreBucket value) {
       if (value == null) { throw new NullPointerException(); }
-      bitField2_ |= 0x00020000;
+      bitField2_ |= 0x00040000;
       historicalCreativeQualityScore_ = value.getNumber();
       onChanged();
       return this;
@@ -21784,7 +23797,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHistoricalCreativeQualityScore() {
-      bitField2_ = (bitField2_ & ~0x00020000);
+      bitField2_ = (bitField2_ & ~0x00040000);
       historicalCreativeQualityScore_ = 0;
       onChanged();
       return this;
@@ -21813,7 +23826,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHistoricalLandingPageQualityScoreValue(int value) {
       historicalLandingPageQualityScore_ = value;
-      bitField2_ |= 0x00040000;
+      bitField2_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -21841,7 +23854,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHistoricalLandingPageQualityScore(com.google.ads.googleads.v24.enums.QualityScoreBucketEnum.QualityScoreBucket value) {
       if (value == null) { throw new NullPointerException(); }
-      bitField2_ |= 0x00040000;
+      bitField2_ |= 0x00080000;
       historicalLandingPageQualityScore_ = value.getNumber();
       onChanged();
       return this;
@@ -21855,7 +23868,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHistoricalLandingPageQualityScore() {
-      bitField2_ = (bitField2_ & ~0x00040000);
+      bitField2_ = (bitField2_ & ~0x00080000);
       historicalLandingPageQualityScore_ = 0;
       onChanged();
       return this;
@@ -21872,7 +23885,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHistoricalQualityScore() {
-      return ((bitField2_ & 0x00080000) != 0);
+      return ((bitField2_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -21898,7 +23911,7 @@ private static final long serialVersionUID = 0L;
     public Builder setHistoricalQualityScore(long value) {
 
       historicalQualityScore_ = value;
-      bitField2_ |= 0x00080000;
+      bitField2_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -21911,7 +23924,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHistoricalQualityScore() {
-      bitField2_ = (bitField2_ & ~0x00080000);
+      bitField2_ = (bitField2_ & ~0x00100000);
       historicalQualityScore_ = 0L;
       onChanged();
       return this;
@@ -21940,7 +23953,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHistoricalSearchPredictedCtrValue(int value) {
       historicalSearchPredictedCtr_ = value;
-      bitField2_ |= 0x00100000;
+      bitField2_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -21968,7 +23981,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHistoricalSearchPredictedCtr(com.google.ads.googleads.v24.enums.QualityScoreBucketEnum.QualityScoreBucket value) {
       if (value == null) { throw new NullPointerException(); }
-      bitField2_ |= 0x00100000;
+      bitField2_ |= 0x00200000;
       historicalSearchPredictedCtr_ = value.getNumber();
       onChanged();
       return this;
@@ -21982,7 +23995,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHistoricalSearchPredictedCtr() {
-      bitField2_ = (bitField2_ & ~0x00100000);
+      bitField2_ = (bitField2_ & ~0x00200000);
       historicalSearchPredictedCtr_ = 0;
       onChanged();
       return this;
@@ -21999,7 +24012,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasGmailForwards() {
-      return ((bitField2_ & 0x00200000) != 0);
+      return ((bitField2_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -22025,7 +24038,7 @@ private static final long serialVersionUID = 0L;
     public Builder setGmailForwards(long value) {
 
       gmailForwards_ = value;
-      bitField2_ |= 0x00200000;
+      bitField2_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -22038,7 +24051,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGmailForwards() {
-      bitField2_ = (bitField2_ & ~0x00200000);
+      bitField2_ = (bitField2_ & ~0x00400000);
       gmailForwards_ = 0L;
       onChanged();
       return this;
@@ -22056,7 +24069,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasGmailSaves() {
-      return ((bitField2_ & 0x00400000) != 0);
+      return ((bitField2_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -22084,7 +24097,7 @@ private static final long serialVersionUID = 0L;
     public Builder setGmailSaves(long value) {
 
       gmailSaves_ = value;
-      bitField2_ |= 0x00400000;
+      bitField2_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -22098,7 +24111,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGmailSaves() {
-      bitField2_ = (bitField2_ & ~0x00400000);
+      bitField2_ = (bitField2_ & ~0x00800000);
       gmailSaves_ = 0L;
       onChanged();
       return this;
@@ -22116,7 +24129,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasGmailSecondaryClicks() {
-      return ((bitField2_ & 0x00800000) != 0);
+      return ((bitField2_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -22144,7 +24157,7 @@ private static final long serialVersionUID = 0L;
     public Builder setGmailSecondaryClicks(long value) {
 
       gmailSecondaryClicks_ = value;
-      bitField2_ |= 0x00800000;
+      bitField2_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -22158,7 +24171,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGmailSecondaryClicks() {
-      bitField2_ = (bitField2_ & ~0x00800000);
+      bitField2_ = (bitField2_ & ~0x01000000);
       gmailSecondaryClicks_ = 0L;
       onChanged();
       return this;
@@ -22177,7 +24190,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasImpressionsFromStoreReach() {
-      return ((bitField2_ & 0x01000000) != 0);
+      return ((bitField2_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -22207,7 +24220,7 @@ private static final long serialVersionUID = 0L;
     public Builder setImpressionsFromStoreReach(long value) {
 
       impressionsFromStoreReach_ = value;
-      bitField2_ |= 0x01000000;
+      bitField2_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -22222,7 +24235,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearImpressionsFromStoreReach() {
-      bitField2_ = (bitField2_ & ~0x01000000);
+      bitField2_ = (bitField2_ & ~0x02000000);
       impressionsFromStoreReach_ = 0L;
       onChanged();
       return this;
@@ -22240,7 +24253,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasImpressions() {
-      return ((bitField2_ & 0x02000000) != 0);
+      return ((bitField2_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -22268,7 +24281,7 @@ private static final long serialVersionUID = 0L;
     public Builder setImpressions(long value) {
 
       impressions_ = value;
-      bitField2_ |= 0x02000000;
+      bitField2_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -22282,7 +24295,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearImpressions() {
-      bitField2_ = (bitField2_ & ~0x02000000);
+      bitField2_ = (bitField2_ & ~0x04000000);
       impressions_ = 0L;
       onChanged();
       return this;
@@ -22301,7 +24314,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasInteractionRate() {
-      return ((bitField2_ & 0x04000000) != 0);
+      return ((bitField2_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -22331,7 +24344,7 @@ private static final long serialVersionUID = 0L;
     public Builder setInteractionRate(double value) {
 
       interactionRate_ = value;
-      bitField2_ |= 0x04000000;
+      bitField2_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -22346,7 +24359,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInteractionRate() {
-      bitField2_ = (bitField2_ & ~0x04000000);
+      bitField2_ = (bitField2_ & ~0x08000000);
       interactionRate_ = 0D;
       onChanged();
       return this;
@@ -22365,7 +24378,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasInteractions() {
-      return ((bitField2_ & 0x08000000) != 0);
+      return ((bitField2_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -22395,7 +24408,7 @@ private static final long serialVersionUID = 0L;
     public Builder setInteractions(long value) {
 
       interactions_ = value;
-      bitField2_ |= 0x08000000;
+      bitField2_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -22410,7 +24423,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInteractions() {
-      bitField2_ = (bitField2_ & ~0x08000000);
+      bitField2_ = (bitField2_ & ~0x10000000);
       interactions_ = 0L;
       onChanged();
       return this;
@@ -22421,7 +24434,7 @@ private static final long serialVersionUID = 0L;
       if (!interactionEventTypes_.isModifiable()) {
         interactionEventTypes_ = makeMutableCopy(interactionEventTypes_);
       }
-      bitField2_ |= 0x10000000;
+      bitField2_ |= 0x20000000;
     }
     /**
      * <pre>
@@ -22520,7 +24533,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearInteractionEventTypes() {
       interactionEventTypes_ = emptyIntList();
-      bitField2_ = (bitField2_ & ~0x10000000);
+      bitField2_ = (bitField2_ & ~0x20000000);
       onChanged();
       return this;
     }
@@ -22612,7 +24625,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasInvalidClickRate() {
-      return ((bitField2_ & 0x20000000) != 0);
+      return ((bitField2_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -22640,7 +24653,7 @@ private static final long serialVersionUID = 0L;
     public Builder setInvalidClickRate(double value) {
 
       invalidClickRate_ = value;
-      bitField2_ |= 0x20000000;
+      bitField2_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -22654,7 +24667,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInvalidClickRate() {
-      bitField2_ = (bitField2_ & ~0x20000000);
+      bitField2_ = (bitField2_ & ~0x40000000);
       invalidClickRate_ = 0D;
       onChanged();
       return this;
@@ -22671,7 +24684,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasInvalidClicks() {
-      return ((bitField2_ & 0x40000000) != 0);
+      return ((bitField2_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -22697,7 +24710,7 @@ private static final long serialVersionUID = 0L;
     public Builder setInvalidClicks(long value) {
 
       invalidClicks_ = value;
-      bitField2_ |= 0x40000000;
+      bitField2_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -22710,7 +24723,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInvalidClicks() {
-      bitField2_ = (bitField2_ & ~0x40000000);
+      bitField2_ = (bitField2_ & ~0x80000000);
       invalidClicks_ = 0L;
       onChanged();
       return this;
@@ -22735,7 +24748,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasGeneralInvalidClickRate() {
-      return ((bitField2_ & 0x80000000) != 0);
+      return ((bitField3_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -22777,7 +24790,7 @@ private static final long serialVersionUID = 0L;
     public Builder setGeneralInvalidClickRate(double value) {
 
       generalInvalidClickRate_ = value;
-      bitField2_ |= 0x80000000;
+      bitField3_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -22798,7 +24811,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGeneralInvalidClickRate() {
-      bitField2_ = (bitField2_ & ~0x80000000);
+      bitField3_ = (bitField3_ & ~0x00000001);
       generalInvalidClickRate_ = 0D;
       onChanged();
       return this;
@@ -22821,7 +24834,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasGeneralInvalidClicks() {
-      return ((bitField3_ & 0x00000001) != 0);
+      return ((bitField3_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -22859,7 +24872,7 @@ private static final long serialVersionUID = 0L;
     public Builder setGeneralInvalidClicks(long value) {
 
       generalInvalidClicks_ = value;
-      bitField3_ |= 0x00000001;
+      bitField3_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -22878,7 +24891,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGeneralInvalidClicks() {
-      bitField3_ = (bitField3_ & ~0x00000001);
+      bitField3_ = (bitField3_ & ~0x00000002);
       generalInvalidClicks_ = 0L;
       onChanged();
       return this;
@@ -22896,7 +24909,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasMessageChats() {
-      return ((bitField3_ & 0x00000002) != 0);
+      return ((bitField3_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -22924,7 +24937,7 @@ private static final long serialVersionUID = 0L;
     public Builder setMessageChats(long value) {
 
       messageChats_ = value;
-      bitField3_ |= 0x00000002;
+      bitField3_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -22938,7 +24951,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMessageChats() {
-      bitField3_ = (bitField3_ & ~0x00000002);
+      bitField3_ = (bitField3_ & ~0x00000004);
       messageChats_ = 0L;
       onChanged();
       return this;
@@ -22955,7 +24968,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasMessageImpressions() {
-      return ((bitField3_ & 0x00000004) != 0);
+      return ((bitField3_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -22981,7 +24994,7 @@ private static final long serialVersionUID = 0L;
     public Builder setMessageImpressions(long value) {
 
       messageImpressions_ = value;
-      bitField3_ |= 0x00000004;
+      bitField3_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -22994,7 +25007,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMessageImpressions() {
-      bitField3_ = (bitField3_ & ~0x00000004);
+      bitField3_ = (bitField3_ & ~0x00000008);
       messageImpressions_ = 0L;
       onChanged();
       return this;
@@ -23015,7 +25028,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasMessageChatRate() {
-      return ((bitField3_ & 0x00000008) != 0);
+      return ((bitField3_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -23049,7 +25062,7 @@ private static final long serialVersionUID = 0L;
     public Builder setMessageChatRate(double value) {
 
       messageChatRate_ = value;
-      bitField3_ |= 0x00000008;
+      bitField3_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -23066,7 +25079,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMessageChatRate() {
-      bitField3_ = (bitField3_ & ~0x00000008);
+      bitField3_ = (bitField3_ & ~0x00000010);
       messageChatRate_ = 0D;
       onChanged();
       return this;
@@ -23083,7 +25096,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasMobileFriendlyClicksPercentage() {
-      return ((bitField3_ & 0x00000010) != 0);
+      return ((bitField3_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -23109,7 +25122,7 @@ private static final long serialVersionUID = 0L;
     public Builder setMobileFriendlyClicksPercentage(double value) {
 
       mobileFriendlyClicksPercentage_ = value;
-      bitField3_ |= 0x00000010;
+      bitField3_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -23122,7 +25135,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMobileFriendlyClicksPercentage() {
-      bitField3_ = (bitField3_ & ~0x00000010);
+      bitField3_ = (bitField3_ & ~0x00000020);
       mobileFriendlyClicksPercentage_ = 0D;
       onChanged();
       return this;
@@ -23139,7 +25152,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOptimizationScoreUplift() {
-      return ((bitField3_ & 0x00000020) != 0);
+      return ((bitField3_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -23165,7 +25178,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOptimizationScoreUplift(double value) {
 
       optimizationScoreUplift_ = value;
-      bitField3_ |= 0x00000020;
+      bitField3_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -23178,7 +25191,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptimizationScoreUplift() {
-      bitField3_ = (bitField3_ & ~0x00000020);
+      bitField3_ = (bitField3_ & ~0x00000040);
       optimizationScoreUplift_ = 0D;
       onChanged();
       return this;
@@ -23199,7 +25212,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the optimizationScoreUrl field is set.
      */
     public boolean hasOptimizationScoreUrl() {
-      return ((bitField3_ & 0x00000040) != 0);
+      return ((bitField3_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -23270,7 +25283,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       optimizationScoreUrl_ = value;
-      bitField3_ |= 0x00000040;
+      bitField3_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -23289,7 +25302,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearOptimizationScoreUrl() {
       optimizationScoreUrl_ = getDefaultInstance().getOptimizationScoreUrl();
-      bitField3_ = (bitField3_ & ~0x00000040);
+      bitField3_ = (bitField3_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -23312,7 +25325,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       optimizationScoreUrl_ = value;
-      bitField3_ |= 0x00000040;
+      bitField3_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -23330,7 +25343,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOrganicClicks() {
-      return ((bitField3_ & 0x00000080) != 0);
+      return ((bitField3_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -23360,7 +25373,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOrganicClicks(long value) {
 
       organicClicks_ = value;
-      bitField3_ |= 0x00000080;
+      bitField3_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -23375,7 +25388,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrganicClicks() {
-      bitField3_ = (bitField3_ & ~0x00000080);
+      bitField3_ = (bitField3_ & ~0x00000100);
       organicClicks_ = 0L;
       onChanged();
       return this;
@@ -23395,7 +25408,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOrganicClicksPerQuery() {
-      return ((bitField3_ & 0x00000100) != 0);
+      return ((bitField3_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -23427,7 +25440,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOrganicClicksPerQuery(double value) {
 
       organicClicksPerQuery_ = value;
-      bitField3_ |= 0x00000100;
+      bitField3_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -23443,7 +25456,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrganicClicksPerQuery() {
-      bitField3_ = (bitField3_ & ~0x00000100);
+      bitField3_ = (bitField3_ & ~0x00000200);
       organicClicksPerQuery_ = 0D;
       onChanged();
       return this;
@@ -23462,7 +25475,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOrganicImpressions() {
-      return ((bitField3_ & 0x00000200) != 0);
+      return ((bitField3_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -23492,7 +25505,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOrganicImpressions(long value) {
 
       organicImpressions_ = value;
-      bitField3_ |= 0x00000200;
+      bitField3_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -23507,7 +25520,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrganicImpressions() {
-      bitField3_ = (bitField3_ & ~0x00000200);
+      bitField3_ = (bitField3_ & ~0x00000400);
       organicImpressions_ = 0L;
       onChanged();
       return this;
@@ -23527,7 +25540,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOrganicImpressionsPerQuery() {
-      return ((bitField3_ & 0x00000400) != 0);
+      return ((bitField3_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -23559,7 +25572,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOrganicImpressionsPerQuery(double value) {
 
       organicImpressionsPerQuery_ = value;
-      bitField3_ |= 0x00000400;
+      bitField3_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -23575,7 +25588,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrganicImpressionsPerQuery() {
-      bitField3_ = (bitField3_ & ~0x00000400);
+      bitField3_ = (bitField3_ & ~0x00000800);
       organicImpressionsPerQuery_ = 0D;
       onChanged();
       return this;
@@ -23594,7 +25607,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOrganicQueries() {
-      return ((bitField3_ & 0x00000800) != 0);
+      return ((bitField3_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -23624,7 +25637,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOrganicQueries(long value) {
 
       organicQueries_ = value;
-      bitField3_ |= 0x00000800;
+      bitField3_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -23639,7 +25652,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrganicQueries() {
-      bitField3_ = (bitField3_ & ~0x00000800);
+      bitField3_ = (bitField3_ & ~0x00001000);
       organicQueries_ = 0L;
       onChanged();
       return this;
@@ -23657,7 +25670,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPercentNewVisitors() {
-      return ((bitField3_ & 0x00001000) != 0);
+      return ((bitField3_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -23685,7 +25698,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPercentNewVisitors(double value) {
 
       percentNewVisitors_ = value;
-      bitField3_ |= 0x00001000;
+      bitField3_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -23699,7 +25712,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPercentNewVisitors() {
-      bitField3_ = (bitField3_ & ~0x00001000);
+      bitField3_ = (bitField3_ & ~0x00002000);
       percentNewVisitors_ = 0D;
       onChanged();
       return this;
@@ -23716,7 +25729,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPhoneCalls() {
-      return ((bitField3_ & 0x00002000) != 0);
+      return ((bitField3_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -23742,7 +25755,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPhoneCalls(long value) {
 
       phoneCalls_ = value;
-      bitField3_ |= 0x00002000;
+      bitField3_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -23755,7 +25768,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPhoneCalls() {
-      bitField3_ = (bitField3_ & ~0x00002000);
+      bitField3_ = (bitField3_ & ~0x00004000);
       phoneCalls_ = 0L;
       onChanged();
       return this;
@@ -23772,7 +25785,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPhoneImpressions() {
-      return ((bitField3_ & 0x00004000) != 0);
+      return ((bitField3_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -23798,7 +25811,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPhoneImpressions(long value) {
 
       phoneImpressions_ = value;
-      bitField3_ |= 0x00004000;
+      bitField3_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -23811,7 +25824,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPhoneImpressions() {
-      bitField3_ = (bitField3_ & ~0x00004000);
+      bitField3_ = (bitField3_ & ~0x00008000);
       phoneImpressions_ = 0L;
       onChanged();
       return this;
@@ -23829,7 +25842,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPhoneThroughRate() {
-      return ((bitField3_ & 0x00008000) != 0);
+      return ((bitField3_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -23857,7 +25870,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPhoneThroughRate(double value) {
 
       phoneThroughRate_ = value;
-      bitField3_ |= 0x00008000;
+      bitField3_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -23871,7 +25884,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPhoneThroughRate() {
-      bitField3_ = (bitField3_ & ~0x00008000);
+      bitField3_ = (bitField3_ & ~0x00010000);
       phoneThroughRate_ = 0D;
       onChanged();
       return this;
@@ -23890,7 +25903,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasRelativeCtr() {
-      return ((bitField3_ & 0x00010000) != 0);
+      return ((bitField3_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -23920,7 +25933,7 @@ private static final long serialVersionUID = 0L;
     public Builder setRelativeCtr(double value) {
 
       relativeCtr_ = value;
-      bitField3_ |= 0x00010000;
+      bitField3_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -23935,7 +25948,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRelativeCtr() {
-      bitField3_ = (bitField3_ & ~0x00010000);
+      bitField3_ = (bitField3_ & ~0x00020000);
       relativeCtr_ = 0D;
       onChanged();
       return this;
@@ -23955,7 +25968,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchAbsoluteTopImpressionShare() {
-      return ((bitField3_ & 0x00020000) != 0);
+      return ((bitField3_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -23987,7 +26000,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchAbsoluteTopImpressionShare(double value) {
 
       searchAbsoluteTopImpressionShare_ = value;
-      bitField3_ |= 0x00020000;
+      bitField3_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -24003,7 +26016,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchAbsoluteTopImpressionShare() {
-      bitField3_ = (bitField3_ & ~0x00020000);
+      bitField3_ = (bitField3_ & ~0x00040000);
       searchAbsoluteTopImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -24023,7 +26036,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchBudgetLostAbsoluteTopImpressionShare() {
-      return ((bitField3_ & 0x00040000) != 0);
+      return ((bitField3_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -24055,7 +26068,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchBudgetLostAbsoluteTopImpressionShare(double value) {
 
       searchBudgetLostAbsoluteTopImpressionShare_ = value;
-      bitField3_ |= 0x00040000;
+      bitField3_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -24071,7 +26084,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchBudgetLostAbsoluteTopImpressionShare() {
-      bitField3_ = (bitField3_ & ~0x00040000);
+      bitField3_ = (bitField3_ & ~0x00080000);
       searchBudgetLostAbsoluteTopImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -24091,7 +26104,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchBudgetLostImpressionShare() {
-      return ((bitField3_ & 0x00080000) != 0);
+      return ((bitField3_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -24123,7 +26136,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchBudgetLostImpressionShare(double value) {
 
       searchBudgetLostImpressionShare_ = value;
-      bitField3_ |= 0x00080000;
+      bitField3_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -24139,7 +26152,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchBudgetLostImpressionShare() {
-      bitField3_ = (bitField3_ & ~0x00080000);
+      bitField3_ = (bitField3_ & ~0x00100000);
       searchBudgetLostImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -24159,7 +26172,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchBudgetLostTopImpressionShare() {
-      return ((bitField3_ & 0x00100000) != 0);
+      return ((bitField3_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -24191,7 +26204,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchBudgetLostTopImpressionShare(double value) {
 
       searchBudgetLostTopImpressionShare_ = value;
-      bitField3_ |= 0x00100000;
+      bitField3_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -24207,7 +26220,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchBudgetLostTopImpressionShare() {
-      bitField3_ = (bitField3_ & ~0x00100000);
+      bitField3_ = (bitField3_ & ~0x00200000);
       searchBudgetLostTopImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -24227,7 +26240,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchClickShare() {
-      return ((bitField3_ & 0x00200000) != 0);
+      return ((bitField3_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -24259,7 +26272,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchClickShare(double value) {
 
       searchClickShare_ = value;
-      bitField3_ |= 0x00200000;
+      bitField3_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -24275,7 +26288,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchClickShare() {
-      bitField3_ = (bitField3_ & ~0x00200000);
+      bitField3_ = (bitField3_ & ~0x00400000);
       searchClickShare_ = 0D;
       onChanged();
       return this;
@@ -24297,7 +26310,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchExactMatchImpressionShare() {
-      return ((bitField3_ & 0x00400000) != 0);
+      return ((bitField3_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -24333,7 +26346,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchExactMatchImpressionShare(double value) {
 
       searchExactMatchImpressionShare_ = value;
-      bitField3_ |= 0x00400000;
+      bitField3_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -24351,7 +26364,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchExactMatchImpressionShare() {
-      bitField3_ = (bitField3_ & ~0x00400000);
+      bitField3_ = (bitField3_ & ~0x00800000);
       searchExactMatchImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -24371,7 +26384,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchImpressionShare() {
-      return ((bitField3_ & 0x00800000) != 0);
+      return ((bitField3_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -24403,7 +26416,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchImpressionShare(double value) {
 
       searchImpressionShare_ = value;
-      bitField3_ |= 0x00800000;
+      bitField3_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -24419,7 +26432,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchImpressionShare() {
-      bitField3_ = (bitField3_ & ~0x00800000);
+      bitField3_ = (bitField3_ & ~0x01000000);
       searchImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -24439,7 +26452,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchRankLostAbsoluteTopImpressionShare() {
-      return ((bitField3_ & 0x01000000) != 0);
+      return ((bitField3_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -24471,7 +26484,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchRankLostAbsoluteTopImpressionShare(double value) {
 
       searchRankLostAbsoluteTopImpressionShare_ = value;
-      bitField3_ |= 0x01000000;
+      bitField3_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -24487,7 +26500,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchRankLostAbsoluteTopImpressionShare() {
-      bitField3_ = (bitField3_ & ~0x01000000);
+      bitField3_ = (bitField3_ & ~0x02000000);
       searchRankLostAbsoluteTopImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -24507,7 +26520,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchRankLostImpressionShare() {
-      return ((bitField3_ & 0x02000000) != 0);
+      return ((bitField3_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -24539,7 +26552,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchRankLostImpressionShare(double value) {
 
       searchRankLostImpressionShare_ = value;
-      bitField3_ |= 0x02000000;
+      bitField3_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -24555,7 +26568,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchRankLostImpressionShare() {
-      bitField3_ = (bitField3_ & ~0x02000000);
+      bitField3_ = (bitField3_ & ~0x04000000);
       searchRankLostImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -24575,7 +26588,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchRankLostTopImpressionShare() {
-      return ((bitField3_ & 0x04000000) != 0);
+      return ((bitField3_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -24607,7 +26620,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchRankLostTopImpressionShare(double value) {
 
       searchRankLostTopImpressionShare_ = value;
-      bitField3_ |= 0x04000000;
+      bitField3_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -24623,7 +26636,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchRankLostTopImpressionShare() {
-      bitField3_ = (bitField3_ & ~0x04000000);
+      bitField3_ = (bitField3_ & ~0x08000000);
       searchRankLostTopImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -24646,7 +26659,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchTopImpressionShare() {
-      return ((bitField3_ & 0x08000000) != 0);
+      return ((bitField3_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -24684,7 +26697,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSearchTopImpressionShare(double value) {
 
       searchTopImpressionShare_ = value;
-      bitField3_ |= 0x08000000;
+      bitField3_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -24703,7 +26716,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchTopImpressionShare() {
-      bitField3_ = (bitField3_ & ~0x08000000);
+      bitField3_ = (bitField3_ & ~0x10000000);
       searchTopImpressionShare_ = 0D;
       onChanged();
       return this;
@@ -24721,7 +26734,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the searchVolume field is set.
      */
     public boolean hasSearchVolume() {
-      return ((bitField3_ & 0x10000000) != 0);
+      return ((bitField3_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -24754,7 +26767,7 @@ private static final long serialVersionUID = 0L;
       } else {
         searchVolumeBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x10000000;
+      bitField3_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -24772,7 +26785,7 @@ private static final long serialVersionUID = 0L;
       } else {
         searchVolumeBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x10000000;
+      bitField3_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -24785,7 +26798,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSearchVolume(com.google.ads.googleads.v24.common.SearchVolumeRange value) {
       if (searchVolumeBuilder_ == null) {
-        if (((bitField3_ & 0x10000000) != 0) &&
+        if (((bitField3_ & 0x20000000) != 0) &&
           searchVolume_ != null &&
           searchVolume_ != com.google.ads.googleads.v24.common.SearchVolumeRange.getDefaultInstance()) {
           getSearchVolumeBuilder().mergeFrom(value);
@@ -24796,7 +26809,7 @@ private static final long serialVersionUID = 0L;
         searchVolumeBuilder_.mergeFrom(value);
       }
       if (searchVolume_ != null) {
-        bitField3_ |= 0x10000000;
+        bitField3_ |= 0x20000000;
         onChanged();
       }
       return this;
@@ -24809,7 +26822,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v24.common.SearchVolumeRange search_volume = 295;</code>
      */
     public Builder clearSearchVolume() {
-      bitField3_ = (bitField3_ & ~0x10000000);
+      bitField3_ = (bitField3_ & ~0x20000000);
       searchVolume_ = null;
       if (searchVolumeBuilder_ != null) {
         searchVolumeBuilder_.dispose();
@@ -24826,7 +26839,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v24.common.SearchVolumeRange search_volume = 295;</code>
      */
     public com.google.ads.googleads.v24.common.SearchVolumeRange.Builder getSearchVolumeBuilder() {
-      bitField3_ |= 0x10000000;
+      bitField3_ |= 0x20000000;
       onChanged();
       return internalGetSearchVolumeFieldBuilder().getBuilder();
     }
@@ -24878,7 +26891,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSpeedScore() {
-      return ((bitField3_ & 0x20000000) != 0);
+      return ((bitField3_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -24906,7 +26919,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSpeedScore(long value) {
 
       speedScore_ = value;
-      bitField3_ |= 0x20000000;
+      bitField3_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -24920,7 +26933,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSpeedScore() {
-      bitField3_ = (bitField3_ & ~0x20000000);
+      bitField3_ = (bitField3_ & ~0x40000000);
       speedScore_ = 0L;
       onChanged();
       return this;
@@ -24938,7 +26951,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAverageTargetCpaMicros() {
-      return ((bitField3_ & 0x40000000) != 0);
+      return ((bitField3_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -24966,7 +26979,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAverageTargetCpaMicros(long value) {
 
       averageTargetCpaMicros_ = value;
-      bitField3_ |= 0x40000000;
+      bitField3_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -24980,7 +26993,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageTargetCpaMicros() {
-      bitField3_ = (bitField3_ & ~0x40000000);
+      bitField3_ = (bitField3_ & ~0x80000000);
       averageTargetCpaMicros_ = 0L;
       onChanged();
       return this;
@@ -24998,7 +27011,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAverageTargetRoas() {
-      return ((bitField3_ & 0x80000000) != 0);
+      return ((bitField4_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -25026,7 +27039,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAverageTargetRoas(double value) {
 
       averageTargetRoas_ = value;
-      bitField3_ |= 0x80000000;
+      bitField4_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -25040,7 +27053,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageTargetRoas() {
-      bitField3_ = (bitField3_ & ~0x80000000);
+      bitField4_ = (bitField4_ & ~0x00000001);
       averageTargetRoas_ = 0D;
       onChanged();
       return this;
@@ -25058,7 +27071,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTopImpressionPercentage() {
-      return ((bitField4_ & 0x00000001) != 0);
+      return ((bitField4_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -25086,7 +27099,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTopImpressionPercentage(double value) {
 
       topImpressionPercentage_ = value;
-      bitField4_ |= 0x00000001;
+      bitField4_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -25100,7 +27113,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTopImpressionPercentage() {
-      bitField4_ = (bitField4_ & ~0x00000001);
+      bitField4_ = (bitField4_ & ~0x00000002);
       topImpressionPercentage_ = 0D;
       onChanged();
       return this;
@@ -25118,7 +27131,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValidAcceleratedMobilePagesClicksPercentage() {
-      return ((bitField4_ & 0x00000002) != 0);
+      return ((bitField4_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -25146,7 +27159,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValidAcceleratedMobilePagesClicksPercentage(double value) {
 
       validAcceleratedMobilePagesClicksPercentage_ = value;
-      bitField4_ |= 0x00000002;
+      bitField4_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -25160,7 +27173,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidAcceleratedMobilePagesClicksPercentage() {
-      bitField4_ = (bitField4_ & ~0x00000002);
+      bitField4_ = (bitField4_ & ~0x00000004);
       validAcceleratedMobilePagesClicksPercentage_ = 0D;
       onChanged();
       return this;
@@ -25177,7 +27190,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerAllConversions() {
-      return ((bitField4_ & 0x00000004) != 0);
+      return ((bitField4_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -25203,7 +27216,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerAllConversions(double value) {
 
       valuePerAllConversions_ = value;
-      bitField4_ |= 0x00000004;
+      bitField4_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -25216,7 +27229,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerAllConversions() {
-      bitField4_ = (bitField4_ & ~0x00000004);
+      bitField4_ = (bitField4_ & ~0x00000008);
       valuePerAllConversions_ = 0D;
       onChanged();
       return this;
@@ -25236,7 +27249,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerAllConversionsByConversionDate() {
-      return ((bitField4_ & 0x00000008) != 0);
+      return ((bitField4_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -25268,7 +27281,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerAllConversionsByConversionDate(double value) {
 
       valuePerAllConversionsByConversionDate_ = value;
-      bitField4_ |= 0x00000008;
+      bitField4_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -25284,7 +27297,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerAllConversionsByConversionDate() {
-      bitField4_ = (bitField4_ & ~0x00000008);
+      bitField4_ = (bitField4_ & ~0x00000010);
       valuePerAllConversionsByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -25304,7 +27317,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerConversion() {
-      return ((bitField4_ & 0x00000010) != 0);
+      return ((bitField4_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -25336,7 +27349,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerConversion(double value) {
 
       valuePerConversion_ = value;
-      bitField4_ |= 0x00000010;
+      bitField4_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -25352,7 +27365,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerConversion() {
-      bitField4_ = (bitField4_ & ~0x00000010);
+      bitField4_ = (bitField4_ & ~0x00000020);
       valuePerConversion_ = 0D;
       onChanged();
       return this;
@@ -25375,7 +27388,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerConversionsByConversionDate() {
-      return ((bitField4_ & 0x00000020) != 0);
+      return ((bitField4_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -25413,7 +27426,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerConversionsByConversionDate(double value) {
 
       valuePerConversionsByConversionDate_ = value;
-      bitField4_ |= 0x00000020;
+      bitField4_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -25432,7 +27445,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerConversionsByConversionDate() {
-      bitField4_ = (bitField4_ & ~0x00000020);
+      bitField4_ = (bitField4_ & ~0x00000040);
       valuePerConversionsByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -25453,7 +27466,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerCurrentModelAttributedConversion() {
-      return ((bitField4_ & 0x00000040) != 0);
+      return ((bitField4_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -25487,7 +27500,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerCurrentModelAttributedConversion(double value) {
 
       valuePerCurrentModelAttributedConversion_ = value;
-      bitField4_ |= 0x00000040;
+      bitField4_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -25504,7 +27517,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerCurrentModelAttributedConversion() {
-      bitField4_ = (bitField4_ & ~0x00000040);
+      bitField4_ = (bitField4_ & ~0x00000080);
       valuePerCurrentModelAttributedConversion_ = 0D;
       onChanged();
       return this;
@@ -25521,7 +27534,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP100Rate() {
-      return ((bitField4_ & 0x00000080) != 0);
+      return ((bitField4_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -25547,7 +27560,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoQuartileP100Rate(double value) {
 
       videoQuartileP100Rate_ = value;
-      bitField4_ |= 0x00000080;
+      bitField4_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -25560,7 +27573,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP100Rate() {
-      bitField4_ = (bitField4_ & ~0x00000080);
+      bitField4_ = (bitField4_ & ~0x00000100);
       videoQuartileP100Rate_ = 0D;
       onChanged();
       return this;
@@ -25577,7 +27590,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP25Rate() {
-      return ((bitField4_ & 0x00000100) != 0);
+      return ((bitField4_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -25603,7 +27616,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoQuartileP25Rate(double value) {
 
       videoQuartileP25Rate_ = value;
-      bitField4_ |= 0x00000100;
+      bitField4_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -25616,7 +27629,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP25Rate() {
-      bitField4_ = (bitField4_ & ~0x00000100);
+      bitField4_ = (bitField4_ & ~0x00000200);
       videoQuartileP25Rate_ = 0D;
       onChanged();
       return this;
@@ -25633,7 +27646,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP50Rate() {
-      return ((bitField4_ & 0x00000200) != 0);
+      return ((bitField4_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -25659,7 +27672,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoQuartileP50Rate(double value) {
 
       videoQuartileP50Rate_ = value;
-      bitField4_ |= 0x00000200;
+      bitField4_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -25672,7 +27685,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP50Rate() {
-      bitField4_ = (bitField4_ & ~0x00000200);
+      bitField4_ = (bitField4_ & ~0x00000400);
       videoQuartileP50Rate_ = 0D;
       onChanged();
       return this;
@@ -25689,7 +27702,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP75Rate() {
-      return ((bitField4_ & 0x00000400) != 0);
+      return ((bitField4_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -25715,7 +27728,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoQuartileP75Rate(double value) {
 
       videoQuartileP75Rate_ = value;
-      bitField4_ |= 0x00000400;
+      bitField4_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -25728,7 +27741,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP75Rate() {
-      bitField4_ = (bitField4_ & ~0x00000400);
+      bitField4_ = (bitField4_ & ~0x00000800);
       videoQuartileP75Rate_ = 0D;
       onChanged();
       return this;
@@ -25747,7 +27760,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoTrueviewViewRate() {
-      return ((bitField4_ & 0x00000800) != 0);
+      return ((bitField4_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -25777,7 +27790,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoTrueviewViewRate(double value) {
 
       videoTrueviewViewRate_ = value;
-      bitField4_ |= 0x00000800;
+      bitField4_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -25792,7 +27805,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoTrueviewViewRate() {
-      bitField4_ = (bitField4_ & ~0x00000800);
+      bitField4_ = (bitField4_ & ~0x00001000);
       videoTrueviewViewRate_ = 0D;
       onChanged();
       return this;
@@ -25809,7 +27822,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoTrueviewViews() {
-      return ((bitField4_ & 0x00001000) != 0);
+      return ((bitField4_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -25835,7 +27848,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoTrueviewViews(long value) {
 
       videoTrueviewViews_ = value;
-      bitField4_ |= 0x00001000;
+      bitField4_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -25848,7 +27861,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoTrueviewViews() {
-      bitField4_ = (bitField4_ & ~0x00001000);
+      bitField4_ = (bitField4_ & ~0x00002000);
       videoTrueviewViews_ = 0L;
       onChanged();
       return this;
@@ -25868,7 +27881,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversions() {
-      return ((bitField4_ & 0x00002000) != 0);
+      return ((bitField4_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -25900,7 +27913,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversions(long value) {
 
       viewThroughConversions_ = value;
-      bitField4_ |= 0x00002000;
+      bitField4_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -25916,7 +27929,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversions() {
-      bitField4_ = (bitField4_ & ~0x00002000);
+      bitField4_ = (bitField4_ & ~0x00004000);
       viewThroughConversions_ = 0L;
       onChanged();
       return this;
@@ -25947,7 +27960,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSkAdNetworkInstalls(long value) {
 
       skAdNetworkInstalls_ = value;
-      bitField4_ |= 0x00004000;
+      bitField4_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -25960,7 +27973,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkInstalls() {
-      bitField4_ = (bitField4_ & ~0x00004000);
+      bitField4_ = (bitField4_ & ~0x00008000);
       skAdNetworkInstalls_ = 0L;
       onChanged();
       return this;
@@ -25991,7 +28004,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSkAdNetworkTotalConversions(long value) {
 
       skAdNetworkTotalConversions_ = value;
-      bitField4_ |= 0x00008000;
+      bitField4_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -26004,7 +28017,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkTotalConversions() {
-      bitField4_ = (bitField4_ & ~0x00008000);
+      bitField4_ = (bitField4_ & ~0x00010000);
       skAdNetworkTotalConversions_ = 0L;
       onChanged();
       return this;
@@ -26037,7 +28050,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPublisherPurchasedClicks(long value) {
 
       publisherPurchasedClicks_ = value;
-      bitField4_ |= 0x00010000;
+      bitField4_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -26051,7 +28064,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPublisherPurchasedClicks() {
-      bitField4_ = (bitField4_ & ~0x00010000);
+      bitField4_ = (bitField4_ & ~0x00020000);
       publisherPurchasedClicks_ = 0L;
       onChanged();
       return this;
@@ -26084,7 +28097,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPublisherOrganicClicks(long value) {
 
       publisherOrganicClicks_ = value;
-      bitField4_ |= 0x00020000;
+      bitField4_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -26098,7 +28111,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPublisherOrganicClicks() {
-      bitField4_ = (bitField4_ & ~0x00020000);
+      bitField4_ = (bitField4_ & ~0x00040000);
       publisherOrganicClicks_ = 0L;
       onChanged();
       return this;
@@ -26131,7 +28144,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPublisherUnknownClicks(long value) {
 
       publisherUnknownClicks_ = value;
-      bitField4_ |= 0x00040000;
+      bitField4_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -26145,7 +28158,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPublisherUnknownClicks() {
-      bitField4_ = (bitField4_ & ~0x00040000);
+      bitField4_ = (bitField4_ & ~0x00080000);
       publisherUnknownClicks_ = 0L;
       onChanged();
       return this;
@@ -26164,7 +28177,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetClickToCall() {
-      return ((bitField4_ & 0x00080000) != 0);
+      return ((bitField4_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -26194,7 +28207,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetClickToCall(double value) {
 
       allConversionsFromLocationAssetClickToCall_ = value;
-      bitField4_ |= 0x00080000;
+      bitField4_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -26209,7 +28222,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetClickToCall() {
-      bitField4_ = (bitField4_ & ~0x00080000);
+      bitField4_ = (bitField4_ & ~0x00100000);
       allConversionsFromLocationAssetClickToCall_ = 0D;
       onChanged();
       return this;
@@ -26228,7 +28241,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetDirections() {
-      return ((bitField4_ & 0x00100000) != 0);
+      return ((bitField4_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -26258,7 +28271,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetDirections(double value) {
 
       allConversionsFromLocationAssetDirections_ = value;
-      bitField4_ |= 0x00100000;
+      bitField4_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -26273,7 +28286,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetDirections() {
-      bitField4_ = (bitField4_ & ~0x00100000);
+      bitField4_ = (bitField4_ & ~0x00200000);
       allConversionsFromLocationAssetDirections_ = 0D;
       onChanged();
       return this;
@@ -26292,7 +28305,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetMenu() {
-      return ((bitField4_ & 0x00200000) != 0);
+      return ((bitField4_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -26322,7 +28335,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetMenu(double value) {
 
       allConversionsFromLocationAssetMenu_ = value;
-      bitField4_ |= 0x00200000;
+      bitField4_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -26337,7 +28350,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetMenu() {
-      bitField4_ = (bitField4_ & ~0x00200000);
+      bitField4_ = (bitField4_ & ~0x00400000);
       allConversionsFromLocationAssetMenu_ = 0D;
       onChanged();
       return this;
@@ -26356,7 +28369,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetOrder() {
-      return ((bitField4_ & 0x00400000) != 0);
+      return ((bitField4_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -26386,7 +28399,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetOrder(double value) {
 
       allConversionsFromLocationAssetOrder_ = value;
-      bitField4_ |= 0x00400000;
+      bitField4_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -26401,7 +28414,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetOrder() {
-      bitField4_ = (bitField4_ & ~0x00400000);
+      bitField4_ = (bitField4_ & ~0x00800000);
       allConversionsFromLocationAssetOrder_ = 0D;
       onChanged();
       return this;
@@ -26420,7 +28433,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetOtherEngagement() {
-      return ((bitField4_ & 0x00800000) != 0);
+      return ((bitField4_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -26450,7 +28463,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetOtherEngagement(double value) {
 
       allConversionsFromLocationAssetOtherEngagement_ = value;
-      bitField4_ |= 0x00800000;
+      bitField4_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -26465,7 +28478,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetOtherEngagement() {
-      bitField4_ = (bitField4_ & ~0x00800000);
+      bitField4_ = (bitField4_ & ~0x01000000);
       allConversionsFromLocationAssetOtherEngagement_ = 0D;
       onChanged();
       return this;
@@ -26484,7 +28497,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetStoreVisits() {
-      return ((bitField4_ & 0x01000000) != 0);
+      return ((bitField4_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -26514,7 +28527,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetStoreVisits(double value) {
 
       allConversionsFromLocationAssetStoreVisits_ = value;
-      bitField4_ |= 0x01000000;
+      bitField4_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -26529,7 +28542,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetStoreVisits() {
-      bitField4_ = (bitField4_ & ~0x01000000);
+      bitField4_ = (bitField4_ & ~0x02000000);
       allConversionsFromLocationAssetStoreVisits_ = 0D;
       onChanged();
       return this;
@@ -26548,7 +28561,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetWebsite() {
-      return ((bitField4_ & 0x02000000) != 0);
+      return ((bitField4_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -26578,7 +28591,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetWebsite(double value) {
 
       allConversionsFromLocationAssetWebsite_ = value;
-      bitField4_ |= 0x02000000;
+      bitField4_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -26593,7 +28606,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetWebsite() {
-      bitField4_ = (bitField4_ & ~0x02000000);
+      bitField4_ = (bitField4_ & ~0x04000000);
       allConversionsFromLocationAssetWebsite_ = 0D;
       onChanged();
       return this;
@@ -26612,7 +28625,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEligibleImpressionsFromLocationAssetStoreReach() {
-      return ((bitField4_ & 0x04000000) != 0);
+      return ((bitField4_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -26642,7 +28655,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEligibleImpressionsFromLocationAssetStoreReach(long value) {
 
       eligibleImpressionsFromLocationAssetStoreReach_ = value;
-      bitField4_ |= 0x04000000;
+      bitField4_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -26657,7 +28670,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEligibleImpressionsFromLocationAssetStoreReach() {
-      bitField4_ = (bitField4_ & ~0x04000000);
+      bitField4_ = (bitField4_ & ~0x08000000);
       eligibleImpressionsFromLocationAssetStoreReach_ = 0L;
       onChanged();
       return this;
@@ -26675,7 +28688,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetClickToCall() {
-      return ((bitField4_ & 0x08000000) != 0);
+      return ((bitField4_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -26703,7 +28716,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetClickToCall(double value) {
 
       viewThroughConversionsFromLocationAssetClickToCall_ = value;
-      bitField4_ |= 0x08000000;
+      bitField4_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -26717,7 +28730,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetClickToCall() {
-      bitField4_ = (bitField4_ & ~0x08000000);
+      bitField4_ = (bitField4_ & ~0x10000000);
       viewThroughConversionsFromLocationAssetClickToCall_ = 0D;
       onChanged();
       return this;
@@ -26735,7 +28748,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetDirections() {
-      return ((bitField4_ & 0x10000000) != 0);
+      return ((bitField4_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -26763,7 +28776,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetDirections(double value) {
 
       viewThroughConversionsFromLocationAssetDirections_ = value;
-      bitField4_ |= 0x10000000;
+      bitField4_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -26777,7 +28790,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetDirections() {
-      bitField4_ = (bitField4_ & ~0x10000000);
+      bitField4_ = (bitField4_ & ~0x20000000);
       viewThroughConversionsFromLocationAssetDirections_ = 0D;
       onChanged();
       return this;
@@ -26795,7 +28808,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetMenu() {
-      return ((bitField4_ & 0x20000000) != 0);
+      return ((bitField4_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -26823,7 +28836,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetMenu(double value) {
 
       viewThroughConversionsFromLocationAssetMenu_ = value;
-      bitField4_ |= 0x20000000;
+      bitField4_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -26837,7 +28850,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetMenu() {
-      bitField4_ = (bitField4_ & ~0x20000000);
+      bitField4_ = (bitField4_ & ~0x40000000);
       viewThroughConversionsFromLocationAssetMenu_ = 0D;
       onChanged();
       return this;
@@ -26855,7 +28868,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetOrder() {
-      return ((bitField4_ & 0x40000000) != 0);
+      return ((bitField4_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -26883,7 +28896,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetOrder(double value) {
 
       viewThroughConversionsFromLocationAssetOrder_ = value;
-      bitField4_ |= 0x40000000;
+      bitField4_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -26897,7 +28910,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetOrder() {
-      bitField4_ = (bitField4_ & ~0x40000000);
+      bitField4_ = (bitField4_ & ~0x80000000);
       viewThroughConversionsFromLocationAssetOrder_ = 0D;
       onChanged();
       return this;
@@ -26915,7 +28928,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetOtherEngagement() {
-      return ((bitField4_ & 0x80000000) != 0);
+      return ((bitField5_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -26943,7 +28956,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetOtherEngagement(double value) {
 
       viewThroughConversionsFromLocationAssetOtherEngagement_ = value;
-      bitField4_ |= 0x80000000;
+      bitField5_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -26957,7 +28970,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetOtherEngagement() {
-      bitField4_ = (bitField4_ & ~0x80000000);
+      bitField5_ = (bitField5_ & ~0x00000001);
       viewThroughConversionsFromLocationAssetOtherEngagement_ = 0D;
       onChanged();
       return this;
@@ -26975,7 +28988,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetStoreVisits() {
-      return ((bitField5_ & 0x00000001) != 0);
+      return ((bitField5_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -27003,7 +29016,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetStoreVisits(double value) {
 
       viewThroughConversionsFromLocationAssetStoreVisits_ = value;
-      bitField5_ |= 0x00000001;
+      bitField5_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -27017,7 +29030,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetStoreVisits() {
-      bitField5_ = (bitField5_ & ~0x00000001);
+      bitField5_ = (bitField5_ & ~0x00000002);
       viewThroughConversionsFromLocationAssetStoreVisits_ = 0D;
       onChanged();
       return this;
@@ -27035,7 +29048,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetWebsite() {
-      return ((bitField5_ & 0x00000002) != 0);
+      return ((bitField5_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -27063,7 +29076,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetWebsite(double value) {
 
       viewThroughConversionsFromLocationAssetWebsite_ = value;
-      bitField5_ |= 0x00000002;
+      bitField5_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -27077,7 +29090,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetWebsite() {
-      bitField5_ = (bitField5_ & ~0x00000002);
+      bitField5_ = (bitField5_ & ~0x00000004);
       viewThroughConversionsFromLocationAssetWebsite_ = 0D;
       onChanged();
       return this;
@@ -27103,7 +29116,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOrders() {
-      return ((bitField5_ & 0x00000004) != 0);
+      return ((bitField5_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -27147,7 +29160,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOrders(double value) {
 
       orders_ = value;
-      bitField5_ |= 0x00000004;
+      bitField5_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -27169,7 +29182,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrders() {
-      bitField5_ = (bitField5_ & ~0x00000004);
+      bitField5_ = (bitField5_ & ~0x00000008);
       orders_ = 0D;
       onChanged();
       return this;
@@ -27193,7 +29206,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAverageOrderValueMicros() {
-      return ((bitField5_ & 0x00000008) != 0);
+      return ((bitField5_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -27233,7 +29246,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAverageOrderValueMicros(long value) {
 
       averageOrderValueMicros_ = value;
-      bitField5_ |= 0x00000008;
+      bitField5_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -27253,7 +29266,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageOrderValueMicros() {
-      bitField5_ = (bitField5_ & ~0x00000008);
+      bitField5_ = (bitField5_ & ~0x00000010);
       averageOrderValueMicros_ = 0L;
       onChanged();
       return this;
@@ -27277,7 +29290,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAverageCartSize() {
-      return ((bitField5_ & 0x00000010) != 0);
+      return ((bitField5_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -27317,7 +29330,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAverageCartSize(double value) {
 
       averageCartSize_ = value;
-      bitField5_ |= 0x00000010;
+      bitField5_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -27337,7 +29350,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageCartSize() {
-      bitField5_ = (bitField5_ & ~0x00000010);
+      bitField5_ = (bitField5_ & ~0x00000020);
       averageCartSize_ = 0D;
       onChanged();
       return this;
@@ -27364,7 +29377,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCostOfGoodsSoldMicros() {
-      return ((bitField5_ & 0x00000020) != 0);
+      return ((bitField5_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -27410,7 +29423,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCostOfGoodsSoldMicros(long value) {
 
       costOfGoodsSoldMicros_ = value;
-      bitField5_ |= 0x00000020;
+      bitField5_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -27433,7 +29446,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCostOfGoodsSoldMicros() {
-      bitField5_ = (bitField5_ & ~0x00000020);
+      bitField5_ = (bitField5_ & ~0x00000040);
       costOfGoodsSoldMicros_ = 0L;
       onChanged();
       return this;
@@ -27460,7 +29473,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasGrossProfitMicros() {
-      return ((bitField5_ & 0x00000040) != 0);
+      return ((bitField5_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -27506,7 +29519,7 @@ private static final long serialVersionUID = 0L;
     public Builder setGrossProfitMicros(long value) {
 
       grossProfitMicros_ = value;
-      bitField5_ |= 0x00000040;
+      bitField5_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -27529,7 +29542,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGrossProfitMicros() {
-      bitField5_ = (bitField5_ & ~0x00000040);
+      bitField5_ = (bitField5_ & ~0x00000080);
       grossProfitMicros_ = 0L;
       onChanged();
       return this;
@@ -27558,7 +29571,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasGrossProfitMargin() {
-      return ((bitField5_ & 0x00000080) != 0);
+      return ((bitField5_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -27608,7 +29621,7 @@ private static final long serialVersionUID = 0L;
     public Builder setGrossProfitMargin(double value) {
 
       grossProfitMargin_ = value;
-      bitField5_ |= 0x00000080;
+      bitField5_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -27633,7 +29646,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGrossProfitMargin() {
-      bitField5_ = (bitField5_ & ~0x00000080);
+      bitField5_ = (bitField5_ & ~0x00000100);
       grossProfitMargin_ = 0D;
       onChanged();
       return this;
@@ -27658,7 +29671,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasRevenueMicros() {
-      return ((bitField5_ & 0x00000100) != 0);
+      return ((bitField5_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -27700,7 +29713,7 @@ private static final long serialVersionUID = 0L;
     public Builder setRevenueMicros(long value) {
 
       revenueMicros_ = value;
-      bitField5_ |= 0x00000100;
+      bitField5_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -27721,7 +29734,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRevenueMicros() {
-      bitField5_ = (bitField5_ & ~0x00000100);
+      bitField5_ = (bitField5_ & ~0x00000200);
       revenueMicros_ = 0L;
       onChanged();
       return this;
@@ -27745,7 +29758,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasUnitsSold() {
-      return ((bitField5_ & 0x00000200) != 0);
+      return ((bitField5_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -27785,7 +29798,7 @@ private static final long serialVersionUID = 0L;
     public Builder setUnitsSold(double value) {
 
       unitsSold_ = value;
-      bitField5_ |= 0x00000200;
+      bitField5_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -27805,7 +29818,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUnitsSold() {
-      bitField5_ = (bitField5_ & ~0x00000200);
+      bitField5_ = (bitField5_ & ~0x00000400);
       unitsSold_ = 0D;
       onChanged();
       return this;
@@ -27835,7 +29848,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCrossSellCostOfGoodsSoldMicros() {
-      return ((bitField5_ & 0x00000400) != 0);
+      return ((bitField5_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -27887,7 +29900,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCrossSellCostOfGoodsSoldMicros(long value) {
 
       crossSellCostOfGoodsSoldMicros_ = value;
-      bitField5_ |= 0x00000400;
+      bitField5_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -27913,7 +29926,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCrossSellCostOfGoodsSoldMicros() {
-      bitField5_ = (bitField5_ & ~0x00000400);
+      bitField5_ = (bitField5_ & ~0x00000800);
       crossSellCostOfGoodsSoldMicros_ = 0L;
       onChanged();
       return this;
@@ -27942,7 +29955,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCrossSellGrossProfitMicros() {
-      return ((bitField5_ & 0x00000800) != 0);
+      return ((bitField5_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -27992,7 +30005,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCrossSellGrossProfitMicros(long value) {
 
       crossSellGrossProfitMicros_ = value;
-      bitField5_ |= 0x00000800;
+      bitField5_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -28017,7 +30030,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCrossSellGrossProfitMicros() {
-      bitField5_ = (bitField5_ & ~0x00000800);
+      bitField5_ = (bitField5_ & ~0x00001000);
       crossSellGrossProfitMicros_ = 0L;
       onChanged();
       return this;
@@ -28046,7 +30059,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCrossSellRevenueMicros() {
-      return ((bitField5_ & 0x00001000) != 0);
+      return ((bitField5_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -28096,7 +30109,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCrossSellRevenueMicros(long value) {
 
       crossSellRevenueMicros_ = value;
-      bitField5_ |= 0x00001000;
+      bitField5_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -28121,7 +30134,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCrossSellRevenueMicros() {
-      bitField5_ = (bitField5_ & ~0x00001000);
+      bitField5_ = (bitField5_ & ~0x00002000);
       crossSellRevenueMicros_ = 0L;
       onChanged();
       return this;
@@ -28149,7 +30162,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCrossSellUnitsSold() {
-      return ((bitField5_ & 0x00002000) != 0);
+      return ((bitField5_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -28197,7 +30210,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCrossSellUnitsSold(double value) {
 
       crossSellUnitsSold_ = value;
-      bitField5_ |= 0x00002000;
+      bitField5_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -28221,7 +30234,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCrossSellUnitsSold() {
-      bitField5_ = (bitField5_ & ~0x00002000);
+      bitField5_ = (bitField5_ & ~0x00004000);
       crossSellUnitsSold_ = 0D;
       onChanged();
       return this;
@@ -28250,7 +30263,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasLeadCostOfGoodsSoldMicros() {
-      return ((bitField5_ & 0x00004000) != 0);
+      return ((bitField5_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -28300,7 +30313,7 @@ private static final long serialVersionUID = 0L;
     public Builder setLeadCostOfGoodsSoldMicros(long value) {
 
       leadCostOfGoodsSoldMicros_ = value;
-      bitField5_ |= 0x00004000;
+      bitField5_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -28325,7 +30338,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLeadCostOfGoodsSoldMicros() {
-      bitField5_ = (bitField5_ & ~0x00004000);
+      bitField5_ = (bitField5_ & ~0x00008000);
       leadCostOfGoodsSoldMicros_ = 0L;
       onChanged();
       return this;
@@ -28354,7 +30367,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasLeadGrossProfitMicros() {
-      return ((bitField5_ & 0x00008000) != 0);
+      return ((bitField5_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -28404,7 +30417,7 @@ private static final long serialVersionUID = 0L;
     public Builder setLeadGrossProfitMicros(long value) {
 
       leadGrossProfitMicros_ = value;
-      bitField5_ |= 0x00008000;
+      bitField5_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -28429,7 +30442,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLeadGrossProfitMicros() {
-      bitField5_ = (bitField5_ & ~0x00008000);
+      bitField5_ = (bitField5_ & ~0x00010000);
       leadGrossProfitMicros_ = 0L;
       onChanged();
       return this;
@@ -28458,7 +30471,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasLeadRevenueMicros() {
-      return ((bitField5_ & 0x00010000) != 0);
+      return ((bitField5_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -28508,7 +30521,7 @@ private static final long serialVersionUID = 0L;
     public Builder setLeadRevenueMicros(long value) {
 
       leadRevenueMicros_ = value;
-      bitField5_ |= 0x00010000;
+      bitField5_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -28533,7 +30546,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLeadRevenueMicros() {
-      bitField5_ = (bitField5_ & ~0x00010000);
+      bitField5_ = (bitField5_ & ~0x00020000);
       leadRevenueMicros_ = 0L;
       onChanged();
       return this;
@@ -28560,7 +30573,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasLeadUnitsSold() {
-      return ((bitField5_ & 0x00020000) != 0);
+      return ((bitField5_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -28606,7 +30619,7 @@ private static final long serialVersionUID = 0L;
     public Builder setLeadUnitsSold(double value) {
 
       leadUnitsSold_ = value;
-      bitField5_ |= 0x00020000;
+      bitField5_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -28629,7 +30642,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLeadUnitsSold() {
-      bitField5_ = (bitField5_ & ~0x00020000);
+      bitField5_ = (bitField5_ & ~0x00040000);
       leadUnitsSold_ = 0D;
       onChanged();
       return this;
@@ -28649,7 +30662,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasUniqueUsers() {
-      return ((bitField5_ & 0x00040000) != 0);
+      return ((bitField5_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -28681,7 +30694,7 @@ private static final long serialVersionUID = 0L;
     public Builder setUniqueUsers(long value) {
 
       uniqueUsers_ = value;
-      bitField5_ |= 0x00040000;
+      bitField5_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -28697,7 +30710,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUniqueUsers() {
-      bitField5_ = (bitField5_ & ~0x00040000);
+      bitField5_ = (bitField5_ & ~0x00080000);
       uniqueUsers_ = 0L;
       onChanged();
       return this;
@@ -28717,7 +30730,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAverageImpressionFrequencyPerUser() {
-      return ((bitField5_ & 0x00080000) != 0);
+      return ((bitField5_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -28749,7 +30762,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAverageImpressionFrequencyPerUser(double value) {
 
       averageImpressionFrequencyPerUser_ = value;
-      bitField5_ |= 0x00080000;
+      bitField5_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -28765,7 +30778,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageImpressionFrequencyPerUser() {
-      bitField5_ = (bitField5_ & ~0x00080000);
+      bitField5_ = (bitField5_ & ~0x00100000);
       averageImpressionFrequencyPerUser_ = 0D;
       onChanged();
       return this;
@@ -28784,7 +30797,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasLinkedEntitiesCount() {
-      return ((bitField5_ & 0x00100000) != 0);
+      return ((bitField5_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -28814,7 +30827,7 @@ private static final long serialVersionUID = 0L;
     public Builder setLinkedEntitiesCount(long value) {
 
       linkedEntitiesCount_ = value;
-      bitField5_ |= 0x00100000;
+      bitField5_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -28829,7 +30842,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkedEntitiesCount() {
-      bitField5_ = (bitField5_ & ~0x00100000);
+      bitField5_ = (bitField5_ & ~0x00200000);
       linkedEntitiesCount_ = 0L;
       onChanged();
       return this;
@@ -28841,7 +30854,7 @@ private static final long serialVersionUID = 0L;
       if (!linkedSampleEntities_.isModifiable()) {
         linkedSampleEntities_ = new com.google.protobuf.LazyStringArrayList(linkedSampleEntities_);
       }
-      bitField5_ |= 0x00200000;
+      bitField5_ |= 0x00400000;
     }
     /**
      * <pre>
@@ -28917,7 +30930,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLinkedSampleEntitiesIsMutable();
       linkedSampleEntities_.set(index, value);
-      bitField5_ |= 0x00200000;
+      bitField5_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -28937,7 +30950,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLinkedSampleEntitiesIsMutable();
       linkedSampleEntities_.add(value);
-      bitField5_ |= 0x00200000;
+      bitField5_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -28957,7 +30970,7 @@ private static final long serialVersionUID = 0L;
       ensureLinkedSampleEntitiesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, linkedSampleEntities_);
-      bitField5_ |= 0x00200000;
+      bitField5_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -28974,7 +30987,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLinkedSampleEntities() {
       linkedSampleEntities_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField5_ = (bitField5_ & ~0x00200000);;
+      bitField5_ = (bitField5_ & ~0x00400000);;
       onChanged();
       return this;
     }
@@ -28995,7 +31008,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLinkedSampleEntitiesIsMutable();
       linkedSampleEntities_.add(value);
-      bitField5_ |= 0x00200000;
+      bitField5_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -29014,7 +31027,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAssetPinnedTotalCount() {
-      return ((bitField5_ & 0x00400000) != 0);
+      return ((bitField5_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -29046,7 +31059,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAssetPinnedTotalCount(long value) {
 
       assetPinnedTotalCount_ = value;
-      bitField5_ |= 0x00400000;
+      bitField5_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -29062,7 +31075,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetPinnedTotalCount() {
-      bitField5_ = (bitField5_ & ~0x00400000);
+      bitField5_ = (bitField5_ & ~0x00800000);
       assetPinnedTotalCount_ = 0L;
       onChanged();
       return this;
@@ -29082,7 +31095,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAssetPinnedAsHeadlinePositionOneCount() {
-      return ((bitField5_ & 0x00800000) != 0);
+      return ((bitField5_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -29114,7 +31127,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAssetPinnedAsHeadlinePositionOneCount(long value) {
 
       assetPinnedAsHeadlinePositionOneCount_ = value;
-      bitField5_ |= 0x00800000;
+      bitField5_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -29130,7 +31143,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetPinnedAsHeadlinePositionOneCount() {
-      bitField5_ = (bitField5_ & ~0x00800000);
+      bitField5_ = (bitField5_ & ~0x01000000);
       assetPinnedAsHeadlinePositionOneCount_ = 0L;
       onChanged();
       return this;
@@ -29150,7 +31163,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAssetPinnedAsHeadlinePositionTwoCount() {
-      return ((bitField5_ & 0x01000000) != 0);
+      return ((bitField5_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -29182,7 +31195,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAssetPinnedAsHeadlinePositionTwoCount(long value) {
 
       assetPinnedAsHeadlinePositionTwoCount_ = value;
-      bitField5_ |= 0x01000000;
+      bitField5_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -29198,7 +31211,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetPinnedAsHeadlinePositionTwoCount() {
-      bitField5_ = (bitField5_ & ~0x01000000);
+      bitField5_ = (bitField5_ & ~0x02000000);
       assetPinnedAsHeadlinePositionTwoCount_ = 0L;
       onChanged();
       return this;
@@ -29218,7 +31231,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAssetPinnedAsHeadlinePositionThreeCount() {
-      return ((bitField5_ & 0x02000000) != 0);
+      return ((bitField5_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -29250,7 +31263,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAssetPinnedAsHeadlinePositionThreeCount(long value) {
 
       assetPinnedAsHeadlinePositionThreeCount_ = value;
-      bitField5_ |= 0x02000000;
+      bitField5_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -29266,7 +31279,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetPinnedAsHeadlinePositionThreeCount() {
-      bitField5_ = (bitField5_ & ~0x02000000);
+      bitField5_ = (bitField5_ & ~0x04000000);
       assetPinnedAsHeadlinePositionThreeCount_ = 0L;
       onChanged();
       return this;
@@ -29286,7 +31299,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAssetPinnedAsDescriptionPositionOneCount() {
-      return ((bitField5_ & 0x04000000) != 0);
+      return ((bitField5_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -29318,7 +31331,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAssetPinnedAsDescriptionPositionOneCount(long value) {
 
       assetPinnedAsDescriptionPositionOneCount_ = value;
-      bitField5_ |= 0x04000000;
+      bitField5_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -29334,7 +31347,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetPinnedAsDescriptionPositionOneCount() {
-      bitField5_ = (bitField5_ & ~0x04000000);
+      bitField5_ = (bitField5_ & ~0x08000000);
       assetPinnedAsDescriptionPositionOneCount_ = 0L;
       onChanged();
       return this;
@@ -29354,7 +31367,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAssetPinnedAsDescriptionPositionTwoCount() {
-      return ((bitField5_ & 0x08000000) != 0);
+      return ((bitField5_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -29386,7 +31399,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAssetPinnedAsDescriptionPositionTwoCount(long value) {
 
       assetPinnedAsDescriptionPositionTwoCount_ = value;
-      bitField5_ |= 0x08000000;
+      bitField5_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -29402,7 +31415,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetPinnedAsDescriptionPositionTwoCount() {
-      bitField5_ = (bitField5_ & ~0x08000000);
+      bitField5_ = (bitField5_ & ~0x10000000);
       assetPinnedAsDescriptionPositionTwoCount_ = 0L;
       onChanged();
       return this;
@@ -29419,7 +31432,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasStoreVisitsLastClickModelAttributedConversions() {
-      return ((bitField5_ & 0x10000000) != 0);
+      return ((bitField5_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -29445,7 +31458,7 @@ private static final long serialVersionUID = 0L;
     public Builder setStoreVisitsLastClickModelAttributedConversions(double value) {
 
       storeVisitsLastClickModelAttributedConversions_ = value;
-      bitField5_ |= 0x10000000;
+      bitField5_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -29458,7 +31471,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStoreVisitsLastClickModelAttributedConversions() {
-      bitField5_ = (bitField5_ & ~0x10000000);
+      bitField5_ = (bitField5_ & ~0x20000000);
       storeVisitsLastClickModelAttributedConversions_ = 0D;
       onChanged();
       return this;
@@ -29475,7 +31488,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasResultsConversionsPurchase() {
-      return ((bitField5_ & 0x20000000) != 0);
+      return ((bitField5_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -29501,7 +31514,7 @@ private static final long serialVersionUID = 0L;
     public Builder setResultsConversionsPurchase(double value) {
 
       resultsConversionsPurchase_ = value;
-      bitField5_ |= 0x20000000;
+      bitField5_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -29514,7 +31527,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResultsConversionsPurchase() {
-      bitField5_ = (bitField5_ & ~0x20000000);
+      bitField5_ = (bitField5_ & ~0x40000000);
       resultsConversionsPurchase_ = 0D;
       onChanged();
       return this;
@@ -29532,7 +31545,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoTrueviewViewRateInFeed() {
-      return ((bitField5_ & 0x40000000) != 0);
+      return ((bitField5_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -29560,7 +31573,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoTrueviewViewRateInFeed(double value) {
 
       videoTrueviewViewRateInFeed_ = value;
-      bitField5_ |= 0x40000000;
+      bitField5_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -29574,7 +31587,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoTrueviewViewRateInFeed() {
-      bitField5_ = (bitField5_ & ~0x40000000);
+      bitField5_ = (bitField5_ & ~0x80000000);
       videoTrueviewViewRateInFeed_ = 0D;
       onChanged();
       return this;
@@ -29592,7 +31605,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoTrueviewViewRateInStream() {
-      return ((bitField5_ & 0x80000000) != 0);
+      return ((bitField6_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -29620,7 +31633,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoTrueviewViewRateInStream(double value) {
 
       videoTrueviewViewRateInStream_ = value;
-      bitField5_ |= 0x80000000;
+      bitField6_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -29634,7 +31647,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoTrueviewViewRateInStream() {
-      bitField5_ = (bitField5_ & ~0x80000000);
+      bitField6_ = (bitField6_ & ~0x00000001);
       videoTrueviewViewRateInStream_ = 0D;
       onChanged();
       return this;
@@ -29652,7 +31665,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoTrueviewViewRateShorts() {
-      return ((bitField6_ & 0x00000001) != 0);
+      return ((bitField6_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -29680,7 +31693,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoTrueviewViewRateShorts(double value) {
 
       videoTrueviewViewRateShorts_ = value;
-      bitField6_ |= 0x00000001;
+      bitField6_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -29694,7 +31707,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoTrueviewViewRateShorts() {
-      bitField6_ = (bitField6_ & ~0x00000001);
+      bitField6_ = (bitField6_ & ~0x00000002);
       videoTrueviewViewRateShorts_ = 0D;
       onChanged();
       return this;
@@ -29716,7 +31729,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCoviewedImpressions() {
-      return ((bitField6_ & 0x00000002) != 0);
+      return ((bitField6_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -29752,7 +31765,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCoviewedImpressions(long value) {
 
       coviewedImpressions_ = value;
-      bitField6_ |= 0x00000002;
+      bitField6_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -29770,7 +31783,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCoviewedImpressions() {
-      bitField6_ = (bitField6_ & ~0x00000002);
+      bitField6_ = (bitField6_ & ~0x00000004);
       coviewedImpressions_ = 0L;
       onChanged();
       return this;
@@ -29790,7 +31803,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPrimaryImpressions() {
-      return ((bitField6_ & 0x00000004) != 0);
+      return ((bitField6_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -29822,7 +31835,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPrimaryImpressions(long value) {
 
       primaryImpressions_ = value;
-      bitField6_ |= 0x00000004;
+      bitField6_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -29838,7 +31851,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrimaryImpressions() {
-      bitField6_ = (bitField6_ & ~0x00000004);
+      bitField6_ = (bitField6_ & ~0x00000008);
       primaryImpressions_ = 0L;
       onChanged();
       return this;
@@ -29859,7 +31872,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPlatformComparableConversionsFromInteractionsRate() {
-      return ((bitField6_ & 0x00000008) != 0);
+      return ((bitField6_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -29893,7 +31906,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPlatformComparableConversionsFromInteractionsRate(double value) {
 
       platformComparableConversionsFromInteractionsRate_ = value;
-      bitField6_ |= 0x00000008;
+      bitField6_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -29910,7 +31923,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlatformComparableConversionsFromInteractionsRate() {
-      bitField6_ = (bitField6_ & ~0x00000008);
+      bitField6_ = (bitField6_ & ~0x00000010);
       platformComparableConversionsFromInteractionsRate_ = 0D;
       onChanged();
       return this;
@@ -29930,7 +31943,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPlatformComparableConversions() {
-      return ((bitField6_ & 0x00000010) != 0);
+      return ((bitField6_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -29962,7 +31975,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPlatformComparableConversions(double value) {
 
       platformComparableConversions_ = value;
-      bitField6_ |= 0x00000010;
+      bitField6_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -29978,7 +31991,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlatformComparableConversions() {
-      bitField6_ = (bitField6_ & ~0x00000010);
+      bitField6_ = (bitField6_ & ~0x00000020);
       platformComparableConversions_ = 0D;
       onChanged();
       return this;
@@ -29998,7 +32011,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPlatformComparableConversionsValue() {
-      return ((bitField6_ & 0x00000020) != 0);
+      return ((bitField6_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -30030,7 +32043,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPlatformComparableConversionsValue(double value) {
 
       platformComparableConversionsValue_ = value;
-      bitField6_ |= 0x00000020;
+      bitField6_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -30046,7 +32059,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlatformComparableConversionsValue() {
-      bitField6_ = (bitField6_ & ~0x00000020);
+      bitField6_ = (bitField6_ & ~0x00000040);
       platformComparableConversionsValue_ = 0D;
       onChanged();
       return this;
@@ -30066,7 +32079,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPlatformComparableConversionsValuePerCost() {
-      return ((bitField6_ & 0x00000040) != 0);
+      return ((bitField6_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -30098,7 +32111,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPlatformComparableConversionsValuePerCost(double value) {
 
       platformComparableConversionsValuePerCost_ = value;
-      bitField6_ |= 0x00000040;
+      bitField6_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -30114,7 +32127,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlatformComparableConversionsValuePerCost() {
-      bitField6_ = (bitField6_ & ~0x00000040);
+      bitField6_ = (bitField6_ & ~0x00000080);
       platformComparableConversionsValuePerCost_ = 0D;
       onChanged();
       return this;
@@ -30136,7 +32149,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPlatformComparableConversionsByConversionDate() {
-      return ((bitField6_ & 0x00000080) != 0);
+      return ((bitField6_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -30172,7 +32185,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPlatformComparableConversionsByConversionDate(double value) {
 
       platformComparableConversionsByConversionDate_ = value;
-      bitField6_ |= 0x00000080;
+      bitField6_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -30190,7 +32203,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlatformComparableConversionsByConversionDate() {
-      bitField6_ = (bitField6_ & ~0x00000080);
+      bitField6_ = (bitField6_ & ~0x00000100);
       platformComparableConversionsByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -30211,7 +32224,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPlatformComparableConversionsValueByConversionDate() {
-      return ((bitField6_ & 0x00000100) != 0);
+      return ((bitField6_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -30245,7 +32258,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPlatformComparableConversionsValueByConversionDate(double value) {
 
       platformComparableConversionsValueByConversionDate_ = value;
-      bitField6_ |= 0x00000100;
+      bitField6_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -30262,7 +32275,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlatformComparableConversionsValueByConversionDate() {
-      bitField6_ = (bitField6_ & ~0x00000100);
+      bitField6_ = (bitField6_ & ~0x00000200);
       platformComparableConversionsValueByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -30283,7 +32296,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPlatformComparableConversionsFromInteractionsValuePerInteraction() {
-      return ((bitField6_ & 0x00000200) != 0);
+      return ((bitField6_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -30317,7 +32330,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPlatformComparableConversionsFromInteractionsValuePerInteraction(double value) {
 
       platformComparableConversionsFromInteractionsValuePerInteraction_ = value;
-      bitField6_ |= 0x00000200;
+      bitField6_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -30334,7 +32347,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlatformComparableConversionsFromInteractionsValuePerInteraction() {
-      bitField6_ = (bitField6_ & ~0x00000200);
+      bitField6_ = (bitField6_ & ~0x00000400);
       platformComparableConversionsFromInteractionsValuePerInteraction_ = 0D;
       onChanged();
       return this;
@@ -30355,7 +32368,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCostPerPlatformComparableConversion() {
-      return ((bitField6_ & 0x00000400) != 0);
+      return ((bitField6_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -30389,7 +32402,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCostPerPlatformComparableConversion(double value) {
 
       costPerPlatformComparableConversion_ = value;
-      bitField6_ |= 0x00000400;
+      bitField6_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -30406,7 +32419,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCostPerPlatformComparableConversion() {
-      bitField6_ = (bitField6_ & ~0x00000400);
+      bitField6_ = (bitField6_ & ~0x00000800);
       costPerPlatformComparableConversion_ = 0D;
       onChanged();
       return this;
@@ -30427,7 +32440,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerPlatformComparableConversion() {
-      return ((bitField6_ & 0x00000800) != 0);
+      return ((bitField6_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -30461,7 +32474,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerPlatformComparableConversion(double value) {
 
       valuePerPlatformComparableConversion_ = value;
-      bitField6_ |= 0x00000800;
+      bitField6_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -30478,7 +32491,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerPlatformComparableConversion() {
-      bitField6_ = (bitField6_ & ~0x00000800);
+      bitField6_ = (bitField6_ & ~0x00001000);
       valuePerPlatformComparableConversion_ = 0D;
       onChanged();
       return this;
@@ -30500,7 +32513,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerPlatformComparableConversionsByConversionDate() {
-      return ((bitField6_ & 0x00001000) != 0);
+      return ((bitField6_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -30536,7 +32549,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerPlatformComparableConversionsByConversionDate(double value) {
 
       valuePerPlatformComparableConversionsByConversionDate_ = value;
-      bitField6_ |= 0x00001000;
+      bitField6_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -30554,7 +32567,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerPlatformComparableConversionsByConversionDate() {
-      bitField6_ = (bitField6_ & ~0x00001000);
+      bitField6_ = (bitField6_ & ~0x00002000);
       valuePerPlatformComparableConversionsByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -30572,7 +32585,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCostConvertedCurrencyPerPlatformComparableConversion() {
-      return ((bitField6_ & 0x00002000) != 0);
+      return ((bitField6_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -30600,7 +32613,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCostConvertedCurrencyPerPlatformComparableConversion(double value) {
 
       costConvertedCurrencyPerPlatformComparableConversion_ = value;
-      bitField6_ |= 0x00002000;
+      bitField6_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -30614,7 +32627,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCostConvertedCurrencyPerPlatformComparableConversion() {
-      bitField6_ = (bitField6_ & ~0x00002000);
+      bitField6_ = (bitField6_ & ~0x00004000);
       costConvertedCurrencyPerPlatformComparableConversion_ = 0D;
       onChanged();
       return this;
@@ -30633,7 +32646,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasUniqueUsersTwoPlus() {
-      return ((bitField6_ & 0x00004000) != 0);
+      return ((bitField6_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -30663,7 +32676,7 @@ private static final long serialVersionUID = 0L;
     public Builder setUniqueUsersTwoPlus(long value) {
 
       uniqueUsersTwoPlus_ = value;
-      bitField6_ |= 0x00004000;
+      bitField6_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -30678,7 +32691,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUniqueUsersTwoPlus() {
-      bitField6_ = (bitField6_ & ~0x00004000);
+      bitField6_ = (bitField6_ & ~0x00008000);
       uniqueUsersTwoPlus_ = 0L;
       onChanged();
       return this;
@@ -30697,7 +32710,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasUniqueUsersThreePlus() {
-      return ((bitField6_ & 0x00008000) != 0);
+      return ((bitField6_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -30727,7 +32740,7 @@ private static final long serialVersionUID = 0L;
     public Builder setUniqueUsersThreePlus(long value) {
 
       uniqueUsersThreePlus_ = value;
-      bitField6_ |= 0x00008000;
+      bitField6_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -30742,7 +32755,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUniqueUsersThreePlus() {
-      bitField6_ = (bitField6_ & ~0x00008000);
+      bitField6_ = (bitField6_ & ~0x00010000);
       uniqueUsersThreePlus_ = 0L;
       onChanged();
       return this;
@@ -30761,7 +32774,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasUniqueUsersFourPlus() {
-      return ((bitField6_ & 0x00010000) != 0);
+      return ((bitField6_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -30791,7 +32804,7 @@ private static final long serialVersionUID = 0L;
     public Builder setUniqueUsersFourPlus(long value) {
 
       uniqueUsersFourPlus_ = value;
-      bitField6_ |= 0x00010000;
+      bitField6_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -30806,7 +32819,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUniqueUsersFourPlus() {
-      bitField6_ = (bitField6_ & ~0x00010000);
+      bitField6_ = (bitField6_ & ~0x00020000);
       uniqueUsersFourPlus_ = 0L;
       onChanged();
       return this;
@@ -30825,7 +32838,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasUniqueUsersFivePlus() {
-      return ((bitField6_ & 0x00020000) != 0);
+      return ((bitField6_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -30855,7 +32868,7 @@ private static final long serialVersionUID = 0L;
     public Builder setUniqueUsersFivePlus(long value) {
 
       uniqueUsersFivePlus_ = value;
-      bitField6_ |= 0x00020000;
+      bitField6_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -30870,7 +32883,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUniqueUsersFivePlus() {
-      bitField6_ = (bitField6_ & ~0x00020000);
+      bitField6_ = (bitField6_ & ~0x00040000);
       uniqueUsersFivePlus_ = 0L;
       onChanged();
       return this;
@@ -30889,7 +32902,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasUniqueUsersTenPlus() {
-      return ((bitField6_ & 0x00040000) != 0);
+      return ((bitField6_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -30919,7 +32932,7 @@ private static final long serialVersionUID = 0L;
     public Builder setUniqueUsersTenPlus(long value) {
 
       uniqueUsersTenPlus_ = value;
-      bitField6_ |= 0x00040000;
+      bitField6_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -30934,7 +32947,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUniqueUsersTenPlus() {
-      bitField6_ = (bitField6_ & ~0x00040000);
+      bitField6_ = (bitField6_ & ~0x00080000);
       uniqueUsersTenPlus_ = 0L;
       onChanged();
       return this;
@@ -30952,7 +32965,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValueAdjustment() {
-      return ((bitField6_ & 0x00080000) != 0);
+      return ((bitField6_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -30980,7 +32993,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValueAdjustment(double value) {
 
       valueAdjustment_ = value;
-      bitField6_ |= 0x00080000;
+      bitField6_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -30994,7 +33007,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValueAdjustment() {
-      bitField6_ = (bitField6_ & ~0x00080000);
+      bitField6_ = (bitField6_ & ~0x00100000);
       valueAdjustment_ = 0D;
       onChanged();
       return this;
@@ -31012,7 +33025,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllValueAdjustment() {
-      return ((bitField6_ & 0x00100000) != 0);
+      return ((bitField6_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -31040,7 +33053,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllValueAdjustment(double value) {
 
       allValueAdjustment_ = value;
-      bitField6_ |= 0x00100000;
+      bitField6_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -31054,7 +33067,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllValueAdjustment() {
-      bitField6_ = (bitField6_ & ~0x00100000);
+      bitField6_ = (bitField6_ & ~0x00200000);
       allValueAdjustment_ = 0D;
       onChanged();
       return this;
@@ -31071,7 +33084,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasClicksUniqueQueryClusters() {
-      return ((bitField6_ & 0x00200000) != 0);
+      return ((bitField6_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -31097,7 +33110,7 @@ private static final long serialVersionUID = 0L;
     public Builder setClicksUniqueQueryClusters(long value) {
 
       clicksUniqueQueryClusters_ = value;
-      bitField6_ |= 0x00200000;
+      bitField6_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -31110,7 +33123,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClicksUniqueQueryClusters() {
-      bitField6_ = (bitField6_ & ~0x00200000);
+      bitField6_ = (bitField6_ & ~0x00400000);
       clicksUniqueQueryClusters_ = 0L;
       onChanged();
       return this;
@@ -31127,7 +33140,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConversionsUniqueQueryClusters() {
-      return ((bitField6_ & 0x00400000) != 0);
+      return ((bitField6_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -31153,7 +33166,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversionsUniqueQueryClusters(long value) {
 
       conversionsUniqueQueryClusters_ = value;
-      bitField6_ |= 0x00400000;
+      bitField6_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -31166,7 +33179,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionsUniqueQueryClusters() {
-      bitField6_ = (bitField6_ & ~0x00400000);
+      bitField6_ = (bitField6_ & ~0x00800000);
       conversionsUniqueQueryClusters_ = 0L;
       onChanged();
       return this;
@@ -31183,7 +33196,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasImpressionsUniqueQueryClusters() {
-      return ((bitField6_ & 0x00800000) != 0);
+      return ((bitField6_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -31209,7 +33222,7 @@ private static final long serialVersionUID = 0L;
     public Builder setImpressionsUniqueQueryClusters(long value) {
 
       impressionsUniqueQueryClusters_ = value;
-      bitField6_ |= 0x00800000;
+      bitField6_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -31222,7 +33235,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearImpressionsUniqueQueryClusters() {
-      bitField6_ = (bitField6_ & ~0x00800000);
+      bitField6_ = (bitField6_ & ~0x01000000);
       impressionsUniqueQueryClusters_ = 0L;
       onChanged();
       return this;
@@ -31243,7 +33256,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoWatchTimeDurationMillis() {
-      return ((bitField6_ & 0x01000000) != 0);
+      return ((bitField6_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -31277,7 +33290,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoWatchTimeDurationMillis(long value) {
 
       videoWatchTimeDurationMillis_ = value;
-      bitField6_ |= 0x01000000;
+      bitField6_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -31294,7 +33307,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoWatchTimeDurationMillis() {
-      bitField6_ = (bitField6_ & ~0x01000000);
+      bitField6_ = (bitField6_ & ~0x02000000);
       videoWatchTimeDurationMillis_ = 0L;
       onChanged();
       return this;
@@ -31312,7 +33325,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAverageVideoWatchTimeDurationMillis() {
-      return ((bitField6_ & 0x02000000) != 0);
+      return ((bitField6_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -31340,7 +33353,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAverageVideoWatchTimeDurationMillis(long value) {
 
       averageVideoWatchTimeDurationMillis_ = value;
-      bitField6_ |= 0x02000000;
+      bitField6_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -31354,7 +33367,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageVideoWatchTimeDurationMillis() {
-      bitField6_ = (bitField6_ & ~0x02000000);
+      bitField6_ = (bitField6_ & ~0x04000000);
       averageVideoWatchTimeDurationMillis_ = 0L;
       onChanged();
       return this;
@@ -31371,7 +33384,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSvr() {
-      return ((bitField6_ & 0x04000000) != 0);
+      return ((bitField6_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -31397,7 +33410,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSvr(long value) {
 
       svr_ = value;
-      bitField6_ |= 0x04000000;
+      bitField6_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -31410,7 +33423,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSvr() {
-      bitField6_ = (bitField6_ & ~0x04000000);
+      bitField6_ = (bitField6_ & ~0x08000000);
       svr_ = 0L;
       onChanged();
       return this;
@@ -31428,7 +33441,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibilityMeasurableImpressions() {
-      return ((bitField6_ & 0x08000000) != 0);
+      return ((bitField6_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -31456,7 +33469,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibilityMeasurableImpressions(long value) {
 
       activeViewAudibilityMeasurableImpressions_ = value;
-      bitField6_ |= 0x08000000;
+      bitField6_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -31470,7 +33483,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibilityMeasurableImpressions() {
-      bitField6_ = (bitField6_ & ~0x08000000);
+      bitField6_ = (bitField6_ & ~0x10000000);
       activeViewAudibilityMeasurableImpressions_ = 0L;
       onChanged();
       return this;
@@ -31489,7 +33502,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibilityMeasurableImpressionsRate() {
-      return ((bitField6_ & 0x10000000) != 0);
+      return ((bitField6_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -31519,7 +33532,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibilityMeasurableImpressionsRate(double value) {
 
       activeViewAudibilityMeasurableImpressionsRate_ = value;
-      bitField6_ |= 0x10000000;
+      bitField6_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -31534,7 +33547,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibilityMeasurableImpressionsRate() {
-      bitField6_ = (bitField6_ & ~0x10000000);
+      bitField6_ = (bitField6_ & ~0x20000000);
       activeViewAudibilityMeasurableImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -31553,7 +33566,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibilityInvalidMeasurableImpressionsRate() {
-      return ((bitField6_ & 0x20000000) != 0);
+      return ((bitField6_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -31583,7 +33596,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibilityInvalidMeasurableImpressionsRate(double value) {
 
       activeViewAudibilityInvalidMeasurableImpressionsRate_ = value;
-      bitField6_ |= 0x20000000;
+      bitField6_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -31598,7 +33611,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibilityInvalidMeasurableImpressionsRate() {
-      bitField6_ = (bitField6_ & ~0x20000000);
+      bitField6_ = (bitField6_ & ~0x40000000);
       activeViewAudibilityInvalidMeasurableImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -31618,7 +33631,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibilityInvalidGivtMeasurableImpressionsRate() {
-      return ((bitField6_ & 0x40000000) != 0);
+      return ((bitField6_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -31650,7 +33663,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibilityInvalidGivtMeasurableImpressionsRate(double value) {
 
       activeViewAudibilityInvalidGivtMeasurableImpressionsRate_ = value;
-      bitField6_ |= 0x40000000;
+      bitField6_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -31666,7 +33679,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibilityInvalidGivtMeasurableImpressionsRate() {
-      bitField6_ = (bitField6_ & ~0x40000000);
+      bitField6_ = (bitField6_ & ~0x80000000);
       activeViewAudibilityInvalidGivtMeasurableImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -31684,7 +33697,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleImpressions() {
-      return ((bitField6_ & 0x80000000) != 0);
+      return ((bitField7_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -31712,7 +33725,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleImpressions(long value) {
 
       activeViewAudibleImpressions_ = value;
-      bitField6_ |= 0x80000000;
+      bitField7_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -31726,7 +33739,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleImpressions() {
-      bitField6_ = (bitField6_ & ~0x80000000);
+      bitField7_ = (bitField7_ & ~0x00000001);
       activeViewAudibleImpressions_ = 0L;
       onChanged();
       return this;
@@ -31745,7 +33758,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleImpressionsRate() {
-      return ((bitField7_ & 0x00000001) != 0);
+      return ((bitField7_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -31775,7 +33788,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleImpressionsRate(double value) {
 
       activeViewAudibleImpressionsRate_ = value;
-      bitField7_ |= 0x00000001;
+      bitField7_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -31790,7 +33803,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleImpressionsRate() {
-      bitField7_ = (bitField7_ & ~0x00000001);
+      bitField7_ = (bitField7_ & ~0x00000002);
       activeViewAudibleImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -31808,7 +33821,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleTwoSecondsImpressions() {
-      return ((bitField7_ & 0x00000002) != 0);
+      return ((bitField7_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -31836,7 +33849,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleTwoSecondsImpressions(long value) {
 
       activeViewAudibleTwoSecondsImpressions_ = value;
-      bitField7_ |= 0x00000002;
+      bitField7_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -31850,7 +33863,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleTwoSecondsImpressions() {
-      bitField7_ = (bitField7_ & ~0x00000002);
+      bitField7_ = (bitField7_ & ~0x00000004);
       activeViewAudibleTwoSecondsImpressions_ = 0L;
       onChanged();
       return this;
@@ -31869,7 +33882,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleTwoSecondsImpressionsRate() {
-      return ((bitField7_ & 0x00000004) != 0);
+      return ((bitField7_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -31899,7 +33912,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleTwoSecondsImpressionsRate(double value) {
 
       activeViewAudibleTwoSecondsImpressionsRate_ = value;
-      bitField7_ |= 0x00000004;
+      bitField7_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -31914,7 +33927,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleTwoSecondsImpressionsRate() {
-      bitField7_ = (bitField7_ & ~0x00000004);
+      bitField7_ = (bitField7_ & ~0x00000008);
       activeViewAudibleTwoSecondsImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -31932,7 +33945,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleThirtySecondsImpressions() {
-      return ((bitField7_ & 0x00000008) != 0);
+      return ((bitField7_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -31960,7 +33973,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleThirtySecondsImpressions(long value) {
 
       activeViewAudibleThirtySecondsImpressions_ = value;
-      bitField7_ |= 0x00000008;
+      bitField7_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -31974,7 +33987,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleThirtySecondsImpressions() {
-      bitField7_ = (bitField7_ & ~0x00000008);
+      bitField7_ = (bitField7_ & ~0x00000010);
       activeViewAudibleThirtySecondsImpressions_ = 0L;
       onChanged();
       return this;
@@ -31993,7 +34006,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleThirtySecondsImpressionsRate() {
-      return ((bitField7_ & 0x00000010) != 0);
+      return ((bitField7_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -32023,7 +34036,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleThirtySecondsImpressionsRate(double value) {
 
       activeViewAudibleThirtySecondsImpressionsRate_ = value;
-      bitField7_ |= 0x00000010;
+      bitField7_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -32038,7 +34051,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleThirtySecondsImpressionsRate() {
-      bitField7_ = (bitField7_ & ~0x00000010);
+      bitField7_ = (bitField7_ & ~0x00000020);
       activeViewAudibleThirtySecondsImpressionsRate_ = 0D;
       onChanged();
       return this;
@@ -32057,7 +34070,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleQuartileP25Rate() {
-      return ((bitField7_ & 0x00000020) != 0);
+      return ((bitField7_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -32087,7 +34100,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleQuartileP25Rate(double value) {
 
       activeViewAudibleQuartileP25Rate_ = value;
-      bitField7_ |= 0x00000020;
+      bitField7_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -32102,7 +34115,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleQuartileP25Rate() {
-      bitField7_ = (bitField7_ & ~0x00000020);
+      bitField7_ = (bitField7_ & ~0x00000040);
       activeViewAudibleQuartileP25Rate_ = 0D;
       onChanged();
       return this;
@@ -32121,7 +34134,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleQuartileP50Rate() {
-      return ((bitField7_ & 0x00000040) != 0);
+      return ((bitField7_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -32151,7 +34164,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleQuartileP50Rate(double value) {
 
       activeViewAudibleQuartileP50Rate_ = value;
-      bitField7_ |= 0x00000040;
+      bitField7_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -32166,7 +34179,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleQuartileP50Rate() {
-      bitField7_ = (bitField7_ & ~0x00000040);
+      bitField7_ = (bitField7_ & ~0x00000080);
       activeViewAudibleQuartileP50Rate_ = 0D;
       onChanged();
       return this;
@@ -32185,7 +34198,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleQuartileP75Rate() {
-      return ((bitField7_ & 0x00000080) != 0);
+      return ((bitField7_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -32215,7 +34228,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleQuartileP75Rate(double value) {
 
       activeViewAudibleQuartileP75Rate_ = value;
-      bitField7_ |= 0x00000080;
+      bitField7_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -32230,7 +34243,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleQuartileP75Rate() {
-      bitField7_ = (bitField7_ & ~0x00000080);
+      bitField7_ = (bitField7_ & ~0x00000100);
       activeViewAudibleQuartileP75Rate_ = 0D;
       onChanged();
       return this;
@@ -32249,7 +34262,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasActiveViewAudibleQuartileP100Rate() {
-      return ((bitField7_ & 0x00000100) != 0);
+      return ((bitField7_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -32279,7 +34292,7 @@ private static final long serialVersionUID = 0L;
     public Builder setActiveViewAudibleQuartileP100Rate(double value) {
 
       activeViewAudibleQuartileP100Rate_ = value;
-      bitField7_ |= 0x00000100;
+      bitField7_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -32294,7 +34307,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveViewAudibleQuartileP100Rate() {
-      bitField7_ = (bitField7_ & ~0x00000100);
+      bitField7_ = (bitField7_ & ~0x00000200);
       activeViewAudibleQuartileP100Rate_ = 0D;
       onChanged();
       return this;
@@ -32312,7 +34325,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasBiddableIndirectInstallFirstInAppConversionMicros() {
-      return ((bitField7_ & 0x00000200) != 0);
+      return ((bitField7_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -32340,7 +34353,7 @@ private static final long serialVersionUID = 0L;
     public Builder setBiddableIndirectInstallFirstInAppConversionMicros(long value) {
 
       biddableIndirectInstallFirstInAppConversionMicros_ = value;
-      bitField7_ |= 0x00000200;
+      bitField7_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -32354,7 +34367,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBiddableIndirectInstallFirstInAppConversionMicros() {
-      bitField7_ = (bitField7_ & ~0x00000200);
+      bitField7_ = (bitField7_ & ~0x00000400);
       biddableIndirectInstallFirstInAppConversionMicros_ = 0L;
       onChanged();
       return this;
@@ -32376,7 +34389,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllAverageCartSize() {
-      return ((bitField7_ & 0x00000400) != 0);
+      return ((bitField7_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -32412,7 +34425,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllAverageCartSize(double value) {
 
       allAverageCartSize_ = value;
-      bitField7_ |= 0x00000400;
+      bitField7_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -32430,7 +34443,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllAverageCartSize() {
-      bitField7_ = (bitField7_ & ~0x00000400);
+      bitField7_ = (bitField7_ & ~0x00000800);
       allAverageCartSize_ = 0D;
       onChanged();
       return this;
@@ -32452,7 +34465,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllAverageOrderValueMicros() {
-      return ((bitField7_ & 0x00000800) != 0);
+      return ((bitField7_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -32488,7 +34501,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllAverageOrderValueMicros(long value) {
 
       allAverageOrderValueMicros_ = value;
-      bitField7_ |= 0x00000800;
+      bitField7_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -32506,7 +34519,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllAverageOrderValueMicros() {
-      bitField7_ = (bitField7_ & ~0x00000800);
+      bitField7_ = (bitField7_ & ~0x00001000);
       allAverageOrderValueMicros_ = 0L;
       onChanged();
       return this;
@@ -32528,7 +34541,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllCostOfGoodsSoldMicros() {
-      return ((bitField7_ & 0x00001000) != 0);
+      return ((bitField7_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -32564,7 +34577,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllCostOfGoodsSoldMicros(long value) {
 
       allCostOfGoodsSoldMicros_ = value;
-      bitField7_ |= 0x00001000;
+      bitField7_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -32582,7 +34595,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllCostOfGoodsSoldMicros() {
-      bitField7_ = (bitField7_ & ~0x00001000);
+      bitField7_ = (bitField7_ & ~0x00002000);
       allCostOfGoodsSoldMicros_ = 0L;
       onChanged();
       return this;
@@ -32605,7 +34618,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllCrossSellCostOfGoodsSoldMicros() {
-      return ((bitField7_ & 0x00002000) != 0);
+      return ((bitField7_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -32643,7 +34656,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllCrossSellCostOfGoodsSoldMicros(long value) {
 
       allCrossSellCostOfGoodsSoldMicros_ = value;
-      bitField7_ |= 0x00002000;
+      bitField7_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -32662,7 +34675,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllCrossSellCostOfGoodsSoldMicros() {
-      bitField7_ = (bitField7_ & ~0x00002000);
+      bitField7_ = (bitField7_ & ~0x00004000);
       allCrossSellCostOfGoodsSoldMicros_ = 0L;
       onChanged();
       return this;
@@ -32685,7 +34698,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllCrossSellGrossProfitMicros() {
-      return ((bitField7_ & 0x00004000) != 0);
+      return ((bitField7_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -32723,7 +34736,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllCrossSellGrossProfitMicros(long value) {
 
       allCrossSellGrossProfitMicros_ = value;
-      bitField7_ |= 0x00004000;
+      bitField7_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -32742,7 +34755,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllCrossSellGrossProfitMicros() {
-      bitField7_ = (bitField7_ & ~0x00004000);
+      bitField7_ = (bitField7_ & ~0x00008000);
       allCrossSellGrossProfitMicros_ = 0L;
       onChanged();
       return this;
@@ -32764,7 +34777,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllCrossSellRevenueMicros() {
-      return ((bitField7_ & 0x00008000) != 0);
+      return ((bitField7_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -32800,7 +34813,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllCrossSellRevenueMicros(long value) {
 
       allCrossSellRevenueMicros_ = value;
-      bitField7_ |= 0x00008000;
+      bitField7_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -32818,7 +34831,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllCrossSellRevenueMicros() {
-      bitField7_ = (bitField7_ & ~0x00008000);
+      bitField7_ = (bitField7_ & ~0x00010000);
       allCrossSellRevenueMicros_ = 0L;
       onChanged();
       return this;
@@ -32841,7 +34854,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllCrossSellUnitsSold() {
-      return ((bitField7_ & 0x00010000) != 0);
+      return ((bitField7_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -32879,7 +34892,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllCrossSellUnitsSold(double value) {
 
       allCrossSellUnitsSold_ = value;
-      bitField7_ |= 0x00010000;
+      bitField7_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -32898,7 +34911,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllCrossSellUnitsSold() {
-      bitField7_ = (bitField7_ & ~0x00010000);
+      bitField7_ = (bitField7_ & ~0x00020000);
       allCrossSellUnitsSold_ = 0D;
       onChanged();
       return this;
@@ -32922,7 +34935,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllGrossProfitMargin() {
-      return ((bitField7_ & 0x00020000) != 0);
+      return ((bitField7_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -32962,7 +34975,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllGrossProfitMargin(double value) {
 
       allGrossProfitMargin_ = value;
-      bitField7_ |= 0x00020000;
+      bitField7_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -32982,7 +34995,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllGrossProfitMargin() {
-      bitField7_ = (bitField7_ & ~0x00020000);
+      bitField7_ = (bitField7_ & ~0x00040000);
       allGrossProfitMargin_ = 0D;
       onChanged();
       return this;
@@ -33004,7 +35017,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllGrossProfitMicros() {
-      return ((bitField7_ & 0x00040000) != 0);
+      return ((bitField7_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -33040,7 +35053,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllGrossProfitMicros(long value) {
 
       allGrossProfitMicros_ = value;
-      bitField7_ |= 0x00040000;
+      bitField7_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -33058,7 +35071,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllGrossProfitMicros() {
-      bitField7_ = (bitField7_ & ~0x00040000);
+      bitField7_ = (bitField7_ & ~0x00080000);
       allGrossProfitMicros_ = 0L;
       onChanged();
       return this;
@@ -33081,7 +35094,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllLeadCostOfGoodsSoldMicros() {
-      return ((bitField7_ & 0x00080000) != 0);
+      return ((bitField7_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -33119,7 +35132,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllLeadCostOfGoodsSoldMicros(long value) {
 
       allLeadCostOfGoodsSoldMicros_ = value;
-      bitField7_ |= 0x00080000;
+      bitField7_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -33138,7 +35151,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllLeadCostOfGoodsSoldMicros() {
-      bitField7_ = (bitField7_ & ~0x00080000);
+      bitField7_ = (bitField7_ & ~0x00100000);
       allLeadCostOfGoodsSoldMicros_ = 0L;
       onChanged();
       return this;
@@ -33161,7 +35174,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllLeadGrossProfitMicros() {
-      return ((bitField7_ & 0x00100000) != 0);
+      return ((bitField7_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -33199,7 +35212,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllLeadGrossProfitMicros(long value) {
 
       allLeadGrossProfitMicros_ = value;
-      bitField7_ |= 0x00100000;
+      bitField7_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -33218,7 +35231,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllLeadGrossProfitMicros() {
-      bitField7_ = (bitField7_ & ~0x00100000);
+      bitField7_ = (bitField7_ & ~0x00200000);
       allLeadGrossProfitMicros_ = 0L;
       onChanged();
       return this;
@@ -33240,7 +35253,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllLeadRevenueMicros() {
-      return ((bitField7_ & 0x00200000) != 0);
+      return ((bitField7_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -33276,7 +35289,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllLeadRevenueMicros(long value) {
 
       allLeadRevenueMicros_ = value;
-      bitField7_ |= 0x00200000;
+      bitField7_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -33294,7 +35307,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllLeadRevenueMicros() {
-      bitField7_ = (bitField7_ & ~0x00200000);
+      bitField7_ = (bitField7_ & ~0x00400000);
       allLeadRevenueMicros_ = 0L;
       onChanged();
       return this;
@@ -33316,7 +35329,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllLeadUnitsSold() {
-      return ((bitField7_ & 0x00400000) != 0);
+      return ((bitField7_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -33352,7 +35365,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllLeadUnitsSold(double value) {
 
       allLeadUnitsSold_ = value;
-      bitField7_ |= 0x00400000;
+      bitField7_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -33370,7 +35383,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllLeadUnitsSold() {
-      bitField7_ = (bitField7_ & ~0x00400000);
+      bitField7_ = (bitField7_ & ~0x00800000);
       allLeadUnitsSold_ = 0D;
       onChanged();
       return this;
@@ -33392,7 +35405,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllOrders() {
-      return ((bitField7_ & 0x00800000) != 0);
+      return ((bitField7_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -33428,7 +35441,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllOrders(double value) {
 
       allOrders_ = value;
-      bitField7_ |= 0x00800000;
+      bitField7_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -33446,7 +35459,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllOrders() {
-      bitField7_ = (bitField7_ & ~0x00800000);
+      bitField7_ = (bitField7_ & ~0x01000000);
       allOrders_ = 0D;
       onChanged();
       return this;
@@ -33468,7 +35481,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllRevenueMicros() {
-      return ((bitField7_ & 0x01000000) != 0);
+      return ((bitField7_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -33504,7 +35517,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllRevenueMicros(long value) {
 
       allRevenueMicros_ = value;
-      bitField7_ |= 0x01000000;
+      bitField7_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -33522,7 +35535,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllRevenueMicros() {
-      bitField7_ = (bitField7_ & ~0x01000000);
+      bitField7_ = (bitField7_ & ~0x02000000);
       allRevenueMicros_ = 0L;
       onChanged();
       return this;
@@ -33544,7 +35557,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllUnitsSold() {
-      return ((bitField7_ & 0x02000000) != 0);
+      return ((bitField7_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -33580,7 +35593,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllUnitsSold(double value) {
 
       allUnitsSold_ = value;
-      bitField7_ |= 0x02000000;
+      bitField7_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -33598,8 +35611,2156 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllUnitsSold() {
-      bitField7_ = (bitField7_ & ~0x02000000);
+      bitField7_ = (bitField7_ & ~0x04000000);
       allUnitsSold_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double controlCostPerConversion_ ;
+    /**
+     * <pre>
+     * The cost per conversion metric on the control arm of the
+     * experiment. The treatment cost per conversion value can be
+     * selected by using `cost_per_conversion`.
+     * </pre>
+     *
+     * <code>optional double control_cost_per_conversion = 446;</code>
+     * @return Whether the controlCostPerConversion field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlCostPerConversion() {
+      return ((bitField7_ & 0x08000000) != 0);
+    }
+    /**
+     * <pre>
+     * The cost per conversion metric on the control arm of the
+     * experiment. The treatment cost per conversion value can be
+     * selected by using `cost_per_conversion`.
+     * </pre>
+     *
+     * <code>optional double control_cost_per_conversion = 446;</code>
+     * @return The controlCostPerConversion.
+     */
+    @java.lang.Override
+    public double getControlCostPerConversion() {
+      return controlCostPerConversion_;
+    }
+    /**
+     * <pre>
+     * The cost per conversion metric on the control arm of the
+     * experiment. The treatment cost per conversion value can be
+     * selected by using `cost_per_conversion`.
+     * </pre>
+     *
+     * <code>optional double control_cost_per_conversion = 446;</code>
+     * @param value The controlCostPerConversion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setControlCostPerConversion(double value) {
+
+      controlCostPerConversion_ = value;
+      bitField7_ |= 0x08000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The cost per conversion metric on the control arm of the
+     * experiment. The treatment cost per conversion value can be
+     * selected by using `cost_per_conversion`.
+     * </pre>
+     *
+     * <code>optional double control_cost_per_conversion = 446;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearControlCostPerConversion() {
+      bitField7_ = (bitField7_ & ~0x08000000);
+      controlCostPerConversion_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double costPerConversionMarginOfError_ ;
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on cost per
+     * conversion.
+     *
+     * Together with `cost_per_conversion_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `cost_per_conversion_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_margin_of_error = 447;</code>
+     * @return Whether the costPerConversionMarginOfError field is set.
+     */
+    @java.lang.Override
+    public boolean hasCostPerConversionMarginOfError() {
+      return ((bitField7_ & 0x10000000) != 0);
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on cost per
+     * conversion.
+     *
+     * Together with `cost_per_conversion_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `cost_per_conversion_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_margin_of_error = 447;</code>
+     * @return The costPerConversionMarginOfError.
+     */
+    @java.lang.Override
+    public double getCostPerConversionMarginOfError() {
+      return costPerConversionMarginOfError_;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on cost per
+     * conversion.
+     *
+     * Together with `cost_per_conversion_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `cost_per_conversion_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_margin_of_error = 447;</code>
+     * @param value The costPerConversionMarginOfError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCostPerConversionMarginOfError(double value) {
+
+      costPerConversionMarginOfError_ = value;
+      bitField7_ |= 0x10000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on cost per
+     * conversion.
+     *
+     * Together with `cost_per_conversion_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `cost_per_conversion_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_margin_of_error = 447;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCostPerConversionMarginOfError() {
+      bitField7_ = (bitField7_ & ~0x10000000);
+      costPerConversionMarginOfError_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double costPerConversionPValue_ ;
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * cost per conversion. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on cost per conversion, is 3%.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_p_value = 448;</code>
+     * @return Whether the costPerConversionPValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasCostPerConversionPValue() {
+      return ((bitField7_ & 0x20000000) != 0);
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * cost per conversion. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on cost per conversion, is 3%.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_p_value = 448;</code>
+     * @return The costPerConversionPValue.
+     */
+    @java.lang.Override
+    public double getCostPerConversionPValue() {
+      return costPerConversionPValue_;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * cost per conversion. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on cost per conversion, is 3%.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_p_value = 448;</code>
+     * @param value The costPerConversionPValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCostPerConversionPValue(double value) {
+
+      costPerConversionPValue_ = value;
+      bitField7_ |= 0x20000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * cost per conversion. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on cost per conversion, is 3%.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_p_value = 448;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCostPerConversionPValue() {
+      bitField7_ = (bitField7_ & ~0x20000000);
+      costPerConversionPValue_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double costPerConversionChangePointEstimate_ ;
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on cost per
+     * conversion change.
+     *
+     * Together with `cost_per_conversion_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(cost_per_conversion_change_point_estimate -
+     * cost_per_conversion_margin_of_error,
+     * cost_per_conversion_change_point_estimate +
+     * cost_per_conversion_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_change_point_estimate = 449;</code>
+     * @return Whether the costPerConversionChangePointEstimate field is set.
+     */
+    @java.lang.Override
+    public boolean hasCostPerConversionChangePointEstimate() {
+      return ((bitField7_ & 0x40000000) != 0);
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on cost per
+     * conversion change.
+     *
+     * Together with `cost_per_conversion_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(cost_per_conversion_change_point_estimate -
+     * cost_per_conversion_margin_of_error,
+     * cost_per_conversion_change_point_estimate +
+     * cost_per_conversion_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_change_point_estimate = 449;</code>
+     * @return The costPerConversionChangePointEstimate.
+     */
+    @java.lang.Override
+    public double getCostPerConversionChangePointEstimate() {
+      return costPerConversionChangePointEstimate_;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on cost per
+     * conversion change.
+     *
+     * Together with `cost_per_conversion_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(cost_per_conversion_change_point_estimate -
+     * cost_per_conversion_margin_of_error,
+     * cost_per_conversion_change_point_estimate +
+     * cost_per_conversion_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_change_point_estimate = 449;</code>
+     * @param value The costPerConversionChangePointEstimate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCostPerConversionChangePointEstimate(double value) {
+
+      costPerConversionChangePointEstimate_ = value;
+      bitField7_ |= 0x40000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on cost per
+     * conversion change.
+     *
+     * Together with `cost_per_conversion_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(cost_per_conversion_change_point_estimate -
+     * cost_per_conversion_margin_of_error,
+     * cost_per_conversion_change_point_estimate +
+     * cost_per_conversion_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double cost_per_conversion_change_point_estimate = 449;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCostPerConversionChangePointEstimate() {
+      bitField7_ = (bitField7_ & ~0x40000000);
+      costPerConversionChangePointEstimate_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double controlConversions_ ;
+    /**
+     * <pre>
+     * The conversions metric on the control arm of the experiment.
+     * The treatment conversions value can be selected by using
+     * `conversions`.
+     * </pre>
+     *
+     * <code>optional double control_conversions = 450;</code>
+     * @return Whether the controlConversions field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlConversions() {
+      return ((bitField7_ & 0x80000000) != 0);
+    }
+    /**
+     * <pre>
+     * The conversions metric on the control arm of the experiment.
+     * The treatment conversions value can be selected by using
+     * `conversions`.
+     * </pre>
+     *
+     * <code>optional double control_conversions = 450;</code>
+     * @return The controlConversions.
+     */
+    @java.lang.Override
+    public double getControlConversions() {
+      return controlConversions_;
+    }
+    /**
+     * <pre>
+     * The conversions metric on the control arm of the experiment.
+     * The treatment conversions value can be selected by using
+     * `conversions`.
+     * </pre>
+     *
+     * <code>optional double control_conversions = 450;</code>
+     * @param value The controlConversions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setControlConversions(double value) {
+
+      controlConversions_ = value;
+      bitField7_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversions metric on the control arm of the experiment.
+     * The treatment conversions value can be selected by using
+     * `conversions`.
+     * </pre>
+     *
+     * <code>optional double control_conversions = 450;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearControlConversions() {
+      bitField7_ = (bitField7_ & ~0x80000000);
+      controlConversions_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double conversionsAbsoluteChangeMarginOfError_ ;
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on conversions
+     * absolute change.
+     *
+     * Together with `conversions_absolute_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment - control). This field specifies the radius of the confidence
+     * interval, which is centered at
+     * `conversions_absolute_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_margin_of_error = 451;</code>
+     * @return Whether the conversionsAbsoluteChangeMarginOfError field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionsAbsoluteChangeMarginOfError() {
+      return ((bitField8_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on conversions
+     * absolute change.
+     *
+     * Together with `conversions_absolute_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment - control). This field specifies the radius of the confidence
+     * interval, which is centered at
+     * `conversions_absolute_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_margin_of_error = 451;</code>
+     * @return The conversionsAbsoluteChangeMarginOfError.
+     */
+    @java.lang.Override
+    public double getConversionsAbsoluteChangeMarginOfError() {
+      return conversionsAbsoluteChangeMarginOfError_;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on conversions
+     * absolute change.
+     *
+     * Together with `conversions_absolute_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment - control). This field specifies the radius of the confidence
+     * interval, which is centered at
+     * `conversions_absolute_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_margin_of_error = 451;</code>
+     * @param value The conversionsAbsoluteChangeMarginOfError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionsAbsoluteChangeMarginOfError(double value) {
+
+      conversionsAbsoluteChangeMarginOfError_ = value;
+      bitField8_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on conversions
+     * absolute change.
+     *
+     * Together with `conversions_absolute_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment - control). This field specifies the radius of the confidence
+     * interval, which is centered at
+     * `conversions_absolute_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_margin_of_error = 451;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionsAbsoluteChangeMarginOfError() {
+      bitField8_ = (bitField8_ & ~0x00000001);
+      conversionsAbsoluteChangeMarginOfError_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double conversionsAbsoluteChangePValue_ ;
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversions absolute change. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversions absolute change, is
+     * 3%.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_p_value = 452;</code>
+     * @return Whether the conversionsAbsoluteChangePValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionsAbsoluteChangePValue() {
+      return ((bitField8_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversions absolute change. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversions absolute change, is
+     * 3%.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_p_value = 452;</code>
+     * @return The conversionsAbsoluteChangePValue.
+     */
+    @java.lang.Override
+    public double getConversionsAbsoluteChangePValue() {
+      return conversionsAbsoluteChangePValue_;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversions absolute change. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversions absolute change, is
+     * 3%.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_p_value = 452;</code>
+     * @param value The conversionsAbsoluteChangePValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionsAbsoluteChangePValue(double value) {
+
+      conversionsAbsoluteChangePValue_ = value;
+      bitField8_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversions absolute change. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversions absolute change, is
+     * 3%.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_p_value = 452;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionsAbsoluteChangePValue() {
+      bitField8_ = (bitField8_ & ~0x00000002);
+      conversionsAbsoluteChangePValue_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double conversionsAbsoluteChangePointEstimate_ ;
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on conversions
+     * absolute change.
+     *
+     * Together with `conversions_absolute_change_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment - control). This field specifies the point estimate, which is
+     * the center of the confidence interval:
+     * `(conversions_absolute_change_point_estimate -
+     * conversions_absolute_change_margin_of_error,
+     * conversions_absolute_change_point_estimate +
+     * conversions_absolute_change_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_point_estimate = 453;</code>
+     * @return Whether the conversionsAbsoluteChangePointEstimate field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionsAbsoluteChangePointEstimate() {
+      return ((bitField8_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on conversions
+     * absolute change.
+     *
+     * Together with `conversions_absolute_change_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment - control). This field specifies the point estimate, which is
+     * the center of the confidence interval:
+     * `(conversions_absolute_change_point_estimate -
+     * conversions_absolute_change_margin_of_error,
+     * conversions_absolute_change_point_estimate +
+     * conversions_absolute_change_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_point_estimate = 453;</code>
+     * @return The conversionsAbsoluteChangePointEstimate.
+     */
+    @java.lang.Override
+    public double getConversionsAbsoluteChangePointEstimate() {
+      return conversionsAbsoluteChangePointEstimate_;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on conversions
+     * absolute change.
+     *
+     * Together with `conversions_absolute_change_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment - control). This field specifies the point estimate, which is
+     * the center of the confidence interval:
+     * `(conversions_absolute_change_point_estimate -
+     * conversions_absolute_change_margin_of_error,
+     * conversions_absolute_change_point_estimate +
+     * conversions_absolute_change_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_point_estimate = 453;</code>
+     * @param value The conversionsAbsoluteChangePointEstimate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionsAbsoluteChangePointEstimate(double value) {
+
+      conversionsAbsoluteChangePointEstimate_ = value;
+      bitField8_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on conversions
+     * absolute change.
+     *
+     * Together with `conversions_absolute_change_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment - control). This field specifies the point estimate, which is
+     * the center of the confidence interval:
+     * `(conversions_absolute_change_point_estimate -
+     * conversions_absolute_change_margin_of_error,
+     * conversions_absolute_change_point_estimate +
+     * conversions_absolute_change_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversions_absolute_change_point_estimate = 453;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionsAbsoluteChangePointEstimate() {
+      bitField8_ = (bitField8_ & ~0x00000004);
+      conversionsAbsoluteChangePointEstimate_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double controlConversionValuePerCost_ ;
+    /**
+     * <pre>
+     * The conversion value per cost metric on the control arm of the
+     * experiment. The treatment conversion value per cost value can be
+     * selected by using `conversions_value_per_cost`.
+     * </pre>
+     *
+     * <code>optional double control_conversion_value_per_cost = 454;</code>
+     * @return Whether the controlConversionValuePerCost field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlConversionValuePerCost() {
+      return ((bitField8_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The conversion value per cost metric on the control arm of the
+     * experiment. The treatment conversion value per cost value can be
+     * selected by using `conversions_value_per_cost`.
+     * </pre>
+     *
+     * <code>optional double control_conversion_value_per_cost = 454;</code>
+     * @return The controlConversionValuePerCost.
+     */
+    @java.lang.Override
+    public double getControlConversionValuePerCost() {
+      return controlConversionValuePerCost_;
+    }
+    /**
+     * <pre>
+     * The conversion value per cost metric on the control arm of the
+     * experiment. The treatment conversion value per cost value can be
+     * selected by using `conversions_value_per_cost`.
+     * </pre>
+     *
+     * <code>optional double control_conversion_value_per_cost = 454;</code>
+     * @param value The controlConversionValuePerCost to set.
+     * @return This builder for chaining.
+     */
+    public Builder setControlConversionValuePerCost(double value) {
+
+      controlConversionValuePerCost_ = value;
+      bitField8_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion value per cost metric on the control arm of the
+     * experiment. The treatment conversion value per cost value can be
+     * selected by using `conversions_value_per_cost`.
+     * </pre>
+     *
+     * <code>optional double control_conversion_value_per_cost = 454;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearControlConversionValuePerCost() {
+      bitField8_ = (bitField8_ & ~0x00000008);
+      controlConversionValuePerCost_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double conversionValuePerCostMarginOfError_ ;
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on
+     * conversion value per cost.
+     *
+     * Together with `conversion_value_per_cost_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `conversion_value_per_cost_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_margin_of_error = 455;</code>
+     * @return Whether the conversionValuePerCostMarginOfError field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionValuePerCostMarginOfError() {
+      return ((bitField8_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on
+     * conversion value per cost.
+     *
+     * Together with `conversion_value_per_cost_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `conversion_value_per_cost_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_margin_of_error = 455;</code>
+     * @return The conversionValuePerCostMarginOfError.
+     */
+    @java.lang.Override
+    public double getConversionValuePerCostMarginOfError() {
+      return conversionValuePerCostMarginOfError_;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on
+     * conversion value per cost.
+     *
+     * Together with `conversion_value_per_cost_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `conversion_value_per_cost_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_margin_of_error = 455;</code>
+     * @param value The conversionValuePerCostMarginOfError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValuePerCostMarginOfError(double value) {
+
+      conversionValuePerCostMarginOfError_ = value;
+      bitField8_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on
+     * conversion value per cost.
+     *
+     * Together with `conversion_value_per_cost_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `conversion_value_per_cost_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_margin_of_error = 455;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionValuePerCostMarginOfError() {
+      bitField8_ = (bitField8_ & ~0x00000010);
+      conversionValuePerCostMarginOfError_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double conversionValuePerCostPValue_ ;
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversion value per cost. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversion value per cost, is 3%.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_p_value = 456;</code>
+     * @return Whether the conversionValuePerCostPValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionValuePerCostPValue() {
+      return ((bitField8_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversion value per cost. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversion value per cost, is 3%.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_p_value = 456;</code>
+     * @return The conversionValuePerCostPValue.
+     */
+    @java.lang.Override
+    public double getConversionValuePerCostPValue() {
+      return conversionValuePerCostPValue_;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversion value per cost. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversion value per cost, is 3%.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_p_value = 456;</code>
+     * @param value The conversionValuePerCostPValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValuePerCostPValue(double value) {
+
+      conversionValuePerCostPValue_ = value;
+      bitField8_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversion value per cost. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversion value per cost, is 3%.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_p_value = 456;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionValuePerCostPValue() {
+      bitField8_ = (bitField8_ & ~0x00000020);
+      conversionValuePerCostPValue_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double conversionValuePerCostChangePointEstimate_ ;
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on
+     * conversion value per cost change.
+     *
+     * Together with `conversion_value_per_cost_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(conversion_value_per_cost_change_point_estimate -
+     * conversion_value_per_cost_margin_of_error,
+     * conversion_value_per_cost_change_point_estimate +
+     * conversion_value_per_cost_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_change_point_estimate = 457;</code>
+     * @return Whether the conversionValuePerCostChangePointEstimate field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionValuePerCostChangePointEstimate() {
+      return ((bitField8_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on
+     * conversion value per cost change.
+     *
+     * Together with `conversion_value_per_cost_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(conversion_value_per_cost_change_point_estimate -
+     * conversion_value_per_cost_margin_of_error,
+     * conversion_value_per_cost_change_point_estimate +
+     * conversion_value_per_cost_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_change_point_estimate = 457;</code>
+     * @return The conversionValuePerCostChangePointEstimate.
+     */
+    @java.lang.Override
+    public double getConversionValuePerCostChangePointEstimate() {
+      return conversionValuePerCostChangePointEstimate_;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on
+     * conversion value per cost change.
+     *
+     * Together with `conversion_value_per_cost_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(conversion_value_per_cost_change_point_estimate -
+     * conversion_value_per_cost_margin_of_error,
+     * conversion_value_per_cost_change_point_estimate +
+     * conversion_value_per_cost_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_change_point_estimate = 457;</code>
+     * @param value The conversionValuePerCostChangePointEstimate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValuePerCostChangePointEstimate(double value) {
+
+      conversionValuePerCostChangePointEstimate_ = value;
+      bitField8_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on
+     * conversion value per cost change.
+     *
+     * Together with `conversion_value_per_cost_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(conversion_value_per_cost_change_point_estimate -
+     * conversion_value_per_cost_margin_of_error,
+     * conversion_value_per_cost_change_point_estimate +
+     * conversion_value_per_cost_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_per_cost_change_point_estimate = 457;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionValuePerCostChangePointEstimate() {
+      bitField8_ = (bitField8_ & ~0x00000040);
+      conversionValuePerCostChangePointEstimate_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private long controlCostMicros_ ;
+    /**
+     * <pre>
+     * The cost metric on the control arm of the experiment.
+     * The treatment cost value can be selected by using `cost_micros`.
+     * </pre>
+     *
+     * <code>optional int64 control_cost_micros = 458;</code>
+     * @return Whether the controlCostMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlCostMicros() {
+      return ((bitField8_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * The cost metric on the control arm of the experiment.
+     * The treatment cost value can be selected by using `cost_micros`.
+     * </pre>
+     *
+     * <code>optional int64 control_cost_micros = 458;</code>
+     * @return The controlCostMicros.
+     */
+    @java.lang.Override
+    public long getControlCostMicros() {
+      return controlCostMicros_;
+    }
+    /**
+     * <pre>
+     * The cost metric on the control arm of the experiment.
+     * The treatment cost value can be selected by using `cost_micros`.
+     * </pre>
+     *
+     * <code>optional int64 control_cost_micros = 458;</code>
+     * @param value The controlCostMicros to set.
+     * @return This builder for chaining.
+     */
+    public Builder setControlCostMicros(long value) {
+
+      controlCostMicros_ = value;
+      bitField8_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The cost metric on the control arm of the experiment.
+     * The treatment cost value can be selected by using `cost_micros`.
+     * </pre>
+     *
+     * <code>optional int64 control_cost_micros = 458;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearControlCostMicros() {
+      bitField8_ = (bitField8_ & ~0x00000080);
+      controlCostMicros_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private double costMicrosMarginOfError_ ;
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on cost.
+     *
+     * Together with `cost_micros_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `cost_micros_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double cost_micros_margin_of_error = 459;</code>
+     * @return Whether the costMicrosMarginOfError field is set.
+     */
+    @java.lang.Override
+    public boolean hasCostMicrosMarginOfError() {
+      return ((bitField8_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on cost.
+     *
+     * Together with `cost_micros_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `cost_micros_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double cost_micros_margin_of_error = 459;</code>
+     * @return The costMicrosMarginOfError.
+     */
+    @java.lang.Override
+    public double getCostMicrosMarginOfError() {
+      return costMicrosMarginOfError_;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on cost.
+     *
+     * Together with `cost_micros_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `cost_micros_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double cost_micros_margin_of_error = 459;</code>
+     * @param value The costMicrosMarginOfError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCostMicrosMarginOfError(double value) {
+
+      costMicrosMarginOfError_ = value;
+      bitField8_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on cost.
+     *
+     * Together with `cost_micros_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `cost_micros_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double cost_micros_margin_of_error = 459;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCostMicrosMarginOfError() {
+      bitField8_ = (bitField8_ & ~0x00000100);
+      costMicrosMarginOfError_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double costMicrosPValue_ ;
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * cost. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on cost, is 3%.
+     * </pre>
+     *
+     * <code>optional double cost_micros_p_value = 460;</code>
+     * @return Whether the costMicrosPValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasCostMicrosPValue() {
+      return ((bitField8_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * cost. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on cost, is 3%.
+     * </pre>
+     *
+     * <code>optional double cost_micros_p_value = 460;</code>
+     * @return The costMicrosPValue.
+     */
+    @java.lang.Override
+    public double getCostMicrosPValue() {
+      return costMicrosPValue_;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * cost. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on cost, is 3%.
+     * </pre>
+     *
+     * <code>optional double cost_micros_p_value = 460;</code>
+     * @param value The costMicrosPValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCostMicrosPValue(double value) {
+
+      costMicrosPValue_ = value;
+      bitField8_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * cost. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on cost, is 3%.
+     * </pre>
+     *
+     * <code>optional double cost_micros_p_value = 460;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCostMicrosPValue() {
+      bitField8_ = (bitField8_ & ~0x00000200);
+      costMicrosPValue_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double costMicrosChangePointEstimate_ ;
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on cost change.
+     *
+     * Together with `cost_micros_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(cost_micros_change_point_estimate - cost_micros_margin_of_error,
+     * cost_micros_change_point_estimate + cost_micros_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double cost_micros_change_point_estimate = 461;</code>
+     * @return Whether the costMicrosChangePointEstimate field is set.
+     */
+    @java.lang.Override
+    public boolean hasCostMicrosChangePointEstimate() {
+      return ((bitField8_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on cost change.
+     *
+     * Together with `cost_micros_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(cost_micros_change_point_estimate - cost_micros_margin_of_error,
+     * cost_micros_change_point_estimate + cost_micros_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double cost_micros_change_point_estimate = 461;</code>
+     * @return The costMicrosChangePointEstimate.
+     */
+    @java.lang.Override
+    public double getCostMicrosChangePointEstimate() {
+      return costMicrosChangePointEstimate_;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on cost change.
+     *
+     * Together with `cost_micros_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(cost_micros_change_point_estimate - cost_micros_margin_of_error,
+     * cost_micros_change_point_estimate + cost_micros_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double cost_micros_change_point_estimate = 461;</code>
+     * @param value The costMicrosChangePointEstimate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCostMicrosChangePointEstimate(double value) {
+
+      costMicrosChangePointEstimate_ = value;
+      bitField8_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on cost change.
+     *
+     * Together with `cost_micros_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(cost_micros_change_point_estimate - cost_micros_margin_of_error,
+     * cost_micros_change_point_estimate + cost_micros_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double cost_micros_change_point_estimate = 461;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCostMicrosChangePointEstimate() {
+      bitField8_ = (bitField8_ & ~0x00000400);
+      costMicrosChangePointEstimate_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private long controlImpressions_ ;
+    /**
+     * <pre>
+     * The impressions metric on the control arm of the experiment.
+     * The treatment impressions value can be selected by using `impressions`.
+     * </pre>
+     *
+     * <code>optional int64 control_impressions = 462;</code>
+     * @return Whether the controlImpressions field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlImpressions() {
+      return ((bitField8_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * The impressions metric on the control arm of the experiment.
+     * The treatment impressions value can be selected by using `impressions`.
+     * </pre>
+     *
+     * <code>optional int64 control_impressions = 462;</code>
+     * @return The controlImpressions.
+     */
+    @java.lang.Override
+    public long getControlImpressions() {
+      return controlImpressions_;
+    }
+    /**
+     * <pre>
+     * The impressions metric on the control arm of the experiment.
+     * The treatment impressions value can be selected by using `impressions`.
+     * </pre>
+     *
+     * <code>optional int64 control_impressions = 462;</code>
+     * @param value The controlImpressions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setControlImpressions(long value) {
+
+      controlImpressions_ = value;
+      bitField8_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The impressions metric on the control arm of the experiment.
+     * The treatment impressions value can be selected by using `impressions`.
+     * </pre>
+     *
+     * <code>optional int64 control_impressions = 462;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearControlImpressions() {
+      bitField8_ = (bitField8_ & ~0x00000800);
+      controlImpressions_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private double impressionsMarginOfError_ ;
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on impressions.
+     *
+     * Together with `impressions_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `impressions_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double impressions_margin_of_error = 463;</code>
+     * @return Whether the impressionsMarginOfError field is set.
+     */
+    @java.lang.Override
+    public boolean hasImpressionsMarginOfError() {
+      return ((bitField8_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on impressions.
+     *
+     * Together with `impressions_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `impressions_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double impressions_margin_of_error = 463;</code>
+     * @return The impressionsMarginOfError.
+     */
+    @java.lang.Override
+    public double getImpressionsMarginOfError() {
+      return impressionsMarginOfError_;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on impressions.
+     *
+     * Together with `impressions_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `impressions_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double impressions_margin_of_error = 463;</code>
+     * @param value The impressionsMarginOfError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImpressionsMarginOfError(double value) {
+
+      impressionsMarginOfError_ = value;
+      bitField8_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on impressions.
+     *
+     * Together with `impressions_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `impressions_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double impressions_margin_of_error = 463;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearImpressionsMarginOfError() {
+      bitField8_ = (bitField8_ & ~0x00001000);
+      impressionsMarginOfError_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double impressionsPValue_ ;
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * impressions. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on impressions, is 3%.
+     * </pre>
+     *
+     * <code>optional double impressions_p_value = 464;</code>
+     * @return Whether the impressionsPValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasImpressionsPValue() {
+      return ((bitField8_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * impressions. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on impressions, is 3%.
+     * </pre>
+     *
+     * <code>optional double impressions_p_value = 464;</code>
+     * @return The impressionsPValue.
+     */
+    @java.lang.Override
+    public double getImpressionsPValue() {
+      return impressionsPValue_;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * impressions. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on impressions, is 3%.
+     * </pre>
+     *
+     * <code>optional double impressions_p_value = 464;</code>
+     * @param value The impressionsPValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImpressionsPValue(double value) {
+
+      impressionsPValue_ = value;
+      bitField8_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * impressions. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on impressions, is 3%.
+     * </pre>
+     *
+     * <code>optional double impressions_p_value = 464;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearImpressionsPValue() {
+      bitField8_ = (bitField8_ & ~0x00002000);
+      impressionsPValue_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double impressionsPointEstimate_ ;
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on impressions.
+     *
+     * Together with `impressions_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(impressions_point_estimate - impressions_margin_of_error,
+     * impressions_point_estimate + impressions_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double impressions_point_estimate = 465;</code>
+     * @return Whether the impressionsPointEstimate field is set.
+     */
+    @java.lang.Override
+    public boolean hasImpressionsPointEstimate() {
+      return ((bitField8_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on impressions.
+     *
+     * Together with `impressions_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(impressions_point_estimate - impressions_margin_of_error,
+     * impressions_point_estimate + impressions_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double impressions_point_estimate = 465;</code>
+     * @return The impressionsPointEstimate.
+     */
+    @java.lang.Override
+    public double getImpressionsPointEstimate() {
+      return impressionsPointEstimate_;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on impressions.
+     *
+     * Together with `impressions_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(impressions_point_estimate - impressions_margin_of_error,
+     * impressions_point_estimate + impressions_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double impressions_point_estimate = 465;</code>
+     * @param value The impressionsPointEstimate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImpressionsPointEstimate(double value) {
+
+      impressionsPointEstimate_ = value;
+      bitField8_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on impressions.
+     *
+     * Together with `impressions_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(impressions_point_estimate - impressions_margin_of_error,
+     * impressions_point_estimate + impressions_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double impressions_point_estimate = 465;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearImpressionsPointEstimate() {
+      bitField8_ = (bitField8_ & ~0x00004000);
+      impressionsPointEstimate_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double clicksMarginOfError_ ;
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on clicks.
+     *
+     * Together with `clicks_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at `clicks_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double clicks_margin_of_error = 466;</code>
+     * @return Whether the clicksMarginOfError field is set.
+     */
+    @java.lang.Override
+    public boolean hasClicksMarginOfError() {
+      return ((bitField8_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on clicks.
+     *
+     * Together with `clicks_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at `clicks_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double clicks_margin_of_error = 466;</code>
+     * @return The clicksMarginOfError.
+     */
+    @java.lang.Override
+    public double getClicksMarginOfError() {
+      return clicksMarginOfError_;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on clicks.
+     *
+     * Together with `clicks_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at `clicks_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double clicks_margin_of_error = 466;</code>
+     * @param value The clicksMarginOfError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setClicksMarginOfError(double value) {
+
+      clicksMarginOfError_ = value;
+      bitField8_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on clicks.
+     *
+     * Together with `clicks_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at `clicks_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double clicks_margin_of_error = 466;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearClicksMarginOfError() {
+      bitField8_ = (bitField8_ & ~0x00008000);
+      clicksMarginOfError_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double clicksPValue_ ;
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * clicks. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on clicks, is 3%.
+     * </pre>
+     *
+     * <code>optional double clicks_p_value = 467;</code>
+     * @return Whether the clicksPValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasClicksPValue() {
+      return ((bitField8_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * clicks. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on clicks, is 3%.
+     * </pre>
+     *
+     * <code>optional double clicks_p_value = 467;</code>
+     * @return The clicksPValue.
+     */
+    @java.lang.Override
+    public double getClicksPValue() {
+      return clicksPValue_;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * clicks. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on clicks, is 3%.
+     * </pre>
+     *
+     * <code>optional double clicks_p_value = 467;</code>
+     * @param value The clicksPValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setClicksPValue(double value) {
+
+      clicksPValue_ = value;
+      bitField8_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * clicks. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on clicks, is 3%.
+     * </pre>
+     *
+     * <code>optional double clicks_p_value = 467;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearClicksPValue() {
+      bitField8_ = (bitField8_ & ~0x00010000);
+      clicksPValue_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double clicksPointEstimate_ ;
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on clicks.
+     *
+     * Together with `clicks_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval: `(clicks_point_estimate -
+     * clicks_margin_of_error,
+     * clicks_point_estimate + clicks_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double clicks_point_estimate = 468;</code>
+     * @return Whether the clicksPointEstimate field is set.
+     */
+    @java.lang.Override
+    public boolean hasClicksPointEstimate() {
+      return ((bitField8_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on clicks.
+     *
+     * Together with `clicks_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval: `(clicks_point_estimate -
+     * clicks_margin_of_error,
+     * clicks_point_estimate + clicks_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double clicks_point_estimate = 468;</code>
+     * @return The clicksPointEstimate.
+     */
+    @java.lang.Override
+    public double getClicksPointEstimate() {
+      return clicksPointEstimate_;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on clicks.
+     *
+     * Together with `clicks_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval: `(clicks_point_estimate -
+     * clicks_margin_of_error,
+     * clicks_point_estimate + clicks_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double clicks_point_estimate = 468;</code>
+     * @param value The clicksPointEstimate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setClicksPointEstimate(double value) {
+
+      clicksPointEstimate_ = value;
+      bitField8_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on clicks.
+     *
+     * Together with `clicks_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval: `(clicks_point_estimate -
+     * clicks_margin_of_error,
+     * clicks_point_estimate + clicks_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double clicks_point_estimate = 468;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearClicksPointEstimate() {
+      bitField8_ = (bitField8_ & ~0x00020000);
+      clicksPointEstimate_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double controlConversionValue_ ;
+    /**
+     * <pre>
+     * The conversion value metric on the control arm of the experiment.
+     * The treatment conversion value can be selected by using
+     * `conversions_value`.
+     * </pre>
+     *
+     * <code>optional double control_conversion_value = 469;</code>
+     * @return Whether the controlConversionValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlConversionValue() {
+      return ((bitField8_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * The conversion value metric on the control arm of the experiment.
+     * The treatment conversion value can be selected by using
+     * `conversions_value`.
+     * </pre>
+     *
+     * <code>optional double control_conversion_value = 469;</code>
+     * @return The controlConversionValue.
+     */
+    @java.lang.Override
+    public double getControlConversionValue() {
+      return controlConversionValue_;
+    }
+    /**
+     * <pre>
+     * The conversion value metric on the control arm of the experiment.
+     * The treatment conversion value can be selected by using
+     * `conversions_value`.
+     * </pre>
+     *
+     * <code>optional double control_conversion_value = 469;</code>
+     * @param value The controlConversionValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setControlConversionValue(double value) {
+
+      controlConversionValue_ = value;
+      bitField8_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion value metric on the control arm of the experiment.
+     * The treatment conversion value can be selected by using
+     * `conversions_value`.
+     * </pre>
+     *
+     * <code>optional double control_conversion_value = 469;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearControlConversionValue() {
+      bitField8_ = (bitField8_ & ~0x00040000);
+      controlConversionValue_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double conversionValueMarginOfError_ ;
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on
+     * conversion value.
+     *
+     * Together with `conversion_value_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `conversion_value_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_margin_of_error = 470;</code>
+     * @return Whether the conversionValueMarginOfError field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionValueMarginOfError() {
+      return ((bitField8_ & 0x00080000) != 0);
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on
+     * conversion value.
+     *
+     * Together with `conversion_value_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `conversion_value_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_margin_of_error = 470;</code>
+     * @return The conversionValueMarginOfError.
+     */
+    @java.lang.Override
+    public double getConversionValueMarginOfError() {
+      return conversionValueMarginOfError_;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on
+     * conversion value.
+     *
+     * Together with `conversion_value_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `conversion_value_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_margin_of_error = 470;</code>
+     * @param value The conversionValueMarginOfError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValueMarginOfError(double value) {
+
+      conversionValueMarginOfError_ = value;
+      bitField8_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The margin of error when estimating the experiment's effect on
+     * conversion value.
+     *
+     * Together with `conversion_value_change_point_estimate`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the radius of the
+     * confidence interval, which is centered at
+     * `conversion_value_change_point_estimate`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_margin_of_error = 470;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionValueMarginOfError() {
+      bitField8_ = (bitField8_ & ~0x00080000);
+      conversionValueMarginOfError_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double conversionValuePValue_ ;
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversion value. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversion value, is 3%.
+     * </pre>
+     *
+     * <code>optional double conversion_value_p_value = 471;</code>
+     * @return Whether the conversionValuePValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionValuePValue() {
+      return ((bitField8_ & 0x00100000) != 0);
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversion value. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversion value, is 3%.
+     * </pre>
+     *
+     * <code>optional double conversion_value_p_value = 471;</code>
+     * @return The conversionValuePValue.
+     */
+    @java.lang.Override
+    public double getConversionValuePValue() {
+      return conversionValuePValue_;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversion value. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversion value, is 3%.
+     * </pre>
+     *
+     * <code>optional double conversion_value_p_value = 471;</code>
+     * @param value The conversionValuePValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValuePValue(double value) {
+
+      conversionValuePValue_ = value;
+      bitField8_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The p-value for the null hypothesis that the experiment has no effect on
+     * conversion value. Ranges from 0 to 1.
+     *
+     * Say if the p-value is 0.03, that means the probability of observing the
+     * data, if the experiment has no effect on conversion value, is 3%.
+     * </pre>
+     *
+     * <code>optional double conversion_value_p_value = 471;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionValuePValue() {
+      bitField8_ = (bitField8_ & ~0x00100000);
+      conversionValuePValue_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double conversionValueChangePointEstimate_ ;
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on
+     * conversion value change.
+     *
+     * Together with `conversion_value_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(conversion_value_change_point_estimate -
+     * conversion_value_margin_of_error,
+     * conversion_value_change_point_estimate +
+     * conversion_value_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_change_point_estimate = 472;</code>
+     * @return Whether the conversionValueChangePointEstimate field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionValueChangePointEstimate() {
+      return ((bitField8_ & 0x00200000) != 0);
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on
+     * conversion value change.
+     *
+     * Together with `conversion_value_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(conversion_value_change_point_estimate -
+     * conversion_value_margin_of_error,
+     * conversion_value_change_point_estimate +
+     * conversion_value_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_change_point_estimate = 472;</code>
+     * @return The conversionValueChangePointEstimate.
+     */
+    @java.lang.Override
+    public double getConversionValueChangePointEstimate() {
+      return conversionValueChangePointEstimate_;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on
+     * conversion value change.
+     *
+     * Together with `conversion_value_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(conversion_value_change_point_estimate -
+     * conversion_value_margin_of_error,
+     * conversion_value_change_point_estimate +
+     * conversion_value_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_change_point_estimate = 472;</code>
+     * @param value The conversionValueChangePointEstimate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionValueChangePointEstimate(double value) {
+
+      conversionValueChangePointEstimate_ = value;
+      bitField8_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The point estimate when estimating the experiment's effect on
+     * conversion value change.
+     *
+     * Together with `conversion_value_margin_of_error`,
+     * they describe a confidence interval with a prescribed confidence level
+     * for the difference being estimated. The quantity being estimated is
+     * (treatment / control - 1). This field specifies the point estimate, which
+     * is the center of the confidence interval:
+     * `(conversion_value_change_point_estimate -
+     * conversion_value_margin_of_error,
+     * conversion_value_change_point_estimate +
+     * conversion_value_margin_of_error)`.
+     * </pre>
+     *
+     * <code>optional double conversion_value_change_point_estimate = 472;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionValueChangePointEstimate() {
+      bitField8_ = (bitField8_ & ~0x00200000);
+      conversionValueChangePointEstimate_ = 0D;
       onChanged();
       return this;
     }

@@ -42,7 +42,7 @@ public final class AssetFieldTypeProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v24/enums/asset_f" +
       "ield_type.proto\022\036google.ads.googleads.v2" +
-      "4.enums\"\345\005\n\022AssetFieldTypeEnum\"\316\005\n\016Asset" +
+      "4.enums\"\200\006\n\022AssetFieldTypeEnum\"\351\005\n\016Asset" +
       "FieldType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
       "\014\n\010HEADLINE\020\002\022\017\n\013DESCRIPTION\020\003\022\025\n\021MANDAT" +
       "ORY_AD_TEXT\020\004\022\023\n\017MARKETING_IMAGE\020\005\022\020\n\014ME" +
@@ -60,13 +60,14 @@ public final class AssetFieldTypeProto {
       "\n\020BUSINESS_MESSAGE\020\037\022!\n\035TALL_PORTRAIT_MA" +
       "RKETING_IMAGE\020 \022\032\n\026RELATED_YOUTUBE_VIDEO" +
       "S\020!\022\030\n\024LANDING_PAGE_PREVIEW\020&\022\024\n\020LONG_DE" +
-      "SCRIPTION\020\'\022\022\n\016CALL_TO_ACTION\020(B\355\001\n\"com." +
-      "google.ads.googleads.v24.enumsB\023AssetFie" +
-      "ldTypeProtoP\001ZCgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v24/enums;enu" +
-      "ms\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V24.Enum" +
-      "s\312\002\036Google\\Ads\\GoogleAds\\V24\\Enums\352\002\"Goo" +
-      "gle::Ads::GoogleAds::V24::Enumsb\006proto3"
+      "SCRIPTION\020\'\022\022\n\016CALL_TO_ACTION\020(\022\031\n\025CLASS" +
+      "IC_DISPLAY_IMAGE\020/B\355\001\n\"com.google.ads.go" +
+      "ogleads.v24.enumsB\023AssetFieldTypeProtoP\001" +
+      "ZCgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v24/enums;enums\242\002\003GAA\252\002\036Go" +
+      "ogle.Ads.GoogleAds.V24.Enums\312\002\036Google\\Ad" +
+      "s\\GoogleAds\\V24\\Enums\352\002\"Google::Ads::Goo" +
+      "gleAds::V24::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

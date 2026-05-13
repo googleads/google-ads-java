@@ -58,6 +58,9 @@ private static final long serialVersionUID = 0L;
     REGION_CRITERION_ID(3),
     CITY_CRITERION_ID(4),
     HOTEL_CLASS(6),
+    USER_RATING(7),
+    VENUE(8),
+    EVENT_PARTICIPANT_DISPLAY_NAME(9),
     DIMENSION_NOT_SET(0);
     private final int value;
     private DimensionCase(int value) {
@@ -80,6 +83,9 @@ private static final long serialVersionUID = 0L;
         case 3: return REGION_CRITERION_ID;
         case 4: return CITY_CRITERION_ID;
         case 6: return HOTEL_CLASS;
+        case 7: return USER_RATING;
+        case 8: return VENUE;
+        case 9: return EVENT_PARTICIPANT_DISPLAY_NAME;
         case 0: return DIMENSION_NOT_SET;
         default: return null;
       }
@@ -382,6 +388,168 @@ private static final long serialVersionUID = 0L;
     return 0L;
   }
 
+  public static final int USER_RATING_FIELD_NUMBER = 7;
+  /**
+   * <pre>
+   * Integer value specifying the user rating for a Vertical Ad listing.
+   * Ranges from 1 to 5, where 5 is the best.
+   * </pre>
+   *
+   * <code>int64 user_rating = 7;</code>
+   * @return Whether the userRating field is set.
+   */
+  @java.lang.Override
+  public boolean hasUserRating() {
+    return dimensionCase_ == 7;
+  }
+  /**
+   * <pre>
+   * Integer value specifying the user rating for a Vertical Ad listing.
+   * Ranges from 1 to 5, where 5 is the best.
+   * </pre>
+   *
+   * <code>int64 user_rating = 7;</code>
+   * @return The userRating.
+   */
+  @java.lang.Override
+  public long getUserRating() {
+    if (dimensionCase_ == 7) {
+      return (java.lang.Long) dimension_;
+    }
+    return 0L;
+  }
+
+  public static final int VENUE_FIELD_NUMBER = 8;
+  /**
+   * <pre>
+   * A name for a specific location, like the venue for a concert event.
+   * </pre>
+   *
+   * <code>string venue = 8;</code>
+   * @return Whether the venue field is set.
+   */
+  public boolean hasVenue() {
+    return dimensionCase_ == 8;
+  }
+  /**
+   * <pre>
+   * A name for a specific location, like the venue for a concert event.
+   * </pre>
+   *
+   * <code>string venue = 8;</code>
+   * @return The venue.
+   */
+  public java.lang.String getVenue() {
+    java.lang.Object ref = "";
+    if (dimensionCase_ == 8) {
+      ref = dimension_;
+    }
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (dimensionCase_ == 8) {
+        dimension_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * A name for a specific location, like the venue for a concert event.
+   * </pre>
+   *
+   * <code>string venue = 8;</code>
+   * @return The bytes for venue.
+   */
+  public com.google.protobuf.ByteString
+      getVenueBytes() {
+    java.lang.Object ref = "";
+    if (dimensionCase_ == 8) {
+      ref = dimension_;
+    }
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      if (dimensionCase_ == 8) {
+        dimension_ = b;
+      }
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int EVENT_PARTICIPANT_DISPLAY_NAME_FIELD_NUMBER = 9;
+  /**
+   * <pre>
+   * The name of an associated participant for a given event. For example,
+   * headliner for a concert event.
+   * </pre>
+   *
+   * <code>string event_participant_display_name = 9;</code>
+   * @return Whether the eventParticipantDisplayName field is set.
+   */
+  public boolean hasEventParticipantDisplayName() {
+    return dimensionCase_ == 9;
+  }
+  /**
+   * <pre>
+   * The name of an associated participant for a given event. For example,
+   * headliner for a concert event.
+   * </pre>
+   *
+   * <code>string event_participant_display_name = 9;</code>
+   * @return The eventParticipantDisplayName.
+   */
+  public java.lang.String getEventParticipantDisplayName() {
+    java.lang.Object ref = "";
+    if (dimensionCase_ == 9) {
+      ref = dimension_;
+    }
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (dimensionCase_ == 9) {
+        dimension_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The name of an associated participant for a given event. For example,
+   * headliner for a concert event.
+   * </pre>
+   *
+   * <code>string event_participant_display_name = 9;</code>
+   * @return The bytes for eventParticipantDisplayName.
+   */
+  public com.google.protobuf.ByteString
+      getEventParticipantDisplayNameBytes() {
+    java.lang.Object ref = "";
+    if (dimensionCase_ == 9) {
+      ref = dimension_;
+    }
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      if (dimensionCase_ == 9) {
+        dimension_ = b;
+      }
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -412,6 +580,16 @@ private static final long serialVersionUID = 0L;
       output.writeInt64(
           6, (long)((java.lang.Long) dimension_));
     }
+    if (dimensionCase_ == 7) {
+      output.writeInt64(
+          7, (long)((java.lang.Long) dimension_));
+    }
+    if (dimensionCase_ == 8) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 8, dimension_);
+    }
+    if (dimensionCase_ == 9) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 9, dimension_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -437,6 +615,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(
             6, (long)((java.lang.Long) dimension_));
+    }
+    if (dimensionCase_ == 7) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(
+            7, (long)((java.lang.Long) dimension_));
+    }
+    if (dimensionCase_ == 8) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(8, dimension_);
+    }
+    if (dimensionCase_ == 9) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(9, dimension_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -475,6 +664,18 @@ private static final long serialVersionUID = 0L;
         if (getHotelClass()
             != other.getHotelClass()) return false;
         break;
+      case 7:
+        if (getUserRating()
+            != other.getUserRating()) return false;
+        break;
+      case 8:
+        if (!getVenue()
+            .equals(other.getVenue())) return false;
+        break;
+      case 9:
+        if (!getEventParticipantDisplayName()
+            .equals(other.getEventParticipantDisplayName())) return false;
+        break;
       case 0:
       default:
     }
@@ -510,6 +711,19 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + HOTEL_CLASS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getHotelClass());
+        break;
+      case 7:
+        hash = (37 * hash) + USER_RATING_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getUserRating());
+        break;
+      case 8:
+        hash = (37 * hash) + VENUE_FIELD_NUMBER;
+        hash = (53 * hash) + getVenue().hashCode();
+        break;
+      case 9:
+        hash = (37 * hash) + EVENT_PARTICIPANT_DISPLAY_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getEventParticipantDisplayName().hashCode();
         break;
       case 0:
       default:
@@ -733,6 +947,22 @@ private static final long serialVersionUID = 0L;
           setHotelClass(other.getHotelClass());
           break;
         }
+        case USER_RATING: {
+          setUserRating(other.getUserRating());
+          break;
+        }
+        case VENUE: {
+          dimensionCase_ = 8;
+          dimension_ = other.dimension_;
+          onChanged();
+          break;
+        }
+        case EVENT_PARTICIPANT_DISPLAY_NAME: {
+          dimensionCase_ = 9;
+          dimension_ = other.dimension_;
+          onChanged();
+          break;
+        }
         case DIMENSION_NOT_SET: {
           break;
         }
@@ -792,6 +1022,23 @@ private static final long serialVersionUID = 0L;
               dimensionCase_ = 6;
               break;
             } // case 48
+            case 56: {
+              dimension_ = input.readInt64();
+              dimensionCase_ = 7;
+              break;
+            } // case 56
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              dimensionCase_ = 8;
+              dimension_ = s;
+              break;
+            } // case 66
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              dimensionCase_ = 9;
+              dimension_ = s;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1351,6 +1598,308 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
         onChanged();
       }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * Integer value specifying the user rating for a Vertical Ad listing.
+     * Ranges from 1 to 5, where 5 is the best.
+     * </pre>
+     *
+     * <code>int64 user_rating = 7;</code>
+     * @return Whether the userRating field is set.
+     */
+    public boolean hasUserRating() {
+      return dimensionCase_ == 7;
+    }
+    /**
+     * <pre>
+     * Integer value specifying the user rating for a Vertical Ad listing.
+     * Ranges from 1 to 5, where 5 is the best.
+     * </pre>
+     *
+     * <code>int64 user_rating = 7;</code>
+     * @return The userRating.
+     */
+    public long getUserRating() {
+      if (dimensionCase_ == 7) {
+        return (java.lang.Long) dimension_;
+      }
+      return 0L;
+    }
+    /**
+     * <pre>
+     * Integer value specifying the user rating for a Vertical Ad listing.
+     * Ranges from 1 to 5, where 5 is the best.
+     * </pre>
+     *
+     * <code>int64 user_rating = 7;</code>
+     * @param value The userRating to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserRating(long value) {
+
+      dimensionCase_ = 7;
+      dimension_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Integer value specifying the user rating for a Vertical Ad listing.
+     * Ranges from 1 to 5, where 5 is the best.
+     * </pre>
+     *
+     * <code>int64 user_rating = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUserRating() {
+      if (dimensionCase_ == 7) {
+        dimensionCase_ = 0;
+        dimension_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * A name for a specific location, like the venue for a concert event.
+     * </pre>
+     *
+     * <code>string venue = 8;</code>
+     * @return Whether the venue field is set.
+     */
+    @java.lang.Override
+    public boolean hasVenue() {
+      return dimensionCase_ == 8;
+    }
+    /**
+     * <pre>
+     * A name for a specific location, like the venue for a concert event.
+     * </pre>
+     *
+     * <code>string venue = 8;</code>
+     * @return The venue.
+     */
+    @java.lang.Override
+    public java.lang.String getVenue() {
+      java.lang.Object ref = "";
+      if (dimensionCase_ == 8) {
+        ref = dimension_;
+      }
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (dimensionCase_ == 8) {
+          dimension_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * A name for a specific location, like the venue for a concert event.
+     * </pre>
+     *
+     * <code>string venue = 8;</code>
+     * @return The bytes for venue.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVenueBytes() {
+      java.lang.Object ref = "";
+      if (dimensionCase_ == 8) {
+        ref = dimension_;
+      }
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (dimensionCase_ == 8) {
+          dimension_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * A name for a specific location, like the venue for a concert event.
+     * </pre>
+     *
+     * <code>string venue = 8;</code>
+     * @param value The venue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVenue(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      dimensionCase_ = 8;
+      dimension_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A name for a specific location, like the venue for a concert event.
+     * </pre>
+     *
+     * <code>string venue = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVenue() {
+      if (dimensionCase_ == 8) {
+        dimensionCase_ = 0;
+        dimension_ = null;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A name for a specific location, like the venue for a concert event.
+     * </pre>
+     *
+     * <code>string venue = 8;</code>
+     * @param value The bytes for venue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVenueBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      dimensionCase_ = 8;
+      dimension_ = value;
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The name of an associated participant for a given event. For example,
+     * headliner for a concert event.
+     * </pre>
+     *
+     * <code>string event_participant_display_name = 9;</code>
+     * @return Whether the eventParticipantDisplayName field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventParticipantDisplayName() {
+      return dimensionCase_ == 9;
+    }
+    /**
+     * <pre>
+     * The name of an associated participant for a given event. For example,
+     * headliner for a concert event.
+     * </pre>
+     *
+     * <code>string event_participant_display_name = 9;</code>
+     * @return The eventParticipantDisplayName.
+     */
+    @java.lang.Override
+    public java.lang.String getEventParticipantDisplayName() {
+      java.lang.Object ref = "";
+      if (dimensionCase_ == 9) {
+        ref = dimension_;
+      }
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (dimensionCase_ == 9) {
+          dimension_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The name of an associated participant for a given event. For example,
+     * headliner for a concert event.
+     * </pre>
+     *
+     * <code>string event_participant_display_name = 9;</code>
+     * @return The bytes for eventParticipantDisplayName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEventParticipantDisplayNameBytes() {
+      java.lang.Object ref = "";
+      if (dimensionCase_ == 9) {
+        ref = dimension_;
+      }
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (dimensionCase_ == 9) {
+          dimension_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The name of an associated participant for a given event. For example,
+     * headliner for a concert event.
+     * </pre>
+     *
+     * <code>string event_participant_display_name = 9;</code>
+     * @param value The eventParticipantDisplayName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEventParticipantDisplayName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      dimensionCase_ = 9;
+      dimension_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of an associated participant for a given event. For example,
+     * headliner for a concert event.
+     * </pre>
+     *
+     * <code>string event_participant_display_name = 9;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEventParticipantDisplayName() {
+      if (dimensionCase_ == 9) {
+        dimensionCase_ = 0;
+        dimension_ = null;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of an associated participant for a given event. For example,
+     * headliner for a concert event.
+     * </pre>
+     *
+     * <code>string event_participant_display_name = 9;</code>
+     * @param value The bytes for eventParticipantDisplayName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEventParticipantDisplayNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      dimensionCase_ = 9;
+      dimension_ = value;
+      onChanged();
       return this;
     }
 

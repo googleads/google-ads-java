@@ -45,7 +45,7 @@ public final class CustomerUserAccessProto {
       "leads.v24.resources\0320google/ads/googlead" +
       "s/v24/enums/access_role.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\373\003\n\022CustomerUserAccess\022J\n\rreso" +
+      "rce.proto\"\262\004\n\022CustomerUserAccess\022J\n\rreso" +
       "urce_name\030\001 \001(\tB3\340A\005\372A-\n+googleads.googl" +
       "eapis.com/CustomerUserAccess\022\024\n\007user_id\030" +
       "\002 \001(\003B\003\340A\003\022\037\n\remail_address\030\003 \001(\tB\003\340A\003H\000" +
@@ -53,18 +53,20 @@ public final class CustomerUserAccessProto {
       "ogleads.v24.enums.AccessRoleEnum.AccessR" +
       "ole\022+\n\031access_creation_date_time\030\006 \001(\tB\003" +
       "\340A\003H\001\210\001\001\022,\n\032inviter_user_email_address\030\007" +
-      " \001(\tB\003\340A\003H\002\210\001\001:h\352Ae\n+googleads.googleapi" +
-      "s.com/CustomerUserAccess\0226customers/{cus" +
-      "tomer_id}/customerUserAccesses/{user_id}" +
-      "B\020\n\016_email_addressB\034\n\032_access_creation_d" +
-      "ate_timeB\035\n\033_inviter_user_email_addressB" +
-      "\211\002\n&com.google.ads.googleads.v24.resourc" +
-      "esB\027CustomerUserAccessProtoP\001ZKgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v24/resources;resources\242\002\003GAA\252\002\"Googl" +
-      "e.Ads.GoogleAds.V24.Resources\312\002\"Google\\A" +
-      "ds\\GoogleAds\\V24\\Resources\352\002&Google::Ads" +
-      "::GoogleAds::V24::Resourcesb\006proto3"
+      " \001(\tB\003\340A\003H\002\210\001\001\022!\n\017passkey_enabled\030\010 \001(\010B" +
+      "\003\340A\003H\003\210\001\001:h\352Ae\n+googleads.googleapis.com" +
+      "/CustomerUserAccess\0226customers/{customer" +
+      "_id}/customerUserAccesses/{user_id}B\020\n\016_" +
+      "email_addressB\034\n\032_access_creation_date_t" +
+      "imeB\035\n\033_inviter_user_email_addressB\022\n\020_p" +
+      "asskey_enabledB\211\002\n&com.google.ads.google" +
+      "ads.v24.resourcesB\027CustomerUserAccessPro" +
+      "toP\001ZKgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v24/resources;resource" +
+      "s\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V24.Resou" +
+      "rces\312\002\"Google\\Ads\\GoogleAds\\V24\\Resource" +
+      "s\352\002&Google::Ads::GoogleAds::V24::Resourc" +
+      "esb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -78,7 +80,7 @@ public final class CustomerUserAccessProto {
     internal_static_google_ads_googleads_v24_resources_CustomerUserAccess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_resources_CustomerUserAccess_descriptor,
-        new java.lang.String[] { "ResourceName", "UserId", "EmailAddress", "AccessRole", "AccessCreationDateTime", "InviterUserEmailAddress", });
+        new java.lang.String[] { "ResourceName", "UserId", "EmailAddress", "AccessRole", "AccessCreationDateTime", "InviterUserEmailAddress", "PasskeyEnabled", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.ads.googleads.v24.enums.AccessRoleProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();

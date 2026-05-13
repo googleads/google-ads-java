@@ -31,6 +31,41 @@ public final class ExperimentArmProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_ads_googleads_v24_resources_ExperimentArm_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetTestingInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetTestingInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetVariationInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetVariationInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetDetail_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetDetail_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupAssetInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupAssetInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_ExperimentalPerformanceMaxCampaignSettings_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_ExperimentalPerformanceMaxCampaignSettings_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_PerformanceMaxExperimentArmInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_PerformanceMaxExperimentArmInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -42,30 +77,82 @@ public final class ExperimentArmProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v24/resources/exp" +
       "eriment_arm.proto\022\"google.ads.googleads." +
-      "v24.resources\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\304\003\n\rEx" +
-      "perimentArm\022E\n\rresource_name\030\001 \001(\tB.\340A\005\372" +
-      "A(\n&googleads.googleapis.com/ExperimentA" +
-      "rm\022?\n\nexperiment\030\010 \001(\tB+\340A\005\372A%\n#googlead" +
-      "s.googleapis.com/Experiment\022\021\n\004name\030\003 \001(" +
-      "\tB\003\340A\002\022\017\n\007control\030\004 \001(\010\022\025\n\rtraffic_split" +
-      "\030\005 \001(\003\0229\n\tcampaigns\030\006 \003(\tB&\372A#\n!googlead" +
-      "s.googleapis.com/Campaign\022F\n\023in_design_c" +
-      "ampaigns\030\007 \003(\tB)\340A\003\372A#\n!googleads.google" +
-      "apis.com/Campaign:m\352Aj\n&googleads.google" +
-      "apis.com/ExperimentArm\022@customers/{custo" +
-      "mer_id}/experimentArms/{trial_id}~{trial" +
-      "_arm_id}B\204\002\n&com.google.ads.googleads.v2" +
-      "4.resourcesB\022ExperimentArmProtoP\001ZKgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v24/resources;resources\242\002\003GAA\252\002\"G" +
-      "oogle.Ads.GoogleAds.V24.Resources\312\002\"Goog" +
-      "le\\Ads\\GoogleAds\\V24\\Resources\352\002&Google:" +
-      ":Ads::GoogleAds::V24::Resourcesb\006proto3"
+      "v24.resources\0325google/ads/googleads/v24/" +
+      "enums/asset_field_type.proto\032:google/ads" +
+      "/googleads/v24/enums/bidding_strategy_ty" +
+      "pe.proto\032Fgoogle/ads/googleads/v24/enums" +
+      "/experiment_asset_detail_operation.proto" +
+      "\032\037google/api/field_behavior.proto\032\031googl" +
+      "e/api/resource.proto\"\215\021\n\rExperimentArm\022E" +
+      "\n\rresource_name\030\001 \001(\tB.\340A\005\372A(\n&googleads" +
+      ".googleapis.com/ExperimentArm\022?\n\nexperim" +
+      "ent\030\010 \001(\tB+\340A\005\372A%\n#googleads.googleapis." +
+      "com/Experiment\022\021\n\004name\030\003 \001(\tB\003\340A\002\022\017\n\007con" +
+      "trol\030\004 \001(\010\022\025\n\rtraffic_split\030\005 \001(\003\0229\n\tcam" +
+      "paigns\030\006 \003(\tB&\372A#\n!googleads.googleapis." +
+      "com/Campaign\022F\n\023in_design_campaigns\030\007 \003(" +
+      "\tB)\340A\003\372A#\n!googleads.googleapis.com/Camp" +
+      "aign\022^\n\022asset_testing_info\030\t \001(\0132B.googl" +
+      "e.ads.googleads.v24.resources.Experiment" +
+      "Arm.AssetTestingInfo\022V\n\014asset_groups\030\n \003" +
+      "(\0132@.google.ads.googleads.v24.resources." +
+      "ExperimentArm.AssetGroupInfo\022\203\001\n#perform" +
+      "ance_max_experiment_arm_info\030\013 \001(\0132Q.goo" +
+      "gle.ads.googleads.v24.resources.Experime" +
+      "ntArm.PerformanceMaxExperimentArmInfoB\003\340" +
+      "A\005\032w\n\020AssetTestingInfo\022c\n\025asset_variatio" +
+      "n_infos\030\001 \003(\0132D.google.ads.googleads.v24" +
+      ".resources.ExperimentArm.AssetVariationI" +
+      "nfo\032\333\001\n\022AssetVariationInfo\022<\n\rbase_ad_gr" +
+      "oup\030\001 \001(\tB%\372A\"\n googleads.googleapis.com" +
+      "/AdGroup\0221\n\007base_ad\030\002 \001(\tB \372A\035\n\033googlead" +
+      "s.googleapis.com/Ad\022T\n\rasset_details\030\003 \003" +
+      "(\0132=.google.ads.googleads.v24.resources." +
+      "ExperimentArm.AssetDetail\032\234\002\n\013AssetDetai" +
+      "l\0222\n\005asset\030\001 \001(\tB#\372A \n\036googleads.googlea" +
+      "pis.com/Asset\022U\n\nfield_type\030\002 \001(\0162A.goog" +
+      "le.ads.googleads.v24.enums.AssetFieldTyp" +
+      "eEnum.AssetFieldType\022\201\001\n\026asset_detail_op" +
+      "eration\030\003 \001(\0162a.google.ads.googleads.v24" +
+      ".enums.ExperimentAssetDetailOperationEnu" +
+      "m.ExperimentAssetDetailOperation\032\262\001\n\016Ass" +
+      "etGroupInfo\022=\n\013asset_group\030\001 \001(\tB(\372A%\n#g" +
+      "oogleads.googleapis.com/AssetGroup\022a\n\022as" +
+      "set_group_assets\030\002 \003(\0132E.google.ads.goog" +
+      "leads.v24.resources.ExperimentArm.AssetG" +
+      "roupAssetInfo\032\240\001\n\023AssetGroupAssetInfo\0222\n" +
+      "\005asset\030\001 \001(\tB#\372A \n\036googleads.googleapis." +
+      "com/Asset\022U\n\nfield_type\030\002 \001(\0162A.google.a" +
+      "ds.googleads.v24.enums.AssetFieldTypeEnu" +
+      "m.AssetFieldType\032\372\001\n*ExperimentalPerform" +
+      "anceMaxCampaignSettings\022!\n\024budget_amount" +
+      "_micros\030\001 \001(\003B\003\340A\005\022\030\n\013target_roas\030\002 \001(\001B" +
+      "\003\340A\005\022\036\n\021target_cpa_micros\030\003 \001(\003B\003\340A\005\022o\n\025" +
+      "bidding_strategy_type\030\004 \001(\0162K.google.ads" +
+      ".googleads.v24.enums.BiddingStrategyType" +
+      "Enum.BiddingStrategyTypeB\003\340A\005\032\275\001\n\037Perfor" +
+      "manceMaxExperimentArmInfo\022\231\001\n.experiment" +
+      "al_performance_max_campaign_settings\030\001 \001" +
+      "(\0132\\.google.ads.googleads.v24.resources." +
+      "ExperimentArm.ExperimentalPerformanceMax" +
+      "CampaignSettingsB\003\340A\005:m\352Aj\n&googleads.go" +
+      "ogleapis.com/ExperimentArm\022@customers/{c" +
+      "ustomer_id}/experimentArms/{trial_id}~{t" +
+      "rial_arm_id}B\204\002\n&com.google.ads.googlead" +
+      "s.v24.resourcesB\022ExperimentArmProtoP\001ZKg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v24/resources;resources\242\002\003GAA" +
+      "\252\002\"Google.Ads.GoogleAds.V24.Resources\312\002\"" +
+      "Google\\Ads\\GoogleAds\\V24\\Resources\352\002&Goo" +
+      "gle::Ads::GoogleAds::V24::Resourcesb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v24.enums.AssetFieldTypeProto.getDescriptor(),
+          com.google.ads.googleads.v24.enums.BiddingStrategyTypeProto.getDescriptor(),
+          com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -74,8 +161,53 @@ public final class ExperimentArmProto {
     internal_static_google_ads_googleads_v24_resources_ExperimentArm_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_resources_ExperimentArm_descriptor,
-        new java.lang.String[] { "ResourceName", "Experiment", "Name", "Control", "TrafficSplit", "Campaigns", "InDesignCampaigns", });
+        new java.lang.String[] { "ResourceName", "Experiment", "Name", "Control", "TrafficSplit", "Campaigns", "InDesignCampaigns", "AssetTestingInfo", "AssetGroups", "PerformanceMaxExperimentArmInfo", });
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetTestingInfo_descriptor =
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_descriptor.getNestedTypes().get(0);
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetTestingInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetTestingInfo_descriptor,
+        new java.lang.String[] { "AssetVariationInfos", });
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetVariationInfo_descriptor =
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_descriptor.getNestedTypes().get(1);
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetVariationInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetVariationInfo_descriptor,
+        new java.lang.String[] { "BaseAdGroup", "BaseAd", "AssetDetails", });
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetDetail_descriptor =
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_descriptor.getNestedTypes().get(2);
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetDetail_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetDetail_descriptor,
+        new java.lang.String[] { "Asset", "FieldType", "AssetDetailOperation", });
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupInfo_descriptor =
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_descriptor.getNestedTypes().get(3);
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupInfo_descriptor,
+        new java.lang.String[] { "AssetGroup", "AssetGroupAssets", });
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupAssetInfo_descriptor =
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_descriptor.getNestedTypes().get(4);
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupAssetInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupAssetInfo_descriptor,
+        new java.lang.String[] { "Asset", "FieldType", });
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_ExperimentalPerformanceMaxCampaignSettings_descriptor =
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_descriptor.getNestedTypes().get(5);
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_ExperimentalPerformanceMaxCampaignSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v24_resources_ExperimentArm_ExperimentalPerformanceMaxCampaignSettings_descriptor,
+        new java.lang.String[] { "BudgetAmountMicros", "TargetRoas", "TargetCpaMicros", "BiddingStrategyType", });
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_PerformanceMaxExperimentArmInfo_descriptor =
+      internal_static_google_ads_googleads_v24_resources_ExperimentArm_descriptor.getNestedTypes().get(6);
+    internal_static_google_ads_googleads_v24_resources_ExperimentArm_PerformanceMaxExperimentArmInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v24_resources_ExperimentArm_PerformanceMaxExperimentArmInfo_descriptor,
+        new java.lang.String[] { "ExperimentalPerformanceMaxCampaignSettings", });
     descriptor.resolveAllFeaturesImmutable();
+    com.google.ads.googleads.v24.enums.AssetFieldTypeProto.getDescriptor();
+    com.google.ads.googleads.v24.enums.BiddingStrategyTypeProto.getDescriptor();
+    com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =

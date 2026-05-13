@@ -319,9 +319,10 @@ private static final long serialVersionUID = 0L;
     LEAD_FORM_SUBMIT(29),
     /**
      * <pre>
-     * Deprecated: The Salesforce integration will be going away and
-     * replaced with an improved way to import your conversions from Salesforce.
-     * - see https://support.google.com/google-ads/answer/14728349
+     * Deprecated: The Salesforce integration ended on May 31, 2025.
+     * See
+     * [Legacy Salesforce integration for conversions upgrade
+     * FAQ](//support.google.com/google-ads/answer/14728349).
      * </pre>
      *
      * <code>SALESFORCE = 30 [deprecated = true];</code>
@@ -392,7 +393,8 @@ private static final long serialVersionUID = 0L;
     WEBPAGE_CODELESS(37),
     /**
      * <pre>
-     * Conversions that come from linked Universal Analytics goals.
+     * Conversions that come from linked Universal Analytics goals. Universal
+     * Analytics is sunset, and has been replaced by Google Analytics.
      * </pre>
      *
      * <code>UNIVERSAL_ANALYTICS_GOAL = 38;</code>
@@ -401,6 +403,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions that come from linked Universal Analytics transactions.
+     * Universal Analytics is sunset, and has been replaced by Google Analytics.
      * </pre>
      *
      * <code>UNIVERSAL_ANALYTICS_TRANSACTION = 39;</code>
@@ -408,7 +411,7 @@ private static final long serialVersionUID = 0L;
     UNIVERSAL_ANALYTICS_TRANSACTION(39),
     /**
      * <pre>
-     * Conversions that come from linked Google Analytics 4 custom event
+     * Conversions that come from linked Google Analytics custom event
      * conversions.
      * </pre>
      *
@@ -417,7 +420,7 @@ private static final long serialVersionUID = 0L;
     GOOGLE_ANALYTICS_4_CUSTOM(40),
     /**
      * <pre>
-     * Conversions that come from linked Google Analytics 4 purchase
+     * Conversions that come from linked Google Analytics purchase
      * conversions.
      * </pre>
      *
@@ -426,7 +429,7 @@ private static final long serialVersionUID = 0L;
     GOOGLE_ANALYTICS_4_PURCHASE(41),
     /**
      * <pre>
-     * Conversions that come from linked Google Analytics 4 generate lead
+     * Conversions that come from linked Google Analytics generate lead
      * conversions.
      * </pre>
      *
@@ -435,7 +438,7 @@ private static final long serialVersionUID = 0L;
     GOOGLE_ANALYTICS_4_GENERATE_LEAD(42),
     /**
      * <pre>
-     * Conversions that come from linked Google Analytics 4 qualify lead
+     * Conversions that come from linked Google Analytics qualify lead
      * conversions.
      * </pre>
      *
@@ -444,7 +447,7 @@ private static final long serialVersionUID = 0L;
     GOOGLE_ANALYTICS_4_QUALIFY_LEAD(43),
     /**
      * <pre>
-     * Conversions that come from linked Google Analytics 4 close convert lead
+     * Conversions that come from linked Google Analytics close convert lead
      * conversions.
      * </pre>
      *
@@ -780,9 +783,10 @@ private static final long serialVersionUID = 0L;
     public static final int LEAD_FORM_SUBMIT_VALUE = 29;
     /**
      * <pre>
-     * Deprecated: The Salesforce integration will be going away and
-     * replaced with an improved way to import your conversions from Salesforce.
-     * - see https://support.google.com/google-ads/answer/14728349
+     * Deprecated: The Salesforce integration ended on May 31, 2025.
+     * See
+     * [Legacy Salesforce integration for conversions upgrade
+     * FAQ](//support.google.com/google-ads/answer/14728349).
      * </pre>
      *
      * <code>SALESFORCE = 30 [deprecated = true];</code>
@@ -852,7 +856,8 @@ private static final long serialVersionUID = 0L;
     public static final int WEBPAGE_CODELESS_VALUE = 37;
     /**
      * <pre>
-     * Conversions that come from linked Universal Analytics goals.
+     * Conversions that come from linked Universal Analytics goals. Universal
+     * Analytics is sunset, and has been replaced by Google Analytics.
      * </pre>
      *
      * <code>UNIVERSAL_ANALYTICS_GOAL = 38;</code>
@@ -861,6 +866,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions that come from linked Universal Analytics transactions.
+     * Universal Analytics is sunset, and has been replaced by Google Analytics.
      * </pre>
      *
      * <code>UNIVERSAL_ANALYTICS_TRANSACTION = 39;</code>
@@ -868,7 +874,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNIVERSAL_ANALYTICS_TRANSACTION_VALUE = 39;
     /**
      * <pre>
-     * Conversions that come from linked Google Analytics 4 custom event
+     * Conversions that come from linked Google Analytics custom event
      * conversions.
      * </pre>
      *
@@ -877,7 +883,7 @@ private static final long serialVersionUID = 0L;
     public static final int GOOGLE_ANALYTICS_4_CUSTOM_VALUE = 40;
     /**
      * <pre>
-     * Conversions that come from linked Google Analytics 4 purchase
+     * Conversions that come from linked Google Analytics purchase
      * conversions.
      * </pre>
      *
@@ -886,7 +892,7 @@ private static final long serialVersionUID = 0L;
     public static final int GOOGLE_ANALYTICS_4_PURCHASE_VALUE = 41;
     /**
      * <pre>
-     * Conversions that come from linked Google Analytics 4 generate lead
+     * Conversions that come from linked Google Analytics generate lead
      * conversions.
      * </pre>
      *
@@ -895,7 +901,7 @@ private static final long serialVersionUID = 0L;
     public static final int GOOGLE_ANALYTICS_4_GENERATE_LEAD_VALUE = 42;
     /**
      * <pre>
-     * Conversions that come from linked Google Analytics 4 qualify lead
+     * Conversions that come from linked Google Analytics qualify lead
      * conversions.
      * </pre>
      *
@@ -904,7 +910,7 @@ private static final long serialVersionUID = 0L;
     public static final int GOOGLE_ANALYTICS_4_QUALIFY_LEAD_VALUE = 43;
     /**
      * <pre>
-     * Conversions that come from linked Google Analytics 4 close convert lead
+     * Conversions that come from linked Google Analytics close convert lead
      * conversions.
      * </pre>
      *

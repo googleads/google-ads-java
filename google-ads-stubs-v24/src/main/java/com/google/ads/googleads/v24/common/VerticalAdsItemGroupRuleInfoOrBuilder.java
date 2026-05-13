@@ -147,5 +147,87 @@ public interface VerticalAdsItemGroupRuleInfoOrBuilder extends
    */
   long getHotelClass();
 
+  /**
+   * <pre>
+   * Integer value specifying the user rating for a Vertical Ad listing.
+   * Ranges from 1 to 5, where 5 is the best.
+   * </pre>
+   *
+   * <code>int64 user_rating = 7;</code>
+   * @return Whether the userRating field is set.
+   */
+  boolean hasUserRating();
+  /**
+   * <pre>
+   * Integer value specifying the user rating for a Vertical Ad listing.
+   * Ranges from 1 to 5, where 5 is the best.
+   * </pre>
+   *
+   * <code>int64 user_rating = 7;</code>
+   * @return The userRating.
+   */
+  long getUserRating();
+
+  /**
+   * <pre>
+   * A name for a specific location, like the venue for a concert event.
+   * </pre>
+   *
+   * <code>string venue = 8;</code>
+   * @return Whether the venue field is set.
+   */
+  boolean hasVenue();
+  /**
+   * <pre>
+   * A name for a specific location, like the venue for a concert event.
+   * </pre>
+   *
+   * <code>string venue = 8;</code>
+   * @return The venue.
+   */
+  java.lang.String getVenue();
+  /**
+   * <pre>
+   * A name for a specific location, like the venue for a concert event.
+   * </pre>
+   *
+   * <code>string venue = 8;</code>
+   * @return The bytes for venue.
+   */
+  com.google.protobuf.ByteString
+      getVenueBytes();
+
+  /**
+   * <pre>
+   * The name of an associated participant for a given event. For example,
+   * headliner for a concert event.
+   * </pre>
+   *
+   * <code>string event_participant_display_name = 9;</code>
+   * @return Whether the eventParticipantDisplayName field is set.
+   */
+  boolean hasEventParticipantDisplayName();
+  /**
+   * <pre>
+   * The name of an associated participant for a given event. For example,
+   * headliner for a concert event.
+   * </pre>
+   *
+   * <code>string event_participant_display_name = 9;</code>
+   * @return The eventParticipantDisplayName.
+   */
+  java.lang.String getEventParticipantDisplayName();
+  /**
+   * <pre>
+   * The name of an associated participant for a given event. For example,
+   * headliner for a concert event.
+   * </pre>
+   *
+   * <code>string event_participant_display_name = 9;</code>
+   * @return The bytes for eventParticipantDisplayName.
+   */
+  com.google.protobuf.ByteString
+      getEventParticipantDisplayNameBytes();
+
   com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleInfo.DimensionCase getDimensionCase();
 }

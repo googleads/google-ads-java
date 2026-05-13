@@ -327,6 +327,60 @@ public interface DemandGenMultiAssetAdInfoOrBuilder extends
 
   /**
    * <pre>
+   * Classic display image assets to be used in the ad. Valid image types are
+   * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+   * ad.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+   */
+  java.util.List<com.google.ads.googleads.v24.common.AdImageAsset> 
+      getClassicDisplayImagesList();
+  /**
+   * <pre>
+   * Classic display image assets to be used in the ad. Valid image types are
+   * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+   * ad.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+   */
+  com.google.ads.googleads.v24.common.AdImageAsset getClassicDisplayImages(int index);
+  /**
+   * <pre>
+   * Classic display image assets to be used in the ad. Valid image types are
+   * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+   * ad.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+   */
+  int getClassicDisplayImagesCount();
+  /**
+   * <pre>
+   * Classic display image assets to be used in the ad. Valid image types are
+   * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+   * ad.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v24.common.AdImageAssetOrBuilder> 
+      getClassicDisplayImagesOrBuilderList();
+  /**
+   * <pre>
+   * Classic display image assets to be used in the ad. Valid image types are
+   * GIF, JPEG, and PNG. At most 20 classic display images can be specified per
+   * ad.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.AdImageAsset classic_display_images = 11;</code>
+   */
+  com.google.ads.googleads.v24.common.AdImageAssetOrBuilder getClassicDisplayImagesOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * Headline text asset of the ad. Maximum display width is 30. At least 1 and
    * max 5 headlines can be specified.
    * </pre>

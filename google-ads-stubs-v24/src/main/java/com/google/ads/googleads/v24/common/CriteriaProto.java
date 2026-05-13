@@ -760,27 +760,29 @@ public final class CriteriaProto {
       "p_id\";\n\021PlacementListInfo\022\027\n\nshared_set\030" +
       "\001 \001(\tH\000\210\001\001B\r\n\013_shared_set\"J\n VerticalAds" +
       "ItemGroupRuleListInfo\022\027\n\nshared_set\030\001 \001(" +
-      "\tH\000\210\001\001B\r\n\013_shared_set\"\263\001\n\034VerticalAdsIte" +
+      "\tH\000\210\001\001B\r\n\013_shared_set\"\205\002\n\034VerticalAdsIte" +
       "mGroupRuleInfo\022\023\n\titem_code\030\001 \001(\tH\000\022\036\n\024c" +
       "ountry_criterion_id\030\002 \001(\tH\000\022\035\n\023region_cr" +
       "iterion_id\030\003 \001(\tH\000\022\033\n\021city_criterion_id\030" +
-      "\004 \001(\tH\000\022\025\n\013hotel_class\030\006 \001(\003H\000B\013\n\tdimens" +
-      "ion\"<\n\022RetailFilterBundle\022\027\n\nshared_set\030" +
-      "\001 \001(\tH\000\210\001\001B\r\n\013_shared_set\"\240\001\n\014RetailFilt" +
-      "er\022M\n\nexpression\030\001 \001(\01327.google.ads.goog" +
-      "leads.v24.common.RetailFilterExpressionH" +
-      "\000\0229\n\003tag\030\002 \001(\0132*.google.ads.googleads.v2" +
-      "4.common.RetailTagH\000B\006\n\004node\"4\n\026RetailFi" +
-      "lterExpression\022\021\n\004name\030\001 \001(\tH\000\210\001\001B\007\n\005_na" +
-      "me\"[\n\tRetailTag\022\022\n\005value\030\001 \001(\tH\000\210\001\001\022\034\n\017e" +
-      "xpression_name\030\002 \001(\tH\001\210\001\001B\010\n\006_valueB\022\n\020_" +
-      "expression_nameB\355\001\n#com.google.ads.googl" +
-      "eads.v24.commonB\rCriteriaProtoP\001ZEgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v24/common;common\242\002\003GAA\252\002\037Google.A" +
-      "ds.GoogleAds.V24.Common\312\002\037Google\\Ads\\Goo" +
-      "gleAds\\V24\\Common\352\002#Google::Ads::GoogleA" +
-      "ds::V24::Commonb\006proto3"
+      "\004 \001(\tH\000\022\025\n\013hotel_class\030\006 \001(\003H\000\022\025\n\013user_r" +
+      "ating\030\007 \001(\003H\000\022\017\n\005venue\030\010 \001(\tH\000\022(\n\036event_" +
+      "participant_display_name\030\t \001(\tH\000B\013\n\tdime" +
+      "nsion\"<\n\022RetailFilterBundle\022\027\n\nshared_se" +
+      "t\030\001 \001(\tH\000\210\001\001B\r\n\013_shared_set\"\240\001\n\014RetailFi" +
+      "lter\022M\n\nexpression\030\001 \001(\01327.google.ads.go" +
+      "ogleads.v24.common.RetailFilterExpressio" +
+      "nH\000\0229\n\003tag\030\002 \001(\0132*.google.ads.googleads." +
+      "v24.common.RetailTagH\000B\006\n\004node\"4\n\026Retail" +
+      "FilterExpression\022\021\n\004name\030\001 \001(\tH\000\210\001\001B\007\n\005_" +
+      "name\"[\n\tRetailTag\022\022\n\005value\030\001 \001(\tH\000\210\001\001\022\034\n" +
+      "\017expression_name\030\002 \001(\tH\001\210\001\001B\010\n\006_valueB\022\n" +
+      "\020_expression_nameB\355\001\n#com.google.ads.goo" +
+      "gleads.v24.commonB\rCriteriaProtoP\001ZEgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v24/common;common\242\002\003GAA\252\002\037Google" +
+      ".Ads.GoogleAds.V24.Common\312\002\037Google\\Ads\\G" +
+      "oogleAds\\V24\\Common\352\002#Google::Ads::Googl" +
+      "eAds::V24::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1298,7 +1300,7 @@ public final class CriteriaProto {
     internal_static_google_ads_googleads_v24_common_VerticalAdsItemGroupRuleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_common_VerticalAdsItemGroupRuleInfo_descriptor,
-        new java.lang.String[] { "ItemCode", "CountryCriterionId", "RegionCriterionId", "CityCriterionId", "HotelClass", "Dimension", });
+        new java.lang.String[] { "ItemCode", "CountryCriterionId", "RegionCriterionId", "CityCriterionId", "HotelClass", "UserRating", "Venue", "EventParticipantDisplayName", "Dimension", });
     internal_static_google_ads_googleads_v24_common_RetailFilterBundle_descriptor =
       getDescriptor().getMessageTypes().get(81);
     internal_static_google_ads_googleads_v24_common_RetailFilterBundle_fieldAccessorTable = new

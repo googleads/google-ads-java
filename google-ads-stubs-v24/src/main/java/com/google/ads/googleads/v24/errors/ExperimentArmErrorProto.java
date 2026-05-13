@@ -42,8 +42,8 @@ public final class ExperimentArmErrorProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v24/errors/experi" +
       "ment_arm_error.proto\022\037google.ads.googlea" +
-      "ds.v24.errors\"\261\005\n\026ExperimentArmErrorEnum" +
-      "\"\226\005\n\022ExperimentArmError\022\017\n\013UNSPECIFIED\020\000" +
+      "ds.v24.errors\"\271\010\n\026ExperimentArmErrorEnum" +
+      "\"\236\010\n\022ExperimentArmError\022\017\n\013UNSPECIFIED\020\000" +
       "\022\013\n\007UNKNOWN\020\001\022\'\n#EXPERIMENT_ARM_COUNT_LI" +
       "MIT_EXCEEDED\020\002\022\033\n\027INVALID_CAMPAIGN_STATU" +
       "S\020\003\022!\n\035DUPLICATE_EXPERIMENT_ARM_NAME\020\004\022%" +
@@ -59,14 +59,23 @@ public final class ExperimentArmErrorProto {
       "\n(CANNOT_ADD_BASE_CAMPAIGN_WITH_DATE_RAN" +
       "GE\020\r\0221\n-BIDDING_STRATEGY_NOT_SUPPORTED_I" +
       "N_EXPERIMENTS\020\016\0220\n,TRAFFIC_SPLIT_NOT_SUP" +
-      "PORTED_FOR_CHANNEL_TYPE\020\017B\367\001\n#com.google" +
-      ".ads.googleads.v24.errorsB\027ExperimentArm" +
-      "ErrorProtoP\001ZEgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v24/errors;err" +
-      "ors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V24.Err" +
-      "ors\312\002\037Google\\Ads\\GoogleAds\\V24\\Errors\352\002#" +
-      "Google::Ads::GoogleAds::V24::Errorsb\006pro" +
-      "to3"
+      "PORTED_FOR_CHANNEL_TYPE\020\017\022\035\n\031BUDGET_MUST" +
+      "_NOT_BE_SHARED\020\020\022<\n8ADOPT_AI_MAX_CAMPAIG" +
+      "N_MISSING_PERFORMANCE_SEARCH_ENABLED\020\021\022(" +
+      "\n$TOO_MANY_CAMPAIGNS_IN_EXPERIMENT_ARM\020\022" +
+      "\022A\n=CANNOT_ADD_CAMPAIGN_WITH_TARGET_ROAS" +
+      "_TOLERANCE_PERCENT_MILLIS\020\023\022:\n6CANNOT_HA" +
+      "VE_SAME_CAMPAIGN_CROSS_ARMS_IN_ONE_EXPER" +
+      "IMENT\020\024\022$\n SEARCH_PLUS_CAMPAIGN_NOT_ALLO" +
+      "WED\020\025\022-\n)DUPLICATE_ASSET_GROUP_ASSETS_BE" +
+      "TWEEN_ARMS\020\026\022+\n\'DUPLICATE_ASSET_GROUP_AS" +
+      "SETS_IN_ONE_ARM\020\027B\367\001\n#com.google.ads.goo" +
+      "gleads.v24.errorsB\027ExperimentArmErrorPro" +
+      "toP\001ZEgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v24/errors;errors\242\002\003GA" +
+      "A\252\002\037Google.Ads.GoogleAds.V24.Errors\312\002\037Go" +
+      "ogle\\Ads\\GoogleAds\\V24\\Errors\352\002#Google::" +
+      "Ads::GoogleAds::V24::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -186,6 +186,77 @@ private static final long serialVersionUID = 0L;
      * <code>TRAFFIC_SPLIT_NOT_SUPPORTED_FOR_CHANNEL_TYPE = 15;</code>
      */
     TRAFFIC_SPLIT_NOT_SUPPORTED_FOR_CHANNEL_TYPE(15),
+    /**
+     * <pre>
+     * Shared budgets are not allowed in experiments.
+     * </pre>
+     *
+     * <code>BUDGET_MUST_NOT_BE_SHARED = 16;</code>
+     */
+    BUDGET_MUST_NOT_BE_SHARED(16),
+    /**
+     * <pre>
+     * Campaign must enable performance search setting for ADOPT_AI_MAX
+     * experiments.
+     * </pre>
+     *
+     * <code>ADOPT_AI_MAX_CAMPAIGN_MISSING_PERFORMANCE_SEARCH_ENABLED = 17;</code>
+     */
+    ADOPT_AI_MAX_CAMPAIGN_MISSING_PERFORMANCE_SEARCH_ENABLED(17),
+    /**
+     * <pre>
+     * Number of campaigns in the experiment arm is above limit.
+     * </pre>
+     *
+     * <code>TOO_MANY_CAMPAIGNS_IN_EXPERIMENT_ARM = 18;</code>
+     */
+    TOO_MANY_CAMPAIGNS_IN_EXPERIMENT_ARM(18),
+    /**
+     * <pre>
+     * AI Max experiments do not support campaigns with a target ROAS tolerance
+     * (see
+     * campaign.maximize_conversion_value.target_roas_tolerance_percent_millis).
+     * </pre>
+     *
+     * <code>CANNOT_ADD_CAMPAIGN_WITH_TARGET_ROAS_TOLERANCE_PERCENT_MILLIS = 19;</code>
+     */
+    CANNOT_ADD_CAMPAIGN_WITH_TARGET_ROAS_TOLERANCE_PERCENT_MILLIS(19),
+    /**
+     * <pre>
+     * A campaign cannot be added to multiple arms in one experiment. Use
+     * different campaigns in each arm of the experiment.
+     * </pre>
+     *
+     * <code>CANNOT_HAVE_SAME_CAMPAIGN_CROSS_ARMS_IN_ONE_EXPERIMENT = 20;</code>
+     */
+    CANNOT_HAVE_SAME_CAMPAIGN_CROSS_ARMS_IN_ONE_EXPERIMENT(20),
+    /**
+     * <pre>
+     * Campaigns in the ADOPT_BROAD_MATCH_KEYWORD experiment cannot target the
+     * Google Display Network.
+     * </pre>
+     *
+     * <code>SEARCH_PLUS_CAMPAIGN_NOT_ALLOWED = 21;</code>
+     */
+    SEARCH_PLUS_CAMPAIGN_NOT_ALLOWED(21),
+    /**
+     * <pre>
+     * An asset group asset cannot be added to multiple arms in one experiment.
+     * Use different asset group assets in each arm of the experiment.
+     * </pre>
+     *
+     * <code>DUPLICATE_ASSET_GROUP_ASSETS_BETWEEN_ARMS = 22;</code>
+     */
+    DUPLICATE_ASSET_GROUP_ASSETS_BETWEEN_ARMS(22),
+    /**
+     * <pre>
+     * An asset group asset cannot be used multiple times in one arm.
+     * Use different asset group assets in one arm of the experiment.
+     * </pre>
+     *
+     * <code>DUPLICATE_ASSET_GROUP_ASSETS_IN_ONE_ARM = 23;</code>
+     */
+    DUPLICATE_ASSET_GROUP_ASSETS_IN_ONE_ARM(23),
     UNRECOGNIZED(-1),
     ;
 
@@ -328,6 +399,77 @@ private static final long serialVersionUID = 0L;
      * <code>TRAFFIC_SPLIT_NOT_SUPPORTED_FOR_CHANNEL_TYPE = 15;</code>
      */
     public static final int TRAFFIC_SPLIT_NOT_SUPPORTED_FOR_CHANNEL_TYPE_VALUE = 15;
+    /**
+     * <pre>
+     * Shared budgets are not allowed in experiments.
+     * </pre>
+     *
+     * <code>BUDGET_MUST_NOT_BE_SHARED = 16;</code>
+     */
+    public static final int BUDGET_MUST_NOT_BE_SHARED_VALUE = 16;
+    /**
+     * <pre>
+     * Campaign must enable performance search setting for ADOPT_AI_MAX
+     * experiments.
+     * </pre>
+     *
+     * <code>ADOPT_AI_MAX_CAMPAIGN_MISSING_PERFORMANCE_SEARCH_ENABLED = 17;</code>
+     */
+    public static final int ADOPT_AI_MAX_CAMPAIGN_MISSING_PERFORMANCE_SEARCH_ENABLED_VALUE = 17;
+    /**
+     * <pre>
+     * Number of campaigns in the experiment arm is above limit.
+     * </pre>
+     *
+     * <code>TOO_MANY_CAMPAIGNS_IN_EXPERIMENT_ARM = 18;</code>
+     */
+    public static final int TOO_MANY_CAMPAIGNS_IN_EXPERIMENT_ARM_VALUE = 18;
+    /**
+     * <pre>
+     * AI Max experiments do not support campaigns with a target ROAS tolerance
+     * (see
+     * campaign.maximize_conversion_value.target_roas_tolerance_percent_millis).
+     * </pre>
+     *
+     * <code>CANNOT_ADD_CAMPAIGN_WITH_TARGET_ROAS_TOLERANCE_PERCENT_MILLIS = 19;</code>
+     */
+    public static final int CANNOT_ADD_CAMPAIGN_WITH_TARGET_ROAS_TOLERANCE_PERCENT_MILLIS_VALUE = 19;
+    /**
+     * <pre>
+     * A campaign cannot be added to multiple arms in one experiment. Use
+     * different campaigns in each arm of the experiment.
+     * </pre>
+     *
+     * <code>CANNOT_HAVE_SAME_CAMPAIGN_CROSS_ARMS_IN_ONE_EXPERIMENT = 20;</code>
+     */
+    public static final int CANNOT_HAVE_SAME_CAMPAIGN_CROSS_ARMS_IN_ONE_EXPERIMENT_VALUE = 20;
+    /**
+     * <pre>
+     * Campaigns in the ADOPT_BROAD_MATCH_KEYWORD experiment cannot target the
+     * Google Display Network.
+     * </pre>
+     *
+     * <code>SEARCH_PLUS_CAMPAIGN_NOT_ALLOWED = 21;</code>
+     */
+    public static final int SEARCH_PLUS_CAMPAIGN_NOT_ALLOWED_VALUE = 21;
+    /**
+     * <pre>
+     * An asset group asset cannot be added to multiple arms in one experiment.
+     * Use different asset group assets in each arm of the experiment.
+     * </pre>
+     *
+     * <code>DUPLICATE_ASSET_GROUP_ASSETS_BETWEEN_ARMS = 22;</code>
+     */
+    public static final int DUPLICATE_ASSET_GROUP_ASSETS_BETWEEN_ARMS_VALUE = 22;
+    /**
+     * <pre>
+     * An asset group asset cannot be used multiple times in one arm.
+     * Use different asset group assets in one arm of the experiment.
+     * </pre>
+     *
+     * <code>DUPLICATE_ASSET_GROUP_ASSETS_IN_ONE_ARM = 23;</code>
+     */
+    public static final int DUPLICATE_ASSET_GROUP_ASSETS_IN_ONE_ARM_VALUE = 23;
 
 
     public final int getNumber() {
@@ -370,6 +512,14 @@ private static final long serialVersionUID = 0L;
         case 13: return CANNOT_ADD_BASE_CAMPAIGN_WITH_DATE_RANGE;
         case 14: return BIDDING_STRATEGY_NOT_SUPPORTED_IN_EXPERIMENTS;
         case 15: return TRAFFIC_SPLIT_NOT_SUPPORTED_FOR_CHANNEL_TYPE;
+        case 16: return BUDGET_MUST_NOT_BE_SHARED;
+        case 17: return ADOPT_AI_MAX_CAMPAIGN_MISSING_PERFORMANCE_SEARCH_ENABLED;
+        case 18: return TOO_MANY_CAMPAIGNS_IN_EXPERIMENT_ARM;
+        case 19: return CANNOT_ADD_CAMPAIGN_WITH_TARGET_ROAS_TOLERANCE_PERCENT_MILLIS;
+        case 20: return CANNOT_HAVE_SAME_CAMPAIGN_CROSS_ARMS_IN_ONE_EXPERIMENT;
+        case 21: return SEARCH_PLUS_CAMPAIGN_NOT_ALLOWED;
+        case 22: return DUPLICATE_ASSET_GROUP_ASSETS_BETWEEN_ARMS;
+        case 23: return DUPLICATE_ASSET_GROUP_ASSETS_IN_ONE_ARM;
         default: return null;
       }
     }

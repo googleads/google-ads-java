@@ -152,6 +152,41 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_CUSTOM = 12;</code>
      */
     HOTEL_CUSTOM(12),
+    /**
+     * <pre>
+     * A custom experiment for optimizing assets.
+     * </pre>
+     *
+     * <code>OPTIMIZE_ASSETS = 13;</code>
+     */
+    OPTIMIZE_ASSETS(13),
+    /**
+     * <pre>
+     * An experiment that tests how AI Max can help you engage more customers
+     * with Google AI and broad match keywords.
+     * </pre>
+     *
+     * <code>ADOPT_AI_MAX = 14;</code>
+     */
+    ADOPT_AI_MAX(14),
+    /**
+     * <pre>
+     * An experiment that tests how broad match keywords can impact the number
+     * of searches your ads appear in.
+     * </pre>
+     *
+     * <code>ADOPT_BROAD_MATCH_KEYWORDS = 15;</code>
+     */
+    ADOPT_BROAD_MATCH_KEYWORDS(15),
+    /**
+     * <pre>
+     * An experiment that tests how your Shopping campaigns perform compared to
+     * Performance Max.
+     * </pre>
+     *
+     * <code>PMAX_REPLACEMENT_SHOPPING = 16;</code>
+     */
+    PMAX_REPLACEMENT_SHOPPING(16),
     UNRECOGNIZED(-1),
     ;
 
@@ -260,6 +295,41 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_CUSTOM = 12;</code>
      */
     public static final int HOTEL_CUSTOM_VALUE = 12;
+    /**
+     * <pre>
+     * A custom experiment for optimizing assets.
+     * </pre>
+     *
+     * <code>OPTIMIZE_ASSETS = 13;</code>
+     */
+    public static final int OPTIMIZE_ASSETS_VALUE = 13;
+    /**
+     * <pre>
+     * An experiment that tests how AI Max can help you engage more customers
+     * with Google AI and broad match keywords.
+     * </pre>
+     *
+     * <code>ADOPT_AI_MAX = 14;</code>
+     */
+    public static final int ADOPT_AI_MAX_VALUE = 14;
+    /**
+     * <pre>
+     * An experiment that tests how broad match keywords can impact the number
+     * of searches your ads appear in.
+     * </pre>
+     *
+     * <code>ADOPT_BROAD_MATCH_KEYWORDS = 15;</code>
+     */
+    public static final int ADOPT_BROAD_MATCH_KEYWORDS_VALUE = 15;
+    /**
+     * <pre>
+     * An experiment that tests how your Shopping campaigns perform compared to
+     * Performance Max.
+     * </pre>
+     *
+     * <code>PMAX_REPLACEMENT_SHOPPING = 16;</code>
+     */
+    public static final int PMAX_REPLACEMENT_SHOPPING_VALUE = 16;
 
 
     public final int getNumber() {
@@ -298,6 +368,10 @@ private static final long serialVersionUID = 0L;
         case 10: return SHOPPING_AUTOMATED_BIDDING_STRATEGY;
         case 11: return SMART_MATCHING;
         case 12: return HOTEL_CUSTOM;
+        case 13: return OPTIMIZE_ASSETS;
+        case 14: return ADOPT_AI_MAX;
+        case 15: return ADOPT_BROAD_MATCH_KEYWORDS;
+        case 16: return PMAX_REPLACEMENT_SHOPPING;
         default: return null;
       }
     }

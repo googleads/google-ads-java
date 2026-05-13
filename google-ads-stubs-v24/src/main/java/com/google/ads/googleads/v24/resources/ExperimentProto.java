@@ -42,45 +42,52 @@ public final class ExperimentProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v24/resources/exp" +
       "eriment.proto\022\"google.ads.googleads.v24." +
-      "resources\0321google/ads/googleads/v24/comm" +
-      "on/metric_goal.proto\0328google/ads/googlea" +
-      "ds/v24/enums/async_action_status.proto\0326" +
-      "google/ads/googleads/v24/enums/experimen" +
-      "t_status.proto\0324google/ads/googleads/v24" +
-      "/enums/experiment_type.proto\032\037google/api" +
-      "/field_behavior.proto\032\031google/api/resour" +
-      "ce.proto\"\246\006\n\nExperiment\022B\n\rresource_name" +
-      "\030\001 \001(\tB+\340A\005\372A%\n#googleads.googleapis.com" +
-      "/Experiment\022\037\n\rexperiment_id\030\t \001(\003B\003\340A\003H" +
-      "\000\210\001\001\022\021\n\004name\030\n \001(\tB\003\340A\002\022\023\n\013description\030\013" +
-      " \001(\t\022\016\n\006suffix\030\014 \001(\t\022T\n\004type\030\r \001(\0162A.goo" +
-      "gle.ads.googleads.v24.enums.ExperimentTy" +
-      "peEnum.ExperimentTypeB\003\340A\002\022U\n\006status\030\016 \001" +
-      "(\0162E.google.ads.googleads.v24.enums.Expe" +
-      "rimentStatusEnum.ExperimentStatus\022\027\n\nsta" +
-      "rt_date\030\017 \001(\tH\001\210\001\001\022\025\n\010end_date\030\020 \001(\tH\002\210\001" +
-      "\001\022:\n\005goals\030\021 \003(\0132+.google.ads.googleads." +
-      "v24.common.MetricGoal\022(\n\026long_running_op" +
-      "eration\030\022 \001(\tB\003\340A\003H\003\210\001\001\022d\n\016promote_statu" +
-      "s\030\023 \001(\0162G.google.ads.googleads.v24.enums" +
-      ".AsyncActionStatusEnum.AsyncActionStatus" +
-      "B\003\340A\003\022\036\n\014sync_enabled\030\024 \001(\010B\003\340A\005H\004\210\001\001:X\352" +
-      "AU\n#googleads.googleapis.com/Experiment\022" +
-      ".customers/{customer_id}/experiments/{tr" +
-      "ial_id}B\020\n\016_experiment_idB\r\n\013_start_date" +
-      "B\013\n\t_end_dateB\031\n\027_long_running_operation" +
-      "B\017\n\r_sync_enabledB\201\002\n&com.google.ads.goo" +
-      "gleads.v24.resourcesB\017ExperimentProtoP\001Z" +
-      "Kgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v24/resources;resources\242\002\003G" +
-      "AA\252\002\"Google.Ads.GoogleAds.V24.Resources\312" +
-      "\002\"Google\\Ads\\GoogleAds\\V24\\Resources\352\002&G" +
-      "oogle::Ads::GoogleAds::V24::Resourcesb\006p" +
-      "roto3"
+      "resources\0326google/ads/googleads/v24/comm" +
+      "on/experiment_types.proto\0321google/ads/go" +
+      "ogleads/v24/common/metric_goal.proto\0328go" +
+      "ogle/ads/googleads/v24/enums/async_actio" +
+      "n_status.proto\0326google/ads/googleads/v24" +
+      "/enums/experiment_status.proto\0324google/a" +
+      "ds/googleads/v24/enums/experiment_type.p" +
+      "roto\032\037google/api/field_behavior.proto\032\031g" +
+      "oogle/api/resource.proto\"\372\007\n\nExperiment\022" +
+      "B\n\rresource_name\030\001 \001(\tB+\340A\005\372A%\n#googlead" +
+      "s.googleapis.com/Experiment\022\037\n\rexperimen" +
+      "t_id\030\t \001(\003B\003\340A\003H\001\210\001\001\022\021\n\004name\030\n \001(\tB\003\340A\002\022" +
+      "\023\n\013description\030\013 \001(\t\022\016\n\006suffix\030\014 \001(\t\022T\n\004" +
+      "type\030\r \001(\0162A.google.ads.googleads.v24.en" +
+      "ums.ExperimentTypeEnum.ExperimentTypeB\003\340" +
+      "A\002\022U\n\006status\030\016 \001(\0162E.google.ads.googlead" +
+      "s.v24.enums.ExperimentStatusEnum.Experim" +
+      "entStatus\022\027\n\nstart_date\030\017 \001(\tH\002\210\001\001\022\025\n\010en" +
+      "d_date\030\020 \001(\tH\003\210\001\001\022:\n\005goals\030\021 \003(\0132+.googl" +
+      "e.ads.googleads.v24.common.MetricGoal\022(\n" +
+      "\026long_running_operation\030\022 \001(\tB\003\340A\003H\004\210\001\001\022" +
+      "d\n\016promote_status\030\023 \001(\0162G.google.ads.goo" +
+      "gleads.v24.enums.AsyncActionStatusEnum.A" +
+      "syncActionStatusB\003\340A\003\022\036\n\014sync_enabled\030\024 " +
+      "\001(\010B\003\340A\005H\005\210\001\001\022U\n\020video_experiment\030\025 \001(\0132" +
+      "4.google.ads.googleads.v24.common.VideoE" +
+      "xperimentInfoB\003\340A\005H\000\022h\n\032optimize_assets_" +
+      "experiment\030\026 \001(\0132=.google.ads.googleads." +
+      "v24.common.OptimizeAssetsExperimentInfoB" +
+      "\003\340A\005H\000:X\352AU\n#googleads.googleapis.com/Ex" +
+      "periment\022.customers/{customer_id}/experi" +
+      "ments/{trial_id}B\021\n\017experiment_infoB\020\n\016_" +
+      "experiment_idB\r\n\013_start_dateB\013\n\t_end_dat" +
+      "eB\031\n\027_long_running_operationB\017\n\r_sync_en" +
+      "abledB\201\002\n&com.google.ads.googleads.v24.r" +
+      "esourcesB\017ExperimentProtoP\001ZKgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v24/resources;resources\242\002\003GAA\252\002\"Google." +
+      "Ads.GoogleAds.V24.Resources\312\002\"Google\\Ads" +
+      "\\GoogleAds\\V24\\Resources\352\002&Google::Ads::" +
+      "GoogleAds::V24::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v24.common.ExperimentTypesProto.getDescriptor(),
           com.google.ads.googleads.v24.common.MetricGoalProto.getDescriptor(),
           com.google.ads.googleads.v24.enums.AsyncActionStatusProto.getDescriptor(),
           com.google.ads.googleads.v24.enums.ExperimentStatusProto.getDescriptor(),
@@ -93,8 +100,9 @@ public final class ExperimentProto {
     internal_static_google_ads_googleads_v24_resources_Experiment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_resources_Experiment_descriptor,
-        new java.lang.String[] { "ResourceName", "ExperimentId", "Name", "Description", "Suffix", "Type", "Status", "StartDate", "EndDate", "Goals", "LongRunningOperation", "PromoteStatus", "SyncEnabled", });
+        new java.lang.String[] { "ResourceName", "ExperimentId", "Name", "Description", "Suffix", "Type", "Status", "StartDate", "EndDate", "Goals", "LongRunningOperation", "PromoteStatus", "SyncEnabled", "VideoExperiment", "OptimizeAssetsExperiment", "ExperimentInfo", });
     descriptor.resolveAllFeaturesImmutable();
+    com.google.ads.googleads.v24.common.ExperimentTypesProto.getDescriptor();
     com.google.ads.googleads.v24.common.MetricGoalProto.getDescriptor();
     com.google.ads.googleads.v24.enums.AsyncActionStatusProto.getDescriptor();
     com.google.ads.googleads.v24.enums.ExperimentStatusProto.getDescriptor();
