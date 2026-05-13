@@ -346,6 +346,14 @@ private static final long serialVersionUID = 0L;
      * <code>CALL_TO_ACTION = 40;</code>
      */
     CALL_TO_ACTION(40),
+    /**
+     * <pre>
+     * The asset is linked for use as a classic display image.
+     * </pre>
+     *
+     * <code>CLASSIC_DISPLAY_IMAGE = 47;</code>
+     */
+    CLASSIC_DISPLAY_IMAGE(47),
     UNRECOGNIZED(-1),
     ;
 
@@ -648,6 +656,14 @@ private static final long serialVersionUID = 0L;
      * <code>CALL_TO_ACTION = 40;</code>
      */
     public static final int CALL_TO_ACTION_VALUE = 40;
+    /**
+     * <pre>
+     * The asset is linked for use as a classic display image.
+     * </pre>
+     *
+     * <code>CLASSIC_DISPLAY_IMAGE = 47;</code>
+     */
+    public static final int CLASSIC_DISPLAY_IMAGE_VALUE = 47;
 
 
     public final int getNumber() {
@@ -710,6 +726,7 @@ private static final long serialVersionUID = 0L;
         case 38: return LANDING_PAGE_PREVIEW;
         case 39: return LONG_DESCRIPTION;
         case 40: return CALL_TO_ACTION;
+        case 47: return CLASSIC_DISPLAY_IMAGE;
         default: return null;
       }
     }

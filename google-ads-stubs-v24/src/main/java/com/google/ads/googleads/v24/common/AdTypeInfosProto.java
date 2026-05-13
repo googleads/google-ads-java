@@ -399,7 +399,7 @@ public final class AdTypeInfosProto {
       "nAdInfo\022?\n\theadlines\030\001 \003(\0132,.google.ads." +
       "googleads.v24.common.AdTextAsset\022B\n\014desc" +
       "riptions\030\002 \003(\0132,.google.ads.googleads.v2" +
-      "4.common.AdTextAsset\"\216\005\n\031DemandGenMultiA" +
+      "4.common.AdTextAsset\"\335\005\n\031DemandGenMultiA" +
       "ssetAdInfo\022G\n\020marketing_images\030\001 \003(\0132-.g" +
       "oogle.ads.googleads.v24.common.AdImageAs" +
       "set\022N\n\027square_marketing_images\030\002 \003(\0132-.g" +
@@ -410,58 +410,60 @@ public final class AdTypeInfosProto {
       "\n \003(\0132-.google.ads.googleads.v24.common." +
       "AdImageAsset\022B\n\013logo_images\030\004 \003(\0132-.goog" +
       "le.ads.googleads.v24.common.AdImageAsset" +
-      "\022?\n\theadlines\030\005 \003(\0132,.google.ads.googlea" +
-      "ds.v24.common.AdTextAsset\022B\n\014description" +
-      "s\030\006 \003(\0132,.google.ads.googleads.v24.commo" +
-      "n.AdTextAsset\022\032\n\rbusiness_name\030\007 \001(\tH\000\210\001" +
-      "\001\022 \n\023call_to_action_text\030\010 \001(\tH\001\210\001\001B\020\n\016_" +
-      "business_nameB\026\n\024_call_to_action_text\"\203\003" +
-      "\n\027DemandGenCarouselAdInfo\022\032\n\rbusiness_na" +
-      "me\030\001 \001(\tB\003\340A\002\022F\n\nlogo_image\030\002 \001(\0132-.goog" +
-      "le.ads.googleads.v24.common.AdImageAsset" +
-      "B\003\340A\002\022C\n\010headline\030\003 \001(\0132,.google.ads.goo" +
-      "gleads.v24.common.AdTextAssetB\003\340A\002\022F\n\013de" +
-      "scription\030\004 \001(\0132,.google.ads.googleads.v" +
-      "24.common.AdTextAssetB\003\340A\002\022\033\n\023call_to_ac" +
-      "tion_text\030\005 \001(\t\022Z\n\016carousel_cards\030\006 \003(\0132" +
-      "=.google.ads.googleads.v24.common.AdDema" +
-      "ndGenCarouselCardAssetB\003\340A\002\"\205\005\n\036DemandGe" +
-      "nVideoResponsiveAdInfo\022?\n\theadlines\030\001 \003(" +
-      "\0132,.google.ads.googleads.v24.common.AdTe" +
-      "xtAsset\022D\n\016long_headlines\030\002 \003(\0132,.google" +
-      ".ads.googleads.v24.common.AdTextAsset\022B\n" +
-      "\014descriptions\030\003 \003(\0132,.google.ads.googlea" +
-      "ds.v24.common.AdTextAsset\022B\n\006videos\030\004 \003(" +
-      "\0132-.google.ads.googleads.v24.common.AdVi" +
-      "deoAssetB\003\340A\002\022G\n\013logo_images\030\005 \003(\0132-.goo" +
-      "gle.ads.googleads.v24.common.AdImageAsse" +
-      "tB\003\340A\002\022H\n\021companion_banners\030\n \003(\0132-.goog" +
-      "le.ads.googleads.v24.common.AdImageAsset" +
-      "\022\023\n\013breadcrumb1\030\006 \001(\t\022\023\n\013breadcrumb2\030\007 \001" +
-      "(\t\022H\n\rbusiness_name\030\010 \001(\0132,.google.ads.g" +
-      "oogleads.v24.common.AdTextAssetB\003\340A\002\022M\n\017" +
-      "call_to_actions\030\t \003(\01324.google.ads.googl" +
-      "eads.v24.common.AdCallToActionAsset\"\202\004\n\026" +
-      "DemandGenProductAdInfo\022H\n\010headline\030\001 \001(\013" +
+      "\022M\n\026classic_display_images\030\013 \003(\0132-.googl" +
+      "e.ads.googleads.v24.common.AdImageAsset\022" +
+      "?\n\theadlines\030\005 \003(\0132,.google.ads.googlead" +
+      "s.v24.common.AdTextAsset\022B\n\014descriptions" +
+      "\030\006 \003(\0132,.google.ads.googleads.v24.common" +
+      ".AdTextAsset\022\032\n\rbusiness_name\030\007 \001(\tH\000\210\001\001" +
+      "\022 \n\023call_to_action_text\030\010 \001(\tH\001\210\001\001B\020\n\016_b" +
+      "usiness_nameB\026\n\024_call_to_action_text\"\203\003\n" +
+      "\027DemandGenCarouselAdInfo\022\032\n\rbusiness_nam" +
+      "e\030\001 \001(\tB\003\340A\002\022F\n\nlogo_image\030\002 \001(\0132-.googl" +
+      "e.ads.googleads.v24.common.AdImageAssetB" +
+      "\003\340A\002\022C\n\010headline\030\003 \001(\0132,.google.ads.goog" +
+      "leads.v24.common.AdTextAssetB\003\340A\002\022F\n\013des" +
+      "cription\030\004 \001(\0132,.google.ads.googleads.v2" +
+      "4.common.AdTextAssetB\003\340A\002\022\033\n\023call_to_act" +
+      "ion_text\030\005 \001(\t\022Z\n\016carousel_cards\030\006 \003(\0132=" +
+      ".google.ads.googleads.v24.common.AdDeman" +
+      "dGenCarouselCardAssetB\003\340A\002\"\205\005\n\036DemandGen" +
+      "VideoResponsiveAdInfo\022?\n\theadlines\030\001 \003(\013" +
       "2,.google.ads.googleads.v24.common.AdTex" +
-      "tAssetB\003\340A\002H\000\210\001\001\022K\n\013description\030\002 \001(\0132,." +
-      "google.ads.googleads.v24.common.AdTextAs" +
-      "setB\003\340A\002H\001\210\001\001\022K\n\nlogo_image\030\003 \001(\0132-.goog" +
+      "tAsset\022D\n\016long_headlines\030\002 \003(\0132,.google." +
+      "ads.googleads.v24.common.AdTextAsset\022B\n\014" +
+      "descriptions\030\003 \003(\0132,.google.ads.googlead" +
+      "s.v24.common.AdTextAsset\022B\n\006videos\030\004 \003(\013" +
+      "2-.google.ads.googleads.v24.common.AdVid" +
+      "eoAssetB\003\340A\002\022G\n\013logo_images\030\005 \003(\0132-.goog" +
       "le.ads.googleads.v24.common.AdImageAsset" +
-      "B\003\340A\002H\002\210\001\001\022\023\n\013breadcrumb1\030\004 \001(\t\022\023\n\013bread" +
-      "crumb2\030\005 \001(\t\022H\n\rbusiness_name\030\006 \001(\0132,.go" +
-      "ogle.ads.googleads.v24.common.AdTextAsse" +
-      "tB\003\340A\002\022Q\n\016call_to_action\030\007 \001(\01324.google." +
-      "ads.googleads.v24.common.AdCallToActionA" +
-      "ssetH\003\210\001\001B\013\n\t_headlineB\016\n\014_descriptionB\r" +
-      "\n\013_logo_imageB\021\n\017_call_to_actionB\360\001\n#com" +
-      ".google.ads.googleads.v24.commonB\020AdType" +
-      "InfosProtoP\001ZEgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v24/common;com" +
-      "mon\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V24.Com" +
-      "mon\312\002\037Google\\Ads\\GoogleAds\\V24\\Common\352\002#" +
-      "Google::Ads::GoogleAds::V24::Commonb\006pro" +
-      "to3"
+      "B\003\340A\002\022H\n\021companion_banners\030\n \003(\0132-.googl" +
+      "e.ads.googleads.v24.common.AdImageAsset\022" +
+      "\023\n\013breadcrumb1\030\006 \001(\t\022\023\n\013breadcrumb2\030\007 \001(" +
+      "\t\022H\n\rbusiness_name\030\010 \001(\0132,.google.ads.go" +
+      "ogleads.v24.common.AdTextAssetB\003\340A\002\022M\n\017c" +
+      "all_to_actions\030\t \003(\01324.google.ads.google" +
+      "ads.v24.common.AdCallToActionAsset\"\202\004\n\026D" +
+      "emandGenProductAdInfo\022H\n\010headline\030\001 \001(\0132" +
+      ",.google.ads.googleads.v24.common.AdText" +
+      "AssetB\003\340A\002H\000\210\001\001\022K\n\013description\030\002 \001(\0132,.g" +
+      "oogle.ads.googleads.v24.common.AdTextAss" +
+      "etB\003\340A\002H\001\210\001\001\022K\n\nlogo_image\030\003 \001(\0132-.googl" +
+      "e.ads.googleads.v24.common.AdImageAssetB" +
+      "\003\340A\002H\002\210\001\001\022\023\n\013breadcrumb1\030\004 \001(\t\022\023\n\013breadc" +
+      "rumb2\030\005 \001(\t\022H\n\rbusiness_name\030\006 \001(\0132,.goo" +
+      "gle.ads.googleads.v24.common.AdTextAsset" +
+      "B\003\340A\002\022Q\n\016call_to_action\030\007 \001(\01324.google.a" +
+      "ds.googleads.v24.common.AdCallToActionAs" +
+      "setH\003\210\001\001B\013\n\t_headlineB\016\n\014_descriptionB\r\n" +
+      "\013_logo_imageB\021\n\017_call_to_actionB\360\001\n#com." +
+      "google.ads.googleads.v24.commonB\020AdTypeI" +
+      "nfosProtoP\001ZEgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v24/common;comm" +
+      "on\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V24.Comm" +
+      "on\312\002\037Google\\Ads\\GoogleAds\\V24\\Common\352\002#G" +
+      "oogle::Ads::GoogleAds::V24::Commonb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -647,7 +649,7 @@ public final class AdTypeInfosProto {
     internal_static_google_ads_googleads_v24_common_DemandGenMultiAssetAdInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_common_DemandGenMultiAssetAdInfo_descriptor,
-        new java.lang.String[] { "MarketingImages", "SquareMarketingImages", "PortraitMarketingImages", "TallPortraitMarketingImages", "LogoImages", "Headlines", "Descriptions", "BusinessName", "CallToActionText", });
+        new java.lang.String[] { "MarketingImages", "SquareMarketingImages", "PortraitMarketingImages", "TallPortraitMarketingImages", "LogoImages", "ClassicDisplayImages", "Headlines", "Descriptions", "BusinessName", "CallToActionText", });
     internal_static_google_ads_googleads_v24_common_DemandGenCarouselAdInfo_descriptor =
       getDescriptor().getMessageTypes().get(29);
     internal_static_google_ads_googleads_v24_common_DemandGenCarouselAdInfo_fieldAccessorTable = new

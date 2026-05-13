@@ -1,3 +1,7 @@
+43.1.0 - 2026-034-22
+-------------------
+- Add support for v24_1 of the Google Ads API.
+
 43.0.0 - 2026-034-22
 -------------------
 - Add support for v24 of the Google Ads API.

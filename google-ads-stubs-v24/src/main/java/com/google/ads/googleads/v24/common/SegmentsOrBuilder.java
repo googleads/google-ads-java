@@ -643,6 +643,25 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Mobile device platform to which metrics apply.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.enums.MobileDevicePlatformEnum.MobileDevicePlatform mobile_device_platform = 219;</code>
+   * @return The enum numeric value on the wire for mobileDevicePlatform.
+   */
+  int getMobileDevicePlatformValue();
+  /**
+   * <pre>
+   * Mobile device platform to which metrics apply.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.enums.MobileDevicePlatformEnum.MobileDevicePlatform mobile_device_platform = 219;</code>
+   * @return The mobileDevicePlatform.
+   */
+  com.google.ads.googleads.v24.enums.MobileDevicePlatformEnum.MobileDevicePlatform getMobileDevicePlatform();
+
+  /**
+   * <pre>
    * External conversion source.
    * </pre>
    *
@@ -3078,6 +3097,61 @@ public interface SegmentsOrBuilder extends
    */
   com.google.protobuf.ByteString
       getVerticalAdsListingRegionBytes();
+
+  /**
+   * <pre>
+   * Integer value specifying the user rating of the vertical ads listing
+   * as a number from 1 to 5, where 5 is the best. The value will always be
+   * within this range.
+   * </pre>
+   *
+   * <code>optional int64 vertical_ads_listing_user_rating = 220;</code>
+   * @return Whether the verticalAdsListingUserRating field is set.
+   */
+  boolean hasVerticalAdsListingUserRating();
+  /**
+   * <pre>
+   * Integer value specifying the user rating of the vertical ads listing
+   * as a number from 1 to 5, where 5 is the best. The value will always be
+   * within this range.
+   * </pre>
+   *
+   * <code>optional int64 vertical_ads_listing_user_rating = 220;</code>
+   * @return The verticalAdsListingUserRating.
+   */
+  long getVerticalAdsListingUserRating();
+
+  /**
+   * <pre>
+   * The name of the venue for the vertical ads listing, for example, the
+   * venue for a concert event.
+   * </pre>
+   *
+   * <code>optional string vertical_ads_listing_venue = 221;</code>
+   * @return Whether the verticalAdsListingVenue field is set.
+   */
+  boolean hasVerticalAdsListingVenue();
+  /**
+   * <pre>
+   * The name of the venue for the vertical ads listing, for example, the
+   * venue for a concert event.
+   * </pre>
+   *
+   * <code>optional string vertical_ads_listing_venue = 221;</code>
+   * @return The verticalAdsListingVenue.
+   */
+  java.lang.String getVerticalAdsListingVenue();
+  /**
+   * <pre>
+   * The name of the venue for the vertical ads listing, for example, the
+   * venue for a concert event.
+   * </pre>
+   *
+   * <code>optional string vertical_ads_listing_venue = 221;</code>
+   * @return The bytes for verticalAdsListingVenue.
+   */
+  com.google.protobuf.ByteString
+      getVerticalAdsListingVenueBytes();
 
   /**
    * <pre>

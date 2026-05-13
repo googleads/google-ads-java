@@ -42,7 +42,7 @@ public final class ExperimentErrorProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v24/errors/experi" +
       "ment_error.proto\022\037google.ads.googleads.v" +
-      "24.errors\"\337\t\n\023ExperimentErrorEnum\"\307\t\n\017Ex" +
+      "24.errors\"\242\n\n\023ExperimentErrorEnum\"\212\n\n\017Ex" +
       "perimentError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOW" +
       "N\020\001\022!\n\035CANNOT_SET_START_DATE_IN_PAST\020\002\022\036" +
       "\n\032END_DATE_BEFORE_START_DATE\020\003\022 \n\034START_" +
@@ -73,13 +73,15 @@ public final class ExperimentErrorProto {
       "NABLE_SYNC_FOR_UNSUPPORTED_EXPERIMENT_TY" +
       "PE\020\035\022&\n\"INVALID_DURATION_FOR_AN_EXPERIME" +
       "NT\020\036\0225\n1MISSING_EU_POLITICAL_ADVERTISING" +
-      "_SELF_DECLARATION\020\037B\364\001\n#com.google.ads.g" +
-      "oogleads.v24.errorsB\024ExperimentErrorProt" +
-      "oP\001ZEgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v24/errors;errors\242\002\003GAA" +
-      "\252\002\037Google.Ads.GoogleAds.V24.Errors\312\002\037Goo" +
-      "gle\\Ads\\GoogleAds\\V24\\Errors\352\002#Google::A" +
-      "ds::GoogleAds::V24::Errorsb\006proto3"
+      "_SELF_DECLARATION\020\037\022\033\n\027MISSING_EXPERIMEN" +
+      "T_ARMS\020 \022$\n MISSING_VIDEO_EXPERIMENT_SUB" +
+      "TYPE\020\"B\364\001\n#com.google.ads.googleads.v24." +
+      "errorsB\024ExperimentErrorProtoP\001ZEgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v24/errors;errors\242\002\003GAA\252\002\037Google.Ads" +
+      ".GoogleAds.V24.Errors\312\002\037Google\\Ads\\Googl" +
+      "eAds\\V24\\Errors\352\002#Google::Ads::GoogleAds" +
+      "::V24::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

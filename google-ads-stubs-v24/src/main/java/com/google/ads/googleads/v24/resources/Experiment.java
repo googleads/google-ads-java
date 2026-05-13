@@ -60,6 +60,48 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
+  private int experimentInfoCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object experimentInfo_;
+  public enum ExperimentInfoCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    VIDEO_EXPERIMENT(21),
+    OPTIMIZE_ASSETS_EXPERIMENT(22),
+    EXPERIMENTINFO_NOT_SET(0);
+    private final int value;
+    private ExperimentInfoCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ExperimentInfoCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ExperimentInfoCase forNumber(int value) {
+      switch (value) {
+        case 21: return VIDEO_EXPERIMENT;
+        case 22: return OPTIMIZE_ASSETS_EXPERIMENT;
+        case 0: return EXPERIMENTINFO_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public ExperimentInfoCase
+  getExperimentInfoCase() {
+    return ExperimentInfoCase.forNumber(
+        experimentInfoCase_);
+  }
+
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object resourceName_ = "";
@@ -677,6 +719,98 @@ private static final long serialVersionUID = 0L;
     return syncEnabled_;
   }
 
+  public static final int VIDEO_EXPERIMENT_FIELD_NUMBER = 21;
+  /**
+   * <pre>
+   * Immutable. Details of the video experiment. Applies for experiment types:
+   * YOUTUBE_CUSTOM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the videoExperiment field is set.
+   */
+  @java.lang.Override
+  public boolean hasVideoExperiment() {
+    return experimentInfoCase_ == 21;
+  }
+  /**
+   * <pre>
+   * Immutable. Details of the video experiment. Applies for experiment types:
+   * YOUTUBE_CUSTOM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The videoExperiment.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.VideoExperimentInfo getVideoExperiment() {
+    if (experimentInfoCase_ == 21) {
+       return (com.google.ads.googleads.v24.common.VideoExperimentInfo) experimentInfo_;
+    }
+    return com.google.ads.googleads.v24.common.VideoExperimentInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Immutable. Details of the video experiment. Applies for experiment types:
+   * YOUTUBE_CUSTOM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.VideoExperimentInfoOrBuilder getVideoExperimentOrBuilder() {
+    if (experimentInfoCase_ == 21) {
+       return (com.google.ads.googleads.v24.common.VideoExperimentInfo) experimentInfo_;
+    }
+    return com.google.ads.googleads.v24.common.VideoExperimentInfo.getDefaultInstance();
+  }
+
+  public static final int OPTIMIZE_ASSETS_EXPERIMENT_FIELD_NUMBER = 22;
+  /**
+   * <pre>
+   * Immutable. Details of the optimize assets experiment. Applies for
+   * experiment types: OPTIMIZE_ASSETS.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the optimizeAssetsExperiment field is set.
+   */
+  @java.lang.Override
+  public boolean hasOptimizeAssetsExperiment() {
+    return experimentInfoCase_ == 22;
+  }
+  /**
+   * <pre>
+   * Immutable. Details of the optimize assets experiment. Applies for
+   * experiment types: OPTIMIZE_ASSETS.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The optimizeAssetsExperiment.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo getOptimizeAssetsExperiment() {
+    if (experimentInfoCase_ == 22) {
+       return (com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo) experimentInfo_;
+    }
+    return com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Immutable. Details of the optimize assets experiment. Applies for
+   * experiment types: OPTIMIZE_ASSETS.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfoOrBuilder getOptimizeAssetsExperimentOrBuilder() {
+    if (experimentInfoCase_ == 22) {
+       return (com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo) experimentInfo_;
+    }
+    return com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -729,6 +863,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000010) != 0)) {
       output.writeBool(20, syncEnabled_);
+    }
+    if (experimentInfoCase_ == 21) {
+      output.writeMessage(21, (com.google.ads.googleads.v24.common.VideoExperimentInfo) experimentInfo_);
+    }
+    if (experimentInfoCase_ == 22) {
+      output.writeMessage(22, (com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo) experimentInfo_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -784,6 +924,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(20, syncEnabled_);
     }
+    if (experimentInfoCase_ == 21) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, (com.google.ads.googleads.v24.common.VideoExperimentInfo) experimentInfo_);
+    }
+    if (experimentInfoCase_ == 22) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(22, (com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo) experimentInfo_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -837,6 +985,19 @@ private static final long serialVersionUID = 0L;
       if (getSyncEnabled()
           != other.getSyncEnabled()) return false;
     }
+    if (!getExperimentInfoCase().equals(other.getExperimentInfoCase())) return false;
+    switch (experimentInfoCase_) {
+      case 21:
+        if (!getVideoExperiment()
+            .equals(other.getVideoExperiment())) return false;
+        break;
+      case 22:
+        if (!getOptimizeAssetsExperiment()
+            .equals(other.getOptimizeAssetsExperiment())) return false;
+        break;
+      case 0:
+      default:
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -887,6 +1048,18 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SYNC_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSyncEnabled());
+    }
+    switch (experimentInfoCase_) {
+      case 21:
+        hash = (37 * hash) + VIDEO_EXPERIMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getVideoExperiment().hashCode();
+        break;
+      case 22:
+        hash = (37 * hash) + OPTIMIZE_ASSETS_EXPERIMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOptimizeAssetsExperiment().hashCode();
+        break;
+      case 0:
+      default:
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1043,6 +1216,14 @@ private static final long serialVersionUID = 0L;
       longRunningOperation_ = "";
       promoteStatus_ = 0;
       syncEnabled_ = false;
+      if (videoExperimentBuilder_ != null) {
+        videoExperimentBuilder_.clear();
+      }
+      if (optimizeAssetsExperimentBuilder_ != null) {
+        optimizeAssetsExperimentBuilder_.clear();
+      }
+      experimentInfoCase_ = 0;
+      experimentInfo_ = null;
       return this;
     }
 
@@ -1071,6 +1252,7 @@ private static final long serialVersionUID = 0L;
       com.google.ads.googleads.v24.resources.Experiment result = new com.google.ads.googleads.v24.resources.Experiment(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
@@ -1132,6 +1314,19 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000010;
       }
       result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v24.resources.Experiment result) {
+      result.experimentInfoCase_ = experimentInfoCase_;
+      result.experimentInfo_ = this.experimentInfo_;
+      if (experimentInfoCase_ == 21 &&
+          videoExperimentBuilder_ != null) {
+        result.experimentInfo_ = videoExperimentBuilder_.build();
+      }
+      if (experimentInfoCase_ == 22 &&
+          optimizeAssetsExperimentBuilder_ != null) {
+        result.experimentInfo_ = optimizeAssetsExperimentBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1221,6 +1416,19 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSyncEnabled()) {
         setSyncEnabled(other.getSyncEnabled());
+      }
+      switch (other.getExperimentInfoCase()) {
+        case VIDEO_EXPERIMENT: {
+          mergeVideoExperiment(other.getVideoExperiment());
+          break;
+        }
+        case OPTIMIZE_ASSETS_EXPERIMENT: {
+          mergeOptimizeAssetsExperiment(other.getOptimizeAssetsExperiment());
+          break;
+        }
+        case EXPERIMENTINFO_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1321,6 +1529,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 160
+            case 170: {
+              input.readMessage(
+                  internalGetVideoExperimentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              experimentInfoCase_ = 21;
+              break;
+            } // case 170
+            case 178: {
+              input.readMessage(
+                  internalGetOptimizeAssetsExperimentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              experimentInfoCase_ = 22;
+              break;
+            } // case 178
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1336,6 +1558,21 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int experimentInfoCase_ = 0;
+    private java.lang.Object experimentInfo_;
+    public ExperimentInfoCase
+        getExperimentInfoCase() {
+      return ExperimentInfoCase.forNumber(
+          experimentInfoCase_);
+    }
+
+    public Builder clearExperimentInfo() {
+      experimentInfoCase_ = 0;
+      experimentInfo_ = null;
+      onChanged();
+      return this;
+    }
+
     private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
@@ -2776,6 +3013,380 @@ private static final long serialVersionUID = 0L;
       syncEnabled_ = false;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.VideoExperimentInfo, com.google.ads.googleads.v24.common.VideoExperimentInfo.Builder, com.google.ads.googleads.v24.common.VideoExperimentInfoOrBuilder> videoExperimentBuilder_;
+    /**
+     * <pre>
+     * Immutable. Details of the video experiment. Applies for experiment types:
+     * YOUTUBE_CUSTOM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the videoExperiment field is set.
+     */
+    @java.lang.Override
+    public boolean hasVideoExperiment() {
+      return experimentInfoCase_ == 21;
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the video experiment. Applies for experiment types:
+     * YOUTUBE_CUSTOM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The videoExperiment.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.common.VideoExperimentInfo getVideoExperiment() {
+      if (videoExperimentBuilder_ == null) {
+        if (experimentInfoCase_ == 21) {
+          return (com.google.ads.googleads.v24.common.VideoExperimentInfo) experimentInfo_;
+        }
+        return com.google.ads.googleads.v24.common.VideoExperimentInfo.getDefaultInstance();
+      } else {
+        if (experimentInfoCase_ == 21) {
+          return videoExperimentBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v24.common.VideoExperimentInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the video experiment. Applies for experiment types:
+     * YOUTUBE_CUSTOM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setVideoExperiment(com.google.ads.googleads.v24.common.VideoExperimentInfo value) {
+      if (videoExperimentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        experimentInfo_ = value;
+        onChanged();
+      } else {
+        videoExperimentBuilder_.setMessage(value);
+      }
+      experimentInfoCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the video experiment. Applies for experiment types:
+     * YOUTUBE_CUSTOM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setVideoExperiment(
+        com.google.ads.googleads.v24.common.VideoExperimentInfo.Builder builderForValue) {
+      if (videoExperimentBuilder_ == null) {
+        experimentInfo_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoExperimentBuilder_.setMessage(builderForValue.build());
+      }
+      experimentInfoCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the video experiment. Applies for experiment types:
+     * YOUTUBE_CUSTOM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder mergeVideoExperiment(com.google.ads.googleads.v24.common.VideoExperimentInfo value) {
+      if (videoExperimentBuilder_ == null) {
+        if (experimentInfoCase_ == 21 &&
+            experimentInfo_ != com.google.ads.googleads.v24.common.VideoExperimentInfo.getDefaultInstance()) {
+          experimentInfo_ = com.google.ads.googleads.v24.common.VideoExperimentInfo.newBuilder((com.google.ads.googleads.v24.common.VideoExperimentInfo) experimentInfo_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          experimentInfo_ = value;
+        }
+        onChanged();
+      } else {
+        if (experimentInfoCase_ == 21) {
+          videoExperimentBuilder_.mergeFrom(value);
+        } else {
+          videoExperimentBuilder_.setMessage(value);
+        }
+      }
+      experimentInfoCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the video experiment. Applies for experiment types:
+     * YOUTUBE_CUSTOM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder clearVideoExperiment() {
+      if (videoExperimentBuilder_ == null) {
+        if (experimentInfoCase_ == 21) {
+          experimentInfoCase_ = 0;
+          experimentInfo_ = null;
+          onChanged();
+        }
+      } else {
+        if (experimentInfoCase_ == 21) {
+          experimentInfoCase_ = 0;
+          experimentInfo_ = null;
+        }
+        videoExperimentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the video experiment. Applies for experiment types:
+     * YOUTUBE_CUSTOM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v24.common.VideoExperimentInfo.Builder getVideoExperimentBuilder() {
+      return internalGetVideoExperimentFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the video experiment. Applies for experiment types:
+     * YOUTUBE_CUSTOM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.common.VideoExperimentInfoOrBuilder getVideoExperimentOrBuilder() {
+      if ((experimentInfoCase_ == 21) && (videoExperimentBuilder_ != null)) {
+        return videoExperimentBuilder_.getMessageOrBuilder();
+      } else {
+        if (experimentInfoCase_ == 21) {
+          return (com.google.ads.googleads.v24.common.VideoExperimentInfo) experimentInfo_;
+        }
+        return com.google.ads.googleads.v24.common.VideoExperimentInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the video experiment. Applies for experiment types:
+     * YOUTUBE_CUSTOM.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.VideoExperimentInfo, com.google.ads.googleads.v24.common.VideoExperimentInfo.Builder, com.google.ads.googleads.v24.common.VideoExperimentInfoOrBuilder> 
+        internalGetVideoExperimentFieldBuilder() {
+      if (videoExperimentBuilder_ == null) {
+        if (!(experimentInfoCase_ == 21)) {
+          experimentInfo_ = com.google.ads.googleads.v24.common.VideoExperimentInfo.getDefaultInstance();
+        }
+        videoExperimentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.common.VideoExperimentInfo, com.google.ads.googleads.v24.common.VideoExperimentInfo.Builder, com.google.ads.googleads.v24.common.VideoExperimentInfoOrBuilder>(
+                (com.google.ads.googleads.v24.common.VideoExperimentInfo) experimentInfo_,
+                getParentForChildren(),
+                isClean());
+        experimentInfo_ = null;
+      }
+      experimentInfoCase_ = 21;
+      onChanged();
+      return videoExperimentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo, com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.Builder, com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfoOrBuilder> optimizeAssetsExperimentBuilder_;
+    /**
+     * <pre>
+     * Immutable. Details of the optimize assets experiment. Applies for
+     * experiment types: OPTIMIZE_ASSETS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the optimizeAssetsExperiment field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptimizeAssetsExperiment() {
+      return experimentInfoCase_ == 22;
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the optimize assets experiment. Applies for
+     * experiment types: OPTIMIZE_ASSETS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The optimizeAssetsExperiment.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo getOptimizeAssetsExperiment() {
+      if (optimizeAssetsExperimentBuilder_ == null) {
+        if (experimentInfoCase_ == 22) {
+          return (com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo) experimentInfo_;
+        }
+        return com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.getDefaultInstance();
+      } else {
+        if (experimentInfoCase_ == 22) {
+          return optimizeAssetsExperimentBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the optimize assets experiment. Applies for
+     * experiment types: OPTIMIZE_ASSETS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setOptimizeAssetsExperiment(com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo value) {
+      if (optimizeAssetsExperimentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        experimentInfo_ = value;
+        onChanged();
+      } else {
+        optimizeAssetsExperimentBuilder_.setMessage(value);
+      }
+      experimentInfoCase_ = 22;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the optimize assets experiment. Applies for
+     * experiment types: OPTIMIZE_ASSETS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setOptimizeAssetsExperiment(
+        com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.Builder builderForValue) {
+      if (optimizeAssetsExperimentBuilder_ == null) {
+        experimentInfo_ = builderForValue.build();
+        onChanged();
+      } else {
+        optimizeAssetsExperimentBuilder_.setMessage(builderForValue.build());
+      }
+      experimentInfoCase_ = 22;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the optimize assets experiment. Applies for
+     * experiment types: OPTIMIZE_ASSETS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder mergeOptimizeAssetsExperiment(com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo value) {
+      if (optimizeAssetsExperimentBuilder_ == null) {
+        if (experimentInfoCase_ == 22 &&
+            experimentInfo_ != com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.getDefaultInstance()) {
+          experimentInfo_ = com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.newBuilder((com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo) experimentInfo_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          experimentInfo_ = value;
+        }
+        onChanged();
+      } else {
+        if (experimentInfoCase_ == 22) {
+          optimizeAssetsExperimentBuilder_.mergeFrom(value);
+        } else {
+          optimizeAssetsExperimentBuilder_.setMessage(value);
+        }
+      }
+      experimentInfoCase_ = 22;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the optimize assets experiment. Applies for
+     * experiment types: OPTIMIZE_ASSETS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder clearOptimizeAssetsExperiment() {
+      if (optimizeAssetsExperimentBuilder_ == null) {
+        if (experimentInfoCase_ == 22) {
+          experimentInfoCase_ = 0;
+          experimentInfo_ = null;
+          onChanged();
+        }
+      } else {
+        if (experimentInfoCase_ == 22) {
+          experimentInfoCase_ = 0;
+          experimentInfo_ = null;
+        }
+        optimizeAssetsExperimentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the optimize assets experiment. Applies for
+     * experiment types: OPTIMIZE_ASSETS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.Builder getOptimizeAssetsExperimentBuilder() {
+      return internalGetOptimizeAssetsExperimentFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the optimize assets experiment. Applies for
+     * experiment types: OPTIMIZE_ASSETS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfoOrBuilder getOptimizeAssetsExperimentOrBuilder() {
+      if ((experimentInfoCase_ == 22) && (optimizeAssetsExperimentBuilder_ != null)) {
+        return optimizeAssetsExperimentBuilder_.getMessageOrBuilder();
+      } else {
+        if (experimentInfoCase_ == 22) {
+          return (com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo) experimentInfo_;
+        }
+        return com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Details of the optimize assets experiment. Applies for
+     * experiment types: OPTIMIZE_ASSETS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo, com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.Builder, com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfoOrBuilder> 
+        internalGetOptimizeAssetsExperimentFieldBuilder() {
+      if (optimizeAssetsExperimentBuilder_ == null) {
+        if (!(experimentInfoCase_ == 22)) {
+          experimentInfo_ = com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.getDefaultInstance();
+        }
+        optimizeAssetsExperimentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo, com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo.Builder, com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfoOrBuilder>(
+                (com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo) experimentInfo_,
+                getParentForChildren(),
+                isClean());
+        experimentInfo_ = null;
+      }
+      experimentInfoCase_ = 22;
+      onChanged();
+      return optimizeAssetsExperimentBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.Experiment)

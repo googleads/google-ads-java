@@ -338,6 +338,35 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PASSKEY_ENABLED_FIELD_NUMBER = 8;
+  private boolean passkeyEnabled_ = false;
+  /**
+   * <pre>
+   * Output only. Whether the user has passkey enabled.
+   * Read only field
+   * </pre>
+   *
+   * <code>optional bool passkey_enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the passkeyEnabled field is set.
+   */
+  @java.lang.Override
+  public boolean hasPasskeyEnabled() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Output only. Whether the user has passkey enabled.
+   * Read only field
+   * </pre>
+   *
+   * <code>optional bool passkey_enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The passkeyEnabled.
+   */
+  @java.lang.Override
+  public boolean getPasskeyEnabled() {
+    return passkeyEnabled_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -370,6 +399,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 7, inviterUserEmailAddress_);
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeBool(8, passkeyEnabled_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -398,6 +430,10 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(7, inviterUserEmailAddress_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, passkeyEnabled_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -434,6 +470,11 @@ private static final long serialVersionUID = 0L;
       if (!getInviterUserEmailAddress()
           .equals(other.getInviterUserEmailAddress())) return false;
     }
+    if (hasPasskeyEnabled() != other.hasPasskeyEnabled()) return false;
+    if (hasPasskeyEnabled()) {
+      if (getPasskeyEnabled()
+          != other.getPasskeyEnabled()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -463,6 +504,11 @@ private static final long serialVersionUID = 0L;
     if (hasInviterUserEmailAddress()) {
       hash = (37 * hash) + INVITER_USER_EMAIL_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getInviterUserEmailAddress().hashCode();
+    }
+    if (hasPasskeyEnabled()) {
+      hash = (37 * hash) + PASSKEY_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPasskeyEnabled());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -605,6 +651,7 @@ private static final long serialVersionUID = 0L;
       accessRole_ = 0;
       accessCreationDateTime_ = "";
       inviterUserEmailAddress_ = "";
+      passkeyEnabled_ = false;
       return this;
     }
 
@@ -660,6 +707,10 @@ private static final long serialVersionUID = 0L;
         result.inviterUserEmailAddress_ = inviterUserEmailAddress_;
         to_bitField0_ |= 0x00000004;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.passkeyEnabled_ = passkeyEnabled_;
+        to_bitField0_ |= 0x00000008;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -700,6 +751,9 @@ private static final long serialVersionUID = 0L;
         inviterUserEmailAddress_ = other.inviterUserEmailAddress_;
         bitField0_ |= 0x00000020;
         onChanged();
+      }
+      if (other.hasPasskeyEnabled()) {
+        setPasskeyEnabled(other.getPasskeyEnabled());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -757,6 +811,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 58
+            case 64: {
+              passkeyEnabled_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1329,6 +1388,66 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       inviterUserEmailAddress_ = value;
       bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private boolean passkeyEnabled_ ;
+    /**
+     * <pre>
+     * Output only. Whether the user has passkey enabled.
+     * Read only field
+     * </pre>
+     *
+     * <code>optional bool passkey_enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the passkeyEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasPasskeyEnabled() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. Whether the user has passkey enabled.
+     * Read only field
+     * </pre>
+     *
+     * <code>optional bool passkey_enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The passkeyEnabled.
+     */
+    @java.lang.Override
+    public boolean getPasskeyEnabled() {
+      return passkeyEnabled_;
+    }
+    /**
+     * <pre>
+     * Output only. Whether the user has passkey enabled.
+     * Read only field
+     * </pre>
+     *
+     * <code>optional bool passkey_enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The passkeyEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPasskeyEnabled(boolean value) {
+
+      passkeyEnabled_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Whether the user has passkey enabled.
+     * Read only field
+     * </pre>
+     *
+     * <code>optional bool passkey_enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPasskeyEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      passkeyEnabled_ = false;
       onChanged();
       return this;
     }

@@ -40,6 +40,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     inDesignCampaigns_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    assetGroups_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -55,6 +56,6203 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v24.resources.ExperimentArm.class, com.google.ads.googleads.v24.resources.ExperimentArm.Builder.class);
   }
 
+  public interface AssetTestingInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Details of assets associated for each experimental copy of the ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+     */
+    java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo> 
+        getAssetVariationInfosList();
+    /**
+     * <pre>
+     * Details of assets associated for each experimental copy of the ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+     */
+    com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo getAssetVariationInfos(int index);
+    /**
+     * <pre>
+     * Details of assets associated for each experimental copy of the ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+     */
+    int getAssetVariationInfosCount();
+    /**
+     * <pre>
+     * Details of assets associated for each experimental copy of the ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+     */
+    java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfoOrBuilder> 
+        getAssetVariationInfosOrBuilderList();
+    /**
+     * <pre>
+     * Details of assets associated for each experimental copy of the ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+     */
+    com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfoOrBuilder getAssetVariationInfosOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Details of assets associated with the experimental copies of
+   * ads.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo}
+   */
+  public static final class AssetTestingInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo)
+      AssetTestingInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 31,
+        /* patch= */ 0,
+        /* suffix= */ "",
+        AssetTestingInfo.class.getName());
+    }
+    // Use AssetTestingInfo.newBuilder() to construct.
+    private AssetTestingInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private AssetTestingInfo() {
+      assetVariationInfos_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetTestingInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetTestingInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.class, com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.Builder.class);
+    }
+
+    public static final int ASSET_VARIATION_INFOS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo> assetVariationInfos_;
+    /**
+     * <pre>
+     * Details of assets associated for each experimental copy of the ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo> getAssetVariationInfosList() {
+      return assetVariationInfos_;
+    }
+    /**
+     * <pre>
+     * Details of assets associated for each experimental copy of the ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfoOrBuilder> 
+        getAssetVariationInfosOrBuilderList() {
+      return assetVariationInfos_;
+    }
+    /**
+     * <pre>
+     * Details of assets associated for each experimental copy of the ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+     */
+    @java.lang.Override
+    public int getAssetVariationInfosCount() {
+      return assetVariationInfos_.size();
+    }
+    /**
+     * <pre>
+     * Details of assets associated for each experimental copy of the ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo getAssetVariationInfos(int index) {
+      return assetVariationInfos_.get(index);
+    }
+    /**
+     * <pre>
+     * Details of assets associated for each experimental copy of the ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfoOrBuilder getAssetVariationInfosOrBuilder(
+        int index) {
+      return assetVariationInfos_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < assetVariationInfos_.size(); i++) {
+        output.writeMessage(1, assetVariationInfos_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < assetVariationInfos_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, assetVariationInfos_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo other = (com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo) obj;
+
+      if (!getAssetVariationInfosList()
+          .equals(other.getAssetVariationInfosList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAssetVariationInfosCount() > 0) {
+        hash = (37 * hash) + ASSET_VARIATION_INFOS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetVariationInfosList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Details of assets associated with the experimental copies of
+     * ads.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo)
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetTestingInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetTestingInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.class, com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (assetVariationInfosBuilder_ == null) {
+          assetVariationInfos_ = java.util.Collections.emptyList();
+        } else {
+          assetVariationInfos_ = null;
+          assetVariationInfosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetTestingInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo getDefaultInstanceForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo build() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo buildPartial() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo result = new com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo result) {
+        if (assetVariationInfosBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            assetVariationInfos_ = java.util.Collections.unmodifiableList(assetVariationInfos_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.assetVariationInfos_ = assetVariationInfos_;
+        } else {
+          result.assetVariationInfos_ = assetVariationInfosBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo) {
+          return mergeFrom((com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo other) {
+        if (other == com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.getDefaultInstance()) return this;
+        if (assetVariationInfosBuilder_ == null) {
+          if (!other.assetVariationInfos_.isEmpty()) {
+            if (assetVariationInfos_.isEmpty()) {
+              assetVariationInfos_ = other.assetVariationInfos_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAssetVariationInfosIsMutable();
+              assetVariationInfos_.addAll(other.assetVariationInfos_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assetVariationInfos_.isEmpty()) {
+            if (assetVariationInfosBuilder_.isEmpty()) {
+              assetVariationInfosBuilder_.dispose();
+              assetVariationInfosBuilder_ = null;
+              assetVariationInfos_ = other.assetVariationInfos_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              assetVariationInfosBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetAssetVariationInfosFieldBuilder() : null;
+            } else {
+              assetVariationInfosBuilder_.addAllMessages(other.assetVariationInfos_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo m =
+                    input.readMessage(
+                        com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.parser(),
+                        extensionRegistry);
+                if (assetVariationInfosBuilder_ == null) {
+                  ensureAssetVariationInfosIsMutable();
+                  assetVariationInfos_.add(m);
+                } else {
+                  assetVariationInfosBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo> assetVariationInfos_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetVariationInfosIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          assetVariationInfos_ = new java.util.ArrayList<com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo>(assetVariationInfos_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfoOrBuilder> assetVariationInfosBuilder_;
+
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo> getAssetVariationInfosList() {
+        if (assetVariationInfosBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assetVariationInfos_);
+        } else {
+          return assetVariationInfosBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public int getAssetVariationInfosCount() {
+        if (assetVariationInfosBuilder_ == null) {
+          return assetVariationInfos_.size();
+        } else {
+          return assetVariationInfosBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo getAssetVariationInfos(int index) {
+        if (assetVariationInfosBuilder_ == null) {
+          return assetVariationInfos_.get(index);
+        } else {
+          return assetVariationInfosBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public Builder setAssetVariationInfos(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo value) {
+        if (assetVariationInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetVariationInfosIsMutable();
+          assetVariationInfos_.set(index, value);
+          onChanged();
+        } else {
+          assetVariationInfosBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public Builder setAssetVariationInfos(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder builderForValue) {
+        if (assetVariationInfosBuilder_ == null) {
+          ensureAssetVariationInfosIsMutable();
+          assetVariationInfos_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetVariationInfosBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public Builder addAssetVariationInfos(com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo value) {
+        if (assetVariationInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetVariationInfosIsMutable();
+          assetVariationInfos_.add(value);
+          onChanged();
+        } else {
+          assetVariationInfosBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public Builder addAssetVariationInfos(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo value) {
+        if (assetVariationInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetVariationInfosIsMutable();
+          assetVariationInfos_.add(index, value);
+          onChanged();
+        } else {
+          assetVariationInfosBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public Builder addAssetVariationInfos(
+          com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder builderForValue) {
+        if (assetVariationInfosBuilder_ == null) {
+          ensureAssetVariationInfosIsMutable();
+          assetVariationInfos_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetVariationInfosBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public Builder addAssetVariationInfos(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder builderForValue) {
+        if (assetVariationInfosBuilder_ == null) {
+          ensureAssetVariationInfosIsMutable();
+          assetVariationInfos_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetVariationInfosBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public Builder addAllAssetVariationInfos(
+          java.lang.Iterable<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo> values) {
+        if (assetVariationInfosBuilder_ == null) {
+          ensureAssetVariationInfosIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assetVariationInfos_);
+          onChanged();
+        } else {
+          assetVariationInfosBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public Builder clearAssetVariationInfos() {
+        if (assetVariationInfosBuilder_ == null) {
+          assetVariationInfos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          assetVariationInfosBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public Builder removeAssetVariationInfos(int index) {
+        if (assetVariationInfosBuilder_ == null) {
+          ensureAssetVariationInfosIsMutable();
+          assetVariationInfos_.remove(index);
+          onChanged();
+        } else {
+          assetVariationInfosBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder getAssetVariationInfosBuilder(
+          int index) {
+        return internalGetAssetVariationInfosFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfoOrBuilder getAssetVariationInfosOrBuilder(
+          int index) {
+        if (assetVariationInfosBuilder_ == null) {
+          return assetVariationInfos_.get(index);  } else {
+          return assetVariationInfosBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfoOrBuilder> 
+           getAssetVariationInfosOrBuilderList() {
+        if (assetVariationInfosBuilder_ != null) {
+          return assetVariationInfosBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assetVariationInfos_);
+        }
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder addAssetVariationInfosBuilder() {
+        return internalGetAssetVariationInfosFieldBuilder().addBuilder(
+            com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder addAssetVariationInfosBuilder(
+          int index) {
+        return internalGetAssetVariationInfosFieldBuilder().addBuilder(
+            index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Details of assets associated for each experimental copy of the ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo asset_variation_infos = 1;</code>
+       */
+      public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder> 
+           getAssetVariationInfosBuilderList() {
+        return internalGetAssetVariationInfosFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfoOrBuilder> 
+          internalGetAssetVariationInfosFieldBuilder() {
+        if (assetVariationInfosBuilder_ == null) {
+          assetVariationInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfoOrBuilder>(
+                  assetVariationInfos_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assetVariationInfos_ = null;
+        }
+        return assetVariationInfosBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo)
+    private static final com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo();
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssetTestingInfo>
+        PARSER = new com.google.protobuf.AbstractParser<AssetTestingInfo>() {
+      @java.lang.Override
+      public AssetTestingInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssetTestingInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssetTestingInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AssetVariationInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Associated base AdGroup resource name.
+     * </pre>
+     *
+     * <code>string base_ad_group = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The baseAdGroup.
+     */
+    java.lang.String getBaseAdGroup();
+    /**
+     * <pre>
+     * Associated base AdGroup resource name.
+     * </pre>
+     *
+     * <code>string base_ad_group = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for baseAdGroup.
+     */
+    com.google.protobuf.ByteString
+        getBaseAdGroupBytes();
+
+    /**
+     * <pre>
+     * Associated base ad resource name.
+     * </pre>
+     *
+     * <code>string base_ad = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return The baseAd.
+     */
+    java.lang.String getBaseAd();
+    /**
+     * <pre>
+     * Associated base ad resource name.
+     * </pre>
+     *
+     * <code>string base_ad = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for baseAd.
+     */
+    com.google.protobuf.ByteString
+        getBaseAdBytes();
+
+    /**
+     * <pre>
+     * Details for each asset that is being modified from the base
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+     */
+    java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail> 
+        getAssetDetailsList();
+    /**
+     * <pre>
+     * Details for each asset that is being modified from the base
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+     */
+    com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail getAssetDetails(int index);
+    /**
+     * <pre>
+     * Details for each asset that is being modified from the base
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+     */
+    int getAssetDetailsCount();
+    /**
+     * <pre>
+     * Details for each asset that is being modified from the base
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+     */
+    java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetailOrBuilder> 
+        getAssetDetailsOrBuilderList();
+    /**
+     * <pre>
+     * Details for each asset that is being modified from the base
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+     */
+    com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetailOrBuilder getAssetDetailsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Details of asset variations to be performed on an ad in the control ad
+   * group.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo}
+   */
+  public static final class AssetVariationInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo)
+      AssetVariationInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 31,
+        /* patch= */ 0,
+        /* suffix= */ "",
+        AssetVariationInfo.class.getName());
+    }
+    // Use AssetVariationInfo.newBuilder() to construct.
+    private AssetVariationInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private AssetVariationInfo() {
+      baseAdGroup_ = "";
+      baseAd_ = "";
+      assetDetails_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetVariationInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetVariationInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.class, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder.class);
+    }
+
+    public static final int BASE_AD_GROUP_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baseAdGroup_ = "";
+    /**
+     * <pre>
+     * Associated base AdGroup resource name.
+     * </pre>
+     *
+     * <code>string base_ad_group = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The baseAdGroup.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseAdGroup() {
+      java.lang.Object ref = baseAdGroup_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseAdGroup_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Associated base AdGroup resource name.
+     * </pre>
+     *
+     * <code>string base_ad_group = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for baseAdGroup.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseAdGroupBytes() {
+      java.lang.Object ref = baseAdGroup_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseAdGroup_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BASE_AD_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baseAd_ = "";
+    /**
+     * <pre>
+     * Associated base ad resource name.
+     * </pre>
+     *
+     * <code>string base_ad = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return The baseAd.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseAd() {
+      java.lang.Object ref = baseAd_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseAd_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Associated base ad resource name.
+     * </pre>
+     *
+     * <code>string base_ad = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for baseAd.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseAdBytes() {
+      java.lang.Object ref = baseAd_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseAd_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSET_DETAILS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail> assetDetails_;
+    /**
+     * <pre>
+     * Details for each asset that is being modified from the base
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail> getAssetDetailsList() {
+      return assetDetails_;
+    }
+    /**
+     * <pre>
+     * Details for each asset that is being modified from the base
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetailOrBuilder> 
+        getAssetDetailsOrBuilderList() {
+      return assetDetails_;
+    }
+    /**
+     * <pre>
+     * Details for each asset that is being modified from the base
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+     */
+    @java.lang.Override
+    public int getAssetDetailsCount() {
+      return assetDetails_.size();
+    }
+    /**
+     * <pre>
+     * Details for each asset that is being modified from the base
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail getAssetDetails(int index) {
+      return assetDetails_.get(index);
+    }
+    /**
+     * <pre>
+     * Details for each asset that is being modified from the base
+     * ad.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetailOrBuilder getAssetDetailsOrBuilder(
+        int index) {
+      return assetDetails_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(baseAdGroup_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, baseAdGroup_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(baseAd_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, baseAd_);
+      }
+      for (int i = 0; i < assetDetails_.size(); i++) {
+        output.writeMessage(3, assetDetails_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(baseAdGroup_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, baseAdGroup_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(baseAd_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, baseAd_);
+      }
+      for (int i = 0; i < assetDetails_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, assetDetails_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo other = (com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo) obj;
+
+      if (!getBaseAdGroup()
+          .equals(other.getBaseAdGroup())) return false;
+      if (!getBaseAd()
+          .equals(other.getBaseAd())) return false;
+      if (!getAssetDetailsList()
+          .equals(other.getAssetDetailsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BASE_AD_GROUP_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseAdGroup().hashCode();
+      hash = (37 * hash) + BASE_AD_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseAd().hashCode();
+      if (getAssetDetailsCount() > 0) {
+        hash = (37 * hash) + ASSET_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetDetailsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Details of asset variations to be performed on an ad in the control ad
+     * group.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo)
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetVariationInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetVariationInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.class, com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        baseAdGroup_ = "";
+        baseAd_ = "";
+        if (assetDetailsBuilder_ == null) {
+          assetDetails_ = java.util.Collections.emptyList();
+        } else {
+          assetDetails_ = null;
+          assetDetailsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetVariationInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo getDefaultInstanceForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo build() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo buildPartial() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo result = new com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo result) {
+        if (assetDetailsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            assetDetails_ = java.util.Collections.unmodifiableList(assetDetails_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.assetDetails_ = assetDetails_;
+        } else {
+          result.assetDetails_ = assetDetailsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.baseAdGroup_ = baseAdGroup_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.baseAd_ = baseAd_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo) {
+          return mergeFrom((com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo other) {
+        if (other == com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo.getDefaultInstance()) return this;
+        if (!other.getBaseAdGroup().isEmpty()) {
+          baseAdGroup_ = other.baseAdGroup_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBaseAd().isEmpty()) {
+          baseAd_ = other.baseAd_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (assetDetailsBuilder_ == null) {
+          if (!other.assetDetails_.isEmpty()) {
+            if (assetDetails_.isEmpty()) {
+              assetDetails_ = other.assetDetails_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAssetDetailsIsMutable();
+              assetDetails_.addAll(other.assetDetails_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assetDetails_.isEmpty()) {
+            if (assetDetailsBuilder_.isEmpty()) {
+              assetDetailsBuilder_.dispose();
+              assetDetailsBuilder_ = null;
+              assetDetails_ = other.assetDetails_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              assetDetailsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetAssetDetailsFieldBuilder() : null;
+            } else {
+              assetDetailsBuilder_.addAllMessages(other.assetDetails_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                baseAdGroup_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                baseAd_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail m =
+                    input.readMessage(
+                        com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.parser(),
+                        extensionRegistry);
+                if (assetDetailsBuilder_ == null) {
+                  ensureAssetDetailsIsMutable();
+                  assetDetails_.add(m);
+                } else {
+                  assetDetailsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object baseAdGroup_ = "";
+      /**
+       * <pre>
+       * Associated base AdGroup resource name.
+       * </pre>
+       *
+       * <code>string base_ad_group = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return The baseAdGroup.
+       */
+      public java.lang.String getBaseAdGroup() {
+        java.lang.Object ref = baseAdGroup_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseAdGroup_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Associated base AdGroup resource name.
+       * </pre>
+       *
+       * <code>string base_ad_group = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return The bytes for baseAdGroup.
+       */
+      public com.google.protobuf.ByteString
+          getBaseAdGroupBytes() {
+        java.lang.Object ref = baseAdGroup_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseAdGroup_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Associated base AdGroup resource name.
+       * </pre>
+       *
+       * <code>string base_ad_group = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The baseAdGroup to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseAdGroup(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        baseAdGroup_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Associated base AdGroup resource name.
+       * </pre>
+       *
+       * <code>string base_ad_group = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseAdGroup() {
+        baseAdGroup_ = getDefaultInstance().getBaseAdGroup();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Associated base AdGroup resource name.
+       * </pre>
+       *
+       * <code>string base_ad_group = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The bytes for baseAdGroup to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseAdGroupBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        baseAdGroup_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object baseAd_ = "";
+      /**
+       * <pre>
+       * Associated base ad resource name.
+       * </pre>
+       *
+       * <code>string base_ad = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @return The baseAd.
+       */
+      public java.lang.String getBaseAd() {
+        java.lang.Object ref = baseAd_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseAd_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Associated base ad resource name.
+       * </pre>
+       *
+       * <code>string base_ad = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @return The bytes for baseAd.
+       */
+      public com.google.protobuf.ByteString
+          getBaseAdBytes() {
+        java.lang.Object ref = baseAd_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseAd_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Associated base ad resource name.
+       * </pre>
+       *
+       * <code>string base_ad = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The baseAd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseAd(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        baseAd_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Associated base ad resource name.
+       * </pre>
+       *
+       * <code>string base_ad = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseAd() {
+        baseAd_ = getDefaultInstance().getBaseAd();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Associated base ad resource name.
+       * </pre>
+       *
+       * <code>string base_ad = 2 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The bytes for baseAd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseAdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        baseAd_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail> assetDetails_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetDetailsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          assetDetails_ = new java.util.ArrayList<com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail>(assetDetails_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetailOrBuilder> assetDetailsBuilder_;
+
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail> getAssetDetailsList() {
+        if (assetDetailsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assetDetails_);
+        } else {
+          return assetDetailsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public int getAssetDetailsCount() {
+        if (assetDetailsBuilder_ == null) {
+          return assetDetails_.size();
+        } else {
+          return assetDetailsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail getAssetDetails(int index) {
+        if (assetDetailsBuilder_ == null) {
+          return assetDetails_.get(index);
+        } else {
+          return assetDetailsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public Builder setAssetDetails(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail value) {
+        if (assetDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetDetailsIsMutable();
+          assetDetails_.set(index, value);
+          onChanged();
+        } else {
+          assetDetailsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public Builder setAssetDetails(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder builderForValue) {
+        if (assetDetailsBuilder_ == null) {
+          ensureAssetDetailsIsMutable();
+          assetDetails_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetDetailsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public Builder addAssetDetails(com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail value) {
+        if (assetDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetDetailsIsMutable();
+          assetDetails_.add(value);
+          onChanged();
+        } else {
+          assetDetailsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public Builder addAssetDetails(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail value) {
+        if (assetDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetDetailsIsMutable();
+          assetDetails_.add(index, value);
+          onChanged();
+        } else {
+          assetDetailsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public Builder addAssetDetails(
+          com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder builderForValue) {
+        if (assetDetailsBuilder_ == null) {
+          ensureAssetDetailsIsMutable();
+          assetDetails_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetDetailsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public Builder addAssetDetails(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder builderForValue) {
+        if (assetDetailsBuilder_ == null) {
+          ensureAssetDetailsIsMutable();
+          assetDetails_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetDetailsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public Builder addAllAssetDetails(
+          java.lang.Iterable<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail> values) {
+        if (assetDetailsBuilder_ == null) {
+          ensureAssetDetailsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assetDetails_);
+          onChanged();
+        } else {
+          assetDetailsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public Builder clearAssetDetails() {
+        if (assetDetailsBuilder_ == null) {
+          assetDetails_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          assetDetailsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public Builder removeAssetDetails(int index) {
+        if (assetDetailsBuilder_ == null) {
+          ensureAssetDetailsIsMutable();
+          assetDetails_.remove(index);
+          onChanged();
+        } else {
+          assetDetailsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder getAssetDetailsBuilder(
+          int index) {
+        return internalGetAssetDetailsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetailOrBuilder getAssetDetailsOrBuilder(
+          int index) {
+        if (assetDetailsBuilder_ == null) {
+          return assetDetails_.get(index);  } else {
+          return assetDetailsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetailOrBuilder> 
+           getAssetDetailsOrBuilderList() {
+        if (assetDetailsBuilder_ != null) {
+          return assetDetailsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assetDetails_);
+        }
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder addAssetDetailsBuilder() {
+        return internalGetAssetDetailsFieldBuilder().addBuilder(
+            com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder addAssetDetailsBuilder(
+          int index) {
+        return internalGetAssetDetailsFieldBuilder().addBuilder(
+            index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Details for each asset that is being modified from the base
+       * ad.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetDetail asset_details = 3;</code>
+       */
+      public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder> 
+           getAssetDetailsBuilderList() {
+        return internalGetAssetDetailsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetailOrBuilder> 
+          internalGetAssetDetailsFieldBuilder() {
+        if (assetDetailsBuilder_ == null) {
+          assetDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetailOrBuilder>(
+                  assetDetails_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assetDetails_ = null;
+        }
+        return assetDetailsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo)
+    private static final com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo();
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssetVariationInfo>
+        PARSER = new com.google.protobuf.AbstractParser<AssetVariationInfo>() {
+      @java.lang.Override
+      public AssetVariationInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssetVariationInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssetVariationInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetVariationInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AssetDetailOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v24.resources.ExperimentArm.AssetDetail)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The asset that is being modified for the experiment.
+     * </pre>
+     *
+     * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The asset.
+     */
+    java.lang.String getAsset();
+    /**
+     * <pre>
+     * The asset that is being modified for the experiment.
+     * </pre>
+     *
+     * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for asset.
+     */
+    com.google.protobuf.ByteString
+        getAssetBytes();
+
+    /**
+     * <pre>
+     * Field type for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * @return The enum numeric value on the wire for fieldType.
+     */
+    int getFieldTypeValue();
+    /**
+     * <pre>
+     * Field type for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * @return The fieldType.
+     */
+    com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType getFieldType();
+
+    /**
+     * <pre>
+     * Enum to specify whether the asset is removed or added from the base
+     * ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation asset_detail_operation = 3;</code>
+     * @return The enum numeric value on the wire for assetDetailOperation.
+     */
+    int getAssetDetailOperationValue();
+    /**
+     * <pre>
+     * Enum to specify whether the asset is removed or added from the base
+     * ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation asset_detail_operation = 3;</code>
+     * @return The assetDetailOperation.
+     */
+    com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation getAssetDetailOperation();
+  }
+  /**
+   * <pre>
+   * Details of an asset modification for the experiment ad, such as adding or
+   * removing the asset.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.AssetDetail}
+   */
+  public static final class AssetDetail extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v24.resources.ExperimentArm.AssetDetail)
+      AssetDetailOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 31,
+        /* patch= */ 0,
+        /* suffix= */ "",
+        AssetDetail.class.getName());
+    }
+    // Use AssetDetail.newBuilder() to construct.
+    private AssetDetail(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private AssetDetail() {
+      asset_ = "";
+      fieldType_ = 0;
+      assetDetailOperation_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetDetail_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetDetail_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.class, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder.class);
+    }
+
+    public static final int ASSET_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object asset_ = "";
+    /**
+     * <pre>
+     * The asset that is being modified for the experiment.
+     * </pre>
+     *
+     * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The asset.
+     */
+    @java.lang.Override
+    public java.lang.String getAsset() {
+      java.lang.Object ref = asset_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        asset_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The asset that is being modified for the experiment.
+     * </pre>
+     *
+     * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for asset.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAssetBytes() {
+      java.lang.Object ref = asset_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        asset_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FIELD_TYPE_FIELD_NUMBER = 2;
+    private int fieldType_ = 0;
+    /**
+     * <pre>
+     * Field type for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * @return The enum numeric value on the wire for fieldType.
+     */
+    @java.lang.Override public int getFieldTypeValue() {
+      return fieldType_;
+    }
+    /**
+     * <pre>
+     * Field type for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * @return The fieldType.
+     */
+    @java.lang.Override public com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType getFieldType() {
+      com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType result = com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.forNumber(fieldType_);
+      return result == null ? com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.UNRECOGNIZED : result;
+    }
+
+    public static final int ASSET_DETAIL_OPERATION_FIELD_NUMBER = 3;
+    private int assetDetailOperation_ = 0;
+    /**
+     * <pre>
+     * Enum to specify whether the asset is removed or added from the base
+     * ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation asset_detail_operation = 3;</code>
+     * @return The enum numeric value on the wire for assetDetailOperation.
+     */
+    @java.lang.Override public int getAssetDetailOperationValue() {
+      return assetDetailOperation_;
+    }
+    /**
+     * <pre>
+     * Enum to specify whether the asset is removed or added from the base
+     * ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation asset_detail_operation = 3;</code>
+     * @return The assetDetailOperation.
+     */
+    @java.lang.Override public com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation getAssetDetailOperation() {
+      com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation result = com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation.forNumber(assetDetailOperation_);
+      return result == null ? com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(asset_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, asset_);
+      }
+      if (fieldType_ != com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, fieldType_);
+      }
+      if (assetDetailOperation_ != com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation.UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, assetDetailOperation_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(asset_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, asset_);
+      }
+      if (fieldType_ != com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, fieldType_);
+      }
+      if (assetDetailOperation_ != com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, assetDetailOperation_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail other = (com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail) obj;
+
+      if (!getAsset()
+          .equals(other.getAsset())) return false;
+      if (fieldType_ != other.fieldType_) return false;
+      if (assetDetailOperation_ != other.assetDetailOperation_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSET_FIELD_NUMBER;
+      hash = (53 * hash) + getAsset().hashCode();
+      hash = (37 * hash) + FIELD_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + fieldType_;
+      hash = (37 * hash) + ASSET_DETAIL_OPERATION_FIELD_NUMBER;
+      hash = (53 * hash) + assetDetailOperation_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Details of an asset modification for the experiment ad, such as adding or
+     * removing the asset.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.AssetDetail}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v24.resources.ExperimentArm.AssetDetail)
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetailOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetDetail_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetDetail_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.class, com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        asset_ = "";
+        fieldType_ = 0;
+        assetDetailOperation_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetDetail_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail getDefaultInstanceForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail build() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail buildPartial() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail result = new com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.asset_ = asset_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fieldType_ = fieldType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.assetDetailOperation_ = assetDetailOperation_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail) {
+          return mergeFrom((com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail other) {
+        if (other == com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail.getDefaultInstance()) return this;
+        if (!other.getAsset().isEmpty()) {
+          asset_ = other.asset_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.fieldType_ != 0) {
+          setFieldTypeValue(other.getFieldTypeValue());
+        }
+        if (other.assetDetailOperation_ != 0) {
+          setAssetDetailOperationValue(other.getAssetDetailOperationValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                asset_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                fieldType_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                assetDetailOperation_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object asset_ = "";
+      /**
+       * <pre>
+       * The asset that is being modified for the experiment.
+       * </pre>
+       *
+       * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return The asset.
+       */
+      public java.lang.String getAsset() {
+        java.lang.Object ref = asset_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          asset_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The asset that is being modified for the experiment.
+       * </pre>
+       *
+       * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return The bytes for asset.
+       */
+      public com.google.protobuf.ByteString
+          getAssetBytes() {
+        java.lang.Object ref = asset_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          asset_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The asset that is being modified for the experiment.
+       * </pre>
+       *
+       * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The asset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAsset(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        asset_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The asset that is being modified for the experiment.
+       * </pre>
+       *
+       * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAsset() {
+        asset_ = getDefaultInstance().getAsset();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The asset that is being modified for the experiment.
+       * </pre>
+       *
+       * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The bytes for asset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        asset_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int fieldType_ = 0;
+      /**
+       * <pre>
+       * Field type for the asset.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+       * @return The enum numeric value on the wire for fieldType.
+       */
+      @java.lang.Override public int getFieldTypeValue() {
+        return fieldType_;
+      }
+      /**
+       * <pre>
+       * Field type for the asset.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+       * @param value The enum numeric value on the wire for fieldType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFieldTypeValue(int value) {
+        fieldType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Field type for the asset.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+       * @return The fieldType.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType getFieldType() {
+        com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType result = com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.forNumber(fieldType_);
+        return result == null ? com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Field type for the asset.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+       * @param value The fieldType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFieldType(com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType value) {
+        if (value == null) { throw new NullPointerException(); }
+        bitField0_ |= 0x00000002;
+        fieldType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Field type for the asset.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFieldType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fieldType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int assetDetailOperation_ = 0;
+      /**
+       * <pre>
+       * Enum to specify whether the asset is removed or added from the base
+       * ad.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation asset_detail_operation = 3;</code>
+       * @return The enum numeric value on the wire for assetDetailOperation.
+       */
+      @java.lang.Override public int getAssetDetailOperationValue() {
+        return assetDetailOperation_;
+      }
+      /**
+       * <pre>
+       * Enum to specify whether the asset is removed or added from the base
+       * ad.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation asset_detail_operation = 3;</code>
+       * @param value The enum numeric value on the wire for assetDetailOperation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetDetailOperationValue(int value) {
+        assetDetailOperation_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enum to specify whether the asset is removed or added from the base
+       * ad.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation asset_detail_operation = 3;</code>
+       * @return The assetDetailOperation.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation getAssetDetailOperation() {
+        com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation result = com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation.forNumber(assetDetailOperation_);
+        return result == null ? com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Enum to specify whether the asset is removed or added from the base
+       * ad.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation asset_detail_operation = 3;</code>
+       * @param value The assetDetailOperation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetDetailOperation(com.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation value) {
+        if (value == null) { throw new NullPointerException(); }
+        bitField0_ |= 0x00000004;
+        assetDetailOperation_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enum to specify whether the asset is removed or added from the base
+       * ad.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.ExperimentAssetDetailOperationEnum.ExperimentAssetDetailOperation asset_detail_operation = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetDetailOperation() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        assetDetailOperation_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.ExperimentArm.AssetDetail)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v24.resources.ExperimentArm.AssetDetail)
+    private static final com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail();
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssetDetail>
+        PARSER = new com.google.protobuf.AbstractParser<AssetDetail>() {
+      @java.lang.Override
+      public AssetDetail parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssetDetail> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssetDetail> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetDetail getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AssetGroupInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Asset group resource name.
+     * </pre>
+     *
+     * <code>string asset_group = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The assetGroup.
+     */
+    java.lang.String getAssetGroup();
+    /**
+     * <pre>
+     * Asset group resource name.
+     * </pre>
+     *
+     * <code>string asset_group = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for assetGroup.
+     */
+    com.google.protobuf.ByteString
+        getAssetGroupBytes();
+
+    /**
+     * <pre>
+     * List of asset group assets under the asset group.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+     */
+    java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo> 
+        getAssetGroupAssetsList();
+    /**
+     * <pre>
+     * List of asset group assets under the asset group.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+     */
+    com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo getAssetGroupAssets(int index);
+    /**
+     * <pre>
+     * List of asset group assets under the asset group.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+     */
+    int getAssetGroupAssetsCount();
+    /**
+     * <pre>
+     * List of asset group assets under the asset group.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+     */
+    java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfoOrBuilder> 
+        getAssetGroupAssetsOrBuilderList();
+    /**
+     * <pre>
+     * List of asset group assets under the asset group.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+     */
+    com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfoOrBuilder getAssetGroupAssetsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Holds the asset groups included in an arm of an Optimize Assets experiment.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo}
+   */
+  public static final class AssetGroupInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo)
+      AssetGroupInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 31,
+        /* patch= */ 0,
+        /* suffix= */ "",
+        AssetGroupInfo.class.getName());
+    }
+    // Use AssetGroupInfo.newBuilder() to construct.
+    private AssetGroupInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private AssetGroupInfo() {
+      assetGroup_ = "";
+      assetGroupAssets_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.class, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder.class);
+    }
+
+    public static final int ASSET_GROUP_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object assetGroup_ = "";
+    /**
+     * <pre>
+     * Asset group resource name.
+     * </pre>
+     *
+     * <code>string asset_group = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The assetGroup.
+     */
+    @java.lang.Override
+    public java.lang.String getAssetGroup() {
+      java.lang.Object ref = assetGroup_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assetGroup_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Asset group resource name.
+     * </pre>
+     *
+     * <code>string asset_group = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for assetGroup.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAssetGroupBytes() {
+      java.lang.Object ref = assetGroup_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assetGroup_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSET_GROUP_ASSETS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo> assetGroupAssets_;
+    /**
+     * <pre>
+     * List of asset group assets under the asset group.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo> getAssetGroupAssetsList() {
+      return assetGroupAssets_;
+    }
+    /**
+     * <pre>
+     * List of asset group assets under the asset group.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfoOrBuilder> 
+        getAssetGroupAssetsOrBuilderList() {
+      return assetGroupAssets_;
+    }
+    /**
+     * <pre>
+     * List of asset group assets under the asset group.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+     */
+    @java.lang.Override
+    public int getAssetGroupAssetsCount() {
+      return assetGroupAssets_.size();
+    }
+    /**
+     * <pre>
+     * List of asset group assets under the asset group.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo getAssetGroupAssets(int index) {
+      return assetGroupAssets_.get(index);
+    }
+    /**
+     * <pre>
+     * List of asset group assets under the asset group.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfoOrBuilder getAssetGroupAssetsOrBuilder(
+        int index) {
+      return assetGroupAssets_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(assetGroup_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, assetGroup_);
+      }
+      for (int i = 0; i < assetGroupAssets_.size(); i++) {
+        output.writeMessage(2, assetGroupAssets_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(assetGroup_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, assetGroup_);
+      }
+      for (int i = 0; i < assetGroupAssets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, assetGroupAssets_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo other = (com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo) obj;
+
+      if (!getAssetGroup()
+          .equals(other.getAssetGroup())) return false;
+      if (!getAssetGroupAssetsList()
+          .equals(other.getAssetGroupAssetsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSET_GROUP_FIELD_NUMBER;
+      hash = (53 * hash) + getAssetGroup().hashCode();
+      if (getAssetGroupAssetsCount() > 0) {
+        hash = (37 * hash) + ASSET_GROUP_ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetGroupAssetsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Holds the asset groups included in an arm of an Optimize Assets experiment.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo)
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.class, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        assetGroup_ = "";
+        if (assetGroupAssetsBuilder_ == null) {
+          assetGroupAssets_ = java.util.Collections.emptyList();
+        } else {
+          assetGroupAssets_ = null;
+          assetGroupAssetsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo getDefaultInstanceForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo build() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo buildPartial() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo result = new com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo result) {
+        if (assetGroupAssetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            assetGroupAssets_ = java.util.Collections.unmodifiableList(assetGroupAssets_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.assetGroupAssets_ = assetGroupAssets_;
+        } else {
+          result.assetGroupAssets_ = assetGroupAssetsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.assetGroup_ = assetGroup_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo) {
+          return mergeFrom((com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo other) {
+        if (other == com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.getDefaultInstance()) return this;
+        if (!other.getAssetGroup().isEmpty()) {
+          assetGroup_ = other.assetGroup_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (assetGroupAssetsBuilder_ == null) {
+          if (!other.assetGroupAssets_.isEmpty()) {
+            if (assetGroupAssets_.isEmpty()) {
+              assetGroupAssets_ = other.assetGroupAssets_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAssetGroupAssetsIsMutable();
+              assetGroupAssets_.addAll(other.assetGroupAssets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assetGroupAssets_.isEmpty()) {
+            if (assetGroupAssetsBuilder_.isEmpty()) {
+              assetGroupAssetsBuilder_.dispose();
+              assetGroupAssetsBuilder_ = null;
+              assetGroupAssets_ = other.assetGroupAssets_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              assetGroupAssetsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetAssetGroupAssetsFieldBuilder() : null;
+            } else {
+              assetGroupAssetsBuilder_.addAllMessages(other.assetGroupAssets_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                assetGroup_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo m =
+                    input.readMessage(
+                        com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.parser(),
+                        extensionRegistry);
+                if (assetGroupAssetsBuilder_ == null) {
+                  ensureAssetGroupAssetsIsMutable();
+                  assetGroupAssets_.add(m);
+                } else {
+                  assetGroupAssetsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object assetGroup_ = "";
+      /**
+       * <pre>
+       * Asset group resource name.
+       * </pre>
+       *
+       * <code>string asset_group = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return The assetGroup.
+       */
+      public java.lang.String getAssetGroup() {
+        java.lang.Object ref = assetGroup_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          assetGroup_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Asset group resource name.
+       * </pre>
+       *
+       * <code>string asset_group = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return The bytes for assetGroup.
+       */
+      public com.google.protobuf.ByteString
+          getAssetGroupBytes() {
+        java.lang.Object ref = assetGroup_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          assetGroup_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Asset group resource name.
+       * </pre>
+       *
+       * <code>string asset_group = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The assetGroup to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetGroup(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        assetGroup_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset group resource name.
+       * </pre>
+       *
+       * <code>string asset_group = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetGroup() {
+        assetGroup_ = getDefaultInstance().getAssetGroup();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset group resource name.
+       * </pre>
+       *
+       * <code>string asset_group = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The bytes for assetGroup to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetGroupBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        assetGroup_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo> assetGroupAssets_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetGroupAssetsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          assetGroupAssets_ = new java.util.ArrayList<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo>(assetGroupAssets_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfoOrBuilder> assetGroupAssetsBuilder_;
+
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo> getAssetGroupAssetsList() {
+        if (assetGroupAssetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assetGroupAssets_);
+        } else {
+          return assetGroupAssetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public int getAssetGroupAssetsCount() {
+        if (assetGroupAssetsBuilder_ == null) {
+          return assetGroupAssets_.size();
+        } else {
+          return assetGroupAssetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo getAssetGroupAssets(int index) {
+        if (assetGroupAssetsBuilder_ == null) {
+          return assetGroupAssets_.get(index);
+        } else {
+          return assetGroupAssetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public Builder setAssetGroupAssets(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo value) {
+        if (assetGroupAssetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetGroupAssetsIsMutable();
+          assetGroupAssets_.set(index, value);
+          onChanged();
+        } else {
+          assetGroupAssetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public Builder setAssetGroupAssets(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder builderForValue) {
+        if (assetGroupAssetsBuilder_ == null) {
+          ensureAssetGroupAssetsIsMutable();
+          assetGroupAssets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetGroupAssetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public Builder addAssetGroupAssets(com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo value) {
+        if (assetGroupAssetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetGroupAssetsIsMutable();
+          assetGroupAssets_.add(value);
+          onChanged();
+        } else {
+          assetGroupAssetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public Builder addAssetGroupAssets(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo value) {
+        if (assetGroupAssetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetGroupAssetsIsMutable();
+          assetGroupAssets_.add(index, value);
+          onChanged();
+        } else {
+          assetGroupAssetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public Builder addAssetGroupAssets(
+          com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder builderForValue) {
+        if (assetGroupAssetsBuilder_ == null) {
+          ensureAssetGroupAssetsIsMutable();
+          assetGroupAssets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetGroupAssetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public Builder addAssetGroupAssets(
+          int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder builderForValue) {
+        if (assetGroupAssetsBuilder_ == null) {
+          ensureAssetGroupAssetsIsMutable();
+          assetGroupAssets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetGroupAssetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public Builder addAllAssetGroupAssets(
+          java.lang.Iterable<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo> values) {
+        if (assetGroupAssetsBuilder_ == null) {
+          ensureAssetGroupAssetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assetGroupAssets_);
+          onChanged();
+        } else {
+          assetGroupAssetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public Builder clearAssetGroupAssets() {
+        if (assetGroupAssetsBuilder_ == null) {
+          assetGroupAssets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          assetGroupAssetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public Builder removeAssetGroupAssets(int index) {
+        if (assetGroupAssetsBuilder_ == null) {
+          ensureAssetGroupAssetsIsMutable();
+          assetGroupAssets_.remove(index);
+          onChanged();
+        } else {
+          assetGroupAssetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder getAssetGroupAssetsBuilder(
+          int index) {
+        return internalGetAssetGroupAssetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfoOrBuilder getAssetGroupAssetsOrBuilder(
+          int index) {
+        if (assetGroupAssetsBuilder_ == null) {
+          return assetGroupAssets_.get(index);  } else {
+          return assetGroupAssetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfoOrBuilder> 
+           getAssetGroupAssetsOrBuilderList() {
+        if (assetGroupAssetsBuilder_ != null) {
+          return assetGroupAssetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assetGroupAssets_);
+        }
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder addAssetGroupAssetsBuilder() {
+        return internalGetAssetGroupAssetsFieldBuilder().addBuilder(
+            com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder addAssetGroupAssetsBuilder(
+          int index) {
+        return internalGetAssetGroupAssetsFieldBuilder().addBuilder(
+            index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of asset group assets under the asset group.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo asset_group_assets = 2;</code>
+       */
+      public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder> 
+           getAssetGroupAssetsBuilderList() {
+        return internalGetAssetGroupAssetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfoOrBuilder> 
+          internalGetAssetGroupAssetsFieldBuilder() {
+        if (assetGroupAssetsBuilder_ == null) {
+          assetGroupAssetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfoOrBuilder>(
+                  assetGroupAssets_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assetGroupAssets_ = null;
+        }
+        return assetGroupAssetsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo)
+    private static final com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo();
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssetGroupInfo>
+        PARSER = new com.google.protobuf.AbstractParser<AssetGroupInfo>() {
+      @java.lang.Override
+      public AssetGroupInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssetGroupInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssetGroupInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AssetGroupAssetInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Asset resource name of the asset group asset.
+     * </pre>
+     *
+     * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The asset.
+     */
+    java.lang.String getAsset();
+    /**
+     * <pre>
+     * Asset resource name of the asset group asset.
+     * </pre>
+     *
+     * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for asset.
+     */
+    com.google.protobuf.ByteString
+        getAssetBytes();
+
+    /**
+     * <pre>
+     * Field type of the asset group asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * @return The enum numeric value on the wire for fieldType.
+     */
+    int getFieldTypeValue();
+    /**
+     * <pre>
+     * Field type of the asset group asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * @return The fieldType.
+     */
+    com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType getFieldType();
+  }
+  /**
+   * <pre>
+   * Holds the details of an asset within an asset group for an Optimize Assets
+   * experiment arm.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo}
+   */
+  public static final class AssetGroupAssetInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo)
+      AssetGroupAssetInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 31,
+        /* patch= */ 0,
+        /* suffix= */ "",
+        AssetGroupAssetInfo.class.getName());
+    }
+    // Use AssetGroupAssetInfo.newBuilder() to construct.
+    private AssetGroupAssetInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private AssetGroupAssetInfo() {
+      asset_ = "";
+      fieldType_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupAssetInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupAssetInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.class, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder.class);
+    }
+
+    public static final int ASSET_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object asset_ = "";
+    /**
+     * <pre>
+     * Asset resource name of the asset group asset.
+     * </pre>
+     *
+     * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The asset.
+     */
+    @java.lang.Override
+    public java.lang.String getAsset() {
+      java.lang.Object ref = asset_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        asset_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Asset resource name of the asset group asset.
+     * </pre>
+     *
+     * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for asset.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAssetBytes() {
+      java.lang.Object ref = asset_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        asset_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FIELD_TYPE_FIELD_NUMBER = 2;
+    private int fieldType_ = 0;
+    /**
+     * <pre>
+     * Field type of the asset group asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * @return The enum numeric value on the wire for fieldType.
+     */
+    @java.lang.Override public int getFieldTypeValue() {
+      return fieldType_;
+    }
+    /**
+     * <pre>
+     * Field type of the asset group asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * @return The fieldType.
+     */
+    @java.lang.Override public com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType getFieldType() {
+      com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType result = com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.forNumber(fieldType_);
+      return result == null ? com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(asset_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, asset_);
+      }
+      if (fieldType_ != com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, fieldType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(asset_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, asset_);
+      }
+      if (fieldType_ != com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, fieldType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo other = (com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo) obj;
+
+      if (!getAsset()
+          .equals(other.getAsset())) return false;
+      if (fieldType_ != other.fieldType_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSET_FIELD_NUMBER;
+      hash = (53 * hash) + getAsset().hashCode();
+      hash = (37 * hash) + FIELD_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + fieldType_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Holds the details of an asset within an asset group for an Optimize Assets
+     * experiment arm.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo)
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupAssetInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupAssetInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.class, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        asset_ = "";
+        fieldType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_AssetGroupAssetInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo getDefaultInstanceForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo build() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo buildPartial() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo result = new com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.asset_ = asset_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fieldType_ = fieldType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo) {
+          return mergeFrom((com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo other) {
+        if (other == com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo.getDefaultInstance()) return this;
+        if (!other.getAsset().isEmpty()) {
+          asset_ = other.asset_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.fieldType_ != 0) {
+          setFieldTypeValue(other.getFieldTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                asset_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                fieldType_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object asset_ = "";
+      /**
+       * <pre>
+       * Asset resource name of the asset group asset.
+       * </pre>
+       *
+       * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return The asset.
+       */
+      public java.lang.String getAsset() {
+        java.lang.Object ref = asset_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          asset_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Asset resource name of the asset group asset.
+       * </pre>
+       *
+       * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return The bytes for asset.
+       */
+      public com.google.protobuf.ByteString
+          getAssetBytes() {
+        java.lang.Object ref = asset_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          asset_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Asset resource name of the asset group asset.
+       * </pre>
+       *
+       * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The asset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAsset(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        asset_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset resource name of the asset group asset.
+       * </pre>
+       *
+       * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAsset() {
+        asset_ = getDefaultInstance().getAsset();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset resource name of the asset group asset.
+       * </pre>
+       *
+       * <code>string asset = 1 [(.google.api.resource_reference) = { ... }</code>
+       * @param value The bytes for asset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        asset_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int fieldType_ = 0;
+      /**
+       * <pre>
+       * Field type of the asset group asset.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+       * @return The enum numeric value on the wire for fieldType.
+       */
+      @java.lang.Override public int getFieldTypeValue() {
+        return fieldType_;
+      }
+      /**
+       * <pre>
+       * Field type of the asset group asset.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+       * @param value The enum numeric value on the wire for fieldType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFieldTypeValue(int value) {
+        fieldType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Field type of the asset group asset.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+       * @return The fieldType.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType getFieldType() {
+        com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType result = com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.forNumber(fieldType_);
+        return result == null ? com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Field type of the asset group asset.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+       * @param value The fieldType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFieldType(com.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType value) {
+        if (value == null) { throw new NullPointerException(); }
+        bitField0_ |= 0x00000002;
+        fieldType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Field type of the asset group asset.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFieldType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fieldType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo)
+    private static final com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo();
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssetGroupAssetInfo>
+        PARSER = new com.google.protobuf.AbstractParser<AssetGroupAssetInfo>() {
+      @java.lang.Override
+      public AssetGroupAssetInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssetGroupAssetInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssetGroupAssetInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupAssetInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ExperimentalPerformanceMaxCampaignSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Immutable. The amount of budget of the Performance Max experiment
+     * campaign.
+     * </pre>
+     *
+     * <code>int64 budget_amount_micros = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The budgetAmountMicros.
+     */
+    long getBudgetAmountMicros();
+
+    /**
+     * <pre>
+     * Immutable. Target ROAS of the Performance Max experiment campaign.
+     * </pre>
+     *
+     * <code>double target_roas = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The targetRoas.
+     */
+    double getTargetRoas();
+
+    /**
+     * <pre>
+     * Immutable. Target CPA of the Performance Max experiment campaign.
+     * </pre>
+     *
+     * <code>int64 target_cpa_micros = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The targetCpaMicros.
+     */
+    long getTargetCpaMicros();
+
+    /**
+     * <pre>
+     * Immutable. Bidding strategy type of the Performance Max experiment
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for biddingStrategyType.
+     */
+    int getBiddingStrategyTypeValue();
+    /**
+     * <pre>
+     * Immutable. Bidding strategy type of the Performance Max experiment
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The biddingStrategyType.
+     */
+    com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType getBiddingStrategyType();
+  }
+  /**
+   * <pre>
+   * Parameters for an experiment to create a Performance Max campaign.
+   * The experimental Performance Max campaign gets created automatically
+   * based on the existing SHOPPING campaign settings and the settings
+   * specified in this field.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings}
+   */
+  public static final class ExperimentalPerformanceMaxCampaignSettings extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings)
+      ExperimentalPerformanceMaxCampaignSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 31,
+        /* patch= */ 0,
+        /* suffix= */ "",
+        ExperimentalPerformanceMaxCampaignSettings.class.getName());
+    }
+    // Use ExperimentalPerformanceMaxCampaignSettings.newBuilder() to construct.
+    private ExperimentalPerformanceMaxCampaignSettings(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ExperimentalPerformanceMaxCampaignSettings() {
+      biddingStrategyType_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_ExperimentalPerformanceMaxCampaignSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_ExperimentalPerformanceMaxCampaignSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.class, com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.Builder.class);
+    }
+
+    public static final int BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 1;
+    private long budgetAmountMicros_ = 0L;
+    /**
+     * <pre>
+     * Immutable. The amount of budget of the Performance Max experiment
+     * campaign.
+     * </pre>
+     *
+     * <code>int64 budget_amount_micros = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The budgetAmountMicros.
+     */
+    @java.lang.Override
+    public long getBudgetAmountMicros() {
+      return budgetAmountMicros_;
+    }
+
+    public static final int TARGET_ROAS_FIELD_NUMBER = 2;
+    private double targetRoas_ = 0D;
+    /**
+     * <pre>
+     * Immutable. Target ROAS of the Performance Max experiment campaign.
+     * </pre>
+     *
+     * <code>double target_roas = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The targetRoas.
+     */
+    @java.lang.Override
+    public double getTargetRoas() {
+      return targetRoas_;
+    }
+
+    public static final int TARGET_CPA_MICROS_FIELD_NUMBER = 3;
+    private long targetCpaMicros_ = 0L;
+    /**
+     * <pre>
+     * Immutable. Target CPA of the Performance Max experiment campaign.
+     * </pre>
+     *
+     * <code>int64 target_cpa_micros = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The targetCpaMicros.
+     */
+    @java.lang.Override
+    public long getTargetCpaMicros() {
+      return targetCpaMicros_;
+    }
+
+    public static final int BIDDING_STRATEGY_TYPE_FIELD_NUMBER = 4;
+    private int biddingStrategyType_ = 0;
+    /**
+     * <pre>
+     * Immutable. Bidding strategy type of the Performance Max experiment
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for biddingStrategyType.
+     */
+    @java.lang.Override public int getBiddingStrategyTypeValue() {
+      return biddingStrategyType_;
+    }
+    /**
+     * <pre>
+     * Immutable. Bidding strategy type of the Performance Max experiment
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The biddingStrategyType.
+     */
+    @java.lang.Override public com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType getBiddingStrategyType() {
+      com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType result = com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType.forNumber(biddingStrategyType_);
+      return result == null ? com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (budgetAmountMicros_ != 0L) {
+        output.writeInt64(1, budgetAmountMicros_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(targetRoas_) != 0) {
+        output.writeDouble(2, targetRoas_);
+      }
+      if (targetCpaMicros_ != 0L) {
+        output.writeInt64(3, targetCpaMicros_);
+      }
+      if (biddingStrategyType_ != com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, biddingStrategyType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (budgetAmountMicros_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, budgetAmountMicros_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(targetRoas_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, targetRoas_);
+      }
+      if (targetCpaMicros_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, targetCpaMicros_);
+      }
+      if (biddingStrategyType_ != com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, biddingStrategyType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings other = (com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings) obj;
+
+      if (getBudgetAmountMicros()
+          != other.getBudgetAmountMicros()) return false;
+      if (java.lang.Double.doubleToLongBits(getTargetRoas())
+          != java.lang.Double.doubleToLongBits(
+              other.getTargetRoas())) return false;
+      if (getTargetCpaMicros()
+          != other.getTargetCpaMicros()) return false;
+      if (biddingStrategyType_ != other.biddingStrategyType_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUDGET_AMOUNT_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBudgetAmountMicros());
+      hash = (37 * hash) + TARGET_ROAS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getTargetRoas()));
+      hash = (37 * hash) + TARGET_CPA_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTargetCpaMicros());
+      hash = (37 * hash) + BIDDING_STRATEGY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + biddingStrategyType_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Parameters for an experiment to create a Performance Max campaign.
+     * The experimental Performance Max campaign gets created automatically
+     * based on the existing SHOPPING campaign settings and the settings
+     * specified in this field.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings)
+        com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_ExperimentalPerformanceMaxCampaignSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_ExperimentalPerformanceMaxCampaignSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.class, com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        budgetAmountMicros_ = 0L;
+        targetRoas_ = 0D;
+        targetCpaMicros_ = 0L;
+        biddingStrategyType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_ExperimentalPerformanceMaxCampaignSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings getDefaultInstanceForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings build() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings buildPartial() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings result = new com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.budgetAmountMicros_ = budgetAmountMicros_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.targetRoas_ = targetRoas_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.targetCpaMicros_ = targetCpaMicros_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.biddingStrategyType_ = biddingStrategyType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings) {
+          return mergeFrom((com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings other) {
+        if (other == com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.getDefaultInstance()) return this;
+        if (other.getBudgetAmountMicros() != 0L) {
+          setBudgetAmountMicros(other.getBudgetAmountMicros());
+        }
+        if (java.lang.Double.doubleToRawLongBits(other.getTargetRoas()) != 0) {
+          setTargetRoas(other.getTargetRoas());
+        }
+        if (other.getTargetCpaMicros() != 0L) {
+          setTargetCpaMicros(other.getTargetCpaMicros());
+        }
+        if (other.biddingStrategyType_ != 0) {
+          setBiddingStrategyTypeValue(other.getBiddingStrategyTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                budgetAmountMicros_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 17: {
+                targetRoas_ = input.readDouble();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 17
+              case 24: {
+                targetCpaMicros_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                biddingStrategyType_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long budgetAmountMicros_ ;
+      /**
+       * <pre>
+       * Immutable. The amount of budget of the Performance Max experiment
+       * campaign.
+       * </pre>
+       *
+       * <code>int64 budget_amount_micros = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The budgetAmountMicros.
+       */
+      @java.lang.Override
+      public long getBudgetAmountMicros() {
+        return budgetAmountMicros_;
+      }
+      /**
+       * <pre>
+       * Immutable. The amount of budget of the Performance Max experiment
+       * campaign.
+       * </pre>
+       *
+       * <code>int64 budget_amount_micros = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @param value The budgetAmountMicros to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBudgetAmountMicros(long value) {
+
+        budgetAmountMicros_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. The amount of budget of the Performance Max experiment
+       * campaign.
+       * </pre>
+       *
+       * <code>int64 budget_amount_micros = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBudgetAmountMicros() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        budgetAmountMicros_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double targetRoas_ ;
+      /**
+       * <pre>
+       * Immutable. Target ROAS of the Performance Max experiment campaign.
+       * </pre>
+       *
+       * <code>double target_roas = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The targetRoas.
+       */
+      @java.lang.Override
+      public double getTargetRoas() {
+        return targetRoas_;
+      }
+      /**
+       * <pre>
+       * Immutable. Target ROAS of the Performance Max experiment campaign.
+       * </pre>
+       *
+       * <code>double target_roas = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @param value The targetRoas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetRoas(double value) {
+
+        targetRoas_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. Target ROAS of the Performance Max experiment campaign.
+       * </pre>
+       *
+       * <code>double target_roas = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetRoas() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        targetRoas_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private long targetCpaMicros_ ;
+      /**
+       * <pre>
+       * Immutable. Target CPA of the Performance Max experiment campaign.
+       * </pre>
+       *
+       * <code>int64 target_cpa_micros = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The targetCpaMicros.
+       */
+      @java.lang.Override
+      public long getTargetCpaMicros() {
+        return targetCpaMicros_;
+      }
+      /**
+       * <pre>
+       * Immutable. Target CPA of the Performance Max experiment campaign.
+       * </pre>
+       *
+       * <code>int64 target_cpa_micros = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @param value The targetCpaMicros to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetCpaMicros(long value) {
+
+        targetCpaMicros_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. Target CPA of the Performance Max experiment campaign.
+       * </pre>
+       *
+       * <code>int64 target_cpa_micros = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetCpaMicros() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        targetCpaMicros_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int biddingStrategyType_ = 0;
+      /**
+       * <pre>
+       * Immutable. Bidding strategy type of the Performance Max experiment
+       * campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The enum numeric value on the wire for biddingStrategyType.
+       */
+      @java.lang.Override public int getBiddingStrategyTypeValue() {
+        return biddingStrategyType_;
+      }
+      /**
+       * <pre>
+       * Immutable. Bidding strategy type of the Performance Max experiment
+       * campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @param value The enum numeric value on the wire for biddingStrategyType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBiddingStrategyTypeValue(int value) {
+        biddingStrategyType_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. Bidding strategy type of the Performance Max experiment
+       * campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The biddingStrategyType.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType getBiddingStrategyType() {
+        com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType result = com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType.forNumber(biddingStrategyType_);
+        return result == null ? com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Immutable. Bidding strategy type of the Performance Max experiment
+       * campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @param value The biddingStrategyType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBiddingStrategyType(com.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType value) {
+        if (value == null) { throw new NullPointerException(); }
+        bitField0_ |= 0x00000008;
+        biddingStrategyType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. Bidding strategy type of the Performance Max experiment
+       * campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBiddingStrategyType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        biddingStrategyType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings)
+    private static final com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings();
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ExperimentalPerformanceMaxCampaignSettings>
+        PARSER = new com.google.protobuf.AbstractParser<ExperimentalPerformanceMaxCampaignSettings>() {
+      @java.lang.Override
+      public ExperimentalPerformanceMaxCampaignSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExperimentalPerformanceMaxCampaignSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExperimentalPerformanceMaxCampaignSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PerformanceMaxExperimentArmInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Immutable. Performance Max campaign settings to be applied on the
+     * Google-created experimental campaign in a Performance Max experiment. The
+     * experimental campaign is automatically created by Google upon experiment
+     * creation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the experimentalPerformanceMaxCampaignSettings field is set.
+     */
+    boolean hasExperimentalPerformanceMaxCampaignSettings();
+    /**
+     * <pre>
+     * Immutable. Performance Max campaign settings to be applied on the
+     * Google-created experimental campaign in a Performance Max experiment. The
+     * experimental campaign is automatically created by Google upon experiment
+     * creation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The experimentalPerformanceMaxCampaignSettings.
+     */
+    com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings getExperimentalPerformanceMaxCampaignSettings();
+    /**
+     * <pre>
+     * Immutable. Performance Max campaign settings to be applied on the
+     * Google-created experimental campaign in a Performance Max experiment. The
+     * experimental campaign is automatically created by Google upon experiment
+     * creation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettingsOrBuilder getExperimentalPerformanceMaxCampaignSettingsOrBuilder();
+  }
+  /**
+   * <pre>
+   * Information specific to the control or treatment campaign of a Performance
+   * Max experiment.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo}
+   */
+  public static final class PerformanceMaxExperimentArmInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo)
+      PerformanceMaxExperimentArmInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 31,
+        /* patch= */ 0,
+        /* suffix= */ "",
+        PerformanceMaxExperimentArmInfo.class.getName());
+    }
+    // Use PerformanceMaxExperimentArmInfo.newBuilder() to construct.
+    private PerformanceMaxExperimentArmInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PerformanceMaxExperimentArmInfo() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_PerformanceMaxExperimentArmInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_PerformanceMaxExperimentArmInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.class, com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EXPERIMENTAL_PERFORMANCE_MAX_CAMPAIGN_SETTINGS_FIELD_NUMBER = 1;
+    private com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimentalPerformanceMaxCampaignSettings_;
+    /**
+     * <pre>
+     * Immutable. Performance Max campaign settings to be applied on the
+     * Google-created experimental campaign in a Performance Max experiment. The
+     * experimental campaign is automatically created by Google upon experiment
+     * creation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the experimentalPerformanceMaxCampaignSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasExperimentalPerformanceMaxCampaignSettings() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Immutable. Performance Max campaign settings to be applied on the
+     * Google-created experimental campaign in a Performance Max experiment. The
+     * experimental campaign is automatically created by Google upon experiment
+     * creation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The experimentalPerformanceMaxCampaignSettings.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings getExperimentalPerformanceMaxCampaignSettings() {
+      return experimentalPerformanceMaxCampaignSettings_ == null ? com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.getDefaultInstance() : experimentalPerformanceMaxCampaignSettings_;
+    }
+    /**
+     * <pre>
+     * Immutable. Performance Max campaign settings to be applied on the
+     * Google-created experimental campaign in a Performance Max experiment. The
+     * experimental campaign is automatically created by Google upon experiment
+     * creation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettingsOrBuilder getExperimentalPerformanceMaxCampaignSettingsOrBuilder() {
+      return experimentalPerformanceMaxCampaignSettings_ == null ? com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.getDefaultInstance() : experimentalPerformanceMaxCampaignSettings_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getExperimentalPerformanceMaxCampaignSettings());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getExperimentalPerformanceMaxCampaignSettings());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo other = (com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo) obj;
+
+      if (hasExperimentalPerformanceMaxCampaignSettings() != other.hasExperimentalPerformanceMaxCampaignSettings()) return false;
+      if (hasExperimentalPerformanceMaxCampaignSettings()) {
+        if (!getExperimentalPerformanceMaxCampaignSettings()
+            .equals(other.getExperimentalPerformanceMaxCampaignSettings())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasExperimentalPerformanceMaxCampaignSettings()) {
+        hash = (37 * hash) + EXPERIMENTAL_PERFORMANCE_MAX_CAMPAIGN_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getExperimentalPerformanceMaxCampaignSettings().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Information specific to the control or treatment campaign of a Performance
+     * Max experiment.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo)
+        com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_PerformanceMaxExperimentArmInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_PerformanceMaxExperimentArmInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.class, com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetExperimentalPerformanceMaxCampaignSettingsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        experimentalPerformanceMaxCampaignSettings_ = null;
+        if (experimentalPerformanceMaxCampaignSettingsBuilder_ != null) {
+          experimentalPerformanceMaxCampaignSettingsBuilder_.dispose();
+          experimentalPerformanceMaxCampaignSettingsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArmProto.internal_static_google_ads_googleads_v24_resources_ExperimentArm_PerformanceMaxExperimentArmInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo getDefaultInstanceForType() {
+        return com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo build() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo buildPartial() {
+        com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo result = new com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.experimentalPerformanceMaxCampaignSettings_ = experimentalPerformanceMaxCampaignSettingsBuilder_ == null
+              ? experimentalPerformanceMaxCampaignSettings_
+              : experimentalPerformanceMaxCampaignSettingsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo) {
+          return mergeFrom((com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo other) {
+        if (other == com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.getDefaultInstance()) return this;
+        if (other.hasExperimentalPerformanceMaxCampaignSettings()) {
+          mergeExperimentalPerformanceMaxCampaignSettings(other.getExperimentalPerformanceMaxCampaignSettings());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetExperimentalPerformanceMaxCampaignSettingsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimentalPerformanceMaxCampaignSettings_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings, com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettingsOrBuilder> experimentalPerformanceMaxCampaignSettingsBuilder_;
+      /**
+       * <pre>
+       * Immutable. Performance Max campaign settings to be applied on the
+       * Google-created experimental campaign in a Performance Max experiment. The
+       * experimental campaign is automatically created by Google upon experiment
+       * creation.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return Whether the experimentalPerformanceMaxCampaignSettings field is set.
+       */
+      public boolean hasExperimentalPerformanceMaxCampaignSettings() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Immutable. Performance Max campaign settings to be applied on the
+       * Google-created experimental campaign in a Performance Max experiment. The
+       * experimental campaign is automatically created by Google upon experiment
+       * creation.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The experimentalPerformanceMaxCampaignSettings.
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings getExperimentalPerformanceMaxCampaignSettings() {
+        if (experimentalPerformanceMaxCampaignSettingsBuilder_ == null) {
+          return experimentalPerformanceMaxCampaignSettings_ == null ? com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.getDefaultInstance() : experimentalPerformanceMaxCampaignSettings_;
+        } else {
+          return experimentalPerformanceMaxCampaignSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Immutable. Performance Max campaign settings to be applied on the
+       * Google-created experimental campaign in a Performance Max experiment. The
+       * experimental campaign is automatically created by Google upon experiment
+       * creation.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public Builder setExperimentalPerformanceMaxCampaignSettings(com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings value) {
+        if (experimentalPerformanceMaxCampaignSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          experimentalPerformanceMaxCampaignSettings_ = value;
+        } else {
+          experimentalPerformanceMaxCampaignSettingsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. Performance Max campaign settings to be applied on the
+       * Google-created experimental campaign in a Performance Max experiment. The
+       * experimental campaign is automatically created by Google upon experiment
+       * creation.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public Builder setExperimentalPerformanceMaxCampaignSettings(
+          com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.Builder builderForValue) {
+        if (experimentalPerformanceMaxCampaignSettingsBuilder_ == null) {
+          experimentalPerformanceMaxCampaignSettings_ = builderForValue.build();
+        } else {
+          experimentalPerformanceMaxCampaignSettingsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. Performance Max campaign settings to be applied on the
+       * Google-created experimental campaign in a Performance Max experiment. The
+       * experimental campaign is automatically created by Google upon experiment
+       * creation.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public Builder mergeExperimentalPerformanceMaxCampaignSettings(com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings value) {
+        if (experimentalPerformanceMaxCampaignSettingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            experimentalPerformanceMaxCampaignSettings_ != null &&
+            experimentalPerformanceMaxCampaignSettings_ != com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.getDefaultInstance()) {
+            getExperimentalPerformanceMaxCampaignSettingsBuilder().mergeFrom(value);
+          } else {
+            experimentalPerformanceMaxCampaignSettings_ = value;
+          }
+        } else {
+          experimentalPerformanceMaxCampaignSettingsBuilder_.mergeFrom(value);
+        }
+        if (experimentalPerformanceMaxCampaignSettings_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. Performance Max campaign settings to be applied on the
+       * Google-created experimental campaign in a Performance Max experiment. The
+       * experimental campaign is automatically created by Google upon experiment
+       * creation.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public Builder clearExperimentalPerformanceMaxCampaignSettings() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        experimentalPerformanceMaxCampaignSettings_ = null;
+        if (experimentalPerformanceMaxCampaignSettingsBuilder_ != null) {
+          experimentalPerformanceMaxCampaignSettingsBuilder_.dispose();
+          experimentalPerformanceMaxCampaignSettingsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. Performance Max campaign settings to be applied on the
+       * Google-created experimental campaign in a Performance Max experiment. The
+       * experimental campaign is automatically created by Google upon experiment
+       * creation.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.Builder getExperimentalPerformanceMaxCampaignSettingsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetExperimentalPerformanceMaxCampaignSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Immutable. Performance Max campaign settings to be applied on the
+       * Google-created experimental campaign in a Performance Max experiment. The
+       * experimental campaign is automatically created by Google upon experiment
+       * creation.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettingsOrBuilder getExperimentalPerformanceMaxCampaignSettingsOrBuilder() {
+        if (experimentalPerformanceMaxCampaignSettingsBuilder_ != null) {
+          return experimentalPerformanceMaxCampaignSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return experimentalPerformanceMaxCampaignSettings_ == null ?
+              com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.getDefaultInstance() : experimentalPerformanceMaxCampaignSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Immutable. Performance Max campaign settings to be applied on the
+       * Google-created experimental campaign in a Performance Max experiment. The
+       * experimental campaign is automatically created by Google upon experiment
+       * creation.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings experimental_performance_max_campaign_settings = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings, com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettingsOrBuilder> 
+          internalGetExperimentalPerformanceMaxCampaignSettingsFieldBuilder() {
+        if (experimentalPerformanceMaxCampaignSettingsBuilder_ == null) {
+          experimentalPerformanceMaxCampaignSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings, com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettings.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.ExperimentalPerformanceMaxCampaignSettingsOrBuilder>(
+                  getExperimentalPerformanceMaxCampaignSettings(),
+                  getParentForChildren(),
+                  isClean());
+          experimentalPerformanceMaxCampaignSettings_ = null;
+        }
+        return experimentalPerformanceMaxCampaignSettingsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo)
+    private static final com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo();
+    }
+
+    public static com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PerformanceMaxExperimentArmInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PerformanceMaxExperimentArmInfo>() {
+      @java.lang.Override
+      public PerformanceMaxExperimentArmInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PerformanceMaxExperimentArmInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PerformanceMaxExperimentArmInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object resourceName_ = "";
@@ -342,6 +6540,161 @@ private static final long serialVersionUID = 0L;
     return inDesignCampaigns_.getByteString(index);
   }
 
+  public static final int ASSET_TESTING_INFO_FIELD_NUMBER = 9;
+  private com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo assetTestingInfo_;
+  /**
+   * <pre>
+   * Details of assets under experiment.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+   * @return Whether the assetTestingInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasAssetTestingInfo() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * Details of assets under experiment.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+   * @return The assetTestingInfo.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo getAssetTestingInfo() {
+    return assetTestingInfo_ == null ? com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.getDefaultInstance() : assetTestingInfo_;
+  }
+  /**
+   * <pre>
+   * Details of assets under experiment.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfoOrBuilder getAssetTestingInfoOrBuilder() {
+    return assetTestingInfo_ == null ? com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.getDefaultInstance() : assetTestingInfo_;
+  }
+
+  public static final int ASSET_GROUPS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo> assetGroups_;
+  /**
+   * <pre>
+   * List of asset groups in the experiment arm.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo> getAssetGroupsList() {
+    return assetGroups_;
+  }
+  /**
+   * <pre>
+   * List of asset groups in the experiment arm.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfoOrBuilder> 
+      getAssetGroupsOrBuilderList() {
+    return assetGroups_;
+  }
+  /**
+   * <pre>
+   * List of asset groups in the experiment arm.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+   */
+  @java.lang.Override
+  public int getAssetGroupsCount() {
+    return assetGroups_.size();
+  }
+  /**
+   * <pre>
+   * List of asset groups in the experiment arm.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo getAssetGroups(int index) {
+    return assetGroups_.get(index);
+  }
+  /**
+   * <pre>
+   * List of asset groups in the experiment arm.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfoOrBuilder getAssetGroupsOrBuilder(
+      int index) {
+    return assetGroups_.get(index);
+  }
+
+  public static final int PERFORMANCE_MAX_EXPERIMENT_ARM_INFO_FIELD_NUMBER = 11;
+  private com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performanceMaxExperimentArmInfo_;
+  /**
+   * <pre>
+   * Immutable. Information specific to the control or treatment campaign of a
+   * Performance Max experiment.
+   *
+   * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+   * For example, the treatment experiment arm contains the
+   * information of treatment Performance Max campaign settings for
+   * PMAX_REPLACEMENT_SHOPPING experiments.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the performanceMaxExperimentArmInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasPerformanceMaxExperimentArmInfo() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * Immutable. Information specific to the control or treatment campaign of a
+   * Performance Max experiment.
+   *
+   * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+   * For example, the treatment experiment arm contains the
+   * information of treatment Performance Max campaign settings for
+   * PMAX_REPLACEMENT_SHOPPING experiments.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The performanceMaxExperimentArmInfo.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo getPerformanceMaxExperimentArmInfo() {
+    return performanceMaxExperimentArmInfo_ == null ? com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.getDefaultInstance() : performanceMaxExperimentArmInfo_;
+  }
+  /**
+   * <pre>
+   * Immutable. Information specific to the control or treatment campaign of a
+   * Performance Max experiment.
+   *
+   * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+   * For example, the treatment experiment arm contains the
+   * information of treatment Performance Max campaign settings for
+   * PMAX_REPLACEMENT_SHOPPING experiments.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfoOrBuilder getPerformanceMaxExperimentArmInfoOrBuilder() {
+    return performanceMaxExperimentArmInfo_ == null ? com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.getDefaultInstance() : performanceMaxExperimentArmInfo_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -376,6 +6729,15 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(experiment_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 8, experiment_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(9, getAssetTestingInfo());
+    }
+    for (int i = 0; i < assetGroups_.size(); i++) {
+      output.writeMessage(10, assetGroups_.get(i));
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(11, getPerformanceMaxExperimentArmInfo());
     }
     getUnknownFields().writeTo(output);
   }
@@ -419,6 +6781,18 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(experiment_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(8, experiment_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getAssetTestingInfo());
+    }
+    for (int i = 0; i < assetGroups_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, assetGroups_.get(i));
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getPerformanceMaxExperimentArmInfo());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -448,6 +6822,18 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCampaignsList())) return false;
     if (!getInDesignCampaignsList()
         .equals(other.getInDesignCampaignsList())) return false;
+    if (hasAssetTestingInfo() != other.hasAssetTestingInfo()) return false;
+    if (hasAssetTestingInfo()) {
+      if (!getAssetTestingInfo()
+          .equals(other.getAssetTestingInfo())) return false;
+    }
+    if (!getAssetGroupsList()
+        .equals(other.getAssetGroupsList())) return false;
+    if (hasPerformanceMaxExperimentArmInfo() != other.hasPerformanceMaxExperimentArmInfo()) return false;
+    if (hasPerformanceMaxExperimentArmInfo()) {
+      if (!getPerformanceMaxExperimentArmInfo()
+          .equals(other.getPerformanceMaxExperimentArmInfo())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -478,6 +6864,18 @@ private static final long serialVersionUID = 0L;
     if (getInDesignCampaignsCount() > 0) {
       hash = (37 * hash) + IN_DESIGN_CAMPAIGNS_FIELD_NUMBER;
       hash = (53 * hash) + getInDesignCampaignsList().hashCode();
+    }
+    if (hasAssetTestingInfo()) {
+      hash = (37 * hash) + ASSET_TESTING_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getAssetTestingInfo().hashCode();
+    }
+    if (getAssetGroupsCount() > 0) {
+      hash = (37 * hash) + ASSET_GROUPS_FIELD_NUMBER;
+      hash = (53 * hash) + getAssetGroupsList().hashCode();
+    }
+    if (hasPerformanceMaxExperimentArmInfo()) {
+      hash = (37 * hash) + PERFORMANCE_MAX_EXPERIMENT_ARM_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getPerformanceMaxExperimentArmInfo().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -603,13 +7001,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v24.resources.ExperimentArm.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetAssetTestingInfoFieldBuilder();
+        internalGetAssetGroupsFieldBuilder();
+        internalGetPerformanceMaxExperimentArmInfoFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -624,6 +7030,23 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       inDesignCampaigns_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      assetTestingInfo_ = null;
+      if (assetTestingInfoBuilder_ != null) {
+        assetTestingInfoBuilder_.dispose();
+        assetTestingInfoBuilder_ = null;
+      }
+      if (assetGroupsBuilder_ == null) {
+        assetGroups_ = java.util.Collections.emptyList();
+      } else {
+        assetGroups_ = null;
+        assetGroupsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000100);
+      performanceMaxExperimentArmInfo_ = null;
+      if (performanceMaxExperimentArmInfoBuilder_ != null) {
+        performanceMaxExperimentArmInfoBuilder_.dispose();
+        performanceMaxExperimentArmInfoBuilder_ = null;
+      }
       return this;
     }
 
@@ -650,9 +7073,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v24.resources.ExperimentArm buildPartial() {
       com.google.ads.googleads.v24.resources.ExperimentArm result = new com.google.ads.googleads.v24.resources.ExperimentArm(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v24.resources.ExperimentArm result) {
+      if (assetGroupsBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0)) {
+          assetGroups_ = java.util.Collections.unmodifiableList(assetGroups_);
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.assetGroups_ = assetGroups_;
+      } else {
+        result.assetGroups_ = assetGroupsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.google.ads.googleads.v24.resources.ExperimentArm result) {
@@ -680,6 +7116,20 @@ private static final long serialVersionUID = 0L;
         inDesignCampaigns_.makeImmutable();
         result.inDesignCampaigns_ = inDesignCampaigns_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.assetTestingInfo_ = assetTestingInfoBuilder_ == null
+            ? assetTestingInfo_
+            : assetTestingInfoBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.performanceMaxExperimentArmInfo_ = performanceMaxExperimentArmInfoBuilder_ == null
+            ? performanceMaxExperimentArmInfo_
+            : performanceMaxExperimentArmInfoBuilder_.build();
+        to_bitField0_ |= 0x00000002;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -734,6 +7184,38 @@ private static final long serialVersionUID = 0L;
           inDesignCampaigns_.addAll(other.inDesignCampaigns_);
         }
         onChanged();
+      }
+      if (other.hasAssetTestingInfo()) {
+        mergeAssetTestingInfo(other.getAssetTestingInfo());
+      }
+      if (assetGroupsBuilder_ == null) {
+        if (!other.assetGroups_.isEmpty()) {
+          if (assetGroups_.isEmpty()) {
+            assetGroups_ = other.assetGroups_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureAssetGroupsIsMutable();
+            assetGroups_.addAll(other.assetGroups_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.assetGroups_.isEmpty()) {
+          if (assetGroupsBuilder_.isEmpty()) {
+            assetGroupsBuilder_.dispose();
+            assetGroupsBuilder_ = null;
+            assetGroups_ = other.assetGroups_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+            assetGroupsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetAssetGroupsFieldBuilder() : null;
+          } else {
+            assetGroupsBuilder_.addAllMessages(other.assetGroups_);
+          }
+        }
+      }
+      if (other.hasPerformanceMaxExperimentArmInfo()) {
+        mergePerformanceMaxExperimentArmInfo(other.getPerformanceMaxExperimentArmInfo());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -798,6 +7280,33 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  internalGetAssetTestingInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 74
+            case 82: {
+              com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo m =
+                  input.readMessage(
+                      com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.parser(),
+                      extensionRegistry);
+              if (assetGroupsBuilder_ == null) {
+                ensureAssetGroupsIsMutable();
+                assetGroups_.add(m);
+              } else {
+                assetGroupsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  internalGetPerformanceMaxExperimentArmInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1497,6 +8006,686 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000040;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo assetTestingInfo_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfoOrBuilder> assetTestingInfoBuilder_;
+    /**
+     * <pre>
+     * Details of assets under experiment.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+     * @return Whether the assetTestingInfo field is set.
+     */
+    public boolean hasAssetTestingInfo() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Details of assets under experiment.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+     * @return The assetTestingInfo.
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo getAssetTestingInfo() {
+      if (assetTestingInfoBuilder_ == null) {
+        return assetTestingInfo_ == null ? com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.getDefaultInstance() : assetTestingInfo_;
+      } else {
+        return assetTestingInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Details of assets under experiment.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+     */
+    public Builder setAssetTestingInfo(com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo value) {
+      if (assetTestingInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetTestingInfo_ = value;
+      } else {
+        assetTestingInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Details of assets under experiment.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+     */
+    public Builder setAssetTestingInfo(
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.Builder builderForValue) {
+      if (assetTestingInfoBuilder_ == null) {
+        assetTestingInfo_ = builderForValue.build();
+      } else {
+        assetTestingInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Details of assets under experiment.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+     */
+    public Builder mergeAssetTestingInfo(com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo value) {
+      if (assetTestingInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          assetTestingInfo_ != null &&
+          assetTestingInfo_ != com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.getDefaultInstance()) {
+          getAssetTestingInfoBuilder().mergeFrom(value);
+        } else {
+          assetTestingInfo_ = value;
+        }
+      } else {
+        assetTestingInfoBuilder_.mergeFrom(value);
+      }
+      if (assetTestingInfo_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details of assets under experiment.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+     */
+    public Builder clearAssetTestingInfo() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      assetTestingInfo_ = null;
+      if (assetTestingInfoBuilder_ != null) {
+        assetTestingInfoBuilder_.dispose();
+        assetTestingInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Details of assets under experiment.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.Builder getAssetTestingInfoBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return internalGetAssetTestingInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details of assets under experiment.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfoOrBuilder getAssetTestingInfoOrBuilder() {
+      if (assetTestingInfoBuilder_ != null) {
+        return assetTestingInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return assetTestingInfo_ == null ?
+            com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.getDefaultInstance() : assetTestingInfo_;
+      }
+    }
+    /**
+     * <pre>
+     * Details of assets under experiment.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo asset_testing_info = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfoOrBuilder> 
+        internalGetAssetTestingInfoFieldBuilder() {
+      if (assetTestingInfoBuilder_ == null) {
+        assetTestingInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetTestingInfoOrBuilder>(
+                getAssetTestingInfo(),
+                getParentForChildren(),
+                isClean());
+        assetTestingInfo_ = null;
+      }
+      return assetTestingInfoBuilder_;
+    }
+
+    private java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo> assetGroups_ =
+      java.util.Collections.emptyList();
+    private void ensureAssetGroupsIsMutable() {
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        assetGroups_ = new java.util.ArrayList<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo>(assetGroups_);
+        bitField0_ |= 0x00000100;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfoOrBuilder> assetGroupsBuilder_;
+
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo> getAssetGroupsList() {
+      if (assetGroupsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(assetGroups_);
+      } else {
+        return assetGroupsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public int getAssetGroupsCount() {
+      if (assetGroupsBuilder_ == null) {
+        return assetGroups_.size();
+      } else {
+        return assetGroupsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo getAssetGroups(int index) {
+      if (assetGroupsBuilder_ == null) {
+        return assetGroups_.get(index);
+      } else {
+        return assetGroupsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public Builder setAssetGroups(
+        int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo value) {
+      if (assetGroupsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAssetGroupsIsMutable();
+        assetGroups_.set(index, value);
+        onChanged();
+      } else {
+        assetGroupsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public Builder setAssetGroups(
+        int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder builderForValue) {
+      if (assetGroupsBuilder_ == null) {
+        ensureAssetGroupsIsMutable();
+        assetGroups_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        assetGroupsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public Builder addAssetGroups(com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo value) {
+      if (assetGroupsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAssetGroupsIsMutable();
+        assetGroups_.add(value);
+        onChanged();
+      } else {
+        assetGroupsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public Builder addAssetGroups(
+        int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo value) {
+      if (assetGroupsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAssetGroupsIsMutable();
+        assetGroups_.add(index, value);
+        onChanged();
+      } else {
+        assetGroupsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public Builder addAssetGroups(
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder builderForValue) {
+      if (assetGroupsBuilder_ == null) {
+        ensureAssetGroupsIsMutable();
+        assetGroups_.add(builderForValue.build());
+        onChanged();
+      } else {
+        assetGroupsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public Builder addAssetGroups(
+        int index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder builderForValue) {
+      if (assetGroupsBuilder_ == null) {
+        ensureAssetGroupsIsMutable();
+        assetGroups_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        assetGroupsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public Builder addAllAssetGroups(
+        java.lang.Iterable<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo> values) {
+      if (assetGroupsBuilder_ == null) {
+        ensureAssetGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, assetGroups_);
+        onChanged();
+      } else {
+        assetGroupsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public Builder clearAssetGroups() {
+      if (assetGroupsBuilder_ == null) {
+        assetGroups_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+      } else {
+        assetGroupsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public Builder removeAssetGroups(int index) {
+      if (assetGroupsBuilder_ == null) {
+        ensureAssetGroupsIsMutable();
+        assetGroups_.remove(index);
+        onChanged();
+      } else {
+        assetGroupsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder getAssetGroupsBuilder(
+        int index) {
+      return internalGetAssetGroupsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfoOrBuilder getAssetGroupsOrBuilder(
+        int index) {
+      if (assetGroupsBuilder_ == null) {
+        return assetGroups_.get(index);  } else {
+        return assetGroupsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfoOrBuilder> 
+         getAssetGroupsOrBuilderList() {
+      if (assetGroupsBuilder_ != null) {
+        return assetGroupsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(assetGroups_);
+      }
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder addAssetGroupsBuilder() {
+      return internalGetAssetGroupsFieldBuilder().addBuilder(
+          com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder addAssetGroupsBuilder(
+        int index) {
+      return internalGetAssetGroupsFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * List of asset groups in the experiment arm.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder> 
+         getAssetGroupsBuilderList() {
+      return internalGetAssetGroupsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfoOrBuilder> 
+        internalGetAssetGroupsFieldBuilder() {
+      if (assetGroupsBuilder_ == null) {
+        assetGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfoOrBuilder>(
+                assetGroups_,
+                ((bitField0_ & 0x00000100) != 0),
+                getParentForChildren(),
+                isClean());
+        assetGroups_ = null;
+      }
+      return assetGroupsBuilder_;
+    }
+
+    private com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performanceMaxExperimentArmInfo_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo, com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfoOrBuilder> performanceMaxExperimentArmInfoBuilder_;
+    /**
+     * <pre>
+     * Immutable. Information specific to the control or treatment campaign of a
+     * Performance Max experiment.
+     *
+     * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+     * For example, the treatment experiment arm contains the
+     * information of treatment Performance Max campaign settings for
+     * PMAX_REPLACEMENT_SHOPPING experiments.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the performanceMaxExperimentArmInfo field is set.
+     */
+    public boolean hasPerformanceMaxExperimentArmInfo() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * Immutable. Information specific to the control or treatment campaign of a
+     * Performance Max experiment.
+     *
+     * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+     * For example, the treatment experiment arm contains the
+     * information of treatment Performance Max campaign settings for
+     * PMAX_REPLACEMENT_SHOPPING experiments.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The performanceMaxExperimentArmInfo.
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo getPerformanceMaxExperimentArmInfo() {
+      if (performanceMaxExperimentArmInfoBuilder_ == null) {
+        return performanceMaxExperimentArmInfo_ == null ? com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.getDefaultInstance() : performanceMaxExperimentArmInfo_;
+      } else {
+        return performanceMaxExperimentArmInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Information specific to the control or treatment campaign of a
+     * Performance Max experiment.
+     *
+     * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+     * For example, the treatment experiment arm contains the
+     * information of treatment Performance Max campaign settings for
+     * PMAX_REPLACEMENT_SHOPPING experiments.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setPerformanceMaxExperimentArmInfo(com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo value) {
+      if (performanceMaxExperimentArmInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        performanceMaxExperimentArmInfo_ = value;
+      } else {
+        performanceMaxExperimentArmInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Information specific to the control or treatment campaign of a
+     * Performance Max experiment.
+     *
+     * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+     * For example, the treatment experiment arm contains the
+     * information of treatment Performance Max campaign settings for
+     * PMAX_REPLACEMENT_SHOPPING experiments.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setPerformanceMaxExperimentArmInfo(
+        com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.Builder builderForValue) {
+      if (performanceMaxExperimentArmInfoBuilder_ == null) {
+        performanceMaxExperimentArmInfo_ = builderForValue.build();
+      } else {
+        performanceMaxExperimentArmInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Information specific to the control or treatment campaign of a
+     * Performance Max experiment.
+     *
+     * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+     * For example, the treatment experiment arm contains the
+     * information of treatment Performance Max campaign settings for
+     * PMAX_REPLACEMENT_SHOPPING experiments.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder mergePerformanceMaxExperimentArmInfo(com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo value) {
+      if (performanceMaxExperimentArmInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+          performanceMaxExperimentArmInfo_ != null &&
+          performanceMaxExperimentArmInfo_ != com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.getDefaultInstance()) {
+          getPerformanceMaxExperimentArmInfoBuilder().mergeFrom(value);
+        } else {
+          performanceMaxExperimentArmInfo_ = value;
+        }
+      } else {
+        performanceMaxExperimentArmInfoBuilder_.mergeFrom(value);
+      }
+      if (performanceMaxExperimentArmInfo_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Information specific to the control or treatment campaign of a
+     * Performance Max experiment.
+     *
+     * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+     * For example, the treatment experiment arm contains the
+     * information of treatment Performance Max campaign settings for
+     * PMAX_REPLACEMENT_SHOPPING experiments.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder clearPerformanceMaxExperimentArmInfo() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      performanceMaxExperimentArmInfo_ = null;
+      if (performanceMaxExperimentArmInfoBuilder_ != null) {
+        performanceMaxExperimentArmInfoBuilder_.dispose();
+        performanceMaxExperimentArmInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Information specific to the control or treatment campaign of a
+     * Performance Max experiment.
+     *
+     * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+     * For example, the treatment experiment arm contains the
+     * information of treatment Performance Max campaign settings for
+     * PMAX_REPLACEMENT_SHOPPING experiments.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.Builder getPerformanceMaxExperimentArmInfoBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return internalGetPerformanceMaxExperimentArmInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Immutable. Information specific to the control or treatment campaign of a
+     * Performance Max experiment.
+     *
+     * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+     * For example, the treatment experiment arm contains the
+     * information of treatment Performance Max campaign settings for
+     * PMAX_REPLACEMENT_SHOPPING experiments.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfoOrBuilder getPerformanceMaxExperimentArmInfoOrBuilder() {
+      if (performanceMaxExperimentArmInfoBuilder_ != null) {
+        return performanceMaxExperimentArmInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return performanceMaxExperimentArmInfo_ == null ?
+            com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.getDefaultInstance() : performanceMaxExperimentArmInfo_;
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Information specific to the control or treatment campaign of a
+     * Performance Max experiment.
+     *
+     * This field is specific to experiments of type PMAX_REPLACEMENT_SHOPPING.
+     * For example, the treatment experiment arm contains the
+     * information of treatment Performance Max campaign settings for
+     * PMAX_REPLACEMENT_SHOPPING experiments.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo performance_max_experiment_arm_info = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo, com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfoOrBuilder> 
+        internalGetPerformanceMaxExperimentArmInfoFieldBuilder() {
+      if (performanceMaxExperimentArmInfoBuilder_ == null) {
+        performanceMaxExperimentArmInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo, com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfo.Builder, com.google.ads.googleads.v24.resources.ExperimentArm.PerformanceMaxExperimentArmInfoOrBuilder>(
+                getPerformanceMaxExperimentArmInfo(),
+                getParentForChildren(),
+                isClean());
+        performanceMaxExperimentArmInfo_ = null;
+      }
+      return performanceMaxExperimentArmInfoBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.ExperimentArm)

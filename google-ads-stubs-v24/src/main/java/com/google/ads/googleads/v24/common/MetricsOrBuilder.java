@@ -1001,6 +1001,27 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The number of clicks on the control arm of an experiment.
+   * The treatment clicks value can be selected by using `clicks`.
+   * </pre>
+   *
+   * <code>optional int64 control_clicks = 443;</code>
+   * @return Whether the controlClicks field is set.
+   */
+  boolean hasControlClicks();
+  /**
+   * <pre>
+   * The number of clicks on the control arm of an experiment.
+   * The treatment clicks value can be selected by using `clicks`.
+   * </pre>
+   *
+   * <code>optional int64 control_clicks = 443;</code>
+   * @return The controlClicks.
+   */
+  long getControlClicks();
+
+  /**
+   * <pre>
    * The number of times your ad or your site's listing in the unpaid
    * results was clicked. See the help page at
    * https://support.google.com/google-ads/answer/3097241 for details.
@@ -6209,4 +6230,835 @@ public interface MetricsOrBuilder extends
    * @return The allUnitsSold.
    */
   double getAllUnitsSold();
+
+  /**
+   * <pre>
+   * The cost per conversion metric on the control arm of the
+   * experiment. The treatment cost per conversion value can be
+   * selected by using `cost_per_conversion`.
+   * </pre>
+   *
+   * <code>optional double control_cost_per_conversion = 446;</code>
+   * @return Whether the controlCostPerConversion field is set.
+   */
+  boolean hasControlCostPerConversion();
+  /**
+   * <pre>
+   * The cost per conversion metric on the control arm of the
+   * experiment. The treatment cost per conversion value can be
+   * selected by using `cost_per_conversion`.
+   * </pre>
+   *
+   * <code>optional double control_cost_per_conversion = 446;</code>
+   * @return The controlCostPerConversion.
+   */
+  double getControlCostPerConversion();
+
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on cost per
+   * conversion.
+   *
+   * Together with `cost_per_conversion_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `cost_per_conversion_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_margin_of_error = 447;</code>
+   * @return Whether the costPerConversionMarginOfError field is set.
+   */
+  boolean hasCostPerConversionMarginOfError();
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on cost per
+   * conversion.
+   *
+   * Together with `cost_per_conversion_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `cost_per_conversion_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_margin_of_error = 447;</code>
+   * @return The costPerConversionMarginOfError.
+   */
+  double getCostPerConversionMarginOfError();
+
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * cost per conversion. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on cost per conversion, is 3%.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_p_value = 448;</code>
+   * @return Whether the costPerConversionPValue field is set.
+   */
+  boolean hasCostPerConversionPValue();
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * cost per conversion. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on cost per conversion, is 3%.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_p_value = 448;</code>
+   * @return The costPerConversionPValue.
+   */
+  double getCostPerConversionPValue();
+
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on cost per
+   * conversion change.
+   *
+   * Together with `cost_per_conversion_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(cost_per_conversion_change_point_estimate -
+   * cost_per_conversion_margin_of_error,
+   * cost_per_conversion_change_point_estimate +
+   * cost_per_conversion_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_change_point_estimate = 449;</code>
+   * @return Whether the costPerConversionChangePointEstimate field is set.
+   */
+  boolean hasCostPerConversionChangePointEstimate();
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on cost per
+   * conversion change.
+   *
+   * Together with `cost_per_conversion_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(cost_per_conversion_change_point_estimate -
+   * cost_per_conversion_margin_of_error,
+   * cost_per_conversion_change_point_estimate +
+   * cost_per_conversion_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double cost_per_conversion_change_point_estimate = 449;</code>
+   * @return The costPerConversionChangePointEstimate.
+   */
+  double getCostPerConversionChangePointEstimate();
+
+  /**
+   * <pre>
+   * The conversions metric on the control arm of the experiment.
+   * The treatment conversions value can be selected by using
+   * `conversions`.
+   * </pre>
+   *
+   * <code>optional double control_conversions = 450;</code>
+   * @return Whether the controlConversions field is set.
+   */
+  boolean hasControlConversions();
+  /**
+   * <pre>
+   * The conversions metric on the control arm of the experiment.
+   * The treatment conversions value can be selected by using
+   * `conversions`.
+   * </pre>
+   *
+   * <code>optional double control_conversions = 450;</code>
+   * @return The controlConversions.
+   */
+  double getControlConversions();
+
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on conversions
+   * absolute change.
+   *
+   * Together with `conversions_absolute_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment - control). This field specifies the radius of the confidence
+   * interval, which is centered at
+   * `conversions_absolute_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_margin_of_error = 451;</code>
+   * @return Whether the conversionsAbsoluteChangeMarginOfError field is set.
+   */
+  boolean hasConversionsAbsoluteChangeMarginOfError();
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on conversions
+   * absolute change.
+   *
+   * Together with `conversions_absolute_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment - control). This field specifies the radius of the confidence
+   * interval, which is centered at
+   * `conversions_absolute_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_margin_of_error = 451;</code>
+   * @return The conversionsAbsoluteChangeMarginOfError.
+   */
+  double getConversionsAbsoluteChangeMarginOfError();
+
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversions absolute change. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversions absolute change, is
+   * 3%.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_p_value = 452;</code>
+   * @return Whether the conversionsAbsoluteChangePValue field is set.
+   */
+  boolean hasConversionsAbsoluteChangePValue();
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversions absolute change. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversions absolute change, is
+   * 3%.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_p_value = 452;</code>
+   * @return The conversionsAbsoluteChangePValue.
+   */
+  double getConversionsAbsoluteChangePValue();
+
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on conversions
+   * absolute change.
+   *
+   * Together with `conversions_absolute_change_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment - control). This field specifies the point estimate, which is
+   * the center of the confidence interval:
+   * `(conversions_absolute_change_point_estimate -
+   * conversions_absolute_change_margin_of_error,
+   * conversions_absolute_change_point_estimate +
+   * conversions_absolute_change_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_point_estimate = 453;</code>
+   * @return Whether the conversionsAbsoluteChangePointEstimate field is set.
+   */
+  boolean hasConversionsAbsoluteChangePointEstimate();
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on conversions
+   * absolute change.
+   *
+   * Together with `conversions_absolute_change_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment - control). This field specifies the point estimate, which is
+   * the center of the confidence interval:
+   * `(conversions_absolute_change_point_estimate -
+   * conversions_absolute_change_margin_of_error,
+   * conversions_absolute_change_point_estimate +
+   * conversions_absolute_change_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversions_absolute_change_point_estimate = 453;</code>
+   * @return The conversionsAbsoluteChangePointEstimate.
+   */
+  double getConversionsAbsoluteChangePointEstimate();
+
+  /**
+   * <pre>
+   * The conversion value per cost metric on the control arm of the
+   * experiment. The treatment conversion value per cost value can be
+   * selected by using `conversions_value_per_cost`.
+   * </pre>
+   *
+   * <code>optional double control_conversion_value_per_cost = 454;</code>
+   * @return Whether the controlConversionValuePerCost field is set.
+   */
+  boolean hasControlConversionValuePerCost();
+  /**
+   * <pre>
+   * The conversion value per cost metric on the control arm of the
+   * experiment. The treatment conversion value per cost value can be
+   * selected by using `conversions_value_per_cost`.
+   * </pre>
+   *
+   * <code>optional double control_conversion_value_per_cost = 454;</code>
+   * @return The controlConversionValuePerCost.
+   */
+  double getControlConversionValuePerCost();
+
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on
+   * conversion value per cost.
+   *
+   * Together with `conversion_value_per_cost_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `conversion_value_per_cost_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_margin_of_error = 455;</code>
+   * @return Whether the conversionValuePerCostMarginOfError field is set.
+   */
+  boolean hasConversionValuePerCostMarginOfError();
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on
+   * conversion value per cost.
+   *
+   * Together with `conversion_value_per_cost_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `conversion_value_per_cost_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_margin_of_error = 455;</code>
+   * @return The conversionValuePerCostMarginOfError.
+   */
+  double getConversionValuePerCostMarginOfError();
+
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversion value per cost. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversion value per cost, is 3%.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_p_value = 456;</code>
+   * @return Whether the conversionValuePerCostPValue field is set.
+   */
+  boolean hasConversionValuePerCostPValue();
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversion value per cost. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversion value per cost, is 3%.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_p_value = 456;</code>
+   * @return The conversionValuePerCostPValue.
+   */
+  double getConversionValuePerCostPValue();
+
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on
+   * conversion value per cost change.
+   *
+   * Together with `conversion_value_per_cost_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(conversion_value_per_cost_change_point_estimate -
+   * conversion_value_per_cost_margin_of_error,
+   * conversion_value_per_cost_change_point_estimate +
+   * conversion_value_per_cost_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_change_point_estimate = 457;</code>
+   * @return Whether the conversionValuePerCostChangePointEstimate field is set.
+   */
+  boolean hasConversionValuePerCostChangePointEstimate();
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on
+   * conversion value per cost change.
+   *
+   * Together with `conversion_value_per_cost_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(conversion_value_per_cost_change_point_estimate -
+   * conversion_value_per_cost_margin_of_error,
+   * conversion_value_per_cost_change_point_estimate +
+   * conversion_value_per_cost_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_per_cost_change_point_estimate = 457;</code>
+   * @return The conversionValuePerCostChangePointEstimate.
+   */
+  double getConversionValuePerCostChangePointEstimate();
+
+  /**
+   * <pre>
+   * The cost metric on the control arm of the experiment.
+   * The treatment cost value can be selected by using `cost_micros`.
+   * </pre>
+   *
+   * <code>optional int64 control_cost_micros = 458;</code>
+   * @return Whether the controlCostMicros field is set.
+   */
+  boolean hasControlCostMicros();
+  /**
+   * <pre>
+   * The cost metric on the control arm of the experiment.
+   * The treatment cost value can be selected by using `cost_micros`.
+   * </pre>
+   *
+   * <code>optional int64 control_cost_micros = 458;</code>
+   * @return The controlCostMicros.
+   */
+  long getControlCostMicros();
+
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on cost.
+   *
+   * Together with `cost_micros_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `cost_micros_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double cost_micros_margin_of_error = 459;</code>
+   * @return Whether the costMicrosMarginOfError field is set.
+   */
+  boolean hasCostMicrosMarginOfError();
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on cost.
+   *
+   * Together with `cost_micros_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `cost_micros_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double cost_micros_margin_of_error = 459;</code>
+   * @return The costMicrosMarginOfError.
+   */
+  double getCostMicrosMarginOfError();
+
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * cost. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on cost, is 3%.
+   * </pre>
+   *
+   * <code>optional double cost_micros_p_value = 460;</code>
+   * @return Whether the costMicrosPValue field is set.
+   */
+  boolean hasCostMicrosPValue();
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * cost. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on cost, is 3%.
+   * </pre>
+   *
+   * <code>optional double cost_micros_p_value = 460;</code>
+   * @return The costMicrosPValue.
+   */
+  double getCostMicrosPValue();
+
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on cost change.
+   *
+   * Together with `cost_micros_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(cost_micros_change_point_estimate - cost_micros_margin_of_error,
+   * cost_micros_change_point_estimate + cost_micros_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double cost_micros_change_point_estimate = 461;</code>
+   * @return Whether the costMicrosChangePointEstimate field is set.
+   */
+  boolean hasCostMicrosChangePointEstimate();
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on cost change.
+   *
+   * Together with `cost_micros_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(cost_micros_change_point_estimate - cost_micros_margin_of_error,
+   * cost_micros_change_point_estimate + cost_micros_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double cost_micros_change_point_estimate = 461;</code>
+   * @return The costMicrosChangePointEstimate.
+   */
+  double getCostMicrosChangePointEstimate();
+
+  /**
+   * <pre>
+   * The impressions metric on the control arm of the experiment.
+   * The treatment impressions value can be selected by using `impressions`.
+   * </pre>
+   *
+   * <code>optional int64 control_impressions = 462;</code>
+   * @return Whether the controlImpressions field is set.
+   */
+  boolean hasControlImpressions();
+  /**
+   * <pre>
+   * The impressions metric on the control arm of the experiment.
+   * The treatment impressions value can be selected by using `impressions`.
+   * </pre>
+   *
+   * <code>optional int64 control_impressions = 462;</code>
+   * @return The controlImpressions.
+   */
+  long getControlImpressions();
+
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on impressions.
+   *
+   * Together with `impressions_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `impressions_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double impressions_margin_of_error = 463;</code>
+   * @return Whether the impressionsMarginOfError field is set.
+   */
+  boolean hasImpressionsMarginOfError();
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on impressions.
+   *
+   * Together with `impressions_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `impressions_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double impressions_margin_of_error = 463;</code>
+   * @return The impressionsMarginOfError.
+   */
+  double getImpressionsMarginOfError();
+
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * impressions. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on impressions, is 3%.
+   * </pre>
+   *
+   * <code>optional double impressions_p_value = 464;</code>
+   * @return Whether the impressionsPValue field is set.
+   */
+  boolean hasImpressionsPValue();
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * impressions. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on impressions, is 3%.
+   * </pre>
+   *
+   * <code>optional double impressions_p_value = 464;</code>
+   * @return The impressionsPValue.
+   */
+  double getImpressionsPValue();
+
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on impressions.
+   *
+   * Together with `impressions_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(impressions_point_estimate - impressions_margin_of_error,
+   * impressions_point_estimate + impressions_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double impressions_point_estimate = 465;</code>
+   * @return Whether the impressionsPointEstimate field is set.
+   */
+  boolean hasImpressionsPointEstimate();
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on impressions.
+   *
+   * Together with `impressions_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(impressions_point_estimate - impressions_margin_of_error,
+   * impressions_point_estimate + impressions_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double impressions_point_estimate = 465;</code>
+   * @return The impressionsPointEstimate.
+   */
+  double getImpressionsPointEstimate();
+
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on clicks.
+   *
+   * Together with `clicks_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at `clicks_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double clicks_margin_of_error = 466;</code>
+   * @return Whether the clicksMarginOfError field is set.
+   */
+  boolean hasClicksMarginOfError();
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on clicks.
+   *
+   * Together with `clicks_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at `clicks_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double clicks_margin_of_error = 466;</code>
+   * @return The clicksMarginOfError.
+   */
+  double getClicksMarginOfError();
+
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * clicks. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on clicks, is 3%.
+   * </pre>
+   *
+   * <code>optional double clicks_p_value = 467;</code>
+   * @return Whether the clicksPValue field is set.
+   */
+  boolean hasClicksPValue();
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * clicks. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on clicks, is 3%.
+   * </pre>
+   *
+   * <code>optional double clicks_p_value = 467;</code>
+   * @return The clicksPValue.
+   */
+  double getClicksPValue();
+
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on clicks.
+   *
+   * Together with `clicks_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval: `(clicks_point_estimate -
+   * clicks_margin_of_error,
+   * clicks_point_estimate + clicks_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double clicks_point_estimate = 468;</code>
+   * @return Whether the clicksPointEstimate field is set.
+   */
+  boolean hasClicksPointEstimate();
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on clicks.
+   *
+   * Together with `clicks_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval: `(clicks_point_estimate -
+   * clicks_margin_of_error,
+   * clicks_point_estimate + clicks_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double clicks_point_estimate = 468;</code>
+   * @return The clicksPointEstimate.
+   */
+  double getClicksPointEstimate();
+
+  /**
+   * <pre>
+   * The conversion value metric on the control arm of the experiment.
+   * The treatment conversion value can be selected by using
+   * `conversions_value`.
+   * </pre>
+   *
+   * <code>optional double control_conversion_value = 469;</code>
+   * @return Whether the controlConversionValue field is set.
+   */
+  boolean hasControlConversionValue();
+  /**
+   * <pre>
+   * The conversion value metric on the control arm of the experiment.
+   * The treatment conversion value can be selected by using
+   * `conversions_value`.
+   * </pre>
+   *
+   * <code>optional double control_conversion_value = 469;</code>
+   * @return The controlConversionValue.
+   */
+  double getControlConversionValue();
+
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on
+   * conversion value.
+   *
+   * Together with `conversion_value_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `conversion_value_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_margin_of_error = 470;</code>
+   * @return Whether the conversionValueMarginOfError field is set.
+   */
+  boolean hasConversionValueMarginOfError();
+  /**
+   * <pre>
+   * The margin of error when estimating the experiment's effect on
+   * conversion value.
+   *
+   * Together with `conversion_value_change_point_estimate`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the radius of the
+   * confidence interval, which is centered at
+   * `conversion_value_change_point_estimate`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_margin_of_error = 470;</code>
+   * @return The conversionValueMarginOfError.
+   */
+  double getConversionValueMarginOfError();
+
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversion value. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversion value, is 3%.
+   * </pre>
+   *
+   * <code>optional double conversion_value_p_value = 471;</code>
+   * @return Whether the conversionValuePValue field is set.
+   */
+  boolean hasConversionValuePValue();
+  /**
+   * <pre>
+   * The p-value for the null hypothesis that the experiment has no effect on
+   * conversion value. Ranges from 0 to 1.
+   *
+   * Say if the p-value is 0.03, that means the probability of observing the
+   * data, if the experiment has no effect on conversion value, is 3%.
+   * </pre>
+   *
+   * <code>optional double conversion_value_p_value = 471;</code>
+   * @return The conversionValuePValue.
+   */
+  double getConversionValuePValue();
+
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on
+   * conversion value change.
+   *
+   * Together with `conversion_value_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(conversion_value_change_point_estimate -
+   * conversion_value_margin_of_error,
+   * conversion_value_change_point_estimate +
+   * conversion_value_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_change_point_estimate = 472;</code>
+   * @return Whether the conversionValueChangePointEstimate field is set.
+   */
+  boolean hasConversionValueChangePointEstimate();
+  /**
+   * <pre>
+   * The point estimate when estimating the experiment's effect on
+   * conversion value change.
+   *
+   * Together with `conversion_value_margin_of_error`,
+   * they describe a confidence interval with a prescribed confidence level
+   * for the difference being estimated. The quantity being estimated is
+   * (treatment / control - 1). This field specifies the point estimate, which
+   * is the center of the confidence interval:
+   * `(conversion_value_change_point_estimate -
+   * conversion_value_margin_of_error,
+   * conversion_value_change_point_estimate +
+   * conversion_value_margin_of_error)`.
+   * </pre>
+   *
+   * <code>optional double conversion_value_change_point_estimate = 472;</code>
+   * @return The conversionValueChangePointEstimate.
+   */
+  double getConversionValueChangePointEstimate();
 }

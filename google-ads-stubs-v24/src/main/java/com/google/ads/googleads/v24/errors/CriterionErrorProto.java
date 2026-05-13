@@ -42,7 +42,7 @@ public final class CriterionErrorProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v24/errors/criter" +
       "ion_error.proto\022\037google.ads.googleads.v2" +
-      "4.errors\"\2048\n\022CriterionErrorEnum\"\3557\n\016Crit" +
+      "4.errors\"\2458\n\022CriterionErrorEnum\"\2168\n\016Crit" +
       "erionError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
       "\022\032\n\026CONCRETE_TYPE_REQUIRED\020\002\022\035\n\031INVALID_" +
       "EXCLUDED_CATEGORY\020\003\022\030\n\024INVALID_KEYWORD_T" +
@@ -221,13 +221,14 @@ public final class CriterionErrorProto {
       "ROUP_RULE_NOT_SUPPORTED_FOR_THE_VERTICAL" +
       "_TYPE\020\267\001\022,\n\'RETAIL_FILTER_EXPRESSION_DOE" +
       "S_NOT_EXIST\020\270\001\022/\n*RETAIL_FILTER_TAGS_REF" +
-      "ERRING_TO_EXPRESSION\020\271\001B\363\001\n#com.google.a" +
-      "ds.googleads.v24.errorsB\023CriterionErrorP" +
-      "rotoP\001ZEgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v24/errors;errors\242\002\003" +
-      "GAA\252\002\037Google.Ads.GoogleAds.V24.Errors\312\002\037" +
-      "Google\\Ads\\GoogleAds\\V24\\Errors\352\002#Google" +
-      "::Ads::GoogleAds::V24::Errorsb\006proto3"
+      "ERRING_TO_EXPRESSION\020\271\001\022\037\n\032CANNOT_EXCLUD" +
+      "E_ALL_TARGETS\020\272\001B\363\001\n#com.google.ads.goog" +
+      "leads.v24.errorsB\023CriterionErrorProtoP\001Z" +
+      "Egoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v24/errors;errors\242\002\003GAA\252\002\037G" +
+      "oogle.Ads.GoogleAds.V24.Errors\312\002\037Google\\" +
+      "Ads\\GoogleAds\\V24\\Errors\352\002#Google::Ads::" +
+      "GoogleAds::V24::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

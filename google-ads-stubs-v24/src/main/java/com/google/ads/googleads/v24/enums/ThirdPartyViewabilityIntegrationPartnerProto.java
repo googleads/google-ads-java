@@ -42,18 +42,19 @@ public final class ThirdPartyViewabilityIntegrationPartnerProto {
     java.lang.String[] descriptorData = {
       "\nPgoogle/ads/googleads/v24/enums/third_p" +
       "arty_viewability_integration_partner.pro" +
-      "to\022\036google.ads.googleads.v24.enums\"\242\001\n+T" +
+      "to\022\036google.ads.googleads.v24.enums\"\254\001\n+T" +
       "hirdPartyViewabilityIntegrationPartnerEn" +
-      "um\"s\n\'ThirdPartyViewabilityIntegrationPa" +
+      "um\"}\n\'ThirdPartyViewabilityIntegrationPa" +
       "rtner\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\021\n\rD" +
-      "OUBLE_VERIFY\020\002\022\027\n\023INTEGRAL_AD_SCIENCE\020\003B" +
-      "\206\002\n\"com.google.ads.googleads.v24.enumsB," +
-      "ThirdPartyViewabilityIntegrationPartnerP" +
-      "rotoP\001ZCgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v24/enums;enums\242\002\003GA" +
-      "A\252\002\036Google.Ads.GoogleAds.V24.Enums\312\002\036Goo" +
-      "gle\\Ads\\GoogleAds\\V24\\Enums\352\002\"Google::Ad" +
-      "s::GoogleAds::V24::Enumsb\006proto3"
+      "OUBLE_VERIFY\020\002\022\027\n\023INTEGRAL_AD_SCIENCE\020\003\022" +
+      "\010\n\004ZEFR\020\004B\206\002\n\"com.google.ads.googleads.v" +
+      "24.enumsB,ThirdPartyViewabilityIntegrati" +
+      "onPartnerProtoP\001ZCgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v24/enums;" +
+      "enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V24.E" +
+      "nums\312\002\036Google\\Ads\\GoogleAds\\V24\\Enums\352\002\"" +
+      "Google::Ads::GoogleAds::V24::Enumsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -374,4 +374,66 @@ public interface ExperimentOrBuilder extends
    * @return The syncEnabled.
    */
   boolean getSyncEnabled();
+
+  /**
+   * <pre>
+   * Immutable. Details of the video experiment. Applies for experiment types:
+   * YOUTUBE_CUSTOM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the videoExperiment field is set.
+   */
+  boolean hasVideoExperiment();
+  /**
+   * <pre>
+   * Immutable. Details of the video experiment. Applies for experiment types:
+   * YOUTUBE_CUSTOM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The videoExperiment.
+   */
+  com.google.ads.googleads.v24.common.VideoExperimentInfo getVideoExperiment();
+  /**
+   * <pre>
+   * Immutable. Details of the video experiment. Applies for experiment types:
+   * YOUTUBE_CUSTOM.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VideoExperimentInfo video_experiment = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  com.google.ads.googleads.v24.common.VideoExperimentInfoOrBuilder getVideoExperimentOrBuilder();
+
+  /**
+   * <pre>
+   * Immutable. Details of the optimize assets experiment. Applies for
+   * experiment types: OPTIMIZE_ASSETS.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the optimizeAssetsExperiment field is set.
+   */
+  boolean hasOptimizeAssetsExperiment();
+  /**
+   * <pre>
+   * Immutable. Details of the optimize assets experiment. Applies for
+   * experiment types: OPTIMIZE_ASSETS.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The optimizeAssetsExperiment.
+   */
+  com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo getOptimizeAssetsExperiment();
+  /**
+   * <pre>
+   * Immutable. Details of the optimize assets experiment. Applies for
+   * experiment types: OPTIMIZE_ASSETS.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfo optimize_assets_experiment = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  com.google.ads.googleads.v24.common.OptimizeAssetsExperimentInfoOrBuilder getOptimizeAssetsExperimentOrBuilder();
+
+  com.google.ads.googleads.v24.resources.Experiment.ExperimentInfoCase getExperimentInfoCase();
 }

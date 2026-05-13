@@ -112,6 +112,16 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED = 6;</code>
      */
     CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED(6),
+    /**
+     * <pre>
+     * The requested time granularity is not supported for the date range in the
+     * query. Metrics with daily, hourly, or weekly segmentation are only
+     * available for the last 37 months.
+     * </pre>
+     *
+     * <code>REQUESTED_DATE_GRANULARITY_NOT_SUPPORTED = 7;</code>
+     */
+    REQUESTED_DATE_GRANULARITY_NOT_SUPPORTED(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -180,6 +190,16 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED = 6;</code>
      */
     public static final int CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED_VALUE = 6;
+    /**
+     * <pre>
+     * The requested time granularity is not supported for the date range in the
+     * query. Metrics with daily, hourly, or weekly segmentation are only
+     * available for the last 37 months.
+     * </pre>
+     *
+     * <code>REQUESTED_DATE_GRANULARITY_NOT_SUPPORTED = 7;</code>
+     */
+    public static final int REQUESTED_DATE_GRANULARITY_NOT_SUPPORTED_VALUE = 7;
 
 
     public final int getNumber() {
@@ -213,6 +233,7 @@ private static final long serialVersionUID = 0L;
         case 4: return CANNOT_SET_DATE_TO_PAST;
         case 5: return AFTER_MAXIMUM_ALLOWABLE_DATE;
         case 6: return CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED;
+        case 7: return REQUESTED_DATE_GRANULARITY_NOT_SUPPORTED;
         default: return null;
       }
     }

@@ -165,4 +165,25 @@ public interface CustomerUserAccessOrBuilder extends
    */
   com.google.protobuf.ByteString
       getInviterUserEmailAddressBytes();
+
+  /**
+   * <pre>
+   * Output only. Whether the user has passkey enabled.
+   * Read only field
+   * </pre>
+   *
+   * <code>optional bool passkey_enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the passkeyEnabled field is set.
+   */
+  boolean hasPasskeyEnabled();
+  /**
+   * <pre>
+   * Output only. Whether the user has passkey enabled.
+   * Read only field
+   * </pre>
+   *
+   * <code>optional bool passkey_enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The passkeyEnabled.
+   */
+  boolean getPasskeyEnabled();
 }
