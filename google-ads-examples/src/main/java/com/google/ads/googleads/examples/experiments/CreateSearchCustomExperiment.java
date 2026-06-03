@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.examples.campaignmanagement;
+package com.google.ads.googleads.examples.experiments;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
 
@@ -47,12 +47,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This example creates a new experiment, experiment arms, and demonstrates how to modify the draft
- * campaign as well as begin the experiment.
+ * This example creates a standard, system-managed campaign experiment.
+ *
+ * <p>It demonstrates how to create an experiment, configure its control and treatment arms (where
+ * the treatment arm automatically generates a draft campaign), modify the system-generated draft
+ * campaign, and schedule the experiment.
+ *
+ * <p>Note: This standard draft-based workflow does not apply to all experiment types (e.g.,
+ * hotswap or asset optimization experiments) that do not use system-generated treatment campaign
+ * copies.
  */
-public class CreateExperiment {
+public class CreateSearchCustomExperiment {
 
-  private static class CreateExperimentParams extends CodeSampleParams {
+  private static class CreateSearchCustomExperimentParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -62,7 +69,7 @@ public class CreateExperiment {
   }
 
   public static void main(String[] args) {
-    CreateExperimentParams params = new CreateExperimentParams();
+    CreateSearchCustomExperimentParams params = new CreateSearchCustomExperimentParams();
     if (!params.parseArguments(args)) {
       throw new IllegalArgumentException("Invalid or missing command line arguments");
     }
@@ -80,7 +87,7 @@ public class CreateExperiment {
     }
 
     try {
-      new CreateExperiment().runExample(googleAdsClient, params.customerId, params.baseCampaignId);
+      new CreateSearchCustomExperiment().runExample(googleAdsClient, params.customerId, params.baseCampaignId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -130,6 +137,9 @@ public class CreateExperiment {
                 Experiment.newBuilder()
                     // Name must be unique.
                     .setName("Example Experiment #" + getPrintableDateTime())
+                    // We specify SEARCH_CUSTOM to create a standard search campaign experiment.
+                    // This type uses a standard draft-based workflow where the system automatically
+                    // creates a draft/in-design campaign for the treatment arm.
                     .setType(ExperimentType.SEARCH_CUSTOM)
                     .setSuffix("[experiment]")
                     .setStatus(ExperimentStatus.SETUP)
@@ -170,8 +180,8 @@ public class CreateExperiment {
     operations.add(
         ExperimentArmOperation.newBuilder()
             .setCreate(
-                // The non-"control" arm, also called a "treatment" arm, will automatically
-                // generate draft campaigns that you can modify before starting the experiment.
+                // In standard campaign experiments, creating the treatment arm automatically
+                // generates a draft campaign that you can modify before starting the experiment.
                 ExperimentArm.newBuilder()
                     .setControl(false)
                     .setExperiment(experiment)
