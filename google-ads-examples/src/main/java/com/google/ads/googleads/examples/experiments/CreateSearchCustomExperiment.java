@@ -54,7 +54,7 @@ import java.util.List;
  * campaign, and schedule the experiment.
  *
  * <p>Note: This standard draft-based workflow does not apply to all experiment types (e.g.,
- * hotswap or asset optimization experiments) that do not use system-generated treatment campaign
+ * intra-campaign or asset optimization experiments) that do not use system-generated treatment campaign
  * copies.
  */
 public class CreateSearchCustomExperiment {
