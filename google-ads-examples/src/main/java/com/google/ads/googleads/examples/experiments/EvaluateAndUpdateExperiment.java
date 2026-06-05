@@ -4,12 +4,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.v24.common.Metrics;
 import com.google.ads.googleads.v24.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v24.enums.ExperimentTypeEnum.ExperimentType;
 import com.google.ads.googleads.v24.errors.GoogleAdsError;
 import com.google.ads.googleads.v24.errors.GoogleAdsException;
 import com.google.ads.googleads.v24.resources.CampaignBudget;
-import com.google.ads.googleads.v24.common.Metrics;
 import com.google.ads.googleads.v24.services.CampaignBudgetMapping;
 import com.google.ads.googleads.v24.services.CampaignBudgetOperation;
 import com.google.ads.googleads.v24.services.CampaignBudgetServiceClient;
@@ -19,6 +19,7 @@ import com.google.ads.googleads.v24.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v24.services.MutateCampaignBudgetsResponse;
 import com.google.ads.googleads.v24.services.SearchGoogleAdsRequest;
 import com.google.api.gax.longrunning.OperationFuture;
+import com.google.common.collect.Iterables;
 import com.google.protobuf.Empty;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -26,15 +27,16 @@ import java.util.Collections;
 import java.util.UUID;
 
 /**
- * This example illustrates how to retrieve performance metrics for an experiment.
+ * Retrieves performance metrics for an experiment, evaluates the performance and takes action on
+ * the experiment accordingly.
  *
- * <p>It shows how to query statistical significance metrics for the experiment,
- * and how to execute actions such as promoting, ending, or graduating an experiment.
+ * <p>It shows how to query statistical significance metrics for the experiment, and how to execute
+ * actions such as promoting, ending, or graduating an experiment.
  */
-public class GetExperimentPerformance {
+public class EvaluateAndUpdateExperiment {
   private static final double P_VALUE_THRESHOLD = 0.05;
 
-  private static class GetExperimentPerformanceParams extends CodeSampleParams {
+  private static class EvaluateAndUpdateExperimentParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -44,7 +46,7 @@ public class GetExperimentPerformance {
   }
 
   public static void main(String[] args) {
-    GetExperimentPerformanceParams params = new GetExperimentPerformanceParams();
+    EvaluateAndUpdateExperimentParams params = new EvaluateAndUpdateExperimentParams();
     if (!params.parseArguments(args)) {
       throw new IllegalArgumentException("Invalid or missing command line arguments");
     }
@@ -62,7 +64,8 @@ public class GetExperimentPerformance {
     }
 
     try {
-      new GetExperimentPerformance().runExample(googleAdsClient, params.customerId, params.experimentId);
+      new EvaluateAndUpdateExperiment()
+          .runExample(googleAdsClient, params.customerId, params.experimentId);
     } catch (GoogleAdsException gae) {
       System.err.printf(
           "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
@@ -86,6 +89,9 @@ public class GetExperimentPerformance {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
 
+      // Query to retrieve the experiment.
+      // Notice that we request the statistical metrics (for example, p-value, point estimate,
+      // margin of error) which are populated based on the treatment arm.
       String query =
           String.format(
               "SELECT "
@@ -111,26 +117,39 @@ public class GetExperimentPerformance {
 
       GoogleAdsServiceClient.SearchPagedResponse response = googleAdsServiceClient.search(request);
 
-      boolean experimentFound = false;
-      for (GoogleAdsRow row : response.iterateAll()) {
-        experimentFound = true;
-        System.out.printf("Found experiment: %s%n", row.getExperiment().getName());
-        System.out.printf("  Resource Name: %s%n", row.getExperiment().getResourceName());
-
-        evaluateExperiment(googleAdsClient, customerId, row);
-      }
-
-      if (!experimentFound) {
+      Iterable<GoogleAdsRow> rows = response.iterateAll();
+      if (Iterables.isEmpty(rows)) {
         System.out.printf("No experiment found for experiment ID: %d%n", experimentId);
+        return;
       }
+      GoogleAdsRow row = Iterables.getOnlyElement(rows);
+      System.out.printf("Found experiment: %s%n", row.getExperiment().getName());
+      System.out.printf("  Resource Name: %s%n", row.getExperiment().getResourceName());
+
+      evaluateExperiment(googleAdsClient, customerId, row);
     }
   }
 
-  // [START get_experiment_performance_1]
-  private void evaluateExperiment(GoogleAdsClient googleAdsClient, long customerId, GoogleAdsRow row) {
+  /**
+   * Evaluates the performance of the experiment and updates it accordingly (for example, promotes,
+   * ends, or graduates).
+   *
+   * <p>Checks conversion and click metrics against statistical significance thresholds to determine
+   * the appropriate action to take on the experiment.
+   */
+  // [START evaluate_and_update_experiment_1]
+  private void evaluateExperiment(
+      GoogleAdsClient googleAdsClient, long customerId, GoogleAdsRow row) {
     Metrics metrics = row.getMetrics();
     String experimentResourceName = row.getExperiment().getResourceName();
 
+    // 1. Evaluate conversion success as a primary success signal if available.
+    // - Point Estimate: Represents the estimated average lift or difference in conversions.
+    // - Margin of Error: Outlines the confidence interval bounds. Note that the margin_of_error
+    //   provided by the API is calculated for a preset confidence level which is set based on the
+    //   experiment type.
+    // - Lower Bound: (Point Estimate - Margin of Error). If this value is above 0,
+    //   we have statistical significance that performance has improved.
     double convPValue = metrics.getConversionsAbsoluteChangePValue();
     double convLift = metrics.getConversionsAbsoluteChangePointEstimate();
     double convError = metrics.getConversionsAbsoluteChangeMarginOfError();
@@ -139,7 +158,8 @@ public class GetExperimentPerformance {
     if (convPValue <= P_VALUE_THRESHOLD) {
       if (convLowerBound > 0) {
         System.out.printf(
-            "Significant Success: Conversions increased. Even at the lower bound, the lift is %.2f. Promoting changes.%n",
+            "Significant Success: Conversions increased. Even at the lower bound, the lift is %.2f."
+                + " Promoting changes.%n",
             convLowerBound);
         promoteExperiment(googleAdsClient, customerId, experimentResourceName);
         return;
@@ -152,49 +172,77 @@ public class GetExperimentPerformance {
       }
     }
 
+    // 2. Fall back to evaluating click metrics if conversions are inconclusive.
     double clickPValue = metrics.getClicksPValue();
     double clickLift = metrics.getClicksPointEstimate();
     double clickError = metrics.getClicksMarginOfError();
     double clickLowerBound = clickLift - clickError;
 
     if (clickPValue <= P_VALUE_THRESHOLD && clickLowerBound > 0) {
-      System.out.printf(
-          "Click volume is significantly up (+%.1f%%). Graduating treatment for further manual analysis.%n",
-          clickLift * 100);
+      System.out.printf("Click volume is significantly up (+%.1f%%).%n", clickLift * 100);
 
+      // Graduation is only supported for separate campaign experiments, not
+      // intra-campaign experiments where there is no separate treatment campaign.
       ExperimentType experimentType = row.getExperiment().getType();
       if (experimentType != ExperimentType.ADOPT_BROAD_MATCH_KEYWORDS
           && experimentType != ExperimentType.ADOPT_AI_MAX) {
+        System.out.println("Graduating treatment campaign for further manual analysis.");
         graduateExperiment(googleAdsClient, customerId, experimentResourceName);
       } else {
         System.out.println(
-            "Intra-campaign trial detected: Graduation is not supported because there is only one campaign. Continuing to run to gather more conversion data.");
+            "Intra-campaign trial detected: graduation is not supported. Continuing to run the"
+                + " experiment to gather more conversion data.");
       }
     } else {
+      // 3. Print status if no action was taken.
       System.out.printf(
-          "Inconclusive: No significant lift in Conversions (p=%.2f) or Clicks (p=%.2f). Current estimated lift: %.2f +/- %.2f. Continue running.%n",
+          "Inconclusive: No significant lift in Conversions (p=%.2f) or Clicks (p=%.2f). Current"
+              + " estimated lift: %.2f +/- %.2f. Allowing the experiment to continue running.%n",
           convPValue, clickPValue, convLift, convError);
     }
   }
-  // [END get_experiment_performance_1]
 
-  private void promoteExperiment(GoogleAdsClient googleAdsClient, long customerId, String experimentResourceName) {
+  // [END evaluate_and_update_experiment_1]
+
+  /**
+   * Promotes the experiment trial campaign to the base campaign.
+   *
+   * <p>Promotion is an asynchronous long-running process that copies the trial campaign's settings
+   * and creatives back to the base campaign and subsequently ends the experiment.
+   */
+  private void promoteExperiment(
+      GoogleAdsClient googleAdsClient, long customerId, String experimentResourceName) {
     try (ExperimentServiceClient experimentServiceClient =
         googleAdsClient.getLatestVersion().createExperimentServiceClient()) {
+      // This method returns a long running operation (LRO).
+      // - To block until the operation is complete: call operationResponse.get()
+      // - For non-blocking status checks: use operationResponse.isDone()
+      // - For manual polling or persistent tracking: store operationResponse.getName()
+      //
+      // For more information on handling LROs, see:
+      // https://developers.google.com/google-ads/api/docs/concepts/long-running-operations
       OperationFuture<Empty, ?> operationResponse =
           experimentServiceClient.promoteExperimentAsync(experimentResourceName);
       System.out.printf("Started promotion for experiment: %s%n", experimentResourceName);
       System.out.printf(
-          "The promotion is running asynchronously. You can track its progress using the long-running operation: %s%n",
+          "The promotion is running asynchronously. You can track its progress using the"
+              + " long-running operation: %s%n",
           operationResponse.getName());
       System.out.println(
-          "Best Practice: If the promotion fails, you can retrieve the full list of errors by calling ExperimentService.ListExperimentAsyncErrors.");
+          "Best Practice: If the promotion fails, you can retrieve the full list of errors by"
+              + " calling ExperimentService.ListExperimentAsyncErrors.");
     } catch (Exception e) {
       System.out.printf("Failed to promote experiment: %s%n", e.getMessage());
     }
   }
 
-  private void endExperiment(GoogleAdsClient googleAdsClient, long customerId, String experimentResourceName) {
+  /**
+   * Immediately ends the experiment.
+   *
+   * <p>Terminates the traffic split and sets the end date to the current time.
+   */
+  private void endExperiment(
+      GoogleAdsClient googleAdsClient, long customerId, String experimentResourceName) {
     try (ExperimentServiceClient experimentServiceClient =
         googleAdsClient.getLatestVersion().createExperimentServiceClient()) {
       experimentServiceClient.endExperiment(experimentResourceName);
@@ -202,10 +250,17 @@ public class GetExperimentPerformance {
     }
   }
 
-  private void graduateExperiment(GoogleAdsClient googleAdsClient, long customerId, String experimentResourceName) {
+  /**
+   * Graduates the experiment to a full standalone campaign.
+   *
+   * <p>This process involves creating a new budget and mapping the treatment campaign to it.
+   */
+  private void graduateExperiment(
+      GoogleAdsClient googleAdsClient, long customerId, String experimentResourceName) {
     String budgetResourceName;
     try (CampaignBudgetServiceClient campaignBudgetServiceClient =
         googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
+      // 1. Create a new campaign budget for the graduating campaign.
       CampaignBudget campaignBudget =
           CampaignBudget.newBuilder()
               .setName("Graduated Experiment Budget #" + UUID.randomUUID())
@@ -227,14 +282,18 @@ public class GetExperimentPerformance {
     String treatmentCampaignResourceName = null;
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+      // 2. Query the experiment_arm to retrieve the treatment campaign's resource name.
+      // The treatment arm has control set to FALSE.
       String query =
           String.format(
-              "SELECT experiment_arm.campaigns FROM experiment_arm WHERE experiment_arm.experiment = '%s' AND experiment_arm.control = FALSE",
+              "SELECT experiment_arm.campaigns FROM experiment_arm WHERE experiment_arm.experiment"
+                  + " = '%s' AND experiment_arm.control = FALSE",
               experimentResourceName);
 
       GoogleAdsServiceClient.SearchPagedResponse searchResponse =
           googleAdsServiceClient.search(Long.toString(customerId), query);
 
+      // Find the resource name of the treatment campaign.
       for (GoogleAdsRow row : searchResponse.iterateAll()) {
         if (row.getExperimentArm().getCampaignsCount() > 0) {
           treatmentCampaignResourceName = row.getExperimentArm().getCampaigns(0);
@@ -243,6 +302,7 @@ public class GetExperimentPerformance {
       }
     }
 
+    // Verify that a treatment campaign was found.
     if (treatmentCampaignResourceName == null) {
       System.out.println("Could not find the treatment campaign associated with this experiment.");
       return;
@@ -250,6 +310,7 @@ public class GetExperimentPerformance {
 
     try (ExperimentServiceClient experimentServiceClient =
         googleAdsClient.getLatestVersion().createExperimentServiceClient()) {
+      // 3. Build the budget mapping and execute the graduation request.
       CampaignBudgetMapping budgetMapping =
           CampaignBudgetMapping.newBuilder()
               .setExperimentCampaign(treatmentCampaignResourceName)

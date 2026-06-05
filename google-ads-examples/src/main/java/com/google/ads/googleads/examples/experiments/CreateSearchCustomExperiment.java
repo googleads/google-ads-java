@@ -47,15 +47,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This example creates a standard, system-managed campaign experiment.
+ * Creates a standard, system-managed campaign experiment of type SEARCH_CUSTOM.
  *
- * <p>It demonstrates how to create an experiment, configure its control and treatment arms (where
- * the treatment arm automatically generates a draft campaign), modify the system-generated draft
- * campaign, and schedule the experiment.
+ * <p>Sets up the experiment, configures its control and treatment arms (where the treatment arm
+ * automatically generates a draft campaign), modifies the system-generated draft campaign, and
+ * schedule the experiment.
  *
- * <p>Note: This standard draft-based workflow does not apply to all experiment types (e.g.,
- * intra-campaign or asset optimization experiments) that do not use system-generated treatment campaign
- * copies.
+ * <p>Note: This standard draft-based workflow applies only to experiment types that use
+ * system-generated treatment campaign copies, and excludes intra-campaign or asset-optimization
+ * experiments.
  */
 public class CreateSearchCustomExperiment {
 
@@ -87,7 +87,8 @@ public class CreateSearchCustomExperiment {
     }
 
     try {
-      new CreateSearchCustomExperiment().runExample(googleAdsClient, params.customerId, params.baseCampaignId);
+      new CreateSearchCustomExperiment()
+          .runExample(googleAdsClient, params.customerId, params.baseCampaignId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -126,9 +127,7 @@ public class CreateSearchCustomExperiment {
     }
   }
 
-  /**
-   * Creates a campaign experiment.
-   */
+  /** Creates a campaign experiment. */
   // [START create_experiment_1]
   private String createExperimentResource(GoogleAdsClient googleAdsClient, long customerId) {
     ExperimentOperation operation =
@@ -156,11 +155,10 @@ public class CreateSearchCustomExperiment {
       return experiment;
     }
   }
+
   // [END create_experiment_1]
 
-  /**
-   * Creates control and experiment arms for the experiment.
-   */
+  /** Creates control and experiment arms for the experiment. */
   // [START create_experiment_2]
   private String createExperimentArms(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId, String experiment) {
@@ -193,13 +191,15 @@ public class CreateSearchCustomExperiment {
     try (ExperimentArmServiceClient experimentArmServiceClient =
         googleAdsClient.getLatestVersion().createExperimentArmServiceClient()) {
       // Constructs the mutate request.
-      MutateExperimentArmsRequest mutateRequest = MutateExperimentArmsRequest.newBuilder()
-          .setCustomerId(Long.toString(customerId))
-          .addAllOperations(operations)
-          // We want to fetch the draft campaign IDs from the treatment arm, so the easiest way to do
-          // that is to have the response return the newly created entities.
-          .setResponseContentType(ResponseContentType.MUTABLE_RESOURCE)
-          .build();
+      MutateExperimentArmsRequest mutateRequest =
+          MutateExperimentArmsRequest.newBuilder()
+              .setCustomerId(Long.toString(customerId))
+              .addAllOperations(operations)
+              // We want to fetch the draft campaign IDs from the treatment arm, so the easiest way
+              // to do
+              // that is to have the response return the newly created entities.
+              .setResponseContentType(ResponseContentType.MUTABLE_RESOURCE)
+              .build();
 
       // Sends the mutate request.
       MutateExperimentArmsResponse response =
@@ -210,22 +210,21 @@ public class CreateSearchCustomExperiment {
       // treatment arm, you can always filter the query in the next section with
       // `experiment_arm.control = false`.
       MutateExperimentArmResult controlArmResult = response.getResults(0);
-      MutateExperimentArmResult treatmentArmResult = response.getResults(
-          response.getResultsCount() - 1);
+      MutateExperimentArmResult treatmentArmResult =
+          response.getResults(response.getResultsCount() - 1);
 
-      System.out.printf("Created control arm with resource name '%s'%n",
-          controlArmResult.getResourceName());
-      System.out.printf("Created treatment arm with resource name '%s'%n",
-          treatmentArmResult.getResourceName());
+      System.out.printf(
+          "Created control arm with resource name '%s'%n", controlArmResult.getResourceName());
+      System.out.printf(
+          "Created treatment arm with resource name '%s'%n", treatmentArmResult.getResourceName());
 
       return treatmentArmResult.getExperimentArm().getInDesignCampaigns(0);
     }
   }
+
   // [END create_experiment_2]
 
-  /**
-   * Modifies the draft campaign.
-   */
+  /** Modifies the draft campaign. */
   // [START create_experiment_4]
   private void modifyDraftCampaign(
       GoogleAdsClient googleAdsClient, long customerId, String draftCampaign) {
