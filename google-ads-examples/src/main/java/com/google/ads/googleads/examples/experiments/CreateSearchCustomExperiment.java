@@ -196,8 +196,7 @@ public class CreateSearchCustomExperiment {
               .setCustomerId(Long.toString(customerId))
               .addAllOperations(operations)
               // We want to fetch the draft campaign IDs from the treatment arm, so the easiest way
-              // to do
-              // that is to have the response return the newly created entities.
+              // to do that is to have the response return the newly created entities.
               .setResponseContentType(ResponseContentType.MUTABLE_RESOURCE)
               .build();
 
