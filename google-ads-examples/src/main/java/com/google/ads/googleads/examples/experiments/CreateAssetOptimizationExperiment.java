@@ -116,10 +116,10 @@ public class CreateAssetOptimizationExperiment {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long assetGroupId)
       throws IOException {
 
-    String campaignResourceName = null;
-
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+
+      String campaignResourceName = null;
 
       // Query the asset group to find the associated campaign resource name.
       String query =
