@@ -372,4 +372,31 @@ public interface AssetGroupOrBuilder extends
    * <code>.google.ads.googleads.v24.resources.AssetCoverage asset_coverage = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v24.resources.AssetCoverageOrBuilder getAssetCoverageOrBuilder();
+
+  /**
+   * <pre>
+   * Local services info of the asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+   * @return Whether the googleLocalServicesInfo field is set.
+   */
+  boolean hasGoogleLocalServicesInfo();
+  /**
+   * <pre>
+   * Local services info of the asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+   * @return The googleLocalServicesInfo.
+   */
+  com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo getGoogleLocalServicesInfo();
+  /**
+   * <pre>
+   * Local services info of the asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+   */
+  com.google.ads.googleads.v24.resources.GoogleLocalServicesInfoOrBuilder getGoogleLocalServicesInfoOrBuilder();
 }

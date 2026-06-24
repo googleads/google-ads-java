@@ -919,6 +919,44 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v24.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.UNRECOGNIZED : result;
   }
 
+  public static final int SYNTHETIC_CONTENT_INFO_FIELD_NUMBER = 65;
+  private com.google.ads.googleads.v24.common.SyntheticContentInfo syntheticContentInfo_;
+  /**
+   * <pre>
+   * Synthetic content info for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+   * @return Whether the syntheticContentInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasSyntheticContentInfo() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Synthetic content info for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+   * @return The syntheticContentInfo.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.SyntheticContentInfo getSyntheticContentInfo() {
+    return syntheticContentInfo_ == null ? com.google.ads.googleads.v24.common.SyntheticContentInfo.getDefaultInstance() : syntheticContentInfo_;
+  }
+  /**
+   * <pre>
+   * Synthetic content info for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder getSyntheticContentInfoOrBuilder() {
+    return syntheticContentInfo_ == null ? com.google.ads.googleads.v24.common.SyntheticContentInfo.getDefaultInstance() : syntheticContentInfo_;
+  }
+
   public static final int TEXT_AD_FIELD_NUMBER = 6;
   /**
    * <pre>
@@ -2143,6 +2181,9 @@ private static final long serialVersionUID = 0L;
     if (adDataCase_ == 64) {
       output.writeMessage(64, (com.google.ads.googleads.v24.common.DemandGenVideoResponsiveAdInfo) adData_);
     }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeMessage(65, getSyntheticContentInfo());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -2315,6 +2356,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(64, (com.google.ads.googleads.v24.common.DemandGenVideoResponsiveAdInfo) adData_);
     }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(65, getSyntheticContentInfo());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2375,6 +2420,11 @@ private static final long serialVersionUID = 0L;
           .equals(other.getName())) return false;
     }
     if (systemManagedResourceSource_ != other.systemManagedResourceSource_) return false;
+    if (hasSyntheticContentInfo() != other.hasSyntheticContentInfo()) return false;
+    if (hasSyntheticContentInfo()) {
+      if (!getSyntheticContentInfo()
+          .equals(other.getSyntheticContentInfo())) return false;
+    }
     if (!getAdDataCase().equals(other.getAdDataCase())) return false;
     switch (adDataCase_) {
       case 6:
@@ -2545,6 +2595,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + SYSTEM_MANAGED_RESOURCE_SOURCE_FIELD_NUMBER;
     hash = (53 * hash) + systemManagedResourceSource_;
+    if (hasSyntheticContentInfo()) {
+      hash = (37 * hash) + SYNTHETIC_CONTENT_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getSyntheticContentInfo().hashCode();
+    }
     switch (adDataCase_) {
       case 6:
         hash = (37 * hash) + TEXT_AD_FIELD_NUMBER;
@@ -2772,13 +2826,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v24.resources.Ad.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetFinalAppUrlsFieldBuilder();
+        internalGetUrlCustomParametersFieldBuilder();
+        internalGetUrlCollectionsFieldBuilder();
+        internalGetSyntheticContentInfoFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -2820,6 +2883,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00001000);
       name_ = "";
       systemManagedResourceSource_ = 0;
+      syntheticContentInfo_ = null;
+      if (syntheticContentInfoBuilder_ != null) {
+        syntheticContentInfoBuilder_.dispose();
+        syntheticContentInfoBuilder_ = null;
+      }
       if (textAdBuilder_ != null) {
         textAdBuilder_.clear();
       }
@@ -3007,6 +3075,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.systemManagedResourceSource_ = systemManagedResourceSource_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.syntheticContentInfo_ = syntheticContentInfoBuilder_ == null
+            ? syntheticContentInfo_
+            : syntheticContentInfoBuilder_.build();
+        to_bitField0_ |= 0x00000040;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -3269,6 +3343,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.systemManagedResourceSource_ != 0) {
         setSystemManagedResourceSourceValue(other.getSystemManagedResourceSourceValue());
+      }
+      if (other.hasSyntheticContentInfo()) {
+        mergeSyntheticContentInfo(other.getSyntheticContentInfo());
       }
       switch (other.getAdDataCase()) {
         case TEXT_AD: {
@@ -3677,6 +3754,13 @@ private static final long serialVersionUID = 0L;
               adDataCase_ = 64;
               break;
             } // case 514
+            case 522: {
+              input.readMessage(
+                  internalGetSyntheticContentInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 522
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5938,6 +6022,163 @@ private static final long serialVersionUID = 0L;
       systemManagedResourceSource_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v24.common.SyntheticContentInfo syntheticContentInfo_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.SyntheticContentInfo, com.google.ads.googleads.v24.common.SyntheticContentInfo.Builder, com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder> syntheticContentInfoBuilder_;
+    /**
+     * <pre>
+     * Synthetic content info for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+     * @return Whether the syntheticContentInfo field is set.
+     */
+    public boolean hasSyntheticContentInfo() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+     * @return The syntheticContentInfo.
+     */
+    public com.google.ads.googleads.v24.common.SyntheticContentInfo getSyntheticContentInfo() {
+      if (syntheticContentInfoBuilder_ == null) {
+        return syntheticContentInfo_ == null ? com.google.ads.googleads.v24.common.SyntheticContentInfo.getDefaultInstance() : syntheticContentInfo_;
+      } else {
+        return syntheticContentInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+     */
+    public Builder setSyntheticContentInfo(com.google.ads.googleads.v24.common.SyntheticContentInfo value) {
+      if (syntheticContentInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        syntheticContentInfo_ = value;
+      } else {
+        syntheticContentInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+     */
+    public Builder setSyntheticContentInfo(
+        com.google.ads.googleads.v24.common.SyntheticContentInfo.Builder builderForValue) {
+      if (syntheticContentInfoBuilder_ == null) {
+        syntheticContentInfo_ = builderForValue.build();
+      } else {
+        syntheticContentInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+     */
+    public Builder mergeSyntheticContentInfo(com.google.ads.googleads.v24.common.SyntheticContentInfo value) {
+      if (syntheticContentInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00008000) != 0) &&
+          syntheticContentInfo_ != null &&
+          syntheticContentInfo_ != com.google.ads.googleads.v24.common.SyntheticContentInfo.getDefaultInstance()) {
+          getSyntheticContentInfoBuilder().mergeFrom(value);
+        } else {
+          syntheticContentInfo_ = value;
+        }
+      } else {
+        syntheticContentInfoBuilder_.mergeFrom(value);
+      }
+      if (syntheticContentInfo_ != null) {
+        bitField0_ |= 0x00008000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+     */
+    public Builder clearSyntheticContentInfo() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      syntheticContentInfo_ = null;
+      if (syntheticContentInfoBuilder_ != null) {
+        syntheticContentInfoBuilder_.dispose();
+        syntheticContentInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+     */
+    public com.google.ads.googleads.v24.common.SyntheticContentInfo.Builder getSyntheticContentInfoBuilder() {
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return internalGetSyntheticContentInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+     */
+    public com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder getSyntheticContentInfoOrBuilder() {
+      if (syntheticContentInfoBuilder_ != null) {
+        return syntheticContentInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return syntheticContentInfo_ == null ?
+            com.google.ads.googleads.v24.common.SyntheticContentInfo.getDefaultInstance() : syntheticContentInfo_;
+      }
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.SyntheticContentInfo, com.google.ads.googleads.v24.common.SyntheticContentInfo.Builder, com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder> 
+        internalGetSyntheticContentInfoFieldBuilder() {
+      if (syntheticContentInfoBuilder_ == null) {
+        syntheticContentInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.common.SyntheticContentInfo, com.google.ads.googleads.v24.common.SyntheticContentInfo.Builder, com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder>(
+                getSyntheticContentInfo(),
+                getParentForChildren(),
+                isClean());
+        syntheticContentInfo_ = null;
+      }
+      return syntheticContentInfoBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilder<

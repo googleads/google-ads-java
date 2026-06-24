@@ -7,7 +7,7 @@ package com.google.ads.googleads.v23.services;
 
 /**
  * <pre>
- * Identifying information for a successfully processed ClickConversion.
+ * Identifying information for a successfully processed `ClickConversion`.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v23.services.ClickConversionResult}
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Identifying information for a successfully processed ClickConversion.
+   * Identifying information for a successfully processed `ClickConversion`.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v23.services.ClickConversionResult}

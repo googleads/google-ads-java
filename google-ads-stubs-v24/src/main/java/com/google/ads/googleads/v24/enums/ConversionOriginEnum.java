@@ -125,6 +125,16 @@ private static final long serialVersionUID = 0L;
      * <code>YOUTUBE_HOSTED = 7;</code>
      */
     YOUTUBE_HOSTED(7),
+    /**
+     * <pre>
+     * Conversion that occurs when a user clicks on local services ads unit and
+     * reaches out to advertiser through phone call, message, or booking options
+     * on the ad.
+     * </pre>
+     *
+     * <code>LOCAL_SERVICES_ADS = 8;</code>
+     */
+    LOCAL_SERVICES_ADS(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -206,6 +216,16 @@ private static final long serialVersionUID = 0L;
      * <code>YOUTUBE_HOSTED = 7;</code>
      */
     public static final int YOUTUBE_HOSTED_VALUE = 7;
+    /**
+     * <pre>
+     * Conversion that occurs when a user clicks on local services ads unit and
+     * reaches out to advertiser through phone call, message, or booking options
+     * on the ad.
+     * </pre>
+     *
+     * <code>LOCAL_SERVICES_ADS = 8;</code>
+     */
+    public static final int LOCAL_SERVICES_ADS_VALUE = 8;
 
 
     public final int getNumber() {
@@ -240,6 +260,7 @@ private static final long serialVersionUID = 0L;
         case 5: return CALL_FROM_ADS;
         case 6: return STORE;
         case 7: return YOUTUBE_HOSTED;
+        case 8: return LOCAL_SERVICES_ADS;
         default: return null;
       }
     }

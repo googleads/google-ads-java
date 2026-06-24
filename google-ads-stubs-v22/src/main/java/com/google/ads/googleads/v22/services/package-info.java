@@ -1351,7 +1351,10 @@
  *
  * <p>======================= CustomerLabelServiceClient =======================
  *
- * <p>Service Description: Service to manage labels on customers.
+ * <p>Service Description: Service to manage labels on Google Ads customers.
+ *
+ * <p>This service is commonly used by manager accounts to apply their own labels to their client
+ * accounts. The label entity must exist under the manager account.
  *
  * <p>Sample for CustomerLabelServiceClient:
  *

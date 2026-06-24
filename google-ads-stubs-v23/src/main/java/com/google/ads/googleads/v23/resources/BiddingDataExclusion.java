@@ -12,6 +12,9 @@ package com.google.ads.googleads.v23.resources;
  *
  * See "About data exclusions" at
  * https://support.google.com/google-ads/answer/10370710.
+ *
+ * Note: A customer account can have a maximum of 500 active bidding data
+ * exclusions.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v23.resources.BiddingDataExclusion}
@@ -953,6 +956,9 @@ private static final long serialVersionUID = 0L;
    *
    * See "About data exclusions" at
    * https://support.google.com/google-ads/answer/10370710.
+   *
+   * Note: A customer account can have a maximum of 500 active bidding data
+   * exclusions.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v23.resources.BiddingDataExclusion}

@@ -13,6 +13,7 @@ public interface CustomVariableOrBuilder extends
   /**
    * <pre>
    * Resource name of the custom variable associated with this conversion.
+   *
    * Note: Although this resource name consists of a customer id and a
    * conversion custom variable id, validation will ignore the customer id and
    * use the conversion custom variable id as the sole identifier of the
@@ -26,6 +27,7 @@ public interface CustomVariableOrBuilder extends
   /**
    * <pre>
    * Resource name of the custom variable associated with this conversion.
+   *
    * Note: Although this resource name consists of a customer id and a
    * conversion custom variable id, validation will ignore the customer id and
    * use the conversion custom variable id as the sole identifier of the

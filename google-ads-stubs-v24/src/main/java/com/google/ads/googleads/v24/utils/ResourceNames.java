@@ -178,6 +178,7 @@ import com.google.ads.googleads.v24.resources.MatchedLocationInterestViewName;
 import com.google.ads.googleads.v24.resources.MediaFileName;
 import com.google.ads.googleads.v24.resources.MobileAppCategoryConstantName;
 import com.google.ads.googleads.v24.resources.MobileDeviceConstantName;
+import com.google.ads.googleads.v24.resources.MultiPartyAuthReviewName;
 import com.google.ads.googleads.v24.resources.OfflineConversionUploadClientSummaryName;
 import com.google.ads.googleads.v24.resources.OfflineConversionUploadConversionActionSummaryName;
 import com.google.ads.googleads.v24.resources.OfflineUserDataJobName;
@@ -1279,6 +1280,12 @@ public class ResourceNames {
   /** Returns the mobile device constant resource name for the specified components. */
   public static String mobileDeviceConstant(long criterionId) {
     return MobileDeviceConstantName.format(String.valueOf(criterionId));
+  }
+
+  /** Returns the multi party auth review resource name for the specified components. */
+  public static String multiPartyAuthReview(long customerId, long multiPartyAuthReviewId) {
+    return MultiPartyAuthReviewName.format(
+        String.valueOf(customerId), String.valueOf(multiPartyAuthReviewId));
   }
 
   /** Returns the batch job resource name for the specified components. */

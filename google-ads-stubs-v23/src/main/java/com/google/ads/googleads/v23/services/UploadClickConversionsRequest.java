@@ -163,13 +163,14 @@ private static final long serialVersionUID = 0L;
   private boolean partialFailure_ = false;
   /**
    * <pre>
-   * Required. If true, successful operations will be carried out and invalid
-   * operations will return errors. If false, all operations will be carried
+   * Required. If `true`, successful operations will be carried out and invalid
+   * operations will return errors. If `false`, all operations will be carried
    * out in one transaction if and only if they are all valid.
-   * This should always be set to true.
+   * This should always be set to `true`.
+   *
    * See
-   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-   * for more information about partial failure.
+   * [Best practices for partial
+   * failures](/google-ads/api/docs/best-practices/partial-failures).
    * </pre>
    *
    * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -184,7 +185,7 @@ private static final long serialVersionUID = 0L;
   private boolean validateOnly_ = false;
   /**
    * <pre>
-   * If true, the request is validated but not executed. Only errors are
+   * If `true`, the request is validated but not executed. Only errors are
    * returned, not results.
    * </pre>
    *
@@ -1088,13 +1089,14 @@ private static final long serialVersionUID = 0L;
     private boolean partialFailure_ ;
     /**
      * <pre>
-     * Required. If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, all operations will be carried
+     * Required. If `true`, successful operations will be carried out and invalid
+     * operations will return errors. If `false`, all operations will be carried
      * out in one transaction if and only if they are all valid.
-     * This should always be set to true.
+     * This should always be set to `true`.
+     *
      * See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1106,13 +1108,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, all operations will be carried
+     * Required. If `true`, successful operations will be carried out and invalid
+     * operations will return errors. If `false`, all operations will be carried
      * out in one transaction if and only if they are all valid.
-     * This should always be set to true.
+     * This should always be set to `true`.
+     *
      * See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1128,13 +1131,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, all operations will be carried
+     * Required. If `true`, successful operations will be carried out and invalid
+     * operations will return errors. If `false`, all operations will be carried
      * out in one transaction if and only if they are all valid.
-     * This should always be set to true.
+     * This should always be set to `true`.
+     *
      * See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1150,7 +1154,7 @@ private static final long serialVersionUID = 0L;
     private boolean validateOnly_ ;
     /**
      * <pre>
-     * If true, the request is validated but not executed. Only errors are
+     * If `true`, the request is validated but not executed. Only errors are
      * returned, not results.
      * </pre>
      *
@@ -1163,7 +1167,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If true, the request is validated but not executed. Only errors are
+     * If `true`, the request is validated but not executed. Only errors are
      * returned, not results.
      * </pre>
      *
@@ -1180,7 +1184,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If true, the request is validated but not executed. Only errors are
+     * If `true`, the request is validated but not executed. Only errors are
      * returned, not results.
      * </pre>
      *

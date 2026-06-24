@@ -42,21 +42,22 @@ public final class SmartCampaignErrorProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v24/errors/smart_" +
       "campaign_error.proto\022\037google.ads.googlea" +
-      "ds.v24.errors\"\276\002\n\026SmartCampaignErrorEnum" +
-      "\"\243\002\n\022SmartCampaignError\022\017\n\013UNSPECIFIED\020\000" +
+      "ds.v24.errors\"\323\002\n\026SmartCampaignErrorEnum" +
+      "\"\270\002\n\022SmartCampaignError\022\017\n\013UNSPECIFIED\020\000" +
       "\022\013\n\007UNKNOWN\020\001\022 \n\034INVALID_BUSINESS_LOCATI" +
       "ON_ID\020\002\022\024\n\020INVALID_CAMPAIGN\020\003\0221\n-BUSINES" +
       "S_NAME_OR_BUSINESS_LOCATION_ID_MISSING\020\004" +
       "\022%\n!REQUIRED_SUGGESTION_FIELD_MISSING\020\005\022" +
       "\030\n\024GEO_TARGETS_REQUIRED\020\006\022&\n\"CANNOT_DETE" +
       "RMINE_SUGGESTION_LOCALE\020\007\022\033\n\027FINAL_URL_N" +
-      "OT_CRAWLABLE\020\010B\367\001\n#com.google.ads.google" +
-      "ads.v24.errorsB\027SmartCampaignErrorProtoP" +
-      "\001ZEgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v24/errors;errors\242\002\003GAA\252\002" +
-      "\037Google.Ads.GoogleAds.V24.Errors\312\002\037Googl" +
-      "e\\Ads\\GoogleAds\\V24\\Errors\352\002#Google::Ads" +
-      "::GoogleAds::V24::Errorsb\006proto3"
+      "OT_CRAWLABLE\020\010\022\023\n\017CREATION_FAILED\020\tB\367\001\n#" +
+      "com.google.ads.googleads.v24.errorsB\027Sma" +
+      "rtCampaignErrorProtoP\001ZEgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v24/" +
+      "errors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleA" +
+      "ds.V24.Errors\312\002\037Google\\Ads\\GoogleAds\\V24" +
+      "\\Errors\352\002#Google::Ads::GoogleAds::V24::E" +
+      "rrorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

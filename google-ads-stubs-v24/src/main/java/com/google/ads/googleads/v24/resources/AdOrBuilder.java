@@ -521,6 +521,33 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
+   * Synthetic content info for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+   * @return Whether the syntheticContentInfo field is set.
+   */
+  boolean hasSyntheticContentInfo();
+  /**
+   * <pre>
+   * Synthetic content info for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+   * @return The syntheticContentInfo.
+   */
+  com.google.ads.googleads.v24.common.SyntheticContentInfo getSyntheticContentInfo();
+  /**
+   * <pre>
+   * Synthetic content info for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 65;</code>
+   */
+  com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder getSyntheticContentInfoOrBuilder();
+
+  /**
+   * <pre>
    * Immutable. Details pertaining to a text ad.
    * </pre>
    *

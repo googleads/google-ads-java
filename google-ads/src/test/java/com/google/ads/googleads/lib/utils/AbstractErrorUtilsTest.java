@@ -35,6 +35,7 @@ import com.google.ads.googleads.v24.services.GenerateRecommendationsRequest;
 import com.google.ads.googleads.v24.services.GenerateShareablePreviewsRequest;
 import com.google.ads.googleads.v24.services.GenerateTargetingSuggestionMetricsRequest;
 import com.google.ads.googleads.v24.services.GenerateTextRequest;
+import com.google.ads.googleads.v24.services.GenerateTrendingInsightsRequest;
 import com.google.ads.googleads.v24.services.GraduateExperimentRequest;
 import com.google.ads.googleads.v24.services.ListAudienceInsightsAttributesRequest;
 import com.google.ads.googleads.v24.services.ListBenchmarksSourcesRequest;
@@ -271,6 +272,7 @@ public class AbstractErrorUtilsTest {
             .add(GenerateCreatorInsightsRequest.getDescriptor())
             .add(ListPlannableUserInterestsRequest.getDescriptor())
             .add(GenerateTextRequest.getDescriptor())
+            .add(GenerateTrendingInsightsRequest.getDescriptor())
             .add(GenerateImagesRequest.getDescriptor())
             .add(ListBenchmarksSourcesRequest.getDescriptor())
             .add(RemoveYouTubeVideoUploadRequest.getDescriptor())

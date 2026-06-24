@@ -55,8 +55,9 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object plannableProductCode_ = "";
   /**
    * <pre>
-   * The code associated with the ad product (for example: BUMPER,
-   * TRUEVIEW_IN_STREAM).
+   * The code associated with the ad product.
+   *
+   * For example: "VIDEO_VIEW_CAMPAIGN".
    * To list the available plannable product codes use
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
    * </pre>
@@ -70,8 +71,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The code associated with the ad product (for example: BUMPER,
-   * TRUEVIEW_IN_STREAM).
+   * The code associated with the ad product.
+   *
+   * For example: "VIDEO_VIEW_CAMPAIGN".
    * To list the available plannable product codes use
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
    * </pre>
@@ -94,8 +96,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The code associated with the ad product (for example: BUMPER,
-   * TRUEVIEW_IN_STREAM).
+   * The code associated with the ad product.
+   *
+   * For example: "VIDEO_VIEW_CAMPAIGN".
    * To list the available plannable product codes use
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
    * </pre>
@@ -124,6 +127,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name associated with the ad product.
+   *
+   * For example: "Video View Campaign".
    * </pre>
    *
    * <code>string plannable_product_name = 3;</code>
@@ -145,6 +150,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name associated with the ad product.
+   *
+   * For example: "Video View Campaign".
    * </pre>
    *
    * <code>string plannable_product_name = 3;</code>
@@ -579,8 +586,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object plannableProductCode_ = "";
     /**
      * <pre>
-     * The code associated with the ad product (for example: BUMPER,
-     * TRUEVIEW_IN_STREAM).
+     * The code associated with the ad product.
+     *
+     * For example: "VIDEO_VIEW_CAMPAIGN".
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -593,8 +601,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The code associated with the ad product (for example: BUMPER,
-     * TRUEVIEW_IN_STREAM).
+     * The code associated with the ad product.
+     *
+     * For example: "VIDEO_VIEW_CAMPAIGN".
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -616,8 +625,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The code associated with the ad product (for example: BUMPER,
-     * TRUEVIEW_IN_STREAM).
+     * The code associated with the ad product.
+     *
+     * For example: "VIDEO_VIEW_CAMPAIGN".
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -640,8 +650,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The code associated with the ad product (for example: BUMPER,
-     * TRUEVIEW_IN_STREAM).
+     * The code associated with the ad product.
+     *
+     * For example: "VIDEO_VIEW_CAMPAIGN".
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -660,8 +671,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The code associated with the ad product (for example: BUMPER,
-     * TRUEVIEW_IN_STREAM).
+     * The code associated with the ad product.
+     *
+     * For example: "VIDEO_VIEW_CAMPAIGN".
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -677,8 +689,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The code associated with the ad product (for example: BUMPER,
-     * TRUEVIEW_IN_STREAM).
+     * The code associated with the ad product.
+     *
+     * For example: "VIDEO_VIEW_CAMPAIGN".
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -701,6 +714,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name associated with the ad product.
+     *
+     * For example: "Video View Campaign".
      * </pre>
      *
      * <code>string plannable_product_name = 3;</code>
@@ -721,6 +736,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name associated with the ad product.
+     *
+     * For example: "Video View Campaign".
      * </pre>
      *
      * <code>string plannable_product_name = 3;</code>
@@ -742,6 +759,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name associated with the ad product.
+     *
+     * For example: "Video View Campaign".
      * </pre>
      *
      * <code>string plannable_product_name = 3;</code>
@@ -759,6 +778,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name associated with the ad product.
+     *
+     * For example: "Video View Campaign".
      * </pre>
      *
      * <code>string plannable_product_name = 3;</code>
@@ -773,6 +794,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name associated with the ad product.
+     *
+     * For example: "Video View Campaign".
      * </pre>
      *
      * <code>string plannable_product_name = 3;</code>

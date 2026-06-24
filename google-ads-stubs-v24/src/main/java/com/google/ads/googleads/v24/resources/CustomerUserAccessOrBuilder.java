@@ -186,4 +186,36 @@ public interface CustomerUserAccessOrBuilder extends
    * @return The passkeyEnabled.
    */
   boolean getPasskeyEnabled();
+
+  /**
+   * <pre>
+   * Output only. The resource name of the pending Multi-Party Authorization
+   * review. Read only field
+   * </pre>
+   *
+   * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the pendingMultiPartyAuthReview field is set.
+   */
+  boolean hasPendingMultiPartyAuthReview();
+  /**
+   * <pre>
+   * Output only. The resource name of the pending Multi-Party Authorization
+   * review. Read only field
+   * </pre>
+   *
+   * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The pendingMultiPartyAuthReview.
+   */
+  java.lang.String getPendingMultiPartyAuthReview();
+  /**
+   * <pre>
+   * Output only. The resource name of the pending Multi-Party Authorization
+   * review. Read only field
+   * </pre>
+   *
+   * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for pendingMultiPartyAuthReview.
+   */
+  com.google.protobuf.ByteString
+      getPendingMultiPartyAuthReviewBytes();
 }

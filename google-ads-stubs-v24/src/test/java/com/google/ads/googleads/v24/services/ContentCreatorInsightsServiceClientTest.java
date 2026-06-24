@@ -18,6 +18,7 @@ package com.google.ads.googleads.v24.services;
 
 import com.google.ads.googleads.v24.common.AdditionalApplicationInfo;
 import com.google.ads.googleads.v24.common.LocationInfo;
+import com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -84,6 +85,7 @@ public class ContentCreatorInsightsServiceClientTest {
     GenerateCreatorInsightsResponse expectedResponse =
         GenerateCreatorInsightsResponse.newBuilder()
             .addAllCreatorInsights(new ArrayList<YouTubeCreatorInsights>())
+            .addAllLocalCreatorInsights(new ArrayList<YouTubeCreatorInsights>())
             .build();
     mockContentCreatorInsightsService.addResponse(expectedResponse);
 
@@ -94,6 +96,10 @@ public class ContentCreatorInsightsServiceClientTest {
             .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
             .addAllCountryLocations(new ArrayList<LocationInfo>())
             .addAllSubCountryLocations(new ArrayList<LocationInfo>())
+            .addAllSupplementalData(
+                new ArrayList<
+                    ContentCreatorInsightsSupplementalDataEnum
+                        .ContentCreatorInsightsSupplementalData>())
             .build();
 
     GenerateCreatorInsightsResponse actualResponse = client.generateCreatorInsights(request);
@@ -112,9 +118,11 @@ public class ContentCreatorInsightsServiceClientTest {
     Assert.assertEquals(request.getCountryLocationsList(), actualRequest.getCountryLocationsList());
     Assert.assertEquals(
         request.getSubCountryLocationsList(), actualRequest.getSubCountryLocationsList());
+    Assert.assertEquals(request.getSupplementalDataList(), actualRequest.getSupplementalDataList());
     Assert.assertEquals(request.getSearchAttributes(), actualRequest.getSearchAttributes());
     Assert.assertEquals(request.getSearchBrand(), actualRequest.getSearchBrand());
     Assert.assertEquals(request.getSearchChannels(), actualRequest.getSearchChannels());
+    Assert.assertEquals(request.getSearchTopics(), actualRequest.getSearchTopics());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -134,6 +142,10 @@ public class ContentCreatorInsightsServiceClientTest {
               .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
               .addAllCountryLocations(new ArrayList<LocationInfo>())
               .addAllSubCountryLocations(new ArrayList<LocationInfo>())
+              .addAllSupplementalData(
+                  new ArrayList<
+                      ContentCreatorInsightsSupplementalDataEnum
+                          .ContentCreatorInsightsSupplementalData>())
               .build();
       client.generateCreatorInsights(request);
       Assert.fail("No exception raised");
@@ -156,6 +168,11 @@ public class ContentCreatorInsightsServiceClientTest {
             .setCustomerInsightsGroup("customerInsightsGroup1092118566")
             .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
             .setCountryLocation(LocationInfo.newBuilder().build())
+            .addAllSubCountryLocations(new ArrayList<LocationInfo>())
+            .addAllSupplementalData(
+                new ArrayList<
+                    ContentCreatorInsightsSupplementalDataEnum
+                        .ContentCreatorInsightsSupplementalData>())
             .build();
 
     GenerateTrendingInsightsResponse actualResponse = client.generateTrendingInsights(request);
@@ -172,6 +189,9 @@ public class ContentCreatorInsightsServiceClientTest {
     Assert.assertEquals(
         request.getInsightsApplicationInfo(), actualRequest.getInsightsApplicationInfo());
     Assert.assertEquals(request.getCountryLocation(), actualRequest.getCountryLocation());
+    Assert.assertEquals(
+        request.getSubCountryLocationsList(), actualRequest.getSubCountryLocationsList());
+    Assert.assertEquals(request.getSupplementalDataList(), actualRequest.getSupplementalDataList());
     Assert.assertEquals(request.getSearchAudience(), actualRequest.getSearchAudience());
     Assert.assertEquals(request.getSearchTopics(), actualRequest.getSearchTopics());
     Assert.assertTrue(
@@ -192,6 +212,11 @@ public class ContentCreatorInsightsServiceClientTest {
               .setCustomerInsightsGroup("customerInsightsGroup1092118566")
               .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
               .setCountryLocation(LocationInfo.newBuilder().build())
+              .addAllSubCountryLocations(new ArrayList<LocationInfo>())
+              .addAllSupplementalData(
+                  new ArrayList<
+                      ContentCreatorInsightsSupplementalDataEnum
+                          .ContentCreatorInsightsSupplementalData>())
               .build();
       client.generateTrendingInsights(request);
       Assert.fail("No exception raised");

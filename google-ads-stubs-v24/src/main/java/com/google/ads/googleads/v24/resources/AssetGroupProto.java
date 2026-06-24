@@ -46,6 +46,16 @@ public final class AssetGroupProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_ads_googleads_v24_resources_AdStrengthActionItem_AddAssetDetails_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v24_resources_GoogleLocalServicesInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v24_resources_GoogleLocalServicesInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v24_resources_LocalServicesCallout_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v24_resources_LocalServicesCallout_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -70,7 +80,7 @@ public final class AssetGroupProto {
       "oto\0327google/ads/googleads/v24/enums/asse" +
       "t_group_status.proto\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\"\354\006\n\nAssetGroup\022B\n\rresource_name\030\001 \001(\tB+" +
+      "\"\315\007\n\nAssetGroup\022B\n\rresource_name\030\001 \001(\tB+" +
       "\340A\005\372A%\n#googleads.googleapis.com/AssetGr" +
       "oup\022\017\n\002id\030\t \001(\003B\003\340A\003\022;\n\010campaign\030\002 \001(\tB)" +
       "\340A\005\372A#\n!googleads.googleapis.com/Campaig" +
@@ -88,36 +98,44 @@ public final class AssetGroupProto {
       "strength\030\n \001(\01629.google.ads.googleads.v2" +
       "4.enums.AdStrengthEnum.AdStrengthB\003\340A\003\022N" +
       "\n\016asset_coverage\030\r \001(\01321.google.ads.goog" +
-      "leads.v24.resources.AssetCoverageB\003\340A\003:w" +
-      "\352At\n#googleads.googleapis.com/AssetGroup" +
-      "\0224customers/{customer_id}/assetGroups/{a" +
-      "sset_group_id}*\013assetGroups2\nassetGroup\"" +
-      "p\n\rAssetCoverage\022_\n\030ad_strength_action_i" +
-      "tems\030\001 \003(\01328.google.ads.googleads.v24.re" +
-      "sources.AdStrengthActionItemB\003\340A\003\"\374\004\n\024Ad" +
-      "StrengthActionItem\022t\n\020action_item_type\030\001" +
-      " \001(\0162U.google.ads.googleads.v24.enums.Ad" +
-      "StrengthActionItemTypeEnum.AdStrengthAct" +
-      "ionItemTypeB\003\340A\003\022j\n\021add_asset_details\030\002 " +
-      "\001(\0132H.google.ads.googleads.v24.resources" +
-      ".AdStrengthActionItem.AddAssetDetailsB\003\340" +
-      "A\003H\000\032\357\002\n\017AddAssetDetails\022`\n\020asset_field_" +
-      "type\030\001 \001(\0162A.google.ads.googleads.v24.en" +
-      "ums.AssetFieldTypeEnum.AssetFieldTypeB\003\340" +
-      "A\003\022\035\n\013asset_count\030\002 \001(\005B\003\340A\003H\000\210\001\001\022\247\001\n\036vi" +
-      "deo_aspect_ratio_requirement\030\003 \001(\0162u.goo" +
-      "gle.ads.googleads.v24.enums.AssetCoverag" +
-      "eVideoAspectRatioRequirementEnum.AssetCo" +
-      "verageVideoAspectRatioRequirementB\003\340A\003H\001" +
-      "\210\001\001B\016\n\014_asset_countB!\n\037_video_aspect_rat" +
-      "io_requirementB\020\n\016action_detailsB\201\002\n&com" +
-      ".google.ads.googleads.v24.resourcesB\017Ass" +
-      "etGroupProtoP\001ZKgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v24/resource" +
-      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
-      ".V24.Resources\312\002\"Google\\Ads\\GoogleAds\\V2" +
-      "4\\Resources\352\002&Google::Ads::GoogleAds::V2" +
-      "4::Resourcesb\006proto3"
+      "leads.v24.resources.AssetCoverageB\003\340A\003\022_" +
+      "\n\032google_local_services_info\030\016 \001(\0132;.goo" +
+      "gle.ads.googleads.v24.resources.GoogleLo" +
+      "calServicesInfo:w\352At\n#googleads.googleap" +
+      "is.com/AssetGroup\0224customers/{customer_i" +
+      "d}/assetGroups/{asset_group_id}*\013assetGr" +
+      "oups2\nassetGroup\"p\n\rAssetCoverage\022_\n\030ad_" +
+      "strength_action_items\030\001 \003(\01328.google.ads" +
+      ".googleads.v24.resources.AdStrengthActio" +
+      "nItemB\003\340A\003\"\374\004\n\024AdStrengthActionItem\022t\n\020a" +
+      "ction_item_type\030\001 \001(\0162U.google.ads.googl" +
+      "eads.v24.enums.AdStrengthActionItemTypeE" +
+      "num.AdStrengthActionItemTypeB\003\340A\003\022j\n\021add" +
+      "_asset_details\030\002 \001(\0132H.google.ads.google" +
+      "ads.v24.resources.AdStrengthActionItem.A" +
+      "ddAssetDetailsB\003\340A\003H\000\032\357\002\n\017AddAssetDetail" +
+      "s\022`\n\020asset_field_type\030\001 \001(\0162A.google.ads" +
+      ".googleads.v24.enums.AssetFieldTypeEnum." +
+      "AssetFieldTypeB\003\340A\003\022\035\n\013asset_count\030\002 \001(\005" +
+      "B\003\340A\003H\000\210\001\001\022\247\001\n\036video_aspect_ratio_requir" +
+      "ement\030\003 \001(\0162u.google.ads.googleads.v24.e" +
+      "nums.AssetCoverageVideoAspectRatioRequir" +
+      "ementEnum.AssetCoverageVideoAspectRatioR" +
+      "equirementB\003\340A\003H\001\210\001\001B\016\n\014_asset_countB!\n\037" +
+      "_video_aspect_ratio_requirementB\020\n\016actio" +
+      "n_details\"\224\001\n\027GoogleLocalServicesInfo\022\035\n" +
+      "\013category_id\030\001 \001(\tB\003\340A\005H\000\210\001\001\022J\n\010callouts" +
+      "\030\002 \003(\01328.google.ads.googleads.v24.resour" +
+      "ces.LocalServicesCalloutB\016\n\014_category_id" +
+      "\"C\n\024LocalServicesCallout\022\034\n\ncallout_id\030\001" +
+      " \001(\tB\003\340A\002H\000\210\001\001B\r\n\013_callout_idB\201\002\n&com.go" +
+      "ogle.ads.googleads.v24.resourcesB\017AssetG" +
+      "roupProtoP\001ZKgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v24/resources;r" +
+      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V2" +
+      "4.Resources\312\002\"Google\\Ads\\GoogleAds\\V24\\R" +
+      "esources\352\002&Google::Ads::GoogleAds::V24::" +
+      "Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -137,7 +155,7 @@ public final class AssetGroupProto {
     internal_static_google_ads_googleads_v24_resources_AssetGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_resources_AssetGroup_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Campaign", "Name", "FinalUrls", "FinalMobileUrls", "Status", "PrimaryStatus", "PrimaryStatusReasons", "Path1", "Path2", "AdStrength", "AssetCoverage", });
+        new java.lang.String[] { "ResourceName", "Id", "Campaign", "Name", "FinalUrls", "FinalMobileUrls", "Status", "PrimaryStatus", "PrimaryStatusReasons", "Path1", "Path2", "AdStrength", "AssetCoverage", "GoogleLocalServicesInfo", });
     internal_static_google_ads_googleads_v24_resources_AssetCoverage_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v24_resources_AssetCoverage_fieldAccessorTable = new
@@ -156,6 +174,18 @@ public final class AssetGroupProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_resources_AdStrengthActionItem_AddAssetDetails_descriptor,
         new java.lang.String[] { "AssetFieldType", "AssetCount", "VideoAspectRatioRequirement", });
+    internal_static_google_ads_googleads_v24_resources_GoogleLocalServicesInfo_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_google_ads_googleads_v24_resources_GoogleLocalServicesInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v24_resources_GoogleLocalServicesInfo_descriptor,
+        new java.lang.String[] { "CategoryId", "Callouts", });
+    internal_static_google_ads_googleads_v24_resources_LocalServicesCallout_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_google_ads_googleads_v24_resources_LocalServicesCallout_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v24_resources_LocalServicesCallout_descriptor,
+        new java.lang.String[] { "CalloutId", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.ads.googleads.v24.enums.AdStrengthProto.getDescriptor();
     com.google.ads.googleads.v24.enums.AdStrengthActionItemTypeProto.getDescriptor();

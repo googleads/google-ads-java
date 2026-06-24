@@ -27,7 +27,10 @@ import javax.annotation.Generated;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * Service Description: Service to manage labels on customers.
+ * Service Description: Service to manage labels on Google Ads customers.
+ *
+ * <p>This service is commonly used by manager accounts to apply their own labels to their client
+ * accounts. The label entity must exist under the manager account.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:

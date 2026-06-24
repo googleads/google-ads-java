@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Unit price excluding tax, shipping, and any transaction
      * level discounts. The currency code is the same as that in the
-     * ClickConversion message.
+     * `ClickConversion` message.
      * </pre>
      *
      * <code>double unit_price = 3;</code>
@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Unit price excluding tax, shipping, and any transaction
      * level discounts. The currency code is the same as that in the
-     * ClickConversion message.
+     * `ClickConversion` message.
      * </pre>
      *
      * <code>double unit_price = 3;</code>
@@ -713,7 +713,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Unit price excluding tax, shipping, and any transaction
        * level discounts. The currency code is the same as that in the
-       * ClickConversion message.
+       * `ClickConversion` message.
        * </pre>
        *
        * <code>double unit_price = 3;</code>
@@ -727,7 +727,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Unit price excluding tax, shipping, and any transaction
        * level discounts. The currency code is the same as that in the
-       * ClickConversion message.
+       * `ClickConversion` message.
        * </pre>
        *
        * <code>double unit_price = 3;</code>
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Unit price excluding tax, shipping, and any transaction
        * level discounts. The currency code is the same as that in the
-       * ClickConversion message.
+       * `ClickConversion` message.
        * </pre>
        *
        * <code>double unit_price = 3;</code>
@@ -924,7 +924,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Sum of all transaction level discounts, such as free shipping and
    * coupon discounts for the whole cart. The currency code is the same
-   * as that in the ClickConversion message.
+   * as that in the `ClickConversion` message.
    * </pre>
    *
    * <code>double local_transaction_cost = 4;</code>
@@ -1672,7 +1672,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Sum of all transaction level discounts, such as free shipping and
      * coupon discounts for the whole cart. The currency code is the same
-     * as that in the ClickConversion message.
+     * as that in the `ClickConversion` message.
      * </pre>
      *
      * <code>double local_transaction_cost = 4;</code>
@@ -1686,7 +1686,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Sum of all transaction level discounts, such as free shipping and
      * coupon discounts for the whole cart. The currency code is the same
-     * as that in the ClickConversion message.
+     * as that in the `ClickConversion` message.
      * </pre>
      *
      * <code>double local_transaction_cost = 4;</code>
@@ -1704,7 +1704,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Sum of all transaction level discounts, such as free shipping and
      * coupon discounts for the whole cart. The currency code is the same
-     * as that in the ClickConversion message.
+     * as that in the `ClickConversion` message.
      * </pre>
      *
      * <code>double local_transaction_cost = 4;</code>

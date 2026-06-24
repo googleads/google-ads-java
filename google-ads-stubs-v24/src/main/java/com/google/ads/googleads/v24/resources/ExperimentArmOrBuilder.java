@@ -211,7 +211,9 @@ public interface ExperimentArmOrBuilder extends
 
   /**
    * <pre>
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the
+   * Optimize Assets experiment construction, the control arm and treatment arm
+   * should both contain the same asset group ID.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -220,7 +222,9 @@ public interface ExperimentArmOrBuilder extends
       getAssetGroupsList();
   /**
    * <pre>
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the
+   * Optimize Assets experiment construction, the control arm and treatment arm
+   * should both contain the same asset group ID.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -228,7 +232,9 @@ public interface ExperimentArmOrBuilder extends
   com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo getAssetGroups(int index);
   /**
    * <pre>
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the
+   * Optimize Assets experiment construction, the control arm and treatment arm
+   * should both contain the same asset group ID.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -236,7 +242,9 @@ public interface ExperimentArmOrBuilder extends
   int getAssetGroupsCount();
   /**
    * <pre>
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the
+   * Optimize Assets experiment construction, the control arm and treatment arm
+   * should both contain the same asset group ID.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -245,7 +253,9 @@ public interface ExperimentArmOrBuilder extends
       getAssetGroupsOrBuilderList();
   /**
    * <pre>
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the
+   * Optimize Assets experiment construction, the control arm and treatment arm
+   * should both contain the same asset group ID.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>

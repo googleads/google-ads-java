@@ -652,6 +652,44 @@ private static final long serialVersionUID = 0L;
     return assetCoverage_ == null ? com.google.ads.googleads.v24.resources.AssetCoverage.getDefaultInstance() : assetCoverage_;
   }
 
+  public static final int GOOGLE_LOCAL_SERVICES_INFO_FIELD_NUMBER = 14;
+  private com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo googleLocalServicesInfo_;
+  /**
+   * <pre>
+   * Local services info of the asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+   * @return Whether the googleLocalServicesInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasGoogleLocalServicesInfo() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * Local services info of the asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+   * @return The googleLocalServicesInfo.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo getGoogleLocalServicesInfo() {
+    return googleLocalServicesInfo_ == null ? com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo.getDefaultInstance() : googleLocalServicesInfo_;
+  }
+  /**
+   * <pre>
+   * Local services info of the asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.resources.GoogleLocalServicesInfoOrBuilder getGoogleLocalServicesInfoOrBuilder() {
+    return googleLocalServicesInfo_ == null ? com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo.getDefaultInstance() : googleLocalServicesInfo_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -709,6 +747,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(13, getAssetCoverage());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(14, getGoogleLocalServicesInfo());
     }
     getUnknownFields().writeTo(output);
   }
@@ -782,6 +823,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getAssetCoverage());
     }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getGoogleLocalServicesInfo());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -821,6 +866,11 @@ private static final long serialVersionUID = 0L;
     if (hasAssetCoverage()) {
       if (!getAssetCoverage()
           .equals(other.getAssetCoverage())) return false;
+    }
+    if (hasGoogleLocalServicesInfo() != other.hasGoogleLocalServicesInfo()) return false;
+    if (hasGoogleLocalServicesInfo()) {
+      if (!getGoogleLocalServicesInfo()
+          .equals(other.getGoogleLocalServicesInfo())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -867,6 +917,10 @@ private static final long serialVersionUID = 0L;
     if (hasAssetCoverage()) {
       hash = (37 * hash) + ASSET_COVERAGE_FIELD_NUMBER;
       hash = (53 * hash) + getAssetCoverage().hashCode();
+    }
+    if (hasGoogleLocalServicesInfo()) {
+      hash = (37 * hash) + GOOGLE_LOCAL_SERVICES_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getGoogleLocalServicesInfo().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1005,6 +1059,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         internalGetAssetCoverageFieldBuilder();
+        internalGetGoogleLocalServicesInfoFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1029,6 +1084,11 @@ private static final long serialVersionUID = 0L;
       if (assetCoverageBuilder_ != null) {
         assetCoverageBuilder_.dispose();
         assetCoverageBuilder_ = null;
+      }
+      googleLocalServicesInfo_ = null;
+      if (googleLocalServicesInfoBuilder_ != null) {
+        googleLocalServicesInfoBuilder_.dispose();
+        googleLocalServicesInfoBuilder_ = null;
       }
       return this;
     }
@@ -1108,6 +1168,12 @@ private static final long serialVersionUID = 0L;
             ? assetCoverage_
             : assetCoverageBuilder_.build();
         to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.googleLocalServicesInfo_ = googleLocalServicesInfoBuilder_ == null
+            ? googleLocalServicesInfo_
+            : googleLocalServicesInfoBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1194,6 +1260,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAssetCoverage()) {
         mergeAssetCoverage(other.getAssetCoverage());
+      }
+      if (other.hasGoogleLocalServicesInfo()) {
+        mergeGoogleLocalServicesInfo(other.getGoogleLocalServicesInfo());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1301,6 +1370,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 106
+            case 114: {
+              input.readMessage(
+                  internalGetGoogleLocalServicesInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2759,6 +2835,163 @@ private static final long serialVersionUID = 0L;
         assetCoverage_ = null;
       }
       return assetCoverageBuilder_;
+    }
+
+    private com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo googleLocalServicesInfo_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo, com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo.Builder, com.google.ads.googleads.v24.resources.GoogleLocalServicesInfoOrBuilder> googleLocalServicesInfoBuilder_;
+    /**
+     * <pre>
+     * Local services info of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+     * @return Whether the googleLocalServicesInfo field is set.
+     */
+    public boolean hasGoogleLocalServicesInfo() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * Local services info of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+     * @return The googleLocalServicesInfo.
+     */
+    public com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo getGoogleLocalServicesInfo() {
+      if (googleLocalServicesInfoBuilder_ == null) {
+        return googleLocalServicesInfo_ == null ? com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo.getDefaultInstance() : googleLocalServicesInfo_;
+      } else {
+        return googleLocalServicesInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Local services info of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+     */
+    public Builder setGoogleLocalServicesInfo(com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo value) {
+      if (googleLocalServicesInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        googleLocalServicesInfo_ = value;
+      } else {
+        googleLocalServicesInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Local services info of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+     */
+    public Builder setGoogleLocalServicesInfo(
+        com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo.Builder builderForValue) {
+      if (googleLocalServicesInfoBuilder_ == null) {
+        googleLocalServicesInfo_ = builderForValue.build();
+      } else {
+        googleLocalServicesInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Local services info of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+     */
+    public Builder mergeGoogleLocalServicesInfo(com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo value) {
+      if (googleLocalServicesInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          googleLocalServicesInfo_ != null &&
+          googleLocalServicesInfo_ != com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo.getDefaultInstance()) {
+          getGoogleLocalServicesInfoBuilder().mergeFrom(value);
+        } else {
+          googleLocalServicesInfo_ = value;
+        }
+      } else {
+        googleLocalServicesInfoBuilder_.mergeFrom(value);
+      }
+      if (googleLocalServicesInfo_ != null) {
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Local services info of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+     */
+    public Builder clearGoogleLocalServicesInfo() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      googleLocalServicesInfo_ = null;
+      if (googleLocalServicesInfoBuilder_ != null) {
+        googleLocalServicesInfoBuilder_.dispose();
+        googleLocalServicesInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Local services info of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+     */
+    public com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo.Builder getGoogleLocalServicesInfoBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return internalGetGoogleLocalServicesInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Local services info of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+     */
+    public com.google.ads.googleads.v24.resources.GoogleLocalServicesInfoOrBuilder getGoogleLocalServicesInfoOrBuilder() {
+      if (googleLocalServicesInfoBuilder_ != null) {
+        return googleLocalServicesInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return googleLocalServicesInfo_ == null ?
+            com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo.getDefaultInstance() : googleLocalServicesInfo_;
+      }
+    }
+    /**
+     * <pre>
+     * Local services info of the asset group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo, com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo.Builder, com.google.ads.googleads.v24.resources.GoogleLocalServicesInfoOrBuilder> 
+        internalGetGoogleLocalServicesInfoFieldBuilder() {
+      if (googleLocalServicesInfoBuilder_ == null) {
+        googleLocalServicesInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo, com.google.ads.googleads.v24.resources.GoogleLocalServicesInfo.Builder, com.google.ads.googleads.v24.resources.GoogleLocalServicesInfoOrBuilder>(
+                getGoogleLocalServicesInfo(),
+                getParentForChildren(),
+                isClean());
+        googleLocalServicesInfo_ = null;
+      }
+      return googleLocalServicesInfoBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.AssetGroup)

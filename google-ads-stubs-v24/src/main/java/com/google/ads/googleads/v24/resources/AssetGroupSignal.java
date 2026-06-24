@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     AUDIENCE(4),
     SEARCH_THEME(5),
+    LOCAL_SERVICES_ID(8),
+    VERTICAL_ADS_ITEM_GROUP_RULE_LIST(9),
     SIGNAL_NOT_SET(0);
     private final int value;
     private SignalCase(int value) {
@@ -82,6 +84,8 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 4: return AUDIENCE;
         case 5: return SEARCH_THEME;
+        case 8: return LOCAL_SERVICES_ID;
+        case 9: return VERTICAL_ADS_ITEM_GROUP_RULE_LIST;
         case 0: return SIGNAL_NOT_SET;
         default: return null;
       }
@@ -403,6 +407,119 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v24.common.SearchThemeInfo.getDefaultInstance();
   }
 
+  public static final int LOCAL_SERVICES_ID_FIELD_NUMBER = 8;
+  /**
+   * <pre>
+   * Immutable. The local services signal to be used by the performance max
+   * campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the localServicesId field is set.
+   */
+  @java.lang.Override
+  public boolean hasLocalServicesId() {
+    return signalCase_ == 8;
+  }
+  /**
+   * <pre>
+   * Immutable. The local services signal to be used by the performance max
+   * campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The localServicesId.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.LocalServiceIdInfo getLocalServicesId() {
+    if (signalCase_ == 8) {
+       return (com.google.ads.googleads.v24.common.LocalServiceIdInfo) signal_;
+    }
+    return com.google.ads.googleads.v24.common.LocalServiceIdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Immutable. The local services signal to be used by the performance max
+   * campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.LocalServiceIdInfoOrBuilder getLocalServicesIdOrBuilder() {
+    if (signalCase_ == 8) {
+       return (com.google.ads.googleads.v24.common.LocalServiceIdInfo) signal_;
+    }
+    return com.google.ads.googleads.v24.common.LocalServiceIdInfo.getDefaultInstance();
+  }
+
+  public static final int VERTICAL_ADS_ITEM_GROUP_RULE_LIST_FIELD_NUMBER = 9;
+  /**
+   * <pre>
+   * Immutable. The list of vertical ads item group rules used to select items
+   * from the attached vertical feed.
+   *
+   * This field links to a SharedSet of type
+   * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+   * define which items from the TRAVEL_FEED AssetSet are eligible to be
+   * served. Items that do not match the rules will be excluded. This behavior
+   * is different from other signal types, which provide guidance to the
+   * optimization engine rather than determining item eligibility.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the verticalAdsItemGroupRuleList field is set.
+   */
+  @java.lang.Override
+  public boolean hasVerticalAdsItemGroupRuleList() {
+    return signalCase_ == 9;
+  }
+  /**
+   * <pre>
+   * Immutable. The list of vertical ads item group rules used to select items
+   * from the attached vertical feed.
+   *
+   * This field links to a SharedSet of type
+   * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+   * define which items from the TRAVEL_FEED AssetSet are eligible to be
+   * served. Items that do not match the rules will be excluded. This behavior
+   * is different from other signal types, which provide guidance to the
+   * optimization engine rather than determining item eligibility.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The verticalAdsItemGroupRuleList.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo getVerticalAdsItemGroupRuleList() {
+    if (signalCase_ == 9) {
+       return (com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo) signal_;
+    }
+    return com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Immutable. The list of vertical ads item group rules used to select items
+   * from the attached vertical feed.
+   *
+   * This field links to a SharedSet of type
+   * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+   * define which items from the TRAVEL_FEED AssetSet are eligible to be
+   * served. Items that do not match the rules will be excluded. This behavior
+   * is different from other signal types, which provide guidance to the
+   * optimization engine rather than determining item eligibility.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfoOrBuilder getVerticalAdsItemGroupRuleListOrBuilder() {
+    if (signalCase_ == 9) {
+       return (com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo) signal_;
+    }
+    return com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -434,6 +551,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < disapprovalReasons_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 7, disapprovalReasons_.getRaw(i));
+    }
+    if (signalCase_ == 8) {
+      output.writeMessage(8, (com.google.ads.googleads.v24.common.LocalServiceIdInfo) signal_);
+    }
+    if (signalCase_ == 9) {
+      output.writeMessage(9, (com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo) signal_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -470,6 +593,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getDisapprovalReasonsList().size();
     }
+    if (signalCase_ == 8) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, (com.google.ads.googleads.v24.common.LocalServiceIdInfo) signal_);
+    }
+    if (signalCase_ == 9) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, (com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo) signal_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -501,6 +632,14 @@ private static final long serialVersionUID = 0L;
       case 5:
         if (!getSearchTheme()
             .equals(other.getSearchTheme())) return false;
+        break;
+      case 8:
+        if (!getLocalServicesId()
+            .equals(other.getLocalServicesId())) return false;
+        break;
+      case 9:
+        if (!getVerticalAdsItemGroupRuleList()
+            .equals(other.getVerticalAdsItemGroupRuleList())) return false;
         break;
       case 0:
       default:
@@ -534,6 +673,14 @@ private static final long serialVersionUID = 0L;
       case 5:
         hash = (37 * hash) + SEARCH_THEME_FIELD_NUMBER;
         hash = (53 * hash) + getSearchTheme().hashCode();
+        break;
+      case 8:
+        hash = (37 * hash) + LOCAL_SERVICES_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalServicesId().hashCode();
+        break;
+      case 9:
+        hash = (37 * hash) + VERTICAL_ADS_ITEM_GROUP_RULE_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getVerticalAdsItemGroupRuleList().hashCode();
         break;
       case 0:
       default:
@@ -687,6 +834,12 @@ private static final long serialVersionUID = 0L;
       if (searchThemeBuilder_ != null) {
         searchThemeBuilder_.clear();
       }
+      if (localServicesIdBuilder_ != null) {
+        localServicesIdBuilder_.clear();
+      }
+      if (verticalAdsItemGroupRuleListBuilder_ != null) {
+        verticalAdsItemGroupRuleListBuilder_.clear();
+      }
       signalCase_ = 0;
       signal_ = null;
       return this;
@@ -749,6 +902,14 @@ private static final long serialVersionUID = 0L;
           searchThemeBuilder_ != null) {
         result.signal_ = searchThemeBuilder_.build();
       }
+      if (signalCase_ == 8 &&
+          localServicesIdBuilder_ != null) {
+        result.signal_ = localServicesIdBuilder_.build();
+      }
+      if (signalCase_ == 9 &&
+          verticalAdsItemGroupRuleListBuilder_ != null) {
+        result.signal_ = verticalAdsItemGroupRuleListBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -793,6 +954,14 @@ private static final long serialVersionUID = 0L;
         }
         case SEARCH_THEME: {
           mergeSearchTheme(other.getSearchTheme());
+          break;
+        }
+        case LOCAL_SERVICES_ID: {
+          mergeLocalServicesId(other.getLocalServicesId());
+          break;
+        }
+        case VERTICAL_ADS_ITEM_GROUP_RULE_LIST: {
+          mergeVerticalAdsItemGroupRuleList(other.getVerticalAdsItemGroupRuleList());
           break;
         }
         case SIGNAL_NOT_SET: {
@@ -860,6 +1029,20 @@ private static final long serialVersionUID = 0L;
               disapprovalReasons_.add(s);
               break;
             } // case 58
+            case 66: {
+              input.readMessage(
+                  internalGetLocalServicesIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              signalCase_ = 8;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  internalGetVerticalAdsItemGroupRuleListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              signalCase_ = 9;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1781,6 +1964,443 @@ private static final long serialVersionUID = 0L;
       signalCase_ = 5;
       onChanged();
       return searchThemeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.LocalServiceIdInfo, com.google.ads.googleads.v24.common.LocalServiceIdInfo.Builder, com.google.ads.googleads.v24.common.LocalServiceIdInfoOrBuilder> localServicesIdBuilder_;
+    /**
+     * <pre>
+     * Immutable. The local services signal to be used by the performance max
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the localServicesId field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalServicesId() {
+      return signalCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Immutable. The local services signal to be used by the performance max
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The localServicesId.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.common.LocalServiceIdInfo getLocalServicesId() {
+      if (localServicesIdBuilder_ == null) {
+        if (signalCase_ == 8) {
+          return (com.google.ads.googleads.v24.common.LocalServiceIdInfo) signal_;
+        }
+        return com.google.ads.googleads.v24.common.LocalServiceIdInfo.getDefaultInstance();
+      } else {
+        if (signalCase_ == 8) {
+          return localServicesIdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v24.common.LocalServiceIdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. The local services signal to be used by the performance max
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setLocalServicesId(com.google.ads.googleads.v24.common.LocalServiceIdInfo value) {
+      if (localServicesIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        signal_ = value;
+        onChanged();
+      } else {
+        localServicesIdBuilder_.setMessage(value);
+      }
+      signalCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. The local services signal to be used by the performance max
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setLocalServicesId(
+        com.google.ads.googleads.v24.common.LocalServiceIdInfo.Builder builderForValue) {
+      if (localServicesIdBuilder_ == null) {
+        signal_ = builderForValue.build();
+        onChanged();
+      } else {
+        localServicesIdBuilder_.setMessage(builderForValue.build());
+      }
+      signalCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. The local services signal to be used by the performance max
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder mergeLocalServicesId(com.google.ads.googleads.v24.common.LocalServiceIdInfo value) {
+      if (localServicesIdBuilder_ == null) {
+        if (signalCase_ == 8 &&
+            signal_ != com.google.ads.googleads.v24.common.LocalServiceIdInfo.getDefaultInstance()) {
+          signal_ = com.google.ads.googleads.v24.common.LocalServiceIdInfo.newBuilder((com.google.ads.googleads.v24.common.LocalServiceIdInfo) signal_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          signal_ = value;
+        }
+        onChanged();
+      } else {
+        if (signalCase_ == 8) {
+          localServicesIdBuilder_.mergeFrom(value);
+        } else {
+          localServicesIdBuilder_.setMessage(value);
+        }
+      }
+      signalCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. The local services signal to be used by the performance max
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder clearLocalServicesId() {
+      if (localServicesIdBuilder_ == null) {
+        if (signalCase_ == 8) {
+          signalCase_ = 0;
+          signal_ = null;
+          onChanged();
+        }
+      } else {
+        if (signalCase_ == 8) {
+          signalCase_ = 0;
+          signal_ = null;
+        }
+        localServicesIdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. The local services signal to be used by the performance max
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v24.common.LocalServiceIdInfo.Builder getLocalServicesIdBuilder() {
+      return internalGetLocalServicesIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Immutable. The local services signal to be used by the performance max
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.common.LocalServiceIdInfoOrBuilder getLocalServicesIdOrBuilder() {
+      if ((signalCase_ == 8) && (localServicesIdBuilder_ != null)) {
+        return localServicesIdBuilder_.getMessageOrBuilder();
+      } else {
+        if (signalCase_ == 8) {
+          return (com.google.ads.googleads.v24.common.LocalServiceIdInfo) signal_;
+        }
+        return com.google.ads.googleads.v24.common.LocalServiceIdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. The local services signal to be used by the performance max
+     * campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.LocalServiceIdInfo, com.google.ads.googleads.v24.common.LocalServiceIdInfo.Builder, com.google.ads.googleads.v24.common.LocalServiceIdInfoOrBuilder> 
+        internalGetLocalServicesIdFieldBuilder() {
+      if (localServicesIdBuilder_ == null) {
+        if (!(signalCase_ == 8)) {
+          signal_ = com.google.ads.googleads.v24.common.LocalServiceIdInfo.getDefaultInstance();
+        }
+        localServicesIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.common.LocalServiceIdInfo, com.google.ads.googleads.v24.common.LocalServiceIdInfo.Builder, com.google.ads.googleads.v24.common.LocalServiceIdInfoOrBuilder>(
+                (com.google.ads.googleads.v24.common.LocalServiceIdInfo) signal_,
+                getParentForChildren(),
+                isClean());
+        signal_ = null;
+      }
+      signalCase_ = 8;
+      onChanged();
+      return localServicesIdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo, com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.Builder, com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfoOrBuilder> verticalAdsItemGroupRuleListBuilder_;
+    /**
+     * <pre>
+     * Immutable. The list of vertical ads item group rules used to select items
+     * from the attached vertical feed.
+     *
+     * This field links to a SharedSet of type
+     * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+     * define which items from the TRAVEL_FEED AssetSet are eligible to be
+     * served. Items that do not match the rules will be excluded. This behavior
+     * is different from other signal types, which provide guidance to the
+     * optimization engine rather than determining item eligibility.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the verticalAdsItemGroupRuleList field is set.
+     */
+    @java.lang.Override
+    public boolean hasVerticalAdsItemGroupRuleList() {
+      return signalCase_ == 9;
+    }
+    /**
+     * <pre>
+     * Immutable. The list of vertical ads item group rules used to select items
+     * from the attached vertical feed.
+     *
+     * This field links to a SharedSet of type
+     * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+     * define which items from the TRAVEL_FEED AssetSet are eligible to be
+     * served. Items that do not match the rules will be excluded. This behavior
+     * is different from other signal types, which provide guidance to the
+     * optimization engine rather than determining item eligibility.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The verticalAdsItemGroupRuleList.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo getVerticalAdsItemGroupRuleList() {
+      if (verticalAdsItemGroupRuleListBuilder_ == null) {
+        if (signalCase_ == 9) {
+          return (com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo) signal_;
+        }
+        return com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.getDefaultInstance();
+      } else {
+        if (signalCase_ == 9) {
+          return verticalAdsItemGroupRuleListBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. The list of vertical ads item group rules used to select items
+     * from the attached vertical feed.
+     *
+     * This field links to a SharedSet of type
+     * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+     * define which items from the TRAVEL_FEED AssetSet are eligible to be
+     * served. Items that do not match the rules will be excluded. This behavior
+     * is different from other signal types, which provide guidance to the
+     * optimization engine rather than determining item eligibility.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setVerticalAdsItemGroupRuleList(com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo value) {
+      if (verticalAdsItemGroupRuleListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        signal_ = value;
+        onChanged();
+      } else {
+        verticalAdsItemGroupRuleListBuilder_.setMessage(value);
+      }
+      signalCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. The list of vertical ads item group rules used to select items
+     * from the attached vertical feed.
+     *
+     * This field links to a SharedSet of type
+     * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+     * define which items from the TRAVEL_FEED AssetSet are eligible to be
+     * served. Items that do not match the rules will be excluded. This behavior
+     * is different from other signal types, which provide guidance to the
+     * optimization engine rather than determining item eligibility.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setVerticalAdsItemGroupRuleList(
+        com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.Builder builderForValue) {
+      if (verticalAdsItemGroupRuleListBuilder_ == null) {
+        signal_ = builderForValue.build();
+        onChanged();
+      } else {
+        verticalAdsItemGroupRuleListBuilder_.setMessage(builderForValue.build());
+      }
+      signalCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. The list of vertical ads item group rules used to select items
+     * from the attached vertical feed.
+     *
+     * This field links to a SharedSet of type
+     * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+     * define which items from the TRAVEL_FEED AssetSet are eligible to be
+     * served. Items that do not match the rules will be excluded. This behavior
+     * is different from other signal types, which provide guidance to the
+     * optimization engine rather than determining item eligibility.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder mergeVerticalAdsItemGroupRuleList(com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo value) {
+      if (verticalAdsItemGroupRuleListBuilder_ == null) {
+        if (signalCase_ == 9 &&
+            signal_ != com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.getDefaultInstance()) {
+          signal_ = com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.newBuilder((com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo) signal_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          signal_ = value;
+        }
+        onChanged();
+      } else {
+        if (signalCase_ == 9) {
+          verticalAdsItemGroupRuleListBuilder_.mergeFrom(value);
+        } else {
+          verticalAdsItemGroupRuleListBuilder_.setMessage(value);
+        }
+      }
+      signalCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. The list of vertical ads item group rules used to select items
+     * from the attached vertical feed.
+     *
+     * This field links to a SharedSet of type
+     * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+     * define which items from the TRAVEL_FEED AssetSet are eligible to be
+     * served. Items that do not match the rules will be excluded. This behavior
+     * is different from other signal types, which provide guidance to the
+     * optimization engine rather than determining item eligibility.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder clearVerticalAdsItemGroupRuleList() {
+      if (verticalAdsItemGroupRuleListBuilder_ == null) {
+        if (signalCase_ == 9) {
+          signalCase_ = 0;
+          signal_ = null;
+          onChanged();
+        }
+      } else {
+        if (signalCase_ == 9) {
+          signalCase_ = 0;
+          signal_ = null;
+        }
+        verticalAdsItemGroupRuleListBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. The list of vertical ads item group rules used to select items
+     * from the attached vertical feed.
+     *
+     * This field links to a SharedSet of type
+     * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+     * define which items from the TRAVEL_FEED AssetSet are eligible to be
+     * served. Items that do not match the rules will be excluded. This behavior
+     * is different from other signal types, which provide guidance to the
+     * optimization engine rather than determining item eligibility.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.Builder getVerticalAdsItemGroupRuleListBuilder() {
+      return internalGetVerticalAdsItemGroupRuleListFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Immutable. The list of vertical ads item group rules used to select items
+     * from the attached vertical feed.
+     *
+     * This field links to a SharedSet of type
+     * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+     * define which items from the TRAVEL_FEED AssetSet are eligible to be
+     * served. Items that do not match the rules will be excluded. This behavior
+     * is different from other signal types, which provide guidance to the
+     * optimization engine rather than determining item eligibility.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfoOrBuilder getVerticalAdsItemGroupRuleListOrBuilder() {
+      if ((signalCase_ == 9) && (verticalAdsItemGroupRuleListBuilder_ != null)) {
+        return verticalAdsItemGroupRuleListBuilder_.getMessageOrBuilder();
+      } else {
+        if (signalCase_ == 9) {
+          return (com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo) signal_;
+        }
+        return com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. The list of vertical ads item group rules used to select items
+     * from the attached vertical feed.
+     *
+     * This field links to a SharedSet of type
+     * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+     * define which items from the TRAVEL_FEED AssetSet are eligible to be
+     * served. Items that do not match the rules will be excluded. This behavior
+     * is different from other signal types, which provide guidance to the
+     * optimization engine rather than determining item eligibility.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo, com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.Builder, com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfoOrBuilder> 
+        internalGetVerticalAdsItemGroupRuleListFieldBuilder() {
+      if (verticalAdsItemGroupRuleListBuilder_ == null) {
+        if (!(signalCase_ == 9)) {
+          signal_ = com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.getDefaultInstance();
+        }
+        verticalAdsItemGroupRuleListBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo, com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo.Builder, com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfoOrBuilder>(
+                (com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo) signal_,
+                getParentForChildren(),
+                isClean());
+        signal_ = null;
+      }
+      signalCase_ = 9;
+      onChanged();
+      return verticalAdsItemGroupRuleListBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.AssetGroupSignal)

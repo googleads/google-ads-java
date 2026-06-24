@@ -117,7 +117,7 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
    * returned. Supported dimensions are KNOWLEDGE_GRAPH, GEO_TARGET_COUNTRY,
    * SUB_COUNTRY_LOCATION, YOUTUBE_CHANNEL, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -130,7 +130,7 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
    * returned. Supported dimensions are KNOWLEDGE_GRAPH, GEO_TARGET_COUNTRY,
    * SUB_COUNTRY_LOCATION, YOUTUBE_CHANNEL, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -143,7 +143,7 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
    * returned. Supported dimensions are KNOWLEDGE_GRAPH, GEO_TARGET_COUNTRY,
    * SUB_COUNTRY_LOCATION, YOUTUBE_CHANNEL, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -157,7 +157,7 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
    * returned. Supported dimensions are KNOWLEDGE_GRAPH, GEO_TARGET_COUNTRY,
    * SUB_COUNTRY_LOCATION, YOUTUBE_CHANNEL, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -171,7 +171,7 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
    * returned. Supported dimensions are KNOWLEDGE_GRAPH, GEO_TARGET_COUNTRY,
    * SUB_COUNTRY_LOCATION, YOUTUBE_CHANNEL, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>

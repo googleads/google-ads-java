@@ -3657,6 +3657,33 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The multi party auth review referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.MultiPartyAuthReview multi_party_auth_review = 265;</code>
+   * @return Whether the multiPartyAuthReview field is set.
+   */
+  boolean hasMultiPartyAuthReview();
+  /**
+   * <pre>
+   * The multi party auth review referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.MultiPartyAuthReview multi_party_auth_review = 265;</code>
+   * @return The multiPartyAuthReview.
+   */
+  com.google.ads.googleads.v24.resources.MultiPartyAuthReview getMultiPartyAuthReview();
+  /**
+   * <pre>
+   * The multi party auth review referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.MultiPartyAuthReview multi_party_auth_review = 265;</code>
+   */
+  com.google.ads.googleads.v24.resources.MultiPartyAuthReviewOrBuilder getMultiPartyAuthReviewOrBuilder();
+
+  /**
+   * <pre>
    * Offline conversion upload summary at customer level.
    * </pre>
    *

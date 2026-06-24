@@ -35,6 +35,8 @@ private static final long serialVersionUID = 0L;
   private GenerateTrendingInsightsRequest() {
     customerId_ = "";
     customerInsightsGroup_ = "";
+    subCountryLocations_ = java.util.Collections.emptyList();
+    supplementalData_ = emptyIntList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -265,10 +267,169 @@ private static final long serialVersionUID = 0L;
     return countryLocation_ == null ? com.google.ads.googleads.v24.common.LocationInfo.getDefaultInstance() : countryLocation_;
   }
 
+  public static final int SUB_COUNTRY_LOCATIONS_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.ads.googleads.v24.common.LocationInfo> subCountryLocations_;
+  /**
+   * <pre>
+   * Optional. The sub-country geographic locations to search that apply to the
+   * criteria. Only supported for `search_audience` criteria.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v24.common.LocationInfo> getSubCountryLocationsList() {
+    return subCountryLocations_;
+  }
+  /**
+   * <pre>
+   * Optional. The sub-country geographic locations to search that apply to the
+   * criteria. Only supported for `search_audience` criteria.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v24.common.LocationInfoOrBuilder> 
+      getSubCountryLocationsOrBuilderList() {
+    return subCountryLocations_;
+  }
+  /**
+   * <pre>
+   * Optional. The sub-country geographic locations to search that apply to the
+   * criteria. Only supported for `search_audience` criteria.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public int getSubCountryLocationsCount() {
+    return subCountryLocations_.size();
+  }
+  /**
+   * <pre>
+   * Optional. The sub-country geographic locations to search that apply to the
+   * criteria. Only supported for `search_audience` criteria.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.LocationInfo getSubCountryLocations(int index) {
+    return subCountryLocations_.get(index);
+  }
+  /**
+   * <pre>
+   * Optional. The sub-country geographic locations to search that apply to the
+   * criteria. Only supported for `search_audience` criteria.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.LocationInfoOrBuilder getSubCountryLocationsOrBuilder(
+      int index) {
+    return subCountryLocations_.get(index);
+  }
+
+  public static final int SUPPLEMENTAL_DATA_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.IntList supplementalData_ =
+      emptyIntList();
+  private static final     com.google.protobuf.Internal.IntListAdapter.IntConverter<
+      com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData> supplementalData_converter_ =
+          new com.google.protobuf.Internal.IntListAdapter.IntConverter<
+              com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData>() {
+            public com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData convert(int from) {
+              com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData result = com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData.forNumber(from);
+              return result == null ? com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the supplementalData.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData> getSupplementalDataList() {
+    return new com.google.protobuf.Internal.IntListAdapter<
+        com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData>(supplementalData_, supplementalData_converter_);
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The count of supplementalData.
+   */
+  @java.lang.Override
+  public int getSupplementalDataCount() {
+    return supplementalData_.size();
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the element to return.
+   * @return The supplementalData at the given index.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData getSupplementalData(int index) {
+    return supplementalData_converter_.convert(supplementalData_.getInt(index));
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the enum numeric values on the wire for supplementalData.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getSupplementalDataValueList() {
+    return supplementalData_;
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of supplementalData at the given index.
+   */
+  @java.lang.Override
+  public int getSupplementalDataValue(int index) {
+    return supplementalData_.getInt(index);
+  }
+  private int supplementalDataMemoizedSerializedSize;
+
   public static final int SEARCH_AUDIENCE_FIELD_NUMBER = 4;
   /**
    * <pre>
-   * An audience to search for trending content in.
+   * An audience to search for trending content in. Data fetched is based on
+   * the country or sub-country locations specified in
+   * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+   * or
+   * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -280,7 +441,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An audience to search for trending content in.
+   * An audience to search for trending content in. Data fetched is based on
+   * the country or sub-country locations specified in
+   * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+   * or
+   * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -295,7 +460,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An audience to search for trending content in.
+   * An audience to search for trending content in. Data fetched is based on
+   * the country or sub-country locations specified in
+   * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+   * or
+   * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -365,6 +534,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(customerId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, customerId_);
     }
@@ -382,6 +552,16 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(6, getInsightsApplicationInfo());
+    }
+    if (getSupplementalDataList().size() > 0) {
+      output.writeUInt32NoTag(58);
+      output.writeUInt32NoTag(supplementalDataMemoizedSerializedSize);
+    }
+    for (int i = 0; i < supplementalData_.size(); i++) {
+      output.writeEnumNoTag(supplementalData_.getInt(i));
+    }
+    for (int i = 0; i < subCountryLocations_.size(); i++) {
+      output.writeMessage(8, subCountryLocations_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -414,6 +594,22 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getInsightsApplicationInfo());
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < supplementalData_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(supplementalData_.getInt(i));
+      }
+      size += dataSize;
+      if (!getSupplementalDataList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }supplementalDataMemoizedSerializedSize = dataSize;
+    }
+    for (int i = 0; i < subCountryLocations_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, subCountryLocations_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -443,6 +639,9 @@ private static final long serialVersionUID = 0L;
       if (!getCountryLocation()
           .equals(other.getCountryLocation())) return false;
     }
+    if (!getSubCountryLocationsList()
+        .equals(other.getSubCountryLocationsList())) return false;
+    if (!supplementalData_.equals(other.supplementalData_)) return false;
     if (!getCriteriaCase().equals(other.getCriteriaCase())) return false;
     switch (criteriaCase_) {
       case 4:
@@ -478,6 +677,14 @@ private static final long serialVersionUID = 0L;
     if (hasCountryLocation()) {
       hash = (37 * hash) + COUNTRY_LOCATION_FIELD_NUMBER;
       hash = (53 * hash) + getCountryLocation().hashCode();
+    }
+    if (getSubCountryLocationsCount() > 0) {
+      hash = (37 * hash) + SUB_COUNTRY_LOCATIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getSubCountryLocationsList().hashCode();
+    }
+    if (getSupplementalDataCount() > 0) {
+      hash = (37 * hash) + SUPPLEMENTAL_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + supplementalData_.hashCode();
     }
     switch (criteriaCase_) {
       case 4:
@@ -628,6 +835,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         internalGetInsightsApplicationInfoFieldBuilder();
         internalGetCountryLocationFieldBuilder();
+        internalGetSubCountryLocationsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -646,6 +854,14 @@ private static final long serialVersionUID = 0L;
         countryLocationBuilder_.dispose();
         countryLocationBuilder_ = null;
       }
+      if (subCountryLocationsBuilder_ == null) {
+        subCountryLocations_ = java.util.Collections.emptyList();
+      } else {
+        subCountryLocations_ = null;
+        subCountryLocationsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
+      supplementalData_ = emptyIntList();
       if (searchAudienceBuilder_ != null) {
         searchAudienceBuilder_.clear();
       }
@@ -680,10 +896,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v24.services.GenerateTrendingInsightsRequest buildPartial() {
       com.google.ads.googleads.v24.services.GenerateTrendingInsightsRequest result = new com.google.ads.googleads.v24.services.GenerateTrendingInsightsRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v24.services.GenerateTrendingInsightsRequest result) {
+      if (subCountryLocationsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          subCountryLocations_ = java.util.Collections.unmodifiableList(subCountryLocations_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.subCountryLocations_ = subCountryLocations_;
+      } else {
+        result.subCountryLocations_ = subCountryLocationsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.google.ads.googleads.v24.services.GenerateTrendingInsightsRequest result) {
@@ -706,6 +935,10 @@ private static final long serialVersionUID = 0L;
             ? countryLocation_
             : countryLocationBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        supplementalData_.makeImmutable();
+        result.supplementalData_ = supplementalData_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -750,6 +983,43 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCountryLocation()) {
         mergeCountryLocation(other.getCountryLocation());
+      }
+      if (subCountryLocationsBuilder_ == null) {
+        if (!other.subCountryLocations_.isEmpty()) {
+          if (subCountryLocations_.isEmpty()) {
+            subCountryLocations_ = other.subCountryLocations_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureSubCountryLocationsIsMutable();
+            subCountryLocations_.addAll(other.subCountryLocations_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.subCountryLocations_.isEmpty()) {
+          if (subCountryLocationsBuilder_.isEmpty()) {
+            subCountryLocationsBuilder_.dispose();
+            subCountryLocationsBuilder_ = null;
+            subCountryLocations_ = other.subCountryLocations_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            subCountryLocationsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetSubCountryLocationsFieldBuilder() : null;
+          } else {
+            subCountryLocationsBuilder_.addAllMessages(other.subCountryLocations_);
+          }
+        }
+      }
+      if (!other.supplementalData_.isEmpty()) {
+        if (supplementalData_.isEmpty()) {
+          supplementalData_ = other.supplementalData_;
+          supplementalData_.makeImmutable();
+          bitField0_ |= 0x00000020;
+        } else {
+          ensureSupplementalDataIsMutable();
+          supplementalData_.addAll(other.supplementalData_);
+        }
+        onChanged();
       }
       switch (other.getCriteriaCase()) {
         case SEARCH_AUDIENCE: {
@@ -828,6 +1098,35 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 50
+            case 56: {
+              int tmpRaw = input.readEnum();
+              ensureSupplementalDataIsMutable();
+              supplementalData_.addInt(tmpRaw);
+              break;
+            } // case 56
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureSupplementalDataIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                supplementalData_.addInt(input.readEnum());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 58
+            case 66: {
+              com.google.ads.googleads.v24.common.LocationInfo m =
+                  input.readMessage(
+                      com.google.ads.googleads.v24.common.LocationInfo.parser(),
+                      extensionRegistry);
+              if (subCountryLocationsBuilder_ == null) {
+                ensureSubCountryLocationsIsMutable();
+                subCountryLocations_.add(m);
+              } else {
+                subCountryLocationsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1363,11 +1662,553 @@ private static final long serialVersionUID = 0L;
       return countryLocationBuilder_;
     }
 
+    private java.util.List<com.google.ads.googleads.v24.common.LocationInfo> subCountryLocations_ =
+      java.util.Collections.emptyList();
+    private void ensureSubCountryLocationsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        subCountryLocations_ = new java.util.ArrayList<com.google.ads.googleads.v24.common.LocationInfo>(subCountryLocations_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.google.ads.googleads.v24.common.LocationInfo, com.google.ads.googleads.v24.common.LocationInfo.Builder, com.google.ads.googleads.v24.common.LocationInfoOrBuilder> subCountryLocationsBuilder_;
+
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public java.util.List<com.google.ads.googleads.v24.common.LocationInfo> getSubCountryLocationsList() {
+      if (subCountryLocationsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(subCountryLocations_);
+      } else {
+        return subCountryLocationsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public int getSubCountryLocationsCount() {
+      if (subCountryLocationsBuilder_ == null) {
+        return subCountryLocations_.size();
+      } else {
+        return subCountryLocationsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v24.common.LocationInfo getSubCountryLocations(int index) {
+      if (subCountryLocationsBuilder_ == null) {
+        return subCountryLocations_.get(index);
+      } else {
+        return subCountryLocationsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setSubCountryLocations(
+        int index, com.google.ads.googleads.v24.common.LocationInfo value) {
+      if (subCountryLocationsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSubCountryLocationsIsMutable();
+        subCountryLocations_.set(index, value);
+        onChanged();
+      } else {
+        subCountryLocationsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setSubCountryLocations(
+        int index, com.google.ads.googleads.v24.common.LocationInfo.Builder builderForValue) {
+      if (subCountryLocationsBuilder_ == null) {
+        ensureSubCountryLocationsIsMutable();
+        subCountryLocations_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        subCountryLocationsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder addSubCountryLocations(com.google.ads.googleads.v24.common.LocationInfo value) {
+      if (subCountryLocationsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSubCountryLocationsIsMutable();
+        subCountryLocations_.add(value);
+        onChanged();
+      } else {
+        subCountryLocationsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder addSubCountryLocations(
+        int index, com.google.ads.googleads.v24.common.LocationInfo value) {
+      if (subCountryLocationsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSubCountryLocationsIsMutable();
+        subCountryLocations_.add(index, value);
+        onChanged();
+      } else {
+        subCountryLocationsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder addSubCountryLocations(
+        com.google.ads.googleads.v24.common.LocationInfo.Builder builderForValue) {
+      if (subCountryLocationsBuilder_ == null) {
+        ensureSubCountryLocationsIsMutable();
+        subCountryLocations_.add(builderForValue.build());
+        onChanged();
+      } else {
+        subCountryLocationsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder addSubCountryLocations(
+        int index, com.google.ads.googleads.v24.common.LocationInfo.Builder builderForValue) {
+      if (subCountryLocationsBuilder_ == null) {
+        ensureSubCountryLocationsIsMutable();
+        subCountryLocations_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        subCountryLocationsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder addAllSubCountryLocations(
+        java.lang.Iterable<? extends com.google.ads.googleads.v24.common.LocationInfo> values) {
+      if (subCountryLocationsBuilder_ == null) {
+        ensureSubCountryLocationsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, subCountryLocations_);
+        onChanged();
+      } else {
+        subCountryLocationsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder clearSubCountryLocations() {
+      if (subCountryLocationsBuilder_ == null) {
+        subCountryLocations_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        subCountryLocationsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder removeSubCountryLocations(int index) {
+      if (subCountryLocationsBuilder_ == null) {
+        ensureSubCountryLocationsIsMutable();
+        subCountryLocations_.remove(index);
+        onChanged();
+      } else {
+        subCountryLocationsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v24.common.LocationInfo.Builder getSubCountryLocationsBuilder(
+        int index) {
+      return internalGetSubCountryLocationsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v24.common.LocationInfoOrBuilder getSubCountryLocationsOrBuilder(
+        int index) {
+      if (subCountryLocationsBuilder_ == null) {
+        return subCountryLocations_.get(index);  } else {
+        return subCountryLocationsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v24.common.LocationInfoOrBuilder> 
+         getSubCountryLocationsOrBuilderList() {
+      if (subCountryLocationsBuilder_ != null) {
+        return subCountryLocationsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(subCountryLocations_);
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v24.common.LocationInfo.Builder addSubCountryLocationsBuilder() {
+      return internalGetSubCountryLocationsFieldBuilder().addBuilder(
+          com.google.ads.googleads.v24.common.LocationInfo.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v24.common.LocationInfo.Builder addSubCountryLocationsBuilder(
+        int index) {
+      return internalGetSubCountryLocationsFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v24.common.LocationInfo.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Optional. The sub-country geographic locations to search that apply to the
+     * criteria. Only supported for `search_audience` criteria.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public java.util.List<com.google.ads.googleads.v24.common.LocationInfo.Builder> 
+         getSubCountryLocationsBuilderList() {
+      return internalGetSubCountryLocationsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.google.ads.googleads.v24.common.LocationInfo, com.google.ads.googleads.v24.common.LocationInfo.Builder, com.google.ads.googleads.v24.common.LocationInfoOrBuilder> 
+        internalGetSubCountryLocationsFieldBuilder() {
+      if (subCountryLocationsBuilder_ == null) {
+        subCountryLocationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.ads.googleads.v24.common.LocationInfo, com.google.ads.googleads.v24.common.LocationInfo.Builder, com.google.ads.googleads.v24.common.LocationInfoOrBuilder>(
+                subCountryLocations_,
+                ((bitField0_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        subCountryLocations_ = null;
+      }
+      return subCountryLocationsBuilder_;
+    }
+
+    private com.google.protobuf.Internal.IntList supplementalData_ = emptyIntList();
+    private void ensureSupplementalDataIsMutable() {
+      if (!supplementalData_.isModifiable()) {
+        supplementalData_ = makeMutableCopy(supplementalData_);
+      }
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return A list containing the supplementalData.
+     */
+    public java.util.List<com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData> getSupplementalDataList() {
+      return new com.google.protobuf.Internal.IntListAdapter<
+          com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData>(supplementalData_, supplementalData_converter_);
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The count of supplementalData.
+     */
+    public int getSupplementalDataCount() {
+      return supplementalData_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index of the element to return.
+     * @return The supplementalData at the given index.
+     */
+    public com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData getSupplementalData(int index) {
+      return supplementalData_converter_.convert(supplementalData_.getInt(index));
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index to set the value at.
+     * @param value The supplementalData to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSupplementalData(
+        int index, com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureSupplementalDataIsMutable();
+      supplementalData_.setInt(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addSupplementalData(com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureSupplementalDataIsMutable();
+      supplementalData_.addInt(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param values The supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllSupplementalData(
+        java.lang.Iterable<? extends com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData> values) {
+      ensureSupplementalDataIsMutable();
+      for (com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData value : values) {
+        supplementalData_.addInt(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSupplementalData() {
+      supplementalData_ = emptyIntList();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return A list containing the enum numeric values on the wire for supplementalData.
+     */
+    public java.util.List<java.lang.Integer>
+    getSupplementalDataValueList() {
+      supplementalData_.makeImmutable();
+      return supplementalData_;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of supplementalData at the given index.
+     */
+    public int getSupplementalDataValue(int index) {
+      return supplementalData_.getInt(index);
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for supplementalData to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSupplementalDataValue(
+        int index, int value) {
+      ensureSupplementalDataIsMutable();
+      supplementalData_.setInt(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The enum numeric value on the wire for supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addSupplementalDataValue(int value) {
+      ensureSupplementalDataIsMutable();
+      supplementalData_.addInt(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param values The enum numeric values on the wire for supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllSupplementalDataValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureSupplementalDataIsMutable();
+      for (int value : values) {
+        supplementalData_.addInt(value);
+      }
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.SingleFieldBuilder<
         com.google.ads.googleads.v24.services.SearchAudience, com.google.ads.googleads.v24.services.SearchAudience.Builder, com.google.ads.googleads.v24.services.SearchAudienceOrBuilder> searchAudienceBuilder_;
     /**
      * <pre>
-     * An audience to search for trending content in.
+     * An audience to search for trending content in. Data fetched is based on
+     * the country or sub-country locations specified in
+     * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+     * or
+     * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -1379,7 +2220,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An audience to search for trending content in.
+     * An audience to search for trending content in. Data fetched is based on
+     * the country or sub-country locations specified in
+     * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+     * or
+     * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -1401,7 +2246,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An audience to search for trending content in.
+     * An audience to search for trending content in. Data fetched is based on
+     * the country or sub-country locations specified in
+     * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+     * or
+     * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -1421,7 +2270,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An audience to search for trending content in.
+     * An audience to search for trending content in. Data fetched is based on
+     * the country or sub-country locations specified in
+     * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+     * or
+     * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -1439,7 +2292,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An audience to search for trending content in.
+     * An audience to search for trending content in. Data fetched is based on
+     * the country or sub-country locations specified in
+     * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+     * or
+     * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -1466,7 +2323,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An audience to search for trending content in.
+     * An audience to search for trending content in. Data fetched is based on
+     * the country or sub-country locations specified in
+     * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+     * or
+     * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -1489,7 +2350,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An audience to search for trending content in.
+     * An audience to search for trending content in. Data fetched is based on
+     * the country or sub-country locations specified in
+     * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+     * or
+     * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -1499,7 +2364,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An audience to search for trending content in.
+     * An audience to search for trending content in. Data fetched is based on
+     * the country or sub-country locations specified in
+     * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+     * or
+     * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -1517,7 +2386,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An audience to search for trending content in.
+     * An audience to search for trending content in. Data fetched is based on
+     * the country or sub-country locations specified in
+     * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+     * or
+     * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>

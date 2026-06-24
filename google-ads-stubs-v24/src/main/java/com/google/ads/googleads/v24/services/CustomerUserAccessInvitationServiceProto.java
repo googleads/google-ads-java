@@ -75,28 +75,30 @@ public final class CustomerUserAccessInvitationServiceProto {
       "\013\n\toperation\"\211\001\n*MutateCustomerUserAcces" +
       "sInvitationResponse\022[\n\006result\030\001 \001(\0132K.go" +
       "ogle.ads.googleads.v24.services.MutateCu" +
-      "stomerUserAccessInvitationResult\"}\n(Muta" +
-      "teCustomerUserAccessInvitationResult\022Q\n\r" +
-      "resource_name\030\001 \001(\tB:\372A7\n5googleads.goog" +
-      "leapis.com/CustomerUserAccessInvitation2" +
-      "\230\003\n#CustomerUserAccessInvitationService\022" +
-      "\251\002\n\"MutateCustomerUserAccessInvitation\022L" +
-      ".google.ads.googleads.v24.services.Mutat" +
-      "eCustomerUserAccessInvitationRequest\032M.g" +
-      "oogle.ads.googleads.v24.services.MutateC" +
-      "ustomerUserAccessInvitationResponse\"f\332A\025" +
-      "customer_id,operation\202\323\344\223\002H\"C/v24/custom" +
-      "ers/{customer_id=*}/customerUserAccessIn" +
-      "vitations:mutate:\001*\032E\312A\030googleads.google" +
-      "apis.com\322A\'https://www.googleapis.com/au" +
-      "th/adwordsB\224\002\n%com.google.ads.googleads." +
-      "v24.servicesB(CustomerUserAccessInvitati" +
-      "onServiceProtoP\001ZIgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v24/servic" +
-      "es;services\242\002\003GAA\252\002!Google.Ads.GoogleAds" +
-      ".V24.Services\312\002!Google\\Ads\\GoogleAds\\V24" +
-      "\\Services\352\002%Google::Ads::GoogleAds::V24:" +
-      ":Servicesb\006proto3"
+      "stomerUserAccessInvitationResult\"\322\001\n(Mut" +
+      "ateCustomerUserAccessInvitationResult\022Q\n" +
+      "\rresource_name\030\001 \001(\tB:\372A7\n5googleads.goo" +
+      "gleapis.com/CustomerUserAccessInvitation" +
+      "\022S\n\027multi_party_auth_review\030\002 \001(\tB2\372A/\n-" +
+      "googleads.googleapis.com/MultiPartyAuthR" +
+      "eview2\230\003\n#CustomerUserAccessInvitationSe" +
+      "rvice\022\251\002\n\"MutateCustomerUserAccessInvita" +
+      "tion\022L.google.ads.googleads.v24.services" +
+      ".MutateCustomerUserAccessInvitationReque" +
+      "st\032M.google.ads.googleads.v24.services.M" +
+      "utateCustomerUserAccessInvitationRespons" +
+      "e\"f\332A\025customer_id,operation\202\323\344\223\002H\"C/v24/" +
+      "customers/{customer_id=*}/customerUserAc" +
+      "cessInvitations:mutate:\001*\032E\312A\030googleads." +
+      "googleapis.com\322A\'https://www.googleapis." +
+      "com/auth/adwordsB\224\002\n%com.google.ads.goog" +
+      "leads.v24.servicesB(CustomerUserAccessIn" +
+      "vitationServiceProtoP\001ZIgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v24/" +
+      "services;services\242\002\003GAA\252\002!Google.Ads.Goo" +
+      "gleAds.V24.Services\312\002!Google\\Ads\\GoogleA" +
+      "ds\\V24\\Services\352\002%Google::Ads::GoogleAds" +
+      "::V24::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -130,7 +132,7 @@ public final class CustomerUserAccessInvitationServiceProto {
     internal_static_google_ads_googleads_v24_services_MutateCustomerUserAccessInvitationResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_services_MutateCustomerUserAccessInvitationResult_descriptor,
-        new java.lang.String[] { "ResourceName", });
+        new java.lang.String[] { "ResourceName", "MultiPartyAuthReview", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.ads.googleads.v24.resources.CustomerUserAccessInvitationProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

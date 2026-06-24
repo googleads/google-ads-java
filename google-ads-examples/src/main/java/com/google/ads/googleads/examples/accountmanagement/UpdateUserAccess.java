@@ -196,11 +196,23 @@ public class UpdateUserAccess {
       MutateCustomerUserAccessResponse response =
           userAccessServiceClient.mutateCustomerUserAccess(String.valueOf(customerId), operation);
 
-      // Prints the result.
-      System.out.printf(
-          "Successfully modified customer user access with resource name '%s' to access level"
-              + " '%s'.%n",
-          response.getResult().getResourceName(), accessRole);
+      if (response.getResult().getMultiPartyAuthReview().isEmpty()) {
+        // A multi-party auth review was not triggered.
+        System.out.printf(
+            "Successfully modified customer user access with resource name '%s' to access level"
+                + " '%s'.%n",
+            response.getResult().getResourceName(), accessRole);
+      } else {
+        // A multi-party auth review was triggered. See
+        // FetchAndApprovePendingMultiPartyAuthReviews.java for an example on how to fetch
+        // and approve an MPA auth review.
+        System.out.printf(
+            "A multi-party auth review was triggered. The MPA review resource name is %s. "
+                + "Ask a second administrator to approve this request make the requested user access "
+                + "changes. See FetchAndApprovePendingMultiPartyAuthReviews.java for an example "
+                + "on how to approve an MPA auth review using the API.%n",
+            response.getResult().getMultiPartyAuthReview());
+      }
     }
   }
 }

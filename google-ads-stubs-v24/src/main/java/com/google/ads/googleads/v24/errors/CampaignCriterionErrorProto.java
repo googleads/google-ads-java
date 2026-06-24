@@ -42,8 +42,8 @@ public final class CampaignCriterionErrorProto {
     java.lang.String[] descriptorData = {
       "\n>google/ads/googleads/v24/errors/campai" +
       "gn_criterion_error.proto\022\037google.ads.goo" +
-      "gleads.v24.errors\"\244\013\n\032CampaignCriterionE" +
-      "rrorEnum\"\205\013\n\026CampaignCriterionError\022\017\n\013U" +
+      "gleads.v24.errors\"\347\013\n\032CampaignCriterionE" +
+      "rrorEnum\"\310\013\n\026CampaignCriterionError\022\017\n\013U" +
       "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032\n\026CONCRETE_TY" +
       "PE_REQUIRED\020\002\022\031\n\025INVALID_PLACEMENT_URL\020\003" +
       "\022 \n\034CANNOT_EXCLUDE_CRITERIA_TYPE\020\004\022\'\n#CA" +
@@ -78,14 +78,15 @@ public final class CampaignCriterionErrorProto {
       "H_BRAND_LIST_TO_NON_QUALIFIED_SEARCH_CAM" +
       "PAIGN\020\032\022B\n>CANNOT_REMOVE_ALL_LOCATIONS_D" +
       "UE_TO_TOO_MANY_COUNTRY_EXCLUSIONS\020\033\022\033\n\027I" +
-      "NVALID_VIDEO_LINEUP_ID\020\034B\373\001\n#com.google." +
-      "ads.googleads.v24.errorsB\033CampaignCriter" +
-      "ionErrorProtoP\001ZEgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v24/errors;" +
-      "errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V24." +
-      "Errors\312\002\037Google\\Ads\\GoogleAds\\V24\\Errors" +
-      "\352\002#Google::Ads::GoogleAds::V24::Errorsb\006" +
-      "proto3"
+      "NVALID_VIDEO_LINEUP_ID\020\034\022A\n=CANNOT_REMOV" +
+      "E_ALL_LOCATIONS_FROM_LOCAL_SERVICES_PMAX" +
+      "_CAMPAIGN\020\035B\373\001\n#com.google.ads.googleads" +
+      ".v24.errorsB\033CampaignCriterionErrorProto" +
+      "P\001ZEgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v24/errors;errors\242\002\003GAA\252" +
+      "\002\037Google.Ads.GoogleAds.V24.Errors\312\002\037Goog" +
+      "le\\Ads\\GoogleAds\\V24\\Errors\352\002#Google::Ad" +
+      "s::GoogleAds::V24::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

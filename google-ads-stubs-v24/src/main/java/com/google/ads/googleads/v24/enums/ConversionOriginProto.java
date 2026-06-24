@@ -42,17 +42,18 @@ public final class ConversionOriginProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v24/enums/convers" +
       "ion_origin.proto\022\036google.ads.googleads.v" +
-      "24.enums\"\244\001\n\024ConversionOriginEnum\"\213\001\n\020Co" +
+      "24.enums\"\274\001\n\024ConversionOriginEnum\"\243\001\n\020Co" +
       "nversionOrigin\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
       "WN\020\001\022\013\n\007WEBSITE\020\002\022\021\n\rGOOGLE_HOSTED\020\003\022\007\n\003" +
       "APP\020\004\022\021\n\rCALL_FROM_ADS\020\005\022\t\n\005STORE\020\006\022\022\n\016Y" +
-      "OUTUBE_HOSTED\020\007B\357\001\n\"com.google.ads.googl" +
-      "eads.v24.enumsB\025ConversionOriginProtoP\001Z" +
-      "Cgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v24/enums;enums\242\002\003GAA\252\002\036Goo" +
-      "gle.Ads.GoogleAds.V24.Enums\312\002\036Google\\Ads" +
-      "\\GoogleAds\\V24\\Enums\352\002\"Google::Ads::Goog" +
-      "leAds::V24::Enumsb\006proto3"
+      "OUTUBE_HOSTED\020\007\022\026\n\022LOCAL_SERVICES_ADS\020\010B" +
+      "\357\001\n\"com.google.ads.googleads.v24.enumsB\025" +
+      "ConversionOriginProtoP\001ZCgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v24" +
+      "/enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAd" +
+      "s.V24.Enums\312\002\036Google\\Ads\\GoogleAds\\V24\\E" +
+      "nums\352\002\"Google::Ads::GoogleAds::V24::Enum" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

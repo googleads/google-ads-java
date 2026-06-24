@@ -295,6 +295,9 @@ public interface GoogleAdsVersion {
         @ServiceClientDescriptor(settingsClass = LocalServicesLeadServiceSettings.class)
         LocalServicesLeadServiceClient createLocalServicesLeadServiceClient();
          
+        @ServiceClientDescriptor(settingsClass = MultiPartyAuthReviewServiceSettings.class)
+        MultiPartyAuthReviewServiceClient createMultiPartyAuthReviewServiceClient();
+         
         @ServiceClientDescriptor(settingsClass = OfflineUserDataJobServiceSettings.class)
         OfflineUserDataJobServiceClient createOfflineUserDataJobServiceClient();
          

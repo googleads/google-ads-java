@@ -187,6 +187,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Resource name of the conversion action associated with this conversion.
+   *
    * Note: Although this resource name consists of a customer id and a
    * conversion action id, validation will ignore the customer id and use the
    * conversion action id as the sole identifier of the conversion action.
@@ -202,6 +203,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Resource name of the conversion action associated with this conversion.
+   *
    * Note: Although this resource name consists of a customer id and a
    * conversion action id, validation will ignore the customer id and use the
    * conversion action id as the sole identifier of the conversion action.
@@ -226,6 +228,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Resource name of the conversion action associated with this conversion.
+   *
    * Note: Although this resource name consists of a customer id and a
    * conversion action id, validation will ignore the customer id and use the
    * conversion action id as the sole identifier of the conversion action.
@@ -1303,6 +1306,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Resource name of the conversion action associated with this conversion.
+     *
      * Note: Although this resource name consists of a customer id and a
      * conversion action id, validation will ignore the customer id and use the
      * conversion action id as the sole identifier of the conversion action.
@@ -1317,6 +1321,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Resource name of the conversion action associated with this conversion.
+     *
      * Note: Although this resource name consists of a customer id and a
      * conversion action id, validation will ignore the customer id and use the
      * conversion action id as the sole identifier of the conversion action.
@@ -1340,6 +1345,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Resource name of the conversion action associated with this conversion.
+     *
      * Note: Although this resource name consists of a customer id and a
      * conversion action id, validation will ignore the customer id and use the
      * conversion action id as the sole identifier of the conversion action.
@@ -1364,6 +1370,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Resource name of the conversion action associated with this conversion.
+     *
      * Note: Although this resource name consists of a customer id and a
      * conversion action id, validation will ignore the customer id and use the
      * conversion action id as the sole identifier of the conversion action.
@@ -1384,6 +1391,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Resource name of the conversion action associated with this conversion.
+     *
      * Note: Although this resource name consists of a customer id and a
      * conversion action id, validation will ignore the customer id and use the
      * conversion action id as the sole identifier of the conversion action.
@@ -1401,6 +1409,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Resource name of the conversion action associated with this conversion.
+     *
      * Note: Although this resource name consists of a customer id and a
      * conversion action id, validation will ignore the customer id and use the
      * conversion action id as the sole identifier of the conversion action.

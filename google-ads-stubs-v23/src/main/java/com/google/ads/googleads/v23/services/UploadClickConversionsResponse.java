@@ -57,9 +57,11 @@ private static final long serialVersionUID = 0L;
    * Errors that pertain to conversion failures in the partial failure mode.
    * Returned when all errors occur inside the conversions. If any errors occur
    * outside the conversions (for example, auth errors), we return an RPC level
-   * error. See
-   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-   * for more information about partial failure.
+   * error.
+   *
+   * See
+   * [Best practices for partial
+   * failures](/google-ads/api/docs/best-practices/partial-failures).
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -74,9 +76,11 @@ private static final long serialVersionUID = 0L;
    * Errors that pertain to conversion failures in the partial failure mode.
    * Returned when all errors occur inside the conversions. If any errors occur
    * outside the conversions (for example, auth errors), we return an RPC level
-   * error. See
-   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-   * for more information about partial failure.
+   * error.
+   *
+   * See
+   * [Best practices for partial
+   * failures](/google-ads/api/docs/best-practices/partial-failures).
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -91,9 +95,11 @@ private static final long serialVersionUID = 0L;
    * Errors that pertain to conversion failures in the partial failure mode.
    * Returned when all errors occur inside the conversions. If any errors occur
    * outside the conversions (for example, auth errors), we return an RPC level
-   * error. See
-   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-   * for more information about partial failure.
+   * error.
+   *
+   * See
+   * [Best practices for partial
+   * failures](/google-ads/api/docs/best-practices/partial-failures).
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -109,8 +115,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Returned for successfully processed conversions. Proto will be empty for
-   * rows that received an error. Results are not returned when validate_only is
-   * true.
+   * rows that received an error. Results are not returned when `validate_only`
+   * is `true`.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -122,8 +128,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Returned for successfully processed conversions. Proto will be empty for
-   * rows that received an error. Results are not returned when validate_only is
-   * true.
+   * rows that received an error. Results are not returned when `validate_only`
+   * is `true`.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -136,8 +142,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Returned for successfully processed conversions. Proto will be empty for
-   * rows that received an error. Results are not returned when validate_only is
-   * true.
+   * rows that received an error. Results are not returned when `validate_only`
+   * is `true`.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -149,8 +155,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Returned for successfully processed conversions. Proto will be empty for
-   * rows that received an error. Results are not returned when validate_only is
-   * true.
+   * rows that received an error. Results are not returned when `validate_only`
+   * is `true`.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -162,8 +168,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Returned for successfully processed conversions. Proto will be empty for
-   * rows that received an error. Results are not returned when validate_only is
-   * true.
+   * rows that received an error. Results are not returned when `validate_only`
+   * is `true`.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -614,9 +620,11 @@ private static final long serialVersionUID = 0L;
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
      * outside the conversions (for example, auth errors), we return an RPC level
-     * error. See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * error.
+     *
+     * See
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -630,9 +638,11 @@ private static final long serialVersionUID = 0L;
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
      * outside the conversions (for example, auth errors), we return an RPC level
-     * error. See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * error.
+     *
+     * See
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -650,9 +660,11 @@ private static final long serialVersionUID = 0L;
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
      * outside the conversions (for example, auth errors), we return an RPC level
-     * error. See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * error.
+     *
+     * See
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -675,9 +687,11 @@ private static final long serialVersionUID = 0L;
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
      * outside the conversions (for example, auth errors), we return an RPC level
-     * error. See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * error.
+     *
+     * See
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -698,9 +712,11 @@ private static final long serialVersionUID = 0L;
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
      * outside the conversions (for example, auth errors), we return an RPC level
-     * error. See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * error.
+     *
+     * See
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -728,9 +744,11 @@ private static final long serialVersionUID = 0L;
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
      * outside the conversions (for example, auth errors), we return an RPC level
-     * error. See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * error.
+     *
+     * See
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -750,9 +768,11 @@ private static final long serialVersionUID = 0L;
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
      * outside the conversions (for example, auth errors), we return an RPC level
-     * error. See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * error.
+     *
+     * See
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -767,9 +787,11 @@ private static final long serialVersionUID = 0L;
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
      * outside the conversions (for example, auth errors), we return an RPC level
-     * error. See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * error.
+     *
+     * See
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -787,9 +809,11 @@ private static final long serialVersionUID = 0L;
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
      * outside the conversions (for example, auth errors), we return an RPC level
-     * error. See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * error.
+     *
+     * See
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -823,8 +847,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -839,8 +863,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -855,8 +879,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -871,8 +895,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -894,8 +918,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -914,8 +938,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -936,8 +960,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -959,8 +983,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -979,8 +1003,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -999,8 +1023,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -1020,8 +1044,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -1039,8 +1063,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -1058,8 +1082,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -1071,8 +1095,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -1087,8 +1111,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -1104,8 +1128,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -1117,8 +1141,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>
@@ -1131,8 +1155,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error. Results are not returned when validate_only is
-     * true.
+     * rows that received an error. Results are not returned when `validate_only`
+     * is `true`.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v23.services.ClickConversionResult results = 2;</code>

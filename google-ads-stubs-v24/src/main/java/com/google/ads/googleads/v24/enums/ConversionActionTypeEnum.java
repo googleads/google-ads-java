@@ -508,6 +508,16 @@ private static final long serialVersionUID = 0L;
      * <code>FIREBASE_IOS_CLOSE_CONVERT_LEAD = 50;</code>
      */
     FIREBASE_IOS_CLOSE_CONVERT_LEAD(50),
+    /**
+     * <pre>
+     * Conversions that occur when a user clicks on local services ads unit and
+     * reaches out to advertiser through phone call, message, or booking options
+     * on the ad.
+     * </pre>
+     *
+     * <code>LOCAL_SERVICES_ADS = 51;</code>
+     */
+    LOCAL_SERVICES_ADS(51),
     UNRECOGNIZED(-1),
     ;
 
@@ -971,6 +981,16 @@ private static final long serialVersionUID = 0L;
      * <code>FIREBASE_IOS_CLOSE_CONVERT_LEAD = 50;</code>
      */
     public static final int FIREBASE_IOS_CLOSE_CONVERT_LEAD_VALUE = 50;
+    /**
+     * <pre>
+     * Conversions that occur when a user clicks on local services ads unit and
+     * reaches out to advertiser through phone call, message, or booking options
+     * on the ad.
+     * </pre>
+     *
+     * <code>LOCAL_SERVICES_ADS = 51;</code>
+     */
+    public static final int LOCAL_SERVICES_ADS_VALUE = 51;
 
 
     public final int getNumber() {
@@ -1048,6 +1068,7 @@ private static final long serialVersionUID = 0L;
         case 48: return FIREBASE_IOS_GENERATE_LEAD;
         case 49: return FIREBASE_IOS_QUALIFY_LEAD;
         case 50: return FIREBASE_IOS_CLOSE_CONVERT_LEAD;
+        case 51: return LOCAL_SERVICES_ADS;
         default: return null;
       }
     }

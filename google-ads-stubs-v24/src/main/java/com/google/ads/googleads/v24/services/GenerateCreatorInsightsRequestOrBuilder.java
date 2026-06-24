@@ -184,6 +184,65 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
 
   /**
    * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the supplementalData.
+   */
+  java.util.List<com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData> getSupplementalDataList();
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The count of supplementalData.
+   */
+  int getSupplementalDataCount();
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the element to return.
+   * @return The supplementalData at the given index.
+   */
+  com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData getSupplementalData(int index);
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the enum numeric values on the wire for supplementalData.
+   */
+  java.util.List<java.lang.Integer>
+  getSupplementalDataValueList();
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of supplementalData at the given index.
+   */
+  int getSupplementalDataValue(int index);
+
+  /**
+   * <pre>
    * The attributes used to identify top creators. Data fetched is based on
    * the list of countries or sub-country locations specified in
    * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations]
@@ -225,7 +284,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
    * list of countries specified in
-   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+   * option is deprecated and will be removed in the V25 release. Use
+   * search_topics instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -236,7 +297,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
    * list of countries specified in
-   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+   * option is deprecated and will be removed in the V25 release. Use
+   * search_topics instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -247,7 +310,9 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
    * list of countries specified in
-   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+   * option is deprecated and will be removed in the V25 release. Use
+   * search_topics instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -286,6 +351,42 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
    * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.YouTubeChannels search_channels = 4;</code>
    */
   com.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.YouTubeChannelsOrBuilder getSearchChannelsOrBuilder();
+
+  /**
+   * <pre>
+   * Search for relevant creators who make content about the specified topics.
+   * Data fetched is based on the country specified in
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * Note: This option allows searching for one country only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+   * @return Whether the searchTopics field is set.
+   */
+  boolean hasSearchTopics();
+  /**
+   * <pre>
+   * Search for relevant creators who make content about the specified topics.
+   * Data fetched is based on the country specified in
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * Note: This option allows searching for one country only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+   * @return The searchTopics.
+   */
+  com.google.ads.googleads.v24.services.SearchTopics getSearchTopics();
+  /**
+   * <pre>
+   * Search for relevant creators who make content about the specified topics.
+   * Data fetched is based on the country specified in
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * Note: This option allows searching for one country only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+   */
+  com.google.ads.googleads.v24.services.SearchTopicsOrBuilder getSearchTopicsOrBuilder();
 
   com.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.CriteriaCase getCriteriaCase();
 }

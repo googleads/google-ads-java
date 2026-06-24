@@ -61,7 +61,7 @@ import javax.annotation.Generated;
  *    </tr>
  *    <tr>
  *      <td><p> CreateDataLink</td>
- *      <td><p> Creates a data link. The requesting Google Ads account name and account ID will be shared with the third party (such as YouTube creators for video links) to whom you are creating the link with. Only customers on the allow-list can create data links.
+ *      <td><p> Creates a data link. The requesting Google Ads account name and account ID will be shared with the third party (such as YouTube creators for video links) to whom you are creating the link with.
  * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [DatabaseError]()   [DataLinkError]()   [FieldError]()   [HeaderError]()   [InternalError]()   [MutateError]()   [QuotaError]()   [RequestError]()</td>
  *      <td>
  *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
@@ -215,7 +215,7 @@ public class DataLinkServiceClient implements BackgroundResource {
   /**
    * Creates a data link. The requesting Google Ads account name and account ID will be shared with
    * the third party (such as YouTube creators for video links) to whom you are creating the link
-   * with. Only customers on the allow-list can create data links.
+   * with.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [DataLinkError]() [FieldError]() [HeaderError]() [InternalError]() [MutateError]()
@@ -250,7 +250,7 @@ public class DataLinkServiceClient implements BackgroundResource {
   /**
    * Creates a data link. The requesting Google Ads account name and account ID will be shared with
    * the third party (such as YouTube creators for video links) to whom you are creating the link
-   * with. Only customers on the allow-list can create data links.
+   * with.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [DataLinkError]() [FieldError]() [HeaderError]() [InternalError]() [MutateError]()
@@ -285,7 +285,7 @@ public class DataLinkServiceClient implements BackgroundResource {
   /**
    * Creates a data link. The requesting Google Ads account name and account ID will be shared with
    * the third party (such as YouTube creators for video links) to whom you are creating the link
-   * with. Only customers on the allow-list can create data links.
+   * with.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [DataLinkError]() [FieldError]() [HeaderError]() [InternalError]() [MutateError]()

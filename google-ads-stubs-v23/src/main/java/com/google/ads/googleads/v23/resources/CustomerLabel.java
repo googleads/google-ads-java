@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The resource name of the customer to which the label is
-   * attached. Read only.
+   * attached. This field should not be set when creating a new `CustomerLabel`.
    * </pre>
    *
    * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -123,7 +123,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The resource name of the customer to which the label is
-   * attached. Read only.
+   * attached. This field should not be set when creating a new `CustomerLabel`.
    * </pre>
    *
    * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The resource name of the customer to which the label is
-   * attached. Read only.
+   * attached. This field should not be set when creating a new `CustomerLabel`.
    * </pre>
    *
    * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -172,9 +172,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The resource name of the label assigned to the customer.
+   * This field should not be set when creating a new `CustomerLabel`.
    *
    * Note: the Customer ID portion of the label resource name is not
-   * validated when creating a new CustomerLabel.
+   * validated when creating a new `CustomerLabel`.
    * </pre>
    *
    * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -187,9 +188,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The resource name of the label assigned to the customer.
+   * This field should not be set when creating a new `CustomerLabel`.
    *
    * Note: the Customer ID portion of the label resource name is not
-   * validated when creating a new CustomerLabel.
+   * validated when creating a new `CustomerLabel`.
    * </pre>
    *
    * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -211,9 +213,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The resource name of the label assigned to the customer.
+   * This field should not be set when creating a new `CustomerLabel`.
    *
    * Note: the Customer ID portion of the label resource name is not
-   * validated when creating a new CustomerLabel.
+   * validated when creating a new `CustomerLabel`.
    * </pre>
    *
    * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -702,7 +705,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the customer to which the label is
-     * attached. Read only.
+     * attached. This field should not be set when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -714,7 +717,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the customer to which the label is
-     * attached. Read only.
+     * attached. This field should not be set when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -735,7 +738,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the customer to which the label is
-     * attached. Read only.
+     * attached. This field should not be set when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -757,7 +760,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the customer to which the label is
-     * attached. Read only.
+     * attached. This field should not be set when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -775,7 +778,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the customer to which the label is
-     * attached. Read only.
+     * attached. This field should not be set when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -790,7 +793,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the customer to which the label is
-     * attached. Read only.
+     * attached. This field should not be set when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -811,9 +814,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the label assigned to the customer.
+     * This field should not be set when creating a new `CustomerLabel`.
      *
      * Note: the Customer ID portion of the label resource name is not
-     * validated when creating a new CustomerLabel.
+     * validated when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -825,9 +829,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the label assigned to the customer.
+     * This field should not be set when creating a new `CustomerLabel`.
      *
      * Note: the Customer ID portion of the label resource name is not
-     * validated when creating a new CustomerLabel.
+     * validated when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -848,9 +853,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the label assigned to the customer.
+     * This field should not be set when creating a new `CustomerLabel`.
      *
      * Note: the Customer ID portion of the label resource name is not
-     * validated when creating a new CustomerLabel.
+     * validated when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -872,9 +878,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the label assigned to the customer.
+     * This field should not be set when creating a new `CustomerLabel`.
      *
      * Note: the Customer ID portion of the label resource name is not
-     * validated when creating a new CustomerLabel.
+     * validated when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -892,9 +899,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the label assigned to the customer.
+     * This field should not be set when creating a new `CustomerLabel`.
      *
      * Note: the Customer ID portion of the label resource name is not
-     * validated when creating a new CustomerLabel.
+     * validated when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -909,9 +917,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of the label assigned to the customer.
+     * This field should not be set when creating a new `CustomerLabel`.
      *
      * Note: the Customer ID portion of the label resource name is not
-     * validated when creating a new CustomerLabel.
+     * validated when creating a new `CustomerLabel`.
      * </pre>
      *
      * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>

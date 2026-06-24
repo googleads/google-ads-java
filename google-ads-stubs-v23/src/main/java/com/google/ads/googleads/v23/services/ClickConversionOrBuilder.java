@@ -82,6 +82,7 @@ public interface ClickConversionOrBuilder extends
   /**
    * <pre>
    * Resource name of the conversion action associated with this conversion.
+   *
    * Note: Although this resource name consists of a customer id and a
    * conversion action id, validation will ignore the customer id and use the
    * conversion action id as the sole identifier of the conversion action.
@@ -94,6 +95,7 @@ public interface ClickConversionOrBuilder extends
   /**
    * <pre>
    * Resource name of the conversion action associated with this conversion.
+   *
    * Note: Although this resource name consists of a customer id and a
    * conversion action id, validation will ignore the customer id and use the
    * conversion action id as the sole identifier of the conversion action.
@@ -106,6 +108,7 @@ public interface ClickConversionOrBuilder extends
   /**
    * <pre>
    * Resource name of the conversion action associated with this conversion.
+   *
    * Note: Although this resource name consists of a customer id and a
    * conversion action id, validation will ignore the customer id and use the
    * conversion action id as the sole identifier of the conversion action.
@@ -442,7 +445,6 @@ public interface ClickConversionOrBuilder extends
   /**
    * <pre>
    * Type of the customer associated with the conversion (new or returning).
-   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.enums.ConversionCustomerTypeEnum.ConversionCustomerType customer_type = 26;</code>
@@ -452,7 +454,6 @@ public interface ClickConversionOrBuilder extends
   /**
    * <pre>
    * Type of the customer associated with the conversion (new or returning).
-   * Accessible only to customers on the allow-list.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.enums.ConversionCustomerTypeEnum.ConversionCustomerType customer_type = 26;</code>
@@ -470,8 +471,11 @@ public interface ClickConversionOrBuilder extends
    * exclude sharing IP addresses from users from these regions and ensure that
    * you provide users with clear and comprehensive information about the data
    * you collect on your sites, apps, and other properties and get consent where
-   * required by law or any applicable Google policies. See the
-   * https://support.google.com/google-ads/answer/2998031 page for more details.
+   * required by law or any applicable Google policies. See
+   * [About offline conversion
+   * imports](//support.google.com/google-ads/answer/2998031) page for more
+   * details.
+   *
    * This field is only available to allowlisted users. To include this field in
    * conversion imports, upgrade to the Data Manager API.
    * </pre>
@@ -490,8 +494,11 @@ public interface ClickConversionOrBuilder extends
    * exclude sharing IP addresses from users from these regions and ensure that
    * you provide users with clear and comprehensive information about the data
    * you collect on your sites, apps, and other properties and get consent where
-   * required by law or any applicable Google policies. See the
-   * https://support.google.com/google-ads/answer/2998031 page for more details.
+   * required by law or any applicable Google policies. See
+   * [About offline conversion
+   * imports](//support.google.com/google-ads/answer/2998031) page for more
+   * details.
+   *
    * This field is only available to allowlisted users. To include this field in
    * conversion imports, upgrade to the Data Manager API.
    * </pre>
@@ -510,8 +517,11 @@ public interface ClickConversionOrBuilder extends
    * exclude sharing IP addresses from users from these regions and ensure that
    * you provide users with clear and comprehensive information about the data
    * you collect on your sites, apps, and other properties and get consent where
-   * required by law or any applicable Google policies. See the
-   * https://support.google.com/google-ads/answer/2998031 page for more details.
+   * required by law or any applicable Google policies. See
+   * [About offline conversion
+   * imports](//support.google.com/google-ads/answer/2998031) page for more
+   * details.
+   *
    * This field is only available to allowlisted users. To include this field in
    * conversion imports, upgrade to the Data Manager API.
    * </pre>

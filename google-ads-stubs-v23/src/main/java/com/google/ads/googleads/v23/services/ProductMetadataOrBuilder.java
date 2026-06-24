@@ -12,8 +12,9 @@ public interface ProductMetadataOrBuilder extends
 
   /**
    * <pre>
-   * The code associated with the ad product (for example: BUMPER,
-   * TRUEVIEW_IN_STREAM).
+   * The code associated with the ad product.
+   *
+   * For example: "VIDEO_VIEW_CAMPAIGN".
    * To list the available plannable product codes use
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
    * </pre>
@@ -24,8 +25,9 @@ public interface ProductMetadataOrBuilder extends
   boolean hasPlannableProductCode();
   /**
    * <pre>
-   * The code associated with the ad product (for example: BUMPER,
-   * TRUEVIEW_IN_STREAM).
+   * The code associated with the ad product.
+   *
+   * For example: "VIDEO_VIEW_CAMPAIGN".
    * To list the available plannable product codes use
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
    * </pre>
@@ -36,8 +38,9 @@ public interface ProductMetadataOrBuilder extends
   java.lang.String getPlannableProductCode();
   /**
    * <pre>
-   * The code associated with the ad product (for example: BUMPER,
-   * TRUEVIEW_IN_STREAM).
+   * The code associated with the ad product.
+   *
+   * For example: "VIDEO_VIEW_CAMPAIGN".
    * To list the available plannable product codes use
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v23.services.ReachPlanService.ListPlannableProducts].
    * </pre>
@@ -51,6 +54,8 @@ public interface ProductMetadataOrBuilder extends
   /**
    * <pre>
    * The name associated with the ad product.
+   *
+   * For example: "Video View Campaign".
    * </pre>
    *
    * <code>string plannable_product_name = 3;</code>
@@ -60,6 +65,8 @@ public interface ProductMetadataOrBuilder extends
   /**
    * <pre>
    * The name associated with the ad product.
+   *
+   * For example: "Video View Campaign".
    * </pre>
    *
    * <code>string plannable_product_name = 3;</code>

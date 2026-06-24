@@ -8,6 +8,16 @@ package com.google.ads.googleads.v24.resources;
 /**
  * <pre>
  * An age range view.
+ *
+ * Represents the view of a customer's performance metrics (like impressions
+ * and clicks) aggregated by age range. All statistics are aggregated at the
+ * ad group level.
+ *
+ * Note: While you can segment metrics by age range using `age_range_view` or by
+ * gender using `gender_view`, the Google Ads API does not support segmenting
+ * metrics by both age range and gender simultaneously in a single query.
+ * Analyzing performance across both dimensions combined is not supported in
+ * the Google Ads API.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v24.resources.AgeRangeView}
@@ -260,6 +270,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * An age range view.
+   *
+   * Represents the view of a customer's performance metrics (like impressions
+   * and clicks) aggregated by age range. All statistics are aggregated at the
+   * ad group level.
+   *
+   * Note: While you can segment metrics by age range using `age_range_view` or by
+   * gender using `gender_view`, the Google Ads API does not support segmenting
+   * metrics by both age range and gender simultaneously in a single query.
+   * Analyzing performance across both dimensions combined is not supported in
+   * the Google Ads API.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v24.resources.AgeRangeView}

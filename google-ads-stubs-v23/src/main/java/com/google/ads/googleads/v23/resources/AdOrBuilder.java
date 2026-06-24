@@ -548,7 +548,8 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * Details pertaining to an expanded text ad.
+   * Details pertaining to an expanded text ad. Expanded text ads are
+   * deprecated. Use `ResponsiveSearchAd` instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -557,7 +558,8 @@ public interface AdOrBuilder extends
   boolean hasExpandedTextAd();
   /**
    * <pre>
-   * Details pertaining to an expanded text ad.
+   * Details pertaining to an expanded text ad. Expanded text ads are
+   * deprecated. Use `ResponsiveSearchAd` instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -566,7 +568,8 @@ public interface AdOrBuilder extends
   com.google.ads.googleads.v23.common.ExpandedTextAdInfo getExpandedTextAd();
   /**
    * <pre>
-   * Details pertaining to an expanded text ad.
+   * Details pertaining to an expanded text ad. Expanded text ads are
+   * deprecated. Use `ResponsiveSearchAd` instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>

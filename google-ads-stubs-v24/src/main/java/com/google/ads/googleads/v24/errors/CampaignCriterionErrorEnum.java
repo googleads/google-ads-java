@@ -304,6 +304,15 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_VIDEO_LINEUP_ID = 28;</code>
      */
     INVALID_VIDEO_LINEUP_ID(28),
+    /**
+     * <pre>
+     * For Local Services PMax campaigns, at least one positive location
+     * criterion must remain.
+     * </pre>
+     *
+     * <code>CANNOT_REMOVE_ALL_LOCATIONS_FROM_LOCAL_SERVICES_PMAX_CAMPAIGN = 29;</code>
+     */
+    CANNOT_REMOVE_ALL_LOCATIONS_FROM_LOCAL_SERVICES_PMAX_CAMPAIGN(29),
     UNRECOGNIZED(-1),
     ;
 
@@ -564,6 +573,15 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_VIDEO_LINEUP_ID = 28;</code>
      */
     public static final int INVALID_VIDEO_LINEUP_ID_VALUE = 28;
+    /**
+     * <pre>
+     * For Local Services PMax campaigns, at least one positive location
+     * criterion must remain.
+     * </pre>
+     *
+     * <code>CANNOT_REMOVE_ALL_LOCATIONS_FROM_LOCAL_SERVICES_PMAX_CAMPAIGN = 29;</code>
+     */
+    public static final int CANNOT_REMOVE_ALL_LOCATIONS_FROM_LOCAL_SERVICES_PMAX_CAMPAIGN_VALUE = 29;
 
 
     public final int getNumber() {
@@ -619,6 +637,7 @@ private static final long serialVersionUID = 0L;
         case 26: return CANNOT_ATTACH_BRAND_LIST_TO_NON_QUALIFIED_SEARCH_CAMPAIGN;
         case 27: return CANNOT_REMOVE_ALL_LOCATIONS_DUE_TO_TOO_MANY_COUNTRY_EXCLUSIONS;
         case 28: return INVALID_VIDEO_LINEUP_ID;
+        case 29: return CANNOT_REMOVE_ALL_LOCATIONS_FROM_LOCAL_SERVICES_PMAX_CAMPAIGN;
         default: return null;
       }
     }

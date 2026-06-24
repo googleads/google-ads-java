@@ -36,7 +36,7 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
    * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
    * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -49,7 +49,7 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
    * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
    * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -62,7 +62,7 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
    * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
    * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -76,7 +76,7 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
    * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
    * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -90,7 +90,7 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
    * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
    * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -105,7 +105,7 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
    * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
    * those dimensions will match or be related to this string.  For other
    * dimensions, this field is ignored and all available attributes are
-   * returned.
+   * returned. Example: "Millennials interested in the World Cup and soccer."
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -118,7 +118,7 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
    * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
    * those dimensions will match or be related to this string.  For other
    * dimensions, this field is ignored and all available attributes are
-   * returned.
+   * returned. Example: "Millennials interested in the World Cup and soccer."
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -276,4 +276,31 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
    * <code>.google.ads.googleads.v24.common.LocationInfo youtube_reach_location = 6;</code>
    */
   com.google.ads.googleads.v24.common.LocationInfoOrBuilder getYoutubeReachLocationOrBuilder();
+
+  /**
+   * <pre>
+   * Optional. Additional search options for Knowledge Graph Entities.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return Whether the knowledgeGraphEntitySearchOptions field is set.
+   */
+  boolean hasKnowledgeGraphEntitySearchOptions();
+  /**
+   * <pre>
+   * Optional. Additional search options for Knowledge Graph Entities.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The knowledgeGraphEntitySearchOptions.
+   */
+  com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions getKnowledgeGraphEntitySearchOptions();
+  /**
+   * <pre>
+   * Optional. Additional search options for Knowledge Graph Entities.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptionsOrBuilder getKnowledgeGraphEntitySearchOptionsOrBuilder();
 }

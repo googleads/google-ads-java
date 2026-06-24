@@ -29,4 +29,26 @@ public interface MutateCustomerUserAccessResultOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
+
+  /**
+   * <pre>
+   * The resource name of the multi-party authorization review associated with
+   * this mutate.
+   * </pre>
+   *
+   * <code>string multi_party_auth_review = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return The multiPartyAuthReview.
+   */
+  java.lang.String getMultiPartyAuthReview();
+  /**
+   * <pre>
+   * The resource name of the multi-party authorization review associated with
+   * this mutate.
+   * </pre>
+   *
+   * <code>string multi_party_auth_review = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for multiPartyAuthReview.
+   */
+  com.google.protobuf.ByteString
+      getMultiPartyAuthReviewBytes();
 }

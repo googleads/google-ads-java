@@ -4,7 +4,10 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Service to manage labels on customers.
+ * Service to manage labels on Google Ads customers.
+ * This service is commonly used by manager accounts to apply their own labels
+ * to their client accounts. The label entity must exist under the manager
+ * account.
  * </pre>
  */
 @io.grpc.stub.annotations.GrpcGenerated
@@ -107,7 +110,10 @@ public final class CustomerLabelServiceGrpc {
 
   /**
    * <pre>
-   * Service to manage labels on customers.
+   * Service to manage labels on Google Ads customers.
+   * This service is commonly used by manager accounts to apply their own labels
+   * to their client accounts. The label entity must exist under the manager
+   * account.
    * </pre>
    */
   public interface AsyncService {
@@ -137,7 +143,10 @@ public final class CustomerLabelServiceGrpc {
   /**
    * Base class for the server implementation of the service CustomerLabelService.
    * <pre>
-   * Service to manage labels on customers.
+   * Service to manage labels on Google Ads customers.
+   * This service is commonly used by manager accounts to apply their own labels
+   * to their client accounts. The label entity must exist under the manager
+   * account.
    * </pre>
    */
   public static abstract class CustomerLabelServiceImplBase
@@ -151,7 +160,10 @@ public final class CustomerLabelServiceGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service CustomerLabelService.
    * <pre>
-   * Service to manage labels on customers.
+   * Service to manage labels on Google Ads customers.
+   * This service is commonly used by manager accounts to apply their own labels
+   * to their client accounts. The label entity must exist under the manager
+   * account.
    * </pre>
    */
   public static final class CustomerLabelServiceStub
@@ -193,7 +205,10 @@ public final class CustomerLabelServiceGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service CustomerLabelService.
    * <pre>
-   * Service to manage labels on customers.
+   * Service to manage labels on Google Ads customers.
+   * This service is commonly used by manager accounts to apply their own labels
+   * to their client accounts. The label entity must exist under the manager
+   * account.
    * </pre>
    */
   public static final class CustomerLabelServiceBlockingV2Stub
@@ -234,7 +249,10 @@ public final class CustomerLabelServiceGrpc {
   /**
    * A stub to allow clients to do limited synchronous rpc calls to service CustomerLabelService.
    * <pre>
-   * Service to manage labels on customers.
+   * Service to manage labels on Google Ads customers.
+   * This service is commonly used by manager accounts to apply their own labels
+   * to their client accounts. The label entity must exist under the manager
+   * account.
    * </pre>
    */
   public static final class CustomerLabelServiceBlockingStub
@@ -275,7 +293,10 @@ public final class CustomerLabelServiceGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomerLabelService.
    * <pre>
-   * Service to manage labels on customers.
+   * Service to manage labels on Google Ads customers.
+   * This service is commonly used by manager accounts to apply their own labels
+   * to their client accounts. The label entity must exist under the manager
+   * account.
    * </pre>
    */
   public static final class CustomerLabelServiceFutureStub

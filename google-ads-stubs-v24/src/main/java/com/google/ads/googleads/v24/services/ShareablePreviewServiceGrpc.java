@@ -5,6 +5,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Service to generate Shareable Previews.
+ * Only Performance Max asset groups and certain YouTube video/audio ad formats
+ * are supported. Other ad types, such as Responsive Search Ads or Responsive
+ * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
+ * The generated preview URLs cannot be embedded in an iframe because the
+ * response headers include `X-Frame-Options: deny`.
  * </pre>
  */
 @io.grpc.stub.annotations.GrpcGenerated
@@ -108,6 +113,11 @@ public final class ShareablePreviewServiceGrpc {
   /**
    * <pre>
    * Service to generate Shareable Previews.
+   * Only Performance Max asset groups and certain YouTube video/audio ad formats
+   * are supported. Other ad types, such as Responsive Search Ads or Responsive
+   * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
+   * The generated preview URLs cannot be embedded in an iframe because the
+   * response headers include `X-Frame-Options: deny`.
    * </pre>
    */
   public interface AsyncService {
@@ -127,6 +137,11 @@ public final class ShareablePreviewServiceGrpc {
    * Base class for the server implementation of the service ShareablePreviewService.
    * <pre>
    * Service to generate Shareable Previews.
+   * Only Performance Max asset groups and certain YouTube video/audio ad formats
+   * are supported. Other ad types, such as Responsive Search Ads or Responsive
+   * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
+   * The generated preview URLs cannot be embedded in an iframe because the
+   * response headers include `X-Frame-Options: deny`.
    * </pre>
    */
   public static abstract class ShareablePreviewServiceImplBase
@@ -141,6 +156,11 @@ public final class ShareablePreviewServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service ShareablePreviewService.
    * <pre>
    * Service to generate Shareable Previews.
+   * Only Performance Max asset groups and certain YouTube video/audio ad formats
+   * are supported. Other ad types, such as Responsive Search Ads or Responsive
+   * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
+   * The generated preview URLs cannot be embedded in an iframe because the
+   * response headers include `X-Frame-Options: deny`.
    * </pre>
    */
   public static final class ShareablePreviewServiceStub
@@ -172,6 +192,11 @@ public final class ShareablePreviewServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service ShareablePreviewService.
    * <pre>
    * Service to generate Shareable Previews.
+   * Only Performance Max asset groups and certain YouTube video/audio ad formats
+   * are supported. Other ad types, such as Responsive Search Ads or Responsive
+   * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
+   * The generated preview URLs cannot be embedded in an iframe because the
+   * response headers include `X-Frame-Options: deny`.
    * </pre>
    */
   public static final class ShareablePreviewServiceBlockingV2Stub
@@ -202,6 +227,11 @@ public final class ShareablePreviewServiceGrpc {
    * A stub to allow clients to do limited synchronous rpc calls to service ShareablePreviewService.
    * <pre>
    * Service to generate Shareable Previews.
+   * Only Performance Max asset groups and certain YouTube video/audio ad formats
+   * are supported. Other ad types, such as Responsive Search Ads or Responsive
+   * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
+   * The generated preview URLs cannot be embedded in an iframe because the
+   * response headers include `X-Frame-Options: deny`.
    * </pre>
    */
   public static final class ShareablePreviewServiceBlockingStub
@@ -232,6 +262,11 @@ public final class ShareablePreviewServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service ShareablePreviewService.
    * <pre>
    * Service to generate Shareable Previews.
+   * Only Performance Max asset groups and certain YouTube video/audio ad formats
+   * are supported. Other ad types, such as Responsive Search Ads or Responsive
+   * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
+   * The generated preview URLs cannot be embedded in an iframe because the
+   * response headers include `X-Frame-Options: deny`.
    * </pre>
    */
   public static final class ShareablePreviewServiceFutureStub

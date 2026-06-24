@@ -18,7 +18,7 @@ public interface TargetingOrBuilder extends
    *
    * Requests must set either this field or `plannable_location_ids`.
    *
-   * This field is deprecated as of V12 and will be removed in a future release.
+   * This field is deprecated and will be removed in a future release.
    * Use `plannable_location_ids` instead.
    * </pre>
    *
@@ -34,7 +34,7 @@ public interface TargetingOrBuilder extends
    *
    * Requests must set either this field or `plannable_location_ids`.
    *
-   * This field is deprecated as of V12 and will be removed in a future release.
+   * This field is deprecated and will be removed in a future release.
    * Use `plannable_location_ids` instead.
    * </pre>
    *
@@ -50,7 +50,7 @@ public interface TargetingOrBuilder extends
    *
    * Requests must set either this field or `plannable_location_ids`.
    *
-   * This field is deprecated as of V12 and will be removed in a future release.
+   * This field is deprecated and will be removed in a future release.
    * Use `plannable_location_ids` instead.
    * </pre>
    *

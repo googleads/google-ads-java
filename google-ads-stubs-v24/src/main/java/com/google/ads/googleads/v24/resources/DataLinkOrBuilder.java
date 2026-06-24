@@ -15,7 +15,7 @@ public interface DataLinkOrBuilder extends
    * Immutable. Resource name of the product data link.
    * DataLink resource names have the form:
    *
-   * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}}
+   * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -27,7 +27,7 @@ public interface DataLinkOrBuilder extends
    * Immutable. Resource name of the product data link.
    * DataLink resource names have the form:
    *
-   * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}}
+   * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -143,5 +143,34 @@ public interface DataLinkOrBuilder extends
    */
   com.google.ads.googleads.v24.resources.YoutubeVideoIdentifierOrBuilder getYoutubeVideoOrBuilder();
 
+  /**
+   * <pre>
+   * Immutable. Metadata for a YouTube link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeLinkMetadata field is set.
+   */
+  boolean hasYoutubeLinkMetadata();
+  /**
+   * <pre>
+   * Immutable. Metadata for a YouTube link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeLinkMetadata.
+   */
+  com.google.ads.googleads.v24.resources.YoutubeLinkMetadata getYoutubeLinkMetadata();
+  /**
+   * <pre>
+   * Immutable. Metadata for a YouTube link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  com.google.ads.googleads.v24.resources.YoutubeLinkMetadataOrBuilder getYoutubeLinkMetadataOrBuilder();
+
   com.google.ads.googleads.v24.resources.DataLink.DataLinkEntityCase getDataLinkEntityCase();
+
+  com.google.ads.googleads.v24.resources.DataLink.DataLinkMetadataCase getDataLinkMetadataCase();
 }
