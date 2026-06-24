@@ -1471,6 +1471,14 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_EXCLUDE_ALL_TARGETS = 186;</code>
      */
     CANNOT_EXCLUDE_ALL_TARGETS(186),
+    /**
+     * <pre>
+     * The criterion is not allowed to be targeted for the language.
+     * </pre>
+     *
+     * <code>CANNOT_TARGET_LANGUAGE = 187;</code>
+     */
+    CANNOT_TARGET_LANGUAGE(187),
     UNRECOGNIZED(-1),
     ;
 
@@ -2898,6 +2906,14 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_EXCLUDE_ALL_TARGETS = 186;</code>
      */
     public static final int CANNOT_EXCLUDE_ALL_TARGETS_VALUE = 186;
+    /**
+     * <pre>
+     * The criterion is not allowed to be targeted for the language.
+     * </pre>
+     *
+     * <code>CANNOT_TARGET_LANGUAGE = 187;</code>
+     */
+    public static final int CANNOT_TARGET_LANGUAGE_VALUE = 187;
 
 
     public final int getNumber() {
@@ -3094,6 +3110,7 @@ private static final long serialVersionUID = 0L;
         case 184: return RETAIL_FILTER_EXPRESSION_DOES_NOT_EXIST;
         case 185: return RETAIL_FILTER_TAGS_REFERRING_TO_EXPRESSION;
         case 186: return CANNOT_EXCLUDE_ALL_TARGETS;
+        case 187: return CANNOT_TARGET_LANGUAGE;
         default: return null;
       }
     }

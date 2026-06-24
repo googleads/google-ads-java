@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
     TEXT_AD(2),
     /**
      * <pre>
-     * The ad is an expanded text ad.
+     * The ad is an expanded text ad. Expanded text ads are deprecated.
      * </pre>
      *
      * <code>EXPANDED_TEXT_AD = 3;</code>
@@ -371,7 +371,7 @@ private static final long serialVersionUID = 0L;
     public static final int TEXT_AD_VALUE = 2;
     /**
      * <pre>
-     * The ad is an expanded text ad.
+     * The ad is an expanded text ad. Expanded text ads are deprecated.
      * </pre>
      *
      * <code>EXPANDED_TEXT_AD = 3;</code>

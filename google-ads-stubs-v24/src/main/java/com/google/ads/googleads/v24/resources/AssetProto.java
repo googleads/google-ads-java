@@ -55,128 +55,131 @@ public final class AssetProto {
       "rces\0321google/ads/googleads/v24/common/as" +
       "set_types.proto\0326google/ads/googleads/v2" +
       "4/common/custom_parameter.proto\032,google/" +
-      "ads/googleads/v24/common/policy.proto\0325g" +
-      "oogle/ads/googleads/v24/enums/asset_fiel" +
-      "d_type.proto\0326google/ads/googleads/v24/e" +
-      "nums/asset_orientation.proto\0321google/ads" +
-      "/googleads/v24/enums/asset_source.proto\032" +
-      "/google/ads/googleads/v24/enums/asset_ty" +
-      "pe.proto\032;google/ads/googleads/v24/enums" +
-      "/policy_approval_status.proto\0329google/ad" +
-      "s/googleads/v24/enums/policy_review_stat" +
-      "us.proto\032\037google/api/field_behavior.prot" +
-      "o\032\031google/api/resource.proto\"\364\032\n\005Asset\022=" +
-      "\n\rresource_name\030\001 \001(\tB&\340A\005\372A \n\036googleads" +
-      ".googleapis.com/Asset\022\024\n\002id\030\013 \001(\003B\003\340A\003H\001" +
-      "\210\001\001\022\021\n\004name\030\014 \001(\tH\002\210\001\001\022J\n\004type\030\004 \001(\01627.g" +
-      "oogle.ads.googleads.v24.enums.AssetTypeE" +
-      "num.AssetTypeB\003\340A\003\022\022\n\nfinal_urls\030\016 \003(\t\022\031" +
-      "\n\021final_mobile_urls\030\020 \003(\t\022\"\n\025tracking_ur" +
-      "l_template\030\021 \001(\tH\003\210\001\001\022O\n\025url_custom_para" +
-      "meters\030\022 \003(\01320.google.ads.googleads.v24." +
-      "common.CustomParameter\022\035\n\020final_url_suff" +
-      "ix\030\023 \001(\tH\004\210\001\001\022P\n\006source\030& \001(\0162;.google.a" +
-      "ds.googleads.v24.enums.AssetSourceEnum.A" +
-      "ssetSourceB\003\340A\003\022S\n\016policy_summary\030\r \001(\0132" +
-      "6.google.ads.googleads.v24.resources.Ass" +
-      "etPolicySummaryB\003\340A\003\022i\n\033field_type_polic" +
-      "y_summaries\030( \003(\0132?.google.ads.googleads" +
-      ".v24.resources.AssetFieldTypePolicySumma" +
-      "ryB\003\340A\003\022d\n\013orientation\0306 \001(\0162E.google.ad" +
-      "s.googleads.v24.enums.AssetOrientationEn" +
-      "um.AssetOrientationB\003\340A\003H\005\210\001\001\022V\n\023youtube" +
-      "_video_asset\030\005 \001(\01322.google.ads.googlead" +
-      "s.v24.common.YoutubeVideoAssetB\003\340A\005H\000\022T\n" +
-      "\022media_bundle_asset\030\006 \001(\01321.google.ads.g" +
-      "oogleads.v24.common.MediaBundleAssetB\003\340A" +
-      "\005H\000\022G\n\013image_asset\030\007 \001(\0132+.google.ads.go" +
-      "ogleads.v24.common.ImageAssetB\003\340A\003H\000\022E\n\n" +
-      "text_asset\030\010 \001(\0132*.google.ads.googleads." +
-      "v24.common.TextAssetB\003\340A\005H\000\022I\n\017lead_form" +
-      "_asset\030\t \001(\0132..google.ads.googleads.v24." +
-      "common.LeadFormAssetH\000\022R\n\024book_on_google" +
-      "_asset\030\n \001(\01322.google.ads.googleads.v24." +
-      "common.BookOnGoogleAssetH\000\022J\n\017promotion_" +
-      "asset\030\017 \001(\0132/.google.ads.googleads.v24.c" +
-      "ommon.PromotionAssetH\000\022F\n\rcallout_asset\030" +
-      "\024 \001(\0132-.google.ads.googleads.v24.common." +
-      "CalloutAssetH\000\022[\n\030structured_snippet_ass" +
-      "et\030\025 \001(\01327.google.ads.googleads.v24.comm" +
-      "on.StructuredSnippetAssetH\000\022H\n\016sitelink_" +
-      "asset\030\026 \001(\0132..google.ads.googleads.v24.c" +
-      "ommon.SitelinkAssetH\000\022I\n\017page_feed_asset" +
-      "\030\027 \001(\0132..google.ads.googleads.v24.common" +
-      ".PageFeedAssetH\000\022Y\n\027dynamic_education_as" +
-      "set\030\030 \001(\01326.google.ads.googleads.v24.com" +
-      "mon.DynamicEducationAssetH\000\022K\n\020mobile_ap" +
-      "p_asset\030\031 \001(\0132/.google.ads.googleads.v24" +
-      ".common.MobileAppAssetH\000\022Q\n\023hotel_callou" +
-      "t_asset\030\032 \001(\01322.google.ads.googleads.v24" +
-      ".common.HotelCalloutAssetH\000\022@\n\ncall_asse" +
-      "t\030\033 \001(\0132*.google.ads.googleads.v24.commo" +
-      "n.CallAssetH\000\022B\n\013price_asset\030\034 \001(\0132+.goo" +
-      "gle.ads.googleads.v24.common.PriceAssetH" +
-      "\000\022W\n\024call_to_action_asset\030\035 \001(\01322.google" +
-      ".ads.googleads.v24.common.CallToActionAs" +
-      "setB\003\340A\005H\000\022\\\n\031dynamic_real_estate_asset\030" +
-      "\036 \001(\01327.google.ads.googleads.v24.common." +
-      "DynamicRealEstateAssetH\000\022S\n\024dynamic_cust" +
-      "om_asset\030\037 \001(\01323.google.ads.googleads.v2" +
-      "4.common.DynamicCustomAssetH\000\022i\n dynamic" +
-      "_hotels_and_rentals_asset\030  \001(\0132=.google" +
-      ".ads.googleads.v24.common.DynamicHotelsA" +
-      "ndRentalsAssetH\000\022U\n\025dynamic_flights_asse" +
-      "t\030! \001(\01324.google.ads.googleads.v24.commo" +
-      "n.DynamicFlightsAssetH\000\022j\n\036demand_gen_ca" +
-      "rousel_card_asset\0302 \001(\0132;.google.ads.goo" +
-      "gleads.v24.common.DemandGenCarouselCardA" +
-      "ssetB\003\340A\005H\000\022S\n\024dynamic_travel_asset\030# \001(" +
-      "\01323.google.ads.googleads.v24.common.Dyna" +
-      "micTravelAssetH\000\022Q\n\023dynamic_local_asset\030" +
-      "$ \001(\01322.google.ads.googleads.v24.common." +
-      "DynamicLocalAssetH\000\022O\n\022dynamic_jobs_asse" +
-      "t\030% \001(\01321.google.ads.googleads.v24.commo" +
-      "n.DynamicJobsAssetH\000\022M\n\016location_asset\030\'" +
-      " \001(\0132..google.ads.googleads.v24.common.L" +
-      "ocationAssetB\003\340A\003H\000\022X\n\024hotel_property_as" +
-      "set\030) \001(\01323.google.ads.googleads.v24.com" +
-      "mon.HotelPropertyAssetB\003\340A\005H\000\022W\n\026busines" +
-      "s_message_asset\0303 \001(\01325.google.ads.googl" +
-      "eads.v24.common.BusinessMessageAssetH\000\022U" +
-      "\n\023app_deep_link_asset\0304 \001(\01321.google.ads" +
-      ".googleads.v24.common.AppDeepLinkAssetB\003" +
-      "\340A\005H\000\022_\n\030youtube_video_list_asset\0305 \001(\0132" +
-      "6.google.ads.googleads.v24.common.YouTub" +
-      "eVideoListAssetB\003\340A\005H\000:N\352AK\n\036googleads.g" +
-      "oogleapis.com/Asset\022)customers/{customer" +
-      "_id}/assets/{asset_id}B\014\n\nasset_dataB\005\n\003" +
-      "_idB\007\n\005_nameB\030\n\026_tracking_url_templateB\023" +
-      "\n\021_final_url_suffixB\016\n\014_orientation\"\376\002\n\033" +
-      "AssetFieldTypePolicySummary\022e\n\020asset_fie" +
-      "ld_type\030\001 \001(\0162A.google.ads.googleads.v24" +
-      ".enums.AssetFieldTypeEnum.AssetFieldType" +
-      "B\003\340A\003H\000\210\001\001\022[\n\014asset_source\030\002 \001(\0162;.googl" +
-      "e.ads.googleads.v24.enums.AssetSourceEnu" +
-      "m.AssetSourceB\003\340A\003H\001\210\001\001\022]\n\023policy_summar" +
-      "y_info\030\003 \001(\01326.google.ads.googleads.v24." +
-      "resources.AssetPolicySummaryB\003\340A\003H\002\210\001\001B\023" +
-      "\n\021_asset_field_typeB\017\n\r_asset_sourceB\026\n\024" +
-      "_policy_summary_info\"\276\002\n\022AssetPolicySumm" +
-      "ary\022T\n\024policy_topic_entries\030\001 \003(\01321.goog" +
-      "le.ads.googleads.v24.common.PolicyTopicE" +
-      "ntryB\003\340A\003\022e\n\rreview_status\030\002 \001(\0162I.googl" +
-      "e.ads.googleads.v24.enums.PolicyReviewSt" +
-      "atusEnum.PolicyReviewStatusB\003\340A\003\022k\n\017appr" +
-      "oval_status\030\003 \001(\0162M.google.ads.googleads" +
-      ".v24.enums.PolicyApprovalStatusEnum.Poli" +
-      "cyApprovalStatusB\003\340A\003B\374\001\n&com.google.ads" +
-      ".googleads.v24.resourcesB\nAssetProtoP\001ZK" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v24/resources;resources\242\002\003GA" +
-      "A\252\002\"Google.Ads.GoogleAds.V24.Resources\312\002" +
-      "\"Google\\Ads\\GoogleAds\\V24\\Resources\352\002&Go" +
-      "ogle::Ads::GoogleAds::V24::Resourcesb\006pr" +
-      "oto3"
+      "ads/googleads/v24/common/policy.proto\032<g" +
+      "oogle/ads/googleads/v24/common/synthetic" +
+      "_content_info.proto\0325google/ads/googlead" +
+      "s/v24/enums/asset_field_type.proto\0326goog" +
+      "le/ads/googleads/v24/enums/asset_orienta" +
+      "tion.proto\0321google/ads/googleads/v24/enu" +
+      "ms/asset_source.proto\032/google/ads/google" +
+      "ads/v24/enums/asset_type.proto\032;google/a" +
+      "ds/googleads/v24/enums/policy_approval_s" +
+      "tatus.proto\0329google/ads/googleads/v24/en" +
+      "ums/policy_review_status.proto\032\037google/a" +
+      "pi/field_behavior.proto\032\031google/api/reso" +
+      "urce.proto\"\313\033\n\005Asset\022=\n\rresource_name\030\001 " +
+      "\001(\tB&\340A\005\372A \n\036googleads.googleapis.com/As" +
+      "set\022\024\n\002id\030\013 \001(\003B\003\340A\003H\001\210\001\001\022\021\n\004name\030\014 \001(\tH" +
+      "\002\210\001\001\022J\n\004type\030\004 \001(\01627.google.ads.googlead" +
+      "s.v24.enums.AssetTypeEnum.AssetTypeB\003\340A\003" +
+      "\022\022\n\nfinal_urls\030\016 \003(\t\022\031\n\021final_mobile_url" +
+      "s\030\020 \003(\t\022\"\n\025tracking_url_template\030\021 \001(\tH\003" +
+      "\210\001\001\022O\n\025url_custom_parameters\030\022 \003(\01320.goo" +
+      "gle.ads.googleads.v24.common.CustomParam" +
+      "eter\022\035\n\020final_url_suffix\030\023 \001(\tH\004\210\001\001\022P\n\006s" +
+      "ource\030& \001(\0162;.google.ads.googleads.v24.e" +
+      "nums.AssetSourceEnum.AssetSourceB\003\340A\003\022S\n" +
+      "\016policy_summary\030\r \001(\01326.google.ads.googl" +
+      "eads.v24.resources.AssetPolicySummaryB\003\340" +
+      "A\003\022i\n\033field_type_policy_summaries\030( \003(\0132" +
+      "?.google.ads.googleads.v24.resources.Ass" +
+      "etFieldTypePolicySummaryB\003\340A\003\022d\n\013orienta" +
+      "tion\0306 \001(\0162E.google.ads.googleads.v24.en" +
+      "ums.AssetOrientationEnum.AssetOrientatio" +
+      "nB\003\340A\003H\005\210\001\001\022U\n\026synthetic_content_info\0307 " +
+      "\001(\01325.google.ads.googleads.v24.common.Sy" +
+      "ntheticContentInfo\022V\n\023youtube_video_asse" +
+      "t\030\005 \001(\01322.google.ads.googleads.v24.commo" +
+      "n.YoutubeVideoAssetB\003\340A\005H\000\022T\n\022media_bund" +
+      "le_asset\030\006 \001(\01321.google.ads.googleads.v2" +
+      "4.common.MediaBundleAssetB\003\340A\005H\000\022G\n\013imag" +
+      "e_asset\030\007 \001(\0132+.google.ads.googleads.v24" +
+      ".common.ImageAssetB\003\340A\003H\000\022E\n\ntext_asset\030" +
+      "\010 \001(\0132*.google.ads.googleads.v24.common." +
+      "TextAssetB\003\340A\005H\000\022I\n\017lead_form_asset\030\t \001(" +
+      "\0132..google.ads.googleads.v24.common.Lead" +
+      "FormAssetH\000\022R\n\024book_on_google_asset\030\n \001(" +
+      "\01322.google.ads.googleads.v24.common.Book" +
+      "OnGoogleAssetH\000\022J\n\017promotion_asset\030\017 \001(\013" +
+      "2/.google.ads.googleads.v24.common.Promo" +
+      "tionAssetH\000\022F\n\rcallout_asset\030\024 \001(\0132-.goo" +
+      "gle.ads.googleads.v24.common.CalloutAsse" +
+      "tH\000\022[\n\030structured_snippet_asset\030\025 \001(\01327." +
+      "google.ads.googleads.v24.common.Structur" +
+      "edSnippetAssetH\000\022H\n\016sitelink_asset\030\026 \001(\013" +
+      "2..google.ads.googleads.v24.common.Sitel" +
+      "inkAssetH\000\022I\n\017page_feed_asset\030\027 \001(\0132..go" +
+      "ogle.ads.googleads.v24.common.PageFeedAs" +
+      "setH\000\022Y\n\027dynamic_education_asset\030\030 \001(\01326" +
+      ".google.ads.googleads.v24.common.Dynamic" +
+      "EducationAssetH\000\022K\n\020mobile_app_asset\030\031 \001" +
+      "(\0132/.google.ads.googleads.v24.common.Mob" +
+      "ileAppAssetH\000\022Q\n\023hotel_callout_asset\030\032 \001" +
+      "(\01322.google.ads.googleads.v24.common.Hot" +
+      "elCalloutAssetH\000\022@\n\ncall_asset\030\033 \001(\0132*.g" +
+      "oogle.ads.googleads.v24.common.CallAsset" +
+      "H\000\022B\n\013price_asset\030\034 \001(\0132+.google.ads.goo" +
+      "gleads.v24.common.PriceAssetH\000\022W\n\024call_t" +
+      "o_action_asset\030\035 \001(\01322.google.ads.google" +
+      "ads.v24.common.CallToActionAssetB\003\340A\005H\000\022" +
+      "\\\n\031dynamic_real_estate_asset\030\036 \001(\01327.goo" +
+      "gle.ads.googleads.v24.common.DynamicReal" +
+      "EstateAssetH\000\022S\n\024dynamic_custom_asset\030\037 " +
+      "\001(\01323.google.ads.googleads.v24.common.Dy" +
+      "namicCustomAssetH\000\022i\n dynamic_hotels_and" +
+      "_rentals_asset\030  \001(\0132=.google.ads.google" +
+      "ads.v24.common.DynamicHotelsAndRentalsAs" +
+      "setH\000\022U\n\025dynamic_flights_asset\030! \001(\01324.g" +
+      "oogle.ads.googleads.v24.common.DynamicFl" +
+      "ightsAssetH\000\022j\n\036demand_gen_carousel_card" +
+      "_asset\0302 \001(\0132;.google.ads.googleads.v24." +
+      "common.DemandGenCarouselCardAssetB\003\340A\005H\000" +
+      "\022S\n\024dynamic_travel_asset\030# \001(\01323.google." +
+      "ads.googleads.v24.common.DynamicTravelAs" +
+      "setH\000\022Q\n\023dynamic_local_asset\030$ \001(\01322.goo" +
+      "gle.ads.googleads.v24.common.DynamicLoca" +
+      "lAssetH\000\022O\n\022dynamic_jobs_asset\030% \001(\01321.g" +
+      "oogle.ads.googleads.v24.common.DynamicJo" +
+      "bsAssetH\000\022M\n\016location_asset\030\' \001(\0132..goog" +
+      "le.ads.googleads.v24.common.LocationAsse" +
+      "tB\003\340A\003H\000\022X\n\024hotel_property_asset\030) \001(\01323" +
+      ".google.ads.googleads.v24.common.HotelPr" +
+      "opertyAssetB\003\340A\005H\000\022W\n\026business_message_a" +
+      "sset\0303 \001(\01325.google.ads.googleads.v24.co" +
+      "mmon.BusinessMessageAssetH\000\022U\n\023app_deep_" +
+      "link_asset\0304 \001(\01321.google.ads.googleads." +
+      "v24.common.AppDeepLinkAssetB\003\340A\005H\000\022_\n\030yo" +
+      "utube_video_list_asset\0305 \001(\01326.google.ad" +
+      "s.googleads.v24.common.YouTubeVideoListA" +
+      "ssetB\003\340A\005H\000:N\352AK\n\036googleads.googleapis.c" +
+      "om/Asset\022)customers/{customer_id}/assets" +
+      "/{asset_id}B\014\n\nasset_dataB\005\n\003_idB\007\n\005_nam" +
+      "eB\030\n\026_tracking_url_templateB\023\n\021_final_ur" +
+      "l_suffixB\016\n\014_orientation\"\376\002\n\033AssetFieldT" +
+      "ypePolicySummary\022e\n\020asset_field_type\030\001 \001" +
+      "(\0162A.google.ads.googleads.v24.enums.Asse" +
+      "tFieldTypeEnum.AssetFieldTypeB\003\340A\003H\000\210\001\001\022" +
+      "[\n\014asset_source\030\002 \001(\0162;.google.ads.googl" +
+      "eads.v24.enums.AssetSourceEnum.AssetSour" +
+      "ceB\003\340A\003H\001\210\001\001\022]\n\023policy_summary_info\030\003 \001(" +
+      "\01326.google.ads.googleads.v24.resources.A" +
+      "ssetPolicySummaryB\003\340A\003H\002\210\001\001B\023\n\021_asset_fi" +
+      "eld_typeB\017\n\r_asset_sourceB\026\n\024_policy_sum" +
+      "mary_info\"\276\002\n\022AssetPolicySummary\022T\n\024poli" +
+      "cy_topic_entries\030\001 \003(\01321.google.ads.goog" +
+      "leads.v24.common.PolicyTopicEntryB\003\340A\003\022e" +
+      "\n\rreview_status\030\002 \001(\0162I.google.ads.googl" +
+      "eads.v24.enums.PolicyReviewStatusEnum.Po" +
+      "licyReviewStatusB\003\340A\003\022k\n\017approval_status" +
+      "\030\003 \001(\0162M.google.ads.googleads.v24.enums." +
+      "PolicyApprovalStatusEnum.PolicyApprovalS" +
+      "tatusB\003\340A\003B\374\001\n&com.google.ads.googleads." +
+      "v24.resourcesB\nAssetProtoP\001ZKgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v24/resources;resources\242\002\003GAA\252\002\"Google." +
+      "Ads.GoogleAds.V24.Resources\312\002\"Google\\Ads" +
+      "\\GoogleAds\\V24\\Resources\352\002&Google::Ads::" +
+      "GoogleAds::V24::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -184,6 +187,7 @@ public final class AssetProto {
           com.google.ads.googleads.v24.common.AssetTypesProto.getDescriptor(),
           com.google.ads.googleads.v24.common.CustomParameterProto.getDescriptor(),
           com.google.ads.googleads.v24.common.PolicyProto.getDescriptor(),
+          com.google.ads.googleads.v24.common.SyntheticContentInfoProto.getDescriptor(),
           com.google.ads.googleads.v24.enums.AssetFieldTypeProto.getDescriptor(),
           com.google.ads.googleads.v24.enums.AssetOrientationProto.getDescriptor(),
           com.google.ads.googleads.v24.enums.AssetSourceProto.getDescriptor(),
@@ -198,7 +202,7 @@ public final class AssetProto {
     internal_static_google_ads_googleads_v24_resources_Asset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_resources_Asset_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "Type", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "FinalUrlSuffix", "Source", "PolicySummary", "FieldTypePolicySummaries", "Orientation", "YoutubeVideoAsset", "MediaBundleAsset", "ImageAsset", "TextAsset", "LeadFormAsset", "BookOnGoogleAsset", "PromotionAsset", "CalloutAsset", "StructuredSnippetAsset", "SitelinkAsset", "PageFeedAsset", "DynamicEducationAsset", "MobileAppAsset", "HotelCalloutAsset", "CallAsset", "PriceAsset", "CallToActionAsset", "DynamicRealEstateAsset", "DynamicCustomAsset", "DynamicHotelsAndRentalsAsset", "DynamicFlightsAsset", "DemandGenCarouselCardAsset", "DynamicTravelAsset", "DynamicLocalAsset", "DynamicJobsAsset", "LocationAsset", "HotelPropertyAsset", "BusinessMessageAsset", "AppDeepLinkAsset", "YoutubeVideoListAsset", "AssetData", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "Type", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "FinalUrlSuffix", "Source", "PolicySummary", "FieldTypePolicySummaries", "Orientation", "SyntheticContentInfo", "YoutubeVideoAsset", "MediaBundleAsset", "ImageAsset", "TextAsset", "LeadFormAsset", "BookOnGoogleAsset", "PromotionAsset", "CalloutAsset", "StructuredSnippetAsset", "SitelinkAsset", "PageFeedAsset", "DynamicEducationAsset", "MobileAppAsset", "HotelCalloutAsset", "CallAsset", "PriceAsset", "CallToActionAsset", "DynamicRealEstateAsset", "DynamicCustomAsset", "DynamicHotelsAndRentalsAsset", "DynamicFlightsAsset", "DemandGenCarouselCardAsset", "DynamicTravelAsset", "DynamicLocalAsset", "DynamicJobsAsset", "LocationAsset", "HotelPropertyAsset", "BusinessMessageAsset", "AppDeepLinkAsset", "YoutubeVideoListAsset", "AssetData", });
     internal_static_google_ads_googleads_v24_resources_AssetFieldTypePolicySummary_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v24_resources_AssetFieldTypePolicySummary_fieldAccessorTable = new
@@ -215,6 +219,7 @@ public final class AssetProto {
     com.google.ads.googleads.v24.common.AssetTypesProto.getDescriptor();
     com.google.ads.googleads.v24.common.CustomParameterProto.getDescriptor();
     com.google.ads.googleads.v24.common.PolicyProto.getDescriptor();
+    com.google.ads.googleads.v24.common.SyntheticContentInfoProto.getDescriptor();
     com.google.ads.googleads.v24.enums.AssetFieldTypeProto.getDescriptor();
     com.google.ads.googleads.v24.enums.AssetOrientationProto.getDescriptor();
     com.google.ads.googleads.v24.enums.AssetSourceProto.getDescriptor();

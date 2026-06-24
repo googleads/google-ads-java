@@ -108,7 +108,119 @@ public interface GenerateTrendingInsightsRequestOrBuilder extends
 
   /**
    * <pre>
-   * An audience to search for trending content in.
+   * Optional. The sub-country geographic locations to search that apply to the
+   * criteria. Only supported for `search_audience` criteria.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  java.util.List<com.google.ads.googleads.v24.common.LocationInfo> 
+      getSubCountryLocationsList();
+  /**
+   * <pre>
+   * Optional. The sub-country geographic locations to search that apply to the
+   * criteria. Only supported for `search_audience` criteria.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.google.ads.googleads.v24.common.LocationInfo getSubCountryLocations(int index);
+  /**
+   * <pre>
+   * Optional. The sub-country geographic locations to search that apply to the
+   * criteria. Only supported for `search_audience` criteria.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  int getSubCountryLocationsCount();
+  /**
+   * <pre>
+   * Optional. The sub-country geographic locations to search that apply to the
+   * criteria. Only supported for `search_audience` criteria.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v24.common.LocationInfoOrBuilder> 
+      getSubCountryLocationsOrBuilderList();
+  /**
+   * <pre>
+   * Optional. The sub-country geographic locations to search that apply to the
+   * criteria. Only supported for `search_audience` criteria.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.common.LocationInfo sub_country_locations = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.google.ads.googleads.v24.common.LocationInfoOrBuilder getSubCountryLocationsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the supplementalData.
+   */
+  java.util.List<com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData> getSupplementalDataList();
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The count of supplementalData.
+   */
+  int getSupplementalDataCount();
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the element to return.
+   * @return The supplementalData at the given index.
+   */
+  com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData getSupplementalData(int index);
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the enum numeric values on the wire for supplementalData.
+   */
+  java.util.List<java.lang.Integer>
+  getSupplementalDataValueList();
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of supplementalData at the given index.
+   */
+  int getSupplementalDataValue(int index);
+
+  /**
+   * <pre>
+   * An audience to search for trending content in. Data fetched is based on
+   * the country or sub-country locations specified in
+   * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+   * or
+   * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -117,7 +229,11 @@ public interface GenerateTrendingInsightsRequestOrBuilder extends
   boolean hasSearchAudience();
   /**
    * <pre>
-   * An audience to search for trending content in.
+   * An audience to search for trending content in. Data fetched is based on
+   * the country or sub-country locations specified in
+   * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+   * or
+   * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>
@@ -126,7 +242,11 @@ public interface GenerateTrendingInsightsRequestOrBuilder extends
   com.google.ads.googleads.v24.services.SearchAudience getSearchAudience();
   /**
    * <pre>
-   * An audience to search for trending content in.
+   * An audience to search for trending content in. Data fetched is based on
+   * the country or sub-country locations specified in
+   * [country_location][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.country_location]
+   * or
+   * [sub_country_locations][google.ads.googleads.v24.services.GenerateTrendingInsightsRequest.sub_country_locations].
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.SearchAudience search_audience = 4;</code>

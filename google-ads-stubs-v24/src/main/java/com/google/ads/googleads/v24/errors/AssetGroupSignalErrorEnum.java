@@ -101,6 +101,15 @@ private static final long serialVersionUID = 0L;
      * <code>AUDIENCE_WITH_WRONG_ASSET_GROUP_ID = 4;</code>
      */
     AUDIENCE_WITH_WRONG_ASSET_GROUP_ID(4),
+    /**
+     * <pre>
+     * The asset group signal cannot be removed because it is the last one in
+     * the Local Services Ads PMax asset group.
+     * </pre>
+     *
+     * <code>CANNOT_REMOVE_ALL_SIGNALS = 5;</code>
+     */
+    CANNOT_REMOVE_ALL_SIGNALS(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -158,6 +167,15 @@ private static final long serialVersionUID = 0L;
      * <code>AUDIENCE_WITH_WRONG_ASSET_GROUP_ID = 4;</code>
      */
     public static final int AUDIENCE_WITH_WRONG_ASSET_GROUP_ID_VALUE = 4;
+    /**
+     * <pre>
+     * The asset group signal cannot be removed because it is the last one in
+     * the Local Services Ads PMax asset group.
+     * </pre>
+     *
+     * <code>CANNOT_REMOVE_ALL_SIGNALS = 5;</code>
+     */
+    public static final int CANNOT_REMOVE_ALL_SIGNALS_VALUE = 5;
 
 
     public final int getNumber() {
@@ -189,6 +207,7 @@ private static final long serialVersionUID = 0L;
         case 2: return TOO_MANY_WORDS;
         case 3: return SEARCH_THEME_POLICY_VIOLATION;
         case 4: return AUDIENCE_WITH_WRONG_ASSET_GROUP_ID;
+        case 5: return CANNOT_REMOVE_ALL_SIGNALS;
         default: return null;
       }
     }

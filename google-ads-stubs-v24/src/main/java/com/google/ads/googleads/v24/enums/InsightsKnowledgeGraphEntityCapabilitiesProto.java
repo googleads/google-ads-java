@@ -42,19 +42,19 @@ public final class InsightsKnowledgeGraphEntityCapabilitiesProto {
     java.lang.String[] descriptorData = {
       "\nQgoogle/ads/googleads/v24/enums/insight" +
       "s_knowledge_graph_entity_capabilities.pr" +
-      "oto\022\036google.ads.googleads.v24.enums\"\256\001\n," +
+      "oto\022\036google.ads.googleads.v24.enums\"\313\001\n," +
       "InsightsKnowledgeGraphEntityCapabilities" +
-      "Enum\"~\n(InsightsKnowledgeGraphEntityCapa" +
-      "bilities\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035" +
-      "\n\031CONTENT_TRENDING_INSIGHTS\020\002\022\025\n\021CREATOR" +
-      "_ATTRIBUTE\020\003B\207\002\n\"com.google.ads.googlead" +
-      "s.v24.enumsB-InsightsKnowledgeGraphEntit" +
-      "yCapabilitiesProtoP\001ZCgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v24/en" +
-      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
-      "24.Enums\312\002\036Google\\Ads\\GoogleAds\\V24\\Enum" +
-      "s\352\002\"Google::Ads::GoogleAds::V24::Enumsb\006" +
-      "proto3"
+      "Enum\"\232\001\n(InsightsKnowledgeGraphEntityCap" +
+      "abilities\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
+      "\035\n\031CONTENT_TRENDING_INSIGHTS\020\002\022\025\n\021CREATO" +
+      "R_ATTRIBUTE\020\003\022\032\n\026CREATOR_TOPIC_INSIGHTS\020" +
+      "\005B\207\002\n\"com.google.ads.googleads.v24.enums" +
+      "B-InsightsKnowledgeGraphEntityCapabiliti" +
+      "esProtoP\001ZCgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v24/enums;enums\242\002" +
+      "\003GAA\252\002\036Google.Ads.GoogleAds.V24.Enums\312\002\036" +
+      "Google\\Ads\\GoogleAds\\V24\\Enums\352\002\"Google:" +
+      ":Ads::GoogleAds::V24::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

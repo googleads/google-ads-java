@@ -66,7 +66,7 @@ private static final long serialVersionUID = 0L;
    *
    * Requests must set either this field or `plannable_location_ids`.
    *
-   * This field is deprecated as of V12 and will be removed in a future release.
+   * This field is deprecated and will be removed in a future release.
    * Use `plannable_location_ids` instead.
    * </pre>
    *
@@ -85,7 +85,7 @@ private static final long serialVersionUID = 0L;
    *
    * Requests must set either this field or `plannable_location_ids`.
    *
-   * This field is deprecated as of V12 and will be removed in a future release.
+   * This field is deprecated and will be removed in a future release.
    * Use `plannable_location_ids` instead.
    * </pre>
    *
@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    *
    * Requests must set either this field or `plannable_location_ids`.
    *
-   * This field is deprecated as of V12 and will be removed in a future release.
+   * This field is deprecated and will be removed in a future release.
    * Use `plannable_location_ids` instead.
    * </pre>
    *
@@ -1046,7 +1046,7 @@ private static final long serialVersionUID = 0L;
      *
      * Requests must set either this field or `plannable_location_ids`.
      *
-     * This field is deprecated as of V12 and will be removed in a future release.
+     * This field is deprecated and will be removed in a future release.
      * Use `plannable_location_ids` instead.
      * </pre>
      *
@@ -1064,7 +1064,7 @@ private static final long serialVersionUID = 0L;
      *
      * Requests must set either this field or `plannable_location_ids`.
      *
-     * This field is deprecated as of V12 and will be removed in a future release.
+     * This field is deprecated and will be removed in a future release.
      * Use `plannable_location_ids` instead.
      * </pre>
      *
@@ -1091,7 +1091,7 @@ private static final long serialVersionUID = 0L;
      *
      * Requests must set either this field or `plannable_location_ids`.
      *
-     * This field is deprecated as of V12 and will be removed in a future release.
+     * This field is deprecated and will be removed in a future release.
      * Use `plannable_location_ids` instead.
      * </pre>
      *
@@ -1119,7 +1119,7 @@ private static final long serialVersionUID = 0L;
      *
      * Requests must set either this field or `plannable_location_ids`.
      *
-     * This field is deprecated as of V12 and will be removed in a future release.
+     * This field is deprecated and will be removed in a future release.
      * Use `plannable_location_ids` instead.
      * </pre>
      *
@@ -1143,7 +1143,7 @@ private static final long serialVersionUID = 0L;
      *
      * Requests must set either this field or `plannable_location_ids`.
      *
-     * This field is deprecated as of V12 and will be removed in a future release.
+     * This field is deprecated and will be removed in a future release.
      * Use `plannable_location_ids` instead.
      * </pre>
      *
@@ -1164,7 +1164,7 @@ private static final long serialVersionUID = 0L;
      *
      * Requests must set either this field or `plannable_location_ids`.
      *
-     * This field is deprecated as of V12 and will be removed in a future release.
+     * This field is deprecated and will be removed in a future release.
      * Use `plannable_location_ids` instead.
      * </pre>
      *

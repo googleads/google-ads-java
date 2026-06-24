@@ -1220,6 +1220,18 @@
         }
       }
     },
+    "MultiPartyAuthReviewService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MultiPartyAuthReviewServiceClient",
+          "rpcs": {
+            "ResolveMultiPartyAuthReview": {
+              "methods": ["resolveMultiPartyAuthReview", "resolveMultiPartyAuthReview", "resolveMultiPartyAuthReviewCallable"]
+            }
+          }
+        }
+      }
+    },
     "OfflineUserDataJobService": {
       "clients": {
         "grpc": {

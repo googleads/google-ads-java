@@ -37,6 +37,7 @@ private static final long serialVersionUID = 0L;
     accessRole_ = 0;
     accessCreationDateTime_ = "";
     inviterUserEmailAddress_ = "";
+    pendingMultiPartyAuthReview_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -367,6 +368,68 @@ private static final long serialVersionUID = 0L;
     return passkeyEnabled_;
   }
 
+  public static final int PENDING_MULTI_PARTY_AUTH_REVIEW_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pendingMultiPartyAuthReview_ = "";
+  /**
+   * <pre>
+   * Output only. The resource name of the pending Multi-Party Authorization
+   * review. Read only field
+   * </pre>
+   *
+   * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the pendingMultiPartyAuthReview field is set.
+   */
+  @java.lang.Override
+  public boolean hasPendingMultiPartyAuthReview() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * Output only. The resource name of the pending Multi-Party Authorization
+   * review. Read only field
+   * </pre>
+   *
+   * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The pendingMultiPartyAuthReview.
+   */
+  @java.lang.Override
+  public java.lang.String getPendingMultiPartyAuthReview() {
+    java.lang.Object ref = pendingMultiPartyAuthReview_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      pendingMultiPartyAuthReview_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The resource name of the pending Multi-Party Authorization
+   * review. Read only field
+   * </pre>
+   *
+   * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for pendingMultiPartyAuthReview.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPendingMultiPartyAuthReviewBytes() {
+    java.lang.Object ref = pendingMultiPartyAuthReview_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      pendingMultiPartyAuthReview_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -402,6 +465,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       output.writeBool(8, passkeyEnabled_);
     }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 9, pendingMultiPartyAuthReview_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -434,6 +500,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(8, passkeyEnabled_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(9, pendingMultiPartyAuthReview_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -475,6 +544,11 @@ private static final long serialVersionUID = 0L;
       if (getPasskeyEnabled()
           != other.getPasskeyEnabled()) return false;
     }
+    if (hasPendingMultiPartyAuthReview() != other.hasPendingMultiPartyAuthReview()) return false;
+    if (hasPendingMultiPartyAuthReview()) {
+      if (!getPendingMultiPartyAuthReview()
+          .equals(other.getPendingMultiPartyAuthReview())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -509,6 +583,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PASSKEY_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPasskeyEnabled());
+    }
+    if (hasPendingMultiPartyAuthReview()) {
+      hash = (37 * hash) + PENDING_MULTI_PARTY_AUTH_REVIEW_FIELD_NUMBER;
+      hash = (53 * hash) + getPendingMultiPartyAuthReview().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -652,6 +730,7 @@ private static final long serialVersionUID = 0L;
       accessCreationDateTime_ = "";
       inviterUserEmailAddress_ = "";
       passkeyEnabled_ = false;
+      pendingMultiPartyAuthReview_ = "";
       return this;
     }
 
@@ -711,6 +790,10 @@ private static final long serialVersionUID = 0L;
         result.passkeyEnabled_ = passkeyEnabled_;
         to_bitField0_ |= 0x00000008;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.pendingMultiPartyAuthReview_ = pendingMultiPartyAuthReview_;
+        to_bitField0_ |= 0x00000010;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -754,6 +837,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPasskeyEnabled()) {
         setPasskeyEnabled(other.getPasskeyEnabled());
+      }
+      if (other.hasPendingMultiPartyAuthReview()) {
+        pendingMultiPartyAuthReview_ = other.pendingMultiPartyAuthReview_;
+        bitField0_ |= 0x00000080;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -816,6 +904,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 64
+            case 74: {
+              pendingMultiPartyAuthReview_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1448,6 +1541,115 @@ private static final long serialVersionUID = 0L;
     public Builder clearPasskeyEnabled() {
       bitField0_ = (bitField0_ & ~0x00000040);
       passkeyEnabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object pendingMultiPartyAuthReview_ = "";
+    /**
+     * <pre>
+     * Output only. The resource name of the pending Multi-Party Authorization
+     * review. Read only field
+     * </pre>
+     *
+     * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the pendingMultiPartyAuthReview field is set.
+     */
+    public boolean hasPendingMultiPartyAuthReview() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the pending Multi-Party Authorization
+     * review. Read only field
+     * </pre>
+     *
+     * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The pendingMultiPartyAuthReview.
+     */
+    public java.lang.String getPendingMultiPartyAuthReview() {
+      java.lang.Object ref = pendingMultiPartyAuthReview_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pendingMultiPartyAuthReview_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the pending Multi-Party Authorization
+     * review. Read only field
+     * </pre>
+     *
+     * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for pendingMultiPartyAuthReview.
+     */
+    public com.google.protobuf.ByteString
+        getPendingMultiPartyAuthReviewBytes() {
+      java.lang.Object ref = pendingMultiPartyAuthReview_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pendingMultiPartyAuthReview_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the pending Multi-Party Authorization
+     * review. Read only field
+     * </pre>
+     *
+     * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The pendingMultiPartyAuthReview to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPendingMultiPartyAuthReview(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      pendingMultiPartyAuthReview_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the pending Multi-Party Authorization
+     * review. Read only field
+     * </pre>
+     *
+     * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPendingMultiPartyAuthReview() {
+      pendingMultiPartyAuthReview_ = getDefaultInstance().getPendingMultiPartyAuthReview();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the pending Multi-Party Authorization
+     * review. Read only field
+     * </pre>
+     *
+     * <code>optional string pending_multi_party_auth_review = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for pendingMultiPartyAuthReview to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPendingMultiPartyAuthReviewBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      pendingMultiPartyAuthReview_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

@@ -6,7 +6,10 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * <pre>
  * Content Creator Insights Service helps users find information about YouTube
  * Creators and their content and how these creators and their audiences can be
- * reached with Google Ads. Accessible to allowlisted customers only.
+ * reached with Google Ads. Refer to the
+ * [YouTube creator insights
+ * guide](https://developers.google.com/google-ads/api/docs/insights/creator-insights)
+ * for more details. Accessible to allowlisted customers only.
  * </pre>
  */
 @io.grpc.stub.annotations.GrpcGenerated
@@ -142,7 +145,10 @@ public final class ContentCreatorInsightsServiceGrpc {
    * <pre>
    * Content Creator Insights Service helps users find information about YouTube
    * Creators and their content and how these creators and their audiences can be
-   * reached with Google Ads. Accessible to allowlisted customers only.
+   * reached with Google Ads. Refer to the
+   * [YouTube creator insights
+   * guide](https://developers.google.com/google-ads/api/docs/insights/creator-insights)
+   * for more details. Accessible to allowlisted customers only.
    * </pre>
    */
   public interface AsyncService {
@@ -191,7 +197,10 @@ public final class ContentCreatorInsightsServiceGrpc {
    * <pre>
    * Content Creator Insights Service helps users find information about YouTube
    * Creators and their content and how these creators and their audiences can be
-   * reached with Google Ads. Accessible to allowlisted customers only.
+   * reached with Google Ads. Refer to the
+   * [YouTube creator insights
+   * guide](https://developers.google.com/google-ads/api/docs/insights/creator-insights)
+   * for more details. Accessible to allowlisted customers only.
    * </pre>
    */
   public static abstract class ContentCreatorInsightsServiceImplBase
@@ -207,7 +216,10 @@ public final class ContentCreatorInsightsServiceGrpc {
    * <pre>
    * Content Creator Insights Service helps users find information about YouTube
    * Creators and their content and how these creators and their audiences can be
-   * reached with Google Ads. Accessible to allowlisted customers only.
+   * reached with Google Ads. Refer to the
+   * [YouTube creator insights
+   * guide](https://developers.google.com/google-ads/api/docs/insights/creator-insights)
+   * for more details. Accessible to allowlisted customers only.
    * </pre>
    */
   public static final class ContentCreatorInsightsServiceStub
@@ -269,7 +281,10 @@ public final class ContentCreatorInsightsServiceGrpc {
    * <pre>
    * Content Creator Insights Service helps users find information about YouTube
    * Creators and their content and how these creators and their audiences can be
-   * reached with Google Ads. Accessible to allowlisted customers only.
+   * reached with Google Ads. Refer to the
+   * [YouTube creator insights
+   * guide](https://developers.google.com/google-ads/api/docs/insights/creator-insights)
+   * for more details. Accessible to allowlisted customers only.
    * </pre>
    */
   public static final class ContentCreatorInsightsServiceBlockingV2Stub
@@ -329,7 +344,10 @@ public final class ContentCreatorInsightsServiceGrpc {
    * <pre>
    * Content Creator Insights Service helps users find information about YouTube
    * Creators and their content and how these creators and their audiences can be
-   * reached with Google Ads. Accessible to allowlisted customers only.
+   * reached with Google Ads. Refer to the
+   * [YouTube creator insights
+   * guide](https://developers.google.com/google-ads/api/docs/insights/creator-insights)
+   * for more details. Accessible to allowlisted customers only.
    * </pre>
    */
   public static final class ContentCreatorInsightsServiceBlockingStub
@@ -389,7 +407,10 @@ public final class ContentCreatorInsightsServiceGrpc {
    * <pre>
    * Content Creator Insights Service helps users find information about YouTube
    * Creators and their content and how these creators and their audiences can be
-   * reached with Google Ads. Accessible to allowlisted customers only.
+   * reached with Google Ads. Refer to the
+   * [YouTube creator insights
+   * guide](https://developers.google.com/google-ads/api/docs/insights/creator-insights)
+   * for more details. Accessible to allowlisted customers only.
    * </pre>
    */
   public static final class ContentCreatorInsightsServiceFutureStub

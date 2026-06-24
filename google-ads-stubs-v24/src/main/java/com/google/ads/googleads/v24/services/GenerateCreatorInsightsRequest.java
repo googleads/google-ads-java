@@ -37,6 +37,7 @@ private static final long serialVersionUID = 0L;
     customerInsightsGroup_ = "";
     countryLocations_ = java.util.Collections.emptyList();
     subCountryLocations_ = java.util.Collections.emptyList();
+    supplementalData_ = emptyIntList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -4575,6 +4576,7 @@ private static final long serialVersionUID = 0L;
     SEARCH_ATTRIBUTES(3),
     SEARCH_BRAND(5),
     SEARCH_CHANNELS(4),
+    SEARCH_TOPICS(9),
     CRITERIA_NOT_SET(0);
     private final int value;
     private CriteriaCase(int value) {
@@ -4595,6 +4597,7 @@ private static final long serialVersionUID = 0L;
         case 3: return SEARCH_ATTRIBUTES;
         case 5: return SEARCH_BRAND;
         case 4: return SEARCH_CHANNELS;
+        case 9: return SEARCH_TOPICS;
         case 0: return CRITERIA_NOT_SET;
         default: return null;
       }
@@ -4881,6 +4884,95 @@ private static final long serialVersionUID = 0L;
     return subCountryLocations_.get(index);
   }
 
+  public static final int SUPPLEMENTAL_DATA_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.IntList supplementalData_ =
+      emptyIntList();
+  private static final     com.google.protobuf.Internal.IntListAdapter.IntConverter<
+      com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData> supplementalData_converter_ =
+          new com.google.protobuf.Internal.IntListAdapter.IntConverter<
+              com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData>() {
+            public com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData convert(int from) {
+              com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData result = com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData.forNumber(from);
+              return result == null ? com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the supplementalData.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData> getSupplementalDataList() {
+    return new com.google.protobuf.Internal.IntListAdapter<
+        com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData>(supplementalData_, supplementalData_converter_);
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The count of supplementalData.
+   */
+  @java.lang.Override
+  public int getSupplementalDataCount() {
+    return supplementalData_.size();
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the element to return.
+   * @return The supplementalData at the given index.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData getSupplementalData(int index) {
+    return supplementalData_converter_.convert(supplementalData_.getInt(index));
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the enum numeric values on the wire for supplementalData.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getSupplementalDataValueList() {
+    return supplementalData_;
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core insight data is returned. Including supplemental data here will
+   * populate additional fields in the response.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of supplementalData at the given index.
+   */
+  @java.lang.Override
+  public int getSupplementalDataValue(int index) {
+    return supplementalData_.getInt(index);
+  }
+  private int supplementalDataMemoizedSerializedSize;
+
   public static final int SEARCH_ATTRIBUTES_FIELD_NUMBER = 3;
   /**
    * <pre>
@@ -4941,7 +5033,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
    * list of countries specified in
-   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+   * option is deprecated and will be removed in the V25 release. Use
+   * search_topics instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -4955,7 +5049,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
    * list of countries specified in
-   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+   * option is deprecated and will be removed in the V25 release. Use
+   * search_topics instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -4972,7 +5068,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * A brand used to search for top creators. Data fetched is based on the
    * list of countries specified in
-   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+   * option is deprecated and will be removed in the V25 release. Use
+   * search_topics instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -5034,6 +5132,58 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.YouTubeChannels.getDefaultInstance();
   }
 
+  public static final int SEARCH_TOPICS_FIELD_NUMBER = 9;
+  /**
+   * <pre>
+   * Search for relevant creators who make content about the specified topics.
+   * Data fetched is based on the country specified in
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * Note: This option allows searching for one country only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+   * @return Whether the searchTopics field is set.
+   */
+  @java.lang.Override
+  public boolean hasSearchTopics() {
+    return criteriaCase_ == 9;
+  }
+  /**
+   * <pre>
+   * Search for relevant creators who make content about the specified topics.
+   * Data fetched is based on the country specified in
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * Note: This option allows searching for one country only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+   * @return The searchTopics.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.services.SearchTopics getSearchTopics() {
+    if (criteriaCase_ == 9) {
+       return (com.google.ads.googleads.v24.services.SearchTopics) criteria_;
+    }
+    return com.google.ads.googleads.v24.services.SearchTopics.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Search for relevant creators who make content about the specified topics.
+   * Data fetched is based on the country specified in
+   * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+   * Note: This option allows searching for one country only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.services.SearchTopicsOrBuilder getSearchTopicsOrBuilder() {
+    if (criteriaCase_ == 9) {
+       return (com.google.ads.googleads.v24.services.SearchTopics) criteria_;
+    }
+    return com.google.ads.googleads.v24.services.SearchTopics.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5048,6 +5198,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(customerId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, customerId_);
     }
@@ -5071,6 +5222,16 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(8, getInsightsApplicationInfo());
+    }
+    if (criteriaCase_ == 9) {
+      output.writeMessage(9, (com.google.ads.googleads.v24.services.SearchTopics) criteria_);
+    }
+    if (getSupplementalDataList().size() > 0) {
+      output.writeUInt32NoTag(82);
+      output.writeUInt32NoTag(supplementalDataMemoizedSerializedSize);
+    }
+    for (int i = 0; i < supplementalData_.size(); i++) {
+      output.writeEnumNoTag(supplementalData_.getInt(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -5111,6 +5272,22 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getInsightsApplicationInfo());
     }
+    if (criteriaCase_ == 9) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, (com.google.ads.googleads.v24.services.SearchTopics) criteria_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < supplementalData_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(supplementalData_.getInt(i));
+      }
+      size += dataSize;
+      if (!getSupplementalDataList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }supplementalDataMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -5139,6 +5316,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCountryLocationsList())) return false;
     if (!getSubCountryLocationsList()
         .equals(other.getSubCountryLocationsList())) return false;
+    if (!supplementalData_.equals(other.supplementalData_)) return false;
     if (!getCriteriaCase().equals(other.getCriteriaCase())) return false;
     switch (criteriaCase_) {
       case 3:
@@ -5152,6 +5330,10 @@ private static final long serialVersionUID = 0L;
       case 4:
         if (!getSearchChannels()
             .equals(other.getSearchChannels())) return false;
+        break;
+      case 9:
+        if (!getSearchTopics()
+            .equals(other.getSearchTopics())) return false;
         break;
       case 0:
       default:
@@ -5183,6 +5365,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SUB_COUNTRY_LOCATIONS_FIELD_NUMBER;
       hash = (53 * hash) + getSubCountryLocationsList().hashCode();
     }
+    if (getSupplementalDataCount() > 0) {
+      hash = (37 * hash) + SUPPLEMENTAL_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + supplementalData_.hashCode();
+    }
     switch (criteriaCase_) {
       case 3:
         hash = (37 * hash) + SEARCH_ATTRIBUTES_FIELD_NUMBER;
@@ -5195,6 +5381,10 @@ private static final long serialVersionUID = 0L;
       case 4:
         hash = (37 * hash) + SEARCH_CHANNELS_FIELD_NUMBER;
         hash = (53 * hash) + getSearchChannels().hashCode();
+        break;
+      case 9:
+        hash = (37 * hash) + SEARCH_TOPICS_FIELD_NUMBER;
+        hash = (53 * hash) + getSearchTopics().hashCode();
         break;
       case 0:
       default:
@@ -5364,6 +5554,7 @@ private static final long serialVersionUID = 0L;
         subCountryLocationsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
+      supplementalData_ = emptyIntList();
       if (searchAttributesBuilder_ != null) {
         searchAttributesBuilder_.clear();
       }
@@ -5372,6 +5563,9 @@ private static final long serialVersionUID = 0L;
       }
       if (searchChannelsBuilder_ != null) {
         searchChannelsBuilder_.clear();
+      }
+      if (searchTopicsBuilder_ != null) {
+        searchTopicsBuilder_.clear();
       }
       criteriaCase_ = 0;
       criteria_ = null;
@@ -5444,6 +5638,10 @@ private static final long serialVersionUID = 0L;
             : insightsApplicationInfoBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        supplementalData_.makeImmutable();
+        result.supplementalData_ = supplementalData_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -5461,6 +5659,10 @@ private static final long serialVersionUID = 0L;
       if (criteriaCase_ == 4 &&
           searchChannelsBuilder_ != null) {
         result.criteria_ = searchChannelsBuilder_.build();
+      }
+      if (criteriaCase_ == 9 &&
+          searchTopicsBuilder_ != null) {
+        result.criteria_ = searchTopicsBuilder_.build();
       }
     }
 
@@ -5541,6 +5743,17 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.supplementalData_.isEmpty()) {
+        if (supplementalData_.isEmpty()) {
+          supplementalData_ = other.supplementalData_;
+          supplementalData_.makeImmutable();
+          bitField0_ |= 0x00000020;
+        } else {
+          ensureSupplementalDataIsMutable();
+          supplementalData_.addAll(other.supplementalData_);
+        }
+        onChanged();
+      }
       switch (other.getCriteriaCase()) {
         case SEARCH_ATTRIBUTES: {
           mergeSearchAttributes(other.getSearchAttributes());
@@ -5552,6 +5765,10 @@ private static final long serialVersionUID = 0L;
         }
         case SEARCH_CHANNELS: {
           mergeSearchChannels(other.getSearchChannels());
+          break;
+        }
+        case SEARCH_TOPICS: {
+          mergeSearchTopics(other.getSearchTopics());
           break;
         }
         case CRITERIA_NOT_SET: {
@@ -5648,6 +5865,29 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  internalGetSearchTopicsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              criteriaCase_ = 9;
+              break;
+            } // case 74
+            case 80: {
+              int tmpRaw = input.readEnum();
+              ensureSupplementalDataIsMutable();
+              supplementalData_.addInt(tmpRaw);
+              break;
+            } // case 80
+            case 82: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureSupplementalDataIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                supplementalData_.addInt(input.readEnum());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6704,6 +6944,214 @@ private static final long serialVersionUID = 0L;
       return subCountryLocationsBuilder_;
     }
 
+    private com.google.protobuf.Internal.IntList supplementalData_ = emptyIntList();
+    private void ensureSupplementalDataIsMutable() {
+      if (!supplementalData_.isModifiable()) {
+        supplementalData_ = makeMutableCopy(supplementalData_);
+      }
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return A list containing the supplementalData.
+     */
+    public java.util.List<com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData> getSupplementalDataList() {
+      return new com.google.protobuf.Internal.IntListAdapter<
+          com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData>(supplementalData_, supplementalData_converter_);
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The count of supplementalData.
+     */
+    public int getSupplementalDataCount() {
+      return supplementalData_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index of the element to return.
+     * @return The supplementalData at the given index.
+     */
+    public com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData getSupplementalData(int index) {
+      return supplementalData_converter_.convert(supplementalData_.getInt(index));
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index to set the value at.
+     * @param value The supplementalData to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSupplementalData(
+        int index, com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureSupplementalDataIsMutable();
+      supplementalData_.setInt(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addSupplementalData(com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureSupplementalDataIsMutable();
+      supplementalData_.addInt(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param values The supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllSupplementalData(
+        java.lang.Iterable<? extends com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData> values) {
+      ensureSupplementalDataIsMutable();
+      for (com.google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData value : values) {
+        supplementalData_.addInt(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSupplementalData() {
+      supplementalData_ = emptyIntList();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return A list containing the enum numeric values on the wire for supplementalData.
+     */
+    public java.util.List<java.lang.Integer>
+    getSupplementalDataValueList() {
+      supplementalData_.makeImmutable();
+      return supplementalData_;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of supplementalData at the given index.
+     */
+    public int getSupplementalDataValue(int index) {
+      return supplementalData_.getInt(index);
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for supplementalData to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSupplementalDataValue(
+        int index, int value) {
+      ensureSupplementalDataIsMutable();
+      supplementalData_.setInt(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The enum numeric value on the wire for supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addSupplementalDataValue(int value) {
+      ensureSupplementalDataIsMutable();
+      supplementalData_.addInt(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core insight data is returned. Including supplemental data here will
+     * populate additional fields in the response.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData supplemental_data = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param values The enum numeric values on the wire for supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllSupplementalDataValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureSupplementalDataIsMutable();
+      for (int value : values) {
+        supplementalData_.addInt(value);
+      }
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.SingleFieldBuilder<
         com.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchAttributes, com.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchAttributes.Builder, com.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchAttributesOrBuilder> searchAttributesBuilder_;
     /**
@@ -6924,7 +7372,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
      * list of countries specified in
-     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+     * option is deprecated and will be removed in the V25 release. Use
+     * search_topics instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -6938,7 +7388,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
      * list of countries specified in
-     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+     * option is deprecated and will be removed in the V25 release. Use
+     * search_topics instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -6962,7 +7414,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
      * list of countries specified in
-     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+     * option is deprecated and will be removed in the V25 release. Use
+     * search_topics instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -6984,7 +7438,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
      * list of countries specified in
-     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+     * option is deprecated and will be removed in the V25 release. Use
+     * search_topics instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -7004,7 +7460,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
      * list of countries specified in
-     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+     * option is deprecated and will be removed in the V25 release. Use
+     * search_topics instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -7033,7 +7491,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
      * list of countries specified in
-     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+     * option is deprecated and will be removed in the V25 release. Use
+     * search_topics instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -7058,7 +7518,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
      * list of countries specified in
-     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+     * option is deprecated and will be removed in the V25 release. Use
+     * search_topics instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -7070,7 +7532,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
      * list of countries specified in
-     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+     * option is deprecated and will be removed in the V25 release. Use
+     * search_topics instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -7090,7 +7554,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A brand used to search for top creators. Data fetched is based on the
      * list of countries specified in
-     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].This
+     * option is deprecated and will be removed in the V25 release. Use
+     * search_topics instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.SearchBrand search_brand = 5;</code>
@@ -7308,6 +7774,211 @@ private static final long serialVersionUID = 0L;
       criteriaCase_ = 4;
       onChanged();
       return searchChannelsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.services.SearchTopics, com.google.ads.googleads.v24.services.SearchTopics.Builder, com.google.ads.googleads.v24.services.SearchTopicsOrBuilder> searchTopicsBuilder_;
+    /**
+     * <pre>
+     * Search for relevant creators who make content about the specified topics.
+     * Data fetched is based on the country specified in
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * Note: This option allows searching for one country only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+     * @return Whether the searchTopics field is set.
+     */
+    @java.lang.Override
+    public boolean hasSearchTopics() {
+      return criteriaCase_ == 9;
+    }
+    /**
+     * <pre>
+     * Search for relevant creators who make content about the specified topics.
+     * Data fetched is based on the country specified in
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * Note: This option allows searching for one country only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+     * @return The searchTopics.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.services.SearchTopics getSearchTopics() {
+      if (searchTopicsBuilder_ == null) {
+        if (criteriaCase_ == 9) {
+          return (com.google.ads.googleads.v24.services.SearchTopics) criteria_;
+        }
+        return com.google.ads.googleads.v24.services.SearchTopics.getDefaultInstance();
+      } else {
+        if (criteriaCase_ == 9) {
+          return searchTopicsBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v24.services.SearchTopics.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Search for relevant creators who make content about the specified topics.
+     * Data fetched is based on the country specified in
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * Note: This option allows searching for one country only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+     */
+    public Builder setSearchTopics(com.google.ads.googleads.v24.services.SearchTopics value) {
+      if (searchTopicsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criteria_ = value;
+        onChanged();
+      } else {
+        searchTopicsBuilder_.setMessage(value);
+      }
+      criteriaCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Search for relevant creators who make content about the specified topics.
+     * Data fetched is based on the country specified in
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * Note: This option allows searching for one country only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+     */
+    public Builder setSearchTopics(
+        com.google.ads.googleads.v24.services.SearchTopics.Builder builderForValue) {
+      if (searchTopicsBuilder_ == null) {
+        criteria_ = builderForValue.build();
+        onChanged();
+      } else {
+        searchTopicsBuilder_.setMessage(builderForValue.build());
+      }
+      criteriaCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Search for relevant creators who make content about the specified topics.
+     * Data fetched is based on the country specified in
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * Note: This option allows searching for one country only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+     */
+    public Builder mergeSearchTopics(com.google.ads.googleads.v24.services.SearchTopics value) {
+      if (searchTopicsBuilder_ == null) {
+        if (criteriaCase_ == 9 &&
+            criteria_ != com.google.ads.googleads.v24.services.SearchTopics.getDefaultInstance()) {
+          criteria_ = com.google.ads.googleads.v24.services.SearchTopics.newBuilder((com.google.ads.googleads.v24.services.SearchTopics) criteria_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criteria_ = value;
+        }
+        onChanged();
+      } else {
+        if (criteriaCase_ == 9) {
+          searchTopicsBuilder_.mergeFrom(value);
+        } else {
+          searchTopicsBuilder_.setMessage(value);
+        }
+      }
+      criteriaCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Search for relevant creators who make content about the specified topics.
+     * Data fetched is based on the country specified in
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * Note: This option allows searching for one country only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+     */
+    public Builder clearSearchTopics() {
+      if (searchTopicsBuilder_ == null) {
+        if (criteriaCase_ == 9) {
+          criteriaCase_ = 0;
+          criteria_ = null;
+          onChanged();
+        }
+      } else {
+        if (criteriaCase_ == 9) {
+          criteriaCase_ = 0;
+          criteria_ = null;
+        }
+        searchTopicsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Search for relevant creators who make content about the specified topics.
+     * Data fetched is based on the country specified in
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * Note: This option allows searching for one country only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+     */
+    public com.google.ads.googleads.v24.services.SearchTopics.Builder getSearchTopicsBuilder() {
+      return internalGetSearchTopicsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Search for relevant creators who make content about the specified topics.
+     * Data fetched is based on the country specified in
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * Note: This option allows searching for one country only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.services.SearchTopicsOrBuilder getSearchTopicsOrBuilder() {
+      if ((criteriaCase_ == 9) && (searchTopicsBuilder_ != null)) {
+        return searchTopicsBuilder_.getMessageOrBuilder();
+      } else {
+        if (criteriaCase_ == 9) {
+          return (com.google.ads.googleads.v24.services.SearchTopics) criteria_;
+        }
+        return com.google.ads.googleads.v24.services.SearchTopics.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Search for relevant creators who make content about the specified topics.
+     * Data fetched is based on the country specified in
+     * [country_locations][google.ads.googleads.v24.services.GenerateCreatorInsightsRequest.country_locations].
+     * Note: This option allows searching for one country only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.SearchTopics search_topics = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.services.SearchTopics, com.google.ads.googleads.v24.services.SearchTopics.Builder, com.google.ads.googleads.v24.services.SearchTopicsOrBuilder> 
+        internalGetSearchTopicsFieldBuilder() {
+      if (searchTopicsBuilder_ == null) {
+        if (!(criteriaCase_ == 9)) {
+          criteria_ = com.google.ads.googleads.v24.services.SearchTopics.getDefaultInstance();
+        }
+        searchTopicsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.services.SearchTopics, com.google.ads.googleads.v24.services.SearchTopics.Builder, com.google.ads.googleads.v24.services.SearchTopicsOrBuilder>(
+                (com.google.ads.googleads.v24.services.SearchTopics) criteria_,
+                getParentForChildren(),
+                isClean());
+        criteria_ = null;
+      }
+      criteriaCase_ = 9;
+      onChanged();
+      return searchTopicsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.services.GenerateCreatorInsightsRequest)

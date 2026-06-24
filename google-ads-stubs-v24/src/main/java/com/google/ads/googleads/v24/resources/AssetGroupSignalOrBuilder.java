@@ -211,5 +211,86 @@ public interface AssetGroupSignalOrBuilder extends
    */
   com.google.ads.googleads.v24.common.SearchThemeInfoOrBuilder getSearchThemeOrBuilder();
 
+  /**
+   * <pre>
+   * Immutable. The local services signal to be used by the performance max
+   * campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the localServicesId field is set.
+   */
+  boolean hasLocalServicesId();
+  /**
+   * <pre>
+   * Immutable. The local services signal to be used by the performance max
+   * campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The localServicesId.
+   */
+  com.google.ads.googleads.v24.common.LocalServiceIdInfo getLocalServicesId();
+  /**
+   * <pre>
+   * Immutable. The local services signal to be used by the performance max
+   * campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.LocalServiceIdInfo local_services_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  com.google.ads.googleads.v24.common.LocalServiceIdInfoOrBuilder getLocalServicesIdOrBuilder();
+
+  /**
+   * <pre>
+   * Immutable. The list of vertical ads item group rules used to select items
+   * from the attached vertical feed.
+   *
+   * This field links to a SharedSet of type
+   * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+   * define which items from the TRAVEL_FEED AssetSet are eligible to be
+   * served. Items that do not match the rules will be excluded. This behavior
+   * is different from other signal types, which provide guidance to the
+   * optimization engine rather than determining item eligibility.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the verticalAdsItemGroupRuleList field is set.
+   */
+  boolean hasVerticalAdsItemGroupRuleList();
+  /**
+   * <pre>
+   * Immutable. The list of vertical ads item group rules used to select items
+   * from the attached vertical feed.
+   *
+   * This field links to a SharedSet of type
+   * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+   * define which items from the TRAVEL_FEED AssetSet are eligible to be
+   * served. Items that do not match the rules will be excluded. This behavior
+   * is different from other signal types, which provide guidance to the
+   * optimization engine rather than determining item eligibility.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The verticalAdsItemGroupRuleList.
+   */
+  com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo getVerticalAdsItemGroupRuleList();
+  /**
+   * <pre>
+   * Immutable. The list of vertical ads item group rules used to select items
+   * from the attached vertical feed.
+   *
+   * This field links to a SharedSet of type
+   * VERTICAL_ADS_ITEM_GROUP_RULE_LIST. The rules within the linked SharedSet
+   * define which items from the TRAVEL_FEED AssetSet are eligible to be
+   * served. Items that do not match the rules will be excluded. This behavior
+   * is different from other signal types, which provide guidance to the
+   * optimization engine rather than determining item eligibility.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfo vertical_ads_item_group_rule_list = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  com.google.ads.googleads.v24.common.VerticalAdsItemGroupRuleListInfoOrBuilder getVerticalAdsItemGroupRuleListOrBuilder();
+
   com.google.ads.googleads.v24.resources.AssetGroupSignal.SignalCase getSignalCase();
 }

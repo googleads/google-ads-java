@@ -187,6 +187,25 @@ private static final long serialVersionUID = 0L;
      * <code>PMAX_REPLACEMENT_SHOPPING = 16;</code>
      */
     PMAX_REPLACEMENT_SHOPPING(16),
+    /**
+     * <pre>
+     * An experiment that compares multiple variables across one or more
+     * campaigns, tests a mix of campaign types, and more.
+     * </pre>
+     *
+     * <code>COMPARE_CAMPAIGNS = 17;</code>
+     */
+    COMPARE_CAMPAIGNS(17),
+    /**
+     * <pre>
+     * An experiment that tests automatically created assets and lets Google AI
+     * send traffic to relevant landing pages and generate text assets to better
+     * match search queries.
+     * </pre>
+     *
+     * <code>PMAX_TEXT_CUSTOMIZATION_FINAL_URL_EXPANSION = 18;</code>
+     */
+    PMAX_TEXT_CUSTOMIZATION_FINAL_URL_EXPANSION(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -330,6 +349,25 @@ private static final long serialVersionUID = 0L;
      * <code>PMAX_REPLACEMENT_SHOPPING = 16;</code>
      */
     public static final int PMAX_REPLACEMENT_SHOPPING_VALUE = 16;
+    /**
+     * <pre>
+     * An experiment that compares multiple variables across one or more
+     * campaigns, tests a mix of campaign types, and more.
+     * </pre>
+     *
+     * <code>COMPARE_CAMPAIGNS = 17;</code>
+     */
+    public static final int COMPARE_CAMPAIGNS_VALUE = 17;
+    /**
+     * <pre>
+     * An experiment that tests automatically created assets and lets Google AI
+     * send traffic to relevant landing pages and generate text assets to better
+     * match search queries.
+     * </pre>
+     *
+     * <code>PMAX_TEXT_CUSTOMIZATION_FINAL_URL_EXPANSION = 18;</code>
+     */
+    public static final int PMAX_TEXT_CUSTOMIZATION_FINAL_URL_EXPANSION_VALUE = 18;
 
 
     public final int getNumber() {
@@ -372,6 +410,8 @@ private static final long serialVersionUID = 0L;
         case 14: return ADOPT_AI_MAX;
         case 15: return ADOPT_BROAD_MATCH_KEYWORDS;
         case 16: return PMAX_REPLACEMENT_SHOPPING;
+        case 17: return COMPARE_CAMPAIGNS;
+        case 18: return PMAX_TEXT_CUSTOMIZATION_FINAL_URL_EXPANSION;
         default: return null;
       }
     }

@@ -965,7 +965,8 @@ private static final long serialVersionUID = 0L;
   public static final int EXPANDED_TEXT_AD_FIELD_NUMBER = 7;
   /**
    * <pre>
-   * Details pertaining to an expanded text ad.
+   * Details pertaining to an expanded text ad. Expanded text ads are
+   * deprecated. Use `ResponsiveSearchAd` instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -977,7 +978,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Details pertaining to an expanded text ad.
+   * Details pertaining to an expanded text ad. Expanded text ads are
+   * deprecated. Use `ResponsiveSearchAd` instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -992,7 +994,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Details pertaining to an expanded text ad.
+   * Details pertaining to an expanded text ad. Expanded text ads are
+   * deprecated. Use `ResponsiveSearchAd` instead.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -6119,7 +6122,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v23.common.ExpandedTextAdInfo, com.google.ads.googleads.v23.common.ExpandedTextAdInfo.Builder, com.google.ads.googleads.v23.common.ExpandedTextAdInfoOrBuilder> expandedTextAdBuilder_;
     /**
      * <pre>
-     * Details pertaining to an expanded text ad.
+     * Details pertaining to an expanded text ad. Expanded text ads are
+     * deprecated. Use `ResponsiveSearchAd` instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -6131,7 +6135,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an expanded text ad.
+     * Details pertaining to an expanded text ad. Expanded text ads are
+     * deprecated. Use `ResponsiveSearchAd` instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -6153,7 +6158,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an expanded text ad.
+     * Details pertaining to an expanded text ad. Expanded text ads are
+     * deprecated. Use `ResponsiveSearchAd` instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -6173,7 +6179,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an expanded text ad.
+     * Details pertaining to an expanded text ad. Expanded text ads are
+     * deprecated. Use `ResponsiveSearchAd` instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -6191,7 +6198,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an expanded text ad.
+     * Details pertaining to an expanded text ad. Expanded text ads are
+     * deprecated. Use `ResponsiveSearchAd` instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -6218,7 +6226,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an expanded text ad.
+     * Details pertaining to an expanded text ad. Expanded text ads are
+     * deprecated. Use `ResponsiveSearchAd` instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -6241,7 +6250,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an expanded text ad.
+     * Details pertaining to an expanded text ad. Expanded text ads are
+     * deprecated. Use `ResponsiveSearchAd` instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -6251,7 +6261,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an expanded text ad.
+     * Details pertaining to an expanded text ad. Expanded text ads are
+     * deprecated. Use `ResponsiveSearchAd` instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
@@ -6269,7 +6280,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an expanded text ad.
+     * Details pertaining to an expanded text ad. Expanded text ads are
+     * deprecated. Use `ResponsiveSearchAd` instead.
      * </pre>
      *
      * <code>.google.ads.googleads.v23.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>

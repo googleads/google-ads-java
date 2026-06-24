@@ -7,7 +7,7 @@ package com.google.ads.googleads.v24.services;
 
 /**
  * <pre>
- * A collection of content topics to return trend information for.
+ * A collection of content topics to return creator and trend information for.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v24.services.SearchTopics}
@@ -53,9 +53,11 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v24.common.AudienceInsightsEntity> entities_;
   /**
    * <pre>
-   * Required. A list of knowledge graph entities to retrieve trend information
-   * for. Supported entities are tagged with
-   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Required. A list of knowledge graph entities to retrieve creator and trend
+   * information for. Supported entities are tagged with
+   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+   * or
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
    * Use
    * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
    * to get the list of supported entities.
@@ -69,9 +71,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A list of knowledge graph entities to retrieve trend information
-   * for. Supported entities are tagged with
-   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Required. A list of knowledge graph entities to retrieve creator and trend
+   * information for. Supported entities are tagged with
+   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+   * or
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
    * Use
    * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
    * to get the list of supported entities.
@@ -86,9 +90,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A list of knowledge graph entities to retrieve trend information
-   * for. Supported entities are tagged with
-   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Required. A list of knowledge graph entities to retrieve creator and trend
+   * information for. Supported entities are tagged with
+   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+   * or
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
    * Use
    * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
    * to get the list of supported entities.
@@ -102,9 +108,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A list of knowledge graph entities to retrieve trend information
-   * for. Supported entities are tagged with
-   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Required. A list of knowledge graph entities to retrieve creator and trend
+   * information for. Supported entities are tagged with
+   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+   * or
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
    * Use
    * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
    * to get the list of supported entities.
@@ -118,9 +126,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A list of knowledge graph entities to retrieve trend information
-   * for. Supported entities are tagged with
-   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Required. A list of knowledge graph entities to retrieve creator and trend
+   * information for. Supported entities are tagged with
+   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+   * or
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
    * Use
    * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
    * to get the list of supported entities.
@@ -295,7 +305,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A collection of content topics to return trend information for.
+   * A collection of content topics to return creator and trend information for.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v24.services.SearchTopics}
@@ -494,9 +504,11 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -513,9 +525,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -532,9 +546,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -551,9 +567,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -577,9 +595,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -600,9 +620,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -625,9 +647,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -651,9 +675,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -674,9 +700,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -697,9 +725,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -721,9 +751,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -743,9 +775,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -765,9 +799,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -781,9 +817,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -800,9 +838,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -820,9 +860,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -836,9 +878,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.
@@ -853,9 +897,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A list of knowledge graph entities to retrieve trend information
-     * for. Supported entities are tagged with
-     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+     * Required. A list of knowledge graph entities to retrieve creator and trend
+     * information for. Supported entities are tagged with
+     * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+     * or
+     * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
      * Use
      * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
      * to get the list of supported entities.

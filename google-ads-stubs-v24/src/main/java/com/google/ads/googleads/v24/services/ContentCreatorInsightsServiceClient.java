@@ -28,7 +28,9 @@ import javax.annotation.Generated;
 /**
  * Service Description: Content Creator Insights Service helps users find information about YouTube
  * Creators and their content and how these creators and their audiences can be reached with Google
- * Ads. Accessible to allowlisted customers only.
+ * Ads. Refer to the [YouTube creator insights
+ * guide](https://developers.google.com/google-ads/api/docs/insights/creator-insights) for more
+ * details. Accessible to allowlisted customers only.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
@@ -48,6 +50,10 @@ import javax.annotation.Generated;
  *           .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
  *           .addAllCountryLocations(new ArrayList<LocationInfo>())
  *           .addAllSubCountryLocations(new ArrayList<LocationInfo>())
+ *           .addAllSupplementalData(
+ *               new ArrayList<
+ *                   ContentCreatorInsightsSupplementalDataEnum
+ *                       .ContentCreatorInsightsSupplementalData>())
  *           .build();
  *   GenerateCreatorInsightsResponse response =
  *       contentCreatorInsightsServiceClient.generateCreatorInsights(request);
@@ -216,6 +222,10 @@ public class ContentCreatorInsightsServiceClient implements BackgroundResource {
    *           .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
    *           .addAllCountryLocations(new ArrayList<LocationInfo>())
    *           .addAllSubCountryLocations(new ArrayList<LocationInfo>())
+   *           .addAllSupplementalData(
+   *               new ArrayList<
+   *                   ContentCreatorInsightsSupplementalDataEnum
+   *                       .ContentCreatorInsightsSupplementalData>())
    *           .build();
    *   GenerateCreatorInsightsResponse response =
    *       contentCreatorInsightsServiceClient.generateCreatorInsights(request);
@@ -254,6 +264,10 @@ public class ContentCreatorInsightsServiceClient implements BackgroundResource {
    *           .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
    *           .addAllCountryLocations(new ArrayList<LocationInfo>())
    *           .addAllSubCountryLocations(new ArrayList<LocationInfo>())
+   *           .addAllSupplementalData(
+   *               new ArrayList<
+   *                   ContentCreatorInsightsSupplementalDataEnum
+   *                       .ContentCreatorInsightsSupplementalData>())
    *           .build();
    *   ApiFuture<GenerateCreatorInsightsResponse> future =
    *       contentCreatorInsightsServiceClient.generateCreatorInsightsCallable().futureCall(request);
@@ -290,6 +304,11 @@ public class ContentCreatorInsightsServiceClient implements BackgroundResource {
    *           .setCustomerInsightsGroup("customerInsightsGroup1092118566")
    *           .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
    *           .setCountryLocation(LocationInfo.newBuilder().build())
+   *           .addAllSubCountryLocations(new ArrayList<LocationInfo>())
+   *           .addAllSupplementalData(
+   *               new ArrayList<
+   *                   ContentCreatorInsightsSupplementalDataEnum
+   *                       .ContentCreatorInsightsSupplementalData>())
    *           .build();
    *   GenerateTrendingInsightsResponse response =
    *       contentCreatorInsightsServiceClient.generateTrendingInsights(request);
@@ -327,6 +346,11 @@ public class ContentCreatorInsightsServiceClient implements BackgroundResource {
    *           .setCustomerInsightsGroup("customerInsightsGroup1092118566")
    *           .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
    *           .setCountryLocation(LocationInfo.newBuilder().build())
+   *           .addAllSubCountryLocations(new ArrayList<LocationInfo>())
+   *           .addAllSupplementalData(
+   *               new ArrayList<
+   *                   ContentCreatorInsightsSupplementalDataEnum
+   *                       .ContentCreatorInsightsSupplementalData>())
    *           .build();
    *   ApiFuture<GenerateTrendingInsightsResponse> future =
    *       contentCreatorInsightsServiceClient

@@ -7,7 +7,7 @@ package com.google.ads.googleads.v23.common;
 
 /**
  * <pre>
- * An expanded text ad.
+ * An expanded text ad. Expanded text ads are deprecated.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v23.common.ExpandedTextAdInfo}
@@ -721,7 +721,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An expanded text ad.
+   * An expanded text ad. Expanded text ads are deprecated.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v23.common.ExpandedTextAdInfo}

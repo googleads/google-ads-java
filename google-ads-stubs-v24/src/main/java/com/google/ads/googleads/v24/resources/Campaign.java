@@ -3922,6 +3922,27 @@ private static final long serialVersionUID = 0L;
      * @return The disableProductFeed.
      */
     boolean getDisableProductFeed();
+
+    /**
+     * <pre>
+     * If true, brand exclusions are ignored for Shopping ads.
+     * Only supported for Shopping campaigns.
+     * </pre>
+     *
+     * <code>optional bool ignore_brand_exclusion_in_shopping_ads = 13;</code>
+     * @return Whether the ignoreBrandExclusionInShoppingAds field is set.
+     */
+    boolean hasIgnoreBrandExclusionInShoppingAds();
+    /**
+     * <pre>
+     * If true, brand exclusions are ignored for Shopping ads.
+     * Only supported for Shopping campaigns.
+     * </pre>
+     *
+     * <code>optional bool ignore_brand_exclusion_in_shopping_ads = 13;</code>
+     * @return The ignoreBrandExclusionInShoppingAds.
+     */
+    boolean getIgnoreBrandExclusionInShoppingAds();
   }
   /**
    * <pre>
@@ -4232,6 +4253,35 @@ private static final long serialVersionUID = 0L;
       return disableProductFeed_;
     }
 
+    public static final int IGNORE_BRAND_EXCLUSION_IN_SHOPPING_ADS_FIELD_NUMBER = 13;
+    private boolean ignoreBrandExclusionInShoppingAds_ = false;
+    /**
+     * <pre>
+     * If true, brand exclusions are ignored for Shopping ads.
+     * Only supported for Shopping campaigns.
+     * </pre>
+     *
+     * <code>optional bool ignore_brand_exclusion_in_shopping_ads = 13;</code>
+     * @return Whether the ignoreBrandExclusionInShoppingAds field is set.
+     */
+    @java.lang.Override
+    public boolean hasIgnoreBrandExclusionInShoppingAds() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * If true, brand exclusions are ignored for Shopping ads.
+     * Only supported for Shopping campaigns.
+     * </pre>
+     *
+     * <code>optional bool ignore_brand_exclusion_in_shopping_ads = 13;</code>
+     * @return The ignoreBrandExclusionInShoppingAds.
+     */
+    @java.lang.Override
+    public boolean getIgnoreBrandExclusionInShoppingAds() {
+      return ignoreBrandExclusionInShoppingAds_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4271,6 +4321,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeBool(12, disableProductFeed_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeBool(13, ignoreBrandExclusionInShoppingAds_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4318,6 +4371,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, disableProductFeed_);
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, ignoreBrandExclusionInShoppingAds_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4359,6 +4416,11 @@ private static final long serialVersionUID = 0L;
         if (getDisableProductFeed()
             != other.getDisableProductFeed()) return false;
       }
+      if (hasIgnoreBrandExclusionInShoppingAds() != other.hasIgnoreBrandExclusionInShoppingAds()) return false;
+      if (hasIgnoreBrandExclusionInShoppingAds()) {
+        if (getIgnoreBrandExclusionInShoppingAds()
+            != other.getIgnoreBrandExclusionInShoppingAds()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4397,6 +4459,11 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + DISABLE_PRODUCT_FEED_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getDisableProductFeed());
+      }
+      if (hasIgnoreBrandExclusionInShoppingAds()) {
+        hash = (37 * hash) + IGNORE_BRAND_EXCLUSION_IN_SHOPPING_ADS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIgnoreBrandExclusionInShoppingAds());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4542,6 +4609,7 @@ private static final long serialVersionUID = 0L;
         useVehicleInventory_ = false;
         advertisingPartnerIds_ = emptyLongList();
         disableProductFeed_ = false;
+        ignoreBrandExclusionInShoppingAds_ = false;
         return this;
       }
 
@@ -4602,6 +4670,10 @@ private static final long serialVersionUID = 0L;
           result.disableProductFeed_ = disableProductFeed_;
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.ignoreBrandExclusionInShoppingAds_ = ignoreBrandExclusionInShoppingAds_;
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -4647,6 +4719,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasDisableProductFeed()) {
           setDisableProductFeed(other.getDisableProductFeed());
+        }
+        if (other.hasIgnoreBrandExclusionInShoppingAds()) {
+          setIgnoreBrandExclusionInShoppingAds(other.getIgnoreBrandExclusionInShoppingAds());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4720,6 +4795,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000040;
                 break;
               } // case 96
+              case 104: {
+                ignoreBrandExclusionInShoppingAds_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 104
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5321,6 +5401,66 @@ private static final long serialVersionUID = 0L;
       public Builder clearDisableProductFeed() {
         bitField0_ = (bitField0_ & ~0x00000040);
         disableProductFeed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean ignoreBrandExclusionInShoppingAds_ ;
+      /**
+       * <pre>
+       * If true, brand exclusions are ignored for Shopping ads.
+       * Only supported for Shopping campaigns.
+       * </pre>
+       *
+       * <code>optional bool ignore_brand_exclusion_in_shopping_ads = 13;</code>
+       * @return Whether the ignoreBrandExclusionInShoppingAds field is set.
+       */
+      @java.lang.Override
+      public boolean hasIgnoreBrandExclusionInShoppingAds() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * If true, brand exclusions are ignored for Shopping ads.
+       * Only supported for Shopping campaigns.
+       * </pre>
+       *
+       * <code>optional bool ignore_brand_exclusion_in_shopping_ads = 13;</code>
+       * @return The ignoreBrandExclusionInShoppingAds.
+       */
+      @java.lang.Override
+      public boolean getIgnoreBrandExclusionInShoppingAds() {
+        return ignoreBrandExclusionInShoppingAds_;
+      }
+      /**
+       * <pre>
+       * If true, brand exclusions are ignored for Shopping ads.
+       * Only supported for Shopping campaigns.
+       * </pre>
+       *
+       * <code>optional bool ignore_brand_exclusion_in_shopping_ads = 13;</code>
+       * @param value The ignoreBrandExclusionInShoppingAds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIgnoreBrandExclusionInShoppingAds(boolean value) {
+
+        ignoreBrandExclusionInShoppingAds_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, brand exclusions are ignored for Shopping ads.
+       * Only supported for Shopping campaigns.
+       * </pre>
+       *
+       * <code>optional bool ignore_brand_exclusion_in_shopping_ads = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIgnoreBrandExclusionInShoppingAds() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        ignoreBrandExclusionInShoppingAds_ = false;
         onChanged();
         return this;
       }
@@ -11462,6 +11602,1391 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v24.resources.Campaign.LocalServicesCampaignSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LocalServicesPmaxCampaignSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Whether to use navigational query filter.
+     * </pre>
+     *
+     * <code>optional bool navigational_query_leads_enabled = 1;</code>
+     * @return Whether the navigationalQueryLeadsEnabled field is set.
+     */
+    boolean hasNavigationalQueryLeadsEnabled();
+    /**
+     * <pre>
+     * Whether to use navigational query filter.
+     * </pre>
+     *
+     * <code>optional bool navigational_query_leads_enabled = 1;</code>
+     * @return The navigationalQueryLeadsEnabled.
+     */
+    boolean getNavigationalQueryLeadsEnabled();
+
+    /**
+     * <pre>
+     * Founding year of the business.
+     * </pre>
+     *
+     * <code>optional int64 founding_year = 2;</code>
+     * @return Whether the foundingYear field is set.
+     */
+    boolean hasFoundingYear();
+    /**
+     * <pre>
+     * Founding year of the business.
+     * </pre>
+     *
+     * <code>optional int64 founding_year = 2;</code>
+     * @return The foundingYear.
+     */
+    long getFoundingYear();
+
+    /**
+     * <pre>
+     * Immutable. Country code of the Local Services Ad. Set once during Ad
+     * Creation and used to determine verification requirements and validate
+     * location criterion selection; upper-case, two-letter codes as defined by
+     * ISO-3166.
+     * </pre>
+     *
+     * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the countryCode field is set.
+     */
+    boolean hasCountryCode();
+    /**
+     * <pre>
+     * Immutable. Country code of the Local Services Ad. Set once during Ad
+     * Creation and used to determine verification requirements and validate
+     * location criterion selection; upper-case, two-letter codes as defined by
+     * ISO-3166.
+     * </pre>
+     *
+     * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The countryCode.
+     */
+    java.lang.String getCountryCode();
+    /**
+     * <pre>
+     * Immutable. Country code of the Local Services Ad. Set once during Ad
+     * Creation and used to determine verification requirements and validate
+     * location criterion selection; upper-case, two-letter codes as defined by
+     * ISO-3166.
+     * </pre>
+     *
+     * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The bytes for countryCode.
+     */
+    com.google.protobuf.ByteString
+        getCountryCodeBytes();
+
+    /**
+     * <pre>
+     * List of phone numbers associated with the provider.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+     */
+    java.util.List<com.google.ads.googleads.v24.common.LocalServicesPhoneNumber> 
+        getPhoneNumbersList();
+    /**
+     * <pre>
+     * List of phone numbers associated with the provider.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+     */
+    com.google.ads.googleads.v24.common.LocalServicesPhoneNumber getPhoneNumbers(int index);
+    /**
+     * <pre>
+     * List of phone numbers associated with the provider.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+     */
+    int getPhoneNumbersCount();
+    /**
+     * <pre>
+     * List of phone numbers associated with the provider.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+     */
+    java.util.List<? extends com.google.ads.googleads.v24.common.LocalServicesPhoneNumberOrBuilder> 
+        getPhoneNumbersOrBuilderList();
+    /**
+     * <pre>
+     * List of phone numbers associated with the provider.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+     */
+    com.google.ads.googleads.v24.common.LocalServicesPhoneNumberOrBuilder getPhoneNumbersOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Settings for Local Services Performance Max Campaign subresource.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings}
+   */
+  public static final class LocalServicesPmaxCampaignSettings extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings)
+      LocalServicesPmaxCampaignSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 31,
+        /* patch= */ 0,
+        /* suffix= */ "",
+        LocalServicesPmaxCampaignSettings.class.getName());
+    }
+    // Use LocalServicesPmaxCampaignSettings.newBuilder() to construct.
+    private LocalServicesPmaxCampaignSettings(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private LocalServicesPmaxCampaignSettings() {
+      countryCode_ = "";
+      phoneNumbers_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v24.resources.CampaignProto.internal_static_google_ads_googleads_v24_resources_Campaign_LocalServicesPmaxCampaignSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v24.resources.CampaignProto.internal_static_google_ads_googleads_v24_resources_Campaign_LocalServicesPmaxCampaignSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.class, com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAVIGATIONAL_QUERY_LEADS_ENABLED_FIELD_NUMBER = 1;
+    private boolean navigationalQueryLeadsEnabled_ = false;
+    /**
+     * <pre>
+     * Whether to use navigational query filter.
+     * </pre>
+     *
+     * <code>optional bool navigational_query_leads_enabled = 1;</code>
+     * @return Whether the navigationalQueryLeadsEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasNavigationalQueryLeadsEnabled() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Whether to use navigational query filter.
+     * </pre>
+     *
+     * <code>optional bool navigational_query_leads_enabled = 1;</code>
+     * @return The navigationalQueryLeadsEnabled.
+     */
+    @java.lang.Override
+    public boolean getNavigationalQueryLeadsEnabled() {
+      return navigationalQueryLeadsEnabled_;
+    }
+
+    public static final int FOUNDING_YEAR_FIELD_NUMBER = 2;
+    private long foundingYear_ = 0L;
+    /**
+     * <pre>
+     * Founding year of the business.
+     * </pre>
+     *
+     * <code>optional int64 founding_year = 2;</code>
+     * @return Whether the foundingYear field is set.
+     */
+    @java.lang.Override
+    public boolean hasFoundingYear() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Founding year of the business.
+     * </pre>
+     *
+     * <code>optional int64 founding_year = 2;</code>
+     * @return The foundingYear.
+     */
+    @java.lang.Override
+    public long getFoundingYear() {
+      return foundingYear_;
+    }
+
+    public static final int COUNTRY_CODE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object countryCode_ = "";
+    /**
+     * <pre>
+     * Immutable. Country code of the Local Services Ad. Set once during Ad
+     * Creation and used to determine verification requirements and validate
+     * location criterion selection; upper-case, two-letter codes as defined by
+     * ISO-3166.
+     * </pre>
+     *
+     * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the countryCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasCountryCode() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Immutable. Country code of the Local Services Ad. Set once during Ad
+     * Creation and used to determine verification requirements and validate
+     * location criterion selection; upper-case, two-letter codes as defined by
+     * ISO-3166.
+     * </pre>
+     *
+     * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The countryCode.
+     */
+    @java.lang.Override
+    public java.lang.String getCountryCode() {
+      java.lang.Object ref = countryCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        countryCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Country code of the Local Services Ad. Set once during Ad
+     * Creation and used to determine verification requirements and validate
+     * location criterion selection; upper-case, two-letter codes as defined by
+     * ISO-3166.
+     * </pre>
+     *
+     * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The bytes for countryCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCountryCodeBytes() {
+      java.lang.Object ref = countryCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        countryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PHONE_NUMBERS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.ads.googleads.v24.common.LocalServicesPhoneNumber> phoneNumbers_;
+    /**
+     * <pre>
+     * List of phone numbers associated with the provider.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.ads.googleads.v24.common.LocalServicesPhoneNumber> getPhoneNumbersList() {
+      return phoneNumbers_;
+    }
+    /**
+     * <pre>
+     * List of phone numbers associated with the provider.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.ads.googleads.v24.common.LocalServicesPhoneNumberOrBuilder> 
+        getPhoneNumbersOrBuilderList() {
+      return phoneNumbers_;
+    }
+    /**
+     * <pre>
+     * List of phone numbers associated with the provider.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+     */
+    @java.lang.Override
+    public int getPhoneNumbersCount() {
+      return phoneNumbers_.size();
+    }
+    /**
+     * <pre>
+     * List of phone numbers associated with the provider.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.common.LocalServicesPhoneNumber getPhoneNumbers(int index) {
+      return phoneNumbers_.get(index);
+    }
+    /**
+     * <pre>
+     * List of phone numbers associated with the provider.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.common.LocalServicesPhoneNumberOrBuilder getPhoneNumbersOrBuilder(
+        int index) {
+      return phoneNumbers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, navigationalQueryLeadsEnabled_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt64(2, foundingYear_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, countryCode_);
+      }
+      for (int i = 0; i < phoneNumbers_.size(); i++) {
+        output.writeMessage(4, phoneNumbers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, navigationalQueryLeadsEnabled_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, foundingYear_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, countryCode_);
+      }
+      for (int i = 0; i < phoneNumbers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, phoneNumbers_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings other = (com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings) obj;
+
+      if (hasNavigationalQueryLeadsEnabled() != other.hasNavigationalQueryLeadsEnabled()) return false;
+      if (hasNavigationalQueryLeadsEnabled()) {
+        if (getNavigationalQueryLeadsEnabled()
+            != other.getNavigationalQueryLeadsEnabled()) return false;
+      }
+      if (hasFoundingYear() != other.hasFoundingYear()) return false;
+      if (hasFoundingYear()) {
+        if (getFoundingYear()
+            != other.getFoundingYear()) return false;
+      }
+      if (hasCountryCode() != other.hasCountryCode()) return false;
+      if (hasCountryCode()) {
+        if (!getCountryCode()
+            .equals(other.getCountryCode())) return false;
+      }
+      if (!getPhoneNumbersList()
+          .equals(other.getPhoneNumbersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasNavigationalQueryLeadsEnabled()) {
+        hash = (37 * hash) + NAVIGATIONAL_QUERY_LEADS_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNavigationalQueryLeadsEnabled());
+      }
+      if (hasFoundingYear()) {
+        hash = (37 * hash) + FOUNDING_YEAR_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getFoundingYear());
+      }
+      if (hasCountryCode()) {
+        hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getCountryCode().hashCode();
+      }
+      if (getPhoneNumbersCount() > 0) {
+        hash = (37 * hash) + PHONE_NUMBERS_FIELD_NUMBER;
+        hash = (53 * hash) + getPhoneNumbersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Settings for Local Services Performance Max Campaign subresource.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings)
+        com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v24.resources.CampaignProto.internal_static_google_ads_googleads_v24_resources_Campaign_LocalServicesPmaxCampaignSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v24.resources.CampaignProto.internal_static_google_ads_googleads_v24_resources_Campaign_LocalServicesPmaxCampaignSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.class, com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        navigationalQueryLeadsEnabled_ = false;
+        foundingYear_ = 0L;
+        countryCode_ = "";
+        if (phoneNumbersBuilder_ == null) {
+          phoneNumbers_ = java.util.Collections.emptyList();
+        } else {
+          phoneNumbers_ = null;
+          phoneNumbersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v24.resources.CampaignProto.internal_static_google_ads_googleads_v24_resources_Campaign_LocalServicesPmaxCampaignSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings getDefaultInstanceForType() {
+        return com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings build() {
+        com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings buildPartial() {
+        com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings result = new com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings result) {
+        if (phoneNumbersBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            phoneNumbers_ = java.util.Collections.unmodifiableList(phoneNumbers_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.phoneNumbers_ = phoneNumbers_;
+        } else {
+          result.phoneNumbers_ = phoneNumbersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.navigationalQueryLeadsEnabled_ = navigationalQueryLeadsEnabled_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.foundingYear_ = foundingYear_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.countryCode_ = countryCode_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings) {
+          return mergeFrom((com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings other) {
+        if (other == com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.getDefaultInstance()) return this;
+        if (other.hasNavigationalQueryLeadsEnabled()) {
+          setNavigationalQueryLeadsEnabled(other.getNavigationalQueryLeadsEnabled());
+        }
+        if (other.hasFoundingYear()) {
+          setFoundingYear(other.getFoundingYear());
+        }
+        if (other.hasCountryCode()) {
+          countryCode_ = other.countryCode_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (phoneNumbersBuilder_ == null) {
+          if (!other.phoneNumbers_.isEmpty()) {
+            if (phoneNumbers_.isEmpty()) {
+              phoneNumbers_ = other.phoneNumbers_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensurePhoneNumbersIsMutable();
+              phoneNumbers_.addAll(other.phoneNumbers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.phoneNumbers_.isEmpty()) {
+            if (phoneNumbersBuilder_.isEmpty()) {
+              phoneNumbersBuilder_.dispose();
+              phoneNumbersBuilder_ = null;
+              phoneNumbers_ = other.phoneNumbers_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              phoneNumbersBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetPhoneNumbersFieldBuilder() : null;
+            } else {
+              phoneNumbersBuilder_.addAllMessages(other.phoneNumbers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                navigationalQueryLeadsEnabled_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                foundingYear_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                countryCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.google.ads.googleads.v24.common.LocalServicesPhoneNumber m =
+                    input.readMessage(
+                        com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.parser(),
+                        extensionRegistry);
+                if (phoneNumbersBuilder_ == null) {
+                  ensurePhoneNumbersIsMutable();
+                  phoneNumbers_.add(m);
+                } else {
+                  phoneNumbersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean navigationalQueryLeadsEnabled_ ;
+      /**
+       * <pre>
+       * Whether to use navigational query filter.
+       * </pre>
+       *
+       * <code>optional bool navigational_query_leads_enabled = 1;</code>
+       * @return Whether the navigationalQueryLeadsEnabled field is set.
+       */
+      @java.lang.Override
+      public boolean hasNavigationalQueryLeadsEnabled() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Whether to use navigational query filter.
+       * </pre>
+       *
+       * <code>optional bool navigational_query_leads_enabled = 1;</code>
+       * @return The navigationalQueryLeadsEnabled.
+       */
+      @java.lang.Override
+      public boolean getNavigationalQueryLeadsEnabled() {
+        return navigationalQueryLeadsEnabled_;
+      }
+      /**
+       * <pre>
+       * Whether to use navigational query filter.
+       * </pre>
+       *
+       * <code>optional bool navigational_query_leads_enabled = 1;</code>
+       * @param value The navigationalQueryLeadsEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNavigationalQueryLeadsEnabled(boolean value) {
+
+        navigationalQueryLeadsEnabled_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether to use navigational query filter.
+       * </pre>
+       *
+       * <code>optional bool navigational_query_leads_enabled = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNavigationalQueryLeadsEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        navigationalQueryLeadsEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long foundingYear_ ;
+      /**
+       * <pre>
+       * Founding year of the business.
+       * </pre>
+       *
+       * <code>optional int64 founding_year = 2;</code>
+       * @return Whether the foundingYear field is set.
+       */
+      @java.lang.Override
+      public boolean hasFoundingYear() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Founding year of the business.
+       * </pre>
+       *
+       * <code>optional int64 founding_year = 2;</code>
+       * @return The foundingYear.
+       */
+      @java.lang.Override
+      public long getFoundingYear() {
+        return foundingYear_;
+      }
+      /**
+       * <pre>
+       * Founding year of the business.
+       * </pre>
+       *
+       * <code>optional int64 founding_year = 2;</code>
+       * @param value The foundingYear to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFoundingYear(long value) {
+
+        foundingYear_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Founding year of the business.
+       * </pre>
+       *
+       * <code>optional int64 founding_year = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFoundingYear() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        foundingYear_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object countryCode_ = "";
+      /**
+       * <pre>
+       * Immutable. Country code of the Local Services Ad. Set once during Ad
+       * Creation and used to determine verification requirements and validate
+       * location criterion selection; upper-case, two-letter codes as defined by
+       * ISO-3166.
+       * </pre>
+       *
+       * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return Whether the countryCode field is set.
+       */
+      public boolean hasCountryCode() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Immutable. Country code of the Local Services Ad. Set once during Ad
+       * Creation and used to determine verification requirements and validate
+       * location criterion selection; upper-case, two-letter codes as defined by
+       * ISO-3166.
+       * </pre>
+       *
+       * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The countryCode.
+       */
+      public java.lang.String getCountryCode() {
+        java.lang.Object ref = countryCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          countryCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Immutable. Country code of the Local Services Ad. Set once during Ad
+       * Creation and used to determine verification requirements and validate
+       * location criterion selection; upper-case, two-letter codes as defined by
+       * ISO-3166.
+       * </pre>
+       *
+       * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The bytes for countryCode.
+       */
+      public com.google.protobuf.ByteString
+          getCountryCodeBytes() {
+        java.lang.Object ref = countryCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          countryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Immutable. Country code of the Local Services Ad. Set once during Ad
+       * Creation and used to determine verification requirements and validate
+       * location criterion selection; upper-case, two-letter codes as defined by
+       * ISO-3166.
+       * </pre>
+       *
+       * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @param value The countryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        countryCode_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. Country code of the Local Services Ad. Set once during Ad
+       * Creation and used to determine verification requirements and validate
+       * location criterion selection; upper-case, two-letter codes as defined by
+       * ISO-3166.
+       * </pre>
+       *
+       * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountryCode() {
+        countryCode_ = getDefaultInstance().getCountryCode();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. Country code of the Local Services Ad. Set once during Ad
+       * Creation and used to determine verification requirements and validate
+       * location criterion selection; upper-case, two-letter codes as defined by
+       * ISO-3166.
+       * </pre>
+       *
+       * <code>optional string country_code = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @param value The bytes for countryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        countryCode_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.google.ads.googleads.v24.common.LocalServicesPhoneNumber> phoneNumbers_ =
+        java.util.Collections.emptyList();
+      private void ensurePhoneNumbersIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          phoneNumbers_ = new java.util.ArrayList<com.google.ads.googleads.v24.common.LocalServicesPhoneNumber>(phoneNumbers_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.ads.googleads.v24.common.LocalServicesPhoneNumber, com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.Builder, com.google.ads.googleads.v24.common.LocalServicesPhoneNumberOrBuilder> phoneNumbersBuilder_;
+
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public java.util.List<com.google.ads.googleads.v24.common.LocalServicesPhoneNumber> getPhoneNumbersList() {
+        if (phoneNumbersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(phoneNumbers_);
+        } else {
+          return phoneNumbersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public int getPhoneNumbersCount() {
+        if (phoneNumbersBuilder_ == null) {
+          return phoneNumbers_.size();
+        } else {
+          return phoneNumbersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public com.google.ads.googleads.v24.common.LocalServicesPhoneNumber getPhoneNumbers(int index) {
+        if (phoneNumbersBuilder_ == null) {
+          return phoneNumbers_.get(index);
+        } else {
+          return phoneNumbersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public Builder setPhoneNumbers(
+          int index, com.google.ads.googleads.v24.common.LocalServicesPhoneNumber value) {
+        if (phoneNumbersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePhoneNumbersIsMutable();
+          phoneNumbers_.set(index, value);
+          onChanged();
+        } else {
+          phoneNumbersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public Builder setPhoneNumbers(
+          int index, com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.Builder builderForValue) {
+        if (phoneNumbersBuilder_ == null) {
+          ensurePhoneNumbersIsMutable();
+          phoneNumbers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          phoneNumbersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public Builder addPhoneNumbers(com.google.ads.googleads.v24.common.LocalServicesPhoneNumber value) {
+        if (phoneNumbersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePhoneNumbersIsMutable();
+          phoneNumbers_.add(value);
+          onChanged();
+        } else {
+          phoneNumbersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public Builder addPhoneNumbers(
+          int index, com.google.ads.googleads.v24.common.LocalServicesPhoneNumber value) {
+        if (phoneNumbersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePhoneNumbersIsMutable();
+          phoneNumbers_.add(index, value);
+          onChanged();
+        } else {
+          phoneNumbersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public Builder addPhoneNumbers(
+          com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.Builder builderForValue) {
+        if (phoneNumbersBuilder_ == null) {
+          ensurePhoneNumbersIsMutable();
+          phoneNumbers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          phoneNumbersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public Builder addPhoneNumbers(
+          int index, com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.Builder builderForValue) {
+        if (phoneNumbersBuilder_ == null) {
+          ensurePhoneNumbersIsMutable();
+          phoneNumbers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          phoneNumbersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public Builder addAllPhoneNumbers(
+          java.lang.Iterable<? extends com.google.ads.googleads.v24.common.LocalServicesPhoneNumber> values) {
+        if (phoneNumbersBuilder_ == null) {
+          ensurePhoneNumbersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, phoneNumbers_);
+          onChanged();
+        } else {
+          phoneNumbersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public Builder clearPhoneNumbers() {
+        if (phoneNumbersBuilder_ == null) {
+          phoneNumbers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          phoneNumbersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public Builder removePhoneNumbers(int index) {
+        if (phoneNumbersBuilder_ == null) {
+          ensurePhoneNumbersIsMutable();
+          phoneNumbers_.remove(index);
+          onChanged();
+        } else {
+          phoneNumbersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.Builder getPhoneNumbersBuilder(
+          int index) {
+        return internalGetPhoneNumbersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public com.google.ads.googleads.v24.common.LocalServicesPhoneNumberOrBuilder getPhoneNumbersOrBuilder(
+          int index) {
+        if (phoneNumbersBuilder_ == null) {
+          return phoneNumbers_.get(index);  } else {
+          return phoneNumbersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public java.util.List<? extends com.google.ads.googleads.v24.common.LocalServicesPhoneNumberOrBuilder> 
+           getPhoneNumbersOrBuilderList() {
+        if (phoneNumbersBuilder_ != null) {
+          return phoneNumbersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(phoneNumbers_);
+        }
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.Builder addPhoneNumbersBuilder() {
+        return internalGetPhoneNumbersFieldBuilder().addBuilder(
+            com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.Builder addPhoneNumbersBuilder(
+          int index) {
+        return internalGetPhoneNumbersFieldBuilder().addBuilder(
+            index, com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of phone numbers associated with the provider.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v24.common.LocalServicesPhoneNumber phone_numbers = 4;</code>
+       */
+      public java.util.List<com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.Builder> 
+           getPhoneNumbersBuilderList() {
+        return internalGetPhoneNumbersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.ads.googleads.v24.common.LocalServicesPhoneNumber, com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.Builder, com.google.ads.googleads.v24.common.LocalServicesPhoneNumberOrBuilder> 
+          internalGetPhoneNumbersFieldBuilder() {
+        if (phoneNumbersBuilder_ == null) {
+          phoneNumbersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.google.ads.googleads.v24.common.LocalServicesPhoneNumber, com.google.ads.googleads.v24.common.LocalServicesPhoneNumber.Builder, com.google.ads.googleads.v24.common.LocalServicesPhoneNumberOrBuilder>(
+                  phoneNumbers_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          phoneNumbers_ = null;
+        }
+        return phoneNumbersBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings)
+    private static final com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings();
+    }
+
+    public static com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LocalServicesPmaxCampaignSettings>
+        PARSER = new com.google.protobuf.AbstractParser<LocalServicesPmaxCampaignSettings>() {
+      @java.lang.Override
+      public LocalServicesPmaxCampaignSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LocalServicesPmaxCampaignSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LocalServicesPmaxCampaignSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21188,6 +22713,57 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v24.resources.Campaign.PmaxCampaignSettings.BrandTargetingOverrides brand_targeting_overrides = 1;</code>
      */
     com.google.ads.googleads.v24.resources.Campaign.PmaxCampaignSettings.BrandTargetingOverridesOrBuilder getBrandTargetingOverridesOrBuilder();
+
+    /**
+     * <pre>
+     * The Local Services Campaign related settings. Only updates are available
+     * for existing Local Services Pmax campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+     * @return Whether the localServicesPmaxCampaignSettings field is set.
+     */
+    boolean hasLocalServicesPmaxCampaignSettings();
+    /**
+     * <pre>
+     * The Local Services Campaign related settings. Only updates are available
+     * for existing Local Services Pmax campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+     * @return The localServicesPmaxCampaignSettings.
+     */
+    com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings getLocalServicesPmaxCampaignSettings();
+    /**
+     * <pre>
+     * The Local Services Campaign related settings. Only updates are available
+     * for existing Local Services Pmax campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+     */
+    com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettingsOrBuilder getLocalServicesPmaxCampaignSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. Indicates whether the Performance Max campaign is a Local
+     * Services campaign.
+     * </pre>
+     *
+     * <code>optional bool local_services_enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the localServicesEnabled field is set.
+     */
+    boolean hasLocalServicesEnabled();
+    /**
+     * <pre>
+     * Output only. Indicates whether the Performance Max campaign is a Local
+     * Services campaign.
+     * </pre>
+     *
+     * <code>optional bool local_services_enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The localServicesEnabled.
+     */
+    boolean getLocalServicesEnabled();
   }
   /**
    * <pre>
@@ -21774,6 +23350,76 @@ private static final long serialVersionUID = 0L;
       return brandTargetingOverrides_ == null ? com.google.ads.googleads.v24.resources.Campaign.PmaxCampaignSettings.BrandTargetingOverrides.getDefaultInstance() : brandTargetingOverrides_;
     }
 
+    public static final int LOCAL_SERVICES_PMAX_CAMPAIGN_SETTINGS_FIELD_NUMBER = 2;
+    private com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings localServicesPmaxCampaignSettings_;
+    /**
+     * <pre>
+     * The Local Services Campaign related settings. Only updates are available
+     * for existing Local Services Pmax campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+     * @return Whether the localServicesPmaxCampaignSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalServicesPmaxCampaignSettings() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The Local Services Campaign related settings. Only updates are available
+     * for existing Local Services Pmax campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+     * @return The localServicesPmaxCampaignSettings.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings getLocalServicesPmaxCampaignSettings() {
+      return localServicesPmaxCampaignSettings_ == null ? com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.getDefaultInstance() : localServicesPmaxCampaignSettings_;
+    }
+    /**
+     * <pre>
+     * The Local Services Campaign related settings. Only updates are available
+     * for existing Local Services Pmax campaigns.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettingsOrBuilder getLocalServicesPmaxCampaignSettingsOrBuilder() {
+      return localServicesPmaxCampaignSettings_ == null ? com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.getDefaultInstance() : localServicesPmaxCampaignSettings_;
+    }
+
+    public static final int LOCAL_SERVICES_ENABLED_FIELD_NUMBER = 3;
+    private boolean localServicesEnabled_ = false;
+    /**
+     * <pre>
+     * Output only. Indicates whether the Performance Max campaign is a Local
+     * Services campaign.
+     * </pre>
+     *
+     * <code>optional bool local_services_enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the localServicesEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalServicesEnabled() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. Indicates whether the Performance Max campaign is a Local
+     * Services campaign.
+     * </pre>
+     *
+     * <code>optional bool local_services_enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The localServicesEnabled.
+     */
+    @java.lang.Override
+    public boolean getLocalServicesEnabled() {
+      return localServicesEnabled_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21791,6 +23437,12 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBrandTargetingOverrides());
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getLocalServicesPmaxCampaignSettings());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, localServicesEnabled_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -21803,6 +23455,14 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBrandTargetingOverrides());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getLocalServicesPmaxCampaignSettings());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, localServicesEnabled_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -21824,6 +23484,16 @@ private static final long serialVersionUID = 0L;
         if (!getBrandTargetingOverrides()
             .equals(other.getBrandTargetingOverrides())) return false;
       }
+      if (hasLocalServicesPmaxCampaignSettings() != other.hasLocalServicesPmaxCampaignSettings()) return false;
+      if (hasLocalServicesPmaxCampaignSettings()) {
+        if (!getLocalServicesPmaxCampaignSettings()
+            .equals(other.getLocalServicesPmaxCampaignSettings())) return false;
+      }
+      if (hasLocalServicesEnabled() != other.hasLocalServicesEnabled()) return false;
+      if (hasLocalServicesEnabled()) {
+        if (getLocalServicesEnabled()
+            != other.getLocalServicesEnabled()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -21838,6 +23508,15 @@ private static final long serialVersionUID = 0L;
       if (hasBrandTargetingOverrides()) {
         hash = (37 * hash) + BRAND_TARGETING_OVERRIDES_FIELD_NUMBER;
         hash = (53 * hash) + getBrandTargetingOverrides().hashCode();
+      }
+      if (hasLocalServicesPmaxCampaignSettings()) {
+        hash = (37 * hash) + LOCAL_SERVICES_PMAX_CAMPAIGN_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalServicesPmaxCampaignSettings().hashCode();
+      }
+      if (hasLocalServicesEnabled()) {
+        hash = (37 * hash) + LOCAL_SERVICES_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getLocalServicesEnabled());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -21974,6 +23653,7 @@ private static final long serialVersionUID = 0L;
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
           internalGetBrandTargetingOverridesFieldBuilder();
+          internalGetLocalServicesPmaxCampaignSettingsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -21985,6 +23665,12 @@ private static final long serialVersionUID = 0L;
           brandTargetingOverridesBuilder_.dispose();
           brandTargetingOverridesBuilder_ = null;
         }
+        localServicesPmaxCampaignSettings_ = null;
+        if (localServicesPmaxCampaignSettingsBuilder_ != null) {
+          localServicesPmaxCampaignSettingsBuilder_.dispose();
+          localServicesPmaxCampaignSettingsBuilder_ = null;
+        }
+        localServicesEnabled_ = false;
         return this;
       }
 
@@ -22025,6 +23711,16 @@ private static final long serialVersionUID = 0L;
               : brandTargetingOverridesBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.localServicesPmaxCampaignSettings_ = localServicesPmaxCampaignSettingsBuilder_ == null
+              ? localServicesPmaxCampaignSettings_
+              : localServicesPmaxCampaignSettingsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.localServicesEnabled_ = localServicesEnabled_;
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -22042,6 +23738,12 @@ private static final long serialVersionUID = 0L;
         if (other == com.google.ads.googleads.v24.resources.Campaign.PmaxCampaignSettings.getDefaultInstance()) return this;
         if (other.hasBrandTargetingOverrides()) {
           mergeBrandTargetingOverrides(other.getBrandTargetingOverrides());
+        }
+        if (other.hasLocalServicesPmaxCampaignSettings()) {
+          mergeLocalServicesPmaxCampaignSettings(other.getLocalServicesPmaxCampaignSettings());
+        }
+        if (other.hasLocalServicesEnabled()) {
+          setLocalServicesEnabled(other.getLocalServicesEnabled());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -22076,6 +23778,18 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    internalGetLocalServicesPmaxCampaignSettingsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                localServicesEnabled_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -22248,6 +23962,232 @@ private static final long serialVersionUID = 0L;
           brandTargetingOverrides_ = null;
         }
         return brandTargetingOverridesBuilder_;
+      }
+
+      private com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings localServicesPmaxCampaignSettings_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings, com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.Builder, com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettingsOrBuilder> localServicesPmaxCampaignSettingsBuilder_;
+      /**
+       * <pre>
+       * The Local Services Campaign related settings. Only updates are available
+       * for existing Local Services Pmax campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+       * @return Whether the localServicesPmaxCampaignSettings field is set.
+       */
+      public boolean hasLocalServicesPmaxCampaignSettings() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The Local Services Campaign related settings. Only updates are available
+       * for existing Local Services Pmax campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+       * @return The localServicesPmaxCampaignSettings.
+       */
+      public com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings getLocalServicesPmaxCampaignSettings() {
+        if (localServicesPmaxCampaignSettingsBuilder_ == null) {
+          return localServicesPmaxCampaignSettings_ == null ? com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.getDefaultInstance() : localServicesPmaxCampaignSettings_;
+        } else {
+          return localServicesPmaxCampaignSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The Local Services Campaign related settings. Only updates are available
+       * for existing Local Services Pmax campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+       */
+      public Builder setLocalServicesPmaxCampaignSettings(com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings value) {
+        if (localServicesPmaxCampaignSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          localServicesPmaxCampaignSettings_ = value;
+        } else {
+          localServicesPmaxCampaignSettingsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Local Services Campaign related settings. Only updates are available
+       * for existing Local Services Pmax campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+       */
+      public Builder setLocalServicesPmaxCampaignSettings(
+          com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.Builder builderForValue) {
+        if (localServicesPmaxCampaignSettingsBuilder_ == null) {
+          localServicesPmaxCampaignSettings_ = builderForValue.build();
+        } else {
+          localServicesPmaxCampaignSettingsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Local Services Campaign related settings. Only updates are available
+       * for existing Local Services Pmax campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+       */
+      public Builder mergeLocalServicesPmaxCampaignSettings(com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings value) {
+        if (localServicesPmaxCampaignSettingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            localServicesPmaxCampaignSettings_ != null &&
+            localServicesPmaxCampaignSettings_ != com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.getDefaultInstance()) {
+            getLocalServicesPmaxCampaignSettingsBuilder().mergeFrom(value);
+          } else {
+            localServicesPmaxCampaignSettings_ = value;
+          }
+        } else {
+          localServicesPmaxCampaignSettingsBuilder_.mergeFrom(value);
+        }
+        if (localServicesPmaxCampaignSettings_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The Local Services Campaign related settings. Only updates are available
+       * for existing Local Services Pmax campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+       */
+      public Builder clearLocalServicesPmaxCampaignSettings() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        localServicesPmaxCampaignSettings_ = null;
+        if (localServicesPmaxCampaignSettingsBuilder_ != null) {
+          localServicesPmaxCampaignSettingsBuilder_.dispose();
+          localServicesPmaxCampaignSettingsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Local Services Campaign related settings. Only updates are available
+       * for existing Local Services Pmax campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+       */
+      public com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.Builder getLocalServicesPmaxCampaignSettingsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return internalGetLocalServicesPmaxCampaignSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The Local Services Campaign related settings. Only updates are available
+       * for existing Local Services Pmax campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+       */
+      public com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettingsOrBuilder getLocalServicesPmaxCampaignSettingsOrBuilder() {
+        if (localServicesPmaxCampaignSettingsBuilder_ != null) {
+          return localServicesPmaxCampaignSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return localServicesPmaxCampaignSettings_ == null ?
+              com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.getDefaultInstance() : localServicesPmaxCampaignSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * The Local Services Campaign related settings. Only updates are available
+       * for existing Local Services Pmax campaigns.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings local_services_pmax_campaign_settings = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings, com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.Builder, com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettingsOrBuilder> 
+          internalGetLocalServicesPmaxCampaignSettingsFieldBuilder() {
+        if (localServicesPmaxCampaignSettingsBuilder_ == null) {
+          localServicesPmaxCampaignSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings, com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettings.Builder, com.google.ads.googleads.v24.resources.Campaign.LocalServicesPmaxCampaignSettingsOrBuilder>(
+                  getLocalServicesPmaxCampaignSettings(),
+                  getParentForChildren(),
+                  isClean());
+          localServicesPmaxCampaignSettings_ = null;
+        }
+        return localServicesPmaxCampaignSettingsBuilder_;
+      }
+
+      private boolean localServicesEnabled_ ;
+      /**
+       * <pre>
+       * Output only. Indicates whether the Performance Max campaign is a Local
+       * Services campaign.
+       * </pre>
+       *
+       * <code>optional bool local_services_enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the localServicesEnabled field is set.
+       */
+      @java.lang.Override
+      public boolean hasLocalServicesEnabled() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. Indicates whether the Performance Max campaign is a Local
+       * Services campaign.
+       * </pre>
+       *
+       * <code>optional bool local_services_enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The localServicesEnabled.
+       */
+      @java.lang.Override
+      public boolean getLocalServicesEnabled() {
+        return localServicesEnabled_;
+      }
+      /**
+       * <pre>
+       * Output only. Indicates whether the Performance Max campaign is a Local
+       * Services campaign.
+       * </pre>
+       *
+       * <code>optional bool local_services_enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The localServicesEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalServicesEnabled(boolean value) {
+
+        localServicesEnabled_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Indicates whether the Performance Max campaign is a Local
+       * Services campaign.
+       * </pre>
+       *
+       * <code>optional bool local_services_enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalServicesEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        localServicesEnabled_ = false;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.Campaign.PmaxCampaignSettings)
@@ -25920,8 +27860,13 @@ private static final long serialVersionUID = 0L;
      * Max features will serve for this campaign, regardless of the other
      * settings.
      *
-     * Search Term Matching is enabled by default when AI Max is enabled, and
-     * can be disabled at the ad group level.
+     * Supported in Search and Shopping campaigns.
+     *
+     * For Search campaigns, Search Term Matching is enabled by default when
+     * AI Max is enabled, and can be disabled at the ad group level.
+     *
+     * For Shopping campaigns, Text customization is always enabled when AI Max
+     * is enabled.
      * </pre>
      *
      * <code>optional bool enable_ai_max = 1;</code>
@@ -25937,8 +27882,13 @@ private static final long serialVersionUID = 0L;
      * Max features will serve for this campaign, regardless of the other
      * settings.
      *
-     * Search Term Matching is enabled by default when AI Max is enabled, and
-     * can be disabled at the ad group level.
+     * Supported in Search and Shopping campaigns.
+     *
+     * For Search campaigns, Search Term Matching is enabled by default when
+     * AI Max is enabled, and can be disabled at the ad group level.
+     *
+     * For Shopping campaigns, Text customization is always enabled when AI Max
+     * is enabled.
      * </pre>
      *
      * <code>optional bool enable_ai_max = 1;</code>
@@ -25948,9 +27898,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. Indicates whether a search campaign has adopted AI Max
-     * before, and is required to have AI Max enabled to adopt campaign-level
-     * text asset automation and brand list targeting in all API versions.
+     * Output only. Search campaigns only. Indicates whether a campaign has
+     * adopted AI Max before, and is required to have AI Max enabled to adopt
+     * campaign-level text asset automation and brand list targeting in all API
+     * versions.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -25959,9 +27910,10 @@ private static final long serialVersionUID = 0L;
     boolean hasBundlingRequired();
     /**
      * <pre>
-     * Output only. Indicates whether a search campaign has adopted AI Max
-     * before, and is required to have AI Max enabled to adopt campaign-level
-     * text asset automation and brand list targeting in all API versions.
+     * Output only. Search campaigns only. Indicates whether a campaign has
+     * adopted AI Max before, and is required to have AI Max enabled to adopt
+     * campaign-level text asset automation and brand list targeting in all API
+     * versions.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -25970,9 +27922,10 @@ private static final long serialVersionUID = 0L;
     int getBundlingRequiredValue();
     /**
      * <pre>
-     * Output only. Indicates whether a search campaign has adopted AI Max
-     * before, and is required to have AI Max enabled to adopt campaign-level
-     * text asset automation and brand list targeting in all API versions.
+     * Output only. Search campaigns only. Indicates whether a campaign has
+     * adopted AI Max before, and is required to have AI Max enabled to adopt
+     * campaign-level text asset automation and brand list targeting in all API
+     * versions.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -25982,7 +27935,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Settings for AI Max in search campaigns.
+   * Settings for AI Max in Search and Shopping campaigns.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v24.resources.Campaign.AiMaxSetting}
@@ -26214,8 +28167,13 @@ private static final long serialVersionUID = 0L;
      * Max features will serve for this campaign, regardless of the other
      * settings.
      *
-     * Search Term Matching is enabled by default when AI Max is enabled, and
-     * can be disabled at the ad group level.
+     * Supported in Search and Shopping campaigns.
+     *
+     * For Search campaigns, Search Term Matching is enabled by default when
+     * AI Max is enabled, and can be disabled at the ad group level.
+     *
+     * For Shopping campaigns, Text customization is always enabled when AI Max
+     * is enabled.
      * </pre>
      *
      * <code>optional bool enable_ai_max = 1;</code>
@@ -26234,8 +28192,13 @@ private static final long serialVersionUID = 0L;
      * Max features will serve for this campaign, regardless of the other
      * settings.
      *
-     * Search Term Matching is enabled by default when AI Max is enabled, and
-     * can be disabled at the ad group level.
+     * Supported in Search and Shopping campaigns.
+     *
+     * For Search campaigns, Search Term Matching is enabled by default when
+     * AI Max is enabled, and can be disabled at the ad group level.
+     *
+     * For Shopping campaigns, Text customization is always enabled when AI Max
+     * is enabled.
      * </pre>
      *
      * <code>optional bool enable_ai_max = 1;</code>
@@ -26250,9 +28213,10 @@ private static final long serialVersionUID = 0L;
     private int bundlingRequired_ = 0;
     /**
      * <pre>
-     * Output only. Indicates whether a search campaign has adopted AI Max
-     * before, and is required to have AI Max enabled to adopt campaign-level
-     * text asset automation and brand list targeting in all API versions.
+     * Output only. Search campaigns only. Indicates whether a campaign has
+     * adopted AI Max before, and is required to have AI Max enabled to adopt
+     * campaign-level text asset automation and brand list targeting in all API
+     * versions.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -26263,9 +28227,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Indicates whether a search campaign has adopted AI Max
-     * before, and is required to have AI Max enabled to adopt campaign-level
-     * text asset automation and brand list targeting in all API versions.
+     * Output only. Search campaigns only. Indicates whether a campaign has
+     * adopted AI Max before, and is required to have AI Max enabled to adopt
+     * campaign-level text asset automation and brand list targeting in all API
+     * versions.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -26276,9 +28241,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Indicates whether a search campaign has adopted AI Max
-     * before, and is required to have AI Max enabled to adopt campaign-level
-     * text asset automation and brand list targeting in all API versions.
+     * Output only. Search campaigns only. Indicates whether a campaign has
+     * adopted AI Max before, and is required to have AI Max enabled to adopt
+     * campaign-level text asset automation and brand list targeting in all API
+     * versions.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -26469,7 +28435,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Settings for AI Max in search campaigns.
+     * Settings for AI Max in Search and Shopping campaigns.
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v24.resources.Campaign.AiMaxSetting}
@@ -26633,8 +28599,13 @@ private static final long serialVersionUID = 0L;
        * Max features will serve for this campaign, regardless of the other
        * settings.
        *
-       * Search Term Matching is enabled by default when AI Max is enabled, and
-       * can be disabled at the ad group level.
+       * Supported in Search and Shopping campaigns.
+       *
+       * For Search campaigns, Search Term Matching is enabled by default when
+       * AI Max is enabled, and can be disabled at the ad group level.
+       *
+       * For Shopping campaigns, Text customization is always enabled when AI Max
+       * is enabled.
        * </pre>
        *
        * <code>optional bool enable_ai_max = 1;</code>
@@ -26653,8 +28624,13 @@ private static final long serialVersionUID = 0L;
        * Max features will serve for this campaign, regardless of the other
        * settings.
        *
-       * Search Term Matching is enabled by default when AI Max is enabled, and
-       * can be disabled at the ad group level.
+       * Supported in Search and Shopping campaigns.
+       *
+       * For Search campaigns, Search Term Matching is enabled by default when
+       * AI Max is enabled, and can be disabled at the ad group level.
+       *
+       * For Shopping campaigns, Text customization is always enabled when AI Max
+       * is enabled.
        * </pre>
        *
        * <code>optional bool enable_ai_max = 1;</code>
@@ -26673,8 +28649,13 @@ private static final long serialVersionUID = 0L;
        * Max features will serve for this campaign, regardless of the other
        * settings.
        *
-       * Search Term Matching is enabled by default when AI Max is enabled, and
-       * can be disabled at the ad group level.
+       * Supported in Search and Shopping campaigns.
+       *
+       * For Search campaigns, Search Term Matching is enabled by default when
+       * AI Max is enabled, and can be disabled at the ad group level.
+       *
+       * For Shopping campaigns, Text customization is always enabled when AI Max
+       * is enabled.
        * </pre>
        *
        * <code>optional bool enable_ai_max = 1;</code>
@@ -26697,8 +28678,13 @@ private static final long serialVersionUID = 0L;
        * Max features will serve for this campaign, regardless of the other
        * settings.
        *
-       * Search Term Matching is enabled by default when AI Max is enabled, and
-       * can be disabled at the ad group level.
+       * Supported in Search and Shopping campaigns.
+       *
+       * For Search campaigns, Search Term Matching is enabled by default when
+       * AI Max is enabled, and can be disabled at the ad group level.
+       *
+       * For Shopping campaigns, Text customization is always enabled when AI Max
+       * is enabled.
        * </pre>
        *
        * <code>optional bool enable_ai_max = 1;</code>
@@ -26714,9 +28700,10 @@ private static final long serialVersionUID = 0L;
       private int bundlingRequired_ = 0;
       /**
        * <pre>
-       * Output only. Indicates whether a search campaign has adopted AI Max
-       * before, and is required to have AI Max enabled to adopt campaign-level
-       * text asset automation and brand list targeting in all API versions.
+       * Output only. Search campaigns only. Indicates whether a campaign has
+       * adopted AI Max before, and is required to have AI Max enabled to adopt
+       * campaign-level text asset automation and brand list targeting in all API
+       * versions.
        * </pre>
        *
        * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -26727,9 +28714,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Indicates whether a search campaign has adopted AI Max
-       * before, and is required to have AI Max enabled to adopt campaign-level
-       * text asset automation and brand list targeting in all API versions.
+       * Output only. Search campaigns only. Indicates whether a campaign has
+       * adopted AI Max before, and is required to have AI Max enabled to adopt
+       * campaign-level text asset automation and brand list targeting in all API
+       * versions.
        * </pre>
        *
        * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -26740,9 +28728,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Indicates whether a search campaign has adopted AI Max
-       * before, and is required to have AI Max enabled to adopt campaign-level
-       * text asset automation and brand list targeting in all API versions.
+       * Output only. Search campaigns only. Indicates whether a campaign has
+       * adopted AI Max before, and is required to have AI Max enabled to adopt
+       * campaign-level text asset automation and brand list targeting in all API
+       * versions.
        * </pre>
        *
        * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -26757,9 +28746,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Indicates whether a search campaign has adopted AI Max
-       * before, and is required to have AI Max enabled to adopt campaign-level
-       * text asset automation and brand list targeting in all API versions.
+       * Output only. Search campaigns only. Indicates whether a campaign has
+       * adopted AI Max before, and is required to have AI Max enabled to adopt
+       * campaign-level text asset automation and brand list targeting in all API
+       * versions.
        * </pre>
        *
        * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -26772,9 +28762,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Indicates whether a search campaign has adopted AI Max
-       * before, and is required to have AI Max enabled to adopt campaign-level
-       * text asset automation and brand list targeting in all API versions.
+       * Output only. Search campaigns only. Indicates whether a campaign has
+       * adopted AI Max before, and is required to have AI Max enabled to adopt
+       * campaign-level text asset automation and brand list targeting in all API
+       * versions.
        * </pre>
        *
        * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -26790,9 +28781,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Indicates whether a search campaign has adopted AI Max
-       * before, and is required to have AI Max enabled to adopt campaign-level
-       * text asset automation and brand list targeting in all API versions.
+       * Output only. Search campaigns only. Indicates whether a campaign has
+       * adopted AI Max before, and is required to have AI Max enabled to adopt
+       * campaign-level text asset automation and brand list targeting in all API
+       * versions.
        * </pre>
        *
        * <code>optional .google.ads.googleads.v24.resources.Campaign.AiMaxSetting.AiMaxBundlingRequired bundling_required = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -29611,7 +31603,7 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v24.resources.Campaign.AiMaxSetting aiMaxSetting_;
   /**
    * <pre>
-   * Settings for AI Max in search campaigns.
+   * Settings for AI Max in Search and Shopping campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -29623,7 +31615,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Settings for AI Max in search campaigns.
+   * Settings for AI Max in Search and Shopping campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -29635,7 +31627,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Settings for AI Max in search campaigns.
+   * Settings for AI Max in Search and Shopping campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -41749,7 +43741,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v24.resources.Campaign.AiMaxSetting, com.google.ads.googleads.v24.resources.Campaign.AiMaxSetting.Builder, com.google.ads.googleads.v24.resources.Campaign.AiMaxSettingOrBuilder> aiMaxSettingBuilder_;
     /**
      * <pre>
-     * Settings for AI Max in search campaigns.
+     * Settings for AI Max in Search and Shopping campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -41760,7 +43752,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Settings for AI Max in search campaigns.
+     * Settings for AI Max in Search and Shopping campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -41775,7 +43767,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Settings for AI Max in search campaigns.
+     * Settings for AI Max in Search and Shopping campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -41795,7 +43787,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Settings for AI Max in search campaigns.
+     * Settings for AI Max in Search and Shopping campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -41813,7 +43805,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Settings for AI Max in search campaigns.
+     * Settings for AI Max in Search and Shopping campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -41838,7 +43830,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Settings for AI Max in search campaigns.
+     * Settings for AI Max in Search and Shopping campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -41855,7 +43847,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Settings for AI Max in search campaigns.
+     * Settings for AI Max in Search and Shopping campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -41867,7 +43859,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Settings for AI Max in search campaigns.
+     * Settings for AI Max in Search and Shopping campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -41882,7 +43874,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Settings for AI Max in search campaigns.
+     * Settings for AI Max in Search and Shopping campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>

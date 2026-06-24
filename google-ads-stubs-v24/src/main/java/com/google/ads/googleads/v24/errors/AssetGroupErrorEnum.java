@@ -200,6 +200,15 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN = 17;</code>
      */
     CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN(17),
+    /**
+     * <pre>
+     * The asset group cannot be removed because it's the last one in the
+     * campaign.
+     * </pre>
+     *
+     * <code>CANNOT_REMOVE_ALL_ASSET_GROUPS_FROM_CAMPAIGN = 18;</code>
+     */
+    CANNOT_REMOVE_ALL_ASSET_GROUPS_FROM_CAMPAIGN(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -356,6 +365,15 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN = 17;</code>
      */
     public static final int CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN_VALUE = 17;
+    /**
+     * <pre>
+     * The asset group cannot be removed because it's the last one in the
+     * campaign.
+     * </pre>
+     *
+     * <code>CANNOT_REMOVE_ALL_ASSET_GROUPS_FROM_CAMPAIGN = 18;</code>
+     */
+    public static final int CANNOT_REMOVE_ALL_ASSET_GROUPS_FROM_CAMPAIGN_VALUE = 18;
 
 
     public final int getNumber() {
@@ -400,6 +418,7 @@ private static final long serialVersionUID = 0L;
         case 15: return FINAL_URL_CONTAINS_INVALID_DOMAIN_NAME;
         case 16: return AD_CUSTOMIZER_NOT_SUPPORTED;
         case 17: return CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN;
+        case 18: return CANNOT_REMOVE_ALL_ASSET_GROUPS_FROM_CAMPAIGN;
         default: return null;
       }
     }

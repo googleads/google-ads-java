@@ -9,11 +9,19 @@ package com.google.ads.googleads.v24.resources;
  * <pre>
  * A view with metrics aggregated by ad group and URL or YouTube video.
  *
+ * Provides granular performance data about specific URLs, YouTube videos,
+ * and apps where your ads showed. This offers a more detailed breakdown
+ * compared to the group_placement_view.
+ *
  * This view primarily surfaces placement data from the Google Display
  * Network. While you can select segments like `segments.ad_network_type`,
  * this view generally does not include placement data from other networks, such
  * as the Search Partners network. To understand performance on Search
  * Partners, consider other reports and segmentations.
+ *
+ * Data for low-traffic placements may be aggregated. This view corresponds to
+ * drilling into details from the "Where ads showed" section in the Google Ads
+ * UI.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v24.resources.DetailPlacementView}
@@ -619,11 +627,19 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * A view with metrics aggregated by ad group and URL or YouTube video.
    *
+   * Provides granular performance data about specific URLs, YouTube videos,
+   * and apps where your ads showed. This offers a more detailed breakdown
+   * compared to the group_placement_view.
+   *
    * This view primarily surfaces placement data from the Google Display
    * Network. While you can select segments like `segments.ad_network_type`,
    * this view generally does not include placement data from other networks, such
    * as the Search Partners network. To understand performance on Search
    * Partners, consider other reports and segmentations.
+   *
+   * Data for low-traffic placements may be aggregated. This view corresponds to
+   * drilling into details from the "Where ads showed" section in the Google Ads
+   * UI.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v24.resources.DetailPlacementView}

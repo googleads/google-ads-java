@@ -74,9 +74,15 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Text asset automation includes headlines and descriptions.
-     * By default, advertisers are opted-in for Performance Max and
+     * Text asset automation (text customization) includes headlines and
+     * descriptions, allowing Google to create customized text assets using your
+     * existing ads, landing page copy, and generative AI across your campaign's
+     * ads. By default, advertisers are opted-in for Performance Max and
      * opted-out for Search.
+     *
+     * Contrast this with `FINAL_URL_EXPANSION_TEXT_ASSET_AUTOMATION`, which
+     * dynamically generates text assets to match the content of dynamically
+     * selected landing pages when final URL expansion is active.
      * </pre>
      *
      * <code>TEXT_ASSET_AUTOMATION = 2;</code>
@@ -115,6 +121,15 @@ private static final long serialVersionUID = 0L;
      * <code>GENERATE_LANDING_PAGE_PREVIEW = 5;</code>
      */
     GENERATE_LANDING_PAGE_PREVIEW(5),
+    /**
+     * <pre>
+     * Generates text information from the landing page to be shown in the
+     * engagement panel. Opted in by default for DemandGenVideoResponsiveAd.
+     * </pre>
+     *
+     * <code>GENERATE_LANDING_PAGE_TEXT = 14;</code>
+     */
+    GENERATE_LANDING_PAGE_TEXT(14),
     /**
      * <pre>
      * Generates video enhancements (vertical and shorter videos) for PMax
@@ -159,6 +174,14 @@ private static final long serialVersionUID = 0L;
      * and generating text assets from the content of those landing pages. This
      * setting is turned OFF by default for Search campaigns, but it is turned
      * ON by default for Performance Max campaigns.
+     *
+     * Enabling final URL expansion also enables text asset automation. There is
+     * no way to opt out of text asset automation and still use final URL
+     * expansion.
+     *
+     * Contrast this with standard `TEXT_ASSET_AUTOMATION` (text customization),
+     * which customizes copy across all ads in the campaign even when final URL
+     * expansion does not occur.
      * </pre>
      *
      * <code>FINAL_URL_EXPANSION_TEXT_ASSET_AUTOMATION = 11;</code>
@@ -203,9 +226,15 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Text asset automation includes headlines and descriptions.
-     * By default, advertisers are opted-in for Performance Max and
+     * Text asset automation (text customization) includes headlines and
+     * descriptions, allowing Google to create customized text assets using your
+     * existing ads, landing page copy, and generative AI across your campaign's
+     * ads. By default, advertisers are opted-in for Performance Max and
      * opted-out for Search.
+     *
+     * Contrast this with `FINAL_URL_EXPANSION_TEXT_ASSET_AUTOMATION`, which
+     * dynamically generates text assets to match the content of dynamically
+     * selected landing pages when final URL expansion is active.
      * </pre>
      *
      * <code>TEXT_ASSET_AUTOMATION = 2;</code>
@@ -244,6 +273,15 @@ private static final long serialVersionUID = 0L;
      * <code>GENERATE_LANDING_PAGE_PREVIEW = 5;</code>
      */
     public static final int GENERATE_LANDING_PAGE_PREVIEW_VALUE = 5;
+    /**
+     * <pre>
+     * Generates text information from the landing page to be shown in the
+     * engagement panel. Opted in by default for DemandGenVideoResponsiveAd.
+     * </pre>
+     *
+     * <code>GENERATE_LANDING_PAGE_TEXT = 14;</code>
+     */
+    public static final int GENERATE_LANDING_PAGE_TEXT_VALUE = 14;
     /**
      * <pre>
      * Generates video enhancements (vertical and shorter videos) for PMax
@@ -288,6 +326,14 @@ private static final long serialVersionUID = 0L;
      * and generating text assets from the content of those landing pages. This
      * setting is turned OFF by default for Search campaigns, but it is turned
      * ON by default for Performance Max campaigns.
+     *
+     * Enabling final URL expansion also enables text asset automation. There is
+     * no way to opt out of text asset automation and still use final URL
+     * expansion.
+     *
+     * Contrast this with standard `TEXT_ASSET_AUTOMATION` (text customization),
+     * which customizes copy across all ads in the campaign even when final URL
+     * expansion does not occur.
      * </pre>
      *
      * <code>FINAL_URL_EXPANSION_TEXT_ASSET_AUTOMATION = 11;</code>
@@ -334,6 +380,7 @@ private static final long serialVersionUID = 0L;
         case 3: return GENERATE_VERTICAL_YOUTUBE_VIDEOS;
         case 4: return GENERATE_SHORTER_YOUTUBE_VIDEOS;
         case 5: return GENERATE_LANDING_PAGE_PREVIEW;
+        case 14: return GENERATE_LANDING_PAGE_TEXT;
         case 6: return GENERATE_ENHANCED_YOUTUBE_VIDEOS;
         case 7: return GENERATE_IMAGE_ENHANCEMENT;
         case 9: return GENERATE_IMAGE_EXTRACTION;

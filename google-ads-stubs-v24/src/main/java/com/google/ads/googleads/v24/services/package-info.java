@@ -1026,7 +1026,9 @@
  *
  * <p>Service Description: Content Creator Insights Service helps users find information about
  * YouTube Creators and their content and how these creators and their audiences can be reached with
- * Google Ads. Accessible to allowlisted customers only.
+ * Google Ads. Refer to the [YouTube creator insights
+ * guide](https://developers.google.com/google-ads/api/docs/insights/creator-insights) for more
+ * details. Accessible to allowlisted customers only.
  *
  * <p>Sample for ContentCreatorInsightsServiceClient:
  *
@@ -1045,6 +1047,10 @@
  *           .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
  *           .addAllCountryLocations(new ArrayList<LocationInfo>())
  *           .addAllSubCountryLocations(new ArrayList<LocationInfo>())
+ *           .addAllSupplementalData(
+ *               new ArrayList<
+ *                   ContentCreatorInsightsSupplementalDataEnum
+ *                       .ContentCreatorInsightsSupplementalData>())
  *           .build();
  *   GenerateCreatorInsightsResponse response =
  *       contentCreatorInsightsServiceClient.generateCreatorInsights(request);
@@ -1992,6 +1998,27 @@
  * }
  * }</pre>
  *
+ * <p>======================= MultiPartyAuthReviewServiceClient =======================
+ *
+ * <p>Service Description: Service to manage Multi-Party Authorization requests.
+ *
+ * <p>Sample for MultiPartyAuthReviewServiceClient:
+ *
+ * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+ * try (MultiPartyAuthReviewServiceClient multiPartyAuthReviewServiceClient =
+ *     MultiPartyAuthReviewServiceClient.create()) {
+ *   String customerId = "customerId-1581184615";
+ *   List<ResolveMultiPartyAuthReviewOperation> operations = new ArrayList<>();
+ *   ResolveMultiPartyAuthReviewResponse response =
+ *       multiPartyAuthReviewServiceClient.resolveMultiPartyAuthReview(customerId, operations);
+ * }
+ * }</pre>
+ *
  * <p>======================= OfflineUserDataJobServiceClient =======================
  *
  * <p>Service Description: Service to manage offline user data jobs.
@@ -2186,6 +2213,13 @@
  * <p>======================= ShareablePreviewServiceClient =======================
  *
  * <p>Service Description: Service to generate Shareable Previews.
+ *
+ * <p>Only Performance Max asset groups and certain YouTube video/audio ad formats are supported.
+ * Other ad types, such as Responsive Search Ads or Responsive Display Ads, are not supported and
+ * return an `UNSUPPORTED_AD_TYPE` error.
+ *
+ * <p>The generated preview URLs cannot be embedded in an iframe because the response headers
+ * include `X-Frame-Options: deny`.
  *
  * <p>Sample for ShareablePreviewServiceClient:
  *

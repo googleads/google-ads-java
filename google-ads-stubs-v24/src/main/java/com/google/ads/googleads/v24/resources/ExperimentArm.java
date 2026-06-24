@@ -6583,7 +6583,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo> assetGroups_;
   /**
    * <pre>
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the
+   * Optimize Assets experiment construction, the control arm and treatment arm
+   * should both contain the same asset group ID.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -6594,7 +6596,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the
+   * Optimize Assets experiment construction, the control arm and treatment arm
+   * should both contain the same asset group ID.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -6606,7 +6610,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the
+   * Optimize Assets experiment construction, the control arm and treatment arm
+   * should both contain the same asset group ID.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -6617,7 +6623,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the
+   * Optimize Assets experiment construction, the control arm and treatment arm
+   * should both contain the same asset group ID.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -6628,7 +6636,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the
+   * Optimize Assets experiment construction, the control arm and treatment arm
+   * should both contain the same asset group ID.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8179,7 +8189,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8193,7 +8205,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8207,7 +8221,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8221,7 +8237,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8242,7 +8260,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8260,7 +8280,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8280,7 +8302,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8301,7 +8325,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8319,7 +8345,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8337,7 +8365,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8356,7 +8386,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8373,7 +8405,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8390,7 +8424,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8401,7 +8437,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8415,7 +8453,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8430,7 +8470,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8441,7 +8483,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>
@@ -8453,7 +8497,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of asset groups in the experiment arm.
+     * List of asset groups in the experiment arm. The max length is one. In the
+     * Optimize Assets experiment construction, the control arm and treatment arm
+     * should both contain the same asset group ID.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.resources.ExperimentArm.AssetGroupInfo asset_groups = 10;</code>

@@ -102,7 +102,7 @@ public final class AdGroupProto {
       "emand_gen_channel_strategy.proto\0328google" +
       "/ads/googleads/v24/enums/targeting_dimen" +
       "sion.proto\032\037google/api/field_behavior.pr" +
-      "oto\032\031google/api/resource.proto\"\316#\n\007AdGro" +
+      "oto\032\031google/api/resource.proto\"\334#\n\007AdGro" +
       "up\022?\n\rresource_name\030\001 \001(\tB(\340A\005\372A\"\n googl" +
       "eads.googleapis.com/AdGroup\022\024\n\002id\030\" \001(\003B" +
       "\003\340A\003H\000\210\001\001\022\021\n\004name\030# \001(\tH\001\210\001\001\022O\n\006status\030\005" +
@@ -173,10 +173,10 @@ public final class AdGroupProto {
       "google.ads.googleads.v24.resources.AdGro" +
       "up.VerticalAdsFormatSetting\0324\n\017AudienceS" +
       "etting\022!\n\024use_audience_grouped\030\001 \001(\010B\003\340A" +
-      "\005\032\337\005\n\030DemandGenAdGroupSettings\022w\n\020channe" +
+      "\005\032\355\005\n\030DemandGenAdGroupSettings\022w\n\020channe" +
       "l_controls\030\001 \001(\0132].google.ads.googleads." +
       "v24.resources.AdGroup.DemandGenAdGroupSe" +
-      "ttings.DemandGenChannelControls\032\311\004\n\030Dema" +
+      "ttings.DemandGenChannelControls\032\327\004\n\030Dema" +
       "ndGenChannelControls\022n\n\016channel_config\030\001" +
       " \001(\0162Q.google.ads.googleads.v24.enums.De" +
       "mandGenChannelConfigEnum.DemandGenChanne" +
@@ -186,44 +186,44 @@ public final class AdGroupProto {
       "ategyH\000\022\224\001\n\021selected_channels\030\003 \001(\0132w.go" +
       "ogle.ads.googleads.v24.resources.AdGroup" +
       ".DemandGenAdGroupSettings.DemandGenChann" +
-      "elControls.DemandGenSelectedChannelsH\000\032\231" +
+      "elControls.DemandGenSelectedChannelsH\000\032\247" +
       "\001\n\031DemandGenSelectedChannels\022\031\n\021youtube_" +
       "in_stream\030\001 \001(\010\022\027\n\017youtube_in_feed\030\002 \001(\010" +
       "\022\026\n\016youtube_shorts\030\003 \001(\010\022\020\n\010discover\030\004 \001" +
-      "(\010\022\r\n\005gmail\030\005 \001(\010\022\017\n\007display\030\006 \001(\010B\027\n\025ch" +
-      "annel_configuration\032\275\001\n\024VideoAdGroupSett" +
-      "ings\022v\n\021video_ad_sequence\030\001 \001(\0132[.google" +
-      ".ads.googleads.v24.resources.AdGroup.Vid" +
-      "eoAdGroupSettings.VideoAdSequenceStepSet" +
-      "ting\032-\n\032VideoAdSequenceStepSetting\022\017\n\007st" +
-      "ep_id\030\001 \001(\003\032a\n\023AiMaxAdGroupSetting\022)\n\034di" +
-      "sable_search_term_matching\030\001 \001(\010H\000\210\001\001B\037\n" +
-      "\035_disable_search_term_matching\032\330\001\n\030Verti" +
-      "calAdsFormatSetting\022\035\n\020disable_text_ads\030" +
-      "\001 \001(\010H\000\210\001\001\022!\n\024enable_booking_links\030\002 \001(\010" +
-      "H\001\210\001\001\022*\n\035enable_vertical_promotion_ads\030\003" +
-      " \001(\010H\002\210\001\001B\023\n\021_disable_text_adsB\027\n\025_enabl" +
-      "e_booking_linksB \n\036_enable_vertical_prom" +
-      "otion_ads:U\352AR\n googleads.googleapis.com" +
-      "/AdGroup\022.customers/{customer_id}/adGrou" +
-      "ps/{ad_group_id}B\005\n\003_idB\007\n\005_nameB\020\n\016_bas" +
-      "e_ad_groupB\030\n\026_tracking_url_templateB\013\n\t" +
-      "_campaignB\021\n\017_cpc_bid_microsB\033\n\031_effecti" +
-      "ve_cpc_bid_microsB\021\n\017_cpm_bid_microsB\024\n\022" +
-      "_target_cpa_microsB\021\n\017_cpv_bid_microsB\024\n" +
-      "\022_target_cpm_microsB\016\n\014_target_roasB\031\n\027_" +
-      "percent_cpc_bid_microsB\023\n\021_fixed_cpm_mic" +
-      "rosB\024\n\022_target_cpv_microsB\024\n\022_target_cpc" +
-      "_microsB\023\n\021_final_url_suffixB\036\n\034_effecti" +
-      "ve_target_cpa_microsB\030\n\026_effective_targe" +
-      "t_roasB\027\n\025_effective_target_cpcB\376\001\n&com." +
-      "google.ads.googleads.v24.resourcesB\014AdGr" +
-      "oupProtoP\001ZKgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v24/resources;re" +
-      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V24" +
-      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V24\\Re" +
-      "sources\352\002&Google::Ads::GoogleAds::V24::R" +
-      "esourcesb\006proto3"
+      "(\010\022\r\n\005gmail\030\005 \001(\010\022\017\n\007display\030\006 \001(\010\022\014\n\004ma" +
+      "ps\030\007 \001(\010B\027\n\025channel_configuration\032\275\001\n\024Vi" +
+      "deoAdGroupSettings\022v\n\021video_ad_sequence\030" +
+      "\001 \001(\0132[.google.ads.googleads.v24.resourc" +
+      "es.AdGroup.VideoAdGroupSettings.VideoAdS" +
+      "equenceStepSetting\032-\n\032VideoAdSequenceSte" +
+      "pSetting\022\017\n\007step_id\030\001 \001(\003\032a\n\023AiMaxAdGrou" +
+      "pSetting\022)\n\034disable_search_term_matching" +
+      "\030\001 \001(\010H\000\210\001\001B\037\n\035_disable_search_term_matc" +
+      "hing\032\330\001\n\030VerticalAdsFormatSetting\022\035\n\020dis" +
+      "able_text_ads\030\001 \001(\010H\000\210\001\001\022!\n\024enable_booki" +
+      "ng_links\030\002 \001(\010H\001\210\001\001\022*\n\035enable_vertical_p" +
+      "romotion_ads\030\003 \001(\010H\002\210\001\001B\023\n\021_disable_text" +
+      "_adsB\027\n\025_enable_booking_linksB \n\036_enable" +
+      "_vertical_promotion_ads:U\352AR\n googleads." +
+      "googleapis.com/AdGroup\022.customers/{custo" +
+      "mer_id}/adGroups/{ad_group_id}B\005\n\003_idB\007\n" +
+      "\005_nameB\020\n\016_base_ad_groupB\030\n\026_tracking_ur" +
+      "l_templateB\013\n\t_campaignB\021\n\017_cpc_bid_micr" +
+      "osB\033\n\031_effective_cpc_bid_microsB\021\n\017_cpm_" +
+      "bid_microsB\024\n\022_target_cpa_microsB\021\n\017_cpv" +
+      "_bid_microsB\024\n\022_target_cpm_microsB\016\n\014_ta" +
+      "rget_roasB\031\n\027_percent_cpc_bid_microsB\023\n\021" +
+      "_fixed_cpm_microsB\024\n\022_target_cpv_microsB" +
+      "\024\n\022_target_cpc_microsB\023\n\021_final_url_suff" +
+      "ixB\036\n\034_effective_target_cpa_microsB\030\n\026_e" +
+      "ffective_target_roasB\027\n\025_effective_targe" +
+      "t_cpcB\376\001\n&com.google.ads.googleads.v24.r" +
+      "esourcesB\014AdGroupProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v2" +
+      "4/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V24.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V24\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V24::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -273,7 +273,7 @@ public final class AdGroupProto {
     internal_static_google_ads_googleads_v24_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_resources_AdGroup_DemandGenAdGroupSettings_DemandGenChannelControls_DemandGenSelectedChannels_descriptor,
-        new java.lang.String[] { "YoutubeInStream", "YoutubeInFeed", "YoutubeShorts", "Discover", "Gmail", "Display", });
+        new java.lang.String[] { "YoutubeInStream", "YoutubeInFeed", "YoutubeShorts", "Discover", "Gmail", "Display", "Maps", });
     internal_static_google_ads_googleads_v24_resources_AdGroup_VideoAdGroupSettings_descriptor =
       internal_static_google_ads_googleads_v24_resources_AdGroup_descriptor.getNestedTypes().get(2);
     internal_static_google_ads_googleads_v24_resources_AdGroup_VideoAdGroupSettings_fieldAccessorTable = new

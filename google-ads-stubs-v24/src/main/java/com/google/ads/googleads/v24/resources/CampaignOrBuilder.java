@@ -1849,7 +1849,7 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * Settings for AI Max in search campaigns.
+   * Settings for AI Max in Search and Shopping campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -1858,7 +1858,7 @@ public interface CampaignOrBuilder extends
   boolean hasAiMaxSetting();
   /**
    * <pre>
-   * Settings for AI Max in search campaigns.
+   * Settings for AI Max in Search and Shopping campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>
@@ -1867,7 +1867,7 @@ public interface CampaignOrBuilder extends
   com.google.ads.googleads.v24.resources.Campaign.AiMaxSetting getAiMaxSetting();
   /**
    * <pre>
-   * Settings for AI Max in search campaigns.
+   * Settings for AI Max in Search and Shopping campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v24.resources.Campaign.AiMaxSetting ai_max_setting = 101;</code>

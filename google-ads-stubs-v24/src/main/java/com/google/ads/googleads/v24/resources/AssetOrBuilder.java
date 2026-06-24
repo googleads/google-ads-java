@@ -418,6 +418,33 @@ public interface AssetOrBuilder extends
 
   /**
    * <pre>
+   * Synthetic content info for the asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+   * @return Whether the syntheticContentInfo field is set.
+   */
+  boolean hasSyntheticContentInfo();
+  /**
+   * <pre>
+   * Synthetic content info for the asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+   * @return The syntheticContentInfo.
+   */
+  com.google.ads.googleads.v24.common.SyntheticContentInfo getSyntheticContentInfo();
+  /**
+   * <pre>
+   * Synthetic content info for the asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+   */
+  com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder getSyntheticContentInfoOrBuilder();
+
+  /**
+   * <pre>
    * Immutable. A YouTube video asset.
    * </pre>
    *

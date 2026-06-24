@@ -42,18 +42,19 @@ public final class AssetGroupSignalErrorProto {
     java.lang.String[] descriptorData = {
       "\n>google/ads/googleads/v24/errors/asset_" +
       "group_signal_error.proto\022\037google.ads.goo" +
-      "gleads.v24.errors\"\262\001\n\031AssetGroupSignalEr" +
-      "rorEnum\"\224\001\n\025AssetGroupSignalError\022\017\n\013UNS" +
+      "gleads.v24.errors\"\321\001\n\031AssetGroupSignalEr" +
+      "rorEnum\"\263\001\n\025AssetGroupSignalError\022\017\n\013UNS" +
       "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016TOO_MANY_WORD" +
       "S\020\002\022!\n\035SEARCH_THEME_POLICY_VIOLATION\020\003\022&" +
-      "\n\"AUDIENCE_WITH_WRONG_ASSET_GROUP_ID\020\004B\372" +
-      "\001\n#com.google.ads.googleads.v24.errorsB\032" +
-      "AssetGroupSignalErrorProtoP\001ZEgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v24/errors;errors\242\002\003GAA\252\002\037Google.Ads.G" +
-      "oogleAds.V24.Errors\312\002\037Google\\Ads\\GoogleA" +
-      "ds\\V24\\Errors\352\002#Google::Ads::GoogleAds::" +
-      "V24::Errorsb\006proto3"
+      "\n\"AUDIENCE_WITH_WRONG_ASSET_GROUP_ID\020\004\022\035" +
+      "\n\031CANNOT_REMOVE_ALL_SIGNALS\020\005B\372\001\n#com.go" +
+      "ogle.ads.googleads.v24.errorsB\032AssetGrou" +
+      "pSignalErrorProtoP\001ZEgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v24/err" +
+      "ors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds." +
+      "V24.Errors\312\002\037Google\\Ads\\GoogleAds\\V24\\Er" +
+      "rors\352\002#Google::Ads::GoogleAds::V24::Erro" +
+      "rsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

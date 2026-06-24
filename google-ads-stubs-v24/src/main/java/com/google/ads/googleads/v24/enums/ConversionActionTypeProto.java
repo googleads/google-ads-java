@@ -42,8 +42,8 @@ public final class ConversionActionTypeProto {
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v24/enums/convers" +
       "ion_action_type.proto\022\036google.ads.google" +
-      "ads.v24.enums\"\320\014\n\030ConversionActionTypeEn" +
-      "um\"\263\014\n\024ConversionActionType\022\017\n\013UNSPECIFI" +
+      "ads.v24.enums\"\350\014\n\030ConversionActionTypeEn" +
+      "um\"\313\014\n\024ConversionActionType\022\017\n\013UNSPECIFI" +
       "ED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007AD_CALL\020\002\022\021\n\rCLICK_" +
       "TO_CALL\020\003\022\030\n\024GOOGLE_PLAY_DOWNLOAD\020\004\022\037\n\033G" +
       "OOGLE_PLAY_IN_APP_PURCHASE\020\005\022\020\n\014UPLOAD_C" +
@@ -82,14 +82,14 @@ public final class ConversionActionTypeProto {
       "LIFY_LEAD\020.\022\'\n#FIREBASE_ANDROID_CLOSE_CO" +
       "NVERT_LEAD\020/\022\036\n\032FIREBASE_IOS_GENERATE_LE" +
       "AD\0200\022\035\n\031FIREBASE_IOS_QUALIFY_LEAD\0201\022#\n\037F" +
-      "IREBASE_IOS_CLOSE_CONVERT_LEAD\0202B\363\001\n\"com" +
-      ".google.ads.googleads.v24.enumsB\031Convers" +
-      "ionActionTypeProtoP\001ZCgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v24/en" +
-      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
-      "24.Enums\312\002\036Google\\Ads\\GoogleAds\\V24\\Enum" +
-      "s\352\002\"Google::Ads::GoogleAds::V24::Enumsb\006" +
-      "proto3"
+      "IREBASE_IOS_CLOSE_CONVERT_LEAD\0202\022\026\n\022LOCA" +
+      "L_SERVICES_ADS\0203B\363\001\n\"com.google.ads.goog" +
+      "leads.v24.enumsB\031ConversionActionTypePro" +
+      "toP\001ZCgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v24/enums;enums\242\002\003GAA\252" +
+      "\002\036Google.Ads.GoogleAds.V24.Enums\312\002\036Googl" +
+      "e\\Ads\\GoogleAds\\V24\\Enums\352\002\"Google::Ads:" +
+      ":GoogleAds::V24::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

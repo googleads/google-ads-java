@@ -785,6 +785,44 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v24.enums.AssetOrientationEnum.AssetOrientation.UNRECOGNIZED : result;
   }
 
+  public static final int SYNTHETIC_CONTENT_INFO_FIELD_NUMBER = 55;
+  private com.google.ads.googleads.v24.common.SyntheticContentInfo syntheticContentInfo_;
+  /**
+   * <pre>
+   * Synthetic content info for the asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+   * @return Whether the syntheticContentInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasSyntheticContentInfo() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Synthetic content info for the asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+   * @return The syntheticContentInfo.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.SyntheticContentInfo getSyntheticContentInfo() {
+    return syntheticContentInfo_ == null ? com.google.ads.googleads.v24.common.SyntheticContentInfo.getDefaultInstance() : syntheticContentInfo_;
+  }
+  /**
+   * <pre>
+   * Synthetic content info for the asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder getSyntheticContentInfoOrBuilder() {
+    return syntheticContentInfo_ == null ? com.google.ads.googleads.v24.common.SyntheticContentInfo.getDefaultInstance() : syntheticContentInfo_;
+  }
+
   public static final int YOUTUBE_VIDEO_ASSET_FIELD_NUMBER = 5;
   /**
    * <pre>
@@ -2218,6 +2256,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000020) != 0)) {
       output.writeEnum(54, orientation_);
     }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeMessage(55, getSyntheticContentInfo());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -2403,6 +2444,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(54, orientation_);
     }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(55, getSyntheticContentInfo());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2458,6 +2503,11 @@ private static final long serialVersionUID = 0L;
     if (hasOrientation() != other.hasOrientation()) return false;
     if (hasOrientation()) {
       if (orientation_ != other.orientation_) return false;
+    }
+    if (hasSyntheticContentInfo() != other.hasSyntheticContentInfo()) return false;
+    if (hasSyntheticContentInfo()) {
+      if (!getSyntheticContentInfo()
+          .equals(other.getSyntheticContentInfo())) return false;
     }
     if (!getAssetDataCase().equals(other.getAssetDataCase())) return false;
     switch (assetDataCase_) {
@@ -2641,6 +2691,10 @@ private static final long serialVersionUID = 0L;
     if (hasOrientation()) {
       hash = (37 * hash) + ORIENTATION_FIELD_NUMBER;
       hash = (53 * hash) + orientation_;
+    }
+    if (hasSyntheticContentInfo()) {
+      hash = (37 * hash) + SYNTHETIC_CONTENT_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getSyntheticContentInfo().hashCode();
     }
     switch (assetDataCase_) {
       case 5:
@@ -2906,6 +2960,7 @@ private static final long serialVersionUID = 0L;
         internalGetUrlCustomParametersFieldBuilder();
         internalGetPolicySummaryFieldBuilder();
         internalGetFieldTypePolicySummariesFieldBuilder();
+        internalGetSyntheticContentInfoFieldBuilder();
       }
     }
     @java.lang.Override
@@ -2944,6 +2999,11 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000800);
       orientation_ = 0;
+      syntheticContentInfo_ = null;
+      if (syntheticContentInfoBuilder_ != null) {
+        syntheticContentInfoBuilder_.dispose();
+        syntheticContentInfoBuilder_ = null;
+      }
       if (youtubeVideoAssetBuilder_ != null) {
         youtubeVideoAssetBuilder_.clear();
       }
@@ -3136,6 +3196,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.orientation_ = orientation_;
         to_bitField0_ |= 0x00000020;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.syntheticContentInfo_ = syntheticContentInfoBuilder_ == null
+            ? syntheticContentInfo_
+            : syntheticContentInfoBuilder_.build();
+        to_bitField0_ |= 0x00000040;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -3387,6 +3453,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasOrientation()) {
         setOrientationValue(other.getOrientationValue());
+      }
+      if (other.hasSyntheticContentInfo()) {
+        mergeSyntheticContentInfo(other.getSyntheticContentInfo());
       }
       switch (other.getAssetDataCase()) {
         case YOUTUBE_VIDEO_ASSET: {
@@ -3834,6 +3903,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 432
+            case 442: {
+              input.readMessage(
+                  internalGetSyntheticContentInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 442
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5666,6 +5742,163 @@ private static final long serialVersionUID = 0L;
       orientation_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v24.common.SyntheticContentInfo syntheticContentInfo_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.SyntheticContentInfo, com.google.ads.googleads.v24.common.SyntheticContentInfo.Builder, com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder> syntheticContentInfoBuilder_;
+    /**
+     * <pre>
+     * Synthetic content info for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+     * @return Whether the syntheticContentInfo field is set.
+     */
+    public boolean hasSyntheticContentInfo() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+     * @return The syntheticContentInfo.
+     */
+    public com.google.ads.googleads.v24.common.SyntheticContentInfo getSyntheticContentInfo() {
+      if (syntheticContentInfoBuilder_ == null) {
+        return syntheticContentInfo_ == null ? com.google.ads.googleads.v24.common.SyntheticContentInfo.getDefaultInstance() : syntheticContentInfo_;
+      } else {
+        return syntheticContentInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+     */
+    public Builder setSyntheticContentInfo(com.google.ads.googleads.v24.common.SyntheticContentInfo value) {
+      if (syntheticContentInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        syntheticContentInfo_ = value;
+      } else {
+        syntheticContentInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+     */
+    public Builder setSyntheticContentInfo(
+        com.google.ads.googleads.v24.common.SyntheticContentInfo.Builder builderForValue) {
+      if (syntheticContentInfoBuilder_ == null) {
+        syntheticContentInfo_ = builderForValue.build();
+      } else {
+        syntheticContentInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+     */
+    public Builder mergeSyntheticContentInfo(com.google.ads.googleads.v24.common.SyntheticContentInfo value) {
+      if (syntheticContentInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          syntheticContentInfo_ != null &&
+          syntheticContentInfo_ != com.google.ads.googleads.v24.common.SyntheticContentInfo.getDefaultInstance()) {
+          getSyntheticContentInfoBuilder().mergeFrom(value);
+        } else {
+          syntheticContentInfo_ = value;
+        }
+      } else {
+        syntheticContentInfoBuilder_.mergeFrom(value);
+      }
+      if (syntheticContentInfo_ != null) {
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+     */
+    public Builder clearSyntheticContentInfo() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      syntheticContentInfo_ = null;
+      if (syntheticContentInfoBuilder_ != null) {
+        syntheticContentInfoBuilder_.dispose();
+        syntheticContentInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+     */
+    public com.google.ads.googleads.v24.common.SyntheticContentInfo.Builder getSyntheticContentInfoBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return internalGetSyntheticContentInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+     */
+    public com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder getSyntheticContentInfoOrBuilder() {
+      if (syntheticContentInfoBuilder_ != null) {
+        return syntheticContentInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return syntheticContentInfo_ == null ?
+            com.google.ads.googleads.v24.common.SyntheticContentInfo.getDefaultInstance() : syntheticContentInfo_;
+      }
+    }
+    /**
+     * <pre>
+     * Synthetic content info for the asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.common.SyntheticContentInfo synthetic_content_info = 55;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.common.SyntheticContentInfo, com.google.ads.googleads.v24.common.SyntheticContentInfo.Builder, com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder> 
+        internalGetSyntheticContentInfoFieldBuilder() {
+      if (syntheticContentInfoBuilder_ == null) {
+        syntheticContentInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.common.SyntheticContentInfo, com.google.ads.googleads.v24.common.SyntheticContentInfo.Builder, com.google.ads.googleads.v24.common.SyntheticContentInfoOrBuilder>(
+                getSyntheticContentInfo(),
+                getParentForChildren(),
+                isClean());
+        syntheticContentInfo_ = null;
+      }
+      return syntheticContentInfoBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilder<

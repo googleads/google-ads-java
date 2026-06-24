@@ -4714,5 +4714,33 @@ public interface ErrorCodeOrBuilder extends
    */
   com.google.ads.googleads.v24.errors.VideoReservationErrorEnum.VideoReservationError getVideoReservationError();
 
+  /**
+   * <pre>
+   * The reasons for the multi party auth review error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+   * @return Whether the multiPartyAuthReviewError field is set.
+   */
+  boolean hasMultiPartyAuthReviewError();
+  /**
+   * <pre>
+   * The reasons for the multi party auth review error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+   * @return The enum numeric value on the wire for multiPartyAuthReviewError.
+   */
+  int getMultiPartyAuthReviewErrorValue();
+  /**
+   * <pre>
+   * The reasons for the multi party auth review error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+   * @return The multiPartyAuthReviewError.
+   */
+  com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError getMultiPartyAuthReviewError();
+
   com.google.ads.googleads.v24.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

@@ -142,9 +142,9 @@ private static final long serialVersionUID = 0L;
   private double engagementRate_ = 0D;
   /**
    * <pre>
-   * The lifetime engagement rate of this channel. The value is computed as the
-   * total number of likes, shares, and comments across all videos divided by
-   * the total number of video views.
+   * The lifetime engagement rate of this channel. A measurement of how often
+   * people engage with the creator's content. The value, between 0 and 1, is
+   * calculated as total engagement divided by total views.
    * </pre>
    *
    * <code>double engagement_rate = 8;</code>
@@ -1360,9 +1360,9 @@ private static final long serialVersionUID = 0L;
     private double engagementRate_ ;
     /**
      * <pre>
-     * The lifetime engagement rate of this channel. The value is computed as the
-     * total number of likes, shares, and comments across all videos divided by
-     * the total number of video views.
+     * The lifetime engagement rate of this channel. A measurement of how often
+     * people engage with the creator's content. The value, between 0 and 1, is
+     * calculated as total engagement divided by total views.
      * </pre>
      *
      * <code>double engagement_rate = 8;</code>
@@ -1374,9 +1374,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The lifetime engagement rate of this channel. The value is computed as the
-     * total number of likes, shares, and comments across all videos divided by
-     * the total number of video views.
+     * The lifetime engagement rate of this channel. A measurement of how often
+     * people engage with the creator's content. The value, between 0 and 1, is
+     * calculated as total engagement divided by total views.
      * </pre>
      *
      * <code>double engagement_rate = 8;</code>
@@ -1392,9 +1392,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The lifetime engagement rate of this channel. The value is computed as the
-     * total number of likes, shares, and comments across all videos divided by
-     * the total number of video views.
+     * The lifetime engagement rate of this channel. A measurement of how often
+     * people engage with the creator's content. The value, between 0 and 1, is
+     * calculated as total engagement divided by total views.
      * </pre>
      *
      * <code>double engagement_rate = 8;</code>

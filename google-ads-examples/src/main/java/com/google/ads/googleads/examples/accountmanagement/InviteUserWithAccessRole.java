@@ -110,12 +110,24 @@ public class InviteUserWithAccessRole {
       MutateCustomerUserAccessInvitationResponse response =
           client.mutateCustomerUserAccessInvitation(String.valueOf(customerId), operation);
 
-      // Prints some information about the result.
-      System.out.printf(
-          "Customer user access invitation was sent for customerId = "
-              + "%d to email address = '%s' and access role = '%s'. The invitation resource "
-              + "name is '%s'.%n",
-          customerId, emailAddress, accessRole, response.getResult().getResourceName());
+      if (response.getResult().getMultiPartyAuthReview().isEmpty()) {
+        // A multi-party auth review was not triggered.
+        System.out.printf(
+            "Customer user access invitation was sent for customerId = "
+                + "%d to email address = '%s' and access role = '%s'. The invitation resource "
+                + "name is '%s'.%n",
+            customerId, emailAddress, accessRole, response.getResult().getResourceName());
+      } else {
+        // A multi-party auth review was triggered. See
+        // FetchAndApprovePendingMultiPartyAuthReviews.java for an example on how to fetch
+        // and approve an MPA auth review.
+        System.out.printf(
+            "A multi-party auth review was triggered. The MPA review resource name is %s. "
+                + "Ask a second administrator to approve this request to send user access invitation. "
+                + "See FetchAndApprovePendingMultiPartyAuthReviews.java for an example on "
+                + "how to approve an MPA auth review using the API.%n",
+            response.getResult().getMultiPartyAuthReview());
+      }
     }
     // [END invite_user_with_access_role]
   }

@@ -42,24 +42,25 @@ public final class AssetAutomationTypeProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v24/enums/asset_a" +
       "utomation_type.proto\022\036google.ads.googlea" +
-      "ds.v24.enums\"\274\003\n\027AssetAutomationTypeEnum" +
-      "\"\240\003\n\023AssetAutomationType\022\017\n\013UNSPECIFIED\020" +
+      "ds.v24.enums\"\334\003\n\027AssetAutomationTypeEnum" +
+      "\"\300\003\n\023AssetAutomationType\022\017\n\013UNSPECIFIED\020" +
       "\000\022\013\n\007UNKNOWN\020\001\022\031\n\025TEXT_ASSET_AUTOMATION\020" +
       "\002\022$\n GENERATE_VERTICAL_YOUTUBE_VIDEOS\020\003\022" +
       "#\n\037GENERATE_SHORTER_YOUTUBE_VIDEOS\020\004\022!\n\035" +
-      "GENERATE_LANDING_PAGE_PREVIEW\020\005\022$\n GENER" +
-      "ATE_ENHANCED_YOUTUBE_VIDEOS\020\006\022\036\n\032GENERAT" +
-      "E_IMAGE_ENHANCEMENT\020\007\022\035\n\031GENERATE_IMAGE_" +
-      "EXTRACTION\020\t\022\'\n#GENERATE_DESIGN_VERSIONS" +
-      "_FOR_IMAGES\020\n\022-\n)FINAL_URL_EXPANSION_TEX" +
-      "T_ASSET_AUTOMATION\020\013\022%\n!GENERATE_VIDEOS_" +
-      "FROM_OTHER_ASSETS\020\014B\362\001\n\"com.google.ads.g" +
-      "oogleads.v24.enumsB\030AssetAutomationTypeP" +
-      "rotoP\001ZCgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v24/enums;enums\242\002\003GA" +
-      "A\252\002\036Google.Ads.GoogleAds.V24.Enums\312\002\036Goo" +
-      "gle\\Ads\\GoogleAds\\V24\\Enums\352\002\"Google::Ad" +
-      "s::GoogleAds::V24::Enumsb\006proto3"
+      "GENERATE_LANDING_PAGE_PREVIEW\020\005\022\036\n\032GENER" +
+      "ATE_LANDING_PAGE_TEXT\020\016\022$\n GENERATE_ENHA" +
+      "NCED_YOUTUBE_VIDEOS\020\006\022\036\n\032GENERATE_IMAGE_" +
+      "ENHANCEMENT\020\007\022\035\n\031GENERATE_IMAGE_EXTRACTI" +
+      "ON\020\t\022\'\n#GENERATE_DESIGN_VERSIONS_FOR_IMA" +
+      "GES\020\n\022-\n)FINAL_URL_EXPANSION_TEXT_ASSET_" +
+      "AUTOMATION\020\013\022%\n!GENERATE_VIDEOS_FROM_OTH" +
+      "ER_ASSETS\020\014B\362\001\n\"com.google.ads.googleads" +
+      ".v24.enumsB\030AssetAutomationTypeProtoP\001ZC" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v24/enums;enums\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V24.Enums\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V24\\Enums\352\002\"Google::Ads::Googl" +
+      "eAds::V24::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

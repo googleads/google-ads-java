@@ -92,6 +92,46 @@ private static final long serialVersionUID = 0L;
         dataLinkEntityCase_);
   }
 
+  private int dataLinkMetadataCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object dataLinkMetadata_;
+  public enum DataLinkMetadataCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    YOUTUBE_LINK_METADATA(7),
+    DATALINKMETADATA_NOT_SET(0);
+    private final int value;
+    private DataLinkMetadataCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DataLinkMetadataCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static DataLinkMetadataCase forNumber(int value) {
+      switch (value) {
+        case 7: return YOUTUBE_LINK_METADATA;
+        case 0: return DATALINKMETADATA_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public DataLinkMetadataCase
+  getDataLinkMetadataCase() {
+    return DataLinkMetadataCase.forNumber(
+        dataLinkMetadataCase_);
+  }
+
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object resourceName_ = "";
@@ -100,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Resource name of the product data link.
    * DataLink resource names have the form:
    *
-   * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}}
+   * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -124,7 +164,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Resource name of the product data link.
    * DataLink resource names have the form:
    *
-   * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}}
+   * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -298,6 +338,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v24.resources.YoutubeVideoIdentifier.getDefaultInstance();
   }
 
+  public static final int YOUTUBE_LINK_METADATA_FIELD_NUMBER = 7;
+  /**
+   * <pre>
+   * Immutable. Metadata for a YouTube link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeLinkMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasYoutubeLinkMetadata() {
+    return dataLinkMetadataCase_ == 7;
+  }
+  /**
+   * <pre>
+   * Immutable. Metadata for a YouTube link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeLinkMetadata.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.resources.YoutubeLinkMetadata getYoutubeLinkMetadata() {
+    if (dataLinkMetadataCase_ == 7) {
+       return (com.google.ads.googleads.v24.resources.YoutubeLinkMetadata) dataLinkMetadata_;
+    }
+    return com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Immutable. Metadata for a YouTube link.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.resources.YoutubeLinkMetadataOrBuilder getYoutubeLinkMetadataOrBuilder() {
+    if (dataLinkMetadataCase_ == 7) {
+       return (com.google.ads.googleads.v24.resources.YoutubeLinkMetadata) dataLinkMetadata_;
+    }
+    return com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -330,6 +413,9 @@ private static final long serialVersionUID = 0L;
     if (dataLinkEntityCase_ == 6) {
       output.writeMessage(6, (com.google.ads.googleads.v24.resources.YoutubeVideoIdentifier) dataLinkEntity_);
     }
+    if (dataLinkMetadataCase_ == 7) {
+      output.writeMessage(7, (com.google.ads.googleads.v24.resources.YoutubeLinkMetadata) dataLinkMetadata_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -361,6 +447,10 @@ private static final long serialVersionUID = 0L;
     if (dataLinkEntityCase_ == 6) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, (com.google.ads.googleads.v24.resources.YoutubeVideoIdentifier) dataLinkEntity_);
+    }
+    if (dataLinkMetadataCase_ == 7) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, (com.google.ads.googleads.v24.resources.YoutubeLinkMetadata) dataLinkMetadata_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -400,6 +490,15 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
+    if (!getDataLinkMetadataCase().equals(other.getDataLinkMetadataCase())) return false;
+    switch (dataLinkMetadataCase_) {
+      case 7:
+        if (!getYoutubeLinkMetadata()
+            .equals(other.getYoutubeLinkMetadata())) return false;
+        break;
+      case 0:
+      default:
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -431,6 +530,14 @@ private static final long serialVersionUID = 0L;
       case 6:
         hash = (37 * hash) + YOUTUBE_VIDEO_FIELD_NUMBER;
         hash = (53 * hash) + getYoutubeVideo().hashCode();
+        break;
+      case 0:
+      default:
+    }
+    switch (dataLinkMetadataCase_) {
+      case 7:
+        hash = (37 * hash) + YOUTUBE_LINK_METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getYoutubeLinkMetadata().hashCode();
         break;
       case 0:
       default:
@@ -579,8 +686,13 @@ private static final long serialVersionUID = 0L;
       if (youtubeVideoBuilder_ != null) {
         youtubeVideoBuilder_.clear();
       }
+      if (youtubeLinkMetadataBuilder_ != null) {
+        youtubeLinkMetadataBuilder_.clear();
+      }
       dataLinkEntityCase_ = 0;
       dataLinkEntity_ = null;
+      dataLinkMetadataCase_ = 0;
+      dataLinkMetadata_ = null;
       return this;
     }
 
@@ -643,6 +755,12 @@ private static final long serialVersionUID = 0L;
           youtubeVideoBuilder_ != null) {
         result.dataLinkEntity_ = youtubeVideoBuilder_.build();
       }
+      result.dataLinkMetadataCase_ = dataLinkMetadataCase_;
+      result.dataLinkMetadata_ = this.dataLinkMetadata_;
+      if (dataLinkMetadataCase_ == 7 &&
+          youtubeLinkMetadataBuilder_ != null) {
+        result.dataLinkMetadata_ = youtubeLinkMetadataBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -680,6 +798,15 @@ private static final long serialVersionUID = 0L;
           break;
         }
         case DATALINKENTITY_NOT_SET: {
+          break;
+        }
+      }
+      switch (other.getDataLinkMetadataCase()) {
+        case YOUTUBE_LINK_METADATA: {
+          mergeYoutubeLinkMetadata(other.getYoutubeLinkMetadata());
+          break;
+        }
+        case DATALINKMETADATA_NOT_SET: {
           break;
         }
       }
@@ -741,6 +868,13 @@ private static final long serialVersionUID = 0L;
               dataLinkEntityCase_ = 6;
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  internalGetYoutubeLinkMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dataLinkMetadataCase_ = 7;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -771,6 +905,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int dataLinkMetadataCase_ = 0;
+    private java.lang.Object dataLinkMetadata_;
+    public DataLinkMetadataCase
+        getDataLinkMetadataCase() {
+      return DataLinkMetadataCase.forNumber(
+          dataLinkMetadataCase_);
+    }
+
+    public Builder clearDataLinkMetadata() {
+      dataLinkMetadataCase_ = 0;
+      dataLinkMetadata_ = null;
+      onChanged();
+      return this;
+    }
+
     private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
@@ -779,7 +928,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Resource name of the product data link.
      * DataLink resource names have the form:
      *
-     * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}}
+     * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -802,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Resource name of the product data link.
      * DataLink resource names have the form:
      *
-     * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}}
+     * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -826,7 +975,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Resource name of the product data link.
      * DataLink resource names have the form:
      *
-     * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}}
+     * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -846,7 +995,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Resource name of the product data link.
      * DataLink resource names have the form:
      *
-     * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}}
+     * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -863,7 +1012,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Resource name of the product data link.
      * DataLink resource names have the form:
      *
-     * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}}
+     * `customers/{customer_id}/datalinks/{product_link_id}~{data_link_id}
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1318,6 +1467,184 @@ private static final long serialVersionUID = 0L;
       dataLinkEntityCase_ = 6;
       onChanged();
       return youtubeVideoBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.resources.YoutubeLinkMetadata, com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.Builder, com.google.ads.googleads.v24.resources.YoutubeLinkMetadataOrBuilder> youtubeLinkMetadataBuilder_;
+    /**
+     * <pre>
+     * Immutable. Metadata for a YouTube link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the youtubeLinkMetadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasYoutubeLinkMetadata() {
+      return dataLinkMetadataCase_ == 7;
+    }
+    /**
+     * <pre>
+     * Immutable. Metadata for a YouTube link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The youtubeLinkMetadata.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.YoutubeLinkMetadata getYoutubeLinkMetadata() {
+      if (youtubeLinkMetadataBuilder_ == null) {
+        if (dataLinkMetadataCase_ == 7) {
+          return (com.google.ads.googleads.v24.resources.YoutubeLinkMetadata) dataLinkMetadata_;
+        }
+        return com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.getDefaultInstance();
+      } else {
+        if (dataLinkMetadataCase_ == 7) {
+          return youtubeLinkMetadataBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Metadata for a YouTube link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setYoutubeLinkMetadata(com.google.ads.googleads.v24.resources.YoutubeLinkMetadata value) {
+      if (youtubeLinkMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dataLinkMetadata_ = value;
+        onChanged();
+      } else {
+        youtubeLinkMetadataBuilder_.setMessage(value);
+      }
+      dataLinkMetadataCase_ = 7;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Metadata for a YouTube link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setYoutubeLinkMetadata(
+        com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.Builder builderForValue) {
+      if (youtubeLinkMetadataBuilder_ == null) {
+        dataLinkMetadata_ = builderForValue.build();
+        onChanged();
+      } else {
+        youtubeLinkMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      dataLinkMetadataCase_ = 7;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Metadata for a YouTube link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder mergeYoutubeLinkMetadata(com.google.ads.googleads.v24.resources.YoutubeLinkMetadata value) {
+      if (youtubeLinkMetadataBuilder_ == null) {
+        if (dataLinkMetadataCase_ == 7 &&
+            dataLinkMetadata_ != com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.getDefaultInstance()) {
+          dataLinkMetadata_ = com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.newBuilder((com.google.ads.googleads.v24.resources.YoutubeLinkMetadata) dataLinkMetadata_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          dataLinkMetadata_ = value;
+        }
+        onChanged();
+      } else {
+        if (dataLinkMetadataCase_ == 7) {
+          youtubeLinkMetadataBuilder_.mergeFrom(value);
+        } else {
+          youtubeLinkMetadataBuilder_.setMessage(value);
+        }
+      }
+      dataLinkMetadataCase_ = 7;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Metadata for a YouTube link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder clearYoutubeLinkMetadata() {
+      if (youtubeLinkMetadataBuilder_ == null) {
+        if (dataLinkMetadataCase_ == 7) {
+          dataLinkMetadataCase_ = 0;
+          dataLinkMetadata_ = null;
+          onChanged();
+        }
+      } else {
+        if (dataLinkMetadataCase_ == 7) {
+          dataLinkMetadataCase_ = 0;
+          dataLinkMetadata_ = null;
+        }
+        youtubeLinkMetadataBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Metadata for a YouTube link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.Builder getYoutubeLinkMetadataBuilder() {
+      return internalGetYoutubeLinkMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Immutable. Metadata for a YouTube link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.resources.YoutubeLinkMetadataOrBuilder getYoutubeLinkMetadataOrBuilder() {
+      if ((dataLinkMetadataCase_ == 7) && (youtubeLinkMetadataBuilder_ != null)) {
+        return youtubeLinkMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        if (dataLinkMetadataCase_ == 7) {
+          return (com.google.ads.googleads.v24.resources.YoutubeLinkMetadata) dataLinkMetadata_;
+        }
+        return com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Metadata for a YouTube link.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.resources.YoutubeLinkMetadata youtube_link_metadata = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.resources.YoutubeLinkMetadata, com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.Builder, com.google.ads.googleads.v24.resources.YoutubeLinkMetadataOrBuilder> 
+        internalGetYoutubeLinkMetadataFieldBuilder() {
+      if (youtubeLinkMetadataBuilder_ == null) {
+        if (!(dataLinkMetadataCase_ == 7)) {
+          dataLinkMetadata_ = com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.getDefaultInstance();
+        }
+        youtubeLinkMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.resources.YoutubeLinkMetadata, com.google.ads.googleads.v24.resources.YoutubeLinkMetadata.Builder, com.google.ads.googleads.v24.resources.YoutubeLinkMetadataOrBuilder>(
+                (com.google.ads.googleads.v24.resources.YoutubeLinkMetadata) dataLinkMetadata_,
+                getParentForChildren(),
+                isClean());
+        dataLinkMetadata_ = null;
+      }
+      dataLinkMetadataCase_ = 7;
+      onChanged();
+      return youtubeLinkMetadataBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.resources.DataLink)

@@ -42,7 +42,7 @@ public final class AssetGroupErrorProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v24/errors/asset_" +
       "group_error.proto\022\037google.ads.googleads." +
-      "v24.errors\"\235\005\n\023AssetGroupErrorEnum\"\205\005\n\017A" +
+      "v24.errors\"\317\005\n\023AssetGroupErrorEnum\"\267\005\n\017A" +
       "ssetGroupError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
       "WN\020\001\022\022\n\016DUPLICATE_NAME\020\002\022,\n(CANNOT_ADD_A" +
       "SSET_GROUP_FOR_CAMPAIGN_TYPE\020\003\022\035\n\031NOT_EN" +
@@ -59,13 +59,14 @@ public final class AssetGroupErrorProto {
       "AL_URL_CONTAINS_INVALID_DOMAIN_NAME\020\017\022\037\n" +
       "\033AD_CUSTOMIZER_NOT_SUPPORTED\020\020\0222\n.CANNOT" +
       "_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN" +
-      "\020\021B\364\001\n#com.google.ads.googleads.v24.erro" +
-      "rsB\024AssetGroupErrorProtoP\001ZEgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v24/errors;errors\242\002\003GAA\252\002\037Google.Ads.Goo" +
-      "gleAds.V24.Errors\312\002\037Google\\Ads\\GoogleAds" +
-      "\\V24\\Errors\352\002#Google::Ads::GoogleAds::V2" +
-      "4::Errorsb\006proto3"
+      "\020\021\0220\n,CANNOT_REMOVE_ALL_ASSET_GROUPS_FRO" +
+      "M_CAMPAIGN\020\022B\364\001\n#com.google.ads.googlead" +
+      "s.v24.errorsB\024AssetGroupErrorProtoP\001ZEgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v24/errors;errors\242\002\003GAA\252\002\037Goog" +
+      "le.Ads.GoogleAds.V24.Errors\312\002\037Google\\Ads" +
+      "\\GoogleAds\\V24\\Errors\352\002#Google::Ads::Goo" +
+      "gleAds::V24::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

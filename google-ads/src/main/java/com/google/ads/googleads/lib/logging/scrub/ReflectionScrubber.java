@@ -86,6 +86,25 @@ public class ReflectionScrubber {
           .put("CustomerUserAccessInvitation", new ReflectionFieldAccessor("email_address"))
           .put("Feed", new ReflectionFieldAccessor("places_location_feed_data.email_address"))
           .put("ChangeEvent", new ReflectionFieldAccessor("user_email"))
+          .put(
+              "SearchGoogleAdsStreamResponse",
+              new SearchResponseScrubber("multi_party_auth_review.request_user_email"))
+          .put(
+              "SearchGoogleAdsResponse",
+              new SearchResponseScrubber("multi_party_auth_review.request_user_email"))
+          .put(
+              "SearchGoogleAdsStreamResponse",
+              new SearchResponseScrubber(
+                  "multi_party_auth_review.customer_user_access_invitation_review.new_customer_user_access_invitation.email_address"))
+          .put(
+              "SearchGoogleAdsResponse",
+              new SearchResponseScrubber(
+                  "multi_party_auth_review.customer_user_access_invitation_review.new_customer_user_access_invitation.email_address"))
+          .put("MultiPartyAuthReview", new ReflectionFieldAccessor("request_user_email"))
+          .put(
+              "MultiPartyAuthReview",
+              new ReflectionFieldAccessor(
+                  "customer_user_access_invitation_review.new_customer_user_access_invitation.email_address"))
           .build();
 
   /** Scrubs the given message using the protobuf descriptor API. */

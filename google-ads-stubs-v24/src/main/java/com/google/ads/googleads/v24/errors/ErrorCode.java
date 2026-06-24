@@ -221,6 +221,7 @@ private static final long serialVersionUID = 0L;
     INCENTIVE_ERROR(197),
     CONTENT_CREATOR_INSIGHTS_ERROR(198),
     VIDEO_RESERVATION_ERROR(199),
+    MULTI_PARTY_AUTH_REVIEW_ERROR(200),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -406,6 +407,7 @@ private static final long serialVersionUID = 0L;
         case 197: return INCENTIVE_ERROR;
         case 198: return CONTENT_CREATOR_INSIGHTS_ERROR;
         case 199: return VIDEO_RESERVATION_ERROR;
+        case 200: return MULTI_PARTY_AUTH_REVIEW_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -7645,6 +7647,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v24.errors.VideoReservationErrorEnum.VideoReservationError.UNSPECIFIED;
   }
 
+  public static final int MULTI_PARTY_AUTH_REVIEW_ERROR_FIELD_NUMBER = 200;
+  /**
+   * <pre>
+   * The reasons for the multi party auth review error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+   * @return Whether the multiPartyAuthReviewError field is set.
+   */
+  public boolean hasMultiPartyAuthReviewError() {
+    return errorCodeCase_ == 200;
+  }
+  /**
+   * <pre>
+   * The reasons for the multi party auth review error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+   * @return The enum numeric value on the wire for multiPartyAuthReviewError.
+   */
+  public int getMultiPartyAuthReviewErrorValue() {
+    if (errorCodeCase_ == 200) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the multi party auth review error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+   * @return The multiPartyAuthReviewError.
+   */
+  public com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError getMultiPartyAuthReviewError() {
+    if (errorCodeCase_ == 200) {
+      com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError result = com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError.forNumber(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -8162,6 +8207,9 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 199) {
       output.writeEnum(199, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 200) {
+      output.writeEnum(200, ((java.lang.Integer) errorCode_));
     }
     getUnknownFields().writeTo(output);
   }
@@ -8843,6 +8891,10 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 199) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(199, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 200) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(200, ((java.lang.Integer) errorCode_));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -9533,6 +9585,10 @@ private static final long serialVersionUID = 0L;
         if (getVideoReservationErrorValue()
             != other.getVideoReservationErrorValue()) return false;
         break;
+      case 200:
+        if (getMultiPartyAuthReviewErrorValue()
+            != other.getMultiPartyAuthReviewErrorValue()) return false;
+        break;
       case 0:
       default:
     }
@@ -10219,6 +10275,10 @@ private static final long serialVersionUID = 0L;
       case 199:
         hash = (37 * hash) + VIDEO_RESERVATION_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getVideoReservationErrorValue();
+        break;
+      case 200:
+        hash = (37 * hash) + MULTI_PARTY_AUTH_REVIEW_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getMultiPartyAuthReviewErrorValue();
         break;
       case 0:
       default:
@@ -11114,6 +11174,10 @@ private static final long serialVersionUID = 0L;
         }
         case VIDEO_RESERVATION_ERROR: {
           setVideoReservationErrorValue(other.getVideoReservationErrorValue());
+          break;
+        }
+        case MULTI_PARTY_AUTH_REVIEW_ERROR: {
+          setMultiPartyAuthReviewErrorValue(other.getMultiPartyAuthReviewErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -12154,6 +12218,12 @@ private static final long serialVersionUID = 0L;
               errorCode_ = rawValue;
               break;
             } // case 1592
+            case 1600: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 200;
+              errorCode_ = rawValue;
+              break;
+            } // case 1600
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -27640,6 +27710,98 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearVideoReservationError() {
       if (errorCodeCase_ == 199) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the multi party auth review error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+     * @return Whether the multiPartyAuthReviewError field is set.
+     */
+    @java.lang.Override
+    public boolean hasMultiPartyAuthReviewError() {
+      return errorCodeCase_ == 200;
+    }
+    /**
+     * <pre>
+     * The reasons for the multi party auth review error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+     * @return The enum numeric value on the wire for multiPartyAuthReviewError.
+     */
+    @java.lang.Override
+    public int getMultiPartyAuthReviewErrorValue() {
+      if (errorCodeCase_ == 200) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the multi party auth review error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+     * @param value The enum numeric value on the wire for multiPartyAuthReviewError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMultiPartyAuthReviewErrorValue(int value) {
+      errorCodeCase_ = 200;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the multi party auth review error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+     * @return The multiPartyAuthReviewError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError getMultiPartyAuthReviewError() {
+      if (errorCodeCase_ == 200) {
+        com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError result = com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError.forNumber(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the multi party auth review error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+     * @param value The multiPartyAuthReviewError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMultiPartyAuthReviewError(com.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError value) {
+      if (value == null) { throw new NullPointerException(); }
+      errorCodeCase_ = 200;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the multi party auth review error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError multi_party_auth_review_error = 200;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMultiPartyAuthReviewError() {
+      if (errorCodeCase_ == 200) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

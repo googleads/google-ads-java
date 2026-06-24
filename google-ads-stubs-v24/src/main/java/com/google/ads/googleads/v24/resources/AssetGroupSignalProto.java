@@ -46,8 +46,8 @@ public final class AssetGroupSignalProto {
       "v24/common/criteria.proto\032Ggoogle/ads/go" +
       "ogleads/v24/enums/asset_group_signal_app" +
       "roval_status.proto\032\037google/api/field_beh" +
-      "avior.proto\032\031google/api/resource.proto\"\335" +
-      "\004\n\020AssetGroupSignal\022H\n\rresource_name\030\001 \001" +
+      "avior.proto\032\031google/api/resource.proto\"\251" +
+      "\006\n\020AssetGroupSignal\022H\n\rresource_name\030\001 \001" +
       "(\tB1\340A\005\372A+\n)googleads.googleapis.com/Ass" +
       "etGroupSignal\022@\n\013asset_group\030\002 \001(\tB+\340A\005\372" +
       "A%\n#googleads.googleapis.com/AssetGroup\022" +
@@ -58,17 +58,23 @@ public final class AssetGroupSignalProto {
       "A\003\022F\n\010audience\030\004 \001(\0132-.google.ads.google" +
       "ads.v24.common.AudienceInfoB\003\340A\005H\000\022M\n\014se" +
       "arch_theme\030\005 \001(\01320.google.ads.googleads." +
-      "v24.common.SearchThemeInfoB\003\340A\005H\000:y\352Av\n)" +
-      "googleads.googleapis.com/AssetGroupSigna" +
-      "l\022Icustomers/{customer_id}/assetGroupSig" +
-      "nals/{asset_group_id}~{criterion_id}B\010\n\006" +
-      "signalB\207\002\n&com.google.ads.googleads.v24." +
-      "resourcesB\025AssetGroupSignalProtoP\001ZKgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v24/resources;resources\242\002\003GAA\252\002\"" +
-      "Google.Ads.GoogleAds.V24.Resources\312\002\"Goo" +
-      "gle\\Ads\\GoogleAds\\V24\\Resources\352\002&Google" +
-      "::Ads::GoogleAds::V24::Resourcesb\006proto3"
+      "v24.common.SearchThemeInfoB\003\340A\005H\000\022U\n\021loc" +
+      "al_services_id\030\010 \001(\01323.google.ads.google" +
+      "ads.v24.common.LocalServiceIdInfoB\003\340A\005H\000" +
+      "\022s\n!vertical_ads_item_group_rule_list\030\t " +
+      "\001(\0132A.google.ads.googleads.v24.common.Ve" +
+      "rticalAdsItemGroupRuleListInfoB\003\340A\005H\000:y\352" +
+      "Av\n)googleads.googleapis.com/AssetGroupS" +
+      "ignal\022Icustomers/{customer_id}/assetGrou" +
+      "pSignals/{asset_group_id}~{criterion_id}" +
+      "B\010\n\006signalB\207\002\n&com.google.ads.googleads." +
+      "v24.resourcesB\025AssetGroupSignalProtoP\001ZK" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v24/resources;resources\242\002\003GA" +
+      "A\252\002\"Google.Ads.GoogleAds.V24.Resources\312\002" +
+      "\"Google\\Ads\\GoogleAds\\V24\\Resources\352\002&Go" +
+      "ogle::Ads::GoogleAds::V24::Resourcesb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -83,7 +89,7 @@ public final class AssetGroupSignalProto {
     internal_static_google_ads_googleads_v24_resources_AssetGroupSignal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_resources_AssetGroupSignal_descriptor,
-        new java.lang.String[] { "ResourceName", "AssetGroup", "ApprovalStatus", "DisapprovalReasons", "Audience", "SearchTheme", "Signal", });
+        new java.lang.String[] { "ResourceName", "AssetGroup", "ApprovalStatus", "DisapprovalReasons", "Audience", "SearchTheme", "LocalServicesId", "VerticalAdsItemGroupRuleList", "Signal", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.ads.googleads.v24.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v24.enums.AssetGroupSignalApprovalStatusProto.getDescriptor();

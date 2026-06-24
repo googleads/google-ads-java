@@ -12,9 +12,11 @@ public interface SearchTopicsOrBuilder extends
 
   /**
    * <pre>
-   * Required. A list of knowledge graph entities to retrieve trend information
-   * for. Supported entities are tagged with
-   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Required. A list of knowledge graph entities to retrieve creator and trend
+   * information for. Supported entities are tagged with
+   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+   * or
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
    * Use
    * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
    * to get the list of supported entities.
@@ -26,9 +28,11 @@ public interface SearchTopicsOrBuilder extends
       getEntitiesList();
   /**
    * <pre>
-   * Required. A list of knowledge graph entities to retrieve trend information
-   * for. Supported entities are tagged with
-   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Required. A list of knowledge graph entities to retrieve creator and trend
+   * information for. Supported entities are tagged with
+   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+   * or
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
    * Use
    * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
    * to get the list of supported entities.
@@ -39,9 +43,11 @@ public interface SearchTopicsOrBuilder extends
   com.google.ads.googleads.v24.common.AudienceInsightsEntity getEntities(int index);
   /**
    * <pre>
-   * Required. A list of knowledge graph entities to retrieve trend information
-   * for. Supported entities are tagged with
-   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Required. A list of knowledge graph entities to retrieve creator and trend
+   * information for. Supported entities are tagged with
+   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+   * or
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
    * Use
    * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
    * to get the list of supported entities.
@@ -52,9 +58,11 @@ public interface SearchTopicsOrBuilder extends
   int getEntitiesCount();
   /**
    * <pre>
-   * Required. A list of knowledge graph entities to retrieve trend information
-   * for. Supported entities are tagged with
-   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Required. A list of knowledge graph entities to retrieve creator and trend
+   * information for. Supported entities are tagged with
+   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+   * or
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
    * Use
    * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
    * to get the list of supported entities.
@@ -66,9 +74,11 @@ public interface SearchTopicsOrBuilder extends
       getEntitiesOrBuilderList();
   /**
    * <pre>
-   * Required. A list of knowledge graph entities to retrieve trend information
-   * for. Supported entities are tagged with
-   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS].
+   * Required. A list of knowledge graph entities to retrieve creator and trend
+   * information for. Supported entities are tagged with
+   * [CONTENT_TRENDING_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CONTENT_TRENDING_INSIGHTS]
+   * or
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS].
    * Use
    * [AudienceInsightsService.ListAudienceInsightsAttributes][google.ads.googleads.v24.services.AudienceInsightsService.ListAudienceInsightsAttributes]
    * to get the list of supported entities.

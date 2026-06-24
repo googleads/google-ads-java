@@ -31,6 +31,11 @@ public final class LocalServicesProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_ads_googleads_v24_common_LocalServicesDocumentReadOnly_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v24_common_LocalServicesPhoneNumber_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v24_common_LocalServicesPhoneNumber_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -42,19 +47,28 @@ public final class LocalServicesProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v24/common/local_" +
       "services.proto\022\037google.ads.googleads.v24" +
-      ".common\"K\n\035LocalServicesDocumentReadOnly" +
-      "\022\031\n\014document_url\030\001 \001(\tH\000\210\001\001B\017\n\r_document" +
-      "_urlB\362\001\n#com.google.ads.googleads.v24.co" +
-      "mmonB\022LocalServicesProtoP\001ZEgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v24/common;common\242\002\003GAA\252\002\037Google.Ads.Goo" +
-      "gleAds.V24.Common\312\002\037Google\\Ads\\GoogleAds" +
-      "\\V24\\Common\352\002#Google::Ads::GoogleAds::V2" +
-      "4::Commonb\006proto3"
+      ".common\032:google/ads/googleads/v24/enums/" +
+      "gls_phone_number_type.proto\"K\n\035LocalServ" +
+      "icesDocumentReadOnly\022\031\n\014document_url\030\001 \001" +
+      "(\tH\000\210\001\001B\017\n\r_document_url\"\363\001\n\030LocalServic" +
+      "esPhoneNumber\022\031\n\014phone_number\030\001 \001(\tH\000\210\001\001" +
+      "\022\031\n\014country_code\030\002 \001(\tH\001\210\001\001\022i\n\021phone_num" +
+      "ber_type\030\003 \001(\0162I.google.ads.googleads.v2" +
+      "4.enums.GlsPhoneNumberTypeEnum.GlsPhoneN" +
+      "umberTypeH\002\210\001\001B\017\n\r_phone_numberB\017\n\r_coun" +
+      "try_codeB\024\n\022_phone_number_typeB\362\001\n#com.g" +
+      "oogle.ads.googleads.v24.commonB\022LocalSer" +
+      "vicesProtoP\001ZEgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v24/common;com" +
+      "mon\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V24.Com" +
+      "mon\312\002\037Google\\Ads\\GoogleAds\\V24\\Common\352\002#" +
+      "Google::Ads::GoogleAds::V24::Commonb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v24.enums.GlsPhoneNumberTypeProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v24_common_LocalServicesDocumentReadOnly_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -62,7 +76,14 @@ public final class LocalServicesProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v24_common_LocalServicesDocumentReadOnly_descriptor,
         new java.lang.String[] { "DocumentUrl", });
+    internal_static_google_ads_googleads_v24_common_LocalServicesPhoneNumber_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v24_common_LocalServicesPhoneNumber_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v24_common_LocalServicesPhoneNumber_descriptor,
+        new java.lang.String[] { "PhoneNumber", "CountryCode", "PhoneNumberType", });
     descriptor.resolveAllFeaturesImmutable();
+    com.google.ads.googleads.v24.enums.GlsPhoneNumberTypeProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

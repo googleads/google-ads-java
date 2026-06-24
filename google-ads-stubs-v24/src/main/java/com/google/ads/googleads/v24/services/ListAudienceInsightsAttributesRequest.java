@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
    * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
    * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
    * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
    * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
    * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
    * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
    * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
    * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
    * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
    * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
    * those dimensions will match or be related to this string.  For other
    * dimensions, this field is ignored and all available attributes are
-   * returned.
+   * returned. Example: "Millennials interested in the World Cup and soccer."
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -234,7 +234,7 @@ private static final long serialVersionUID = 0L;
    * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
    * those dimensions will match or be related to this string.  For other
    * dimensions, this field is ignored and all available attributes are
-   * returned.
+   * returned. Example: "Millennials interested in the World Cup and soccer."
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -471,6 +471,44 @@ private static final long serialVersionUID = 0L;
     return youtubeReachLocation_ == null ? com.google.ads.googleads.v24.common.LocationInfo.getDefaultInstance() : youtubeReachLocation_;
   }
 
+  public static final int KNOWLEDGE_GRAPH_ENTITY_SEARCH_OPTIONS_FIELD_NUMBER = 8;
+  private com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledgeGraphEntitySearchOptions_;
+  /**
+   * <pre>
+   * Optional. Additional search options for Knowledge Graph Entities.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return Whether the knowledgeGraphEntitySearchOptions field is set.
+   */
+  @java.lang.Override
+  public boolean hasKnowledgeGraphEntitySearchOptions() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * Optional. Additional search options for Knowledge Graph Entities.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The knowledgeGraphEntitySearchOptions.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions getKnowledgeGraphEntitySearchOptions() {
+    return knowledgeGraphEntitySearchOptions_ == null ? com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions.getDefaultInstance() : knowledgeGraphEntitySearchOptions_;
+  }
+  /**
+   * <pre>
+   * Optional. Additional search options for Knowledge Graph Entities.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptionsOrBuilder getKnowledgeGraphEntitySearchOptionsOrBuilder() {
+    return knowledgeGraphEntitySearchOptions_ == null ? com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions.getDefaultInstance() : knowledgeGraphEntitySearchOptions_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -510,6 +548,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(7, getInsightsApplicationInfo());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(8, getKnowledgeGraphEntitySearchOptions());
     }
     getUnknownFields().writeTo(output);
   }
@@ -553,6 +594,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getInsightsApplicationInfo());
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getKnowledgeGraphEntitySearchOptions());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -587,6 +632,11 @@ private static final long serialVersionUID = 0L;
       if (!getYoutubeReachLocation()
           .equals(other.getYoutubeReachLocation())) return false;
     }
+    if (hasKnowledgeGraphEntitySearchOptions() != other.hasKnowledgeGraphEntitySearchOptions()) return false;
+    if (hasKnowledgeGraphEntitySearchOptions()) {
+      if (!getKnowledgeGraphEntitySearchOptions()
+          .equals(other.getKnowledgeGraphEntitySearchOptions())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -619,6 +669,10 @@ private static final long serialVersionUID = 0L;
     if (hasYoutubeReachLocation()) {
       hash = (37 * hash) + YOUTUBE_REACH_LOCATION_FIELD_NUMBER;
       hash = (53 * hash) + getYoutubeReachLocation().hashCode();
+    }
+    if (hasKnowledgeGraphEntitySearchOptions()) {
+      hash = (37 * hash) + KNOWLEDGE_GRAPH_ENTITY_SEARCH_OPTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getKnowledgeGraphEntitySearchOptions().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -758,6 +812,7 @@ private static final long serialVersionUID = 0L;
         internalGetInsightsApplicationInfoFieldBuilder();
         internalGetLocationCountryFiltersFieldBuilder();
         internalGetYoutubeReachLocationFieldBuilder();
+        internalGetKnowledgeGraphEntitySearchOptionsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -784,6 +839,11 @@ private static final long serialVersionUID = 0L;
       if (youtubeReachLocationBuilder_ != null) {
         youtubeReachLocationBuilder_.dispose();
         youtubeReachLocationBuilder_ = null;
+      }
+      knowledgeGraphEntitySearchOptions_ = null;
+      if (knowledgeGraphEntitySearchOptionsBuilder_ != null) {
+        knowledgeGraphEntitySearchOptionsBuilder_.dispose();
+        knowledgeGraphEntitySearchOptionsBuilder_ = null;
       }
       return this;
     }
@@ -857,6 +917,12 @@ private static final long serialVersionUID = 0L;
             : youtubeReachLocationBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.knowledgeGraphEntitySearchOptions_ = knowledgeGraphEntitySearchOptionsBuilder_ == null
+            ? knowledgeGraphEntitySearchOptions_
+            : knowledgeGraphEntitySearchOptionsBuilder_.build();
+        to_bitField0_ |= 0x00000004;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -929,6 +995,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasYoutubeReachLocation()) {
         mergeYoutubeReachLocation(other.getYoutubeReachLocation());
+      }
+      if (other.hasKnowledgeGraphEntitySearchOptions()) {
+        mergeKnowledgeGraphEntitySearchOptions(other.getKnowledgeGraphEntitySearchOptions());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1014,6 +1083,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 58
+            case 66: {
+              input.readMessage(
+                  internalGetKnowledgeGraphEntitySearchOptionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1136,7 +1212,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1152,7 +1228,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1167,7 +1243,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1183,7 +1259,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1205,7 +1281,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1225,7 +1301,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1247,7 +1323,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1265,7 +1341,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1282,7 +1358,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1298,7 +1374,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1319,7 +1395,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1338,7 +1414,7 @@ private static final long serialVersionUID = 0L;
      * dimensions are CATEGORY, KNOWLEDGE_GRAPH, DEVICE,
      * GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION, YOUTUBE_LINEUP,
      * AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+     * PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v24.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1362,7 +1438,7 @@ private static final long serialVersionUID = 0L;
      * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
      * those dimensions will match or be related to this string.  For other
      * dimensions, this field is ignored and all available attributes are
-     * returned.
+     * returned. Example: "Millennials interested in the World Cup and soccer."
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1386,7 +1462,7 @@ private static final long serialVersionUID = 0L;
      * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
      * those dimensions will match or be related to this string.  For other
      * dimensions, this field is ignored and all available attributes are
-     * returned.
+     * returned. Example: "Millennials interested in the World Cup and soccer."
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1411,7 +1487,7 @@ private static final long serialVersionUID = 0L;
      * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
      * those dimensions will match or be related to this string.  For other
      * dimensions, this field is ignored and all available attributes are
-     * returned.
+     * returned. Example: "Millennials interested in the World Cup and soccer."
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1432,7 +1508,7 @@ private static final long serialVersionUID = 0L;
      * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
      * those dimensions will match or be related to this string.  For other
      * dimensions, this field is ignored and all available attributes are
-     * returned.
+     * returned. Example: "Millennials interested in the World Cup and soccer."
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1450,7 +1526,7 @@ private static final long serialVersionUID = 0L;
      * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
      * those dimensions will match or be related to this string.  For other
      * dimensions, this field is ignored and all available attributes are
-     * returned.
+     * returned. Example: "Millennials interested in the World Cup and soccer."
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2291,6 +2367,163 @@ private static final long serialVersionUID = 0L;
         youtubeReachLocation_ = null;
       }
       return youtubeReachLocationBuilder_;
+    }
+
+    private com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledgeGraphEntitySearchOptions_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions, com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions.Builder, com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptionsOrBuilder> knowledgeGraphEntitySearchOptionsBuilder_;
+    /**
+     * <pre>
+     * Optional. Additional search options for Knowledge Graph Entities.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the knowledgeGraphEntitySearchOptions field is set.
+     */
+    public boolean hasKnowledgeGraphEntitySearchOptions() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. Additional search options for Knowledge Graph Entities.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The knowledgeGraphEntitySearchOptions.
+     */
+    public com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions getKnowledgeGraphEntitySearchOptions() {
+      if (knowledgeGraphEntitySearchOptionsBuilder_ == null) {
+        return knowledgeGraphEntitySearchOptions_ == null ? com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions.getDefaultInstance() : knowledgeGraphEntitySearchOptions_;
+      } else {
+        return knowledgeGraphEntitySearchOptionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Additional search options for Knowledge Graph Entities.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setKnowledgeGraphEntitySearchOptions(com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions value) {
+      if (knowledgeGraphEntitySearchOptionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        knowledgeGraphEntitySearchOptions_ = value;
+      } else {
+        knowledgeGraphEntitySearchOptionsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Additional search options for Knowledge Graph Entities.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setKnowledgeGraphEntitySearchOptions(
+        com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions.Builder builderForValue) {
+      if (knowledgeGraphEntitySearchOptionsBuilder_ == null) {
+        knowledgeGraphEntitySearchOptions_ = builderForValue.build();
+      } else {
+        knowledgeGraphEntitySearchOptionsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Additional search options for Knowledge Graph Entities.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder mergeKnowledgeGraphEntitySearchOptions(com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions value) {
+      if (knowledgeGraphEntitySearchOptionsBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          knowledgeGraphEntitySearchOptions_ != null &&
+          knowledgeGraphEntitySearchOptions_ != com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions.getDefaultInstance()) {
+          getKnowledgeGraphEntitySearchOptionsBuilder().mergeFrom(value);
+        } else {
+          knowledgeGraphEntitySearchOptions_ = value;
+        }
+      } else {
+        knowledgeGraphEntitySearchOptionsBuilder_.mergeFrom(value);
+      }
+      if (knowledgeGraphEntitySearchOptions_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Additional search options for Knowledge Graph Entities.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder clearKnowledgeGraphEntitySearchOptions() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      knowledgeGraphEntitySearchOptions_ = null;
+      if (knowledgeGraphEntitySearchOptionsBuilder_ != null) {
+        knowledgeGraphEntitySearchOptionsBuilder_.dispose();
+        knowledgeGraphEntitySearchOptionsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Additional search options for Knowledge Graph Entities.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions.Builder getKnowledgeGraphEntitySearchOptionsBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return internalGetKnowledgeGraphEntitySearchOptionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. Additional search options for Knowledge Graph Entities.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptionsOrBuilder getKnowledgeGraphEntitySearchOptionsOrBuilder() {
+      if (knowledgeGraphEntitySearchOptionsBuilder_ != null) {
+        return knowledgeGraphEntitySearchOptionsBuilder_.getMessageOrBuilder();
+      } else {
+        return knowledgeGraphEntitySearchOptions_ == null ?
+            com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions.getDefaultInstance() : knowledgeGraphEntitySearchOptions_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Additional search options for Knowledge Graph Entities.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions knowledge_graph_entity_search_options = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions, com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions.Builder, com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptionsOrBuilder> 
+        internalGetKnowledgeGraphEntitySearchOptionsFieldBuilder() {
+      if (knowledgeGraphEntitySearchOptionsBuilder_ == null) {
+        knowledgeGraphEntitySearchOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions, com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptions.Builder, com.google.ads.googleads.v24.services.KnowledgeGraphEntitySearchOptionsOrBuilder>(
+                getKnowledgeGraphEntitySearchOptions(),
+                getParentForChildren(),
+                isClean());
+        knowledgeGraphEntitySearchOptions_ = null;
+      }
+      return knowledgeGraphEntitySearchOptionsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v24.services.ListAudienceInsightsAttributesRequest)

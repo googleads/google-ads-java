@@ -802,6 +802,16 @@ private static final long serialVersionUID = 0L;
          * @return The display.
          */
         boolean getDisplay();
+
+        /**
+         * <pre>
+         * Whether to enable ads on the Maps channel.
+         * </pre>
+         *
+         * <code>bool maps = 7;</code>
+         * @return The maps.
+         */
+        boolean getMaps();
       }
       /**
        * <pre>
@@ -935,6 +945,21 @@ private static final long serialVersionUID = 0L;
           return display_;
         }
 
+        public static final int MAPS_FIELD_NUMBER = 7;
+        private boolean maps_ = false;
+        /**
+         * <pre>
+         * Whether to enable ads on the Maps channel.
+         * </pre>
+         *
+         * <code>bool maps = 7;</code>
+         * @return The maps.
+         */
+        @java.lang.Override
+        public boolean getMaps() {
+          return maps_;
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -966,6 +991,9 @@ private static final long serialVersionUID = 0L;
           }
           if (display_ != false) {
             output.writeBool(6, display_);
+          }
+          if (maps_ != false) {
+            output.writeBool(7, maps_);
           }
           getUnknownFields().writeTo(output);
         }
@@ -1000,6 +1028,10 @@ private static final long serialVersionUID = 0L;
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(6, display_);
           }
+          if (maps_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(7, maps_);
+          }
           size += getUnknownFields().getSerializedSize();
           memoizedSize = size;
           return size;
@@ -1027,6 +1059,8 @@ private static final long serialVersionUID = 0L;
               != other.getGmail()) return false;
           if (getDisplay()
               != other.getDisplay()) return false;
+          if (getMaps()
+              != other.getMaps()) return false;
           if (!getUnknownFields().equals(other.getUnknownFields())) return false;
           return true;
         }
@@ -1056,6 +1090,9 @@ private static final long serialVersionUID = 0L;
           hash = (37 * hash) + DISPLAY_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getDisplay());
+          hash = (37 * hash) + MAPS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getMaps());
           hash = (29 * hash) + getUnknownFields().hashCode();
           memoizedHashCode = hash;
           return hash;
@@ -1198,6 +1235,7 @@ private static final long serialVersionUID = 0L;
             discover_ = false;
             gmail_ = false;
             display_ = false;
+            maps_ = false;
             return this;
           }
 
@@ -1249,6 +1287,9 @@ private static final long serialVersionUID = 0L;
             if (((from_bitField0_ & 0x00000020) != 0)) {
               result.display_ = display_;
             }
+            if (((from_bitField0_ & 0x00000040) != 0)) {
+              result.maps_ = maps_;
+            }
           }
 
           @java.lang.Override
@@ -1280,6 +1321,9 @@ private static final long serialVersionUID = 0L;
             }
             if (other.getDisplay() != false) {
               setDisplay(other.getDisplay());
+            }
+            if (other.getMaps() != false) {
+              setMaps(other.getMaps());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             onChanged();
@@ -1337,6 +1381,11 @@ private static final long serialVersionUID = 0L;
                     bitField0_ |= 0x00000020;
                     break;
                   } // case 48
+                  case 56: {
+                    maps_ = input.readBool();
+                    bitField0_ |= 0x00000040;
+                    break;
+                  } // case 56
                   default: {
                     if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                       done = true; // was an endgroup tag
@@ -1614,6 +1663,50 @@ private static final long serialVersionUID = 0L;
           public Builder clearDisplay() {
             bitField0_ = (bitField0_ & ~0x00000020);
             display_ = false;
+            onChanged();
+            return this;
+          }
+
+          private boolean maps_ ;
+          /**
+           * <pre>
+           * Whether to enable ads on the Maps channel.
+           * </pre>
+           *
+           * <code>bool maps = 7;</code>
+           * @return The maps.
+           */
+          @java.lang.Override
+          public boolean getMaps() {
+            return maps_;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the Maps channel.
+           * </pre>
+           *
+           * <code>bool maps = 7;</code>
+           * @param value The maps to set.
+           * @return This builder for chaining.
+           */
+          public Builder setMaps(boolean value) {
+
+            maps_ = value;
+            bitField0_ |= 0x00000040;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Whether to enable ads on the Maps channel.
+           * </pre>
+           *
+           * <code>bool maps = 7;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearMaps() {
+            bitField0_ = (bitField0_ & ~0x00000040);
+            maps_ = false;
             onChanged();
             return this;
           }

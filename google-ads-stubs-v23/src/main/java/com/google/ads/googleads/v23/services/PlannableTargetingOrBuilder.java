@@ -279,7 +279,7 @@ public interface PlannableTargetingOrBuilder extends
    * <pre>
    * Targetable YouTube Select Lineups for the ad product.
    *
-   * This field replaces the deprecated youtube_select_lineups field.
+   * This field replaces the deprecated `youtube_select_lineups` field.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.YouTubeSelectLineUpTargeting youtube_select_lineup_targeting = 7;</code>
@@ -290,7 +290,7 @@ public interface PlannableTargetingOrBuilder extends
    * <pre>
    * Targetable YouTube Select Lineups for the ad product.
    *
-   * This field replaces the deprecated youtube_select_lineups field.
+   * This field replaces the deprecated `youtube_select_lineups` field.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.YouTubeSelectLineUpTargeting youtube_select_lineup_targeting = 7;</code>
@@ -301,7 +301,7 @@ public interface PlannableTargetingOrBuilder extends
    * <pre>
    * Targetable YouTube Select Lineups for the ad product.
    *
-   * This field replaces the deprecated youtube_select_lineups field.
+   * This field replaces the deprecated `youtube_select_lineups` field.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.YouTubeSelectLineUpTargeting youtube_select_lineup_targeting = 7;</code>

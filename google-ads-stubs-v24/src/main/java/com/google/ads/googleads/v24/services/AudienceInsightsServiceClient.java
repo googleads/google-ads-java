@@ -454,11 +454,11 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    * @param dimensions Required. The types of attributes to be returned. Supported dimensions are
    *     CATEGORY, KNOWLEDGE_GRAPH, DEVICE, GEO_TARGET_COUNTRY, SUB_COUNTRY_LOCATION,
    *     YOUTUBE_LINEUP, AFFINITY_USER_INTEREST, IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST,
-   *     PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, and GENDER.
+   *     PARENTAL_STATUS, INCOME_RANGE, AGE_RANGE, GENDER, and USER_LIST.
    * @param queryText Required. A free text query. If the requested dimensions include Attributes
    *     CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for those dimensions will match
    *     or be related to this string. For other dimensions, this field is ignored and all available
-   *     attributes are returned.
+   *     attributes are returned. Example: "Millennials interested in the World Cup and soccer."
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListAudienceInsightsAttributesResponse listAudienceInsightsAttributes(
@@ -501,6 +501,8 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *           .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
    *           .addAllLocationCountryFilters(new ArrayList<LocationInfo>())
    *           .setYoutubeReachLocation(LocationInfo.newBuilder().build())
+   *           .setKnowledgeGraphEntitySearchOptions(
+   *               KnowledgeGraphEntitySearchOptions.newBuilder().build())
    *           .build();
    *   ListAudienceInsightsAttributesResponse response =
    *       audienceInsightsServiceClient.listAudienceInsightsAttributes(request);
@@ -542,6 +544,8 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *           .setInsightsApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
    *           .addAllLocationCountryFilters(new ArrayList<LocationInfo>())
    *           .setYoutubeReachLocation(LocationInfo.newBuilder().build())
+   *           .setKnowledgeGraphEntitySearchOptions(
+   *               KnowledgeGraphEntitySearchOptions.newBuilder().build())
    *           .build();
    *   ApiFuture<ListAudienceInsightsAttributesResponse> future =
    *       audienceInsightsServiceClient
@@ -660,7 +664,7 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *     returned. Supported dimensions are KNOWLEDGE_GRAPH, GEO_TARGET_COUNTRY,
    *     SUB_COUNTRY_LOCATION, YOUTUBE_CHANNEL, YOUTUBE_LINEUP, AFFINITY_USER_INTEREST,
    *     IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST, PARENTAL_STATUS, INCOME_RANGE,
-   *     AGE_RANGE, and GENDER.
+   *     AGE_RANGE, GENDER, and USER_LIST.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateAudienceCompositionInsightsResponse generateAudienceCompositionInsights(

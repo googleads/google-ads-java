@@ -97,7 +97,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * the same user.
    * If not specified, no cap is applied.
    *
-   * This field is deprecated in v4 and will eventually be removed.
+   * This field is deprecated and will eventually be removed.
    * Use cookie_frequency_cap_setting instead.
    * </pre>
    *
@@ -113,7 +113,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * the same user.
    * If not specified, no cap is applied.
    *
-   * This field is deprecated in v4 and will eventually be removed.
+   * This field is deprecated and will eventually be removed.
    * Use cookie_frequency_cap_setting instead.
    * </pre>
    *
@@ -130,7 +130,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * the same user during a specified time interval.
    * If not specified, a default of 0 (no cap) is applied.
    *
-   * This field replaces the deprecated cookie_frequency_cap field.
+   * This field replaces the deprecated `cookie_frequency_cap` field.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.FrequencyCap cookie_frequency_cap_setting = 8;</code>
@@ -145,7 +145,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * the same user during a specified time interval.
    * If not specified, a default of 0 (no cap) is applied.
    *
-   * This field replaces the deprecated cookie_frequency_cap field.
+   * This field replaces the deprecated `cookie_frequency_cap` field.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.FrequencyCap cookie_frequency_cap_setting = 8;</code>
@@ -160,7 +160,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * the same user during a specified time interval.
    * If not specified, a default of 0 (no cap) is applied.
    *
-   * This field replaces the deprecated cookie_frequency_cap field.
+   * This field replaces the deprecated `cookie_frequency_cap` field.
    * </pre>
    *
    * <code>.google.ads.googleads.v23.services.FrequencyCap cookie_frequency_cap_setting = 8;</code>

@@ -251,4 +251,98 @@ public interface TrendInsightOrBuilder extends
    */
   com.google.ads.googleads.v24.services.YouTubeCreatorInsightsOrBuilder getRelatedCreatorsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Related local creators for this topic who have consented to share their
+   * location data. Related local creators refers to creators that are based in
+   * or post from the chosen country and are viewed in the chosen country.
+   * Only populated when all of the following are true:
+   * - The trend request uses search_topics.
+   * - The Knowledge Graph entity topic has the
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS]
+   * capability.
+   * - Supplemental data
+   * [LOCAL_CREATOR_DATA][google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData.LOCAL_CREATOR_DATA]
+   * is requested.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.services.YouTubeCreatorInsights related_local_creators = 8;</code>
+   */
+  java.util.List<com.google.ads.googleads.v24.services.YouTubeCreatorInsights> 
+      getRelatedLocalCreatorsList();
+  /**
+   * <pre>
+   * Related local creators for this topic who have consented to share their
+   * location data. Related local creators refers to creators that are based in
+   * or post from the chosen country and are viewed in the chosen country.
+   * Only populated when all of the following are true:
+   * - The trend request uses search_topics.
+   * - The Knowledge Graph entity topic has the
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS]
+   * capability.
+   * - Supplemental data
+   * [LOCAL_CREATOR_DATA][google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData.LOCAL_CREATOR_DATA]
+   * is requested.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.services.YouTubeCreatorInsights related_local_creators = 8;</code>
+   */
+  com.google.ads.googleads.v24.services.YouTubeCreatorInsights getRelatedLocalCreators(int index);
+  /**
+   * <pre>
+   * Related local creators for this topic who have consented to share their
+   * location data. Related local creators refers to creators that are based in
+   * or post from the chosen country and are viewed in the chosen country.
+   * Only populated when all of the following are true:
+   * - The trend request uses search_topics.
+   * - The Knowledge Graph entity topic has the
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS]
+   * capability.
+   * - Supplemental data
+   * [LOCAL_CREATOR_DATA][google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData.LOCAL_CREATOR_DATA]
+   * is requested.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.services.YouTubeCreatorInsights related_local_creators = 8;</code>
+   */
+  int getRelatedLocalCreatorsCount();
+  /**
+   * <pre>
+   * Related local creators for this topic who have consented to share their
+   * location data. Related local creators refers to creators that are based in
+   * or post from the chosen country and are viewed in the chosen country.
+   * Only populated when all of the following are true:
+   * - The trend request uses search_topics.
+   * - The Knowledge Graph entity topic has the
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS]
+   * capability.
+   * - Supplemental data
+   * [LOCAL_CREATOR_DATA][google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData.LOCAL_CREATOR_DATA]
+   * is requested.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.services.YouTubeCreatorInsights related_local_creators = 8;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v24.services.YouTubeCreatorInsightsOrBuilder> 
+      getRelatedLocalCreatorsOrBuilderList();
+  /**
+   * <pre>
+   * Related local creators for this topic who have consented to share their
+   * location data. Related local creators refers to creators that are based in
+   * or post from the chosen country and are viewed in the chosen country.
+   * Only populated when all of the following are true:
+   * - The trend request uses search_topics.
+   * - The Knowledge Graph entity topic has the
+   * [CREATOR_TOPIC_INSIGHTS][google.ads.googleads.v24.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities.CREATOR_TOPIC_INSIGHTS]
+   * capability.
+   * - Supplemental data
+   * [LOCAL_CREATOR_DATA][google.ads.googleads.v24.enums.ContentCreatorInsightsSupplementalDataEnum.ContentCreatorInsightsSupplementalData.LOCAL_CREATOR_DATA]
+   * is requested.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v24.services.YouTubeCreatorInsights related_local_creators = 8;</code>
+   */
+  com.google.ads.googleads.v24.services.YouTubeCreatorInsightsOrBuilder getRelatedLocalCreatorsOrBuilder(
+      int index);
 }

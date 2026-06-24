@@ -57,7 +57,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the customer lifecycle goal of a campaign.
    *
-   * `customers/{customer_id}/campaignLifecycleGoal/{campaign_id}`
+   * `customers/{customer_id}/campaignLifecycleGoals/{campaign_id}`
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the customer lifecycle goal of a campaign.
    *
-   * `customers/{customer_id}/campaignLifecycleGoal/{campaign_id}`
+   * `customers/{customer_id}/campaignLifecycleGoals/{campaign_id}`
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer lifecycle goal of a campaign.
      *
-     * `customers/{customer_id}/campaignLifecycleGoal/{campaign_id}`
+     * `customers/{customer_id}/campaignLifecycleGoals/{campaign_id}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -586,7 +586,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer lifecycle goal of a campaign.
      *
-     * `customers/{customer_id}/campaignLifecycleGoal/{campaign_id}`
+     * `customers/{customer_id}/campaignLifecycleGoals/{campaign_id}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer lifecycle goal of a campaign.
      *
-     * `customers/{customer_id}/campaignLifecycleGoal/{campaign_id}`
+     * `customers/{customer_id}/campaignLifecycleGoals/{campaign_id}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer lifecycle goal of a campaign.
      *
-     * `customers/{customer_id}/campaignLifecycleGoal/{campaign_id}`
+     * `customers/{customer_id}/campaignLifecycleGoals/{campaign_id}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -644,7 +644,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer lifecycle goal of a campaign.
      *
-     * `customers/{customer_id}/campaignLifecycleGoal/{campaign_id}`
+     * `customers/{customer_id}/campaignLifecycleGoals/{campaign_id}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>

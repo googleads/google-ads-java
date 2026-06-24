@@ -129,6 +129,14 @@ private static final long serialVersionUID = 0L;
      * <code>FINAL_URL_NOT_CRAWLABLE = 8;</code>
      */
     FINAL_URL_NOT_CRAWLABLE(8),
+    /**
+     * <pre>
+     * New Smart campaigns cannot be created.
+     * </pre>
+     *
+     * <code>CREATION_FAILED = 9;</code>
+     */
+    CREATION_FAILED(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -214,6 +222,14 @@ private static final long serialVersionUID = 0L;
      * <code>FINAL_URL_NOT_CRAWLABLE = 8;</code>
      */
     public static final int FINAL_URL_NOT_CRAWLABLE_VALUE = 8;
+    /**
+     * <pre>
+     * New Smart campaigns cannot be created.
+     * </pre>
+     *
+     * <code>CREATION_FAILED = 9;</code>
+     */
+    public static final int CREATION_FAILED_VALUE = 9;
 
 
     public final int getNumber() {
@@ -249,6 +265,7 @@ private static final long serialVersionUID = 0L;
         case 6: return GEO_TARGETS_REQUIRED;
         case 7: return CANNOT_DETERMINE_SUGGESTION_LOCALE;
         case 8: return FINAL_URL_NOT_CRAWLABLE;
+        case 9: return CREATION_FAILED;
         default: return null;
       }
     }

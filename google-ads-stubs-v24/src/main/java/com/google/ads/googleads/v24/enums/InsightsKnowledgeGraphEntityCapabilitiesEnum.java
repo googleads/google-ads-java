@@ -85,12 +85,25 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An entity that is supported to use as a creator attribute in
-     * [ContentCreatorInsightsService.GenerateCreatorInsights][google.ads.googleads.v24.services.ContentCreatorInsightsService.GenerateCreatorInsights].
+     * [ContentCreatorInsightsService.GenerateCreatorInsights][google.ads.googleads.v24.services.ContentCreatorInsightsService.GenerateCreatorInsights]
+     * in field
+     * [GenerateCreatorInsightsRequest.search_attributes.creator_attributes][].
      * </pre>
      *
      * <code>CREATOR_ATTRIBUTE = 3;</code>
      */
     CREATOR_ATTRIBUTE(3),
+    /**
+     * <pre>
+     * An entity that is supported to use as a topic in
+     * [ContentCreatorInsightsService.GenerateCreatorInsights]
+     * [google.ads.googleads.v24.services.ContentCreatorInsightsService.GenerateCreatorInsights]
+     * in field [GenerateCreatorInsightsRequest.search_topics][].
+     * </pre>
+     *
+     * <code>CREATOR_TOPIC_INSIGHTS = 5;</code>
+     */
+    CREATOR_TOPIC_INSIGHTS(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -131,12 +144,25 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An entity that is supported to use as a creator attribute in
-     * [ContentCreatorInsightsService.GenerateCreatorInsights][google.ads.googleads.v24.services.ContentCreatorInsightsService.GenerateCreatorInsights].
+     * [ContentCreatorInsightsService.GenerateCreatorInsights][google.ads.googleads.v24.services.ContentCreatorInsightsService.GenerateCreatorInsights]
+     * in field
+     * [GenerateCreatorInsightsRequest.search_attributes.creator_attributes][].
      * </pre>
      *
      * <code>CREATOR_ATTRIBUTE = 3;</code>
      */
     public static final int CREATOR_ATTRIBUTE_VALUE = 3;
+    /**
+     * <pre>
+     * An entity that is supported to use as a topic in
+     * [ContentCreatorInsightsService.GenerateCreatorInsights]
+     * [google.ads.googleads.v24.services.ContentCreatorInsightsService.GenerateCreatorInsights]
+     * in field [GenerateCreatorInsightsRequest.search_topics][].
+     * </pre>
+     *
+     * <code>CREATOR_TOPIC_INSIGHTS = 5;</code>
+     */
+    public static final int CREATOR_TOPIC_INSIGHTS_VALUE = 5;
 
 
     public final int getNumber() {
@@ -167,6 +193,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return CONTENT_TRENDING_INSIGHTS;
         case 3: return CREATOR_ATTRIBUTE;
+        case 5: return CREATOR_TOPIC_INSIGHTS;
         default: return null;
       }
     }
