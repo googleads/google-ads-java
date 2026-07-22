@@ -11,10 +11,6 @@
     <file>jspecify-1.0.0.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
-  <dependency name='com.google.http-client:google-http-client:2.1.0'>
-    <file>google-http-client-2.1.0.jar</file>
-    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
-  </dependency>
   <dependency name='io.grpc:grpc-context:1.81.0'>
     <file>grpc-context-1.81.0.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
@@ -27,12 +23,12 @@
     <file>conscrypt-openjdk-uber-2.5.2.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
+  <dependency name='com.google.api:gax:2.82.0'>
+    <file>gax-2.82.0.jar</file>
+    <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
+  </dependency>
   <dependency name='com.google.errorprone:error_prone_annotations:2.48.0'>
     <file>error_prone_annotations-2.48.0.jar</file>
-    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
-  </dependency>
-  <dependency name='com.google.http-client:google-http-client-gson:2.1.0'>
-    <file>google-http-client-gson-2.1.0.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
   <dependency name='io.grpc:grpc-netty-shaded:1.81.0'>
@@ -63,8 +59,8 @@
     <file>guava-33.5.0-jre.jar</file>
     <license name='Apache License, Version 2.0' url='http://www.apache.org/licenses/LICENSE-2.0.txt' />
   </dependency>
-  <dependency name='com.google.api:api-common:2.63.0'>
-    <file>api-common-2.63.0.jar</file>
+  <dependency name='com.google.api:gax-grpc:2.82.0'>
+    <file>gax-grpc-2.82.0.jar</file>
     <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
   </dependency>
   <dependency name='org.codehaus.mojo:animal-sniffer-annotations:1.27'>
@@ -99,6 +95,10 @@
     <file>auto-common-1.2.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
+  <dependency name='com.google.http-client:google-http-client-gson:2.1.1'>
+    <file>google-http-client-gson-2.1.1.jar</file>
+    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
+  </dependency>
   <dependency name='io.grpc:grpc-protobuf:1.81.0'>
     <file>grpc-protobuf-1.81.0.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
@@ -115,6 +115,10 @@
     <file>j2objc-annotations-3.1.jar</file>
     <license name='Apache License, Version 2.0' url='http://www.apache.org/licenses/LICENSE-2.0.txt' />
   </dependency>
+  <dependency name='com.google.http-client:google-http-client:2.1.1'>
+    <file>google-http-client-2.1.1.jar</file>
+    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
+  </dependency>
   <dependency name='com.google.auto.value:auto-value-annotations:1.11.0'>
     <file>auto-value-annotations-1.11.0.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
@@ -127,25 +131,25 @@
     <file>auto-service-1.0.1.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
-  <dependency name='com.google.api:gax-grpc:2.80.0'>
-    <file>gax-grpc-2.80.0.jar</file>
+  <dependency name='com.google.api:api-common:2.65.0'>
+    <file>api-common-2.65.0.jar</file>
     <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
   </dependency>
   <dependency name='org.apache.httpcomponents:httpcore:4.4.16'>
     <file>httpcore-4.4.16.jar</file>
     <license name='Apache License, Version 2.0' url='http://www.apache.org/licenses/LICENSE-2.0.txt' />
   </dependency>
-  <dependency name='com.google.auth:google-auth-library-oauth2-http:1.47.0'>
-    <file>google-auth-library-oauth2-http-1.47.0.jar</file>
+  <dependency name='com.google.auth:google-auth-library-credentials:1.49.0'>
+    <file>google-auth-library-credentials-1.49.0.jar</file>
     <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
-  </dependency>
-  <dependency name='com.google.api.grpc:proto-google-common-protos:2.71.0'>
-    <file>proto-google-common-protos-2.71.0.jar</file>
-    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
   <dependency name='io.grpc:grpc-protobuf-lite:1.81.0'>
     <file>grpc-protobuf-lite-1.81.0.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
+  </dependency>
+  <dependency name='com.google.auth:google-auth-library-oauth2-http:1.49.0'>
+    <file>google-auth-library-oauth2-http-1.49.0.jar</file>
+    <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
   </dependency>
   <dependency name='com.google.code.findbugs:jsr305:3.0.2'>
     <file>jsr305-3.0.2.jar</file>
@@ -163,16 +167,16 @@
     <file>auto-service-annotations-1.0.1.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
-  <dependency name='com.google.api:gax:2.80.0'>
-    <file>gax-2.80.0.jar</file>
-    <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
-  </dependency>
   <dependency name='io.grpc:grpc-alts:1.81.0'>
     <file>grpc-alts-1.81.0.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
   <dependency name='io.grpc:grpc-googleapis:1.81.0'>
     <file>grpc-googleapis-1.81.0.jar</file>
+    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
+  </dependency>
+  <dependency name='com.google.api.grpc:proto-google-common-protos:2.73.0'>
+    <file>proto-google-common-protos-2.73.0.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
   <dependency name='com.squareup:javapoet:1.11.1'>
@@ -182,10 +186,6 @@
   <dependency name='io.opencensus:opencensus-api:0.31.1'>
     <file>opencensus-api-0.31.1.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
-  </dependency>
-  <dependency name='com.google.auth:google-auth-library-credentials:1.47.0'>
-    <file>google-auth-library-credentials-1.47.0.jar</file>
-    <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
   </dependency>
   <dependency name='org.apache.httpcomponents:httpclient:4.5.14'>
     <file>httpclient-4.5.14.jar</file>
