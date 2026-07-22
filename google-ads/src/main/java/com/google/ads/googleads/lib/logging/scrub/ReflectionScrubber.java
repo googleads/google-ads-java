@@ -76,6 +76,14 @@ public class ReflectionScrubber {
               new SearchResponseScrubber("local_services_lead.contact_details.phone_number"))
           .put(
               "SearchGoogleAdsStreamResponse",
+              new SearchResponseScrubber(
+                  "local_services_lead.contact_details.phone_number_extension"))
+          .put(
+              "SearchGoogleAdsResponse",
+              new SearchResponseScrubber(
+                  "local_services_lead.contact_details.phone_number_extension"))
+          .put(
+              "SearchGoogleAdsStreamResponse",
               new SearchResponseScrubber("local_services_lead_conversation.message_details.text"))
           .put(
               "SearchGoogleAdsResponse",
@@ -86,6 +94,14 @@ public class ReflectionScrubber {
           .put("CustomerUserAccessInvitation", new ReflectionFieldAccessor("email_address"))
           .put("Feed", new ReflectionFieldAccessor("places_location_feed_data.email_address"))
           .put("ChangeEvent", new ReflectionFieldAccessor("user_email"))
+          .put(
+              "LocalServicesLead",
+              new ReflectionFieldAccessor("contact_details.consumer_name"))
+          .put("LocalServicesLead", new ReflectionFieldAccessor("contact_details.email"))
+          .put("LocalServicesLead", new ReflectionFieldAccessor("contact_details.phone_number"))
+          .put(
+              "LocalServicesLead",
+              new ReflectionFieldAccessor("contact_details.phone_number_extension"))
           .put(
               "SearchGoogleAdsStreamResponse",
               new SearchResponseScrubber("multi_party_auth_review.request_user_email"))

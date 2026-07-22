@@ -1,0 +1,3 @@
+plugins {
+  id 'com.google.api-ads.gapic-stubs'
+}

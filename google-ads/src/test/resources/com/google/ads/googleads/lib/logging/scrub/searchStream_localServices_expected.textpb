@@ -2,7 +2,7 @@ results {
   local_services_lead {
     contact_details {
       phone_number: "REDACTED"
-      email: "REDACTED"
+      phone_number_extension: "REDACTED"
       consumer_name: "REDACTED"
     }
   }
@@ -16,5 +16,6 @@ results {
   }
 }
 field_mask {
-  paths: ["local_services_lead.contact_details.phone_number", "local_services_lead.contact_details.email", "local_services_lead.contact_details.consumer_name", "local_services_lead_conversation.conversation_channel", "local_services_lead_conversation.id", "local_services_lead_conversation.message_details.text"]
+  paths: ["local_services_lead.contact_details.phone_number", "local_services_lead.contact_details.phone_number_extension", "local_services_lead.contact_details.consumer_name", "local_services_lead_conversation.conversation_channel", "local_services_lead_conversation.id", "local_services_lead_conversation.message_details.text"]
 }
+

@@ -130,6 +130,7 @@ dependencies {
 
     // Add constraints for all of this project's artifacts.
     constraints {
+        api "com.google.api-ads:google-ads-stubs-v25:${version}"
         api "com.google.api-ads:google-ads-stubs-v24:${version}"
         api "com.google.api-ads:google-ads:${version}"
         api "com.google.api-ads:google-ads-codegen:${version}"

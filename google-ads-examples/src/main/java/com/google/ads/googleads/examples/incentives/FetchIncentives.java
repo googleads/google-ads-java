@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v24.errors.GoogleAdsError;
-import com.google.ads.googleads.v24.errors.GoogleAdsException;
-import com.google.ads.googleads.v24.services.CyoIncentives;
-import com.google.ads.googleads.v24.services.FetchIncentiveRequest;
-import com.google.ads.googleads.v24.services.FetchIncentiveRequest.IncentiveType;
-import com.google.ads.googleads.v24.services.FetchIncentiveResponse;
-import com.google.ads.googleads.v24.services.Incentive;
-import com.google.ads.googleads.v24.services.IncentiveServiceClient;
+import com.google.ads.googleads.v25.errors.GoogleAdsError;
+import com.google.ads.googleads.v25.errors.GoogleAdsException;
+import com.google.ads.googleads.v25.services.CyoIncentives;
+import com.google.ads.googleads.v25.services.FetchIncentiveRequest;
+import com.google.ads.googleads.v25.enums.IncentiveTypeEnum.IncentiveType;
+import com.google.ads.googleads.v25.services.FetchIncentiveResponse;
+import com.google.ads.googleads.v25.services.Incentive;
+import com.google.ads.googleads.v25.services.IncentiveServiceClient;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -105,7 +105,7 @@ public class FetchIncentives {
     try (IncentiveServiceClient incentiveServiceClient =
         googleAdsClient.getLatestVersion().createIncentiveServiceClient()) {
       FetchIncentiveRequest request = FetchIncentiveRequest.newBuilder().setCountryCode(countryCode)
-          .setLanguageCode(languageCode).setEmail(email).setType(IncentiveType.ACQUISITION).build();
+          .setLanguageCode(languageCode).setEmail(email).setIncentiveType(IncentiveType.ACQUISITION).build();
 
       // Issues the request.
       FetchIncentiveResponse response =

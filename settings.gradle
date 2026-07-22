@@ -54,3 +54,5 @@ include ':google-ads-stubs-v21'
 include ':google-ads-stubs-v22'
 include ':google-ads-stubs-v23'
 include ':google-ads-stubs-v24'
+
+include ':google-ads-stubs-v25'

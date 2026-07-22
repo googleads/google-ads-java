@@ -18,11 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v24.errors.GoogleAdsError;
-import com.google.ads.googleads.v24.errors.GoogleAdsException;
-import com.google.ads.googleads.v24.services.ApplyIncentiveRequest;
-import com.google.ads.googleads.v24.services.ApplyIncentiveResponse;
-import com.google.ads.googleads.v24.services.IncentiveServiceClient;
+import com.google.ads.googleads.v25.errors.GoogleAdsError;
+import com.google.ads.googleads.v25.errors.GoogleAdsException;
+import com.google.ads.googleads.v25.services.ApplyIncentiveRequest;
+import com.google.ads.googleads.v25.services.ApplyIncentiveResponse;
+import com.google.ads.googleads.v25.services.IncentiveServiceClient;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
