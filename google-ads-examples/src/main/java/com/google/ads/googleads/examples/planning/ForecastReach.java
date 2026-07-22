@@ -18,27 +18,27 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v24.common.DeviceInfo;
-import com.google.ads.googleads.v24.common.GenderInfo;
-import com.google.ads.googleads.v24.enums.DeviceEnum.Device;
-import com.google.ads.googleads.v24.enums.GenderTypeEnum.GenderType;
-import com.google.ads.googleads.v24.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange;
-import com.google.ads.googleads.v24.errors.GoogleAdsError;
-import com.google.ads.googleads.v24.errors.GoogleAdsException;
-import com.google.ads.googleads.v24.services.CampaignDuration;
-import com.google.ads.googleads.v24.services.GenerateReachForecastRequest;
-import com.google.ads.googleads.v24.services.GenerateReachForecastResponse;
-import com.google.ads.googleads.v24.services.ListPlannableLocationsRequest;
-import com.google.ads.googleads.v24.services.ListPlannableLocationsResponse;
-import com.google.ads.googleads.v24.services.ListPlannableProductsRequest;
-import com.google.ads.googleads.v24.services.ListPlannableProductsResponse;
-import com.google.ads.googleads.v24.services.PlannableLocation;
-import com.google.ads.googleads.v24.services.PlannedProduct;
-import com.google.ads.googleads.v24.services.PlannedProductReachForecast;
-import com.google.ads.googleads.v24.services.ProductMetadata;
-import com.google.ads.googleads.v24.services.ReachForecast;
-import com.google.ads.googleads.v24.services.ReachPlanServiceClient;
-import com.google.ads.googleads.v24.services.Targeting;
+import com.google.ads.googleads.v25.common.DeviceInfo;
+import com.google.ads.googleads.v25.common.GenderInfo;
+import com.google.ads.googleads.v25.enums.DeviceEnum.Device;
+import com.google.ads.googleads.v25.enums.GenderTypeEnum.GenderType;
+import com.google.ads.googleads.v25.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange;
+import com.google.ads.googleads.v25.errors.GoogleAdsError;
+import com.google.ads.googleads.v25.errors.GoogleAdsException;
+import com.google.ads.googleads.v25.services.CampaignDuration;
+import com.google.ads.googleads.v25.services.GenerateReachForecastRequest;
+import com.google.ads.googleads.v25.services.GenerateReachForecastResponse;
+import com.google.ads.googleads.v25.services.ListPlannableLocationsRequest;
+import com.google.ads.googleads.v25.services.ListPlannableLocationsResponse;
+import com.google.ads.googleads.v25.services.ListPlannableProductsRequest;
+import com.google.ads.googleads.v25.services.ListPlannableProductsResponse;
+import com.google.ads.googleads.v25.services.PlannableLocation;
+import com.google.ads.googleads.v25.services.PlannedProduct;
+import com.google.ads.googleads.v25.services.PlannedProductReachForecast;
+import com.google.ads.googleads.v25.services.ProductMetadata;
+import com.google.ads.googleads.v25.services.ReachForecast;
+import com.google.ads.googleads.v25.services.ReachPlanServiceClient;
+import com.google.ads.googleads.v25.services.Targeting;
 import com.google.common.base.Joiner;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -196,7 +196,7 @@ public class ForecastReach {
 
     Targeting targeting =
         Targeting.newBuilder()
-            .setPlannableLocationId(locationId)
+            .addPlannableLocationIds(locationId)
             .setAgeRange(ReachPlanAgeRange.AGE_RANGE_18_65_UP)
             .addAllGenders(genders)
             .addAllDevices(devices)
