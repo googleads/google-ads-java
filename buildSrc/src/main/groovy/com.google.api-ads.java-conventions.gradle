@@ -69,10 +69,10 @@ repositories {
     mavenLocal()
 }
 
-java.sourceCompatibility = JavaVersion.VERSION_1_8
-java.targetCompatibility = JavaVersion.VERSION_1_8
-
 java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(8)
+  }
   withSourcesJar()
   withJavadocJar()
 }
@@ -103,6 +103,8 @@ javadoc {
 
 tasks.withType(JavaCompile) {
   options.encoding = 'UTF-8'
+  options.fork = true // Required in order for Gradle to honor the memoryMaximumSize below.
+  options.forkOptions.memoryMaximumSize = '4g'
 }
 
 publishing {
