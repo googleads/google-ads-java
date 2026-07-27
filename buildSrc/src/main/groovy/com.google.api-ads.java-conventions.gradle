@@ -101,10 +101,10 @@ javadoc {
   options.encoding = 'UTF-8'
 }
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
   options.encoding = 'UTF-8'
   options.fork = true // Required in order for Gradle to honor the memoryMaximumSize below.
-  options.forkOptions.memoryMaximumSize = '4g'
+  options.forkOptions.memoryMaximumSize = '2g'
 }
 
 publishing {
