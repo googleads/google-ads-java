@@ -1,3 +1,7 @@
+45.0.0 - 2026-08-13
+-------------------
+- Release major version 45.0.0.
+
 44.0.0 - 2026-07-22
 -------------------
 - Add support and examples for v25 of the Google Ads API.
