@@ -81,8 +81,8 @@ import java.util.Set;
  *       https://support.google.com/adspolicy/answer/6299717.
  *   <li>It may take up to several hours for the list to be populated with members.
  *   <li>Email addresses must be associated with a Google account.
- *   <li>For privacy purposes, the user list size will show as zero until the list has at least
- *       100 members. After that, the size will be rounded to the two most significant digits.
+ *   <li>For privacy purposes, the user list size will show as zero until the list has at least 100
+ *       members. After that, the size will be rounded to the two most significant digits.
  * </ul>
  */
 public class AddCustomerMatchUserList {
@@ -423,14 +423,14 @@ public class AddCustomerMatchUserList {
         ImmutableMap.<String, String>builder()
             .put("email", "dana@example.com")
             // Phone number to be converted to E.164 format, with a leading '+' as required. This
-            // includes whitespace that will be removed later.
-            .put("phone", "+1 800 5550101")
+            // includes whitespace, dashes, and parentheses that will be removed later.
+            .put("phone", "+1 (800) 555-0101")
             .build();
     // The second user data has an email address, a mailing address, and a phone number.
     Map<String, String> rawRecord2 =
         ImmutableMap.<String, String>builder()
-            // Email address that includes a period (.) before the domain.
-            .put("email", "alex.2@example.com")
+            // Email address that includes a period (.) and plus (+) suffix before the Gmail domain.
+            .put("email", "alex.2+myalias@gmail.com")
             // Address that includes all four required elements: first name, last name, country
             // code, and postal code.
             .put("firstName", "Alex")
@@ -438,7 +438,7 @@ public class AddCustomerMatchUserList {
             .put("countryCode", "US")
             .put("postalCode", "94045")
             // Phone number to be converted to E.164 format, with a leading '+' as required.
-            .put("phone", "+1 800 5550102")
+            .put("phone", "+1 800-555-0102")
             .build();
     // The third user data only has an email address.
     Map<String, String> rawRecord3 =
@@ -479,7 +479,7 @@ public class AddCustomerMatchUserList {
       if (rawRecord.containsKey("email")) {
         UserIdentifier hashedEmailIdentifier =
             UserIdentifier.newBuilder()
-                .setHashedEmail(normalizeAndHash(sha256Digest, rawRecord.get("email"), true))
+                .setHashedEmail(normalizeAndHashEmailAddress(sha256Digest, rawRecord.get("email")))
                 .build();
         // Adds the hashed email identifier to the UserData object's list.
         userDataBuilder.addUserIdentifiers(hashedEmailIdentifier);
@@ -489,7 +489,8 @@ public class AddCustomerMatchUserList {
       if (rawRecord.containsKey("phone")) {
         UserIdentifier hashedPhoneNumberIdentifier =
             UserIdentifier.newBuilder()
-                .setHashedPhoneNumber(normalizeAndHash(sha256Digest, rawRecord.get("phone"), true))
+                .setHashedPhoneNumber(
+                    normalizeAndHashPhoneNumber(sha256Digest, rawRecord.get("phone")))
                 .build();
         // Adds the hashed phone number identifier to the UserData object's list.
         userDataBuilder.addUserIdentifiers(hashedPhoneNumberIdentifier);
@@ -576,6 +577,50 @@ public class AddCustomerMatchUserList {
     }
 
     return result.toString();
+  }
+
+  /**
+   * Returns the result of normalizing and hashing an email address. For this use case, Google Ads
+   * requires removal of any '.' characters or trailing '+' and characters that follow it from the
+   * username portion of the email address if the domain is {@code gmail.com} or {@code
+   * googlemail.com}.
+   *
+   * @param digest the digest to use to hash the normalized string.
+   * @param emailAddress the email address to normalize and hash.
+   */
+  private String normalizeAndHashEmailAddress(MessageDigest digest, String emailAddress)
+      throws UnsupportedEncodingException {
+    // Removes all whitespace (leading, trailing, and intermediate) from the email address.
+    String normalizedEmail = emailAddress.toLowerCase().replaceAll("\\s+", "");
+    String[] emailParts = normalizedEmail.split("@", 2);
+    if (emailParts.length == 2 && emailParts[1].matches("^(gmail|googlemail)\\.com$")) {
+      // Removes any '.' characters from the portion of the email address before the domain if the
+      // domain is gmail.com or googlemail.com.
+      emailParts[0] = emailParts[0].replaceAll("\\.", "");
+      // Removes any '+' and all characters that follow it from the portion of the email address
+      // before the domain if the domain is gmail.com or googlemail.com.
+      emailParts[0] = emailParts[0].replaceAll("\\+.*", "");
+      normalizedEmail = String.format("%s@%s", emailParts[0], emailParts[1]);
+    }
+    return normalizeAndHash(digest, normalizedEmail, true);
+  }
+
+  /**
+   * Returns the result of normalizing and hashing a phone number. For this use case, Google Ads
+   * requires phone numbers to be in E.164 format.
+   *
+   * @param digest the digest to use to hash the normalized string.
+   * @param phoneNumber the phone number to normalize and hash.
+   */
+  private String normalizeAndHashPhoneNumber(MessageDigest digest, String phoneNumber)
+      throws UnsupportedEncodingException {
+    // Removes non-digit characters and prepends a leading '+' sign.
+    String digitsOnly = phoneNumber.replaceAll("[^0-9]", "");
+    String formattedPhone = "+" + digitsOnly;
+    if (!formattedPhone.matches("^\\+[1-9]\\d{6,14}$")) {
+      throw new IllegalArgumentException("Phone number must be in E.164 format: " + phoneNumber);
+    }
+    return normalizeAndHash(digest, formattedPhone, true);
   }
 
   /**
