@@ -44,6 +44,7 @@ import com.google.api.gax.retrying.RetrySettings;
 import com.google.api.gax.rpc.ApiCallContext;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.LibraryMetadata;
 import com.google.api.gax.rpc.OperationCallSettings;
 import com.google.api.gax.rpc.PageContext;
 import com.google.api.gax.rpc.PagedCallSettings;
@@ -65,6 +66,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -143,7 +146,9 @@ import javax.annotation.Generated;
  *     .build();
  * }</pre>
  */
+@NullMarked
 @Generated("by gapic-generator-java")
+@SuppressWarnings("CanonicalDuration")
 public class ExperimentServiceStubSettings extends StubSettings<ExperimentServiceStubSettings> {
   /** The default scopes of the service. */
   private static final ImmutableList<String> DEFAULT_SERVICE_SCOPES =
@@ -349,7 +354,7 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
   }
 
   /** Returns a new builder for this class. */
-  public static Builder newBuilder(ClientContext clientContext) {
+  public static Builder newBuilder(@Nullable ClientContext clientContext) {
     return new Builder(clientContext);
   }
 
@@ -371,6 +376,11 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
     promoteExperimentSettings = settingsBuilder.promoteExperimentSettings().build();
     promoteExperimentOperationSettings =
         settingsBuilder.promoteExperimentOperationSettings().build();
+  }
+
+  @Override
+  protected LibraryMetadata getLibraryMetadata() {
+    return LibraryMetadata.newBuilder().build();
   }
 
   /** Builder for ExperimentServiceStubSettings. */
@@ -433,7 +443,7 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
       this(((ClientContext) null));
     }
 
-    protected Builder(ClientContext clientContext) {
+    protected Builder(@Nullable ClientContext clientContext) {
       super(clientContext);
 
       mutateExperimentsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();

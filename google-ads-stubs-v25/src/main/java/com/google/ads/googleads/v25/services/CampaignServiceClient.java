@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -138,9 +140,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CampaignServiceClient implements BackgroundResource {
-  private final CampaignServiceSettings settings;
+  private final @Nullable CampaignServiceSettings settings;
   private final CampaignServiceStub stub;
 
   /** Constructs an instance of CampaignServiceClient with default settings. */
@@ -180,7 +183,7 @@ public class CampaignServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final CampaignServiceSettings getSettings() {
+  public final @Nullable CampaignServiceSettings getSettings() {
     return settings;
   }
 

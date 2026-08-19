@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -120,9 +122,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class SharedCriterionServiceClient implements BackgroundResource {
-  private final SharedCriterionServiceSettings settings;
+  private final @Nullable SharedCriterionServiceSettings settings;
   private final SharedCriterionServiceStub stub;
 
   /** Constructs an instance of SharedCriterionServiceClient with default settings. */
@@ -163,7 +166,7 @@ public class SharedCriterionServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final SharedCriterionServiceSettings getSettings() {
+  public final @Nullable SharedCriterionServiceSettings getSettings() {
     return settings;
   }
 

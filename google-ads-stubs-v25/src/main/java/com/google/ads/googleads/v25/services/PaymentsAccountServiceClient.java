@@ -23,6 +23,8 @@ import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -119,9 +121,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class PaymentsAccountServiceClient implements BackgroundResource {
-  private final PaymentsAccountServiceSettings settings;
+  private final @Nullable PaymentsAccountServiceSettings settings;
   private final PaymentsAccountServiceStub stub;
 
   /** Constructs an instance of PaymentsAccountServiceClient with default settings. */
@@ -162,7 +165,7 @@ public class PaymentsAccountServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final PaymentsAccountServiceSettings getSettings() {
+  public final @Nullable PaymentsAccountServiceSettings getSettings() {
     return settings;
   }
 

@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -120,9 +122,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CampaignGoalConfigServiceClient implements BackgroundResource {
-  private final CampaignGoalConfigServiceSettings settings;
+  private final @Nullable CampaignGoalConfigServiceSettings settings;
   private final CampaignGoalConfigServiceStub stub;
 
   /** Constructs an instance of CampaignGoalConfigServiceClient with default settings. */
@@ -164,7 +167,7 @@ public class CampaignGoalConfigServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final CampaignGoalConfigServiceSettings getSettings() {
+  public final @Nullable CampaignGoalConfigServiceSettings getSettings() {
     return settings;
   }
 

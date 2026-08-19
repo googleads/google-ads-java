@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -123,9 +125,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CustomerLabelServiceClient implements BackgroundResource {
-  private final CustomerLabelServiceSettings settings;
+  private final @Nullable CustomerLabelServiceSettings settings;
   private final CustomerLabelServiceStub stub;
 
   /** Constructs an instance of CustomerLabelServiceClient with default settings. */
@@ -165,7 +168,7 @@ public class CustomerLabelServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final CustomerLabelServiceSettings getSettings() {
+  public final @Nullable CustomerLabelServiceSettings getSettings() {
     return settings;
   }
 

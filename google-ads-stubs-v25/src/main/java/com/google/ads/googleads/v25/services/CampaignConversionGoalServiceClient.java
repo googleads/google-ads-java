@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -119,9 +121,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CampaignConversionGoalServiceClient implements BackgroundResource {
-  private final CampaignConversionGoalServiceSettings settings;
+  private final @Nullable CampaignConversionGoalServiceSettings settings;
   private final CampaignConversionGoalServiceStub stub;
 
   /** Constructs an instance of CampaignConversionGoalServiceClient with default settings. */
@@ -165,7 +168,7 @@ public class CampaignConversionGoalServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final CampaignConversionGoalServiceSettings getSettings() {
+  public final @Nullable CampaignConversionGoalServiceSettings getSettings() {
     return settings;
   }
 

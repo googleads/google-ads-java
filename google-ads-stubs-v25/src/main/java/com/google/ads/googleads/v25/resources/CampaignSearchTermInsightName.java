@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CampaignSearchTermInsightName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_CAMPAIGN_ID_CLUSTER_ID =
@@ -88,7 +91,7 @@ public class CampaignSearchTermInsightName implements ResourceName {
         .toString();
   }
 
-  public static CampaignSearchTermInsightName parse(String formattedString) {
+  public static @Nullable CampaignSearchTermInsightName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -107,7 +110,7 @@ public class CampaignSearchTermInsightName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<CampaignSearchTermInsightName> values) {
+  public static List<String> toStringList(List<@Nullable CampaignSearchTermInsightName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (CampaignSearchTermInsightName value : values) {
       if (value == null) {
@@ -156,7 +159,7 @@ public class CampaignSearchTermInsightName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

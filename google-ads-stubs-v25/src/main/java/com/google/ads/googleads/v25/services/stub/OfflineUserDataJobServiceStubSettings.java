@@ -36,6 +36,7 @@ import com.google.api.gax.longrunning.OperationTimedPollAlgorithm;
 import com.google.api.gax.retrying.RetrySettings;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.LibraryMetadata;
 import com.google.api.gax.rpc.OperationCallSettings;
 import com.google.api.gax.rpc.StatusCode;
 import com.google.api.gax.rpc.StubSettings;
@@ -51,6 +52,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -129,7 +132,9 @@ import javax.annotation.Generated;
  *     .build();
  * }</pre>
  */
+@NullMarked
 @Generated("by gapic-generator-java")
+@SuppressWarnings("CanonicalDuration")
 public class OfflineUserDataJobServiceStubSettings
     extends StubSettings<OfflineUserDataJobServiceStubSettings> {
   /** The default scopes of the service. */
@@ -241,7 +246,7 @@ public class OfflineUserDataJobServiceStubSettings
   }
 
   /** Returns a new builder for this class. */
-  public static Builder newBuilder(ClientContext clientContext) {
+  public static Builder newBuilder(@Nullable ClientContext clientContext) {
     return new Builder(clientContext);
   }
 
@@ -259,6 +264,11 @@ public class OfflineUserDataJobServiceStubSettings
     runOfflineUserDataJobSettings = settingsBuilder.runOfflineUserDataJobSettings().build();
     runOfflineUserDataJobOperationSettings =
         settingsBuilder.runOfflineUserDataJobOperationSettings().build();
+  }
+
+  @Override
+  protected LibraryMetadata getLibraryMetadata() {
+    return LibraryMetadata.newBuilder().build();
   }
 
   /** Builder for OfflineUserDataJobServiceStubSettings. */
@@ -313,7 +323,7 @@ public class OfflineUserDataJobServiceStubSettings
       this(((ClientContext) null));
     }
 
-    protected Builder(ClientContext clientContext) {
+    protected Builder(@Nullable ClientContext clientContext) {
       super(clientContext);
 
       createOfflineUserDataJobSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();

@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -141,9 +143,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class ConversionUploadServiceClient implements BackgroundResource {
-  private final ConversionUploadServiceSettings settings;
+  private final @Nullable ConversionUploadServiceSettings settings;
   private final ConversionUploadServiceStub stub;
 
   /** Constructs an instance of ConversionUploadServiceClient with default settings. */
@@ -184,7 +187,7 @@ public class ConversionUploadServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final ConversionUploadServiceSettings getSettings() {
+  public final @Nullable ConversionUploadServiceSettings getSettings() {
     return settings;
   }
 

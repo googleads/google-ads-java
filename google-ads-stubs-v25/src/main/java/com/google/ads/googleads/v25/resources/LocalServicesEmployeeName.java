@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class LocalServicesEmployeeName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_GLS_EMPLOYEE_ID =
@@ -75,7 +78,7 @@ public class LocalServicesEmployeeName implements ResourceName {
         .toString();
   }
 
-  public static LocalServicesEmployeeName parse(String formattedString) {
+  public static @Nullable LocalServicesEmployeeName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -94,7 +97,7 @@ public class LocalServicesEmployeeName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<LocalServicesEmployeeName> values) {
+  public static List<String> toStringList(List<@Nullable LocalServicesEmployeeName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (LocalServicesEmployeeName value : values) {
       if (value == null) {
@@ -140,7 +143,7 @@ public class LocalServicesEmployeeName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

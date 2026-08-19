@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class QualifyingQuestionName implements ResourceName {
   private static final PathTemplate QUALIFYING_QUESTION_ID =
@@ -63,7 +66,7 @@ public class QualifyingQuestionName implements ResourceName {
     return newBuilder().setQualifyingQuestionId(qualifyingQuestionId).build().toString();
   }
 
-  public static QualifyingQuestionName parse(String formattedString) {
+  public static @Nullable QualifyingQuestionName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -81,7 +84,7 @@ public class QualifyingQuestionName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<QualifyingQuestionName> values) {
+  public static List<String> toStringList(List<@Nullable QualifyingQuestionName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (QualifyingQuestionName value : values) {
       if (value == null) {
@@ -123,7 +126,7 @@ public class QualifyingQuestionName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

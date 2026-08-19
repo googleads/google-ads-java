@@ -38,6 +38,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -237,9 +239,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class ExperimentServiceClient implements BackgroundResource {
-  private final ExperimentServiceSettings settings;
+  private final @Nullable ExperimentServiceSettings settings;
   private final ExperimentServiceStub stub;
   private final OperationsClient operationsClient;
 
@@ -282,7 +285,7 @@ public class ExperimentServiceClient implements BackgroundResource {
     this.operationsClient = OperationsClient.create(this.stub.getOperationsStub());
   }
 
-  public final ExperimentServiceSettings getSettings() {
+  public final @Nullable ExperimentServiceSettings getSettings() {
     return settings;
   }
 
@@ -429,7 +432,7 @@ public class ExperimentServiceClient implements BackgroundResource {
    * @param experiment Required. The resource name of the campaign experiment to end.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final void endExperiment(ExperimentName experiment) {
+  public final void endExperiment(@Nullable ExperimentName experiment) {
     EndExperimentRequest request =
         EndExperimentRequest.newBuilder()
             .setExperiment(experiment == null ? null : experiment.toString())
@@ -563,7 +566,7 @@ public class ExperimentServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListExperimentAsyncErrorsPagedResponse listExperimentAsyncErrors(
-      ExperimentName resourceName) {
+      @Nullable ExperimentName resourceName) {
     ListExperimentAsyncErrorsRequest request =
         ListExperimentAsyncErrorsRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())
@@ -756,7 +759,7 @@ public class ExperimentServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final void graduateExperiment(
-      ExperimentName experiment, List<CampaignBudgetMapping> campaignBudgetMappings) {
+      @Nullable ExperimentName experiment, List<CampaignBudgetMapping> campaignBudgetMappings) {
     GraduateExperimentRequest request =
         GraduateExperimentRequest.newBuilder()
             .setExperiment(experiment == null ? null : experiment.toString())
@@ -901,7 +904,7 @@ public class ExperimentServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, ScheduleExperimentMetadata> scheduleExperimentAsync(
-      ExperimentName resourceName) {
+      @Nullable ExperimentName resourceName) {
     ScheduleExperimentRequest request =
         ScheduleExperimentRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())
@@ -1095,7 +1098,7 @@ public class ExperimentServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, PromoteExperimentMetadata> promoteExperimentAsync(
-      ExperimentName resourceName) {
+      @Nullable ExperimentName resourceName) {
     PromoteExperimentRequest request =
         PromoteExperimentRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())
@@ -1311,9 +1314,10 @@ public class ExperimentServiceClient implements BackgroundResource {
           ListExperimentAsyncErrorsPage> {
 
     private ListExperimentAsyncErrorsPage(
-        PageContext<ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse, Status>
-            context,
-        ListExperimentAsyncErrorsResponse response) {
+        @Nullable
+            PageContext<ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse, Status>
+                context,
+        @Nullable ListExperimentAsyncErrorsResponse response) {
       super(context, response);
     }
 
@@ -1323,16 +1327,18 @@ public class ExperimentServiceClient implements BackgroundResource {
 
     @Override
     protected ListExperimentAsyncErrorsPage createPage(
-        PageContext<ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse, Status>
-            context,
-        ListExperimentAsyncErrorsResponse response) {
+        @Nullable
+            PageContext<ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse, Status>
+                context,
+        @Nullable ListExperimentAsyncErrorsResponse response) {
       return new ListExperimentAsyncErrorsPage(context, response);
     }
 
     @Override
     public ApiFuture<ListExperimentAsyncErrorsPage> createPageAsync(
-        PageContext<ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse, Status>
-            context,
+        @Nullable
+            PageContext<ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse, Status>
+                context,
         ApiFuture<ListExperimentAsyncErrorsResponse> futureResponse) {
       return super.createPageAsync(context, futureResponse);
     }
@@ -1347,7 +1353,7 @@ public class ExperimentServiceClient implements BackgroundResource {
           ListExperimentAsyncErrorsFixedSizeCollection> {
 
     private ListExperimentAsyncErrorsFixedSizeCollection(
-        List<ListExperimentAsyncErrorsPage> pages, int collectionSize) {
+        @Nullable List<ListExperimentAsyncErrorsPage> pages, int collectionSize) {
       super(pages, collectionSize);
     }
 
@@ -1357,7 +1363,7 @@ public class ExperimentServiceClient implements BackgroundResource {
 
     @Override
     protected ListExperimentAsyncErrorsFixedSizeCollection createCollection(
-        List<ListExperimentAsyncErrorsPage> pages, int collectionSize) {
+        @Nullable List<ListExperimentAsyncErrorsPage> pages, int collectionSize) {
       return new ListExperimentAsyncErrorsFixedSizeCollection(pages, collectionSize);
     }
   }

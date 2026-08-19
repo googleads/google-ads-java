@@ -25,6 +25,8 @@ import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -141,9 +143,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class ProductLinkServiceClient implements BackgroundResource {
-  private final ProductLinkServiceSettings settings;
+  private final @Nullable ProductLinkServiceSettings settings;
   private final ProductLinkServiceStub stub;
 
   /** Constructs an instance of ProductLinkServiceClient with default settings. */
@@ -183,7 +186,7 @@ public class ProductLinkServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final ProductLinkServiceSettings getSettings() {
+  public final @Nullable ProductLinkServiceSettings getSettings() {
     return settings;
   }
 
@@ -326,7 +329,7 @@ public class ProductLinkServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final RemoveProductLinkResponse removeProductLink(
-      String customerId, ProductLinkName resourceName) {
+      String customerId, @Nullable ProductLinkName resourceName) {
     RemoveProductLinkRequest request =
         RemoveProductLinkRequest.newBuilder()
             .setCustomerId(customerId)

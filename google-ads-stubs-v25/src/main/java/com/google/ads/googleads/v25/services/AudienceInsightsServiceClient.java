@@ -27,6 +27,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -252,9 +254,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AudienceInsightsServiceClient implements BackgroundResource {
-  private final AudienceInsightsServiceSettings settings;
+  private final @Nullable AudienceInsightsServiceSettings settings;
   private final AudienceInsightsServiceStub stub;
 
   /** Constructs an instance of AudienceInsightsServiceClient with default settings. */
@@ -295,7 +298,7 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final AudienceInsightsServiceSettings getSettings() {
+  public final @Nullable AudienceInsightsServiceSettings getSettings() {
     return settings;
   }
 
@@ -665,6 +668,11 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *     SUB_COUNTRY_LOCATION, YOUTUBE_CHANNEL, YOUTUBE_LINEUP, AFFINITY_USER_INTEREST,
    *     IN_MARKET_USER_INTEREST, LIFE_EVENT_USER_INTEREST, PARENTAL_STATUS, INCOME_RANGE,
    *     AGE_RANGE, GENDER, and USER_LIST.
+   *     <p>Note that when an
+   *     [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
+   *     is requested: - Only the following dimensions are supported: AFFINITY_USER_INTEREST,
+   *     AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST - The score field is omitted from
+   *     AudienceCompositionMetrics of the GenerateAudienceCompositionInsightsResponse.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateAudienceCompositionInsightsResponse generateAudienceCompositionInsights(

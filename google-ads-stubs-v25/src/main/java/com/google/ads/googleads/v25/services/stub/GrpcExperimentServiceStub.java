@@ -45,6 +45,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -52,6 +53,7 @@ import javax.annotation.Generated;
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class GrpcExperimentServiceStub extends ExperimentServiceStub {
   private static final MethodDescriptor<MutateExperimentsRequest, MutateExperimentsResponse>
@@ -207,6 +209,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
                   builder.add("experiment", String.valueOf(request.getExperiment()));
                   return builder.build();
                 })
+            .setResourceNameExtractor(request -> request.getExperiment())
             .build();
     GrpcCallSettings<ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse>
         listExperimentAsyncErrorsTransportSettings =
@@ -219,6 +222,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
                       builder.add("resource_name", String.valueOf(request.getResourceName()));
                       return builder.build();
                     })
+                .setResourceNameExtractor(request -> request.getResourceName())
                 .build();
     GrpcCallSettings<GraduateExperimentRequest, Empty> graduateExperimentTransportSettings =
         GrpcCallSettings.<GraduateExperimentRequest, Empty>newBuilder()
@@ -229,6 +233,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
                   builder.add("experiment", String.valueOf(request.getExperiment()));
                   return builder.build();
                 })
+            .setResourceNameExtractor(request -> request.getExperiment())
             .build();
     GrpcCallSettings<ScheduleExperimentRequest, Operation> scheduleExperimentTransportSettings =
         GrpcCallSettings.<ScheduleExperimentRequest, Operation>newBuilder()
@@ -239,6 +244,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
                   builder.add("resource_name", String.valueOf(request.getResourceName()));
                   return builder.build();
                 })
+            .setResourceNameExtractor(request -> request.getResourceName())
             .build();
     GrpcCallSettings<PromoteExperimentRequest, Operation> promoteExperimentTransportSettings =
         GrpcCallSettings.<PromoteExperimentRequest, Operation>newBuilder()
@@ -249,6 +255,7 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
                   builder.add("resource_name", String.valueOf(request.getResourceName()));
                   return builder.build();
                 })
+            .setResourceNameExtractor(request -> request.getResourceName())
             .build();
 
     this.mutateExperimentsCallable =

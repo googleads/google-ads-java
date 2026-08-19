@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class PaidOrganicSearchTermViewName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_CAMPAIGN_ID_AD_GROUP_ID_BASE64_SEARCH_TERM =
@@ -98,7 +101,7 @@ public class PaidOrganicSearchTermViewName implements ResourceName {
         .toString();
   }
 
-  public static PaidOrganicSearchTermViewName parse(String formattedString) {
+  public static @Nullable PaidOrganicSearchTermViewName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -121,7 +124,7 @@ public class PaidOrganicSearchTermViewName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<PaidOrganicSearchTermViewName> values) {
+  public static List<String> toStringList(List<@Nullable PaidOrganicSearchTermViewName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (PaidOrganicSearchTermViewName value : values) {
       if (value == null) {
@@ -180,7 +183,7 @@ public class PaidOrganicSearchTermViewName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

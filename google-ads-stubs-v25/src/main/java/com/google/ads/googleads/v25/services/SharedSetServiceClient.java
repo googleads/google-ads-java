@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -119,9 +121,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class SharedSetServiceClient implements BackgroundResource {
-  private final SharedSetServiceSettings settings;
+  private final @Nullable SharedSetServiceSettings settings;
   private final SharedSetServiceStub stub;
 
   /** Constructs an instance of SharedSetServiceClient with default settings. */
@@ -161,7 +164,7 @@ public class SharedSetServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final SharedSetServiceSettings getSettings() {
+  public final @Nullable SharedSetServiceSettings getSettings() {
     return settings;
   }
 

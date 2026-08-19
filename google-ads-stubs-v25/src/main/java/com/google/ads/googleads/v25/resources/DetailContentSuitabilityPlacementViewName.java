@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class DetailContentSuitabilityPlacementViewName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_PLACEMENT_FINGERPRINT =
@@ -79,7 +82,7 @@ public class DetailContentSuitabilityPlacementViewName implements ResourceName {
         .toString();
   }
 
-  public static DetailContentSuitabilityPlacementViewName parse(String formattedString) {
+  public static @Nullable DetailContentSuitabilityPlacementViewName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -99,7 +102,8 @@ public class DetailContentSuitabilityPlacementViewName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<DetailContentSuitabilityPlacementViewName> values) {
+  public static List<String> toStringList(
+      List<@Nullable DetailContentSuitabilityPlacementViewName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (DetailContentSuitabilityPlacementViewName value : values) {
       if (value == null) {
@@ -145,7 +149,7 @@ public class DetailContentSuitabilityPlacementViewName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

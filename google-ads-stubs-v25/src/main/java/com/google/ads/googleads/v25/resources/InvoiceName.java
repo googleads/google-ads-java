@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class InvoiceName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_INVOICE_ID =
@@ -70,7 +73,7 @@ public class InvoiceName implements ResourceName {
     return newBuilder().setCustomerId(customerId).setInvoiceId(invoiceId).build().toString();
   }
 
-  public static InvoiceName parse(String formattedString) {
+  public static @Nullable InvoiceName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -88,7 +91,7 @@ public class InvoiceName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<InvoiceName> values) {
+  public static List<String> toStringList(List<@Nullable InvoiceName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (InvoiceName value : values) {
       if (value == null) {
@@ -133,7 +136,7 @@ public class InvoiceName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

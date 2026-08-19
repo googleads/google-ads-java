@@ -34,6 +34,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -41,6 +42,7 @@ import javax.annotation.Generated;
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class GrpcSmartCampaignSettingServiceStub extends SmartCampaignSettingServiceStub {
   private static final MethodDescriptor<
@@ -137,6 +139,7 @@ public class GrpcSmartCampaignSettingServiceStub extends SmartCampaignSettingSer
                       builder.add("resource_name", String.valueOf(request.getResourceName()));
                       return builder.build();
                     })
+                .setResourceNameExtractor(request -> request.getResourceName())
                 .build();
     GrpcCallSettings<MutateSmartCampaignSettingsRequest, MutateSmartCampaignSettingsResponse>
         mutateSmartCampaignSettingsTransportSettings =

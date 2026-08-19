@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class KeywordPlanAdGroupKeywordName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_KEYWORD_PLAN_AD_GROUP_KEYWORD_ID =
@@ -80,7 +83,7 @@ public class KeywordPlanAdGroupKeywordName implements ResourceName {
         .toString();
   }
 
-  public static KeywordPlanAdGroupKeywordName parse(String formattedString) {
+  public static @Nullable KeywordPlanAdGroupKeywordName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -99,7 +102,7 @@ public class KeywordPlanAdGroupKeywordName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<KeywordPlanAdGroupKeywordName> values) {
+  public static List<String> toStringList(List<@Nullable KeywordPlanAdGroupKeywordName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (KeywordPlanAdGroupKeywordName value : values) {
       if (value == null) {
@@ -145,7 +148,7 @@ public class KeywordPlanAdGroupKeywordName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

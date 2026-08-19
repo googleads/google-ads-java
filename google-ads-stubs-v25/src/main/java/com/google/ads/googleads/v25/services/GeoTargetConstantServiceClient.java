@@ -23,6 +23,8 @@ import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -118,9 +120,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class GeoTargetConstantServiceClient implements BackgroundResource {
-  private final GeoTargetConstantServiceSettings settings;
+  private final @Nullable GeoTargetConstantServiceSettings settings;
   private final GeoTargetConstantServiceStub stub;
 
   /** Constructs an instance of GeoTargetConstantServiceClient with default settings. */
@@ -162,7 +165,7 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final GeoTargetConstantServiceSettings getSettings() {
+  public final @Nullable GeoTargetConstantServiceSettings getSettings() {
     return settings;
   }
 

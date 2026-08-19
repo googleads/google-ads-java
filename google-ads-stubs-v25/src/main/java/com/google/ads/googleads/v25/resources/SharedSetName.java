@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class SharedSetName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_SHARED_SET_ID =
@@ -70,7 +73,7 @@ public class SharedSetName implements ResourceName {
     return newBuilder().setCustomerId(customerId).setSharedSetId(sharedSetId).build().toString();
   }
 
-  public static SharedSetName parse(String formattedString) {
+  public static @Nullable SharedSetName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -88,7 +91,7 @@ public class SharedSetName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<SharedSetName> values) {
+  public static List<String> toStringList(List<@Nullable SharedSetName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (SharedSetName value : values) {
       if (value == null) {
@@ -134,7 +137,7 @@ public class SharedSetName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

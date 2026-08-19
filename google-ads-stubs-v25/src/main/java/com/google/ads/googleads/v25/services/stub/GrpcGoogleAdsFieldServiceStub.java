@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -43,6 +44,7 @@ import javax.annotation.Generated;
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class GrpcGoogleAdsFieldServiceStub extends GoogleAdsFieldServiceStub {
   private static final MethodDescriptor<GetGoogleAdsFieldRequest, GoogleAdsField>
@@ -129,6 +131,7 @@ public class GrpcGoogleAdsFieldServiceStub extends GoogleAdsFieldServiceStub {
                   builder.add("resource_name", String.valueOf(request.getResourceName()));
                   return builder.build();
                 })
+            .setResourceNameExtractor(request -> request.getResourceName())
             .build();
     GrpcCallSettings<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse>
         searchGoogleAdsFieldsTransportSettings =

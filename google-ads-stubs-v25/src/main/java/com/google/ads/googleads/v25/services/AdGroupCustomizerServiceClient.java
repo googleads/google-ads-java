@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -119,9 +121,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AdGroupCustomizerServiceClient implements BackgroundResource {
-  private final AdGroupCustomizerServiceSettings settings;
+  private final @Nullable AdGroupCustomizerServiceSettings settings;
   private final AdGroupCustomizerServiceStub stub;
 
   /** Constructs an instance of AdGroupCustomizerServiceClient with default settings. */
@@ -163,7 +166,7 @@ public class AdGroupCustomizerServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final AdGroupCustomizerServiceSettings getSettings() {
+  public final @Nullable AdGroupCustomizerServiceSettings getSettings() {
     return settings;
   }
 

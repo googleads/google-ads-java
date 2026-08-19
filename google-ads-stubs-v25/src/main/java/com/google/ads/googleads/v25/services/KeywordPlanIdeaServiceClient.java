@@ -31,6 +31,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -185,9 +187,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class KeywordPlanIdeaServiceClient implements BackgroundResource {
-  private final KeywordPlanIdeaServiceSettings settings;
+  private final @Nullable KeywordPlanIdeaServiceSettings settings;
   private final KeywordPlanIdeaServiceStub stub;
 
   /** Constructs an instance of KeywordPlanIdeaServiceClient with default settings. */
@@ -228,7 +231,7 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final KeywordPlanIdeaServiceSettings getSettings() {
+  public final @Nullable KeywordPlanIdeaServiceSettings getSettings() {
     return settings;
   }
 
@@ -751,10 +754,13 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
           GenerateKeywordIdeasPage> {
 
     private GenerateKeywordIdeasPage(
-        PageContext<
-                GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse, GenerateKeywordIdeaResult>
-            context,
-        GenerateKeywordIdeaResponse response) {
+        @Nullable
+            PageContext<
+                    GenerateKeywordIdeasRequest,
+                    GenerateKeywordIdeaResponse,
+                    GenerateKeywordIdeaResult>
+                context,
+        @Nullable GenerateKeywordIdeaResponse response) {
       super(context, response);
     }
 
@@ -764,18 +770,24 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
 
     @Override
     protected GenerateKeywordIdeasPage createPage(
-        PageContext<
-                GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse, GenerateKeywordIdeaResult>
-            context,
-        GenerateKeywordIdeaResponse response) {
+        @Nullable
+            PageContext<
+                    GenerateKeywordIdeasRequest,
+                    GenerateKeywordIdeaResponse,
+                    GenerateKeywordIdeaResult>
+                context,
+        @Nullable GenerateKeywordIdeaResponse response) {
       return new GenerateKeywordIdeasPage(context, response);
     }
 
     @Override
     public ApiFuture<GenerateKeywordIdeasPage> createPageAsync(
-        PageContext<
-                GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse, GenerateKeywordIdeaResult>
-            context,
+        @Nullable
+            PageContext<
+                    GenerateKeywordIdeasRequest,
+                    GenerateKeywordIdeaResponse,
+                    GenerateKeywordIdeaResult>
+                context,
         ApiFuture<GenerateKeywordIdeaResponse> futureResponse) {
       return super.createPageAsync(context, futureResponse);
     }
@@ -790,7 +802,7 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
           GenerateKeywordIdeasFixedSizeCollection> {
 
     private GenerateKeywordIdeasFixedSizeCollection(
-        List<GenerateKeywordIdeasPage> pages, int collectionSize) {
+        @Nullable List<GenerateKeywordIdeasPage> pages, int collectionSize) {
       super(pages, collectionSize);
     }
 
@@ -800,7 +812,7 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
 
     @Override
     protected GenerateKeywordIdeasFixedSizeCollection createCollection(
-        List<GenerateKeywordIdeasPage> pages, int collectionSize) {
+        @Nullable List<GenerateKeywordIdeasPage> pages, int collectionSize) {
       return new GenerateKeywordIdeasFixedSizeCollection(pages, collectionSize);
     }
   }

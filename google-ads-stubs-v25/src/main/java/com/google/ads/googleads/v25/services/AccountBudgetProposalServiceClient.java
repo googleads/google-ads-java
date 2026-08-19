@@ -23,6 +23,8 @@ import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -125,9 +127,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AccountBudgetProposalServiceClient implements BackgroundResource {
-  private final AccountBudgetProposalServiceSettings settings;
+  private final @Nullable AccountBudgetProposalServiceSettings settings;
   private final AccountBudgetProposalServiceStub stub;
 
   /** Constructs an instance of AccountBudgetProposalServiceClient with default settings. */
@@ -171,7 +174,7 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final AccountBudgetProposalServiceSettings getSettings() {
+  public final @Nullable AccountBudgetProposalServiceSettings getSettings() {
     return settings;
   }
 

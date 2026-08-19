@@ -39,6 +39,7 @@ import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.retrying.RetrySettings;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.LibraryMetadata;
 import com.google.api.gax.rpc.StatusCode;
 import com.google.api.gax.rpc.StubSettings;
 import com.google.api.gax.rpc.TransportChannelProvider;
@@ -51,6 +52,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -102,7 +105,9 @@ import javax.annotation.Generated;
  * Guide](https://docs.cloud.google.com/java/docs/client-retries) for additional support in setting
  * retries.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
+@SuppressWarnings("CanonicalDuration")
 public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceStubSettings> {
   /** The default scopes of the service. */
   private static final ImmutableList<String> DEFAULT_SERVICE_SCOPES =
@@ -227,7 +232,7 @@ public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceS
   }
 
   /** Returns a new builder for this class. */
-  public static Builder newBuilder(ClientContext clientContext) {
+  public static Builder newBuilder(@Nullable ClientContext clientContext) {
     return new Builder(clientContext);
   }
 
@@ -246,6 +251,11 @@ public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceS
     listPlannableUserListsSettings = settingsBuilder.listPlannableUserListsSettings().build();
     listPlannableUserInterestsSettings =
         settingsBuilder.listPlannableUserInterestsSettings().build();
+  }
+
+  @Override
+  protected LibraryMetadata getLibraryMetadata() {
+    return LibraryMetadata.newBuilder().build();
   }
 
   /** Builder for ReachPlanServiceStubSettings. */
@@ -306,7 +316,7 @@ public class ReachPlanServiceStubSettings extends StubSettings<ReachPlanServiceS
       this(((ClientContext) null));
     }
 
-    protected Builder(ClientContext clientContext) {
+    protected Builder(@Nullable ClientContext clientContext) {
       super(clientContext);
 
       generateConversionRatesSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();

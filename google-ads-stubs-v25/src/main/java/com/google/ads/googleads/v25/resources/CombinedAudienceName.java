@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CombinedAudienceName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_COMBINED_AUDIENCE_ID =
@@ -75,7 +78,7 @@ public class CombinedAudienceName implements ResourceName {
         .toString();
   }
 
-  public static CombinedAudienceName parse(String formattedString) {
+  public static @Nullable CombinedAudienceName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -93,7 +96,7 @@ public class CombinedAudienceName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<CombinedAudienceName> values) {
+  public static List<String> toStringList(List<@Nullable CombinedAudienceName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (CombinedAudienceName value : values) {
       if (value == null) {
@@ -139,7 +142,7 @@ public class CombinedAudienceName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

@@ -23,6 +23,8 @@ import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -118,9 +120,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class TravelAssetSuggestionServiceClient implements BackgroundResource {
-  private final TravelAssetSuggestionServiceSettings settings;
+  private final @Nullable TravelAssetSuggestionServiceSettings settings;
   private final TravelAssetSuggestionServiceStub stub;
 
   /** Constructs an instance of TravelAssetSuggestionServiceClient with default settings. */
@@ -164,7 +167,7 @@ public class TravelAssetSuggestionServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final TravelAssetSuggestionServiceSettings getSettings() {
+  public final @Nullable TravelAssetSuggestionServiceSettings getSettings() {
     return settings;
   }
 

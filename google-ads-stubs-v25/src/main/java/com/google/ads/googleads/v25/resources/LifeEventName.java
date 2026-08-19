@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class LifeEventName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_LIFE_EVENT_ID =
@@ -70,7 +73,7 @@ public class LifeEventName implements ResourceName {
     return newBuilder().setCustomerId(customerId).setLifeEventId(lifeEventId).build().toString();
   }
 
-  public static LifeEventName parse(String formattedString) {
+  public static @Nullable LifeEventName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -88,7 +91,7 @@ public class LifeEventName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<LifeEventName> values) {
+  public static List<String> toStringList(List<@Nullable LifeEventName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (LifeEventName value : values) {
       if (value == null) {
@@ -134,7 +137,7 @@ public class LifeEventName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

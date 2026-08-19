@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AppTopCombinationViewName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_AD_GROUP_ID_AD_ID_ASSET_COMBINATION_CATEGORY =
@@ -98,7 +101,7 @@ public class AppTopCombinationViewName implements ResourceName {
         .toString();
   }
 
-  public static AppTopCombinationViewName parse(String formattedString) {
+  public static @Nullable AppTopCombinationViewName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -121,7 +124,7 @@ public class AppTopCombinationViewName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<AppTopCombinationViewName> values) {
+  public static List<String> toStringList(List<@Nullable AppTopCombinationViewName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (AppTopCombinationViewName value : values) {
       if (value == null) {
@@ -180,7 +183,7 @@ public class AppTopCombinationViewName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

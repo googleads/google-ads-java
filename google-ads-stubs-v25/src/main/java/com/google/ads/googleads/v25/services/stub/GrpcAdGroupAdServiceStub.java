@@ -34,6 +34,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -41,6 +42,7 @@ import javax.annotation.Generated;
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class GrpcAdGroupAdServiceStub extends AdGroupAdServiceStub {
   private static final MethodDescriptor<MutateAdGroupAdsRequest, MutateAdGroupAdsResponse>
@@ -139,6 +141,7 @@ public class GrpcAdGroupAdServiceStub extends AdGroupAdServiceStub {
                       builder.add("ad_group_ad", String.valueOf(request.getAdGroupAd()));
                       return builder.build();
                     })
+                .setResourceNameExtractor(request -> request.getAdGroupAd())
                 .build();
 
     this.mutateAdGroupAdsCallable =

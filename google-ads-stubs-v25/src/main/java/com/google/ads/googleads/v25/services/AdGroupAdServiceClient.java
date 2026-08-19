@@ -26,6 +26,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -141,9 +143,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AdGroupAdServiceClient implements BackgroundResource {
-  private final AdGroupAdServiceSettings settings;
+  private final @Nullable AdGroupAdServiceSettings settings;
   private final AdGroupAdServiceStub stub;
 
   /** Constructs an instance of AdGroupAdServiceClient with default settings. */
@@ -183,7 +186,7 @@ public class AdGroupAdServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final AdGroupAdServiceSettings getSettings() {
+  public final @Nullable AdGroupAdServiceSettings getSettings() {
     return settings;
   }
 
@@ -354,7 +357,7 @@ public class AdGroupAdServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final void removeAutomaticallyCreatedAssets(
-      AdGroupAdName adGroupAd, List<AssetsWithFieldType> assetsWithFieldType) {
+      @Nullable AdGroupAdName adGroupAd, List<AssetsWithFieldType> assetsWithFieldType) {
     RemoveAutomaticallyCreatedAssetsRequest request =
         RemoveAutomaticallyCreatedAssetsRequest.newBuilder()
             .setAdGroupAd(adGroupAd == null ? null : adGroupAd.toString())

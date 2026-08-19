@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CustomizerAttributeName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_CUSTOMIZER_ATTRIBUTE_ID =
@@ -78,7 +81,7 @@ public class CustomizerAttributeName implements ResourceName {
         .toString();
   }
 
-  public static CustomizerAttributeName parse(String formattedString) {
+  public static @Nullable CustomizerAttributeName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -96,7 +99,7 @@ public class CustomizerAttributeName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<CustomizerAttributeName> values) {
+  public static List<String> toStringList(List<@Nullable CustomizerAttributeName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (CustomizerAttributeName value : values) {
       if (value == null) {
@@ -142,7 +145,7 @@ public class CustomizerAttributeName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

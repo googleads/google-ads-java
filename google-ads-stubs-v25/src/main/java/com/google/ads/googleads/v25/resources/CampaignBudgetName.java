@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CampaignBudgetName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_CAMPAIGN_BUDGET_ID =
@@ -75,7 +78,7 @@ public class CampaignBudgetName implements ResourceName {
         .toString();
   }
 
-  public static CampaignBudgetName parse(String formattedString) {
+  public static @Nullable CampaignBudgetName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -93,7 +96,7 @@ public class CampaignBudgetName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<CampaignBudgetName> values) {
+  public static List<String> toStringList(List<@Nullable CampaignBudgetName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (CampaignBudgetName value : values) {
       if (value == null) {
@@ -139,7 +142,7 @@ public class CampaignBudgetName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

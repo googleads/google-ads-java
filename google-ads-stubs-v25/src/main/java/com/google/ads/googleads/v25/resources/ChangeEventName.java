@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class ChangeEventName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_TIMESTAMP_MICROS_COMMAND_INDEX_MUTATE_INDEX =
@@ -98,7 +101,7 @@ public class ChangeEventName implements ResourceName {
         .toString();
   }
 
-  public static ChangeEventName parse(String formattedString) {
+  public static @Nullable ChangeEventName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -120,7 +123,7 @@ public class ChangeEventName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<ChangeEventName> values) {
+  public static List<String> toStringList(List<@Nullable ChangeEventName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (ChangeEventName value : values) {
       if (value == null) {
@@ -179,7 +182,7 @@ public class ChangeEventName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }
