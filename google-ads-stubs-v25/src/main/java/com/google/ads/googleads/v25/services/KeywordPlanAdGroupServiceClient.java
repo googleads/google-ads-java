@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -120,9 +122,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
-  private final KeywordPlanAdGroupServiceSettings settings;
+  private final @Nullable KeywordPlanAdGroupServiceSettings settings;
   private final KeywordPlanAdGroupServiceStub stub;
 
   /** Constructs an instance of KeywordPlanAdGroupServiceClient with default settings. */
@@ -164,7 +167,7 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final KeywordPlanAdGroupServiceSettings getSettings() {
+  public final @Nullable KeywordPlanAdGroupServiceSettings getSettings() {
     return settings;
   }
 

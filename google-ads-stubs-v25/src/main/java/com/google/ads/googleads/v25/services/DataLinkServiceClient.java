@@ -26,6 +26,8 @@ import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -161,9 +163,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class DataLinkServiceClient implements BackgroundResource {
-  private final DataLinkServiceSettings settings;
+  private final @Nullable DataLinkServiceSettings settings;
   private final DataLinkServiceStub stub;
 
   /** Constructs an instance of DataLinkServiceClient with default settings. */
@@ -203,7 +206,7 @@ public class DataLinkServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final DataLinkServiceSettings getSettings() {
+  public final @Nullable DataLinkServiceSettings getSettings() {
     return settings;
   }
 
@@ -346,7 +349,8 @@ public class DataLinkServiceClient implements BackgroundResource {
    * @param resourceName Required. The data link is expected to have a valid resource name.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final RemoveDataLinkResponse removeDataLink(String customerId, DataLinkName resourceName) {
+  public final RemoveDataLinkResponse removeDataLink(
+      String customerId, @Nullable DataLinkName resourceName) {
     RemoveDataLinkRequest request =
         RemoveDataLinkRequest.newBuilder()
             .setCustomerId(customerId)
@@ -499,7 +503,7 @@ public class DataLinkServiceClient implements BackgroundResource {
   public final UpdateDataLinkResponse updateDataLink(
       String customerId,
       DataLinkStatusEnum.DataLinkStatus dataLinkStatus,
-      DataLinkName resourceName) {
+      @Nullable DataLinkName resourceName) {
     UpdateDataLinkRequest request =
         UpdateDataLinkRequest.newBuilder()
             .setCustomerId(customerId)

@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CampaignAudienceViewName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_CAMPAIGN_ID_CRITERION_ID =
@@ -88,7 +91,7 @@ public class CampaignAudienceViewName implements ResourceName {
         .toString();
   }
 
-  public static CampaignAudienceViewName parse(String formattedString) {
+  public static @Nullable CampaignAudienceViewName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -107,7 +110,7 @@ public class CampaignAudienceViewName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<CampaignAudienceViewName> values) {
+  public static List<String> toStringList(List<@Nullable CampaignAudienceViewName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (CampaignAudienceViewName value : values) {
       if (value == null) {
@@ -156,7 +159,7 @@ public class CampaignAudienceViewName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

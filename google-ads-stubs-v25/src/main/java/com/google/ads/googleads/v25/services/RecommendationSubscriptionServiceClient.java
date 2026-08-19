@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -121,9 +123,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class RecommendationSubscriptionServiceClient implements BackgroundResource {
-  private final RecommendationSubscriptionServiceSettings settings;
+  private final @Nullable RecommendationSubscriptionServiceSettings settings;
   private final RecommendationSubscriptionServiceStub stub;
 
   /** Constructs an instance of RecommendationSubscriptionServiceClient with default settings. */
@@ -168,7 +171,7 @@ public class RecommendationSubscriptionServiceClient implements BackgroundResour
     this.stub = stub;
   }
 
-  public final RecommendationSubscriptionServiceSettings getSettings() {
+  public final @Nullable RecommendationSubscriptionServiceSettings getSettings() {
     return settings;
   }
 

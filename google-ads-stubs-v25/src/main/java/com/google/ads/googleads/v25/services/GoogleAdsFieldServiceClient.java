@@ -33,6 +33,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -148,9 +150,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class GoogleAdsFieldServiceClient implements BackgroundResource {
-  private final GoogleAdsFieldServiceSettings settings;
+  private final @Nullable GoogleAdsFieldServiceSettings settings;
   private final GoogleAdsFieldServiceStub stub;
 
   /** Constructs an instance of GoogleAdsFieldServiceClient with default settings. */
@@ -190,7 +193,7 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final GoogleAdsFieldServiceSettings getSettings() {
+  public final @Nullable GoogleAdsFieldServiceSettings getSettings() {
     return settings;
   }
 
@@ -223,7 +226,7 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
    * @param resourceName Required. The resource name of the field to get.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final GoogleAdsField getGoogleAdsField(GoogleAdsFieldName resourceName) {
+  public final GoogleAdsField getGoogleAdsField(@Nullable GoogleAdsFieldName resourceName) {
     GetGoogleAdsFieldRequest request =
         GetGoogleAdsFieldRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())
@@ -542,9 +545,10 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
           SearchGoogleAdsFieldsPage> {
 
     private SearchGoogleAdsFieldsPage(
-        PageContext<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse, GoogleAdsField>
-            context,
-        SearchGoogleAdsFieldsResponse response) {
+        @Nullable
+            PageContext<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse, GoogleAdsField>
+                context,
+        @Nullable SearchGoogleAdsFieldsResponse response) {
       super(context, response);
     }
 
@@ -554,16 +558,18 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
 
     @Override
     protected SearchGoogleAdsFieldsPage createPage(
-        PageContext<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse, GoogleAdsField>
-            context,
-        SearchGoogleAdsFieldsResponse response) {
+        @Nullable
+            PageContext<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse, GoogleAdsField>
+                context,
+        @Nullable SearchGoogleAdsFieldsResponse response) {
       return new SearchGoogleAdsFieldsPage(context, response);
     }
 
     @Override
     public ApiFuture<SearchGoogleAdsFieldsPage> createPageAsync(
-        PageContext<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse, GoogleAdsField>
-            context,
+        @Nullable
+            PageContext<SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse, GoogleAdsField>
+                context,
         ApiFuture<SearchGoogleAdsFieldsResponse> futureResponse) {
       return super.createPageAsync(context, futureResponse);
     }
@@ -578,7 +584,7 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
           SearchGoogleAdsFieldsFixedSizeCollection> {
 
     private SearchGoogleAdsFieldsFixedSizeCollection(
-        List<SearchGoogleAdsFieldsPage> pages, int collectionSize) {
+        @Nullable List<SearchGoogleAdsFieldsPage> pages, int collectionSize) {
       super(pages, collectionSize);
     }
 
@@ -588,7 +594,7 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
 
     @Override
     protected SearchGoogleAdsFieldsFixedSizeCollection createCollection(
-        List<SearchGoogleAdsFieldsPage> pages, int collectionSize) {
+        @Nullable List<SearchGoogleAdsFieldsPage> pages, int collectionSize) {
       return new SearchGoogleAdsFieldsFixedSizeCollection(pages, collectionSize);
     }
   }

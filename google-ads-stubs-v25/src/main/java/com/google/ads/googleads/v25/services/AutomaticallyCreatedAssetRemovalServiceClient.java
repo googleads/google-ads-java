@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -129,9 +131,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AutomaticallyCreatedAssetRemovalServiceClient implements BackgroundResource {
-  private final AutomaticallyCreatedAssetRemovalServiceSettings settings;
+  private final @Nullable AutomaticallyCreatedAssetRemovalServiceSettings settings;
   private final AutomaticallyCreatedAssetRemovalServiceStub stub;
 
   /**
@@ -180,7 +183,7 @@ public class AutomaticallyCreatedAssetRemovalServiceClient implements Background
     this.stub = stub;
   }
 
-  public final AutomaticallyCreatedAssetRemovalServiceSettings getSettings() {
+  public final @Nullable AutomaticallyCreatedAssetRemovalServiceSettings getSettings() {
     return settings;
   }
 

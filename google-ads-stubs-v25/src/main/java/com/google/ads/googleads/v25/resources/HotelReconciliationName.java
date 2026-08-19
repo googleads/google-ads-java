@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class HotelReconciliationName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_COMMISSION_ID =
@@ -71,7 +74,7 @@ public class HotelReconciliationName implements ResourceName {
     return newBuilder().setCustomerId(customerId).setCommissionId(commissionId).build().toString();
   }
 
-  public static HotelReconciliationName parse(String formattedString) {
+  public static @Nullable HotelReconciliationName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -89,7 +92,7 @@ public class HotelReconciliationName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<HotelReconciliationName> values) {
+  public static List<String> toStringList(List<@Nullable HotelReconciliationName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (HotelReconciliationName value : values) {
       if (value == null) {
@@ -135,7 +138,7 @@ public class HotelReconciliationName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

@@ -32,6 +32,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -170,9 +172,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class OfflineUserDataJobServiceClient implements BackgroundResource {
-  private final OfflineUserDataJobServiceSettings settings;
+  private final @Nullable OfflineUserDataJobServiceSettings settings;
   private final OfflineUserDataJobServiceStub stub;
   private final OperationsClient operationsClient;
 
@@ -217,7 +220,7 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
     this.operationsClient = OperationsClient.create(this.stub.getOperationsStub());
   }
 
-  public final OfflineUserDataJobServiceSettings getSettings() {
+  public final @Nullable OfflineUserDataJobServiceSettings getSettings() {
     return settings;
   }
 
@@ -376,7 +379,7 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AddOfflineUserDataJobOperationsResponse addOfflineUserDataJobOperations(
-      OfflineUserDataJobName resourceName, List<OfflineUserDataJobOperation> operations) {
+      @Nullable OfflineUserDataJobName resourceName, List<OfflineUserDataJobOperation> operations) {
     AddOfflineUserDataJobOperationsRequest request =
         AddOfflineUserDataJobOperationsRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())
@@ -539,7 +542,7 @@ public class OfflineUserDataJobServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, OfflineUserDataJobMetadata> runOfflineUserDataJobAsync(
-      OfflineUserDataJobName resourceName) {
+      @Nullable OfflineUserDataJobName resourceName) {
     RunOfflineUserDataJobRequest request =
         RunOfflineUserDataJobRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())

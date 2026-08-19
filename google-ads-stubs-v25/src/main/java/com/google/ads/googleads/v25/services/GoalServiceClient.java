@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -115,9 +117,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class GoalServiceClient implements BackgroundResource {
-  private final GoalServiceSettings settings;
+  private final @Nullable GoalServiceSettings settings;
   private final GoalServiceStub stub;
 
   /** Constructs an instance of GoalServiceClient with default settings. */
@@ -156,7 +159,7 @@ public class GoalServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final GoalServiceSettings getSettings() {
+  public final @Nullable GoalServiceSettings getSettings() {
     return settings;
   }
 

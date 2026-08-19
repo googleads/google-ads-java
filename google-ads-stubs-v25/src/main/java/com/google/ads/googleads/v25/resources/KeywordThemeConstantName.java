@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class KeywordThemeConstantName implements ResourceName {
   private static final PathTemplate EXPRESS_CATEGORY_ID_EXPRESS_SUB_CATEGORY_ID =
@@ -78,7 +81,7 @@ public class KeywordThemeConstantName implements ResourceName {
         .toString();
   }
 
-  public static KeywordThemeConstantName parse(String formattedString) {
+  public static @Nullable KeywordThemeConstantName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -96,7 +99,7 @@ public class KeywordThemeConstantName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<KeywordThemeConstantName> values) {
+  public static List<String> toStringList(List<@Nullable KeywordThemeConstantName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (KeywordThemeConstantName value : values) {
       if (value == null) {
@@ -142,7 +145,7 @@ public class KeywordThemeConstantName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

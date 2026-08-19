@@ -26,6 +26,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -188,9 +190,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class BenchmarksServiceClient implements BackgroundResource {
-  private final BenchmarksServiceSettings settings;
+  private final @Nullable BenchmarksServiceSettings settings;
   private final BenchmarksServiceStub stub;
 
   /** Constructs an instance of BenchmarksServiceClient with default settings. */
@@ -230,7 +233,7 @@ public class BenchmarksServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final BenchmarksServiceSettings getSettings() {
+  public final @Nullable BenchmarksServiceSettings getSettings() {
     return settings;
   }
 
@@ -456,7 +459,9 @@ public class BenchmarksServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param benchmarksSources Required. The types of benchmarks sources to be returned
+   * @param benchmarksSources Required. The types of benchmarks sources to be returned. Supported
+   *     sources include INDUSTRY_VERTICAL and CATEGORY. Categories are used as filters for scoping
+   *     the benchmarks analysis when benchmarking against all advertisers.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListBenchmarksSourcesResponse listBenchmarksSources(
@@ -609,6 +614,7 @@ public class BenchmarksServiceClient implements BackgroundResource {
    *           .setDateRange(DateRange.newBuilder().build())
    *           .setLocation(LocationInfo.newBuilder().build())
    *           .setBenchmarksSource(BenchmarksSource.newBuilder().build())
+   *           .setCategoryFilter(CategoryFilter.newBuilder().build())
    *           .setProductFilter(ProductFilter.newBuilder().build())
    *           .setBreakdownDefinition(BreakdownDefinition.newBuilder().build())
    *           .setCurrencyCode("currencyCode1004773790")
@@ -650,6 +656,7 @@ public class BenchmarksServiceClient implements BackgroundResource {
    *           .setDateRange(DateRange.newBuilder().build())
    *           .setLocation(LocationInfo.newBuilder().build())
    *           .setBenchmarksSource(BenchmarksSource.newBuilder().build())
+   *           .setCategoryFilter(CategoryFilter.newBuilder().build())
    *           .setProductFilter(ProductFilter.newBuilder().build())
    *           .setBreakdownDefinition(BreakdownDefinition.newBuilder().build())
    *           .setCurrencyCode("currencyCode1004773790")

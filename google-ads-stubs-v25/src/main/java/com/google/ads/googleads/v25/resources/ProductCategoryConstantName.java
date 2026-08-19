@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class ProductCategoryConstantName implements ResourceName {
   private static final PathTemplate LEVEL_CATEGORY_ID =
@@ -70,7 +73,7 @@ public class ProductCategoryConstantName implements ResourceName {
     return newBuilder().setLevel(level).setCategoryId(categoryId).build().toString();
   }
 
-  public static ProductCategoryConstantName parse(String formattedString) {
+  public static @Nullable ProductCategoryConstantName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -89,7 +92,7 @@ public class ProductCategoryConstantName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<ProductCategoryConstantName> values) {
+  public static List<String> toStringList(List<@Nullable ProductCategoryConstantName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (ProductCategoryConstantName value : values) {
       if (value == null) {
@@ -134,7 +137,7 @@ public class ProductCategoryConstantName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AndroidPrivacySharedKeyGoogleNetworkTypeName implements ResourceName {
   private static final PathTemplate
@@ -118,7 +121,8 @@ public class AndroidPrivacySharedKeyGoogleNetworkTypeName implements ResourceNam
         .toString();
   }
 
-  public static AndroidPrivacySharedKeyGoogleNetworkTypeName parse(String formattedString) {
+  public static @Nullable AndroidPrivacySharedKeyGoogleNetworkTypeName parse(
+      String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -146,7 +150,7 @@ public class AndroidPrivacySharedKeyGoogleNetworkTypeName implements ResourceNam
   }
 
   public static List<String> toStringList(
-      List<AndroidPrivacySharedKeyGoogleNetworkTypeName> values) {
+      List<@Nullable AndroidPrivacySharedKeyGoogleNetworkTypeName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (AndroidPrivacySharedKeyGoogleNetworkTypeName value : values) {
       if (value == null) {
@@ -212,7 +216,7 @@ public class AndroidPrivacySharedKeyGoogleNetworkTypeName implements ResourceNam
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

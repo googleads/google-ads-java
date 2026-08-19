@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AdGroupLabelName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_AD_GROUP_ID_LABEL_ID =
@@ -87,7 +90,7 @@ public class AdGroupLabelName implements ResourceName {
         .toString();
   }
 
-  public static AdGroupLabelName parse(String formattedString) {
+  public static @Nullable AdGroupLabelName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -105,7 +108,7 @@ public class AdGroupLabelName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<AdGroupLabelName> values) {
+  public static List<String> toStringList(List<@Nullable AdGroupLabelName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (AdGroupLabelName value : values) {
       if (value == null) {
@@ -154,7 +157,7 @@ public class AdGroupLabelName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

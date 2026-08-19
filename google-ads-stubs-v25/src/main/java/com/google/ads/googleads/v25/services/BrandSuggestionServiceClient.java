@@ -23,6 +23,8 @@ import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -118,9 +120,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class BrandSuggestionServiceClient implements BackgroundResource {
-  private final BrandSuggestionServiceSettings settings;
+  private final @Nullable BrandSuggestionServiceSettings settings;
   private final BrandSuggestionServiceStub stub;
 
   /** Constructs an instance of BrandSuggestionServiceClient with default settings. */
@@ -161,7 +164,7 @@ public class BrandSuggestionServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final BrandSuggestionServiceSettings getSettings() {
+  public final @Nullable BrandSuggestionServiceSettings getSettings() {
     return settings;
   }
 

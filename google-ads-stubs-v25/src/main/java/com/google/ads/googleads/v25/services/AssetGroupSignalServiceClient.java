@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -119,9 +121,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AssetGroupSignalServiceClient implements BackgroundResource {
-  private final AssetGroupSignalServiceSettings settings;
+  private final @Nullable AssetGroupSignalServiceSettings settings;
   private final AssetGroupSignalServiceStub stub;
 
   /** Constructs an instance of AssetGroupSignalServiceClient with default settings. */
@@ -162,7 +165,7 @@ public class AssetGroupSignalServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final AssetGroupSignalServiceSettings getSettings() {
+  public final @Nullable AssetGroupSignalServiceSettings getSettings() {
     return settings;
   }
 

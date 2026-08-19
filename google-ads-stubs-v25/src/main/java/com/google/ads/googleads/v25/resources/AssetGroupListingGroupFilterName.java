@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AssetGroupListingGroupFilterName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_ASSET_GROUP_ID_LISTING_GROUP_FILTER_ID =
@@ -88,7 +91,7 @@ public class AssetGroupListingGroupFilterName implements ResourceName {
         .toString();
   }
 
-  public static AssetGroupListingGroupFilterName parse(String formattedString) {
+  public static @Nullable AssetGroupListingGroupFilterName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -110,7 +113,7 @@ public class AssetGroupListingGroupFilterName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<AssetGroupListingGroupFilterName> values) {
+  public static List<String> toStringList(List<@Nullable AssetGroupListingGroupFilterName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (AssetGroupListingGroupFilterName value : values) {
       if (value == null) {
@@ -164,7 +167,7 @@ public class AssetGroupListingGroupFilterName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

@@ -23,6 +23,8 @@ import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -152,9 +154,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class SmartCampaignSuggestServiceClient implements BackgroundResource {
-  private final SmartCampaignSuggestServiceSettings settings;
+  private final @Nullable SmartCampaignSuggestServiceSettings settings;
   private final SmartCampaignSuggestServiceStub stub;
 
   /** Constructs an instance of SmartCampaignSuggestServiceClient with default settings. */
@@ -197,7 +200,7 @@ public class SmartCampaignSuggestServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final SmartCampaignSuggestServiceSettings getSettings() {
+  public final @Nullable SmartCampaignSuggestServiceSettings getSettings() {
     return settings;
   }
 

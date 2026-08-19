@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -43,6 +44,7 @@ import javax.annotation.Generated;
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class GrpcDataLinkServiceStub extends DataLinkServiceStub {
   private static final MethodDescriptor<CreateDataLinkRequest, CreateDataLinkResponse>
@@ -150,6 +152,7 @@ public class GrpcDataLinkServiceStub extends DataLinkServiceStub {
                       builder.add("customer_id", String.valueOf(request.getCustomerId()));
                       return builder.build();
                     })
+                .setResourceNameExtractor(request -> request.getResourceName())
                 .build();
     GrpcCallSettings<UpdateDataLinkRequest, UpdateDataLinkResponse>
         updateDataLinkTransportSettings =
@@ -161,6 +164,7 @@ public class GrpcDataLinkServiceStub extends DataLinkServiceStub {
                       builder.add("customer_id", String.valueOf(request.getCustomerId()));
                       return builder.build();
                     })
+                .setResourceNameExtractor(request -> request.getResourceName())
                 .build();
 
     this.createDataLinkCallable =

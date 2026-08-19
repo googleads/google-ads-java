@@ -38,6 +38,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -177,9 +179,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CampaignDraftServiceClient implements BackgroundResource {
-  private final CampaignDraftServiceSettings settings;
+  private final @Nullable CampaignDraftServiceSettings settings;
   private final CampaignDraftServiceStub stub;
   private final OperationsClient operationsClient;
 
@@ -222,7 +225,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
     this.operationsClient = OperationsClient.create(this.stub.getOperationsStub());
   }
 
-  public final CampaignDraftServiceSettings getSettings() {
+  public final @Nullable CampaignDraftServiceSettings getSettings() {
     return settings;
   }
 
@@ -387,7 +390,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, Empty> promoteCampaignDraftAsync(
-      CampaignDraftName campaignDraft) {
+      @Nullable CampaignDraftName campaignDraft) {
     PromoteCampaignDraftRequest request =
         PromoteCampaignDraftRequest.newBuilder()
             .setCampaignDraft(campaignDraft == null ? null : campaignDraft.toString())
@@ -599,7 +602,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListCampaignDraftAsyncErrorsPagedResponse listCampaignDraftAsyncErrors(
-      CampaignDraftName resourceName) {
+      @Nullable CampaignDraftName resourceName) {
     ListCampaignDraftAsyncErrorsRequest request =
         ListCampaignDraftAsyncErrorsRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())
@@ -842,10 +845,13 @@ public class CampaignDraftServiceClient implements BackgroundResource {
           ListCampaignDraftAsyncErrorsPage> {
 
     private ListCampaignDraftAsyncErrorsPage(
-        PageContext<
-                ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse, Status>
-            context,
-        ListCampaignDraftAsyncErrorsResponse response) {
+        @Nullable
+            PageContext<
+                    ListCampaignDraftAsyncErrorsRequest,
+                    ListCampaignDraftAsyncErrorsResponse,
+                    Status>
+                context,
+        @Nullable ListCampaignDraftAsyncErrorsResponse response) {
       super(context, response);
     }
 
@@ -855,18 +861,24 @@ public class CampaignDraftServiceClient implements BackgroundResource {
 
     @Override
     protected ListCampaignDraftAsyncErrorsPage createPage(
-        PageContext<
-                ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse, Status>
-            context,
-        ListCampaignDraftAsyncErrorsResponse response) {
+        @Nullable
+            PageContext<
+                    ListCampaignDraftAsyncErrorsRequest,
+                    ListCampaignDraftAsyncErrorsResponse,
+                    Status>
+                context,
+        @Nullable ListCampaignDraftAsyncErrorsResponse response) {
       return new ListCampaignDraftAsyncErrorsPage(context, response);
     }
 
     @Override
     public ApiFuture<ListCampaignDraftAsyncErrorsPage> createPageAsync(
-        PageContext<
-                ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse, Status>
-            context,
+        @Nullable
+            PageContext<
+                    ListCampaignDraftAsyncErrorsRequest,
+                    ListCampaignDraftAsyncErrorsResponse,
+                    Status>
+                context,
         ApiFuture<ListCampaignDraftAsyncErrorsResponse> futureResponse) {
       return super.createPageAsync(context, futureResponse);
     }
@@ -881,7 +893,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
           ListCampaignDraftAsyncErrorsFixedSizeCollection> {
 
     private ListCampaignDraftAsyncErrorsFixedSizeCollection(
-        List<ListCampaignDraftAsyncErrorsPage> pages, int collectionSize) {
+        @Nullable List<ListCampaignDraftAsyncErrorsPage> pages, int collectionSize) {
       super(pages, collectionSize);
     }
 
@@ -891,7 +903,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
 
     @Override
     protected ListCampaignDraftAsyncErrorsFixedSizeCollection createCollection(
-        List<ListCampaignDraftAsyncErrorsPage> pages, int collectionSize) {
+        @Nullable List<ListCampaignDraftAsyncErrorsPage> pages, int collectionSize) {
       return new ListCampaignDraftAsyncErrorsFixedSizeCollection(pages, collectionSize);
     }
   }

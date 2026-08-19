@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class TargetingExpansionViewName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_CAMPAIGN_ID_TARGETING_EXPANSION_TYPE =
@@ -88,7 +91,7 @@ public class TargetingExpansionViewName implements ResourceName {
         .toString();
   }
 
-  public static TargetingExpansionViewName parse(String formattedString) {
+  public static @Nullable TargetingExpansionViewName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -110,7 +113,7 @@ public class TargetingExpansionViewName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<TargetingExpansionViewName> values) {
+  public static List<String> toStringList(List<@Nullable TargetingExpansionViewName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (TargetingExpansionViewName value : values) {
       if (value == null) {
@@ -164,7 +167,7 @@ public class TargetingExpansionViewName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

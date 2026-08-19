@@ -40,6 +40,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -47,6 +48,7 @@ import javax.annotation.Generated;
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
   private static final MethodDescriptor<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>
@@ -166,6 +168,7 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                   builder.add("campaign_draft", String.valueOf(request.getCampaignDraft()));
                   return builder.build();
                 })
+            .setResourceNameExtractor(request -> request.getCampaignDraft())
             .build();
     GrpcCallSettings<ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>
         listCampaignDraftAsyncErrorsTransportSettings =
@@ -179,6 +182,7 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                       builder.add("resource_name", String.valueOf(request.getResourceName()));
                       return builder.build();
                     })
+                .setResourceNameExtractor(request -> request.getResourceName())
                 .build();
 
     this.mutateCampaignDraftsCallable =

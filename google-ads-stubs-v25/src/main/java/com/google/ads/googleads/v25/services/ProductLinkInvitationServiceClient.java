@@ -26,6 +26,8 @@ import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -161,9 +163,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class ProductLinkInvitationServiceClient implements BackgroundResource {
-  private final ProductLinkInvitationServiceSettings settings;
+  private final @Nullable ProductLinkInvitationServiceSettings settings;
   private final ProductLinkInvitationServiceStub stub;
 
   /** Constructs an instance of ProductLinkInvitationServiceClient with default settings. */
@@ -207,7 +210,7 @@ public class ProductLinkInvitationServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final ProductLinkInvitationServiceSettings getSettings() {
+  public final @Nullable ProductLinkInvitationServiceSettings getSettings() {
     return settings;
   }
 
@@ -350,7 +353,7 @@ public class ProductLinkInvitationServiceClient implements BackgroundResource {
   public final UpdateProductLinkInvitationResponse updateProductLinkInvitation(
       String customerId,
       ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus productLinkInvitationStatus,
-      ProductLinkInvitationName resourceName) {
+      @Nullable ProductLinkInvitationName resourceName) {
     UpdateProductLinkInvitationRequest request =
         UpdateProductLinkInvitationRequest.newBuilder()
             .setCustomerId(customerId)
@@ -502,7 +505,7 @@ public class ProductLinkInvitationServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final RemoveProductLinkInvitationResponse removeProductLinkInvitation(
-      String customerId, ProductLinkInvitationName resourceName) {
+      String customerId, @Nullable ProductLinkInvitationName resourceName) {
     RemoveProductLinkInvitationRequest request =
         RemoveProductLinkInvitationRequest.newBuilder()
             .setCustomerId(customerId)

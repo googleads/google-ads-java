@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -119,9 +121,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class BiddingDataExclusionServiceClient implements BackgroundResource {
-  private final BiddingDataExclusionServiceSettings settings;
+  private final @Nullable BiddingDataExclusionServiceSettings settings;
   private final BiddingDataExclusionServiceStub stub;
 
   /** Constructs an instance of BiddingDataExclusionServiceClient with default settings. */
@@ -164,7 +167,7 @@ public class BiddingDataExclusionServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final BiddingDataExclusionServiceSettings getSettings() {
+  public final @Nullable BiddingDataExclusionServiceSettings getSettings() {
     return settings;
   }
 

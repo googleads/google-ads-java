@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class DynamicSearchAdsSearchTermViewName implements ResourceName {
   private static final PathTemplate
@@ -127,7 +130,7 @@ public class DynamicSearchAdsSearchTermViewName implements ResourceName {
         .toString();
   }
 
-  public static DynamicSearchAdsSearchTermViewName parse(String formattedString) {
+  public static @Nullable DynamicSearchAdsSearchTermViewName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -153,7 +156,8 @@ public class DynamicSearchAdsSearchTermViewName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<DynamicSearchAdsSearchTermViewName> values) {
+  public static List<String> toStringList(
+      List<@Nullable DynamicSearchAdsSearchTermViewName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (DynamicSearchAdsSearchTermViewName value : values) {
       if (value == null) {
@@ -224,7 +228,7 @@ public class DynamicSearchAdsSearchTermViewName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

@@ -23,6 +23,8 @@ import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -124,9 +126,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class CustomerUserAccessInvitationServiceClient implements BackgroundResource {
-  private final CustomerUserAccessInvitationServiceSettings settings;
+  private final @Nullable CustomerUserAccessInvitationServiceSettings settings;
   private final CustomerUserAccessInvitationServiceStub stub;
 
   /** Constructs an instance of CustomerUserAccessInvitationServiceClient with default settings. */
@@ -172,7 +175,7 @@ public class CustomerUserAccessInvitationServiceClient implements BackgroundReso
     this.stub = stub;
   }
 
-  public final CustomerUserAccessInvitationServiceSettings getSettings() {
+  public final @Nullable CustomerUserAccessInvitationServiceSettings getSettings() {
     return settings;
   }
 

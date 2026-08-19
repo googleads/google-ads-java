@@ -35,6 +35,7 @@ import com.google.api.gax.retrying.RetrySettings;
 import com.google.api.gax.rpc.ApiCallContext;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.LibraryMetadata;
 import com.google.api.gax.rpc.PageContext;
 import com.google.api.gax.rpc.PagedCallSettings;
 import com.google.api.gax.rpc.PagedListDescriptor;
@@ -52,6 +53,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -104,7 +107,9 @@ import javax.annotation.Generated;
  * Guide](https://docs.cloud.google.com/java/docs/client-retries) for additional support in setting
  * retries.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
+@SuppressWarnings("CanonicalDuration")
 public class GoogleAdsFieldServiceStubSettings
     extends StubSettings<GoogleAdsFieldServiceStubSettings> {
   /** The default scopes of the service. */
@@ -265,7 +270,7 @@ public class GoogleAdsFieldServiceStubSettings
   }
 
   /** Returns a new builder for this class. */
-  public static Builder newBuilder(ClientContext clientContext) {
+  public static Builder newBuilder(@Nullable ClientContext clientContext) {
     return new Builder(clientContext);
   }
 
@@ -279,6 +284,11 @@ public class GoogleAdsFieldServiceStubSettings
 
     getGoogleAdsFieldSettings = settingsBuilder.getGoogleAdsFieldSettings().build();
     searchGoogleAdsFieldsSettings = settingsBuilder.searchGoogleAdsFieldsSettings().build();
+  }
+
+  @Override
+  protected LibraryMetadata getLibraryMetadata() {
+    return LibraryMetadata.newBuilder().build();
   }
 
   /** Builder for GoogleAdsFieldServiceStubSettings. */
@@ -329,7 +339,7 @@ public class GoogleAdsFieldServiceStubSettings
       this(((ClientContext) null));
     }
 
-    protected Builder(ClientContext clientContext) {
+    protected Builder(@Nullable ClientContext clientContext) {
       super(clientContext);
 
       getGoogleAdsFieldSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();

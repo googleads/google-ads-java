@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AiMaxSearchTermAdCombinationViewName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_AD_GROUP_ID_SEARCH_TERM_LANDING_PAGE_HEADLINE =
@@ -107,7 +110,7 @@ public class AiMaxSearchTermAdCombinationViewName implements ResourceName {
         .toString();
   }
 
-  public static AiMaxSearchTermAdCombinationViewName parse(String formattedString) {
+  public static @Nullable AiMaxSearchTermAdCombinationViewName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -132,7 +135,8 @@ public class AiMaxSearchTermAdCombinationViewName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<AiMaxSearchTermAdCombinationViewName> values) {
+  public static List<String> toStringList(
+      List<@Nullable AiMaxSearchTermAdCombinationViewName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (AiMaxSearchTermAdCombinationViewName value : values) {
       if (value == null) {
@@ -196,7 +200,7 @@ public class AiMaxSearchTermAdCombinationViewName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

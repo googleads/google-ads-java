@@ -1,5 +1,6 @@
-45.0.0 - 2026-08-13
+45.0.0 - 2026-08-20
 -------------------
+- Add support and examples for v25_1 of the Google Ads API.
 - Remove support for v21 of the Google Ads API.
 
 44.0.0 - 2026-07-22

@@ -38,6 +38,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -197,9 +199,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class BatchJobServiceClient implements BackgroundResource {
-  private final BatchJobServiceSettings settings;
+  private final @Nullable BatchJobServiceSettings settings;
   private final BatchJobServiceStub stub;
   private final OperationsClient operationsClient;
 
@@ -242,7 +245,7 @@ public class BatchJobServiceClient implements BackgroundResource {
     this.operationsClient = OperationsClient.create(this.stub.getOperationsStub());
   }
 
-  public final BatchJobServiceSettings getSettings() {
+  public final @Nullable BatchJobServiceSettings getSettings() {
     return settings;
   }
 
@@ -387,7 +390,8 @@ public class BatchJobServiceClient implements BackgroundResource {
    *     listed.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final ListBatchJobResultsPagedResponse listBatchJobResults(BatchJobName resourceName) {
+  public final ListBatchJobResultsPagedResponse listBatchJobResults(
+      @Nullable BatchJobName resourceName) {
     ListBatchJobResultsRequest request =
         ListBatchJobResultsRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())
@@ -574,7 +578,7 @@ public class BatchJobServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OperationFuture<Empty, BatchJob.BatchJobMetadata> runBatchJobAsync(
-      BatchJobName resourceName) {
+      @Nullable BatchJobName resourceName) {
     RunBatchJobRequest request =
         RunBatchJobRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())
@@ -758,7 +762,7 @@ public class BatchJobServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AddBatchJobOperationsResponse addBatchJobOperations(
-      BatchJobName resourceName, List<MutateOperation> mutateOperations) {
+      @Nullable BatchJobName resourceName, List<MutateOperation> mutateOperations) {
     AddBatchJobOperationsRequest request =
         AddBatchJobOperationsRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())
@@ -852,7 +856,9 @@ public class BatchJobServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AddBatchJobOperationsResponse addBatchJobOperations(
-      BatchJobName resourceName, String sequenceToken, List<MutateOperation> mutateOperations) {
+      @Nullable BatchJobName resourceName,
+      String sequenceToken,
+      List<MutateOperation> mutateOperations) {
     AddBatchJobOperationsRequest request =
         AddBatchJobOperationsRequest.newBuilder()
             .setResourceName(resourceName == null ? null : resourceName.toString())
@@ -1046,9 +1052,10 @@ public class BatchJobServiceClient implements BackgroundResource {
           ListBatchJobResultsPage> {
 
     private ListBatchJobResultsPage(
-        PageContext<ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
-            context,
-        ListBatchJobResultsResponse response) {
+        @Nullable
+            PageContext<ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
+                context,
+        @Nullable ListBatchJobResultsResponse response) {
       super(context, response);
     }
 
@@ -1058,16 +1065,18 @@ public class BatchJobServiceClient implements BackgroundResource {
 
     @Override
     protected ListBatchJobResultsPage createPage(
-        PageContext<ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
-            context,
-        ListBatchJobResultsResponse response) {
+        @Nullable
+            PageContext<ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
+                context,
+        @Nullable ListBatchJobResultsResponse response) {
       return new ListBatchJobResultsPage(context, response);
     }
 
     @Override
     public ApiFuture<ListBatchJobResultsPage> createPageAsync(
-        PageContext<ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
-            context,
+        @Nullable
+            PageContext<ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
+                context,
         ApiFuture<ListBatchJobResultsResponse> futureResponse) {
       return super.createPageAsync(context, futureResponse);
     }
@@ -1082,7 +1091,7 @@ public class BatchJobServiceClient implements BackgroundResource {
           ListBatchJobResultsFixedSizeCollection> {
 
     private ListBatchJobResultsFixedSizeCollection(
-        List<ListBatchJobResultsPage> pages, int collectionSize) {
+        @Nullable List<ListBatchJobResultsPage> pages, int collectionSize) {
       super(pages, collectionSize);
     }
 
@@ -1092,7 +1101,7 @@ public class BatchJobServiceClient implements BackgroundResource {
 
     @Override
     protected ListBatchJobResultsFixedSizeCollection createCollection(
-        List<ListBatchJobResultsPage> pages, int collectionSize) {
+        @Nullable List<ListBatchJobResultsPage> pages, int collectionSize) {
       return new ListBatchJobResultsFixedSizeCollection(pages, collectionSize);
     }
   }

@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -118,9 +120,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AssetSetServiceClient implements BackgroundResource {
-  private final AssetSetServiceSettings settings;
+  private final @Nullable AssetSetServiceSettings settings;
   private final AssetSetServiceStub stub;
 
   /** Constructs an instance of AssetSetServiceClient with default settings. */
@@ -160,7 +163,7 @@ public class AssetSetServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final AssetSetServiceSettings getSettings() {
+  public final @Nullable AssetSetServiceSettings getSettings() {
     return settings;
   }
 

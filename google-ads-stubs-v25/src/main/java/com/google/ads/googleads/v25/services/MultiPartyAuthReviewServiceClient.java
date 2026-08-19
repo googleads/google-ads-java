@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -120,9 +122,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class MultiPartyAuthReviewServiceClient implements BackgroundResource {
-  private final MultiPartyAuthReviewServiceSettings settings;
+  private final @Nullable MultiPartyAuthReviewServiceSettings settings;
   private final MultiPartyAuthReviewServiceStub stub;
 
   /** Constructs an instance of MultiPartyAuthReviewServiceClient with default settings. */
@@ -165,7 +168,7 @@ public class MultiPartyAuthReviewServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final MultiPartyAuthReviewServiceSettings getSettings() {
+  public final @Nullable MultiPartyAuthReviewServiceSettings getSettings() {
     return settings;
   }
 

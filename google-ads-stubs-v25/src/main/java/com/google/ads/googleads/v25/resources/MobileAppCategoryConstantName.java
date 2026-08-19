@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class MobileAppCategoryConstantName implements ResourceName {
   private static final PathTemplate MOBILE_APP_CATEGORY_ID =
@@ -63,7 +66,7 @@ public class MobileAppCategoryConstantName implements ResourceName {
     return newBuilder().setMobileAppCategoryId(mobileAppCategoryId).build().toString();
   }
 
-  public static MobileAppCategoryConstantName parse(String formattedString) {
+  public static @Nullable MobileAppCategoryConstantName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -82,7 +85,7 @@ public class MobileAppCategoryConstantName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<MobileAppCategoryConstantName> values) {
+  public static List<String> toStringList(List<@Nullable MobileAppCategoryConstantName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (MobileAppCategoryConstantName value : values) {
       if (value == null) {
@@ -124,7 +127,7 @@ public class MobileAppCategoryConstantName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

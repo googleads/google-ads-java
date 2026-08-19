@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -122,9 +124,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class AssetGroupListingGroupFilterServiceClient implements BackgroundResource {
-  private final AssetGroupListingGroupFilterServiceSettings settings;
+  private final @Nullable AssetGroupListingGroupFilterServiceSettings settings;
   private final AssetGroupListingGroupFilterServiceStub stub;
 
   /** Constructs an instance of AssetGroupListingGroupFilterServiceClient with default settings. */
@@ -170,7 +173,7 @@ public class AssetGroupListingGroupFilterServiceClient implements BackgroundReso
     this.stub = stub;
   }
 
-  public final AssetGroupListingGroupFilterServiceSettings getSettings() {
+  public final @Nullable AssetGroupListingGroupFilterServiceSettings getSettings() {
     return settings;
   }
 

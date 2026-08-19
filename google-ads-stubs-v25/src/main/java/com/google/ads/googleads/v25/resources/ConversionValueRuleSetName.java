@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
+@NullMarked
 @Generated("by gapic-generator-java")
 public class ConversionValueRuleSetName implements ResourceName {
   private static final PathTemplate CUSTOMER_ID_CONVERSION_VALUE_RULE_SET_ID =
@@ -78,7 +81,7 @@ public class ConversionValueRuleSetName implements ResourceName {
         .toString();
   }
 
-  public static ConversionValueRuleSetName parse(String formattedString) {
+  public static @Nullable ConversionValueRuleSetName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
@@ -97,7 +100,7 @@ public class ConversionValueRuleSetName implements ResourceName {
     return list;
   }
 
-  public static List<String> toStringList(List<ConversionValueRuleSetName> values) {
+  public static List<String> toStringList(List<@Nullable ConversionValueRuleSetName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (ConversionValueRuleSetName value : values) {
       if (value == null) {
@@ -143,7 +146,7 @@ public class ConversionValueRuleSetName implements ResourceName {
   }
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(@Nullable Object o) {
     if (o == this) {
       return true;
     }

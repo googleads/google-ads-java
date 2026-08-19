@@ -32,6 +32,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
@@ -170,9 +172,10 @@ import javax.annotation.Generated;
  *
  * <p>Please refer to the GitHub repository's samples for more quickstart code snippets.
  */
+@NullMarked
 @Generated("by gapic-generator-java")
 public class GoogleAdsServiceClient implements BackgroundResource {
-  private final GoogleAdsServiceSettings settings;
+  private final @Nullable GoogleAdsServiceSettings settings;
   private final GoogleAdsServiceStub stub;
 
   /** Constructs an instance of GoogleAdsServiceClient with default settings. */
@@ -212,7 +215,7 @@ public class GoogleAdsServiceClient implements BackgroundResource {
     this.stub = stub;
   }
 
-  public final GoogleAdsServiceSettings getSettings() {
+  public final @Nullable GoogleAdsServiceSettings getSettings() {
     return settings;
   }
 
@@ -746,8 +749,9 @@ public class GoogleAdsServiceClient implements BackgroundResource {
           SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow, SearchPage> {
 
     private SearchPage(
-        PageContext<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow> context,
-        SearchGoogleAdsResponse response) {
+        @Nullable
+            PageContext<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow> context,
+        @Nullable SearchGoogleAdsResponse response) {
       super(context, response);
     }
 
@@ -757,14 +761,16 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
     @Override
     protected SearchPage createPage(
-        PageContext<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow> context,
-        SearchGoogleAdsResponse response) {
+        @Nullable
+            PageContext<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow> context,
+        @Nullable SearchGoogleAdsResponse response) {
       return new SearchPage(context, response);
     }
 
     @Override
     public ApiFuture<SearchPage> createPageAsync(
-        PageContext<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow> context,
+        @Nullable
+            PageContext<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow> context,
         ApiFuture<SearchGoogleAdsResponse> futureResponse) {
       return super.createPageAsync(context, futureResponse);
     }
@@ -778,7 +784,7 @@ public class GoogleAdsServiceClient implements BackgroundResource {
           SearchPage,
           SearchFixedSizeCollection> {
 
-    private SearchFixedSizeCollection(List<SearchPage> pages, int collectionSize) {
+    private SearchFixedSizeCollection(@Nullable List<SearchPage> pages, int collectionSize) {
       super(pages, collectionSize);
     }
 
@@ -788,7 +794,7 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
     @Override
     protected SearchFixedSizeCollection createCollection(
-        List<SearchPage> pages, int collectionSize) {
+        @Nullable List<SearchPage> pages, int collectionSize) {
       return new SearchFixedSizeCollection(pages, collectionSize);
     }
   }
