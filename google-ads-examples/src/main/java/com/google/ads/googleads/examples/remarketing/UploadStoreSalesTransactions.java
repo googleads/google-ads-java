@@ -562,7 +562,7 @@ public class UploadStoreSalesTransactions {
       throw new RuntimeException("Missing SHA-256 algorithm implementation", e);
     }
 
-    // Create the first transaction for upload based on an email address and state.
+    // Create the first transaction for upload based on an email address, phone number, and state.
     UserData.Builder userDataWithEmailAddress =
         UserData.newBuilder()
             .addAllUserIdentifiers(
@@ -570,7 +570,12 @@ public class UploadStoreSalesTransactions {
                     UserIdentifier.newBuilder()
                         .setHashedEmail(
                             // Email addresses must be normalized and hashed.
-                            normalizeAndHash(sha256Digest, "dana@example.com"))
+                            normalizeAndHashEmailAddress(sha256Digest, "dana.2+myalias@gmail.com"))
+                        .build(),
+                    UserIdentifier.newBuilder()
+                        .setHashedPhoneNumber(
+                            // Phone numbers must be normalized and hashed.
+                            normalizeAndHashPhoneNumber(sha256Digest, "+1 (800) 555-0101"))
                         .build(),
                     UserIdentifier.newBuilder()
                         .setAddressInfo(OfflineUserAddressInfo.newBuilder().setState("NY"))
@@ -673,6 +678,50 @@ public class UploadStoreSalesTransactions {
     }
 
     return result.toString();
+  }
+
+  /**
+   * Returns the result of normalizing and hashing an email address. For this use case, Google Ads
+   * requires removal of any '.' characters or trailing '+' and characters that follow it from the
+   * username portion of the email address if the domain is {@code gmail.com} or {@code
+   * googlemail.com}.
+   *
+   * @param digest the digest to use to hash the normalized string.
+   * @param emailAddress the email address to normalize and hash.
+   */
+  private String normalizeAndHashEmailAddress(MessageDigest digest, String emailAddress)
+      throws UnsupportedEncodingException {
+    // Removes all whitespace (leading, trailing, and intermediate) from the email address.
+    String normalizedEmail = emailAddress.toLowerCase().replaceAll("\\s+", "");
+    String[] emailParts = normalizedEmail.split("@", 2);
+    if (emailParts.length == 2 && emailParts[1].matches("^(gmail|googlemail)\\.com$")) {
+      // Removes any '.' characters from the portion of the email address before the domain if the
+      // domain is gmail.com or googlemail.com.
+      emailParts[0] = emailParts[0].replaceAll("\\.", "");
+      // Removes any '+' and all characters that follow it from the portion of the email address
+      // before the domain if the domain is gmail.com or googlemail.com.
+      emailParts[0] = emailParts[0].replaceAll("\\+.*", "");
+      normalizedEmail = String.format("%s@%s", emailParts[0], emailParts[1]);
+    }
+    return normalizeAndHash(digest, normalizedEmail);
+  }
+
+  /**
+   * Returns the result of normalizing and hashing a phone number. For this use case, Google Ads
+   * requires phone numbers to be in E.164 format.
+   *
+   * @param digest the digest to use to hash the normalized string.
+   * @param phoneNumber the phone number to normalize and hash.
+   */
+  private String normalizeAndHashPhoneNumber(MessageDigest digest, String phoneNumber)
+      throws UnsupportedEncodingException {
+    // Removes non-digit characters and prepends a leading '+' sign.
+    String digitsOnly = phoneNumber.replaceAll("[^0-9]", "");
+    String formattedPhone = "+" + digitsOnly;
+    if (!formattedPhone.matches("^\\+[1-9]\\d{6,14}$")) {
+      throw new IllegalArgumentException("Phone number must be in E.164 format: " + phoneNumber);
+    }
+    return normalizeAndHash(digest, formattedPhone);
   }
 
   /** Retrieves, checks, and prints the status of the offline user data job. */

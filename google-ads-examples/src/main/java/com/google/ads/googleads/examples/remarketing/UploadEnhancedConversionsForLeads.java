@@ -86,18 +86,17 @@ public class UploadEnhancedConversionsForLeads {
         names = ArgumentNames.SESSION_ATTRIBUTES_ENCODED,
         required = false,
         description =
-            "A session attributes token. Only one of sessionAttributesEncoded or sessionAttributesMap"
-                + " should be passed.")
+            "A session attributes token. Only one of sessionAttributesEncoded or"
+                + " sessionAttributesMap should be passed.")
     private String sessionAttributesEncoded;
 
     @Parameter(
         names = ArgumentNames.SESSION_ATTRIBUTES_MAP,
         required = false,
         description =
-            "A "
-                + "space-delimited list of session attribute key value pairs. Each pair should be "
-                + "separated by an equal sign, for example: 'gad_campaignid=12345 gad_source=1'. Only "
-                + "one of sessionAttributesEncoded or sessionAttributesMap should be passed.")
+            "A space-delimited list of session attribute key value pairs. Each pair should be"
+                + " separated by an equal sign, for example: 'gad_campaignid=12345 gad_source=1'."
+                + " Only one of sessionAttributesEncoded or sessionAttributesMap should be passed.")
     private String sessionAttributesMap;
   }
 
@@ -217,9 +216,9 @@ public class UploadEnhancedConversionsForLeads {
 
     ImmutableMap.Builder<String, String> rawRecordBuilder =
         ImmutableMap.<String, String>builder()
-            .put("email", "alex.2@example.com")
+            .put("email", "alex.2+myalias@gmail.com")
             // Phone number to be converted to E.164 format, with a leading '+' as required.
-            .put("phone", "+1 800 5550102")
+            .put("phone", "+1 (800) 555-0102")
             // This example lets you put conversion details as arguments, but in reality you might
             // store this data alongside other user data, so we include it in this sample user
             // record.
@@ -269,7 +268,7 @@ public class UploadEnhancedConversionsForLeads {
     // Creates a user identifier using normalized and hashed phone info.
     UserIdentifier hashedPhoneNumberIdentifier =
         UserIdentifier.newBuilder()
-            .setHashedPhoneNumber(normalizeAndHash(sha256Digest, rawRecord.get("phone")))
+            .setHashedPhoneNumber(normalizeAndHashPhoneNumber(sha256Digest, rawRecord.get("phone")))
             .build();
     // Adds the hashed phone number identifier to the UserData object's list.
     userIdentifiers.add(hashedPhoneNumberIdentifier);
@@ -324,9 +323,10 @@ public class UploadEnhancedConversionsForLeads {
         String[] parts = pair.split("=", 2);
         if (parts.length != 2) {
           throw new IllegalArgumentException(
-              "Failed to read the sessionAttributesMap. SessionAttributesMap must use a "
-                  + "space-delimited list of session attribute key value pairs. Each pair should be"
-                  + " separated by an equal sign, for example: 'gad_campaignid=12345 gad_source=1'");
+              "Failed to read the sessionAttributesMap. SessionAttributesMap must use a"
+                  + " space-delimited list of session attribute key value pairs. Each pair should"
+                  + " be separated by an equal sign, for example: 'gad_campaignid=12345"
+                  + " gad_source=1'");
         }
         sessionAttributePairs.addKeyValuePairs(
             SessionAttributeKeyValuePair.newBuilder()
@@ -409,22 +409,46 @@ public class UploadEnhancedConversionsForLeads {
 
   /**
    * Returns the result of normalizing and hashing an email address. For this use case, Google Ads
-   * requires removal of any '.' characters preceding {@code gmail.com} or {@code googlemail.com}.
+   * requires removal of any '.' characters or trailing '+' and characters that follow it from the
+   * username portion of the email address if the domain is {@code gmail.com} or {@code
+   * googlemail.com}.
    *
    * @param digest the digest to use to hash the normalized string.
    * @param emailAddress the email address to normalize and hash.
    */
   private String normalizeAndHashEmailAddress(MessageDigest digest, String emailAddress)
       throws UnsupportedEncodingException {
-    String normalizedEmail = emailAddress.toLowerCase();
-    String[] emailParts = normalizedEmail.split("@");
-    if (emailParts.length > 1 && emailParts[1].matches("^(gmail|googlemail)\\.com\\s*")) {
+    // Removes all whitespace (leading, trailing, and intermediate) from the email address.
+    String normalizedEmail = emailAddress.toLowerCase().replaceAll("\\s+", "");
+    String[] emailParts = normalizedEmail.split("@", 2);
+    if (emailParts.length == 2 && emailParts[1].matches("^(gmail|googlemail)\\.com$")) {
       // Removes any '.' characters from the portion of the email address before the domain if the
       // domain is gmail.com or googlemail.com.
       emailParts[0] = emailParts[0].replaceAll("\\.", "");
+      // Removes any '+' and all characters that follow it from the portion of the email address
+      // before the domain if the domain is gmail.com or googlemail.com.
+      emailParts[0] = emailParts[0].replaceAll("\\+.*", "");
       normalizedEmail = String.format("%s@%s", emailParts[0], emailParts[1]);
     }
     return normalizeAndHash(digest, normalizedEmail);
+  }
+
+  /**
+   * Returns the result of normalizing and hashing a phone number. For this use case, Google Ads
+   * requires phone numbers to be in E.164 format.
+   *
+   * @param digest the digest to use to hash the normalized string.
+   * @param phoneNumber the phone number to normalize and hash.
+   */
+  private String normalizeAndHashPhoneNumber(MessageDigest digest, String phoneNumber)
+      throws UnsupportedEncodingException {
+    // Removes non-digit characters and prepends a leading '+' sign.
+    String digitsOnly = phoneNumber.replaceAll("[^0-9]", "");
+    String formattedPhone = "+" + digitsOnly;
+    if (!formattedPhone.matches("^\\+[1-9]\\d{6,14}$")) {
+      throw new IllegalArgumentException("Phone number must be in E.164 format: " + phoneNumber);
+    }
+    return normalizeAndHash(digest, formattedPhone);
   }
   // [END normalize_and_hash]
 }
