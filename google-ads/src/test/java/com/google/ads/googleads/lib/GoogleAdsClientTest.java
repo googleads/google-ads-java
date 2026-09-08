@@ -203,6 +203,7 @@ public class GoogleAdsClientTest {
             .fromProperties(testProperties)
             .setDeveloperToken(null)
             .build();
+    assertGoogleAdsClient(client, true);
     assertNull(client.getDeveloperToken());
   }
 
