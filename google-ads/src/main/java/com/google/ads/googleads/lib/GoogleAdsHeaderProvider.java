@@ -22,6 +22,7 @@ import com.google.api.gax.rpc.HeaderProvider;
 import com.google.auto.value.AutoValue;
 import com.google.auto.value.extension.memoized.Memoized;
 import com.google.common.base.Joiner;
+import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Message;
 import java.io.IOException;
@@ -64,7 +65,7 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
   @Memoized
   public ImmutableMap<String, String> getHeaders() {
     Map<String, String> headers = new HashMap<>();
-    if (getDeveloperToken() != null) {
+    if (!Strings.isNullOrEmpty(getDeveloperToken())) {
       headers.put("developer-token", getDeveloperToken());
     }
     if (getLoginCustomerId() != null) {
@@ -134,7 +135,7 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
   public abstract static class Builder {
 
     /** Sets the developer token. */
-    public abstract Builder setDeveloperToken(String developerToken);
+    public abstract Builder setDeveloperToken(@Nullable String developerToken);
 
     /** Sets the login customer ID. */
     public abstract Builder setLoginCustomerId(Long loginCustomerId);

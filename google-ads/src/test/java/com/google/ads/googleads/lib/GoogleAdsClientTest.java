@@ -179,8 +179,7 @@ public class GoogleAdsClientTest {
    * token property.
    */
   @Test
-  public void testBuildFromPropertiesFile_withoutDeveloperToken_withUseCloudOrgForApiAccess()
-      throws IOException {
+  public void testBuildFromPropertiesFile_withoutDeveloperToken() throws IOException {
     // Create a properties file in the temporary folder.
     File propertiesFile = folder.newFile("ads.properties");
     // Remove the developer token property.
@@ -191,40 +190,41 @@ public class GoogleAdsClientTest {
 
     // Build a new client from the file.
     GoogleAdsClient client =
-        GoogleAdsClient.newBuilder()
-            .fromPropertiesFile(propertiesFile)
-            .setUseCloudOrgForApiAccess(true)
-            .build();
+        GoogleAdsClient.newBuilder().fromPropertiesFile(propertiesFile).build();
     assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID, true);
+    assertNull(client.getDeveloperToken());
   }
 
-  /** Tests that clients can only use exactly one of dev token or Cloud org for API access. */
+  /** Tests building a client without a developer token. */
   @Test
-  public void testDevTokenAndUseCloudOrgForApiAccessAreExclusive_failIfBothOrNeither() {
-    GoogleAdsClient.Builder builder = GoogleAdsClient.newBuilder().fromProperties(testProperties);
-    // Confirms developer token is set on the builder.
-    assertNotNull("dev token not set from test properties", builder.getDeveloperToken());
-    // Opts into using Cloud org for API access.
-    builder.setUseCloudOrgForApiAccess(true);
-    // Confirms build() fails.
-    Throwable exception =
-        assertThrows(
-            "Should fail when both dev token is set and using Cloud org for API access",
-            IllegalStateException.class,
-            () -> builder.build());
-    // Checks the exception message.
-    assertThat(exception.getMessage(), Matchers.containsString("not both"));
+  public void testBuild_withoutDeveloperToken() {
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .fromProperties(testProperties)
+            .setDeveloperToken(null)
+            .build();
+    assertGoogleAdsClient(client, true);
+    assertNull(client.getDeveloperToken());
+  }
 
-    // Clears dev token and opts out of using Cloud org for API access.
-    builder.setDeveloperToken(null).setUseCloudOrgForApiAccess(false);
-    // Confirms build() fails.
-    exception =
-        assertThrows(
-            "Should fail when neither dev token is set nor using Cloud org for API access",
-            IllegalStateException.class,
-            () -> builder.build());
-    // Checks the exception message.
-    assertThat(exception.getMessage(), Matchers.containsString("not both"));
+  /** Tests that developer token is not included in headers when it is null. */
+  @Test
+  public void testNullDeveloperTokenNotAppearInHeaders() {
+    GoogleAdsClient.Builder builder =
+        GoogleAdsClient.newBuilder()
+            .fromProperties(testProperties)
+            .setDeveloperToken(null);
+    assertFalse(builder.getHeaders().containsKey("developer-token"));
+  }
+
+  /** Tests that developer token is not included in headers when it is empty. */
+  @Test
+  public void testEmptyDeveloperTokenNotAppearInHeaders() {
+    GoogleAdsClient.Builder builder =
+        GoogleAdsClient.newBuilder()
+            .fromProperties(testProperties)
+            .setDeveloperToken("");
+    assertFalse(builder.getHeaders().containsKey("developer-token"));
   }
 
   /**
@@ -1063,10 +1063,7 @@ public class GoogleAdsClientTest {
           channelProvider.toBuilder().getMaxInboundMessageSize());
     }
 
-    if (client.getDeveloperToken() == null) {
-      assertTrue(
-          "Developer token is null but use cloud org is false", client.isUseCloudOrgForApiAccess());
-    } else {
+    if (client.getDeveloperToken() != null) {
       assertEquals("developer token", DEVELOPER_TOKEN, client.getDeveloperToken());
     }
     assertEquals("Login customer id", loginCustomerId, client.getLoginCustomerId());

@@ -37,6 +37,15 @@ public class GoogleAdsHeaderProviderTest {
     assertFalse(provider.getHeaders().containsKey("developer-token"));
   }
 
+  /** Verifies that the developer token is not present in headers when empty. */
+  @Test
+  public void developerTokenEmpty_notIncluded() {
+    GoogleAdsHeaderProvider provider =
+        GoogleAdsHeaderProvider.newBuilder().setDeveloperToken("").build();
+    assertEquals("", provider.getDeveloperToken());
+    assertFalse(provider.getHeaders().containsKey("developer-token"));
+  }
+
   /** Verifies that the developer token is set and present in the headers when provided. */
   @Test
   public void developerToken_includesIfSet() {
