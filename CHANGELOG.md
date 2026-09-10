@@ -1,7 +1,6 @@
 46.0.0 - 2026-09-10
 -------------------
-- Removed the developer token requirement and associated property from
-  `GoogleAdsClient`.
+- Removed the developer token requirement from `GoogleAdsClient`.
 - Removed the `useCloudOrgForApiAccess` property from `GoogleAdsClient`.
 
 45.0.0 - 2026-08-19
