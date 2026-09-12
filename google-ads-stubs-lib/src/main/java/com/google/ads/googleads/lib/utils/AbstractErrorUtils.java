@@ -134,7 +134,7 @@ public abstract class AbstractErrorUtils<
           && path.getIndex().get() == operationIndex) {
         GoogleAdsErrorT error = path.getError();
         if (!result.contains(error)) {
-          result.add(path.getError());
+          result.add(error);
         }
       }
     }
