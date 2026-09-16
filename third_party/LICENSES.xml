@@ -55,12 +55,12 @@
     <file>slf4j-api-1.7.25.jar</file>
     <license name='MIT License' url='http://www.opensource.org/licenses/mit-license.php' />
   </dependency>
-  <dependency name='io.grpc:grpc-xds:1.82.2'>
-    <file>grpc-xds-1.82.2.jar</file>
-    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
-  </dependency>
   <dependency name='com.google.auto:auto-common:1.2'>
     <file>auto-common-1.2.jar</file>
+    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
+  </dependency>
+  <dependency name='io.grpc:grpc-xds:1.82.2'>
+    <file>grpc-xds-1.82.2.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
   <dependency name='com.google.guava:guava:33.6.0-jre'>
@@ -87,13 +87,13 @@
     <file>grpc-alts-1.82.2.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
-  <dependency name='com.google.auto.value:auto-value-annotations:1.11.0'>
-    <file>auto-value-annotations-1.11.0.jar</file>
-    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
-  </dependency>
   <dependency name='com.google.api:gax-grpc:2.83.0'>
     <file>gax-grpc-2.83.0.jar</file>
     <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
+  </dependency>
+  <dependency name='com.google.auto.value:auto-value-annotations:1.11.0'>
+    <file>auto-value-annotations-1.11.0.jar</file>
+    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
   <dependency name='com.google.guava:failureaccess:1.0.3'>
     <file>failureaccess-1.0.3.jar</file>
@@ -171,13 +171,13 @@
     <file>grpc-core-1.82.2.jar</file>
     <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
-  <dependency name='io.grpc:grpc-protobuf:1.82.2'>
-    <file>grpc-protobuf-1.82.2.jar</file>
-    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
-  </dependency>
   <dependency name='org.apache.httpcomponents:httpclient:4.5.14'>
     <file>httpclient-4.5.14.jar</file>
     <license name='Apache License, Version 2.0' url='http://www.apache.org/licenses/LICENSE-2.0.txt' />
+  </dependency>
+  <dependency name='io.grpc:grpc-protobuf:1.82.2'>
+    <file>grpc-protobuf-1.82.2.jar</file>
+    <license name='Apache License, Version 2.0' url='http://opensource.org/licenses/Apache-2.0' />
   </dependency>
   <dependency name='com.google.http-client:google-http-client-gson:2.2.0'>
     <file>google-http-client-gson-2.2.0.jar</file>
