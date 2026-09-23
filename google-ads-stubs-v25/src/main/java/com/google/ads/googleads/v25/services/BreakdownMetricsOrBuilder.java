@@ -66,7 +66,11 @@ public interface BreakdownMetricsOrBuilder extends
 
   /**
    * <pre>
-   * Metrics for the selected benchmarks source.
+   * Metrics for the selected benchmarks source. Rate metrics for the benchmarks
+   * source are only returned when the request `date_range` is a subset of
+   * `supported_dates_for_all_metrics` returned by
+   * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates]
+   * due to limited availability.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.services.Metrics average_benchmarks_metrics = 3;</code>
@@ -75,7 +79,11 @@ public interface BreakdownMetricsOrBuilder extends
   boolean hasAverageBenchmarksMetrics();
   /**
    * <pre>
-   * Metrics for the selected benchmarks source.
+   * Metrics for the selected benchmarks source. Rate metrics for the benchmarks
+   * source are only returned when the request `date_range` is a subset of
+   * `supported_dates_for_all_metrics` returned by
+   * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates]
+   * due to limited availability.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.services.Metrics average_benchmarks_metrics = 3;</code>
@@ -84,7 +92,11 @@ public interface BreakdownMetricsOrBuilder extends
   com.google.ads.googleads.v25.services.Metrics getAverageBenchmarksMetrics();
   /**
    * <pre>
-   * Metrics for the selected benchmarks source.
+   * Metrics for the selected benchmarks source. Rate metrics for the benchmarks
+   * source are only returned when the request `date_range` is a subset of
+   * `supported_dates_for_all_metrics` returned by
+   * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates]
+   * due to limited availability.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.services.Metrics average_benchmarks_metrics = 3;</code>

@@ -673,6 +673,8 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *     is requested: - Only the following dimensions are supported: AFFINITY_USER_INTEREST,
    *     AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST - The score field is omitted from
    *     AudienceCompositionMetrics of the GenerateAudienceCompositionInsightsResponse.
+   *     <p>Note: The USER_LIST dimension does not support the score metric in
+   *     AudienceCompositionMetrics.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateAudienceCompositionInsightsResponse generateAudienceCompositionInsights(
@@ -1149,6 +1151,14 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *
    * @param customerId Required. The ID of the customer.
    * @param audiences Required. Audiences to request metrics for.
+   *     [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+   *     [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+   *     [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+   *     and
+   *     [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+   *     are the only supported fields for these audiences. Only
+   *     [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+   *     attributes are supported for topic_audience_combinations.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateTargetingSuggestionMetricsResponse generateTargetingSuggestionMetrics(

@@ -26,6 +26,7 @@ import com.google.ads.googleads.lib.utils.AbstractErrorUtils.ErrorPath;
 import com.google.ads.googleads.v25.services.GenerateAdGroupThemesRequest;
 import com.google.ads.googleads.v25.services.GenerateAudienceCompositionInsightsRequest;
 import com.google.ads.googleads.v25.services.GenerateAudienceOverlapInsightsRequest;
+import com.google.ads.googleads.v25.services.GenerateBenchmarksMetricsRequest;
 import com.google.ads.googleads.v25.services.GenerateCreatorInsightsRequest;
 import com.google.ads.googleads.v25.services.GenerateImagesRequest;
 import com.google.ads.googleads.v25.services.GenerateKeywordHistoricalMetricsRequest;
@@ -276,6 +277,7 @@ public class AbstractErrorUtilsTest {
             .add(GenerateImagesRequest.getDescriptor())
             .add(ListBenchmarksSourcesRequest.getDescriptor())
             .add(RemoveYouTubeVideoUploadRequest.getDescriptor())
+            .add(GenerateBenchmarksMetricsRequest.getDescriptor())
             .build();
 
     // Gets the class for the latest version of the Google Ads API.

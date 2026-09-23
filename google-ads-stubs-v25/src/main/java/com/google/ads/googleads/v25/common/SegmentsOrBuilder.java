@@ -296,6 +296,25 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Advance booking window for the itinerary in days.
+   * </pre>
+   *
+   * <code>optional int64 advance_booking_window = 238;</code>
+   * @return Whether the advanceBookingWindow field is set.
+   */
+  boolean hasAdvanceBookingWindow();
+  /**
+   * <pre>
+   * Advance booking window for the itinerary in days.
+   * </pre>
+   *
+   * <code>optional int64 advance_booking_window = 238;</code>
+   * @return The advanceBookingWindow.
+   */
+  long getAdvanceBookingWindow();
+
+  /**
+   * <pre>
    * Age range
    * </pre>
    *
@@ -1641,6 +1660,25 @@ public interface SegmentsOrBuilder extends
    * @return The landingPageSource.
    */
   com.google.ads.googleads.v25.enums.LandingPageSourceEnum.LandingPageSource getLandingPageSource();
+
+  /**
+   * <pre>
+   * Length of booking for the itinerary in days.
+   * </pre>
+   *
+   * <code>optional int64 length_of_booking = 237;</code>
+   * @return Whether the lengthOfBooking field is set.
+   */
+  boolean hasLengthOfBooking();
+  /**
+   * <pre>
+   * Length of booking for the itinerary in days.
+   * </pre>
+   *
+   * <code>optional int64 length_of_booking = 237;</code>
+   * @return The lengthOfBooking.
+   */
+  long getLengthOfBooking();
 
   /**
    * <pre>
@@ -3144,6 +3182,25 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Indicates whether user-specified dates were selected.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType user_set_dates = 236;</code>
+   * @return The enum numeric value on the wire for userSetDates.
+   */
+  int getUserSetDatesValue();
+  /**
+   * <pre>
+   * Indicates whether user-specified dates were selected.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType user_set_dates = 236;</code>
+   * @return The userSetDates.
+   */
+  com.google.ads.googleads.v25.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getUserSetDates();
+
+  /**
+   * <pre>
    * The display names of participants in an event listing, like performers,
    * speakers, or teams.
    * </pre>
@@ -3424,6 +3481,78 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Relative price competitiveness bucket hotel listing (only relevant
+   * to hotel campaigns).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.enums.HotelPriceBucketEnum.HotelPriceBucket vertical_ads_price_tier = 239;</code>
+   * @return The enum numeric value on the wire for verticalAdsPriceTier.
+   */
+  int getVerticalAdsPriceTierValue();
+  /**
+   * <pre>
+   * Relative price competitiveness bucket hotel listing (only relevant
+   * to hotel campaigns).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.enums.HotelPriceBucketEnum.HotelPriceBucket vertical_ads_price_tier = 239;</code>
+   * @return The verticalAdsPriceTier.
+   */
+  com.google.ads.googleads.v25.enums.HotelPriceBucketEnum.HotelPriceBucket getVerticalAdsPriceTier();
+
+  /**
+   * <pre>
+   * String identifier corresponding to private or conditional rate rules
+   * applied to the bid/impression.
+   * </pre>
+   *
+   * <code>optional string vertical_ads_rate_rule_id = 240;</code>
+   * @return Whether the verticalAdsRateRuleId field is set.
+   */
+  boolean hasVerticalAdsRateRuleId();
+  /**
+   * <pre>
+   * String identifier corresponding to private or conditional rate rules
+   * applied to the bid/impression.
+   * </pre>
+   *
+   * <code>optional string vertical_ads_rate_rule_id = 240;</code>
+   * @return The verticalAdsRateRuleId.
+   */
+  java.lang.String getVerticalAdsRateRuleId();
+  /**
+   * <pre>
+   * String identifier corresponding to private or conditional rate rules
+   * applied to the bid/impression.
+   * </pre>
+   *
+   * <code>optional string vertical_ads_rate_rule_id = 240;</code>
+   * @return The bytes for verticalAdsRateRuleId.
+   */
+  com.google.protobuf.ByteString
+      getVerticalAdsRateRuleIdBytes();
+
+  /**
+   * <pre>
+   * Categorization of the public, private, or conditional rate type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.enums.HotelRateTypeEnum.HotelRateType vertical_ads_rate_type = 241;</code>
+   * @return The enum numeric value on the wire for verticalAdsRateType.
+   */
+  int getVerticalAdsRateTypeValue();
+  /**
+   * <pre>
+   * Categorization of the public, private, or conditional rate type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.enums.HotelRateTypeEnum.HotelRateType vertical_ads_rate_type = 241;</code>
+   * @return The verticalAdsRateType.
+   */
+  com.google.ads.googleads.v25.enums.HotelRateTypeEnum.HotelRateType getVerticalAdsRateType();
+
+  /**
+   * <pre>
    * Type of vertical ad, such as Vacation Rentals, Car Rentals, or
    * Events, used to categorize and segment data in the context of Vertical
    * Ads.
@@ -3623,6 +3752,54 @@ public interface SegmentsOrBuilder extends
    * @return The slot.
    */
   com.google.ads.googleads.v25.enums.SlotEnum.Slot getSlot();
+
+  /**
+   * <pre>
+   * Start date of the booking. Formatted as yyyy-MM-dd.
+   * </pre>
+   *
+   * <code>optional string start_date = 234;</code>
+   * @return Whether the startDate field is set.
+   */
+  boolean hasStartDate();
+  /**
+   * <pre>
+   * Start date of the booking. Formatted as yyyy-MM-dd.
+   * </pre>
+   *
+   * <code>optional string start_date = 234;</code>
+   * @return The startDate.
+   */
+  java.lang.String getStartDate();
+  /**
+   * <pre>
+   * Start date of the booking. Formatted as yyyy-MM-dd.
+   * </pre>
+   *
+   * <code>optional string start_date = 234;</code>
+   * @return The bytes for startDate.
+   */
+  com.google.protobuf.ByteString
+      getStartDateBytes();
+
+  /**
+   * <pre>
+   * Start day of week of the booking.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.enums.DayOfWeekEnum.DayOfWeek start_day_of_week = 235;</code>
+   * @return The enum numeric value on the wire for startDayOfWeek.
+   */
+  int getStartDayOfWeekValue();
+  /**
+   * <pre>
+   * Start day of week of the booking.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.enums.DayOfWeekEnum.DayOfWeek start_day_of_week = 235;</code>
+   * @return The startDayOfWeek.
+   */
+  com.google.ads.googleads.v25.enums.DayOfWeekEnum.DayOfWeek getStartDayOfWeek();
 
   /**
    * <pre>

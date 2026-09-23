@@ -157,6 +157,34 @@ private static final long serialVersionUID = 0L;
      * <code>LOYALTY_RETENTION_GOAL_INVALID_MODE = 16;</code>
      */
     LOYALTY_RETENTION_GOAL_INVALID_MODE(16),
+    /**
+     * <pre>
+     * When using the customer lifecycle optimization goal, the value multiplier
+     * must be present if the high lifetime value multiplier is present.
+     * </pre>
+     *
+     * <code>HIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSENT = 17;</code>
+     */
+    HIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSENT(17),
+    /**
+     * <pre>
+     * When using the customer lifecycle optimization goal, the high lifetime
+     * value multiplier must be strictly greater than the value multiplier.
+     * </pre>
+     *
+     * <code>HIGH_LIFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER = 18;</code>
+     */
+    HIGH_LIFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER(18),
+    /**
+     * <pre>
+     * The high lifetime value multiplier for campaign-level overrides in
+     * customer lifecycle optimization (new customer acquisition) is only
+     * supported for certain campaign types.
+     * </pre>
+     *
+     * <code>CAMPAIGN_OVERRIDE_HIGH_LIFETIME_VALUE_MULTIPLIER_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE = 19;</code>
+     */
+    CAMPAIGN_OVERRIDE_HIGH_LIFETIME_VALUE_MULTIPLIER_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE(19),
     UNRECOGNIZED(-1),
     ;
 
@@ -270,6 +298,34 @@ private static final long serialVersionUID = 0L;
      * <code>LOYALTY_RETENTION_GOAL_INVALID_MODE = 16;</code>
      */
     public static final int LOYALTY_RETENTION_GOAL_INVALID_MODE_VALUE = 16;
+    /**
+     * <pre>
+     * When using the customer lifecycle optimization goal, the value multiplier
+     * must be present if the high lifetime value multiplier is present.
+     * </pre>
+     *
+     * <code>HIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSENT = 17;</code>
+     */
+    public static final int HIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSENT_VALUE = 17;
+    /**
+     * <pre>
+     * When using the customer lifecycle optimization goal, the high lifetime
+     * value multiplier must be strictly greater than the value multiplier.
+     * </pre>
+     *
+     * <code>HIGH_LIFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER = 18;</code>
+     */
+    public static final int HIGH_LIFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER_VALUE = 18;
+    /**
+     * <pre>
+     * The high lifetime value multiplier for campaign-level overrides in
+     * customer lifecycle optimization (new customer acquisition) is only
+     * supported for certain campaign types.
+     * </pre>
+     *
+     * <code>CAMPAIGN_OVERRIDE_HIGH_LIFETIME_VALUE_MULTIPLIER_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE = 19;</code>
+     */
+    public static final int CAMPAIGN_OVERRIDE_HIGH_LIFETIME_VALUE_MULTIPLIER_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE_VALUE = 19;
 
 
     public final int getNumber() {
@@ -308,6 +364,9 @@ private static final long serialVersionUID = 0L;
         case 14: return CAMPAIGN_OVERRIDE_HIGH_LIFETIME_VALUE_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE;
         case 15: return CANNOT_USE_INCOMPATIBLE_CLO_GOALS;
         case 16: return LOYALTY_RETENTION_GOAL_INVALID_MODE;
+        case 17: return HIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSENT;
+        case 18: return HIGH_LIFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER;
+        case 19: return CAMPAIGN_OVERRIDE_HIGH_LIFETIME_VALUE_MULTIPLIER_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE;
         default: return null;
       }
     }

@@ -104,7 +104,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. URL to the SMS or email attachments. These URLs can be used to
-   * download the contents of the attachment by using the developer token.
+   * download the contents of the attachment using authorized Google Cloud
+   * project credentials.
    * </pre>
    *
    * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -117,7 +118,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. URL to the SMS or email attachments. These URLs can be used to
-   * download the contents of the attachment by using the developer token.
+   * download the contents of the attachment using authorized Google Cloud
+   * project credentials.
    * </pre>
    *
    * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -129,7 +131,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. URL to the SMS or email attachments. These URLs can be used to
-   * download the contents of the attachment by using the developer token.
+   * download the contents of the attachment using authorized Google Cloud
+   * project credentials.
    * </pre>
    *
    * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -142,7 +145,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. URL to the SMS or email attachments. These URLs can be used to
-   * download the contents of the attachment by using the developer token.
+   * download the contents of the attachment using authorized Google Cloud
+   * project credentials.
    * </pre>
    *
    * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -594,7 +598,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. URL to the SMS or email attachments. These URLs can be used to
-     * download the contents of the attachment by using the developer token.
+     * download the contents of the attachment using authorized Google Cloud
+     * project credentials.
      * </pre>
      *
      * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -608,7 +613,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. URL to the SMS or email attachments. These URLs can be used to
-     * download the contents of the attachment by using the developer token.
+     * download the contents of the attachment using authorized Google Cloud
+     * project credentials.
      * </pre>
      *
      * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -620,7 +626,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. URL to the SMS or email attachments. These URLs can be used to
-     * download the contents of the attachment by using the developer token.
+     * download the contents of the attachment using authorized Google Cloud
+     * project credentials.
      * </pre>
      *
      * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -633,7 +640,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. URL to the SMS or email attachments. These URLs can be used to
-     * download the contents of the attachment by using the developer token.
+     * download the contents of the attachment using authorized Google Cloud
+     * project credentials.
      * </pre>
      *
      * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -647,7 +655,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. URL to the SMS or email attachments. These URLs can be used to
-     * download the contents of the attachment by using the developer token.
+     * download the contents of the attachment using authorized Google Cloud
+     * project credentials.
      * </pre>
      *
      * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -667,7 +676,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. URL to the SMS or email attachments. These URLs can be used to
-     * download the contents of the attachment by using the developer token.
+     * download the contents of the attachment using authorized Google Cloud
+     * project credentials.
      * </pre>
      *
      * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -686,7 +696,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. URL to the SMS or email attachments. These URLs can be used to
-     * download the contents of the attachment by using the developer token.
+     * download the contents of the attachment using authorized Google Cloud
+     * project credentials.
      * </pre>
      *
      * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -705,7 +716,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. URL to the SMS or email attachments. These URLs can be used to
-     * download the contents of the attachment by using the developer token.
+     * download the contents of the attachment using authorized Google Cloud
+     * project credentials.
      * </pre>
      *
      * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -721,7 +733,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. URL to the SMS or email attachments. These URLs can be used to
-     * download the contents of the attachment by using the developer token.
+     * download the contents of the attachment using authorized Google Cloud
+     * project credentials.
      * </pre>
      *
      * <code>repeated string attachment_urls = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

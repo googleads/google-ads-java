@@ -83,6 +83,16 @@ private static final long serialVersionUID = 0L;
      * <code>MAX_QUERY_COMPLEXITY_EXCEEDED = 2;</code>
      */
     MAX_QUERY_COMPLEXITY_EXCEEDED(2),
+    /**
+     * <pre>
+     * No metrics were found for the given combination of inputs (vertical or
+     * categories supplied, location, date range, and products). Try selecting
+     * a different combination of inputs.
+     * </pre>
+     *
+     * <code>NO_METRICS_FOUND = 3;</code>
+     */
+    NO_METRICS_FOUND(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -121,6 +131,16 @@ private static final long serialVersionUID = 0L;
      * <code>MAX_QUERY_COMPLEXITY_EXCEEDED = 2;</code>
      */
     public static final int MAX_QUERY_COMPLEXITY_EXCEEDED_VALUE = 2;
+    /**
+     * <pre>
+     * No metrics were found for the given combination of inputs (vertical or
+     * categories supplied, location, date range, and products). Try selecting
+     * a different combination of inputs.
+     * </pre>
+     *
+     * <code>NO_METRICS_FOUND = 3;</code>
+     */
+    public static final int NO_METRICS_FOUND_VALUE = 3;
 
 
     public final int getNumber() {
@@ -150,6 +170,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return MAX_QUERY_COMPLEXITY_EXCEEDED;
+        case 3: return NO_METRICS_FOUND;
         default: return null;
       }
     }

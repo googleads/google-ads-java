@@ -31838,6 +31838,1311 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface RaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. A number greater than 1.0 indicating the factor by which we
+     * recommend the target CPA should be increased.
+     * </pre>
+     *
+     * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedTargetMultiplier field is set.
+     */
+    boolean hasRecommendedTargetMultiplier();
+    /**
+     * <pre>
+     * Output only. A number greater than 1.0 indicating the factor by which we
+     * recommend the target CPA should be increased.
+     * </pre>
+     *
+     * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedTargetMultiplier.
+     */
+    double getRecommendedTargetMultiplier();
+
+    /**
+     * <pre>
+     * Output only. The current average target CPA of the campaign, in micros of
+     * customer local currency.
+     * </pre>
+     *
+     * <code>optional int64 current_average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the currentAverageTargetCpaMicros field is set.
+     */
+    boolean hasCurrentAverageTargetCpaMicros();
+    /**
+     * <pre>
+     * Output only. The current average target CPA of the campaign, in micros of
+     * customer local currency.
+     * </pre>
+     *
+     * <code>optional int64 current_average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The currentAverageTargetCpaMicros.
+     */
+    long getCurrentAverageTargetCpaMicros();
+  }
+  /**
+   * <pre>
+   * Recommendation to raise Target CPA when it is too low for Search
+   * campaigns.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation}
+   */
+  public static final class RaiseTargetCpaPerformanceBidTooLowRecommendation extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation)
+      RaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        "RaiseTargetCpaPerformanceBidTooLowRecommendation");
+    }
+    // Use RaiseTargetCpaPerformanceBidTooLowRecommendation.newBuilder() to construct.
+    private RaiseTargetCpaPerformanceBidTooLowRecommendation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private RaiseTargetCpaPerformanceBidTooLowRecommendation() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v25.resources.RecommendationProto.internal_static_google_ads_googleads_v25_resources_Recommendation_RaiseTargetCpaPerformanceBidTooLowRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v25.resources.RecommendationProto.internal_static_google_ads_googleads_v25_resources_Recommendation_RaiseTargetCpaPerformanceBidTooLowRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.class, com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RECOMMENDED_TARGET_MULTIPLIER_FIELD_NUMBER = 1;
+    private double recommendedTargetMultiplier_ = 0D;
+    /**
+     * <pre>
+     * Output only. A number greater than 1.0 indicating the factor by which we
+     * recommend the target CPA should be increased.
+     * </pre>
+     *
+     * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedTargetMultiplier field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecommendedTargetMultiplier() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. A number greater than 1.0 indicating the factor by which we
+     * recommend the target CPA should be increased.
+     * </pre>
+     *
+     * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedTargetMultiplier.
+     */
+    @java.lang.Override
+    public double getRecommendedTargetMultiplier() {
+      return recommendedTargetMultiplier_;
+    }
+
+    public static final int CURRENT_AVERAGE_TARGET_CPA_MICROS_FIELD_NUMBER = 2;
+    private long currentAverageTargetCpaMicros_ = 0L;
+    /**
+     * <pre>
+     * Output only. The current average target CPA of the campaign, in micros of
+     * customer local currency.
+     * </pre>
+     *
+     * <code>optional int64 current_average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the currentAverageTargetCpaMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasCurrentAverageTargetCpaMicros() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The current average target CPA of the campaign, in micros of
+     * customer local currency.
+     * </pre>
+     *
+     * <code>optional int64 current_average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The currentAverageTargetCpaMicros.
+     */
+    @java.lang.Override
+    public long getCurrentAverageTargetCpaMicros() {
+      return currentAverageTargetCpaMicros_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeDouble(1, recommendedTargetMultiplier_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt64(2, currentAverageTargetCpaMicros_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(1, recommendedTargetMultiplier_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, currentAverageTargetCpaMicros_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation other = (com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation) obj;
+
+      if (hasRecommendedTargetMultiplier() != other.hasRecommendedTargetMultiplier()) return false;
+      if (hasRecommendedTargetMultiplier()) {
+        if (java.lang.Double.doubleToLongBits(getRecommendedTargetMultiplier())
+            != java.lang.Double.doubleToLongBits(
+                other.getRecommendedTargetMultiplier())) return false;
+      }
+      if (hasCurrentAverageTargetCpaMicros() != other.hasCurrentAverageTargetCpaMicros()) return false;
+      if (hasCurrentAverageTargetCpaMicros()) {
+        if (getCurrentAverageTargetCpaMicros()
+            != other.getCurrentAverageTargetCpaMicros()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRecommendedTargetMultiplier()) {
+        hash = (37 * hash) + RECOMMENDED_TARGET_MULTIPLIER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getRecommendedTargetMultiplier()));
+      }
+      if (hasCurrentAverageTargetCpaMicros()) {
+        hash = (37 * hash) + CURRENT_AVERAGE_TARGET_CPA_MICROS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCurrentAverageTargetCpaMicros());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Recommendation to raise Target CPA when it is too low for Search
+     * campaigns.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation)
+        com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v25.resources.RecommendationProto.internal_static_google_ads_googleads_v25_resources_Recommendation_RaiseTargetCpaPerformanceBidTooLowRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v25.resources.RecommendationProto.internal_static_google_ads_googleads_v25_resources_Recommendation_RaiseTargetCpaPerformanceBidTooLowRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.class, com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recommendedTargetMultiplier_ = 0D;
+        currentAverageTargetCpaMicros_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v25.resources.RecommendationProto.internal_static_google_ads_googleads_v25_resources_Recommendation_RaiseTargetCpaPerformanceBidTooLowRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation build() {
+        com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation buildPartial() {
+        com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation result = new com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recommendedTargetMultiplier_ = recommendedTargetMultiplier_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.currentAverageTargetCpaMicros_ = currentAverageTargetCpaMicros_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation other) {
+        if (other == com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.getDefaultInstance()) return this;
+        if (other.hasRecommendedTargetMultiplier()) {
+          setRecommendedTargetMultiplier(other.getRecommendedTargetMultiplier());
+        }
+        if (other.hasCurrentAverageTargetCpaMicros()) {
+          setCurrentAverageTargetCpaMicros(other.getCurrentAverageTargetCpaMicros());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 9: {
+                recommendedTargetMultiplier_ = input.readDouble();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 9
+              case 16: {
+                currentAverageTargetCpaMicros_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private double recommendedTargetMultiplier_ ;
+      /**
+       * <pre>
+       * Output only. A number greater than 1.0 indicating the factor by which we
+       * recommend the target CPA should be increased.
+       * </pre>
+       *
+       * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the recommendedTargetMultiplier field is set.
+       */
+      @java.lang.Override
+      public boolean hasRecommendedTargetMultiplier() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. A number greater than 1.0 indicating the factor by which we
+       * recommend the target CPA should be increased.
+       * </pre>
+       *
+       * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The recommendedTargetMultiplier.
+       */
+      @java.lang.Override
+      public double getRecommendedTargetMultiplier() {
+        return recommendedTargetMultiplier_;
+      }
+      /**
+       * <pre>
+       * Output only. A number greater than 1.0 indicating the factor by which we
+       * recommend the target CPA should be increased.
+       * </pre>
+       *
+       * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The recommendedTargetMultiplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecommendedTargetMultiplier(double value) {
+
+        recommendedTargetMultiplier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. A number greater than 1.0 indicating the factor by which we
+       * recommend the target CPA should be increased.
+       * </pre>
+       *
+       * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecommendedTargetMultiplier() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        recommendedTargetMultiplier_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private long currentAverageTargetCpaMicros_ ;
+      /**
+       * <pre>
+       * Output only. The current average target CPA of the campaign, in micros of
+       * customer local currency.
+       * </pre>
+       *
+       * <code>optional int64 current_average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the currentAverageTargetCpaMicros field is set.
+       */
+      @java.lang.Override
+      public boolean hasCurrentAverageTargetCpaMicros() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. The current average target CPA of the campaign, in micros of
+       * customer local currency.
+       * </pre>
+       *
+       * <code>optional int64 current_average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The currentAverageTargetCpaMicros.
+       */
+      @java.lang.Override
+      public long getCurrentAverageTargetCpaMicros() {
+        return currentAverageTargetCpaMicros_;
+      }
+      /**
+       * <pre>
+       * Output only. The current average target CPA of the campaign, in micros of
+       * customer local currency.
+       * </pre>
+       *
+       * <code>optional int64 current_average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The currentAverageTargetCpaMicros to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentAverageTargetCpaMicros(long value) {
+
+        currentAverageTargetCpaMicros_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The current average target CPA of the campaign, in micros of
+       * customer local currency.
+       * </pre>
+       *
+       * <code>optional int64 current_average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentAverageTargetCpaMicros() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        currentAverageTargetCpaMicros_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation)
+    private static final com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation();
+    }
+
+    public static com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RaiseTargetCpaPerformanceBidTooLowRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<RaiseTargetCpaPerformanceBidTooLowRecommendation>() {
+      @java.lang.Override
+      public RaiseTargetCpaPerformanceBidTooLowRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RaiseTargetCpaPerformanceBidTooLowRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RaiseTargetCpaPerformanceBidTooLowRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. A number less than 1.0 indicating the factor by which we
+     * recommend the target ROAS should be decreased.
+     * </pre>
+     *
+     * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedTargetMultiplier field is set.
+     */
+    boolean hasRecommendedTargetMultiplier();
+    /**
+     * <pre>
+     * Output only. A number less than 1.0 indicating the factor by which we
+     * recommend the target ROAS should be decreased.
+     * </pre>
+     *
+     * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedTargetMultiplier.
+     */
+    double getRecommendedTargetMultiplier();
+
+    /**
+     * <pre>
+     * Output only. The current average target ROAS of the campaign.
+     * </pre>
+     *
+     * <code>optional double current_average_target_roas = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the currentAverageTargetRoas field is set.
+     */
+    boolean hasCurrentAverageTargetRoas();
+    /**
+     * <pre>
+     * Output only. The current average target ROAS of the campaign.
+     * </pre>
+     *
+     * <code>optional double current_average_target_roas = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The currentAverageTargetRoas.
+     */
+    double getCurrentAverageTargetRoas();
+  }
+  /**
+   * <pre>
+   * Recommendation to lower Target ROAS when it is too low for Search
+   * campaigns.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation}
+   */
+  public static final class LowerTargetRoasPerformanceBidTooLowRecommendation extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation)
+      LowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        "LowerTargetRoasPerformanceBidTooLowRecommendation");
+    }
+    // Use LowerTargetRoasPerformanceBidTooLowRecommendation.newBuilder() to construct.
+    private LowerTargetRoasPerformanceBidTooLowRecommendation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private LowerTargetRoasPerformanceBidTooLowRecommendation() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v25.resources.RecommendationProto.internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasPerformanceBidTooLowRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v25.resources.RecommendationProto.internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasPerformanceBidTooLowRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.class, com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RECOMMENDED_TARGET_MULTIPLIER_FIELD_NUMBER = 1;
+    private double recommendedTargetMultiplier_ = 0D;
+    /**
+     * <pre>
+     * Output only. A number less than 1.0 indicating the factor by which we
+     * recommend the target ROAS should be decreased.
+     * </pre>
+     *
+     * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedTargetMultiplier field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecommendedTargetMultiplier() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. A number less than 1.0 indicating the factor by which we
+     * recommend the target ROAS should be decreased.
+     * </pre>
+     *
+     * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedTargetMultiplier.
+     */
+    @java.lang.Override
+    public double getRecommendedTargetMultiplier() {
+      return recommendedTargetMultiplier_;
+    }
+
+    public static final int CURRENT_AVERAGE_TARGET_ROAS_FIELD_NUMBER = 2;
+    private double currentAverageTargetRoas_ = 0D;
+    /**
+     * <pre>
+     * Output only. The current average target ROAS of the campaign.
+     * </pre>
+     *
+     * <code>optional double current_average_target_roas = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the currentAverageTargetRoas field is set.
+     */
+    @java.lang.Override
+    public boolean hasCurrentAverageTargetRoas() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The current average target ROAS of the campaign.
+     * </pre>
+     *
+     * <code>optional double current_average_target_roas = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The currentAverageTargetRoas.
+     */
+    @java.lang.Override
+    public double getCurrentAverageTargetRoas() {
+      return currentAverageTargetRoas_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeDouble(1, recommendedTargetMultiplier_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeDouble(2, currentAverageTargetRoas_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(1, recommendedTargetMultiplier_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, currentAverageTargetRoas_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation other = (com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation) obj;
+
+      if (hasRecommendedTargetMultiplier() != other.hasRecommendedTargetMultiplier()) return false;
+      if (hasRecommendedTargetMultiplier()) {
+        if (java.lang.Double.doubleToLongBits(getRecommendedTargetMultiplier())
+            != java.lang.Double.doubleToLongBits(
+                other.getRecommendedTargetMultiplier())) return false;
+      }
+      if (hasCurrentAverageTargetRoas() != other.hasCurrentAverageTargetRoas()) return false;
+      if (hasCurrentAverageTargetRoas()) {
+        if (java.lang.Double.doubleToLongBits(getCurrentAverageTargetRoas())
+            != java.lang.Double.doubleToLongBits(
+                other.getCurrentAverageTargetRoas())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRecommendedTargetMultiplier()) {
+        hash = (37 * hash) + RECOMMENDED_TARGET_MULTIPLIER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getRecommendedTargetMultiplier()));
+      }
+      if (hasCurrentAverageTargetRoas()) {
+        hash = (37 * hash) + CURRENT_AVERAGE_TARGET_ROAS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getCurrentAverageTargetRoas()));
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Recommendation to lower Target ROAS when it is too low for Search
+     * campaigns.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation)
+        com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v25.resources.RecommendationProto.internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasPerformanceBidTooLowRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v25.resources.RecommendationProto.internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasPerformanceBidTooLowRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.class, com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recommendedTargetMultiplier_ = 0D;
+        currentAverageTargetRoas_ = 0D;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v25.resources.RecommendationProto.internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasPerformanceBidTooLowRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation build() {
+        com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation buildPartial() {
+        com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation result = new com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recommendedTargetMultiplier_ = recommendedTargetMultiplier_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.currentAverageTargetRoas_ = currentAverageTargetRoas_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation other) {
+        if (other == com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.getDefaultInstance()) return this;
+        if (other.hasRecommendedTargetMultiplier()) {
+          setRecommendedTargetMultiplier(other.getRecommendedTargetMultiplier());
+        }
+        if (other.hasCurrentAverageTargetRoas()) {
+          setCurrentAverageTargetRoas(other.getCurrentAverageTargetRoas());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 9: {
+                recommendedTargetMultiplier_ = input.readDouble();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 9
+              case 17: {
+                currentAverageTargetRoas_ = input.readDouble();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 17
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private double recommendedTargetMultiplier_ ;
+      /**
+       * <pre>
+       * Output only. A number less than 1.0 indicating the factor by which we
+       * recommend the target ROAS should be decreased.
+       * </pre>
+       *
+       * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the recommendedTargetMultiplier field is set.
+       */
+      @java.lang.Override
+      public boolean hasRecommendedTargetMultiplier() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. A number less than 1.0 indicating the factor by which we
+       * recommend the target ROAS should be decreased.
+       * </pre>
+       *
+       * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The recommendedTargetMultiplier.
+       */
+      @java.lang.Override
+      public double getRecommendedTargetMultiplier() {
+        return recommendedTargetMultiplier_;
+      }
+      /**
+       * <pre>
+       * Output only. A number less than 1.0 indicating the factor by which we
+       * recommend the target ROAS should be decreased.
+       * </pre>
+       *
+       * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The recommendedTargetMultiplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecommendedTargetMultiplier(double value) {
+
+        recommendedTargetMultiplier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. A number less than 1.0 indicating the factor by which we
+       * recommend the target ROAS should be decreased.
+       * </pre>
+       *
+       * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecommendedTargetMultiplier() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        recommendedTargetMultiplier_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double currentAverageTargetRoas_ ;
+      /**
+       * <pre>
+       * Output only. The current average target ROAS of the campaign.
+       * </pre>
+       *
+       * <code>optional double current_average_target_roas = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the currentAverageTargetRoas field is set.
+       */
+      @java.lang.Override
+      public boolean hasCurrentAverageTargetRoas() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. The current average target ROAS of the campaign.
+       * </pre>
+       *
+       * <code>optional double current_average_target_roas = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The currentAverageTargetRoas.
+       */
+      @java.lang.Override
+      public double getCurrentAverageTargetRoas() {
+        return currentAverageTargetRoas_;
+      }
+      /**
+       * <pre>
+       * Output only. The current average target ROAS of the campaign.
+       * </pre>
+       *
+       * <code>optional double current_average_target_roas = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The currentAverageTargetRoas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentAverageTargetRoas(double value) {
+
+        currentAverageTargetRoas_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The current average target ROAS of the campaign.
+       * </pre>
+       *
+       * <code>optional double current_average_target_roas = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentAverageTargetRoas() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        currentAverageTargetRoas_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation)
+    private static final com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation();
+    }
+
+    public static com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LowerTargetRoasPerformanceBidTooLowRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<LowerTargetRoasPerformanceBidTooLowRecommendation>() {
+      @java.lang.Override
+      public LowerTargetRoasPerformanceBidTooLowRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LowerTargetRoasPerformanceBidTooLowRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LowerTargetRoasPerformanceBidTooLowRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DynamicImageExtensionOptInRecommendationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v25.resources.Recommendation.DynamicImageExtensionOptInRecommendation)
       com.google.protobuf.MessageOrBuilder {
@@ -40947,7 +42252,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
      * @return A list containing the appConversionGoals.
      */
     @java.lang.Deprecated java.util.List<com.google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory> getAppConversionGoalsList();
@@ -40959,7 +42264,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
      * @return The count of appConversionGoals.
      */
     @java.lang.Deprecated int getAppConversionGoalsCount();
@@ -40971,7 +42276,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
      * @param index The index of the element to return.
      * @return The appConversionGoals at the given index.
      */
@@ -40984,7 +42289,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
      * @return A list containing the enum numeric values on the wire for appConversionGoals.
      */
     @java.lang.Deprecated java.util.List<java.lang.Integer>
@@ -40997,7 +42302,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of appConversionGoals at the given index.
      */
@@ -41060,7 +42365,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string current_custom_goal = 8 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.current_custom_goal is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=678
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=705
      * @return The currentCustomGoal.
      */
     @java.lang.Deprecated java.lang.String getCurrentCustomGoal();
@@ -41072,7 +42377,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string current_custom_goal = 8 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.current_custom_goal is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=678
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=705
      * @return The bytes for currentCustomGoal.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -41345,7 +42650,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
      * @return A list containing the appConversionGoals.
      */
     @java.lang.Override
@@ -41361,7 +42666,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
      * @return The count of appConversionGoals.
      */
     @java.lang.Override
@@ -41376,7 +42681,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
      * @param index The index of the element to return.
      * @return The appConversionGoals at the given index.
      */
@@ -41392,7 +42697,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
      * @return A list containing the enum numeric values on the wire for appConversionGoals.
      */
     @java.lang.Override
@@ -41408,7 +42713,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of appConversionGoals at the given index.
      */
@@ -41495,7 +42800,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string current_custom_goal = 8 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.current_custom_goal is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=678
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=705
      * @return The currentCustomGoal.
      */
     @java.lang.Override
@@ -41519,7 +42824,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string current_custom_goal = 8 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.current_custom_goal is deprecated.
-     *     See google/ads/googleads/v25/resources/recommendation.proto;l=678
+     *     See google/ads/googleads/v25/resources/recommendation.proto;l=705
      * @return The bytes for currentCustomGoal.
      */
     @java.lang.Override
@@ -42673,7 +43978,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @return A list containing the appConversionGoals.
        */
       @java.lang.Deprecated public java.util.List<com.google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory> getAppConversionGoalsList() {
@@ -42688,7 +43993,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @return The count of appConversionGoals.
        */
       @java.lang.Deprecated public int getAppConversionGoalsCount() {
@@ -42702,7 +44007,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @param index The index of the element to return.
        * @return The appConversionGoals at the given index.
        */
@@ -42717,7 +44022,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @param index The index to set the value at.
        * @param value The appConversionGoals to set.
        * @return This builder for chaining.
@@ -42738,7 +44043,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @param value The appConversionGoals to add.
        * @return This builder for chaining.
        */
@@ -42757,7 +44062,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @param values The appConversionGoals to add.
        * @return This builder for chaining.
        */
@@ -42778,7 +44083,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearAppConversionGoals() {
@@ -42795,7 +44100,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @return A list containing the enum numeric values on the wire for appConversionGoals.
        */
       @java.lang.Deprecated public java.util.List<java.lang.Integer>
@@ -42811,7 +44116,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @param index The index of the value to return.
        * @return The enum numeric value on the wire of appConversionGoals at the given index.
        */
@@ -42826,7 +44131,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @param index The index to set the value at.
        * @param value The enum numeric value on the wire for appConversionGoals to set.
        * @return This builder for chaining.
@@ -42846,7 +44151,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @param value The enum numeric value on the wire for appConversionGoals to add.
        * @return This builder for chaining.
        */
@@ -42864,7 +44169,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .google.ads.googleads.v25.enums.ConversionActionCategoryEnum.ConversionActionCategory app_conversion_goals = 6 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.app_conversion_goals is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=666
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=693
        * @param values The enum numeric values on the wire for appConversionGoals to add.
        * @return This builder for chaining.
        */
@@ -43217,7 +44522,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>string current_custom_goal = 8 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.current_custom_goal is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=678
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=705
        * @return The currentCustomGoal.
        */
       @java.lang.Deprecated public java.lang.String getCurrentCustomGoal() {
@@ -43240,7 +44545,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>string current_custom_goal = 8 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.current_custom_goal is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=678
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=705
        * @return The bytes for currentCustomGoal.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -43264,7 +44569,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>string current_custom_goal = 8 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.current_custom_goal is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=678
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=705
        * @param value The currentCustomGoal to set.
        * @return This builder for chaining.
        */
@@ -43284,7 +44589,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>string current_custom_goal = 8 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.current_custom_goal is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=678
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=705
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearCurrentCustomGoal() {
@@ -43301,7 +44606,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>string current_custom_goal = 8 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        * @deprecated google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.current_custom_goal is deprecated.
-       *     See google/ads/googleads/v25/resources/recommendation.proto;l=678
+       *     See google/ads/googleads/v25/resources/recommendation.proto;l=705
        * @param value The bytes for currentCustomGoal to set.
        * @return This builder for chaining.
        */
@@ -44033,6 +45338,8 @@ private static final long serialVersionUID = 0L;
     LEAD_FORM_ASSET_RECOMMENDATION(68),
     IMPROVE_DEMAND_GEN_AD_STRENGTH_RECOMMENDATION(69),
     CAMPAIGN_SPECIFIC_APP_GOAL_RECOMMENDATION(70),
+    RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION(72),
+    LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION(73),
     RECOMMENDATION_NOT_SET(0);
     private final int value;
     private RecommendationCase(int value) {
@@ -44105,6 +45412,8 @@ private static final long serialVersionUID = 0L;
         case 68: return LEAD_FORM_ASSET_RECOMMENDATION;
         case 69: return IMPROVE_DEMAND_GEN_AD_STRENGTH_RECOMMENDATION;
         case 70: return CAMPAIGN_SPECIFIC_APP_GOAL_RECOMMENDATION;
+        case 72: return RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION;
+        case 73: return LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION;
         case 0: return RECOMMENDATION_NOT_SET;
         default: return null;
       }
@@ -46993,6 +48302,98 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation.getDefaultInstance();
   }
 
+  public static final int RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION_FIELD_NUMBER = 72;
+  /**
+   * <pre>
+   * Output only. The raise Target CPA for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the raiseTargetCpaPerformanceBidTooLowRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasRaiseTargetCpaPerformanceBidTooLowRecommendation() {
+    return recommendationCase_ == 72;
+  }
+  /**
+   * <pre>
+   * Output only. The raise Target CPA for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The raiseTargetCpaPerformanceBidTooLowRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation getRaiseTargetCpaPerformanceBidTooLowRecommendation() {
+    if (recommendationCase_ == 72) {
+       return (com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The raise Target CPA for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder getRaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder() {
+    if (recommendationCase_ == 72) {
+       return (com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.getDefaultInstance();
+  }
+
+  public static final int LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION_FIELD_NUMBER = 73;
+  /**
+   * <pre>
+   * Output only. The lower Target ROAS for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the lowerTargetRoasPerformanceBidTooLowRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasLowerTargetRoasPerformanceBidTooLowRecommendation() {
+    return recommendationCase_ == 73;
+  }
+  /**
+   * <pre>
+   * Output only. The lower Target ROAS for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The lowerTargetRoasPerformanceBidTooLowRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation getLowerTargetRoasPerformanceBidTooLowRecommendation() {
+    if (recommendationCase_ == 73) {
+       return (com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The lower Target ROAS for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder getLowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder() {
+    if (recommendationCase_ == 73) {
+       return (com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -47195,6 +48596,12 @@ private static final long serialVersionUID = 0L;
     }
     if (recommendationCase_ == 70) {
       output.writeMessage(70, (com.google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 72) {
+      output.writeMessage(72, (com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 73) {
+      output.writeMessage(73, (com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation) recommendation_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -47456,6 +48863,14 @@ private static final long serialVersionUID = 0L;
     if (recommendationCase_ == 70) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(70, (com.google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 72) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(72, (com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 73) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(73, (com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation) recommendation_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -47724,6 +49139,14 @@ private static final long serialVersionUID = 0L;
         if (!getCampaignSpecificAppGoalRecommendation()
             .equals(other.getCampaignSpecificAppGoalRecommendation())) return false;
         break;
+      case 72:
+        if (!getRaiseTargetCpaPerformanceBidTooLowRecommendation()
+            .equals(other.getRaiseTargetCpaPerformanceBidTooLowRecommendation())) return false;
+        break;
+      case 73:
+        if (!getLowerTargetRoasPerformanceBidTooLowRecommendation()
+            .equals(other.getLowerTargetRoasPerformanceBidTooLowRecommendation())) return false;
+        break;
       case 0:
       default:
     }
@@ -47988,6 +49411,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CAMPAIGN_SPECIFIC_APP_GOAL_RECOMMENDATION_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignSpecificAppGoalRecommendation().hashCode();
         break;
+      case 72:
+        hash = (37 * hash) + RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getRaiseTargetCpaPerformanceBidTooLowRecommendation().hashCode();
+        break;
+      case 73:
+        hash = (37 * hash) + LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLowerTargetRoasPerformanceBidTooLowRecommendation().hashCode();
+        break;
       case 0:
       default:
     }
@@ -48133,6 +49564,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       bitField1_ = 0;
+      bitField2_ = 0;
       resourceName_ = "";
       type_ = 0;
       impact_ = null;
@@ -48311,6 +49743,12 @@ private static final long serialVersionUID = 0L;
       if (campaignSpecificAppGoalRecommendationBuilder_ != null) {
         campaignSpecificAppGoalRecommendationBuilder_.clear();
       }
+      if (raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_ != null) {
+        raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_.clear();
+      }
+      if (lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_ != null) {
+        lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_.clear();
+      }
       recommendationCase_ = 0;
       recommendation_ = null;
       return this;
@@ -48341,6 +49779,7 @@ private static final long serialVersionUID = 0L;
       com.google.ads.googleads.v25.resources.Recommendation result = new com.google.ads.googleads.v25.resources.Recommendation(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       if (bitField1_ != 0) { buildPartial1(result); }
+      if (bitField2_ != 0) { buildPartial2(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -48386,6 +49825,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial1(com.google.ads.googleads.v25.resources.Recommendation result) {
       int from_bitField1_ = bitField1_;
+    }
+
+    private void buildPartial2(com.google.ads.googleads.v25.resources.Recommendation result) {
+      int from_bitField2_ = bitField2_;
     }
 
     private void buildPartialOneofs(com.google.ads.googleads.v25.resources.Recommendation result) {
@@ -48610,6 +50053,14 @@ private static final long serialVersionUID = 0L;
       if (recommendationCase_ == 70 &&
           campaignSpecificAppGoalRecommendationBuilder_ != null) {
         result.recommendation_ = campaignSpecificAppGoalRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 72 &&
+          raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_ != null) {
+        result.recommendation_ = raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 73 &&
+          lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_ != null) {
+        result.recommendation_ = lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_.build();
       }
     }
 
@@ -48883,6 +50334,14 @@ private static final long serialVersionUID = 0L;
         }
         case CAMPAIGN_SPECIFIC_APP_GOAL_RECOMMENDATION: {
           mergeCampaignSpecificAppGoalRecommendation(other.getCampaignSpecificAppGoalRecommendation());
+          break;
+        }
+        case RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION: {
+          mergeRaiseTargetCpaPerformanceBidTooLowRecommendation(other.getRaiseTargetCpaPerformanceBidTooLowRecommendation());
+          break;
+        }
+        case LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION: {
+          mergeLowerTargetRoasPerformanceBidTooLowRecommendation(other.getLowerTargetRoasPerformanceBidTooLowRecommendation());
           break;
         }
         case RECOMMENDATION_NOT_SET: {
@@ -49343,6 +50802,20 @@ private static final long serialVersionUID = 0L;
               recommendationCase_ = 70;
               break;
             } // case 562
+            case 578: {
+              input.readMessage(
+                  internalGetRaiseTargetCpaPerformanceBidTooLowRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 72;
+              break;
+            } // case 578
+            case 586: {
+              input.readMessage(
+                  internalGetLowerTargetRoasPerformanceBidTooLowRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 73;
+              break;
+            } // case 586
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -49375,6 +50848,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     private int bitField1_;
+    private int bitField2_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -60312,6 +61786,380 @@ private static final long serialVersionUID = 0L;
       recommendationCase_ = 70;
       onChanged();
       return campaignSpecificAppGoalRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation, com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.Builder, com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder> raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The raise Target CPA for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the raiseTargetCpaPerformanceBidTooLowRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasRaiseTargetCpaPerformanceBidTooLowRecommendation() {
+      return recommendationCase_ == 72;
+    }
+    /**
+     * <pre>
+     * Output only. The raise Target CPA for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The raiseTargetCpaPerformanceBidTooLowRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation getRaiseTargetCpaPerformanceBidTooLowRecommendation() {
+      if (raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 72) {
+          return (com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 72) {
+          return raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The raise Target CPA for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setRaiseTargetCpaPerformanceBidTooLowRecommendation(com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation value) {
+      if (raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 72;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The raise Target CPA for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setRaiseTargetCpaPerformanceBidTooLowRecommendation(
+        com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.Builder builderForValue) {
+      if (raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 72;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The raise Target CPA for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeRaiseTargetCpaPerformanceBidTooLowRecommendation(com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation value) {
+      if (raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 72 &&
+            recommendation_ != com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.newBuilder((com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 72) {
+          raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_.mergeFrom(value);
+        } else {
+          raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 72;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The raise Target CPA for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearRaiseTargetCpaPerformanceBidTooLowRecommendation() {
+      if (raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 72) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 72) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The raise Target CPA for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.Builder getRaiseTargetCpaPerformanceBidTooLowRecommendationBuilder() {
+      return internalGetRaiseTargetCpaPerformanceBidTooLowRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The raise Target CPA for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder getRaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder() {
+      if ((recommendationCase_ == 72) && (raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_ != null)) {
+        return raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 72) {
+          return (com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The raise Target CPA for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation, com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.Builder, com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder> 
+        internalGetRaiseTargetCpaPerformanceBidTooLowRecommendationFieldBuilder() {
+      if (raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 72)) {
+          recommendation_ = com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.getDefaultInstance();
+        }
+        raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation, com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation.Builder, com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder>(
+                (com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 72;
+      onChanged();
+      return raiseTargetCpaPerformanceBidTooLowRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation, com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.Builder, com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder> lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The lower Target ROAS for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the lowerTargetRoasPerformanceBidTooLowRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasLowerTargetRoasPerformanceBidTooLowRecommendation() {
+      return recommendationCase_ == 73;
+    }
+    /**
+     * <pre>
+     * Output only. The lower Target ROAS for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The lowerTargetRoasPerformanceBidTooLowRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation getLowerTargetRoasPerformanceBidTooLowRecommendation() {
+      if (lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 73) {
+          return (com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 73) {
+          return lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The lower Target ROAS for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setLowerTargetRoasPerformanceBidTooLowRecommendation(com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation value) {
+      if (lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 73;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The lower Target ROAS for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setLowerTargetRoasPerformanceBidTooLowRecommendation(
+        com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.Builder builderForValue) {
+      if (lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 73;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The lower Target ROAS for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeLowerTargetRoasPerformanceBidTooLowRecommendation(com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation value) {
+      if (lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 73 &&
+            recommendation_ != com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.newBuilder((com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 73) {
+          lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_.mergeFrom(value);
+        } else {
+          lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 73;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The lower Target ROAS for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearLowerTargetRoasPerformanceBidTooLowRecommendation() {
+      if (lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 73) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 73) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The lower Target ROAS for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.Builder getLowerTargetRoasPerformanceBidTooLowRecommendationBuilder() {
+      return internalGetLowerTargetRoasPerformanceBidTooLowRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The lower Target ROAS for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder getLowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder() {
+      if ((recommendationCase_ == 73) && (lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_ != null)) {
+        return lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 73) {
+          return (com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The lower Target ROAS for Performance Bid Too Low
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation, com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.Builder, com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder> 
+        internalGetLowerTargetRoasPerformanceBidTooLowRecommendationFieldBuilder() {
+      if (lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 73)) {
+          recommendation_ = com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.getDefaultInstance();
+        }
+        lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation, com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation.Builder, com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder>(
+                (com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 73;
+      onChanged();
+      return lowerTargetRoasPerformanceBidTooLowRecommendationBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v25.resources.Recommendation)

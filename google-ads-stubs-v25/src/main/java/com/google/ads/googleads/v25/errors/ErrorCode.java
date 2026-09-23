@@ -84,6 +84,7 @@ private static final long serialVersionUID = 0L;
     ASSET_SET_ASSET_ERROR(153),
     ASSET_SET_LINK_ERROR(154),
     ASSET_SET_ERROR(152),
+    BUSINESS_PROFILE_LOCATION_SYNC_ERROR(168),
     BIDDING_ERROR(26),
     CAMPAIGN_CRITERION_ERROR(29),
     CAMPAIGN_CONVERSION_GOAL_ERROR(166),
@@ -268,6 +269,7 @@ private static final long serialVersionUID = 0L;
         case 153: return ASSET_SET_ASSET_ERROR;
         case 154: return ASSET_SET_LINK_ERROR;
         case 152: return ASSET_SET_ERROR;
+        case 168: return BUSINESS_PROFILE_LOCATION_SYNC_ERROR;
         case 26: return BIDDING_ERROR;
         case 29: return CAMPAIGN_CRITERION_ERROR;
         case 166: return CAMPAIGN_CONVERSION_GOAL_ERROR;
@@ -1750,6 +1752,49 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v25.errors.AssetSetErrorEnum.AssetSetError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v25.errors.AssetSetErrorEnum.AssetSetError.UNSPECIFIED;
+  }
+
+  public static final int BUSINESS_PROFILE_LOCATION_SYNC_ERROR_FIELD_NUMBER = 168;
+  /**
+   * <pre>
+   * The reasons for the business profile sync error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+   * @return Whether the businessProfileLocationSyncError field is set.
+   */
+  public boolean hasBusinessProfileLocationSyncError() {
+    return errorCodeCase_ == 168;
+  }
+  /**
+   * <pre>
+   * The reasons for the business profile sync error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+   * @return The enum numeric value on the wire for businessProfileLocationSyncError.
+   */
+  public int getBusinessProfileLocationSyncErrorValue() {
+    if (errorCodeCase_ == 168) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the business profile sync error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+   * @return The businessProfileLocationSyncError.
+   */
+  public com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError getBusinessProfileLocationSyncError() {
+    if (errorCodeCase_ == 168) {
+      com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError result = com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError.forNumber(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError.UNSPECIFIED;
   }
 
   public static final int BIDDING_ERROR_FIELD_NUMBER = 26;
@@ -7130,7 +7175,7 @@ private static final long serialVersionUID = 0L;
   public static final int AUTOMATICALLY_CREATED_ASSET_REMOVAL_ERROR_FIELD_NUMBER = 185;
   /**
    * <pre>
-   * The reasons for error in automatically created asset removal action.
+   * The reasons for error in text customization removal action.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
@@ -7141,7 +7186,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The reasons for error in automatically created asset removal action.
+   * The reasons for error in text customization removal action.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
@@ -7155,7 +7200,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The reasons for error in automatically created asset removal action.
+   * The reasons for error in text customization removal action.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
@@ -8040,6 +8085,9 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 167) {
       output.writeEnum(167, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 168) {
+      output.writeEnum(168, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 169) {
       output.writeEnum(169, ((java.lang.Integer) errorCode_));
     }
@@ -8692,6 +8740,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(167, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 168) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(168, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 169) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(169, ((java.lang.Integer) errorCode_));
@@ -8932,6 +8984,10 @@ private static final long serialVersionUID = 0L;
       case 152:
         if (getAssetSetErrorValue()
             != other.getAssetSetErrorValue()) return false;
+        break;
+      case 168:
+        if (getBusinessProfileLocationSyncErrorValue()
+            != other.getBusinessProfileLocationSyncErrorValue()) return false;
         break;
       case 26:
         if (getBiddingErrorValue()
@@ -9615,6 +9671,10 @@ private static final long serialVersionUID = 0L;
       case 152:
         hash = (37 * hash) + ASSET_SET_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getAssetSetErrorValue();
+        break;
+      case 168:
+        hash = (37 * hash) + BUSINESS_PROFILE_LOCATION_SYNC_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getBusinessProfileLocationSyncErrorValue();
         break;
       case 26:
         hash = (37 * hash) + BIDDING_ERROR_FIELD_NUMBER;
@@ -10506,6 +10566,10 @@ private static final long serialVersionUID = 0L;
         }
         case ASSET_SET_ERROR: {
           setAssetSetErrorValue(other.getAssetSetErrorValue());
+          break;
+        }
+        case BUSINESS_PROFILE_LOCATION_SYNC_ERROR: {
+          setBusinessProfileLocationSyncErrorValue(other.getBusinessProfileLocationSyncErrorValue());
           break;
         }
         case BIDDING_ERROR: {
@@ -11934,6 +11998,12 @@ private static final long serialVersionUID = 0L;
               errorCode_ = rawValue;
               break;
             } // case 1336
+            case 1344: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 168;
+              errorCode_ = rawValue;
+              break;
+            } // case 1344
             case 1352: {
               int rawValue = input.readEnum();
               errorCodeCase_ = 169;
@@ -14966,6 +15036,98 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAssetSetError() {
       if (errorCodeCase_ == 152) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the business profile sync error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+     * @return Whether the businessProfileLocationSyncError field is set.
+     */
+    @java.lang.Override
+    public boolean hasBusinessProfileLocationSyncError() {
+      return errorCodeCase_ == 168;
+    }
+    /**
+     * <pre>
+     * The reasons for the business profile sync error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+     * @return The enum numeric value on the wire for businessProfileLocationSyncError.
+     */
+    @java.lang.Override
+    public int getBusinessProfileLocationSyncErrorValue() {
+      if (errorCodeCase_ == 168) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the business profile sync error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+     * @param value The enum numeric value on the wire for businessProfileLocationSyncError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBusinessProfileLocationSyncErrorValue(int value) {
+      errorCodeCase_ = 168;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the business profile sync error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+     * @return The businessProfileLocationSyncError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError getBusinessProfileLocationSyncError() {
+      if (errorCodeCase_ == 168) {
+        com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError result = com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError.forNumber(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the business profile sync error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+     * @param value The businessProfileLocationSyncError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBusinessProfileLocationSyncError(com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError value) {
+      if (value == null) { throw new NullPointerException(); }
+      errorCodeCase_ = 168;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the business profile sync error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBusinessProfileLocationSyncError() {
+      if (errorCodeCase_ == 168) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();
@@ -26475,7 +26637,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The reasons for error in automatically created asset removal action.
+     * The reasons for error in text customization removal action.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
@@ -26487,7 +26649,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The reasons for error in automatically created asset removal action.
+     * The reasons for error in text customization removal action.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
@@ -26502,7 +26664,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The reasons for error in automatically created asset removal action.
+     * The reasons for error in text customization removal action.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
@@ -26517,7 +26679,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The reasons for error in automatically created asset removal action.
+     * The reasons for error in text customization removal action.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
@@ -26534,7 +26696,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The reasons for error in automatically created asset removal action.
+     * The reasons for error in text customization removal action.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
@@ -26550,7 +26712,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The reasons for error in automatically created asset removal action.
+     * The reasons for error in text customization removal action.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>

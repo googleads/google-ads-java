@@ -711,5 +711,65 @@ public interface ApplyRecommendationOperationOrBuilder extends
    */
   com.google.ads.googleads.v25.services.ApplyRecommendationOperation.LeadFormAssetParametersOrBuilder getLeadFormAssetOrBuilder();
 
+  /**
+   * <pre>
+   * Parameters to use when applying Raise Target CPA Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.ApplyRecommendationOperation.RaiseTargetCpaPerformanceBidTooLowParameters raise_target_cpa_performance_bid_too_low = 26;</code>
+   * @return Whether the raiseTargetCpaPerformanceBidTooLow field is set.
+   */
+  boolean hasRaiseTargetCpaPerformanceBidTooLow();
+  /**
+   * <pre>
+   * Parameters to use when applying Raise Target CPA Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.ApplyRecommendationOperation.RaiseTargetCpaPerformanceBidTooLowParameters raise_target_cpa_performance_bid_too_low = 26;</code>
+   * @return The raiseTargetCpaPerformanceBidTooLow.
+   */
+  com.google.ads.googleads.v25.services.ApplyRecommendationOperation.RaiseTargetCpaPerformanceBidTooLowParameters getRaiseTargetCpaPerformanceBidTooLow();
+  /**
+   * <pre>
+   * Parameters to use when applying Raise Target CPA Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.ApplyRecommendationOperation.RaiseTargetCpaPerformanceBidTooLowParameters raise_target_cpa_performance_bid_too_low = 26;</code>
+   */
+  com.google.ads.googleads.v25.services.ApplyRecommendationOperation.RaiseTargetCpaPerformanceBidTooLowParametersOrBuilder getRaiseTargetCpaPerformanceBidTooLowOrBuilder();
+
+  /**
+   * <pre>
+   * Parameters to use when applying Lower Target ROAS Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.ApplyRecommendationOperation.LowerTargetRoasPerformanceBidTooLowParameters lower_target_roas_performance_bid_too_low = 27;</code>
+   * @return Whether the lowerTargetRoasPerformanceBidTooLow field is set.
+   */
+  boolean hasLowerTargetRoasPerformanceBidTooLow();
+  /**
+   * <pre>
+   * Parameters to use when applying Lower Target ROAS Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.ApplyRecommendationOperation.LowerTargetRoasPerformanceBidTooLowParameters lower_target_roas_performance_bid_too_low = 27;</code>
+   * @return The lowerTargetRoasPerformanceBidTooLow.
+   */
+  com.google.ads.googleads.v25.services.ApplyRecommendationOperation.LowerTargetRoasPerformanceBidTooLowParameters getLowerTargetRoasPerformanceBidTooLow();
+  /**
+   * <pre>
+   * Parameters to use when applying Lower Target ROAS Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.ApplyRecommendationOperation.LowerTargetRoasPerformanceBidTooLowParameters lower_target_roas_performance_bid_too_low = 27;</code>
+   */
+  com.google.ads.googleads.v25.services.ApplyRecommendationOperation.LowerTargetRoasPerformanceBidTooLowParametersOrBuilder getLowerTargetRoasPerformanceBidTooLowOrBuilder();
+
   com.google.ads.googleads.v25.services.ApplyRecommendationOperation.ApplyParametersCase getApplyParametersCase();
 }

@@ -95,6 +95,9 @@ private static final long serialVersionUID = 0L;
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
    * request `category_filter` must be set when using `all_advertisers`.
+   * 2. The request `date_range` is a subset of
+   * `supported_dates_for_all_metrics` returned by
+   * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
    * </pre>
    *
    * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -111,6 +114,9 @@ private static final long serialVersionUID = 0L;
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
    * request `category_filter` must be set when using `all_advertisers`.
+   * 2. The request `date_range` is a subset of
+   * `supported_dates_for_all_metrics` returned by
+   * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
    * </pre>
    *
    * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -127,6 +133,9 @@ private static final long serialVersionUID = 0L;
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
    * request `category_filter` must be set when using `all_advertisers`.
+   * 2. The request `date_range` is a subset of
+   * `supported_dates_for_all_metrics` returned by
+   * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
    * </pre>
    *
    * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -177,6 +186,59 @@ private static final long serialVersionUID = 0L;
     return aggregateMetrics_ == null ? com.google.ads.googleads.v25.services.AggregateMetrics.getDefaultInstance() : aggregateMetrics_;
   }
 
+  public static final int PERCENTILE_METRICS_FIELD_NUMBER = 4;
+  private com.google.ads.googleads.v25.services.PercentileMetrics percentileMetrics_;
+  /**
+   * <pre>
+   * Metrics representing the customer’s competitive standing among advertisers
+   * scoped by the analysis. Percentile metrics are only returned when:
+   *
+   * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+   * request `category_filter` must be set when using `all_advertisers`.
+   * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+   * @return Whether the percentileMetrics field is set.
+   */
+  @java.lang.Override
+  public boolean hasPercentileMetrics() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Metrics representing the customer’s competitive standing among advertisers
+   * scoped by the analysis. Percentile metrics are only returned when:
+   *
+   * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+   * request `category_filter` must be set when using `all_advertisers`.
+   * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+   * @return The percentileMetrics.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.services.PercentileMetrics getPercentileMetrics() {
+    return percentileMetrics_ == null ? com.google.ads.googleads.v25.services.PercentileMetrics.getDefaultInstance() : percentileMetrics_;
+  }
+  /**
+   * <pre>
+   * Metrics representing the customer’s competitive standing among advertisers
+   * scoped by the analysis. Percentile metrics are only returned when:
+   *
+   * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+   * request `category_filter` must be set when using `all_advertisers`.
+   * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.services.PercentileMetricsOrBuilder getPercentileMetricsOrBuilder() {
+    return percentileMetrics_ == null ? com.google.ads.googleads.v25.services.PercentileMetrics.getDefaultInstance() : percentileMetrics_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -200,6 +262,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(3, getAggregateMetrics());
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(4, getPercentileMetrics());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -220,6 +285,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getAggregateMetrics());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getPercentileMetrics());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -251,6 +320,11 @@ private static final long serialVersionUID = 0L;
       if (!getAggregateMetrics()
           .equals(other.getAggregateMetrics())) return false;
     }
+    if (hasPercentileMetrics() != other.hasPercentileMetrics()) return false;
+    if (hasPercentileMetrics()) {
+      if (!getPercentileMetrics()
+          .equals(other.getPercentileMetrics())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -273,6 +347,10 @@ private static final long serialVersionUID = 0L;
     if (hasAggregateMetrics()) {
       hash = (37 * hash) + AGGREGATE_METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getAggregateMetrics().hashCode();
+    }
+    if (hasPercentileMetrics()) {
+      hash = (37 * hash) + PERCENTILE_METRICS_FIELD_NUMBER;
+      hash = (53 * hash) + getPercentileMetrics().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -411,6 +489,7 @@ private static final long serialVersionUID = 0L;
         internalGetAverageRateMetricsFieldBuilder();
         internalGetShareMetricsFieldBuilder();
         internalGetAggregateMetricsFieldBuilder();
+        internalGetPercentileMetricsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -431,6 +510,11 @@ private static final long serialVersionUID = 0L;
       if (aggregateMetricsBuilder_ != null) {
         aggregateMetricsBuilder_.dispose();
         aggregateMetricsBuilder_ = null;
+      }
+      percentileMetrics_ = null;
+      if (percentileMetricsBuilder_ != null) {
+        percentileMetricsBuilder_.dispose();
+        percentileMetricsBuilder_ = null;
       }
       return this;
     }
@@ -484,6 +568,12 @@ private static final long serialVersionUID = 0L;
             : aggregateMetricsBuilder_.build();
         to_bitField0_ |= 0x00000004;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.percentileMetrics_ = percentileMetricsBuilder_ == null
+            ? percentileMetrics_
+            : percentileMetricsBuilder_.build();
+        to_bitField0_ |= 0x00000008;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -507,6 +597,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAggregateMetrics()) {
         mergeAggregateMetrics(other.getAggregateMetrics());
+      }
+      if (other.hasPercentileMetrics()) {
+        mergePercentileMetrics(other.getPercentileMetrics());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -555,6 +648,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  internalGetPercentileMetricsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -739,6 +839,9 @@ private static final long serialVersionUID = 0L;
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
      * request `category_filter` must be set when using `all_advertisers`.
+     * 2. The request `date_range` is a subset of
+     * `supported_dates_for_all_metrics` returned by
+     * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
      * </pre>
      *
      * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -754,6 +857,9 @@ private static final long serialVersionUID = 0L;
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
      * request `category_filter` must be set when using `all_advertisers`.
+     * 2. The request `date_range` is a subset of
+     * `supported_dates_for_all_metrics` returned by
+     * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
      * </pre>
      *
      * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -773,6 +879,9 @@ private static final long serialVersionUID = 0L;
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
      * request `category_filter` must be set when using `all_advertisers`.
+     * 2. The request `date_range` is a subset of
+     * `supported_dates_for_all_metrics` returned by
+     * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
      * </pre>
      *
      * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -797,6 +906,9 @@ private static final long serialVersionUID = 0L;
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
      * request `category_filter` must be set when using `all_advertisers`.
+     * 2. The request `date_range` is a subset of
+     * `supported_dates_for_all_metrics` returned by
+     * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
      * </pre>
      *
      * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -819,6 +931,9 @@ private static final long serialVersionUID = 0L;
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
      * request `category_filter` must be set when using `all_advertisers`.
+     * 2. The request `date_range` is a subset of
+     * `supported_dates_for_all_metrics` returned by
+     * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
      * </pre>
      *
      * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -848,6 +963,9 @@ private static final long serialVersionUID = 0L;
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
      * request `category_filter` must be set when using `all_advertisers`.
+     * 2. The request `date_range` is a subset of
+     * `supported_dates_for_all_metrics` returned by
+     * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
      * </pre>
      *
      * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -869,6 +987,9 @@ private static final long serialVersionUID = 0L;
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
      * request `category_filter` must be set when using `all_advertisers`.
+     * 2. The request `date_range` is a subset of
+     * `supported_dates_for_all_metrics` returned by
+     * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
      * </pre>
      *
      * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -885,6 +1006,9 @@ private static final long serialVersionUID = 0L;
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
      * request `category_filter` must be set when using `all_advertisers`.
+     * 2. The request `date_range` is a subset of
+     * `supported_dates_for_all_metrics` returned by
+     * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
      * </pre>
      *
      * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -904,6 +1028,9 @@ private static final long serialVersionUID = 0L;
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
      * request `category_filter` must be set when using `all_advertisers`.
+     * 2. The request `date_range` is a subset of
+     * `supported_dates_for_all_metrics` returned by
+     * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
      * </pre>
      *
      * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -1086,6 +1213,208 @@ private static final long serialVersionUID = 0L;
         aggregateMetrics_ = null;
       }
       return aggregateMetricsBuilder_;
+    }
+
+    private com.google.ads.googleads.v25.services.PercentileMetrics percentileMetrics_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v25.services.PercentileMetrics, com.google.ads.googleads.v25.services.PercentileMetrics.Builder, com.google.ads.googleads.v25.services.PercentileMetricsOrBuilder> percentileMetricsBuilder_;
+    /**
+     * <pre>
+     * Metrics representing the customer’s competitive standing among advertisers
+     * scoped by the analysis. Percentile metrics are only returned when:
+     *
+     * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+     * request `category_filter` must be set when using `all_advertisers`.
+     * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+     * @return Whether the percentileMetrics field is set.
+     */
+    public boolean hasPercentileMetrics() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Metrics representing the customer’s competitive standing among advertisers
+     * scoped by the analysis. Percentile metrics are only returned when:
+     *
+     * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+     * request `category_filter` must be set when using `all_advertisers`.
+     * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+     * @return The percentileMetrics.
+     */
+    public com.google.ads.googleads.v25.services.PercentileMetrics getPercentileMetrics() {
+      if (percentileMetricsBuilder_ == null) {
+        return percentileMetrics_ == null ? com.google.ads.googleads.v25.services.PercentileMetrics.getDefaultInstance() : percentileMetrics_;
+      } else {
+        return percentileMetricsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Metrics representing the customer’s competitive standing among advertisers
+     * scoped by the analysis. Percentile metrics are only returned when:
+     *
+     * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+     * request `category_filter` must be set when using `all_advertisers`.
+     * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+     */
+    public Builder setPercentileMetrics(com.google.ads.googleads.v25.services.PercentileMetrics value) {
+      if (percentileMetricsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        percentileMetrics_ = value;
+      } else {
+        percentileMetricsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics representing the customer’s competitive standing among advertisers
+     * scoped by the analysis. Percentile metrics are only returned when:
+     *
+     * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+     * request `category_filter` must be set when using `all_advertisers`.
+     * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+     */
+    public Builder setPercentileMetrics(
+        com.google.ads.googleads.v25.services.PercentileMetrics.Builder builderForValue) {
+      if (percentileMetricsBuilder_ == null) {
+        percentileMetrics_ = builderForValue.build();
+      } else {
+        percentileMetricsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics representing the customer’s competitive standing among advertisers
+     * scoped by the analysis. Percentile metrics are only returned when:
+     *
+     * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+     * request `category_filter` must be set when using `all_advertisers`.
+     * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+     */
+    public Builder mergePercentileMetrics(com.google.ads.googleads.v25.services.PercentileMetrics value) {
+      if (percentileMetricsBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          percentileMetrics_ != null &&
+          percentileMetrics_ != com.google.ads.googleads.v25.services.PercentileMetrics.getDefaultInstance()) {
+          getPercentileMetricsBuilder().mergeFrom(value);
+        } else {
+          percentileMetrics_ = value;
+        }
+      } else {
+        percentileMetricsBuilder_.mergeFrom(value);
+      }
+      if (percentileMetrics_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics representing the customer’s competitive standing among advertisers
+     * scoped by the analysis. Percentile metrics are only returned when:
+     *
+     * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+     * request `category_filter` must be set when using `all_advertisers`.
+     * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+     */
+    public Builder clearPercentileMetrics() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      percentileMetrics_ = null;
+      if (percentileMetricsBuilder_ != null) {
+        percentileMetricsBuilder_.dispose();
+        percentileMetricsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Metrics representing the customer’s competitive standing among advertisers
+     * scoped by the analysis. Percentile metrics are only returned when:
+     *
+     * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+     * request `category_filter` must be set when using `all_advertisers`.
+     * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+     */
+    public com.google.ads.googleads.v25.services.PercentileMetrics.Builder getPercentileMetricsBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return internalGetPercentileMetricsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Metrics representing the customer’s competitive standing among advertisers
+     * scoped by the analysis. Percentile metrics are only returned when:
+     *
+     * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+     * request `category_filter` must be set when using `all_advertisers`.
+     * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+     */
+    public com.google.ads.googleads.v25.services.PercentileMetricsOrBuilder getPercentileMetricsOrBuilder() {
+      if (percentileMetricsBuilder_ != null) {
+        return percentileMetricsBuilder_.getMessageOrBuilder();
+      } else {
+        return percentileMetrics_ == null ?
+            com.google.ads.googleads.v25.services.PercentileMetrics.getDefaultInstance() : percentileMetrics_;
+      }
+    }
+    /**
+     * <pre>
+     * Metrics representing the customer’s competitive standing among advertisers
+     * scoped by the analysis. Percentile metrics are only returned when:
+     *
+     * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+     * request `category_filter` must be set when using `all_advertisers`.
+     * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v25.services.PercentileMetrics, com.google.ads.googleads.v25.services.PercentileMetrics.Builder, com.google.ads.googleads.v25.services.PercentileMetricsOrBuilder> 
+        internalGetPercentileMetricsFieldBuilder() {
+      if (percentileMetricsBuilder_ == null) {
+        percentileMetricsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v25.services.PercentileMetrics, com.google.ads.googleads.v25.services.PercentileMetrics.Builder, com.google.ads.googleads.v25.services.PercentileMetricsOrBuilder>(
+                getPercentileMetrics(),
+                getParentForChildren(),
+                isClean());
+        percentileMetrics_ = null;
+      }
+      return percentileMetricsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v25.services.CustomerMetrics)

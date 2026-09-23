@@ -29,7 +29,8 @@ import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * Service Description: Service to remove automatically created assets.
+ * Service Description: Service to remove text customization (formerly automatically created
+ * assets).
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
@@ -65,7 +66,7 @@ import org.jspecify.annotations.Nullable;
  *    </tr>
  *    <tr>
  *      <td><p> RemoveCampaignAutomaticallyCreatedAsset</td>
- *      <td><p> Removes automatically created assets from a campaign.
+ *      <td><p> Removes text customization (formerly automatically created assets) from a campaign.
  * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [ContextError]()   [FieldError]()   [InternalError]()   [MutateError]()   [PartialFailureError]()   [QuotaError]()   [RequestError]()</td>
  *      <td>
  *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
@@ -193,7 +194,7 @@ public class AutomaticallyCreatedAssetRemovalServiceClient implements Background
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Removes automatically created assets from a campaign.
+   * Removes text customization (formerly automatically created assets) from a campaign.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [ContextError]()
    * [FieldError]() [InternalError]() [MutateError]() [PartialFailureError]() [QuotaError]()
@@ -242,7 +243,7 @@ public class AutomaticallyCreatedAssetRemovalServiceClient implements Background
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Removes automatically created assets from a campaign.
+   * Removes text customization (formerly automatically created assets) from a campaign.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [ContextError]()
    * [FieldError]() [InternalError]() [MutateError]() [PartialFailureError]() [QuotaError]()
@@ -282,7 +283,7 @@ public class AutomaticallyCreatedAssetRemovalServiceClient implements Background
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Removes automatically created assets from a campaign.
+   * Removes text customization (formerly automatically created assets) from a campaign.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [ContextError]()
    * [FieldError]() [InternalError]() [MutateError]() [PartialFailureError]() [QuotaError]()

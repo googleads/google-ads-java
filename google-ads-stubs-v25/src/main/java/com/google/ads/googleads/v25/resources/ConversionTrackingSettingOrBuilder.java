@@ -100,15 +100,18 @@ public interface ConversionTrackingSettingOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Whether the customer is opted-in for enhanced conversions
-   * for leads. If using cross-account conversion tracking, this value is
-   * inherited from the manager. This field is read-only.
+   * Output only. Deprecated: Use enablement_setting instead. Whether the
+   * customer is opted-in for enhanced conversions for leads. If using
+   * cross-account conversion tracking, this value is inherited from the
+   * manager. This field is read-only.
    * </pre>
    *
-   * <code>bool enhanced_conversions_for_leads_enabled = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>bool enhanced_conversions_for_leads_enabled = 7 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @deprecated google.ads.googleads.v25.resources.ConversionTrackingSetting.enhanced_conversions_for_leads_enabled is deprecated.
+   *     See google/ads/googleads/v25/resources/customer.proto;l=247
    * @return The enhancedConversionsForLeadsEnabled.
    */
-  boolean getEnhancedConversionsForLeadsEnabled();
+  @java.lang.Deprecated boolean getEnhancedConversionsForLeadsEnabled();
 
   /**
    * <pre>

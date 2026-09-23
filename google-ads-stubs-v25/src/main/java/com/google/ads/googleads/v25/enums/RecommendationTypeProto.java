@@ -42,7 +42,7 @@ public final class RecommendationTypeProto extends com.google.protobuf.Generated
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v25/enums/recomme" +
       "ndation_type.proto\022\036google.ads.googleads" +
-      ".v25.enums\"\223\016\n\026RecommendationTypeEnum\"\370\r" +
+      ".v25.enums\"\360\016\n\026RecommendationTypeEnum\"\325\016" +
       "\n\022RecommendationType\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
       "\007UNKNOWN\020\001\022\023\n\017CAMPAIGN_BUDGET\020\002\022\013\n\007KEYWO" +
       "RD\020\003\022\013\n\007TEXT_AD\020\004\022\025\n\021TARGET_CPA_OPT_IN\020\005" +
@@ -87,13 +87,16 @@ public final class RecommendationTypeProto extends com.google.protobuf.Generated
       "FRESH_CUSTOMER_MATCH_LIST\0207\022\032\n\026CUSTOM_AU" +
       "DIENCE_OPT_IN\0208\022\023\n\017LEAD_FORM_ASSET\0209\022\"\n\036" +
       "IMPROVE_DEMAND_GEN_AD_STRENGTH\020:\022\036\n\032CAMP" +
-      "AIGN_SPECIFIC_APP_GOAL\020;B\361\001\n\"com.google." +
-      "ads.googleads.v25.enumsB\027RecommendationT" +
-      "ypeProtoP\001ZCgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v25/enums;enums\242" +
-      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V25.Enums\312\002" +
-      "\036Google\\Ads\\GoogleAds\\V25\\Enums\352\002\"Google" +
-      "::Ads::GoogleAds::V25::Enumsb\006proto3"
+      "AIGN_SPECIFIC_APP_GOAL\020;\022,\n(RAISE_TARGET" +
+      "_CPA_PERFORMANCE_BID_TOO_LOW\020=\022-\n)LOWER_" +
+      "TARGET_ROAS_PERFORMANCE_BID_TOO_LOW\020>B\361\001" +
+      "\n\"com.google.ads.googleads.v25.enumsB\027Re" +
+      "commendationTypeProtoP\001ZCgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v25" +
+      "/enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAd" +
+      "s.V25.Enums\312\002\036Google\\Ads\\GoogleAds\\V25\\E" +
+      "nums\352\002\"Google::Ads::GoogleAds::V25::Enum" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

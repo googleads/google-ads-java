@@ -42,29 +42,30 @@ public final class AuthorizationErrorProto extends com.google.protobuf.Generated
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v25/errors/author" +
       "ization_error.proto\022\037google.ads.googlead" +
-      "s.v25.errors\"\375\004\n\026AuthorizationErrorEnum\"" +
-      "\342\004\n\022AuthorizationError\022\017\n\013UNSPECIFIED\020\000\022" +
+      "s.v25.errors\"\211\005\n\026AuthorizationErrorEnum\"" +
+      "\356\004\n\022AuthorizationError\022\017\n\013UNSPECIFIED\020\000\022" +
       "\013\n\007UNKNOWN\020\001\022\032\n\026USER_PERMISSION_DENIED\020\002" +
-      "\022$\n DEVELOPER_TOKEN_NOT_ON_ALLOWLIST\020\r\022\036" +
-      "\n\032DEVELOPER_TOKEN_PROHIBITED\020\004\022\024\n\020PROJEC" +
-      "T_DISABLED\020\005\022\027\n\023AUTHORIZATION_ERROR\020\006\022\030\n" +
-      "\024ACTION_NOT_PERMITTED\020\007\022\025\n\021INCOMPLETE_SI" +
-      "GNUP\020\010\022\030\n\024CUSTOMER_NOT_ENABLED\020\030\022\017\n\013MISS" +
-      "ING_TOS\020\t\022 \n\034DEVELOPER_TOKEN_NOT_APPROVE" +
-      "D\020\n\022-\n)CLOUD_PROJECT_NOT_APPROVED_FOR_PR" +
-      "ODUCTION\020 \022=\n9INVALID_LOGIN_CUSTOMER_ID_" +
-      "SERVING_CUSTOMER_ID_COMBINATION\020\013\022\031\n\025SER" +
-      "VICE_ACCESS_DENIED\020\014\022\"\n\036ACCESS_DENIED_FO" +
-      "R_ACCOUNT_TYPE\020\031\022\030\n\024METRIC_ACCESS_DENIED" +
-      "\020\032\022(\n$CLOUD_PROJECT_NOT_UNDER_ORGANIZATI" +
-      "ON\020\033\022.\n*ACTION_NOT_PERMITTED_FOR_SUSPEND" +
-      "ED_ACCOUNT\020\034B\367\001\n#com.google.ads.googlead" +
-      "s.v25.errorsB\027AuthorizationErrorProtoP\001Z" +
-      "Egoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v25/errors;errors\242\002\003GAA\252\002\037G" +
-      "oogle.Ads.GoogleAds.V25.Errors\312\002\037Google\\" +
-      "Ads\\GoogleAds\\V25\\Errors\352\002#Google::Ads::" +
-      "GoogleAds::V25::Errorsb\006proto3"
+      "\022(\n DEVELOPER_TOKEN_NOT_ON_ALLOWLIST\020\r\032\002" +
+      "\010\001\022\"\n\032DEVELOPER_TOKEN_PROHIBITED\020\004\032\002\010\001\022\024" +
+      "\n\020PROJECT_DISABLED\020\005\022\027\n\023AUTHORIZATION_ER" +
+      "ROR\020\006\022\030\n\024ACTION_NOT_PERMITTED\020\007\022\025\n\021INCOM" +
+      "PLETE_SIGNUP\020\010\022\030\n\024CUSTOMER_NOT_ENABLED\020\030" +
+      "\022\017\n\013MISSING_TOS\020\t\022$\n\034DEVELOPER_TOKEN_NOT" +
+      "_APPROVED\020\n\032\002\010\001\022-\n)CLOUD_PROJECT_NOT_APP" +
+      "ROVED_FOR_PRODUCTION\020 \022=\n9INVALID_LOGIN_" +
+      "CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINAT" +
+      "ION\020\013\022\031\n\025SERVICE_ACCESS_DENIED\020\014\022\"\n\036ACCE" +
+      "SS_DENIED_FOR_ACCOUNT_TYPE\020\031\022\030\n\024METRIC_A" +
+      "CCESS_DENIED\020\032\022(\n$CLOUD_PROJECT_NOT_UNDE" +
+      "R_ORGANIZATION\020\033\022.\n*ACTION_NOT_PERMITTED" +
+      "_FOR_SUSPENDED_ACCOUNT\020\034B\367\001\n#com.google." +
+      "ads.googleads.v25.errorsB\027AuthorizationE" +
+      "rrorProtoP\001ZEgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v25/errors;erro" +
+      "rs\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V25.Erro" +
+      "rs\312\002\037Google\\Ads\\GoogleAds\\V25\\Errors\352\002#G" +
+      "oogle::Ads::GoogleAds::V25::Errorsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

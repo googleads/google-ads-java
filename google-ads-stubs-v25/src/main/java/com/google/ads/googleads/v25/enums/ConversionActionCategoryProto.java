@@ -42,8 +42,8 @@ public final class ConversionActionCategoryProto extends com.google.protobuf.Gen
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v25/enums/convers" +
       "ion_action_category.proto\022\036google.ads.go" +
-      "ogleads.v25.enums\"\350\003\n\034ConversionActionCa" +
-      "tegoryEnum\"\307\003\n\030ConversionActionCategory\022" +
+      "ogleads.v25.enums\"\377\003\n\034ConversionActionCa" +
+      "tegoryEnum\"\336\003\n\030ConversionActionCategory\022" +
       "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007DEFAULT" +
       "\020\002\022\r\n\tPAGE_VIEW\020\003\022\014\n\010PURCHASE\020\004\022\n\n\006SIGNU" +
       "P\020\005\022\014\n\010DOWNLOAD\020\007\022\017\n\013ADD_TO_CART\020\010\022\022\n\016BE" +
@@ -54,14 +54,14 @@ public final class ConversionActionCategoryProto extends com.google.protobuf.Gen
       "\016OUTBOUND_CLICK\020\021\022\013\n\007CONTACT\020\022\022\016\n\nENGAGE" +
       "MENT\020\023\022\017\n\013STORE_VISIT\020\024\022\016\n\nSTORE_SALE\020\025\022" +
       "\022\n\016QUALIFIED_LEAD\020\026\022\022\n\016CONVERTED_LEAD\020\027\022" +
-      "\033\n\027YOUTUBE_FOLLOW_ON_VIEWS\020\030B\367\001\n\"com.goo" +
-      "gle.ads.googleads.v25.enumsB\035ConversionA" +
-      "ctionCategoryProtoP\001ZCgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v25/en" +
-      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
-      "25.Enums\312\002\036Google\\Ads\\GoogleAds\\V25\\Enum" +
-      "s\352\002\"Google::Ads::GoogleAds::V25::Enumsb\006" +
-      "proto3"
+      "\033\n\027YOUTUBE_FOLLOW_ON_VIEWS\020\030\022\025\n\021IN_APP_A" +
+      "D_REVENUE\020\032B\367\001\n\"com.google.ads.googleads" +
+      ".v25.enumsB\035ConversionActionCategoryProt" +
+      "oP\001ZCgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v25/enums;enums\242\002\003GAA\252\002" +
+      "\036Google.Ads.GoogleAds.V25.Enums\312\002\036Google" +
+      "\\Ads\\GoogleAds\\V25\\Enums\352\002\"Google::Ads::" +
+      "GoogleAds::V25::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

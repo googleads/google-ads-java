@@ -77,6 +77,37 @@ public final class SmartCampaignSettingServiceGrpc {
     return getMutateSmartCampaignSettingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest,
+      com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse> getGeneratePMaxDraftCampaignMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GeneratePMaxDraftCampaign",
+      requestType = com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest.class,
+      responseType = com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest,
+      com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse> getGeneratePMaxDraftCampaignMethod() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest, com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse> getGeneratePMaxDraftCampaignMethod;
+    if ((getGeneratePMaxDraftCampaignMethod = SmartCampaignSettingServiceGrpc.getGeneratePMaxDraftCampaignMethod) == null) {
+      synchronized (SmartCampaignSettingServiceGrpc.class) {
+        if ((getGeneratePMaxDraftCampaignMethod = SmartCampaignSettingServiceGrpc.getGeneratePMaxDraftCampaignMethod) == null) {
+          SmartCampaignSettingServiceGrpc.getGeneratePMaxDraftCampaignMethod = getGeneratePMaxDraftCampaignMethod =
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest, com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GeneratePMaxDraftCampaign"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SmartCampaignSettingServiceMethodDescriptorSupplier("GeneratePMaxDraftCampaign"))
+              .build();
+        }
+      }
+    }
+    return getGeneratePMaxDraftCampaignMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -162,6 +193,19 @@ public final class SmartCampaignSettingServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v25.services.MutateSmartCampaignSettingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateSmartCampaignSettingsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Generates a Performance Max (PMax) draft campaign from an existing Smart
+     * campaign, initialized with a status of [CampaignStatus.PAUSED] and a
+     * creation status of [CampaignCreationStatus.INCOMPLETE]. Returns the draft
+     * PMax campaign ID and related entity IDs.
+     * </pre>
+     */
+    default void generatePMaxDraftCampaign(com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGeneratePMaxDraftCampaignMethod(), responseObserver);
+    }
   }
 
   /**
@@ -218,6 +262,20 @@ public final class SmartCampaignSettingServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMutateSmartCampaignSettingsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Generates a Performance Max (PMax) draft campaign from an existing Smart
+     * campaign, initialized with a status of [CampaignStatus.PAUSED] and a
+     * creation status of [CampaignCreationStatus.INCOMPLETE]. Returns the draft
+     * PMax campaign ID and related entity IDs.
+     * </pre>
+     */
+    public void generatePMaxDraftCampaign(com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGeneratePMaxDraftCampaignMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -258,6 +316,19 @@ public final class SmartCampaignSettingServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMutateSmartCampaignSettingsMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Generates a Performance Max (PMax) draft campaign from an existing Smart
+     * campaign, initialized with a status of [CampaignStatus.PAUSED] and a
+     * creation status of [CampaignCreationStatus.INCOMPLETE]. Returns the draft
+     * PMax campaign ID and related entity IDs.
+     * </pre>
+     */
+    public com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse generatePMaxDraftCampaign(com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGeneratePMaxDraftCampaignMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -297,6 +368,19 @@ public final class SmartCampaignSettingServiceGrpc {
     public com.google.ads.googleads.v25.services.MutateSmartCampaignSettingsResponse mutateSmartCampaignSettings(com.google.ads.googleads.v25.services.MutateSmartCampaignSettingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMutateSmartCampaignSettingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Generates a Performance Max (PMax) draft campaign from an existing Smart
+     * campaign, initialized with a status of [CampaignStatus.PAUSED] and a
+     * creation status of [CampaignCreationStatus.INCOMPLETE]. Returns the draft
+     * PMax campaign ID and related entity IDs.
+     * </pre>
+     */
+    public com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse generatePMaxDraftCampaign(com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGeneratePMaxDraftCampaignMethod(), getCallOptions(), request);
     }
   }
 
@@ -340,10 +424,25 @@ public final class SmartCampaignSettingServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMutateSmartCampaignSettingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Generates a Performance Max (PMax) draft campaign from an existing Smart
+     * campaign, initialized with a status of [CampaignStatus.PAUSED] and a
+     * creation status of [CampaignCreationStatus.INCOMPLETE]. Returns the draft
+     * PMax campaign ID and related entity IDs.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse> generatePMaxDraftCampaign(
+        com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGeneratePMaxDraftCampaignMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_SMART_CAMPAIGN_STATUS = 0;
   private static final int METHODID_MUTATE_SMART_CAMPAIGN_SETTINGS = 1;
+  private static final int METHODID_GENERATE_PMAX_DRAFT_CAMPAIGN = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -369,6 +468,10 @@ public final class SmartCampaignSettingServiceGrpc {
         case METHODID_MUTATE_SMART_CAMPAIGN_SETTINGS:
           serviceImpl.mutateSmartCampaignSettings((com.google.ads.googleads.v25.services.MutateSmartCampaignSettingsRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v25.services.MutateSmartCampaignSettingsResponse>) responseObserver);
+          break;
+        case METHODID_GENERATE_PMAX_DRAFT_CAMPAIGN:
+          serviceImpl.generatePMaxDraftCampaign((com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -402,6 +505,13 @@ public final class SmartCampaignSettingServiceGrpc {
               com.google.ads.googleads.v25.services.MutateSmartCampaignSettingsRequest,
               com.google.ads.googleads.v25.services.MutateSmartCampaignSettingsResponse>(
                 service, METHODID_MUTATE_SMART_CAMPAIGN_SETTINGS)))
+        .addMethod(
+          getGeneratePMaxDraftCampaignMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest,
+              com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse>(
+                service, METHODID_GENERATE_PMAX_DRAFT_CAMPAIGN)))
         .build();
   }
 
@@ -452,6 +562,7 @@ public final class SmartCampaignSettingServiceGrpc {
               .setSchemaDescriptor(new SmartCampaignSettingServiceFileDescriptorSupplier())
               .addMethod(getGetSmartCampaignStatusMethod())
               .addMethod(getMutateSmartCampaignSettingsMethod())
+              .addMethod(getGeneratePMaxDraftCampaignMethod())
               .build();
         }
       }

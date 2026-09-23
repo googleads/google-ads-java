@@ -7,7 +7,7 @@ package com.google.ads.googleads.v25.common;
 
 /**
  * <pre>
- * A Page Feed asset.
+ * A Page URL inclusion asset.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v25.common.PageFeedAsset}
@@ -325,7 +325,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A Page Feed asset.
+   * A Page URL inclusion asset.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v25.common.PageFeedAsset}

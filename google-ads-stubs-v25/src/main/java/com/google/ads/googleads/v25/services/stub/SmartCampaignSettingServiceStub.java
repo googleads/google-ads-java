@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v25.services.stub;
 
+import com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest;
+import com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse;
 import com.google.ads.googleads.v25.services.GetSmartCampaignStatusRequest;
 import com.google.ads.googleads.v25.services.GetSmartCampaignStatusResponse;
 import com.google.ads.googleads.v25.services.MutateSmartCampaignSettingsRequest;
@@ -44,6 +46,11 @@ public abstract class SmartCampaignSettingServiceStub implements BackgroundResou
       mutateSmartCampaignSettingsCallable() {
     throw new UnsupportedOperationException(
         "Not implemented: mutateSmartCampaignSettingsCallable()");
+  }
+
+  public UnaryCallable<GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+      generatePMaxDraftCampaignCallable() {
+    throw new UnsupportedOperationException("Not implemented: generatePMaxDraftCampaignCallable()");
   }
 
   @Override

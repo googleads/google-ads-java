@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v25.services.stub;
 
+import com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest;
+import com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse;
 import com.google.ads.googleads.v25.services.GetSmartCampaignStatusRequest;
 import com.google.ads.googleads.v25.services.GetSmartCampaignStatusResponse;
 import com.google.ads.googleads.v25.services.MutateSmartCampaignSettingsRequest;
@@ -112,6 +114,9 @@ public class SmartCampaignSettingServiceStubSettings
   private final UnaryCallSettings<
           MutateSmartCampaignSettingsRequest, MutateSmartCampaignSettingsResponse>
       mutateSmartCampaignSettingsSettings;
+  private final UnaryCallSettings<
+          GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+      generatePMaxDraftCampaignSettings;
 
   /** Returns the object with the settings used for calls to getSmartCampaignStatus. */
   public UnaryCallSettings<GetSmartCampaignStatusRequest, GetSmartCampaignStatusResponse>
@@ -123,6 +128,12 @@ public class SmartCampaignSettingServiceStubSettings
   public UnaryCallSettings<MutateSmartCampaignSettingsRequest, MutateSmartCampaignSettingsResponse>
       mutateSmartCampaignSettingsSettings() {
     return mutateSmartCampaignSettingsSettings;
+  }
+
+  /** Returns the object with the settings used for calls to generatePMaxDraftCampaign. */
+  public UnaryCallSettings<GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+      generatePMaxDraftCampaignSettings() {
+    return generatePMaxDraftCampaignSettings;
   }
 
   public SmartCampaignSettingServiceStub createStub() throws IOException {
@@ -209,6 +220,7 @@ public class SmartCampaignSettingServiceStubSettings
     getSmartCampaignStatusSettings = settingsBuilder.getSmartCampaignStatusSettings().build();
     mutateSmartCampaignSettingsSettings =
         settingsBuilder.mutateSmartCampaignSettingsSettings().build();
+    generatePMaxDraftCampaignSettings = settingsBuilder.generatePMaxDraftCampaignSettings().build();
   }
 
   @Override
@@ -226,6 +238,9 @@ public class SmartCampaignSettingServiceStubSettings
     private final UnaryCallSettings.Builder<
             MutateSmartCampaignSettingsRequest, MutateSmartCampaignSettingsResponse>
         mutateSmartCampaignSettingsSettings;
+    private final UnaryCallSettings.Builder<
+            GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+        generatePMaxDraftCampaignSettings;
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -268,10 +283,13 @@ public class SmartCampaignSettingServiceStubSettings
 
       getSmartCampaignStatusSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
       mutateSmartCampaignSettingsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+      generatePMaxDraftCampaignSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              getSmartCampaignStatusSettings, mutateSmartCampaignSettingsSettings);
+              getSmartCampaignStatusSettings,
+              mutateSmartCampaignSettingsSettings,
+              generatePMaxDraftCampaignSettings);
       initDefaults(this);
     }
 
@@ -281,10 +299,13 @@ public class SmartCampaignSettingServiceStubSettings
       getSmartCampaignStatusSettings = settings.getSmartCampaignStatusSettings.toBuilder();
       mutateSmartCampaignSettingsSettings =
           settings.mutateSmartCampaignSettingsSettings.toBuilder();
+      generatePMaxDraftCampaignSettings = settings.generatePMaxDraftCampaignSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              getSmartCampaignStatusSettings, mutateSmartCampaignSettingsSettings);
+              getSmartCampaignStatusSettings,
+              mutateSmartCampaignSettingsSettings,
+              generatePMaxDraftCampaignSettings);
     }
 
     private static Builder createDefault() {
@@ -307,6 +328,11 @@ public class SmartCampaignSettingServiceStubSettings
 
       builder
           .mutateSmartCampaignSettingsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .generatePMaxDraftCampaignSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
 
@@ -339,6 +365,13 @@ public class SmartCampaignSettingServiceStubSettings
             MutateSmartCampaignSettingsRequest, MutateSmartCampaignSettingsResponse>
         mutateSmartCampaignSettingsSettings() {
       return mutateSmartCampaignSettingsSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to generatePMaxDraftCampaign. */
+    public UnaryCallSettings.Builder<
+            GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+        generatePMaxDraftCampaignSettings() {
+      return generatePMaxDraftCampaignSettings;
     }
 
     @Override

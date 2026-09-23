@@ -205,6 +205,14 @@ private static final long serialVersionUID = 0L;
      * <code>GENERATE_ANIMATED_IMAGES_FROM_OTHER_ASSETS = 13;</code>
      */
     GENERATE_ANIMATED_IMAGES_FROM_OTHER_ASSETS(13),
+    /**
+     * <pre>
+     * Automated video crawl.
+     * </pre>
+     *
+     * <code>AUTOMATED_VIDEO_CRAWL = 15;</code>
+     */
+    AUTOMATED_VIDEO_CRAWL(15),
     UNRECOGNIZED(-1),
     ;
 
@@ -366,6 +374,14 @@ private static final long serialVersionUID = 0L;
      * <code>GENERATE_ANIMATED_IMAGES_FROM_OTHER_ASSETS = 13;</code>
      */
     public static final int GENERATE_ANIMATED_IMAGES_FROM_OTHER_ASSETS_VALUE = 13;
+    /**
+     * <pre>
+     * Automated video crawl.
+     * </pre>
+     *
+     * <code>AUTOMATED_VIDEO_CRAWL = 15;</code>
+     */
+    public static final int AUTOMATED_VIDEO_CRAWL_VALUE = 15;
 
 
     public final int getNumber() {
@@ -406,6 +422,7 @@ private static final long serialVersionUID = 0L;
         case 11: return FINAL_URL_EXPANSION_TEXT_ASSET_AUTOMATION;
         case 12: return GENERATE_VIDEOS_FROM_OTHER_ASSETS;
         case 13: return GENERATE_ANIMATED_IMAGES_FROM_OTHER_ASSETS;
+        case 15: return AUTOMATED_VIDEO_CRAWL;
         default: return null;
       }
     }

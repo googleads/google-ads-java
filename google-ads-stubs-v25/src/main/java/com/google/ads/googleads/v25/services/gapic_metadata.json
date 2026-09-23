@@ -1396,6 +1396,9 @@
         "grpc": {
           "libraryClient": "SmartCampaignSettingServiceClient",
           "rpcs": {
+            "GeneratePMaxDraftCampaign": {
+              "methods": ["generatePMaxDraftCampaign", "generatePMaxDraftCampaign", "generatePMaxDraftCampaign", "generatePMaxDraftCampaignCallable"]
+            },
             "GetSmartCampaignStatus": {
               "methods": ["getSmartCampaignStatus", "getSmartCampaignStatus", "getSmartCampaignStatus", "getSmartCampaignStatusCallable"]
             },

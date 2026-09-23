@@ -42,7 +42,7 @@ public final class GoalErrorProto extends com.google.protobuf.GeneratedFile {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v25/errors/goal_e" +
       "rror.proto\022\037google.ads.googleads.v25.err" +
-      "ors\"\340\002\n\rGoalErrorEnum\"\316\002\n\tGoalError\022\017\n\013U" +
+      "ors\"\363\003\n\rGoalErrorEnum\"\341\003\n\tGoalError\022\017\n\013U" +
       "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035RETENTION_G" +
       "OAL_ALREADY_EXISTS\020\004\0220\n,HIGH_LIFETIME_VA" +
       "LUE_PRESENT_BUT_VALUE_ABSENT\020\005\0223\n/HIGH_L" +
@@ -50,14 +50,17 @@ public final class GoalErrorProto extends com.google.protobuf.GeneratedFile {
       "E\020\006\022<\n8CUSTOMER_LIFECYCLE_OPTIMIZATION_A" +
       "CCOUNT_TYPE_NOT_ALLOWED\020\007\0220\n,NEW_CUSTOME" +
       "R_ACQUISITION_GOAL_ALREADY_EXISTS\020\010\022)\n%L" +
-      "OYALTY_RETENTION_GOAL_ALREADY_EXISTS\020\tB\356" +
-      "\001\n#com.google.ads.googleads.v25.errorsB\016" +
-      "GoalErrorProtoP\001ZEgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v25/errors" +
-      ";errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V25" +
-      ".Errors\312\002\037Google\\Ads\\GoogleAds\\V25\\Error" +
-      "s\352\002#Google::Ads::GoogleAds::V25::Errorsb" +
-      "\006proto3"
+      "OYALTY_RETENTION_GOAL_ALREADY_EXISTS\020\t\022F" +
+      "\nBHIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT" +
+      "_BUT_VALUE_MULTIPLIER_ABSENT\020\n\022I\nEHIGH_L" +
+      "IFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQ" +
+      "UAL_TO_VALUE_MULTIPLIER\020\013B\356\001\n#com.google" +
+      ".ads.googleads.v25.errorsB\016GoalErrorProt" +
+      "oP\001ZEgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v25/errors;errors\242\002\003GAA" +
+      "\252\002\037Google.Ads.GoogleAds.V25.Errors\312\002\037Goo" +
+      "gle\\Ads\\GoogleAds\\V25\\Errors\352\002#Google::A" +
+      "ds::GoogleAds::V25::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -198,7 +198,7 @@ private static final long serialVersionUID = 0L;
     COMPARE_CAMPAIGNS(17),
     /**
      * <pre>
-     * An experiment that tests automatically created assets and lets Google AI
+     * An experiment that tests text customization and lets Google AI
      * send traffic to relevant landing pages and generate text assets to better
      * match search queries.
      * </pre>
@@ -360,7 +360,7 @@ private static final long serialVersionUID = 0L;
     public static final int COMPARE_CAMPAIGNS_VALUE = 17;
     /**
      * <pre>
-     * An experiment that tests automatically created assets and lets Google AI
+     * An experiment that tests text customization and lets Google AI
      * send traffic to relevant landing pages and generate text assets to better
      * match search queries.
      * </pre>

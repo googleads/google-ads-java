@@ -81,6 +81,16 @@ public final class SmartCampaignSettingServiceProto extends com.google.protobuf.
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_ads_googleads_v25_services_MutateSmartCampaignSettingResult_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v25_services_GeneratePMaxDraftCampaignRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v25_services_GeneratePMaxDraftCampaignRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v25_services_GeneratePMaxDraftCampaignResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v25_services_GeneratePMaxDraftCampaignResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -157,30 +167,46 @@ public final class SmartCampaignSettingServiceProto extends com.google.protobuf.
       "source_name\030\001 \001(\tB2\372A/\n-googleads.google" +
       "apis.com/SmartCampaignSetting\022X\n\026smart_c" +
       "ampaign_setting\030\002 \001(\01328.google.ads.googl" +
-      "eads.v25.resources.SmartCampaignSetting2" +
-      "\375\004\n\033SmartCampaignSettingService\022\206\002\n\026GetS" +
-      "martCampaignStatus\022@.google.ads.googlead" +
-      "s.v25.services.GetSmartCampaignStatusReq" +
-      "uest\032A.google.ads.googleads.v25.services" +
-      ".GetSmartCampaignStatusResponse\"g\332A\rreso" +
-      "urce_name\202\323\344\223\002Q\022O/v25/{resource_name=cus" +
-      "tomers/*/smartCampaignSettings/*}:getSma" +
-      "rtCampaignStatus\022\215\002\n\033MutateSmartCampaign" +
-      "Settings\022E.google.ads.googleads.v25.serv" +
-      "ices.MutateSmartCampaignSettingsRequest\032" +
-      "F.google.ads.googleads.v25.services.Muta" +
-      "teSmartCampaignSettingsResponse\"_\332A\026cust" +
-      "omer_id,operations\202\323\344\223\002@\";/v25/customers" +
-      "/{customer_id=*}/smartCampaignSettings:m" +
-      "utate:\001*\032E\312A\030googleads.googleapis.com\322A\'" +
-      "https://www.googleapis.com/auth/adwordsB" +
-      "\214\002\n%com.google.ads.googleads.v25.service" +
-      "sB SmartCampaignSettingServiceProtoP\001ZIg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v25/services;services\242\002\003GAA\252\002" +
-      "!Google.Ads.GoogleAds.V25.Services\312\002!Goo" +
-      "gle\\Ads\\GoogleAds\\V25\\Services\352\002%Google:" +
-      ":Ads::GoogleAds::V25::Servicesb\006proto3"
+      "eads.v25.resources.SmartCampaignSetting\"" +
+      "\302\001\n GeneratePMaxDraftCampaignRequest\022L\n\r" +
+      "resource_name\030\001 \001(\tB5\340A\002\372A/\n-googleads.g" +
+      "oogleapis.com/SmartCampaignSetting\022\032\n\rva" +
+      "lidate_only\030\002 \001(\010B\003\340A\001\022\030\n\013gbp_enabled\030\003 " +
+      "\001(\010B\003\340A\001\022\032\n\rimage_enabled\030\004 \001(\010B\003\340A\001\"\220\001\n" +
+      "!GeneratePMaxDraftCampaignResponse\022\025\n\rpm" +
+      "ax_campaign\030\001 \001(\t\022\027\n\017campaign_budget\030\002 \001" +
+      "(\t\022\023\n\013asset_group\030\003 \001(\t\022\016\n\006assets\030\004 \003(\t\022" +
+      "\026\n\016validated_info\030\005 \001(\t2\225\007\n\033SmartCampaig" +
+      "nSettingService\022\206\002\n\026GetSmartCampaignStat" +
+      "us\022@.google.ads.googleads.v25.services.G" +
+      "etSmartCampaignStatusRequest\032A.google.ad" +
+      "s.googleads.v25.services.GetSmartCampaig" +
+      "nStatusResponse\"g\332A\rresource_name\202\323\344\223\002Q\022" +
+      "O/v25/{resource_name=customers/*/smartCa" +
+      "mpaignSettings/*}:getSmartCampaignStatus" +
+      "\022\215\002\n\033MutateSmartCampaignSettings\022E.googl" +
+      "e.ads.googleads.v25.services.MutateSmart" +
+      "CampaignSettingsRequest\032F.google.ads.goo" +
+      "gleads.v25.services.MutateSmartCampaignS" +
+      "ettingsResponse\"_\332A\026customer_id,operatio" +
+      "ns\202\323\344\223\002@\";/v25/customers/{customer_id=*}" +
+      "/smartCampaignSettings:mutate:\001*\022\225\002\n\031Gen" +
+      "eratePMaxDraftCampaign\022C.google.ads.goog" +
+      "leads.v25.services.GeneratePMaxDraftCamp" +
+      "aignRequest\032D.google.ads.googleads.v25.s" +
+      "ervices.GeneratePMaxDraftCampaignRespons" +
+      "e\"m\332A\rresource_name\202\323\344\223\002W\"R/v25/{resourc" +
+      "e_name=customers/*/smartCampaignSettings" +
+      "/*}:generatePMaxDraftCampaign:\001*\032E\312A\030goo" +
+      "gleads.googleapis.com\322A\'https://www.goog" +
+      "leapis.com/auth/adwordsB\214\002\n%com.google.a" +
+      "ds.googleads.v25.servicesB SmartCampaign" +
+      "SettingServiceProtoP\001ZIgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v25/s" +
+      "ervices;services\242\002\003GAA\252\002!Google.Ads.Goog" +
+      "leAds.V25.Services\312\002!Google\\Ads\\GoogleAd" +
+      "s\\V25\\Services\352\002%Google::Ads::GoogleAds:" +
+      ":V25::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -262,6 +288,18 @@ public final class SmartCampaignSettingServiceProto extends com.google.protobuf.
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_services_MutateSmartCampaignSettingResult_descriptor,
         new java.lang.String[] { "ResourceName", "SmartCampaignSetting", });
+    internal_static_google_ads_googleads_v25_services_GeneratePMaxDraftCampaignRequest_descriptor =
+      getDescriptor().getMessageType(11);
+    internal_static_google_ads_googleads_v25_services_GeneratePMaxDraftCampaignRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v25_services_GeneratePMaxDraftCampaignRequest_descriptor,
+        new java.lang.String[] { "ResourceName", "ValidateOnly", "GbpEnabled", "ImageEnabled", });
+    internal_static_google_ads_googleads_v25_services_GeneratePMaxDraftCampaignResponse_descriptor =
+      getDescriptor().getMessageType(12);
+    internal_static_google_ads_googleads_v25_services_GeneratePMaxDraftCampaignResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v25_services_GeneratePMaxDraftCampaignResponse_descriptor,
+        new java.lang.String[] { "PmaxCampaign", "CampaignBudget", "AssetGroup", "Assets", "ValidatedInfo", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.ads.googleads.v25.enums.ResponseContentTypeProto.getDescriptor();
     com.google.ads.googleads.v25.enums.SmartCampaignNotEligibleReasonProto.getDescriptor();

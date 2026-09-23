@@ -282,8 +282,8 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
 
   /**
    * <pre>
-   * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in
+   * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+   * Data fetched for channels is based on the list of countries specified in
    * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
@@ -293,8 +293,8 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   boolean hasSearchChannels();
   /**
    * <pre>
-   * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in
+   * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+   * Data fetched for channels is based on the list of countries specified in
    * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
@@ -304,8 +304,8 @@ public interface GenerateCreatorInsightsRequestOrBuilder extends
   com.google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.YouTubeChannels getSearchChannels();
   /**
    * <pre>
-   * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in
+   * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+   * Data fetched for channels is based on the list of countries specified in
    * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *

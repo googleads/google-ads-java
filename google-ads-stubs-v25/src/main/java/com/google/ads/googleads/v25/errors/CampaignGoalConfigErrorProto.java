@@ -42,8 +42,8 @@ public final class CampaignGoalConfigErrorProto extends com.google.protobuf.Gene
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v25/errors/campai" +
       "gn_goal_config_error.proto\022\037google.ads.g" +
-      "oogleads.v25.errors\"\315\004\n\033CampaignGoalConf" +
-      "igErrorEnum\"\255\004\n\027CampaignGoalConfigError\022" +
+      "oogleads.v25.errors\"\266\006\n\033CampaignGoalConf" +
+      "igErrorEnum\"\226\006\n\027CampaignGoalConfigError\022" +
       "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016GOAL_NO" +
       "T_FOUND\020\003\022\026\n\022CAMPAIGN_NOT_FOUND\020\004\0220\n,HIG" +
       "H_LIFETIME_VALUE_PRESENT_BUT_VALUE_ABSEN" +
@@ -57,13 +57,19 @@ public final class CampaignGoalConfigErrorProto extends com.google.protobuf.Gene
       "GH_LIFETIME_VALUE_NOT_SUPPORTED_FOR_CAMP" +
       "AIGN_TYPE\020\016\022%\n!CANNOT_USE_INCOMPATIBLE_C" +
       "LO_GOALS\020\017\022\'\n#LOYALTY_RETENTION_GOAL_INV" +
-      "ALID_MODE\020\020B\374\001\n#com.google.ads.googleads" +
-      ".v25.errorsB\034CampaignGoalConfigErrorProt" +
-      "oP\001ZEgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v25/errors;errors\242\002\003GAA" +
-      "\252\002\037Google.Ads.GoogleAds.V25.Errors\312\002\037Goo" +
-      "gle\\Ads\\GoogleAds\\V25\\Errors\352\002#Google::A" +
-      "ds::GoogleAds::V25::Errorsb\006proto3"
+      "ALID_MODE\020\020\022F\nBHIGH_LIFETIME_VALUE_MULTI" +
+      "PLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSEN" +
+      "T\020\021\022I\nEHIGH_LIFETIME_VALUE_MULTIPLIER_LE" +
+      "SS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER\020\022\022T" +
+      "\nPCAMPAIGN_OVERRIDE_HIGH_LIFETIME_VALUE_" +
+      "MULTIPLIER_NOT_SUPPORTED_FOR_CAMPAIGN_TY" +
+      "PE\020\023B\374\001\n#com.google.ads.googleads.v25.er" +
+      "rorsB\034CampaignGoalConfigErrorProtoP\001ZEgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v25/errors;errors\242\002\003GAA\252\002\037Goog" +
+      "le.Ads.GoogleAds.V25.Errors\312\002\037Google\\Ads" +
+      "\\GoogleAds\\V25\\Errors\352\002#Google::Ads::Goo" +
+      "gleAds::V25::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

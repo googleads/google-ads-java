@@ -76,7 +76,8 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Ad serving is optimized based on CTR for the campaign.
+     * Ad serving is optimized based on clickthrough rate (CTR) for the
+     * campaign.
      * </pre>
      *
      * <code>OPTIMIZE = 2;</code>
@@ -84,9 +85,9 @@ private static final long serialVersionUID = 0L;
     OPTIMIZE(2),
     /**
      * <pre>
-     * Ad serving is optimized based on CTR * Conversion for the campaign. If
-     * the campaign is not in the conversion optimizer bidding strategy, it will
-     * default to OPTIMIZED.
+     * Ad serving is optimized based on clickthrough rate (CTR) * Conversion for
+     * the campaign. If the campaign is not in the conversion optimizer bidding
+     * strategy, it will default to OPTIMIZED.
      * </pre>
      *
      * <code>CONVERSION_OPTIMIZE = 3;</code>
@@ -149,7 +150,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Ad serving is optimized based on CTR for the campaign.
+     * Ad serving is optimized based on clickthrough rate (CTR) for the
+     * campaign.
      * </pre>
      *
      * <code>OPTIMIZE = 2;</code>
@@ -157,9 +159,9 @@ private static final long serialVersionUID = 0L;
     public static final int OPTIMIZE_VALUE = 2;
     /**
      * <pre>
-     * Ad serving is optimized based on CTR * Conversion for the campaign. If
-     * the campaign is not in the conversion optimizer bidding strategy, it will
-     * default to OPTIMIZED.
+     * Ad serving is optimized based on clickthrough rate (CTR) * Conversion for
+     * the campaign. If the campaign is not in the conversion optimizer bidding
+     * strategy, it will default to OPTIMIZED.
      * </pre>
      *
      * <code>CONVERSION_OPTIMIZE = 3;</code>

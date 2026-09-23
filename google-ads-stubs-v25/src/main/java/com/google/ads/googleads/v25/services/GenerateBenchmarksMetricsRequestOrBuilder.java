@@ -276,6 +276,65 @@ public interface GenerateBenchmarksMetricsRequestOrBuilder extends
 
   /**
    * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core data is returned. Including supplemental data here will populate
+   * additional metrics in the response such as percentile metrics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the supplementalData.
+   */
+  java.util.List<com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData> getSupplementalDataList();
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core data is returned. Including supplemental data here will populate
+   * additional metrics in the response such as percentile metrics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The count of supplementalData.
+   */
+  int getSupplementalDataCount();
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core data is returned. Including supplemental data here will populate
+   * additional metrics in the response such as percentile metrics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the element to return.
+   * @return The supplementalData at the given index.
+   */
+  com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData getSupplementalData(int index);
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core data is returned. Including supplemental data here will populate
+   * additional metrics in the response such as percentile metrics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the enum numeric values on the wire for supplementalData.
+   */
+  java.util.List<java.lang.Integer>
+  getSupplementalDataValueList();
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core data is returned. Including supplemental data here will populate
+   * additional metrics in the response such as percentile metrics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of supplementalData at the given index.
+   */
+  int getSupplementalDataValue(int index);
+
+  /**
+   * <pre>
    * Additional information on the application issuing the request.
    * </pre>
    *

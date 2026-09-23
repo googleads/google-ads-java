@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
     SITELINK(11),
     /**
      * <pre>
-     * Page Feed asset.
+     * Page URL inclusion.
      * </pre>
      *
      * <code>PAGE_FEED = 12;</code>
@@ -422,7 +422,7 @@ private static final long serialVersionUID = 0L;
     public static final int SITELINK_VALUE = 11;
     /**
      * <pre>
-     * Page Feed asset.
+     * Page URL inclusion.
      * </pre>
      *
      * <code>PAGE_FEED = 12;</code>

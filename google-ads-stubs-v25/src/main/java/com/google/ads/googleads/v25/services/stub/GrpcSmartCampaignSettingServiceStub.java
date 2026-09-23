@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v25.services.stub;
 
+import com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignRequest;
+import com.google.ads.googleads.v25.services.GeneratePMaxDraftCampaignResponse;
 import com.google.ads.googleads.v25.services.GetSmartCampaignStatusRequest;
 import com.google.ads.googleads.v25.services.GetSmartCampaignStatusResponse;
 import com.google.ads.googleads.v25.services.MutateSmartCampaignSettingsRequest;
@@ -75,11 +77,28 @@ public class GrpcSmartCampaignSettingServiceStub extends SmartCampaignSettingSer
               .setSampledToLocalTracing(true)
               .build();
 
+  private static final MethodDescriptor<
+          GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+      generatePMaxDraftCampaignMethodDescriptor =
+          MethodDescriptor
+              .<GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v25.services.SmartCampaignSettingService/GeneratePMaxDraftCampaign")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(GeneratePMaxDraftCampaignRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(GeneratePMaxDraftCampaignResponse.getDefaultInstance()))
+              .setSampledToLocalTracing(true)
+              .build();
+
   private final UnaryCallable<GetSmartCampaignStatusRequest, GetSmartCampaignStatusResponse>
       getSmartCampaignStatusCallable;
   private final UnaryCallable<
           MutateSmartCampaignSettingsRequest, MutateSmartCampaignSettingsResponse>
       mutateSmartCampaignSettingsCallable;
+  private final UnaryCallable<GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+      generatePMaxDraftCampaignCallable;
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
@@ -154,6 +173,19 @@ public class GrpcSmartCampaignSettingServiceStub extends SmartCampaignSettingSer
                       return builder.build();
                     })
                 .build();
+    GrpcCallSettings<GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+        generatePMaxDraftCampaignTransportSettings =
+            GrpcCallSettings
+                .<GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>newBuilder()
+                .setMethodDescriptor(generatePMaxDraftCampaignMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("resource_name", String.valueOf(request.getResourceName()));
+                      return builder.build();
+                    })
+                .setResourceNameExtractor(request -> request.getResourceName())
+                .build();
 
     this.getSmartCampaignStatusCallable =
         callableFactory.createUnaryCallable(
@@ -164,6 +196,11 @@ public class GrpcSmartCampaignSettingServiceStub extends SmartCampaignSettingSer
         callableFactory.createUnaryCallable(
             mutateSmartCampaignSettingsTransportSettings,
             settings.mutateSmartCampaignSettingsSettings(),
+            clientContext);
+    this.generatePMaxDraftCampaignCallable =
+        callableFactory.createUnaryCallable(
+            generatePMaxDraftCampaignTransportSettings,
+            settings.generatePMaxDraftCampaignSettings(),
             clientContext);
 
     this.backgroundResources =
@@ -184,6 +221,12 @@ public class GrpcSmartCampaignSettingServiceStub extends SmartCampaignSettingSer
   public UnaryCallable<MutateSmartCampaignSettingsRequest, MutateSmartCampaignSettingsResponse>
       mutateSmartCampaignSettingsCallable() {
     return mutateSmartCampaignSettingsCallable;
+  }
+
+  @Override
+  public UnaryCallable<GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+      generatePMaxDraftCampaignCallable() {
+    return generatePMaxDraftCampaignCallable;
   }
 
   @Override

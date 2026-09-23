@@ -101,4 +101,26 @@ public class MockSmartCampaignSettingServiceImpl extends SmartCampaignSettingSer
                   Exception.class.getName())));
     }
   }
+
+  @Override
+  public void generatePMaxDraftCampaign(
+      GeneratePMaxDraftCampaignRequest request,
+      StreamObserver<GeneratePMaxDraftCampaignResponse> responseObserver) {
+    Object response = responses.poll();
+    if (response instanceof GeneratePMaxDraftCampaignResponse) {
+      requests.add(request);
+      responseObserver.onNext(((GeneratePMaxDraftCampaignResponse) response));
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError(((Exception) response));
+    } else {
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method GeneratePMaxDraftCampaign, expected %s or %s",
+                  response == null ? "null" : response.getClass().getName(),
+                  GeneratePMaxDraftCampaignResponse.class.getName(),
+                  Exception.class.getName())));
+    }
+  }
 }

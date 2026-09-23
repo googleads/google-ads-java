@@ -32,7 +32,7 @@ package com.google.ads.googleads.v25.resources;
  * - Metrics and some fields (see the per-field documentation) are restricted
  * to the specified campaign.
  * - Only the following metrics are supported for Demand Gen, Video, App
- * campaigns: impressions, clicks, ctr.
+ * campaigns: `impressions`, `clicks`, `ctr`.
  * * Ad group:
  * - An equality filter on `ad_group` and `campaign` is specified. Supported
  * campaign types are Shopping, Demand Gen, Video, App.
@@ -40,7 +40,7 @@ package com.google.ads.googleads.v25.resources;
  * - Metrics and some fields (see the per-field documentation) are restricted
  * to the specified ad group.
  * - Only the following metrics are supported for Demand Gen, Video, App
- * campaigns: impressions, clicks, ctr.
+ * campaigns: `impressions`, `clicks`, `ctr`.
  *
  * Note that segmentation by date segments is not permitted and will return
  * UNSUPPORTED_DATE_SEGMENTATION error. On the other hand, filtering on date
@@ -4469,7 +4469,7 @@ private static final long serialVersionUID = 0L;
    * - Metrics and some fields (see the per-field documentation) are restricted
    * to the specified campaign.
    * - Only the following metrics are supported for Demand Gen, Video, App
-   * campaigns: impressions, clicks, ctr.
+   * campaigns: `impressions`, `clicks`, `ctr`.
    * * Ad group:
    * - An equality filter on `ad_group` and `campaign` is specified. Supported
    * campaign types are Shopping, Demand Gen, Video, App.
@@ -4477,7 +4477,7 @@ private static final long serialVersionUID = 0L;
    * - Metrics and some fields (see the per-field documentation) are restricted
    * to the specified ad group.
    * - Only the following metrics are supported for Demand Gen, Video, App
-   * campaigns: impressions, clicks, ctr.
+   * campaigns: `impressions`, `clicks`, `ctr`.
    *
    * Note that segmentation by date segments is not permitted and will return
    * UNSUPPORTED_DATE_SEGMENTATION error. On the other hand, filtering on date

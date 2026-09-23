@@ -159,7 +159,7 @@ public final class CustomerProto extends com.google.protobuf.GeneratedFile {
       "\n)googleads.googleapis.com/ConversionAct" +
       "ionH\002\210\001\001B\031\n\027_call_reporting_enabledB$\n\"_" +
       "call_conversion_reporting_enabledB\031\n\027_ca" +
-      "ll_conversion_action\"\311\003\n\031ConversionTrack" +
+      "ll_conversion_action\"\313\003\n\031ConversionTrack" +
       "ingSetting\022(\n\026conversion_tracking_id\030\003 \001" +
       "(\003B\003\340A\003H\000\210\001\001\0226\n$cross_account_conversion" +
       "_tracking_id\030\004 \001(\003B\003\340A\003H\001\210\001\001\022)\n\034accepted" +
@@ -167,45 +167,45 @@ public final class CustomerProto extends com.google.protobuf.GeneratedFile {
       "rsion_tracking_status\030\006 \001(\0162U.google.ads" +
       ".googleads.v25.enums.ConversionTrackingS" +
       "tatusEnum.ConversionTrackingStatusB\003\340A\003\022" +
-      "3\n&enhanced_conversions_for_leads_enable" +
-      "d\030\007 \001(\010B\003\340A\003\022&\n\036google_ads_conversion_cu" +
-      "stomer\030\010 \001(\tB\031\n\027_conversion_tracking_idB" +
-      "\'\n%_cross_account_conversion_tracking_id" +
-      "\"Y\n\022RemarketingSetting\022(\n\026google_global_" +
-      "site_tag\030\002 \001(\tB\003\340A\003H\000\210\001\001B\031\n\027_google_glob" +
-      "al_site_tag\"A\n\030CustomerAgreementSetting\022" +
-      "%\n\030accepted_lead_form_terms\030\001 \001(\010B\003\340A\003\"\341" +
-      "\001\n\025LocalServicesSettings\022a\n\031granular_lic" +
-      "ense_statuses\030\001 \003(\01329.google.ads.googlea" +
-      "ds.v25.resources.GranularLicenseStatusB\003" +
-      "\340A\003\022e\n\033granular_insurance_statuses\030\002 \003(\013" +
-      "2;.google.ads.googleads.v25.resources.Gr" +
-      "anularInsuranceStatusB\003\340A\003\"\244\002\n\025GranularL" +
-      "icenseStatus\022\"\n\020geo_criterion_id\030\001 \001(\003B\003" +
-      "\340A\003H\000\210\001\001\022\035\n\013category_id\030\002 \001(\tB\003\340A\003H\001\210\001\001\022" +
-      "\212\001\n\023verification_status\030\003 \001(\0162c.google.a" +
-      "ds.googleads.v25.enums.LocalServicesVeri" +
-      "ficationStatusEnum.LocalServicesVerifica" +
-      "tionStatusB\003\340A\003H\002\210\001\001B\023\n\021_geo_criterion_i" +
-      "dB\016\n\014_category_idB\026\n\024_verification_statu" +
-      "s\"\246\002\n\027GranularInsuranceStatus\022\"\n\020geo_cri" +
-      "terion_id\030\001 \001(\003B\003\340A\003H\000\210\001\001\022\035\n\013category_id" +
-      "\030\002 \001(\tB\003\340A\003H\001\210\001\001\022\212\001\n\023verification_status" +
-      "\030\003 \001(\0162c.google.ads.googleads.v25.enums." +
-      "LocalServicesVerificationStatusEnum.Loca" +
-      "lServicesVerificationStatusB\003\340A\003H\002\210\001\001B\023\n" +
-      "\021_geo_criterion_idB\016\n\014_category_idB\026\n\024_v" +
-      "erification_status\"\201\001\n\rVideoCustomer\022p\n " +
-      "third_party_integration_partners\030\001 \001(\0132F" +
-      ".google.ads.googleads.v25.common.Custome" +
-      "rThirdPartyIntegrationPartnersB\377\001\n&com.g" +
-      "oogle.ads.googleads.v25.resourcesB\rCusto" +
-      "merProtoP\001ZKgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v25/resources;re" +
-      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V25" +
-      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V25\\Re" +
-      "sources\352\002&Google::Ads::GoogleAds::V25::R" +
-      "esourcesb\006proto3"
+      "5\n&enhanced_conversions_for_leads_enable" +
+      "d\030\007 \001(\010B\005\030\001\340A\003\022&\n\036google_ads_conversion_" +
+      "customer\030\010 \001(\tB\031\n\027_conversion_tracking_i" +
+      "dB\'\n%_cross_account_conversion_tracking_" +
+      "id\"Y\n\022RemarketingSetting\022(\n\026google_globa" +
+      "l_site_tag\030\002 \001(\tB\003\340A\003H\000\210\001\001B\031\n\027_google_gl" +
+      "obal_site_tag\"A\n\030CustomerAgreementSettin" +
+      "g\022%\n\030accepted_lead_form_terms\030\001 \001(\010B\003\340A\003" +
+      "\"\341\001\n\025LocalServicesSettings\022a\n\031granular_l" +
+      "icense_statuses\030\001 \003(\01329.google.ads.googl" +
+      "eads.v25.resources.GranularLicenseStatus" +
+      "B\003\340A\003\022e\n\033granular_insurance_statuses\030\002 \003" +
+      "(\0132;.google.ads.googleads.v25.resources." +
+      "GranularInsuranceStatusB\003\340A\003\"\244\002\n\025Granula" +
+      "rLicenseStatus\022\"\n\020geo_criterion_id\030\001 \001(\003" +
+      "B\003\340A\003H\000\210\001\001\022\035\n\013category_id\030\002 \001(\tB\003\340A\003H\001\210\001" +
+      "\001\022\212\001\n\023verification_status\030\003 \001(\0162c.google" +
+      ".ads.googleads.v25.enums.LocalServicesVe" +
+      "rificationStatusEnum.LocalServicesVerifi" +
+      "cationStatusB\003\340A\003H\002\210\001\001B\023\n\021_geo_criterion" +
+      "_idB\016\n\014_category_idB\026\n\024_verification_sta" +
+      "tus\"\246\002\n\027GranularInsuranceStatus\022\"\n\020geo_c" +
+      "riterion_id\030\001 \001(\003B\003\340A\003H\000\210\001\001\022\035\n\013category_" +
+      "id\030\002 \001(\tB\003\340A\003H\001\210\001\001\022\212\001\n\023verification_stat" +
+      "us\030\003 \001(\0162c.google.ads.googleads.v25.enum" +
+      "s.LocalServicesVerificationStatusEnum.Lo" +
+      "calServicesVerificationStatusB\003\340A\003H\002\210\001\001B" +
+      "\023\n\021_geo_criterion_idB\016\n\014_category_idB\026\n\024" +
+      "_verification_status\"\201\001\n\rVideoCustomer\022p" +
+      "\n third_party_integration_partners\030\001 \001(\013" +
+      "2F.google.ads.googleads.v25.common.Custo" +
+      "merThirdPartyIntegrationPartnersB\377\001\n&com" +
+      ".google.ads.googleads.v25.resourcesB\rCus" +
+      "tomerProtoP\001ZKgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v25/resources;" +
+      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
+      "25.Resources\312\002\"Google\\Ads\\GoogleAds\\V25\\" +
+      "Resources\352\002&Google::Ads::GoogleAds::V25:" +
+      ":Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

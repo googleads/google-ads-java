@@ -619,6 +619,8 @@ public class BenchmarksServiceClient implements BackgroundResource {
    *           .setBreakdownDefinition(BreakdownDefinition.newBuilder().build())
    *           .setCurrencyCode("currencyCode1004773790")
    *           .setCustomerBenchmarksGroup("customerBenchmarksGroup-2124896949")
+   *           .addAllSupplementalData(
+   *               new ArrayList<BenchmarksSupplementalDataEnum.BenchmarksSupplementalData>())
    *           .setApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
    *           .build();
    *   GenerateBenchmarksMetricsResponse response =
@@ -661,6 +663,8 @@ public class BenchmarksServiceClient implements BackgroundResource {
    *           .setBreakdownDefinition(BreakdownDefinition.newBuilder().build())
    *           .setCurrencyCode("currencyCode1004773790")
    *           .setCustomerBenchmarksGroup("customerBenchmarksGroup-2124896949")
+   *           .addAllSupplementalData(
+   *               new ArrayList<BenchmarksSupplementalDataEnum.BenchmarksSupplementalData>())
    *           .setApplicationInfo(AdditionalApplicationInfo.newBuilder().build())
    *           .build();
    *   ApiFuture<GenerateBenchmarksMetricsResponse> future =

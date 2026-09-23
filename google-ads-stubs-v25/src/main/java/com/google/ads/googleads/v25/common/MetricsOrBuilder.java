@@ -13,7 +13,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Search absolute top impression share is the percentage of your Search ad
-   * impressions that are shown in the most prominent Search position.
+   * impressions that are shown in the absolute top Search position.
    * </pre>
    *
    * <code>optional double absolute_top_impression_percentage = 183;</code>
@@ -23,7 +23,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Search absolute top impression share is the percentage of your Search ad
-   * impressions that are shown in the most prominent Search position.
+   * impressions that are shown in the absolute top Search position.
    * </pre>
    *
    * <code>optional double absolute_top_impression_percentage = 183;</code>
@@ -75,8 +75,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * A measurement of how often your ad has become viewable on a Display
-   * Network site.
+   * A measurement of the number of times your ad has become viewable on a
+   * Display Network site.
    * </pre>
    *
    * <code>optional int64 active_view_impressions = 186;</code>
@@ -85,8 +85,8 @@ public interface MetricsOrBuilder extends
   boolean hasActiveViewImpressions();
   /**
    * <pre>
-   * A measurement of how often your ad has become viewable on a Display
-   * Network site.
+   * A measurement of the number of times your ad has become viewable on a
+   * Display Network site.
    * </pre>
    *
    * <code>optional int64 active_view_impressions = 186;</code>
@@ -96,8 +96,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The ratio of impressions that could be measured by Active View over the
-   * number of served impressions.
+   * The ratio of impressions that were eligible to be measured by Active View
+   * over the number of served impressions.
    * </pre>
    *
    * <code>optional double active_view_measurability = 187;</code>
@@ -106,8 +106,8 @@ public interface MetricsOrBuilder extends
   boolean hasActiveViewMeasurability();
   /**
    * <pre>
-   * The ratio of impressions that could be measured by Active View over the
-   * number of served impressions.
+   * The ratio of impressions that were eligible to be measured by Active View
+   * over the number of served impressions.
    * </pre>
    *
    * <code>optional double active_view_measurability = 187;</code>
@@ -159,8 +159,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The percentage of time when your ad appeared on an Active View enabled site
-   * (measurable impressions) and was viewable (viewable impressions).
+   * The percentage of times when your ad appeared on an Active View enabled
+   * site (measurable impressions) and was viewable (viewable impressions).
    * </pre>
    *
    * <code>optional double active_view_viewability = 190;</code>
@@ -169,8 +169,8 @@ public interface MetricsOrBuilder extends
   boolean hasActiveViewViewability();
   /**
    * <pre>
-   * The percentage of time when your ad appeared on an Active View enabled site
-   * (measurable impressions) and was viewable (viewable impressions).
+   * The percentage of times when your ad appeared on an Active View enabled
+   * site (measurable impressions) and was viewable (viewable impressions).
    * </pre>
    *
    * <code>optional double active_view_viewability = 190;</code>
@@ -524,7 +524,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of times that people were taken to a business's URL after
+   * The number of times people were taken to a business's URL after
    * clicking an ad.
    *
    * This metric applies to feed items only.
@@ -536,7 +536,7 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversionsFromStoreWebsite();
   /**
    * <pre>
-   * The number of times that people were taken to a business's URL after
+   * The number of times people were taken to a business's URL after
    * clicking an ad.
    *
    * This metric applies to feed items only.
@@ -549,11 +549,10 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * the ads of another participant showed in the most prominent position on the
-   * search results page.
-   * This percentage is computed only over the auctions that you appeared in
-   * the page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times the ads of another participant showed in the absolute
+   * top position (Position 1) on the search results page. This percentage is
+   * computed only over the auctions that you appeared in the page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -564,11 +563,10 @@ public interface MetricsOrBuilder extends
   boolean hasAuctionInsightSearchAbsoluteTopImpressionPercentage();
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * the ads of another participant showed in the most prominent position on the
-   * search results page.
-   * This percentage is computed only over the auctions that you appeared in
-   * the page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times the ads of another participant showed in the absolute
+   * top position (Position 1) on the search results page. This percentage is
+   * computed only over the auctions that you appeared in the page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -640,9 +638,9 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * another participant's ad received an impression when your ad also received
-   * an impression.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times another participant's ad received an impression when
+   * your ad also received an impression.
    *
    * This metric is not publicly available.
    * </pre>
@@ -653,9 +651,9 @@ public interface MetricsOrBuilder extends
   boolean hasAuctionInsightSearchOverlapRate();
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * another participant's ad received an impression when your ad also received
-   * an impression.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times another participant's ad received an impression when
+   * your ad also received an impression.
    *
    * This metric is not publicly available.
    * </pre>
@@ -667,9 +665,9 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * another participant's ad was shown in a higher position than yours, when
-   * both of your ads were shown at the same page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times another participant's ad was shown in a higher position
+   * than yours, when both of your ads were shown at the same page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -680,9 +678,9 @@ public interface MetricsOrBuilder extends
   boolean hasAuctionInsightSearchPositionAboveRate();
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * another participant's ad was shown in a higher position than yours, when
-   * both of your ads were shown at the same page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times another participant's ad was shown in a higher position
+   * than yours, when both of your ads were shown at the same page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -694,10 +692,10 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * the ads of another participant showed adjacent to the top organic search
-   * results. This percentage is computed only over the auctions that you
-   * appeared in the page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times the ads of another participant showed adjacent to the
+   * top organic search results. This percentage is computed only over the
+   * auctions that you appeared in the page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -708,10 +706,10 @@ public interface MetricsOrBuilder extends
   boolean hasAuctionInsightSearchTopImpressionPercentage();
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * the ads of another participant showed adjacent to the top organic search
-   * results. This percentage is computed only over the auctions that you
-   * appeared in the page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times the ads of another participant showed adjacent to the
+   * top organic search results. This percentage is computed only over the
+   * auctions that you appeared in the page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -949,7 +947,8 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * An indication on how other advertisers' Shopping ads for similar products
-   * are performing based on how often people who see their ad click on it.
+   * are performing based on the frequency with which people who see their ad
+   * click on it.
    * </pre>
    *
    * <code>optional double benchmark_ctr = 211;</code>
@@ -959,7 +958,8 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * An indication on how other advertisers' Shopping ads for similar products
-   * are performing based on how often people who see their ad click on it.
+   * are performing based on the frequency with which people who see their ad
+   * click on it.
    * </pre>
    *
    * <code>optional double benchmark_ctr = 211;</code>
@@ -1105,7 +1105,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The estimated percent of times that your ad was eligible to show
+   * The estimated percentage of times that your ad was eligible to show
    * on the Display Network but didn't because your budget was too low.
    * Note: Content budget lost impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -1117,7 +1117,7 @@ public interface MetricsOrBuilder extends
   boolean hasContentBudgetLostImpressionShare();
   /**
    * <pre>
-   * The estimated percent of times that your ad was eligible to show
+   * The estimated percentage of times that your ad was eligible to show
    * on the Display Network but didn't because your budget was too low.
    * Note: Content budget lost impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -1842,8 +1842,9 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * How often people engage with your ad after it's shown to them. This is the
-   * number of ad expansions divided by the number of times your ad is shown.
+   * The frequency with which people engage with your ad after it's shown to
+   * them. This is the number of ad expansions divided by the number of times
+   * your ad is shown.
    * </pre>
    *
    * <code>optional double engagement_rate = 180;</code>
@@ -1852,8 +1853,9 @@ public interface MetricsOrBuilder extends
   boolean hasEngagementRate();
   /**
    * <pre>
-   * How often people engage with your ad after it's shown to them. This is the
-   * number of ad expansions divided by the number of times your ad is shown.
+   * The frequency with which people engage with your ad after it's shown to
+   * them. This is the number of ad expansions divided by the number of times
+   * your ad is shown.
    * </pre>
    *
    * <code>optional double engagement_rate = 180;</code>
@@ -2046,7 +2048,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The historical search predicted click through rate (CTR).
+   * The historical search predicted clickthrough rate (CTR).
    * </pre>
    *
    * <code>.google.ads.googleads.v25.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
@@ -2055,7 +2057,7 @@ public interface MetricsOrBuilder extends
   int getHistoricalSearchPredictedCtrValue();
   /**
    * <pre>
-   * The historical search predicted click through rate (CTR).
+   * The historical search predicted clickthrough rate (CTR).
    * </pre>
    *
    * <code>.google.ads.googleads.v25.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
@@ -2149,7 +2151,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * Count of how often your ad has appeared on a search results page or
+   * The number of times your ad has appeared on a search results page or
    * website on the Google Network.
    * </pre>
    *
@@ -2159,7 +2161,7 @@ public interface MetricsOrBuilder extends
   boolean hasImpressions();
   /**
    * <pre>
-   * Count of how often your ad has appeared on a search results page or
+   * The number of times your ad has appeared on a search results page or
    * website on the Google Network.
    * </pre>
    *
@@ -2170,9 +2172,9 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * How often people interact with your ad after it is shown to them.
-   * This is the number of interactions divided by the number of times your ad
-   * is shown.
+   * The frequency with which people interact with your ad after it is shown to
+   * them. This is the number of interactions divided by the number of times
+   * your ad is shown.
    * </pre>
    *
    * <code>optional double interaction_rate = 222;</code>
@@ -2181,9 +2183,9 @@ public interface MetricsOrBuilder extends
   boolean hasInteractionRate();
   /**
    * <pre>
-   * How often people interact with your ad after it is shown to them.
-   * This is the number of interactions divided by the number of times your ad
-   * is shown.
+   * The frequency with which people interact with your ad after it is shown to
+   * them. This is the number of interactions divided by the number of times
+   * your ad is shown.
    * </pre>
    *
    * <code>optional double interaction_rate = 222;</code>
@@ -2730,7 +2732,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * Your clickthrough rate (Ctr) divided by the average clickthrough rate of
+   * Your clickthrough rate (CTR) divided by the average clickthrough rate of
    * all advertisers on the websites that show your ads. Measures how your ads
    * perform on Display Network sites compared to other ads on the same sites.
    * </pre>
@@ -2741,7 +2743,7 @@ public interface MetricsOrBuilder extends
   boolean hasRelativeCtr();
   /**
    * <pre>
-   * Your clickthrough rate (Ctr) divided by the average clickthrough rate of
+   * Your clickthrough rate (CTR) divided by the average clickthrough rate of
    * all advertisers on the websites that show your ads. Measures how your ads
    * perform on Display Network sites compared to other ads on the same sites.
    * </pre>
@@ -2754,7 +2756,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The percentage of the customer's Shopping or Search ad impressions that are
-   * shown in the most prominent Shopping position. See
+   * shown in the absolute top position (Position 1). See
    * [About top and
    * absolute top metrics](https://support.google.com/google-ads/answer/7501826)
    *
@@ -2768,7 +2770,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The percentage of the customer's Shopping or Search ad impressions that are
-   * shown in the most prominent Shopping position. See
+   * shown in the absolute top position (Position 1). See
    * [About top and
    * absolute top metrics](https://support.google.com/google-ads/answer/7501826)
    *
@@ -2782,8 +2784,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number estimating how often your ad wasn't the very first ad among the
-   * top ads in the search results due to a low budget.
+   * The estimated percentage of times your ad wasn't the very first ad among
+   * the top ads in the search results due to a low budget.
    *
    * Note: Search budget lost absolute top impression share is reported in the
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -2795,8 +2797,8 @@ public interface MetricsOrBuilder extends
   boolean hasSearchBudgetLostAbsoluteTopImpressionShare();
   /**
    * <pre>
-   * The number estimating how often your ad wasn't the very first ad among the
-   * top ads in the search results due to a low budget.
+   * The estimated percentage of times your ad wasn't the very first ad among
+   * the top ads in the search results due to a low budget.
    *
    * Note: Search budget lost absolute top impression share is reported in the
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -2809,7 +2811,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The estimated percent of times that your ad was eligible to show on the
+   * The estimated percentage of times that your ad was eligible to show on the
    * Search Network but didn't because your budget was too low.
    *
    * Note: Search
@@ -2823,7 +2825,7 @@ public interface MetricsOrBuilder extends
   boolean hasSearchBudgetLostImpressionShare();
   /**
    * <pre>
-   * The estimated percent of times that your ad was eligible to show on the
+   * The estimated percentage of times that your ad was eligible to show on the
    * Search Network but didn't because your budget was too low.
    *
    * Note: Search
@@ -2838,8 +2840,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The estimated percent of times that your ad didn't show adjacent to the top
-   * organic search results due to a low budget.
+   * The estimated percentage of times that your ad didn't show adjacent to the
+   * top organic search results due to a low budget.
    *
    * Note: Search budget lost top impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -2851,8 +2853,8 @@ public interface MetricsOrBuilder extends
   boolean hasSearchBudgetLostTopImpressionShare();
   /**
    * <pre>
-   * The estimated percent of times that your ad didn't show adjacent to the top
-   * organic search results due to a low budget.
+   * The estimated percentage of times that your ad didn't show adjacent to the
+   * top organic search results due to a low budget.
    *
    * Note: Search budget lost top impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -2950,8 +2952,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number estimating how often your ad wasn't the very first ad among the
-   * top ads in the search results due to poor Ad Rank.
+   * The estimated percentage of times your ad wasn't the very first ad among
+   * the top ads in the search results due to poor Ad Rank.
    *
    * Note: Search rank lost absolute top impression share is reported in the
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -2963,8 +2965,8 @@ public interface MetricsOrBuilder extends
   boolean hasSearchRankLostAbsoluteTopImpressionShare();
   /**
    * <pre>
-   * The number estimating how often your ad wasn't the very first ad among the
-   * top ads in the search results due to poor Ad Rank.
+   * The estimated percentage of times your ad wasn't the very first ad among
+   * the top ads in the search results due to poor Ad Rank.
    *
    * Note: Search rank lost absolute top impression share is reported in the
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -3002,7 +3004,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number estimating how often your ad didn't show adjacent to the top
+   * The estimated percentage of times your ad didn't show adjacent to the top
    * organic search results due to poor Ad Rank.
    *
    * Note: Search rank lost top impression share is reported in the range of 0
@@ -3015,7 +3017,7 @@ public interface MetricsOrBuilder extends
   boolean hasSearchRankLostTopImpressionShare();
   /**
    * <pre>
-   * The number estimating how often your ad didn't show adjacent to the top
+   * The estimated percentage of times your ad didn't show adjacent to the top
    * organic search results due to poor Ad Rank.
    *
    * Note: Search rank lost top impression share is reported in the range of 0
@@ -3034,7 +3036,7 @@ public interface MetricsOrBuilder extends
    * Note: Search top impression share is reported in the range of 0.1 to 1. Any
    * value below 0.1 is reported as 0.0999.
    *
-   * Top ads are generally above the top organic results, although they may show
+   * Top ads are typically above the top organic results, although they may show
    * below the top organic results on certain queries.
    * </pre>
    *
@@ -3049,7 +3051,7 @@ public interface MetricsOrBuilder extends
    * Note: Search top impression share is reported in the range of 0.1 to 1. Any
    * value below 0.1 is reported as 0.0999.
    *
-   * Top ads are generally above the top organic results, although they may show
+   * Top ads are typically above the top organic results, although they may show
    * below the top organic results on certain queries.
    * </pre>
    *
@@ -3150,7 +3152,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The percent of your ad impressions that are shown adjacent to the top
+   * The percentage of your ad impressions that are shown adjacent to the top
    * organic search results.
    * </pre>
    *
@@ -3160,7 +3162,7 @@ public interface MetricsOrBuilder extends
   boolean hasTopImpressionPercentage();
   /**
    * <pre>
-   * The percent of your ad impressions that are shown adjacent to the top
+   * The percentage of your ad impressions that are shown adjacent to the top
    * organic search results.
    * </pre>
    *
@@ -7348,7 +7350,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Represents the total conversions from users who were exposed to the ads.
-   * Often referred to as "Treatment" conversions.
+   * Also referred to as "Treatment" conversions.
    * </pre>
    *
    * <code>optional double conversion_lift_exposed_conversions = 477;</code>
@@ -7358,7 +7360,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Represents the total conversions from users who were exposed to the ads.
-   * Often referred to as "Treatment" conversions.
+   * Also referred to as "Treatment" conversions.
    * </pre>
    *
    * <code>optional double conversion_lift_exposed_conversions = 477;</code>
@@ -7941,7 +7943,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * Represents the rate of positive responses that would have occurred
    * naturally without ad exposure, based on the behavior of the control group.
-   * Often referred to as "Control" responses. Provides the baseline
+   * Also referred to as "Control" responses. Provides the baseline
    * level of brand perception that occurred naturally.
    * </pre>
    *
@@ -7953,7 +7955,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * Represents the rate of positive responses that would have occurred
    * naturally without ad exposure, based on the behavior of the control group.
-   * Often referred to as "Control" responses. Provides the baseline
+   * Also referred to as "Control" responses. Provides the baseline
    * level of brand perception that occurred naturally.
    * </pre>
    *
@@ -8082,7 +8084,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Represents the rate of positive responses from users who were exposed to
-   * the ads. Often referred to as "Treatment" responses. Shows
+   * the ads. Also referred to as "Treatment" responses. Shows
    * total positive response rate when users were exposed to your ads.
    * </pre>
    *
@@ -8093,7 +8095,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Represents the rate of positive responses from users who were exposed to
-   * the ads. Often referred to as "Treatment" responses. Shows
+   * the ads. Also referred to as "Treatment" responses. Shows
    * total positive response rate when users were exposed to your ads.
    * </pre>
    *
@@ -8308,7 +8310,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Lower bound of the 90% confidence interval for the cost per lifted cookie.
-   * Represents the most optimistic (lowest cost) estimate for moving a user to
+   * Represents the optimistic (lowest cost) estimate for moving a user to
    * a positive brand state.
    * </pre>
    *
@@ -8319,7 +8321,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Lower bound of the 90% confidence interval for the cost per lifted cookie.
-   * Represents the most optimistic (lowest cost) estimate for moving a user to
+   * Represents the optimistic (lowest cost) estimate for moving a user to
    * a positive brand state.
    * </pre>
    *
@@ -8331,7 +8333,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Upper bound of the 90% confidence interval for the cost per lifted cookie.
-   * Represents the most conservative (highest cost) estimate for moving a user
+   * Represents the conservative (highest cost) estimate for moving a user
    * to a positive brand state.
    * </pre>
    *
@@ -8342,7 +8344,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Upper bound of the 90% confidence interval for the cost per lifted cookie.
-   * Represents the most conservative (highest cost) estimate for moving a user
+   * Represents the conservative (highest cost) estimate for moving a user
    * to a positive brand state.
    * </pre>
    *
@@ -8641,4 +8643,67 @@ public interface MetricsOrBuilder extends
    * @return The originalConversionValue.
    */
   double getOriginalConversionValue();
+
+  /**
+   * <pre>
+   * Potential impressions representing the total view-capped eligible
+   * impressions available across the query context.
+   * </pre>
+   *
+   * <code>optional int64 vertical_ads_potential_impressions = 532;</code>
+   * @return Whether the verticalAdsPotentialImpressions field is set.
+   */
+  boolean hasVerticalAdsPotentialImpressions();
+  /**
+   * <pre>
+   * Potential impressions representing the total view-capped eligible
+   * impressions available across the query context.
+   * </pre>
+   *
+   * <code>optional int64 vertical_ads_potential_impressions = 532;</code>
+   * @return The verticalAdsPotentialImpressions.
+   */
+  long getVerticalAdsPotentialImpressions();
+
+  /**
+   * <pre>
+   * Click-weighted average daily rate in micros, including taxes and fees, over
+   * the total length of stay.
+   * </pre>
+   *
+   * <code>optional int64 vertical_ads_average_booking_value_micros = 533;</code>
+   * @return Whether the verticalAdsAverageBookingValueMicros field is set.
+   */
+  boolean hasVerticalAdsAverageBookingValueMicros();
+  /**
+   * <pre>
+   * Click-weighted average daily rate in micros, including taxes and fees, over
+   * the total length of stay.
+   * </pre>
+   *
+   * <code>optional int64 vertical_ads_average_booking_value_micros = 533;</code>
+   * @return The verticalAdsAverageBookingValueMicros.
+   */
+  long getVerticalAdsAverageBookingValueMicros();
+
+  /**
+   * <pre>
+   * Percentage delta comparing the advertiser's offered price against the
+   * lowest competing price for the same property.
+   * </pre>
+   *
+   * <code>optional double vertical_ads_price_difference_percentage = 534;</code>
+   * @return Whether the verticalAdsPriceDifferencePercentage field is set.
+   */
+  boolean hasVerticalAdsPriceDifferencePercentage();
+  /**
+   * <pre>
+   * Percentage delta comparing the advertiser's offered price against the
+   * lowest competing price for the same property.
+   * </pre>
+   *
+   * <code>optional double vertical_ads_price_difference_percentage = 534;</code>
+   * @return The verticalAdsPriceDifferencePercentage.
+   */
+  double getVerticalAdsPriceDifferencePercentage();
 }

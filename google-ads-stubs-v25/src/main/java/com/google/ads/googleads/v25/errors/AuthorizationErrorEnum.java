@@ -85,19 +85,24 @@ private static final long serialVersionUID = 0L;
     USER_PERMISSION_DENIED(2),
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset. Use Google Cloud project
+     * permissions instead.
      * The developer token is not on the allow-list.
      * </pre>
      *
-     * <code>DEVELOPER_TOKEN_NOT_ON_ALLOWLIST = 13;</code>
+     * <code>DEVELOPER_TOKEN_NOT_ON_ALLOWLIST = 13 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     DEVELOPER_TOKEN_NOT_ON_ALLOWLIST(13),
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset.
      * The developer token is not allowed with the project sent in the request.
      * </pre>
      *
-     * <code>DEVELOPER_TOKEN_PROHIBITED = 4;</code>
+     * <code>DEVELOPER_TOKEN_PROHIBITED = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     DEVELOPER_TOKEN_PROHIBITED(4),
     /**
      * <pre>
@@ -145,7 +150,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The developer must sign the terms of service. They can be found here:
-     * ads.google.com/aw/apicenter
+     * console.cloud.google.com/google/ads-apis/overview
      * </pre>
      *
      * <code>MISSING_TOS = 9;</code>
@@ -153,12 +158,15 @@ private static final long serialVersionUID = 0L;
     MISSING_TOS(9),
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset. Superseded by
+     * CLOUD_PROJECT_NOT_APPROVED_FOR_PRODUCTION.
      * The developer token is only approved for use with test accounts. To
      * access non-test accounts, apply for Basic or Standard access.
      * </pre>
      *
-     * <code>DEVELOPER_TOKEN_NOT_APPROVED = 10;</code>
+     * <code>DEVELOPER_TOKEN_NOT_APPROVED = 10 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     DEVELOPER_TOKEN_NOT_APPROVED(10),
     /**
      * <pre>
@@ -262,20 +270,23 @@ private static final long serialVersionUID = 0L;
     public static final int USER_PERMISSION_DENIED_VALUE = 2;
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset. Use Google Cloud project
+     * permissions instead.
      * The developer token is not on the allow-list.
      * </pre>
      *
-     * <code>DEVELOPER_TOKEN_NOT_ON_ALLOWLIST = 13;</code>
+     * <code>DEVELOPER_TOKEN_NOT_ON_ALLOWLIST = 13 [deprecated = true];</code>
      */
-    public static final int DEVELOPER_TOKEN_NOT_ON_ALLOWLIST_VALUE = 13;
+    @java.lang.Deprecated public static final int DEVELOPER_TOKEN_NOT_ON_ALLOWLIST_VALUE = 13;
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset.
      * The developer token is not allowed with the project sent in the request.
      * </pre>
      *
-     * <code>DEVELOPER_TOKEN_PROHIBITED = 4;</code>
+     * <code>DEVELOPER_TOKEN_PROHIBITED = 4 [deprecated = true];</code>
      */
-    public static final int DEVELOPER_TOKEN_PROHIBITED_VALUE = 4;
+    @java.lang.Deprecated public static final int DEVELOPER_TOKEN_PROHIBITED_VALUE = 4;
     /**
      * <pre>
      * The Google Cloud project sent in the request does not have permission to
@@ -322,7 +333,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The developer must sign the terms of service. They can be found here:
-     * ads.google.com/aw/apicenter
+     * console.cloud.google.com/google/ads-apis/overview
      * </pre>
      *
      * <code>MISSING_TOS = 9;</code>
@@ -330,13 +341,15 @@ private static final long serialVersionUID = 0L;
     public static final int MISSING_TOS_VALUE = 9;
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset. Superseded by
+     * CLOUD_PROJECT_NOT_APPROVED_FOR_PRODUCTION.
      * The developer token is only approved for use with test accounts. To
      * access non-test accounts, apply for Basic or Standard access.
      * </pre>
      *
-     * <code>DEVELOPER_TOKEN_NOT_APPROVED = 10;</code>
+     * <code>DEVELOPER_TOKEN_NOT_APPROVED = 10 [deprecated = true];</code>
      */
-    public static final int DEVELOPER_TOKEN_NOT_APPROVED_VALUE = 10;
+    @java.lang.Deprecated public static final int DEVELOPER_TOKEN_NOT_APPROVED_VALUE = 10;
     /**
      * <pre>
      * The Google Cloud project is only approved for use with test accounts.

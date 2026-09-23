@@ -171,16 +171,19 @@ private static final long serialVersionUID = 0L;
   private boolean enhancedConversionsForLeadsEnabled_ = false;
   /**
    * <pre>
-   * Output only. Whether the customer is opted-in for enhanced conversions
-   * for leads. If using cross-account conversion tracking, this value is
-   * inherited from the manager. This field is read-only.
+   * Output only. Deprecated: Use enablement_setting instead. Whether the
+   * customer is opted-in for enhanced conversions for leads. If using
+   * cross-account conversion tracking, this value is inherited from the
+   * manager. This field is read-only.
    * </pre>
    *
-   * <code>bool enhanced_conversions_for_leads_enabled = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>bool enhanced_conversions_for_leads_enabled = 7 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @deprecated google.ads.googleads.v25.resources.ConversionTrackingSetting.enhanced_conversions_for_leads_enabled is deprecated.
+   *     See google/ads/googleads/v25/resources/customer.proto;l=247
    * @return The enhancedConversionsForLeadsEnabled.
    */
   @java.lang.Override
-  public boolean getEnhancedConversionsForLeadsEnabled() {
+  @java.lang.Deprecated public boolean getEnhancedConversionsForLeadsEnabled() {
     return enhancedConversionsForLeadsEnabled_;
   }
 
@@ -943,30 +946,36 @@ private static final long serialVersionUID = 0L;
     private boolean enhancedConversionsForLeadsEnabled_ ;
     /**
      * <pre>
-     * Output only. Whether the customer is opted-in for enhanced conversions
-     * for leads. If using cross-account conversion tracking, this value is
-     * inherited from the manager. This field is read-only.
+     * Output only. Deprecated: Use enablement_setting instead. Whether the
+     * customer is opted-in for enhanced conversions for leads. If using
+     * cross-account conversion tracking, this value is inherited from the
+     * manager. This field is read-only.
      * </pre>
      *
-     * <code>bool enhanced_conversions_for_leads_enabled = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>bool enhanced_conversions_for_leads_enabled = 7 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @deprecated google.ads.googleads.v25.resources.ConversionTrackingSetting.enhanced_conversions_for_leads_enabled is deprecated.
+     *     See google/ads/googleads/v25/resources/customer.proto;l=247
      * @return The enhancedConversionsForLeadsEnabled.
      */
     @java.lang.Override
-    public boolean getEnhancedConversionsForLeadsEnabled() {
+    @java.lang.Deprecated public boolean getEnhancedConversionsForLeadsEnabled() {
       return enhancedConversionsForLeadsEnabled_;
     }
     /**
      * <pre>
-     * Output only. Whether the customer is opted-in for enhanced conversions
-     * for leads. If using cross-account conversion tracking, this value is
-     * inherited from the manager. This field is read-only.
+     * Output only. Deprecated: Use enablement_setting instead. Whether the
+     * customer is opted-in for enhanced conversions for leads. If using
+     * cross-account conversion tracking, this value is inherited from the
+     * manager. This field is read-only.
      * </pre>
      *
-     * <code>bool enhanced_conversions_for_leads_enabled = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>bool enhanced_conversions_for_leads_enabled = 7 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @deprecated google.ads.googleads.v25.resources.ConversionTrackingSetting.enhanced_conversions_for_leads_enabled is deprecated.
+     *     See google/ads/googleads/v25/resources/customer.proto;l=247
      * @param value The enhancedConversionsForLeadsEnabled to set.
      * @return This builder for chaining.
      */
-    public Builder setEnhancedConversionsForLeadsEnabled(boolean value) {
+    @java.lang.Deprecated public Builder setEnhancedConversionsForLeadsEnabled(boolean value) {
 
       enhancedConversionsForLeadsEnabled_ = value;
       bitField0_ |= 0x00000010;
@@ -975,15 +984,18 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Whether the customer is opted-in for enhanced conversions
-     * for leads. If using cross-account conversion tracking, this value is
-     * inherited from the manager. This field is read-only.
+     * Output only. Deprecated: Use enablement_setting instead. Whether the
+     * customer is opted-in for enhanced conversions for leads. If using
+     * cross-account conversion tracking, this value is inherited from the
+     * manager. This field is read-only.
      * </pre>
      *
-     * <code>bool enhanced_conversions_for_leads_enabled = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>bool enhanced_conversions_for_leads_enabled = 7 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @deprecated google.ads.googleads.v25.resources.ConversionTrackingSetting.enhanced_conversions_for_leads_enabled is deprecated.
+     *     See google/ads/googleads/v25/resources/customer.proto;l=247
      * @return This builder for chaining.
      */
-    public Builder clearEnhancedConversionsForLeadsEnabled() {
+    @java.lang.Deprecated public Builder clearEnhancedConversionsForLeadsEnabled() {
       bitField0_ = (bitField0_ & ~0x00000010);
       enhancedConversionsForLeadsEnabled_ = false;
       onChanged();

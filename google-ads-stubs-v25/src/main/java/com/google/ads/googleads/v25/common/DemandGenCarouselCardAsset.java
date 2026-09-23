@@ -57,8 +57,9 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object marketingImageAsset_ = "";
   /**
    * <pre>
-   * Asset resource name of the associated 1.91:1 marketing image. This and/or
-   * square marketing image asset is required.
+   * Asset resource name of the associated 1.91:1 marketing image. Either this
+   * image, or the square marketing image, or both, is required. Temporary IDs
+   * are not supported. Only existing image assets can be referenced.
    * </pre>
    *
    * <code>string marketing_image_asset = 1;</code>
@@ -79,8 +80,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Asset resource name of the associated 1.91:1 marketing image. This and/or
-   * square marketing image asset is required.
+   * Asset resource name of the associated 1.91:1 marketing image. Either this
+   * image, or the square marketing image, or both, is required. Temporary IDs
+   * are not supported. Only existing image assets can be referenced.
    * </pre>
    *
    * <code>string marketing_image_asset = 1;</code>
@@ -106,8 +108,9 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object squareMarketingImageAsset_ = "";
   /**
    * <pre>
-   * Asset resource name of the associated square marketing image. This
-   * and/or a marketing image asset is required.
+   * Asset resource name of the associated square marketing image. Either this
+   * image, or the 1.91:1 marketing image, or both, is required. Temporary IDs
+   * are not supported. Only existing image assets can be referenced.
    * </pre>
    *
    * <code>string square_marketing_image_asset = 2;</code>
@@ -128,8 +131,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Asset resource name of the associated square marketing image. This
-   * and/or a marketing image asset is required.
+   * Asset resource name of the associated square marketing image. Either this
+   * image, or the 1.91:1 marketing image, or both, is required. Temporary IDs
+   * are not supported. Only existing image assets can be referenced.
    * </pre>
    *
    * <code>string square_marketing_image_asset = 2;</code>
@@ -156,6 +160,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Asset resource name of the associated 4:5 portrait marketing image.
+   * Temporary IDs are not supported. Only existing image assets can be
+   * referenced.
    * </pre>
    *
    * <code>string portrait_marketing_image_asset = 3;</code>
@@ -177,6 +183,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Asset resource name of the associated 4:5 portrait marketing image.
+   * Temporary IDs are not supported. Only existing image assets can be
+   * referenced.
    * </pre>
    *
    * <code>string portrait_marketing_image_asset = 3;</code>
@@ -688,8 +696,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object marketingImageAsset_ = "";
     /**
      * <pre>
-     * Asset resource name of the associated 1.91:1 marketing image. This and/or
-     * square marketing image asset is required.
+     * Asset resource name of the associated 1.91:1 marketing image. Either this
+     * image, or the square marketing image, or both, is required. Temporary IDs
+     * are not supported. Only existing image assets can be referenced.
      * </pre>
      *
      * <code>string marketing_image_asset = 1;</code>
@@ -709,8 +718,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Asset resource name of the associated 1.91:1 marketing image. This and/or
-     * square marketing image asset is required.
+     * Asset resource name of the associated 1.91:1 marketing image. Either this
+     * image, or the square marketing image, or both, is required. Temporary IDs
+     * are not supported. Only existing image assets can be referenced.
      * </pre>
      *
      * <code>string marketing_image_asset = 1;</code>
@@ -731,8 +741,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Asset resource name of the associated 1.91:1 marketing image. This and/or
-     * square marketing image asset is required.
+     * Asset resource name of the associated 1.91:1 marketing image. Either this
+     * image, or the square marketing image, or both, is required. Temporary IDs
+     * are not supported. Only existing image assets can be referenced.
      * </pre>
      *
      * <code>string marketing_image_asset = 1;</code>
@@ -749,8 +760,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Asset resource name of the associated 1.91:1 marketing image. This and/or
-     * square marketing image asset is required.
+     * Asset resource name of the associated 1.91:1 marketing image. Either this
+     * image, or the square marketing image, or both, is required. Temporary IDs
+     * are not supported. Only existing image assets can be referenced.
      * </pre>
      *
      * <code>string marketing_image_asset = 1;</code>
@@ -764,8 +776,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Asset resource name of the associated 1.91:1 marketing image. This and/or
-     * square marketing image asset is required.
+     * Asset resource name of the associated 1.91:1 marketing image. Either this
+     * image, or the square marketing image, or both, is required. Temporary IDs
+     * are not supported. Only existing image assets can be referenced.
      * </pre>
      *
      * <code>string marketing_image_asset = 1;</code>
@@ -785,8 +798,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object squareMarketingImageAsset_ = "";
     /**
      * <pre>
-     * Asset resource name of the associated square marketing image. This
-     * and/or a marketing image asset is required.
+     * Asset resource name of the associated square marketing image. Either this
+     * image, or the 1.91:1 marketing image, or both, is required. Temporary IDs
+     * are not supported. Only existing image assets can be referenced.
      * </pre>
      *
      * <code>string square_marketing_image_asset = 2;</code>
@@ -806,8 +820,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Asset resource name of the associated square marketing image. This
-     * and/or a marketing image asset is required.
+     * Asset resource name of the associated square marketing image. Either this
+     * image, or the 1.91:1 marketing image, or both, is required. Temporary IDs
+     * are not supported. Only existing image assets can be referenced.
      * </pre>
      *
      * <code>string square_marketing_image_asset = 2;</code>
@@ -828,8 +843,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Asset resource name of the associated square marketing image. This
-     * and/or a marketing image asset is required.
+     * Asset resource name of the associated square marketing image. Either this
+     * image, or the 1.91:1 marketing image, or both, is required. Temporary IDs
+     * are not supported. Only existing image assets can be referenced.
      * </pre>
      *
      * <code>string square_marketing_image_asset = 2;</code>
@@ -846,8 +862,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Asset resource name of the associated square marketing image. This
-     * and/or a marketing image asset is required.
+     * Asset resource name of the associated square marketing image. Either this
+     * image, or the 1.91:1 marketing image, or both, is required. Temporary IDs
+     * are not supported. Only existing image assets can be referenced.
      * </pre>
      *
      * <code>string square_marketing_image_asset = 2;</code>
@@ -861,8 +878,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Asset resource name of the associated square marketing image. This
-     * and/or a marketing image asset is required.
+     * Asset resource name of the associated square marketing image. Either this
+     * image, or the 1.91:1 marketing image, or both, is required. Temporary IDs
+     * are not supported. Only existing image assets can be referenced.
      * </pre>
      *
      * <code>string square_marketing_image_asset = 2;</code>
@@ -883,6 +901,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Asset resource name of the associated 4:5 portrait marketing image.
+     * Temporary IDs are not supported. Only existing image assets can be
+     * referenced.
      * </pre>
      *
      * <code>string portrait_marketing_image_asset = 3;</code>
@@ -903,6 +923,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Asset resource name of the associated 4:5 portrait marketing image.
+     * Temporary IDs are not supported. Only existing image assets can be
+     * referenced.
      * </pre>
      *
      * <code>string portrait_marketing_image_asset = 3;</code>
@@ -924,6 +946,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Asset resource name of the associated 4:5 portrait marketing image.
+     * Temporary IDs are not supported. Only existing image assets can be
+     * referenced.
      * </pre>
      *
      * <code>string portrait_marketing_image_asset = 3;</code>
@@ -941,6 +965,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Asset resource name of the associated 4:5 portrait marketing image.
+     * Temporary IDs are not supported. Only existing image assets can be
+     * referenced.
      * </pre>
      *
      * <code>string portrait_marketing_image_asset = 3;</code>
@@ -955,6 +981,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Asset resource name of the associated 4:5 portrait marketing image.
+     * Temporary IDs are not supported. Only existing image assets can be
+     * referenced.
      * </pre>
      *
      * <code>string portrait_marketing_image_asset = 3;</code>

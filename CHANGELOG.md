@@ -1,3 +1,7 @@
+46.1.0 - 2026-09-23
+-------------------
+- Add support and examples for v25_2 of the Google Ads API.
+
 46.0.0 - 2026-09-10
 -------------------
 - Removed the developer token requirement from `GoogleAdsClient`.

@@ -42,8 +42,8 @@ public final class ConversionActionTypeProto extends com.google.protobuf.Generat
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v25/enums/convers" +
       "ion_action_type.proto\022\036google.ads.google" +
-      "ads.v25.enums\"\350\014\n\030ConversionActionTypeEn" +
-      "um\"\313\014\n\024ConversionActionType\022\017\n\013UNSPECIFI" +
+      "ads.v25.enums\"\264\r\n\030ConversionActionTypeEn" +
+      "um\"\227\r\n\024ConversionActionType\022\017\n\013UNSPECIFI" +
       "ED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007AD_CALL\020\002\022\021\n\rCLICK_" +
       "TO_CALL\020\003\022\030\n\024GOOGLE_PLAY_DOWNLOAD\020\004\022\037\n\033G" +
       "OOGLE_PLAY_IN_APP_PURCHASE\020\005\022\020\n\014UPLOAD_C" +
@@ -83,13 +83,15 @@ public final class ConversionActionTypeProto extends com.google.protobuf.Generat
       "NVERT_LEAD\020/\022\036\n\032FIREBASE_IOS_GENERATE_LE" +
       "AD\0200\022\035\n\031FIREBASE_IOS_QUALIFY_LEAD\0201\022#\n\037F" +
       "IREBASE_IOS_CLOSE_CONVERT_LEAD\0202\022\026\n\022LOCA" +
-      "L_SERVICES_ADS\0203B\363\001\n\"com.google.ads.goog" +
-      "leads.v25.enumsB\031ConversionActionTypePro" +
-      "toP\001ZCgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v25/enums;enums\242\002\003GAA\252" +
-      "\002\036Google.Ads.GoogleAds.V25.Enums\312\002\036Googl" +
-      "e\\Ads\\GoogleAds\\V25\\Enums\352\002\"Google::Ads:" +
-      ":GoogleAds::V25::Enumsb\006proto3"
+      "L_SERVICES_ADS\0203\022&\n\"FIREBASE_ANDROID_APP" +
+      "_AD_IMPRESSION\0204\022\"\n\036FIREBASE_IOS_APP_AD_" +
+      "IMPRESSION\0205B\363\001\n\"com.google.ads.googlead" +
+      "s.v25.enumsB\031ConversionActionTypeProtoP\001" +
+      "ZCgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v25/enums;enums\242\002\003GAA\252\002\036Go" +
+      "ogle.Ads.GoogleAds.V25.Enums\312\002\036Google\\Ad" +
+      "s\\GoogleAds\\V25\\Enums\352\002\"Google::Ads::Goo" +
+      "gleAds::V25::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
