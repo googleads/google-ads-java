@@ -227,6 +227,16 @@ public final class RecommendationProto extends com.google.protobuf.GeneratedFile
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasRecommendation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v25_resources_Recommendation_RaiseTargetCpaPerformanceBidTooLowRecommendation_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v25_resources_Recommendation_RaiseTargetCpaPerformanceBidTooLowRecommendation_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasPerformanceBidTooLowRecommendation_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasPerformanceBidTooLowRecommendation_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v25_resources_Recommendation_DynamicImageExtensionOptInRecommendation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -330,7 +340,7 @@ public final class RecommendationProto extends com.google.protobuf.GeneratedFile
       "/v25/resources/ad.proto\032.google/ads/goog" +
       "leads/v25/resources/asset.proto\032\037google/" +
       "api/field_behavior.proto\032\031google/api/res" +
-      "ource.proto\"\346\217\001\n\016Recommendation\022F\n\rresou" +
+      "ource.proto\"\377\225\001\n\016Recommendation\022F\n\rresou" +
       "rce_name\030\001 \001(\tB/\340A\005\372A)\n\'googleads.google" +
       "apis.com/Recommendation\022\\\n\004type\030\002 \001(\0162I." +
       "google.ads.googleads.v25.enums.Recommend" +
@@ -548,256 +558,276 @@ public final class RecommendationProto extends com.google.protobuf.GeneratedFile
       "_specific_app_goal_recommendation\030F \001(\0132" +
       "X.google.ads.googleads.v25.resources.Rec" +
       "ommendation.CampaignSpecificAppGoalRecom" +
-      "mendationB\003\340A\003H\000\032M\n\014MerchantInfo\022\017\n\002id\030\001" +
-      " \001(\003B\003\340A\003\022\021\n\004name\030\002 \001(\tB\003\340A\003\022\031\n\014multi_cl" +
-      "ient\030\003 \001(\010B\003\340A\003\032\345\001\n\024RecommendationImpact" +
-      "\022c\n\014base_metrics\030\001 \001(\0132H.google.ads.goog" +
-      "leads.v25.resources.Recommendation.Recom" +
-      "mendationMetricsB\003\340A\003\022h\n\021potential_metri" +
-      "cs\030\002 \001(\0132H.google.ads.googleads.v25.reso" +
-      "urces.Recommendation.RecommendationMetri" +
-      "csB\003\340A\003\032\263\002\n\025RecommendationMetrics\022\035\n\013imp" +
-      "ressions\030\006 \001(\001B\003\340A\003H\000\210\001\001\022\030\n\006clicks\030\007 \001(\001" +
-      "B\003\340A\003H\001\210\001\001\022\035\n\013cost_micros\030\010 \001(\003B\003\340A\003H\002\210\001" +
-      "\001\022\035\n\013conversions\030\t \001(\001B\003\340A\003H\003\210\001\001\022#\n\021conv" +
-      "ersions_value\030\013 \001(\001B\003\340A\003H\004\210\001\001\022\035\n\013video_v" +
-      "iews\030\n \001(\001B\003\340A\003H\005\210\001\001B\016\n\014_impressionsB\t\n\007" +
-      "_clicksB\016\n\014_cost_microsB\016\n\014_conversionsB" +
-      "\024\n\022_conversions_valueB\016\n\014_video_views\032\240\004" +
-      "\n\034CampaignBudgetRecommendation\022.\n\034curren" +
-      "t_budget_amount_micros\030\007 \001(\003B\003\340A\003H\000\210\001\001\0222" +
-      "\n recommended_budget_amount_micros\030\010 \001(\003" +
-      "B\003\340A\003H\001\210\001\001\022\217\001\n\016budget_options\030\003 \003(\0132r.go" +
-      "ogle.ads.googleads.v25.resources.Recomme" +
-      "ndation.CampaignBudgetRecommendation.Cam" +
-      "paignBudgetRecommendationOptionB\003\340A\003\032\303\001\n" +
-      "\"CampaignBudgetRecommendationOption\022&\n\024b" +
-      "udget_amount_micros\030\003 \001(\003B\003\340A\003H\000\210\001\001\022\\\n\006i" +
-      "mpact\030\002 \001(\0132G.google.ads.googleads.v25.r" +
-      "esources.Recommendation.RecommendationIm" +
-      "pactB\003\340A\003B\027\n\025_budget_amount_microsB\037\n\035_c" +
-      "urrent_budget_amount_microsB#\n!_recommen" +
-      "ded_budget_amount_micros\032\345\002\n\025KeywordReco" +
-      "mmendation\022B\n\007keyword\030\001 \001(\0132,.google.ads" +
-      ".googleads.v25.common.KeywordInfoB\003\340A\003\022n" +
-      "\n\014search_terms\030\004 \003(\0132S.google.ads.google" +
-      "ads.v25.resources.Recommendation.Keyword" +
-      "Recommendation.SearchTermB\003\340A\003\022,\n\032recomm" +
-      "ended_cpc_bid_micros\030\003 \001(\003B\003\340A\003H\000\210\001\001\032K\n\n" +
-      "SearchTerm\022\021\n\004text\030\001 \001(\tB\003\340A\003\022*\n\035estimat" +
-      "ed_weekly_search_count\030\002 \001(\003B\003\340A\003B\035\n\033_re" +
-      "commended_cpc_bid_micros\032\271\001\n\024TextAdRecom" +
-      "mendation\0227\n\002ad\030\001 \001(\0132&.google.ads.googl" +
-      "eads.v25.resources.AdB\003\340A\003\022\037\n\rcreation_d" +
-      "ate\030\004 \001(\tB\003\340A\003H\000\210\001\001\022!\n\017auto_apply_date\030\005" +
-      " \001(\tB\003\340A\003H\001\210\001\001B\020\n\016_creation_dateB\022\n\020_aut" +
-      "o_apply_date\032\233\005\n\034TargetCpaOptInRecommend" +
-      "ation\022\210\001\n\007options\030\001 \003(\0132r.google.ads.goo" +
-      "gleads.v25.resources.Recommendation.Targ" +
-      "etCpaOptInRecommendation.TargetCpaOptInR" +
-      "ecommendationOptionB\003\340A\003\022/\n\035recommended_" +
-      "target_cpa_micros\030\003 \001(\003B\003\340A\003H\000\210\001\001\032\234\003\n\"Ta" +
-      "rgetCpaOptInRecommendationOption\022x\n\004goal" +
-      "\030\001 \001(\0162e.google.ads.googleads.v25.enums." +
-      "TargetCpaOptInRecommendationGoalEnum.Tar" +
-      "getCpaOptInRecommendationGoalB\003\340A\003\022#\n\021ta" +
-      "rget_cpa_micros\030\005 \001(\003B\003\340A\003H\000\210\001\001\0228\n&requi" +
-      "red_campaign_budget_amount_micros\030\006 \001(\003B" +
-      "\003\340A\003H\001\210\001\001\022\\\n\006impact\030\004 \001(\0132G.google.ads.g" +
-      "oogleads.v25.resources.Recommendation.Re" +
-      "commendationImpactB\003\340A\003B\024\n\022_target_cpa_m" +
-      "icrosB)\n\'_required_campaign_budget_amoun" +
-      "t_microsB \n\036_recommended_target_cpa_micr" +
-      "os\032\201\001\n&MaximizeConversionsOptInRecommend" +
-      "ation\0222\n recommended_budget_amount_micro" +
-      "s\030\002 \001(\003B\003\340A\003H\000\210\001\001B#\n!_recommended_budget" +
-      "_amount_micros\032 \n\036EnhancedCpcOptInRecomm" +
-      "endation\032#\n!SearchPartnersOptInRecommend" +
-      "ation\032|\n!MaximizeClicksOptInRecommendati" +
-      "on\0222\n recommended_budget_amount_micros\030\002" +
-      " \001(\003B\003\340A\003H\000\210\001\001B#\n!_recommended_budget_am" +
-      "ount_micros\032\"\n OptimizeAdRotationRecomme" +
-      "ndation\032\326\001\n\032CalloutAssetRecommendation\022[" +
-      "\n#recommended_campaign_callout_assets\030\001 " +
-      "\003(\0132).google.ads.googleads.v25.resources" +
-      ".AssetB\003\340A\003\022[\n#recommended_customer_call" +
-      "out_assets\030\002 \003(\0132).google.ads.googleads." +
-      "v25.resources.AssetB\003\340A\003\032\331\001\n\033SitelinkAss" +
-      "etRecommendation\022\\\n$recommended_campaign" +
-      "_sitelink_assets\030\001 \003(\0132).google.ads.goog" +
-      "leads.v25.resources.AssetB\003\340A\003\022\\\n$recomm" +
-      "ended_customer_sitelink_assets\030\002 \003(\0132).g" +
-      "oogle.ads.googleads.v25.resources.AssetB" +
-      "\003\340A\003\032\031\n\027CallAssetRecommendation\032\320\001\n\036Keyw" +
-      "ordMatchTypeRecommendation\022B\n\007keyword\030\001 " +
-      "\001(\0132,.google.ads.googleads.v25.common.Ke" +
-      "ywordInfoB\003\340A\003\022j\n\026recommended_match_type" +
-      "\030\002 \001(\0162E.google.ads.googleads.v25.enums." +
-      "KeywordMatchTypeEnum.KeywordMatchTypeB\003\340" +
-      "A\003\032\332\001\n\036MoveUnusedBudgetRecommendation\022(\n" +
-      "\026excess_campaign_budget\030\003 \001(\tB\003\340A\003H\000\210\001\001\022" +
-      "s\n\025budget_recommendation\030\002 \001(\0132O.google." +
-      "ads.googleads.v25.resources.Recommendati" +
-      "on.CampaignBudgetRecommendationB\003\340A\003B\031\n\027" +
-      "_excess_campaign_budget\032\313\001\n\035TargetRoasOp" +
-      "tInRecommendation\022)\n\027recommended_target_" +
-      "roas\030\001 \001(\001B\003\340A\003H\000\210\001\001\0228\n&required_campaig" +
-      "n_budget_amount_micros\030\002 \001(\003B\003\340A\003H\001\210\001\001B\032" +
-      "\n\030_recommended_target_roasB)\n\'_required_" +
-      "campaign_budget_amount_micros\032\261\001\n%Respon" +
-      "siveSearchAdAssetRecommendation\022?\n\ncurre" +
-      "nt_ad\030\003 \001(\0132&.google.ads.googleads.v25.r" +
-      "esources.AdB\003\340A\003\022G\n\022recommended_assets\030\002" +
-      " \001(\0132&.google.ads.googleads.v25.resource" +
-      "s.AdB\003\340A\003\032\271\001\n1ResponsiveSearchAdImproveA" +
-      "dStrengthRecommendation\022?\n\ncurrent_ad\030\001 " +
-      "\001(\0132&.google.ads.googleads.v25.resources" +
-      ".AdB\003\340A\003\022C\n\016recommended_ad\030\002 \001(\0132&.googl" +
-      "e.ads.googleads.v25.resources.AdB\003\340A\003\032[\n" +
-      " ResponsiveSearchAdRecommendation\0227\n\002ad\030" +
-      "\001 \001(\0132&.google.ads.googleads.v25.resourc" +
-      "es.AdB\003\340A\003\032\224\002\n\"UseBroadMatchKeywordRecom" +
-      "mendation\022B\n\007keyword\030\001 \003(\0132,.google.ads." +
-      "googleads.v25.common.KeywordInfoB\003\340A\003\022%\n" +
-      "\030suggested_keywords_count\030\002 \001(\003B\003\340A\003\022$\n\027" +
-      "campaign_keywords_count\030\003 \001(\003B\003\340A\003\022(\n\033ca" +
-      "mpaign_uses_shared_budget\030\004 \001(\010B\003\340A\003\0223\n&" +
-      "required_campaign_budget_amount_micros\030\005" +
-      " \001(\003B\003\340A\003\032w\n:UpgradeSmartShoppingCampaig" +
-      "nToPerformanceMaxRecommendation\022\030\n\013merch" +
-      "ant_id\030\001 \001(\003B\003\340A\003\022\037\n\022sales_country_code\030" +
-      "\002 \001(\tB\003\340A\003\032\305\001\n%RaiseTargetCpaBidTooLowRe" +
-      "commendation\022/\n\035recommended_target_multi" +
-      "plier\030\001 \001(\001B\003\340A\003H\000\210\001\001\022+\n\031average_target_" +
-      "cpa_micros\030\002 \001(\003B\003\340A\003H\001\210\001\001B \n\036_recommend" +
-      "ed_target_multiplierB\034\n\032_average_target_" +
-      "cpa_micros\032%\n#DisplayExpansionOptInRecom" +
-      "mendation\0324\n2UpgradeLocalCampaignToPerfo" +
-      "rmanceMaxRecommendation\032\257\001\n&ForecastingS" +
-      "etTargetRoasRecommendation\022$\n\027recommende" +
-      "d_target_roas\030\001 \001(\001B\003\340A\003\022_\n\017campaign_bud" +
-      "get\030\002 \001(\0132A.google.ads.googleads.v25.res" +
-      "ources.Recommendation.CampaignBudgetB\003\340A" +
-      "\003\032\325\001\n$ShoppingOfferAttributeRecommendati" +
-      "on\022V\n\010merchant\030\001 \001(\0132?.google.ads.google" +
-      "ads.v25.resources.Recommendation.Merchan" +
-      "tInfoB\003\340A\003\022\027\n\nfeed_label\030\002 \001(\tB\003\340A\003\022\031\n\014o" +
-      "ffers_count\030\003 \001(\003B\003\340A\003\022!\n\024demoted_offers" +
-      "_count\030\004 \001(\003B\003\340A\003\032\345\001\n,ShoppingFixDisappr" +
-      "ovedProductsRecommendation\022V\n\010merchant\030\001" +
-      " \001(\0132?.google.ads.googleads.v25.resource" +
-      "s.Recommendation.MerchantInfoB\003\340A\003\022\027\n\nfe" +
-      "ed_label\030\002 \001(\tB\003\340A\003\022\033\n\016products_count\030\003 " +
-      "\001(\003B\003\340A\003\022\'\n\032disapproved_products_count\030\004" +
-      " \001(\003B\003\340A\003\032\276\001\n%ShoppingTargetAllOffersRec" +
-      "ommendation\022V\n\010merchant\030\001 \001(\0132?.google.a" +
-      "ds.googleads.v25.resources.Recommendatio" +
-      "n.MerchantInfoB\003\340A\003\022$\n\027untargeted_offers" +
-      "_count\030\002 \001(\003B\003\340A\003\022\027\n\nfeed_label\030\003 \001(\tB\003\340" +
-      "A\003\032\213\002\n+ShoppingAddProductsToCampaignReco" +
-      "mmendation\022V\n\010merchant\030\001 \001(\0132?.google.ad" +
-      "s.googleads.v25.resources.Recommendation" +
-      ".MerchantInfoB\003\340A\003\022\027\n\nfeed_label\030\002 \001(\tB\003" +
-      "\340A\003\022k\n\006reason\030\003 \001(\0162V.google.ads.googlea" +
-      "ds.v25.enums.ShoppingAddProductsToCampai" +
-      "gnRecommendationEnum.ReasonB\003\340A\003\032\250\001\n5Sho" +
-      "ppingMerchantCenterAccountSuspensionReco" +
-      "mmendation\022V\n\010merchant\030\001 \001(\0132?.google.ad" +
-      "s.googleads.v25.resources.Recommendation" +
-      ".MerchantInfoB\003\340A\003\022\027\n\nfeed_label\030\002 \001(\tB\003" +
-      "\340A\003\032\275\001\nJShoppingMigrateRegularShoppingCa" +
-      "mpaignOffersToPerformanceMaxRecommendati" +
-      "on\022V\n\010merchant\030\001 \001(\0132?.google.ads.google" +
-      "ads.v25.resources.Recommendation.Merchan" +
-      "tInfoB\003\340A\003\022\027\n\nfeed_label\030\002 \001(\tB\003\340A\003\032\233\001\n\024",
-      "TargetAdjustmentInfo\022\034\n\nshared_set\030\001 \001(\t" +
-      "B\003\340A\003H\000\210\001\001\022*\n\035recommended_target_multipl" +
-      "ier\030\002 \001(\001B\003\340A\003\022*\n\035current_average_target" +
-      "_micros\030\003 \001(\003B\003\340A\003B\r\n\013_shared_set\032\203\002\n\034Ra" +
-      "iseTargetCpaRecommendation\022g\n\021target_adj" +
-      "ustment\030\001 \001(\0132G.google.ads.googleads.v25" +
-      ".resources.Recommendation.TargetAdjustme" +
-      "ntInfoB\003\340A\003\022e\n\020app_bidding_goal\030\002 \001(\0162A." +
-      "google.ads.googleads.v25.enums.AppBiddin" +
-      "gGoalEnum.AppBiddingGoalB\003\340A\003H\000\210\001\001B\023\n\021_a" +
-      "pp_bidding_goal\032\210\001\n\035LowerTargetRoasRecom" +
-      "mendation\022g\n\021target_adjustment\030\001 \001(\0132G.g" +
-      "oogle.ads.googleads.v25.resources.Recomm" +
-      "endation.TargetAdjustmentInfoB\003\340A\003\032*\n(Dy" +
-      "namicImageExtensionOptInRecommendation\032}" +
-      "\n\016CampaignBudget\022\"\n\025current_amount_micro" +
-      "s\030\001 \001(\003B\003\340A\003\022*\n\035recommended_new_amount_m" +
-      "icros\030\002 \001(\003B\003\340A\003\022\033\n\016new_start_date\030\003 \001(\t" +
-      "B\003\340A\003\032#\n!PerformanceMaxOptInRecommendati" +
-      "on\032\236\001\n-ImprovePerformanceMaxAdStrengthRe" +
-      "commendation\022\030\n\013asset_group\030\001 \001(\tB\003\340A\003\022S" +
-      "\n\013ad_strength\030\002 \001(\01629.google.ads.googlea" +
-      "ds.v25.enums.AdStrengthEnum.AdStrengthB\003" +
-      "\340A\003\032X\n=MigrateDynamicSearchAdsCampaignTo" +
-      "PerformanceMaxRecommendation\022\027\n\napply_li" +
-      "nk\030\001 \001(\tB\003\340A\003\032\264\001\n%ForecastingSetTargetCp" +
-      "aRecommendation\022*\n\035recommended_target_cp" +
-      "a_micros\030\001 \001(\003B\003\340A\003\022_\n\017campaign_budget\030\002" +
-      " \001(\0132A.google.ads.googleads.v25.resource" +
-      "s.Recommendation.CampaignBudgetB\003\340A\003\032,\n*" +
-      "MaximizeConversionValueOptInRecommendati" +
-      "on\032(\n&ImproveGoogleTagCoverageRecommenda" +
-      "tion\032+\n)PerformanceMaxFinalUrlOptInRecom" +
-      "mendation\032\354\002\n&RefreshCustomerMatchListRe" +
-      "commendation\022\031\n\014user_list_id\030\001 \001(\003B\003\340A\003\022" +
-      "\033\n\016user_list_name\030\002 \001(\tB\003\340A\003\022$\n\027days_sin" +
-      "ce_last_refresh\030\003 \001(\003B\003\340A\003\022a\n\024top_spendi" +
-      "ng_account\030\004 \003(\0132>.google.ads.googleads." +
-      "v25.resources.Recommendation.AccountInfo" +
-      "B\003\340A\003\022%\n\030targeting_accounts_count\030\005 \001(\003B" +
-      "\003\340A\003\022Z\n\rowner_account\030\006 \001(\0132>.google.ads" +
-      ".googleads.v25.resources.Recommendation." +
-      "AccountInfoB\003\340A\003\032F\n\013AccountInfo\022\030\n\013custo" +
-      "mer_id\030\001 \001(\003B\003\340A\003\022\035\n\020descriptive_name\030\002 " +
-      "\001(\tB\003\340A\003\032h\n!CustomAudienceOptInRecommend" +
-      "ation\022C\n\010keywords\030\001 \003(\0132,.google.ads.goo" +
-      "gleads.v25.common.KeywordInfoB\003\340A\003\032\035\n\033Le" +
-      "adFormAssetRecommendation\032\274\001\n(ImproveDem" +
-      "andGenAdStrengthRecommendation\022\017\n\002ad\030\001 \001" +
-      "(\tB\003\340A\003\022S\n\013ad_strength\030\002 \001(\01629.google.ad" +
-      "s.googleads.v25.enums.AdStrengthEnum.AdS" +
-      "trengthB\003\340A\003\022*\n\035demand_gen_asset_action_" +
-      "items\030\003 \003(\tB\003\340A\003\032\251\007\n%CampaignSpecificApp" +
-      "GoalRecommendation\0223\n&campaign_cost_micr" +
-      "os_last_fifteen_days\030\001 \001(\003B\003\340A\003\0223\n&campa" +
-      "ign_conversions_last_fifteen_days\030\002 \001(\001B" +
-      "\003\340A\003\0228\n+campaign_conversion_value_last_f" +
-      "ifteen_days\030\003 \001(\001B\003\340A\003\0224\n\'projected_conv" +
-      "ersions_last_fifteen_days\030\004 \001(\001B\003\340A\003\0229\n," +
-      "projected_conversion_value_last_fifteen_" +
-      "days\030\005 \001(\001B\003\340A\003\022z\n\024app_conversion_goals\030" +
-      "\006 \003(\0162U.google.ads.googleads.v25.enums.C" +
-      "onversionActionCategoryEnum.ConversionAc" +
-      "tionCategoryB\005\030\001\340A\003\022Z\n\022current_auto_goal" +
-      "s\030\007 \003(\01327.google.ads.googleads.v25.commo" +
-      "n.EffectiveAutomaticGoalB\005\030\001\340A\003\022T\n\023curre" +
-      "nt_custom_goal\030\010 \001(\tB7\030\001\340A\003\372A/\n-googlead" +
-      "s.googleapis.com/CustomConversionGoal\022~\n" +
-      "\032suggested_conversion_goals\030\t \003(\0162U.goog" +
-      "le.ads.googleads.v25.enums.ConversionAct" +
-      "ionCategoryEnum.ConversionActionCategory" +
-      "B\003\340A\003\022^\n\030current_conversion_goals\030\n \003(\0132" +
-      "7.google.ads.googleads.v25.common.Effect" +
-      "iveAutomaticGoalB\003\340A\003\022]\n\036current_custom_" +
-      "conversion_goal\030\013 \001(\tB5\340A\003\372A/\n-googleads" +
-      ".googleapis.com/CustomConversionGoal:i\352A" +
-      "f\n\'googleads.googleapis.com/Recommendati" +
-      "on\022;customers/{customer_id}/recommendati" +
-      "ons/{recommendation_id}B\020\n\016recommendatio" +
-      "nB\022\n\020_campaign_budgetB\013\n\t_campaignB\013\n\t_a" +
-      "d_groupB\014\n\n_dismissedB\205\002\n&com.google.ads" +
-      ".googleads.v25.resourcesB\023Recommendation" +
-      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v25/resources;resou" +
-      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V25.Re" +
-      "sources\312\002\"Google\\Ads\\GoogleAds\\V25\\Resou" +
-      "rces\352\002&Google::Ads::GoogleAds::V25::Reso" +
-      "urcesb\006proto3"
+      "mendationB\003\340A\003H\000\022\253\001\n7raise_target_cpa_pe" +
+      "rformance_bid_too_low_recommendation\030H \001" +
+      "(\0132c.google.ads.googleads.v25.resources." +
+      "Recommendation.RaiseTargetCpaPerformance" +
+      "BidTooLowRecommendationB\003\340A\003H\000\022\255\001\n8lower" +
+      "_target_roas_performance_bid_too_low_rec" +
+      "ommendation\030I \001(\0132d.google.ads.googleads" +
+      ".v25.resources.Recommendation.LowerTarge" +
+      "tRoasPerformanceBidTooLowRecommendationB" +
+      "\003\340A\003H\000\032M\n\014MerchantInfo\022\017\n\002id\030\001 \001(\003B\003\340A\003\022" +
+      "\021\n\004name\030\002 \001(\tB\003\340A\003\022\031\n\014multi_client\030\003 \001(\010" +
+      "B\003\340A\003\032\345\001\n\024RecommendationImpact\022c\n\014base_m" +
+      "etrics\030\001 \001(\0132H.google.ads.googleads.v25." +
+      "resources.Recommendation.RecommendationM" +
+      "etricsB\003\340A\003\022h\n\021potential_metrics\030\002 \001(\0132H" +
+      ".google.ads.googleads.v25.resources.Reco" +
+      "mmendation.RecommendationMetricsB\003\340A\003\032\263\002" +
+      "\n\025RecommendationMetrics\022\035\n\013impressions\030\006" +
+      " \001(\001B\003\340A\003H\000\210\001\001\022\030\n\006clicks\030\007 \001(\001B\003\340A\003H\001\210\001\001" +
+      "\022\035\n\013cost_micros\030\010 \001(\003B\003\340A\003H\002\210\001\001\022\035\n\013conve" +
+      "rsions\030\t \001(\001B\003\340A\003H\003\210\001\001\022#\n\021conversions_va" +
+      "lue\030\013 \001(\001B\003\340A\003H\004\210\001\001\022\035\n\013video_views\030\n \001(\001" +
+      "B\003\340A\003H\005\210\001\001B\016\n\014_impressionsB\t\n\007_clicksB\016\n" +
+      "\014_cost_microsB\016\n\014_conversionsB\024\n\022_conver" +
+      "sions_valueB\016\n\014_video_views\032\240\004\n\034Campaign" +
+      "BudgetRecommendation\022.\n\034current_budget_a" +
+      "mount_micros\030\007 \001(\003B\003\340A\003H\000\210\001\001\0222\n recommen" +
+      "ded_budget_amount_micros\030\010 \001(\003B\003\340A\003H\001\210\001\001" +
+      "\022\217\001\n\016budget_options\030\003 \003(\0132r.google.ads.g" +
+      "oogleads.v25.resources.Recommendation.Ca" +
+      "mpaignBudgetRecommendation.CampaignBudge" +
+      "tRecommendationOptionB\003\340A\003\032\303\001\n\"CampaignB" +
+      "udgetRecommendationOption\022&\n\024budget_amou" +
+      "nt_micros\030\003 \001(\003B\003\340A\003H\000\210\001\001\022\\\n\006impact\030\002 \001(" +
+      "\0132G.google.ads.googleads.v25.resources.R" +
+      "ecommendation.RecommendationImpactB\003\340A\003B" +
+      "\027\n\025_budget_amount_microsB\037\n\035_current_bud" +
+      "get_amount_microsB#\n!_recommended_budget" +
+      "_amount_micros\032\345\002\n\025KeywordRecommendation" +
+      "\022B\n\007keyword\030\001 \001(\0132,.google.ads.googleads" +
+      ".v25.common.KeywordInfoB\003\340A\003\022n\n\014search_t" +
+      "erms\030\004 \003(\0132S.google.ads.googleads.v25.re" +
+      "sources.Recommendation.KeywordRecommenda" +
+      "tion.SearchTermB\003\340A\003\022,\n\032recommended_cpc_" +
+      "bid_micros\030\003 \001(\003B\003\340A\003H\000\210\001\001\032K\n\nSearchTerm" +
+      "\022\021\n\004text\030\001 \001(\tB\003\340A\003\022*\n\035estimated_weekly_" +
+      "search_count\030\002 \001(\003B\003\340A\003B\035\n\033_recommended_" +
+      "cpc_bid_micros\032\271\001\n\024TextAdRecommendation\022" +
+      "7\n\002ad\030\001 \001(\0132&.google.ads.googleads.v25.r" +
+      "esources.AdB\003\340A\003\022\037\n\rcreation_date\030\004 \001(\tB" +
+      "\003\340A\003H\000\210\001\001\022!\n\017auto_apply_date\030\005 \001(\tB\003\340A\003H" +
+      "\001\210\001\001B\020\n\016_creation_dateB\022\n\020_auto_apply_da" +
+      "te\032\233\005\n\034TargetCpaOptInRecommendation\022\210\001\n\007" +
+      "options\030\001 \003(\0132r.google.ads.googleads.v25" +
+      ".resources.Recommendation.TargetCpaOptIn" +
+      "Recommendation.TargetCpaOptInRecommendat" +
+      "ionOptionB\003\340A\003\022/\n\035recommended_target_cpa" +
+      "_micros\030\003 \001(\003B\003\340A\003H\000\210\001\001\032\234\003\n\"TargetCpaOpt" +
+      "InRecommendationOption\022x\n\004goal\030\001 \001(\0162e.g" +
+      "oogle.ads.googleads.v25.enums.TargetCpaO" +
+      "ptInRecommendationGoalEnum.TargetCpaOptI" +
+      "nRecommendationGoalB\003\340A\003\022#\n\021target_cpa_m" +
+      "icros\030\005 \001(\003B\003\340A\003H\000\210\001\001\0228\n&required_campai" +
+      "gn_budget_amount_micros\030\006 \001(\003B\003\340A\003H\001\210\001\001\022" +
+      "\\\n\006impact\030\004 \001(\0132G.google.ads.googleads.v" +
+      "25.resources.Recommendation.Recommendati" +
+      "onImpactB\003\340A\003B\024\n\022_target_cpa_microsB)\n\'_" +
+      "required_campaign_budget_amount_microsB " +
+      "\n\036_recommended_target_cpa_micros\032\201\001\n&Max" +
+      "imizeConversionsOptInRecommendation\0222\n r" +
+      "ecommended_budget_amount_micros\030\002 \001(\003B\003\340" +
+      "A\003H\000\210\001\001B#\n!_recommended_budget_amount_mi" +
+      "cros\032 \n\036EnhancedCpcOptInRecommendation\032#" +
+      "\n!SearchPartnersOptInRecommendation\032|\n!M" +
+      "aximizeClicksOptInRecommendation\0222\n reco" +
+      "mmended_budget_amount_micros\030\002 \001(\003B\003\340A\003H" +
+      "\000\210\001\001B#\n!_recommended_budget_amount_micro" +
+      "s\032\"\n OptimizeAdRotationRecommendation\032\326\001" +
+      "\n\032CalloutAssetRecommendation\022[\n#recommen" +
+      "ded_campaign_callout_assets\030\001 \003(\0132).goog" +
+      "le.ads.googleads.v25.resources.AssetB\003\340A" +
+      "\003\022[\n#recommended_customer_callout_assets" +
+      "\030\002 \003(\0132).google.ads.googleads.v25.resour" +
+      "ces.AssetB\003\340A\003\032\331\001\n\033SitelinkAssetRecommen" +
+      "dation\022\\\n$recommended_campaign_sitelink_" +
+      "assets\030\001 \003(\0132).google.ads.googleads.v25." +
+      "resources.AssetB\003\340A\003\022\\\n$recommended_cust" +
+      "omer_sitelink_assets\030\002 \003(\0132).google.ads." +
+      "googleads.v25.resources.AssetB\003\340A\003\032\031\n\027Ca" +
+      "llAssetRecommendation\032\320\001\n\036KeywordMatchTy" +
+      "peRecommendation\022B\n\007keyword\030\001 \001(\0132,.goog" +
+      "le.ads.googleads.v25.common.KeywordInfoB" +
+      "\003\340A\003\022j\n\026recommended_match_type\030\002 \001(\0162E.g" +
+      "oogle.ads.googleads.v25.enums.KeywordMat" +
+      "chTypeEnum.KeywordMatchTypeB\003\340A\003\032\332\001\n\036Mov" +
+      "eUnusedBudgetRecommendation\022(\n\026excess_ca" +
+      "mpaign_budget\030\003 \001(\tB\003\340A\003H\000\210\001\001\022s\n\025budget_" +
+      "recommendation\030\002 \001(\0132O.google.ads.google" +
+      "ads.v25.resources.Recommendation.Campaig" +
+      "nBudgetRecommendationB\003\340A\003B\031\n\027_excess_ca" +
+      "mpaign_budget\032\313\001\n\035TargetRoasOptInRecomme" +
+      "ndation\022)\n\027recommended_target_roas\030\001 \001(\001" +
+      "B\003\340A\003H\000\210\001\001\0228\n&required_campaign_budget_a" +
+      "mount_micros\030\002 \001(\003B\003\340A\003H\001\210\001\001B\032\n\030_recomme" +
+      "nded_target_roasB)\n\'_required_campaign_b" +
+      "udget_amount_micros\032\261\001\n%ResponsiveSearch" +
+      "AdAssetRecommendation\022?\n\ncurrent_ad\030\003 \001(" +
+      "\0132&.google.ads.googleads.v25.resources.A" +
+      "dB\003\340A\003\022G\n\022recommended_assets\030\002 \001(\0132&.goo" +
+      "gle.ads.googleads.v25.resources.AdB\003\340A\003\032" +
+      "\271\001\n1ResponsiveSearchAdImproveAdStrengthR" +
+      "ecommendation\022?\n\ncurrent_ad\030\001 \001(\0132&.goog" +
+      "le.ads.googleads.v25.resources.AdB\003\340A\003\022C" +
+      "\n\016recommended_ad\030\002 \001(\0132&.google.ads.goog" +
+      "leads.v25.resources.AdB\003\340A\003\032[\n Responsiv" +
+      "eSearchAdRecommendation\0227\n\002ad\030\001 \001(\0132&.go" +
+      "ogle.ads.googleads.v25.resources.AdB\003\340A\003" +
+      "\032\224\002\n\"UseBroadMatchKeywordRecommendation\022" +
+      "B\n\007keyword\030\001 \003(\0132,.google.ads.googleads." +
+      "v25.common.KeywordInfoB\003\340A\003\022%\n\030suggested" +
+      "_keywords_count\030\002 \001(\003B\003\340A\003\022$\n\027campaign_k" +
+      "eywords_count\030\003 \001(\003B\003\340A\003\022(\n\033campaign_use" +
+      "s_shared_budget\030\004 \001(\010B\003\340A\003\0223\n&required_c" +
+      "ampaign_budget_amount_micros\030\005 \001(\003B\003\340A\003\032" +
+      "w\n:UpgradeSmartShoppingCampaignToPerform" +
+      "anceMaxRecommendation\022\030\n\013merchant_id\030\001 \001" +
+      "(\003B\003\340A\003\022\037\n\022sales_country_code\030\002 \001(\tB\003\340A\003" +
+      "\032\305\001\n%RaiseTargetCpaBidTooLowRecommendati" +
+      "on\022/\n\035recommended_target_multiplier\030\001 \001(" +
+      "\001B\003\340A\003H\000\210\001\001\022+\n\031average_target_cpa_micros" +
+      "\030\002 \001(\003B\003\340A\003H\001\210\001\001B \n\036_recommended_target_" +
+      "multiplierB\034\n\032_average_target_cpa_micros" +
+      "\032%\n#DisplayExpansionOptInRecommendation\032" +
+      "4\n2UpgradeLocalCampaignToPerformanceMaxR" +
+      "ecommendation\032\257\001\n&ForecastingSetTargetRo" +
+      "asRecommendation\022$\n\027recommended_target_r" +
+      "oas\030\001 \001(\001B\003\340A\003\022_\n\017campaign_budget\030\002 \001(\0132" +
+      "A.google.ads.googleads.v25.resources.Rec" +
+      "ommendation.CampaignBudgetB\003\340A\003\032\325\001\n$Shop" +
+      "pingOfferAttributeRecommendation\022V\n\010merc" +
+      "hant\030\001 \001(\0132?.google.ads.googleads.v25.re" +
+      "sources.Recommendation.MerchantInfoB\003\340A\003" +
+      "\022\027\n\nfeed_label\030\002 \001(\tB\003\340A\003\022\031\n\014offers_coun" +
+      "t\030\003 \001(\003B\003\340A\003\022!\n\024demoted_offers_count\030\004 \001" +
+      "(\003B\003\340A\003\032\345\001\n,ShoppingFixDisapprovedProduc" +
+      "tsRecommendation\022V\n\010merchant\030\001 \001(\0132?.goo" +
+      "gle.ads.googleads.v25.resources.Recommen" +
+      "dation.MerchantInfoB\003\340A\003\022\027\n\nfeed_label\030\002" +
+      " \001(\tB\003\340A\003\022\033\n\016products_count\030\003 \001(\003B\003\340A\003\022\'" +
+      "\n\032disapproved_products_count\030\004 \001(\003B\003\340A\003\032" +
+      "\276\001\n%ShoppingTargetAllOffersRecommendatio" +
+      "n\022V\n\010merchant\030\001 \001(\0132?.google.ads.googlea" +
+      "ds.v25.resources.Recommendation.Merchant" +
+      "InfoB\003\340A\003\022$\n\027untargeted_offers_count\030\002 \001" +
+      "(\003B\003\340A\003\022\027\n\nfeed_label\030\003 \001(\tB\003\340A\003\032\213\002\n+Sho" +
+      "ppingAddProductsToCampaignRecommendation" +
+      "\022V\n\010merchant\030\001 \001(\0132?.google.ads.googlead" +
+      "s.v25.resources.Recommendation.MerchantI" +
+      "nfoB\003\340A\003\022\027\n\nfeed_label\030\002 \001(\tB\003\340A\003\022k\n\006rea" +
+      "son\030\003 \001(\0162V.google.ads.googleads.v25.enu" +
+      "ms.ShoppingAddProductsToCampaignRecommen" +
+      "dationEnum.ReasonB\003\340A\003\032\250\001\n5ShoppingMerch",
+      "antCenterAccountSuspensionRecommendation" +
+      "\022V\n\010merchant\030\001 \001(\0132?.google.ads.googlead" +
+      "s.v25.resources.Recommendation.MerchantI" +
+      "nfoB\003\340A\003\022\027\n\nfeed_label\030\002 \001(\tB\003\340A\003\032\275\001\nJSh" +
+      "oppingMigrateRegularShoppingCampaignOffe" +
+      "rsToPerformanceMaxRecommendation\022V\n\010merc" +
+      "hant\030\001 \001(\0132?.google.ads.googleads.v25.re" +
+      "sources.Recommendation.MerchantInfoB\003\340A\003" +
+      "\022\027\n\nfeed_label\030\002 \001(\tB\003\340A\003\032\233\001\n\024TargetAdju" +
+      "stmentInfo\022\034\n\nshared_set\030\001 \001(\tB\003\340A\003H\000\210\001\001" +
+      "\022*\n\035recommended_target_multiplier\030\002 \001(\001B" +
+      "\003\340A\003\022*\n\035current_average_target_micros\030\003 " +
+      "\001(\003B\003\340A\003B\r\n\013_shared_set\032\203\002\n\034RaiseTargetC" +
+      "paRecommendation\022g\n\021target_adjustment\030\001 " +
+      "\001(\0132G.google.ads.googleads.v25.resources" +
+      ".Recommendation.TargetAdjustmentInfoB\003\340A" +
+      "\003\022e\n\020app_bidding_goal\030\002 \001(\0162A.google.ads" +
+      ".googleads.v25.enums.AppBiddingGoalEnum." +
+      "AppBiddingGoalB\003\340A\003H\000\210\001\001B\023\n\021_app_bidding" +
+      "_goal\032\210\001\n\035LowerTargetRoasRecommendation\022" +
+      "g\n\021target_adjustment\030\001 \001(\0132G.google.ads." +
+      "googleads.v25.resources.Recommendation.T" +
+      "argetAdjustmentInfoB\003\340A\003\032\340\001\n0RaiseTarget" +
+      "CpaPerformanceBidTooLowRecommendation\022/\n" +
+      "\035recommended_target_multiplier\030\001 \001(\001B\003\340A" +
+      "\003H\000\210\001\001\0223\n!current_average_target_cpa_mic" +
+      "ros\030\002 \001(\003B\003\340A\003H\001\210\001\001B \n\036_recommended_targ" +
+      "et_multiplierB$\n\"_current_average_target" +
+      "_cpa_micros\032\325\001\n1LowerTargetRoasPerforman" +
+      "ceBidTooLowRecommendation\022/\n\035recommended" +
+      "_target_multiplier\030\001 \001(\001B\003\340A\003H\000\210\001\001\022-\n\033cu" +
+      "rrent_average_target_roas\030\002 \001(\001B\003\340A\003H\001\210\001" +
+      "\001B \n\036_recommended_target_multiplierB\036\n\034_" +
+      "current_average_target_roas\032*\n(DynamicIm" +
+      "ageExtensionOptInRecommendation\032}\n\016Campa" +
+      "ignBudget\022\"\n\025current_amount_micros\030\001 \001(\003" +
+      "B\003\340A\003\022*\n\035recommended_new_amount_micros\030\002" +
+      " \001(\003B\003\340A\003\022\033\n\016new_start_date\030\003 \001(\tB\003\340A\003\032#" +
+      "\n!PerformanceMaxOptInRecommendation\032\236\001\n-" +
+      "ImprovePerformanceMaxAdStrengthRecommend" +
+      "ation\022\030\n\013asset_group\030\001 \001(\tB\003\340A\003\022S\n\013ad_st" +
+      "rength\030\002 \001(\01629.google.ads.googleads.v25." +
+      "enums.AdStrengthEnum.AdStrengthB\003\340A\003\032X\n=" +
+      "MigrateDynamicSearchAdsCampaignToPerform" +
+      "anceMaxRecommendation\022\027\n\napply_link\030\001 \001(" +
+      "\tB\003\340A\003\032\264\001\n%ForecastingSetTargetCpaRecomm" +
+      "endation\022*\n\035recommended_target_cpa_micro" +
+      "s\030\001 \001(\003B\003\340A\003\022_\n\017campaign_budget\030\002 \001(\0132A." +
+      "google.ads.googleads.v25.resources.Recom" +
+      "mendation.CampaignBudgetB\003\340A\003\032,\n*Maximiz" +
+      "eConversionValueOptInRecommendation\032(\n&I" +
+      "mproveGoogleTagCoverageRecommendation\032+\n" +
+      ")PerformanceMaxFinalUrlOptInRecommendati" +
+      "on\032\354\002\n&RefreshCustomerMatchListRecommend" +
+      "ation\022\031\n\014user_list_id\030\001 \001(\003B\003\340A\003\022\033\n\016user" +
+      "_list_name\030\002 \001(\tB\003\340A\003\022$\n\027days_since_last" +
+      "_refresh\030\003 \001(\003B\003\340A\003\022a\n\024top_spending_acco" +
+      "unt\030\004 \003(\0132>.google.ads.googleads.v25.res" +
+      "ources.Recommendation.AccountInfoB\003\340A\003\022%" +
+      "\n\030targeting_accounts_count\030\005 \001(\003B\003\340A\003\022Z\n" +
+      "\rowner_account\030\006 \001(\0132>.google.ads.google" +
+      "ads.v25.resources.Recommendation.Account" +
+      "InfoB\003\340A\003\032F\n\013AccountInfo\022\030\n\013customer_id\030" +
+      "\001 \001(\003B\003\340A\003\022\035\n\020descriptive_name\030\002 \001(\tB\003\340A" +
+      "\003\032h\n!CustomAudienceOptInRecommendation\022C" +
+      "\n\010keywords\030\001 \003(\0132,.google.ads.googleads." +
+      "v25.common.KeywordInfoB\003\340A\003\032\035\n\033LeadFormA" +
+      "ssetRecommendation\032\274\001\n(ImproveDemandGenA" +
+      "dStrengthRecommendation\022\017\n\002ad\030\001 \001(\tB\003\340A\003" +
+      "\022S\n\013ad_strength\030\002 \001(\01629.google.ads.googl" +
+      "eads.v25.enums.AdStrengthEnum.AdStrength" +
+      "B\003\340A\003\022*\n\035demand_gen_asset_action_items\030\003" +
+      " \003(\tB\003\340A\003\032\251\007\n%CampaignSpecificAppGoalRec" +
+      "ommendation\0223\n&campaign_cost_micros_last" +
+      "_fifteen_days\030\001 \001(\003B\003\340A\003\0223\n&campaign_con" +
+      "versions_last_fifteen_days\030\002 \001(\001B\003\340A\003\0228\n" +
+      "+campaign_conversion_value_last_fifteen_" +
+      "days\030\003 \001(\001B\003\340A\003\0224\n\'projected_conversions" +
+      "_last_fifteen_days\030\004 \001(\001B\003\340A\003\0229\n,project" +
+      "ed_conversion_value_last_fifteen_days\030\005 " +
+      "\001(\001B\003\340A\003\022z\n\024app_conversion_goals\030\006 \003(\0162U" +
+      ".google.ads.googleads.v25.enums.Conversi" +
+      "onActionCategoryEnum.ConversionActionCat" +
+      "egoryB\005\030\001\340A\003\022Z\n\022current_auto_goals\030\007 \003(\013" +
+      "27.google.ads.googleads.v25.common.Effec" +
+      "tiveAutomaticGoalB\005\030\001\340A\003\022T\n\023current_cust" +
+      "om_goal\030\010 \001(\tB7\030\001\340A\003\372A/\n-googleads.googl" +
+      "eapis.com/CustomConversionGoal\022~\n\032sugges" +
+      "ted_conversion_goals\030\t \003(\0162U.google.ads." +
+      "googleads.v25.enums.ConversionActionCate" +
+      "goryEnum.ConversionActionCategoryB\003\340A\003\022^" +
+      "\n\030current_conversion_goals\030\n \003(\01327.googl" +
+      "e.ads.googleads.v25.common.EffectiveAuto" +
+      "maticGoalB\003\340A\003\022]\n\036current_custom_convers" +
+      "ion_goal\030\013 \001(\tB5\340A\003\372A/\n-googleads.google" +
+      "apis.com/CustomConversionGoal:i\352Af\n\'goog" +
+      "leads.googleapis.com/Recommendation\022;cus" +
+      "tomers/{customer_id}/recommendations/{re" +
+      "commendation_id}B\020\n\016recommendationB\022\n\020_c" +
+      "ampaign_budgetB\013\n\t_campaignB\013\n\t_ad_group" +
+      "B\014\n\n_dismissedB\205\002\n&com.google.ads.google" +
+      "ads.v25.resourcesB\023RecommendationProtoP\001" +
+      "ZKgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v25/resources;resources\242\002\003" +
+      "GAA\252\002\"Google.Ads.GoogleAds.V25.Resources" +
+      "\312\002\"Google\\Ads\\GoogleAds\\V25\\Resources\352\002&" +
+      "Google::Ads::GoogleAds::V25::Resourcesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -821,7 +851,7 @@ public final class RecommendationProto extends com.google.protobuf.GeneratedFile
     internal_static_google_ads_googleads_v25_resources_Recommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor,
-        new java.lang.String[] { "ResourceName", "Type", "Impact", "CampaignBudget", "Campaign", "AdGroup", "Dismissed", "Campaigns", "CampaignBudgetRecommendation", "ForecastingCampaignBudgetRecommendation", "KeywordRecommendation", "TextAdRecommendation", "TargetCpaOptInRecommendation", "MaximizeConversionsOptInRecommendation", "EnhancedCpcOptInRecommendation", "SearchPartnersOptInRecommendation", "MaximizeClicksOptInRecommendation", "OptimizeAdRotationRecommendation", "KeywordMatchTypeRecommendation", "MoveUnusedBudgetRecommendation", "TargetRoasOptInRecommendation", "ResponsiveSearchAdRecommendation", "MarginalRoiCampaignBudgetRecommendation", "UseBroadMatchKeywordRecommendation", "ResponsiveSearchAdAssetRecommendation", "UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation", "ResponsiveSearchAdImproveAdStrengthRecommendation", "DisplayExpansionOptInRecommendation", "UpgradeLocalCampaignToPerformanceMaxRecommendation", "RaiseTargetCpaBidTooLowRecommendation", "ForecastingSetTargetRoasRecommendation", "CalloutAssetRecommendation", "SitelinkAssetRecommendation", "CallAssetRecommendation", "ShoppingAddAgeGroupRecommendation", "ShoppingAddColorRecommendation", "ShoppingAddGenderRecommendation", "ShoppingAddGtinRecommendation", "ShoppingAddMoreIdentifiersRecommendation", "ShoppingAddSizeRecommendation", "ShoppingAddProductsToCampaignRecommendation", "ShoppingFixDisapprovedProductsRecommendation", "ShoppingTargetAllOffersRecommendation", "ShoppingFixSuspendedMerchantCenterAccountRecommendation", "ShoppingFixMerchantCenterAccountSuspensionWarningRecommendation", "ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation", "DynamicImageExtensionOptInRecommendation", "RaiseTargetCpaRecommendation", "LowerTargetRoasRecommendation", "PerformanceMaxOptInRecommendation", "ImprovePerformanceMaxAdStrengthRecommendation", "MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation", "ForecastingSetTargetCpaRecommendation", "SetTargetCpaRecommendation", "SetTargetRoasRecommendation", "MaximizeConversionValueOptInRecommendation", "ImproveGoogleTagCoverageRecommendation", "PerformanceMaxFinalUrlOptInRecommendation", "RefreshCustomerMatchListRecommendation", "CustomAudienceOptInRecommendation", "LeadFormAssetRecommendation", "ImproveDemandGenAdStrengthRecommendation", "CampaignSpecificAppGoalRecommendation", "Recommendation", });
+        new java.lang.String[] { "ResourceName", "Type", "Impact", "CampaignBudget", "Campaign", "AdGroup", "Dismissed", "Campaigns", "CampaignBudgetRecommendation", "ForecastingCampaignBudgetRecommendation", "KeywordRecommendation", "TextAdRecommendation", "TargetCpaOptInRecommendation", "MaximizeConversionsOptInRecommendation", "EnhancedCpcOptInRecommendation", "SearchPartnersOptInRecommendation", "MaximizeClicksOptInRecommendation", "OptimizeAdRotationRecommendation", "KeywordMatchTypeRecommendation", "MoveUnusedBudgetRecommendation", "TargetRoasOptInRecommendation", "ResponsiveSearchAdRecommendation", "MarginalRoiCampaignBudgetRecommendation", "UseBroadMatchKeywordRecommendation", "ResponsiveSearchAdAssetRecommendation", "UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation", "ResponsiveSearchAdImproveAdStrengthRecommendation", "DisplayExpansionOptInRecommendation", "UpgradeLocalCampaignToPerformanceMaxRecommendation", "RaiseTargetCpaBidTooLowRecommendation", "ForecastingSetTargetRoasRecommendation", "CalloutAssetRecommendation", "SitelinkAssetRecommendation", "CallAssetRecommendation", "ShoppingAddAgeGroupRecommendation", "ShoppingAddColorRecommendation", "ShoppingAddGenderRecommendation", "ShoppingAddGtinRecommendation", "ShoppingAddMoreIdentifiersRecommendation", "ShoppingAddSizeRecommendation", "ShoppingAddProductsToCampaignRecommendation", "ShoppingFixDisapprovedProductsRecommendation", "ShoppingTargetAllOffersRecommendation", "ShoppingFixSuspendedMerchantCenterAccountRecommendation", "ShoppingFixMerchantCenterAccountSuspensionWarningRecommendation", "ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation", "DynamicImageExtensionOptInRecommendation", "RaiseTargetCpaRecommendation", "LowerTargetRoasRecommendation", "PerformanceMaxOptInRecommendation", "ImprovePerformanceMaxAdStrengthRecommendation", "MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation", "ForecastingSetTargetCpaRecommendation", "SetTargetCpaRecommendation", "SetTargetRoasRecommendation", "MaximizeConversionValueOptInRecommendation", "ImproveGoogleTagCoverageRecommendation", "PerformanceMaxFinalUrlOptInRecommendation", "RefreshCustomerMatchListRecommendation", "CustomAudienceOptInRecommendation", "LeadFormAssetRecommendation", "ImproveDemandGenAdStrengthRecommendation", "CampaignSpecificAppGoalRecommendation", "RaiseTargetCpaPerformanceBidTooLowRecommendation", "LowerTargetRoasPerformanceBidTooLowRecommendation", "Recommendation", });
     internal_static_google_ads_googleads_v25_resources_Recommendation_MerchantInfo_descriptor =
       internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(0);
     internal_static_google_ads_googleads_v25_resources_Recommendation_MerchantInfo_fieldAccessorTable = new
@@ -1056,92 +1086,104 @@ public final class RecommendationProto extends com.google.protobuf.GeneratedFile
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasRecommendation_descriptor,
         new java.lang.String[] { "TargetAdjustment", });
-    internal_static_google_ads_googleads_v25_resources_Recommendation_DynamicImageExtensionOptInRecommendation_descriptor =
+    internal_static_google_ads_googleads_v25_resources_Recommendation_RaiseTargetCpaPerformanceBidTooLowRecommendation_descriptor =
       internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(36);
+    internal_static_google_ads_googleads_v25_resources_Recommendation_RaiseTargetCpaPerformanceBidTooLowRecommendation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v25_resources_Recommendation_RaiseTargetCpaPerformanceBidTooLowRecommendation_descriptor,
+        new java.lang.String[] { "RecommendedTargetMultiplier", "CurrentAverageTargetCpaMicros", });
+    internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasPerformanceBidTooLowRecommendation_descriptor =
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(37);
+    internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasPerformanceBidTooLowRecommendation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v25_resources_Recommendation_LowerTargetRoasPerformanceBidTooLowRecommendation_descriptor,
+        new java.lang.String[] { "RecommendedTargetMultiplier", "CurrentAverageTargetRoas", });
+    internal_static_google_ads_googleads_v25_resources_Recommendation_DynamicImageExtensionOptInRecommendation_descriptor =
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(38);
     internal_static_google_ads_googleads_v25_resources_Recommendation_DynamicImageExtensionOptInRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_DynamicImageExtensionOptInRecommendation_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v25_resources_Recommendation_CampaignBudget_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(37);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(39);
     internal_static_google_ads_googleads_v25_resources_Recommendation_CampaignBudget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_CampaignBudget_descriptor,
         new java.lang.String[] { "CurrentAmountMicros", "RecommendedNewAmountMicros", "NewStartDate", });
     internal_static_google_ads_googleads_v25_resources_Recommendation_PerformanceMaxOptInRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(38);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(40);
     internal_static_google_ads_googleads_v25_resources_Recommendation_PerformanceMaxOptInRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_PerformanceMaxOptInRecommendation_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v25_resources_Recommendation_ImprovePerformanceMaxAdStrengthRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(39);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(41);
     internal_static_google_ads_googleads_v25_resources_Recommendation_ImprovePerformanceMaxAdStrengthRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_ImprovePerformanceMaxAdStrengthRecommendation_descriptor,
         new java.lang.String[] { "AssetGroup", "AdStrength", });
     internal_static_google_ads_googleads_v25_resources_Recommendation_MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(40);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(42);
     internal_static_google_ads_googleads_v25_resources_Recommendation_MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation_descriptor,
         new java.lang.String[] { "ApplyLink", });
     internal_static_google_ads_googleads_v25_resources_Recommendation_ForecastingSetTargetCpaRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(41);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(43);
     internal_static_google_ads_googleads_v25_resources_Recommendation_ForecastingSetTargetCpaRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_ForecastingSetTargetCpaRecommendation_descriptor,
         new java.lang.String[] { "RecommendedTargetCpaMicros", "CampaignBudget", });
     internal_static_google_ads_googleads_v25_resources_Recommendation_MaximizeConversionValueOptInRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(42);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(44);
     internal_static_google_ads_googleads_v25_resources_Recommendation_MaximizeConversionValueOptInRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_MaximizeConversionValueOptInRecommendation_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v25_resources_Recommendation_ImproveGoogleTagCoverageRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(43);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(45);
     internal_static_google_ads_googleads_v25_resources_Recommendation_ImproveGoogleTagCoverageRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_ImproveGoogleTagCoverageRecommendation_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v25_resources_Recommendation_PerformanceMaxFinalUrlOptInRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(44);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(46);
     internal_static_google_ads_googleads_v25_resources_Recommendation_PerformanceMaxFinalUrlOptInRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_PerformanceMaxFinalUrlOptInRecommendation_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v25_resources_Recommendation_RefreshCustomerMatchListRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(45);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(47);
     internal_static_google_ads_googleads_v25_resources_Recommendation_RefreshCustomerMatchListRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_RefreshCustomerMatchListRecommendation_descriptor,
         new java.lang.String[] { "UserListId", "UserListName", "DaysSinceLastRefresh", "TopSpendingAccount", "TargetingAccountsCount", "OwnerAccount", });
     internal_static_google_ads_googleads_v25_resources_Recommendation_AccountInfo_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(46);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(48);
     internal_static_google_ads_googleads_v25_resources_Recommendation_AccountInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_AccountInfo_descriptor,
         new java.lang.String[] { "CustomerId", "DescriptiveName", });
     internal_static_google_ads_googleads_v25_resources_Recommendation_CustomAudienceOptInRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(47);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(49);
     internal_static_google_ads_googleads_v25_resources_Recommendation_CustomAudienceOptInRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_CustomAudienceOptInRecommendation_descriptor,
         new java.lang.String[] { "Keywords", });
     internal_static_google_ads_googleads_v25_resources_Recommendation_LeadFormAssetRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(48);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(50);
     internal_static_google_ads_googleads_v25_resources_Recommendation_LeadFormAssetRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_LeadFormAssetRecommendation_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v25_resources_Recommendation_ImproveDemandGenAdStrengthRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(49);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(51);
     internal_static_google_ads_googleads_v25_resources_Recommendation_ImproveDemandGenAdStrengthRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_ImproveDemandGenAdStrengthRecommendation_descriptor,
         new java.lang.String[] { "Ad", "AdStrength", "DemandGenAssetActionItems", });
     internal_static_google_ads_googleads_v25_resources_Recommendation_CampaignSpecificAppGoalRecommendation_descriptor =
-      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(50);
+      internal_static_google_ads_googleads_v25_resources_Recommendation_descriptor.getNestedType(52);
     internal_static_google_ads_googleads_v25_resources_Recommendation_CampaignSpecificAppGoalRecommendation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v25_resources_Recommendation_CampaignSpecificAppGoalRecommendation_descriptor,

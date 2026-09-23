@@ -736,7 +736,7 @@ public interface AssetOrBuilder extends
 
   /**
    * <pre>
-   * A page feed asset.
+   * A page URL inclusion.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -745,7 +745,7 @@ public interface AssetOrBuilder extends
   boolean hasPageFeedAsset();
   /**
    * <pre>
-   * A page feed asset.
+   * A page URL inclusion.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -754,7 +754,7 @@ public interface AssetOrBuilder extends
   com.google.ads.googleads.v25.common.PageFeedAsset getPageFeedAsset();
   /**
    * <pre>
-   * A page feed asset.
+   * A page URL inclusion.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>

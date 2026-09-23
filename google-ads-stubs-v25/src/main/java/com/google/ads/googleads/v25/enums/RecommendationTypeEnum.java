@@ -554,6 +554,24 @@ private static final long serialVersionUID = 0L;
      * <code>CAMPAIGN_SPECIFIC_APP_GOAL = 59;</code>
      */
     CAMPAIGN_SPECIFIC_APP_GOAL(59),
+    /**
+     * <pre>
+     * Recommendation to raise target CPA when it is too low for Search
+     * campaigns.
+     * </pre>
+     *
+     * <code>RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW = 61;</code>
+     */
+    RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW(61),
+    /**
+     * <pre>
+     * Recommendation to lower target ROAS when it is too low for Search
+     * campaigns.
+     * </pre>
+     *
+     * <code>LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW = 62;</code>
+     */
+    LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW(62),
     UNRECOGNIZED(-1),
     ;
 
@@ -1064,6 +1082,24 @@ private static final long serialVersionUID = 0L;
      * <code>CAMPAIGN_SPECIFIC_APP_GOAL = 59;</code>
      */
     public static final int CAMPAIGN_SPECIFIC_APP_GOAL_VALUE = 59;
+    /**
+     * <pre>
+     * Recommendation to raise target CPA when it is too low for Search
+     * campaigns.
+     * </pre>
+     *
+     * <code>RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW = 61;</code>
+     */
+    public static final int RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW_VALUE = 61;
+    /**
+     * <pre>
+     * Recommendation to lower target ROAS when it is too low for Search
+     * campaigns.
+     * </pre>
+     *
+     * <code>LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW = 62;</code>
+     */
+    public static final int LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW_VALUE = 62;
 
 
     public final int getNumber() {
@@ -1147,6 +1183,8 @@ private static final long serialVersionUID = 0L;
         case 57: return LEAD_FORM_ASSET;
         case 58: return IMPROVE_DEMAND_GEN_AD_STRENGTH;
         case 59: return CAMPAIGN_SPECIFIC_APP_GOAL;
+        case 61: return RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW;
+        case 62: return LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW;
         default: return null;
       }
     }

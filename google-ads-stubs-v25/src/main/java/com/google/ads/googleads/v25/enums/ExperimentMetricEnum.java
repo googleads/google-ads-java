@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
     AVERAGE_CPC(8),
     /**
      * <pre>
-     * The goal of the experiment is ctr.
+     * The goal of the experiment is clickthrough rate (CTR).
      * </pre>
      *
      * <code>CTR = 9;</code>
@@ -262,7 +262,7 @@ private static final long serialVersionUID = 0L;
     public static final int AVERAGE_CPC_VALUE = 8;
     /**
      * <pre>
-     * The goal of the experiment is ctr.
+     * The goal of the experiment is clickthrough rate (CTR).
      * </pre>
      *
      * <code>CTR = 9;</code>

@@ -98,6 +98,25 @@ import org.jspecify.annotations.Nullable;
  *      </ul>
  *       </td>
  *    </tr>
+ *    <tr>
+ *      <td><p> GeneratePMaxDraftCampaign</td>
+ *      <td><p> Generates a Performance Max (PMax) draft campaign from an existing Smart campaign, initialized with a status of [CampaignStatus.PAUSED] and a creation status of [CampaignCreationStatus.INCOMPLETE]. Returns the draft PMax campaign ID and related entity IDs.</td>
+ *      <td>
+ *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
+ *      <ul>
+ *           <li><p> generatePMaxDraftCampaign(GeneratePMaxDraftCampaignRequest request)
+ *      </ul>
+ *      <p>"Flattened" method variants have converted the fields of the request object into function parameters to enable multiple ways to call the same method.</p>
+ *      <ul>
+ *           <li><p> generatePMaxDraftCampaign(SmartCampaignSettingName resourceName)
+ *           <li><p> generatePMaxDraftCampaign(String resourceName)
+ *      </ul>
+ *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
+ *      <ul>
+ *           <li><p> generatePMaxDraftCampaignCallable()
+ *      </ul>
+ *       </td>
+ *    </tr>
  *  </table>
  *
  * <p>See the individual methods for example code.
@@ -428,6 +447,146 @@ public class SmartCampaignSettingServiceClient implements BackgroundResource {
           MutateSmartCampaignSettingsRequest, MutateSmartCampaignSettingsResponse>
       mutateSmartCampaignSettingsCallable() {
     return stub.mutateSmartCampaignSettingsCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Generates a Performance Max (PMax) draft campaign from an existing Smart campaign, initialized
+   * with a status of [CampaignStatus.PAUSED] and a creation status of
+   * [CampaignCreationStatus.INCOMPLETE]. Returns the draft PMax campaign ID and related entity IDs.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (SmartCampaignSettingServiceClient smartCampaignSettingServiceClient =
+   *     SmartCampaignSettingServiceClient.create()) {
+   *   SmartCampaignSettingName resourceName =
+   *       SmartCampaignSettingName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]");
+   *   GeneratePMaxDraftCampaignResponse response =
+   *       smartCampaignSettingServiceClient.generatePMaxDraftCampaign(resourceName);
+   * }
+   * }</pre>
+   *
+   * @param resourceName Required. The resource name of the Smart campaign setting to regenerate.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GeneratePMaxDraftCampaignResponse generatePMaxDraftCampaign(
+      @Nullable SmartCampaignSettingName resourceName) {
+    GeneratePMaxDraftCampaignRequest request =
+        GeneratePMaxDraftCampaignRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return generatePMaxDraftCampaign(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Generates a Performance Max (PMax) draft campaign from an existing Smart campaign, initialized
+   * with a status of [CampaignStatus.PAUSED] and a creation status of
+   * [CampaignCreationStatus.INCOMPLETE]. Returns the draft PMax campaign ID and related entity IDs.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (SmartCampaignSettingServiceClient smartCampaignSettingServiceClient =
+   *     SmartCampaignSettingServiceClient.create()) {
+   *   String resourceName =
+   *       SmartCampaignSettingName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString();
+   *   GeneratePMaxDraftCampaignResponse response =
+   *       smartCampaignSettingServiceClient.generatePMaxDraftCampaign(resourceName);
+   * }
+   * }</pre>
+   *
+   * @param resourceName Required. The resource name of the Smart campaign setting to regenerate.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GeneratePMaxDraftCampaignResponse generatePMaxDraftCampaign(String resourceName) {
+    GeneratePMaxDraftCampaignRequest request =
+        GeneratePMaxDraftCampaignRequest.newBuilder().setResourceName(resourceName).build();
+    return generatePMaxDraftCampaign(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Generates a Performance Max (PMax) draft campaign from an existing Smart campaign, initialized
+   * with a status of [CampaignStatus.PAUSED] and a creation status of
+   * [CampaignCreationStatus.INCOMPLETE]. Returns the draft PMax campaign ID and related entity IDs.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (SmartCampaignSettingServiceClient smartCampaignSettingServiceClient =
+   *     SmartCampaignSettingServiceClient.create()) {
+   *   GeneratePMaxDraftCampaignRequest request =
+   *       GeneratePMaxDraftCampaignRequest.newBuilder()
+   *           .setResourceName(
+   *               SmartCampaignSettingName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+   *           .setValidateOnly(true)
+   *           .setGbpEnabled(true)
+   *           .setImageEnabled(true)
+   *           .build();
+   *   GeneratePMaxDraftCampaignResponse response =
+   *       smartCampaignSettingServiceClient.generatePMaxDraftCampaign(request);
+   * }
+   * }</pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GeneratePMaxDraftCampaignResponse generatePMaxDraftCampaign(
+      GeneratePMaxDraftCampaignRequest request) {
+    return generatePMaxDraftCampaignCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Generates a Performance Max (PMax) draft campaign from an existing Smart campaign, initialized
+   * with a status of [CampaignStatus.PAUSED] and a creation status of
+   * [CampaignCreationStatus.INCOMPLETE]. Returns the draft PMax campaign ID and related entity IDs.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+   * try (SmartCampaignSettingServiceClient smartCampaignSettingServiceClient =
+   *     SmartCampaignSettingServiceClient.create()) {
+   *   GeneratePMaxDraftCampaignRequest request =
+   *       GeneratePMaxDraftCampaignRequest.newBuilder()
+   *           .setResourceName(
+   *               SmartCampaignSettingName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+   *           .setValidateOnly(true)
+   *           .setGbpEnabled(true)
+   *           .setImageEnabled(true)
+   *           .build();
+   *   ApiFuture<GeneratePMaxDraftCampaignResponse> future =
+   *       smartCampaignSettingServiceClient.generatePMaxDraftCampaignCallable().futureCall(request);
+   *   // Do something.
+   *   GeneratePMaxDraftCampaignResponse response = future.get();
+   * }
+   * }</pre>
+   */
+  public final UnaryCallable<GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+      generatePMaxDraftCampaignCallable() {
+    return stub.generatePMaxDraftCampaignCallable();
   }
 
   @Override

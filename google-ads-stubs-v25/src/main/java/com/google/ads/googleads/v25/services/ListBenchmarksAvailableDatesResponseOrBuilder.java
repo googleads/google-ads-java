@@ -13,7 +13,9 @@ public interface ListBenchmarksAvailableDatesResponseOrBuilder extends
   /**
    * <pre>
    * The dates that support benchmarks metrics. Data is supported for any dates
-   * within this date range inclusive.
+   * within this date range inclusive. This is a general date range where
+   * benchmarks data is available. Some metrics are only returned within more
+   * restricted dates `supported_dates_for_all_metrics`.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -23,7 +25,9 @@ public interface ListBenchmarksAvailableDatesResponseOrBuilder extends
   /**
    * <pre>
    * The dates that support benchmarks metrics. Data is supported for any dates
-   * within this date range inclusive.
+   * within this date range inclusive. This is a general date range where
+   * benchmarks data is available. Some metrics are only returned within more
+   * restricted dates `supported_dates_for_all_metrics`.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -33,10 +37,66 @@ public interface ListBenchmarksAvailableDatesResponseOrBuilder extends
   /**
    * <pre>
    * The dates that support benchmarks metrics. Data is supported for any dates
-   * within this date range inclusive.
+   * within this date range inclusive. This is a general date range where
+   * benchmarks data is available. Some metrics are only returned within more
+   * restricted dates `supported_dates_for_all_metrics`.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
    */
   com.google.ads.googleads.v25.common.DateRangeOrBuilder getSupportedDatesOrBuilder();
+
+  /**
+   * <pre>
+   * The subset of `supported_dates` that support all metrics. Some metrics are
+   * only supported within this specific date range due to limited availability.
+   * This applies to the following metrics:
+   *
+   * 1. Average rate metrics of the selected benchmarks source. For example, the
+   * `average_cpm` of category "/Apparel/Clothing."
+   * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+   *
+   * These metrics are omitted from the response if the request `date_range`
+   * does not fall within this smaller date range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+   * @return Whether the supportedDatesForAllMetrics field is set.
+   */
+  boolean hasSupportedDatesForAllMetrics();
+  /**
+   * <pre>
+   * The subset of `supported_dates` that support all metrics. Some metrics are
+   * only supported within this specific date range due to limited availability.
+   * This applies to the following metrics:
+   *
+   * 1. Average rate metrics of the selected benchmarks source. For example, the
+   * `average_cpm` of category "/Apparel/Clothing."
+   * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+   *
+   * These metrics are omitted from the response if the request `date_range`
+   * does not fall within this smaller date range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+   * @return The supportedDatesForAllMetrics.
+   */
+  com.google.ads.googleads.v25.common.DateRange getSupportedDatesForAllMetrics();
+  /**
+   * <pre>
+   * The subset of `supported_dates` that support all metrics. Some metrics are
+   * only supported within this specific date range due to limited availability.
+   * This applies to the following metrics:
+   *
+   * 1. Average rate metrics of the selected benchmarks source. For example, the
+   * `average_cpm` of category "/Apparel/Clothing."
+   * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+   *
+   * These metrics are omitted from the response if the request `date_range`
+   * does not fall within this smaller date range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+   */
+  com.google.ads.googleads.v25.common.DateRangeOrBuilder getSupportedDatesForAllMetricsOrBuilder();
 }

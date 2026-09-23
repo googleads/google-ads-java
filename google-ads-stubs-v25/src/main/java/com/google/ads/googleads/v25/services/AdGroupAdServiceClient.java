@@ -82,7 +82,7 @@ import org.jspecify.annotations.Nullable;
  *    </tr>
  *    <tr>
  *      <td><p> RemoveAutomaticallyCreatedAssets</td>
- *      <td><p> Remove automatically created assets from an ad.
+ *      <td><p> Remove text customization (formerly automatically created assets) from an ad.
  * <p>  List of thrown errors:   [AdError]()   [AuthenticationError]()   [AuthorizationError]()   [AutomaticallyCreatedAssetRemovalError]()   [HeaderError]()   [InternalError]()   [MutateError]()   [QuotaError]()   [RequestError]()</td>
  *      <td>
  *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
@@ -329,7 +329,7 @@ public class AdGroupAdServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Remove automatically created assets from an ad.
+   * Remove text customization (formerly automatically created assets) from an ad.
    *
    * <p>List of thrown errors: [AdError]() [AuthenticationError]() [AuthorizationError]()
    * [AutomaticallyCreatedAssetRemovalError]() [HeaderError]() [InternalError]() [MutateError]()
@@ -368,7 +368,7 @@ public class AdGroupAdServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Remove automatically created assets from an ad.
+   * Remove text customization (formerly automatically created assets) from an ad.
    *
    * <p>List of thrown errors: [AdError]() [AuthenticationError]() [AuthorizationError]()
    * [AutomaticallyCreatedAssetRemovalError]() [HeaderError]() [InternalError]() [MutateError]()
@@ -407,7 +407,7 @@ public class AdGroupAdServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Remove automatically created assets from an ad.
+   * Remove text customization (formerly automatically created assets) from an ad.
    *
    * <p>List of thrown errors: [AdError]() [AuthenticationError]() [AuthorizationError]()
    * [AutomaticallyCreatedAssetRemovalError]() [HeaderError]() [InternalError]() [MutateError]()
@@ -442,7 +442,7 @@ public class AdGroupAdServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Remove automatically created assets from an ad.
+   * Remove text customization (formerly automatically created assets) from an ad.
    *
    * <p>List of thrown errors: [AdError]() [AuthenticationError]() [AuthorizationError]()
    * [AutomaticallyCreatedAssetRemovalError]() [HeaderError]() [InternalError]() [MutateError]()

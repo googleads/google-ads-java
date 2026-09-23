@@ -214,6 +214,7 @@ private static final long serialVersionUID = 0L;
     INVALID_ENUM_VALUE(18),
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset.
      * The developer-token parameter is required for all requests.
      * </pre>
      *
@@ -465,6 +466,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_ENUM_VALUE_VALUE = 18;
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset.
      * The developer-token parameter is required for all requests.
      * </pre>
      *

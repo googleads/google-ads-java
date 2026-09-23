@@ -7,7 +7,8 @@ package com.google.ads.googleads.v25.services;
 
 /**
  * <pre>
- * A single operation to remove an automatically created asset from a campaign.
+ * A single operation to remove a text customization (formerly automatically
+ * created asset) from a campaign.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v25.services.RemoveCampaignAutomaticallyCreatedAssetOperation}
@@ -348,7 +349,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A single operation to remove an automatically created asset from a campaign.
+   * A single operation to remove a text customization (formerly automatically
+   * created asset) from a campaign.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v25.services.RemoveCampaignAutomaticallyCreatedAssetOperation}

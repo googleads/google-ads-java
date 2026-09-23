@@ -105,6 +105,14 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Audiences to request metrics for.
+   * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+   * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+   * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+   * and
+   * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+   * are the only supported fields for these audiences. Only
+   * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+   * attributes are supported for topic_audience_combinations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -116,6 +124,14 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Audiences to request metrics for.
+   * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+   * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+   * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+   * and
+   * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+   * are the only supported fields for these audiences. Only
+   * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+   * attributes are supported for topic_audience_combinations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -128,6 +144,14 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Audiences to request metrics for.
+   * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+   * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+   * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+   * and
+   * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+   * are the only supported fields for these audiences. Only
+   * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+   * attributes are supported for topic_audience_combinations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -139,6 +163,14 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Audiences to request metrics for.
+   * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+   * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+   * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+   * and
+   * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+   * are the only supported fields for these audiences. Only
+   * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+   * attributes are supported for topic_audience_combinations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -150,6 +182,14 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Audiences to request metrics for.
+   * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+   * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+   * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+   * and
+   * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+   * are the only supported fields for these audiences. Only
+   * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+   * attributes are supported for topic_audience_combinations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -795,6 +835,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -809,6 +857,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -823,6 +879,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -837,6 +901,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -858,6 +930,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -876,6 +956,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -896,6 +984,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -917,6 +1013,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -935,6 +1039,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -953,6 +1065,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -972,6 +1092,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -989,6 +1117,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1006,6 +1142,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1017,6 +1161,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1031,6 +1183,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1046,6 +1206,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1057,6 +1225,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1069,6 +1245,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Audiences to request metrics for.
+     * [InsightsAudience.country_locations][google.ads.googleads.v25.services.InsightsAudience.country_locations],
+     * [InsightsAudience.gender][google.ads.googleads.v25.services.InsightsAudience.gender],
+     * [InsightsAudience.age_ranges][google.ads.googleads.v25.services.InsightsAudience.age_ranges]
+     * and
+     * [InsightsAudience.topic_audience_combinations][google.ads.googleads.v25.services.InsightsAudience.topic_audience_combinations]
+     * are the only supported fields for these audiences. Only
+     * [AudienceInsightsAttribute.user_interest][google.ads.googleads.v25.common.AudienceInsightsAttribute.user_interest]
+     * attributes are supported for topic_audience_combinations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.services.InsightsAudience audiences = 5 [(.google.api.field_behavior) = REQUIRED];</code>

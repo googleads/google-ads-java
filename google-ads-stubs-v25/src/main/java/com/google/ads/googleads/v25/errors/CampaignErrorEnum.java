@@ -707,8 +707,8 @@ private static final long serialVersionUID = 0L;
     CANNOT_TARGET_NETWORK_FOR_COMPARISON_SHOPPING_SERVICE_LINKED_ACCOUNTS(87),
     /**
      * <pre>
-     * Text asset automation settings can not be modified when there is an
-     * active Performance Max optimization automatically created assets
+     * Text asset automation settings cannot be modified when there is an
+     * active Performance Max optimization text customization
      * experiment. End the experiment to modify these settings.
      * </pre>
      *
@@ -726,7 +726,7 @@ private static final long serialVersionUID = 0L;
     DYNAMIC_TEXT_ASSET_CANNOT_OPT_OUT_WITH_FINAL_URL_EXPANSION_OPT_IN(89),
     /**
      * <pre>
-     * Can not set a campaign level match type.
+     * Cannot set a campaign level match type.
      * </pre>
      *
      * <code>CANNOT_SET_CAMPAIGN_KEYWORD_MATCH_TYPE = 90;</code>
@@ -1599,8 +1599,8 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_TARGET_NETWORK_FOR_COMPARISON_SHOPPING_SERVICE_LINKED_ACCOUNTS_VALUE = 87;
     /**
      * <pre>
-     * Text asset automation settings can not be modified when there is an
-     * active Performance Max optimization automatically created assets
+     * Text asset automation settings cannot be modified when there is an
+     * active Performance Max optimization text customization
      * experiment. End the experiment to modify these settings.
      * </pre>
      *
@@ -1618,7 +1618,7 @@ private static final long serialVersionUID = 0L;
     public static final int DYNAMIC_TEXT_ASSET_CANNOT_OPT_OUT_WITH_FINAL_URL_EXPANSION_OPT_IN_VALUE = 89;
     /**
      * <pre>
-     * Can not set a campaign level match type.
+     * Cannot set a campaign level match type.
      * </pre>
      *
      * <code>CANNOT_SET_CAMPAIGN_KEYWORD_MATCH_TYPE = 90;</code>

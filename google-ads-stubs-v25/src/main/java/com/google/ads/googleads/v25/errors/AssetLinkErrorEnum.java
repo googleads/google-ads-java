@@ -234,7 +234,8 @@ private static final long serialVersionUID = 0L;
     CANNOT_CREATE_AUTOMATICALLY_CREATED_LINKS(19),
     /**
      * <pre>
-     * Advertiser links cannot link to automatically created asset.
+     * Advertiser links cannot link to text customization (formerly
+     * automatically created asset).
      * </pre>
      *
      * <code>CANNOT_LINK_TO_AUTOMATICALLY_CREATED_ASSET = 20;</code>
@@ -482,7 +483,8 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_CREATE_AUTOMATICALLY_CREATED_LINKS_VALUE = 19;
     /**
      * <pre>
-     * Advertiser links cannot link to automatically created asset.
+     * Advertiser links cannot link to text customization (formerly
+     * automatically created asset).
      * </pre>
      *
      * <code>CANNOT_LINK_TO_AUTOMATICALLY_CREATED_ASSET = 20;</code>

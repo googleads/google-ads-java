@@ -60,7 +60,7 @@ private static final long serialVersionUID = 0L;
    *
    * Note: When an
    * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-   * is requested in GenerateAudienceCompositionInsightsRequest, score is
+   * is requested or when the request contains the USER_LIST dimension, score is
    * omitted from AudienceCompositionMetrics of the
    * GenerateAudienceCompositionInsightsResponse.
    * </pre>
@@ -79,7 +79,7 @@ private static final long serialVersionUID = 0L;
    *
    * Note: When an
    * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-   * is requested in GenerateAudienceCompositionInsightsRequest, score is
+   * is requested or when the request contains the USER_LIST dimension, score is
    * omitted from AudienceCompositionMetrics of the
    * GenerateAudienceCompositionInsightsResponse.
    * </pre>
@@ -99,7 +99,7 @@ private static final long serialVersionUID = 0L;
    *
    * Note: When an
    * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-   * is requested in GenerateAudienceCompositionInsightsRequest, score is
+   * is requested or when the request contains the USER_LIST dimension, score is
    * omitted from AudienceCompositionMetrics of the
    * GenerateAudienceCompositionInsightsResponse.
    * </pre>
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * Note: When an
    * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-   * is requested in GenerateAudienceCompositionInsightsRequest, score is
+   * is requested or when the request contains the USER_LIST dimension, score is
    * omitted from AudienceCompositionMetrics of the
    * GenerateAudienceCompositionInsightsResponse.
    * </pre>
@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
    *
    * Note: When an
    * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-   * is requested in GenerateAudienceCompositionInsightsRequest, score is
+   * is requested or when the request contains the USER_LIST dimension, score is
    * omitted from AudienceCompositionMetrics of the
    * GenerateAudienceCompositionInsightsResponse.
    * </pre>
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -583,7 +583,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -638,7 +638,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -666,7 +666,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -695,7 +695,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -721,7 +721,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -799,7 +799,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -824,7 +824,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -865,7 +865,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -907,7 +907,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
      *
      * Note: When an
      * [InsightsAudience.user_list][google.ads.googleads.v25.services.InsightsAudience.user_list]
-     * is requested in GenerateAudienceCompositionInsightsRequest, score is
+     * is requested or when the request contains the USER_LIST dimension, score is
      * omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
      * </pre>

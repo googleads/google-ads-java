@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Service to remove automatically created assets.
+ * Service to remove text customization (formerly automatically created assets).
  * </pre>
  */
 @io.grpc.stub.annotations.GrpcGenerated
@@ -107,14 +107,15 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
 
   /**
    * <pre>
-   * Service to remove automatically created assets.
+   * Service to remove text customization (formerly automatically created assets).
    * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
-     * Removes automatically created assets from a campaign.
+     * Removes text customization (formerly automatically created assets) from a
+     * campaign.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -136,7 +137,7 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
   /**
    * Base class for the server implementation of the service AutomaticallyCreatedAssetRemovalService.
    * <pre>
-   * Service to remove automatically created assets.
+   * Service to remove text customization (formerly automatically created assets).
    * </pre>
    */
   public static abstract class AutomaticallyCreatedAssetRemovalServiceImplBase
@@ -150,7 +151,7 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service AutomaticallyCreatedAssetRemovalService.
    * <pre>
-   * Service to remove automatically created assets.
+   * Service to remove text customization (formerly automatically created assets).
    * </pre>
    */
   public static final class AutomaticallyCreatedAssetRemovalServiceStub
@@ -168,7 +169,8 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
 
     /**
      * <pre>
-     * Removes automatically created assets from a campaign.
+     * Removes text customization (formerly automatically created assets) from a
+     * campaign.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -191,7 +193,7 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service AutomaticallyCreatedAssetRemovalService.
    * <pre>
-   * Service to remove automatically created assets.
+   * Service to remove text customization (formerly automatically created assets).
    * </pre>
    */
   public static final class AutomaticallyCreatedAssetRemovalServiceBlockingV2Stub
@@ -209,7 +211,8 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
 
     /**
      * <pre>
-     * Removes automatically created assets from a campaign.
+     * Removes text customization (formerly automatically created assets) from a
+     * campaign.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -231,7 +234,7 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
   /**
    * A stub to allow clients to do limited synchronous rpc calls to service AutomaticallyCreatedAssetRemovalService.
    * <pre>
-   * Service to remove automatically created assets.
+   * Service to remove text customization (formerly automatically created assets).
    * </pre>
    */
   public static final class AutomaticallyCreatedAssetRemovalServiceBlockingStub
@@ -249,7 +252,8 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
 
     /**
      * <pre>
-     * Removes automatically created assets from a campaign.
+     * Removes text customization (formerly automatically created assets) from a
+     * campaign.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -271,7 +275,7 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service AutomaticallyCreatedAssetRemovalService.
    * <pre>
-   * Service to remove automatically created assets.
+   * Service to remove text customization (formerly automatically created assets).
    * </pre>
    */
   public static final class AutomaticallyCreatedAssetRemovalServiceFutureStub
@@ -289,7 +293,8 @@ public final class AutomaticallyCreatedAssetRemovalServiceGrpc {
 
     /**
      * <pre>
-     * Removes automatically created assets from a campaign.
+     * Removes text customization (formerly automatically created assets) from a
+     * campaign.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()

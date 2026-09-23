@@ -1848,5 +1848,65 @@ public interface RecommendationOrBuilder extends
    */
   com.google.ads.googleads.v25.resources.Recommendation.CampaignSpecificAppGoalRecommendationOrBuilder getCampaignSpecificAppGoalRecommendationOrBuilder();
 
+  /**
+   * <pre>
+   * Output only. The raise Target CPA for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the raiseTargetCpaPerformanceBidTooLowRecommendation field is set.
+   */
+  boolean hasRaiseTargetCpaPerformanceBidTooLowRecommendation();
+  /**
+   * <pre>
+   * Output only. The raise Target CPA for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The raiseTargetCpaPerformanceBidTooLowRecommendation.
+   */
+  com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation getRaiseTargetCpaPerformanceBidTooLowRecommendation();
+  /**
+   * <pre>
+   * Output only. The raise Target CPA for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendation raise_target_cpa_performance_bid_too_low_recommendation = 72 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v25.resources.Recommendation.RaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder getRaiseTargetCpaPerformanceBidTooLowRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The lower Target ROAS for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the lowerTargetRoasPerformanceBidTooLowRecommendation field is set.
+   */
+  boolean hasLowerTargetRoasPerformanceBidTooLowRecommendation();
+  /**
+   * <pre>
+   * Output only. The lower Target ROAS for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The lowerTargetRoasPerformanceBidTooLowRecommendation.
+   */
+  com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation getLowerTargetRoasPerformanceBidTooLowRecommendation();
+  /**
+   * <pre>
+   * Output only. The lower Target ROAS for Performance Bid Too Low
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendation lower_target_roas_performance_bid_too_low_recommendation = 73 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v25.resources.Recommendation.LowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder getLowerTargetRoasPerformanceBidTooLowRecommendationOrBuilder();
+
   com.google.ads.googleads.v25.resources.Recommendation.RecommendationCase getRecommendationCase();
 }

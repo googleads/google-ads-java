@@ -518,6 +518,24 @@ private static final long serialVersionUID = 0L;
      * <code>LOCAL_SERVICES_ADS = 51;</code>
      */
     LOCAL_SERVICES_ADS(51),
+    /**
+     * <pre>
+     * Conversions that come from linked Firebase Android app ad impression
+     * conversions.
+     * </pre>
+     *
+     * <code>FIREBASE_ANDROID_APP_AD_IMPRESSION = 52;</code>
+     */
+    FIREBASE_ANDROID_APP_AD_IMPRESSION(52),
+    /**
+     * <pre>
+     * Conversions that come from linked Firebase iOS app ad impression
+     * conversions.
+     * </pre>
+     *
+     * <code>FIREBASE_IOS_APP_AD_IMPRESSION = 53;</code>
+     */
+    FIREBASE_IOS_APP_AD_IMPRESSION(53),
     UNRECOGNIZED(-1),
     ;
 
@@ -991,6 +1009,24 @@ private static final long serialVersionUID = 0L;
      * <code>LOCAL_SERVICES_ADS = 51;</code>
      */
     public static final int LOCAL_SERVICES_ADS_VALUE = 51;
+    /**
+     * <pre>
+     * Conversions that come from linked Firebase Android app ad impression
+     * conversions.
+     * </pre>
+     *
+     * <code>FIREBASE_ANDROID_APP_AD_IMPRESSION = 52;</code>
+     */
+    public static final int FIREBASE_ANDROID_APP_AD_IMPRESSION_VALUE = 52;
+    /**
+     * <pre>
+     * Conversions that come from linked Firebase iOS app ad impression
+     * conversions.
+     * </pre>
+     *
+     * <code>FIREBASE_IOS_APP_AD_IMPRESSION = 53;</code>
+     */
+    public static final int FIREBASE_IOS_APP_AD_IMPRESSION_VALUE = 53;
 
 
     public final int getNumber() {
@@ -1069,6 +1105,8 @@ private static final long serialVersionUID = 0L;
         case 49: return FIREBASE_IOS_QUALIFY_LEAD;
         case 50: return FIREBASE_IOS_CLOSE_CONVERT_LEAD;
         case 51: return LOCAL_SERVICES_ADS;
+        case 52: return FIREBASE_ANDROID_APP_AD_IMPRESSION;
+        case 53: return FIREBASE_IOS_APP_AD_IMPRESSION;
         default: return null;
       }
     }

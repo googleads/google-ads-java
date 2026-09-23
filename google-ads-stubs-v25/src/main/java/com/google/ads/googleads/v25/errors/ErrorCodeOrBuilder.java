@@ -880,6 +880,34 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the business profile sync error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+   * @return Whether the businessProfileLocationSyncError field is set.
+   */
+  boolean hasBusinessProfileLocationSyncError();
+  /**
+   * <pre>
+   * The reasons for the business profile sync error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+   * @return The enum numeric value on the wire for businessProfileLocationSyncError.
+   */
+  int getBusinessProfileLocationSyncErrorValue();
+  /**
+   * <pre>
+   * The reasons for the business profile sync error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError business_profile_location_sync_error = 168;</code>
+   * @return The businessProfileLocationSyncError.
+   */
+  com.google.ads.googleads.v25.errors.BusinessProfileLocationSyncErrorEnum.BusinessProfileLocationSyncError getBusinessProfileLocationSyncError();
+
+  /**
+   * <pre>
    * The reasons for the bidding errors
    * </pre>
    *
@@ -4380,7 +4408,7 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
-   * The reasons for error in automatically created asset removal action.
+   * The reasons for error in text customization removal action.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
@@ -4389,7 +4417,7 @@ public interface ErrorCodeOrBuilder extends
   boolean hasAutomaticallyCreatedAssetRemovalError();
   /**
    * <pre>
-   * The reasons for error in automatically created asset removal action.
+   * The reasons for error in text customization removal action.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>
@@ -4398,7 +4426,7 @@ public interface ErrorCodeOrBuilder extends
   int getAutomaticallyCreatedAssetRemovalErrorValue();
   /**
    * <pre>
-   * The reasons for error in automatically created asset removal action.
+   * The reasons for error in text customization removal action.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError automatically_created_asset_removal_error = 185;</code>

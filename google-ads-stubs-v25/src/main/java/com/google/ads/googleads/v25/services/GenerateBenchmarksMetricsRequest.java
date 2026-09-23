@@ -36,6 +36,7 @@ private static final long serialVersionUID = 0L;
     customerId_ = "";
     currencyCode_ = "";
     customerBenchmarksGroup_ = "";
+    supplementalData_ = emptyIntList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -463,6 +464,95 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SUPPLEMENTAL_DATA_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.IntList supplementalData_ =
+      emptyIntList();
+  private static final     com.google.protobuf.Internal.IntListAdapter.IntConverter<
+      com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData> supplementalData_converter_ =
+          new com.google.protobuf.Internal.IntListAdapter.IntConverter<
+              com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData>() {
+            public com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData convert(int from) {
+              com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData result = com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData.forNumber(from);
+              return result == null ? com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core data is returned. Including supplemental data here will populate
+   * additional metrics in the response such as percentile metrics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the supplementalData.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData> getSupplementalDataList() {
+    return new com.google.protobuf.Internal.IntListAdapter<
+        com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData>(supplementalData_, supplementalData_converter_);
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core data is returned. Including supplemental data here will populate
+   * additional metrics in the response such as percentile metrics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The count of supplementalData.
+   */
+  @java.lang.Override
+  public int getSupplementalDataCount() {
+    return supplementalData_.size();
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core data is returned. Including supplemental data here will populate
+   * additional metrics in the response such as percentile metrics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the element to return.
+   * @return The supplementalData at the given index.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData getSupplementalData(int index) {
+    return supplementalData_converter_.convert(supplementalData_.getInt(index));
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core data is returned. Including supplemental data here will populate
+   * additional metrics in the response such as percentile metrics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return A list containing the enum numeric values on the wire for supplementalData.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getSupplementalDataValueList() {
+    return supplementalData_;
+  }
+  /**
+   * <pre>
+   * Optional. Optional features to include in the response. By default, only
+   * core data is returned. Including supplemental data here will populate
+   * additional metrics in the response such as percentile metrics.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of supplementalData at the given index.
+   */
+  @java.lang.Override
+  public int getSupplementalDataValue(int index) {
+    return supplementalData_.getInt(index);
+  }
+  private int supplementalDataMemoizedSerializedSize;
+
   public static final int APPLICATION_INFO_FIELD_NUMBER = 8;
   private com.google.ads.googleads.v25.common.AdditionalApplicationInfo applicationInfo_;
   /**
@@ -515,6 +605,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(customerId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, customerId_);
     }
@@ -544,6 +635,13 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(10, getCategoryFilter());
+    }
+    if (getSupplementalDataList().size() > 0) {
+      output.writeUInt32NoTag(90);
+      output.writeUInt32NoTag(supplementalDataMemoizedSerializedSize);
+    }
+    for (int i = 0; i < supplementalData_.size(); i++) {
+      output.writeEnumNoTag(supplementalData_.getInt(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -590,6 +688,18 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getCategoryFilter());
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < supplementalData_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(supplementalData_.getInt(i));
+      }
+      size += dataSize;
+      if (!getSupplementalDataList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }supplementalDataMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -642,6 +752,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCurrencyCode())) return false;
     if (!getCustomerBenchmarksGroup()
         .equals(other.getCustomerBenchmarksGroup())) return false;
+    if (!supplementalData_.equals(other.supplementalData_)) return false;
     if (hasApplicationInfo() != other.hasApplicationInfo()) return false;
     if (hasApplicationInfo()) {
       if (!getApplicationInfo()
@@ -688,6 +799,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getCurrencyCode().hashCode();
     hash = (37 * hash) + CUSTOMER_BENCHMARKS_GROUP_FIELD_NUMBER;
     hash = (53 * hash) + getCustomerBenchmarksGroup().hashCode();
+    if (getSupplementalDataCount() > 0) {
+      hash = (37 * hash) + SUPPLEMENTAL_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + supplementalData_.hashCode();
+    }
     if (hasApplicationInfo()) {
       hash = (37 * hash) + APPLICATION_INFO_FIELD_NUMBER;
       hash = (53 * hash) + getApplicationInfo().hashCode();
@@ -873,6 +988,7 @@ private static final long serialVersionUID = 0L;
       }
       currencyCode_ = "";
       customerBenchmarksGroup_ = "";
+      supplementalData_ = emptyIntList();
       applicationInfo_ = null;
       if (applicationInfoBuilder_ != null) {
         applicationInfoBuilder_.dispose();
@@ -958,6 +1074,10 @@ private static final long serialVersionUID = 0L;
         result.customerBenchmarksGroup_ = customerBenchmarksGroup_;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
+        supplementalData_.makeImmutable();
+        result.supplementalData_ = supplementalData_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.applicationInfo_ = applicationInfoBuilder_ == null
             ? applicationInfo_
             : applicationInfoBuilder_.build();
@@ -1009,6 +1129,17 @@ private static final long serialVersionUID = 0L;
       if (!other.getCustomerBenchmarksGroup().isEmpty()) {
         customerBenchmarksGroup_ = other.customerBenchmarksGroup_;
         bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      if (!other.supplementalData_.isEmpty()) {
+        if (supplementalData_.isEmpty()) {
+          supplementalData_ = other.supplementalData_;
+          supplementalData_.makeImmutable();
+          bitField0_ |= 0x00000200;
+        } else {
+          ensureSupplementalDataIsMutable();
+          supplementalData_.addAll(other.supplementalData_);
+        }
         onChanged();
       }
       if (other.hasApplicationInfo()) {
@@ -1087,7 +1218,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   internalGetApplicationInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               break;
             } // case 66
             case 74: {
@@ -1104,6 +1235,22 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 82
+            case 88: {
+              int tmpRaw = input.readEnum();
+              ensureSupplementalDataIsMutable();
+              supplementalData_.addInt(tmpRaw);
+              break;
+            } // case 88
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureSupplementalDataIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                supplementalData_.addInt(input.readEnum());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2462,6 +2609,214 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.Internal.IntList supplementalData_ = emptyIntList();
+    private void ensureSupplementalDataIsMutable() {
+      if (!supplementalData_.isModifiable()) {
+        supplementalData_ = makeMutableCopy(supplementalData_);
+      }
+      bitField0_ |= 0x00000200;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return A list containing the supplementalData.
+     */
+    public java.util.List<com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData> getSupplementalDataList() {
+      return new com.google.protobuf.Internal.IntListAdapter<
+          com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData>(supplementalData_, supplementalData_converter_);
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The count of supplementalData.
+     */
+    public int getSupplementalDataCount() {
+      return supplementalData_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index of the element to return.
+     * @return The supplementalData at the given index.
+     */
+    public com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData getSupplementalData(int index) {
+      return supplementalData_converter_.convert(supplementalData_.getInt(index));
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index to set the value at.
+     * @param value The supplementalData to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSupplementalData(
+        int index, com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureSupplementalDataIsMutable();
+      supplementalData_.setInt(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addSupplementalData(com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureSupplementalDataIsMutable();
+      supplementalData_.addInt(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param values The supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllSupplementalData(
+        java.lang.Iterable<? extends com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData> values) {
+      ensureSupplementalDataIsMutable();
+      for (com.google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData value : values) {
+        supplementalData_.addInt(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSupplementalData() {
+      supplementalData_ = emptyIntList();
+      bitField0_ = (bitField0_ & ~0x00000200);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return A list containing the enum numeric values on the wire for supplementalData.
+     */
+    public java.util.List<java.lang.Integer>
+    getSupplementalDataValueList() {
+      supplementalData_.makeImmutable();
+      return supplementalData_;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of supplementalData at the given index.
+     */
+    public int getSupplementalDataValue(int index) {
+      return supplementalData_.getInt(index);
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for supplementalData to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSupplementalDataValue(
+        int index, int value) {
+      ensureSupplementalDataIsMutable();
+      supplementalData_.setInt(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The enum numeric value on the wire for supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addSupplementalDataValue(int value) {
+      ensureSupplementalDataIsMutable();
+      supplementalData_.addInt(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Optional features to include in the response. By default, only
+     * core data is returned. Including supplemental data here will populate
+     * additional metrics in the response such as percentile metrics.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.enums.BenchmarksSupplementalDataEnum.BenchmarksSupplementalData supplemental_data = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param values The enum numeric values on the wire for supplementalData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllSupplementalDataValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureSupplementalDataIsMutable();
+      for (int value : values) {
+        supplementalData_.addInt(value);
+      }
+      onChanged();
+      return this;
+    }
+
     private com.google.ads.googleads.v25.common.AdditionalApplicationInfo applicationInfo_;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.ads.googleads.v25.common.AdditionalApplicationInfo, com.google.ads.googleads.v25.common.AdditionalApplicationInfo.Builder, com.google.ads.googleads.v25.common.AdditionalApplicationInfoOrBuilder> applicationInfoBuilder_;
@@ -2474,7 +2829,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the applicationInfo field is set.
      */
     public boolean hasApplicationInfo() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -2507,7 +2862,7 @@ private static final long serialVersionUID = 0L;
       } else {
         applicationInfoBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2525,7 +2880,7 @@ private static final long serialVersionUID = 0L;
       } else {
         applicationInfoBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2538,7 +2893,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeApplicationInfo(com.google.ads.googleads.v25.common.AdditionalApplicationInfo value) {
       if (applicationInfoBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0) &&
+        if (((bitField0_ & 0x00000400) != 0) &&
           applicationInfo_ != null &&
           applicationInfo_ != com.google.ads.googleads.v25.common.AdditionalApplicationInfo.getDefaultInstance()) {
           getApplicationInfoBuilder().mergeFrom(value);
@@ -2549,7 +2904,7 @@ private static final long serialVersionUID = 0L;
         applicationInfoBuilder_.mergeFrom(value);
       }
       if (applicationInfo_ != null) {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       return this;
@@ -2562,7 +2917,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v25.common.AdditionalApplicationInfo application_info = 8;</code>
      */
     public Builder clearApplicationInfo() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       applicationInfo_ = null;
       if (applicationInfoBuilder_ != null) {
         applicationInfoBuilder_.dispose();
@@ -2579,7 +2934,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v25.common.AdditionalApplicationInfo application_info = 8;</code>
      */
     public com.google.ads.googleads.v25.common.AdditionalApplicationInfo.Builder getApplicationInfoBuilder() {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return internalGetApplicationInfoFieldBuilder().getBuilder();
     }

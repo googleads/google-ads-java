@@ -7,7 +7,7 @@ package com.google.ads.googleads.v25.errors;
 
 /**
  * <pre>
- * Container for enum describing possible automatically created asset removal
+ * Container for enum describing possible text customization removal
  * errors.
  * </pre>
  *
@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Enum describing possible automatically created asset removal errors.
+   * Enum describing possible text customization removal errors.
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v25.errors.AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError}
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
     ASSET_FIELD_TYPE_DOES_NOT_MATCH(5),
     /**
      * <pre>
-     * Not an automatically created asset.
+     * Not a text customization (formerly automatically created asset).
      * </pre>
      *
      * <code>NOT_AN_AUTOMATICALLY_CREATED_ASSET = 6;</code>
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
     public static final int ASSET_FIELD_TYPE_DOES_NOT_MATCH_VALUE = 5;
     /**
      * <pre>
-     * Not an automatically created asset.
+     * Not a text customization (formerly automatically created asset).
      * </pre>
      *
      * <code>NOT_AN_AUTOMATICALLY_CREATED_ASSET = 6;</code>
@@ -418,7 +418,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Container for enum describing possible automatically created asset removal
+   * Container for enum describing possible text customization removal
    * errors.
    * </pre>
    *

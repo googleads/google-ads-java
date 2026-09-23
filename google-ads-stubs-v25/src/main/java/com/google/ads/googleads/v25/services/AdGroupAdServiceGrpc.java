@@ -199,7 +199,8 @@ public final class AdGroupAdServiceGrpc {
 
     /**
      * <pre>
-     * Remove automatically created assets from an ad.
+     * Remove text customization (formerly automatically created assets) from an
+     * ad.
      * List of thrown errors:
      *   [AdError]()
      *   [AuthenticationError]()
@@ -308,7 +309,8 @@ public final class AdGroupAdServiceGrpc {
 
     /**
      * <pre>
-     * Remove automatically created assets from an ad.
+     * Remove text customization (formerly automatically created assets) from an
+     * ad.
      * List of thrown errors:
      *   [AdError]()
      *   [AuthenticationError]()
@@ -403,7 +405,8 @@ public final class AdGroupAdServiceGrpc {
 
     /**
      * <pre>
-     * Remove automatically created assets from an ad.
+     * Remove text customization (formerly automatically created assets) from an
+     * ad.
      * List of thrown errors:
      *   [AdError]()
      *   [AuthenticationError]()
@@ -497,7 +500,8 @@ public final class AdGroupAdServiceGrpc {
 
     /**
      * <pre>
-     * Remove automatically created assets from an ad.
+     * Remove text customization (formerly automatically created assets) from an
+     * ad.
      * List of thrown errors:
      *   [AdError]()
      *   [AuthenticationError]()
@@ -592,7 +596,8 @@ public final class AdGroupAdServiceGrpc {
 
     /**
      * <pre>
-     * Remove automatically created assets from an ad.
+     * Remove text customization (formerly automatically created assets) from an
+     * ad.
      * List of thrown errors:
      *   [AdError]()
      *   [AuthenticationError]()

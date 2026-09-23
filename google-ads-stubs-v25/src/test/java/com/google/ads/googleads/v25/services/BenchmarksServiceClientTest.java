@@ -85,6 +85,7 @@ public class BenchmarksServiceClientTest {
     ListBenchmarksAvailableDatesResponse expectedResponse =
         ListBenchmarksAvailableDatesResponse.newBuilder()
             .setSupportedDates(DateRange.newBuilder().build())
+            .setSupportedDatesForAllMetrics(DateRange.newBuilder().build())
             .build();
     mockBenchmarksService.addResponse(expectedResponse);
 

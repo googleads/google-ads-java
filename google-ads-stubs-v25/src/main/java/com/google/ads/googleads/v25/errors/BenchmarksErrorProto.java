@@ -42,16 +42,16 @@ public final class BenchmarksErrorProto extends com.google.protobuf.GeneratedFil
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v25/errors/benchm" +
       "arks_error.proto\022\037google.ads.googleads.v" +
-      "25.errors\"i\n\023BenchmarksErrorEnum\"R\n\017Benc" +
+      "25.errors\"\177\n\023BenchmarksErrorEnum\"h\n\017Benc" +
       "hmarksError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020" +
-      "\001\022!\n\035MAX_QUERY_COMPLEXITY_EXCEEDED\020\002B\364\001\n" +
-      "#com.google.ads.googleads.v25.errorsB\024Be" +
-      "nchmarksErrorProtoP\001ZEgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v25/er" +
-      "rors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds" +
-      ".V25.Errors\312\002\037Google\\Ads\\GoogleAds\\V25\\E" +
-      "rrors\352\002#Google::Ads::GoogleAds::V25::Err" +
-      "orsb\006proto3"
+      "\001\022!\n\035MAX_QUERY_COMPLEXITY_EXCEEDED\020\002\022\024\n\020" +
+      "NO_METRICS_FOUND\020\003B\364\001\n#com.google.ads.go" +
+      "ogleads.v25.errorsB\024BenchmarksErrorProto" +
+      "P\001ZEgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v25/errors;errors\242\002\003GAA\252" +
+      "\002\037Google.Ads.GoogleAds.V25.Errors\312\002\037Goog" +
+      "le\\Ads\\GoogleAds\\V25\\Errors\352\002#Google::Ad" +
+      "s::GoogleAds::V25::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

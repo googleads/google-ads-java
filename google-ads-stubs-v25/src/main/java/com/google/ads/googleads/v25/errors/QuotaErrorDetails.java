@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
     ACCOUNT(2),
     /**
      * <pre>
-     * Per project or DevToken quota
+     * Per project quota (formerly developer token quota).
      * </pre>
      *
      * <code>DEVELOPER = 3;</code>
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
     public static final int ACCOUNT_VALUE = 2;
     /**
      * <pre>
-     * Per project or DevToken quota
+     * Per project quota (formerly developer token quota).
      * </pre>
      *
      * <code>DEVELOPER = 3;</code>

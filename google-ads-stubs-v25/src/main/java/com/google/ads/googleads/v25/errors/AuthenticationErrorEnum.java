@@ -250,20 +250,24 @@ private static final long serialVersionUID = 0L;
     ORGANIZATION_NOT_APPROVED(27),
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset.
      * The Cloud organization associated with the project is not associated with
      * the developer token.
      * </pre>
      *
-     * <code>ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28;</code>
+     * <code>ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN(28),
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset.
      * The developer token is not valid.
      * </pre>
      *
-     * <code>DEVELOPER_TOKEN_INVALID = 29;</code>
+     * <code>DEVELOPER_TOKEN_INVALID = 29 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     DEVELOPER_TOKEN_INVALID(29),
     UNRECOGNIZED(-1),
     ;
@@ -471,21 +475,23 @@ private static final long serialVersionUID = 0L;
     public static final int ORGANIZATION_NOT_APPROVED_VALUE = 27;
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset.
      * The Cloud organization associated with the project is not associated with
      * the developer token.
      * </pre>
      *
-     * <code>ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28;</code>
+     * <code>ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28 [deprecated = true];</code>
      */
-    public static final int ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN_VALUE = 28;
+    @java.lang.Deprecated public static final int ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN_VALUE = 28;
     /**
      * <pre>
+     * Deprecated: Developer tokens have been sunset.
      * The developer token is not valid.
      * </pre>
      *
-     * <code>DEVELOPER_TOKEN_INVALID = 29;</code>
+     * <code>DEVELOPER_TOKEN_INVALID = 29 [deprecated = true];</code>
      */
-    public static final int DEVELOPER_TOKEN_INVALID_VALUE = 29;
+    @java.lang.Deprecated public static final int DEVELOPER_TOKEN_INVALID_VALUE = 29;
 
 
     public final int getNumber() {

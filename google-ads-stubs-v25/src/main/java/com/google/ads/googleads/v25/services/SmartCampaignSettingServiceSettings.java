@@ -103,6 +103,13 @@ public class SmartCampaignSettingServiceSettings
         .mutateSmartCampaignSettingsSettings();
   }
 
+  /** Returns the object with the settings used for calls to generatePMaxDraftCampaign. */
+  public UnaryCallSettings<GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+      generatePMaxDraftCampaignSettings() {
+    return ((SmartCampaignSettingServiceStubSettings) getStubSettings())
+        .generatePMaxDraftCampaignSettings();
+  }
+
   public static final SmartCampaignSettingServiceSettings create(
       SmartCampaignSettingServiceStubSettings stub) throws IOException {
     return new SmartCampaignSettingServiceSettings.Builder(stub.toBuilder()).build();
@@ -211,6 +218,13 @@ public class SmartCampaignSettingServiceSettings
             MutateSmartCampaignSettingsRequest, MutateSmartCampaignSettingsResponse>
         mutateSmartCampaignSettingsSettings() {
       return getStubSettingsBuilder().mutateSmartCampaignSettingsSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to generatePMaxDraftCampaign. */
+    public UnaryCallSettings.Builder<
+            GeneratePMaxDraftCampaignRequest, GeneratePMaxDraftCampaignResponse>
+        generatePMaxDraftCampaignSettings() {
+      return getStubSettingsBuilder().generatePMaxDraftCampaignSettings();
     }
 
     @Override

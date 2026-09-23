@@ -348,7 +348,8 @@ private static final long serialVersionUID = 0L;
     CANNOT_MODIFY_ASSET_SOURCE(35),
     /**
      * <pre>
-     * User can not modify the automatically created asset.
+     * User cannot modify text customization (formerly automatically created
+     * asset).
      * </pre>
      *
      * <code>CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET = 36;</code>
@@ -364,7 +365,7 @@ private static final long serialVersionUID = 0L;
     LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED(37),
     /**
      * <pre>
-     * Page Feed label text contains invalid characters.
+     * Page URL inclusion label text contains invalid characters.
      * </pre>
      *
      * <code>PAGE_FEED_INVALID_LABEL_TEXT = 38;</code>
@@ -738,7 +739,8 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_MODIFY_ASSET_SOURCE_VALUE = 35;
     /**
      * <pre>
-     * User can not modify the automatically created asset.
+     * User cannot modify text customization (formerly automatically created
+     * asset).
      * </pre>
      *
      * <code>CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET = 36;</code>
@@ -754,7 +756,7 @@ private static final long serialVersionUID = 0L;
     public static final int LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED_VALUE = 37;
     /**
      * <pre>
-     * Page Feed label text contains invalid characters.
+     * Page URL inclusion label text contains invalid characters.
      * </pre>
      *
      * <code>PAGE_FEED_INVALID_LABEL_TEXT = 38;</code>

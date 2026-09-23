@@ -258,6 +258,9 @@ private static final long serialVersionUID = 0L;
    * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
    * - The score field is omitted from AudienceCompositionMetrics of the
    * GenerateAudienceCompositionInsightsResponse.
+   *
+   * Note: The USER_LIST dimension does not support the score metric in
+   * AudienceCompositionMetrics.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -283,6 +286,9 @@ private static final long serialVersionUID = 0L;
    * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
    * - The score field is omitted from AudienceCompositionMetrics of the
    * GenerateAudienceCompositionInsightsResponse.
+   *
+   * Note: The USER_LIST dimension does not support the score metric in
+   * AudienceCompositionMetrics.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -307,6 +313,9 @@ private static final long serialVersionUID = 0L;
    * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
    * - The score field is omitted from AudienceCompositionMetrics of the
    * GenerateAudienceCompositionInsightsResponse.
+   *
+   * Note: The USER_LIST dimension does not support the score metric in
+   * AudienceCompositionMetrics.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -332,6 +341,9 @@ private static final long serialVersionUID = 0L;
    * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
    * - The score field is omitted from AudienceCompositionMetrics of the
    * GenerateAudienceCompositionInsightsResponse.
+   *
+   * Note: The USER_LIST dimension does not support the score metric in
+   * AudienceCompositionMetrics.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -357,6 +369,9 @@ private static final long serialVersionUID = 0L;
    * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
    * - The score field is omitted from AudienceCompositionMetrics of the
    * GenerateAudienceCompositionInsightsResponse.
+   *
+   * Note: The USER_LIST dimension does not support the score metric in
+   * AudienceCompositionMetrics.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1518,6 +1533,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1542,6 +1560,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1565,6 +1586,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1589,6 +1613,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1619,6 +1646,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1647,6 +1677,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1677,6 +1710,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1703,6 +1739,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1728,6 +1767,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1752,6 +1794,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1781,6 +1826,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1808,6 +1856,9 @@ private static final long serialVersionUID = 0L;
      * AGE_RANGE, GENDER, IN_MARKET_USER_INTEREST
      * - The score field is omitted from AudienceCompositionMetrics of the
      * GenerateAudienceCompositionInsightsResponse.
+     *
+     * Note: The USER_LIST dimension does not support the score metric in
+     * AudienceCompositionMetrics.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v25.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>

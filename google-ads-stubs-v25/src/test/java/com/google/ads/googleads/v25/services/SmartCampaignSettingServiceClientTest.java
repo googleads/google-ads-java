@@ -198,4 +198,94 @@ public class SmartCampaignSettingServiceClientTest {
       // Expected exception.
     }
   }
+
+  @Test
+  public void generatePMaxDraftCampaignTest() throws Exception {
+    GeneratePMaxDraftCampaignResponse expectedResponse =
+        GeneratePMaxDraftCampaignResponse.newBuilder()
+            .setPmaxCampaign("pmaxCampaign-830226396")
+            .setCampaignBudget("campaignBudget-2134405003")
+            .setAssetGroup("assetGroup2107535727")
+            .addAllAssets(new ArrayList<String>())
+            .setValidatedInfo("validatedInfo-827511844")
+            .build();
+    mockSmartCampaignSettingService.addResponse(expectedResponse);
+
+    SmartCampaignSettingName resourceName =
+        SmartCampaignSettingName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]");
+
+    GeneratePMaxDraftCampaignResponse actualResponse =
+        client.generatePMaxDraftCampaign(resourceName);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockSmartCampaignSettingService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GeneratePMaxDraftCampaignRequest actualRequest =
+        ((GeneratePMaxDraftCampaignRequest) actualRequests.get(0));
+
+    Assert.assertEquals(resourceName.toString(), actualRequest.getResourceName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void generatePMaxDraftCampaignExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockSmartCampaignSettingService.addException(exception);
+
+    try {
+      SmartCampaignSettingName resourceName =
+          SmartCampaignSettingName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]");
+      client.generatePMaxDraftCampaign(resourceName);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void generatePMaxDraftCampaignTest2() throws Exception {
+    GeneratePMaxDraftCampaignResponse expectedResponse =
+        GeneratePMaxDraftCampaignResponse.newBuilder()
+            .setPmaxCampaign("pmaxCampaign-830226396")
+            .setCampaignBudget("campaignBudget-2134405003")
+            .setAssetGroup("assetGroup2107535727")
+            .addAllAssets(new ArrayList<String>())
+            .setValidatedInfo("validatedInfo-827511844")
+            .build();
+    mockSmartCampaignSettingService.addResponse(expectedResponse);
+
+    String resourceName = "resourceName-384566343";
+
+    GeneratePMaxDraftCampaignResponse actualResponse =
+        client.generatePMaxDraftCampaign(resourceName);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockSmartCampaignSettingService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GeneratePMaxDraftCampaignRequest actualRequest =
+        ((GeneratePMaxDraftCampaignRequest) actualRequests.get(0));
+
+    Assert.assertEquals(resourceName, actualRequest.getResourceName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void generatePMaxDraftCampaignExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockSmartCampaignSettingService.addException(exception);
+
+    try {
+      String resourceName = "resourceName-384566343";
+      client.generatePMaxDraftCampaign(resourceName);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
 }

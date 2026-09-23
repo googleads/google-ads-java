@@ -44,6 +44,9 @@ public interface CustomerMetricsOrBuilder extends
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
    * request `category_filter` must be set when using `all_advertisers`.
+   * 2. The request `date_range` is a subset of
+   * `supported_dates_for_all_metrics` returned by
+   * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
    * </pre>
    *
    * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -57,6 +60,9 @@ public interface CustomerMetricsOrBuilder extends
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
    * request `category_filter` must be set when using `all_advertisers`.
+   * 2. The request `date_range` is a subset of
+   * `supported_dates_for_all_metrics` returned by
+   * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
    * </pre>
    *
    * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -70,6 +76,9 @@ public interface CustomerMetricsOrBuilder extends
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
    * request `category_filter` must be set when using `all_advertisers`.
+   * 2. The request `date_range` is a subset of
+   * `supported_dates_for_all_metrics` returned by
+   * [BenchmarksService.ListBenchmarksAvailableDates][google.ads.googleads.v25.services.BenchmarksService.ListBenchmarksAvailableDates].
    * </pre>
    *
    * <code>.google.ads.googleads.v25.services.ShareMetrics share_metrics = 2;</code>
@@ -105,4 +114,46 @@ public interface CustomerMetricsOrBuilder extends
    * <code>.google.ads.googleads.v25.services.AggregateMetrics aggregate_metrics = 3;</code>
    */
   com.google.ads.googleads.v25.services.AggregateMetricsOrBuilder getAggregateMetricsOrBuilder();
+
+  /**
+   * <pre>
+   * Metrics representing the customer’s competitive standing among advertisers
+   * scoped by the analysis. Percentile metrics are only returned when:
+   *
+   * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+   * request `category_filter` must be set when using `all_advertisers`.
+   * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+   * @return Whether the percentileMetrics field is set.
+   */
+  boolean hasPercentileMetrics();
+  /**
+   * <pre>
+   * Metrics representing the customer’s competitive standing among advertisers
+   * scoped by the analysis. Percentile metrics are only returned when:
+   *
+   * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+   * request `category_filter` must be set when using `all_advertisers`.
+   * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+   * @return The percentileMetrics.
+   */
+  com.google.ads.googleads.v25.services.PercentileMetrics getPercentileMetrics();
+  /**
+   * <pre>
+   * Metrics representing the customer’s competitive standing among advertisers
+   * scoped by the analysis. Percentile metrics are only returned when:
+   *
+   * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
+   * request `category_filter` must be set when using `all_advertisers`.
+   * 2. `PERCENTILE_DATA` is requested as `supplemental_data`.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.services.PercentileMetrics percentile_metrics = 4;</code>
+   */
+  com.google.ads.googleads.v25.services.PercentileMetricsOrBuilder getPercentileMetricsOrBuilder();
 }

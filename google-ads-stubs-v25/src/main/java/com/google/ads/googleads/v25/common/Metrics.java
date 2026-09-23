@@ -72,7 +72,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Search absolute top impression share is the percentage of your Search ad
-   * impressions that are shown in the most prominent Search position.
+   * impressions that are shown in the absolute top Search position.
    * </pre>
    *
    * <code>optional double absolute_top_impression_percentage = 183;</code>
@@ -85,7 +85,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Search absolute top impression share is the percentage of your Search ad
-   * impressions that are shown in the most prominent Search position.
+   * impressions that are shown in the absolute top Search position.
    * </pre>
    *
    * <code>optional double absolute_top_impression_percentage = 183;</code>
@@ -158,8 +158,8 @@ private static final long serialVersionUID = 0L;
   private long activeViewImpressions_ = 0L;
   /**
    * <pre>
-   * A measurement of how often your ad has become viewable on a Display
-   * Network site.
+   * A measurement of the number of times your ad has become viewable on a
+   * Display Network site.
    * </pre>
    *
    * <code>optional int64 active_view_impressions = 186;</code>
@@ -171,8 +171,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A measurement of how often your ad has become viewable on a Display
-   * Network site.
+   * A measurement of the number of times your ad has become viewable on a
+   * Display Network site.
    * </pre>
    *
    * <code>optional int64 active_view_impressions = 186;</code>
@@ -187,8 +187,8 @@ private static final long serialVersionUID = 0L;
   private double activeViewMeasurability_ = 0D;
   /**
    * <pre>
-   * The ratio of impressions that could be measured by Active View over the
-   * number of served impressions.
+   * The ratio of impressions that were eligible to be measured by Active View
+   * over the number of served impressions.
    * </pre>
    *
    * <code>optional double active_view_measurability = 187;</code>
@@ -200,8 +200,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ratio of impressions that could be measured by Active View over the
-   * number of served impressions.
+   * The ratio of impressions that were eligible to be measured by Active View
+   * over the number of served impressions.
    * </pre>
    *
    * <code>optional double active_view_measurability = 187;</code>
@@ -274,8 +274,8 @@ private static final long serialVersionUID = 0L;
   private double activeViewViewability_ = 0D;
   /**
    * <pre>
-   * The percentage of time when your ad appeared on an Active View enabled site
-   * (measurable impressions) and was viewable (viewable impressions).
+   * The percentage of times when your ad appeared on an Active View enabled
+   * site (measurable impressions) and was viewable (viewable impressions).
    * </pre>
    *
    * <code>optional double active_view_viewability = 190;</code>
@@ -287,8 +287,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The percentage of time when your ad appeared on an Active View enabled site
-   * (measurable impressions) and was viewable (viewable impressions).
+   * The percentage of times when your ad appeared on an Active View enabled
+   * site (measurable impressions) and was viewable (viewable impressions).
    * </pre>
    *
    * <code>optional double active_view_viewability = 190;</code>
@@ -759,7 +759,7 @@ private static final long serialVersionUID = 0L;
   private double allConversionsFromStoreWebsite_ = 0D;
   /**
    * <pre>
-   * The number of times that people were taken to a business's URL after
+   * The number of times people were taken to a business's URL after
    * clicking an ad.
    *
    * This metric applies to feed items only.
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times that people were taken to a business's URL after
+   * The number of times people were taken to a business's URL after
    * clicking an ad.
    *
    * This metric applies to feed items only.
@@ -792,11 +792,10 @@ private static final long serialVersionUID = 0L;
   private double auctionInsightSearchAbsoluteTopImpressionPercentage_ = 0D;
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * the ads of another participant showed in the most prominent position on the
-   * search results page.
-   * This percentage is computed only over the auctions that you appeared in
-   * the page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times the ads of another participant showed in the absolute
+   * top position (Position 1) on the search results page. This percentage is
+   * computed only over the auctions that you appeared in the page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -810,11 +809,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * the ads of another participant showed in the most prominent position on the
-   * search results page.
-   * This percentage is computed only over the auctions that you appeared in
-   * the page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times the ads of another participant showed in the absolute
+   * top position (Position 1) on the search results page. This percentage is
+   * computed only over the auctions that you appeared in the page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -907,9 +905,9 @@ private static final long serialVersionUID = 0L;
   private double auctionInsightSearchOverlapRate_ = 0D;
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * another participant's ad received an impression when your ad also received
-   * an impression.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times another participant's ad received an impression when
+   * your ad also received an impression.
    *
    * This metric is not publicly available.
    * </pre>
@@ -923,9 +921,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * another participant's ad received an impression when your ad also received
-   * an impression.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times another participant's ad received an impression when
+   * your ad also received an impression.
    *
    * This metric is not publicly available.
    * </pre>
@@ -942,9 +940,9 @@ private static final long serialVersionUID = 0L;
   private double auctionInsightSearchPositionAboveRate_ = 0D;
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * another participant's ad was shown in a higher position than yours, when
-   * both of your ads were shown at the same page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times another participant's ad was shown in a higher position
+   * than yours, when both of your ads were shown at the same page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -958,9 +956,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * another participant's ad was shown in a higher position than yours, when
-   * both of your ads were shown at the same page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times another participant's ad was shown in a higher position
+   * than yours, when both of your ads were shown at the same page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -977,10 +975,10 @@ private static final long serialVersionUID = 0L;
   private double auctionInsightSearchTopImpressionPercentage_ = 0D;
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * the ads of another participant showed adjacent to the top organic search
-   * results. This percentage is computed only over the auctions that you
-   * appeared in the page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times the ads of another participant showed adjacent to the
+   * top organic search results. This percentage is computed only over the
+   * auctions that you appeared in the page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -994,10 +992,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * This metric is part of the Auction Insights report, and tells how often
-   * the ads of another participant showed adjacent to the top organic search
-   * results. This percentage is computed only over the auctions that you
-   * appeared in the page.
+   * This metric is part of the Auction Insights report, and tells the
+   * percentage of times the ads of another participant showed adjacent to the
+   * top organic search results. This percentage is computed only over the
+   * auctions that you appeared in the page.
    *
    * This metric is not publicly available.
    * </pre>
@@ -1328,7 +1326,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * An indication on how other advertisers' Shopping ads for similar products
-   * are performing based on how often people who see their ad click on it.
+   * are performing based on the frequency with which people who see their ad
+   * click on it.
    * </pre>
    *
    * <code>optional double benchmark_ctr = 211;</code>
@@ -1341,7 +1340,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * An indication on how other advertisers' Shopping ads for similar products
-   * are performing based on how often people who see their ad click on it.
+   * are performing based on the frequency with which people who see their ad
+   * click on it.
    * </pre>
    *
    * <code>optional double benchmark_ctr = 211;</code>
@@ -1540,7 +1540,7 @@ private static final long serialVersionUID = 0L;
   private double contentBudgetLostImpressionShare_ = 0D;
   /**
    * <pre>
-   * The estimated percent of times that your ad was eligible to show
+   * The estimated percentage of times that your ad was eligible to show
    * on the Display Network but didn't because your budget was too low.
    * Note: Content budget lost impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -1555,7 +1555,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The estimated percent of times that your ad was eligible to show
+   * The estimated percentage of times that your ad was eligible to show
    * on the Display Network but didn't because your budget was too low.
    * Note: Content budget lost impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -2545,8 +2545,9 @@ private static final long serialVersionUID = 0L;
   private double engagementRate_ = 0D;
   /**
    * <pre>
-   * How often people engage with your ad after it's shown to them. This is the
-   * number of ad expansions divided by the number of times your ad is shown.
+   * The frequency with which people engage with your ad after it's shown to
+   * them. This is the number of ad expansions divided by the number of times
+   * your ad is shown.
    * </pre>
    *
    * <code>optional double engagement_rate = 180;</code>
@@ -2558,8 +2559,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * How often people engage with your ad after it's shown to them. This is the
-   * number of ad expansions divided by the number of times your ad is shown.
+   * The frequency with which people engage with your ad after it's shown to
+   * them. This is the number of ad expansions divided by the number of times
+   * your ad is shown.
    * </pre>
    *
    * <code>optional double engagement_rate = 180;</code>
@@ -2827,7 +2829,7 @@ private static final long serialVersionUID = 0L;
   private int historicalSearchPredictedCtr_ = 0;
   /**
    * <pre>
-   * The historical search predicted click through rate (CTR).
+   * The historical search predicted clickthrough rate (CTR).
    * </pre>
    *
    * <code>.google.ads.googleads.v25.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
@@ -2838,7 +2840,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The historical search predicted click through rate (CTR).
+   * The historical search predicted clickthrough rate (CTR).
    * </pre>
    *
    * <code>.google.ads.googleads.v25.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
@@ -2969,7 +2971,7 @@ private static final long serialVersionUID = 0L;
   private long impressions_ = 0L;
   /**
    * <pre>
-   * Count of how often your ad has appeared on a search results page or
+   * The number of times your ad has appeared on a search results page or
    * website on the Google Network.
    * </pre>
    *
@@ -2982,7 +2984,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Count of how often your ad has appeared on a search results page or
+   * The number of times your ad has appeared on a search results page or
    * website on the Google Network.
    * </pre>
    *
@@ -2998,9 +3000,9 @@ private static final long serialVersionUID = 0L;
   private double interactionRate_ = 0D;
   /**
    * <pre>
-   * How often people interact with your ad after it is shown to them.
-   * This is the number of interactions divided by the number of times your ad
-   * is shown.
+   * The frequency with which people interact with your ad after it is shown to
+   * them. This is the number of interactions divided by the number of times
+   * your ad is shown.
    * </pre>
    *
    * <code>optional double interaction_rate = 222;</code>
@@ -3012,9 +3014,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * How often people interact with your ad after it is shown to them.
-   * This is the number of interactions divided by the number of times your ad
-   * is shown.
+   * The frequency with which people interact with your ad after it is shown to
+   * them. This is the number of interactions divided by the number of times
+   * your ad is shown.
    * </pre>
    *
    * <code>optional double interaction_rate = 222;</code>
@@ -3778,7 +3780,7 @@ private static final long serialVersionUID = 0L;
   private double relativeCtr_ = 0D;
   /**
    * <pre>
-   * Your clickthrough rate (Ctr) divided by the average clickthrough rate of
+   * Your clickthrough rate (CTR) divided by the average clickthrough rate of
    * all advertisers on the websites that show your ads. Measures how your ads
    * perform on Display Network sites compared to other ads on the same sites.
    * </pre>
@@ -3792,7 +3794,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Your clickthrough rate (Ctr) divided by the average clickthrough rate of
+   * Your clickthrough rate (CTR) divided by the average clickthrough rate of
    * all advertisers on the websites that show your ads. Measures how your ads
    * perform on Display Network sites compared to other ads on the same sites.
    * </pre>
@@ -3810,7 +3812,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The percentage of the customer's Shopping or Search ad impressions that are
-   * shown in the most prominent Shopping position. See
+   * shown in the absolute top position (Position 1). See
    * [About top and
    * absolute top metrics](https://support.google.com/google-ads/answer/7501826)
    *
@@ -3827,7 +3829,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The percentage of the customer's Shopping or Search ad impressions that are
-   * shown in the most prominent Shopping position. See
+   * shown in the absolute top position (Position 1). See
    * [About top and
    * absolute top metrics](https://support.google.com/google-ads/answer/7501826)
    *
@@ -3846,8 +3848,8 @@ private static final long serialVersionUID = 0L;
   private double searchBudgetLostAbsoluteTopImpressionShare_ = 0D;
   /**
    * <pre>
-   * The number estimating how often your ad wasn't the very first ad among the
-   * top ads in the search results due to a low budget.
+   * The estimated percentage of times your ad wasn't the very first ad among
+   * the top ads in the search results due to a low budget.
    *
    * Note: Search budget lost absolute top impression share is reported in the
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -3862,8 +3864,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number estimating how often your ad wasn't the very first ad among the
-   * top ads in the search results due to a low budget.
+   * The estimated percentage of times your ad wasn't the very first ad among
+   * the top ads in the search results due to a low budget.
    *
    * Note: Search budget lost absolute top impression share is reported in the
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -3881,7 +3883,7 @@ private static final long serialVersionUID = 0L;
   private double searchBudgetLostImpressionShare_ = 0D;
   /**
    * <pre>
-   * The estimated percent of times that your ad was eligible to show on the
+   * The estimated percentage of times that your ad was eligible to show on the
    * Search Network but didn't because your budget was too low.
    *
    * Note: Search
@@ -3898,7 +3900,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The estimated percent of times that your ad was eligible to show on the
+   * The estimated percentage of times that your ad was eligible to show on the
    * Search Network but didn't because your budget was too low.
    *
    * Note: Search
@@ -3918,8 +3920,8 @@ private static final long serialVersionUID = 0L;
   private double searchBudgetLostTopImpressionShare_ = 0D;
   /**
    * <pre>
-   * The estimated percent of times that your ad didn't show adjacent to the top
-   * organic search results due to a low budget.
+   * The estimated percentage of times that your ad didn't show adjacent to the
+   * top organic search results due to a low budget.
    *
    * Note: Search budget lost top impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -3934,8 +3936,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The estimated percent of times that your ad didn't show adjacent to the top
-   * organic search results due to a low budget.
+   * The estimated percentage of times that your ad didn't show adjacent to the
+   * top organic search results due to a low budget.
    *
    * Note: Search budget lost top impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -4062,8 +4064,8 @@ private static final long serialVersionUID = 0L;
   private double searchRankLostAbsoluteTopImpressionShare_ = 0D;
   /**
    * <pre>
-   * The number estimating how often your ad wasn't the very first ad among the
-   * top ads in the search results due to poor Ad Rank.
+   * The estimated percentage of times your ad wasn't the very first ad among
+   * the top ads in the search results due to poor Ad Rank.
    *
    * Note: Search rank lost absolute top impression share is reported in the
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -4078,8 +4080,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number estimating how often your ad wasn't the very first ad among the
-   * top ads in the search results due to poor Ad Rank.
+   * The estimated percentage of times your ad wasn't the very first ad among
+   * the top ads in the search results due to poor Ad Rank.
    *
    * Note: Search rank lost absolute top impression share is reported in the
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -4130,7 +4132,7 @@ private static final long serialVersionUID = 0L;
   private double searchRankLostTopImpressionShare_ = 0D;
   /**
    * <pre>
-   * The number estimating how often your ad didn't show adjacent to the top
+   * The estimated percentage of times your ad didn't show adjacent to the top
    * organic search results due to poor Ad Rank.
    *
    * Note: Search rank lost top impression share is reported in the range of 0
@@ -4146,7 +4148,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number estimating how often your ad didn't show adjacent to the top
+   * The estimated percentage of times your ad didn't show adjacent to the top
    * organic search results due to poor Ad Rank.
    *
    * Note: Search rank lost top impression share is reported in the range of 0
@@ -4170,7 +4172,7 @@ private static final long serialVersionUID = 0L;
    * Note: Search top impression share is reported in the range of 0.1 to 1. Any
    * value below 0.1 is reported as 0.0999.
    *
-   * Top ads are generally above the top organic results, although they may show
+   * Top ads are typically above the top organic results, although they may show
    * below the top organic results on certain queries.
    * </pre>
    *
@@ -4188,7 +4190,7 @@ private static final long serialVersionUID = 0L;
    * Note: Search top impression share is reported in the range of 0.1 to 1. Any
    * value below 0.1 is reported as 0.0999.
    *
-   * Top ads are generally above the top organic results, although they may show
+   * Top ads are typically above the top organic results, although they may show
    * below the top organic results on certain queries.
    * </pre>
    *
@@ -4329,7 +4331,7 @@ private static final long serialVersionUID = 0L;
   private double topImpressionPercentage_ = 0D;
   /**
    * <pre>
-   * The percent of your ad impressions that are shown adjacent to the top
+   * The percentage of your ad impressions that are shown adjacent to the top
    * organic search results.
    * </pre>
    *
@@ -4342,7 +4344,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The percent of your ad impressions that are shown adjacent to the top
+   * The percentage of your ad impressions that are shown adjacent to the top
    * organic search results.
    * </pre>
    *
@@ -9756,7 +9758,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Represents the total conversions from users who were exposed to the ads.
-   * Often referred to as "Treatment" conversions.
+   * Also referred to as "Treatment" conversions.
    * </pre>
    *
    * <code>optional double conversion_lift_exposed_conversions = 477;</code>
@@ -9769,7 +9771,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Represents the total conversions from users who were exposed to the ads.
-   * Often referred to as "Treatment" conversions.
+   * Also referred to as "Treatment" conversions.
    * </pre>
    *
    * <code>optional double conversion_lift_exposed_conversions = 477;</code>
@@ -10557,7 +10559,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Represents the rate of positive responses that would have occurred
    * naturally without ad exposure, based on the behavior of the control group.
-   * Often referred to as "Control" responses. Provides the baseline
+   * Also referred to as "Control" responses. Provides the baseline
    * level of brand perception that occurred naturally.
    * </pre>
    *
@@ -10572,7 +10574,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Represents the rate of positive responses that would have occurred
    * naturally without ad exposure, based on the behavior of the control group.
-   * Often referred to as "Control" responses. Provides the baseline
+   * Also referred to as "Control" responses. Provides the baseline
    * level of brand perception that occurred naturally.
    * </pre>
    *
@@ -10746,7 +10748,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Represents the rate of positive responses from users who were exposed to
-   * the ads. Often referred to as "Treatment" responses. Shows
+   * the ads. Also referred to as "Treatment" responses. Shows
    * total positive response rate when users were exposed to your ads.
    * </pre>
    *
@@ -10760,7 +10762,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Represents the rate of positive responses from users who were exposed to
-   * the ads. Often referred to as "Treatment" responses. Shows
+   * the ads. Also referred to as "Treatment" responses. Shows
    * total positive response rate when users were exposed to your ads.
    * </pre>
    *
@@ -11052,7 +11054,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Lower bound of the 90% confidence interval for the cost per lifted cookie.
-   * Represents the most optimistic (lowest cost) estimate for moving a user to
+   * Represents the optimistic (lowest cost) estimate for moving a user to
    * a positive brand state.
    * </pre>
    *
@@ -11066,7 +11068,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Lower bound of the 90% confidence interval for the cost per lifted cookie.
-   * Represents the most optimistic (lowest cost) estimate for moving a user to
+   * Represents the optimistic (lowest cost) estimate for moving a user to
    * a positive brand state.
    * </pre>
    *
@@ -11083,7 +11085,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Upper bound of the 90% confidence interval for the cost per lifted cookie.
-   * Represents the most conservative (highest cost) estimate for moving a user
+   * Represents the conservative (highest cost) estimate for moving a user
    * to a positive brand state.
    * </pre>
    *
@@ -11097,7 +11099,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Upper bound of the 90% confidence interval for the cost per lifted cookie.
-   * Represents the most conservative (highest cost) estimate for moving a user
+   * Represents the conservative (highest cost) estimate for moving a user
    * to a positive brand state.
    * </pre>
    *
@@ -11502,6 +11504,93 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public double getOriginalConversionValue() {
     return originalConversionValue_;
+  }
+
+  public static final int VERTICAL_ADS_POTENTIAL_IMPRESSIONS_FIELD_NUMBER = 532;
+  private long verticalAdsPotentialImpressions_ = 0L;
+  /**
+   * <pre>
+   * Potential impressions representing the total view-capped eligible
+   * impressions available across the query context.
+   * </pre>
+   *
+   * <code>optional int64 vertical_ads_potential_impressions = 532;</code>
+   * @return Whether the verticalAdsPotentialImpressions field is set.
+   */
+  @java.lang.Override
+  public boolean hasVerticalAdsPotentialImpressions() {
+    return ((bitField10_ & 0x00000800) != 0);
+  }
+  /**
+   * <pre>
+   * Potential impressions representing the total view-capped eligible
+   * impressions available across the query context.
+   * </pre>
+   *
+   * <code>optional int64 vertical_ads_potential_impressions = 532;</code>
+   * @return The verticalAdsPotentialImpressions.
+   */
+  @java.lang.Override
+  public long getVerticalAdsPotentialImpressions() {
+    return verticalAdsPotentialImpressions_;
+  }
+
+  public static final int VERTICAL_ADS_AVERAGE_BOOKING_VALUE_MICROS_FIELD_NUMBER = 533;
+  private long verticalAdsAverageBookingValueMicros_ = 0L;
+  /**
+   * <pre>
+   * Click-weighted average daily rate in micros, including taxes and fees, over
+   * the total length of stay.
+   * </pre>
+   *
+   * <code>optional int64 vertical_ads_average_booking_value_micros = 533;</code>
+   * @return Whether the verticalAdsAverageBookingValueMicros field is set.
+   */
+  @java.lang.Override
+  public boolean hasVerticalAdsAverageBookingValueMicros() {
+    return ((bitField10_ & 0x00001000) != 0);
+  }
+  /**
+   * <pre>
+   * Click-weighted average daily rate in micros, including taxes and fees, over
+   * the total length of stay.
+   * </pre>
+   *
+   * <code>optional int64 vertical_ads_average_booking_value_micros = 533;</code>
+   * @return The verticalAdsAverageBookingValueMicros.
+   */
+  @java.lang.Override
+  public long getVerticalAdsAverageBookingValueMicros() {
+    return verticalAdsAverageBookingValueMicros_;
+  }
+
+  public static final int VERTICAL_ADS_PRICE_DIFFERENCE_PERCENTAGE_FIELD_NUMBER = 534;
+  private double verticalAdsPriceDifferencePercentage_ = 0D;
+  /**
+   * <pre>
+   * Percentage delta comparing the advertiser's offered price against the
+   * lowest competing price for the same property.
+   * </pre>
+   *
+   * <code>optional double vertical_ads_price_difference_percentage = 534;</code>
+   * @return Whether the verticalAdsPriceDifferencePercentage field is set.
+   */
+  @java.lang.Override
+  public boolean hasVerticalAdsPriceDifferencePercentage() {
+    return ((bitField10_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * Percentage delta comparing the advertiser's offered price against the
+   * lowest competing price for the same property.
+   * </pre>
+   *
+   * <code>optional double vertical_ads_price_difference_percentage = 534;</code>
+   * @return The verticalAdsPriceDifferencePercentage.
+   */
+  @java.lang.Override
+  public double getVerticalAdsPriceDifferencePercentage() {
+    return verticalAdsPriceDifferencePercentage_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -12533,6 +12622,15 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField10_ & 0x00000400) != 0)) {
       output.writeDouble(531, originalConversionValue_);
+    }
+    if (((bitField10_ & 0x00000800) != 0)) {
+      output.writeInt64(532, verticalAdsPotentialImpressions_);
+    }
+    if (((bitField10_ & 0x00001000) != 0)) {
+      output.writeInt64(533, verticalAdsAverageBookingValueMicros_);
+    }
+    if (((bitField10_ & 0x00002000) != 0)) {
+      output.writeDouble(534, verticalAdsPriceDifferencePercentage_);
     }
     if (((bitField8_ & 0x00002000) != 0)) {
       output.writeDouble(601, incrementalConversionsWinnerScore_);
@@ -13911,6 +14009,18 @@ private static final long serialVersionUID = 0L;
     if (((bitField10_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(531, originalConversionValue_);
+    }
+    if (((bitField10_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(532, verticalAdsPotentialImpressions_);
+    }
+    if (((bitField10_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(533, verticalAdsAverageBookingValueMicros_);
+    }
+    if (((bitField10_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(534, verticalAdsPriceDifferencePercentage_);
     }
     if (((bitField8_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -15857,6 +15967,22 @@ private static final long serialVersionUID = 0L;
           != java.lang.Double.doubleToLongBits(
               other.getOriginalConversionValue())) return false;
     }
+    if (hasVerticalAdsPotentialImpressions() != other.hasVerticalAdsPotentialImpressions()) return false;
+    if (hasVerticalAdsPotentialImpressions()) {
+      if (getVerticalAdsPotentialImpressions()
+          != other.getVerticalAdsPotentialImpressions()) return false;
+    }
+    if (hasVerticalAdsAverageBookingValueMicros() != other.hasVerticalAdsAverageBookingValueMicros()) return false;
+    if (hasVerticalAdsAverageBookingValueMicros()) {
+      if (getVerticalAdsAverageBookingValueMicros()
+          != other.getVerticalAdsAverageBookingValueMicros()) return false;
+    }
+    if (hasVerticalAdsPriceDifferencePercentage() != other.hasVerticalAdsPriceDifferencePercentage()) return false;
+    if (hasVerticalAdsPriceDifferencePercentage()) {
+      if (java.lang.Double.doubleToLongBits(getVerticalAdsPriceDifferencePercentage())
+          != java.lang.Double.doubleToLongBits(
+              other.getVerticalAdsPriceDifferencePercentage())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -17548,6 +17674,21 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getOriginalConversionValue()));
     }
+    if (hasVerticalAdsPotentialImpressions()) {
+      hash = (37 * hash) + VERTICAL_ADS_POTENTIAL_IMPRESSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVerticalAdsPotentialImpressions());
+    }
+    if (hasVerticalAdsAverageBookingValueMicros()) {
+      hash = (37 * hash) + VERTICAL_ADS_AVERAGE_BOOKING_VALUE_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVerticalAdsAverageBookingValueMicros());
+    }
+    if (hasVerticalAdsPriceDifferencePercentage()) {
+      hash = (37 * hash) + VERTICAL_ADS_PRICE_DIFFERENCE_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getVerticalAdsPriceDifferencePercentage()));
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -18045,6 +18186,9 @@ private static final long serialVersionUID = 0L;
       youtubeLikes_ = 0L;
       youtubeShares_ = 0L;
       originalConversionValue_ = 0D;
+      verticalAdsPotentialImpressions_ = 0L;
+      verticalAdsAverageBookingValueMicros_ = 0L;
+      verticalAdsPriceDifferencePercentage_ = 0D;
       return this;
     }
 
@@ -19522,6 +19666,18 @@ private static final long serialVersionUID = 0L;
         result.originalConversionValue_ = originalConversionValue_;
         to_bitField10_ |= 0x00000400;
       }
+      if (((from_bitField10_ & 0x00200000) != 0)) {
+        result.verticalAdsPotentialImpressions_ = verticalAdsPotentialImpressions_;
+        to_bitField10_ |= 0x00000800;
+      }
+      if (((from_bitField10_ & 0x00400000) != 0)) {
+        result.verticalAdsAverageBookingValueMicros_ = verticalAdsAverageBookingValueMicros_;
+        to_bitField10_ |= 0x00001000;
+      }
+      if (((from_bitField10_ & 0x00800000) != 0)) {
+        result.verticalAdsPriceDifferencePercentage_ = verticalAdsPriceDifferencePercentage_;
+        to_bitField10_ |= 0x00002000;
+      }
       result.bitField9_ |= to_bitField9_;
       result.bitField10_ |= to_bitField10_;
     }
@@ -20581,6 +20737,15 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasOriginalConversionValue()) {
         setOriginalConversionValue(other.getOriginalConversionValue());
+      }
+      if (other.hasVerticalAdsPotentialImpressions()) {
+        setVerticalAdsPotentialImpressions(other.getVerticalAdsPotentialImpressions());
+      }
+      if (other.hasVerticalAdsAverageBookingValueMicros()) {
+        setVerticalAdsAverageBookingValueMicros(other.getVerticalAdsAverageBookingValueMicros());
+      }
+      if (other.hasVerticalAdsPriceDifferencePercentage()) {
+        setVerticalAdsPriceDifferencePercentage(other.getVerticalAdsPriceDifferencePercentage());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -22307,6 +22472,21 @@ private static final long serialVersionUID = 0L;
               bitField10_ |= 0x00100000;
               break;
             } // case 4249
+            case 4256: {
+              verticalAdsPotentialImpressions_ = input.readInt64();
+              bitField10_ |= 0x00200000;
+              break;
+            } // case 4256
+            case 4264: {
+              verticalAdsAverageBookingValueMicros_ = input.readInt64();
+              bitField10_ |= 0x00400000;
+              break;
+            } // case 4264
+            case 4273: {
+              verticalAdsPriceDifferencePercentage_ = input.readDouble();
+              bitField10_ |= 0x00800000;
+              break;
+            } // case 4273
             case 4809: {
               incrementalConversionsWinnerScore_ = input.readDouble();
               bitField8_ |= 0x00800000;
@@ -22358,7 +22538,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Search absolute top impression share is the percentage of your Search ad
-     * impressions that are shown in the most prominent Search position.
+     * impressions that are shown in the absolute top Search position.
      * </pre>
      *
      * <code>optional double absolute_top_impression_percentage = 183;</code>
@@ -22371,7 +22551,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Search absolute top impression share is the percentage of your Search ad
-     * impressions that are shown in the most prominent Search position.
+     * impressions that are shown in the absolute top Search position.
      * </pre>
      *
      * <code>optional double absolute_top_impression_percentage = 183;</code>
@@ -22384,7 +22564,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Search absolute top impression share is the percentage of your Search ad
-     * impressions that are shown in the most prominent Search position.
+     * impressions that are shown in the absolute top Search position.
      * </pre>
      *
      * <code>optional double absolute_top_impression_percentage = 183;</code>
@@ -22401,7 +22581,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Search absolute top impression share is the percentage of your Search ad
-     * impressions that are shown in the most prominent Search position.
+     * impressions that are shown in the absolute top Search position.
      * </pre>
      *
      * <code>optional double absolute_top_impression_percentage = 183;</code>
@@ -22537,8 +22717,8 @@ private static final long serialVersionUID = 0L;
     private long activeViewImpressions_ ;
     /**
      * <pre>
-     * A measurement of how often your ad has become viewable on a Display
-     * Network site.
+     * A measurement of the number of times your ad has become viewable on a
+     * Display Network site.
      * </pre>
      *
      * <code>optional int64 active_view_impressions = 186;</code>
@@ -22550,8 +22730,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A measurement of how often your ad has become viewable on a Display
-     * Network site.
+     * A measurement of the number of times your ad has become viewable on a
+     * Display Network site.
      * </pre>
      *
      * <code>optional int64 active_view_impressions = 186;</code>
@@ -22563,8 +22743,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A measurement of how often your ad has become viewable on a Display
-     * Network site.
+     * A measurement of the number of times your ad has become viewable on a
+     * Display Network site.
      * </pre>
      *
      * <code>optional int64 active_view_impressions = 186;</code>
@@ -22580,8 +22760,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A measurement of how often your ad has become viewable on a Display
-     * Network site.
+     * A measurement of the number of times your ad has become viewable on a
+     * Display Network site.
      * </pre>
      *
      * <code>optional int64 active_view_impressions = 186;</code>
@@ -22597,8 +22777,8 @@ private static final long serialVersionUID = 0L;
     private double activeViewMeasurability_ ;
     /**
      * <pre>
-     * The ratio of impressions that could be measured by Active View over the
-     * number of served impressions.
+     * The ratio of impressions that were eligible to be measured by Active View
+     * over the number of served impressions.
      * </pre>
      *
      * <code>optional double active_view_measurability = 187;</code>
@@ -22610,8 +22790,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ratio of impressions that could be measured by Active View over the
-     * number of served impressions.
+     * The ratio of impressions that were eligible to be measured by Active View
+     * over the number of served impressions.
      * </pre>
      *
      * <code>optional double active_view_measurability = 187;</code>
@@ -22623,8 +22803,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ratio of impressions that could be measured by Active View over the
-     * number of served impressions.
+     * The ratio of impressions that were eligible to be measured by Active View
+     * over the number of served impressions.
      * </pre>
      *
      * <code>optional double active_view_measurability = 187;</code>
@@ -22640,8 +22820,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ratio of impressions that could be measured by Active View over the
-     * number of served impressions.
+     * The ratio of impressions that were eligible to be measured by Active View
+     * over the number of served impressions.
      * </pre>
      *
      * <code>optional double active_view_measurability = 187;</code>
@@ -22777,8 +22957,8 @@ private static final long serialVersionUID = 0L;
     private double activeViewViewability_ ;
     /**
      * <pre>
-     * The percentage of time when your ad appeared on an Active View enabled site
-     * (measurable impressions) and was viewable (viewable impressions).
+     * The percentage of times when your ad appeared on an Active View enabled
+     * site (measurable impressions) and was viewable (viewable impressions).
      * </pre>
      *
      * <code>optional double active_view_viewability = 190;</code>
@@ -22790,8 +22970,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of time when your ad appeared on an Active View enabled site
-     * (measurable impressions) and was viewable (viewable impressions).
+     * The percentage of times when your ad appeared on an Active View enabled
+     * site (measurable impressions) and was viewable (viewable impressions).
      * </pre>
      *
      * <code>optional double active_view_viewability = 190;</code>
@@ -22803,8 +22983,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of time when your ad appeared on an Active View enabled site
-     * (measurable impressions) and was viewable (viewable impressions).
+     * The percentage of times when your ad appeared on an Active View enabled
+     * site (measurable impressions) and was viewable (viewable impressions).
      * </pre>
      *
      * <code>optional double active_view_viewability = 190;</code>
@@ -22820,8 +23000,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of time when your ad appeared on an Active View enabled site
-     * (measurable impressions) and was viewable (viewable impressions).
+     * The percentage of times when your ad appeared on an Active View enabled
+     * site (measurable impressions) and was viewable (viewable impressions).
      * </pre>
      *
      * <code>optional double active_view_viewability = 190;</code>
@@ -23777,7 +23957,7 @@ private static final long serialVersionUID = 0L;
     private double allConversionsFromStoreWebsite_ ;
     /**
      * <pre>
-     * The number of times that people were taken to a business's URL after
+     * The number of times people were taken to a business's URL after
      * clicking an ad.
      *
      * This metric applies to feed items only.
@@ -23792,7 +23972,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times that people were taken to a business's URL after
+     * The number of times people were taken to a business's URL after
      * clicking an ad.
      *
      * This metric applies to feed items only.
@@ -23807,7 +23987,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times that people were taken to a business's URL after
+     * The number of times people were taken to a business's URL after
      * clicking an ad.
      *
      * This metric applies to feed items only.
@@ -23826,7 +24006,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times that people were taken to a business's URL after
+     * The number of times people were taken to a business's URL after
      * clicking an ad.
      *
      * This metric applies to feed items only.
@@ -23845,11 +24025,10 @@ private static final long serialVersionUID = 0L;
     private double auctionInsightSearchAbsoluteTopImpressionPercentage_ ;
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * the ads of another participant showed in the most prominent position on the
-     * search results page.
-     * This percentage is computed only over the auctions that you appeared in
-     * the page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times the ads of another participant showed in the absolute
+     * top position (Position 1) on the search results page. This percentage is
+     * computed only over the auctions that you appeared in the page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -23863,11 +24042,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * the ads of another participant showed in the most prominent position on the
-     * search results page.
-     * This percentage is computed only over the auctions that you appeared in
-     * the page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times the ads of another participant showed in the absolute
+     * top position (Position 1) on the search results page. This percentage is
+     * computed only over the auctions that you appeared in the page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -23881,11 +24059,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * the ads of another participant showed in the most prominent position on the
-     * search results page.
-     * This percentage is computed only over the auctions that you appeared in
-     * the page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times the ads of another participant showed in the absolute
+     * top position (Position 1) on the search results page. This percentage is
+     * computed only over the auctions that you appeared in the page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -23903,11 +24080,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * the ads of another participant showed in the most prominent position on the
-     * search results page.
-     * This percentage is computed only over the auctions that you appeared in
-     * the page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times the ads of another participant showed in the absolute
+     * top position (Position 1) on the search results page. This percentage is
+     * computed only over the auctions that you appeared in the page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24081,9 +24257,9 @@ private static final long serialVersionUID = 0L;
     private double auctionInsightSearchOverlapRate_ ;
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * another participant's ad received an impression when your ad also received
-     * an impression.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times another participant's ad received an impression when
+     * your ad also received an impression.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24097,9 +24273,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * another participant's ad received an impression when your ad also received
-     * an impression.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times another participant's ad received an impression when
+     * your ad also received an impression.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24113,9 +24289,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * another participant's ad received an impression when your ad also received
-     * an impression.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times another participant's ad received an impression when
+     * your ad also received an impression.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24133,9 +24309,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * another participant's ad received an impression when your ad also received
-     * an impression.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times another participant's ad received an impression when
+     * your ad also received an impression.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24153,9 +24329,9 @@ private static final long serialVersionUID = 0L;
     private double auctionInsightSearchPositionAboveRate_ ;
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * another participant's ad was shown in a higher position than yours, when
-     * both of your ads were shown at the same page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times another participant's ad was shown in a higher position
+     * than yours, when both of your ads were shown at the same page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24169,9 +24345,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * another participant's ad was shown in a higher position than yours, when
-     * both of your ads were shown at the same page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times another participant's ad was shown in a higher position
+     * than yours, when both of your ads were shown at the same page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24185,9 +24361,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * another participant's ad was shown in a higher position than yours, when
-     * both of your ads were shown at the same page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times another participant's ad was shown in a higher position
+     * than yours, when both of your ads were shown at the same page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24205,9 +24381,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * another participant's ad was shown in a higher position than yours, when
-     * both of your ads were shown at the same page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times another participant's ad was shown in a higher position
+     * than yours, when both of your ads were shown at the same page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24225,10 +24401,10 @@ private static final long serialVersionUID = 0L;
     private double auctionInsightSearchTopImpressionPercentage_ ;
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * the ads of another participant showed adjacent to the top organic search
-     * results. This percentage is computed only over the auctions that you
-     * appeared in the page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times the ads of another participant showed adjacent to the
+     * top organic search results. This percentage is computed only over the
+     * auctions that you appeared in the page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24242,10 +24418,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * the ads of another participant showed adjacent to the top organic search
-     * results. This percentage is computed only over the auctions that you
-     * appeared in the page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times the ads of another participant showed adjacent to the
+     * top organic search results. This percentage is computed only over the
+     * auctions that you appeared in the page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24259,10 +24435,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * the ads of another participant showed adjacent to the top organic search
-     * results. This percentage is computed only over the auctions that you
-     * appeared in the page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times the ads of another participant showed adjacent to the
+     * top organic search results. This percentage is computed only over the
+     * auctions that you appeared in the page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24280,10 +24456,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This metric is part of the Auction Insights report, and tells how often
-     * the ads of another participant showed adjacent to the top organic search
-     * results. This percentage is computed only over the auctions that you
-     * appeared in the page.
+     * This metric is part of the Auction Insights report, and tells the
+     * percentage of times the ads of another participant showed adjacent to the
+     * top organic search results. This percentage is computed only over the
+     * auctions that you appeared in the page.
      *
      * This metric is not publicly available.
      * </pre>
@@ -24950,7 +25126,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An indication on how other advertisers' Shopping ads for similar products
-     * are performing based on how often people who see their ad click on it.
+     * are performing based on the frequency with which people who see their ad
+     * click on it.
      * </pre>
      *
      * <code>optional double benchmark_ctr = 211;</code>
@@ -24963,7 +25140,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An indication on how other advertisers' Shopping ads for similar products
-     * are performing based on how often people who see their ad click on it.
+     * are performing based on the frequency with which people who see their ad
+     * click on it.
      * </pre>
      *
      * <code>optional double benchmark_ctr = 211;</code>
@@ -24976,7 +25154,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An indication on how other advertisers' Shopping ads for similar products
-     * are performing based on how often people who see their ad click on it.
+     * are performing based on the frequency with which people who see their ad
+     * click on it.
      * </pre>
      *
      * <code>optional double benchmark_ctr = 211;</code>
@@ -24993,7 +25172,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An indication on how other advertisers' Shopping ads for similar products
-     * are performing based on how often people who see their ad click on it.
+     * are performing based on the frequency with which people who see their ad
+     * click on it.
      * </pre>
      *
      * <code>optional double benchmark_ctr = 211;</code>
@@ -25389,7 +25569,7 @@ private static final long serialVersionUID = 0L;
     private double contentBudgetLostImpressionShare_ ;
     /**
      * <pre>
-     * The estimated percent of times that your ad was eligible to show
+     * The estimated percentage of times that your ad was eligible to show
      * on the Display Network but didn't because your budget was too low.
      * Note: Content budget lost impression share is reported in the range of 0
      * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -25404,7 +25584,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated percent of times that your ad was eligible to show
+     * The estimated percentage of times that your ad was eligible to show
      * on the Display Network but didn't because your budget was too low.
      * Note: Content budget lost impression share is reported in the range of 0
      * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -25419,7 +25599,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated percent of times that your ad was eligible to show
+     * The estimated percentage of times that your ad was eligible to show
      * on the Display Network but didn't because your budget was too low.
      * Note: Content budget lost impression share is reported in the range of 0
      * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -25438,7 +25618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated percent of times that your ad was eligible to show
+     * The estimated percentage of times that your ad was eligible to show
      * on the Display Network but didn't because your budget was too low.
      * Note: Content budget lost impression share is reported in the range of 0
      * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -27421,8 +27601,9 @@ private static final long serialVersionUID = 0L;
     private double engagementRate_ ;
     /**
      * <pre>
-     * How often people engage with your ad after it's shown to them. This is the
-     * number of ad expansions divided by the number of times your ad is shown.
+     * The frequency with which people engage with your ad after it's shown to
+     * them. This is the number of ad expansions divided by the number of times
+     * your ad is shown.
      * </pre>
      *
      * <code>optional double engagement_rate = 180;</code>
@@ -27434,8 +27615,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * How often people engage with your ad after it's shown to them. This is the
-     * number of ad expansions divided by the number of times your ad is shown.
+     * The frequency with which people engage with your ad after it's shown to
+     * them. This is the number of ad expansions divided by the number of times
+     * your ad is shown.
      * </pre>
      *
      * <code>optional double engagement_rate = 180;</code>
@@ -27447,8 +27629,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * How often people engage with your ad after it's shown to them. This is the
-     * number of ad expansions divided by the number of times your ad is shown.
+     * The frequency with which people engage with your ad after it's shown to
+     * them. This is the number of ad expansions divided by the number of times
+     * your ad is shown.
      * </pre>
      *
      * <code>optional double engagement_rate = 180;</code>
@@ -27464,8 +27647,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * How often people engage with your ad after it's shown to them. This is the
-     * number of ad expansions divided by the number of times your ad is shown.
+     * The frequency with which people engage with your ad after it's shown to
+     * them. This is the number of ad expansions divided by the number of times
+     * your ad is shown.
      * </pre>
      *
      * <code>optional double engagement_rate = 180;</code>
@@ -28039,7 +28223,7 @@ private static final long serialVersionUID = 0L;
     private int historicalSearchPredictedCtr_ = 0;
     /**
      * <pre>
-     * The historical search predicted click through rate (CTR).
+     * The historical search predicted clickthrough rate (CTR).
      * </pre>
      *
      * <code>.google.ads.googleads.v25.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
@@ -28050,7 +28234,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The historical search predicted click through rate (CTR).
+     * The historical search predicted clickthrough rate (CTR).
      * </pre>
      *
      * <code>.google.ads.googleads.v25.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
@@ -28065,7 +28249,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The historical search predicted click through rate (CTR).
+     * The historical search predicted clickthrough rate (CTR).
      * </pre>
      *
      * <code>.google.ads.googleads.v25.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
@@ -28078,7 +28262,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The historical search predicted click through rate (CTR).
+     * The historical search predicted clickthrough rate (CTR).
      * </pre>
      *
      * <code>.google.ads.googleads.v25.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
@@ -28094,7 +28278,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The historical search predicted click through rate (CTR).
+     * The historical search predicted clickthrough rate (CTR).
      * </pre>
      *
      * <code>.google.ads.googleads.v25.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
@@ -28350,7 +28534,7 @@ private static final long serialVersionUID = 0L;
     private long impressions_ ;
     /**
      * <pre>
-     * Count of how often your ad has appeared on a search results page or
+     * The number of times your ad has appeared on a search results page or
      * website on the Google Network.
      * </pre>
      *
@@ -28363,7 +28547,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Count of how often your ad has appeared on a search results page or
+     * The number of times your ad has appeared on a search results page or
      * website on the Google Network.
      * </pre>
      *
@@ -28376,7 +28560,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Count of how often your ad has appeared on a search results page or
+     * The number of times your ad has appeared on a search results page or
      * website on the Google Network.
      * </pre>
      *
@@ -28393,7 +28577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Count of how often your ad has appeared on a search results page or
+     * The number of times your ad has appeared on a search results page or
      * website on the Google Network.
      * </pre>
      *
@@ -28410,9 +28594,9 @@ private static final long serialVersionUID = 0L;
     private double interactionRate_ ;
     /**
      * <pre>
-     * How often people interact with your ad after it is shown to them.
-     * This is the number of interactions divided by the number of times your ad
-     * is shown.
+     * The frequency with which people interact with your ad after it is shown to
+     * them. This is the number of interactions divided by the number of times
+     * your ad is shown.
      * </pre>
      *
      * <code>optional double interaction_rate = 222;</code>
@@ -28424,9 +28608,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * How often people interact with your ad after it is shown to them.
-     * This is the number of interactions divided by the number of times your ad
-     * is shown.
+     * The frequency with which people interact with your ad after it is shown to
+     * them. This is the number of interactions divided by the number of times
+     * your ad is shown.
      * </pre>
      *
      * <code>optional double interaction_rate = 222;</code>
@@ -28438,9 +28622,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * How often people interact with your ad after it is shown to them.
-     * This is the number of interactions divided by the number of times your ad
-     * is shown.
+     * The frequency with which people interact with your ad after it is shown to
+     * them. This is the number of interactions divided by the number of times
+     * your ad is shown.
      * </pre>
      *
      * <code>optional double interaction_rate = 222;</code>
@@ -28456,9 +28640,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * How often people interact with your ad after it is shown to them.
-     * This is the number of interactions divided by the number of times your ad
-     * is shown.
+     * The frequency with which people interact with your ad after it is shown to
+     * them. This is the number of interactions divided by the number of times
+     * your ad is shown.
      * </pre>
      *
      * <code>optional double interaction_rate = 222;</code>
@@ -30021,7 +30205,7 @@ private static final long serialVersionUID = 0L;
     private double relativeCtr_ ;
     /**
      * <pre>
-     * Your clickthrough rate (Ctr) divided by the average clickthrough rate of
+     * Your clickthrough rate (CTR) divided by the average clickthrough rate of
      * all advertisers on the websites that show your ads. Measures how your ads
      * perform on Display Network sites compared to other ads on the same sites.
      * </pre>
@@ -30035,7 +30219,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Your clickthrough rate (Ctr) divided by the average clickthrough rate of
+     * Your clickthrough rate (CTR) divided by the average clickthrough rate of
      * all advertisers on the websites that show your ads. Measures how your ads
      * perform on Display Network sites compared to other ads on the same sites.
      * </pre>
@@ -30049,7 +30233,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Your clickthrough rate (Ctr) divided by the average clickthrough rate of
+     * Your clickthrough rate (CTR) divided by the average clickthrough rate of
      * all advertisers on the websites that show your ads. Measures how your ads
      * perform on Display Network sites compared to other ads on the same sites.
      * </pre>
@@ -30067,7 +30251,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Your clickthrough rate (Ctr) divided by the average clickthrough rate of
+     * Your clickthrough rate (CTR) divided by the average clickthrough rate of
      * all advertisers on the websites that show your ads. Measures how your ads
      * perform on Display Network sites compared to other ads on the same sites.
      * </pre>
@@ -30086,7 +30270,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
-     * shown in the most prominent Shopping position. See
+     * shown in the absolute top position (Position 1). See
      * [About top and
      * absolute top metrics](https://support.google.com/google-ads/answer/7501826)
      *
@@ -30103,7 +30287,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
-     * shown in the most prominent Shopping position. See
+     * shown in the absolute top position (Position 1). See
      * [About top and
      * absolute top metrics](https://support.google.com/google-ads/answer/7501826)
      *
@@ -30120,7 +30304,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
-     * shown in the most prominent Shopping position. See
+     * shown in the absolute top position (Position 1). See
      * [About top and
      * absolute top metrics](https://support.google.com/google-ads/answer/7501826)
      *
@@ -30141,7 +30325,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
-     * shown in the most prominent Shopping position. See
+     * shown in the absolute top position (Position 1). See
      * [About top and
      * absolute top metrics](https://support.google.com/google-ads/answer/7501826)
      *
@@ -30161,8 +30345,8 @@ private static final long serialVersionUID = 0L;
     private double searchBudgetLostAbsoluteTopImpressionShare_ ;
     /**
      * <pre>
-     * The number estimating how often your ad wasn't the very first ad among the
-     * top ads in the search results due to a low budget.
+     * The estimated percentage of times your ad wasn't the very first ad among
+     * the top ads in the search results due to a low budget.
      *
      * Note: Search budget lost absolute top impression share is reported in the
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30177,8 +30361,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number estimating how often your ad wasn't the very first ad among the
-     * top ads in the search results due to a low budget.
+     * The estimated percentage of times your ad wasn't the very first ad among
+     * the top ads in the search results due to a low budget.
      *
      * Note: Search budget lost absolute top impression share is reported in the
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30193,8 +30377,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number estimating how often your ad wasn't the very first ad among the
-     * top ads in the search results due to a low budget.
+     * The estimated percentage of times your ad wasn't the very first ad among
+     * the top ads in the search results due to a low budget.
      *
      * Note: Search budget lost absolute top impression share is reported in the
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30213,8 +30397,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number estimating how often your ad wasn't the very first ad among the
-     * top ads in the search results due to a low budget.
+     * The estimated percentage of times your ad wasn't the very first ad among
+     * the top ads in the search results due to a low budget.
      *
      * Note: Search budget lost absolute top impression share is reported in the
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30233,7 +30417,7 @@ private static final long serialVersionUID = 0L;
     private double searchBudgetLostImpressionShare_ ;
     /**
      * <pre>
-     * The estimated percent of times that your ad was eligible to show on the
+     * The estimated percentage of times that your ad was eligible to show on the
      * Search Network but didn't because your budget was too low.
      *
      * Note: Search
@@ -30250,7 +30434,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated percent of times that your ad was eligible to show on the
+     * The estimated percentage of times that your ad was eligible to show on the
      * Search Network but didn't because your budget was too low.
      *
      * Note: Search
@@ -30267,7 +30451,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated percent of times that your ad was eligible to show on the
+     * The estimated percentage of times that your ad was eligible to show on the
      * Search Network but didn't because your budget was too low.
      *
      * Note: Search
@@ -30288,7 +30472,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated percent of times that your ad was eligible to show on the
+     * The estimated percentage of times that your ad was eligible to show on the
      * Search Network but didn't because your budget was too low.
      *
      * Note: Search
@@ -30309,8 +30493,8 @@ private static final long serialVersionUID = 0L;
     private double searchBudgetLostTopImpressionShare_ ;
     /**
      * <pre>
-     * The estimated percent of times that your ad didn't show adjacent to the top
-     * organic search results due to a low budget.
+     * The estimated percentage of times that your ad didn't show adjacent to the
+     * top organic search results due to a low budget.
      *
      * Note: Search budget lost top impression share is reported in the range of 0
      * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30325,8 +30509,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated percent of times that your ad didn't show adjacent to the top
-     * organic search results due to a low budget.
+     * The estimated percentage of times that your ad didn't show adjacent to the
+     * top organic search results due to a low budget.
      *
      * Note: Search budget lost top impression share is reported in the range of 0
      * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30341,8 +30525,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated percent of times that your ad didn't show adjacent to the top
-     * organic search results due to a low budget.
+     * The estimated percentage of times that your ad didn't show adjacent to the
+     * top organic search results due to a low budget.
      *
      * Note: Search budget lost top impression share is reported in the range of 0
      * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30361,8 +30545,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The estimated percent of times that your ad didn't show adjacent to the top
-     * organic search results due to a low budget.
+     * The estimated percentage of times that your ad didn't show adjacent to the
+     * top organic search results due to a low budget.
      *
      * Note: Search budget lost top impression share is reported in the range of 0
      * to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30605,8 +30789,8 @@ private static final long serialVersionUID = 0L;
     private double searchRankLostAbsoluteTopImpressionShare_ ;
     /**
      * <pre>
-     * The number estimating how often your ad wasn't the very first ad among the
-     * top ads in the search results due to poor Ad Rank.
+     * The estimated percentage of times your ad wasn't the very first ad among
+     * the top ads in the search results due to poor Ad Rank.
      *
      * Note: Search rank lost absolute top impression share is reported in the
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30621,8 +30805,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number estimating how often your ad wasn't the very first ad among the
-     * top ads in the search results due to poor Ad Rank.
+     * The estimated percentage of times your ad wasn't the very first ad among
+     * the top ads in the search results due to poor Ad Rank.
      *
      * Note: Search rank lost absolute top impression share is reported in the
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30637,8 +30821,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number estimating how often your ad wasn't the very first ad among the
-     * top ads in the search results due to poor Ad Rank.
+     * The estimated percentage of times your ad wasn't the very first ad among
+     * the top ads in the search results due to poor Ad Rank.
      *
      * Note: Search rank lost absolute top impression share is reported in the
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30657,8 +30841,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number estimating how often your ad wasn't the very first ad among the
-     * top ads in the search results due to poor Ad Rank.
+     * The estimated percentage of times your ad wasn't the very first ad among
+     * the top ads in the search results due to poor Ad Rank.
      *
      * Note: Search rank lost absolute top impression share is reported in the
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
@@ -30745,7 +30929,7 @@ private static final long serialVersionUID = 0L;
     private double searchRankLostTopImpressionShare_ ;
     /**
      * <pre>
-     * The number estimating how often your ad didn't show adjacent to the top
+     * The estimated percentage of times your ad didn't show adjacent to the top
      * organic search results due to poor Ad Rank.
      *
      * Note: Search rank lost top impression share is reported in the range of 0
@@ -30761,7 +30945,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number estimating how often your ad didn't show adjacent to the top
+     * The estimated percentage of times your ad didn't show adjacent to the top
      * organic search results due to poor Ad Rank.
      *
      * Note: Search rank lost top impression share is reported in the range of 0
@@ -30777,7 +30961,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number estimating how often your ad didn't show adjacent to the top
+     * The estimated percentage of times your ad didn't show adjacent to the top
      * organic search results due to poor Ad Rank.
      *
      * Note: Search rank lost top impression share is reported in the range of 0
@@ -30797,7 +30981,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number estimating how often your ad didn't show adjacent to the top
+     * The estimated percentage of times your ad didn't show adjacent to the top
      * organic search results due to poor Ad Rank.
      *
      * Note: Search rank lost top impression share is reported in the range of 0
@@ -30822,7 +31006,7 @@ private static final long serialVersionUID = 0L;
      * Note: Search top impression share is reported in the range of 0.1 to 1. Any
      * value below 0.1 is reported as 0.0999.
      *
-     * Top ads are generally above the top organic results, although they may show
+     * Top ads are typically above the top organic results, although they may show
      * below the top organic results on certain queries.
      * </pre>
      *
@@ -30840,7 +31024,7 @@ private static final long serialVersionUID = 0L;
      * Note: Search top impression share is reported in the range of 0.1 to 1. Any
      * value below 0.1 is reported as 0.0999.
      *
-     * Top ads are generally above the top organic results, although they may show
+     * Top ads are typically above the top organic results, although they may show
      * below the top organic results on certain queries.
      * </pre>
      *
@@ -30858,7 +31042,7 @@ private static final long serialVersionUID = 0L;
      * Note: Search top impression share is reported in the range of 0.1 to 1. Any
      * value below 0.1 is reported as 0.0999.
      *
-     * Top ads are generally above the top organic results, although they may show
+     * Top ads are typically above the top organic results, although they may show
      * below the top organic results on certain queries.
      * </pre>
      *
@@ -30880,7 +31064,7 @@ private static final long serialVersionUID = 0L;
      * Note: Search top impression share is reported in the range of 0.1 to 1. Any
      * value below 0.1 is reported as 0.0999.
      *
-     * Top ads are generally above the top organic results, although they may show
+     * Top ads are typically above the top organic results, although they may show
      * below the top organic results on certain queries.
      * </pre>
      *
@@ -31234,7 +31418,7 @@ private static final long serialVersionUID = 0L;
     private double topImpressionPercentage_ ;
     /**
      * <pre>
-     * The percent of your ad impressions that are shown adjacent to the top
+     * The percentage of your ad impressions that are shown adjacent to the top
      * organic search results.
      * </pre>
      *
@@ -31247,7 +31431,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percent of your ad impressions that are shown adjacent to the top
+     * The percentage of your ad impressions that are shown adjacent to the top
      * organic search results.
      * </pre>
      *
@@ -31260,7 +31444,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percent of your ad impressions that are shown adjacent to the top
+     * The percentage of your ad impressions that are shown adjacent to the top
      * organic search results.
      * </pre>
      *
@@ -31277,7 +31461,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percent of your ad impressions that are shown adjacent to the top
+     * The percentage of your ad impressions that are shown adjacent to the top
      * organic search results.
      * </pre>
      *
@@ -42501,7 +42685,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Represents the total conversions from users who were exposed to the ads.
-     * Often referred to as "Treatment" conversions.
+     * Also referred to as "Treatment" conversions.
      * </pre>
      *
      * <code>optional double conversion_lift_exposed_conversions = 477;</code>
@@ -42514,7 +42698,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Represents the total conversions from users who were exposed to the ads.
-     * Often referred to as "Treatment" conversions.
+     * Also referred to as "Treatment" conversions.
      * </pre>
      *
      * <code>optional double conversion_lift_exposed_conversions = 477;</code>
@@ -42527,7 +42711,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Represents the total conversions from users who were exposed to the ads.
-     * Often referred to as "Treatment" conversions.
+     * Also referred to as "Treatment" conversions.
      * </pre>
      *
      * <code>optional double conversion_lift_exposed_conversions = 477;</code>
@@ -42544,7 +42728,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Represents the total conversions from users who were exposed to the ads.
-     * Often referred to as "Treatment" conversions.
+     * Also referred to as "Treatment" conversions.
      * </pre>
      *
      * <code>optional double conversion_lift_exposed_conversions = 477;</code>
@@ -44154,7 +44338,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Represents the rate of positive responses that would have occurred
      * naturally without ad exposure, based on the behavior of the control group.
-     * Often referred to as "Control" responses. Provides the baseline
+     * Also referred to as "Control" responses. Provides the baseline
      * level of brand perception that occurred naturally.
      * </pre>
      *
@@ -44169,7 +44353,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Represents the rate of positive responses that would have occurred
      * naturally without ad exposure, based on the behavior of the control group.
-     * Often referred to as "Control" responses. Provides the baseline
+     * Also referred to as "Control" responses. Provides the baseline
      * level of brand perception that occurred naturally.
      * </pre>
      *
@@ -44184,7 +44368,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Represents the rate of positive responses that would have occurred
      * naturally without ad exposure, based on the behavior of the control group.
-     * Often referred to as "Control" responses. Provides the baseline
+     * Also referred to as "Control" responses. Provides the baseline
      * level of brand perception that occurred naturally.
      * </pre>
      *
@@ -44203,7 +44387,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Represents the rate of positive responses that would have occurred
      * naturally without ad exposure, based on the behavior of the control group.
-     * Often referred to as "Control" responses. Provides the baseline
+     * Also referred to as "Control" responses. Provides the baseline
      * level of brand perception that occurred naturally.
      * </pre>
      *
@@ -44545,7 +44729,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Represents the rate of positive responses from users who were exposed to
-     * the ads. Often referred to as "Treatment" responses. Shows
+     * the ads. Also referred to as "Treatment" responses. Shows
      * total positive response rate when users were exposed to your ads.
      * </pre>
      *
@@ -44559,7 +44743,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Represents the rate of positive responses from users who were exposed to
-     * the ads. Often referred to as "Treatment" responses. Shows
+     * the ads. Also referred to as "Treatment" responses. Shows
      * total positive response rate when users were exposed to your ads.
      * </pre>
      *
@@ -44573,7 +44757,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Represents the rate of positive responses from users who were exposed to
-     * the ads. Often referred to as "Treatment" responses. Shows
+     * the ads. Also referred to as "Treatment" responses. Shows
      * total positive response rate when users were exposed to your ads.
      * </pre>
      *
@@ -44591,7 +44775,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Represents the rate of positive responses from users who were exposed to
-     * the ads. Often referred to as "Treatment" responses. Shows
+     * the ads. Also referred to as "Treatment" responses. Shows
      * total positive response rate when users were exposed to your ads.
      * </pre>
      *
@@ -45177,7 +45361,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Lower bound of the 90% confidence interval for the cost per lifted cookie.
-     * Represents the most optimistic (lowest cost) estimate for moving a user to
+     * Represents the optimistic (lowest cost) estimate for moving a user to
      * a positive brand state.
      * </pre>
      *
@@ -45191,7 +45375,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Lower bound of the 90% confidence interval for the cost per lifted cookie.
-     * Represents the most optimistic (lowest cost) estimate for moving a user to
+     * Represents the optimistic (lowest cost) estimate for moving a user to
      * a positive brand state.
      * </pre>
      *
@@ -45205,7 +45389,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Lower bound of the 90% confidence interval for the cost per lifted cookie.
-     * Represents the most optimistic (lowest cost) estimate for moving a user to
+     * Represents the optimistic (lowest cost) estimate for moving a user to
      * a positive brand state.
      * </pre>
      *
@@ -45223,7 +45407,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Lower bound of the 90% confidence interval for the cost per lifted cookie.
-     * Represents the most optimistic (lowest cost) estimate for moving a user to
+     * Represents the optimistic (lowest cost) estimate for moving a user to
      * a positive brand state.
      * </pre>
      *
@@ -45241,7 +45425,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Upper bound of the 90% confidence interval for the cost per lifted cookie.
-     * Represents the most conservative (highest cost) estimate for moving a user
+     * Represents the conservative (highest cost) estimate for moving a user
      * to a positive brand state.
      * </pre>
      *
@@ -45255,7 +45439,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Upper bound of the 90% confidence interval for the cost per lifted cookie.
-     * Represents the most conservative (highest cost) estimate for moving a user
+     * Represents the conservative (highest cost) estimate for moving a user
      * to a positive brand state.
      * </pre>
      *
@@ -45269,7 +45453,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Upper bound of the 90% confidence interval for the cost per lifted cookie.
-     * Represents the most conservative (highest cost) estimate for moving a user
+     * Represents the conservative (highest cost) estimate for moving a user
      * to a positive brand state.
      * </pre>
      *
@@ -45287,7 +45471,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Upper bound of the 90% confidence interval for the cost per lifted cookie.
-     * Represents the most conservative (highest cost) estimate for moving a user
+     * Represents the conservative (highest cost) estimate for moving a user
      * to a positive brand state.
      * </pre>
      *
@@ -46113,6 +46297,186 @@ private static final long serialVersionUID = 0L;
     public Builder clearOriginalConversionValue() {
       bitField10_ = (bitField10_ & ~0x00100000);
       originalConversionValue_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private long verticalAdsPotentialImpressions_ ;
+    /**
+     * <pre>
+     * Potential impressions representing the total view-capped eligible
+     * impressions available across the query context.
+     * </pre>
+     *
+     * <code>optional int64 vertical_ads_potential_impressions = 532;</code>
+     * @return Whether the verticalAdsPotentialImpressions field is set.
+     */
+    @java.lang.Override
+    public boolean hasVerticalAdsPotentialImpressions() {
+      return ((bitField10_ & 0x00200000) != 0);
+    }
+    /**
+     * <pre>
+     * Potential impressions representing the total view-capped eligible
+     * impressions available across the query context.
+     * </pre>
+     *
+     * <code>optional int64 vertical_ads_potential_impressions = 532;</code>
+     * @return The verticalAdsPotentialImpressions.
+     */
+    @java.lang.Override
+    public long getVerticalAdsPotentialImpressions() {
+      return verticalAdsPotentialImpressions_;
+    }
+    /**
+     * <pre>
+     * Potential impressions representing the total view-capped eligible
+     * impressions available across the query context.
+     * </pre>
+     *
+     * <code>optional int64 vertical_ads_potential_impressions = 532;</code>
+     * @param value The verticalAdsPotentialImpressions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVerticalAdsPotentialImpressions(long value) {
+
+      verticalAdsPotentialImpressions_ = value;
+      bitField10_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Potential impressions representing the total view-capped eligible
+     * impressions available across the query context.
+     * </pre>
+     *
+     * <code>optional int64 vertical_ads_potential_impressions = 532;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVerticalAdsPotentialImpressions() {
+      bitField10_ = (bitField10_ & ~0x00200000);
+      verticalAdsPotentialImpressions_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long verticalAdsAverageBookingValueMicros_ ;
+    /**
+     * <pre>
+     * Click-weighted average daily rate in micros, including taxes and fees, over
+     * the total length of stay.
+     * </pre>
+     *
+     * <code>optional int64 vertical_ads_average_booking_value_micros = 533;</code>
+     * @return Whether the verticalAdsAverageBookingValueMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasVerticalAdsAverageBookingValueMicros() {
+      return ((bitField10_ & 0x00400000) != 0);
+    }
+    /**
+     * <pre>
+     * Click-weighted average daily rate in micros, including taxes and fees, over
+     * the total length of stay.
+     * </pre>
+     *
+     * <code>optional int64 vertical_ads_average_booking_value_micros = 533;</code>
+     * @return The verticalAdsAverageBookingValueMicros.
+     */
+    @java.lang.Override
+    public long getVerticalAdsAverageBookingValueMicros() {
+      return verticalAdsAverageBookingValueMicros_;
+    }
+    /**
+     * <pre>
+     * Click-weighted average daily rate in micros, including taxes and fees, over
+     * the total length of stay.
+     * </pre>
+     *
+     * <code>optional int64 vertical_ads_average_booking_value_micros = 533;</code>
+     * @param value The verticalAdsAverageBookingValueMicros to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVerticalAdsAverageBookingValueMicros(long value) {
+
+      verticalAdsAverageBookingValueMicros_ = value;
+      bitField10_ |= 0x00400000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Click-weighted average daily rate in micros, including taxes and fees, over
+     * the total length of stay.
+     * </pre>
+     *
+     * <code>optional int64 vertical_ads_average_booking_value_micros = 533;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVerticalAdsAverageBookingValueMicros() {
+      bitField10_ = (bitField10_ & ~0x00400000);
+      verticalAdsAverageBookingValueMicros_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private double verticalAdsPriceDifferencePercentage_ ;
+    /**
+     * <pre>
+     * Percentage delta comparing the advertiser's offered price against the
+     * lowest competing price for the same property.
+     * </pre>
+     *
+     * <code>optional double vertical_ads_price_difference_percentage = 534;</code>
+     * @return Whether the verticalAdsPriceDifferencePercentage field is set.
+     */
+    @java.lang.Override
+    public boolean hasVerticalAdsPriceDifferencePercentage() {
+      return ((bitField10_ & 0x00800000) != 0);
+    }
+    /**
+     * <pre>
+     * Percentage delta comparing the advertiser's offered price against the
+     * lowest competing price for the same property.
+     * </pre>
+     *
+     * <code>optional double vertical_ads_price_difference_percentage = 534;</code>
+     * @return The verticalAdsPriceDifferencePercentage.
+     */
+    @java.lang.Override
+    public double getVerticalAdsPriceDifferencePercentage() {
+      return verticalAdsPriceDifferencePercentage_;
+    }
+    /**
+     * <pre>
+     * Percentage delta comparing the advertiser's offered price against the
+     * lowest competing price for the same property.
+     * </pre>
+     *
+     * <code>optional double vertical_ads_price_difference_percentage = 534;</code>
+     * @param value The verticalAdsPriceDifferencePercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVerticalAdsPriceDifferencePercentage(double value) {
+
+      verticalAdsPriceDifferencePercentage_ = value;
+      bitField10_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage delta comparing the advertiser's offered price against the
+     * lowest competing price for the same property.
+     * </pre>
+     *
+     * <code>optional double vertical_ads_price_difference_percentage = 534;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVerticalAdsPriceDifferencePercentage() {
+      bitField10_ = (bitField10_ & ~0x00800000);
+      verticalAdsPriceDifferencePercentage_ = 0D;
       onChanged();
       return this;
     }

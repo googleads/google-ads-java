@@ -42,8 +42,8 @@ public final class AuthenticationErrorProto extends com.google.protobuf.Generate
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v25/errors/authen" +
       "tication_error.proto\022\037google.ads.googlea" +
-      "ds.v25.errors\"\226\006\n\027AuthenticationErrorEnu" +
-      "m\"\372\005\n\023AuthenticationError\022\017\n\013UNSPECIFIED" +
+      "ds.v25.errors\"\236\006\n\027AuthenticationErrorEnu" +
+      "m\"\202\006\n\023AuthenticationError\022\017\n\013UNSPECIFIED" +
       "\020\000\022\013\n\007UNKNOWN\020\001\022\030\n\024AUTHENTICATION_ERROR\020" +
       "\002\022\036\n\032CLIENT_CUSTOMER_ID_INVALID\020\005\022\026\n\022CUS" +
       "TOMER_NOT_FOUND\020\010\022\032\n\026GOOGLE_ACCOUNT_DELE" +
@@ -60,15 +60,15 @@ public final class AuthenticationErrorProto extends com.google.protobuf.Generate
       "CATION_NOT_ENROLLED\020\027\022$\n ADVANCED_PROTEC" +
       "TION_NOT_ENROLLED\020\030\022\037\n\033ORGANIZATION_NOT_" +
       "RECOGNIZED\020\032\022\035\n\031ORGANIZATION_NOT_APPROVE" +
-      "D\020\033\0224\n0ORGANIZATION_NOT_ASSOCIATED_WITH_" +
-      "DEVELOPER_TOKEN\020\034\022\033\n\027DEVELOPER_TOKEN_INV" +
-      "ALID\020\035B\370\001\n#com.google.ads.googleads.v25." +
-      "errorsB\030AuthenticationErrorProtoP\001ZEgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v25/errors;errors\242\002\003GAA\252\002\037Google" +
-      ".Ads.GoogleAds.V25.Errors\312\002\037Google\\Ads\\G" +
-      "oogleAds\\V25\\Errors\352\002#Google::Ads::Googl" +
-      "eAds::V25::Errorsb\006proto3"
+      "D\020\033\0228\n0ORGANIZATION_NOT_ASSOCIATED_WITH_" +
+      "DEVELOPER_TOKEN\020\034\032\002\010\001\022\037\n\027DEVELOPER_TOKEN" +
+      "_INVALID\020\035\032\002\010\001B\370\001\n#com.google.ads.google" +
+      "ads.v25.errorsB\030AuthenticationErrorProto" +
+      "P\001ZEgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v25/errors;errors\242\002\003GAA\252" +
+      "\002\037Google.Ads.GoogleAds.V25.Errors\312\002\037Goog" +
+      "le\\Ads\\GoogleAds\\V25\\Errors\352\002#Google::Ad" +
+      "s::GoogleAds::V25::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

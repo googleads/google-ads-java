@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The click-through rate compared to that of other
+     * Output only. The clickthrough rate (CTR) compared to that of other
      * advertisers.
      * </pre>
      *
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
     int getSearchPredictedCtrValue();
     /**
      * <pre>
-     * Output only. The click-through rate compared to that of other
+     * Output only. The clickthrough rate (CTR) compared to that of other
      * advertisers.
      * </pre>
      *
@@ -295,7 +295,7 @@ private static final long serialVersionUID = 0L;
     private int searchPredictedCtr_ = 0;
     /**
      * <pre>
-     * Output only. The click-through rate compared to that of other
+     * Output only. The clickthrough rate (CTR) compared to that of other
      * advertisers.
      * </pre>
      *
@@ -307,7 +307,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The click-through rate compared to that of other
+     * Output only. The clickthrough rate (CTR) compared to that of other
      * advertisers.
      * </pre>
      *
@@ -903,7 +903,7 @@ private static final long serialVersionUID = 0L;
       private int searchPredictedCtr_ = 0;
       /**
        * <pre>
-       * Output only. The click-through rate compared to that of other
+       * Output only. The clickthrough rate (CTR) compared to that of other
        * advertisers.
        * </pre>
        *
@@ -915,7 +915,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The click-through rate compared to that of other
+       * Output only. The clickthrough rate (CTR) compared to that of other
        * advertisers.
        * </pre>
        *
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The click-through rate compared to that of other
+       * Output only. The clickthrough rate (CTR) compared to that of other
        * advertisers.
        * </pre>
        *
@@ -945,7 +945,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The click-through rate compared to that of other
+       * Output only. The clickthrough rate (CTR) compared to that of other
        * advertisers.
        * </pre>
        *
@@ -962,7 +962,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The click-through rate compared to that of other
+       * Output only. The clickthrough rate (CTR) compared to that of other
        * advertisers.
        * </pre>
        *

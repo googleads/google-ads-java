@@ -399,4 +399,95 @@ public interface AssetGroupOrBuilder extends
    * <code>.google.ads.googleads.v25.resources.GoogleLocalServicesInfo google_local_services_info = 14;</code>
    */
   com.google.ads.googleads.v25.resources.GoogleLocalServicesInfoOrBuilder getGoogleLocalServicesInfoOrBuilder();
+
+  /**
+   * <pre>
+   * URL template for constructing a tracking URL.
+   * </pre>
+   *
+   * <code>string tracking_url_template = 15;</code>
+   * @return The trackingUrlTemplate.
+   */
+  java.lang.String getTrackingUrlTemplate();
+  /**
+   * <pre>
+   * URL template for constructing a tracking URL.
+   * </pre>
+   *
+   * <code>string tracking_url_template = 15;</code>
+   * @return The bytes for trackingUrlTemplate.
+   */
+  com.google.protobuf.ByteString
+      getTrackingUrlTemplateBytes();
+
+  /**
+   * <pre>
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+   */
+  java.util.List<com.google.ads.googleads.v25.common.CustomParameter> 
+      getUrlCustomParametersList();
+  /**
+   * <pre>
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+   */
+  com.google.ads.googleads.v25.common.CustomParameter getUrlCustomParameters(int index);
+  /**
+   * <pre>
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+   */
+  int getUrlCustomParametersCount();
+  /**
+   * <pre>
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v25.common.CustomParameterOrBuilder> 
+      getUrlCustomParametersOrBuilderList();
+  /**
+   * <pre>
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+   */
+  com.google.ads.googleads.v25.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * URL template for appending params to landing page URLs served with parallel
+   * tracking.
+   * </pre>
+   *
+   * <code>string final_url_suffix = 17;</code>
+   * @return The finalUrlSuffix.
+   */
+  java.lang.String getFinalUrlSuffix();
+  /**
+   * <pre>
+   * URL template for appending params to landing page URLs served with parallel
+   * tracking.
+   * </pre>
+   *
+   * <code>string final_url_suffix = 17;</code>
+   * @return The bytes for finalUrlSuffix.
+   */
+  com.google.protobuf.ByteString
+      getFinalUrlSuffixBytes();
 }

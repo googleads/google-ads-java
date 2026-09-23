@@ -760,7 +760,7 @@ private static final long serialVersionUID = 0L;
     AD_IMAGE_AD_GROUP_ASSETS_PER_AD_GROUP(176),
     /**
      * <pre>
-     * Number of ENABLED page feed asset sets per customer.
+     * Number of ENABLED page URL inclusion sets per customer.
      * </pre>
      *
      * <code>PAGE_FEED_ASSET_SETS_PER_CUSTOMER = 157;</code>
@@ -776,7 +776,8 @@ private static final long serialVersionUID = 0L;
     DYNAMIC_EDUCATION_FEED_ASSET_SETS_PER_CUSTOMER(158),
     /**
      * <pre>
-     * Number of ENABLED assets per page feed asset set.
+     * Number of ENABLED assets per page URL inclusion set (formerly page feed
+     * asset set).
      * </pre>
      *
      * <code>ASSETS_PER_PAGE_FEED_ASSET_SET = 159;</code>
@@ -1999,7 +2000,7 @@ private static final long serialVersionUID = 0L;
     public static final int AD_IMAGE_AD_GROUP_ASSETS_PER_AD_GROUP_VALUE = 176;
     /**
      * <pre>
-     * Number of ENABLED page feed asset sets per customer.
+     * Number of ENABLED page URL inclusion sets per customer.
      * </pre>
      *
      * <code>PAGE_FEED_ASSET_SETS_PER_CUSTOMER = 157;</code>
@@ -2015,7 +2016,8 @@ private static final long serialVersionUID = 0L;
     public static final int DYNAMIC_EDUCATION_FEED_ASSET_SETS_PER_CUSTOMER_VALUE = 158;
     /**
      * <pre>
-     * Number of ENABLED assets per page feed asset set.
+     * Number of ENABLED assets per page URL inclusion set (formerly page feed
+     * asset set).
      * </pre>
      *
      * <code>ASSETS_PER_PAGE_FEED_ASSET_SET = 159;</code>

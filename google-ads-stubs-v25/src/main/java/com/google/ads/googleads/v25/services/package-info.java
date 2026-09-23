@@ -551,7 +551,8 @@
  *
  * <p>======================= AutomaticallyCreatedAssetRemovalServiceClient =======================
  *
- * <p>Service Description: Service to remove automatically created assets.
+ * <p>Service Description: Service to remove text customization (formerly automatically created
+ * assets).
  *
  * <p>Sample for AutomaticallyCreatedAssetRemovalServiceClient:
  *

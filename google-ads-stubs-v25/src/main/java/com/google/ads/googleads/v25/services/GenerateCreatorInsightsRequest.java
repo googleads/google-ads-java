@@ -2752,10 +2752,57 @@ private static final long serialVersionUID = 0L;
      */
     com.google.ads.googleads.v25.common.YouTubeChannelInfoOrBuilder getYoutubeChannelsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Optional. The YouTube Channel handles to fetch creator insights for.
+     * Valid channel handles start with &#64;.
+     * </pre>
+     *
+     * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return A list containing the youtubeChannelHandles.
+     */
+    java.util.List<java.lang.String>
+        getYoutubeChannelHandlesList();
+    /**
+     * <pre>
+     * Optional. The YouTube Channel handles to fetch creator insights for.
+     * Valid channel handles start with &#64;.
+     * </pre>
+     *
+     * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The count of youtubeChannelHandles.
+     */
+    int getYoutubeChannelHandlesCount();
+    /**
+     * <pre>
+     * Optional. The YouTube Channel handles to fetch creator insights for.
+     * Valid channel handles start with &#64;.
+     * </pre>
+     *
+     * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index of the element to return.
+     * @return The youtubeChannelHandles at the given index.
+     */
+    java.lang.String getYoutubeChannelHandles(int index);
+    /**
+     * <pre>
+     * Optional. The YouTube Channel handles to fetch creator insights for.
+     * Valid channel handles start with &#64;.
+     * </pre>
+     *
+     * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the youtubeChannelHandles at the given index.
+     */
+    com.google.protobuf.ByteString
+        getYoutubeChannelHandlesBytes(int index);
   }
   /**
    * <pre>
-   * A collection of YouTube Channels.
+   * A collection of YouTube Channels. The YouTube Channels can be listed using
+   * either YouTube Channel IDs, YouTube Channel handles, or a combination of
+   * both.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.YouTubeChannels}
@@ -2780,6 +2827,8 @@ private static final long serialVersionUID = 0L;
     }
     private YouTubeChannels() {
       youtubeChannels_ = java.util.Collections.emptyList();
+      youtubeChannelHandles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -2856,6 +2905,63 @@ private static final long serialVersionUID = 0L;
       return youtubeChannels_.get(index);
     }
 
+    public static final int YOUTUBE_CHANNEL_HANDLES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList youtubeChannelHandles_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. The YouTube Channel handles to fetch creator insights for.
+     * Valid channel handles start with &#64;.
+     * </pre>
+     *
+     * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return A list containing the youtubeChannelHandles.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getYoutubeChannelHandlesList() {
+      return youtubeChannelHandles_;
+    }
+    /**
+     * <pre>
+     * Optional. The YouTube Channel handles to fetch creator insights for.
+     * Valid channel handles start with &#64;.
+     * </pre>
+     *
+     * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The count of youtubeChannelHandles.
+     */
+    public int getYoutubeChannelHandlesCount() {
+      return youtubeChannelHandles_.size();
+    }
+    /**
+     * <pre>
+     * Optional. The YouTube Channel handles to fetch creator insights for.
+     * Valid channel handles start with &#64;.
+     * </pre>
+     *
+     * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index of the element to return.
+     * @return The youtubeChannelHandles at the given index.
+     */
+    public java.lang.String getYoutubeChannelHandles(int index) {
+      return youtubeChannelHandles_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. The YouTube Channel handles to fetch creator insights for.
+     * Valid channel handles start with &#64;.
+     * </pre>
+     *
+     * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the youtubeChannelHandles at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getYoutubeChannelHandlesBytes(int index) {
+      return youtubeChannelHandles_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2873,6 +2979,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < youtubeChannels_.size(); i++) {
         output.writeMessage(1, youtubeChannels_.get(i));
       }
+      for (int i = 0; i < youtubeChannelHandles_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, youtubeChannelHandles_.getRaw(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2885,6 +2994,14 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < youtubeChannels_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, youtubeChannels_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < youtubeChannelHandles_.size(); i++) {
+          dataSize += computeStringSizeNoTag(youtubeChannelHandles_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getYoutubeChannelHandlesList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2903,6 +3020,8 @@ private static final long serialVersionUID = 0L;
 
       if (!getYoutubeChannelsList()
           .equals(other.getYoutubeChannelsList())) return false;
+      if (!getYoutubeChannelHandlesList()
+          .equals(other.getYoutubeChannelHandlesList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2917,6 +3036,10 @@ private static final long serialVersionUID = 0L;
       if (getYoutubeChannelsCount() > 0) {
         hash = (37 * hash) + YOUTUBE_CHANNELS_FIELD_NUMBER;
         hash = (53 * hash) + getYoutubeChannelsList().hashCode();
+      }
+      if (getYoutubeChannelHandlesCount() > 0) {
+        hash = (37 * hash) + YOUTUBE_CHANNEL_HANDLES_FIELD_NUMBER;
+        hash = (53 * hash) + getYoutubeChannelHandlesList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3017,7 +3140,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A collection of YouTube Channels.
+     * A collection of YouTube Channels. The YouTube Channels can be listed using
+     * either YouTube Channel IDs, YouTube Channel handles, or a combination of
+     * both.
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.YouTubeChannels}
@@ -3060,6 +3185,8 @@ private static final long serialVersionUID = 0L;
           youtubeChannelsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
+        youtubeChannelHandles_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -3106,6 +3233,10 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.YouTubeChannels result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          youtubeChannelHandles_.makeImmutable();
+          result.youtubeChannelHandles_ = youtubeChannelHandles_;
+        }
       }
 
       @java.lang.Override
@@ -3146,6 +3277,16 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
+        if (!other.youtubeChannelHandles_.isEmpty()) {
+          if (youtubeChannelHandles_.isEmpty()) {
+            youtubeChannelHandles_ = other.youtubeChannelHandles_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureYoutubeChannelHandlesIsMutable();
+            youtubeChannelHandles_.addAll(other.youtubeChannelHandles_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3185,6 +3326,12 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureYoutubeChannelHandlesIsMutable();
+                youtubeChannelHandles_.add(s);
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3512,6 +3659,162 @@ private static final long serialVersionUID = 0L;
           youtubeChannels_ = null;
         }
         return youtubeChannelsBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList youtubeChannelHandles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureYoutubeChannelHandlesIsMutable() {
+        if (!youtubeChannelHandles_.isModifiable()) {
+          youtubeChannelHandles_ = new com.google.protobuf.LazyStringArrayList(youtubeChannelHandles_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * Optional. The YouTube Channel handles to fetch creator insights for.
+       * Valid channel handles start with &#64;.
+       * </pre>
+       *
+       * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+       * @return A list containing the youtubeChannelHandles.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getYoutubeChannelHandlesList() {
+        youtubeChannelHandles_.makeImmutable();
+        return youtubeChannelHandles_;
+      }
+      /**
+       * <pre>
+       * Optional. The YouTube Channel handles to fetch creator insights for.
+       * Valid channel handles start with &#64;.
+       * </pre>
+       *
+       * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The count of youtubeChannelHandles.
+       */
+      public int getYoutubeChannelHandlesCount() {
+        return youtubeChannelHandles_.size();
+      }
+      /**
+       * <pre>
+       * Optional. The YouTube Channel handles to fetch creator insights for.
+       * Valid channel handles start with &#64;.
+       * </pre>
+       *
+       * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+       * @param index The index of the element to return.
+       * @return The youtubeChannelHandles at the given index.
+       */
+      public java.lang.String getYoutubeChannelHandles(int index) {
+        return youtubeChannelHandles_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. The YouTube Channel handles to fetch creator insights for.
+       * Valid channel handles start with &#64;.
+       * </pre>
+       *
+       * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the youtubeChannelHandles at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getYoutubeChannelHandlesBytes(int index) {
+        return youtubeChannelHandles_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. The YouTube Channel handles to fetch creator insights for.
+       * Valid channel handles start with &#64;.
+       * </pre>
+       *
+       * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+       * @param index The index to set the value at.
+       * @param value The youtubeChannelHandles to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYoutubeChannelHandles(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureYoutubeChannelHandlesIsMutable();
+        youtubeChannelHandles_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. The YouTube Channel handles to fetch creator insights for.
+       * Valid channel handles start with &#64;.
+       * </pre>
+       *
+       * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+       * @param value The youtubeChannelHandles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addYoutubeChannelHandles(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureYoutubeChannelHandlesIsMutable();
+        youtubeChannelHandles_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. The YouTube Channel handles to fetch creator insights for.
+       * Valid channel handles start with &#64;.
+       * </pre>
+       *
+       * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+       * @param values The youtubeChannelHandles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllYoutubeChannelHandles(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureYoutubeChannelHandlesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, youtubeChannelHandles_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. The YouTube Channel handles to fetch creator insights for.
+       * Valid channel handles start with &#64;.
+       * </pre>
+       *
+       * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearYoutubeChannelHandles() {
+        youtubeChannelHandles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. The YouTube Channel handles to fetch creator insights for.
+       * Valid channel handles start with &#64;.
+       * </pre>
+       *
+       * <code>repeated string youtube_channel_handles = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+       * @param value The bytes of the youtubeChannelHandles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addYoutubeChannelHandlesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureYoutubeChannelHandlesIsMutable();
+        youtubeChannelHandles_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.YouTubeChannels)
@@ -4028,8 +4331,8 @@ private static final long serialVersionUID = 0L;
   public static final int SEARCH_CHANNELS_FIELD_NUMBER = 4;
   /**
    * <pre>
-   * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in
+   * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+   * Data fetched for channels is based on the list of countries specified in
    * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
@@ -4042,8 +4345,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in
+   * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+   * Data fetched for channels is based on the list of countries specified in
    * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
@@ -4059,8 +4362,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-   * based on the list of countries specified in
+   * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+   * Data fetched for channels is based on the list of countries specified in
    * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
    * </pre>
    *
@@ -6279,8 +6582,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.YouTubeChannels, com.google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.YouTubeChannels.Builder, com.google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.YouTubeChannelsOrBuilder> searchChannelsBuilder_;
     /**
      * <pre>
-     * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in
+     * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+     * Data fetched for channels is based on the list of countries specified in
      * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
@@ -6293,8 +6596,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in
+     * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+     * Data fetched for channels is based on the list of countries specified in
      * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
@@ -6317,8 +6620,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in
+     * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+     * Data fetched for channels is based on the list of countries specified in
      * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
@@ -6339,8 +6642,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in
+     * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+     * Data fetched for channels is based on the list of countries specified in
      * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
@@ -6359,8 +6662,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in
+     * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+     * Data fetched for channels is based on the list of countries specified in
      * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
@@ -6388,8 +6691,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in
+     * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+     * Data fetched for channels is based on the list of countries specified in
      * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
@@ -6413,8 +6716,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in
+     * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+     * Data fetched for channels is based on the list of countries specified in
      * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
@@ -6425,8 +6728,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in
+     * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+     * Data fetched for channels is based on the list of countries specified in
      * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *
@@ -6445,8 +6748,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel IDs for Creator Insights. Data fetched for channels is
-     * based on the list of countries specified in
+     * YouTube Channel IDs and YouTube Channel handles for Creator Insights.
+     * Data fetched for channels is based on the list of countries specified in
      * [country_locations][google.ads.googleads.v25.services.GenerateCreatorInsightsRequest.country_locations].
      * </pre>
      *

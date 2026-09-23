@@ -47,6 +47,9 @@ private static final long serialVersionUID = 0L;
     path1_ = "";
     path2_ = "";
     adStrength_ = 0;
+    trackingUrlTemplate_ = "";
+    urlCustomParameters_ = java.util.Collections.emptyList();
+    finalUrlSuffix_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -690,6 +693,168 @@ private static final long serialVersionUID = 0L;
     return googleLocalServicesInfo_ == null ? com.google.ads.googleads.v25.resources.GoogleLocalServicesInfo.getDefaultInstance() : googleLocalServicesInfo_;
   }
 
+  public static final int TRACKING_URL_TEMPLATE_FIELD_NUMBER = 15;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object trackingUrlTemplate_ = "";
+  /**
+   * <pre>
+   * URL template for constructing a tracking URL.
+   * </pre>
+   *
+   * <code>string tracking_url_template = 15;</code>
+   * @return The trackingUrlTemplate.
+   */
+  @java.lang.Override
+  public java.lang.String getTrackingUrlTemplate() {
+    java.lang.Object ref = trackingUrlTemplate_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      trackingUrlTemplate_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * URL template for constructing a tracking URL.
+   * </pre>
+   *
+   * <code>string tracking_url_template = 15;</code>
+   * @return The bytes for trackingUrlTemplate.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTrackingUrlTemplateBytes() {
+    java.lang.Object ref = trackingUrlTemplate_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      trackingUrlTemplate_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int URL_CUSTOM_PARAMETERS_FIELD_NUMBER = 16;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.ads.googleads.v25.common.CustomParameter> urlCustomParameters_;
+  /**
+   * <pre>
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v25.common.CustomParameter> getUrlCustomParametersList() {
+    return urlCustomParameters_;
+  }
+  /**
+   * <pre>
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v25.common.CustomParameterOrBuilder> 
+      getUrlCustomParametersOrBuilderList() {
+    return urlCustomParameters_;
+  }
+  /**
+   * <pre>
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+   */
+  @java.lang.Override
+  public int getUrlCustomParametersCount() {
+    return urlCustomParameters_.size();
+  }
+  /**
+   * <pre>
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.common.CustomParameter getUrlCustomParameters(int index) {
+    return urlCustomParameters_.get(index);
+  }
+  /**
+   * <pre>
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
+      int index) {
+    return urlCustomParameters_.get(index);
+  }
+
+  public static final int FINAL_URL_SUFFIX_FIELD_NUMBER = 17;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object finalUrlSuffix_ = "";
+  /**
+   * <pre>
+   * URL template for appending params to landing page URLs served with parallel
+   * tracking.
+   * </pre>
+   *
+   * <code>string final_url_suffix = 17;</code>
+   * @return The finalUrlSuffix.
+   */
+  @java.lang.Override
+  public java.lang.String getFinalUrlSuffix() {
+    java.lang.Object ref = finalUrlSuffix_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      finalUrlSuffix_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * URL template for appending params to landing page URLs served with parallel
+   * tracking.
+   * </pre>
+   *
+   * <code>string final_url_suffix = 17;</code>
+   * @return The bytes for finalUrlSuffix.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFinalUrlSuffixBytes() {
+    java.lang.Object ref = finalUrlSuffix_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      finalUrlSuffix_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -750,6 +915,15 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(14, getGoogleLocalServicesInfo());
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trackingUrlTemplate_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 15, trackingUrlTemplate_);
+    }
+    for (int i = 0; i < urlCustomParameters_.size(); i++) {
+      output.writeMessage(16, urlCustomParameters_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(finalUrlSuffix_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 17, finalUrlSuffix_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -827,6 +1001,16 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getGoogleLocalServicesInfo());
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trackingUrlTemplate_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(15, trackingUrlTemplate_);
+    }
+    for (int i = 0; i < urlCustomParameters_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, urlCustomParameters_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(finalUrlSuffix_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(17, finalUrlSuffix_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -872,6 +1056,12 @@ private static final long serialVersionUID = 0L;
       if (!getGoogleLocalServicesInfo()
           .equals(other.getGoogleLocalServicesInfo())) return false;
     }
+    if (!getTrackingUrlTemplate()
+        .equals(other.getTrackingUrlTemplate())) return false;
+    if (!getUrlCustomParametersList()
+        .equals(other.getUrlCustomParametersList())) return false;
+    if (!getFinalUrlSuffix()
+        .equals(other.getFinalUrlSuffix())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -922,6 +1112,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + GOOGLE_LOCAL_SERVICES_INFO_FIELD_NUMBER;
       hash = (53 * hash) + getGoogleLocalServicesInfo().hashCode();
     }
+    hash = (37 * hash) + TRACKING_URL_TEMPLATE_FIELD_NUMBER;
+    hash = (53 * hash) + getTrackingUrlTemplate().hashCode();
+    if (getUrlCustomParametersCount() > 0) {
+      hash = (37 * hash) + URL_CUSTOM_PARAMETERS_FIELD_NUMBER;
+      hash = (53 * hash) + getUrlCustomParametersList().hashCode();
+    }
+    hash = (37 * hash) + FINAL_URL_SUFFIX_FIELD_NUMBER;
+    hash = (53 * hash) + getFinalUrlSuffix().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1060,6 +1258,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         internalGetAssetCoverageFieldBuilder();
         internalGetGoogleLocalServicesInfoFieldBuilder();
+        internalGetUrlCustomParametersFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1090,6 +1289,15 @@ private static final long serialVersionUID = 0L;
         googleLocalServicesInfoBuilder_.dispose();
         googleLocalServicesInfoBuilder_ = null;
       }
+      trackingUrlTemplate_ = "";
+      if (urlCustomParametersBuilder_ == null) {
+        urlCustomParameters_ = java.util.Collections.emptyList();
+      } else {
+        urlCustomParameters_ = null;
+        urlCustomParametersBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00008000);
+      finalUrlSuffix_ = "";
       return this;
     }
 
@@ -1116,9 +1324,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v25.resources.AssetGroup buildPartial() {
       com.google.ads.googleads.v25.resources.AssetGroup result = new com.google.ads.googleads.v25.resources.AssetGroup(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v25.resources.AssetGroup result) {
+      if (urlCustomParametersBuilder_ == null) {
+        if (((bitField0_ & 0x00008000) != 0)) {
+          urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
+          bitField0_ = (bitField0_ & ~0x00008000);
+        }
+        result.urlCustomParameters_ = urlCustomParameters_;
+      } else {
+        result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.google.ads.googleads.v25.resources.AssetGroup result) {
@@ -1174,6 +1395,12 @@ private static final long serialVersionUID = 0L;
             ? googleLocalServicesInfo_
             : googleLocalServicesInfoBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.trackingUrlTemplate_ = trackingUrlTemplate_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.finalUrlSuffix_ = finalUrlSuffix_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1263,6 +1490,42 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasGoogleLocalServicesInfo()) {
         mergeGoogleLocalServicesInfo(other.getGoogleLocalServicesInfo());
+      }
+      if (!other.getTrackingUrlTemplate().isEmpty()) {
+        trackingUrlTemplate_ = other.trackingUrlTemplate_;
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
+      if (urlCustomParametersBuilder_ == null) {
+        if (!other.urlCustomParameters_.isEmpty()) {
+          if (urlCustomParameters_.isEmpty()) {
+            urlCustomParameters_ = other.urlCustomParameters_;
+            bitField0_ = (bitField0_ & ~0x00008000);
+          } else {
+            ensureUrlCustomParametersIsMutable();
+            urlCustomParameters_.addAll(other.urlCustomParameters_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.urlCustomParameters_.isEmpty()) {
+          if (urlCustomParametersBuilder_.isEmpty()) {
+            urlCustomParametersBuilder_.dispose();
+            urlCustomParametersBuilder_ = null;
+            urlCustomParameters_ = other.urlCustomParameters_;
+            bitField0_ = (bitField0_ & ~0x00008000);
+            urlCustomParametersBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetUrlCustomParametersFieldBuilder() : null;
+          } else {
+            urlCustomParametersBuilder_.addAllMessages(other.urlCustomParameters_);
+          }
+        }
+      }
+      if (!other.getFinalUrlSuffix().isEmpty()) {
+        finalUrlSuffix_ = other.finalUrlSuffix_;
+        bitField0_ |= 0x00010000;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1377,6 +1640,29 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 114
+            case 122: {
+              trackingUrlTemplate_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 122
+            case 130: {
+              com.google.ads.googleads.v25.common.CustomParameter m =
+                  input.readMessage(
+                      com.google.ads.googleads.v25.common.CustomParameter.parser(),
+                      extensionRegistry);
+              if (urlCustomParametersBuilder_ == null) {
+                ensureUrlCustomParametersIsMutable();
+                urlCustomParameters_.add(m);
+              } else {
+                urlCustomParametersBuilder_.addMessage(m);
+              }
+              break;
+            } // case 130
+            case 138: {
+              finalUrlSuffix_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 138
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2992,6 +3278,525 @@ private static final long serialVersionUID = 0L;
         googleLocalServicesInfo_ = null;
       }
       return googleLocalServicesInfoBuilder_;
+    }
+
+    private java.lang.Object trackingUrlTemplate_ = "";
+    /**
+     * <pre>
+     * URL template for constructing a tracking URL.
+     * </pre>
+     *
+     * <code>string tracking_url_template = 15;</code>
+     * @return The trackingUrlTemplate.
+     */
+    public java.lang.String getTrackingUrlTemplate() {
+      java.lang.Object ref = trackingUrlTemplate_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trackingUrlTemplate_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * URL template for constructing a tracking URL.
+     * </pre>
+     *
+     * <code>string tracking_url_template = 15;</code>
+     * @return The bytes for trackingUrlTemplate.
+     */
+    public com.google.protobuf.ByteString
+        getTrackingUrlTemplateBytes() {
+      java.lang.Object ref = trackingUrlTemplate_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trackingUrlTemplate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * URL template for constructing a tracking URL.
+     * </pre>
+     *
+     * <code>string tracking_url_template = 15;</code>
+     * @param value The trackingUrlTemplate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTrackingUrlTemplate(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      trackingUrlTemplate_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * URL template for constructing a tracking URL.
+     * </pre>
+     *
+     * <code>string tracking_url_template = 15;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTrackingUrlTemplate() {
+      trackingUrlTemplate_ = getDefaultInstance().getTrackingUrlTemplate();
+      bitField0_ = (bitField0_ & ~0x00004000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * URL template for constructing a tracking URL.
+     * </pre>
+     *
+     * <code>string tracking_url_template = 15;</code>
+     * @param value The bytes for trackingUrlTemplate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTrackingUrlTemplateBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      trackingUrlTemplate_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.google.ads.googleads.v25.common.CustomParameter> urlCustomParameters_ =
+      java.util.Collections.emptyList();
+    private void ensureUrlCustomParametersIsMutable() {
+      if (!((bitField0_ & 0x00008000) != 0)) {
+        urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v25.common.CustomParameter>(urlCustomParameters_);
+        bitField0_ |= 0x00008000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.google.ads.googleads.v25.common.CustomParameter, com.google.ads.googleads.v25.common.CustomParameter.Builder, com.google.ads.googleads.v25.common.CustomParameterOrBuilder> urlCustomParametersBuilder_;
+
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v25.common.CustomParameter> getUrlCustomParametersList() {
+      if (urlCustomParametersBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(urlCustomParameters_);
+      } else {
+        return urlCustomParametersBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public int getUrlCustomParametersCount() {
+      if (urlCustomParametersBuilder_ == null) {
+        return urlCustomParameters_.size();
+      } else {
+        return urlCustomParametersBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public com.google.ads.googleads.v25.common.CustomParameter getUrlCustomParameters(int index) {
+      if (urlCustomParametersBuilder_ == null) {
+        return urlCustomParameters_.get(index);
+      } else {
+        return urlCustomParametersBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public Builder setUrlCustomParameters(
+        int index, com.google.ads.googleads.v25.common.CustomParameter value) {
+      if (urlCustomParametersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUrlCustomParametersIsMutable();
+        urlCustomParameters_.set(index, value);
+        onChanged();
+      } else {
+        urlCustomParametersBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public Builder setUrlCustomParameters(
+        int index, com.google.ads.googleads.v25.common.CustomParameter.Builder builderForValue) {
+      if (urlCustomParametersBuilder_ == null) {
+        ensureUrlCustomParametersIsMutable();
+        urlCustomParameters_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        urlCustomParametersBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public Builder addUrlCustomParameters(com.google.ads.googleads.v25.common.CustomParameter value) {
+      if (urlCustomParametersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUrlCustomParametersIsMutable();
+        urlCustomParameters_.add(value);
+        onChanged();
+      } else {
+        urlCustomParametersBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public Builder addUrlCustomParameters(
+        int index, com.google.ads.googleads.v25.common.CustomParameter value) {
+      if (urlCustomParametersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureUrlCustomParametersIsMutable();
+        urlCustomParameters_.add(index, value);
+        onChanged();
+      } else {
+        urlCustomParametersBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public Builder addUrlCustomParameters(
+        com.google.ads.googleads.v25.common.CustomParameter.Builder builderForValue) {
+      if (urlCustomParametersBuilder_ == null) {
+        ensureUrlCustomParametersIsMutable();
+        urlCustomParameters_.add(builderForValue.build());
+        onChanged();
+      } else {
+        urlCustomParametersBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public Builder addUrlCustomParameters(
+        int index, com.google.ads.googleads.v25.common.CustomParameter.Builder builderForValue) {
+      if (urlCustomParametersBuilder_ == null) {
+        ensureUrlCustomParametersIsMutable();
+        urlCustomParameters_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        urlCustomParametersBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public Builder addAllUrlCustomParameters(
+        java.lang.Iterable<? extends com.google.ads.googleads.v25.common.CustomParameter> values) {
+      if (urlCustomParametersBuilder_ == null) {
+        ensureUrlCustomParametersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, urlCustomParameters_);
+        onChanged();
+      } else {
+        urlCustomParametersBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public Builder clearUrlCustomParameters() {
+      if (urlCustomParametersBuilder_ == null) {
+        urlCustomParameters_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00008000);
+        onChanged();
+      } else {
+        urlCustomParametersBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public Builder removeUrlCustomParameters(int index) {
+      if (urlCustomParametersBuilder_ == null) {
+        ensureUrlCustomParametersIsMutable();
+        urlCustomParameters_.remove(index);
+        onChanged();
+      } else {
+        urlCustomParametersBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public com.google.ads.googleads.v25.common.CustomParameter.Builder getUrlCustomParametersBuilder(
+        int index) {
+      return internalGetUrlCustomParametersFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public com.google.ads.googleads.v25.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
+        int index) {
+      if (urlCustomParametersBuilder_ == null) {
+        return urlCustomParameters_.get(index);  } else {
+        return urlCustomParametersBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v25.common.CustomParameterOrBuilder> 
+         getUrlCustomParametersOrBuilderList() {
+      if (urlCustomParametersBuilder_ != null) {
+        return urlCustomParametersBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(urlCustomParameters_);
+      }
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public com.google.ads.googleads.v25.common.CustomParameter.Builder addUrlCustomParametersBuilder() {
+      return internalGetUrlCustomParametersFieldBuilder().addBuilder(
+          com.google.ads.googleads.v25.common.CustomParameter.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public com.google.ads.googleads.v25.common.CustomParameter.Builder addUrlCustomParametersBuilder(
+        int index) {
+      return internalGetUrlCustomParametersFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v25.common.CustomParameter.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * A list of mappings to be used for substituting URL custom parameter tags in
+     * the `tracking_url_template`, `final_urls`, and/or `final_mobile_urls`.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v25.common.CustomParameter url_custom_parameters = 16;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v25.common.CustomParameter.Builder> 
+         getUrlCustomParametersBuilderList() {
+      return internalGetUrlCustomParametersFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.google.ads.googleads.v25.common.CustomParameter, com.google.ads.googleads.v25.common.CustomParameter.Builder, com.google.ads.googleads.v25.common.CustomParameterOrBuilder> 
+        internalGetUrlCustomParametersFieldBuilder() {
+      if (urlCustomParametersBuilder_ == null) {
+        urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.google.ads.googleads.v25.common.CustomParameter, com.google.ads.googleads.v25.common.CustomParameter.Builder, com.google.ads.googleads.v25.common.CustomParameterOrBuilder>(
+                urlCustomParameters_,
+                ((bitField0_ & 0x00008000) != 0),
+                getParentForChildren(),
+                isClean());
+        urlCustomParameters_ = null;
+      }
+      return urlCustomParametersBuilder_;
+    }
+
+    private java.lang.Object finalUrlSuffix_ = "";
+    /**
+     * <pre>
+     * URL template for appending params to landing page URLs served with parallel
+     * tracking.
+     * </pre>
+     *
+     * <code>string final_url_suffix = 17;</code>
+     * @return The finalUrlSuffix.
+     */
+    public java.lang.String getFinalUrlSuffix() {
+      java.lang.Object ref = finalUrlSuffix_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        finalUrlSuffix_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * URL template for appending params to landing page URLs served with parallel
+     * tracking.
+     * </pre>
+     *
+     * <code>string final_url_suffix = 17;</code>
+     * @return The bytes for finalUrlSuffix.
+     */
+    public com.google.protobuf.ByteString
+        getFinalUrlSuffixBytes() {
+      java.lang.Object ref = finalUrlSuffix_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        finalUrlSuffix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * URL template for appending params to landing page URLs served with parallel
+     * tracking.
+     * </pre>
+     *
+     * <code>string final_url_suffix = 17;</code>
+     * @param value The finalUrlSuffix to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFinalUrlSuffix(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      finalUrlSuffix_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * URL template for appending params to landing page URLs served with parallel
+     * tracking.
+     * </pre>
+     *
+     * <code>string final_url_suffix = 17;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFinalUrlSuffix() {
+      finalUrlSuffix_ = getDefaultInstance().getFinalUrlSuffix();
+      bitField0_ = (bitField0_ & ~0x00010000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * URL template for appending params to landing page URLs served with parallel
+     * tracking.
+     * </pre>
+     *
+     * <code>string final_url_suffix = 17;</code>
+     * @param value The bytes for finalUrlSuffix to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFinalUrlSuffixBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      finalUrlSuffix_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v25.resources.AssetGroup)

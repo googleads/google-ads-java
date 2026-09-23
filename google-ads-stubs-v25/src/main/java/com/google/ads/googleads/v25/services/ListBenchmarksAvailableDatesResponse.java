@@ -54,7 +54,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The dates that support benchmarks metrics. Data is supported for any dates
-   * within this date range inclusive.
+   * within this date range inclusive. This is a general date range where
+   * benchmarks data is available. Some metrics are only returned within more
+   * restricted dates `supported_dates_for_all_metrics`.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -67,7 +69,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The dates that support benchmarks metrics. Data is supported for any dates
-   * within this date range inclusive.
+   * within this date range inclusive. This is a general date range where
+   * benchmarks data is available. Some metrics are only returned within more
+   * restricted dates `supported_dates_for_all_metrics`.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -80,7 +84,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The dates that support benchmarks metrics. Data is supported for any dates
-   * within this date range inclusive.
+   * within this date range inclusive. This is a general date range where
+   * benchmarks data is available. Some metrics are only returned within more
+   * restricted dates `supported_dates_for_all_metrics`.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -88,6 +94,71 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.ads.googleads.v25.common.DateRangeOrBuilder getSupportedDatesOrBuilder() {
     return supportedDates_ == null ? com.google.ads.googleads.v25.common.DateRange.getDefaultInstance() : supportedDates_;
+  }
+
+  public static final int SUPPORTED_DATES_FOR_ALL_METRICS_FIELD_NUMBER = 2;
+  private com.google.ads.googleads.v25.common.DateRange supportedDatesForAllMetrics_;
+  /**
+   * <pre>
+   * The subset of `supported_dates` that support all metrics. Some metrics are
+   * only supported within this specific date range due to limited availability.
+   * This applies to the following metrics:
+   *
+   * 1. Average rate metrics of the selected benchmarks source. For example, the
+   * `average_cpm` of category "/Apparel/Clothing."
+   * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+   *
+   * These metrics are omitted from the response if the request `date_range`
+   * does not fall within this smaller date range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+   * @return Whether the supportedDatesForAllMetrics field is set.
+   */
+  @java.lang.Override
+  public boolean hasSupportedDatesForAllMetrics() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * The subset of `supported_dates` that support all metrics. Some metrics are
+   * only supported within this specific date range due to limited availability.
+   * This applies to the following metrics:
+   *
+   * 1. Average rate metrics of the selected benchmarks source. For example, the
+   * `average_cpm` of category "/Apparel/Clothing."
+   * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+   *
+   * These metrics are omitted from the response if the request `date_range`
+   * does not fall within this smaller date range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+   * @return The supportedDatesForAllMetrics.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.common.DateRange getSupportedDatesForAllMetrics() {
+    return supportedDatesForAllMetrics_ == null ? com.google.ads.googleads.v25.common.DateRange.getDefaultInstance() : supportedDatesForAllMetrics_;
+  }
+  /**
+   * <pre>
+   * The subset of `supported_dates` that support all metrics. Some metrics are
+   * only supported within this specific date range due to limited availability.
+   * This applies to the following metrics:
+   *
+   * 1. Average rate metrics of the selected benchmarks source. For example, the
+   * `average_cpm` of category "/Apparel/Clothing."
+   * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+   *
+   * These metrics are omitted from the response if the request `date_range`
+   * does not fall within this smaller date range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v25.common.DateRangeOrBuilder getSupportedDatesForAllMetricsOrBuilder() {
+    return supportedDatesForAllMetrics_ == null ? com.google.ads.googleads.v25.common.DateRange.getDefaultInstance() : supportedDatesForAllMetrics_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -107,6 +178,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getSupportedDates());
     }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(2, getSupportedDatesForAllMetrics());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -119,6 +193,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSupportedDates());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getSupportedDatesForAllMetrics());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -140,6 +218,11 @@ private static final long serialVersionUID = 0L;
       if (!getSupportedDates()
           .equals(other.getSupportedDates())) return false;
     }
+    if (hasSupportedDatesForAllMetrics() != other.hasSupportedDatesForAllMetrics()) return false;
+    if (hasSupportedDatesForAllMetrics()) {
+      if (!getSupportedDatesForAllMetrics()
+          .equals(other.getSupportedDatesForAllMetrics())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -154,6 +237,10 @@ private static final long serialVersionUID = 0L;
     if (hasSupportedDates()) {
       hash = (37 * hash) + SUPPORTED_DATES_FIELD_NUMBER;
       hash = (53 * hash) + getSupportedDates().hashCode();
+    }
+    if (hasSupportedDatesForAllMetrics()) {
+      hash = (37 * hash) + SUPPORTED_DATES_FOR_ALL_METRICS_FIELD_NUMBER;
+      hash = (53 * hash) + getSupportedDatesForAllMetrics().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -291,6 +378,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         internalGetSupportedDatesFieldBuilder();
+        internalGetSupportedDatesForAllMetricsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -301,6 +389,11 @@ private static final long serialVersionUID = 0L;
       if (supportedDatesBuilder_ != null) {
         supportedDatesBuilder_.dispose();
         supportedDatesBuilder_ = null;
+      }
+      supportedDatesForAllMetrics_ = null;
+      if (supportedDatesForAllMetricsBuilder_ != null) {
+        supportedDatesForAllMetricsBuilder_.dispose();
+        supportedDatesForAllMetricsBuilder_ = null;
       }
       return this;
     }
@@ -342,6 +435,12 @@ private static final long serialVersionUID = 0L;
             : supportedDatesBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.supportedDatesForAllMetrics_ = supportedDatesForAllMetricsBuilder_ == null
+            ? supportedDatesForAllMetrics_
+            : supportedDatesForAllMetricsBuilder_.build();
+        to_bitField0_ |= 0x00000002;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -359,6 +458,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v25.services.ListBenchmarksAvailableDatesResponse.getDefaultInstance()) return this;
       if (other.hasSupportedDates()) {
         mergeSupportedDates(other.getSupportedDates());
+      }
+      if (other.hasSupportedDatesForAllMetrics()) {
+        mergeSupportedDatesForAllMetrics(other.getSupportedDatesForAllMetrics());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -393,6 +495,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetSupportedDatesForAllMetricsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -416,7 +525,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The dates that support benchmarks metrics. Data is supported for any dates
-     * within this date range inclusive.
+     * within this date range inclusive. This is a general date range where
+     * benchmarks data is available. Some metrics are only returned within more
+     * restricted dates `supported_dates_for_all_metrics`.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -428,7 +539,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The dates that support benchmarks metrics. Data is supported for any dates
-     * within this date range inclusive.
+     * within this date range inclusive. This is a general date range where
+     * benchmarks data is available. Some metrics are only returned within more
+     * restricted dates `supported_dates_for_all_metrics`.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -444,7 +557,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The dates that support benchmarks metrics. Data is supported for any dates
-     * within this date range inclusive.
+     * within this date range inclusive. This is a general date range where
+     * benchmarks data is available. Some metrics are only returned within more
+     * restricted dates `supported_dates_for_all_metrics`.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -465,7 +580,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The dates that support benchmarks metrics. Data is supported for any dates
-     * within this date range inclusive.
+     * within this date range inclusive. This is a general date range where
+     * benchmarks data is available. Some metrics are only returned within more
+     * restricted dates `supported_dates_for_all_metrics`.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -484,7 +601,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The dates that support benchmarks metrics. Data is supported for any dates
-     * within this date range inclusive.
+     * within this date range inclusive. This is a general date range where
+     * benchmarks data is available. Some metrics are only returned within more
+     * restricted dates `supported_dates_for_all_metrics`.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -510,7 +629,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The dates that support benchmarks metrics. Data is supported for any dates
-     * within this date range inclusive.
+     * within this date range inclusive. This is a general date range where
+     * benchmarks data is available. Some metrics are only returned within more
+     * restricted dates `supported_dates_for_all_metrics`.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -528,7 +649,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The dates that support benchmarks metrics. Data is supported for any dates
-     * within this date range inclusive.
+     * within this date range inclusive. This is a general date range where
+     * benchmarks data is available. Some metrics are only returned within more
+     * restricted dates `supported_dates_for_all_metrics`.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -541,7 +664,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The dates that support benchmarks metrics. Data is supported for any dates
-     * within this date range inclusive.
+     * within this date range inclusive. This is a general date range where
+     * benchmarks data is available. Some metrics are only returned within more
+     * restricted dates `supported_dates_for_all_metrics`.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -557,7 +682,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The dates that support benchmarks metrics. Data is supported for any dates
-     * within this date range inclusive.
+     * within this date range inclusive. This is a general date range where
+     * benchmarks data is available. Some metrics are only returned within more
+     * restricted dates `supported_dates_for_all_metrics`.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.DateRange supported_dates = 1;</code>
@@ -574,6 +701,244 @@ private static final long serialVersionUID = 0L;
         supportedDates_ = null;
       }
       return supportedDatesBuilder_;
+    }
+
+    private com.google.ads.googleads.v25.common.DateRange supportedDatesForAllMetrics_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v25.common.DateRange, com.google.ads.googleads.v25.common.DateRange.Builder, com.google.ads.googleads.v25.common.DateRangeOrBuilder> supportedDatesForAllMetricsBuilder_;
+    /**
+     * <pre>
+     * The subset of `supported_dates` that support all metrics. Some metrics are
+     * only supported within this specific date range due to limited availability.
+     * This applies to the following metrics:
+     *
+     * 1. Average rate metrics of the selected benchmarks source. For example, the
+     * `average_cpm` of category "/Apparel/Clothing."
+     * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+     *
+     * These metrics are omitted from the response if the request `date_range`
+     * does not fall within this smaller date range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+     * @return Whether the supportedDatesForAllMetrics field is set.
+     */
+    public boolean hasSupportedDatesForAllMetrics() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The subset of `supported_dates` that support all metrics. Some metrics are
+     * only supported within this specific date range due to limited availability.
+     * This applies to the following metrics:
+     *
+     * 1. Average rate metrics of the selected benchmarks source. For example, the
+     * `average_cpm` of category "/Apparel/Clothing."
+     * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+     *
+     * These metrics are omitted from the response if the request `date_range`
+     * does not fall within this smaller date range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+     * @return The supportedDatesForAllMetrics.
+     */
+    public com.google.ads.googleads.v25.common.DateRange getSupportedDatesForAllMetrics() {
+      if (supportedDatesForAllMetricsBuilder_ == null) {
+        return supportedDatesForAllMetrics_ == null ? com.google.ads.googleads.v25.common.DateRange.getDefaultInstance() : supportedDatesForAllMetrics_;
+      } else {
+        return supportedDatesForAllMetricsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The subset of `supported_dates` that support all metrics. Some metrics are
+     * only supported within this specific date range due to limited availability.
+     * This applies to the following metrics:
+     *
+     * 1. Average rate metrics of the selected benchmarks source. For example, the
+     * `average_cpm` of category "/Apparel/Clothing."
+     * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+     *
+     * These metrics are omitted from the response if the request `date_range`
+     * does not fall within this smaller date range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+     */
+    public Builder setSupportedDatesForAllMetrics(com.google.ads.googleads.v25.common.DateRange value) {
+      if (supportedDatesForAllMetricsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        supportedDatesForAllMetrics_ = value;
+      } else {
+        supportedDatesForAllMetricsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The subset of `supported_dates` that support all metrics. Some metrics are
+     * only supported within this specific date range due to limited availability.
+     * This applies to the following metrics:
+     *
+     * 1. Average rate metrics of the selected benchmarks source. For example, the
+     * `average_cpm` of category "/Apparel/Clothing."
+     * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+     *
+     * These metrics are omitted from the response if the request `date_range`
+     * does not fall within this smaller date range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+     */
+    public Builder setSupportedDatesForAllMetrics(
+        com.google.ads.googleads.v25.common.DateRange.Builder builderForValue) {
+      if (supportedDatesForAllMetricsBuilder_ == null) {
+        supportedDatesForAllMetrics_ = builderForValue.build();
+      } else {
+        supportedDatesForAllMetricsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The subset of `supported_dates` that support all metrics. Some metrics are
+     * only supported within this specific date range due to limited availability.
+     * This applies to the following metrics:
+     *
+     * 1. Average rate metrics of the selected benchmarks source. For example, the
+     * `average_cpm` of category "/Apparel/Clothing."
+     * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+     *
+     * These metrics are omitted from the response if the request `date_range`
+     * does not fall within this smaller date range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+     */
+    public Builder mergeSupportedDatesForAllMetrics(com.google.ads.googleads.v25.common.DateRange value) {
+      if (supportedDatesForAllMetricsBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          supportedDatesForAllMetrics_ != null &&
+          supportedDatesForAllMetrics_ != com.google.ads.googleads.v25.common.DateRange.getDefaultInstance()) {
+          getSupportedDatesForAllMetricsBuilder().mergeFrom(value);
+        } else {
+          supportedDatesForAllMetrics_ = value;
+        }
+      } else {
+        supportedDatesForAllMetricsBuilder_.mergeFrom(value);
+      }
+      if (supportedDatesForAllMetrics_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The subset of `supported_dates` that support all metrics. Some metrics are
+     * only supported within this specific date range due to limited availability.
+     * This applies to the following metrics:
+     *
+     * 1. Average rate metrics of the selected benchmarks source. For example, the
+     * `average_cpm` of category "/Apparel/Clothing."
+     * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+     *
+     * These metrics are omitted from the response if the request `date_range`
+     * does not fall within this smaller date range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+     */
+    public Builder clearSupportedDatesForAllMetrics() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      supportedDatesForAllMetrics_ = null;
+      if (supportedDatesForAllMetricsBuilder_ != null) {
+        supportedDatesForAllMetricsBuilder_.dispose();
+        supportedDatesForAllMetricsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The subset of `supported_dates` that support all metrics. Some metrics are
+     * only supported within this specific date range due to limited availability.
+     * This applies to the following metrics:
+     *
+     * 1. Average rate metrics of the selected benchmarks source. For example, the
+     * `average_cpm` of category "/Apparel/Clothing."
+     * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+     *
+     * These metrics are omitted from the response if the request `date_range`
+     * does not fall within this smaller date range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+     */
+    public com.google.ads.googleads.v25.common.DateRange.Builder getSupportedDatesForAllMetricsBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return internalGetSupportedDatesForAllMetricsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The subset of `supported_dates` that support all metrics. Some metrics are
+     * only supported within this specific date range due to limited availability.
+     * This applies to the following metrics:
+     *
+     * 1. Average rate metrics of the selected benchmarks source. For example, the
+     * `average_cpm` of category "/Apparel/Clothing."
+     * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+     *
+     * These metrics are omitted from the response if the request `date_range`
+     * does not fall within this smaller date range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+     */
+    public com.google.ads.googleads.v25.common.DateRangeOrBuilder getSupportedDatesForAllMetricsOrBuilder() {
+      if (supportedDatesForAllMetricsBuilder_ != null) {
+        return supportedDatesForAllMetricsBuilder_.getMessageOrBuilder();
+      } else {
+        return supportedDatesForAllMetrics_ == null ?
+            com.google.ads.googleads.v25.common.DateRange.getDefaultInstance() : supportedDatesForAllMetrics_;
+      }
+    }
+    /**
+     * <pre>
+     * The subset of `supported_dates` that support all metrics. Some metrics are
+     * only supported within this specific date range due to limited availability.
+     * This applies to the following metrics:
+     *
+     * 1. Average rate metrics of the selected benchmarks source. For example, the
+     * `average_cpm` of category "/Apparel/Clothing."
+     * 2. Customer share metrics. For example, the customer's `share_of_voice`.
+     *
+     * These metrics are omitted from the response if the request `date_range`
+     * does not fall within this smaller date range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.common.DateRange supported_dates_for_all_metrics = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v25.common.DateRange, com.google.ads.googleads.v25.common.DateRange.Builder, com.google.ads.googleads.v25.common.DateRangeOrBuilder> 
+        internalGetSupportedDatesForAllMetricsFieldBuilder() {
+      if (supportedDatesForAllMetricsBuilder_ == null) {
+        supportedDatesForAllMetricsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v25.common.DateRange, com.google.ads.googleads.v25.common.DateRange.Builder, com.google.ads.googleads.v25.common.DateRangeOrBuilder>(
+                getSupportedDatesForAllMetrics(),
+                getParentForChildren(),
+                isClean());
+        supportedDatesForAllMetrics_ = null;
+      }
+      return supportedDatesForAllMetricsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v25.services.ListBenchmarksAvailableDatesResponse)

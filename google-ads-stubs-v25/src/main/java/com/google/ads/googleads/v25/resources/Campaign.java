@@ -24302,6 +24302,35 @@ private static final long serialVersionUID = 0L;
      * @return The assetAutomationStatus.
      */
     com.google.ads.googleads.v25.enums.AssetAutomationStatusEnum.AssetAutomationStatus getAssetAutomationStatus();
+
+    /**
+     * <pre>
+     * Settings for automated video crawling.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+     * @return Whether the automatedVideoCrawlSetting field is set.
+     */
+    boolean hasAutomatedVideoCrawlSetting();
+    /**
+     * <pre>
+     * Settings for automated video crawling.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+     * @return The automatedVideoCrawlSetting.
+     */
+    com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting getAutomatedVideoCrawlSetting();
+    /**
+     * <pre>
+     * Settings for automated video crawling.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+     */
+    com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSettingOrBuilder getAutomatedVideoCrawlSettingOrBuilder();
+
+    com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.SettingCase getSettingCase();
   }
   /**
    * <pre>
@@ -24347,7 +24376,1818 @@ private static final long serialVersionUID = 0L;
               com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.class, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.Builder.class);
     }
 
+    public interface AutomatedVideoCrawlInfoOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The URL to be included for crawling.
+       * </pre>
+       *
+       * <code>optional string url = 1;</code>
+       * @return Whether the url field is set.
+       */
+      boolean hasUrl();
+      /**
+       * <pre>
+       * The URL to be included for crawling.
+       * </pre>
+       *
+       * <code>optional string url = 1;</code>
+       * @return The url.
+       */
+      java.lang.String getUrl();
+      /**
+       * <pre>
+       * The URL to be included for crawling.
+       * </pre>
+       *
+       * <code>optional string url = 1;</code>
+       * @return The bytes for url.
+       */
+      com.google.protobuf.ByteString
+          getUrlBytes();
+
+      /**
+       * <pre>
+       * The type of source this info block represents.
+       * </pre>
+       *
+       * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+       * @return Whether the sourcePlatform field is set.
+       */
+      boolean hasSourcePlatform();
+      /**
+       * <pre>
+       * The type of source this info block represents.
+       * </pre>
+       *
+       * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+       * @return The enum numeric value on the wire for sourcePlatform.
+       */
+      int getSourcePlatformValue();
+      /**
+       * <pre>
+       * The type of source this info block represents.
+       * </pre>
+       *
+       * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+       * @return The sourcePlatform.
+       */
+      com.google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform getSourcePlatform();
+
+      /**
+       * <pre>
+       * Whether the user has checked this source and opted in for automated
+       * video crawling.
+       * </pre>
+       *
+       * <code>optional bool enabled = 3;</code>
+       * @return Whether the enabled field is set.
+       */
+      boolean hasEnabled();
+      /**
+       * <pre>
+       * Whether the user has checked this source and opted in for automated
+       * video crawling.
+       * </pre>
+       *
+       * <code>optional bool enabled = 3;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+    }
+    /**
+     * <pre>
+     * Represents the info for a single URL source for automated video crawling.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo}
+     */
+    public static final class AutomatedVideoCrawlInfo extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo)
+        AutomatedVideoCrawlInfoOrBuilder {
+    private static final long serialVersionUID = 0L;
+      static {
+        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 33,
+          /* patch= */ 2,
+          /* suffix= */ "",
+          "AutomatedVideoCrawlInfo");
+      }
+      // Use AutomatedVideoCrawlInfo.newBuilder() to construct.
+      private AutomatedVideoCrawlInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+      }
+      private AutomatedVideoCrawlInfo() {
+        url_ = "";
+        sourcePlatform_ = 0;
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v25.resources.CampaignProto.internal_static_google_ads_googleads_v25_resources_Campaign_AssetAutomationSetting_AutomatedVideoCrawlInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v25.resources.CampaignProto.internal_static_google_ads_googleads_v25_resources_Campaign_AssetAutomationSetting_AutomatedVideoCrawlInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.class, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int URL_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object url_ = "";
+      /**
+       * <pre>
+       * The URL to be included for crawling.
+       * </pre>
+       *
+       * <code>optional string url = 1;</code>
+       * @return Whether the url field is set.
+       */
+      @java.lang.Override
+      public boolean hasUrl() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The URL to be included for crawling.
+       * </pre>
+       *
+       * <code>optional string url = 1;</code>
+       * @return The url.
+       */
+      @java.lang.Override
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          url_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The URL to be included for crawling.
+       * </pre>
+       *
+       * <code>optional string url = 1;</code>
+       * @return The bytes for url.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int SOURCE_PLATFORM_FIELD_NUMBER = 2;
+      private int sourcePlatform_ = 0;
+      /**
+       * <pre>
+       * The type of source this info block represents.
+       * </pre>
+       *
+       * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+       * @return Whether the sourcePlatform field is set.
+       */
+      @java.lang.Override public boolean hasSourcePlatform() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The type of source this info block represents.
+       * </pre>
+       *
+       * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+       * @return The enum numeric value on the wire for sourcePlatform.
+       */
+      @java.lang.Override public int getSourcePlatformValue() {
+        return sourcePlatform_;
+      }
+      /**
+       * <pre>
+       * The type of source this info block represents.
+       * </pre>
+       *
+       * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+       * @return The sourcePlatform.
+       */
+      @java.lang.Override public com.google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform getSourcePlatform() {
+        com.google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform result = com.google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform.forNumber(sourcePlatform_);
+        return result == null ? com.google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform.UNRECOGNIZED : result;
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 3;
+      private boolean enabled_ = false;
+      /**
+       * <pre>
+       * Whether the user has checked this source and opted in for automated
+       * video crawling.
+       * </pre>
+       *
+       * <code>optional bool enabled = 3;</code>
+       * @return Whether the enabled field is set.
+       */
+      @java.lang.Override
+      public boolean hasEnabled() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Whether the user has checked this source and opted in for automated
+       * video crawling.
+       * </pre>
+       *
+       * <code>optional bool enabled = 3;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 1, url_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeEnum(2, sourcePlatform_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeBool(3, enabled_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(1, url_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, sourcePlatform_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, enabled_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo)) {
+          return super.equals(obj);
+        }
+        com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo other = (com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo) obj;
+
+        if (hasUrl() != other.hasUrl()) return false;
+        if (hasUrl()) {
+          if (!getUrl()
+              .equals(other.getUrl())) return false;
+        }
+        if (hasSourcePlatform() != other.hasSourcePlatform()) return false;
+        if (hasSourcePlatform()) {
+          if (sourcePlatform_ != other.sourcePlatform_) return false;
+        }
+        if (hasEnabled() != other.hasEnabled()) return false;
+        if (hasEnabled()) {
+          if (getEnabled()
+              != other.getEnabled()) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasUrl()) {
+          hash = (37 * hash) + URL_FIELD_NUMBER;
+          hash = (53 * hash) + getUrl().hashCode();
+        }
+        if (hasSourcePlatform()) {
+          hash = (37 * hash) + SOURCE_PLATFORM_FIELD_NUMBER;
+          hash = (53 * hash) + sourcePlatform_;
+        }
+        if (hasEnabled()) {
+          hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getEnabled());
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Represents the info for a single URL source for automated video crawling.
+       * </pre>
+       *
+       * Protobuf type {@code google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo)
+          com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfoOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.ads.googleads.v25.resources.CampaignProto.internal_static_google_ads_googleads_v25_resources_Campaign_AssetAutomationSetting_AutomatedVideoCrawlInfo_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.ads.googleads.v25.resources.CampaignProto.internal_static_google_ads_googleads_v25_resources_Campaign_AssetAutomationSetting_AutomatedVideoCrawlInfo_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.class, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder.class);
+        }
+
+        // Construct using com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          url_ = "";
+          sourcePlatform_ = 0;
+          enabled_ = false;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.ads.googleads.v25.resources.CampaignProto.internal_static_google_ads_googleads_v25_resources_Campaign_AssetAutomationSetting_AutomatedVideoCrawlInfo_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo getDefaultInstanceForType() {
+          return com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo build() {
+          com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo buildPartial() {
+          com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo result = new com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.url_ = url_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.sourcePlatform_ = sourcePlatform_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.enabled_ = enabled_;
+            to_bitField0_ |= 0x00000004;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo) {
+            return mergeFrom((com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo other) {
+          if (other == com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.getDefaultInstance()) return this;
+          if (other.hasUrl()) {
+            url_ = other.url_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          if (other.hasSourcePlatform()) {
+            setSourcePlatformValue(other.getSourcePlatformValue());
+          }
+          if (other.hasEnabled()) {
+            setEnabled(other.getEnabled());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  url_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 16: {
+                  sourcePlatform_ = input.readEnum();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  enabled_ = input.readBool();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object url_ = "";
+        /**
+         * <pre>
+         * The URL to be included for crawling.
+         * </pre>
+         *
+         * <code>optional string url = 1;</code>
+         * @return Whether the url field is set.
+         */
+        public boolean hasUrl() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The URL to be included for crawling.
+         * </pre>
+         *
+         * <code>optional string url = 1;</code>
+         * @return The url.
+         */
+        public java.lang.String getUrl() {
+          java.lang.Object ref = url_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            url_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The URL to be included for crawling.
+         * </pre>
+         *
+         * <code>optional string url = 1;</code>
+         * @return The bytes for url.
+         */
+        public com.google.protobuf.ByteString
+            getUrlBytes() {
+          java.lang.Object ref = url_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            url_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The URL to be included for crawling.
+         * </pre>
+         *
+         * <code>optional string url = 1;</code>
+         * @param value The url to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUrl(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          url_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The URL to be included for crawling.
+         * </pre>
+         *
+         * <code>optional string url = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUrl() {
+          url_ = getDefaultInstance().getUrl();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The URL to be included for crawling.
+         * </pre>
+         *
+         * <code>optional string url = 1;</code>
+         * @param value The bytes for url to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          url_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private int sourcePlatform_ = 0;
+        /**
+         * <pre>
+         * The type of source this info block represents.
+         * </pre>
+         *
+         * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+         * @return Whether the sourcePlatform field is set.
+         */
+        @java.lang.Override public boolean hasSourcePlatform() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * The type of source this info block represents.
+         * </pre>
+         *
+         * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+         * @return The enum numeric value on the wire for sourcePlatform.
+         */
+        @java.lang.Override public int getSourcePlatformValue() {
+          return sourcePlatform_;
+        }
+        /**
+         * <pre>
+         * The type of source this info block represents.
+         * </pre>
+         *
+         * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+         * @param value The enum numeric value on the wire for sourcePlatform to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSourcePlatformValue(int value) {
+          sourcePlatform_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The type of source this info block represents.
+         * </pre>
+         *
+         * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+         * @return The sourcePlatform.
+         */
+        @java.lang.Override
+        public com.google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform getSourcePlatform() {
+          com.google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform result = com.google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform.forNumber(sourcePlatform_);
+          return result == null ? com.google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * The type of source this info block represents.
+         * </pre>
+         *
+         * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+         * @param value The sourcePlatform to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSourcePlatform(com.google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform value) {
+          if (value == null) { throw new NullPointerException(); }
+          bitField0_ |= 0x00000002;
+          sourcePlatform_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The type of source this info block represents.
+         * </pre>
+         *
+         * <code>optional .google.ads.googleads.v25.enums.VideoCrawlSourcePlatformEnum.VideoCrawlSourcePlatform source_platform = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSourcePlatform() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          sourcePlatform_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * Whether the user has checked this source and opted in for automated
+         * video crawling.
+         * </pre>
+         *
+         * <code>optional bool enabled = 3;</code>
+         * @return Whether the enabled field is set.
+         */
+        @java.lang.Override
+        public boolean hasEnabled() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Whether the user has checked this source and opted in for automated
+         * video crawling.
+         * </pre>
+         *
+         * <code>optional bool enabled = 3;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * Whether the user has checked this source and opted in for automated
+         * video crawling.
+         * </pre>
+         *
+         * <code>optional bool enabled = 3;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+
+          enabled_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether the user has checked this source and opted in for automated
+         * video crawling.
+         * </pre>
+         *
+         * <code>optional bool enabled = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo)
+      }
+
+      // @@protoc_insertion_point(class_scope:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo)
+      private static final com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo();
+      }
+
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AutomatedVideoCrawlInfo>
+          PARSER = new com.google.protobuf.AbstractParser<AutomatedVideoCrawlInfo>() {
+        @java.lang.Override
+        public AutomatedVideoCrawlInfo parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<AutomatedVideoCrawlInfo> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AutomatedVideoCrawlInfo> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AutomatedVideoCrawlSettingOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The list of info to be included for crawling.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+       */
+      java.util.List<com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo> 
+          getAutomatedVideoCrawlInfosList();
+      /**
+       * <pre>
+       * The list of info to be included for crawling.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+       */
+      com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo getAutomatedVideoCrawlInfos(int index);
+      /**
+       * <pre>
+       * The list of info to be included for crawling.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+       */
+      int getAutomatedVideoCrawlInfosCount();
+      /**
+       * <pre>
+       * The list of info to be included for crawling.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+       */
+      java.util.List<? extends com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfoOrBuilder> 
+          getAutomatedVideoCrawlInfosOrBuilderList();
+      /**
+       * <pre>
+       * The list of info to be included for crawling.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+       */
+      com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfoOrBuilder getAutomatedVideoCrawlInfosOrBuilder(
+          int index);
+    }
+    /**
+     * <pre>
+     * Represents the settings for automated video crawling for a campaign.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting}
+     */
+    public static final class AutomatedVideoCrawlSetting extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting)
+        AutomatedVideoCrawlSettingOrBuilder {
+    private static final long serialVersionUID = 0L;
+      static {
+        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 33,
+          /* patch= */ 2,
+          /* suffix= */ "",
+          "AutomatedVideoCrawlSetting");
+      }
+      // Use AutomatedVideoCrawlSetting.newBuilder() to construct.
+      private AutomatedVideoCrawlSetting(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+      }
+      private AutomatedVideoCrawlSetting() {
+        automatedVideoCrawlInfos_ = java.util.Collections.emptyList();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v25.resources.CampaignProto.internal_static_google_ads_googleads_v25_resources_Campaign_AssetAutomationSetting_AutomatedVideoCrawlSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v25.resources.CampaignProto.internal_static_google_ads_googleads_v25_resources_Campaign_AssetAutomationSetting_AutomatedVideoCrawlSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.class, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.Builder.class);
+      }
+
+      public static final int AUTOMATED_VIDEO_CRAWL_INFOS_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private java.util.List<com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo> automatedVideoCrawlInfos_;
+      /**
+       * <pre>
+       * The list of info to be included for crawling.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo> getAutomatedVideoCrawlInfosList() {
+        return automatedVideoCrawlInfos_;
+      }
+      /**
+       * <pre>
+       * The list of info to be included for crawling.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfoOrBuilder> 
+          getAutomatedVideoCrawlInfosOrBuilderList() {
+        return automatedVideoCrawlInfos_;
+      }
+      /**
+       * <pre>
+       * The list of info to be included for crawling.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+       */
+      @java.lang.Override
+      public int getAutomatedVideoCrawlInfosCount() {
+        return automatedVideoCrawlInfos_.size();
+      }
+      /**
+       * <pre>
+       * The list of info to be included for crawling.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo getAutomatedVideoCrawlInfos(int index) {
+        return automatedVideoCrawlInfos_.get(index);
+      }
+      /**
+       * <pre>
+       * The list of info to be included for crawling.
+       * </pre>
+       *
+       * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfoOrBuilder getAutomatedVideoCrawlInfosOrBuilder(
+          int index) {
+        return automatedVideoCrawlInfos_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < automatedVideoCrawlInfos_.size(); i++) {
+          output.writeMessage(1, automatedVideoCrawlInfos_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (int i = 0; i < automatedVideoCrawlInfos_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, automatedVideoCrawlInfos_.get(i));
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting)) {
+          return super.equals(obj);
+        }
+        com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting other = (com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting) obj;
+
+        if (!getAutomatedVideoCrawlInfosList()
+            .equals(other.getAutomatedVideoCrawlInfosList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAutomatedVideoCrawlInfosCount() > 0) {
+          hash = (37 * hash) + AUTOMATED_VIDEO_CRAWL_INFOS_FIELD_NUMBER;
+          hash = (53 * hash) + getAutomatedVideoCrawlInfosList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Represents the settings for automated video crawling for a campaign.
+       * </pre>
+       *
+       * Protobuf type {@code google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting)
+          com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSettingOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.ads.googleads.v25.resources.CampaignProto.internal_static_google_ads_googleads_v25_resources_Campaign_AssetAutomationSetting_AutomatedVideoCrawlSetting_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.ads.googleads.v25.resources.CampaignProto.internal_static_google_ads_googleads_v25_resources_Campaign_AssetAutomationSetting_AutomatedVideoCrawlSetting_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.class, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.Builder.class);
+        }
+
+        // Construct using com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            automatedVideoCrawlInfos_ = java.util.Collections.emptyList();
+          } else {
+            automatedVideoCrawlInfos_ = null;
+            automatedVideoCrawlInfosBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.ads.googleads.v25.resources.CampaignProto.internal_static_google_ads_googleads_v25_resources_Campaign_AssetAutomationSetting_AutomatedVideoCrawlSetting_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting getDefaultInstanceForType() {
+          return com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting build() {
+          com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting buildPartial() {
+          com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting result = new com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting result) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              automatedVideoCrawlInfos_ = java.util.Collections.unmodifiableList(automatedVideoCrawlInfos_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.automatedVideoCrawlInfos_ = automatedVideoCrawlInfos_;
+          } else {
+            result.automatedVideoCrawlInfos_ = automatedVideoCrawlInfosBuilder_.build();
+          }
+        }
+
+        private void buildPartial0(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting) {
+            return mergeFrom((com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting other) {
+          if (other == com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.getDefaultInstance()) return this;
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            if (!other.automatedVideoCrawlInfos_.isEmpty()) {
+              if (automatedVideoCrawlInfos_.isEmpty()) {
+                automatedVideoCrawlInfos_ = other.automatedVideoCrawlInfos_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureAutomatedVideoCrawlInfosIsMutable();
+                automatedVideoCrawlInfos_.addAll(other.automatedVideoCrawlInfos_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.automatedVideoCrawlInfos_.isEmpty()) {
+              if (automatedVideoCrawlInfosBuilder_.isEmpty()) {
+                automatedVideoCrawlInfosBuilder_.dispose();
+                automatedVideoCrawlInfosBuilder_ = null;
+                automatedVideoCrawlInfos_ = other.automatedVideoCrawlInfos_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                automatedVideoCrawlInfosBuilder_ = 
+                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                     internalGetAutomatedVideoCrawlInfosFieldBuilder() : null;
+              } else {
+                automatedVideoCrawlInfosBuilder_.addAllMessages(other.automatedVideoCrawlInfos_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo m =
+                      input.readMessage(
+                          com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.parser(),
+                          extensionRegistry);
+                  if (automatedVideoCrawlInfosBuilder_ == null) {
+                    ensureAutomatedVideoCrawlInfosIsMutable();
+                    automatedVideoCrawlInfos_.add(m);
+                  } else {
+                    automatedVideoCrawlInfosBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo> automatedVideoCrawlInfos_ =
+          java.util.Collections.emptyList();
+        private void ensureAutomatedVideoCrawlInfosIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            automatedVideoCrawlInfos_ = new java.util.ArrayList<com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo>(automatedVideoCrawlInfos_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilder<
+            com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfoOrBuilder> automatedVideoCrawlInfosBuilder_;
+
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public java.util.List<com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo> getAutomatedVideoCrawlInfosList() {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(automatedVideoCrawlInfos_);
+          } else {
+            return automatedVideoCrawlInfosBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public int getAutomatedVideoCrawlInfosCount() {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            return automatedVideoCrawlInfos_.size();
+          } else {
+            return automatedVideoCrawlInfosBuilder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo getAutomatedVideoCrawlInfos(int index) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            return automatedVideoCrawlInfos_.get(index);
+          } else {
+            return automatedVideoCrawlInfosBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public Builder setAutomatedVideoCrawlInfos(
+            int index, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo value) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAutomatedVideoCrawlInfosIsMutable();
+            automatedVideoCrawlInfos_.set(index, value);
+            onChanged();
+          } else {
+            automatedVideoCrawlInfosBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public Builder setAutomatedVideoCrawlInfos(
+            int index, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder builderForValue) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            ensureAutomatedVideoCrawlInfosIsMutable();
+            automatedVideoCrawlInfos_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            automatedVideoCrawlInfosBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public Builder addAutomatedVideoCrawlInfos(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo value) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAutomatedVideoCrawlInfosIsMutable();
+            automatedVideoCrawlInfos_.add(value);
+            onChanged();
+          } else {
+            automatedVideoCrawlInfosBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public Builder addAutomatedVideoCrawlInfos(
+            int index, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo value) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAutomatedVideoCrawlInfosIsMutable();
+            automatedVideoCrawlInfos_.add(index, value);
+            onChanged();
+          } else {
+            automatedVideoCrawlInfosBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public Builder addAutomatedVideoCrawlInfos(
+            com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder builderForValue) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            ensureAutomatedVideoCrawlInfosIsMutable();
+            automatedVideoCrawlInfos_.add(builderForValue.build());
+            onChanged();
+          } else {
+            automatedVideoCrawlInfosBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public Builder addAutomatedVideoCrawlInfos(
+            int index, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder builderForValue) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            ensureAutomatedVideoCrawlInfosIsMutable();
+            automatedVideoCrawlInfos_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            automatedVideoCrawlInfosBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public Builder addAllAutomatedVideoCrawlInfos(
+            java.lang.Iterable<? extends com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo> values) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            ensureAutomatedVideoCrawlInfosIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, automatedVideoCrawlInfos_);
+            onChanged();
+          } else {
+            automatedVideoCrawlInfosBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public Builder clearAutomatedVideoCrawlInfos() {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            automatedVideoCrawlInfos_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            automatedVideoCrawlInfosBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public Builder removeAutomatedVideoCrawlInfos(int index) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            ensureAutomatedVideoCrawlInfosIsMutable();
+            automatedVideoCrawlInfos_.remove(index);
+            onChanged();
+          } else {
+            automatedVideoCrawlInfosBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder getAutomatedVideoCrawlInfosBuilder(
+            int index) {
+          return internalGetAutomatedVideoCrawlInfosFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfoOrBuilder getAutomatedVideoCrawlInfosOrBuilder(
+            int index) {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            return automatedVideoCrawlInfos_.get(index);  } else {
+            return automatedVideoCrawlInfosBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public java.util.List<? extends com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfoOrBuilder> 
+             getAutomatedVideoCrawlInfosOrBuilderList() {
+          if (automatedVideoCrawlInfosBuilder_ != null) {
+            return automatedVideoCrawlInfosBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(automatedVideoCrawlInfos_);
+          }
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder addAutomatedVideoCrawlInfosBuilder() {
+          return internalGetAutomatedVideoCrawlInfosFieldBuilder().addBuilder(
+              com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder addAutomatedVideoCrawlInfosBuilder(
+            int index) {
+          return internalGetAutomatedVideoCrawlInfosFieldBuilder().addBuilder(
+              index, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * The list of info to be included for crawling.
+         * </pre>
+         *
+         * <code>repeated .google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo automated_video_crawl_infos = 1;</code>
+         */
+        public java.util.List<com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder> 
+             getAutomatedVideoCrawlInfosBuilderList() {
+          return internalGetAutomatedVideoCrawlInfosFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilder<
+            com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfoOrBuilder> 
+            internalGetAutomatedVideoCrawlInfosFieldBuilder() {
+          if (automatedVideoCrawlInfosBuilder_ == null) {
+            automatedVideoCrawlInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfo.Builder, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlInfoOrBuilder>(
+                    automatedVideoCrawlInfos_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            automatedVideoCrawlInfos_ = null;
+          }
+          return automatedVideoCrawlInfosBuilder_;
+        }
+
+        // @@protoc_insertion_point(builder_scope:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting)
+      }
+
+      // @@protoc_insertion_point(class_scope:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting)
+      private static final com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting();
+      }
+
+      public static com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AutomatedVideoCrawlSetting>
+          PARSER = new com.google.protobuf.AbstractParser<AutomatedVideoCrawlSetting>() {
+        @java.lang.Override
+        public AutomatedVideoCrawlSetting parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<AutomatedVideoCrawlSetting> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AutomatedVideoCrawlSetting> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int bitField0_;
+    private int settingCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object setting_;
+    public enum SettingCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      AUTOMATED_VIDEO_CRAWL_SETTING(3),
+      SETTING_NOT_SET(0);
+      private final int value;
+      private SettingCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SettingCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SettingCase forNumber(int value) {
+        switch (value) {
+          case 3: return AUTOMATED_VIDEO_CRAWL_SETTING;
+          case 0: return SETTING_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SettingCase
+    getSettingCase() {
+      return SettingCase.forNumber(
+          settingCase_);
+    }
+
     public static final int ASSET_AUTOMATION_TYPE_FIELD_NUMBER = 1;
     private int assetAutomationType_ = 0;
     /**
@@ -24422,6 +26262,49 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v25.enums.AssetAutomationStatusEnum.AssetAutomationStatus.UNRECOGNIZED : result;
     }
 
+    public static final int AUTOMATED_VIDEO_CRAWL_SETTING_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Settings for automated video crawling.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+     * @return Whether the automatedVideoCrawlSetting field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutomatedVideoCrawlSetting() {
+      return settingCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Settings for automated video crawling.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+     * @return The automatedVideoCrawlSetting.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting getAutomatedVideoCrawlSetting() {
+      if (settingCase_ == 3) {
+         return (com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting) setting_;
+      }
+      return com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Settings for automated video crawling.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSettingOrBuilder getAutomatedVideoCrawlSettingOrBuilder() {
+      if (settingCase_ == 3) {
+         return (com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting) setting_;
+      }
+      return com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -24442,6 +26325,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeEnum(2, assetAutomationStatus_);
       }
+      if (settingCase_ == 3) {
+        output.writeMessage(3, (com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting) setting_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -24458,6 +26344,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, assetAutomationStatus_);
+      }
+      if (settingCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting) setting_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -24482,6 +26372,15 @@ private static final long serialVersionUID = 0L;
       if (hasAssetAutomationStatus()) {
         if (assetAutomationStatus_ != other.assetAutomationStatus_) return false;
       }
+      if (!getSettingCase().equals(other.getSettingCase())) return false;
+      switch (settingCase_) {
+        case 3:
+          if (!getAutomatedVideoCrawlSetting()
+              .equals(other.getAutomatedVideoCrawlSetting())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -24500,6 +26399,14 @@ private static final long serialVersionUID = 0L;
       if (hasAssetAutomationStatus()) {
         hash = (37 * hash) + ASSET_AUTOMATION_STATUS_FIELD_NUMBER;
         hash = (53 * hash) + assetAutomationStatus_;
+      }
+      switch (settingCase_) {
+        case 3:
+          hash = (37 * hash) + AUTOMATED_VIDEO_CRAWL_SETTING_FIELD_NUMBER;
+          hash = (53 * hash) + getAutomatedVideoCrawlSetting().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -24639,6 +26546,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = 0;
         assetAutomationType_ = 0;
         assetAutomationStatus_ = 0;
+        if (automatedVideoCrawlSettingBuilder_ != null) {
+          automatedVideoCrawlSettingBuilder_.clear();
+        }
+        settingCase_ = 0;
+        setting_ = null;
         return this;
       }
 
@@ -24666,6 +26578,7 @@ private static final long serialVersionUID = 0L;
       public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting buildPartial() {
         com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting result = new com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting(this);
         if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
@@ -24682,6 +26595,15 @@ private static final long serialVersionUID = 0L;
           to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ |= to_bitField0_;
+      }
+
+      private void buildPartialOneofs(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting result) {
+        result.settingCase_ = settingCase_;
+        result.setting_ = this.setting_;
+        if (settingCase_ == 3 &&
+            automatedVideoCrawlSettingBuilder_ != null) {
+          result.setting_ = automatedVideoCrawlSettingBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -24701,6 +26623,15 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasAssetAutomationStatus()) {
           setAssetAutomationStatusValue(other.getAssetAutomationStatusValue());
+        }
+        switch (other.getSettingCase()) {
+          case AUTOMATED_VIDEO_CRAWL_SETTING: {
+            mergeAutomatedVideoCrawlSetting(other.getAutomatedVideoCrawlSetting());
+            break;
+          }
+          case SETTING_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -24738,6 +26669,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
+              case 26: {
+                input.readMessage(
+                    internalGetAutomatedVideoCrawlSettingFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                settingCase_ = 3;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -24753,6 +26691,21 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int settingCase_ = 0;
+      private java.lang.Object setting_;
+      public SettingCase
+          getSettingCase() {
+        return SettingCase.forNumber(
+            settingCase_);
+      }
+
+      public Builder clearSetting() {
+        settingCase_ = 0;
+        setting_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private int assetAutomationType_ = 0;
@@ -24917,6 +26870,184 @@ private static final long serialVersionUID = 0L;
         assetAutomationStatus_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.Builder, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSettingOrBuilder> automatedVideoCrawlSettingBuilder_;
+      /**
+       * <pre>
+       * Settings for automated video crawling.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+       * @return Whether the automatedVideoCrawlSetting field is set.
+       */
+      @java.lang.Override
+      public boolean hasAutomatedVideoCrawlSetting() {
+        return settingCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Settings for automated video crawling.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+       * @return The automatedVideoCrawlSetting.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting getAutomatedVideoCrawlSetting() {
+        if (automatedVideoCrawlSettingBuilder_ == null) {
+          if (settingCase_ == 3) {
+            return (com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting) setting_;
+          }
+          return com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.getDefaultInstance();
+        } else {
+          if (settingCase_ == 3) {
+            return automatedVideoCrawlSettingBuilder_.getMessage();
+          }
+          return com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Settings for automated video crawling.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+       */
+      public Builder setAutomatedVideoCrawlSetting(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting value) {
+        if (automatedVideoCrawlSettingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          setting_ = value;
+          onChanged();
+        } else {
+          automatedVideoCrawlSettingBuilder_.setMessage(value);
+        }
+        settingCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for automated video crawling.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+       */
+      public Builder setAutomatedVideoCrawlSetting(
+          com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.Builder builderForValue) {
+        if (automatedVideoCrawlSettingBuilder_ == null) {
+          setting_ = builderForValue.build();
+          onChanged();
+        } else {
+          automatedVideoCrawlSettingBuilder_.setMessage(builderForValue.build());
+        }
+        settingCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for automated video crawling.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+       */
+      public Builder mergeAutomatedVideoCrawlSetting(com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting value) {
+        if (automatedVideoCrawlSettingBuilder_ == null) {
+          if (settingCase_ == 3 &&
+              setting_ != com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.getDefaultInstance()) {
+            setting_ = com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.newBuilder((com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting) setting_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            setting_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingCase_ == 3) {
+            automatedVideoCrawlSettingBuilder_.mergeFrom(value);
+          } else {
+            automatedVideoCrawlSettingBuilder_.setMessage(value);
+          }
+        }
+        settingCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for automated video crawling.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+       */
+      public Builder clearAutomatedVideoCrawlSetting() {
+        if (automatedVideoCrawlSettingBuilder_ == null) {
+          if (settingCase_ == 3) {
+            settingCase_ = 0;
+            setting_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingCase_ == 3) {
+            settingCase_ = 0;
+            setting_ = null;
+          }
+          automatedVideoCrawlSettingBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for automated video crawling.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+       */
+      public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.Builder getAutomatedVideoCrawlSettingBuilder() {
+        return internalGetAutomatedVideoCrawlSettingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Settings for automated video crawling.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSettingOrBuilder getAutomatedVideoCrawlSettingOrBuilder() {
+        if ((settingCase_ == 3) && (automatedVideoCrawlSettingBuilder_ != null)) {
+          return automatedVideoCrawlSettingBuilder_.getMessageOrBuilder();
+        } else {
+          if (settingCase_ == 3) {
+            return (com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting) setting_;
+          }
+          return com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Settings for automated video crawling.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting automated_video_crawl_setting = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.Builder, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSettingOrBuilder> 
+          internalGetAutomatedVideoCrawlSettingFieldBuilder() {
+        if (automatedVideoCrawlSettingBuilder_ == null) {
+          if (!(settingCase_ == 3)) {
+            setting_ = com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.getDefaultInstance();
+          }
+          automatedVideoCrawlSettingBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting.Builder, com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSettingOrBuilder>(
+                  (com.google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting.AutomatedVideoCrawlSetting) setting_,
+                  getParentForChildren(),
+                  isClean());
+          setting_ = null;
+        }
+        settingCase_ = 3;
+        onChanged();
+        return automatedVideoCrawlSettingBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:google.ads.googleads.v25.resources.Campaign.AssetAutomationSetting)

@@ -260,6 +260,14 @@ private static final long serialVersionUID = 0L;
      * <code>YOUTUBE_FOLLOW_ON_VIEWS = 24;</code>
      */
     YOUTUBE_FOLLOW_ON_VIEWS(24),
+    /**
+     * <pre>
+     * An in-app ad revenue conversion.
+     * </pre>
+     *
+     * <code>IN_APP_AD_REVENUE = 26;</code>
+     */
+    IN_APP_AD_REVENUE(26),
     UNRECOGNIZED(-1),
     ;
 
@@ -475,6 +483,14 @@ private static final long serialVersionUID = 0L;
      * <code>YOUTUBE_FOLLOW_ON_VIEWS = 24;</code>
      */
     public static final int YOUTUBE_FOLLOW_ON_VIEWS_VALUE = 24;
+    /**
+     * <pre>
+     * An in-app ad revenue conversion.
+     * </pre>
+     *
+     * <code>IN_APP_AD_REVENUE = 26;</code>
+     */
+    public static final int IN_APP_AD_REVENUE_VALUE = 26;
 
 
     public final int getNumber() {
@@ -525,6 +541,7 @@ private static final long serialVersionUID = 0L;
         case 22: return QUALIFIED_LEAD;
         case 23: return CONVERTED_LEAD;
         case 24: return YOUTUBE_FOLLOW_ON_VIEWS;
+        case 26: return IN_APP_AD_REVENUE;
         default: return null;
       }
     }

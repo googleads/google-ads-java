@@ -122,6 +122,24 @@ private static final long serialVersionUID = 0L;
      * <code>LOYALTY_RETENTION_GOAL_ALREADY_EXISTS = 9;</code>
      */
     LOYALTY_RETENTION_GOAL_ALREADY_EXISTS(9),
+    /**
+     * <pre>
+     * When using the customer lifecycle optimization goal, the value multiplier
+     * must be present if the high lifetime value multiplier is present.
+     * </pre>
+     *
+     * <code>HIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSENT = 10;</code>
+     */
+    HIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSENT(10),
+    /**
+     * <pre>
+     * When using the customer lifecycle optimization goal, the high lifetime
+     * value multiplier must be strictly greater than the value multiplier.
+     * </pre>
+     *
+     * <code>HIGH_LIFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER = 11;</code>
+     */
+    HIGH_LIFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER(11),
     UNRECOGNIZED(-1),
     ;
 
@@ -200,6 +218,24 @@ private static final long serialVersionUID = 0L;
      * <code>LOYALTY_RETENTION_GOAL_ALREADY_EXISTS = 9;</code>
      */
     public static final int LOYALTY_RETENTION_GOAL_ALREADY_EXISTS_VALUE = 9;
+    /**
+     * <pre>
+     * When using the customer lifecycle optimization goal, the value multiplier
+     * must be present if the high lifetime value multiplier is present.
+     * </pre>
+     *
+     * <code>HIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSENT = 10;</code>
+     */
+    public static final int HIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSENT_VALUE = 10;
+    /**
+     * <pre>
+     * When using the customer lifecycle optimization goal, the high lifetime
+     * value multiplier must be strictly greater than the value multiplier.
+     * </pre>
+     *
+     * <code>HIGH_LIFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER = 11;</code>
+     */
+    public static final int HIGH_LIFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER_VALUE = 11;
 
 
     public final int getNumber() {
@@ -234,6 +270,8 @@ private static final long serialVersionUID = 0L;
         case 7: return CUSTOMER_LIFECYCLE_OPTIMIZATION_ACCOUNT_TYPE_NOT_ALLOWED;
         case 8: return NEW_CUSTOMER_ACQUISITION_GOAL_ALREADY_EXISTS;
         case 9: return LOYALTY_RETENTION_GOAL_ALREADY_EXISTS;
+        case 10: return HIGH_LIFETIME_VALUE_MULTIPLIER_PRESENT_BUT_VALUE_MULTIPLIER_ABSENT;
+        case 11: return HIGH_LIFETIME_VALUE_MULTIPLIER_LESS_THAN_OR_EQUAL_TO_VALUE_MULTIPLIER;
         default: return null;
       }
     }

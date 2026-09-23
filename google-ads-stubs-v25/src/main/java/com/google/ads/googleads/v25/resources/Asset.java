@@ -1277,7 +1277,7 @@ private static final long serialVersionUID = 0L;
   public static final int PAGE_FEED_ASSET_FIELD_NUMBER = 23;
   /**
    * <pre>
-   * A page feed asset.
+   * A page URL inclusion.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -1289,7 +1289,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A page feed asset.
+   * A page URL inclusion.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -1304,7 +1304,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A page feed asset.
+   * A page URL inclusion.
    * </pre>
    *
    * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -7769,7 +7769,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v25.common.PageFeedAsset, com.google.ads.googleads.v25.common.PageFeedAsset.Builder, com.google.ads.googleads.v25.common.PageFeedAssetOrBuilder> pageFeedAssetBuilder_;
     /**
      * <pre>
-     * A page feed asset.
+     * A page URL inclusion.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -7781,7 +7781,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A page feed asset.
+     * A page URL inclusion.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -7803,7 +7803,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A page feed asset.
+     * A page URL inclusion.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -7823,7 +7823,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A page feed asset.
+     * A page URL inclusion.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -7841,7 +7841,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A page feed asset.
+     * A page URL inclusion.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -7868,7 +7868,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A page feed asset.
+     * A page URL inclusion.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -7891,7 +7891,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A page feed asset.
+     * A page URL inclusion.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -7901,7 +7901,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A page feed asset.
+     * A page URL inclusion.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
@@ -7919,7 +7919,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A page feed asset.
+     * A page URL inclusion.
      * </pre>
      *
      * <code>.google.ads.googleads.v25.common.PageFeedAsset page_feed_asset = 23;</code>
