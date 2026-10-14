@@ -23,6 +23,7 @@ import com.google.ads.googleads.v25.services.RemoveYouTubeVideoUploadResponse;
 import com.google.ads.googleads.v25.services.UpdateYouTubeVideoUploadRequest;
 import com.google.ads.googleads.v25.services.UpdateYouTubeVideoUploadResponse;
 import com.google.api.gax.core.BackgroundResource;
+import com.google.api.gax.rpc.ResumableUploadCallable;
 import com.google.api.gax.rpc.UnaryCallable;
 import javax.annotation.Generated;
 import org.jspecify.annotations.NullMarked;
@@ -37,7 +38,7 @@ import org.jspecify.annotations.NullMarked;
 @Generated("by gapic-generator-java")
 public abstract class YouTubeVideoUploadServiceStub implements BackgroundResource {
 
-  public UnaryCallable<CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>
+  public ResumableUploadCallable<CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>
       createYouTubeVideoUploadCallable() {
     throw new UnsupportedOperationException("Not implemented: createYouTubeVideoUploadCallable()");
   }

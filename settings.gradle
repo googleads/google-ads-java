@@ -53,3 +53,5 @@ if (!startParameter.projectProperties.containsKey("release")) {
 include ':google-ads-stubs-v23'
 include ':google-ads-stubs-v24'
 include ':google-ads-stubs-v25'
+
+include ':google-ads-stubs-v26'

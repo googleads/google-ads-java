@@ -23,6 +23,7 @@ import com.google.ads.googleads.v25.services.RemoveYouTubeVideoUploadResponse;
 import com.google.ads.googleads.v25.services.UpdateYouTubeVideoUploadRequest;
 import com.google.ads.googleads.v25.services.UpdateYouTubeVideoUploadResponse;
 import com.google.api.core.ApiFunction;
+import com.google.api.core.InternalApi;
 import com.google.api.core.ObsoleteApi;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.core.GoogleCredentialsProvider;
@@ -33,6 +34,7 @@ import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.retrying.RetrySettings;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.HeaderProvider;
 import com.google.api.gax.rpc.LibraryMetadata;
 import com.google.api.gax.rpc.StatusCode;
 import com.google.api.gax.rpc.StubSettings;
@@ -66,7 +68,7 @@ import org.jspecify.annotations.Nullable;
  *
  * <p>For example, to set the
  * [RetrySettings](https://cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings)
- * of createYouTubeVideoUpload:
+ * of updateYouTubeVideoUpload:
  *
  * <pre>{@code
  * // This snippet has been automatically generated and should be regarded as a code template only.
@@ -77,10 +79,10 @@ import org.jspecify.annotations.Nullable;
  * YouTubeVideoUploadServiceStubSettings.Builder youTubeVideoUploadServiceSettingsBuilder =
  *     YouTubeVideoUploadServiceStubSettings.newBuilder();
  * youTubeVideoUploadServiceSettingsBuilder
- *     .createYouTubeVideoUploadSettings()
+ *     .updateYouTubeVideoUploadSettings()
  *     .setRetrySettings(
  *         youTubeVideoUploadServiceSettingsBuilder
- *             .createYouTubeVideoUploadSettings()
+ *             .updateYouTubeVideoUploadSettings()
  *             .getRetrySettings()
  *             .toBuilder()
  *             .setInitialRetryDelayDuration(Duration.ofSeconds(1))
@@ -333,6 +335,13 @@ public class YouTubeVideoUploadServiceStubSettings
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
 
       return builder;
+    }
+
+    /** Sets the internal HeaderProvider for HTTP/JSON. Does not change the transport. */
+    @InternalApi
+    protected Builder setHttpJsonInternalHeaderProvider(
+        HeaderProvider httpJsonInternalHeaderProvider) {
+      return setInternalHeaderProvider(httpJsonInternalHeaderProvider);
     }
 
     /**

@@ -1493,7 +1493,7 @@
           "libraryClient": "YouTubeVideoUploadServiceClient",
           "rpcs": {
             "CreateYouTubeVideoUpload": {
-              "methods": ["createYouTubeVideoUpload", "createYouTubeVideoUpload", "createYouTubeVideoUploadCallable"]
+              "methods": ["createYouTubeVideoUpload", "createYouTubeVideoUploadCallable"]
             },
             "RemoveYouTubeVideoUpload": {
               "methods": ["removeYouTubeVideoUpload", "removeYouTubeVideoUpload", "removeYouTubeVideoUploadCallable"]

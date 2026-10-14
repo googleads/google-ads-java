@@ -50,7 +50,7 @@ import org.jspecify.annotations.Nullable;
  *
  * <p>For example, to set the
  * [RetrySettings](https://cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings)
- * of createYouTubeVideoUpload:
+ * of updateYouTubeVideoUpload:
  *
  * <pre>{@code
  * // This snippet has been automatically generated and should be regarded as a code template only.
@@ -61,10 +61,10 @@ import org.jspecify.annotations.Nullable;
  * YouTubeVideoUploadServiceSettings.Builder youTubeVideoUploadServiceSettingsBuilder =
  *     YouTubeVideoUploadServiceSettings.newBuilder();
  * youTubeVideoUploadServiceSettingsBuilder
- *     .createYouTubeVideoUploadSettings()
+ *     .updateYouTubeVideoUploadSettings()
  *     .setRetrySettings(
  *         youTubeVideoUploadServiceSettingsBuilder
- *             .createYouTubeVideoUploadSettings()
+ *             .updateYouTubeVideoUploadSettings()
  *             .getRetrySettings()
  *             .toBuilder()
  *             .setInitialRetryDelayDuration(Duration.ofSeconds(1))

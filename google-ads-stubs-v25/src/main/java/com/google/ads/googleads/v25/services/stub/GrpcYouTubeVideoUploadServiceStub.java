@@ -28,7 +28,9 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.RequestParamsBuilder;
+import com.google.api.gax.rpc.ResumableUploadCallable;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.common.collect.ImmutableList;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
@@ -47,21 +49,6 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 @Generated("by gapic-generator-java")
 public class GrpcYouTubeVideoUploadServiceStub extends YouTubeVideoUploadServiceStub {
-  private static final MethodDescriptor<
-          CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>
-      createYouTubeVideoUploadMethodDescriptor =
-          MethodDescriptor
-              .<CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>newBuilder()
-              .setType(MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(
-                  "google.ads.googleads.v25.services.YouTubeVideoUploadService/CreateYouTubeVideoUpload")
-              .setRequestMarshaller(
-                  ProtoUtils.marshaller(CreateYouTubeVideoUploadRequest.getDefaultInstance()))
-              .setResponseMarshaller(
-                  ProtoUtils.marshaller(CreateYouTubeVideoUploadResponse.getDefaultInstance()))
-              .setSampledToLocalTracing(true)
-              .build();
-
   private static final MethodDescriptor<
           UpdateYouTubeVideoUploadRequest, UpdateYouTubeVideoUploadResponse>
       updateYouTubeVideoUploadMethodDescriptor =
@@ -92,8 +79,6 @@ public class GrpcYouTubeVideoUploadServiceStub extends YouTubeVideoUploadService
               .setSampledToLocalTracing(true)
               .build();
 
-  private final UnaryCallable<CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>
-      createYouTubeVideoUploadCallable;
   private final UnaryCallable<UpdateYouTubeVideoUploadRequest, UpdateYouTubeVideoUploadResponse>
       updateYouTubeVideoUploadCallable;
   private final UnaryCallable<RemoveYouTubeVideoUploadRequest, RemoveYouTubeVideoUploadResponse>
@@ -101,6 +86,7 @@ public class GrpcYouTubeVideoUploadServiceStub extends YouTubeVideoUploadService
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
+  private final HttpJsonYouTubeVideoUploadServiceResumableUploadStub resumableUploadStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcYouTubeVideoUploadServiceStub create(
@@ -144,18 +130,6 @@ public class GrpcYouTubeVideoUploadServiceStub extends YouTubeVideoUploadService
     this.callableFactory = callableFactory;
     this.operationsStub = GrpcOperationsStub.create(clientContext, callableFactory);
 
-    GrpcCallSettings<CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>
-        createYouTubeVideoUploadTransportSettings =
-            GrpcCallSettings
-                .<CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>newBuilder()
-                .setMethodDescriptor(createYouTubeVideoUploadMethodDescriptor)
-                .setParamsExtractor(
-                    request -> {
-                      RequestParamsBuilder builder = RequestParamsBuilder.create();
-                      builder.add("customer_id", String.valueOf(request.getCustomerId()));
-                      return builder.build();
-                    })
-                .build();
     GrpcCallSettings<UpdateYouTubeVideoUploadRequest, UpdateYouTubeVideoUploadResponse>
         updateYouTubeVideoUploadTransportSettings =
             GrpcCallSettings
@@ -181,11 +155,6 @@ public class GrpcYouTubeVideoUploadServiceStub extends YouTubeVideoUploadService
                     })
                 .build();
 
-    this.createYouTubeVideoUploadCallable =
-        callableFactory.createUnaryCallable(
-            createYouTubeVideoUploadTransportSettings,
-            settings.createYouTubeVideoUploadSettings(),
-            clientContext);
     this.updateYouTubeVideoUploadCallable =
         callableFactory.createUnaryCallable(
             updateYouTubeVideoUploadTransportSettings,
@@ -197,18 +166,19 @@ public class GrpcYouTubeVideoUploadServiceStub extends YouTubeVideoUploadService
             settings.removeYouTubeVideoUploadSettings(),
             clientContext);
 
+    this.resumableUploadStub =
+        HttpJsonYouTubeVideoUploadServiceResumableUploadStub.create(settings);
+
     this.backgroundResources =
-        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+        new BackgroundResourceAggregation(
+            ImmutableList.<BackgroundResource>builder()
+                .addAll(clientContext.getBackgroundResources())
+                .add(resumableUploadStub)
+                .build());
   }
 
   public GrpcOperationsStub getOperationsStub() {
     return operationsStub;
-  }
-
-  @Override
-  public UnaryCallable<CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>
-      createYouTubeVideoUploadCallable() {
-    return createYouTubeVideoUploadCallable;
   }
 
   @Override
@@ -221,6 +191,12 @@ public class GrpcYouTubeVideoUploadServiceStub extends YouTubeVideoUploadService
   public UnaryCallable<RemoveYouTubeVideoUploadRequest, RemoveYouTubeVideoUploadResponse>
       removeYouTubeVideoUploadCallable() {
     return removeYouTubeVideoUploadCallable;
+  }
+
+  @Override
+  public ResumableUploadCallable<CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>
+      createYouTubeVideoUploadCallable() {
+    return resumableUploadStub.createYouTubeVideoUploadCallable();
   }
 
   @Override

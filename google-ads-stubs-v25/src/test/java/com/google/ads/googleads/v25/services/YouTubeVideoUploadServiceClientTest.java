@@ -81,50 +81,6 @@ public class YouTubeVideoUploadServiceClientTest {
   }
 
   @Test
-  public void createYouTubeVideoUploadTest() throws Exception {
-    CreateYouTubeVideoUploadResponse expectedResponse =
-        CreateYouTubeVideoUploadResponse.newBuilder()
-            .setResourceName(
-                YouTubeVideoUploadName.of("[CUSTOMER_ID]", "[VIDEO_UPLOAD_ID]").toString())
-            .build();
-    mockYouTubeVideoUploadService.addResponse(expectedResponse);
-
-    String customerId = "customerId-1581184615";
-    YouTubeVideoUpload youTubeVideoUpload = YouTubeVideoUpload.newBuilder().build();
-
-    CreateYouTubeVideoUploadResponse actualResponse =
-        client.createYouTubeVideoUpload(customerId, youTubeVideoUpload);
-    Assert.assertEquals(expectedResponse, actualResponse);
-
-    List<AbstractMessage> actualRequests = mockYouTubeVideoUploadService.getRequests();
-    Assert.assertEquals(1, actualRequests.size());
-    CreateYouTubeVideoUploadRequest actualRequest =
-        ((CreateYouTubeVideoUploadRequest) actualRequests.get(0));
-
-    Assert.assertEquals(customerId, actualRequest.getCustomerId());
-    Assert.assertEquals(youTubeVideoUpload, actualRequest.getYouTubeVideoUpload());
-    Assert.assertTrue(
-        channelProvider.isHeaderSent(
-            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
-            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
-  }
-
-  @Test
-  public void createYouTubeVideoUploadExceptionTest() throws Exception {
-    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
-    mockYouTubeVideoUploadService.addException(exception);
-
-    try {
-      String customerId = "customerId-1581184615";
-      YouTubeVideoUpload youTubeVideoUpload = YouTubeVideoUpload.newBuilder().build();
-      client.createYouTubeVideoUpload(customerId, youTubeVideoUpload);
-      Assert.fail("No exception raised");
-    } catch (InvalidArgumentException e) {
-      // Expected exception.
-    }
-  }
-
-  @Test
   public void updateYouTubeVideoUploadTest() throws Exception {
     UpdateYouTubeVideoUploadResponse expectedResponse =
         UpdateYouTubeVideoUploadResponse.newBuilder()

@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v25.errors.GoogleAdsError;
-import com.google.ads.googleads.v25.errors.GoogleAdsException;
-import com.google.ads.googleads.v25.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v25.services.GoogleAdsRow;
-import com.google.ads.googleads.v25.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v25.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v25.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v26.errors.GoogleAdsError;
+import com.google.ads.googleads.v26.errors.GoogleAdsException;
+import com.google.ads.googleads.v26.resources.AdGroupBidModifier;
+import com.google.ads.googleads.v26.services.GoogleAdsRow;
+import com.google.ads.googleads.v26.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v26.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v26.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
@@ -103,12 +103,12 @@ public class GetAdGroupBidModifiers {
               + "  campaign.id,"
               + "  ad_group_bid_modifier.bid_modifier,"
               + "  ad_group_bid_modifier.device.type,"
-              + "  ad_group_bid_modifier.hotel_date_selection_type.type,"
-              + "  ad_group_bid_modifier.hotel_advance_booking_window.min_days,"
-              + "  ad_group_bid_modifier.hotel_advance_booking_window.max_days,"
-              + "  ad_group_bid_modifier.hotel_length_of_stay.min_nights,"
-              + "  ad_group_bid_modifier.hotel_length_of_stay.max_nights,"
-              + "  ad_group_bid_modifier.hotel_check_in_day.day_of_week "
+              + "  ad_group_bid_modifier.user_set_dates.type,"
+              + "  ad_group_bid_modifier.advance_booking_window.min_days,"
+              + "  ad_group_bid_modifier.advance_booking_window.max_days,"
+              + "  ad_group_bid_modifier.length_of_booking.min_days,"
+              + "  ad_group_bid_modifier.length_of_booking.max_days,"
+              + "  ad_group_bid_modifier.start_day_of_week.day_of_week "
               + "FROM"
               + "  ad_group_bid_modifier";
       if (adGroupId != null) {
@@ -155,27 +155,27 @@ public class GetAdGroupBidModifiers {
           case DEVICE:
             criterionDetails += "Type: " + adGroupBidModifier.getDevice().getType();
             break;
-          case HOTEL_ADVANCE_BOOKING_WINDOW:
+          case ADVANCE_BOOKING_WINDOW:
             criterionDetails +=
                 "Min Days: "
-                    + adGroupBidModifier.getHotelAdvanceBookingWindow().getMinDays()
+                    + adGroupBidModifier.getAdvanceBookingWindow().getMinDays()
                     + ", Max Days: "
-                    + adGroupBidModifier.getHotelAdvanceBookingWindow().getMaxDays();
+                    + adGroupBidModifier.getAdvanceBookingWindow().getMaxDays();
             break;
-          case HOTEL_CHECK_IN_DAY:
+          case START_DAY_OF_WEEK:
             criterionDetails +=
-                "Day of the week: " + adGroupBidModifier.getHotelCheckInDay().getDayOfWeek();
+                "Day of the week: " + adGroupBidModifier.getStartDayOfWeek().getDayOfWeek();
             break;
-          case HOTEL_DATE_SELECTION_TYPE:
+          case USER_SET_DATES:
             criterionDetails +=
-                "Date selection type: " + adGroupBidModifier.getHotelDateSelectionType().getType();
+                "Date selection type: " + adGroupBidModifier.getUserSetDates().getType();
             break;
-          case HOTEL_LENGTH_OF_STAY:
+          case LENGTH_OF_BOOKING:
             criterionDetails +=
-                "Min Nights: "
-                    + adGroupBidModifier.getHotelLengthOfStay().getMinNights()
-                    + ", Max Nights: "
-                    + adGroupBidModifier.getHotelLengthOfStay().getMaxNights();
+                "Min Days: "
+                    + adGroupBidModifier.getLengthOfBooking().getMinDays()
+                    + ", Max Days: "
+                    + adGroupBidModifier.getLengthOfBooking().getMaxDays();
             break;
         }
         System.out.println(criterionDetails);

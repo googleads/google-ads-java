@@ -20,6 +20,10 @@ import com.google.ads.googleads.v25.resources.YouTubeVideoUpload;
 import com.google.ads.googleads.v25.services.stub.YouTubeVideoUploadServiceStub;
 import com.google.ads.googleads.v25.services.stub.YouTubeVideoUploadServiceStubSettings;
 import com.google.api.gax.core.BackgroundResource;
+import com.google.api.gax.rpc.ApiExceptions;
+import com.google.api.gax.rpc.InputStreamSupplier;
+import com.google.api.gax.rpc.ResumableUploadCallable;
+import com.google.api.gax.rpc.ResumableUploadOptions;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.protobuf.FieldMask;
 import java.io.IOException;
@@ -45,8 +49,10 @@ import org.jspecify.annotations.Nullable;
  *     YouTubeVideoUploadServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   YouTubeVideoUpload youTubeVideoUpload = YouTubeVideoUpload.newBuilder().build();
- *   CreateYouTubeVideoUploadResponse response =
- *       youTubeVideoUploadServiceClient.createYouTubeVideoUpload(customerId, youTubeVideoUpload);
+ *   FieldMask updateMask = FieldMask.newBuilder().build();
+ *   UpdateYouTubeVideoUploadResponse response =
+ *       youTubeVideoUploadServiceClient.updateYouTubeVideoUpload(
+ *           customerId, youTubeVideoUpload, updateMask);
  * }
  * }</pre>
  *
@@ -67,11 +73,7 @@ import org.jspecify.annotations.Nullable;
  *      <td>
  *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
  *      <ul>
- *           <li><p> createYouTubeVideoUpload(CreateYouTubeVideoUploadRequest request)
- *      </ul>
- *      <p>"Flattened" method variants have converted the fields of the request object into function parameters to enable multiple ways to call the same method.</p>
- *      <ul>
- *           <li><p> createYouTubeVideoUpload(String customerId, YouTubeVideoUpload youTubeVideoUpload)
+ *           <li><p> createYouTubeVideoUpload(CreateYouTubeVideoUploadRequest request, InputStreamSupplier payload, ResumableUploadOptions options)
  *      </ul>
  *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
  *      <ul>
@@ -215,96 +217,24 @@ public class YouTubeVideoUploadServiceClient implements BackgroundResource {
   /**
    * Uploads a video to Google-managed or advertiser owned (brand) YouTube channel.
    *
-   * <p>Sample code:
-   *
-   * <pre>{@code
-   * // This snippet has been automatically generated and should be regarded as a code template only.
-   * // It will require modifications to work:
-   * // - It may require correct/in-range values for request initialization.
-   * // - It may require specifying regional endpoints when creating the service client as shown in
-   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-   * try (YouTubeVideoUploadServiceClient youTubeVideoUploadServiceClient =
-   *     YouTubeVideoUploadServiceClient.create()) {
-   *   String customerId = "customerId-1581184615";
-   *   YouTubeVideoUpload youTubeVideoUpload = YouTubeVideoUpload.newBuilder().build();
-   *   CreateYouTubeVideoUploadResponse response =
-   *       youTubeVideoUploadServiceClient.createYouTubeVideoUpload(customerId, youTubeVideoUpload);
-   * }
-   * }</pre>
-   *
-   * @param customerId Required. The customer ID requesting the upload. Required.
-   * @param youTubeVideoUpload Required. The initial details of the video to upload. Required.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final CreateYouTubeVideoUploadResponse createYouTubeVideoUpload(
-      String customerId, YouTubeVideoUpload youTubeVideoUpload) {
-    CreateYouTubeVideoUploadRequest request =
-        CreateYouTubeVideoUploadRequest.newBuilder()
-            .setCustomerId(customerId)
-            .setYouTubeVideoUpload(youTubeVideoUpload)
-            .build();
-    return createYouTubeVideoUpload(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD.
-  /**
-   * Uploads a video to Google-managed or advertiser owned (brand) YouTube channel.
-   *
-   * <p>Sample code:
-   *
-   * <pre>{@code
-   * // This snippet has been automatically generated and should be regarded as a code template only.
-   * // It will require modifications to work:
-   * // - It may require correct/in-range values for request initialization.
-   * // - It may require specifying regional endpoints when creating the service client as shown in
-   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-   * try (YouTubeVideoUploadServiceClient youTubeVideoUploadServiceClient =
-   *     YouTubeVideoUploadServiceClient.create()) {
-   *   CreateYouTubeVideoUploadRequest request =
-   *       CreateYouTubeVideoUploadRequest.newBuilder()
-   *           .setCustomerId("customerId-1581184615")
-   *           .setYouTubeVideoUpload(YouTubeVideoUpload.newBuilder().build())
-   *           .build();
-   *   CreateYouTubeVideoUploadResponse response =
-   *       youTubeVideoUploadServiceClient.createYouTubeVideoUpload(request);
-   * }
-   * }</pre>
-   *
    * @param request The request object containing all of the parameters for the API call.
+   * @param payload Supplies the payload data stream to upload. The stream is closed automatically
+   *     when the upload succeeds, fails, times out, or is cancelled.
+   * @param options The options to apply to this upload, or null to use defaults.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CreateYouTubeVideoUploadResponse createYouTubeVideoUpload(
-      CreateYouTubeVideoUploadRequest request) {
-    return createYouTubeVideoUploadCallable().call(request);
+      CreateYouTubeVideoUploadRequest request,
+      InputStreamSupplier payload,
+      @Nullable ResumableUploadOptions options) {
+    return ApiExceptions.callAndTranslateApiException(
+        createYouTubeVideoUploadCallable().futureCall(request, payload, options));
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
-  /**
-   * Uploads a video to Google-managed or advertiser owned (brand) YouTube channel.
-   *
-   * <p>Sample code:
-   *
-   * <pre>{@code
-   * // This snippet has been automatically generated and should be regarded as a code template only.
-   * // It will require modifications to work:
-   * // - It may require correct/in-range values for request initialization.
-   * // - It may require specifying regional endpoints when creating the service client as shown in
-   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-   * try (YouTubeVideoUploadServiceClient youTubeVideoUploadServiceClient =
-   *     YouTubeVideoUploadServiceClient.create()) {
-   *   CreateYouTubeVideoUploadRequest request =
-   *       CreateYouTubeVideoUploadRequest.newBuilder()
-   *           .setCustomerId("customerId-1581184615")
-   *           .setYouTubeVideoUpload(YouTubeVideoUpload.newBuilder().build())
-   *           .build();
-   *   ApiFuture<CreateYouTubeVideoUploadResponse> future =
-   *       youTubeVideoUploadServiceClient.createYouTubeVideoUploadCallable().futureCall(request);
-   *   // Do something.
-   *   CreateYouTubeVideoUploadResponse response = future.get();
-   * }
-   * }</pre>
-   */
-  public final UnaryCallable<CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>
+  /** Uploads a video to Google-managed or advertiser owned (brand) YouTube channel. */
+  public final ResumableUploadCallable<
+          CreateYouTubeVideoUploadRequest, CreateYouTubeVideoUploadResponse>
       createYouTubeVideoUploadCallable() {
     return stub.createYouTubeVideoUploadCallable();
   }

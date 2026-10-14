@@ -18,17 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v25.common.HotelCheckInDayInfo;
-import com.google.ads.googleads.v25.common.HotelLengthOfStayInfo;
-import com.google.ads.googleads.v25.enums.DayOfWeekEnum.DayOfWeek;
-import com.google.ads.googleads.v25.errors.GoogleAdsError;
-import com.google.ads.googleads.v25.errors.GoogleAdsException;
-import com.google.ads.googleads.v25.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v25.services.AdGroupBidModifierOperation;
-import com.google.ads.googleads.v25.services.AdGroupBidModifierServiceClient;
-import com.google.ads.googleads.v25.services.MutateAdGroupBidModifierResult;
-import com.google.ads.googleads.v25.services.MutateAdGroupBidModifiersResponse;
-import com.google.ads.googleads.v25.utils.ResourceNames;
+import com.google.ads.googleads.v26.common.LengthOfBookingInfo;
+import com.google.ads.googleads.v26.common.StartDayOfWeekInfo;
+import com.google.ads.googleads.v26.enums.DayOfWeekEnum.DayOfWeek;
+import com.google.ads.googleads.v26.errors.GoogleAdsError;
+import com.google.ads.googleads.v26.errors.GoogleAdsException;
+import com.google.ads.googleads.v26.resources.AdGroupBidModifier;
+import com.google.ads.googleads.v26.services.AdGroupBidModifierOperation;
+import com.google.ads.googleads.v26.services.AdGroupBidModifierServiceClient;
+import com.google.ads.googleads.v26.services.MutateAdGroupBidModifierResult;
+import com.google.ads.googleads.v26.services.MutateAdGroupBidModifiersResponse;
+import com.google.ads.googleads.v26.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -114,7 +114,7 @@ public class AddHotelAdGroupBidModifiers {
             // Sets the resource name to the ad group resource name joined with the criterion ID
             // whose value corresponds to the desired check-in day.
             .setAdGroup(adGroupResourceName)
-            .setHotelCheckInDay(HotelCheckInDayInfo.newBuilder().setDayOfWeek(DayOfWeek.MONDAY))
+            .setStartDayOfWeek(StartDayOfWeekInfo.newBuilder().setDayOfWeek(DayOfWeek.MONDAY))
             // Sets the bid modifier value to 150%.
             .setBidModifier(1.5d)
             .build();
@@ -126,9 +126,9 @@ public class AddHotelAdGroupBidModifiers {
         AdGroupBidModifier.newBuilder()
             // Sets the ad group.
             .setAdGroup(adGroupResourceName)
-            // Creates the hotel length of stay info.
-            .setHotelLengthOfStay(
-                HotelLengthOfStayInfo.newBuilder().setMinNights(3L).setMaxNights(7L).build())
+            // Creates the length of booking info.
+            .setLengthOfBooking(
+                LengthOfBookingInfo.newBuilder().setMinDays(3L).setMaxDays(7L).build())
             // Sets the bid modifier value to 170%.
             .setBidModifier(1.7d)
             .build();
