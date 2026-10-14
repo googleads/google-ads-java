@@ -1,3 +1,7 @@
+48.0.0 - 2026-10-14
+-------------------
+- Add support and examples for v26 of the Google Ads API.
+
 47.0.0 - 2026-09-30
 -------------------
 - Remove support for v22 of the Google Ads API

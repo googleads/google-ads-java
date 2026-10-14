@@ -2409,8 +2409,10 @@
  *     YouTubeVideoUploadServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   YouTubeVideoUpload youTubeVideoUpload = YouTubeVideoUpload.newBuilder().build();
- *   CreateYouTubeVideoUploadResponse response =
- *       youTubeVideoUploadServiceClient.createYouTubeVideoUpload(customerId, youTubeVideoUpload);
+ *   FieldMask updateMask = FieldMask.newBuilder().build();
+ *   UpdateYouTubeVideoUploadResponse response =
+ *       youTubeVideoUploadServiceClient.updateYouTubeVideoUpload(
+ *           customerId, youTubeVideoUpload, updateMask);
  * }
  * }</pre>
  */

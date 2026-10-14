@@ -33409,7 +33409,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. Listing type of ads served for this campaign.
-   * Field is restricted for usage with Performance Max campaigns.
+   * Field is restricted for usage with Performance Max and Shopping campaigns.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v25.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -33421,7 +33421,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. Listing type of ads served for this campaign.
-   * Field is restricted for usage with Performance Max campaigns.
+   * Field is restricted for usage with Performance Max and Shopping campaigns.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v25.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -33433,7 +33433,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. Listing type of ads served for this campaign.
-   * Field is restricted for usage with Performance Max campaigns.
+   * Field is restricted for usage with Performance Max and Shopping campaigns.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v25.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -44916,7 +44916,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. Listing type of ads served for this campaign.
-     * Field is restricted for usage with Performance Max campaigns.
+     * Field is restricted for usage with Performance Max and Shopping campaigns.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v25.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -44928,7 +44928,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. Listing type of ads served for this campaign.
-     * Field is restricted for usage with Performance Max campaigns.
+     * Field is restricted for usage with Performance Max and Shopping campaigns.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v25.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -44940,7 +44940,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. Listing type of ads served for this campaign.
-     * Field is restricted for usage with Performance Max campaigns.
+     * Field is restricted for usage with Performance Max and Shopping campaigns.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v25.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -44956,7 +44956,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. Listing type of ads served for this campaign.
-     * Field is restricted for usage with Performance Max campaigns.
+     * Field is restricted for usage with Performance Max and Shopping campaigns.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v25.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -44970,7 +44970,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. Listing type of ads served for this campaign.
-     * Field is restricted for usage with Performance Max campaigns.
+     * Field is restricted for usage with Performance Max and Shopping campaigns.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v25.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -44987,7 +44987,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. Listing type of ads served for this campaign.
-     * Field is restricted for usage with Performance Max campaigns.
+     * Field is restricted for usage with Performance Max and Shopping campaigns.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v25.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
