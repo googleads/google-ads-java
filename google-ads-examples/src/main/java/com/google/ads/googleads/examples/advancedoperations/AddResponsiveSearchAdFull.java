@@ -595,7 +595,7 @@ public class AddResponsiveSearchAdFull {
             suggestion.getReach(),
             suggestion.getSearchTerm());
 
-        // Creates the campaign criterion for loaction targeting.
+        // Creates the campaign criterion for location targeting.
         CampaignCriterion campaignCriterion =
             CampaignCriterion.newBuilder()
                 .setCampaign(campaignResourceName)
