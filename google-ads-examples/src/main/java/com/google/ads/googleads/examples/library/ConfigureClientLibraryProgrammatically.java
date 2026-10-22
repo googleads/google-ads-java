@@ -26,7 +26,6 @@ import com.google.auth.oauth2.UserCredentials;
  */
 public class ConfigureClientLibraryProgrammatically {
 
-  private static final String DEVELOPER_TOKEN = "INSERT_DEVELOPER_TOKEN";
   private static final String OAUTH_CLIENT_ID = "INSERT_CLIENT_ID";
   private static final String OAUTH_CLIENT_SECRET = "INSERT_CLIENT_SECRET";
   private static final String REFRESH_TOKEN = "INSERT_REFRESH_TOKEN";
@@ -45,8 +44,6 @@ public class ConfigureClientLibraryProgrammatically {
     // Creates a GoogleAdsClient with the provided credentials.
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
-            // Sets the developer token which enables API access.
-            .setDeveloperToken(DEVELOPER_TOKEN)
             // Sets the OAuth credentials which provide Google Ads account access.
             .setCredentials(credentials)
             // Optional: sets the login customer ID. This is required when the Google account
