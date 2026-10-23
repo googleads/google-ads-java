@@ -128,7 +128,8 @@ public class ParallelReportDownload {
     try (GoogleAdsServiceClient serviceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // IMPORTANT: You should avoid hitting the same customer ID in parallel. There are rate limits
-      // at the customer ID level which are much stricter than limits at the developer token level.
+      // at the customer ID level which are much stricter than limits at the Google Cloud project
+      // level.
       // Hitting these limits frequently enough will significantly reduce throughput as the client
       // library will automatically retry with exponential back-off before failing the request.
       for (String gaqlQuery : GAQL_QUERY_STRINGS) {
