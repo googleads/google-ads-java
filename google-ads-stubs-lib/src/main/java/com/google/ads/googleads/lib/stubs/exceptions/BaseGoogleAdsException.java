@@ -16,10 +16,12 @@ package com.google.ads.googleads.lib.stubs.exceptions;
 
 import com.google.api.gax.rpc.ApiException;
 import com.google.common.annotations.VisibleForTesting;
+import com.google.protobuf.Any;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
 import io.grpc.Metadata;
 import io.grpc.Status;
+import io.grpc.protobuf.StatusProto;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -76,9 +78,9 @@ public abstract class BaseGoogleAdsException extends ApiException {
    * Optionally create a GoogleAdsException from a ApiException.
    *
    * <p>Returns an Optional containing the underlying GoogleAdsException if the ApiException
-   * contains the appropriate metadata.
+   * contains the appropriate metadata or status details.
    *
-   * <p>Returns an empty Optional if the required metadata is not present or is not parsable.
+   * <p>Returns an empty Optional if the required metadata or status details is not present or is not parsable.
    */
   public abstract static class Factory<T extends BaseGoogleAdsException, U extends Message> {
     protected static Metadata.Key<byte[]> createKey(String trailerKey) {
@@ -94,15 +96,36 @@ public abstract class BaseGoogleAdsException extends ApiException {
         return Optional.empty();
       }
       Metadata metadata = Status.trailersFromThrowable(cause);
-      if (metadata == null) {
-        return Optional.empty();
+      byte[] protoData = null;
+      if (metadata != null) {
+        protoData = metadata.get(getTrailerKey());
       }
-      byte[] protoData = metadata.get(getTrailerKey());
+
+      // If the GoogleAdsFailure was not found in the metadata, checks if it is in the status
+      // details.
+      if (protoData == null) {
+        com.google.rpc.Status statusProto = StatusProto.fromThrowable(cause);
+        if (statusProto != null) {
+          String expectedTypeUrl =
+              "type.googleapis.com/" + createGoogleAdsFailure().getDescriptorForType().getFullName();
+          for (Any any : statusProto.getDetailsList()) {
+            if (any.getTypeUrl().equals(expectedTypeUrl)) {
+              protoData = any.getValue().toByteArray();
+              break;
+            }
+          }
+        }
+      }
+
       if (protoData == null) {
         return Optional.empty();
       }
+
       try {
-        return Optional.of(createException(source, protoData, metadata));
+        // The original implementation requires metadata to be non-null, but it might be if we
+        // extracted from status details instead of trailers.
+        Metadata nonNullMetadata = metadata == null ? new Metadata() : metadata;
+        return Optional.of(createException(source, protoData, nonNullMetadata));
       } catch (InvalidProtocolBufferException e) {
         logger.error("Failed to decode GoogleAdsFailure", e);
         return Optional.empty();
