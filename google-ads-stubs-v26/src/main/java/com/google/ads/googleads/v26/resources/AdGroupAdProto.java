@@ -68,56 +68,57 @@ public final class AdGroupAdProto extends com.google.protobuf.GeneratedFile {
       "cy_review_status.proto\032+google/ads/googl" +
       "eads/v26/resources/ad.proto\032\037google/api/" +
       "field_behavior.proto\032\031google/api/resourc" +
-      "e.proto\"\260\010\n\tAdGroupAd\022A\n\rresource_name\030\001" +
-      " \001(\tB*\340A\005\372A$\n\"googleads.googleapis.com/A" +
-      "dGroupAd\022S\n\006status\030\003 \001(\0162C.google.ads.go" +
-      "ogleads.v26.enums.AdGroupAdStatusEnum.Ad" +
-      "GroupAdStatus\022?\n\010ad_group\030\t \001(\tB(\340A\005\372A\"\n" +
-      " googleads.googleapis.com/AdGroupH\000\210\001\001\0227" +
-      "\n\002ad\030\005 \001(\0132&.google.ads.googleads.v26.re" +
-      "sources.AdB\003\340A\005\022\027\n\017start_date_time\030\024 \001(\t" +
-      "\022\025\n\rend_date_time\030\025 \001(\t\022W\n\016policy_summar" +
-      "y\030\006 \001(\0132:.google.ads.googleads.v26.resou" +
-      "rces.AdGroupAdPolicySummaryB\003\340A\003\022S\n\013ad_s" +
-      "trength\030\007 \001(\01629.google.ads.googleads.v26" +
-      ".enums.AdStrengthEnum.AdStrengthB\003\340A\003\022\031\n" +
-      "\014action_items\030\r \003(\tB\003\340A\003\022?\n\006labels\030\n \003(\t" +
-      "B/\340A\003\372A)\n\'googleads.googleapis.com/AdGro" +
-      "upAdLabel\022n\n\016primary_status\030\020 \001(\0162Q.goog" +
-      "le.ads.googleads.v26.enums.AdGroupAdPrim" +
-      "aryStatusEnum.AdGroupAdPrimaryStatusB\003\340A" +
-      "\003\022\202\001\n\026primary_status_reasons\030\021 \003(\0162].goo" +
-      "gle.ads.googleads.v26.enums.AdGroupAdPri" +
-      "maryStatusReasonEnum.AdGroupAdPrimarySta" +
-      "tusReasonB\003\340A\003\022r\n%ad_group_ad_asset_auto" +
-      "mation_settings\030\022 \003(\0132C.google.ads.googl" +
-      "eads.v26.resources.AdGroupAdAssetAutomat" +
-      "ionSetting:a\352A^\n\"googleads.googleapis.co" +
-      "m/AdGroupAd\0228customers/{customer_id}/adG" +
-      "roupAds/{ad_group_id}~{ad_id}B\013\n\t_ad_gro" +
-      "up\"\302\002\n\026AdGroupAdPolicySummary\022T\n\024policy_" +
-      "topic_entries\030\001 \003(\01321.google.ads.googlea" +
-      "ds.v26.common.PolicyTopicEntryB\003\340A\003\022e\n\rr" +
-      "eview_status\030\002 \001(\0162I.google.ads.googlead" +
-      "s.v26.enums.PolicyReviewStatusEnum.Polic" +
-      "yReviewStatusB\003\340A\003\022k\n\017approval_status\030\003 " +
-      "\001(\0162M.google.ads.googleads.v26.enums.Pol" +
-      "icyApprovalStatusEnum.PolicyApprovalStat" +
-      "usB\003\340A\003\"\277\002\n\037AdGroupAdAssetAutomationSett" +
-      "ing\022o\n\025asset_automation_type\030\001 \001(\0162K.goo" +
-      "gle.ads.googleads.v26.enums.AssetAutomat" +
-      "ionTypeEnum.AssetAutomationTypeH\000\210\001\001\022u\n\027" +
-      "asset_automation_status\030\002 \001(\0162O.google.a" +
-      "ds.googleads.v26.enums.AssetAutomationSt" +
-      "atusEnum.AssetAutomationStatusH\001\210\001\001B\030\n\026_" +
-      "asset_automation_typeB\032\n\030_asset_automati" +
-      "on_statusB\200\002\n&com.google.ads.googleads.v" +
-      "26.resourcesB\016AdGroupAdProtoP\001ZKgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v26/resources;resources\242\002\003GAA\252\002\"Goog" +
-      "le.Ads.GoogleAds.V26.Resources\312\002\"Google\\" +
-      "Ads\\GoogleAds\\V26\\Resources\352\002&Google::Ad" +
-      "s::GoogleAds::V26::Resourcesb\006proto3"
+      "e.proto\"\271\010\n\tAdGroupAd\022B\n\rresource_name\030\001" +
+      " \001(\tB+\342A\001\005\372A$\n\"googleads.googleapis.com/" +
+      "AdGroupAd\022S\n\006status\030\003 \001(\0162C.google.ads.g" +
+      "oogleads.v26.enums.AdGroupAdStatusEnum.A" +
+      "dGroupAdStatus\022@\n\010ad_group\030\t \001(\tB)\342A\001\005\372A" +
+      "\"\n googleads.googleapis.com/AdGroupH\000\210\001\001" +
+      "\0228\n\002ad\030\005 \001(\0132&.google.ads.googleads.v26." +
+      "resources.AdB\004\342A\001\005\022\027\n\017start_date_time\030\024 " +
+      "\001(\t\022\025\n\rend_date_time\030\025 \001(\t\022X\n\016policy_sum" +
+      "mary\030\006 \001(\0132:.google.ads.googleads.v26.re" +
+      "sources.AdGroupAdPolicySummaryB\004\342A\001\003\022T\n\013" +
+      "ad_strength\030\007 \001(\01629.google.ads.googleads" +
+      ".v26.enums.AdStrengthEnum.AdStrengthB\004\342A" +
+      "\001\003\022\032\n\014action_items\030\r \003(\tB\004\342A\001\003\022@\n\006labels" +
+      "\030\n \003(\tB0\342A\001\003\372A)\n\'googleads.googleapis.co" +
+      "m/AdGroupAdLabel\022o\n\016primary_status\030\020 \001(\016" +
+      "2Q.google.ads.googleads.v26.enums.AdGrou" +
+      "pAdPrimaryStatusEnum.AdGroupAdPrimarySta" +
+      "tusB\004\342A\001\003\022\203\001\n\026primary_status_reasons\030\021 \003" +
+      "(\0162].google.ads.googleads.v26.enums.AdGr" +
+      "oupAdPrimaryStatusReasonEnum.AdGroupAdPr" +
+      "imaryStatusReasonB\004\342A\001\003\022r\n%ad_group_ad_a" +
+      "sset_automation_settings\030\022 \003(\0132C.google." +
+      "ads.googleads.v26.resources.AdGroupAdAss" +
+      "etAutomationSetting:a\352A^\n\"googleads.goog" +
+      "leapis.com/AdGroupAd\0228customers/{custome" +
+      "r_id}/adGroupAds/{ad_group_id}~{ad_id}B\013" +
+      "\n\t_ad_group\"\305\002\n\026AdGroupAdPolicySummary\022U" +
+      "\n\024policy_topic_entries\030\001 \003(\01321.google.ad" +
+      "s.googleads.v26.common.PolicyTopicEntryB" +
+      "\004\342A\001\003\022f\n\rreview_status\030\002 \001(\0162I.google.ad" +
+      "s.googleads.v26.enums.PolicyReviewStatus" +
+      "Enum.PolicyReviewStatusB\004\342A\001\003\022l\n\017approva" +
+      "l_status\030\003 \001(\0162M.google.ads.googleads.v2" +
+      "6.enums.PolicyApprovalStatusEnum.PolicyA" +
+      "pprovalStatusB\004\342A\001\003\"\277\002\n\037AdGroupAdAssetAu" +
+      "tomationSetting\022o\n\025asset_automation_type" +
+      "\030\001 \001(\0162K.google.ads.googleads.v26.enums." +
+      "AssetAutomationTypeEnum.AssetAutomationT" +
+      "ypeH\000\210\001\001\022u\n\027asset_automation_status\030\002 \001(" +
+      "\0162O.google.ads.googleads.v26.enums.Asset" +
+      "AutomationStatusEnum.AssetAutomationStat" +
+      "usH\001\210\001\001B\030\n\026_asset_automation_typeB\032\n\030_as" +
+      "set_automation_statusB\200\002\n&com.google.ads" +
+      ".googleads.v26.resourcesB\016AdGroupAdProto" +
+      "P\001ZKgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v26/resources;resources\242" +
+      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resourc" +
+      "es\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352" +
+      "\002&Google::Ads::GoogleAds::V26::Resources" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

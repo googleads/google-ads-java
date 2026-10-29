@@ -52,32 +52,32 @@ public final class SearchLiftKeywordBundleProto extends com.google.protobuf.Gene
       "ndle_status.proto\032Egoogle/ads/googleads/" +
       "v26/enums/search_lift_matching_info_sour" +
       "ce.proto\032\037google/api/field_behavior.prot" +
-      "o\032\031google/api/resource.proto\"\316\005\n\027SearchL" +
-      "iftKeywordBundle\022O\n\rresource_name\030\001 \001(\tB" +
-      "8\340A\005\372A2\n0googleads.googleapis.com/Search" +
-      "LiftKeywordBundle\022/\n\035search_lift_keyword" +
-      "_bundle_id\030\002 \001(\003B\003\340A\003H\000\210\001\001\022d\n\010keywords\030\003" +
-      " \003(\0132M.google.ads.googleads.v26.resource" +
-      "s.SearchLiftKeywordBundle.SearchLiftKeyw" +
-      "ordB\003\340A\003\022r\n\006source\030\004 \001(\0162].google.ads.go" +
-      "ogleads.v26.enums.SearchLiftMatchingInfo" +
-      "SourceEnum.SearchLiftMatchingInfoSourceB" +
-      "\003\340A\003\022t\n\006status\030\005 \001(\0162_.google.ads.google" +
-      "ads.v26.enums.SearchLiftKeywordBundleSta" +
-      "tusEnum.SearchLiftKeywordBundleStatusB\003\340" +
-      "A\003\0324\n\021SearchLiftKeyword\022\026\n\004text\030\001 \001(\tB\003\340" +
-      "A\003H\000\210\001\001B\007\n\005_text:\210\001\352A\204\001\n0googleads.googl" +
-      "eapis.com/SearchLiftKeywordBundle\022Pcusto" +
-      "mers/{customer_id}/searchLiftKeywordBund" +
-      "les/{search_lift_keyword_bundle_id}B \n\036_" +
-      "search_lift_keyword_bundle_idB\216\002\n&com.go" +
-      "ogle.ads.googleads.v26.resourcesB\034Search" +
-      "LiftKeywordBundleProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v2" +
-      "6/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V26.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V26\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V26::Resourcesb\006proto3"
+      "o\032\031google/api/resource.proto\"\324\005\n\027SearchL" +
+      "iftKeywordBundle\022P\n\rresource_name\030\001 \001(\tB" +
+      "9\342A\001\005\372A2\n0googleads.googleapis.com/Searc" +
+      "hLiftKeywordBundle\0220\n\035search_lift_keywor" +
+      "d_bundle_id\030\002 \001(\003B\004\342A\001\003H\000\210\001\001\022e\n\010keywords" +
+      "\030\003 \003(\0132M.google.ads.googleads.v26.resour" +
+      "ces.SearchLiftKeywordBundle.SearchLiftKe" +
+      "ywordB\004\342A\001\003\022s\n\006source\030\004 \001(\0162].google.ads" +
+      ".googleads.v26.enums.SearchLiftMatchingI" +
+      "nfoSourceEnum.SearchLiftMatchingInfoSour" +
+      "ceB\004\342A\001\003\022u\n\006status\030\005 \001(\0162_.google.ads.go" +
+      "ogleads.v26.enums.SearchLiftKeywordBundl" +
+      "eStatusEnum.SearchLiftKeywordBundleStatu" +
+      "sB\004\342A\001\003\0325\n\021SearchLiftKeyword\022\027\n\004text\030\001 \001" +
+      "(\tB\004\342A\001\003H\000\210\001\001B\007\n\005_text:\210\001\352A\204\001\n0googleads" +
+      ".googleapis.com/SearchLiftKeywordBundle\022" +
+      "Pcustomers/{customer_id}/searchLiftKeywo" +
+      "rdBundles/{search_lift_keyword_bundle_id" +
+      "}B \n\036_search_lift_keyword_bundle_idB\216\002\n&" +
+      "com.google.ads.googleads.v26.resourcesB\034" +
+      "SearchLiftKeywordBundleProtoP\001ZKgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v26/resources;resources\242\002\003GAA\252\002\"Goog" +
+      "le.Ads.GoogleAds.V26.Resources\312\002\"Google\\" +
+      "Ads\\GoogleAds\\V26\\Resources\352\002&Google::Ad" +
+      "s::GoogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

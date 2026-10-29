@@ -86,94 +86,95 @@ public final class CustomerSkAdNetworkConversionValueSchemaProto extends com.goo
       "urces\032Jgoogle/ads/googleads/v26/enums/sk" +
       "_ad_network_coarse_conversion_value.prot" +
       "o\032\037google/api/field_behavior.proto\032\031goog" +
-      "le/api/resource.proto\"\371\030\n(CustomerSkAdNe" +
-      "tworkConversionValueSchema\022`\n\rresource_n" +
-      "ame\030\001 \001(\tBI\340A\003\372AC\nAgoogleads.googleapis." +
-      "com/CustomerSkAdNetworkConversionValueSc" +
-      "hema\022\202\001\n\006schema\030\002 \001(\0132m.google.ads.googl" +
-      "eads.v26.resources.CustomerSkAdNetworkCo" +
-      "nversionValueSchema.SkAdNetworkConversio" +
-      "nValueSchemaB\003\340A\003\032\306\025\n SkAdNetworkConvers" +
-      "ionValueSchema\022\026\n\006app_id\030\001 \001(\tB\006\340A\002\340A\003\022%" +
-      "\n\030measurement_window_hours\030\002 \001(\005B\003\340A\003\022\306\001" +
-      "\n&fine_grained_conversion_value_mappings" +
-      "\030\003 \003(\0132\220\001.google.ads.googleads.v26.resou" +
-      "rces.CustomerSkAdNetworkConversionValueS" +
-      "chema.SkAdNetworkConversionValueSchema.F" +
-      "ineGrainedConversionValueMappingsB\003\340A\003\022\235" +
-      "\001\n\021postback_mappings\030\004 \003(\0132}.google.ads." +
-      "googleads.v26.resources.CustomerSkAdNetw" +
-      "orkConversionValueSchema.SkAdNetworkConv" +
-      "ersionValueSchema.PostbackMappingB\003\340A\003\032\377" +
-      "\001\n\"FineGrainedConversionValueMappings\022*\n" +
-      "\035fine_grained_conversion_value\030\001 \001(\005B\003\340A" +
-      "\003\022\254\001\n\030conversion_value_mapping\030\002 \001(\0132\204\001." +
-      "google.ads.googleads.v26.resources.Custo" +
-      "merSkAdNetworkConversionValueSchema.SkAd" +
-      "NetworkConversionValueSchema.ConversionV" +
-      "alueMappingB\003\340A\003\032\213\004\n\017PostbackMapping\022$\n\027" +
-      "postback_sequence_index\030\001 \001(\005B\003\340A\003\022\312\001\n(c" +
-      "oarse_grained_conversion_value_mappings\030" +
-      "\002 \001(\0132\222\001.google.ads.googleads.v26.resour" +
-      "ces.CustomerSkAdNetworkConversionValueSc" +
-      "hema.SkAdNetworkConversionValueSchema.Co" +
-      "arseGrainedConversionValueMappingsB\003\340A\003\022" +
-      "\231\001\n#lock_window_coarse_conversion_value\030" +
-      "\003 \001(\0162e.google.ads.googleads.v26.enums.S" +
-      "kAdNetworkCoarseConversionValueEnum.SkAd" +
-      "NetworkCoarseConversionValueB\003\340A\003H\000\0220\n!l" +
-      "ock_window_fine_conversion_value\030\004 \001(\005B\003" +
-      "\340A\003H\000\022 \n\021lock_window_event\030\005 \001(\tB\003\340A\003H\000B" +
-      "\025\n\023lock_window_trigger\032\303\004\n$CoarseGrained" +
-      "ConversionValueMappings\022\260\001\n\034low_conversi" +
-      "on_value_mapping\030\001 \001(\0132\204\001.google.ads.goo" +
-      "gleads.v26.resources.CustomerSkAdNetwork" +
-      "ConversionValueSchema.SkAdNetworkConvers" +
-      "ionValueSchema.ConversionValueMappingB\003\340" +
-      "A\003\022\263\001\n\037medium_conversion_value_mapping\030\002" +
-      " \001(\0132\204\001.google.ads.googleads.v26.resourc" +
-      "es.CustomerSkAdNetworkConversionValueSch" +
-      "ema.SkAdNetworkConversionValueSchema.Con" +
-      "versionValueMappingB\003\340A\003\022\261\001\n\035high_conver" +
-      "sion_value_mapping\030\003 \001(\0132\204\001.google.ads.g" +
-      "oogleads.v26.resources.CustomerSkAdNetwo" +
-      "rkConversionValueSchema.SkAdNetworkConve" +
-      "rsionValueSchema.ConversionValueMappingB" +
-      "\003\340A\003\032\376\001\n\026ConversionValueMapping\022(\n\033min_t" +
-      "ime_post_install_hours\030\001 \001(\003B\003\340A\003\022(\n\033max" +
-      "_time_post_install_hours\030\002 \001(\003B\003\340A\003\022\217\001\n\r" +
-      "mapped_events\030\003 \003(\0132s.google.ads.googlea" +
-      "ds.v26.resources.CustomerSkAdNetworkConv" +
-      "ersionValueSchema.SkAdNetworkConversionV" +
-      "alueSchema.EventB\003\340A\003\032\242\005\n\005Event\022\036\n\021mappe" +
-      "d_event_name\030\001 \001(\tB\003\340A\003\022\032\n\rcurrency_code" +
-      "\030\002 \001(\tB\003\340A\003\022\245\001\n\023event_revenue_range\030\003 \001(" +
-      "\0132\200\001.google.ads.googleads.v26.resources." +
-      "CustomerSkAdNetworkConversionValueSchema" +
-      ".SkAdNetworkConversionValueSchema.Event." +
-      "RevenueRangeB\003\340A\003H\000\022\"\n\023event_revenue_val" +
-      "ue\030\004 \001(\001B\003\340A\003H\000\022\260\001\n\026event_occurrence_ran" +
-      "ge\030\005 \001(\0132\210\001.google.ads.googleads.v26.res" +
+      "le/api/resource.proto\"\224\031\n(CustomerSkAdNe" +
+      "tworkConversionValueSchema\022a\n\rresource_n" +
+      "ame\030\001 \001(\tBJ\342A\001\003\372AC\nAgoogleads.googleapis" +
+      ".com/CustomerSkAdNetworkConversionValueS" +
+      "chema\022\203\001\n\006schema\030\002 \001(\0132m.google.ads.goog" +
+      "leads.v26.resources.CustomerSkAdNetworkC" +
+      "onversionValueSchema.SkAdNetworkConversi" +
+      "onValueSchemaB\004\342A\001\003\032\337\025\n SkAdNetworkConve" +
+      "rsionValueSchema\022\025\n\006app_id\030\001 \001(\tB\005\342A\002\002\003\022" +
+      "&\n\030measurement_window_hours\030\002 \001(\005B\004\342A\001\003\022" +
+      "\307\001\n&fine_grained_conversion_value_mappin" +
+      "gs\030\003 \003(\0132\220\001.google.ads.googleads.v26.res" +
       "ources.CustomerSkAdNetworkConversionValu" +
       "eSchema.SkAdNetworkConversionValueSchema" +
-      ".Event.EventOccurrenceRangeB\003\340A\003H\001\022\034\n\rev" +
-      "ent_counter\030\006 \001(\003B\003\340A\003H\001\032N\n\014RevenueRange" +
-      "\022\036\n\021min_event_revenue\030\003 \001(\001B\003\340A\003\022\036\n\021max_" +
-      "event_revenue\030\004 \001(\001B\003\340A\003\032R\n\024EventOccurre" +
-      "nceRange\022\034\n\017min_event_count\030\001 \001(\003B\003\340A\003\022\034" +
-      "\n\017max_event_count\030\002 \001(\003B\003\340A\003B\016\n\014revenue_" +
-      "rateB\014\n\nevent_rate:\234\001\352A\230\001\nAgoogleads.goo" +
-      "gleapis.com/CustomerSkAdNetworkConversio" +
-      "nValueSchema\022Scustomers/{customer_id}/cu" +
-      "stomerSkAdNetworkConversionValueSchemas/" +
-      "{account_link_id}B\237\002\n&com.google.ads.goo" +
-      "gleads.v26.resourcesB-CustomerSkAdNetwor" +
-      "kConversionValueSchemaProtoP\001ZKgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v26/resources;resources\242\002\003GAA\252\002\"Googl" +
-      "e.Ads.GoogleAds.V26.Resources\312\002\"Google\\A" +
-      "ds\\GoogleAds\\V26\\Resources\352\002&Google::Ads" +
-      "::GoogleAds::V26::Resourcesb\006proto3"
+      ".FineGrainedConversionValueMappingsB\004\342A\001" +
+      "\003\022\236\001\n\021postback_mappings\030\004 \003(\0132}.google.a" +
+      "ds.googleads.v26.resources.CustomerSkAdN" +
+      "etworkConversionValueSchema.SkAdNetworkC" +
+      "onversionValueSchema.PostbackMappingB\004\342A" +
+      "\001\003\032\201\002\n\"FineGrainedConversionValueMapping" +
+      "s\022+\n\035fine_grained_conversion_value\030\001 \001(\005" +
+      "B\004\342A\001\003\022\255\001\n\030conversion_value_mapping\030\002 \001(" +
+      "\0132\204\001.google.ads.googleads.v26.resources." +
+      "CustomerSkAdNetworkConversionValueSchema" +
+      ".SkAdNetworkConversionValueSchema.Conver" +
+      "sionValueMappingB\004\342A\001\003\032\220\004\n\017PostbackMappi" +
+      "ng\022%\n\027postback_sequence_index\030\001 \001(\005B\004\342A\001" +
+      "\003\022\313\001\n(coarse_grained_conversion_value_ma" +
+      "ppings\030\002 \001(\0132\222\001.google.ads.googleads.v26" +
+      ".resources.CustomerSkAdNetworkConversion" +
+      "ValueSchema.SkAdNetworkConversionValueSc" +
+      "hema.CoarseGrainedConversionValueMapping" +
+      "sB\004\342A\001\003\022\232\001\n#lock_window_coarse_conversio" +
+      "n_value\030\003 \001(\0162e.google.ads.googleads.v26" +
+      ".enums.SkAdNetworkCoarseConversionValueE" +
+      "num.SkAdNetworkCoarseConversionValueB\004\342A" +
+      "\001\003H\000\0221\n!lock_window_fine_conversion_valu" +
+      "e\030\004 \001(\005B\004\342A\001\003H\000\022!\n\021lock_window_event\030\005 \001" +
+      "(\tB\004\342A\001\003H\000B\025\n\023lock_window_trigger\032\306\004\n$Co" +
+      "arseGrainedConversionValueMappings\022\261\001\n\034l" +
+      "ow_conversion_value_mapping\030\001 \001(\0132\204\001.goo" +
+      "gle.ads.googleads.v26.resources.Customer" +
+      "SkAdNetworkConversionValueSchema.SkAdNet" +
+      "workConversionValueSchema.ConversionValu" +
+      "eMappingB\004\342A\001\003\022\264\001\n\037medium_conversion_val" +
+      "ue_mapping\030\002 \001(\0132\204\001.google.ads.googleads" +
+      ".v26.resources.CustomerSkAdNetworkConver" +
+      "sionValueSchema.SkAdNetworkConversionVal" +
+      "ueSchema.ConversionValueMappingB\004\342A\001\003\022\262\001" +
+      "\n\035high_conversion_value_mapping\030\003 \001(\0132\204\001" +
+      ".google.ads.googleads.v26.resources.Cust" +
+      "omerSkAdNetworkConversionValueSchema.SkA" +
+      "dNetworkConversionValueSchema.Conversion" +
+      "ValueMappingB\004\342A\001\003\032\201\002\n\026ConversionValueMa" +
+      "pping\022)\n\033min_time_post_install_hours\030\001 \001" +
+      "(\003B\004\342A\001\003\022)\n\033max_time_post_install_hours\030" +
+      "\002 \001(\003B\004\342A\001\003\022\220\001\n\rmapped_events\030\003 \003(\0132s.go" +
+      "ogle.ads.googleads.v26.resources.Custome" +
+      "rSkAdNetworkConversionValueSchema.SkAdNe" +
+      "tworkConversionValueSchema.EventB\004\342A\001\003\032\254" +
+      "\005\n\005Event\022\037\n\021mapped_event_name\030\001 \001(\tB\004\342A\001" +
+      "\003\022\033\n\rcurrency_code\030\002 \001(\tB\004\342A\001\003\022\246\001\n\023event" +
+      "_revenue_range\030\003 \001(\0132\200\001.google.ads.googl" +
+      "eads.v26.resources.CustomerSkAdNetworkCo" +
+      "nversionValueSchema.SkAdNetworkConversio" +
+      "nValueSchema.Event.RevenueRangeB\004\342A\001\003H\000\022" +
+      "#\n\023event_revenue_value\030\004 \001(\001B\004\342A\001\003H\000\022\261\001\n" +
+      "\026event_occurrence_range\030\005 \001(\0132\210\001.google." +
+      "ads.googleads.v26.resources.CustomerSkAd" +
+      "NetworkConversionValueSchema.SkAdNetwork" +
+      "ConversionValueSchema.Event.EventOccurre" +
+      "nceRangeB\004\342A\001\003H\001\022\035\n\revent_counter\030\006 \001(\003B" +
+      "\004\342A\001\003H\001\032P\n\014RevenueRange\022\037\n\021min_event_rev" +
+      "enue\030\003 \001(\001B\004\342A\001\003\022\037\n\021max_event_revenue\030\004 " +
+      "\001(\001B\004\342A\001\003\032T\n\024EventOccurrenceRange\022\035\n\017min" +
+      "_event_count\030\001 \001(\003B\004\342A\001\003\022\035\n\017max_event_co" +
+      "unt\030\002 \001(\003B\004\342A\001\003B\016\n\014revenue_rateB\014\n\nevent" +
+      "_rate:\234\001\352A\230\001\nAgoogleads.googleapis.com/C" +
+      "ustomerSkAdNetworkConversionValueSchema\022" +
+      "Scustomers/{customer_id}/customerSkAdNet" +
+      "workConversionValueSchemas/{account_link" +
+      "_id}B\237\002\n&com.google.ads.googleads.v26.re" +
+      "sourcesB-CustomerSkAdNetworkConversionVa" +
+      "lueSchemaProtoP\001ZKgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v26/resour" +
+      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
+      "ds.V26.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
+      "V26\\Resources\352\002&Google::Ads::GoogleAds::" +
+      "V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

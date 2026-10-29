@@ -77,75 +77,76 @@ public final class OfflineConversionUploadClientSummaryProto extends com.google.
       "26/errors/string_format_error.proto\0329goo" +
       "gle/ads/googleads/v26/errors/string_leng" +
       "th_error.proto\032\037google/api/field_behavio" +
-      "r.proto\032\031google/api/resource.proto\"\305\007\n$O" +
-      "fflineConversionUploadClientSummary\022\\\n\rr" +
-      "esource_name\030\001 \001(\tBE\340A\003\372A?\n=googleads.go" +
-      "ogleapis.com/OfflineConversionUploadClie" +
-      "ntSummary\022j\n\006client\030\002 \001(\0162U.google.ads.g" +
-      "oogleads.v26.enums.OfflineEventUploadCli" +
-      "entEnum.OfflineEventUploadClientB\003\340A\003\022|\n" +
-      "\006status\030\003 \001(\0162g.google.ads.googleads.v26" +
-      ".enums.OfflineConversionDiagnosticStatus" +
-      "Enum.OfflineConversionDiagnosticStatusB\003" +
-      "\340A\003\022\036\n\021total_event_count\030\004 \001(\003B\003\340A\003\022#\n\026s" +
-      "uccessful_event_count\030\005 \001(\003B\003\340A\003\022\031\n\014succ" +
-      "ess_rate\030\006 \001(\001B\003\340A\003\022 \n\023pending_event_cou" +
-      "nt\030\013 \001(\003B\003\340A\003\022\031\n\014pending_rate\030\014 \001(\001B\003\340A\003" +
-      "\022\"\n\025last_upload_date_time\030\007 \001(\tB\003\340A\003\022Z\n\017" +
-      "daily_summaries\030\010 \003(\0132<.google.ads.googl" +
-      "eads.v26.resources.OfflineConversionSumm" +
-      "aryB\003\340A\003\022X\n\rjob_summaries\030\t \003(\0132<.google" +
-      ".ads.googleads.v26.resources.OfflineConv" +
-      "ersionSummaryB\003\340A\003\022O\n\006alerts\030\n \003(\0132:.goo" +
-      "gle.ads.googleads.v26.resources.OfflineC" +
-      "onversionAlertB\003\340A\003:\214\001\352A\210\001\n=googleads.go" +
-      "ogleapis.com/OfflineConversionUploadClie" +
-      "ntSummary\022Gcustomers/{customer_id}/offli" +
-      "neConversionUploadClientSummaries/{clien" +
-      "t}\"\264\001\n\030OfflineConversionSummary\022\035\n\020succe" +
-      "ssful_count\030\003 \001(\003B\003\340A\003\022\031\n\014failed_count\030\004" +
-      " \001(\003B\003\340A\003\022\032\n\rpending_count\030\005 \001(\003B\003\340A\003\022\025\n" +
-      "\006job_id\030\001 \001(\003B\003\340A\003H\000\022\032\n\013upload_date\030\002 \001(" +
-      "\tB\003\340A\003H\000B\017\n\rdimension_key\"\207\001\n\026OfflineCon" +
-      "versionAlert\022N\n\005error\030\001 \001(\0132:.google.ads" +
-      ".googleads.v26.resources.OfflineConversi" +
-      "onErrorB\003\340A\003\022\035\n\020error_percentage\030\002 \001(\001B\003" +
-      "\340A\003\"\347\010\n\026OfflineConversionError\022r\n\025collec" +
-      "tion_size_error\030\001 \001(\0162L.google.ads.googl" +
-      "eads.v26.errors.CollectionSizeErrorEnum." +
-      "CollectionSizeErrorB\003\340A\003H\000\022\227\001\n\"conversio" +
-      "n_adjustment_upload_error\030\002 \001(\0162d.google" +
-      ".ads.googleads.v26.errors.ConversionAdju" +
-      "stmentUploadErrorEnum.ConversionAdjustme" +
-      "ntUploadErrorB\003\340A\003H\000\022x\n\027conversion_uploa" +
-      "d_error\030\003 \001(\0162P.google.ads.googleads.v26" +
-      ".errors.ConversionUploadErrorEnum.Conver" +
-      "sionUploadErrorB\003\340A\003H\000\022S\n\ndate_error\030\004 \001" +
-      "(\01628.google.ads.googleads.v26.errors.Dat" +
-      "eErrorEnum.DateErrorB\003\340A\003H\000\022_\n\016distinct_" +
-      "error\030\005 \001(\0162@.google.ads.googleads.v26.e" +
-      "rrors.DistinctErrorEnum.DistinctErrorB\003\340" +
-      "A\003H\000\022V\n\013field_error\030\006 \001(\0162:.google.ads.g" +
-      "oogleads.v26.errors.FieldErrorEnum.Field" +
-      "ErrorB\003\340A\003H\000\022Y\n\014mutate_error\030\007 \001(\0162<.goo" +
-      "gle.ads.googleads.v26.errors.MutateError" +
-      "Enum.MutateErrorB\003\340A\003H\000\022r\n\025not_allowlist" +
-      "ed_error\030\010 \001(\0162L.google.ads.googleads.v2" +
-      "6.errors.NotAllowlistedErrorEnum.NotAllo" +
-      "wlistedErrorB\003\340A\003H\000\022l\n\023string_format_err" +
-      "or\030\t \001(\0162H.google.ads.googleads.v26.erro" +
-      "rs.StringFormatErrorEnum.StringFormatErr" +
-      "orB\003\340A\003H\000\022l\n\023string_length_error\030\n \001(\0162H" +
-      ".google.ads.googleads.v26.errors.StringL" +
-      "engthErrorEnum.StringLengthErrorB\003\340A\003H\000B" +
-      "\014\n\nerror_codeB\233\002\n&com.google.ads.googlea" +
-      "ds.v26.resourcesB)OfflineConversionUploa" +
-      "dClientSummaryProtoP\001ZKgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v26/r" +
-      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
-      "ogleAds.V26.Resources\312\002\"Google\\Ads\\Googl" +
-      "eAds\\V26\\Resources\352\002&Google::Ads::Google" +
-      "Ads::V26::Resourcesb\006proto3"
+      "r.proto\032\031google/api/resource.proto\"\321\007\n$O" +
+      "fflineConversionUploadClientSummary\022]\n\rr" +
+      "esource_name\030\001 \001(\tBF\342A\001\003\372A?\n=googleads.g" +
+      "oogleapis.com/OfflineConversionUploadCli" +
+      "entSummary\022k\n\006client\030\002 \001(\0162U.google.ads." +
+      "googleads.v26.enums.OfflineEventUploadCl" +
+      "ientEnum.OfflineEventUploadClientB\004\342A\001\003\022" +
+      "}\n\006status\030\003 \001(\0162g.google.ads.googleads.v" +
+      "26.enums.OfflineConversionDiagnosticStat" +
+      "usEnum.OfflineConversionDiagnosticStatus" +
+      "B\004\342A\001\003\022\037\n\021total_event_count\030\004 \001(\003B\004\342A\001\003\022" +
+      "$\n\026successful_event_count\030\005 \001(\003B\004\342A\001\003\022\032\n" +
+      "\014success_rate\030\006 \001(\001B\004\342A\001\003\022!\n\023pending_eve" +
+      "nt_count\030\013 \001(\003B\004\342A\001\003\022\032\n\014pending_rate\030\014 \001" +
+      "(\001B\004\342A\001\003\022#\n\025last_upload_date_time\030\007 \001(\tB" +
+      "\004\342A\001\003\022[\n\017daily_summaries\030\010 \003(\0132<.google." +
+      "ads.googleads.v26.resources.OfflineConve" +
+      "rsionSummaryB\004\342A\001\003\022Y\n\rjob_summaries\030\t \003(" +
+      "\0132<.google.ads.googleads.v26.resources.O" +
+      "fflineConversionSummaryB\004\342A\001\003\022P\n\006alerts\030" +
+      "\n \003(\0132:.google.ads.googleads.v26.resourc" +
+      "es.OfflineConversionAlertB\004\342A\001\003:\214\001\352A\210\001\n=" +
+      "googleads.googleapis.com/OfflineConversi" +
+      "onUploadClientSummary\022Gcustomers/{custom" +
+      "er_id}/offlineConversionUploadClientSumm" +
+      "aries/{client}\"\271\001\n\030OfflineConversionSumm" +
+      "ary\022\036\n\020successful_count\030\003 \001(\003B\004\342A\001\003\022\032\n\014f" +
+      "ailed_count\030\004 \001(\003B\004\342A\001\003\022\033\n\rpending_count" +
+      "\030\005 \001(\003B\004\342A\001\003\022\026\n\006job_id\030\001 \001(\003B\004\342A\001\003H\000\022\033\n\013" +
+      "upload_date\030\002 \001(\tB\004\342A\001\003H\000B\017\n\rdimension_k" +
+      "ey\"\211\001\n\026OfflineConversionAlert\022O\n\005error\030\001" +
+      " \001(\0132:.google.ads.googleads.v26.resource" +
+      "s.OfflineConversionErrorB\004\342A\001\003\022\036\n\020error_" +
+      "percentage\030\002 \001(\001B\004\342A\001\003\"\361\010\n\026OfflineConver" +
+      "sionError\022s\n\025collection_size_error\030\001 \001(\016" +
+      "2L.google.ads.googleads.v26.errors.Colle" +
+      "ctionSizeErrorEnum.CollectionSizeErrorB\004" +
+      "\342A\001\003H\000\022\230\001\n\"conversion_adjustment_upload_" +
+      "error\030\002 \001(\0162d.google.ads.googleads.v26.e" +
+      "rrors.ConversionAdjustmentUploadErrorEnu" +
+      "m.ConversionAdjustmentUploadErrorB\004\342A\001\003H" +
+      "\000\022y\n\027conversion_upload_error\030\003 \001(\0162P.goo" +
+      "gle.ads.googleads.v26.errors.ConversionU" +
+      "ploadErrorEnum.ConversionUploadErrorB\004\342A" +
+      "\001\003H\000\022T\n\ndate_error\030\004 \001(\01628.google.ads.go" +
+      "ogleads.v26.errors.DateErrorEnum.DateErr" +
+      "orB\004\342A\001\003H\000\022`\n\016distinct_error\030\005 \001(\0162@.goo" +
+      "gle.ads.googleads.v26.errors.DistinctErr" +
+      "orEnum.DistinctErrorB\004\342A\001\003H\000\022W\n\013field_er" +
+      "ror\030\006 \001(\0162:.google.ads.googleads.v26.err" +
+      "ors.FieldErrorEnum.FieldErrorB\004\342A\001\003H\000\022Z\n" +
+      "\014mutate_error\030\007 \001(\0162<.google.ads.googlea" +
+      "ds.v26.errors.MutateErrorEnum.MutateErro" +
+      "rB\004\342A\001\003H\000\022s\n\025not_allowlisted_error\030\010 \001(\016" +
+      "2L.google.ads.googleads.v26.errors.NotAl" +
+      "lowlistedErrorEnum.NotAllowlistedErrorB\004" +
+      "\342A\001\003H\000\022m\n\023string_format_error\030\t \001(\0162H.go" +
+      "ogle.ads.googleads.v26.errors.StringForm" +
+      "atErrorEnum.StringFormatErrorB\004\342A\001\003H\000\022m\n" +
+      "\023string_length_error\030\n \001(\0162H.google.ads." +
+      "googleads.v26.errors.StringLengthErrorEn" +
+      "um.StringLengthErrorB\004\342A\001\003H\000B\014\n\nerror_co" +
+      "deB\233\002\n&com.google.ads.googleads.v26.reso" +
+      "urcesB)OfflineConversionUploadClientSumm" +
+      "aryProtoP\001ZKgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v26/resources;re" +
+      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26" +
+      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\Re" +
+      "sources\352\002&Google::Ads::GoogleAds::V26::R" +
+      "esourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

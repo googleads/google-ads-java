@@ -83,69 +83,69 @@ public final class ExperimentArmProto extends com.google.protobuf.GeneratedFile 
       "pe.proto\032Fgoogle/ads/googleads/v26/enums" +
       "/experiment_asset_detail_operation.proto" +
       "\032\037google/api/field_behavior.proto\032\031googl" +
-      "e/api/resource.proto\"\215\021\n\rExperimentArm\022E" +
-      "\n\rresource_name\030\001 \001(\tB.\340A\005\372A(\n&googleads" +
-      ".googleapis.com/ExperimentArm\022?\n\nexperim" +
-      "ent\030\010 \001(\tB+\340A\005\372A%\n#googleads.googleapis." +
-      "com/Experiment\022\021\n\004name\030\003 \001(\tB\003\340A\002\022\017\n\007con" +
-      "trol\030\004 \001(\010\022\025\n\rtraffic_split\030\005 \001(\003\0229\n\tcam" +
-      "paigns\030\006 \003(\tB&\372A#\n!googleads.googleapis." +
-      "com/Campaign\022F\n\023in_design_campaigns\030\007 \003(" +
-      "\tB)\340A\003\372A#\n!googleads.googleapis.com/Camp" +
-      "aign\022^\n\022asset_testing_info\030\t \001(\0132B.googl" +
-      "e.ads.googleads.v26.resources.Experiment" +
-      "Arm.AssetTestingInfo\022V\n\014asset_groups\030\n \003" +
-      "(\0132@.google.ads.googleads.v26.resources." +
-      "ExperimentArm.AssetGroupInfo\022\203\001\n#perform" +
-      "ance_max_experiment_arm_info\030\013 \001(\0132Q.goo" +
-      "gle.ads.googleads.v26.resources.Experime" +
-      "ntArm.PerformanceMaxExperimentArmInfoB\003\340" +
-      "A\005\032w\n\020AssetTestingInfo\022c\n\025asset_variatio" +
-      "n_infos\030\001 \003(\0132D.google.ads.googleads.v26" +
-      ".resources.ExperimentArm.AssetVariationI" +
-      "nfo\032\333\001\n\022AssetVariationInfo\022<\n\rbase_ad_gr" +
-      "oup\030\001 \001(\tB%\372A\"\n googleads.googleapis.com" +
-      "/AdGroup\0221\n\007base_ad\030\002 \001(\tB \372A\035\n\033googlead" +
-      "s.googleapis.com/Ad\022T\n\rasset_details\030\003 \003" +
-      "(\0132=.google.ads.googleads.v26.resources." +
-      "ExperimentArm.AssetDetail\032\234\002\n\013AssetDetai" +
-      "l\0222\n\005asset\030\001 \001(\tB#\372A \n\036googleads.googlea" +
-      "pis.com/Asset\022U\n\nfield_type\030\002 \001(\0162A.goog" +
-      "le.ads.googleads.v26.enums.AssetFieldTyp" +
-      "eEnum.AssetFieldType\022\201\001\n\026asset_detail_op" +
-      "eration\030\003 \001(\0162a.google.ads.googleads.v26" +
-      ".enums.ExperimentAssetDetailOperationEnu" +
-      "m.ExperimentAssetDetailOperation\032\262\001\n\016Ass" +
-      "etGroupInfo\022=\n\013asset_group\030\001 \001(\tB(\372A%\n#g" +
-      "oogleads.googleapis.com/AssetGroup\022a\n\022as" +
-      "set_group_assets\030\002 \003(\0132E.google.ads.goog" +
-      "leads.v26.resources.ExperimentArm.AssetG" +
-      "roupAssetInfo\032\240\001\n\023AssetGroupAssetInfo\0222\n" +
-      "\005asset\030\001 \001(\tB#\372A \n\036googleads.googleapis." +
-      "com/Asset\022U\n\nfield_type\030\002 \001(\0162A.google.a" +
-      "ds.googleads.v26.enums.AssetFieldTypeEnu" +
-      "m.AssetFieldType\032\372\001\n*ExperimentalPerform" +
-      "anceMaxCampaignSettings\022!\n\024budget_amount" +
-      "_micros\030\001 \001(\003B\003\340A\005\022\030\n\013target_roas\030\002 \001(\001B" +
-      "\003\340A\005\022\036\n\021target_cpa_micros\030\003 \001(\003B\003\340A\005\022o\n\025" +
-      "bidding_strategy_type\030\004 \001(\0162K.google.ads" +
-      ".googleads.v26.enums.BiddingStrategyType" +
-      "Enum.BiddingStrategyTypeB\003\340A\005\032\275\001\n\037Perfor" +
-      "manceMaxExperimentArmInfo\022\231\001\n.experiment" +
-      "al_performance_max_campaign_settings\030\001 \001" +
-      "(\0132\\.google.ads.googleads.v26.resources." +
-      "ExperimentArm.ExperimentalPerformanceMax" +
-      "CampaignSettingsB\003\340A\005:m\352Aj\n&googleads.go" +
-      "ogleapis.com/ExperimentArm\022@customers/{c" +
-      "ustomer_id}/experimentArms/{trial_id}~{t" +
-      "rial_arm_id}B\204\002\n&com.google.ads.googlead" +
-      "s.v26.resourcesB\022ExperimentArmProtoP\001ZKg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v26/resources;resources\242\002\003GAA" +
-      "\252\002\"Google.Ads.GoogleAds.V26.Resources\312\002\"" +
-      "Google\\Ads\\GoogleAds\\V26\\Resources\352\002&Goo" +
-      "gle::Ads::GoogleAds::V26::Resourcesb\006pro" +
-      "to3"
+      "e/api/resource.proto\"\227\021\n\rExperimentArm\022F" +
+      "\n\rresource_name\030\001 \001(\tB/\342A\001\005\372A(\n&googlead" +
+      "s.googleapis.com/ExperimentArm\022@\n\nexperi" +
+      "ment\030\010 \001(\tB,\342A\001\005\372A%\n#googleads.googleapi" +
+      "s.com/Experiment\022\022\n\004name\030\003 \001(\tB\004\342A\001\002\022\017\n\007" +
+      "control\030\004 \001(\010\022\025\n\rtraffic_split\030\005 \001(\003\0229\n\t" +
+      "campaigns\030\006 \003(\tB&\372A#\n!googleads.googleap" +
+      "is.com/Campaign\022G\n\023in_design_campaigns\030\007" +
+      " \003(\tB*\342A\001\003\372A#\n!googleads.googleapis.com/" +
+      "Campaign\022^\n\022asset_testing_info\030\t \001(\0132B.g" +
+      "oogle.ads.googleads.v26.resources.Experi" +
+      "mentArm.AssetTestingInfo\022V\n\014asset_groups" +
+      "\030\n \003(\0132@.google.ads.googleads.v26.resour" +
+      "ces.ExperimentArm.AssetGroupInfo\022\204\001\n#per" +
+      "formance_max_experiment_arm_info\030\013 \001(\0132Q" +
+      ".google.ads.googleads.v26.resources.Expe" +
+      "rimentArm.PerformanceMaxExperimentArmInf" +
+      "oB\004\342A\001\005\032w\n\020AssetTestingInfo\022c\n\025asset_var" +
+      "iation_infos\030\001 \003(\0132D.google.ads.googlead" +
+      "s.v26.resources.ExperimentArm.AssetVaria" +
+      "tionInfo\032\333\001\n\022AssetVariationInfo\022<\n\rbase_" +
+      "ad_group\030\001 \001(\tB%\372A\"\n googleads.googleapi" +
+      "s.com/AdGroup\0221\n\007base_ad\030\002 \001(\tB \372A\035\n\033goo" +
+      "gleads.googleapis.com/Ad\022T\n\rasset_detail" +
+      "s\030\003 \003(\0132=.google.ads.googleads.v26.resou" +
+      "rces.ExperimentArm.AssetDetail\032\234\002\n\013Asset" +
+      "Detail\0222\n\005asset\030\001 \001(\tB#\372A \n\036googleads.go" +
+      "ogleapis.com/Asset\022U\n\nfield_type\030\002 \001(\0162A" +
+      ".google.ads.googleads.v26.enums.AssetFie" +
+      "ldTypeEnum.AssetFieldType\022\201\001\n\026asset_deta" +
+      "il_operation\030\003 \001(\0162a.google.ads.googlead" +
+      "s.v26.enums.ExperimentAssetDetailOperati" +
+      "onEnum.ExperimentAssetDetailOperation\032\262\001" +
+      "\n\016AssetGroupInfo\022=\n\013asset_group\030\001 \001(\tB(\372" +
+      "A%\n#googleads.googleapis.com/AssetGroup\022" +
+      "a\n\022asset_group_assets\030\002 \003(\0132E.google.ads" +
+      ".googleads.v26.resources.ExperimentArm.A" +
+      "ssetGroupAssetInfo\032\240\001\n\023AssetGroupAssetIn" +
+      "fo\0222\n\005asset\030\001 \001(\tB#\372A \n\036googleads.google" +
+      "apis.com/Asset\022U\n\nfield_type\030\002 \001(\0162A.goo" +
+      "gle.ads.googleads.v26.enums.AssetFieldTy" +
+      "peEnum.AssetFieldType\032\376\001\n*ExperimentalPe" +
+      "rformanceMaxCampaignSettings\022\"\n\024budget_a" +
+      "mount_micros\030\001 \001(\003B\004\342A\001\005\022\031\n\013target_roas\030" +
+      "\002 \001(\001B\004\342A\001\005\022\037\n\021target_cpa_micros\030\003 \001(\003B\004" +
+      "\342A\001\005\022p\n\025bidding_strategy_type\030\004 \001(\0162K.go" +
+      "ogle.ads.googleads.v26.enums.BiddingStra" +
+      "tegyTypeEnum.BiddingStrategyTypeB\004\342A\001\005\032\276" +
+      "\001\n\037PerformanceMaxExperimentArmInfo\022\232\001\n.e" +
+      "xperimental_performance_max_campaign_set" +
+      "tings\030\001 \001(\0132\\.google.ads.googleads.v26.r" +
+      "esources.ExperimentArm.ExperimentalPerfo" +
+      "rmanceMaxCampaignSettingsB\004\342A\001\005:m\352Aj\n&go" +
+      "ogleads.googleapis.com/ExperimentArm\022@cu" +
+      "stomers/{customer_id}/experimentArms/{tr" +
+      "ial_id}~{trial_arm_id}B\204\002\n&com.google.ad" +
+      "s.googleads.v26.resourcesB\022ExperimentArm" +
+      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v26/resources;resou" +
+      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Re" +
+      "sources\312\002\"Google\\Ads\\GoogleAds\\V26\\Resou" +
+      "rces\352\002&Google::Ads::GoogleAds::V26::Reso" +
+      "urcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -90,78 +90,78 @@ public final class ConversionValueRuleProto extends com.google.protobuf.Generate
       "tion_match_type.proto\0329google/ads/google" +
       "ads/v26/enums/value_rule_operation.proto" +
       "\032\037google/api/field_behavior.proto\032\031googl" +
-      "e/api/resource.proto\"\370\023\n\023ConversionValue" +
-      "Rule\022K\n\rresource_name\030\001 \001(\tB4\340A\005\372A.\n,goo" +
-      "gleads.googleapis.com/ConversionValueRul" +
-      "e\022\017\n\002id\030\002 \001(\003B\003\340A\003\022W\n\006action\030\003 \001(\0132G.goo" +
-      "gle.ads.googleads.v26.resources.Conversi" +
-      "onValueRule.ValueRuleAction\022u\n\026geo_locat" +
-      "ion_condition\030\004 \001(\0132U.google.ads.googlea" +
+      "e/api/resource.proto\"\373\023\n\023ConversionValue" +
+      "Rule\022L\n\rresource_name\030\001 \001(\tB5\342A\001\005\372A.\n,go" +
+      "ogleads.googleapis.com/ConversionValueRu" +
+      "le\022\020\n\002id\030\002 \001(\003B\004\342A\001\003\022W\n\006action\030\003 \001(\0132G.g" +
+      "oogle.ads.googleads.v26.resources.Conver" +
+      "sionValueRule.ValueRuleAction\022u\n\026geo_loc" +
+      "ation_condition\030\004 \001(\0132U.google.ads.googl" +
+      "eads.v26.resources.ConversionValueRule.V" +
+      "alueRuleGeoLocationCondition\022j\n\020device_c" +
+      "ondition\030\005 \001(\0132P.google.ads.googleads.v2" +
+      "6.resources.ConversionValueRule.ValueRul" +
+      "eDeviceCondition\022n\n\022audience_condition\030\006" +
+      " \001(\0132R.google.ads.googleads.v26.resource" +
+      "s.ConversionValueRule.ValueRuleAudienceC" +
+      "ondition\022p\n\023itinerary_condition\030\t \001(\0132S." +
+      "google.ads.googleads.v26.resources.Conve" +
+      "rsionValueRule.ValueRuleItineraryConditi" +
+      "on\022B\n\016owner_customer\030\007 \001(\tB*\342A\001\003\372A#\n!goo" +
+      "gleads.googleapis.com/Customer\022g\n\006status" +
+      "\030\010 \001(\0162W.google.ads.googleads.v26.enums." +
+      "ConversionValueRuleStatusEnum.Conversion" +
+      "ValueRuleStatus\032~\n\017ValueRuleAction\022\\\n\top" +
+      "eration\030\001 \001(\0162I.google.ads.googleads.v26" +
+      ".enums.ValueRuleOperationEnum.ValueRuleO" +
+      "peration\022\r\n\005value\030\002 \001(\001\032\302\003\n\035ValueRuleGeo" +
+      "LocationCondition\022V\n\035excluded_geo_target" +
+      "_constants\030\001 \003(\tB/\372A,\n*googleads.googlea" +
+      "pis.com/GeoTargetConstant\022\200\001\n\027excluded_g" +
+      "eo_match_type\030\002 \001(\0162_.google.ads.googlea" +
+      "ds.v26.enums.ValueRuleGeoLocationMatchTy" +
+      "peEnum.ValueRuleGeoLocationMatchType\022M\n\024" +
+      "geo_target_constants\030\003 \003(\tB/\372A,\n*googlea" +
+      "ds.googleapis.com/GeoTargetConstant\022w\n\016g" +
+      "eo_match_type\030\004 \001(\0162_.google.ads.googlea" +
+      "ds.v26.enums.ValueRuleGeoLocationMatchTy" +
+      "peEnum.ValueRuleGeoLocationMatchType\032}\n\030" +
+      "ValueRuleDeviceCondition\022a\n\014device_types" +
+      "\030\001 \003(\0162K.google.ads.googleads.v26.enums." +
+      "ValueRuleDeviceTypeEnum.ValueRuleDeviceT" +
+      "ype\032\234\001\n\032ValueRuleAudienceCondition\022:\n\nus" +
+      "er_lists\030\001 \003(\tB&\372A#\n!googleads.googleapi" +
+      "s.com/UserList\022B\n\016user_interests\030\002 \003(\tB*" +
+      "\372A\'\n%googleads.googleapis.com/UserIntere" +
+      "st\032\200\003\n\033ValueRuleItineraryCondition\022~\n\026ad" +
+      "vance_booking_window\030\001 \001(\0132^.google.ads." +
+      "googleads.v26.resources.ConversionValueR" +
+      "ule.ValueRuleItineraryAdvanceBookingWind" +
+      "ow\022m\n\rtravel_length\030\002 \001(\0132V.google.ads.g" +
+      "oogleads.v26.resources.ConversionValueRu" +
+      "le.ValueRuleItineraryTravelLength\022r\n\020tra" +
+      "vel_start_day\030\003 \001(\0132X.google.ads.googlea" +
       "ds.v26.resources.ConversionValueRule.Val" +
-      "ueRuleGeoLocationCondition\022j\n\020device_con" +
-      "dition\030\005 \001(\0132P.google.ads.googleads.v26." +
-      "resources.ConversionValueRule.ValueRuleD" +
-      "eviceCondition\022n\n\022audience_condition\030\006 \001" +
-      "(\0132R.google.ads.googleads.v26.resources." +
-      "ConversionValueRule.ValueRuleAudienceCon" +
-      "dition\022p\n\023itinerary_condition\030\t \001(\0132S.go" +
-      "ogle.ads.googleads.v26.resources.Convers" +
-      "ionValueRule.ValueRuleItineraryCondition" +
-      "\022A\n\016owner_customer\030\007 \001(\tB)\340A\003\372A#\n!google" +
-      "ads.googleapis.com/Customer\022g\n\006status\030\010 " +
-      "\001(\0162W.google.ads.googleads.v26.enums.Con" +
-      "versionValueRuleStatusEnum.ConversionVal" +
-      "ueRuleStatus\032~\n\017ValueRuleAction\022\\\n\topera" +
-      "tion\030\001 \001(\0162I.google.ads.googleads.v26.en" +
-      "ums.ValueRuleOperationEnum.ValueRuleOper" +
-      "ation\022\r\n\005value\030\002 \001(\001\032\302\003\n\035ValueRuleGeoLoc" +
-      "ationCondition\022V\n\035excluded_geo_target_co" +
-      "nstants\030\001 \003(\tB/\372A,\n*googleads.googleapis" +
-      ".com/GeoTargetConstant\022\200\001\n\027excluded_geo_" +
-      "match_type\030\002 \001(\0162_.google.ads.googleads." +
-      "v26.enums.ValueRuleGeoLocationMatchTypeE" +
-      "num.ValueRuleGeoLocationMatchType\022M\n\024geo" +
-      "_target_constants\030\003 \003(\tB/\372A,\n*googleads." +
-      "googleapis.com/GeoTargetConstant\022w\n\016geo_" +
-      "match_type\030\004 \001(\0162_.google.ads.googleads." +
-      "v26.enums.ValueRuleGeoLocationMatchTypeE" +
-      "num.ValueRuleGeoLocationMatchType\032}\n\030Val" +
-      "ueRuleDeviceCondition\022a\n\014device_types\030\001 " +
-      "\003(\0162K.google.ads.googleads.v26.enums.Val" +
-      "ueRuleDeviceTypeEnum.ValueRuleDeviceType" +
-      "\032\234\001\n\032ValueRuleAudienceCondition\022:\n\nuser_" +
-      "lists\030\001 \003(\tB&\372A#\n!googleads.googleapis.c" +
-      "om/UserList\022B\n\016user_interests\030\002 \003(\tB*\372A\'" +
-      "\n%googleads.googleapis.com/UserInterest\032" +
-      "\200\003\n\033ValueRuleItineraryCondition\022~\n\026advan" +
-      "ce_booking_window\030\001 \001(\0132^.google.ads.goo" +
-      "gleads.v26.resources.ConversionValueRule" +
-      ".ValueRuleItineraryAdvanceBookingWindow\022" +
-      "m\n\rtravel_length\030\002 \001(\0132V.google.ads.goog" +
-      "leads.v26.resources.ConversionValueRule." +
-      "ValueRuleItineraryTravelLength\022r\n\020travel" +
-      "_start_day\030\003 \001(\0132X.google.ads.googleads." +
-      "v26.resources.ConversionValueRule.ValueR" +
-      "uleItineraryTravelStartDay\032p\n&ValueRuleI" +
-      "tineraryAdvanceBookingWindow\022\025\n\010min_days" +
-      "\030\003 \001(\005H\000\210\001\001\022\025\n\010max_days\030\004 \001(\005H\001\210\001\001B\013\n\t_m" +
-      "in_daysB\013\n\t_max_days\032H\n\036ValueRuleItinera" +
-      "ryTravelLength\022\022\n\nmin_nights\030\001 \001(\005\022\022\n\nma" +
-      "x_nights\030\002 \001(\005\032\232\001\n ValueRuleItineraryTra" +
-      "velStartDay\022\016\n\006monday\030\001 \001(\010\022\017\n\007tuesday\030\002" +
-      " \001(\010\022\021\n\twednesday\030\003 \001(\010\022\020\n\010thursday\030\004 \001(" +
-      "\010\022\016\n\006friday\030\005 \001(\010\022\020\n\010saturday\030\006 \001(\010\022\016\n\006s" +
-      "unday\030\007 \001(\010:z\352Aw\n,googleads.googleapis.c" +
-      "om/ConversionValueRule\022Gcustomers/{custo" +
-      "mer_id}/conversionValueRules/{conversion" +
-      "_value_rule_id}B\212\002\n&com.google.ads.googl" +
-      "eads.v26.resourcesB\030ConversionValueRuleP" +
-      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v26/resources;resour" +
-      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Res" +
-      "ources\312\002\"Google\\Ads\\GoogleAds\\V26\\Resour" +
-      "ces\352\002&Google::Ads::GoogleAds::V26::Resou" +
-      "rcesb\006proto3"
+      "ueRuleItineraryTravelStartDay\032p\n&ValueRu" +
+      "leItineraryAdvanceBookingWindow\022\025\n\010min_d" +
+      "ays\030\003 \001(\005H\000\210\001\001\022\025\n\010max_days\030\004 \001(\005H\001\210\001\001B\013\n" +
+      "\t_min_daysB\013\n\t_max_days\032H\n\036ValueRuleItin" +
+      "eraryTravelLength\022\022\n\nmin_nights\030\001 \001(\005\022\022\n" +
+      "\nmax_nights\030\002 \001(\005\032\232\001\n ValueRuleItinerary" +
+      "TravelStartDay\022\016\n\006monday\030\001 \001(\010\022\017\n\007tuesda" +
+      "y\030\002 \001(\010\022\021\n\twednesday\030\003 \001(\010\022\020\n\010thursday\030\004" +
+      " \001(\010\022\016\n\006friday\030\005 \001(\010\022\020\n\010saturday\030\006 \001(\010\022\016" +
+      "\n\006sunday\030\007 \001(\010:z\352Aw\n,googleads.googleapi" +
+      "s.com/ConversionValueRule\022Gcustomers/{cu" +
+      "stomer_id}/conversionValueRules/{convers" +
+      "ion_value_rule_id}B\212\002\n&com.google.ads.go" +
+      "ogleads.v26.resourcesB\030ConversionValueRu" +
+      "leProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v26/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V26::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

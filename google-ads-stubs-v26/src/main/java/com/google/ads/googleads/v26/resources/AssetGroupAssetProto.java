@@ -54,39 +54,39 @@ public final class AssetGroupAssetProto extends com.google.protobuf.GeneratedFil
       "us.proto\0321google/ads/googleads/v26/enums" +
       "/asset_source.proto\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\"" +
-      "\373\007\n\017AssetGroupAsset\022G\n\rresource_name\030\001 \001" +
-      "(\tB0\340A\005\372A*\n(googleads.googleapis.com/Ass" +
-      "etGroupAsset\022@\n\013asset_group\030\002 \001(\tB+\340A\005\372A" +
-      "%\n#googleads.googleapis.com/AssetGroup\0225" +
-      "\n\005asset\030\003 \001(\tB&\340A\005\372A \n\036googleads.googlea" +
-      "pis.com/Asset\022U\n\nfield_type\030\004 \001(\0162A.goog" +
-      "le.ads.googleads.v26.enums.AssetFieldTyp" +
-      "eEnum.AssetFieldType\022S\n\006status\030\005 \001(\0162C.g" +
-      "oogle.ads.googleads.v26.enums.AssetLinkS" +
-      "tatusEnum.AssetLinkStatus\022n\n\016primary_sta" +
-      "tus\030\010 \001(\0162Q.google.ads.googleads.v26.enu" +
-      "ms.AssetLinkPrimaryStatusEnum.AssetLinkP" +
-      "rimaryStatusB\003\340A\003\022\202\001\n\026primary_status_rea" +
-      "sons\030\t \003(\0162].google.ads.googleads.v26.en" +
-      "ums.AssetLinkPrimaryStatusReasonEnum.Ass" +
-      "etLinkPrimaryStatusReasonB\003\340A\003\022c\n\026primar" +
-      "y_status_details\030\n \003(\0132>.google.ads.goog" +
-      "leads.v26.common.AssetLinkPrimaryStatusD" +
-      "etailsB\003\340A\003\022K\n\016policy_summary\030\007 \001(\0132..go" +
-      "ogle.ads.googleads.v26.common.PolicySumm" +
-      "aryB\003\340A\003\022P\n\006source\030\013 \001(\0162;.google.ads.go" +
-      "ogleads.v26.enums.AssetSourceEnum.AssetS" +
-      "ourceB\003\340A\003:\200\001\352A}\n(googleads.googleapis.c" +
-      "om/AssetGroupAsset\022Qcustomers/{customer_" +
-      "id}/assetGroupAssets/{asset_group_id}~{a" +
-      "sset_id}~{field_type}B\206\002\n&com.google.ads" +
-      ".googleads.v26.resourcesB\024AssetGroupAsse" +
-      "tProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v26/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V26\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V26::Res" +
-      "ourcesb\006proto3"
+      "\203\010\n\017AssetGroupAsset\022H\n\rresource_name\030\001 \001" +
+      "(\tB1\342A\001\005\372A*\n(googleads.googleapis.com/As" +
+      "setGroupAsset\022A\n\013asset_group\030\002 \001(\tB,\342A\001\005" +
+      "\372A%\n#googleads.googleapis.com/AssetGroup" +
+      "\0226\n\005asset\030\003 \001(\tB\'\342A\001\005\372A \n\036googleads.goog" +
+      "leapis.com/Asset\022U\n\nfield_type\030\004 \001(\0162A.g" +
+      "oogle.ads.googleads.v26.enums.AssetField" +
+      "TypeEnum.AssetFieldType\022S\n\006status\030\005 \001(\0162" +
+      "C.google.ads.googleads.v26.enums.AssetLi" +
+      "nkStatusEnum.AssetLinkStatus\022o\n\016primary_" +
+      "status\030\010 \001(\0162Q.google.ads.googleads.v26." +
+      "enums.AssetLinkPrimaryStatusEnum.AssetLi" +
+      "nkPrimaryStatusB\004\342A\001\003\022\203\001\n\026primary_status" +
+      "_reasons\030\t \003(\0162].google.ads.googleads.v2" +
+      "6.enums.AssetLinkPrimaryStatusReasonEnum" +
+      ".AssetLinkPrimaryStatusReasonB\004\342A\001\003\022d\n\026p" +
+      "rimary_status_details\030\n \003(\0132>.google.ads" +
+      ".googleads.v26.common.AssetLinkPrimarySt" +
+      "atusDetailsB\004\342A\001\003\022L\n\016policy_summary\030\007 \001(" +
+      "\0132..google.ads.googleads.v26.common.Poli" +
+      "cySummaryB\004\342A\001\003\022Q\n\006source\030\013 \001(\0162;.google" +
+      ".ads.googleads.v26.enums.AssetSourceEnum" +
+      ".AssetSourceB\004\342A\001\003:\200\001\352A}\n(googleads.goog" +
+      "leapis.com/AssetGroupAsset\022Qcustomers/{c" +
+      "ustomer_id}/assetGroupAssets/{asset_grou" +
+      "p_id}~{asset_id}~{field_type}B\206\002\n&com.go" +
+      "ogle.ads.googleads.v26.resourcesB\024AssetG" +
+      "roupAssetProtoP\001ZKgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v26/resour" +
+      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
+      "ds.V26.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
+      "V26\\Resources\352\002&Google::Ads::GoogleAds::" +
+      "V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

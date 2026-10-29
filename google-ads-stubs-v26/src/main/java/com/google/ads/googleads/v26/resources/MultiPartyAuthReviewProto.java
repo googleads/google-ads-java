@@ -62,49 +62,50 @@ public final class MultiPartyAuthReviewProto extends com.google.protobuf.Generat
       "omer_user_access.proto\032Hgoogle/ads/googl" +
       "eads/v26/resources/customer_user_access_" +
       "invitation.proto\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"\211\010\n" +
-      "\024MultiPartyAuthReview\022L\n\rresource_name\030\001" +
-      " \001(\tB5\340A\005\372A/\n-googleads.googleapis.com/M" +
-      "ultiPartyAuthReview\022\'\n\032multi_party_auth_" +
-      "review_id\030\004 \001(\003B\003\340A\003\022\037\n\022creation_date_ti" +
-      "me\030\005 \001(\tB\003\340A\003\022u\n\rreview_status\030\006 \001(\0162Y.g" +
-      "oogle.ads.googleads.v26.enums.MultiParty" +
-      "AuthReviewStatusEnum.MultiPartyAuthRevie" +
-      "wStatusB\003\340A\003\022\037\n\022approval_date_time\030\007 \001(\t" +
-      "B\003\340A\003\022\032\n\rjustification\030\t \001(\tB\003\340A\003\022\037\n\022req" +
-      "uest_user_email\030\n \001(\tB\003\340A\003\022x\n\016operation_" +
-      "type\030\013 \001(\0162[.google.ads.googleads.v26.en" +
-      "ums.MultiPartyAuthOperationTypeEnum.Mult" +
-      "iPartyAuthOperationTypeB\003\340A\003\022\207\001\n\017target_" +
-      "resource\030\014 \001(\0162i.google.ads.googleads.v2" +
-      "6.enums.MultiPartyAuthReviewTargetResour" +
-      "ceEnum.MultiPartyAuthReviewTargetResourc" +
-      "eB\003\340A\003\022h\n\033customer_user_access_review\030\002 " +
-      "\001(\0132<.google.ads.googleads.v26.resources" +
-      ".CustomerUserAccessReviewB\003\340A\003H\000\022}\n&cust" +
-      "omer_user_access_invitation_review\030\003 \001(\013" +
-      "2F.google.ads.googleads.v26.resources.Cu" +
-      "stomerUserAccessInvitationReviewB\003\340A\003H\000:" +
-      "z\352Aw\n-googleads.googleapis.com/MultiPart" +
-      "yAuthReview\022Fcustomers/{customer_id}/mul" +
-      "tiPartyAuthReviews/{customer_invitation_" +
-      "id}B\033\n\031multi_party_review_detail\"\320\001\n\030Cus" +
-      "tomerUserAccessReview\022U\n\030old_customer_us" +
-      "er_access\030\001 \001(\tB3\340A\003\372A-\n+googleads.googl" +
-      "eapis.com/CustomerUserAccess\022]\n\030new_cust" +
-      "omer_user_access\030\002 \001(\01326.google.ads.goog" +
-      "leads.v26.resources.CustomerUserAccessB\003" +
-      "\340A\003\"\230\001\n\"CustomerUserAccessInvitationRevi" +
-      "ew\022r\n#new_customer_user_access_invitatio" +
-      "n\030\002 \001(\0132@.google.ads.googleads.v26.resou" +
-      "rces.CustomerUserAccessInvitationB\003\340A\003B\213" +
-      "\002\n&com.google.ads.googleads.v26.resource" +
-      "sB\031MultiPartyAuthReviewProtoP\001ZKgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v26/resources;resources\242\002\003GAA\252\002\"Goog" +
-      "le.Ads.GoogleAds.V26.Resources\312\002\"Google\\" +
-      "Ads\\GoogleAds\\V26\\Resources\352\002&Google::Ad" +
-      "s::GoogleAds::V26::Resourcesb\006proto3"
+      "ior.proto\032\031google/api/resource.proto\"\224\010\n" +
+      "\024MultiPartyAuthReview\022M\n\rresource_name\030\001" +
+      " \001(\tB6\342A\001\005\372A/\n-googleads.googleapis.com/" +
+      "MultiPartyAuthReview\022(\n\032multi_party_auth" +
+      "_review_id\030\004 \001(\003B\004\342A\001\003\022 \n\022creation_date_" +
+      "time\030\005 \001(\tB\004\342A\001\003\022v\n\rreview_status\030\006 \001(\0162" +
+      "Y.google.ads.googleads.v26.enums.MultiPa" +
+      "rtyAuthReviewStatusEnum.MultiPartyAuthRe" +
+      "viewStatusB\004\342A\001\003\022 \n\022approval_date_time\030\007" +
+      " \001(\tB\004\342A\001\003\022\033\n\rjustification\030\t \001(\tB\004\342A\001\003\022" +
+      " \n\022request_user_email\030\n \001(\tB\004\342A\001\003\022y\n\016ope" +
+      "ration_type\030\013 \001(\0162[.google.ads.googleads" +
+      ".v26.enums.MultiPartyAuthOperationTypeEn" +
+      "um.MultiPartyAuthOperationTypeB\004\342A\001\003\022\210\001\n" +
+      "\017target_resource\030\014 \001(\0162i.google.ads.goog" +
+      "leads.v26.enums.MultiPartyAuthReviewTarg" +
+      "etResourceEnum.MultiPartyAuthReviewTarge" +
+      "tResourceB\004\342A\001\003\022i\n\033customer_user_access_" +
+      "review\030\002 \001(\0132<.google.ads.googleads.v26." +
+      "resources.CustomerUserAccessReviewB\004\342A\001\003" +
+      "H\000\022~\n&customer_user_access_invitation_re" +
+      "view\030\003 \001(\0132F.google.ads.googleads.v26.re" +
+      "sources.CustomerUserAccessInvitationRevi" +
+      "ewB\004\342A\001\003H\000:z\352Aw\n-googleads.googleapis.co" +
+      "m/MultiPartyAuthReview\022Fcustomers/{custo" +
+      "mer_id}/multiPartyAuthReviews/{customer_" +
+      "invitation_id}B\033\n\031multi_party_review_det" +
+      "ail\"\322\001\n\030CustomerUserAccessReview\022V\n\030old_" +
+      "customer_user_access\030\001 \001(\tB4\342A\001\003\372A-\n+goo" +
+      "gleads.googleapis.com/CustomerUserAccess" +
+      "\022^\n\030new_customer_user_access\030\002 \001(\01326.goo" +
+      "gle.ads.googleads.v26.resources.Customer" +
+      "UserAccessB\004\342A\001\003\"\231\001\n\"CustomerUserAccessI" +
+      "nvitationReview\022s\n#new_customer_user_acc" +
+      "ess_invitation\030\002 \001(\0132@.google.ads.google" +
+      "ads.v26.resources.CustomerUserAccessInvi" +
+      "tationB\004\342A\001\003B\213\002\n&com.google.ads.googlead" +
+      "s.v26.resourcesB\031MultiPartyAuthReviewPro" +
+      "toP\001ZKgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v26/resources;resource" +
+      "s\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resou" +
+      "rces\312\002\"Google\\Ads\\GoogleAds\\V26\\Resource" +
+      "s\352\002&Google::Ads::GoogleAds::V26::Resourc" +
+      "esb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

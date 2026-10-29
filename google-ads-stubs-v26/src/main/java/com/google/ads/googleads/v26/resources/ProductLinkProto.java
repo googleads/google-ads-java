@@ -70,47 +70,47 @@ public final class ProductLinkProto extends com.google.protobuf.GeneratedFile {
       "6.resources\0328google/ads/googleads/v26/en" +
       "ums/linked_product_type.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\326\006\n\013ProductLink\022C\n\rresource_na" +
-      "me\030\001 \001(\tB,\340A\005\372A&\n$googleads.googleapis.c" +
-      "om/ProductLink\022!\n\017product_link_id\030\002 \001(\003B" +
-      "\003\340A\003H\002\210\001\001\022Z\n\004type\030\003 \001(\0162G.google.ads.goo" +
-      "gleads.v26.enums.LinkedProductTypeEnum.L" +
-      "inkedProductTypeB\003\340A\003\022V\n\014data_partner\030\004 " +
-      "\001(\01329.google.ads.googleads.v26.resources" +
-      ".DataPartnerIdentifierB\003\340A\005H\000\022R\n\ngoogle_" +
-      "ads\030\005 \001(\01327.google.ads.googleads.v26.res" +
-      "ources.GoogleAdsIdentifierB\003\340A\005H\000\022\\\n\017mer" +
-      "chant_center\030\014 \001(\0132<.google.ads.googlead" +
-      "s.v26.resources.MerchantCenterIdentifier" +
-      "B\003\340A\005H\000\022d\n\023advertising_partner\030\r \001(\0132@.g" +
+      "rce.proto\"\336\006\n\013ProductLink\022D\n\rresource_na" +
+      "me\030\001 \001(\tB-\342A\001\005\372A&\n$googleads.googleapis." +
+      "com/ProductLink\022\"\n\017product_link_id\030\002 \001(\003" +
+      "B\004\342A\001\003H\002\210\001\001\022[\n\004type\030\003 \001(\0162G.google.ads.g" +
+      "oogleads.v26.enums.LinkedProductTypeEnum" +
+      ".LinkedProductTypeB\004\342A\001\003\022W\n\014data_partner" +
+      "\030\004 \001(\01329.google.ads.googleads.v26.resour" +
+      "ces.DataPartnerIdentifierB\004\342A\001\005H\000\022S\n\ngoo" +
+      "gle_ads\030\005 \001(\01327.google.ads.googleads.v26" +
+      ".resources.GoogleAdsIdentifierB\004\342A\001\005H\000\022]" +
+      "\n\017merchant_center\030\014 \001(\0132<.google.ads.goo" +
+      "gleads.v26.resources.MerchantCenterIdent" +
+      "ifierB\004\342A\001\005H\000\022e\n\023advertising_partner\030\r \001" +
+      "(\0132@.google.ads.googleads.v26.resources." +
+      "AdvertisingPartnerIdentifierB\004\342A\001\003H\000\022p\n\036" +
+      "advertising_partner_properties\030\017 \001(\0132@.g" +
       "oogle.ads.googleads.v26.resources.Advert" +
-      "isingPartnerIdentifierB\003\340A\003H\000\022o\n\036adverti" +
-      "sing_partner_properties\030\017 \001(\0132@.google.a" +
-      "ds.googleads.v26.resources.AdvertisingPa" +
-      "rtnerPropertiesB\003\340A\003H\001:a\352A^\n$googleads.g" +
-      "oogleapis.com/ProductLink\0226customers/{cu" +
-      "stomer_id}/productLinks/{product_link_id" +
-      "}B\020\n\016linked_productB\031\n\027product_link_prop" +
-      "ertiesB\022\n\020_product_link_id\"N\n\025DataPartne" +
-      "rIdentifier\022!\n\017data_partner_id\030\001 \001(\003B\003\340A" +
-      "\005H\000\210\001\001B\022\n\020_data_partner_id\"d\n\023GoogleAdsI" +
-      "dentifier\022@\n\010customer\030\001 \001(\tB)\340A\005\372A#\n!goo" +
-      "gleads.googleapis.com/CustomerH\000\210\001\001B\013\n\t_" +
-      "customer\"W\n\030MerchantCenterIdentifier\022$\n\022" +
-      "merchant_center_id\030\001 \001(\003B\003\340A\005H\000\210\001\001B\025\n\023_m" +
-      "erchant_center_id\"m\n\034AdvertisingPartnerI" +
-      "dentifier\022@\n\010customer\030\001 \001(\tB)\340A\003\372A#\n!goo" +
-      "gleads.googleapis.com/CustomerH\000\210\001\001B\013\n\t_" +
-      "customer\"S\n\034AdvertisingPartnerProperties" +
-      "\022 \n\016allowed_domain\030\001 \001(\tB\003\340A\003H\000\210\001\001B\021\n\017_a" +
-      "llowed_domainB\202\002\n&com.google.ads.googlea" +
-      "ds.v26.resourcesB\020ProductLinkProtoP\001ZKgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v26/resources;resources\242\002\003GAA\252" +
-      "\002\"Google.Ads.GoogleAds.V26.Resources\312\002\"G" +
-      "oogle\\Ads\\GoogleAds\\V26\\Resources\352\002&Goog" +
-      "le::Ads::GoogleAds::V26::Resourcesb\006prot" +
-      "o3"
+      "isingPartnerPropertiesB\004\342A\001\003H\001:a\352A^\n$goo" +
+      "gleads.googleapis.com/ProductLink\0226custo" +
+      "mers/{customer_id}/productLinks/{product" +
+      "_link_id}B\020\n\016linked_productB\031\n\027product_l" +
+      "ink_propertiesB\022\n\020_product_link_id\"O\n\025Da" +
+      "taPartnerIdentifier\022\"\n\017data_partner_id\030\001" +
+      " \001(\003B\004\342A\001\005H\000\210\001\001B\022\n\020_data_partner_id\"e\n\023G" +
+      "oogleAdsIdentifier\022A\n\010customer\030\001 \001(\tB*\342A" +
+      "\001\005\372A#\n!googleads.googleapis.com/Customer" +
+      "H\000\210\001\001B\013\n\t_customer\"X\n\030MerchantCenterIden" +
+      "tifier\022%\n\022merchant_center_id\030\001 \001(\003B\004\342A\001\005" +
+      "H\000\210\001\001B\025\n\023_merchant_center_id\"n\n\034Advertis" +
+      "ingPartnerIdentifier\022A\n\010customer\030\001 \001(\tB*" +
+      "\342A\001\003\372A#\n!googleads.googleapis.com/Custom" +
+      "erH\000\210\001\001B\013\n\t_customer\"T\n\034AdvertisingPartn" +
+      "erProperties\022!\n\016allowed_domain\030\001 \001(\tB\004\342A" +
+      "\001\003H\000\210\001\001B\021\n\017_allowed_domainB\202\002\n&com.googl" +
+      "e.ads.googleads.v26.resourcesB\020ProductLi" +
+      "nkProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v26/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V26::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

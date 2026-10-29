@@ -45,28 +45,28 @@ public final class DetailContentSuitabilityPlacementViewProto extends com.google
       "roto\022\"google.ads.googleads.v26.resources" +
       "\0323google/ads/googleads/v26/enums/placeme" +
       "nt_type.proto\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\236\004\n%De" +
-      "tailContentSuitabilityPlacementView\022]\n\rr" +
-      "esource_name\030\001 \001(\tBF\340A\003\372A@\n>googleads.go" +
-      "ogleapis.com/DetailContentSuitabilityPla" +
-      "cementView\022\031\n\014display_name\030\002 \001(\tB\003\340A\003\022\026\n" +
-      "\tplacement\030\003 \001(\tB\003\340A\003\022\\\n\016placement_type\030" +
-      "\004 \001(\0162?.google.ads.googleads.v26.enums.P" +
-      "lacementTypeEnum.PlacementTypeB\003\340A\003\022\027\n\nt" +
-      "arget_url\030\005 \001(\tB\003\340A\003:\353\001\352A\347\001\n>googleads.g" +
+      ".proto\032\031google/api/resource.proto\"\243\004\n%De" +
+      "tailContentSuitabilityPlacementView\022^\n\rr" +
+      "esource_name\030\001 \001(\tBG\342A\001\003\372A@\n>googleads.g" +
       "oogleapis.com/DetailContentSuitabilityPl" +
-      "acementView\022Vcustomers/{customer_id}/det" +
-      "ailContentSuitabilityPlacementViews/{pla" +
-      "cement_fingerprint}*&detailContentSuitab" +
-      "ilityPlacementViews2%detailContentSuitab" +
-      "ilityPlacementViewB\234\002\n&com.google.ads.go" +
-      "ogleads.v26.resourcesB*DetailContentSuit" +
-      "abilityPlacementViewProtoP\001ZKgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v26/resources;resources\242\002\003GAA\252\002\"Google." +
-      "Ads.GoogleAds.V26.Resources\312\002\"Google\\Ads" +
-      "\\GoogleAds\\V26\\Resources\352\002&Google::Ads::" +
-      "GoogleAds::V26::Resourcesb\006proto3"
+      "acementView\022\032\n\014display_name\030\002 \001(\tB\004\342A\001\003\022" +
+      "\027\n\tplacement\030\003 \001(\tB\004\342A\001\003\022]\n\016placement_ty" +
+      "pe\030\004 \001(\0162?.google.ads.googleads.v26.enum" +
+      "s.PlacementTypeEnum.PlacementTypeB\004\342A\001\003\022" +
+      "\030\n\ntarget_url\030\005 \001(\tB\004\342A\001\003:\353\001\352A\347\001\n>google" +
+      "ads.googleapis.com/DetailContentSuitabil" +
+      "ityPlacementView\022Vcustomers/{customer_id" +
+      "}/detailContentSuitabilityPlacementViews" +
+      "/{placement_fingerprint}*&detailContentS" +
+      "uitabilityPlacementViews2%detailContentS" +
+      "uitabilityPlacementViewB\234\002\n&com.google.a" +
+      "ds.googleads.v26.resourcesB*DetailConten" +
+      "tSuitabilityPlacementViewProtoP\001ZKgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v26/resources;resources\242\002\003GAA\252\002\"Go" +
+      "ogle.Ads.GoogleAds.V26.Resources\312\002\"Googl" +
+      "e\\Ads\\GoogleAds\\V26\\Resources\352\002&Google::" +
+      "Ads::GoogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

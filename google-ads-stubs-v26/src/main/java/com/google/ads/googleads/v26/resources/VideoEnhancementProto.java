@@ -45,24 +45,24 @@ public final class VideoEnhancementProto extends com.google.protobuf.GeneratedFi
       "ds.v26.resources\032=google/ads/googleads/v" +
       "26/enums/video_enhancement_source.proto\032" +
       "\037google/api/field_behavior.proto\032\031google" +
-      "/api/resource.proto\"\214\003\n\020VideoEnhancement" +
-      "\022H\n\rresource_name\030\001 \001(\tB1\340A\003\372A+\n)googlea" +
-      "ds.googleapis.com/VideoEnhancement\022\034\n\017du" +
-      "ration_millis\030\002 \001(\003B\003\340A\003\022f\n\006source\030\003 \001(\016" +
-      "2Q.google.ads.googleads.v26.enums.VideoE" +
-      "nhancementSourceEnum.VideoEnhancementSou" +
-      "rceB\003\340A\003\022\022\n\005title\030\004 \001(\tB\003\340A\003:\223\001\352A\217\001\n)goo" +
-      "gleads.googleapis.com/VideoEnhancement\022=" +
-      "customers/{customer_id}/videoEnhancement" +
-      "s/{video_enhancement}*\021videoEnhancements" +
-      "2\020videoEnhancementB\207\002\n&com.google.ads.go" +
-      "ogleads.v26.resourcesB\025VideoEnhancementP" +
-      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v26/resources;resour" +
-      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Res" +
-      "ources\312\002\"Google\\Ads\\GoogleAds\\V26\\Resour" +
-      "ces\352\002&Google::Ads::GoogleAds::V26::Resou" +
-      "rcesb\006proto3"
+      "/api/resource.proto\"\220\003\n\020VideoEnhancement" +
+      "\022I\n\rresource_name\030\001 \001(\tB2\342A\001\003\372A+\n)google" +
+      "ads.googleapis.com/VideoEnhancement\022\035\n\017d" +
+      "uration_millis\030\002 \001(\003B\004\342A\001\003\022g\n\006source\030\003 \001" +
+      "(\0162Q.google.ads.googleads.v26.enums.Vide" +
+      "oEnhancementSourceEnum.VideoEnhancementS" +
+      "ourceB\004\342A\001\003\022\023\n\005title\030\004 \001(\tB\004\342A\001\003:\223\001\352A\217\001\n" +
+      ")googleads.googleapis.com/VideoEnhanceme" +
+      "nt\022=customers/{customer_id}/videoEnhance" +
+      "ments/{video_enhancement}*\021videoEnhancem" +
+      "ents2\020videoEnhancementB\207\002\n&com.google.ad" +
+      "s.googleads.v26.resourcesB\025VideoEnhancem" +
+      "entProtoP\001ZKgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v26/resources;re" +
+      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26" +
+      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\Re" +
+      "sources\352\002&Google::Ads::GoogleAds::V26::R" +
+      "esourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

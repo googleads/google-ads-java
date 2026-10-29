@@ -45,27 +45,27 @@ public final class LiftMeasurementAgeRangeProto extends com.google.protobuf.Gene
       "s.googleads.v26.resources\0323google/ads/go" +
       "ogleads/v26/enums/age_range_type.proto\032\037" +
       "google/api/field_behavior.proto\032\031google/" +
-      "api/resource.proto\"\211\004\n\027LiftMeasurementAg" +
-      "eRange\022O\n\rresource_name\030\001 \001(\tB8\340A\003\372A2\n0g" +
-      "oogleads.googleapis.com/LiftMeasurementA" +
-      "geRange\022,\n\032lift_measurement_config_id\030\002 " +
-      "\001(\003B\003\340A\003H\000\210\001\001\022@\n\010campaign\030\003 \001(\tB)\340A\003\372A#\n" +
-      "!googleads.googleapis.com/CampaignH\001\210\001\001\022" +
-      "U\n\tage_range\030\005 \001(\0162=.google.ads.googlead" +
-      "s.v26.enums.AgeRangeTypeEnum.AgeRangeTyp" +
-      "eB\003\340A\003:\251\001\352A\245\001\n0googleads.googleapis.com/" +
-      "LiftMeasurementAgeRange\022qcustomers/{cust" +
-      "omer_id}/liftMeasurementAgeRanges/{lift_" +
-      "measurement_configuration_id}~{campaign_" +
-      "id}~{criterion_id}B\035\n\033_lift_measurement_" +
-      "config_idB\013\n\t_campaignB\216\002\n&com.google.ad" +
-      "s.googleads.v26.resourcesB\034LiftMeasureme" +
-      "ntAgeRangeProtoP\001ZKgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v26/resou" +
-      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
-      "Ads.V26.Resources\312\002\"Google\\Ads\\GoogleAds" +
-      "\\V26\\Resources\352\002&Google::Ads::GoogleAds:" +
-      ":V26::Resourcesb\006proto3"
+      "api/resource.proto\"\215\004\n\027LiftMeasurementAg" +
+      "eRange\022P\n\rresource_name\030\001 \001(\tB9\342A\001\003\372A2\n0" +
+      "googleads.googleapis.com/LiftMeasurement" +
+      "AgeRange\022-\n\032lift_measurement_config_id\030\002" +
+      " \001(\003B\004\342A\001\003H\000\210\001\001\022A\n\010campaign\030\003 \001(\tB*\342A\001\003\372" +
+      "A#\n!googleads.googleapis.com/CampaignH\001\210" +
+      "\001\001\022V\n\tage_range\030\005 \001(\0162=.google.ads.googl" +
+      "eads.v26.enums.AgeRangeTypeEnum.AgeRange" +
+      "TypeB\004\342A\001\003:\251\001\352A\245\001\n0googleads.googleapis." +
+      "com/LiftMeasurementAgeRange\022qcustomers/{" +
+      "customer_id}/liftMeasurementAgeRanges/{l" +
+      "ift_measurement_configuration_id}~{campa" +
+      "ign_id}~{criterion_id}B\035\n\033_lift_measurem" +
+      "ent_config_idB\013\n\t_campaignB\216\002\n&com.googl" +
+      "e.ads.googleads.v26.resourcesB\034LiftMeasu" +
+      "rementAgeRangeProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v26/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V26.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V26\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

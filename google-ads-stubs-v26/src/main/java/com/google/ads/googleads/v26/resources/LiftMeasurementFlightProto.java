@@ -59,51 +59,51 @@ public final class LiftMeasurementFlightProto extends com.google.protobuf.Genera
       "oogleads/v26/enums/survey_lift_flight_ta" +
       "rget_response_mode.proto\032\037google/api/fie" +
       "ld_behavior.proto\032\031google/api/resource.p" +
-      "roto\"\205\010\n\025LiftMeasurementFlight\022M\n\rresour" +
-      "ce_name\030\001 \001(\tB6\340A\005\372A0\n.googleads.googlea" +
-      "pis.com/LiftMeasurementFlight\022,\n\032lift_me" +
-      "asurement_config_id\030\002 \001(\003B\003\340A\003H\000\210\001\001\022,\n\032l" +
-      "ift_measurement_flight_id\030\003 \001(\003B\003\340A\003H\001\210\001" +
-      "\001\022k\n\020survey_lift_info\030\004 \001(\0132G.google.ads" +
-      ".googleads.v26.resources.LiftMeasurement" +
-      "FlightSurveyLiftInfoB\003\340A\003H\002\210\001\001\022\026\n\004name\030\005" +
-      " \001(\tB\003\340A\003H\003\210\001\001\022p\n\006status\030\010 \001(\0162[.google." +
-      "ads.googleads.v26.enums.LiftMeasurementF" +
-      "lightStatusEnum.LiftMeasurementFlightSta" +
-      "tusB\003\340A\003\022Y\n\tlift_type\030\t \001(\0162A.google.ads" +
-      ".googleads.v26.enums.LiftMetricTypeEnum." +
-      "LiftMetricTypeB\003\340A\003\022y\n\027survey_lift_measu" +
-      "rement\030\014 \001(\0132N.google.ads.googleads.v26." +
-      "resources.LiftMeasurementFlightSurveyLif" +
-      "tMeasurementB\003\340A\003H\004\210\001\001\022\034\n\nstart_date\030\016 \001" +
-      "(\tB\003\340A\003H\005\210\001\001\022\032\n\010end_date\030\017 \001(\tB\003\340A\003H\006\210\001\001" +
-      ":\245\001\352A\241\001\n.googleads.googleapis.com/LiftMe" +
-      "asurementFlight\022ocustomers/{customer_id}" +
-      "/liftMeasurementFlights/{lift_measuremen" +
-      "t_configuration_id}~{lift_measurement_fl" +
-      "ight_id}B\035\n\033_lift_measurement_config_idB" +
-      "\035\n\033_lift_measurement_flight_idB\023\n\021_surve" +
-      "y_lift_infoB\007\n\005_nameB\032\n\030_survey_lift_mea" +
-      "surementB\r\n\013_start_dateB\013\n\t_end_date\"\264\001\n" +
-      "#LiftMeasurementFlightSurveyLiftInfo\022\214\001\n" +
-      "\024target_response_mode\030\001 \001(\0162i.google.ads" +
-      ".googleads.v26.enums.SurveyLiftFlightTar" +
-      "getResponseModeEnum.SurveyLiftFlightTarg" +
-      "etResponseModeB\003\340A\003\"\227\002\n*LiftMeasurementF" +
-      "lightSurveyLiftMeasurement\0222\n response_c" +
-      "ollection_ratio_micros\030\001 \001(\003B\003\340A\003H\000\210\001\001\022*" +
-      "\n\030min_survey_response_date\030\002 \001(\tB\003\340A\003H\001\210" +
-      "\001\001\022*\n\030max_survey_response_date\030\003 \001(\tB\003\340A" +
-      "\003H\002\210\001\001B#\n!_response_collection_ratio_mic" +
-      "rosB\033\n\031_min_survey_response_dateB\033\n\031_max" +
-      "_survey_response_dateB\214\002\n&com.google.ads" +
-      ".googleads.v26.resourcesB\032LiftMeasuremen" +
-      "tFlightProtoP\001ZKgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v26/resource" +
-      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
-      ".V26.Resources\312\002\"Google\\Ads\\GoogleAds\\V2" +
-      "6\\Resources\352\002&Google::Ads::GoogleAds::V2" +
-      "6::Resourcesb\006proto3"
+      "roto\"\217\010\n\025LiftMeasurementFlight\022N\n\rresour" +
+      "ce_name\030\001 \001(\tB7\342A\001\005\372A0\n.googleads.google" +
+      "apis.com/LiftMeasurementFlight\022-\n\032lift_m" +
+      "easurement_config_id\030\002 \001(\003B\004\342A\001\003H\000\210\001\001\022-\n" +
+      "\032lift_measurement_flight_id\030\003 \001(\003B\004\342A\001\003H" +
+      "\001\210\001\001\022l\n\020survey_lift_info\030\004 \001(\0132G.google." +
+      "ads.googleads.v26.resources.LiftMeasurem" +
+      "entFlightSurveyLiftInfoB\004\342A\001\003H\002\210\001\001\022\027\n\004na" +
+      "me\030\005 \001(\tB\004\342A\001\003H\003\210\001\001\022q\n\006status\030\010 \001(\0162[.go" +
+      "ogle.ads.googleads.v26.enums.LiftMeasure" +
+      "mentFlightStatusEnum.LiftMeasurementFlig" +
+      "htStatusB\004\342A\001\003\022Z\n\tlift_type\030\t \001(\0162A.goog" +
+      "le.ads.googleads.v26.enums.LiftMetricTyp" +
+      "eEnum.LiftMetricTypeB\004\342A\001\003\022z\n\027survey_lif" +
+      "t_measurement\030\014 \001(\0132N.google.ads.googlea" +
+      "ds.v26.resources.LiftMeasurementFlightSu" +
+      "rveyLiftMeasurementB\004\342A\001\003H\004\210\001\001\022\035\n\nstart_" +
+      "date\030\016 \001(\tB\004\342A\001\003H\005\210\001\001\022\033\n\010end_date\030\017 \001(\tB" +
+      "\004\342A\001\003H\006\210\001\001:\245\001\352A\241\001\n.googleads.googleapis." +
+      "com/LiftMeasurementFlight\022ocustomers/{cu" +
+      "stomer_id}/liftMeasurementFlights/{lift_" +
+      "measurement_configuration_id}~{lift_meas" +
+      "urement_flight_id}B\035\n\033_lift_measurement_" +
+      "config_idB\035\n\033_lift_measurement_flight_id" +
+      "B\023\n\021_survey_lift_infoB\007\n\005_nameB\032\n\030_surve" +
+      "y_lift_measurementB\r\n\013_start_dateB\013\n\t_en" +
+      "d_date\"\265\001\n#LiftMeasurementFlightSurveyLi" +
+      "ftInfo\022\215\001\n\024target_response_mode\030\001 \001(\0162i." +
+      "google.ads.googleads.v26.enums.SurveyLif" +
+      "tFlightTargetResponseModeEnum.SurveyLift" +
+      "FlightTargetResponseModeB\004\342A\001\003\"\232\002\n*LiftM" +
+      "easurementFlightSurveyLiftMeasurement\0223\n" +
+      " response_collection_ratio_micros\030\001 \001(\003B" +
+      "\004\342A\001\003H\000\210\001\001\022+\n\030min_survey_response_date\030\002" +
+      " \001(\tB\004\342A\001\003H\001\210\001\001\022+\n\030max_survey_response_d" +
+      "ate\030\003 \001(\tB\004\342A\001\003H\002\210\001\001B#\n!_response_collec" +
+      "tion_ratio_microsB\033\n\031_min_survey_respons" +
+      "e_dateB\033\n\031_max_survey_response_dateB\214\002\n&" +
+      "com.google.ads.googleads.v26.resourcesB\032" +
+      "LiftMeasurementFlightProtoP\001ZKgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v26/resources;resources\242\002\003GAA\252\002\"Google" +
+      ".Ads.GoogleAds.V26.Resources\312\002\"Google\\Ad" +
+      "s\\GoogleAds\\V26\\Resources\352\002&Google::Ads:" +
+      ":GoogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

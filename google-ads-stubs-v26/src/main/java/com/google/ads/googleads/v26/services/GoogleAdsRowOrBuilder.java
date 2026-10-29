@@ -2226,6 +2226,33 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The customer budget network setting referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.CustomerBudgetNetworkSetting customer_budget_network_setting = 268;</code>
+   * @return Whether the customerBudgetNetworkSetting field is set.
+   */
+  boolean hasCustomerBudgetNetworkSetting();
+  /**
+   * <pre>
+   * The customer budget network setting referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.CustomerBudgetNetworkSetting customer_budget_network_setting = 268;</code>
+   * @return The customerBudgetNetworkSetting.
+   */
+  com.google.ads.googleads.v26.resources.CustomerBudgetNetworkSetting getCustomerBudgetNetworkSetting();
+  /**
+   * <pre>
+   * The customer budget network setting referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.CustomerBudgetNetworkSetting customer_budget_network_setting = 268;</code>
+   */
+  com.google.ads.googleads.v26.resources.CustomerBudgetNetworkSettingOrBuilder getCustomerBudgetNetworkSettingOrBuilder();
+
+  /**
+   * <pre>
    * The accessible bidding strategy referenced in the query.
    * </pre>
    *

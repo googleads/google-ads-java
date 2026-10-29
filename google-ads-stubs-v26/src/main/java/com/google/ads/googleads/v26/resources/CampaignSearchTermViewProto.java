@@ -44,23 +44,23 @@ public final class CampaignSearchTermViewProto extends com.google.protobuf.Gener
       "paign_search_term_view.proto\022\"google.ads" +
       ".googleads.v26.resources\032\037google/api/fie" +
       "ld_behavior.proto\032\031google/api/resource.p" +
-      "roto\"\343\002\n\026CampaignSearchTermView\022N\n\rresou" +
-      "rce_name\030\001 \001(\tB7\340A\003\372A1\n/googleads.google" +
-      "apis.com/CampaignSearchTermView\022\035\n\013searc" +
-      "h_term\030\002 \001(\tB\003\340A\003H\000\210\001\001\022@\n\010campaign\030\003 \001(\t" +
-      "B)\340A\003\372A#\n!googleads.googleapis.com/Campa" +
-      "ignH\001\210\001\001:{\352Ax\n/googleads.googleapis.com/" +
-      "CampaignSearchTermView\022Ecustomers/{custo" +
-      "mer_id}/campaignSearchTermViews/{campaig" +
-      "n_id}~{query}B\016\n\014_search_termB\013\n\t_campai" +
-      "gnB\215\002\n&com.google.ads.googleads.v26.reso" +
-      "urcesB\033CampaignSearchTermViewProtoP\001ZKgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v26/resources;resources\242\002\003GAA\252" +
-      "\002\"Google.Ads.GoogleAds.V26.Resources\312\002\"G" +
-      "oogle\\Ads\\GoogleAds\\V26\\Resources\352\002&Goog" +
-      "le::Ads::GoogleAds::V26::Resourcesb\006prot" +
-      "o3"
+      "roto\"\346\002\n\026CampaignSearchTermView\022O\n\rresou" +
+      "rce_name\030\001 \001(\tB8\342A\001\003\372A1\n/googleads.googl" +
+      "eapis.com/CampaignSearchTermView\022\036\n\013sear" +
+      "ch_term\030\002 \001(\tB\004\342A\001\003H\000\210\001\001\022A\n\010campaign\030\003 \001" +
+      "(\tB*\342A\001\003\372A#\n!googleads.googleapis.com/Ca" +
+      "mpaignH\001\210\001\001:{\352Ax\n/googleads.googleapis.c" +
+      "om/CampaignSearchTermView\022Ecustomers/{cu" +
+      "stomer_id}/campaignSearchTermViews/{camp" +
+      "aign_id}~{query}B\016\n\014_search_termB\013\n\t_cam" +
+      "paignB\215\002\n&com.google.ads.googleads.v26.r" +
+      "esourcesB\033CampaignSearchTermViewProtoP\001Z" +
+      "Kgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v26/resources;resources\242\002\003G" +
+      "AA\252\002\"Google.Ads.GoogleAds.V26.Resources\312" +
+      "\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002&G" +
+      "oogle::Ads::GoogleAds::V26::Resourcesb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

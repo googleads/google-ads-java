@@ -73,62 +73,62 @@ public final class ProductLinkInvitationServiceProto extends com.google.protobuf
       "v26/resources/product_link_invitation.pr" +
       "oto\032\034google/api/annotations.proto\032\027googl" +
       "e/api/client.proto\032\037google/api/field_beh" +
-      "avior.proto\032\031google/api/resource.proto\"\237" +
-      "\001\n\"CreateProductLinkInvitationRequest\022\030\n" +
-      "\013customer_id\030\001 \001(\tB\003\340A\002\022_\n\027product_link_" +
-      "invitation\030\002 \001(\01329.google.ads.googleads." +
-      "v26.resources.ProductLinkInvitationB\003\340A\002" +
-      "\"q\n#CreateProductLinkInvitationResponse\022" +
-      "J\n\rresource_name\030\001 \001(\tB3\372A0\n.googleads.g" +
-      "oogleapis.com/ProductLinkInvitation\"\230\002\n\"" +
-      "UpdateProductLinkInvitationRequest\022\030\n\013cu" +
-      "stomer_id\030\001 \001(\tB\003\340A\002\022\210\001\n\036product_link_in" +
-      "vitation_status\030\002 \001(\0162[.google.ads.googl" +
-      "eads.v26.enums.ProductLinkInvitationStat" +
-      "usEnum.ProductLinkInvitationStatusB\003\340A\002\022" +
-      "M\n\rresource_name\030\003 \001(\tB6\340A\002\372A0\n.googlead" +
-      "s.googleapis.com/ProductLinkInvitation\"q" +
-      "\n#UpdateProductLinkInvitationResponse\022J\n" +
-      "\rresource_name\030\001 \001(\tB3\372A0\n.googleads.goo" +
-      "gleapis.com/ProductLinkInvitation\"\215\001\n\"Re" +
-      "moveProductLinkInvitationRequest\022\030\n\013cust" +
-      "omer_id\030\001 \001(\tB\003\340A\002\022M\n\rresource_name\030\002 \001(" +
-      "\tB6\340A\002\372A0\n.googleads.googleapis.com/Prod" +
-      "uctLinkInvitation\"q\n#RemoveProductLinkIn" +
-      "vitationResponse\022J\n\rresource_name\030\001 \001(\tB" +
-      "3\372A0\n.googleads.googleapis.com/ProductLi" +
-      "nkInvitation2\313\007\n\034ProductLinkInvitationSe" +
-      "rvice\022\233\002\n\033CreateProductLinkInvitation\022E." +
-      "google.ads.googleads.v26.services.Create" +
-      "ProductLinkInvitationRequest\032F.google.ad" +
-      "s.googleads.v26.services.CreateProductLi" +
-      "nkInvitationResponse\"m\332A#customer_id,pro" +
-      "duct_link_invitation\202\323\344\223\002A\"</v26/custome" +
-      "rs/{customer_id=*}/productLinkInvitation" +
-      "s:create:\001*\022\261\002\n\033UpdateProductLinkInvitat" +
-      "ion\022E.google.ads.googleads.v26.services." +
-      "UpdateProductLinkInvitationRequest\032F.goo" +
-      "gle.ads.googleads.v26.services.UpdatePro" +
-      "ductLinkInvitationResponse\"\202\001\332A8customer" +
-      "_id,product_link_invitation_status,resou" +
-      "rce_name\202\323\344\223\002A\"</v26/customers/{customer" +
-      "_id=*}/productLinkInvitations:update:\001*\022" +
-      "\221\002\n\033RemoveProductLinkInvitation\022E.google" +
-      ".ads.googleads.v26.services.RemoveProduc" +
-      "tLinkInvitationRequest\032F.google.ads.goog" +
-      "leads.v26.services.RemoveProductLinkInvi" +
-      "tationResponse\"c\332A\031customer_id,resource_" +
-      "name\202\323\344\223\002A\"</v26/customers/{customer_id=" +
-      "*}/productLinkInvitations:remove:\001*\032E\312A\030" +
-      "googleads.googleapis.com\322A\'https://www.g" +
-      "oogleapis.com/auth/adwordsB\215\002\n%com.googl" +
-      "e.ads.googleads.v26.servicesB!ProductLin" +
-      "kInvitationServiceProtoP\001ZIgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "26/services;services\242\002\003GAA\252\002!Google.Ads." +
-      "GoogleAds.V26.Services\312\002!Google\\Ads\\Goog" +
-      "leAds\\V26\\Services\352\002%Google::Ads::Google" +
-      "Ads::V26::Servicesb\006proto3"
+      "avior.proto\032\031google/api/resource.proto\"\241" +
+      "\001\n\"CreateProductLinkInvitationRequest\022\031\n" +
+      "\013customer_id\030\001 \001(\tB\004\342A\001\002\022`\n\027product_link" +
+      "_invitation\030\002 \001(\01329.google.ads.googleads" +
+      ".v26.resources.ProductLinkInvitationB\004\342A" +
+      "\001\002\"q\n#CreateProductLinkInvitationRespons" +
+      "e\022J\n\rresource_name\030\001 \001(\tB3\372A0\n.googleads" +
+      ".googleapis.com/ProductLinkInvitation\"\233\002" +
+      "\n\"UpdateProductLinkInvitationRequest\022\031\n\013" +
+      "customer_id\030\001 \001(\tB\004\342A\001\002\022\211\001\n\036product_link" +
+      "_invitation_status\030\002 \001(\0162[.google.ads.go" +
+      "ogleads.v26.enums.ProductLinkInvitationS" +
+      "tatusEnum.ProductLinkInvitationStatusB\004\342" +
+      "A\001\002\022N\n\rresource_name\030\003 \001(\tB7\342A\001\002\372A0\n.goo" +
+      "gleads.googleapis.com/ProductLinkInvitat" +
+      "ion\"q\n#UpdateProductLinkInvitationRespon" +
+      "se\022J\n\rresource_name\030\001 \001(\tB3\372A0\n.googlead" +
+      "s.googleapis.com/ProductLinkInvitation\"\217" +
+      "\001\n\"RemoveProductLinkInvitationRequest\022\031\n" +
+      "\013customer_id\030\001 \001(\tB\004\342A\001\002\022N\n\rresource_nam" +
+      "e\030\002 \001(\tB7\342A\001\002\372A0\n.googleads.googleapis.c" +
+      "om/ProductLinkInvitation\"q\n#RemoveProduc" +
+      "tLinkInvitationResponse\022J\n\rresource_name" +
+      "\030\001 \001(\tB3\372A0\n.googleads.googleapis.com/Pr" +
+      "oductLinkInvitation2\313\007\n\034ProductLinkInvit" +
+      "ationService\022\233\002\n\033CreateProductLinkInvita" +
+      "tion\022E.google.ads.googleads.v26.services" +
+      ".CreateProductLinkInvitationRequest\032F.go" +
+      "ogle.ads.googleads.v26.services.CreatePr" +
+      "oductLinkInvitationResponse\"m\332A#customer" +
+      "_id,product_link_invitation\202\323\344\223\002A\"</v26/" +
+      "customers/{customer_id=*}/productLinkInv" +
+      "itations:create:\001*\022\261\002\n\033UpdateProductLink" +
+      "Invitation\022E.google.ads.googleads.v26.se" +
+      "rvices.UpdateProductLinkInvitationReques" +
+      "t\032F.google.ads.googleads.v26.services.Up" +
+      "dateProductLinkInvitationResponse\"\202\001\332A8c" +
+      "ustomer_id,product_link_invitation_statu" +
+      "s,resource_name\202\323\344\223\002A\"</v26/customers/{c" +
+      "ustomer_id=*}/productLinkInvitations:upd" +
+      "ate:\001*\022\221\002\n\033RemoveProductLinkInvitation\022E" +
+      ".google.ads.googleads.v26.services.Remov" +
+      "eProductLinkInvitationRequest\032F.google.a" +
+      "ds.googleads.v26.services.RemoveProductL" +
+      "inkInvitationResponse\"c\332A\031customer_id,re" +
+      "source_name\202\323\344\223\002A\"</v26/customers/{custo" +
+      "mer_id=*}/productLinkInvitations:remove:" +
+      "\001*\032E\312A\030googleads.googleapis.com\322A\'https:" +
+      "//www.googleapis.com/auth/adwordsB\215\002\n%co" +
+      "m.google.ads.googleads.v26.servicesB!Pro" +
+      "ductLinkInvitationServiceProtoP\001ZIgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v26/services;services\242\002\003GAA\252\002!Goog" +
+      "le.Ads.GoogleAds.V26.Services\312\002!Google\\A" +
+      "ds\\GoogleAds\\V26\\Services\352\002%Google::Ads:" +
+      ":GoogleAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

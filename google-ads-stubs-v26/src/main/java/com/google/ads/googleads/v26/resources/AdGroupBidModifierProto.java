@@ -46,42 +46,42 @@ public final class AdGroupBidModifierProto extends com.google.protobuf.Generated
       "ds/v26/common/criteria.proto\0328google/ads" +
       "/googleads/v26/enums/bid_modifier_source" +
       ".proto\032\037google/api/field_behavior.proto\032" +
-      "\031google/api/resource.proto\"\324\010\n\022AdGroupBi" +
-      "dModifier\022J\n\rresource_name\030\001 \001(\tB3\340A\005\372A-" +
-      "\n+googleads.googleapis.com/AdGroupBidMod" +
-      "ifier\022?\n\010ad_group\030\r \001(\tB(\340A\005\372A\"\n googlea" +
-      "ds.googleapis.com/AdGroupH\001\210\001\001\022\036\n\014criter" +
-      "ion_id\030\016 \001(\003B\003\340A\003H\002\210\001\001\022\031\n\014bid_modifier\030\017" +
-      " \001(\001H\003\210\001\001\022D\n\rbase_ad_group\030\020 \001(\tB(\340A\003\372A\"" +
-      "\n googleads.googleapis.com/AdGroupH\004\210\001\001\022" +
-      "i\n\023bid_modifier_source\030\n \001(\0162G.google.ad" +
-      "s.googleads.v26.enums.BidModifierSourceE" +
-      "num.BidModifierSourceB\003\340A\003\022B\n\006device\030\013 \001" +
-      "(\0132+.google.ads.googleads.v26.common.Dev" +
-      "iceInfoB\003\340A\005H\000\022P\n\016user_set_dates\030\022 \001(\01321" +
-      ".google.ads.googleads.v26.common.UserSet" +
-      "DatesInfoB\003\340A\005H\000\022`\n\026advance_booking_wind" +
-      "ow\030\023 \001(\01329.google.ads.googleads.v26.comm" +
-      "on.AdvanceBookingWindowInfoB\003\340A\005H\000\022V\n\021le" +
-      "ngth_of_booking\030\024 \001(\01324.google.ads.googl" +
-      "eads.v26.common.LengthOfBookingInfoB\003\340A\005" +
-      "H\000\022U\n\021start_day_of_week\030\025 \001(\01323.google.a" +
-      "ds.googleads.v26.common.StartDayOfWeekIn" +
-      "foB\003\340A\005H\000\022T\n\020start_date_range\030\026 \001(\01323.go" +
-      "ogle.ads.googleads.v26.common.StartDateR" +
-      "angeInfoB\003\340A\005H\000:z\352Aw\n+googleads.googleap" +
-      "is.com/AdGroupBidModifier\022Hcustomers/{cu" +
-      "stomer_id}/adGroupBidModifiers/{ad_group" +
-      "_id}~{criterion_id}B\013\n\tcriterionB\013\n\t_ad_" +
-      "groupB\017\n\r_criterion_idB\017\n\r_bid_modifierB" +
-      "\020\n\016_base_ad_groupB\211\002\n&com.google.ads.goo" +
-      "gleads.v26.resourcesB\027AdGroupBidModifier" +
-      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v26/resources;resou" +
-      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Re" +
-      "sources\312\002\"Google\\Ads\\GoogleAds\\V26\\Resou" +
-      "rces\352\002&Google::Ads::GoogleAds::V26::Reso" +
-      "urcesb\006proto3"
+      "\031google/api/resource.proto\"\337\010\n\022AdGroupBi" +
+      "dModifier\022K\n\rresource_name\030\001 \001(\tB4\342A\001\005\372A" +
+      "-\n+googleads.googleapis.com/AdGroupBidMo" +
+      "difier\022@\n\010ad_group\030\r \001(\tB)\342A\001\005\372A\"\n googl" +
+      "eads.googleapis.com/AdGroupH\001\210\001\001\022\037\n\014crit" +
+      "erion_id\030\016 \001(\003B\004\342A\001\003H\002\210\001\001\022\031\n\014bid_modifie" +
+      "r\030\017 \001(\001H\003\210\001\001\022E\n\rbase_ad_group\030\020 \001(\tB)\342A\001" +
+      "\003\372A\"\n googleads.googleapis.com/AdGroupH\004" +
+      "\210\001\001\022j\n\023bid_modifier_source\030\n \001(\0162G.googl" +
+      "e.ads.googleads.v26.enums.BidModifierSou" +
+      "rceEnum.BidModifierSourceB\004\342A\001\003\022C\n\006devic" +
+      "e\030\013 \001(\0132+.google.ads.googleads.v26.commo" +
+      "n.DeviceInfoB\004\342A\001\005H\000\022Q\n\016user_set_dates\030\022" +
+      " \001(\01321.google.ads.googleads.v26.common.U" +
+      "serSetDatesInfoB\004\342A\001\005H\000\022a\n\026advance_booki" +
+      "ng_window\030\023 \001(\01329.google.ads.googleads.v" +
+      "26.common.AdvanceBookingWindowInfoB\004\342A\001\005" +
+      "H\000\022W\n\021length_of_booking\030\024 \001(\01324.google.a" +
+      "ds.googleads.v26.common.LengthOfBookingI" +
+      "nfoB\004\342A\001\005H\000\022V\n\021start_day_of_week\030\025 \001(\01323" +
+      ".google.ads.googleads.v26.common.StartDa" +
+      "yOfWeekInfoB\004\342A\001\005H\000\022U\n\020start_date_range\030" +
+      "\026 \001(\01323.google.ads.googleads.v26.common." +
+      "StartDateRangeInfoB\004\342A\001\005H\000:z\352Aw\n+googlea" +
+      "ds.googleapis.com/AdGroupBidModifier\022Hcu" +
+      "stomers/{customer_id}/adGroupBidModifier" +
+      "s/{ad_group_id}~{criterion_id}B\013\n\tcriter" +
+      "ionB\013\n\t_ad_groupB\017\n\r_criterion_idB\017\n\r_bi" +
+      "d_modifierB\020\n\016_base_ad_groupB\211\002\n&com.goo" +
+      "gle.ads.googleads.v26.resourcesB\027AdGroup" +
+      "BidModifierProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v26/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V26.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V26\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

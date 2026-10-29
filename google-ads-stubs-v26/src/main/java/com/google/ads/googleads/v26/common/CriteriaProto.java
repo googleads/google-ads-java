@@ -744,50 +744,50 @@ public final class CriteriaProto extends com.google.protobuf.GeneratedFile {
       "_form_keyword_theme\030\002 \001(\tH\000B\017\n\rkeyword_t" +
       "heme\"(\n\022LocalServiceIdInfo\022\022\n\nservice_id" +
       "\030\001 \001(\t\"\037\n\017SearchThemeInfo\022\014\n\004text\030\001 \001(\t\"" +
-      "\207\003\n\tBrandInfo\022\036\n\014display_name\030\002 \001(\tB\003\340A\003" +
-      "H\000\210\001\001\022\026\n\tentity_id\030\001 \001(\tH\001\210\001\001\022\035\n\013primary" +
-      "_url\030\003 \001(\tB\003\340A\003H\002\210\001\001\022\177\n\020rejection_reason" +
-      "\030\004 \001(\0162[.google.ads.googleads.v26.enums." +
-      "BrandRequestRejectionReasonEnum.BrandReq" +
-      "uestRejectionReasonB\003\340A\003H\003\210\001\001\022S\n\006status\030" +
-      "\005 \001(\01629.google.ads.googleads.v26.enums.B" +
-      "randStateEnum.BrandStateB\003\340A\003H\004\210\001\001B\017\n\r_d" +
-      "isplay_nameB\014\n\n_entity_idB\016\n\014_primary_ur" +
-      "lB\023\n\021_rejection_reasonB\t\n\007_status\"7\n\rBra" +
-      "ndListInfo\022\027\n\nshared_set\030\001 \001(\tH\000\210\001\001B\r\n\013_" +
-      "shared_set\"=\n\rLifeEventInfo\022\032\n\rlife_even" +
-      "t_id\030\001 \001(\003H\000\210\001\001B\020\n\016_life_event_id\"[\n\027Ext" +
-      "endedDemographicInfo\022$\n\027extended_demogra" +
-      "phic_id\030\001 \001(\003H\000\210\001\001B\032\n\030_extended_demograp" +
-      "hic_id\"C\n\017VideoLineupInfo\022\034\n\017video_lineu" +
-      "p_id\030\001 \001(\003H\000\210\001\001B\022\n\020_video_lineup_id\";\n\021P" +
-      "lacementListInfo\022\027\n\nshared_set\030\001 \001(\tH\000\210\001" +
-      "\001B\r\n\013_shared_set\"J\n VerticalAdsItemGroup" +
-      "RuleListInfo\022\027\n\nshared_set\030\001 \001(\tH\000\210\001\001B\r\n" +
-      "\013_shared_set\"\205\002\n\034VerticalAdsItemGroupRul" +
-      "eInfo\022\023\n\titem_code\030\001 \001(\tH\000\022\036\n\024country_cr" +
-      "iterion_id\030\002 \001(\tH\000\022\035\n\023region_criterion_i" +
-      "d\030\003 \001(\tH\000\022\033\n\021city_criterion_id\030\004 \001(\tH\000\022\025" +
-      "\n\013hotel_class\030\006 \001(\003H\000\022\025\n\013user_rating\030\007 \001" +
-      "(\003H\000\022\017\n\005venue\030\010 \001(\tH\000\022(\n\036event_participa" +
-      "nt_display_name\030\t \001(\tH\000B\013\n\tdimension\"<\n\022" +
-      "RetailFilterBundle\022\027\n\nshared_set\030\001 \001(\tH\000" +
-      "\210\001\001B\r\n\013_shared_set\"\240\001\n\014RetailFilter\022M\n\ne" +
-      "xpression\030\001 \001(\01327.google.ads.googleads.v" +
-      "26.common.RetailFilterExpressionH\000\0229\n\003ta" +
-      "g\030\002 \001(\0132*.google.ads.googleads.v26.commo" +
-      "n.RetailTagH\000B\006\n\004node\"4\n\026RetailFilterExp" +
-      "ression\022\021\n\004name\030\001 \001(\tH\000\210\001\001B\007\n\005_name\"[\n\tR" +
-      "etailTag\022\022\n\005value\030\001 \001(\tH\000\210\001\001\022\034\n\017expressi" +
-      "on_name\030\002 \001(\tH\001\210\001\001B\010\n\006_valueB\022\n\020_express" +
-      "ion_name\"1\n\tEntityBid\022\026\n\titem_code\030\001 \001(\t" +
-      "H\000\210\001\001B\014\n\n_item_codeB\355\001\n#com.google.ads.g" +
-      "oogleads.v26.commonB\rCriteriaProtoP\001ZEgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v26/common;common\242\002\003GAA\252\002\037Goog" +
-      "le.Ads.GoogleAds.V26.Common\312\002\037Google\\Ads" +
-      "\\GoogleAds\\V26\\Common\352\002#Google::Ads::Goo" +
-      "gleAds::V26::Commonb\006proto3"
+      "\214\003\n\tBrandInfo\022\037\n\014display_name\030\002 \001(\tB\004\342A\001" +
+      "\003H\000\210\001\001\022\026\n\tentity_id\030\001 \001(\tH\001\210\001\001\022\036\n\013primar" +
+      "y_url\030\003 \001(\tB\004\342A\001\003H\002\210\001\001\022\200\001\n\020rejection_rea" +
+      "son\030\004 \001(\0162[.google.ads.googleads.v26.enu" +
+      "ms.BrandRequestRejectionReasonEnum.Brand" +
+      "RequestRejectionReasonB\004\342A\001\003H\003\210\001\001\022T\n\006sta" +
+      "tus\030\005 \001(\01629.google.ads.googleads.v26.enu" +
+      "ms.BrandStateEnum.BrandStateB\004\342A\001\003H\004\210\001\001B" +
+      "\017\n\r_display_nameB\014\n\n_entity_idB\016\n\014_prima" +
+      "ry_urlB\023\n\021_rejection_reasonB\t\n\007_status\"7" +
+      "\n\rBrandListInfo\022\027\n\nshared_set\030\001 \001(\tH\000\210\001\001" +
+      "B\r\n\013_shared_set\"=\n\rLifeEventInfo\022\032\n\rlife" +
+      "_event_id\030\001 \001(\003H\000\210\001\001B\020\n\016_life_event_id\"[" +
+      "\n\027ExtendedDemographicInfo\022$\n\027extended_de" +
+      "mographic_id\030\001 \001(\003H\000\210\001\001B\032\n\030_extended_dem" +
+      "ographic_id\"C\n\017VideoLineupInfo\022\034\n\017video_" +
+      "lineup_id\030\001 \001(\003H\000\210\001\001B\022\n\020_video_lineup_id" +
+      "\";\n\021PlacementListInfo\022\027\n\nshared_set\030\001 \001(" +
+      "\tH\000\210\001\001B\r\n\013_shared_set\"J\n VerticalAdsItem" +
+      "GroupRuleListInfo\022\027\n\nshared_set\030\001 \001(\tH\000\210" +
+      "\001\001B\r\n\013_shared_set\"\205\002\n\034VerticalAdsItemGro" +
+      "upRuleInfo\022\023\n\titem_code\030\001 \001(\tH\000\022\036\n\024count" +
+      "ry_criterion_id\030\002 \001(\tH\000\022\035\n\023region_criter" +
+      "ion_id\030\003 \001(\tH\000\022\033\n\021city_criterion_id\030\004 \001(" +
+      "\tH\000\022\025\n\013hotel_class\030\006 \001(\003H\000\022\025\n\013user_ratin" +
+      "g\030\007 \001(\003H\000\022\017\n\005venue\030\010 \001(\tH\000\022(\n\036event_part" +
+      "icipant_display_name\030\t \001(\tH\000B\013\n\tdimensio" +
+      "n\"<\n\022RetailFilterBundle\022\027\n\nshared_set\030\001 " +
+      "\001(\tH\000\210\001\001B\r\n\013_shared_set\"\240\001\n\014RetailFilter" +
+      "\022M\n\nexpression\030\001 \001(\01327.google.ads.google" +
+      "ads.v26.common.RetailFilterExpressionH\000\022" +
+      "9\n\003tag\030\002 \001(\0132*.google.ads.googleads.v26." +
+      "common.RetailTagH\000B\006\n\004node\"4\n\026RetailFilt" +
+      "erExpression\022\021\n\004name\030\001 \001(\tH\000\210\001\001B\007\n\005_name" +
+      "\"[\n\tRetailTag\022\022\n\005value\030\001 \001(\tH\000\210\001\001\022\034\n\017exp" +
+      "ression_name\030\002 \001(\tH\001\210\001\001B\010\n\006_valueB\022\n\020_ex" +
+      "pression_name\"1\n\tEntityBid\022\026\n\titem_code\030" +
+      "\001 \001(\tH\000\210\001\001B\014\n\n_item_codeB\355\001\n#com.google." +
+      "ads.googleads.v26.commonB\rCriteriaProtoP" +
+      "\001ZEgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v26/common;common\242\002\003GAA\252\002" +
+      "\037Google.Ads.GoogleAds.V26.Common\312\002\037Googl" +
+      "e\\Ads\\GoogleAds\\V26\\Common\352\002#Google::Ads" +
+      "::GoogleAds::V26::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

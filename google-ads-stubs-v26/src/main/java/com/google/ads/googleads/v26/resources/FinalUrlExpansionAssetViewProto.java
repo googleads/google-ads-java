@@ -47,35 +47,35 @@ public final class FinalUrlExpansionAssetViewProto extends com.google.protobuf.G
       "roto\0326google/ads/googleads/v26/enums/ass" +
       "et_link_status.proto\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\"\307\006\n\032FinalUrlExpansionAssetView\022R\n\rresou" +
-      "rce_name\030\001 \001(\tB;\340A\003\372A5\n3googleads.google" +
-      "apis.com/FinalUrlExpansionAssetView\022@\n\010c" +
-      "ampaign\030\002 \001(\tB)\340A\003\372A#\n!googleads.googlea" +
-      "pis.com/CampaignH\001\210\001\001\022:\n\005asset\030\003 \001(\tB&\340A" +
-      "\003\372A \n\036googleads.googleapis.com/AssetH\002\210\001" +
-      "\001\022Z\n\nfield_type\030\004 \001(\0162A.google.ads.googl" +
-      "eads.v26.enums.AssetFieldTypeEnum.AssetF" +
-      "ieldTypeB\003\340A\003\022]\n\006status\030\005 \001(\0162C.google.a" +
-      "ds.googleads.v26.enums.AssetLinkStatusEn" +
-      "um.AssetLinkStatusB\003\340A\003H\003\210\001\001\022\026\n\tfinal_ur" +
-      "l\030\006 \001(\tB\003\340A\003\022<\n\010ad_group\030\007 \001(\tB(\340A\003\372A\"\n " +
-      "googleads.googleapis.com/AdGroupH\000\022B\n\013as" +
-      "set_group\030\010 \001(\tB+\340A\003\372A%\n#googleads.googl" +
-      "eapis.com/AssetGroupH\000:\326\001\352A\322\001\n3googleads" +
-      ".googleapis.com/FinalUrlExpansionAssetVi" +
-      "ew\022bcustomers/{customer_id}/finalUrlExpa" +
-      "nsionAssetViews/{campaign_id}~{asset_id}" +
-      "~{field_type}~{url_fp}*\033finalUrlExpansio" +
-      "nAssetViews2\032finalUrlExpansionAssetViewB" +
-      "\007\n\005levelB\013\n\t_campaignB\010\n\006_assetB\t\n\007_stat" +
-      "usB\221\002\n&com.google.ads.googleads.v26.reso" +
-      "urcesB\037FinalUrlExpansionAssetViewProtoP\001" +
-      "ZKgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v26/resources;resources\242\002\003" +
-      "GAA\252\002\"Google.Ads.GoogleAds.V26.Resources" +
-      "\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002&" +
-      "Google::Ads::GoogleAds::V26::Resourcesb\006" +
-      "proto3"
+      "\"\317\006\n\032FinalUrlExpansionAssetView\022S\n\rresou" +
+      "rce_name\030\001 \001(\tB<\342A\001\003\372A5\n3googleads.googl" +
+      "eapis.com/FinalUrlExpansionAssetView\022A\n\010" +
+      "campaign\030\002 \001(\tB*\342A\001\003\372A#\n!googleads.googl" +
+      "eapis.com/CampaignH\001\210\001\001\022;\n\005asset\030\003 \001(\tB\'" +
+      "\342A\001\003\372A \n\036googleads.googleapis.com/AssetH" +
+      "\002\210\001\001\022[\n\nfield_type\030\004 \001(\0162A.google.ads.go" +
+      "ogleads.v26.enums.AssetFieldTypeEnum.Ass" +
+      "etFieldTypeB\004\342A\001\003\022^\n\006status\030\005 \001(\0162C.goog" +
+      "le.ads.googleads.v26.enums.AssetLinkStat" +
+      "usEnum.AssetLinkStatusB\004\342A\001\003H\003\210\001\001\022\027\n\tfin" +
+      "al_url\030\006 \001(\tB\004\342A\001\003\022=\n\010ad_group\030\007 \001(\tB)\342A" +
+      "\001\003\372A\"\n googleads.googleapis.com/AdGroupH" +
+      "\000\022C\n\013asset_group\030\010 \001(\tB,\342A\001\003\372A%\n#googlea" +
+      "ds.googleapis.com/AssetGroupH\000:\326\001\352A\322\001\n3g" +
+      "oogleads.googleapis.com/FinalUrlExpansio" +
+      "nAssetView\022bcustomers/{customer_id}/fina" +
+      "lUrlExpansionAssetViews/{campaign_id}~{a" +
+      "sset_id}~{field_type}~{url_fp}*\033finalUrl" +
+      "ExpansionAssetViews2\032finalUrlExpansionAs" +
+      "setViewB\007\n\005levelB\013\n\t_campaignB\010\n\006_assetB" +
+      "\t\n\007_statusB\221\002\n&com.google.ads.googleads." +
+      "v26.resourcesB\037FinalUrlExpansionAssetVie" +
+      "wProtoP\001ZKgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v26/resources;reso" +
+      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.R" +
+      "esources\312\002\"Google\\Ads\\GoogleAds\\V26\\Reso" +
+      "urces\352\002&Google::Ads::GoogleAds::V26::Res" +
+      "ourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

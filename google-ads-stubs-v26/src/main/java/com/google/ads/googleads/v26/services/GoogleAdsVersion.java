@@ -199,6 +199,9 @@ public interface GoogleAdsVersion {
         @ServiceClientDescriptor(settingsClass = CustomerAssetSetServiceSettings.class)
         CustomerAssetSetServiceClient createCustomerAssetSetServiceClient();
          
+        @ServiceClientDescriptor(settingsClass = CustomerBudgetNetworkSettingServiceSettings.class)
+        CustomerBudgetNetworkSettingServiceClient createCustomerBudgetNetworkSettingServiceClient();
+         
         @ServiceClientDescriptor(settingsClass = CustomerClientLinkServiceSettings.class)
         CustomerClientLinkServiceClient createCustomerClientLinkServiceClient();
          
@@ -285,6 +288,9 @@ public interface GoogleAdsVersion {
          
         @ServiceClientDescriptor(settingsClass = LabelServiceSettings.class)
         LabelServiceClient createLabelServiceClient();
+         
+        @ServiceClientDescriptor(settingsClass = LocalServicesEligibilityServiceSettings.class)
+        LocalServicesEligibilityServiceClient createLocalServicesEligibilityServiceClient();
          
         @ServiceClientDescriptor(settingsClass = LocalServicesLeadServiceSettings.class)
         LocalServicesLeadServiceClient createLocalServicesLeadServiceClient();

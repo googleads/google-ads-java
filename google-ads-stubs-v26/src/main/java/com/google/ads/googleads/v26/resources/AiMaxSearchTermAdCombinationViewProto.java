@@ -44,29 +44,29 @@ public final class AiMaxSearchTermAdCombinationViewProto extends com.google.prot
       "max_search_term_ad_combination_view.prot" +
       "o\022\"google.ads.googleads.v26.resources\032\037g" +
       "oogle/api/field_behavior.proto\032\031google/a" +
-      "pi/resource.proto\"\313\004\n AiMaxSearchTermAdC" +
-      "ombinationView\022X\n\rresource_name\030\001 \001(\tBA\340" +
-      "A\003\372A;\n9googleads.googleapis.com/AiMaxSea" +
-      "rchTermAdCombinationView\022?\n\010ad_group\030\002 \001" +
-      "(\tB(\340A\003\372A\"\n googleads.googleapis.com/AdG" +
-      "roupH\000\210\001\001\022\035\n\013search_term\030\003 \001(\tB\003\340A\003H\001\210\001\001" +
-      "\022\036\n\014landing_page\030\004 \001(\tB\003\340A\003H\002\210\001\001\022\032\n\010head" +
-      "line\030\005 \001(\tB\003\340A\003H\003\210\001\001:\365\001\352A\361\001\n9googleads.g" +
-      "oogleapis.com/AiMaxSearchTermAdCombinati" +
-      "onView\022ocustomers/{customer_id}/aiMaxSea" +
-      "rchTermAdCombinationViews/{ad_group_id}~" +
-      "{search_term}~{landing_page}~{headline}*" +
-      "!aiMaxSearchTermAdCombinationViews2 aiMa" +
-      "xSearchTermAdCombinationViewB\013\n\t_ad_grou" +
-      "pB\016\n\014_search_termB\017\n\r_landing_pageB\013\n\t_h" +
-      "eadlineB\227\002\n&com.google.ads.googleads.v26" +
-      ".resourcesB%AiMaxSearchTermAdCombination" +
-      "ViewProtoP\001ZKgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v26/resources;r" +
-      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V2" +
-      "6.Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\R" +
-      "esources\352\002&Google::Ads::GoogleAds::V26::" +
-      "Resourcesb\006proto3"
+      "pi/resource.proto\"\320\004\n AiMaxSearchTermAdC" +
+      "ombinationView\022Y\n\rresource_name\030\001 \001(\tBB\342" +
+      "A\001\003\372A;\n9googleads.googleapis.com/AiMaxSe" +
+      "archTermAdCombinationView\022@\n\010ad_group\030\002 " +
+      "\001(\tB)\342A\001\003\372A\"\n googleads.googleapis.com/A" +
+      "dGroupH\000\210\001\001\022\036\n\013search_term\030\003 \001(\tB\004\342A\001\003H\001" +
+      "\210\001\001\022\037\n\014landing_page\030\004 \001(\tB\004\342A\001\003H\002\210\001\001\022\033\n\010" +
+      "headline\030\005 \001(\tB\004\342A\001\003H\003\210\001\001:\365\001\352A\361\001\n9google" +
+      "ads.googleapis.com/AiMaxSearchTermAdComb" +
+      "inationView\022ocustomers/{customer_id}/aiM" +
+      "axSearchTermAdCombinationViews/{ad_group" +
+      "_id}~{search_term}~{landing_page}~{headl" +
+      "ine}*!aiMaxSearchTermAdCombinationViews2" +
+      " aiMaxSearchTermAdCombinationViewB\013\n\t_ad" +
+      "_groupB\016\n\014_search_termB\017\n\r_landing_pageB" +
+      "\013\n\t_headlineB\227\002\n&com.google.ads.googlead" +
+      "s.v26.resourcesB%AiMaxSearchTermAdCombin" +
+      "ationViewProtoP\001ZKgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v26/resour" +
+      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
+      "ds.V26.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
+      "V26\\Resources\352\002&Google::Ads::GoogleAds::" +
+      "V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

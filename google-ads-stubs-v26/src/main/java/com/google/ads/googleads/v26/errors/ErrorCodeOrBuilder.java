@@ -4714,5 +4714,61 @@ public interface ErrorCodeOrBuilder extends
    */
   com.google.ads.googleads.v26.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError getMultiPartyAuthReviewError();
 
+  /**
+   * <pre>
+   * The reasons for the budget network setting error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+   * @return Whether the budgetNetworkSettingError field is set.
+   */
+  boolean hasBudgetNetworkSettingError();
+  /**
+   * <pre>
+   * The reasons for the budget network setting error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+   * @return The enum numeric value on the wire for budgetNetworkSettingError.
+   */
+  int getBudgetNetworkSettingErrorValue();
+  /**
+   * <pre>
+   * The reasons for the budget network setting error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+   * @return The budgetNetworkSettingError.
+   */
+  com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError getBudgetNetworkSettingError();
+
+  /**
+   * <pre>
+   * The reasons for the Demand Gen campaign error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+   * @return Whether the demandGenCampaignError field is set.
+   */
+  boolean hasDemandGenCampaignError();
+  /**
+   * <pre>
+   * The reasons for the Demand Gen campaign error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+   * @return The enum numeric value on the wire for demandGenCampaignError.
+   */
+  int getDemandGenCampaignErrorValue();
+  /**
+   * <pre>
+   * The reasons for the Demand Gen campaign error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+   * @return The demandGenCampaignError.
+   */
+  com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError getDemandGenCampaignError();
+
   com.google.ads.googleads.v26.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

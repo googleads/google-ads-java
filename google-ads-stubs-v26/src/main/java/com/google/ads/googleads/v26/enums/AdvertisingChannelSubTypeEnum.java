@@ -106,7 +106,8 @@ private static final long serialVersionUID = 0L;
     DISPLAY_EXPRESS(5),
     /**
      * <pre>
-     * Smart Shopping campaigns.
+     * Smart Shopping campaigns. New Smart Shopping campaigns cannot be
+     * created.
      * </pre>
      *
      * <code>SHOPPING_SMART_ADS = 6;</code>
@@ -294,7 +295,8 @@ private static final long serialVersionUID = 0L;
     public static final int DISPLAY_EXPRESS_VALUE = 5;
     /**
      * <pre>
-     * Smart Shopping campaigns.
+     * Smart Shopping campaigns. New Smart Shopping campaigns cannot be
+     * created.
      * </pre>
      *
      * <code>SHOPPING_SMART_ADS = 6;</code>

@@ -52,29 +52,30 @@ public final class InvoiceServiceProto extends com.google.protobuf.GeneratedFile
       "gleads/v26/resources/invoice.proto\032\034goog" +
       "le/api/annotations.proto\032\027google/api/cli" +
       "ent.proto\032\037google/api/field_behavior.pro" +
-      "to\"\360\001\n\023ListInvoicesRequest\022\030\n\013customer_i" +
-      "d\030\001 \001(\tB\003\340A\002\022\032\n\rbilling_setup\030\002 \001(\tB\003\340A\002" +
-      "\022\027\n\nissue_year\030\003 \001(\tB\003\340A\002\022U\n\013issue_month" +
-      "\030\004 \001(\0162;.google.ads.googleads.v26.enums." +
-      "MonthOfYearEnum.MonthOfYearB\003\340A\002\0223\n&incl" +
-      "ude_granular_level_invoice_details\030\005 \001(\010" +
-      "B\003\340A\001\"U\n\024ListInvoicesResponse\022=\n\010invoice" +
-      "s\030\001 \003(\0132+.google.ads.googleads.v26.resou" +
-      "rces.Invoice2\275\002\n\016InvoiceService\022\343\001\n\014List" +
-      "Invoices\0226.google.ads.googleads.v26.serv" +
-      "ices.ListInvoicesRequest\0327.google.ads.go" +
-      "ogleads.v26.services.ListInvoicesRespons" +
-      "e\"b\332A0customer_id,billing_setup,issue_ye" +
-      "ar,issue_month\202\323\344\223\002)\022\'/v26/customers/{cu" +
-      "stomer_id=*}/invoices\032E\312A\030googleads.goog" +
-      "leapis.com\322A\'https://www.googleapis.com/" +
-      "auth/adwordsB\377\001\n%com.google.ads.googlead" +
-      "s.v26.servicesB\023InvoiceServiceProtoP\001ZIg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v26/services;services\242\002\003GAA\252\002" +
-      "!Google.Ads.GoogleAds.V26.Services\312\002!Goo" +
-      "gle\\Ads\\GoogleAds\\V26\\Services\352\002%Google:" +
-      ":Ads::GoogleAds::V26::Servicesb\006proto3"
+      "to\"\365\001\n\023ListInvoicesRequest\022\031\n\013customer_i" +
+      "d\030\001 \001(\tB\004\342A\001\002\022\033\n\rbilling_setup\030\002 \001(\tB\004\342A" +
+      "\001\002\022\030\n\nissue_year\030\003 \001(\tB\004\342A\001\002\022V\n\013issue_mo" +
+      "nth\030\004 \001(\0162;.google.ads.googleads.v26.enu" +
+      "ms.MonthOfYearEnum.MonthOfYearB\004\342A\001\002\0224\n&" +
+      "include_granular_level_invoice_details\030\005" +
+      " \001(\010B\004\342A\001\001\"U\n\024ListInvoicesResponse\022=\n\010in" +
+      "voices\030\001 \003(\0132+.google.ads.googleads.v26." +
+      "resources.Invoice2\275\002\n\016InvoiceService\022\343\001\n" +
+      "\014ListInvoices\0226.google.ads.googleads.v26" +
+      ".services.ListInvoicesRequest\0327.google.a" +
+      "ds.googleads.v26.services.ListInvoicesRe" +
+      "sponse\"b\332A0customer_id,billing_setup,iss" +
+      "ue_year,issue_month\202\323\344\223\002)\022\'/v26/customer" +
+      "s/{customer_id=*}/invoices\032E\312A\030googleads" +
+      ".googleapis.com\322A\'https://www.googleapis" +
+      ".com/auth/adwordsB\377\001\n%com.google.ads.goo" +
+      "gleads.v26.servicesB\023InvoiceServiceProto" +
+      "P\001ZIgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v26/services;services\242\002\003" +
+      "GAA\252\002!Google.Ads.GoogleAds.V26.Services\312" +
+      "\002!Google\\Ads\\GoogleAds\\V26\\Services\352\002%Go" +
+      "ogle::Ads::GoogleAds::V26::Servicesb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

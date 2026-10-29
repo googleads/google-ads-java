@@ -5,6 +5,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Service to manage offline user data jobs.
+ * For help diagnosing and resolving conversion or user data upload issues, see
+ * the conversion upload
+ * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+ * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
+ * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
  * </pre>
  */
 @io.grpc.stub.annotations.GrpcGenerated
@@ -170,6 +175,11 @@ public final class OfflineUserDataJobServiceGrpc {
   /**
    * <pre>
    * Service to manage offline user data jobs.
+   * For help diagnosing and resolving conversion or user data upload issues, see
+   * the conversion upload
+   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
+   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public interface AsyncService {
@@ -242,6 +252,11 @@ public final class OfflineUserDataJobServiceGrpc {
    * Base class for the server implementation of the service OfflineUserDataJobService.
    * <pre>
    * Service to manage offline user data jobs.
+   * For help diagnosing and resolving conversion or user data upload issues, see
+   * the conversion upload
+   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
+   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public static abstract class OfflineUserDataJobServiceImplBase
@@ -256,6 +271,11 @@ public final class OfflineUserDataJobServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service OfflineUserDataJobService.
    * <pre>
    * Service to manage offline user data jobs.
+   * For help diagnosing and resolving conversion or user data upload issues, see
+   * the conversion upload
+   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
+   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public static final class OfflineUserDataJobServiceStub
@@ -342,6 +362,11 @@ public final class OfflineUserDataJobServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service OfflineUserDataJobService.
    * <pre>
    * Service to manage offline user data jobs.
+   * For help diagnosing and resolving conversion or user data upload issues, see
+   * the conversion upload
+   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
+   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public static final class OfflineUserDataJobServiceBlockingV2Stub
@@ -425,6 +450,11 @@ public final class OfflineUserDataJobServiceGrpc {
    * A stub to allow clients to do limited synchronous rpc calls to service OfflineUserDataJobService.
    * <pre>
    * Service to manage offline user data jobs.
+   * For help diagnosing and resolving conversion or user data upload issues, see
+   * the conversion upload
+   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
+   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public static final class OfflineUserDataJobServiceBlockingStub
@@ -508,6 +538,11 @@ public final class OfflineUserDataJobServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service OfflineUserDataJobService.
    * <pre>
    * Service to manage offline user data jobs.
+   * For help diagnosing and resolving conversion or user data upload issues, see
+   * the conversion upload
+   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
+   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public static final class OfflineUserDataJobServiceFutureStub

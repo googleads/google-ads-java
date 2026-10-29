@@ -8,6 +8,12 @@ package com.google.ads.googleads.v26.services;
 /**
  * <pre>
  * A click conversion.
+ *
+ * For help diagnosing and resolving conversion upload issues, see the
+ * conversion upload
+ * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+ * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
+ * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v26.services.ClickConversion}
@@ -692,7 +698,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The user identifiers associated with this conversion. Only hashed_email and
    * hashed_phone_number are supported for conversion uploads. The maximum
-   * number of user identifiers for each conversion is 5.
+   * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+   * in the list must have only one identifier field set (`oneof identifier` is
+   * mutually exclusive), and raw values must be normalized before SHA-256
+   * hashing (for email addresses, trim leading and trailing whitespace and
+   * convert to lowercase; for phone numbers, format in E.164 format).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -705,7 +715,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The user identifiers associated with this conversion. Only hashed_email and
    * hashed_phone_number are supported for conversion uploads. The maximum
-   * number of user identifiers for each conversion is 5.
+   * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+   * in the list must have only one identifier field set (`oneof identifier` is
+   * mutually exclusive), and raw values must be normalized before SHA-256
+   * hashing (for email addresses, trim leading and trailing whitespace and
+   * convert to lowercase; for phone numbers, format in E.164 format).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -719,7 +733,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The user identifiers associated with this conversion. Only hashed_email and
    * hashed_phone_number are supported for conversion uploads. The maximum
-   * number of user identifiers for each conversion is 5.
+   * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+   * in the list must have only one identifier field set (`oneof identifier` is
+   * mutually exclusive), and raw values must be normalized before SHA-256
+   * hashing (for email addresses, trim leading and trailing whitespace and
+   * convert to lowercase; for phone numbers, format in E.164 format).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -732,7 +750,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The user identifiers associated with this conversion. Only hashed_email and
    * hashed_phone_number are supported for conversion uploads. The maximum
-   * number of user identifiers for each conversion is 5.
+   * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+   * in the list must have only one identifier field set (`oneof identifier` is
+   * mutually exclusive), and raw values must be normalized before SHA-256
+   * hashing (for email addresses, trim leading and trailing whitespace and
+   * convert to lowercase; for phone numbers, format in E.164 format).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -745,7 +767,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The user identifiers associated with this conversion. Only hashed_email and
    * hashed_phone_number are supported for conversion uploads. The maximum
-   * number of user identifiers for each conversion is 5.
+   * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+   * in the list must have only one identifier field set (`oneof identifier` is
+   * mutually exclusive), and raw values must be normalized before SHA-256
+   * hashing (for email addresses, trim leading and trailing whitespace and
+   * convert to lowercase; for phone numbers, format in E.164 format).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -1420,6 +1446,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A click conversion.
+   *
+   * For help diagnosing and resolving conversion upload issues, see the
+   * conversion upload
+   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
+   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v26.services.ClickConversion}
@@ -3407,7 +3439,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3423,7 +3459,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3439,7 +3479,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3455,7 +3499,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3478,7 +3526,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3498,7 +3550,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3520,7 +3576,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3543,7 +3603,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3563,7 +3627,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3583,7 +3651,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3604,7 +3676,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3623,7 +3699,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3642,7 +3722,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3655,7 +3739,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3671,7 +3759,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3688,7 +3780,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3701,7 +3797,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>
@@ -3715,7 +3815,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The user identifiers associated with this conversion. Only hashed_email and
      * hashed_phone_number are supported for conversion uploads. The maximum
-     * number of user identifiers for each conversion is 5.
+     * number of user identifiers for each conversion is 5. Each `UserIdentifier`
+     * in the list must have only one identifier field set (`oneof identifier` is
+     * mutually exclusive), and raw values must be normalized before SHA-256
+     * hashing (for email addresses, trim leading and trailing whitespace and
+     * convert to lowercase; for phone numbers, format in E.164 format).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v26.common.UserIdentifier user_identifiers = 17;</code>

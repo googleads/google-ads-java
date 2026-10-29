@@ -5388,6 +5388,98 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * This metric counts the unique individuals who were shown your video ad six
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_six_plus = 556;</code>
+   * @return Whether the uniqueUsersSixPlus field is set.
+   */
+  boolean hasUniqueUsersSixPlus();
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad six
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_six_plus = 556;</code>
+   * @return The uniqueUsersSixPlus.
+   */
+  long getUniqueUsersSixPlus();
+
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad
+   * seven or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_seven_plus = 557;</code>
+   * @return Whether the uniqueUsersSevenPlus field is set.
+   */
+  boolean hasUniqueUsersSevenPlus();
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad
+   * seven or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_seven_plus = 557;</code>
+   * @return The uniqueUsersSevenPlus.
+   */
+  long getUniqueUsersSevenPlus();
+
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad
+   * eight or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_eight_plus = 558;</code>
+   * @return Whether the uniqueUsersEightPlus field is set.
+   */
+  boolean hasUniqueUsersEightPlus();
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad
+   * eight or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_eight_plus = 558;</code>
+   * @return The uniqueUsersEightPlus.
+   */
+  long getUniqueUsersEightPlus();
+
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad nine
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_nine_plus = 559;</code>
+   * @return Whether the uniqueUsersNinePlus field is set.
+   */
+  boolean hasUniqueUsersNinePlus();
+  /**
+   * <pre>
+   * This metric counts the unique individuals who were shown your video ad nine
+   * or more times within the selected date range. This metric cannot be
+   * aggregated, and can only be requested for date ranges of 31 days or less.
+   * </pre>
+   *
+   * <code>optional int64 unique_users_nine_plus = 559;</code>
+   * @return The uniqueUsersNinePlus.
+   */
+  long getUniqueUsersNinePlus();
+
+  /**
+   * <pre>
    * This metric counts the unique individuals who were shown your video ad ten
    * or more times within the selected date range. This metric cannot be
    * aggregated, and can only be requested for date ranges of 31 days or less.
@@ -9045,4 +9137,334 @@ public interface MetricsOrBuilder extends
    * @return The normalizedIncrementalSearchesPerImpressionP90UpperBound.
    */
   double getNormalizedIncrementalSearchesPerImpressionP90UpperBound();
+
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad at
+   * least once within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_info = 550;</code>
+   * @return Whether the uniqueUsersInfo field is set.
+   */
+  boolean hasUniqueUsersInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad at
+   * least once within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_info = 550;</code>
+   * @return The uniqueUsersInfo.
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfo getUniqueUsersInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad at
+   * least once within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_info = 550;</code>
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfoOrBuilder getUniqueUsersInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad two
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_two_plus_info = 551;</code>
+   * @return Whether the uniqueUsersTwoPlusInfo field is set.
+   */
+  boolean hasUniqueUsersTwoPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad two
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_two_plus_info = 551;</code>
+   * @return The uniqueUsersTwoPlusInfo.
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfo getUniqueUsersTwoPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad two
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_two_plus_info = 551;</code>
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfoOrBuilder getUniqueUsersTwoPlusInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad three
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_three_plus_info = 552;</code>
+   * @return Whether the uniqueUsersThreePlusInfo field is set.
+   */
+  boolean hasUniqueUsersThreePlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad three
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_three_plus_info = 552;</code>
+   * @return The uniqueUsersThreePlusInfo.
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfo getUniqueUsersThreePlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad three
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_three_plus_info = 552;</code>
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfoOrBuilder getUniqueUsersThreePlusInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad four
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_four_plus_info = 553;</code>
+   * @return Whether the uniqueUsersFourPlusInfo field is set.
+   */
+  boolean hasUniqueUsersFourPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad four
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_four_plus_info = 553;</code>
+   * @return The uniqueUsersFourPlusInfo.
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfo getUniqueUsersFourPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad four
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_four_plus_info = 553;</code>
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfoOrBuilder getUniqueUsersFourPlusInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad five
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_five_plus_info = 554;</code>
+   * @return Whether the uniqueUsersFivePlusInfo field is set.
+   */
+  boolean hasUniqueUsersFivePlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad five
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_five_plus_info = 554;</code>
+   * @return The uniqueUsersFivePlusInfo.
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfo getUniqueUsersFivePlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad five
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_five_plus_info = 554;</code>
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfoOrBuilder getUniqueUsersFivePlusInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad six
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_six_plus_info = 560;</code>
+   * @return Whether the uniqueUsersSixPlusInfo field is set.
+   */
+  boolean hasUniqueUsersSixPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad six
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_six_plus_info = 560;</code>
+   * @return The uniqueUsersSixPlusInfo.
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfo getUniqueUsersSixPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad six
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_six_plus_info = 560;</code>
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfoOrBuilder getUniqueUsersSixPlusInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad seven
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_seven_plus_info = 561;</code>
+   * @return Whether the uniqueUsersSevenPlusInfo field is set.
+   */
+  boolean hasUniqueUsersSevenPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad seven
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_seven_plus_info = 561;</code>
+   * @return The uniqueUsersSevenPlusInfo.
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfo getUniqueUsersSevenPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad seven
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_seven_plus_info = 561;</code>
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfoOrBuilder getUniqueUsersSevenPlusInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad eight
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_eight_plus_info = 562;</code>
+   * @return Whether the uniqueUsersEightPlusInfo field is set.
+   */
+  boolean hasUniqueUsersEightPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad eight
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_eight_plus_info = 562;</code>
+   * @return The uniqueUsersEightPlusInfo.
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfo getUniqueUsersEightPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad eight
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_eight_plus_info = 562;</code>
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfoOrBuilder getUniqueUsersEightPlusInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad nine
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_nine_plus_info = 563;</code>
+   * @return Whether the uniqueUsersNinePlusInfo field is set.
+   */
+  boolean hasUniqueUsersNinePlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad nine
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_nine_plus_info = 563;</code>
+   * @return The uniqueUsersNinePlusInfo.
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfo getUniqueUsersNinePlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad nine
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_nine_plus_info = 563;</code>
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfoOrBuilder getUniqueUsersNinePlusInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad ten
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_ten_plus_info = 555;</code>
+   * @return Whether the uniqueUsersTenPlusInfo field is set.
+   */
+  boolean hasUniqueUsersTenPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad ten
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_ten_plus_info = 555;</code>
+   * @return The uniqueUsersTenPlusInfo.
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfo getUniqueUsersTenPlusInfo();
+  /**
+   * <pre>
+   * Additional information (e.g. quality of reach data) about the metric
+   * representing the number of unique individuals who were shown your ad ten
+   * or more times within the selected date range.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v26.common.ReachMetricInfo unique_users_ten_plus_info = 555;</code>
+   */
+  com.google.ads.googleads.v26.common.ReachMetricInfoOrBuilder getUniqueUsersTenPlusInfoOrBuilder();
 }

@@ -44,22 +44,22 @@ public final class MatchedLocationInterestViewProto extends com.google.protobuf.
       "ched_location_interest_view.proto\022\"googl" +
       "e.ads.googleads.v26.resources\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\267\002\n\033MatchedLocationInterestVie" +
-      "w\022S\n\rresource_name\030\001 \001(\tB<\340A\003\372A6\n4google" +
-      "ads.googleapis.com/MatchedLocationIntere" +
-      "stView:\302\001\352A\276\001\n4googleads.googleapis.com/" +
-      "MatchedLocationInterestView\022Kcustomers/{" +
-      "customer_id}/matchedLocationInterestView" +
-      "s/{country_criterion_id}*\034matchedLocatio" +
-      "nInterestViews2\033matchedLocationInterestV" +
-      "iewB\222\002\n&com.google.ads.googleads.v26.res" +
-      "ourcesB MatchedLocationInterestViewProto" +
-      "P\001ZKgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v26/resources;resources\242" +
-      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resourc" +
-      "es\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352" +
-      "\002&Google::Ads::GoogleAds::V26::Resources" +
-      "b\006proto3"
+      "rce.proto\"\270\002\n\033MatchedLocationInterestVie" +
+      "w\022T\n\rresource_name\030\001 \001(\tB=\342A\001\003\372A6\n4googl" +
+      "eads.googleapis.com/MatchedLocationInter" +
+      "estView:\302\001\352A\276\001\n4googleads.googleapis.com" +
+      "/MatchedLocationInterestView\022Kcustomers/" +
+      "{customer_id}/matchedLocationInterestVie" +
+      "ws/{country_criterion_id}*\034matchedLocati" +
+      "onInterestViews2\033matchedLocationInterest" +
+      "ViewB\222\002\n&com.google.ads.googleads.v26.re" +
+      "sourcesB MatchedLocationInterestViewProt" +
+      "oP\001ZKgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v26/resources;resources" +
+      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resour" +
+      "ces\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources" +
+      "\352\002&Google::Ads::GoogleAds::V26::Resource" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

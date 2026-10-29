@@ -44,24 +44,24 @@ public final class LiftMeasurementCampaignProto extends com.google.protobuf.Gene
       "t_measurement_campaign.proto\022\"google.ads" +
       ".googleads.v26.resources\032\037google/api/fie" +
       "ld_behavior.proto\032\031google/api/resource.p" +
-      "roto\"\243\003\n\027LiftMeasurementCampaign\022O\n\rreso" +
-      "urce_name\030\001 \001(\tB8\340A\003\372A2\n0googleads.googl" +
-      "eapis.com/LiftMeasurementCampaign\022,\n\032lif" +
-      "t_measurement_config_id\030\002 \001(\003B\003\340A\003H\000\210\001\001\022" +
-      "@\n\010campaign\030\004 \001(\tB)\340A\003\372A#\n!googleads.goo" +
-      "gleapis.com/CampaignH\001\210\001\001:\232\001\352A\226\001\n0google" +
-      "ads.googleapis.com/LiftMeasurementCampai" +
-      "gn\022bcustomers/{customer_id}/liftMeasurem" +
-      "entCampaigns/{lift_measurement_configura" +
-      "tion_id}~{campaign_id}B\035\n\033_lift_measurem" +
-      "ent_config_idB\013\n\t_campaignB\216\002\n&com.googl" +
-      "e.ads.googleads.v26.resourcesB\034LiftMeasu" +
-      "rementCampaignProtoP\001ZKgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v26/r" +
-      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
-      "ogleAds.V26.Resources\312\002\"Google\\Ads\\Googl" +
-      "eAds\\V26\\Resources\352\002&Google::Ads::Google" +
-      "Ads::V26::Resourcesb\006proto3"
+      "roto\"\246\003\n\027LiftMeasurementCampaign\022P\n\rreso" +
+      "urce_name\030\001 \001(\tB9\342A\001\003\372A2\n0googleads.goog" +
+      "leapis.com/LiftMeasurementCampaign\022-\n\032li" +
+      "ft_measurement_config_id\030\002 \001(\003B\004\342A\001\003H\000\210\001" +
+      "\001\022A\n\010campaign\030\004 \001(\tB*\342A\001\003\372A#\n!googleads." +
+      "googleapis.com/CampaignH\001\210\001\001:\232\001\352A\226\001\n0goo" +
+      "gleads.googleapis.com/LiftMeasurementCam" +
+      "paign\022bcustomers/{customer_id}/liftMeasu" +
+      "rementCampaigns/{lift_measurement_config" +
+      "uration_id}~{campaign_id}B\035\n\033_lift_measu" +
+      "rement_config_idB\013\n\t_campaignB\216\002\n&com.go" +
+      "ogle.ads.googleads.v26.resourcesB\034LiftMe" +
+      "asurementCampaignProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v2" +
+      "6/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V26.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V26\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

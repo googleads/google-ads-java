@@ -42,7 +42,7 @@ public final class AssetErrorProto extends com.google.protobuf.GeneratedFile {
     java.lang.String[] descriptorData = {
       "\n1google/ads/googleads/v26/errors/asset_" +
       "error.proto\022\037google.ads.googleads.v26.er" +
-      "rors\"\276\016\n\016AssetErrorEnum\"\253\016\n\nAssetError\022\017" +
+      "rors\"\352\016\n\016AssetErrorEnum\"\327\016\n\nAssetError\022\017" +
       "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022,\n(CUSTOMER" +
       "_NOT_ON_ALLOWLIST_FOR_ASSET_TYPE\020\r\022\023\n\017DU" +
       "PLICATE_ASSET\020\003\022\030\n\024DUPLICATE_ASSET_NAME\020" +
@@ -88,13 +88,14 @@ public final class AssetErrorProto extends com.google.protobuf.GeneratedFile {
       "DE_TYPE\020+\022*\n&PROMOTION_QR_CODE_CANNOT_CO" +
       "NTAIN_LINKS\020,\022$\n PROMOTION_QR_CODE_INVAL" +
       "ID_FORMAT\020-\0220\n,CUSTOMER_NOT_ON_ALLOWLIST" +
-      "_FOR_MESSAGE_ASSETS\020.B\357\001\n#com.google.ads" +
-      ".googleads.v26.errorsB\017AssetErrorProtoP\001" +
-      "ZEgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v26/errors;errors\242\002\003GAA\252\002\037" +
-      "Google.Ads.GoogleAds.V26.Errors\312\002\037Google" +
-      "\\Ads\\GoogleAds\\V26\\Errors\352\002#Google::Ads:" +
-      ":GoogleAds::V26::Errorsb\006proto3"
+      "_FOR_MESSAGE_ASSETS\020.\022*\n&PARTNER_PROMOTI" +
+      "ON_ID_TYPE_INCOMPATIBLE\020/B\357\001\n#com.google" +
+      ".ads.googleads.v26.errorsB\017AssetErrorPro" +
+      "toP\001ZEgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v26/errors;errors\242\002\003GA" +
+      "A\252\002\037Google.Ads.GoogleAds.V26.Errors\312\002\037Go" +
+      "ogle\\Ads\\GoogleAds\\V26\\Errors\352\002#Google::" +
+      "Ads::GoogleAds::V26::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

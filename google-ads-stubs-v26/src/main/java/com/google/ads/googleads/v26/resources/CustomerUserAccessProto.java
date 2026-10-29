@@ -45,31 +45,31 @@ public final class CustomerUserAccessProto extends com.google.protobuf.Generated
       "leads.v26.resources\0320google/ads/googlead" +
       "s/v26/enums/access_role.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\273\005\n\022CustomerUserAccess\022J\n\rreso" +
-      "urce_name\030\001 \001(\tB3\340A\005\372A-\n+googleads.googl" +
-      "eapis.com/CustomerUserAccess\022\024\n\007user_id\030" +
-      "\002 \001(\003B\003\340A\003\022\037\n\remail_address\030\003 \001(\tB\003\340A\003H\000" +
-      "\210\001\001\022N\n\013access_role\030\004 \001(\01629.google.ads.go" +
-      "ogleads.v26.enums.AccessRoleEnum.AccessR" +
-      "ole\022+\n\031access_creation_date_time\030\006 \001(\tB\003" +
-      "\340A\003H\001\210\001\001\022,\n\032inviter_user_email_address\030\007" +
-      " \001(\tB\003\340A\003H\002\210\001\001\022!\n\017passkey_enabled\030\010 \001(\010B" +
-      "\003\340A\003H\003\210\001\001\022c\n\037pending_multi_party_auth_re" +
-      "view\030\t \001(\tB5\340A\003\372A/\n-googleads.googleapis" +
-      ".com/MultiPartyAuthReviewH\004\210\001\001:h\352Ae\n+goo" +
-      "gleads.googleapis.com/CustomerUserAccess" +
-      "\0226customers/{customer_id}/customerUserAc" +
-      "cesses/{user_id}B\020\n\016_email_addressB\034\n\032_a" +
-      "ccess_creation_date_timeB\035\n\033_inviter_use" +
-      "r_email_addressB\022\n\020_passkey_enabledB\"\n _" +
-      "pending_multi_party_auth_reviewB\211\002\n&com." +
-      "google.ads.googleads.v26.resourcesB\027Cust" +
-      "omerUserAccessProtoP\001ZKgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v26/r" +
-      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
-      "ogleAds.V26.Resources\312\002\"Google\\Ads\\Googl" +
-      "eAds\\V26\\Resources\352\002&Google::Ads::Google" +
-      "Ads::V26::Resourcesb\006proto3"
+      "rce.proto\"\302\005\n\022CustomerUserAccess\022K\n\rreso" +
+      "urce_name\030\001 \001(\tB4\342A\001\005\372A-\n+googleads.goog" +
+      "leapis.com/CustomerUserAccess\022\025\n\007user_id" +
+      "\030\002 \001(\003B\004\342A\001\003\022 \n\remail_address\030\003 \001(\tB\004\342A\001" +
+      "\003H\000\210\001\001\022N\n\013access_role\030\004 \001(\01629.google.ads" +
+      ".googleads.v26.enums.AccessRoleEnum.Acce" +
+      "ssRole\022,\n\031access_creation_date_time\030\006 \001(" +
+      "\tB\004\342A\001\003H\001\210\001\001\022-\n\032inviter_user_email_addre" +
+      "ss\030\007 \001(\tB\004\342A\001\003H\002\210\001\001\022\"\n\017passkey_enabled\030\010" +
+      " \001(\010B\004\342A\001\003H\003\210\001\001\022d\n\037pending_multi_party_a" +
+      "uth_review\030\t \001(\tB6\342A\001\003\372A/\n-googleads.goo" +
+      "gleapis.com/MultiPartyAuthReviewH\004\210\001\001:h\352" +
+      "Ae\n+googleads.googleapis.com/CustomerUse" +
+      "rAccess\0226customers/{customer_id}/custome" +
+      "rUserAccesses/{user_id}B\020\n\016_email_addres" +
+      "sB\034\n\032_access_creation_date_timeB\035\n\033_invi" +
+      "ter_user_email_addressB\022\n\020_passkey_enabl" +
+      "edB\"\n _pending_multi_party_auth_reviewB\211" +
+      "\002\n&com.google.ads.googleads.v26.resource" +
+      "sB\027CustomerUserAccessProtoP\001ZKgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v26/resources;resources\242\002\003GAA\252\002\"Google" +
+      ".Ads.GoogleAds.V26.Resources\312\002\"Google\\Ad" +
+      "s\\GoogleAds\\V26\\Resources\352\002&Google::Ads:" +
+      ":GoogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

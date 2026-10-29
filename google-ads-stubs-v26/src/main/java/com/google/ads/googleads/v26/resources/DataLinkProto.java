@@ -56,36 +56,36 @@ public final class DataLinkProto extends com.google.protobuf.GeneratedFile {
       "/data_link_status.proto\0323google/ads/goog" +
       "leads/v26/enums/data_link_type.proto\032\037go" +
       "ogle/api/field_behavior.proto\032\031google/ap" +
-      "i/resource.proto\"\255\005\n\010DataLink\022@\n\rresourc" +
-      "e_name\030\001 \001(\tB)\340A\005\372A#\n!googleads.googleap" +
-      "is.com/DataLink\022!\n\017product_link_id\030\002 \001(\003" +
-      "B\003\340A\003H\002\210\001\001\022\036\n\014data_link_id\030\003 \001(\003B\003\340A\003H\003\210" +
-      "\001\001\022P\n\004type\030\004 \001(\0162=.google.ads.googleads." +
-      "v26.enums.DataLinkTypeEnum.DataLinkTypeB" +
-      "\003\340A\003\022V\n\006status\030\005 \001(\0162A.google.ads.google" +
-      "ads.v26.enums.DataLinkStatusEnum.DataLin" +
-      "kStatusB\003\340A\003\022X\n\ryoutube_video\030\006 \001(\0132:.go" +
-      "ogle.ads.googleads.v26.resources.Youtube" +
-      "VideoIdentifierB\003\340A\005H\000\022]\n\025youtube_link_m" +
-      "etadata\030\007 \001(\01327.google.ads.googleads.v26" +
-      ".resources.YoutubeLinkMetadataB\003\340A\005H\001:j\352" +
-      "Ag\n!googleads.googleapis.com/DataLink\022Bc" +
-      "ustomers/{customer_id}/dataLinks/{produc" +
-      "t_link_id}~{data_link_id}B\022\n\020data_link_e" +
-      "ntityB\024\n\022data_link_metadataB\022\n\020_product_" +
-      "link_idB\017\n\r_data_link_id\"n\n\026YoutubeVideo" +
-      "Identifier\022\034\n\nchannel_id\030\001 \001(\tB\003\340A\005H\000\210\001\001" +
-      "\022\032\n\010video_id\030\002 \001(\tB\003\340A\005H\001\210\001\001B\r\n\013_channel" +
-      "_idB\013\n\t_video_id\"N\n\023YoutubeLinkMetadata\022" +
-      "\"\n\020brand_channel_id\030\001 \001(\tB\003\340A\005H\000\210\001\001B\023\n\021_" +
-      "brand_channel_idB\377\001\n&com.google.ads.goog" +
-      "leads.v26.resourcesB\rDataLinkProtoP\001ZKgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v26/resources;resources\242\002\003GAA\252" +
-      "\002\"Google.Ads.GoogleAds.V26.Resources\312\002\"G" +
-      "oogle\\Ads\\GoogleAds\\V26\\Resources\352\002&Goog" +
-      "le::Ads::GoogleAds::V26::Resourcesb\006prot" +
-      "o3"
+      "i/resource.proto\"\264\005\n\010DataLink\022A\n\rresourc" +
+      "e_name\030\001 \001(\tB*\342A\001\005\372A#\n!googleads.googlea" +
+      "pis.com/DataLink\022\"\n\017product_link_id\030\002 \001(" +
+      "\003B\004\342A\001\003H\002\210\001\001\022\037\n\014data_link_id\030\003 \001(\003B\004\342A\001\003" +
+      "H\003\210\001\001\022Q\n\004type\030\004 \001(\0162=.google.ads.googlea" +
+      "ds.v26.enums.DataLinkTypeEnum.DataLinkTy" +
+      "peB\004\342A\001\003\022W\n\006status\030\005 \001(\0162A.google.ads.go" +
+      "ogleads.v26.enums.DataLinkStatusEnum.Dat" +
+      "aLinkStatusB\004\342A\001\003\022Y\n\ryoutube_video\030\006 \001(\013" +
+      "2:.google.ads.googleads.v26.resources.Yo" +
+      "utubeVideoIdentifierB\004\342A\001\005H\000\022^\n\025youtube_" +
+      "link_metadata\030\007 \001(\01327.google.ads.googlea" +
+      "ds.v26.resources.YoutubeLinkMetadataB\004\342A" +
+      "\001\005H\001:j\352Ag\n!googleads.googleapis.com/Data" +
+      "Link\022Bcustomers/{customer_id}/dataLinks/" +
+      "{product_link_id}~{data_link_id}B\022\n\020data" +
+      "_link_entityB\024\n\022data_link_metadataB\022\n\020_p" +
+      "roduct_link_idB\017\n\r_data_link_id\"p\n\026Youtu" +
+      "beVideoIdentifier\022\035\n\nchannel_id\030\001 \001(\tB\004\342" +
+      "A\001\005H\000\210\001\001\022\033\n\010video_id\030\002 \001(\tB\004\342A\001\005H\001\210\001\001B\r\n" +
+      "\013_channel_idB\013\n\t_video_id\"O\n\023YoutubeLink" +
+      "Metadata\022#\n\020brand_channel_id\030\001 \001(\tB\004\342A\001\005" +
+      "H\000\210\001\001B\023\n\021_brand_channel_idB\377\001\n&com.googl" +
+      "e.ads.googleads.v26.resourcesB\rDataLinkP" +
+      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v26/resources;resour" +
+      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Res" +
+      "ources\312\002\"Google\\Ads\\GoogleAds\\V26\\Resour" +
+      "ces\352\002&Google::Ads::GoogleAds::V26::Resou" +
+      "rcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

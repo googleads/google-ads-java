@@ -46,31 +46,31 @@ public final class CampaignAggregateAssetViewProto extends com.google.protobuf.G
       "/googleads/v26/enums/asset_field_type.pr" +
       "oto\0321google/ads/googleads/v26/enums/asse" +
       "t_source.proto\032\037google/api/field_behavio" +
-      "r.proto\032\031google/api/resource.proto\"\216\005\n\032C" +
-      "ampaignAggregateAssetView\022R\n\rresource_na" +
-      "me\030\001 \001(\tB;\340A\003\372A5\n3googleads.googleapis.c" +
-      "om/CampaignAggregateAssetView\022@\n\010campaig" +
-      "n\030\002 \001(\tB)\340A\003\372A#\n!googleads.googleapis.co" +
-      "m/CampaignH\000\210\001\001\022:\n\005asset\030\003 \001(\tB&\340A\003\372A \n\036" +
-      "googleads.googleapis.com/AssetH\001\210\001\001\022[\n\014a" +
-      "sset_source\030\004 \001(\0162;.google.ads.googleads" +
-      ".v26.enums.AssetSourceEnum.AssetSourceB\003" +
-      "\340A\003H\002\210\001\001\022_\n\nfield_type\030\005 \001(\0162A.google.ad" +
-      "s.googleads.v26.enums.AssetFieldTypeEnum" +
-      ".AssetFieldTypeB\003\340A\003H\003\210\001\001:\250\001\352A\244\001\n3google" +
-      "ads.googleapis.com/CampaignAggregateAsse" +
-      "tView\022mcustomers/{customer_id}/campaignA" +
-      "ggregateAssetViews/{campaign_id}~{asset_" +
-      "id}~{asset_link_source}~{field_type}B\013\n\t" +
-      "_campaignB\010\n\006_assetB\017\n\r_asset_sourceB\r\n\013" +
-      "_field_typeB\221\002\n&com.google.ads.googleads" +
-      ".v26.resourcesB\037CampaignAggregateAssetVi" +
-      "ewProtoP\001ZKgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v26/resources;res" +
-      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26." +
-      "Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\Res" +
-      "ources\352\002&Google::Ads::GoogleAds::V26::Re" +
-      "sourcesb\006proto3"
+      "r.proto\032\031google/api/resource.proto\"\223\005\n\032C" +
+      "ampaignAggregateAssetView\022S\n\rresource_na" +
+      "me\030\001 \001(\tB<\342A\001\003\372A5\n3googleads.googleapis." +
+      "com/CampaignAggregateAssetView\022A\n\010campai" +
+      "gn\030\002 \001(\tB*\342A\001\003\372A#\n!googleads.googleapis." +
+      "com/CampaignH\000\210\001\001\022;\n\005asset\030\003 \001(\tB\'\342A\001\003\372A" +
+      " \n\036googleads.googleapis.com/AssetH\001\210\001\001\022\\" +
+      "\n\014asset_source\030\004 \001(\0162;.google.ads.google" +
+      "ads.v26.enums.AssetSourceEnum.AssetSourc" +
+      "eB\004\342A\001\003H\002\210\001\001\022`\n\nfield_type\030\005 \001(\0162A.googl" +
+      "e.ads.googleads.v26.enums.AssetFieldType" +
+      "Enum.AssetFieldTypeB\004\342A\001\003H\003\210\001\001:\250\001\352A\244\001\n3g" +
+      "oogleads.googleapis.com/CampaignAggregat" +
+      "eAssetView\022mcustomers/{customer_id}/camp" +
+      "aignAggregateAssetViews/{campaign_id}~{a" +
+      "sset_id}~{asset_link_source}~{field_type" +
+      "}B\013\n\t_campaignB\010\n\006_assetB\017\n\r_asset_sourc" +
+      "eB\r\n\013_field_typeB\221\002\n&com.google.ads.goog" +
+      "leads.v26.resourcesB\037CampaignAggregateAs" +
+      "setViewProtoP\001ZKgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v26/resource" +
+      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
+      ".V26.Resources\312\002\"Google\\Ads\\GoogleAds\\V2" +
+      "6\\Resources\352\002&Google::Ads::GoogleAds::V2" +
+      "6::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   private int status_ = 0;
   /**
    * <pre>
-   * Indicates whether the content is considered synthetic by this source.
+   * Indicates the attestation status for whether the content should be labeled
+   * as created or edited with AI by this source.
    * </pre>
    *
    * <code>.google.ads.googleads.v26.enums.SyntheticContentAttestationStatusEnum.SyntheticContentAttestationStatus status = 1;</code>
@@ -64,7 +65,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Indicates whether the content is considered synthetic by this source.
+   * Indicates the attestation status for whether the content should be labeled
+   * as created or edited with AI by this source.
    * </pre>
    *
    * <code>.google.ads.googleads.v26.enums.SyntheticContentAttestationStatusEnum.SyntheticContentAttestationStatus status = 1;</code>
@@ -422,7 +424,8 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Indicates whether the content is considered synthetic by this source.
+     * Indicates the attestation status for whether the content should be labeled
+     * as created or edited with AI by this source.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.enums.SyntheticContentAttestationStatusEnum.SyntheticContentAttestationStatus status = 1;</code>
@@ -433,7 +436,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether the content is considered synthetic by this source.
+     * Indicates the attestation status for whether the content should be labeled
+     * as created or edited with AI by this source.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.enums.SyntheticContentAttestationStatusEnum.SyntheticContentAttestationStatus status = 1;</code>
@@ -448,7 +452,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether the content is considered synthetic by this source.
+     * Indicates the attestation status for whether the content should be labeled
+     * as created or edited with AI by this source.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.enums.SyntheticContentAttestationStatusEnum.SyntheticContentAttestationStatus status = 1;</code>
@@ -461,7 +466,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether the content is considered synthetic by this source.
+     * Indicates the attestation status for whether the content should be labeled
+     * as created or edited with AI by this source.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.enums.SyntheticContentAttestationStatusEnum.SyntheticContentAttestationStatus status = 1;</code>
@@ -477,7 +483,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether the content is considered synthetic by this source.
+     * Indicates the attestation status for whether the content should be labeled
+     * as created or edited with AI by this source.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.enums.SyntheticContentAttestationStatusEnum.SyntheticContentAttestationStatus status = 1;</code>

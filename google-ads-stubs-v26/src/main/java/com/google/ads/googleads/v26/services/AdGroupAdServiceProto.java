@@ -77,62 +77,63 @@ public final class AdGroupAdServiceProto extends com.google.protobuf.GeneratedFi
       ".proto\032\037google/api/field_behavior.proto\032" +
       "\031google/api/resource.proto\032\033google/proto" +
       "buf/empty.proto\032 google/protobuf/field_m" +
-      "ask.proto\032\027google/rpc/status.proto\"\237\002\n\027M" +
-      "utateAdGroupAdsRequest\022\030\n\013customer_id\030\001 " +
-      "\001(\tB\003\340A\002\022N\n\noperations\030\002 \003(\01325.google.ad" +
-      "s.googleads.v26.services.AdGroupAdOperat" +
-      "ionB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rval" +
-      "idate_only\030\004 \001(\010\022j\n\025response_content_typ" +
-      "e\030\005 \001(\0162K.google.ads.googleads.v26.enums" +
-      ".ResponseContentTypeEnum.ResponseContent" +
-      "Type\"\360\002\n\022AdGroupAdOperation\022/\n\013update_ma" +
-      "sk\030\004 \001(\0132\032.google.protobuf.FieldMask\022_\n\033" +
-      "policy_validation_parameter\030\005 \001(\0132:.goog" +
-      "le.ads.googleads.v26.common.PolicyValida" +
-      "tionParameter\022?\n\006create\030\001 \001(\0132-.google.a" +
-      "ds.googleads.v26.resources.AdGroupAdH\000\022?" +
-      "\n\006update\030\002 \001(\0132-.google.ads.googleads.v2" +
-      "6.resources.AdGroupAdH\000\0229\n\006remove\030\003 \001(\tB" +
-      "\'\372A$\n\"googleads.googleapis.com/AdGroupAd" +
-      "H\000B\013\n\toperation\"\230\001\n\030MutateAdGroupAdsResp" +
-      "onse\0221\n\025partial_failure_error\030\003 \001(\0132\022.go" +
-      "ogle.rpc.Status\022I\n\007results\030\002 \003(\01328.googl" +
-      "e.ads.googleads.v26.services.MutateAdGro" +
-      "upAdResult\"\233\001\n\025MutateAdGroupAdResult\022>\n\r" +
-      "resource_name\030\001 \001(\tB\'\372A$\n\"googleads.goog" +
-      "leapis.com/AdGroupAd\022B\n\013ad_group_ad\030\002 \001(" +
-      "\0132-.google.ads.googleads.v26.resources.A" +
-      "dGroupAd\"\307\001\n\'RemoveAutomaticallyCreatedA" +
-      "ssetsRequest\022?\n\013ad_group_ad\030\001 \001(\tB*\340A\002\372A" +
-      "$\n\"googleads.googleapis.com/AdGroupAd\022[\n" +
-      "\026assets_with_field_type\030\002 \003(\01326.google.a" +
-      "ds.googleads.v26.services.AssetsWithFiel" +
-      "dTypeB\003\340A\002\"\256\001\n\023AssetsWithFieldType\0225\n\005as" +
-      "set\030\001 \001(\tB&\340A\002\372A \n\036googleads.googleapis." +
-      "com/Asset\022`\n\020asset_field_type\030\002 \001(\0162A.go" +
-      "ogle.ads.googleads.v26.enums.AssetFieldT" +
-      "ypeEnum.AssetFieldTypeB\003\340A\0022\304\004\n\020AdGroupA" +
-      "dService\022\341\001\n\020MutateAdGroupAds\022:.google.a" +
-      "ds.googleads.v26.services.MutateAdGroupA" +
-      "dsRequest\032;.google.ads.googleads.v26.ser" +
-      "vices.MutateAdGroupAdsResponse\"T\332A\026custo" +
-      "mer_id,operations\202\323\344\223\0025\"0/v26/customers/" +
-      "{customer_id=*}/adGroupAds:mutate:\001*\022\204\002\n" +
-      " RemoveAutomaticallyCreatedAssets\022J.goog" +
-      "le.ads.googleads.v26.services.RemoveAuto" +
-      "maticallyCreatedAssetsRequest\032\026.google.p" +
-      "rotobuf.Empty\"|\332A\"ad_group_ad,assets_wit" +
-      "h_field_type\202\323\344\223\002Q\"L/v26/{ad_group_ad=cu" +
-      "stomers/*/adGroupAds/*}:removeAutomatica" +
-      "llyCreatedAssets:\001*\032E\312A\030googleads.google" +
-      "apis.com\322A\'https://www.googleapis.com/au" +
-      "th/adwordsB\201\002\n%com.google.ads.googleads." +
-      "v26.servicesB\025AdGroupAdServiceProtoP\001ZIg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v26/services;services\242\002\003GAA\252\002" +
-      "!Google.Ads.GoogleAds.V26.Services\312\002!Goo" +
-      "gle\\Ads\\GoogleAds\\V26\\Services\352\002%Google:" +
-      ":Ads::GoogleAds::V26::Servicesb\006proto3"
+      "ask.proto\032\027google/rpc/status.proto\"\241\002\n\027M" +
+      "utateAdGroupAdsRequest\022\031\n\013customer_id\030\001 " +
+      "\001(\tB\004\342A\001\002\022O\n\noperations\030\002 \003(\01325.google.a" +
+      "ds.googleads.v26.services.AdGroupAdOpera" +
+      "tionB\004\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rv" +
+      "alidate_only\030\004 \001(\010\022j\n\025response_content_t" +
+      "ype\030\005 \001(\0162K.google.ads.googleads.v26.enu" +
+      "ms.ResponseContentTypeEnum.ResponseConte" +
+      "ntType\"\360\002\n\022AdGroupAdOperation\022/\n\013update_" +
+      "mask\030\004 \001(\0132\032.google.protobuf.FieldMask\022_" +
+      "\n\033policy_validation_parameter\030\005 \001(\0132:.go" +
+      "ogle.ads.googleads.v26.common.PolicyVali" +
+      "dationParameter\022?\n\006create\030\001 \001(\0132-.google" +
+      ".ads.googleads.v26.resources.AdGroupAdH\000" +
+      "\022?\n\006update\030\002 \001(\0132-.google.ads.googleads." +
+      "v26.resources.AdGroupAdH\000\0229\n\006remove\030\003 \001(" +
+      "\tB\'\372A$\n\"googleads.googleapis.com/AdGroup" +
+      "AdH\000B\013\n\toperation\"\230\001\n\030MutateAdGroupAdsRe" +
+      "sponse\0221\n\025partial_failure_error\030\003 \001(\0132\022." +
+      "google.rpc.Status\022I\n\007results\030\002 \003(\01328.goo" +
+      "gle.ads.googleads.v26.services.MutateAdG" +
+      "roupAdResult\"\233\001\n\025MutateAdGroupAdResult\022>" +
+      "\n\rresource_name\030\001 \001(\tB\'\372A$\n\"googleads.go" +
+      "ogleapis.com/AdGroupAd\022B\n\013ad_group_ad\030\002 " +
+      "\001(\0132-.google.ads.googleads.v26.resources" +
+      ".AdGroupAd\"\311\001\n\'RemoveAutomaticallyCreate" +
+      "dAssetsRequest\022@\n\013ad_group_ad\030\001 \001(\tB+\342A\001" +
+      "\002\372A$\n\"googleads.googleapis.com/AdGroupAd" +
+      "\022\\\n\026assets_with_field_type\030\002 \003(\01326.googl" +
+      "e.ads.googleads.v26.services.AssetsWithF" +
+      "ieldTypeB\004\342A\001\002\"\260\001\n\023AssetsWithFieldType\0226" +
+      "\n\005asset\030\001 \001(\tB\'\342A\001\002\372A \n\036googleads.google" +
+      "apis.com/Asset\022a\n\020asset_field_type\030\002 \001(\016" +
+      "2A.google.ads.googleads.v26.enums.AssetF" +
+      "ieldTypeEnum.AssetFieldTypeB\004\342A\001\0022\304\004\n\020Ad" +
+      "GroupAdService\022\341\001\n\020MutateAdGroupAds\022:.go" +
+      "ogle.ads.googleads.v26.services.MutateAd" +
+      "GroupAdsRequest\032;.google.ads.googleads.v" +
+      "26.services.MutateAdGroupAdsResponse\"T\332A" +
+      "\026customer_id,operations\202\323\344\223\0025\"0/v26/cust" +
+      "omers/{customer_id=*}/adGroupAds:mutate:" +
+      "\001*\022\204\002\n RemoveAutomaticallyCreatedAssets\022" +
+      "J.google.ads.googleads.v26.services.Remo" +
+      "veAutomaticallyCreatedAssetsRequest\032\026.go" +
+      "ogle.protobuf.Empty\"|\332A\"ad_group_ad,asse" +
+      "ts_with_field_type\202\323\344\223\002Q\"L/v26/{ad_group" +
+      "_ad=customers/*/adGroupAds/*}:removeAuto" +
+      "maticallyCreatedAssets:\001*\032E\312A\030googleads." +
+      "googleapis.com\322A\'https://www.googleapis." +
+      "com/auth/adwordsB\201\002\n%com.google.ads.goog" +
+      "leads.v26.servicesB\025AdGroupAdServiceProt" +
+      "oP\001ZIgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v26/services;services\242\002" +
+      "\003GAA\252\002!Google.Ads.GoogleAds.V26.Services" +
+      "\312\002!Google\\Ads\\GoogleAds\\V26\\Services\352\002%G" +
+      "oogle::Ads::GoogleAds::V26::Servicesb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
