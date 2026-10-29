@@ -89,66 +89,66 @@ public final class LocalServicesLeadServiceProto extends com.google.protobuf.Gen
       "nnotations.proto\032\027google/api/client.prot" +
       "o\032\037google/api/field_behavior.proto\032\031goog" +
       "le/api/resource.proto\032\027google/rpc/status" +
-      ".proto\"\206\001\n\035AppendLeadConversationRequest" +
-      "\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022K\n\rconversati" +
-      "ons\030\002 \003(\0132/.google.ads.googleads.v26.ser" +
-      "vices.ConversationB\003\340A\002\"p\n\036AppendLeadCon" +
-      "versationResponse\022N\n\tresponses\030\001 \003(\01326.g" +
-      "oogle.ads.googleads.v26.services.Convers" +
-      "ationOrErrorB\003\340A\002\"r\n\014Conversation\022O\n\023loc" +
-      "al_services_lead\030\001 \001(\tB2\340A\002\372A,\n*googlead" +
-      "s.googleapis.com/LocalServicesLead\022\021\n\004te" +
-      "xt\030\002 \001(\tB\003\340A\002\"\233\001\n\023ConversationOrError\022*\n" +
-      " local_services_lead_conversation\030\001 \001(\tH" +
-      "\000\0223\n\025partial_failure_error\030\002 \001(\0132\022.googl" +
-      "e.rpc.StatusH\000B#\n!append_lead_conversati" +
-      "on_response\"\275\001\n\017SurveySatisfied\022\206\001\n\027surv" +
-      "ey_satisfied_reason\030\001 \001(\0162`.google.ads.g" +
-      "oogleads.v26.enums.LocalServicesLeadSurv" +
-      "eySatisfiedReasonEnum.SurveySatisfiedRea" +
-      "sonB\003\340A\002\022!\n\024other_reason_comment\030\002 \001(\tB\003" +
-      "\340A\001\"\311\001\n\022SurveyDissatisfied\022\217\001\n\032survey_di" +
-      "ssatisfied_reason\030\001 \001(\0162f.google.ads.goo" +
-      "gleads.v26.enums.LocalServicesLeadSurvey" +
-      "DissatisfiedReasonEnum.SurveyDissatisfie" +
-      "dReasonB\003\340A\002\022!\n\024other_reason_comment\030\002 \001" +
-      "(\tB\003\340A\001\"\213\003\n\032ProvideLeadFeedbackRequest\022I" +
-      "\n\rresource_name\030\001 \001(\tB2\340A\002\372A,\n*googleads" +
-      ".googleapis.com/LocalServicesLead\022j\n\rsur" +
-      "vey_answer\030\002 \001(\0162N.google.ads.googleads." +
-      "v26.enums.LocalServicesLeadSurveyAnswerE" +
-      "num.SurveyAnswerB\003\340A\002\022N\n\020survey_satisfie" +
-      "d\030\003 \001(\01322.google.ads.googleads.v26.servi" +
-      "ces.SurveySatisfiedH\000\022T\n\023survey_dissatis" +
-      "fied\030\004 \001(\01325.google.ads.googleads.v26.se" +
-      "rvices.SurveyDissatisfiedH\000B\020\n\016survey_de" +
-      "tails\"\251\001\n\033ProvideLeadFeedbackResponse\022\211\001" +
-      "\n\030credit_issuance_decision\030\001 \001(\0162b.googl" +
-      "e.ads.googleads.v26.enums.LocalServicesL" +
-      "eadCreditIssuanceDecisionEnum.CreditIssu" +
-      "anceDecisionB\003\340A\0022\332\004\n\030LocalServicesLeadS" +
-      "ervice\022\211\002\n\026AppendLeadConversation\022@.goog" +
-      "le.ads.googleads.v26.services.AppendLead" +
-      "ConversationRequest\032A.google.ads.googlea" +
-      "ds.v26.services.AppendLeadConversationRe" +
-      "sponse\"j\332A\031customer_id,conversations\202\323\344\223" +
-      "\002H\"C/v26/customers/{customer_id=*}/local" +
-      "Services:appendLeadConversation:\001*\022\352\001\n\023P" +
-      "rovideLeadFeedback\022=.google.ads.googlead" +
-      "s.v26.services.ProvideLeadFeedbackReques" +
-      "t\032>.google.ads.googleads.v26.services.Pr" +
-      "ovideLeadFeedbackResponse\"T\202\323\344\223\002N\"I/v26/" +
-      "{resource_name=customers/*/localServices" +
-      "Leads/*}:provideLeadFeedback:\001*\032E\312A\030goog" +
-      "leads.googleapis.com\322A\'https://www.googl" +
-      "eapis.com/auth/adwordsB\211\002\n%com.google.ad" +
-      "s.googleads.v26.servicesB\035LocalServicesL" +
-      "eadServiceProtoP\001ZIgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v26/servi" +
-      "ces;services\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
-      "s.V26.Services\312\002!Google\\Ads\\GoogleAds\\V2" +
-      "6\\Services\352\002%Google::Ads::GoogleAds::V26" +
-      "::Servicesb\006proto3"
+      ".proto\"\210\001\n\035AppendLeadConversationRequest" +
+      "\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022L\n\rconversat" +
+      "ions\030\002 \003(\0132/.google.ads.googleads.v26.se" +
+      "rvices.ConversationB\004\342A\001\002\"q\n\036AppendLeadC" +
+      "onversationResponse\022O\n\tresponses\030\001 \003(\01326" +
+      ".google.ads.googleads.v26.services.Conve" +
+      "rsationOrErrorB\004\342A\001\002\"t\n\014Conversation\022P\n\023" +
+      "local_services_lead\030\001 \001(\tB3\342A\001\002\372A,\n*goog" +
+      "leads.googleapis.com/LocalServicesLead\022\022" +
+      "\n\004text\030\002 \001(\tB\004\342A\001\002\"\233\001\n\023ConversationOrErr" +
+      "or\022*\n local_services_lead_conversation\030\001" +
+      " \001(\tH\000\0223\n\025partial_failure_error\030\002 \001(\0132\022." +
+      "google.rpc.StatusH\000B#\n!append_lead_conve" +
+      "rsation_response\"\277\001\n\017SurveySatisfied\022\207\001\n" +
+      "\027survey_satisfied_reason\030\001 \001(\0162`.google." +
+      "ads.googleads.v26.enums.LocalServicesLea" +
+      "dSurveySatisfiedReasonEnum.SurveySatisfi" +
+      "edReasonB\004\342A\001\002\022\"\n\024other_reason_comment\030\002" +
+      " \001(\tB\004\342A\001\001\"\313\001\n\022SurveyDissatisfied\022\220\001\n\032su" +
+      "rvey_dissatisfied_reason\030\001 \001(\0162f.google." +
+      "ads.googleads.v26.enums.LocalServicesLea" +
+      "dSurveyDissatisfiedReasonEnum.SurveyDiss" +
+      "atisfiedReasonB\004\342A\001\002\022\"\n\024other_reason_com" +
+      "ment\030\002 \001(\tB\004\342A\001\001\"\215\003\n\032ProvideLeadFeedback" +
+      "Request\022J\n\rresource_name\030\001 \001(\tB3\342A\001\002\372A,\n" +
+      "*googleads.googleapis.com/LocalServicesL" +
+      "ead\022k\n\rsurvey_answer\030\002 \001(\0162N.google.ads." +
+      "googleads.v26.enums.LocalServicesLeadSur" +
+      "veyAnswerEnum.SurveyAnswerB\004\342A\001\002\022N\n\020surv" +
+      "ey_satisfied\030\003 \001(\01322.google.ads.googlead" +
+      "s.v26.services.SurveySatisfiedH\000\022T\n\023surv" +
+      "ey_dissatisfied\030\004 \001(\01325.google.ads.googl" +
+      "eads.v26.services.SurveyDissatisfiedH\000B\020" +
+      "\n\016survey_details\"\252\001\n\033ProvideLeadFeedback" +
+      "Response\022\212\001\n\030credit_issuance_decision\030\001 " +
+      "\001(\0162b.google.ads.googleads.v26.enums.Loc" +
+      "alServicesLeadCreditIssuanceDecisionEnum" +
+      ".CreditIssuanceDecisionB\004\342A\001\0022\332\004\n\030LocalS" +
+      "ervicesLeadService\022\211\002\n\026AppendLeadConvers" +
+      "ation\022@.google.ads.googleads.v26.service" +
+      "s.AppendLeadConversationRequest\032A.google" +
+      ".ads.googleads.v26.services.AppendLeadCo" +
+      "nversationResponse\"j\332A\031customer_id,conve" +
+      "rsations\202\323\344\223\002H\"C/v26/customers/{customer" +
+      "_id=*}/localServices:appendLeadConversat" +
+      "ion:\001*\022\352\001\n\023ProvideLeadFeedback\022=.google." +
+      "ads.googleads.v26.services.ProvideLeadFe" +
+      "edbackRequest\032>.google.ads.googleads.v26" +
+      ".services.ProvideLeadFeedbackResponse\"T\202" +
+      "\323\344\223\002N\"I/v26/{resource_name=customers/*/l" +
+      "ocalServicesLeads/*}:provideLeadFeedback" +
+      ":\001*\032E\312A\030googleads.googleapis.com\322A\'https" +
+      "://www.googleapis.com/auth/adwordsB\211\002\n%c" +
+      "om.google.ads.googleads.v26.servicesB\035Lo" +
+      "calServicesLeadServiceProtoP\001ZIgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v26/services;services\242\002\003GAA\252\002!Google." +
+      "Ads.GoogleAds.V26.Services\312\002!Google\\Ads\\" +
+      "GoogleAds\\V26\\Services\352\002%Google::Ads::Go" +
+      "ogleAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

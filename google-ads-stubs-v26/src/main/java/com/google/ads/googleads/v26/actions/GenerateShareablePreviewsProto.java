@@ -69,35 +69,35 @@ public final class GenerateShareablePreviewsProto extends com.google.protobuf.Ge
       "ate_shareable_previews.proto\022 google.ads" +
       ".googleads.v26.actions\0321google/ads/googl" +
       "eads/v26/enums/preview_type.proto\032\037googl" +
-      "e/api/field_behavior.proto\"y\n\"GenerateSh" +
-      "areablePreviewsOperation\022S\n\022shareable_pr" +
+      "e/api/field_behavior.proto\"z\n\"GenerateSh" +
+      "areablePreviewsOperation\022T\n\022shareable_pr" +
       "eviews\030\001 \003(\01322.google.ads.googleads.v26." +
-      "actions.ShareablePreviewB\003\340A\002\"\246\001\n\020Sharea" +
-      "blePreview\022V\n\014preview_type\030\001 \001(\0162;.googl" +
-      "e.ads.googleads.v26.enums.PreviewTypeEnu" +
-      "m.PreviewTypeB\003\340A\002\022\025\n\013ad_group_ad\030\002 \001(\tH" +
-      "\000\022\025\n\013asset_group\030\003 \001(\tH\000B\014\n\nidentifier\"m" +
-      "\n\037GenerateShareablePreviewsResult\022J\n\010pre" +
-      "views\030\001 \003(\01328.google.ads.googleads.v26.a" +
-      "ctions.ShareablePreviewResult\"\257\002\n\026Sharea" +
-      "blePreviewResult\022\034\n\024expiration_date_time" +
-      "\030\003 \001(\t\022N\n\021ui_preview_result\030\001 \001(\01321.goog" +
-      "le.ads.googleads.v26.actions.UiPreviewRe" +
-      "sultH\000\022a\n\033youtube_live_preview_result\030\002 " +
-      "\001(\0132:.google.ads.googleads.v26.actions.Y" +
-      "ouTubeLivePreviewResultH\000\022\025\n\013ad_group_ad" +
-      "\030\004 \001(\tH\001\022\025\n\013asset_group\030\005 \001(\tH\001B\010\n\006resul" +
-      "tB\014\n\nidentifier\"0\n\017UiPreviewResult\022\035\n\025sh" +
-      "areable_preview_url\030\001 \001(\t\"W\n\030YouTubeLive" +
-      "PreviewResult\022\033\n\023youtube_preview_url\030\001 \001" +
-      "(\t\022\036\n\026youtube_tv_preview_url\030\002 \001(\tB\204\002\n$c" +
-      "om.google.ads.googleads.v26.actionsB\036Gen" +
-      "erateShareablePreviewsProtoP\001ZGgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v26/actions;actions\242\002\003GAA\252\002 Google.Ad" +
-      "s.GoogleAds.V26.Actions\312\002 Google\\Ads\\Goo" +
-      "gleAds\\V26\\Actions\352\002$Google::Ads::Google" +
-      "Ads::V26::Actionsb\006proto3"
+      "actions.ShareablePreviewB\004\342A\001\002\"\247\001\n\020Share" +
+      "ablePreview\022W\n\014preview_type\030\001 \001(\0162;.goog" +
+      "le.ads.googleads.v26.enums.PreviewTypeEn" +
+      "um.PreviewTypeB\004\342A\001\002\022\025\n\013ad_group_ad\030\002 \001(" +
+      "\tH\000\022\025\n\013asset_group\030\003 \001(\tH\000B\014\n\nidentifier" +
+      "\"m\n\037GenerateShareablePreviewsResult\022J\n\010p" +
+      "reviews\030\001 \003(\01328.google.ads.googleads.v26" +
+      ".actions.ShareablePreviewResult\"\257\002\n\026Shar" +
+      "eablePreviewResult\022\034\n\024expiration_date_ti" +
+      "me\030\003 \001(\t\022N\n\021ui_preview_result\030\001 \001(\01321.go" +
+      "ogle.ads.googleads.v26.actions.UiPreview" +
+      "ResultH\000\022a\n\033youtube_live_preview_result\030" +
+      "\002 \001(\0132:.google.ads.googleads.v26.actions" +
+      ".YouTubeLivePreviewResultH\000\022\025\n\013ad_group_" +
+      "ad\030\004 \001(\tH\001\022\025\n\013asset_group\030\005 \001(\tH\001B\010\n\006res" +
+      "ultB\014\n\nidentifier\"0\n\017UiPreviewResult\022\035\n\025" +
+      "shareable_preview_url\030\001 \001(\t\"W\n\030YouTubeLi" +
+      "vePreviewResult\022\033\n\023youtube_preview_url\030\001" +
+      " \001(\t\022\036\n\026youtube_tv_preview_url\030\002 \001(\tB\204\002\n" +
+      "$com.google.ads.googleads.v26.actionsB\036G" +
+      "enerateShareablePreviewsProtoP\001ZGgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v26/actions;actions\242\002\003GAA\252\002 Google." +
+      "Ads.GoogleAds.V26.Actions\312\002 Google\\Ads\\G" +
+      "oogleAds\\V26\\Actions\352\002$Google::Ads::Goog" +
+      "leAds::V26::Actionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

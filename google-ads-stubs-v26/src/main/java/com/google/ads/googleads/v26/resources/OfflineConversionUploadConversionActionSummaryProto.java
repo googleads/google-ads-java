@@ -50,41 +50,41 @@ public final class OfflineConversionUploadConversionActionSummaryProto extends c
       "o\032Qgoogle/ads/googleads/v26/resources/of" +
       "fline_conversion_upload_client_summary.p" +
       "roto\032\037google/api/field_behavior.proto\032\031g" +
-      "oogle/api/resource.proto\"\224\010\n.OfflineConv" +
-      "ersionUploadConversionActionSummary\022f\n\rr" +
-      "esource_name\030\001 \001(\tBO\340A\003\372AI\nGgoogleads.go" +
+      "oogle/api/resource.proto\"\240\010\n.OfflineConv" +
+      "ersionUploadConversionActionSummary\022g\n\rr" +
+      "esource_name\030\001 \001(\tBP\342A\001\003\372AI\nGgoogleads.g" +
+      "oogleapis.com/OfflineConversionUploadCon" +
+      "versionActionSummary\022k\n\006client\030\002 \001(\0162U.g" +
+      "oogle.ads.googleads.v26.enums.OfflineEve" +
+      "ntUploadClientEnum.OfflineEventUploadCli" +
+      "entB\004\342A\001\003\022\"\n\024conversion_action_id\030\003 \001(\003B" +
+      "\004\342A\001\003\022$\n\026conversion_action_name\030\004 \001(\tB\004\342" +
+      "A\001\003\022}\n\006status\030\005 \001(\0162g.google.ads.googlea" +
+      "ds.v26.enums.OfflineConversionDiagnostic" +
+      "StatusEnum.OfflineConversionDiagnosticSt" +
+      "atusB\004\342A\001\003\022\037\n\021total_event_count\030\006 \001(\003B\004\342" +
+      "A\001\003\022$\n\026successful_event_count\030\007 \001(\003B\004\342A\001" +
+      "\003\022!\n\023pending_event_count\030\010 \001(\003B\004\342A\001\003\022#\n\025" +
+      "last_upload_date_time\030\t \001(\tB\004\342A\001\003\022[\n\017dai" +
+      "ly_summaries\030\n \003(\0132<.google.ads.googlead" +
+      "s.v26.resources.OfflineConversionSummary" +
+      "B\004\342A\001\003\022Y\n\rjob_summaries\030\013 \003(\0132<.google.a" +
+      "ds.googleads.v26.resources.OfflineConver" +
+      "sionSummaryB\004\342A\001\003\022P\n\006alerts\030\014 \003(\0132:.goog" +
+      "le.ads.googleads.v26.resources.OfflineCo" +
+      "nversionAlertB\004\342A\001\003:\265\001\352A\261\001\nGgoogleads.go" +
       "ogleapis.com/OfflineConversionUploadConv" +
-      "ersionActionSummary\022j\n\006client\030\002 \001(\0162U.go" +
-      "ogle.ads.googleads.v26.enums.OfflineEven" +
-      "tUploadClientEnum.OfflineEventUploadClie" +
-      "ntB\003\340A\003\022!\n\024conversion_action_id\030\003 \001(\003B\003\340" +
-      "A\003\022#\n\026conversion_action_name\030\004 \001(\tB\003\340A\003\022" +
-      "|\n\006status\030\005 \001(\0162g.google.ads.googleads.v" +
-      "26.enums.OfflineConversionDiagnosticStat" +
-      "usEnum.OfflineConversionDiagnosticStatus" +
-      "B\003\340A\003\022\036\n\021total_event_count\030\006 \001(\003B\003\340A\003\022#\n" +
-      "\026successful_event_count\030\007 \001(\003B\003\340A\003\022 \n\023pe" +
-      "nding_event_count\030\010 \001(\003B\003\340A\003\022\"\n\025last_upl" +
-      "oad_date_time\030\t \001(\tB\003\340A\003\022Z\n\017daily_summar" +
-      "ies\030\n \003(\0132<.google.ads.googleads.v26.res" +
-      "ources.OfflineConversionSummaryB\003\340A\003\022X\n\r" +
-      "job_summaries\030\013 \003(\0132<.google.ads.googlea" +
-      "ds.v26.resources.OfflineConversionSummar" +
-      "yB\003\340A\003\022O\n\006alerts\030\014 \003(\0132:.google.ads.goog" +
-      "leads.v26.resources.OfflineConversionAle" +
-      "rtB\003\340A\003:\265\001\352A\261\001\nGgoogleads.googleapis.com" +
-      "/OfflineConversionUploadConversionAction" +
-      "Summary\022fcustomers/{customer_id}/offline" +
-      "ConversionUploadConversionActionSummarie" +
-      "s/{conversion_type_id}~{client}B\245\002\n&com." +
-      "google.ads.googleads.v26.resourcesB3Offl" +
-      "ineConversionUploadConversionActionSumma" +
-      "ryProtoP\001ZKgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v26/resources;res" +
-      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26." +
-      "Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\Res" +
-      "ources\352\002&Google::Ads::GoogleAds::V26::Re" +
-      "sourcesb\006proto3"
+      "ersionActionSummary\022fcustomers/{customer" +
+      "_id}/offlineConversionUploadConversionAc" +
+      "tionSummaries/{conversion_type_id}~{clie" +
+      "nt}B\245\002\n&com.google.ads.googleads.v26.res" +
+      "ourcesB3OfflineConversionUploadConversio" +
+      "nActionSummaryProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v26/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V26.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V26\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

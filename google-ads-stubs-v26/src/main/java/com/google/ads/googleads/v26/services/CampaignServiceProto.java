@@ -89,70 +89,70 @@ public final class CampaignServiceProto extends com.google.protobuf.GeneratedFil
       "le/api/client.proto\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\032" +
       " google/protobuf/field_mask.proto\032\027googl" +
-      "e/rpc/status.proto\"\235\002\n\026MutateCampaignsRe" +
-      "quest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022M\n\nopera" +
-      "tions\030\002 \003(\01324.google.ads.googleads.v26.s" +
-      "ervices.CampaignOperationB\003\340A\002\022\027\n\017partia" +
-      "l_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j" +
-      "\n\025response_content_type\030\005 \001(\0162K.google.a" +
-      "ds.googleads.v26.enums.ResponseContentTy" +
-      "peEnum.ResponseContentType\"\213\002\n\021CampaignO" +
-      "peration\022/\n\013update_mask\030\004 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\022>\n\006create\030\001 \001(\0132,.goog" +
-      "le.ads.googleads.v26.resources.CampaignH" +
-      "\000\022>\n\006update\030\002 \001(\0132,.google.ads.googleads" +
-      ".v26.resources.CampaignH\000\0228\n\006remove\030\003 \001(" +
-      "\tB&\372A#\n!googleads.googleapis.com/Campaig" +
-      "nH\000B\013\n\toperation\"\226\001\n\027MutateCampaignsResp" +
-      "onse\0221\n\025partial_failure_error\030\003 \001(\0132\022.go" +
-      "ogle.rpc.Status\022H\n\007results\030\002 \003(\01327.googl" +
-      "e.ads.googleads.v26.services.MutateCampa" +
-      "ignResult\"\225\001\n\024MutateCampaignResult\022=\n\rre" +
-      "source_name\030\001 \001(\tB&\372A#\n!googleads.google" +
-      "apis.com/Campaign\022>\n\010campaign\030\002 \001(\0132,.go" +
+      "e/rpc/status.proto\"\237\002\n\026MutateCampaignsRe" +
+      "quest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022N\n\noper" +
+      "ations\030\002 \003(\01324.google.ads.googleads.v26." +
+      "services.CampaignOperationB\004\342A\001\002\022\027\n\017part" +
+      "ial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010" +
+      "\022j\n\025response_content_type\030\005 \001(\0162K.google" +
+      ".ads.googleads.v26.enums.ResponseContent" +
+      "TypeEnum.ResponseContentType\"\213\002\n\021Campaig" +
+      "nOperation\022/\n\013update_mask\030\004 \001(\0132\032.google" +
+      ".protobuf.FieldMask\022>\n\006create\030\001 \001(\0132,.go" +
       "ogle.ads.googleads.v26.resources.Campaig" +
-      "n\"\211\001\n EnablePMaxBrandGuidelinesRequest\022\030" +
-      "\n\013customer_id\030\001 \001(\tB\003\340A\002\022K\n\noperations\030\002" +
-      " \003(\01322.google.ads.googleads.v26.services" +
-      ".EnableOperationB\003\340A\002\"\267\002\n\017EnableOperatio" +
-      "n\022;\n\010campaign\030\001 \001(\tB)\340A\002\372A#\n!googleads.g" +
-      "oogleapis.com/Campaign\022\'\n\032auto_populate_" +
-      "brand_assets\030\002 \001(\010B\003\340A\002\022Q\n\014brand_assets\030" +
-      "\003 \001(\01326.google.ads.googleads.v26.service" +
-      "s.BrandCampaignAssetsB\003\340A\001\022\035\n\020final_uri_" +
-      "domain\030\004 \001(\tB\003\340A\001\022\027\n\nmain_color\030\005 \001(\tB\003\340" +
-      "A\001\022\031\n\014accent_color\030\006 \001(\tB\003\340A\001\022\030\n\013font_fa" +
-      "mily\030\007 \001(\tB\003\340A\001\"s\n\023BrandCampaignAssets\022 " +
-      "\n\023business_name_asset\030\001 \001(\tB\003\340A\002\022\027\n\nlogo" +
-      "_asset\030\002 \003(\tB\003\340A\002\022!\n\024landscape_logo_asse" +
-      "t\030\003 \003(\tB\003\340A\001\"i\n!EnablePMaxBrandGuideline" +
-      "sResponse\022D\n\007results\030\001 \003(\01323.google.ads." +
-      "googleads.v26.services.EnablementResult\"" +
-      "z\n\020EnablementResult\0228\n\010campaign\030\001 \001(\tB&\372" +
-      "A#\n!googleads.googleapis.com/Campaign\022,\n" +
-      "\020enablement_error\030\002 \001(\0132\022.google.rpc.Sta" +
-      "tus2\311\004\n\017CampaignService\022\335\001\n\017MutateCampai" +
-      "gns\0229.google.ads.googleads.v26.services." +
-      "MutateCampaignsRequest\032:.google.ads.goog" +
-      "leads.v26.services.MutateCampaignsRespon" +
-      "se\"S\332A\026customer_id,operations\202\323\344\223\0024\"//v2" +
-      "6/customers/{customer_id=*}/campaigns:mu" +
-      "tate:\001*\022\216\002\n\031EnablePMaxBrandGuidelines\022C." +
-      "google.ads.googleads.v26.services.Enable" +
-      "PMaxBrandGuidelinesRequest\032D.google.ads." +
-      "googleads.v26.services.EnablePMaxBrandGu" +
-      "idelinesResponse\"f\332A\026customer_id,operati" +
-      "ons\202\323\344\223\002G\"B/v26/customers/{customer_id=*" +
-      "}/campaigns:enablePMaxBrandGuidelines:\001*" +
-      "\032E\312A\030googleads.googleapis.com\322A\'https://" +
-      "www.googleapis.com/auth/adwordsB\200\002\n%com." +
-      "google.ads.googleads.v26.servicesB\024Campa" +
-      "ignServiceProtoP\001ZIgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v26/servi" +
-      "ces;services\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
-      "s.V26.Services\312\002!Google\\Ads\\GoogleAds\\V2" +
-      "6\\Services\352\002%Google::Ads::GoogleAds::V26" +
-      "::Servicesb\006proto3"
+      "nH\000\022>\n\006update\030\002 \001(\0132,.google.ads.googlea" +
+      "ds.v26.resources.CampaignH\000\0228\n\006remove\030\003 " +
+      "\001(\tB&\372A#\n!googleads.googleapis.com/Campa" +
+      "ignH\000B\013\n\toperation\"\226\001\n\027MutateCampaignsRe" +
+      "sponse\0221\n\025partial_failure_error\030\003 \001(\0132\022." +
+      "google.rpc.Status\022H\n\007results\030\002 \003(\01327.goo" +
+      "gle.ads.googleads.v26.services.MutateCam" +
+      "paignResult\"\225\001\n\024MutateCampaignResult\022=\n\r" +
+      "resource_name\030\001 \001(\tB&\372A#\n!googleads.goog" +
+      "leapis.com/Campaign\022>\n\010campaign\030\002 \001(\0132,." +
+      "google.ads.googleads.v26.resources.Campa" +
+      "ign\"\213\001\n EnablePMaxBrandGuidelinesRequest" +
+      "\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022L\n\noperation" +
+      "s\030\002 \003(\01322.google.ads.googleads.v26.servi" +
+      "ces.EnableOperationB\004\342A\001\002\"\276\002\n\017EnableOper" +
+      "ation\022<\n\010campaign\030\001 \001(\tB*\342A\001\002\372A#\n!google" +
+      "ads.googleapis.com/Campaign\022(\n\032auto_popu" +
+      "late_brand_assets\030\002 \001(\010B\004\342A\001\002\022R\n\014brand_a" +
+      "ssets\030\003 \001(\01326.google.ads.googleads.v26.s" +
+      "ervices.BrandCampaignAssetsB\004\342A\001\001\022\036\n\020fin" +
+      "al_uri_domain\030\004 \001(\tB\004\342A\001\001\022\030\n\nmain_color\030" +
+      "\005 \001(\tB\004\342A\001\001\022\032\n\014accent_color\030\006 \001(\tB\004\342A\001\001\022" +
+      "\031\n\013font_family\030\007 \001(\tB\004\342A\001\001\"v\n\023BrandCampa" +
+      "ignAssets\022!\n\023business_name_asset\030\001 \001(\tB\004" +
+      "\342A\001\002\022\030\n\nlogo_asset\030\002 \003(\tB\004\342A\001\002\022\"\n\024landsc" +
+      "ape_logo_asset\030\003 \003(\tB\004\342A\001\001\"i\n!EnablePMax" +
+      "BrandGuidelinesResponse\022D\n\007results\030\001 \003(\013" +
+      "23.google.ads.googleads.v26.services.Ena" +
+      "blementResult\"z\n\020EnablementResult\0228\n\010cam" +
+      "paign\030\001 \001(\tB&\372A#\n!googleads.googleapis.c" +
+      "om/Campaign\022,\n\020enablement_error\030\002 \001(\0132\022." +
+      "google.rpc.Status2\311\004\n\017CampaignService\022\335\001" +
+      "\n\017MutateCampaigns\0229.google.ads.googleads" +
+      ".v26.services.MutateCampaignsRequest\032:.g" +
+      "oogle.ads.googleads.v26.services.MutateC" +
+      "ampaignsResponse\"S\332A\026customer_id,operati" +
+      "ons\202\323\344\223\0024\"//v26/customers/{customer_id=*" +
+      "}/campaigns:mutate:\001*\022\216\002\n\031EnablePMaxBran" +
+      "dGuidelines\022C.google.ads.googleads.v26.s" +
+      "ervices.EnablePMaxBrandGuidelinesRequest" +
+      "\032D.google.ads.googleads.v26.services.Ena" +
+      "blePMaxBrandGuidelinesResponse\"f\332A\026custo" +
+      "mer_id,operations\202\323\344\223\002G\"B/v26/customers/" +
+      "{customer_id=*}/campaigns:enablePMaxBran" +
+      "dGuidelines:\001*\032E\312A\030googleads.googleapis." +
+      "com\322A\'https://www.googleapis.com/auth/ad" +
+      "wordsB\200\002\n%com.google.ads.googleads.v26.s" +
+      "ervicesB\024CampaignServiceProtoP\001ZIgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v26/services;services\242\002\003GAA\252\002!Googl" +
+      "e.Ads.GoogleAds.V26.Services\312\002!Google\\Ad" +
+      "s\\GoogleAds\\V26\\Services\352\002%Google::Ads::" +
+      "GoogleAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

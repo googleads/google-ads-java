@@ -48,32 +48,33 @@ public final class ChannelAggregateAssetViewProto extends com.google.protobuf.Ge
       "ms/asset_field_type.proto\0321google/ads/go" +
       "ogleads/v26/enums/asset_source.proto\032\037go" +
       "ogle/api/field_behavior.proto\032\031google/ap" +
-      "i/resource.proto\"\337\005\n\031ChannelAggregateAss" +
-      "etView\022Q\n\rresource_name\030\001 \001(\tB:\340A\003\372A4\n2g" +
-      "oogleads.googleapis.com/ChannelAggregate" +
-      "AssetView\022}\n\030advertising_channel_type\030\002 " +
-      "\001(\0162Q.google.ads.googleads.v26.enums.Adv" +
-      "ertisingChannelTypeEnum.AdvertisingChann" +
-      "elTypeB\003\340A\003H\000\210\001\001\022:\n\005asset\030\003 \001(\tB&\340A\003\372A \n" +
-      "\036googleads.googleapis.com/AssetH\001\210\001\001\022[\n\014" +
-      "asset_source\030\004 \001(\0162;.google.ads.googlead" +
-      "s.v26.enums.AssetSourceEnum.AssetSourceB" +
-      "\003\340A\003H\002\210\001\001\022_\n\nfield_type\030\005 \001(\0162A.google.a" +
-      "ds.googleads.v26.enums.AssetFieldTypeEnu" +
-      "m.AssetFieldTypeB\003\340A\003H\003\210\001\001:\256\001\352A\252\001\n2googl" +
-      "eads.googleapis.com/ChannelAggregateAsse" +
-      "tView\022tcustomers/{customer_id}/channelAg" +
-      "gregateAssetViews/{advertising_channel_t" +
-      "ype}~{asset_id}~{asset_source}~{field_ty" +
-      "pe}B\033\n\031_advertising_channel_typeB\010\n\006_ass" +
-      "etB\017\n\r_asset_sourceB\r\n\013_field_typeB\220\002\n&c" +
-      "om.google.ads.googleads.v26.resourcesB\036C" +
-      "hannelAggregateAssetViewProtoP\001ZKgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v26/resources;resources\242\002\003GAA\252\002\"Goo" +
-      "gle.Ads.GoogleAds.V26.Resources\312\002\"Google" +
-      "\\Ads\\GoogleAds\\V26\\Resources\352\002&Google::A" +
-      "ds::GoogleAds::V26::Resourcesb\006proto3"
+      "i/resource.proto\"\344\005\n\031ChannelAggregateAss" +
+      "etView\022R\n\rresource_name\030\001 \001(\tB;\342A\001\003\372A4\n2" +
+      "googleads.googleapis.com/ChannelAggregat" +
+      "eAssetView\022~\n\030advertising_channel_type\030\002" +
+      " \001(\0162Q.google.ads.googleads.v26.enums.Ad" +
+      "vertisingChannelTypeEnum.AdvertisingChan" +
+      "nelTypeB\004\342A\001\003H\000\210\001\001\022;\n\005asset\030\003 \001(\tB\'\342A\001\003\372" +
+      "A \n\036googleads.googleapis.com/AssetH\001\210\001\001\022" +
+      "\\\n\014asset_source\030\004 \001(\0162;.google.ads.googl" +
+      "eads.v26.enums.AssetSourceEnum.AssetSour" +
+      "ceB\004\342A\001\003H\002\210\001\001\022`\n\nfield_type\030\005 \001(\0162A.goog" +
+      "le.ads.googleads.v26.enums.AssetFieldTyp" +
+      "eEnum.AssetFieldTypeB\004\342A\001\003H\003\210\001\001:\256\001\352A\252\001\n2" +
+      "googleads.googleapis.com/ChannelAggregat" +
+      "eAssetView\022tcustomers/{customer_id}/chan" +
+      "nelAggregateAssetViews/{advertising_chan" +
+      "nel_type}~{asset_id}~{asset_source}~{fie" +
+      "ld_type}B\033\n\031_advertising_channel_typeB\010\n" +
+      "\006_assetB\017\n\r_asset_sourceB\r\n\013_field_typeB" +
+      "\220\002\n&com.google.ads.googleads.v26.resourc" +
+      "esB\036ChannelAggregateAssetViewProtoP\001ZKgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v26/resources;resources\242\002\003GAA\252" +
+      "\002\"Google.Ads.GoogleAds.V26.Resources\312\002\"G" +
+      "oogle\\Ads\\GoogleAds\\V26\\Resources\352\002&Goog" +
+      "le::Ads::GoogleAds::V26::Resourcesb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

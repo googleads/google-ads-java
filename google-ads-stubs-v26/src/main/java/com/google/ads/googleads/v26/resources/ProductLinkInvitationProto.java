@@ -67,47 +67,48 @@ public final class ProductLinkInvitationProto extends com.google.protobuf.Genera
       "\032Cgoogle/ads/googleads/v26/enums/product" +
       "_link_invitation_status.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\321\007\n\025ProductLinkInvitation\022M\n\rr" +
-      "esource_name\030\001 \001(\tB6\340A\005\372A0\n.googleads.go" +
-      "ogleapis.com/ProductLinkInvitation\022\'\n\032pr" +
-      "oduct_link_invitation_id\030\002 \001(\003B\003\340A\003\022p\n\006s" +
-      "tatus\030\003 \001(\0162[.google.ads.googleads.v26.e" +
-      "nums.ProductLinkInvitationStatusEnum.Pro" +
-      "ductLinkInvitationStatusB\003\340A\003\022Z\n\004type\030\006 " +
-      "\001(\0162G.google.ads.googleads.v26.enums.Lin" +
-      "kedProductTypeEnum.LinkedProductTypeB\003\340A" +
-      "\003\022d\n\014hotel_center\030\004 \001(\0132G.google.ads.goo" +
-      "gleads.v26.resources.HotelCenterLinkInvi" +
-      "tationIdentifierB\003\340A\003H\000\022j\n\017merchant_cent" +
-      "er\030\005 \001(\0132J.google.ads.googleads.v26.reso" +
-      "urces.MerchantCenterLinkInvitationIdenti" +
-      "fierB\003\340A\003H\000\022r\n\023advertising_partner\030\007 \001(\013" +
-      "2N.google.ads.googleads.v26.resources.Ad" +
-      "vertisingPartnerLinkInvitationIdentifier" +
-      "B\003\340A\003H\000\022}\n\036advertising_partner_propertie" +
-      "s\030\010 \001(\0132N.google.ads.googleads.v26.resou" +
-      "rces.AdvertisingPartnerLinkInvitationPro" +
-      "pertiesB\003\340A\003H\001:|\352Ay\n.googleads.googleapi" +
-      "s.com/ProductLinkInvitation\022Gcustomers/{" +
-      "customer_id}/productLinkInvitations/{cus" +
-      "tomer_invitation_id}B\021\n\017invited_accountB" +
-      "\034\n\032invited_account_properties\"C\n#HotelCe" +
-      "nterLinkInvitationIdentifier\022\034\n\017hotel_ce" +
-      "nter_id\030\001 \001(\003B\003\340A\003\"I\n&MerchantCenterLink" +
-      "InvitationIdentifier\022\037\n\022merchant_center_" +
-      "id\030\001 \001(\003B\003\340A\003\"{\n*AdvertisingPartnerLinkI" +
-      "nvitationIdentifier\022@\n\010customer\030\001 \001(\tB)\340" +
-      "A\005\372A#\n!googleads.googleapis.com/Customer" +
-      "H\000\210\001\001B\013\n\t_customer\"a\n*AdvertisingPartner" +
-      "LinkInvitationProperties\022 \n\016allowed_doma" +
-      "in\030\001 \001(\tB\003\340A\005H\000\210\001\001B\021\n\017_allowed_domainB\214\002" +
-      "\n&com.google.ads.googleads.v26.resources" +
-      "B\032ProductLinkInvitationProtoP\001ZKgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v26/resources;resources\242\002\003GAA\252\002\"Goog" +
-      "le.Ads.GoogleAds.V26.Resources\312\002\"Google\\" +
-      "Ads\\GoogleAds\\V26\\Resources\352\002&Google::Ad" +
-      "s::GoogleAds::V26::Resourcesb\006proto3"
+      "rce.proto\"\331\007\n\025ProductLinkInvitation\022N\n\rr" +
+      "esource_name\030\001 \001(\tB7\342A\001\005\372A0\n.googleads.g" +
+      "oogleapis.com/ProductLinkInvitation\022(\n\032p" +
+      "roduct_link_invitation_id\030\002 \001(\003B\004\342A\001\003\022q\n" +
+      "\006status\030\003 \001(\0162[.google.ads.googleads.v26" +
+      ".enums.ProductLinkInvitationStatusEnum.P" +
+      "roductLinkInvitationStatusB\004\342A\001\003\022[\n\004type" +
+      "\030\006 \001(\0162G.google.ads.googleads.v26.enums." +
+      "LinkedProductTypeEnum.LinkedProductTypeB" +
+      "\004\342A\001\003\022e\n\014hotel_center\030\004 \001(\0132G.google.ads" +
+      ".googleads.v26.resources.HotelCenterLink" +
+      "InvitationIdentifierB\004\342A\001\003H\000\022k\n\017merchant" +
+      "_center\030\005 \001(\0132J.google.ads.googleads.v26" +
+      ".resources.MerchantCenterLinkInvitationI" +
+      "dentifierB\004\342A\001\003H\000\022s\n\023advertising_partner" +
+      "\030\007 \001(\0132N.google.ads.googleads.v26.resour" +
+      "ces.AdvertisingPartnerLinkInvitationIden" +
+      "tifierB\004\342A\001\003H\000\022~\n\036advertising_partner_pr" +
+      "operties\030\010 \001(\0132N.google.ads.googleads.v2" +
+      "6.resources.AdvertisingPartnerLinkInvita" +
+      "tionPropertiesB\004\342A\001\003H\001:|\352Ay\n.googleads.g" +
+      "oogleapis.com/ProductLinkInvitation\022Gcus" +
+      "tomers/{customer_id}/productLinkInvitati" +
+      "ons/{customer_invitation_id}B\021\n\017invited_" +
+      "accountB\034\n\032invited_account_properties\"D\n" +
+      "#HotelCenterLinkInvitationIdentifier\022\035\n\017" +
+      "hotel_center_id\030\001 \001(\003B\004\342A\001\003\"J\n&MerchantC" +
+      "enterLinkInvitationIdentifier\022 \n\022merchan" +
+      "t_center_id\030\001 \001(\003B\004\342A\001\003\"|\n*AdvertisingPa" +
+      "rtnerLinkInvitationIdentifier\022A\n\010custome" +
+      "r\030\001 \001(\tB*\342A\001\005\372A#\n!googleads.googleapis.c" +
+      "om/CustomerH\000\210\001\001B\013\n\t_customer\"b\n*Adverti" +
+      "singPartnerLinkInvitationProperties\022!\n\016a" +
+      "llowed_domain\030\001 \001(\tB\004\342A\001\005H\000\210\001\001B\021\n\017_allow" +
+      "ed_domainB\214\002\n&com.google.ads.googleads.v" +
+      "26.resourcesB\032ProductLinkInvitationProto" +
+      "P\001ZKgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v26/resources;resources\242" +
+      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resourc" +
+      "es\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352" +
+      "\002&Google::Ads::GoogleAds::V26::Resources" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

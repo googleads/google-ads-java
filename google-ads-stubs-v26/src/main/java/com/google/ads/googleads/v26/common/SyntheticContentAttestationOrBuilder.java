@@ -12,7 +12,8 @@ public interface SyntheticContentAttestationOrBuilder extends
 
   /**
    * <pre>
-   * Indicates whether the content is considered synthetic by this source.
+   * Indicates the attestation status for whether the content should be labeled
+   * as created or edited with AI by this source.
    * </pre>
    *
    * <code>.google.ads.googleads.v26.enums.SyntheticContentAttestationStatusEnum.SyntheticContentAttestationStatus status = 1;</code>
@@ -21,7 +22,8 @@ public interface SyntheticContentAttestationOrBuilder extends
   int getStatusValue();
   /**
    * <pre>
-   * Indicates whether the content is considered synthetic by this source.
+   * Indicates the attestation status for whether the content should be labeled
+   * as created or edited with AI by this source.
    * </pre>
    *
    * <code>.google.ads.googleads.v26.enums.SyntheticContentAttestationStatusEnum.SyntheticContentAttestationStatus status = 1;</code>

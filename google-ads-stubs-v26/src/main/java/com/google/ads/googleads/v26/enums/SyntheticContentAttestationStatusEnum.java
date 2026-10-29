@@ -74,7 +74,8 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The content is attested as not synthetic.
+     * The content is attested as not needing to be labeled as created or edited
+     * with AI.
      * </pre>
      *
      * <code>NOT_SYNTHETIC = 2;</code>
@@ -82,7 +83,8 @@ private static final long serialVersionUID = 0L;
     NOT_SYNTHETIC(2),
     /**
      * <pre>
-     * The content is attested as synthetic.
+     * The content is attested as needing to be labeled as created or edited
+     * with AI.
      * </pre>
      *
      * <code>IS_SYNTHETIC = 3;</code>
@@ -118,7 +120,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * The content is attested as not synthetic.
+     * The content is attested as not needing to be labeled as created or edited
+     * with AI.
      * </pre>
      *
      * <code>NOT_SYNTHETIC = 2;</code>
@@ -126,7 +129,8 @@ private static final long serialVersionUID = 0L;
     public static final int NOT_SYNTHETIC_VALUE = 2;
     /**
      * <pre>
-     * The content is attested as synthetic.
+     * The content is attested as needing to be labeled as created or edited
+     * with AI.
      * </pre>
      *
      * <code>IS_SYNTHETIC = 3;</code>

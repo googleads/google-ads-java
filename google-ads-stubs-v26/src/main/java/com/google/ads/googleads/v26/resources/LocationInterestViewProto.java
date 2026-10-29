@@ -44,21 +44,21 @@ public final class LocationInterestViewProto extends com.google.protobuf.Generat
       "ation_interest_view.proto\022\"google.ads.go" +
       "ogleads.v26.resources\032\037google/api/field_" +
       "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\241\002\n\024LocationInterestView\022L\n\rresource_n" +
-      "ame\030\001 \001(\tB5\340A\003\372A/\n-googleads.googleapis." +
-      "com/LocationInterestView:\272\001\352A\266\001\n-googlea" +
-      "ds.googleapis.com/LocationInterestView\022X" +
-      "customers/{customer_id}/locationInterest" +
-      "Views/{campaign_id}~{ad_group_id}~{crite" +
-      "rion_id}*\025locationInterestViews2\024locatio" +
-      "nInterestViewB\213\002\n&com.google.ads.googlea" +
-      "ds.v26.resourcesB\031LocationInterestViewPr" +
-      "otoP\001ZKgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v26/resources;resourc" +
-      "es\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Reso" +
-      "urces\312\002\"Google\\Ads\\GoogleAds\\V26\\Resourc" +
-      "es\352\002&Google::Ads::GoogleAds::V26::Resour" +
-      "cesb\006proto3"
+      "o\"\242\002\n\024LocationInterestView\022M\n\rresource_n" +
+      "ame\030\001 \001(\tB6\342A\001\003\372A/\n-googleads.googleapis" +
+      ".com/LocationInterestView:\272\001\352A\266\001\n-google" +
+      "ads.googleapis.com/LocationInterestView\022" +
+      "Xcustomers/{customer_id}/locationInteres" +
+      "tViews/{campaign_id}~{ad_group_id}~{crit" +
+      "erion_id}*\025locationInterestViews2\024locati" +
+      "onInterestViewB\213\002\n&com.google.ads.google" +
+      "ads.v26.resourcesB\031LocationInterestViewP" +
+      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v26/resources;resour" +
+      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Res" +
+      "ources\312\002\"Google\\Ads\\GoogleAds\\V26\\Resour" +
+      "ces\352\002&Google::Ads::GoogleAds::V26::Resou" +
+      "rcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

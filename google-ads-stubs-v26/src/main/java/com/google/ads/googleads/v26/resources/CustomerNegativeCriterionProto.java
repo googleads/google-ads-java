@@ -46,42 +46,42 @@ public final class CustomerNegativeCriterionProto extends com.google.protobuf.Ge
       "oogleads/v26/common/criteria.proto\0323goog" +
       "le/ads/googleads/v26/enums/criterion_typ" +
       "e.proto\032\037google/api/field_behavior.proto" +
-      "\032\031google/api/resource.proto\"\330\010\n\031Customer" +
-      "NegativeCriterion\022Q\n\rresource_name\030\001 \001(\t" +
-      "B:\340A\005\372A4\n2googleads.googleapis.com/Custo" +
-      "merNegativeCriterion\022\024\n\002id\030\n \001(\003B\003\340A\003H\001\210" +
-      "\001\001\022R\n\004type\030\003 \001(\0162?.google.ads.googleads." +
-      "v26.enums.CriterionTypeEnum.CriterionTyp" +
-      "eB\003\340A\003\022O\n\rcontent_label\030\004 \001(\01321.google.a" +
-      "ds.googleads.v26.common.ContentLabelInfo" +
-      "B\003\340A\005H\000\022Y\n\022mobile_application\030\005 \001(\01326.go" +
-      "ogle.ads.googleads.v26.common.MobileAppl" +
-      "icationInfoB\003\340A\005H\000\022Z\n\023mobile_app_categor" +
-      "y\030\006 \001(\01326.google.ads.googleads.v26.commo" +
-      "n.MobileAppCategoryInfoB\003\340A\005H\000\022H\n\tplacem" +
-      "ent\030\007 \001(\0132..google.ads.googleads.v26.com" +
-      "mon.PlacementInfoB\003\340A\005H\000\022O\n\ryoutube_vide" +
-      "o\030\010 \001(\01321.google.ads.googleads.v26.commo" +
-      "n.YouTubeVideoInfoB\003\340A\005H\000\022S\n\017youtube_cha" +
-      "nnel\030\t \001(\01323.google.ads.googleads.v26.co" +
-      "mmon.YouTubeChannelInfoB\003\340A\005H\000\022^\n\025negati" +
-      "ve_keyword_list\030\013 \001(\01328.google.ads.googl" +
-      "eads.v26.common.NegativeKeywordListInfoB" +
-      "\003\340A\005H\000\022E\n\010ip_block\030\014 \001(\0132,.google.ads.go" +
-      "ogleads.v26.common.IpBlockInfoB\003\340A\005H\000\022Q\n" +
-      "\016placement_list\030\r \001(\01322.google.ads.googl" +
-      "eads.v26.common.PlacementListInfoB\003\340A\005H\000" +
-      ":x\352Au\n2googleads.googleapis.com/Customer" +
-      "NegativeCriterion\022?customers/{customer_i" +
-      "d}/customerNegativeCriteria/{criterion_i" +
-      "d}B\013\n\tcriterionB\005\n\003_idB\220\002\n&com.google.ad" +
-      "s.googleads.v26.resourcesB\036CustomerNegat" +
-      "iveCriterionProtoP\001ZKgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v26/res" +
-      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
-      "leAds.V26.Resources\312\002\"Google\\Ads\\GoogleA" +
-      "ds\\V26\\Resources\352\002&Google::Ads::GoogleAd" +
-      "s::V26::Resourcesb\006proto3"
+      "\032\031google/api/resource.proto\"\344\010\n\031Customer" +
+      "NegativeCriterion\022R\n\rresource_name\030\001 \001(\t" +
+      "B;\342A\001\005\372A4\n2googleads.googleapis.com/Cust" +
+      "omerNegativeCriterion\022\025\n\002id\030\n \001(\003B\004\342A\001\003H" +
+      "\001\210\001\001\022S\n\004type\030\003 \001(\0162?.google.ads.googlead" +
+      "s.v26.enums.CriterionTypeEnum.CriterionT" +
+      "ypeB\004\342A\001\003\022P\n\rcontent_label\030\004 \001(\01321.googl" +
+      "e.ads.googleads.v26.common.ContentLabelI" +
+      "nfoB\004\342A\001\005H\000\022Z\n\022mobile_application\030\005 \001(\0132" +
+      "6.google.ads.googleads.v26.common.Mobile" +
+      "ApplicationInfoB\004\342A\001\005H\000\022[\n\023mobile_app_ca" +
+      "tegory\030\006 \001(\01326.google.ads.googleads.v26." +
+      "common.MobileAppCategoryInfoB\004\342A\001\005H\000\022I\n\t" +
+      "placement\030\007 \001(\0132..google.ads.googleads.v" +
+      "26.common.PlacementInfoB\004\342A\001\005H\000\022P\n\ryoutu" +
+      "be_video\030\010 \001(\01321.google.ads.googleads.v2" +
+      "6.common.YouTubeVideoInfoB\004\342A\001\005H\000\022T\n\017you" +
+      "tube_channel\030\t \001(\01323.google.ads.googlead" +
+      "s.v26.common.YouTubeChannelInfoB\004\342A\001\005H\000\022" +
+      "_\n\025negative_keyword_list\030\013 \001(\01328.google." +
+      "ads.googleads.v26.common.NegativeKeyword" +
+      "ListInfoB\004\342A\001\005H\000\022F\n\010ip_block\030\014 \001(\0132,.goo" +
+      "gle.ads.googleads.v26.common.IpBlockInfo" +
+      "B\004\342A\001\005H\000\022R\n\016placement_list\030\r \001(\01322.googl" +
+      "e.ads.googleads.v26.common.PlacementList" +
+      "InfoB\004\342A\001\005H\000:x\352Au\n2googleads.googleapis." +
+      "com/CustomerNegativeCriterion\022?customers" +
+      "/{customer_id}/customerNegativeCriteria/" +
+      "{criterion_id}B\013\n\tcriterionB\005\n\003_idB\220\002\n&c" +
+      "om.google.ads.googleads.v26.resourcesB\036C" +
+      "ustomerNegativeCriterionProtoP\001ZKgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v26/resources;resources\242\002\003GAA\252\002\"Goo" +
+      "gle.Ads.GoogleAds.V26.Resources\312\002\"Google" +
+      "\\Ads\\GoogleAds\\V26\\Resources\352\002&Google::A" +
+      "ds::GoogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

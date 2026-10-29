@@ -734,6 +734,91 @@ private static final long serialVersionUID = 0L;
     return alignedBiddingStrategyId_;
   }
 
+  public static final int BUDGET_NETWORK_SETTINGS_FIELD_NUMBER = 32;
+  private com.google.ads.googleads.v26.common.BudgetNetworkSettings budgetNetworkSettings_;
+  /**
+   * <pre>
+   * Waterfall channel priorities and budget caps for this budget, at most one
+   * entry per advertising channel type. When unset, the customer-level
+   * defaults in `CustomerBudgetNetworkSetting` apply.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+   * @return Whether the budgetNetworkSettings field is set.
+   */
+  @java.lang.Override
+  public boolean hasBudgetNetworkSettings() {
+    return ((bitField0_ & 0x00001000) != 0);
+  }
+  /**
+   * <pre>
+   * Waterfall channel priorities and budget caps for this budget, at most one
+   * entry per advertising channel type. When unset, the customer-level
+   * defaults in `CustomerBudgetNetworkSetting` apply.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+   * @return The budgetNetworkSettings.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.common.BudgetNetworkSettings getBudgetNetworkSettings() {
+    return budgetNetworkSettings_ == null ? com.google.ads.googleads.v26.common.BudgetNetworkSettings.getDefaultInstance() : budgetNetworkSettings_;
+  }
+  /**
+   * <pre>
+   * Waterfall channel priorities and budget caps for this budget, at most one
+   * entry per advertising channel type. When unset, the customer-level
+   * defaults in `CustomerBudgetNetworkSetting` apply.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.common.BudgetNetworkSettingsOrBuilder getBudgetNetworkSettingsOrBuilder() {
+    return budgetNetworkSettings_ == null ? com.google.ads.googleads.v26.common.BudgetNetworkSettings.getDefaultInstance() : budgetNetworkSettings_;
+  }
+
+  public static final int BUDGET_NETWORK_ELIGIBILITY_FIELD_NUMBER = 33;
+  private com.google.ads.googleads.v26.common.BudgetNetworkEligibility budgetNetworkEligibility_;
+  /**
+   * <pre>
+   * Output only. Whether this budget is eligible for waterfall channel
+   * prioritization and budget caps, and if not, why.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the budgetNetworkEligibility field is set.
+   */
+  @java.lang.Override
+  public boolean hasBudgetNetworkEligibility() {
+    return ((bitField0_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * Output only. Whether this budget is eligible for waterfall channel
+   * prioritization and budget caps, and if not, why.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The budgetNetworkEligibility.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.common.BudgetNetworkEligibility getBudgetNetworkEligibility() {
+    return budgetNetworkEligibility_ == null ? com.google.ads.googleads.v26.common.BudgetNetworkEligibility.getDefaultInstance() : budgetNetworkEligibility_;
+  }
+  /**
+   * <pre>
+   * Output only. Whether this budget is eligible for waterfall channel
+   * prioritization and budget caps, and if not, why.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.common.BudgetNetworkEligibilityOrBuilder getBudgetNetworkEligibilityOrBuilder() {
+    return budgetNetworkEligibility_ == null ? com.google.ads.googleads.v26.common.BudgetNetworkEligibility.getDefaultInstance() : budgetNetworkEligibility_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -801,6 +886,12 @@ private static final long serialVersionUID = 0L;
     }
     if (alignedBiddingStrategyId_ != 0L) {
       output.writeInt64(31, alignedBiddingStrategyId_);
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      output.writeMessage(32, getBudgetNetworkSettings());
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      output.writeMessage(33, getBudgetNetworkEligibility());
     }
     getUnknownFields().writeTo(output);
   }
@@ -880,6 +971,14 @@ private static final long serialVersionUID = 0L;
     if (alignedBiddingStrategyId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(31, alignedBiddingStrategyId_);
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(32, getBudgetNetworkSettings());
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(33, getBudgetNetworkEligibility());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -964,6 +1063,16 @@ private static final long serialVersionUID = 0L;
     if (type_ != other.type_) return false;
     if (getAlignedBiddingStrategyId()
         != other.getAlignedBiddingStrategyId()) return false;
+    if (hasBudgetNetworkSettings() != other.hasBudgetNetworkSettings()) return false;
+    if (hasBudgetNetworkSettings()) {
+      if (!getBudgetNetworkSettings()
+          .equals(other.getBudgetNetworkSettings())) return false;
+    }
+    if (hasBudgetNetworkEligibility() != other.hasBudgetNetworkEligibility()) return false;
+    if (hasBudgetNetworkEligibility()) {
+      if (!getBudgetNetworkEligibility()
+          .equals(other.getBudgetNetworkEligibility())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1047,6 +1156,14 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ALIGNED_BIDDING_STRATEGY_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAlignedBiddingStrategyId());
+    if (hasBudgetNetworkSettings()) {
+      hash = (37 * hash) + BUDGET_NETWORK_SETTINGS_FIELD_NUMBER;
+      hash = (53 * hash) + getBudgetNetworkSettings().hashCode();
+    }
+    if (hasBudgetNetworkEligibility()) {
+      hash = (37 * hash) + BUDGET_NETWORK_ELIGIBILITY_FIELD_NUMBER;
+      hash = (53 * hash) + getBudgetNetworkEligibility().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1170,13 +1287,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v26.resources.CampaignBudget.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetBudgetNetworkSettingsFieldBuilder();
+        internalGetBudgetNetworkEligibilityFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1200,6 +1324,16 @@ private static final long serialVersionUID = 0L;
       recommendedBudgetEstimatedChangeWeeklyViews_ = 0L;
       type_ = 0;
       alignedBiddingStrategyId_ = 0L;
+      budgetNetworkSettings_ = null;
+      if (budgetNetworkSettingsBuilder_ != null) {
+        budgetNetworkSettingsBuilder_.dispose();
+        budgetNetworkSettingsBuilder_ = null;
+      }
+      budgetNetworkEligibility_ = null;
+      if (budgetNetworkEligibilityBuilder_ != null) {
+        budgetNetworkEligibilityBuilder_.dispose();
+        budgetNetworkEligibilityBuilder_ = null;
+      }
       return this;
     }
 
@@ -1300,6 +1434,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00020000) != 0)) {
         result.alignedBiddingStrategyId_ = alignedBiddingStrategyId_;
       }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.budgetNetworkSettings_ = budgetNetworkSettingsBuilder_ == null
+            ? budgetNetworkSettings_
+            : budgetNetworkSettingsBuilder_.build();
+        to_bitField0_ |= 0x00001000;
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.budgetNetworkEligibility_ = budgetNetworkEligibilityBuilder_ == null
+            ? budgetNetworkEligibility_
+            : budgetNetworkEligibilityBuilder_.build();
+        to_bitField0_ |= 0x00002000;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -1372,6 +1518,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getAlignedBiddingStrategyId() != 0L) {
         setAlignedBiddingStrategyId(other.getAlignedBiddingStrategyId());
+      }
+      if (other.hasBudgetNetworkSettings()) {
+        mergeBudgetNetworkSettings(other.getBudgetNetworkSettings());
+      }
+      if (other.hasBudgetNetworkEligibility()) {
+        mergeBudgetNetworkEligibility(other.getBudgetNetworkEligibility());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1489,6 +1641,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00020000;
               break;
             } // case 248
+            case 258: {
+              input.readMessage(
+                  internalGetBudgetNetworkSettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 258
+            case 266: {
+              input.readMessage(
+                  internalGetBudgetNetworkEligibilityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 266
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2970,6 +3136,347 @@ private static final long serialVersionUID = 0L;
       alignedBiddingStrategyId_ = 0L;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v26.common.BudgetNetworkSettings budgetNetworkSettings_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.common.BudgetNetworkSettings, com.google.ads.googleads.v26.common.BudgetNetworkSettings.Builder, com.google.ads.googleads.v26.common.BudgetNetworkSettingsOrBuilder> budgetNetworkSettingsBuilder_;
+    /**
+     * <pre>
+     * Waterfall channel priorities and budget caps for this budget, at most one
+     * entry per advertising channel type. When unset, the customer-level
+     * defaults in `CustomerBudgetNetworkSetting` apply.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+     * @return Whether the budgetNetworkSettings field is set.
+     */
+    public boolean hasBudgetNetworkSettings() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * Waterfall channel priorities and budget caps for this budget, at most one
+     * entry per advertising channel type. When unset, the customer-level
+     * defaults in `CustomerBudgetNetworkSetting` apply.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+     * @return The budgetNetworkSettings.
+     */
+    public com.google.ads.googleads.v26.common.BudgetNetworkSettings getBudgetNetworkSettings() {
+      if (budgetNetworkSettingsBuilder_ == null) {
+        return budgetNetworkSettings_ == null ? com.google.ads.googleads.v26.common.BudgetNetworkSettings.getDefaultInstance() : budgetNetworkSettings_;
+      } else {
+        return budgetNetworkSettingsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Waterfall channel priorities and budget caps for this budget, at most one
+     * entry per advertising channel type. When unset, the customer-level
+     * defaults in `CustomerBudgetNetworkSetting` apply.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+     */
+    public Builder setBudgetNetworkSettings(com.google.ads.googleads.v26.common.BudgetNetworkSettings value) {
+      if (budgetNetworkSettingsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        budgetNetworkSettings_ = value;
+      } else {
+        budgetNetworkSettingsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Waterfall channel priorities and budget caps for this budget, at most one
+     * entry per advertising channel type. When unset, the customer-level
+     * defaults in `CustomerBudgetNetworkSetting` apply.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+     */
+    public Builder setBudgetNetworkSettings(
+        com.google.ads.googleads.v26.common.BudgetNetworkSettings.Builder builderForValue) {
+      if (budgetNetworkSettingsBuilder_ == null) {
+        budgetNetworkSettings_ = builderForValue.build();
+      } else {
+        budgetNetworkSettingsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Waterfall channel priorities and budget caps for this budget, at most one
+     * entry per advertising channel type. When unset, the customer-level
+     * defaults in `CustomerBudgetNetworkSetting` apply.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+     */
+    public Builder mergeBudgetNetworkSettings(com.google.ads.googleads.v26.common.BudgetNetworkSettings value) {
+      if (budgetNetworkSettingsBuilder_ == null) {
+        if (((bitField0_ & 0x00040000) != 0) &&
+          budgetNetworkSettings_ != null &&
+          budgetNetworkSettings_ != com.google.ads.googleads.v26.common.BudgetNetworkSettings.getDefaultInstance()) {
+          getBudgetNetworkSettingsBuilder().mergeFrom(value);
+        } else {
+          budgetNetworkSettings_ = value;
+        }
+      } else {
+        budgetNetworkSettingsBuilder_.mergeFrom(value);
+      }
+      if (budgetNetworkSettings_ != null) {
+        bitField0_ |= 0x00040000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Waterfall channel priorities and budget caps for this budget, at most one
+     * entry per advertising channel type. When unset, the customer-level
+     * defaults in `CustomerBudgetNetworkSetting` apply.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+     */
+    public Builder clearBudgetNetworkSettings() {
+      bitField0_ = (bitField0_ & ~0x00040000);
+      budgetNetworkSettings_ = null;
+      if (budgetNetworkSettingsBuilder_ != null) {
+        budgetNetworkSettingsBuilder_.dispose();
+        budgetNetworkSettingsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Waterfall channel priorities and budget caps for this budget, at most one
+     * entry per advertising channel type. When unset, the customer-level
+     * defaults in `CustomerBudgetNetworkSetting` apply.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+     */
+    public com.google.ads.googleads.v26.common.BudgetNetworkSettings.Builder getBudgetNetworkSettingsBuilder() {
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return internalGetBudgetNetworkSettingsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Waterfall channel priorities and budget caps for this budget, at most one
+     * entry per advertising channel type. When unset, the customer-level
+     * defaults in `CustomerBudgetNetworkSetting` apply.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+     */
+    public com.google.ads.googleads.v26.common.BudgetNetworkSettingsOrBuilder getBudgetNetworkSettingsOrBuilder() {
+      if (budgetNetworkSettingsBuilder_ != null) {
+        return budgetNetworkSettingsBuilder_.getMessageOrBuilder();
+      } else {
+        return budgetNetworkSettings_ == null ?
+            com.google.ads.googleads.v26.common.BudgetNetworkSettings.getDefaultInstance() : budgetNetworkSettings_;
+      }
+    }
+    /**
+     * <pre>
+     * Waterfall channel priorities and budget caps for this budget, at most one
+     * entry per advertising channel type. When unset, the customer-level
+     * defaults in `CustomerBudgetNetworkSetting` apply.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.common.BudgetNetworkSettings, com.google.ads.googleads.v26.common.BudgetNetworkSettings.Builder, com.google.ads.googleads.v26.common.BudgetNetworkSettingsOrBuilder> 
+        internalGetBudgetNetworkSettingsFieldBuilder() {
+      if (budgetNetworkSettingsBuilder_ == null) {
+        budgetNetworkSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v26.common.BudgetNetworkSettings, com.google.ads.googleads.v26.common.BudgetNetworkSettings.Builder, com.google.ads.googleads.v26.common.BudgetNetworkSettingsOrBuilder>(
+                getBudgetNetworkSettings(),
+                getParentForChildren(),
+                isClean());
+        budgetNetworkSettings_ = null;
+      }
+      return budgetNetworkSettingsBuilder_;
+    }
+
+    private com.google.ads.googleads.v26.common.BudgetNetworkEligibility budgetNetworkEligibility_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.common.BudgetNetworkEligibility, com.google.ads.googleads.v26.common.BudgetNetworkEligibility.Builder, com.google.ads.googleads.v26.common.BudgetNetworkEligibilityOrBuilder> budgetNetworkEligibilityBuilder_;
+    /**
+     * <pre>
+     * Output only. Whether this budget is eligible for waterfall channel
+     * prioritization and budget caps, and if not, why.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the budgetNetworkEligibility field is set.
+     */
+    public boolean hasBudgetNetworkEligibility() {
+      return ((bitField0_ & 0x00080000) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. Whether this budget is eligible for waterfall channel
+     * prioritization and budget caps, and if not, why.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The budgetNetworkEligibility.
+     */
+    public com.google.ads.googleads.v26.common.BudgetNetworkEligibility getBudgetNetworkEligibility() {
+      if (budgetNetworkEligibilityBuilder_ == null) {
+        return budgetNetworkEligibility_ == null ? com.google.ads.googleads.v26.common.BudgetNetworkEligibility.getDefaultInstance() : budgetNetworkEligibility_;
+      } else {
+        return budgetNetworkEligibilityBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Whether this budget is eligible for waterfall channel
+     * prioritization and budget caps, and if not, why.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setBudgetNetworkEligibility(com.google.ads.googleads.v26.common.BudgetNetworkEligibility value) {
+      if (budgetNetworkEligibilityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        budgetNetworkEligibility_ = value;
+      } else {
+        budgetNetworkEligibilityBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Whether this budget is eligible for waterfall channel
+     * prioritization and budget caps, and if not, why.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setBudgetNetworkEligibility(
+        com.google.ads.googleads.v26.common.BudgetNetworkEligibility.Builder builderForValue) {
+      if (budgetNetworkEligibilityBuilder_ == null) {
+        budgetNetworkEligibility_ = builderForValue.build();
+      } else {
+        budgetNetworkEligibilityBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Whether this budget is eligible for waterfall channel
+     * prioritization and budget caps, and if not, why.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeBudgetNetworkEligibility(com.google.ads.googleads.v26.common.BudgetNetworkEligibility value) {
+      if (budgetNetworkEligibilityBuilder_ == null) {
+        if (((bitField0_ & 0x00080000) != 0) &&
+          budgetNetworkEligibility_ != null &&
+          budgetNetworkEligibility_ != com.google.ads.googleads.v26.common.BudgetNetworkEligibility.getDefaultInstance()) {
+          getBudgetNetworkEligibilityBuilder().mergeFrom(value);
+        } else {
+          budgetNetworkEligibility_ = value;
+        }
+      } else {
+        budgetNetworkEligibilityBuilder_.mergeFrom(value);
+      }
+      if (budgetNetworkEligibility_ != null) {
+        bitField0_ |= 0x00080000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Whether this budget is eligible for waterfall channel
+     * prioritization and budget caps, and if not, why.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearBudgetNetworkEligibility() {
+      bitField0_ = (bitField0_ & ~0x00080000);
+      budgetNetworkEligibility_ = null;
+      if (budgetNetworkEligibilityBuilder_ != null) {
+        budgetNetworkEligibilityBuilder_.dispose();
+        budgetNetworkEligibilityBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Whether this budget is eligible for waterfall channel
+     * prioritization and budget caps, and if not, why.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v26.common.BudgetNetworkEligibility.Builder getBudgetNetworkEligibilityBuilder() {
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return internalGetBudgetNetworkEligibilityFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. Whether this budget is eligible for waterfall channel
+     * prioritization and budget caps, and if not, why.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v26.common.BudgetNetworkEligibilityOrBuilder getBudgetNetworkEligibilityOrBuilder() {
+      if (budgetNetworkEligibilityBuilder_ != null) {
+        return budgetNetworkEligibilityBuilder_.getMessageOrBuilder();
+      } else {
+        return budgetNetworkEligibility_ == null ?
+            com.google.ads.googleads.v26.common.BudgetNetworkEligibility.getDefaultInstance() : budgetNetworkEligibility_;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Whether this budget is eligible for waterfall channel
+     * prioritization and budget caps, and if not, why.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.common.BudgetNetworkEligibility, com.google.ads.googleads.v26.common.BudgetNetworkEligibility.Builder, com.google.ads.googleads.v26.common.BudgetNetworkEligibilityOrBuilder> 
+        internalGetBudgetNetworkEligibilityFieldBuilder() {
+      if (budgetNetworkEligibilityBuilder_ == null) {
+        budgetNetworkEligibilityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v26.common.BudgetNetworkEligibility, com.google.ads.googleads.v26.common.BudgetNetworkEligibility.Builder, com.google.ads.googleads.v26.common.BudgetNetworkEligibilityOrBuilder>(
+                getBudgetNetworkEligibility(),
+                getParentForChildren(),
+                isClean());
+        budgetNetworkEligibility_ = null;
+      }
+      return budgetNetworkEligibilityBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v26.resources.CampaignBudget)

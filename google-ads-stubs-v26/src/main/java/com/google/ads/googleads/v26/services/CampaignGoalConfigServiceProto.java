@@ -63,43 +63,43 @@ public final class CampaignGoalConfigServiceProto extends com.google.protobuf.Ge
       "google/api/client.proto\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
       "oto\032 google/protobuf/field_mask.proto\032\027g" +
-      "oogle/rpc/status.proto\"\317\001\n MutateCampaig" +
-      "nGoalConfigsRequest\022\030\n\013customer_id\030\001 \001(\t" +
-      "B\003\340A\002\022W\n\noperations\030\002 \003(\0132>.google.ads.g" +
-      "oogleads.v26.services.CampaignGoalConfig" +
-      "OperationB\003\340A\002\022\034\n\017partial_failure\030\003 \001(\010B" +
-      "\003\340A\001\022\032\n\rvalidate_only\030\004 \001(\010B\003\340A\001\"\263\002\n\033Cam" +
-      "paignGoalConfigOperation\022/\n\013update_mask\030" +
-      "\004 \001(\0132\032.google.protobuf.FieldMask\022H\n\006cre" +
-      "ate\030\001 \001(\01326.google.ads.googleads.v26.res" +
-      "ources.CampaignGoalConfigH\000\022H\n\006update\030\003 " +
-      "\001(\01326.google.ads.googleads.v26.resources" +
-      ".CampaignGoalConfigH\000\022B\n\006remove\030\002 \001(\tB0\372" +
-      "A-\n+googleads.googleapis.com/CampaignGoa" +
-      "lConfigH\000B\013\n\toperation\"\252\001\n!MutateCampaig" +
-      "nGoalConfigsResponse\0221\n\025partial_failure_" +
-      "error\030\001 \001(\0132\022.google.rpc.Status\022R\n\007resul" +
-      "ts\030\002 \003(\0132A.google.ads.googleads.v26.serv" +
-      "ices.MutateCampaignGoalConfigResult\"i\n\036M" +
-      "utateCampaignGoalConfigResult\022G\n\rresourc" +
-      "e_name\030\001 \001(\tB0\372A-\n+googleads.googleapis." +
-      "com/CampaignGoalConfig2\352\002\n\031CampaignGoalC" +
-      "onfigService\022\205\002\n\031MutateCampaignGoalConfi" +
-      "gs\022C.google.ads.googleads.v26.services.M" +
-      "utateCampaignGoalConfigsRequest\032D.google" +
-      ".ads.googleads.v26.services.MutateCampai" +
-      "gnGoalConfigsResponse\"]\332A\026customer_id,op" +
-      "erations\202\323\344\223\002>\"9/v26/customers/{customer" +
-      "_id=*}/CampaignGoalConfigs:mutate:\001*\032E\312A" +
-      "\030googleads.googleapis.com\322A\'https://www." +
-      "googleapis.com/auth/adwordsB\212\002\n%com.goog" +
-      "le.ads.googleads.v26.servicesB\036CampaignG" +
-      "oalConfigServiceProtoP\001ZIgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v26" +
-      "/services;services\242\002\003GAA\252\002!Google.Ads.Go" +
-      "ogleAds.V26.Services\312\002!Google\\Ads\\Google" +
-      "Ads\\V26\\Services\352\002%Google::Ads::GoogleAd" +
-      "s::V26::Servicesb\006proto3"
+      "oogle/rpc/status.proto\"\323\001\n MutateCampaig" +
+      "nGoalConfigsRequest\022\031\n\013customer_id\030\001 \001(\t" +
+      "B\004\342A\001\002\022X\n\noperations\030\002 \003(\0132>.google.ads." +
+      "googleads.v26.services.CampaignGoalConfi" +
+      "gOperationB\004\342A\001\002\022\035\n\017partial_failure\030\003 \001(" +
+      "\010B\004\342A\001\001\022\033\n\rvalidate_only\030\004 \001(\010B\004\342A\001\001\"\263\002\n" +
+      "\033CampaignGoalConfigOperation\022/\n\013update_m" +
+      "ask\030\004 \001(\0132\032.google.protobuf.FieldMask\022H\n" +
+      "\006create\030\001 \001(\01326.google.ads.googleads.v26" +
+      ".resources.CampaignGoalConfigH\000\022H\n\006updat" +
+      "e\030\003 \001(\01326.google.ads.googleads.v26.resou" +
+      "rces.CampaignGoalConfigH\000\022B\n\006remove\030\002 \001(" +
+      "\tB0\372A-\n+googleads.googleapis.com/Campaig" +
+      "nGoalConfigH\000B\013\n\toperation\"\252\001\n!MutateCam" +
+      "paignGoalConfigsResponse\0221\n\025partial_fail" +
+      "ure_error\030\001 \001(\0132\022.google.rpc.Status\022R\n\007r" +
+      "esults\030\002 \003(\0132A.google.ads.googleads.v26." +
+      "services.MutateCampaignGoalConfigResult\"" +
+      "i\n\036MutateCampaignGoalConfigResult\022G\n\rres" +
+      "ource_name\030\001 \001(\tB0\372A-\n+googleads.googlea" +
+      "pis.com/CampaignGoalConfig2\352\002\n\031CampaignG" +
+      "oalConfigService\022\205\002\n\031MutateCampaignGoalC" +
+      "onfigs\022C.google.ads.googleads.v26.servic" +
+      "es.MutateCampaignGoalConfigsRequest\032D.go" +
+      "ogle.ads.googleads.v26.services.MutateCa" +
+      "mpaignGoalConfigsResponse\"]\332A\026customer_i" +
+      "d,operations\202\323\344\223\002>\"9/v26/customers/{cust" +
+      "omer_id=*}/CampaignGoalConfigs:mutate:\001*" +
+      "\032E\312A\030googleads.googleapis.com\322A\'https://" +
+      "www.googleapis.com/auth/adwordsB\212\002\n%com." +
+      "google.ads.googleads.v26.servicesB\036Campa" +
+      "ignGoalConfigServiceProtoP\001ZIgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v26/services;services\242\002\003GAA\252\002!Google.Ad" +
+      "s.GoogleAds.V26.Services\312\002!Google\\Ads\\Go" +
+      "ogleAds\\V26\\Services\352\002%Google::Ads::Goog" +
+      "leAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

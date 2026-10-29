@@ -72,55 +72,55 @@ public final class YoutubeVideoUploadServiceProto extends com.google.protobuf.Ge
       "ad.proto\032\034google/api/annotations.proto\032\027" +
       "google/api/client.proto\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\032 google/protobuf/field_mask.proto\"\227\001" +
-      "\n\037CreateYouTubeVideoUploadRequest\022\030\n\013cus" +
-      "tomer_id\030\001 \001(\tB\003\340A\002\022Z\n\025you_tube_video_up" +
-      "load\030\002 \001(\01326.google.ads.googleads.v26.re" +
-      "sources.YouTubeVideoUploadB\003\340A\002\"k\n Creat" +
-      "eYouTubeVideoUploadResponse\022G\n\rresource_" +
-      "name\030\001 \001(\tB0\372A-\n+googleads.googleapis.co" +
-      "m/YouTubeVideoUpload\"\315\001\n\037UpdateYouTubeVi" +
-      "deoUploadRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340" +
-      "A\002\022Z\n\025you_tube_video_upload\030\002 \001(\01326.goog" +
-      "le.ads.googleads.v26.resources.YouTubeVi" +
-      "deoUploadB\003\340A\002\0224\n\013update_mask\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMaskB\003\340A\002\"k\n UpdateYo" +
-      "uTubeVideoUploadResponse\022G\n\rresource_nam" +
-      "e\030\001 \001(\tB0\372A-\n+googleads.googleapis.com/Y" +
-      "ouTubeVideoUpload\"S\n\037RemoveYouTubeVideoU" +
-      "ploadRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022\026" +
-      "\n\016resource_names\030\002 \003(\t\":\n RemoveYouTubeV" +
-      "ideoUploadResponse\022\026\n\016resource_names\030\001 \003" +
-      "(\t2\210\007\n\031YouTubeVideoUploadService\022\215\002\n\030Cre" +
-      "ateYouTubeVideoUpload\022B.google.ads.googl" +
-      "eads.v26.services.CreateYouTubeVideoUplo" +
-      "adRequest\032C.google.ads.googleads.v26.ser" +
-      "vices.CreateYouTubeVideoUploadResponse\"h" +
-      "\332A!customer_id,you_tube_video_upload\202\323\344\223" +
-      "\002>\"9/v26/customers/{customer_id=*}/youTu" +
-      "beVideoUploads:create:\001*\022\231\002\n\030UpdateYouTu" +
-      "beVideoUpload\022B.google.ads.googleads.v26" +
-      ".services.UpdateYouTubeVideoUploadReques" +
-      "t\032C.google.ads.googleads.v26.services.Up" +
-      "dateYouTubeVideoUploadResponse\"t\332A-custo" +
-      "mer_id,you_tube_video_upload,update_mask" +
-      "\202\323\344\223\002>\"9/v26/customers/{customer_id=*}/y" +
-      "ouTubeVideoUploads:update:\001*\022\367\001\n\030RemoveY" +
-      "ouTubeVideoUpload\022B.google.ads.googleads" +
-      ".v26.services.RemoveYouTubeVideoUploadRe" +
-      "quest\032C.google.ads.googleads.v26.service" +
-      "s.RemoveYouTubeVideoUploadResponse\"R\332A\013c" +
-      "ustomer_id\202\323\344\223\002>\"9/v26/customers/{custom" +
-      "er_id=*}/youTubeVideoUploads:remove:\001*\032E" +
-      "\312A\030googleads.googleapis.com\322A\'https://ww" +
-      "w.googleapis.com/auth/adwordsB\212\002\n%com.go" +
-      "ogle.ads.googleads.v26.servicesB\036Youtube" +
-      "VideoUploadServiceProtoP\001ZIgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "26/services;services\242\002\003GAA\252\002!Google.Ads." +
-      "GoogleAds.V26.Services\312\002!Google\\Ads\\Goog" +
-      "leAds\\V26\\Services\352\002%Google::Ads::Google" +
-      "Ads::V26::Servicesb\006proto3"
+      "oto\032 google/protobuf/field_mask.proto\"\231\001" +
+      "\n\037CreateYouTubeVideoUploadRequest\022\031\n\013cus" +
+      "tomer_id\030\001 \001(\tB\004\342A\001\002\022[\n\025you_tube_video_u" +
+      "pload\030\002 \001(\01326.google.ads.googleads.v26.r" +
+      "esources.YouTubeVideoUploadB\004\342A\001\002\"k\n Cre" +
+      "ateYouTubeVideoUploadResponse\022G\n\rresourc" +
+      "e_name\030\001 \001(\tB0\372A-\n+googleads.googleapis." +
+      "com/YouTubeVideoUpload\"\320\001\n\037UpdateYouTube" +
+      "VideoUploadRequest\022\031\n\013customer_id\030\001 \001(\tB" +
+      "\004\342A\001\002\022[\n\025you_tube_video_upload\030\002 \001(\01326.g" +
+      "oogle.ads.googleads.v26.resources.YouTub" +
+      "eVideoUploadB\004\342A\001\002\0225\n\013update_mask\030\003 \001(\0132" +
+      "\032.google.protobuf.FieldMaskB\004\342A\001\002\"k\n Upd" +
+      "ateYouTubeVideoUploadResponse\022G\n\rresourc" +
+      "e_name\030\001 \001(\tB0\372A-\n+googleads.googleapis." +
+      "com/YouTubeVideoUpload\"T\n\037RemoveYouTubeV" +
+      "ideoUploadRequest\022\031\n\013customer_id\030\001 \001(\tB\004" +
+      "\342A\001\002\022\026\n\016resource_names\030\002 \003(\t\":\n RemoveYo" +
+      "uTubeVideoUploadResponse\022\026\n\016resource_nam" +
+      "es\030\001 \003(\t2\210\007\n\031YouTubeVideoUploadService\022\215" +
+      "\002\n\030CreateYouTubeVideoUpload\022B.google.ads" +
+      ".googleads.v26.services.CreateYouTubeVid" +
+      "eoUploadRequest\032C.google.ads.googleads.v" +
+      "26.services.CreateYouTubeVideoUploadResp" +
+      "onse\"h\332A!customer_id,you_tube_video_uplo" +
+      "ad\202\323\344\223\002>\"9/v26/customers/{customer_id=*}" +
+      "/youTubeVideoUploads:create:\001*\022\231\002\n\030Updat" +
+      "eYouTubeVideoUpload\022B.google.ads.googlea" +
+      "ds.v26.services.UpdateYouTubeVideoUpload" +
+      "Request\032C.google.ads.googleads.v26.servi" +
+      "ces.UpdateYouTubeVideoUploadResponse\"t\332A" +
+      "-customer_id,you_tube_video_upload,updat" +
+      "e_mask\202\323\344\223\002>\"9/v26/customers/{customer_i" +
+      "d=*}/youTubeVideoUploads:update:\001*\022\367\001\n\030R" +
+      "emoveYouTubeVideoUpload\022B.google.ads.goo" +
+      "gleads.v26.services.RemoveYouTubeVideoUp" +
+      "loadRequest\032C.google.ads.googleads.v26.s" +
+      "ervices.RemoveYouTubeVideoUploadResponse" +
+      "\"R\332A\013customer_id\202\323\344\223\002>\"9/v26/customers/{" +
+      "customer_id=*}/youTubeVideoUploads:remov" +
+      "e:\001*\032E\312A\030googleads.googleapis.com\322A\'http" +
+      "s://www.googleapis.com/auth/adwordsB\212\002\n%" +
+      "com.google.ads.googleads.v26.servicesB\036Y" +
+      "outubeVideoUploadServiceProtoP\001ZIgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v26/services;services\242\002\003GAA\252\002!Googl" +
+      "e.Ads.GoogleAds.V26.Services\312\002!Google\\Ad" +
+      "s\\GoogleAds\\V26\\Services\352\002%Google::Ads::" +
+      "GoogleAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

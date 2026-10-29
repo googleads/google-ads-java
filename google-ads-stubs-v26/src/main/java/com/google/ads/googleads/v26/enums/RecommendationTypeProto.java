@@ -42,7 +42,7 @@ public final class RecommendationTypeProto extends com.google.protobuf.Generated
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v26/enums/recomme" +
       "ndation_type.proto\022\036google.ads.googleads" +
-      ".v26.enums\"\226\017\n\026RecommendationTypeEnum\"\373\016" +
+      ".v26.enums\"\266\017\n\026RecommendationTypeEnum\"\233\017" +
       "\n\022RecommendationType\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
       "\007UNKNOWN\020\001\022\023\n\017CAMPAIGN_BUDGET\020\002\022\013\n\007KEYWO" +
       "RD\020\003\022\013\n\007TEXT_AD\020\004\022\025\n\021TARGET_CPA_OPT_IN\020\005" +
@@ -90,14 +90,14 @@ public final class RecommendationTypeProto extends com.google.protobuf.Generated
       "AIGN_SPECIFIC_APP_GOAL\020;\022,\n(RAISE_TARGET" +
       "_CPA_PERFORMANCE_BID_TOO_LOW\020=\022-\n)LOWER_" +
       "TARGET_ROAS_PERFORMANCE_BID_TOO_LOW\020>\022$\n" +
-      " RAISE_BUDGET_PERFORMANCE_TOO_LOW\020?B\361\001\n\"" +
-      "com.google.ads.googleads.v26.enumsB\027Reco" +
-      "mmendationTypeProtoP\001ZCgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v26/e" +
-      "nums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
-      "V26.Enums\312\002\036Google\\Ads\\GoogleAds\\V26\\Enu" +
-      "ms\352\002\"Google::Ads::GoogleAds::V26::Enumsb" +
-      "\006proto3"
+      " RAISE_BUDGET_PERFORMANCE_TOO_LOW\020?\022\036\n\032O" +
+      "PTIMIZE_FOR_NEW_CUSTOMERS\020@B\361\001\n\"com.goog" +
+      "le.ads.googleads.v26.enumsB\027Recommendati" +
+      "onTypeProtoP\001ZCgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v26/enums;enu" +
+      "ms\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V26.Enum" +
+      "s\312\002\036Google\\Ads\\GoogleAds\\V26\\Enums\352\002\"Goo" +
+      "gle::Ads::GoogleAds::V26::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

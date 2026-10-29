@@ -9,6 +9,11 @@ package com.google.ads.googleads.v26.services;
  * <pre>
  * Request message for
  * [CampaignBudgetService.MutateCampaignBudgets][google.ads.googleads.v26.services.CampaignBudgetService.MutateCampaignBudgets].
+ *
+ * Update operations in `operations` require an `update_mask` specifying the
+ * fields to modify. Note that `explicitly_shared` defaults to `true` if
+ * unspecified. A non-shared budget can be updated to explicitly shared, but an
+ * explicitly shared budget cannot become non-shared.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v26.services.MutateCampaignBudgetsRequest}
@@ -428,6 +433,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Request message for
    * [CampaignBudgetService.MutateCampaignBudgets][google.ads.googleads.v26.services.CampaignBudgetService.MutateCampaignBudgets].
+   *
+   * Update operations in `operations` require an `update_mask` specifying the
+   * fields to modify. Note that `explicitly_shared` defaults to `true` if
+   * unspecified. A non-shared budget can be updated to explicitly shared, but an
+   * explicitly shared budget cannot become non-shared.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v26.services.MutateCampaignBudgetsRequest}

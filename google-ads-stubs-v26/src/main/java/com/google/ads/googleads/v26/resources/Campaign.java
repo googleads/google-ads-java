@@ -3803,8 +3803,6 @@ private static final long serialVersionUID = 0L;
      * take precedence over those with lower priorities.
      * This field is required for Shopping campaigns, with values between 0 and
      * 2, inclusive.
-     * This field is optional for Smart Shopping campaigns, but must be equal to
-     * 3 if set.
      * </pre>
      *
      * <code>optional int32 campaign_priority = 7;</code>
@@ -3817,8 +3815,6 @@ private static final long serialVersionUID = 0L;
      * take precedence over those with lower priorities.
      * This field is required for Shopping campaigns, with values between 0 and
      * 2, inclusive.
-     * This field is optional for Smart Shopping campaigns, but must be equal to
-     * 3 if set.
      * </pre>
      *
      * <code>optional int32 campaign_priority = 7;</code>
@@ -3847,9 +3843,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. Whether to target Vehicle Listing inventory. This field is
-     * supported only in Smart Shopping Campaigns. For setting Vehicle Listing
-     * inventory in Performance Max campaigns, use `listing_type` instead.
+     * Immutable. Whether to target Vehicle Listing inventory. This field is no
+     * longer supported. Use Performance Max or Shopping campaigns with
+     * `listing_type` to target Vehicle Listing inventory.
      * </pre>
      *
      * <code>bool use_vehicle_inventory = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4093,8 +4089,6 @@ private static final long serialVersionUID = 0L;
      * take precedence over those with lower priorities.
      * This field is required for Shopping campaigns, with values between 0 and
      * 2, inclusive.
-     * This field is optional for Smart Shopping campaigns, but must be equal to
-     * 3 if set.
      * </pre>
      *
      * <code>optional int32 campaign_priority = 7;</code>
@@ -4110,8 +4104,6 @@ private static final long serialVersionUID = 0L;
      * take precedence over those with lower priorities.
      * This field is required for Shopping campaigns, with values between 0 and
      * 2, inclusive.
-     * This field is optional for Smart Shopping campaigns, but must be equal to
-     * 3 if set.
      * </pre>
      *
      * <code>optional int32 campaign_priority = 7;</code>
@@ -4153,9 +4145,9 @@ private static final long serialVersionUID = 0L;
     private boolean useVehicleInventory_ = false;
     /**
      * <pre>
-     * Immutable. Whether to target Vehicle Listing inventory. This field is
-     * supported only in Smart Shopping Campaigns. For setting Vehicle Listing
-     * inventory in Performance Max campaigns, use `listing_type` instead.
+     * Immutable. Whether to target Vehicle Listing inventory. This field is no
+     * longer supported. Use Performance Max or Shopping campaigns with
+     * `listing_type` to target Vehicle Listing inventory.
      * </pre>
      *
      * <code>bool use_vehicle_inventory = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5018,8 +5010,6 @@ private static final long serialVersionUID = 0L;
        * take precedence over those with lower priorities.
        * This field is required for Shopping campaigns, with values between 0 and
        * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
        * </pre>
        *
        * <code>optional int32 campaign_priority = 7;</code>
@@ -5035,8 +5025,6 @@ private static final long serialVersionUID = 0L;
        * take precedence over those with lower priorities.
        * This field is required for Shopping campaigns, with values between 0 and
        * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
        * </pre>
        *
        * <code>optional int32 campaign_priority = 7;</code>
@@ -5052,8 +5040,6 @@ private static final long serialVersionUID = 0L;
        * take precedence over those with lower priorities.
        * This field is required for Shopping campaigns, with values between 0 and
        * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
        * </pre>
        *
        * <code>optional int32 campaign_priority = 7;</code>
@@ -5073,8 +5059,6 @@ private static final long serialVersionUID = 0L;
        * take precedence over those with lower priorities.
        * This field is required for Shopping campaigns, with values between 0 and
        * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
        * </pre>
        *
        * <code>optional int32 campaign_priority = 7;</code>
@@ -5146,9 +5130,9 @@ private static final long serialVersionUID = 0L;
       private boolean useVehicleInventory_ ;
       /**
        * <pre>
-       * Immutable. Whether to target Vehicle Listing inventory. This field is
-       * supported only in Smart Shopping Campaigns. For setting Vehicle Listing
-       * inventory in Performance Max campaigns, use `listing_type` instead.
+       * Immutable. Whether to target Vehicle Listing inventory. This field is no
+       * longer supported. Use Performance Max or Shopping campaigns with
+       * `listing_type` to target Vehicle Listing inventory.
        * </pre>
        *
        * <code>bool use_vehicle_inventory = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5160,9 +5144,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. Whether to target Vehicle Listing inventory. This field is
-       * supported only in Smart Shopping Campaigns. For setting Vehicle Listing
-       * inventory in Performance Max campaigns, use `listing_type` instead.
+       * Immutable. Whether to target Vehicle Listing inventory. This field is no
+       * longer supported. Use Performance Max or Shopping campaigns with
+       * `listing_type` to target Vehicle Listing inventory.
        * </pre>
        *
        * <code>bool use_vehicle_inventory = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5178,9 +5162,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. Whether to target Vehicle Listing inventory. This field is
-       * supported only in Smart Shopping Campaigns. For setting Vehicle Listing
-       * inventory in Performance Max campaigns, use `listing_type` instead.
+       * Immutable. Whether to target Vehicle Listing inventory. This field is no
+       * longer supported. Use Performance Max or Shopping campaigns with
+       * `listing_type` to target Vehicle Listing inventory.
        * </pre>
        *
        * <code>bool use_vehicle_inventory = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>

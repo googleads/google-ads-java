@@ -511,4 +511,67 @@ public interface CampaignBudgetOrBuilder extends
    * @return The alignedBiddingStrategyId.
    */
   long getAlignedBiddingStrategyId();
+
+  /**
+   * <pre>
+   * Waterfall channel priorities and budget caps for this budget, at most one
+   * entry per advertising channel type. When unset, the customer-level
+   * defaults in `CustomerBudgetNetworkSetting` apply.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+   * @return Whether the budgetNetworkSettings field is set.
+   */
+  boolean hasBudgetNetworkSettings();
+  /**
+   * <pre>
+   * Waterfall channel priorities and budget caps for this budget, at most one
+   * entry per advertising channel type. When unset, the customer-level
+   * defaults in `CustomerBudgetNetworkSetting` apply.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+   * @return The budgetNetworkSettings.
+   */
+  com.google.ads.googleads.v26.common.BudgetNetworkSettings getBudgetNetworkSettings();
+  /**
+   * <pre>
+   * Waterfall channel priorities and budget caps for this budget, at most one
+   * entry per advertising channel type. When unset, the customer-level
+   * defaults in `CustomerBudgetNetworkSetting` apply.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkSettings budget_network_settings = 32;</code>
+   */
+  com.google.ads.googleads.v26.common.BudgetNetworkSettingsOrBuilder getBudgetNetworkSettingsOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. Whether this budget is eligible for waterfall channel
+   * prioritization and budget caps, and if not, why.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the budgetNetworkEligibility field is set.
+   */
+  boolean hasBudgetNetworkEligibility();
+  /**
+   * <pre>
+   * Output only. Whether this budget is eligible for waterfall channel
+   * prioritization and budget caps, and if not, why.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The budgetNetworkEligibility.
+   */
+  com.google.ads.googleads.v26.common.BudgetNetworkEligibility getBudgetNetworkEligibility();
+  /**
+   * <pre>
+   * Output only. Whether this budget is eligible for waterfall channel
+   * prioritization and budget caps, and if not, why.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.BudgetNetworkEligibility budget_network_eligibility = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v26.common.BudgetNetworkEligibilityOrBuilder getBudgetNetworkEligibilityOrBuilder();
 }

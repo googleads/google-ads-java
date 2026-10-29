@@ -75,69 +75,70 @@ public final class ChangeEventProto extends com.google.protobuf.GeneratedFile {
       "6/resources/customer_asset.proto\032\037google" +
       "/api/field_behavior.proto\032\031google/api/re" +
       "source.proto\032 google/protobuf/field_mask" +
-      ".proto\"\300\021\n\013ChangeEvent\022C\n\rresource_name\030" +
-      "\001 \001(\tB,\340A\003\372A&\n$googleads.googleapis.com/" +
-      "ChangeEvent\022\035\n\020change_date_time\030\002 \001(\tB\003\340" +
-      "A\003\022v\n\024change_resource_type\030\003 \001(\0162S.googl" +
-      "e.ads.googleads.v26.enums.ChangeEventRes" +
-      "ourceTypeEnum.ChangeEventResourceTypeB\003\340" +
-      "A\003\022!\n\024change_resource_name\030\004 \001(\tB\003\340A\003\022_\n" +
-      "\013client_type\030\005 \001(\0162E.google.ads.googlead" +
-      "s.v26.enums.ChangeClientTypeEnum.ChangeC" +
-      "lientTypeB\003\340A\003\022\027\n\nuser_email\030\006 \001(\tB\003\340A\003\022" +
-      "Z\n\014old_resource\030\007 \001(\0132?.google.ads.googl" +
-      "eads.v26.resources.ChangeEvent.ChangedRe" +
-      "sourceB\003\340A\003\022Z\n\014new_resource\030\010 \001(\0132?.goog" +
-      "le.ads.googleads.v26.resources.ChangeEve" +
-      "nt.ChangedResourceB\003\340A\003\022{\n\031resource_chan" +
-      "ge_operation\030\t \001(\0162S.google.ads.googlead" +
-      "s.v26.enums.ResourceChangeOperationEnum." +
-      "ResourceChangeOperationB\003\340A\003\0227\n\016changed_" +
-      "fields\030\n \001(\0132\032.google.protobuf.FieldMask" +
-      "B\003\340A\003\022;\n\010campaign\030\013 \001(\tB)\340A\003\372A#\n!googlea" +
-      "ds.googleapis.com/Campaign\022:\n\010ad_group\030\014" +
-      " \001(\tB(\340A\003\372A\"\n googleads.googleapis.com/A" +
-      "dGroup\0225\n\005asset\030\024 \001(\tB&\340A\003\372A \n\036googleads" +
-      ".googleapis.com/Asset\032\225\t\n\017ChangedResourc" +
-      "e\0227\n\002ad\030\001 \001(\0132&.google.ads.googleads.v26" +
-      ".resources.AdB\003\340A\003\022B\n\010ad_group\030\002 \001(\0132+.g" +
-      "oogle.ads.googleads.v26.resources.AdGrou" +
-      "pB\003\340A\003\022U\n\022ad_group_criterion\030\003 \001(\01324.goo" +
-      "gle.ads.googleads.v26.resources.AdGroupC" +
-      "riterionB\003\340A\003\022C\n\010campaign\030\004 \001(\0132,.google" +
-      ".ads.googleads.v26.resources.CampaignB\003\340" +
-      "A\003\022P\n\017campaign_budget\030\005 \001(\01322.google.ads" +
-      ".googleads.v26.resources.CampaignBudgetB" +
-      "\003\340A\003\022Z\n\025ad_group_bid_modifier\030\006 \001(\01326.go" +
-      "ogle.ads.googleads.v26.resources.AdGroup" +
-      "BidModifierB\003\340A\003\022V\n\022campaign_criterion\030\007" +
-      " \001(\01325.google.ads.googleads.v26.resource" +
-      "s.CampaignCriterionB\003\340A\003\022G\n\013ad_group_ad\030" +
-      "\014 \001(\0132-.google.ads.googleads.v26.resourc" +
-      "es.AdGroupAdB\003\340A\003\022=\n\005asset\030\r \001(\0132).googl" +
-      "e.ads.googleads.v26.resources.AssetB\003\340A\003" +
-      "\022N\n\016customer_asset\030\016 \001(\01321.google.ads.go" +
-      "ogleads.v26.resources.CustomerAssetB\003\340A\003" +
-      "\022N\n\016campaign_asset\030\017 \001(\01321.google.ads.go" +
-      "ogleads.v26.resources.CampaignAssetB\003\340A\003" +
-      "\022M\n\016ad_group_asset\030\020 \001(\01320.google.ads.go" +
-      "ogleads.v26.resources.AdGroupAssetB\003\340A\003\022" +
-      "D\n\tasset_set\030\021 \001(\0132,.google.ads.googlead" +
-      "s.v26.resources.AssetSetB\003\340A\003\022O\n\017asset_s" +
-      "et_asset\030\022 \001(\01321.google.ads.googleads.v2" +
-      "6.resources.AssetSetAssetB\003\340A\003\022U\n\022campai" +
-      "gn_asset_set\030\023 \001(\01324.google.ads.googlead" +
-      "s.v26.resources.CampaignAssetSetB\003\340A\003:\201\001" +
-      "\352A~\n$googleads.googleapis.com/ChangeEven" +
-      "t\022Vcustomers/{customer_id}/changeEvents/" +
-      "{timestamp_micros}~{command_index}~{muta" +
-      "te_index}B\202\002\n&com.google.ads.googleads.v" +
-      "26.resourcesB\020ChangeEventProtoP\001ZKgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v26/resources;resources\242\002\003GAA\252\002\"Go" +
-      "ogle.Ads.GoogleAds.V26.Resources\312\002\"Googl" +
-      "e\\Ads\\GoogleAds\\V26\\Resources\352\002&Google::" +
-      "Ads::GoogleAds::V26::Resourcesb\006proto3"
+      ".proto\"\334\021\n\013ChangeEvent\022D\n\rresource_name\030" +
+      "\001 \001(\tB-\342A\001\003\372A&\n$googleads.googleapis.com" +
+      "/ChangeEvent\022\036\n\020change_date_time\030\002 \001(\tB\004" +
+      "\342A\001\003\022w\n\024change_resource_type\030\003 \001(\0162S.goo" +
+      "gle.ads.googleads.v26.enums.ChangeEventR" +
+      "esourceTypeEnum.ChangeEventResourceTypeB" +
+      "\004\342A\001\003\022\"\n\024change_resource_name\030\004 \001(\tB\004\342A\001" +
+      "\003\022`\n\013client_type\030\005 \001(\0162E.google.ads.goog" +
+      "leads.v26.enums.ChangeClientTypeEnum.Cha" +
+      "ngeClientTypeB\004\342A\001\003\022\030\n\nuser_email\030\006 \001(\tB" +
+      "\004\342A\001\003\022[\n\014old_resource\030\007 \001(\0132?.google.ads" +
+      ".googleads.v26.resources.ChangeEvent.Cha" +
+      "ngedResourceB\004\342A\001\003\022[\n\014new_resource\030\010 \001(\013" +
+      "2?.google.ads.googleads.v26.resources.Ch" +
+      "angeEvent.ChangedResourceB\004\342A\001\003\022|\n\031resou" +
+      "rce_change_operation\030\t \001(\0162S.google.ads." +
+      "googleads.v26.enums.ResourceChangeOperat" +
+      "ionEnum.ResourceChangeOperationB\004\342A\001\003\0228\n" +
+      "\016changed_fields\030\n \001(\0132\032.google.protobuf." +
+      "FieldMaskB\004\342A\001\003\022<\n\010campaign\030\013 \001(\tB*\342A\001\003\372" +
+      "A#\n!googleads.googleapis.com/Campaign\022;\n" +
+      "\010ad_group\030\014 \001(\tB)\342A\001\003\372A\"\n googleads.goog" +
+      "leapis.com/AdGroup\0226\n\005asset\030\024 \001(\tB\'\342A\001\003\372" +
+      "A \n\036googleads.googleapis.com/Asset\032\244\t\n\017C" +
+      "hangedResource\0228\n\002ad\030\001 \001(\0132&.google.ads." +
+      "googleads.v26.resources.AdB\004\342A\001\003\022C\n\010ad_g" +
+      "roup\030\002 \001(\0132+.google.ads.googleads.v26.re" +
+      "sources.AdGroupB\004\342A\001\003\022V\n\022ad_group_criter" +
+      "ion\030\003 \001(\01324.google.ads.googleads.v26.res" +
+      "ources.AdGroupCriterionB\004\342A\001\003\022D\n\010campaig" +
+      "n\030\004 \001(\0132,.google.ads.googleads.v26.resou" +
+      "rces.CampaignB\004\342A\001\003\022Q\n\017campaign_budget\030\005" +
+      " \001(\01322.google.ads.googleads.v26.resource" +
+      "s.CampaignBudgetB\004\342A\001\003\022[\n\025ad_group_bid_m" +
+      "odifier\030\006 \001(\01326.google.ads.googleads.v26" +
+      ".resources.AdGroupBidModifierB\004\342A\001\003\022W\n\022c" +
+      "ampaign_criterion\030\007 \001(\01325.google.ads.goo" +
+      "gleads.v26.resources.CampaignCriterionB\004" +
+      "\342A\001\003\022H\n\013ad_group_ad\030\014 \001(\0132-.google.ads.g" +
+      "oogleads.v26.resources.AdGroupAdB\004\342A\001\003\022>" +
+      "\n\005asset\030\r \001(\0132).google.ads.googleads.v26" +
+      ".resources.AssetB\004\342A\001\003\022O\n\016customer_asset" +
+      "\030\016 \001(\01321.google.ads.googleads.v26.resour" +
+      "ces.CustomerAssetB\004\342A\001\003\022O\n\016campaign_asse" +
+      "t\030\017 \001(\01321.google.ads.googleads.v26.resou" +
+      "rces.CampaignAssetB\004\342A\001\003\022N\n\016ad_group_ass" +
+      "et\030\020 \001(\01320.google.ads.googleads.v26.reso" +
+      "urces.AdGroupAssetB\004\342A\001\003\022E\n\tasset_set\030\021 " +
+      "\001(\0132,.google.ads.googleads.v26.resources" +
+      ".AssetSetB\004\342A\001\003\022P\n\017asset_set_asset\030\022 \001(\013" +
+      "21.google.ads.googleads.v26.resources.As" +
+      "setSetAssetB\004\342A\001\003\022V\n\022campaign_asset_set\030" +
+      "\023 \001(\01324.google.ads.googleads.v26.resourc" +
+      "es.CampaignAssetSetB\004\342A\001\003:\201\001\352A~\n$googlea" +
+      "ds.googleapis.com/ChangeEvent\022Vcustomers" +
+      "/{customer_id}/changeEvents/{timestamp_m" +
+      "icros}~{command_index}~{mutate_index}B\202\002" +
+      "\n&com.google.ads.googleads.v26.resources" +
+      "B\020ChangeEventProtoP\001ZKgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v26/re" +
+      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
+      "gleAds.V26.Resources\312\002\"Google\\Ads\\Google" +
+      "Ads\\V26\\Resources\352\002&Google::Ads::GoogleA" +
+      "ds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

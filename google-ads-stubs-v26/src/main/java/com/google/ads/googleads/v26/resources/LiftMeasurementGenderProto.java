@@ -45,26 +45,27 @@ public final class LiftMeasurementGenderProto extends com.google.protobuf.Genera
       "oogleads.v26.resources\0320google/ads/googl" +
       "eads/v26/enums/gender_type.proto\032\037google" +
       "/api/field_behavior.proto\032\031google/api/re" +
-      "source.proto\"\372\003\n\025LiftMeasurementGender\022M" +
-      "\n\rresource_name\030\001 \001(\tB6\340A\003\372A0\n.googleads" +
-      ".googleapis.com/LiftMeasurementGender\022,\n" +
-      "\032lift_measurement_config_id\030\002 \001(\003B\003\340A\003H\000" +
-      "\210\001\001\022@\n\010campaign\030\003 \001(\tB)\340A\003\372A#\n!googleads" +
-      ".googleapis.com/CampaignH\001\210\001\001\022N\n\006gender\030" +
-      "\005 \001(\01629.google.ads.googleads.v26.enums.G" +
-      "enderTypeEnum.GenderTypeB\003\340A\003:\245\001\352A\241\001\n.go" +
-      "ogleads.googleapis.com/LiftMeasurementGe" +
-      "nder\022ocustomers/{customer_id}/liftMeasur" +
-      "ementGenders/{lift_measurement_configura" +
-      "tion_id}~{campaign_id}~{criterion_id}B\035\n" +
-      "\033_lift_measurement_config_idB\013\n\t_campaig" +
-      "nB\214\002\n&com.google.ads.googleads.v26.resou" +
-      "rcesB\032LiftMeasurementGenderProtoP\001ZKgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v26/resources;resources\242\002\003GAA\252\002\"" +
-      "Google.Ads.GoogleAds.V26.Resources\312\002\"Goo" +
-      "gle\\Ads\\GoogleAds\\V26\\Resources\352\002&Google" +
-      "::Ads::GoogleAds::V26::Resourcesb\006proto3"
+      "source.proto\"\376\003\n\025LiftMeasurementGender\022N" +
+      "\n\rresource_name\030\001 \001(\tB7\342A\001\003\372A0\n.googlead" +
+      "s.googleapis.com/LiftMeasurementGender\022-" +
+      "\n\032lift_measurement_config_id\030\002 \001(\003B\004\342A\001\003" +
+      "H\000\210\001\001\022A\n\010campaign\030\003 \001(\tB*\342A\001\003\372A#\n!google" +
+      "ads.googleapis.com/CampaignH\001\210\001\001\022O\n\006gend" +
+      "er\030\005 \001(\01629.google.ads.googleads.v26.enum" +
+      "s.GenderTypeEnum.GenderTypeB\004\342A\001\003:\245\001\352A\241\001" +
+      "\n.googleads.googleapis.com/LiftMeasureme" +
+      "ntGender\022ocustomers/{customer_id}/liftMe" +
+      "asurementGenders/{lift_measurement_confi" +
+      "guration_id}~{campaign_id}~{criterion_id" +
+      "}B\035\n\033_lift_measurement_config_idB\013\n\t_cam" +
+      "paignB\214\002\n&com.google.ads.googleads.v26.r" +
+      "esourcesB\032LiftMeasurementGenderProtoP\001ZK" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v26/resources;resources\242\002\003GA" +
+      "A\252\002\"Google.Ads.GoogleAds.V26.Resources\312\002" +
+      "\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002&Go" +
+      "ogle::Ads::GoogleAds::V26::Resourcesb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

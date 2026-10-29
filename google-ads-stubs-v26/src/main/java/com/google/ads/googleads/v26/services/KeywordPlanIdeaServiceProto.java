@@ -225,100 +225,101 @@ public final class KeywordPlanIdeaServiceProto extends com.google.protobuf.Gener
       "(\tH\000\210\001\001\022\026\n\016close_variants\030\003 \003(\t\022V\n\017keywo" +
       "rd_metrics\030\002 \001(\0132=.google.ads.googleads." +
       "v26.common.KeywordPlanHistoricalMetricsB" +
-      "\007\n\005_text\"g\n\034GenerateAdGroupThemesRequest" +
-      "\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022\025\n\010keywords\030\002" +
-      " \003(\tB\003\340A\002\022\026\n\tad_groups\030\003 \003(\tB\003\340A\002\"\322\001\n\035Ge" +
-      "nerateAdGroupThemesResponse\022a\n\034ad_group_" +
-      "keyword_suggestions\030\001 \003(\0132;.google.ads.g" +
-      "oogleads.v26.services.AdGroupKeywordSugg" +
-      "estion\022N\n\022unusable_ad_groups\030\002 \003(\01322.goo" +
-      "gle.ads.googleads.v26.services.UnusableA" +
-      "dGroup\"\355\001\n\030AdGroupKeywordSuggestion\022\024\n\014k" +
-      "eyword_text\030\001 \001(\t\022\036\n\026suggested_keyword_t" +
-      "ext\030\002 \001(\t\022c\n\024suggested_match_type\030\003 \001(\0162" +
-      "E.google.ads.googleads.v26.enums.Keyword" +
-      "MatchTypeEnum.KeywordMatchType\022\032\n\022sugges" +
-      "ted_ad_group\030\004 \001(\t\022\032\n\022suggested_campaign" +
-      "\030\005 \001(\t\"5\n\017UnusableAdGroup\022\020\n\010ad_group\030\001 " +
-      "\001(\t\022\020\n\010campaign\030\002 \001(\t\"\375\001\n%GenerateKeywor" +
-      "dForecastMetricsRequest\022\023\n\013customer_id\030\001" +
-      " \001(\t\022\032\n\rcurrency_code\030\002 \001(\tH\000\210\001\001\022C\n\017fore" +
-      "cast_period\030\003 \001(\0132*.google.ads.googleads" +
-      ".v26.common.DateRange\022L\n\010campaign\030\004 \001(\0132" +
-      "5.google.ads.googleads.v26.services.Camp" +
-      "aignToForecastB\003\340A\002B\020\n\016_currency_code\"\375\004" +
-      "\n\022CampaignToForecast\022\032\n\022language_constan" +
-      "ts\030\001 \003(\t\022\034\n\024geo_target_constants\030\010 \003(\t\022l" +
-      "\n\020bidding_strategy\030\005 \001(\0132M.google.ads.go" +
-      "ogleads.v26.services.CampaignToForecast." +
-      "CampaignBiddingStrategyB\003\340A\002\022E\n\tad_group" +
-      "s\030\007 \003(\01322.google.ads.googleads.v26.servi" +
-      "ces.ForecastAdGroup\032\367\002\n\027CampaignBiddingS" +
-      "trategy\022b\n\033manual_cpc_bidding_strategy\030\001" +
-      " \001(\0132;.google.ads.googleads.v26.services" +
-      ".ManualCpcBiddingStrategyH\000\022l\n maximize_" +
-      "clicks_bidding_strategy\030\002 \001(\0132@.google.a" +
-      "ds.googleads.v26.services.MaximizeClicks" +
-      "BiddingStrategyH\000\022v\n%maximize_conversion" +
-      "s_bidding_strategy\030\003 \001(\0132E.google.ads.go" +
-      "ogleads.v26.services.MaximizeConversions" +
-      "BiddingStrategyH\000B\022\n\020bidding_strategy\"V\n" +
-      "\017ForecastAdGroup\022C\n\010keywords\030\004 \003(\0132,.goo" +
-      "gle.ads.googleads.v26.common.KeywordInfo" +
-      "B\003\340A\002\"u\n\030ManualCpcBiddingStrategy\022 \n\023dai" +
-      "ly_budget_micros\030\001 \001(\003H\000\210\001\001\022\037\n\022max_cpc_b" +
-      "id_micros\030\002 \001(\003B\003\340A\002B\026\n\024_daily_budget_mi" +
-      "cros\"\217\001\n\035MaximizeClicksBiddingStrategy\022&" +
-      "\n\031daily_target_spend_micros\030\001 \001(\003B\003\340A\002\022\'" +
-      "\n\032max_cpc_bid_ceiling_micros\030\002 \001(\003H\000\210\001\001B" +
-      "\035\n\033_max_cpc_bid_ceiling_micros\"L\n\"Maximi" +
-      "zeConversionsBiddingStrategy\022&\n\031daily_ta" +
-      "rget_spend_micros\030\001 \001(\003B\003\340A\002\"\251\001\n&Generat" +
-      "eKeywordForecastMetricsResponse\022a\n\031campa" +
-      "ign_forecast_metrics\030\001 \001(\01329.google.ads." +
-      "googleads.v26.services.KeywordForecastMe" +
-      "tricsH\000\210\001\001B\034\n\032_campaign_forecast_metrics" +
-      "\"\374\001\n\026KeywordForecastMetrics\022\037\n\022average_c" +
-      "pc_micros\030\003 \001(\003H\000\210\001\001\022\023\n\006clicks\030\004 \001(\001H\001\210\001" +
-      "\001\022\030\n\013cost_micros\030\005 \001(\003H\002\210\001\001\022\030\n\013conversio" +
-      "ns\030\006 \001(\001H\003\210\001\001\022\037\n\022average_cpa_micros\030\010 \001(" +
-      "\003H\004\210\001\001B\025\n\023_average_cpc_microsB\t\n\007_clicks" +
-      "B\016\n\014_cost_microsB\016\n\014_conversionsB\025\n\023_ave" +
-      "rage_cpa_micros2\316\010\n\026KeywordPlanIdeaServi" +
-      "ce\022\326\001\n\024GenerateKeywordIdeas\022>.google.ads" +
-      ".googleads.v26.services.GenerateKeywordI" +
-      "deasRequest\032>.google.ads.googleads.v26.s" +
-      "ervices.GenerateKeywordIdeaResponse\">\202\323\344" +
-      "\223\0028\"3/v26/customers/{customer_id=*}:gene" +
-      "rateKeywordIdeas:\001*\022\207\002\n GenerateKeywordH" +
-      "istoricalMetrics\022J.google.ads.googleads." +
-      "v26.services.GenerateKeywordHistoricalMe" +
-      "tricsRequest\032K.google.ads.googleads.v26." +
-      "services.GenerateKeywordHistoricalMetric" +
-      "sResponse\"J\202\323\344\223\002D\"?/v26/customers/{custo" +
-      "mer_id=*}:generateKeywordHistoricalMetri" +
-      "cs:\001*\022\374\001\n\025GenerateAdGroupThemes\022?.google" +
-      ".ads.googleads.v26.services.GenerateAdGr" +
-      "oupThemesRequest\032@.google.ads.googleads." +
-      "v26.services.GenerateAdGroupThemesRespon" +
-      "se\"`\332A\036customer_id,keywords,ad_groups\202\323\344" +
-      "\223\0029\"4/v26/customers/{customer_id=*}:gene" +
-      "rateAdGroupThemes:\001*\022\212\002\n\036GenerateKeyword" +
-      "ForecastMetrics\022H.google.ads.googleads.v" +
-      "26.services.GenerateKeywordForecastMetri" +
-      "csRequest\032I.google.ads.googleads.v26.ser" +
-      "vices.GenerateKeywordForecastMetricsResp" +
-      "onse\"S\332A\010campaign\202\323\344\223\002B\"=/v26/customers/" +
-      "{customer_id=*}:generateKeywordForecastM" +
-      "etrics:\001*\032E\312A\030googleads.googleapis.com\322A" +
-      "\'https://www.googleapis.com/auth/adwords" +
-      "B\207\002\n%com.google.ads.googleads.v26.servic" +
-      "esB\033KeywordPlanIdeaServiceProtoP\001ZIgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v26/services;services\242\002\003GAA\252\002!Goo" +
-      "gle.Ads.GoogleAds.V26.Services\312\002!Google\\" +
-      "Ads\\GoogleAds\\V26\\Services\352\002%Google::Ads" +
-      "::GoogleAds::V26::Servicesb\006proto3"
+      "\007\n\005_text\"j\n\034GenerateAdGroupThemesRequest" +
+      "\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022\026\n\010keywords\030" +
+      "\002 \003(\tB\004\342A\001\002\022\027\n\tad_groups\030\003 \003(\tB\004\342A\001\002\"\322\001\n" +
+      "\035GenerateAdGroupThemesResponse\022a\n\034ad_gro" +
+      "up_keyword_suggestions\030\001 \003(\0132;.google.ad" +
+      "s.googleads.v26.services.AdGroupKeywordS" +
+      "uggestion\022N\n\022unusable_ad_groups\030\002 \003(\01322." +
+      "google.ads.googleads.v26.services.Unusab" +
+      "leAdGroup\"\355\001\n\030AdGroupKeywordSuggestion\022\024" +
+      "\n\014keyword_text\030\001 \001(\t\022\036\n\026suggested_keywor" +
+      "d_text\030\002 \001(\t\022c\n\024suggested_match_type\030\003 \001" +
+      "(\0162E.google.ads.googleads.v26.enums.Keyw" +
+      "ordMatchTypeEnum.KeywordMatchType\022\032\n\022sug" +
+      "gested_ad_group\030\004 \001(\t\022\032\n\022suggested_campa" +
+      "ign\030\005 \001(\t\"5\n\017UnusableAdGroup\022\020\n\010ad_group" +
+      "\030\001 \001(\t\022\020\n\010campaign\030\002 \001(\t\"\376\001\n%GenerateKey" +
+      "wordForecastMetricsRequest\022\023\n\013customer_i" +
+      "d\030\001 \001(\t\022\032\n\rcurrency_code\030\002 \001(\tH\000\210\001\001\022C\n\017f" +
+      "orecast_period\030\003 \001(\0132*.google.ads.google" +
+      "ads.v26.common.DateRange\022M\n\010campaign\030\004 \001" +
+      "(\01325.google.ads.googleads.v26.services.C" +
+      "ampaignToForecastB\004\342A\001\002B\020\n\016_currency_cod" +
+      "e\"\376\004\n\022CampaignToForecast\022\032\n\022language_con" +
+      "stants\030\001 \003(\t\022\034\n\024geo_target_constants\030\010 \003" +
+      "(\t\022m\n\020bidding_strategy\030\005 \001(\0132M.google.ad" +
+      "s.googleads.v26.services.CampaignToForec" +
+      "ast.CampaignBiddingStrategyB\004\342A\001\002\022E\n\tad_" +
+      "groups\030\007 \003(\01322.google.ads.googleads.v26." +
+      "services.ForecastAdGroup\032\367\002\n\027CampaignBid" +
+      "dingStrategy\022b\n\033manual_cpc_bidding_strat" +
+      "egy\030\001 \001(\0132;.google.ads.googleads.v26.ser" +
+      "vices.ManualCpcBiddingStrategyH\000\022l\n maxi" +
+      "mize_clicks_bidding_strategy\030\002 \001(\0132@.goo" +
+      "gle.ads.googleads.v26.services.MaximizeC" +
+      "licksBiddingStrategyH\000\022v\n%maximize_conve" +
+      "rsions_bidding_strategy\030\003 \001(\0132E.google.a" +
+      "ds.googleads.v26.services.MaximizeConver" +
+      "sionsBiddingStrategyH\000B\022\n\020bidding_strate" +
+      "gy\"W\n\017ForecastAdGroup\022D\n\010keywords\030\004 \003(\0132" +
+      ",.google.ads.googleads.v26.common.Keywor" +
+      "dInfoB\004\342A\001\002\"v\n\030ManualCpcBiddingStrategy\022" +
+      " \n\023daily_budget_micros\030\001 \001(\003H\000\210\001\001\022 \n\022max" +
+      "_cpc_bid_micros\030\002 \001(\003B\004\342A\001\002B\026\n\024_daily_bu" +
+      "dget_micros\"\220\001\n\035MaximizeClicksBiddingStr" +
+      "ategy\022\'\n\031daily_target_spend_micros\030\001 \001(\003" +
+      "B\004\342A\001\002\022\'\n\032max_cpc_bid_ceiling_micros\030\002 \001" +
+      "(\003H\000\210\001\001B\035\n\033_max_cpc_bid_ceiling_micros\"M" +
+      "\n\"MaximizeConversionsBiddingStrategy\022\'\n\031" +
+      "daily_target_spend_micros\030\001 \001(\003B\004\342A\001\002\"\251\001" +
+      "\n&GenerateKeywordForecastMetricsResponse" +
+      "\022a\n\031campaign_forecast_metrics\030\001 \001(\01329.go" +
+      "ogle.ads.googleads.v26.services.KeywordF" +
+      "orecastMetricsH\000\210\001\001B\034\n\032_campaign_forecas" +
+      "t_metrics\"\374\001\n\026KeywordForecastMetrics\022\037\n\022" +
+      "average_cpc_micros\030\003 \001(\003H\000\210\001\001\022\023\n\006clicks\030" +
+      "\004 \001(\001H\001\210\001\001\022\030\n\013cost_micros\030\005 \001(\003H\002\210\001\001\022\030\n\013" +
+      "conversions\030\006 \001(\001H\003\210\001\001\022\037\n\022average_cpa_mi" +
+      "cros\030\010 \001(\003H\004\210\001\001B\025\n\023_average_cpc_microsB\t" +
+      "\n\007_clicksB\016\n\014_cost_microsB\016\n\014_conversion" +
+      "sB\025\n\023_average_cpa_micros2\316\010\n\026KeywordPlan" +
+      "IdeaService\022\326\001\n\024GenerateKeywordIdeas\022>.g" +
+      "oogle.ads.googleads.v26.services.Generat" +
+      "eKeywordIdeasRequest\032>.google.ads.google" +
+      "ads.v26.services.GenerateKeywordIdeaResp" +
+      "onse\">\202\323\344\223\0028\"3/v26/customers/{customer_i" +
+      "d=*}:generateKeywordIdeas:\001*\022\207\002\n Generat" +
+      "eKeywordHistoricalMetrics\022J.google.ads.g" +
+      "oogleads.v26.services.GenerateKeywordHis" +
+      "toricalMetricsRequest\032K.google.ads.googl" +
+      "eads.v26.services.GenerateKeywordHistori" +
+      "calMetricsResponse\"J\202\323\344\223\002D\"?/v26/custome" +
+      "rs/{customer_id=*}:generateKeywordHistor" +
+      "icalMetrics:\001*\022\374\001\n\025GenerateAdGroupThemes" +
+      "\022?.google.ads.googleads.v26.services.Gen" +
+      "erateAdGroupThemesRequest\032@.google.ads.g" +
+      "oogleads.v26.services.GenerateAdGroupThe" +
+      "mesResponse\"`\332A\036customer_id,keywords,ad_" +
+      "groups\202\323\344\223\0029\"4/v26/customers/{customer_i" +
+      "d=*}:generateAdGroupThemes:\001*\022\212\002\n\036Genera" +
+      "teKeywordForecastMetrics\022H.google.ads.go" +
+      "ogleads.v26.services.GenerateKeywordFore" +
+      "castMetricsRequest\032I.google.ads.googlead" +
+      "s.v26.services.GenerateKeywordForecastMe" +
+      "tricsResponse\"S\332A\010campaign\202\323\344\223\002B\"=/v26/c" +
+      "ustomers/{customer_id=*}:generateKeyword" +
+      "ForecastMetrics:\001*\032E\312A\030googleads.googlea" +
+      "pis.com\322A\'https://www.googleapis.com/aut" +
+      "h/adwordsB\207\002\n%com.google.ads.googleads.v" +
+      "26.servicesB\033KeywordPlanIdeaServiceProto" +
+      "P\001ZIgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v26/services;services\242\002\003" +
+      "GAA\252\002!Google.Ads.GoogleAds.V26.Services\312" +
+      "\002!Google\\Ads\\GoogleAds\\V26\\Services\352\002%Go" +
+      "ogle::Ads::GoogleAds::V26::Servicesb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

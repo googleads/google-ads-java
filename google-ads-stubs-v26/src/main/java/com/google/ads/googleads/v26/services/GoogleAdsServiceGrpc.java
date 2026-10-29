@@ -5,6 +5,18 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Service to fetch data and metrics across resources.
+ * Use the interactive [Google Ads Query
+ * Builder](/google-ads/api/fields/latest/overview_query_builder)
+ * to construct and validate Google Ads Query Language (GAQL) queries.
+ * Search versus SearchStream:
+ * * `Search`: Paginated using `next_page_token` with up to 10,000 rows per
+ * page. Caches pages across requests. Best for small result sets (&lt; 10,000
+ * rows) or user-driven paginated interfaces.
+ * * `SearchStream`: Delivers a single stream of response batches with up to
+ * 10,000 rows per batch. Lower overhead without request caching. Best for large
+ * result sets (&gt; 10,000 rows) or batch reporting workloads.
+ * For more details, see [Streaming versus
+ * paging](/google-ads/api/docs/reporting/streaming).
  * </pre>
  */
 @io.grpc.stub.annotations.GrpcGenerated
@@ -170,6 +182,18 @@ public final class GoogleAdsServiceGrpc {
   /**
    * <pre>
    * Service to fetch data and metrics across resources.
+   * Use the interactive [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder)
+   * to construct and validate Google Ads Query Language (GAQL) queries.
+   * Search versus SearchStream:
+   * * `Search`: Paginated using `next_page_token` with up to 10,000 rows per
+   * page. Caches pages across requests. Best for small result sets (&lt; 10,000
+   * rows) or user-driven paginated interfaces.
+   * * `SearchStream`: Delivers a single stream of response batches with up to
+   * 10,000 rows per batch. Lower overhead without request caching. Best for large
+   * result sets (&gt; 10,000 rows) or batch reporting workloads.
+   * For more details, see [Streaming versus
+   * paging](/google-ads/api/docs/reporting/streaming).
    * </pre>
    */
   public interface AsyncService {
@@ -177,6 +201,11 @@ public final class GoogleAdsServiceGrpc {
     /**
      * <pre>
      * Returns all rows that match the search query.
+     * Uses pagination (`next_page_token`) with up to 10,000 rows per page. For
+     * result sets larger than 10,000 rows, prefer
+     * [GoogleAdsService.SearchStream][google.ads.googleads.v26.services.GoogleAdsService.SearchStream].
+     * To build and validate queries, use the [Google Ads Query
+     * Builder](/google-ads/api/fields/latest/overview_query_builder).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -198,6 +227,12 @@ public final class GoogleAdsServiceGrpc {
     /**
      * <pre>
      * Returns all rows that match the search stream query.
+     * Streams batches of rows over a single connection without pagination
+     * overhead, making it preferred over
+     * [GoogleAdsService.Search][google.ads.googleads.v26.services.GoogleAdsService.Search]
+     * for large result sets (&gt; 10,000 rows). To build and validate queries, use
+     * the [Google Ads Query
+     * Builder](/google-ads/api/fields/latest/overview_query_builder).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -330,6 +365,18 @@ public final class GoogleAdsServiceGrpc {
    * Base class for the server implementation of the service GoogleAdsService.
    * <pre>
    * Service to fetch data and metrics across resources.
+   * Use the interactive [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder)
+   * to construct and validate Google Ads Query Language (GAQL) queries.
+   * Search versus SearchStream:
+   * * `Search`: Paginated using `next_page_token` with up to 10,000 rows per
+   * page. Caches pages across requests. Best for small result sets (&lt; 10,000
+   * rows) or user-driven paginated interfaces.
+   * * `SearchStream`: Delivers a single stream of response batches with up to
+   * 10,000 rows per batch. Lower overhead without request caching. Best for large
+   * result sets (&gt; 10,000 rows) or batch reporting workloads.
+   * For more details, see [Streaming versus
+   * paging](/google-ads/api/docs/reporting/streaming).
    * </pre>
    */
   public static abstract class GoogleAdsServiceImplBase
@@ -344,6 +391,18 @@ public final class GoogleAdsServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service GoogleAdsService.
    * <pre>
    * Service to fetch data and metrics across resources.
+   * Use the interactive [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder)
+   * to construct and validate Google Ads Query Language (GAQL) queries.
+   * Search versus SearchStream:
+   * * `Search`: Paginated using `next_page_token` with up to 10,000 rows per
+   * page. Caches pages across requests. Best for small result sets (&lt; 10,000
+   * rows) or user-driven paginated interfaces.
+   * * `SearchStream`: Delivers a single stream of response batches with up to
+   * 10,000 rows per batch. Lower overhead without request caching. Best for large
+   * result sets (&gt; 10,000 rows) or batch reporting workloads.
+   * For more details, see [Streaming versus
+   * paging](/google-ads/api/docs/reporting/streaming).
    * </pre>
    */
   public static final class GoogleAdsServiceStub
@@ -362,6 +421,11 @@ public final class GoogleAdsServiceGrpc {
     /**
      * <pre>
      * Returns all rows that match the search query.
+     * Uses pagination (`next_page_token`) with up to 10,000 rows per page. For
+     * result sets larger than 10,000 rows, prefer
+     * [GoogleAdsService.SearchStream][google.ads.googleads.v26.services.GoogleAdsService.SearchStream].
+     * To build and validate queries, use the [Google Ads Query
+     * Builder](/google-ads/api/fields/latest/overview_query_builder).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -384,6 +448,12 @@ public final class GoogleAdsServiceGrpc {
     /**
      * <pre>
      * Returns all rows that match the search stream query.
+     * Streams batches of rows over a single connection without pagination
+     * overhead, making it preferred over
+     * [GoogleAdsService.Search][google.ads.googleads.v26.services.GoogleAdsService.Search]
+     * for large result sets (&gt; 10,000 rows). To build and validate queries, use
+     * the [Google Ads Query
+     * Builder](/google-ads/api/fields/latest/overview_query_builder).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -518,6 +588,18 @@ public final class GoogleAdsServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service GoogleAdsService.
    * <pre>
    * Service to fetch data and metrics across resources.
+   * Use the interactive [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder)
+   * to construct and validate Google Ads Query Language (GAQL) queries.
+   * Search versus SearchStream:
+   * * `Search`: Paginated using `next_page_token` with up to 10,000 rows per
+   * page. Caches pages across requests. Best for small result sets (&lt; 10,000
+   * rows) or user-driven paginated interfaces.
+   * * `SearchStream`: Delivers a single stream of response batches with up to
+   * 10,000 rows per batch. Lower overhead without request caching. Best for large
+   * result sets (&gt; 10,000 rows) or batch reporting workloads.
+   * For more details, see [Streaming versus
+   * paging](/google-ads/api/docs/reporting/streaming).
    * </pre>
    */
   public static final class GoogleAdsServiceBlockingV2Stub
@@ -536,6 +618,11 @@ public final class GoogleAdsServiceGrpc {
     /**
      * <pre>
      * Returns all rows that match the search query.
+     * Uses pagination (`next_page_token`) with up to 10,000 rows per page. For
+     * result sets larger than 10,000 rows, prefer
+     * [GoogleAdsService.SearchStream][google.ads.googleads.v26.services.GoogleAdsService.SearchStream].
+     * To build and validate queries, use the [Google Ads Query
+     * Builder](/google-ads/api/fields/latest/overview_query_builder).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -557,6 +644,12 @@ public final class GoogleAdsServiceGrpc {
     /**
      * <pre>
      * Returns all rows that match the search stream query.
+     * Streams batches of rows over a single connection without pagination
+     * overhead, making it preferred over
+     * [GoogleAdsService.Search][google.ads.googleads.v26.services.GoogleAdsService.Search]
+     * for large result sets (&gt; 10,000 rows). To build and validate queries, use
+     * the [Google Ads Query
+     * Builder](/google-ads/api/fields/latest/overview_query_builder).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -691,6 +784,18 @@ public final class GoogleAdsServiceGrpc {
    * A stub to allow clients to do limited synchronous rpc calls to service GoogleAdsService.
    * <pre>
    * Service to fetch data and metrics across resources.
+   * Use the interactive [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder)
+   * to construct and validate Google Ads Query Language (GAQL) queries.
+   * Search versus SearchStream:
+   * * `Search`: Paginated using `next_page_token` with up to 10,000 rows per
+   * page. Caches pages across requests. Best for small result sets (&lt; 10,000
+   * rows) or user-driven paginated interfaces.
+   * * `SearchStream`: Delivers a single stream of response batches with up to
+   * 10,000 rows per batch. Lower overhead without request caching. Best for large
+   * result sets (&gt; 10,000 rows) or batch reporting workloads.
+   * For more details, see [Streaming versus
+   * paging](/google-ads/api/docs/reporting/streaming).
    * </pre>
    */
   public static final class GoogleAdsServiceBlockingStub
@@ -709,6 +814,11 @@ public final class GoogleAdsServiceGrpc {
     /**
      * <pre>
      * Returns all rows that match the search query.
+     * Uses pagination (`next_page_token`) with up to 10,000 rows per page. For
+     * result sets larger than 10,000 rows, prefer
+     * [GoogleAdsService.SearchStream][google.ads.googleads.v26.services.GoogleAdsService.SearchStream].
+     * To build and validate queries, use the [Google Ads Query
+     * Builder](/google-ads/api/fields/latest/overview_query_builder).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -730,6 +840,12 @@ public final class GoogleAdsServiceGrpc {
     /**
      * <pre>
      * Returns all rows that match the search stream query.
+     * Streams batches of rows over a single connection without pagination
+     * overhead, making it preferred over
+     * [GoogleAdsService.Search][google.ads.googleads.v26.services.GoogleAdsService.Search]
+     * for large result sets (&gt; 10,000 rows). To build and validate queries, use
+     * the [Google Ads Query
+     * Builder](/google-ads/api/fields/latest/overview_query_builder).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -863,6 +979,18 @@ public final class GoogleAdsServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service GoogleAdsService.
    * <pre>
    * Service to fetch data and metrics across resources.
+   * Use the interactive [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder)
+   * to construct and validate Google Ads Query Language (GAQL) queries.
+   * Search versus SearchStream:
+   * * `Search`: Paginated using `next_page_token` with up to 10,000 rows per
+   * page. Caches pages across requests. Best for small result sets (&lt; 10,000
+   * rows) or user-driven paginated interfaces.
+   * * `SearchStream`: Delivers a single stream of response batches with up to
+   * 10,000 rows per batch. Lower overhead without request caching. Best for large
+   * result sets (&gt; 10,000 rows) or batch reporting workloads.
+   * For more details, see [Streaming versus
+   * paging](/google-ads/api/docs/reporting/streaming).
    * </pre>
    */
   public static final class GoogleAdsServiceFutureStub
@@ -881,6 +1009,11 @@ public final class GoogleAdsServiceGrpc {
     /**
      * <pre>
      * Returns all rows that match the search query.
+     * Uses pagination (`next_page_token`) with up to 10,000 rows per page. For
+     * result sets larger than 10,000 rows, prefer
+     * [GoogleAdsService.SearchStream][google.ads.googleads.v26.services.GoogleAdsService.SearchStream].
+     * To build and validate queries, use the [Google Ads Query
+     * Builder](/google-ads/api/fields/latest/overview_query_builder).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()

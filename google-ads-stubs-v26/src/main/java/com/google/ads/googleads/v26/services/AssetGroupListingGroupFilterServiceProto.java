@@ -65,50 +65,50 @@ public final class AssetGroupListingGroupFilterServiceProto extends com.google.p
       "to\032\027google/api/client.proto\032\037google/api/" +
       "field_behavior.proto\032\031google/api/resourc" +
       "e.proto\032 google/protobuf/field_mask.prot" +
-      "o\"\254\002\n*MutateAssetGroupListingGroupFilter" +
-      "sRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022a\n\nop" +
-      "erations\030\002 \003(\0132H.google.ads.googleads.v2" +
-      "6.services.AssetGroupListingGroupFilterO" +
-      "perationB\003\340A\002\022\025\n\rvalidate_only\030\003 \001(\010\022j\n\025" +
-      "response_content_type\030\004 \001(\0162K.google.ads" +
-      ".googleads.v26.enums.ResponseContentType" +
-      "Enum.ResponseContentType\"\333\002\n%AssetGroupL" +
-      "istingGroupFilterOperation\022/\n\013update_mas" +
-      "k\030\004 \001(\0132\032.google.protobuf.FieldMask\022R\n\006c" +
-      "reate\030\001 \001(\0132@.google.ads.googleads.v26.r" +
-      "esources.AssetGroupListingGroupFilterH\000\022" +
-      "R\n\006update\030\002 \001(\0132@.google.ads.googleads.v" +
-      "26.resources.AssetGroupListingGroupFilte" +
-      "rH\000\022L\n\006remove\030\003 \001(\tB:\372A7\n5googleads.goog" +
-      "leapis.com/AssetGroupListingGroupFilterH" +
-      "\000B\013\n\toperation\"\213\001\n+MutateAssetGroupListi" +
-      "ngGroupFiltersResponse\022\\\n\007results\030\001 \003(\0132" +
-      "K.google.ads.googleads.v26.services.Muta" +
-      "teAssetGroupListingGroupFilterResult\"\351\001\n" +
-      "(MutateAssetGroupListingGroupFilterResul" +
-      "t\022Q\n\rresource_name\030\001 \001(\tB:\372A7\n5googleads" +
-      ".googleapis.com/AssetGroupListingGroupFi" +
-      "lter\022j\n asset_group_listing_group_filter" +
-      "\030\002 \001(\0132@.google.ads.googleads.v26.resour" +
-      "ces.AssetGroupListingGroupFilter2\234\003\n#Ass" +
-      "etGroupListingGroupFilterService\022\255\002\n#Mut" +
-      "ateAssetGroupListingGroupFilters\022M.googl" +
-      "e.ads.googleads.v26.services.MutateAsset" +
-      "GroupListingGroupFiltersRequest\032N.google" +
-      ".ads.googleads.v26.services.MutateAssetG" +
-      "roupListingGroupFiltersResponse\"g\332A\026cust" +
-      "omer_id,operations\202\323\344\223\002H\"C/v26/customers" +
-      "/{customer_id=*}/assetGroupListingGroupF" +
-      "ilters:mutate:\001*\032E\312A\030googleads.googleapi" +
-      "s.com\322A\'https://www.googleapis.com/auth/" +
-      "adwordsB\224\002\n%com.google.ads.googleads.v26" +
-      ".servicesB(AssetGroupListingGroupFilterS" +
-      "erviceProtoP\001ZIgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v26/services;" +
-      "services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2" +
-      "6.Services\312\002!Google\\Ads\\GoogleAds\\V26\\Se" +
-      "rvices\352\002%Google::Ads::GoogleAds::V26::Se" +
-      "rvicesb\006proto3"
+      "o\"\256\002\n*MutateAssetGroupListingGroupFilter" +
+      "sRequest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022b\n\no" +
+      "perations\030\002 \003(\0132H.google.ads.googleads.v" +
+      "26.services.AssetGroupListingGroupFilter" +
+      "OperationB\004\342A\001\002\022\025\n\rvalidate_only\030\003 \001(\010\022j" +
+      "\n\025response_content_type\030\004 \001(\0162K.google.a" +
+      "ds.googleads.v26.enums.ResponseContentTy" +
+      "peEnum.ResponseContentType\"\333\002\n%AssetGrou" +
+      "pListingGroupFilterOperation\022/\n\013update_m" +
+      "ask\030\004 \001(\0132\032.google.protobuf.FieldMask\022R\n" +
+      "\006create\030\001 \001(\0132@.google.ads.googleads.v26" +
+      ".resources.AssetGroupListingGroupFilterH" +
+      "\000\022R\n\006update\030\002 \001(\0132@.google.ads.googleads" +
+      ".v26.resources.AssetGroupListingGroupFil" +
+      "terH\000\022L\n\006remove\030\003 \001(\tB:\372A7\n5googleads.go" +
+      "ogleapis.com/AssetGroupListingGroupFilte" +
+      "rH\000B\013\n\toperation\"\213\001\n+MutateAssetGroupLis" +
+      "tingGroupFiltersResponse\022\\\n\007results\030\001 \003(" +
+      "\0132K.google.ads.googleads.v26.services.Mu" +
+      "tateAssetGroupListingGroupFilterResult\"\351" +
+      "\001\n(MutateAssetGroupListingGroupFilterRes" +
+      "ult\022Q\n\rresource_name\030\001 \001(\tB:\372A7\n5googlea" +
+      "ds.googleapis.com/AssetGroupListingGroup" +
+      "Filter\022j\n asset_group_listing_group_filt" +
+      "er\030\002 \001(\0132@.google.ads.googleads.v26.reso" +
+      "urces.AssetGroupListingGroupFilter2\234\003\n#A" +
+      "ssetGroupListingGroupFilterService\022\255\002\n#M" +
+      "utateAssetGroupListingGroupFilters\022M.goo" +
+      "gle.ads.googleads.v26.services.MutateAss" +
+      "etGroupListingGroupFiltersRequest\032N.goog" +
+      "le.ads.googleads.v26.services.MutateAsse" +
+      "tGroupListingGroupFiltersResponse\"g\332A\026cu" +
+      "stomer_id,operations\202\323\344\223\002H\"C/v26/custome" +
+      "rs/{customer_id=*}/assetGroupListingGrou" +
+      "pFilters:mutate:\001*\032E\312A\030googleads.googlea" +
+      "pis.com\322A\'https://www.googleapis.com/aut" +
+      "h/adwordsB\224\002\n%com.google.ads.googleads.v" +
+      "26.servicesB(AssetGroupListingGroupFilte" +
+      "rServiceProtoP\001ZIgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v26/service" +
+      "s;services\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
+      "V26.Services\312\002!Google\\Ads\\GoogleAds\\V26\\" +
+      "Services\352\002%Google::Ads::GoogleAds::V26::" +
+      "Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

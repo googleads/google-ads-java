@@ -46,35 +46,35 @@ public final class AssetGroupSignalProto extends com.google.protobuf.GeneratedFi
       "v26/common/criteria.proto\032Ggoogle/ads/go" +
       "ogleads/v26/enums/asset_group_signal_app" +
       "roval_status.proto\032\037google/api/field_beh" +
-      "avior.proto\032\031google/api/resource.proto\"\251" +
-      "\006\n\020AssetGroupSignal\022H\n\rresource_name\030\001 \001" +
-      "(\tB1\340A\005\372A+\n)googleads.googleapis.com/Ass" +
-      "etGroupSignal\022@\n\013asset_group\030\002 \001(\tB+\340A\005\372" +
-      "A%\n#googleads.googleapis.com/AssetGroup\022" +
-      "\177\n\017approval_status\030\006 \001(\0162a.google.ads.go" +
-      "ogleads.v26.enums.AssetGroupSignalApprov" +
-      "alStatusEnum.AssetGroupSignalApprovalSta" +
-      "tusB\003\340A\003\022 \n\023disapproval_reasons\030\007 \003(\tB\003\340" +
-      "A\003\022F\n\010audience\030\004 \001(\0132-.google.ads.google" +
-      "ads.v26.common.AudienceInfoB\003\340A\005H\000\022M\n\014se" +
-      "arch_theme\030\005 \001(\01320.google.ads.googleads." +
-      "v26.common.SearchThemeInfoB\003\340A\005H\000\022U\n\021loc" +
-      "al_services_id\030\010 \001(\01323.google.ads.google" +
-      "ads.v26.common.LocalServiceIdInfoB\003\340A\005H\000" +
-      "\022s\n!vertical_ads_item_group_rule_list\030\t " +
-      "\001(\0132A.google.ads.googleads.v26.common.Ve" +
-      "rticalAdsItemGroupRuleListInfoB\003\340A\005H\000:y\352" +
-      "Av\n)googleads.googleapis.com/AssetGroupS" +
-      "ignal\022Icustomers/{customer_id}/assetGrou" +
-      "pSignals/{asset_group_id}~{criterion_id}" +
-      "B\010\n\006signalB\207\002\n&com.google.ads.googleads." +
-      "v26.resourcesB\025AssetGroupSignalProtoP\001ZK" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v26/resources;resources\242\002\003GA" +
-      "A\252\002\"Google.Ads.GoogleAds.V26.Resources\312\002" +
-      "\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002&Go" +
-      "ogle::Ads::GoogleAds::V26::Resourcesb\006pr" +
-      "oto3"
+      "avior.proto\032\031google/api/resource.proto\"\262" +
+      "\006\n\020AssetGroupSignal\022I\n\rresource_name\030\001 \001" +
+      "(\tB2\342A\001\005\372A+\n)googleads.googleapis.com/As" +
+      "setGroupSignal\022A\n\013asset_group\030\002 \001(\tB,\342A\001" +
+      "\005\372A%\n#googleads.googleapis.com/AssetGrou" +
+      "p\022\200\001\n\017approval_status\030\006 \001(\0162a.google.ads" +
+      ".googleads.v26.enums.AssetGroupSignalApp" +
+      "rovalStatusEnum.AssetGroupSignalApproval" +
+      "StatusB\004\342A\001\003\022!\n\023disapproval_reasons\030\007 \003(" +
+      "\tB\004\342A\001\003\022G\n\010audience\030\004 \001(\0132-.google.ads.g" +
+      "oogleads.v26.common.AudienceInfoB\004\342A\001\005H\000" +
+      "\022N\n\014search_theme\030\005 \001(\01320.google.ads.goog" +
+      "leads.v26.common.SearchThemeInfoB\004\342A\001\005H\000" +
+      "\022V\n\021local_services_id\030\010 \001(\01323.google.ads" +
+      ".googleads.v26.common.LocalServiceIdInfo" +
+      "B\004\342A\001\005H\000\022t\n!vertical_ads_item_group_rule" +
+      "_list\030\t \001(\0132A.google.ads.googleads.v26.c" +
+      "ommon.VerticalAdsItemGroupRuleListInfoB\004" +
+      "\342A\001\005H\000:y\352Av\n)googleads.googleapis.com/As" +
+      "setGroupSignal\022Icustomers/{customer_id}/" +
+      "assetGroupSignals/{asset_group_id}~{crit" +
+      "erion_id}B\010\n\006signalB\207\002\n&com.google.ads.g" +
+      "oogleads.v26.resourcesB\025AssetGroupSignal" +
+      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v26/resources;resou" +
+      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Re" +
+      "sources\312\002\"Google\\Ads\\GoogleAds\\V26\\Resou" +
+      "rces\352\002&Google::Ads::GoogleAds::V26::Reso" +
+      "urcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

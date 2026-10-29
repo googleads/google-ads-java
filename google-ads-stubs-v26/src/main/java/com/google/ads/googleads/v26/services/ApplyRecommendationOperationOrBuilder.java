@@ -801,5 +801,35 @@ public interface ApplyRecommendationOperationOrBuilder extends
    */
   com.google.ads.googleads.v26.services.ApplyRecommendationOperation.RaiseBudgetPerformanceTooLowParametersOrBuilder getRaiseBudgetPerformanceTooLowOrBuilder();
 
+  /**
+   * <pre>
+   * Parameters to use when applying Optimize For New Customers
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters optimize_for_new_customers = 29;</code>
+   * @return Whether the optimizeForNewCustomers field is set.
+   */
+  boolean hasOptimizeForNewCustomers();
+  /**
+   * <pre>
+   * Parameters to use when applying Optimize For New Customers
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters optimize_for_new_customers = 29;</code>
+   * @return The optimizeForNewCustomers.
+   */
+  com.google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters getOptimizeForNewCustomers();
+  /**
+   * <pre>
+   * Parameters to use when applying Optimize For New Customers
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters optimize_for_new_customers = 29;</code>
+   */
+  com.google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParametersOrBuilder getOptimizeForNewCustomersOrBuilder();
+
   com.google.ads.googleads.v26.services.ApplyRecommendationOperation.ApplyParametersCase getApplyParametersCase();
 }

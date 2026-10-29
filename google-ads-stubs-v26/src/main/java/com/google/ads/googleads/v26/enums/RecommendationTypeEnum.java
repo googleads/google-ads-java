@@ -580,6 +580,14 @@ private static final long serialVersionUID = 0L;
      * <code>RAISE_BUDGET_PERFORMANCE_TOO_LOW = 63;</code>
      */
     RAISE_BUDGET_PERFORMANCE_TOO_LOW(63),
+    /**
+     * <pre>
+     * Recommendation to optimize for new customers.
+     * </pre>
+     *
+     * <code>OPTIMIZE_FOR_NEW_CUSTOMERS = 64;</code>
+     */
+    OPTIMIZE_FOR_NEW_CUSTOMERS(64),
     UNRECOGNIZED(-1),
     ;
 
@@ -1116,6 +1124,14 @@ private static final long serialVersionUID = 0L;
      * <code>RAISE_BUDGET_PERFORMANCE_TOO_LOW = 63;</code>
      */
     public static final int RAISE_BUDGET_PERFORMANCE_TOO_LOW_VALUE = 63;
+    /**
+     * <pre>
+     * Recommendation to optimize for new customers.
+     * </pre>
+     *
+     * <code>OPTIMIZE_FOR_NEW_CUSTOMERS = 64;</code>
+     */
+    public static final int OPTIMIZE_FOR_NEW_CUSTOMERS_VALUE = 64;
 
 
     public final int getNumber() {
@@ -1202,6 +1218,7 @@ private static final long serialVersionUID = 0L;
         case 61: return RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW;
         case 62: return LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW;
         case 63: return RAISE_BUDGET_PERFORMANCE_TOO_LOW;
+        case 64: return OPTIMIZE_FOR_NEW_CUSTOMERS;
         default: return null;
       }
     }

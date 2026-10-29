@@ -47,35 +47,35 @@ public final class GoalProto extends com.google.protobuf.GeneratedFile {
       "6/enums/goal_optimization_eligibility.pr" +
       "oto\032.google/ads/googleads/v26/enums/goal" +
       "_type.proto\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\310\006\n\004Goal" +
-      "\022<\n\rresource_name\030\001 \001(\tB%\340A\005\372A\037\n\035googlea" +
-      "ds.googleapis.com/Goal\022\031\n\007goal_id\030\002 \001(\003B" +
-      "\003\340A\003H\001\210\001\001\022M\n\tgoal_type\030\003 \001(\01625.google.ad" +
-      "s.googleads.v26.enums.GoalTypeEnum.GoalT" +
-      "ypeB\003\340A\003\022F\n\016owner_customer\030\004 \001(\tB)\340A\003\372A#" +
-      "\n!googleads.googleapis.com/CustomerH\002\210\001\001" +
-      "\022\202\001\n\030optimization_eligibility\030\006 \001(\0162[.go" +
-      "ogle.ads.googleads.v26.enums.GoalOptimiz" +
-      "ationEligibilityEnum.GoalOptimizationEli" +
-      "gibilityB\003\340A\003\022]\n\027retention_goal_settings" +
-      "\030\007 \001(\0132:.google.ads.googleads.v26.common" +
-      ".GoalSetting.RetentionGoalH\000\022y\n&new_cust" +
-      "omer_acquisition_goal_settings\030\010 \001(\0132G.g" +
-      "oogle.ads.googleads.v26.common.GoalSetti" +
-      "ng.NewCustomerAcquisitionGoalH\000\022l\n\037loyal" +
-      "ty_retention_goal_settings\030\t \001(\0132A.googl" +
-      "e.ads.googleads.v26.common.GoalSetting.L" +
-      "oyaltyRetentionGoalH\000:S\352AP\n\035googleads.go" +
-      "ogleapis.com/Goal\022/customers/{customer_i" +
-      "d}/goals/{unified_goal_id}B\017\n\rgoal_setti" +
-      "ngsB\n\n\010_goal_idB\021\n\017_owner_customerB\373\001\n&c" +
-      "om.google.ads.googleads.v26.resourcesB\tG" +
-      "oalProtoP\001ZKgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v26/resources;re" +
-      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26" +
-      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\Re" +
-      "sources\352\002&Google::Ads::GoogleAds::V26::R" +
-      "esourcesb\006proto3"
+      "roto\032\031google/api/resource.proto\"\315\006\n\004Goal" +
+      "\022=\n\rresource_name\030\001 \001(\tB&\342A\001\005\372A\037\n\035google" +
+      "ads.googleapis.com/Goal\022\032\n\007goal_id\030\002 \001(\003" +
+      "B\004\342A\001\003H\001\210\001\001\022N\n\tgoal_type\030\003 \001(\01625.google." +
+      "ads.googleads.v26.enums.GoalTypeEnum.Goa" +
+      "lTypeB\004\342A\001\003\022G\n\016owner_customer\030\004 \001(\tB*\342A\001" +
+      "\003\372A#\n!googleads.googleapis.com/CustomerH" +
+      "\002\210\001\001\022\203\001\n\030optimization_eligibility\030\006 \001(\0162" +
+      "[.google.ads.googleads.v26.enums.GoalOpt" +
+      "imizationEligibilityEnum.GoalOptimizatio" +
+      "nEligibilityB\004\342A\001\003\022]\n\027retention_goal_set" +
+      "tings\030\007 \001(\0132:.google.ads.googleads.v26.c" +
+      "ommon.GoalSetting.RetentionGoalH\000\022y\n&new" +
+      "_customer_acquisition_goal_settings\030\010 \001(" +
+      "\0132G.google.ads.googleads.v26.common.Goal" +
+      "Setting.NewCustomerAcquisitionGoalH\000\022l\n\037" +
+      "loyalty_retention_goal_settings\030\t \001(\0132A." +
+      "google.ads.googleads.v26.common.GoalSett" +
+      "ing.LoyaltyRetentionGoalH\000:S\352AP\n\035googlea" +
+      "ds.googleapis.com/Goal\022/customers/{custo" +
+      "mer_id}/goals/{unified_goal_id}B\017\n\rgoal_" +
+      "settingsB\n\n\010_goal_idB\021\n\017_owner_customerB" +
+      "\373\001\n&com.google.ads.googleads.v26.resourc" +
+      "esB\tGoalProtoP\001ZKgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v26/resourc" +
+      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
+      "s.V26.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
+      "26\\Resources\352\002&Google::Ads::GoogleAds::V" +
+      "26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

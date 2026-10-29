@@ -110,7 +110,8 @@ private static final long serialVersionUID = 0L;
     HOTEL_ADS(6),
     /**
      * <pre>
-     * The type for ad groups in Smart Shopping campaigns.
+     * The type for ad groups in Smart Shopping campaigns. New Smart Shopping
+     * campaigns cannot be created.
      * </pre>
      *
      * <code>SHOPPING_SMART_ADS = 7;</code>
@@ -276,7 +277,8 @@ private static final long serialVersionUID = 0L;
     public static final int HOTEL_ADS_VALUE = 6;
     /**
      * <pre>
-     * The type for ad groups in Smart Shopping campaigns.
+     * The type for ad groups in Smart Shopping campaigns. New Smart Shopping
+     * campaigns cannot be created.
      * </pre>
      *
      * <code>SHOPPING_SMART_ADS = 7;</code>

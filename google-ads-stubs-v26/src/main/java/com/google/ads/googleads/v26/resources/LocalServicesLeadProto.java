@@ -63,46 +63,47 @@ public final class LocalServicesLeadProto extends com.google.protobuf.GeneratedF
       "s/local_services_lead_status.proto\032=goog" +
       "le/ads/googleads/v26/enums/local_service" +
       "s_lead_type.proto\032\037google/api/field_beha" +
-      "vior.proto\032\031google/api/resource.proto\"\241\007" +
-      "\n\021LocalServicesLead\022I\n\rresource_name\030\001 \001" +
-      "(\tB2\340A\005\372A,\n*googleads.googleapis.com/Loc" +
-      "alServicesLead\022\017\n\002id\030\002 \001(\003B\003\340A\003\022\030\n\013categ" +
-      "ory_id\030\003 \001(\tB\003\340A\003\022\027\n\nservice_id\030\004 \001(\tB\003\340" +
-      "A\003\022P\n\017contact_details\030\005 \001(\01322.google.ads" +
-      ".googleads.v26.resources.ContactDetailsB" +
-      "\003\340A\003\022Z\n\tlead_type\030\006 \001(\0162B.google.ads.goo" +
-      "gleads.v26.enums.LocalServicesLeadTypeEn" +
-      "um.LeadTypeB\003\340A\003\022`\n\013lead_status\030\007 \001(\0162F." +
-      "google.ads.googleads.v26.enums.LocalServ" +
-      "icesLeadStatusEnum.LeadStatusB\003\340A\003\022\037\n\022cr" +
-      "eation_date_time\030\010 \001(\tB\003\340A\003\022\023\n\006locale\030\t " +
-      "\001(\tB\003\340A\003\022@\n\004note\030\n \001(\0132(.google.ads.goog" +
-      "leads.v26.resources.NoteB\003\340A\003H\000\210\001\001\022\031\n\014le" +
-      "ad_charged\030\013 \001(\010B\003\340A\003\022S\n\016credit_details\030" +
-      "\014 \001(\01321.google.ads.googleads.v26.resourc" +
-      "es.CreditDetailsB\003\340A\003H\001\210\001\001\022$\n\027lead_feedb" +
-      "ack_submitted\030\r \001(\010B\003\340A\003\022@\n\010campaign\030\016 \001" +
-      "(\tB)\340A\003\372A#\n!googleads.googleapis.com/Cam" +
-      "paignH\002\210\001\001:t\352Aq\n*googleads.googleapis.co" +
-      "m/LocalServicesLead\022Ccustomers/{customer" +
-      "_id}/localServicesLeads/{local_services_" +
-      "lead_id}B\007\n\005_noteB\021\n\017_credit_detailsB\013\n\t" +
-      "_campaign\"l\n\016ContactDetails\022\031\n\014phone_num" +
-      "ber\030\001 \001(\tB\003\340A\003\022\032\n\rconsumer_name\030\003 \001(\tB\003\340" +
-      "A\003\022#\n\026phone_number_extension\030\004 \001(\tB\003\340A\003\"" +
-      "=\n\004Note\022\033\n\016edit_date_time\030\001 \001(\tB\003\340A\003\022\030\n\013" +
-      "description\030\002 \001(\tB\003\340A\003\"\245\001\n\rCreditDetails" +
-      "\022c\n\014credit_state\030\001 \001(\0162H.google.ads.goog" +
-      "leads.v26.enums.LocalServicesCreditState" +
-      "Enum.CreditStateB\003\340A\003\022/\n\"credit_state_la" +
-      "st_update_date_time\030\002 \001(\tB\003\340A\003B\210\002\n&com.g" +
-      "oogle.ads.googleads.v26.resourcesB\026Local" +
-      "ServicesLeadProtoP\001ZKgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v26/res" +
-      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
-      "leAds.V26.Resources\312\002\"Google\\Ads\\GoogleA" +
-      "ds\\V26\\Resources\352\002&Google::Ads::GoogleAd" +
-      "s::V26::Resourcesb\006proto3"
+      "vior.proto\032\031google/api/resource.proto\"\257\007" +
+      "\n\021LocalServicesLead\022J\n\rresource_name\030\001 \001" +
+      "(\tB3\342A\001\005\372A,\n*googleads.googleapis.com/Lo" +
+      "calServicesLead\022\020\n\002id\030\002 \001(\003B\004\342A\001\003\022\031\n\013cat" +
+      "egory_id\030\003 \001(\tB\004\342A\001\003\022\030\n\nservice_id\030\004 \001(\t" +
+      "B\004\342A\001\003\022Q\n\017contact_details\030\005 \001(\01322.google" +
+      ".ads.googleads.v26.resources.ContactDeta" +
+      "ilsB\004\342A\001\003\022[\n\tlead_type\030\006 \001(\0162B.google.ad" +
+      "s.googleads.v26.enums.LocalServicesLeadT" +
+      "ypeEnum.LeadTypeB\004\342A\001\003\022a\n\013lead_status\030\007 " +
+      "\001(\0162F.google.ads.googleads.v26.enums.Loc" +
+      "alServicesLeadStatusEnum.LeadStatusB\004\342A\001" +
+      "\003\022 \n\022creation_date_time\030\010 \001(\tB\004\342A\001\003\022\024\n\006l" +
+      "ocale\030\t \001(\tB\004\342A\001\003\022A\n\004note\030\n \001(\0132(.google" +
+      ".ads.googleads.v26.resources.NoteB\004\342A\001\003H" +
+      "\000\210\001\001\022\032\n\014lead_charged\030\013 \001(\010B\004\342A\001\003\022T\n\016cred" +
+      "it_details\030\014 \001(\01321.google.ads.googleads." +
+      "v26.resources.CreditDetailsB\004\342A\001\003H\001\210\001\001\022%" +
+      "\n\027lead_feedback_submitted\030\r \001(\010B\004\342A\001\003\022A\n" +
+      "\010campaign\030\016 \001(\tB*\342A\001\003\372A#\n!googleads.goog" +
+      "leapis.com/CampaignH\002\210\001\001:t\352Aq\n*googleads" +
+      ".googleapis.com/LocalServicesLead\022Ccusto" +
+      "mers/{customer_id}/localServicesLeads/{l" +
+      "ocal_services_lead_id}B\007\n\005_noteB\021\n\017_cred" +
+      "it_detailsB\013\n\t_campaign\"o\n\016ContactDetail" +
+      "s\022\032\n\014phone_number\030\001 \001(\tB\004\342A\001\003\022\033\n\rconsume" +
+      "r_name\030\003 \001(\tB\004\342A\001\003\022$\n\026phone_number_exten" +
+      "sion\030\004 \001(\tB\004\342A\001\003\"?\n\004Note\022\034\n\016edit_date_ti" +
+      "me\030\001 \001(\tB\004\342A\001\003\022\031\n\013description\030\002 \001(\tB\004\342A\001" +
+      "\003\"\247\001\n\rCreditDetails\022d\n\014credit_state\030\001 \001(" +
+      "\0162H.google.ads.googleads.v26.enums.Local" +
+      "ServicesCreditStateEnum.CreditStateB\004\342A\001" +
+      "\003\0220\n\"credit_state_last_update_date_time\030" +
+      "\002 \001(\tB\004\342A\001\003B\210\002\n&com.google.ads.googleads" +
+      ".v26.resourcesB\026LocalServicesLeadProtoP\001" +
+      "ZKgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v26/resources;resources\242\002\003" +
+      "GAA\252\002\"Google.Ads.GoogleAds.V26.Resources" +
+      "\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002&" +
+      "Google::Ads::GoogleAds::V26::Resourcesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

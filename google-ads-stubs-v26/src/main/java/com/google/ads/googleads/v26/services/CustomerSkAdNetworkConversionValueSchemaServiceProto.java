@@ -67,41 +67,41 @@ public final class CustomerSkAdNetworkConversionValueSchemaServiceProto extends 
       "\"\221\001\n1CustomerSkAdNetworkConversionValueS" +
       "chemaOperation\022\\\n\006update\030\001 \001(\0132L.google." +
       "ads.googleads.v26.resources.CustomerSkAd" +
-      "NetworkConversionValueSchema\"\352\001\n5MutateC" +
+      "NetworkConversionValueSchema\"\353\001\n5MutateC" +
       "ustomerSkAdNetworkConversionValueSchemaR" +
       "equest\022\023\n\013customer_id\030\001 \001(\t\022g\n\toperation" +
       "\030\002 \001(\0132T.google.ads.googleads.v26.servic" +
       "es.CustomerSkAdNetworkConversionValueSch" +
-      "emaOperation\022\025\n\rvalidate_only\030\003 \001(\010\022\034\n\017e" +
-      "nable_warnings\030\004 \001(\010B\003\340A\001\"\245\001\n4MutateCust" +
-      "omerSkAdNetworkConversionValueSchemaResu" +
-      "lt\022]\n\rresource_name\030\001 \001(\tBF\372AC\nAgooglead" +
-      "s.googleapis.com/CustomerSkAdNetworkConv" +
-      "ersionValueSchema\022\016\n\006app_id\030\002 \001(\t\"\306\001\n6Mu" +
-      "tateCustomerSkAdNetworkConversionValueSc" +
-      "hemaResponse\022g\n\006result\030\001 \001(\0132W.google.ad" +
+      "emaOperation\022\025\n\rvalidate_only\030\003 \001(\010\022\035\n\017e" +
+      "nable_warnings\030\004 \001(\010B\004\342A\001\001\"\245\001\n4MutateCus" +
+      "tomerSkAdNetworkConversionValueSchemaRes" +
+      "ult\022]\n\rresource_name\030\001 \001(\tBF\372AC\nAgooglea" +
+      "ds.googleapis.com/CustomerSkAdNetworkCon" +
+      "versionValueSchema\022\016\n\006app_id\030\002 \001(\t\"\306\001\n6M" +
+      "utateCustomerSkAdNetworkConversionValueS" +
+      "chemaResponse\022g\n\006result\030\001 \001(\0132W.google.a" +
+      "ds.googleads.v26.services.MutateCustomer" +
+      "SkAdNetworkConversionValueSchemaResult\022#" +
+      "\n\007warning\030\002 \001(\0132\022.google.rpc.Status2\274\003\n/" +
+      "CustomerSkAdNetworkConversionValueSchema" +
+      "Service\022\301\002\n.MutateCustomerSkAdNetworkCon" +
+      "versionValueSchema\022X.google.ads.googlead" +
+      "s.v26.services.MutateCustomerSkAdNetwork" +
+      "ConversionValueSchemaRequest\032Y.google.ad" +
       "s.googleads.v26.services.MutateCustomerS" +
-      "kAdNetworkConversionValueSchemaResult\022#\n" +
-      "\007warning\030\002 \001(\0132\022.google.rpc.Status2\274\003\n/C" +
-      "ustomerSkAdNetworkConversionValueSchemaS" +
-      "ervice\022\301\002\n.MutateCustomerSkAdNetworkConv" +
-      "ersionValueSchema\022X.google.ads.googleads" +
-      ".v26.services.MutateCustomerSkAdNetworkC" +
-      "onversionValueSchemaRequest\032Y.google.ads" +
-      ".googleads.v26.services.MutateCustomerSk" +
-      "AdNetworkConversionValueSchemaResponse\"Z" +
-      "\202\323\344\223\002T\"O/v26/customers/{customer_id=*}/c" +
-      "ustomerSkAdNetworkConversionValueSchemas" +
-      ":mutate:\001*\032E\312A\030googleads.googleapis.com\322" +
-      "A\'https://www.googleapis.com/auth/adword" +
-      "sB\240\002\n%com.google.ads.googleads.v26.servi" +
-      "cesB4CustomerSkAdNetworkConversionValueS" +
-      "chemaServiceProtoP\001ZIgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v26/ser" +
-      "vices;services\242\002\003GAA\252\002!Google.Ads.Google" +
-      "Ads.V26.Services\312\002!Google\\Ads\\GoogleAds\\" +
-      "V26\\Services\352\002%Google::Ads::GoogleAds::V" +
-      "26::Servicesb\006proto3"
+      "kAdNetworkConversionValueSchemaResponse\"" +
+      "Z\202\323\344\223\002T\"O/v26/customers/{customer_id=*}/" +
+      "customerSkAdNetworkConversionValueSchema" +
+      "s:mutate:\001*\032E\312A\030googleads.googleapis.com" +
+      "\322A\'https://www.googleapis.com/auth/adwor" +
+      "dsB\240\002\n%com.google.ads.googleads.v26.serv" +
+      "icesB4CustomerSkAdNetworkConversionValue" +
+      "SchemaServiceProtoP\001ZIgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v26/se" +
+      "rvices;services\242\002\003GAA\252\002!Google.Ads.Googl" +
+      "eAds.V26.Services\312\002!Google\\Ads\\GoogleAds" +
+      "\\V26\\Services\352\002%Google::Ads::GoogleAds::" +
+      "V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

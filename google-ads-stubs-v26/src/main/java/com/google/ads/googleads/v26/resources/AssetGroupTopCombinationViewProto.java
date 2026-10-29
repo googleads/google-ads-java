@@ -50,27 +50,27 @@ public final class AssetGroupTopCombinationViewProto extends com.google.protobuf
       "gle.ads.googleads.v26.resources\0321google/" +
       "ads/googleads/v26/common/asset_usage.pro" +
       "to\032\037google/api/field_behavior.proto\032\031goo" +
-      "gle/api/resource.proto\"\206\003\n\034AssetGroupTop" +
-      "CombinationView\022T\n\rresource_name\030\001 \001(\tB=" +
-      "\340A\003\372A7\n5googleads.googleapis.com/AssetGr" +
-      "oupTopCombinationView\022m\n\034asset_group_top" +
-      "_combinations\030\002 \003(\0132B.google.ads.googlea" +
-      "ds.v26.resources.AssetGroupAssetCombinat" +
-      "ionDataB\003\340A\003:\240\001\352A\234\001\n5googleads.googleapi" +
-      "s.com/AssetGroupTopCombinationView\022ccust" +
-      "omers/{customer_id}/assetGroupTopCombina" +
-      "tionViews/{asset_group_id}~{asset_combin" +
-      "ation_category}\"{\n\036AssetGroupAssetCombin" +
-      "ationData\022Y\n\037asset_combination_served_as" +
-      "sets\030\001 \003(\0132+.google.ads.googleads.v26.co" +
-      "mmon.AssetUsageB\003\340A\003B\223\002\n&com.google.ads." +
-      "googleads.v26.resourcesB!AssetGroupTopCo" +
-      "mbinationViewProtoP\001ZKgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v26/re" +
-      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
-      "gleAds.V26.Resources\312\002\"Google\\Ads\\Google" +
-      "Ads\\V26\\Resources\352\002&Google::Ads::GoogleA" +
-      "ds::V26::Resourcesb\006proto3"
+      "gle/api/resource.proto\"\210\003\n\034AssetGroupTop" +
+      "CombinationView\022U\n\rresource_name\030\001 \001(\tB>" +
+      "\342A\001\003\372A7\n5googleads.googleapis.com/AssetG" +
+      "roupTopCombinationView\022n\n\034asset_group_to" +
+      "p_combinations\030\002 \003(\0132B.google.ads.google" +
+      "ads.v26.resources.AssetGroupAssetCombina" +
+      "tionDataB\004\342A\001\003:\240\001\352A\234\001\n5googleads.googlea" +
+      "pis.com/AssetGroupTopCombinationView\022ccu" +
+      "stomers/{customer_id}/assetGroupTopCombi" +
+      "nationViews/{asset_group_id}~{asset_comb" +
+      "ination_category}\"|\n\036AssetGroupAssetComb" +
+      "inationData\022Z\n\037asset_combination_served_" +
+      "assets\030\001 \003(\0132+.google.ads.googleads.v26." +
+      "common.AssetUsageB\004\342A\001\003B\223\002\n&com.google.a" +
+      "ds.googleads.v26.resourcesB!AssetGroupTo" +
+      "pCombinationViewProtoP\001ZKgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v26" +
+      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
+      "GoogleAds.V26.Resources\312\002\"Google\\Ads\\Goo" +
+      "gleAds\\V26\\Resources\352\002&Google::Ads::Goog" +
+      "leAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

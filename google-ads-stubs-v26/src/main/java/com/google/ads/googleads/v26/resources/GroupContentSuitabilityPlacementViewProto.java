@@ -45,28 +45,28 @@ public final class GroupContentSuitabilityPlacementViewProto extends com.google.
       "oto\022\"google.ads.googleads.v26.resources\032" +
       "3google/ads/googleads/v26/enums/placemen" +
       "t_type.proto\032\037google/api/field_behavior." +
-      "proto\032\031google/api/resource.proto\"\230\004\n$Gro" +
-      "upContentSuitabilityPlacementView\022\\\n\rres" +
-      "ource_name\030\001 \001(\tBE\340A\003\372A?\n=googleads.goog" +
-      "leapis.com/GroupContentSuitabilityPlacem" +
-      "entView\022\031\n\014display_name\030\002 \001(\tB\003\340A\003\022\026\n\tpl" +
-      "acement\030\003 \001(\tB\003\340A\003\022\\\n\016placement_type\030\004 \001" +
-      "(\0162?.google.ads.googleads.v26.enums.Plac" +
-      "ementTypeEnum.PlacementTypeB\003\340A\003\022\027\n\ntarg" +
-      "et_url\030\005 \001(\tB\003\340A\003:\347\001\352A\343\001\n=googleads.goog" +
-      "leapis.com/GroupContentSuitabilityPlacem" +
-      "entView\022Ucustomers/{customer_id}/groupCo" +
-      "ntentSuitabilityPlacementViews/{placemen" +
-      "t_fingerprint}*%groupContentSuitabilityP" +
-      "lacementViews2$groupContentSuitabilityPl" +
-      "acementViewB\233\002\n&com.google.ads.googleads" +
-      ".v26.resourcesB)GroupContentSuitabilityP" +
-      "lacementViewProtoP\001ZKgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v26/res" +
-      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
-      "leAds.V26.Resources\312\002\"Google\\Ads\\GoogleA" +
-      "ds\\V26\\Resources\352\002&Google::Ads::GoogleAd" +
-      "s::V26::Resourcesb\006proto3"
+      "proto\032\031google/api/resource.proto\"\235\004\n$Gro" +
+      "upContentSuitabilityPlacementView\022]\n\rres" +
+      "ource_name\030\001 \001(\tBF\342A\001\003\372A?\n=googleads.goo" +
+      "gleapis.com/GroupContentSuitabilityPlace" +
+      "mentView\022\032\n\014display_name\030\002 \001(\tB\004\342A\001\003\022\027\n\t" +
+      "placement\030\003 \001(\tB\004\342A\001\003\022]\n\016placement_type\030" +
+      "\004 \001(\0162?.google.ads.googleads.v26.enums.P" +
+      "lacementTypeEnum.PlacementTypeB\004\342A\001\003\022\030\n\n" +
+      "target_url\030\005 \001(\tB\004\342A\001\003:\347\001\352A\343\001\n=googleads" +
+      ".googleapis.com/GroupContentSuitabilityP" +
+      "lacementView\022Ucustomers/{customer_id}/gr" +
+      "oupContentSuitabilityPlacementViews/{pla" +
+      "cement_fingerprint}*%groupContentSuitabi" +
+      "lityPlacementViews2$groupContentSuitabil" +
+      "ityPlacementViewB\233\002\n&com.google.ads.goog" +
+      "leads.v26.resourcesB)GroupContentSuitabi" +
+      "lityPlacementViewProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v2" +
+      "6/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V26.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V26\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

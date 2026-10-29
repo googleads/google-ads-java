@@ -56,30 +56,30 @@ public final class BrandSuggestionServiceProto extends com.google.protobuf.Gener
       "ads/v26/enums/brand_state.proto\032\034google/" +
       "api/annotations.proto\032\027google/api/client" +
       ".proto\032\037google/api/field_behavior.proto\"" +
-      "\177\n\024SuggestBrandsRequest\022\030\n\013customer_id\030\001" +
-      " \001(\tB\003\340A\002\022\036\n\014brand_prefix\030\002 \001(\tB\003\340A\002H\000\210\001" +
-      "\001\022\034\n\017selected_brands\030\003 \003(\tB\003\340A\001B\017\n\r_bran" +
-      "d_prefix\"[\n\025SuggestBrandsResponse\022B\n\006bra" +
-      "nds\030\001 \003(\01322.google.ads.googleads.v26.ser" +
-      "vices.BrandSuggestion\"\203\001\n\017BrandSuggestio" +
-      "n\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004urls\030\003 \003(" +
-      "\t\022H\n\005state\030\004 \001(\01629.google.ads.googleads." +
-      "v26.enums.BrandStateEnum.BrandState2\270\002\n\026" +
-      "BrandSuggestionService\022\326\001\n\rSuggestBrands" +
-      "\0227.google.ads.googleads.v26.services.Sug" +
-      "gestBrandsRequest\0328.google.ads.googleads" +
-      ".v26.services.SuggestBrandsResponse\"R\332A\030" +
-      "customer_id,brand_prefix\202\323\344\223\0021\",/v26/cus" +
-      "tomers/{customer_id=*}:suggestBrands:\001*\032" +
-      "E\312A\030googleads.googleapis.com\322A\'https://w" +
-      "ww.googleapis.com/auth/adwordsB\207\002\n%com.g" +
-      "oogle.ads.googleads.v26.servicesB\033BrandS" +
-      "uggestionServiceProtoP\001ZIgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v26" +
-      "/services;services\242\002\003GAA\252\002!Google.Ads.Go" +
-      "ogleAds.V26.Services\312\002!Google\\Ads\\Google" +
-      "Ads\\V26\\Services\352\002%Google::Ads::GoogleAd" +
-      "s::V26::Servicesb\006proto3"
+      "\202\001\n\024SuggestBrandsRequest\022\031\n\013customer_id\030" +
+      "\001 \001(\tB\004\342A\001\002\022\037\n\014brand_prefix\030\002 \001(\tB\004\342A\001\002H" +
+      "\000\210\001\001\022\035\n\017selected_brands\030\003 \003(\tB\004\342A\001\001B\017\n\r_" +
+      "brand_prefix\"[\n\025SuggestBrandsResponse\022B\n" +
+      "\006brands\030\001 \003(\01322.google.ads.googleads.v26" +
+      ".services.BrandSuggestion\"\203\001\n\017BrandSugge" +
+      "stion\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004urls\030" +
+      "\003 \003(\t\022H\n\005state\030\004 \001(\01629.google.ads.google" +
+      "ads.v26.enums.BrandStateEnum.BrandState2" +
+      "\270\002\n\026BrandSuggestionService\022\326\001\n\rSuggestBr" +
+      "ands\0227.google.ads.googleads.v26.services" +
+      ".SuggestBrandsRequest\0328.google.ads.googl" +
+      "eads.v26.services.SuggestBrandsResponse\"" +
+      "R\332A\030customer_id,brand_prefix\202\323\344\223\0021\",/v26" +
+      "/customers/{customer_id=*}:suggestBrands" +
+      ":\001*\032E\312A\030googleads.googleapis.com\322A\'https" +
+      "://www.googleapis.com/auth/adwordsB\207\002\n%c" +
+      "om.google.ads.googleads.v26.servicesB\033Br" +
+      "andSuggestionServiceProtoP\001ZIgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v26/services;services\242\002\003GAA\252\002!Google.Ad" +
+      "s.GoogleAds.V26.Services\312\002!Google\\Ads\\Go" +
+      "ogleAds\\V26\\Services\352\002%Google::Ads::Goog" +
+      "leAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

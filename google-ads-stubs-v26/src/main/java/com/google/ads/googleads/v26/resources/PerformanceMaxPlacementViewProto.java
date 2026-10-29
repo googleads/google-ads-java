@@ -45,28 +45,28 @@ public final class PerformanceMaxPlacementViewProto extends com.google.protobuf.
       "e.ads.googleads.v26.resources\0323google/ad" +
       "s/googleads/v26/enums/placement_type.pro" +
       "to\032\037google/api/field_behavior.proto\032\031goo" +
-      "gle/api/resource.proto\"\233\004\n\033PerformanceMa" +
-      "xPlacementView\022S\n\rresource_name\030\001 \001(\tB<\340" +
-      "A\003\372A6\n4googleads.googleapis.com/Performa" +
-      "nceMaxPlacementView\022\033\n\tplacement\030\002 \001(\tB\003" +
-      "\340A\003H\000\210\001\001\022\036\n\014display_name\030\003 \001(\tB\003\340A\003H\001\210\001\001" +
-      "\022\034\n\ntarget_url\030\004 \001(\tB\003\340A\003H\002\210\001\001\022\\\n\016placem" +
-      "ent_type\030\005 \001(\0162?.google.ads.googleads.v2" +
-      "6.enums.PlacementTypeEnum.PlacementTypeB" +
-      "\003\340A\003:\277\001\352A\273\001\n4googleads.googleapis.com/Pe" +
-      "rformanceMaxPlacementView\022Hcustomers/{cu" +
-      "stomer_id}/performanceMaxPlacementViews/" +
-      "{base_64_placement}*\034performanceMaxPlace" +
-      "mentViews2\033performanceMaxPlacementViewB\014" +
-      "\n\n_placementB\017\n\r_display_nameB\r\n\013_target" +
-      "_urlB\222\002\n&com.google.ads.googleads.v26.re" +
-      "sourcesB PerformanceMaxPlacementViewProt" +
-      "oP\001ZKgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v26/resources;resources" +
-      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resour" +
-      "ces\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources" +
-      "\352\002&Google::Ads::GoogleAds::V26::Resource" +
-      "sb\006proto3"
+      "gle/api/resource.proto\"\240\004\n\033PerformanceMa" +
+      "xPlacementView\022T\n\rresource_name\030\001 \001(\tB=\342" +
+      "A\001\003\372A6\n4googleads.googleapis.com/Perform" +
+      "anceMaxPlacementView\022\034\n\tplacement\030\002 \001(\tB" +
+      "\004\342A\001\003H\000\210\001\001\022\037\n\014display_name\030\003 \001(\tB\004\342A\001\003H\001" +
+      "\210\001\001\022\035\n\ntarget_url\030\004 \001(\tB\004\342A\001\003H\002\210\001\001\022]\n\016pl" +
+      "acement_type\030\005 \001(\0162?.google.ads.googlead" +
+      "s.v26.enums.PlacementTypeEnum.PlacementT" +
+      "ypeB\004\342A\001\003:\277\001\352A\273\001\n4googleads.googleapis.c" +
+      "om/PerformanceMaxPlacementView\022Hcustomer" +
+      "s/{customer_id}/performanceMaxPlacementV" +
+      "iews/{base_64_placement}*\034performanceMax" +
+      "PlacementViews2\033performanceMaxPlacementV" +
+      "iewB\014\n\n_placementB\017\n\r_display_nameB\r\n\013_t" +
+      "arget_urlB\222\002\n&com.google.ads.googleads.v" +
+      "26.resourcesB PerformanceMaxPlacementVie" +
+      "wProtoP\001ZKgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v26/resources;reso" +
+      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.R" +
+      "esources\312\002\"Google\\Ads\\GoogleAds\\V26\\Reso" +
+      "urces\352\002&Google::Ads::GoogleAds::V26::Res" +
+      "ourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

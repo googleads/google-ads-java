@@ -53,44 +53,44 @@ public final class LiftMeasurementConfigProto extends com.google.protobuf.Genera
       "/survey_intended_action.proto\0328google/ad" +
       "s/googleads/v26/enums/survey_subject_typ" +
       "e.proto\032\037google/api/field_behavior.proto" +
-      "\032\031google/api/resource.proto\"\226\t\n\025LiftMeas" +
-      "urementConfig\022M\n\rresource_name\030\001 \001(\tB6\340A" +
-      "\005\372A0\n.googleads.googleapis.com/LiftMeasu" +
-      "rementConfig\022\'\n\032lift_measurement_config_" +
-      "id\030\002 \001(\003B\003\340A\003\022\021\n\004name\030\003 \001(\tB\003\340A\003\022M\n\022conv" +
-      "ersion_actions\030\004 \003(\tB1\340A\003\372A+\n)googleads." +
-      "googleapis.com/ConversionAction\022<\n\tcampa" +
-      "igns\030\005 \003(\tB)\340A\003\372A#\n!googleads.googleapis" +
-      ".com/Campaign\022\034\n\017survey_language\030\007 \001(\tB\003" +
-      "\340A\003\022\204\001\n\037single_measurement_question_set\030" +
-      "\t \001(\0132V.google.ads.googleads.v26.resourc" +
-      "es.LiftMeasurementConfig.SingleMeasureme" +
-      "ntQuestionSetB\003\340A\003\0227\n%conversion_lift_ho" +
-      "ldback_ratio_micros\030\n \001(\003B\003\340A\003H\000\210\001\001\032\321\003\n\034" +
-      "SingleMeasurementQuestionSet\022y\n\035question" +
-      "_text_intended_action\030\001 \001(\0162M.google.ads" +
-      ".googleads.v26.enums.SurveyIntendedActio" +
-      "nEnum.SurveyIntendedActionB\003\340A\003\022p\n\032quest" +
-      "ion_text_subject_type\030\002 \001(\0162G.google.ads" +
-      ".googleads.v26.enums.SurveySubjectTypeEn" +
-      "um.SurveySubjectTypeB\003\340A\003\022y\n\025question_me" +
-      "asurements\030\003 \003(\0162U.google.ads.googleads." +
-      "v26.enums.BrandLiftMeasurementTypeEnum.B" +
-      "randLiftMeasurementTypeB\003\340A\003\022(\n\033advertis" +
-      "er_preferred_choice\030\004 \001(\tB\003\340A\003\022\037\n\022compet" +
-      "itor_choices\030\005 \003(\tB\003\340A\003:\210\001\352A\204\001\n.googlead" +
-      "s.googleapis.com/LiftMeasurementConfig\022R" +
-      "customers/{customer_id}/liftMeasurementC" +
-      "onfigs/{lift_measurement_configuration_i" +
-      "d}B(\n&_conversion_lift_holdback_ratio_mi" +
-      "crosB\214\002\n&com.google.ads.googleads.v26.re" +
-      "sourcesB\032LiftMeasurementConfigProtoP\001ZKg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v26/resources;resources\242\002\003GAA" +
-      "\252\002\"Google.Ads.GoogleAds.V26.Resources\312\002\"" +
-      "Google\\Ads\\GoogleAds\\V26\\Resources\352\002&Goo" +
-      "gle::Ads::GoogleAds::V26::Resourcesb\006pro" +
-      "to3"
+      "\032\031google/api/resource.proto\"\243\t\n\025LiftMeas" +
+      "urementConfig\022N\n\rresource_name\030\001 \001(\tB7\342A" +
+      "\001\005\372A0\n.googleads.googleapis.com/LiftMeas" +
+      "urementConfig\022(\n\032lift_measurement_config" +
+      "_id\030\002 \001(\003B\004\342A\001\003\022\022\n\004name\030\003 \001(\tB\004\342A\001\003\022N\n\022c" +
+      "onversion_actions\030\004 \003(\tB2\342A\001\003\372A+\n)google" +
+      "ads.googleapis.com/ConversionAction\022=\n\tc" +
+      "ampaigns\030\005 \003(\tB*\342A\001\003\372A#\n!googleads.googl" +
+      "eapis.com/Campaign\022\035\n\017survey_language\030\007 " +
+      "\001(\tB\004\342A\001\003\022\205\001\n\037single_measurement_questio" +
+      "n_set\030\t \001(\0132V.google.ads.googleads.v26.r" +
+      "esources.LiftMeasurementConfig.SingleMea" +
+      "surementQuestionSetB\004\342A\001\003\0228\n%conversion_" +
+      "lift_holdback_ratio_micros\030\n \001(\003B\004\342A\001\003H\000" +
+      "\210\001\001\032\326\003\n\034SingleMeasurementQuestionSet\022z\n\035" +
+      "question_text_intended_action\030\001 \001(\0162M.go" +
+      "ogle.ads.googleads.v26.enums.SurveyInten" +
+      "dedActionEnum.SurveyIntendedActionB\004\342A\001\003" +
+      "\022q\n\032question_text_subject_type\030\002 \001(\0162G.g" +
+      "oogle.ads.googleads.v26.enums.SurveySubj" +
+      "ectTypeEnum.SurveySubjectTypeB\004\342A\001\003\022z\n\025q" +
+      "uestion_measurements\030\003 \003(\0162U.google.ads." +
+      "googleads.v26.enums.BrandLiftMeasurement" +
+      "TypeEnum.BrandLiftMeasurementTypeB\004\342A\001\003\022" +
+      ")\n\033advertiser_preferred_choice\030\004 \001(\tB\004\342A" +
+      "\001\003\022 \n\022competitor_choices\030\005 \003(\tB\004\342A\001\003:\210\001\352" +
+      "A\204\001\n.googleads.googleapis.com/LiftMeasur" +
+      "ementConfig\022Rcustomers/{customer_id}/lif" +
+      "tMeasurementConfigs/{lift_measurement_co" +
+      "nfiguration_id}B(\n&_conversion_lift_hold" +
+      "back_ratio_microsB\214\002\n&com.google.ads.goo" +
+      "gleads.v26.resourcesB\032LiftMeasurementCon" +
+      "figProtoP\001ZKgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v26/resources;re" +
+      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26" +
+      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\Re" +
+      "sources\352\002&Google::Ads::GoogleAds::V26::R" +
+      "esourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

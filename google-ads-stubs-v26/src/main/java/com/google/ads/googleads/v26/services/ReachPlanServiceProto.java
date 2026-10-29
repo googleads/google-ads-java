@@ -269,310 +269,310 @@ public final class ReachPlanServiceProto extends com.google.protobuf.GeneratedFi
       "s/googleads/v26/enums/user_list_type.pro" +
       "to\032\034google/api/annotations.proto\032\027google" +
       "/api/client.proto\032\037google/api/field_beha" +
-      "vior.proto\"\327\001\n\036GenerateConversionRatesRe" +
-      "quest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022!\n\024custo" +
-      "mer_reach_group\030\002 \001(\tH\000\210\001\001\022_\n\026reach_appl" +
-      "ication_info\030\003 \001(\0132:.google.ads.googlead" +
-      "s.v26.common.AdditionalApplicationInfoB\003" +
-      "\340A\001B\027\n\025_customer_reach_group\"\203\001\n\037Generat" +
-      "eConversionRatesResponse\022`\n\033conversion_r" +
-      "ate_suggestions\030\001 \003(\0132;.google.ads.googl" +
-      "eads.v26.services.ConversionRateSuggesti" +
-      "on\"\274\002\n\030ConversionRateSuggestion\022|\n\025conve" +
-      "rsion_rate_model\030\001 \001(\0162].google.ads.goog" +
-      "leads.v26.enums.ReachPlanConversionRateM" +
-      "odelEnum.ReachPlanConversionRateModel\022\036\n" +
-      "\026plannable_product_code\030\002 \001(\t\022S\n\021surface" +
-      "_targeting\030\004 \001(\01323.google.ads.googleads." +
-      "v26.services.SurfaceTargetingH\000\210\001\001\022\027\n\017co" +
-      "nversion_rate\030\003 \001(\001B\024\n\022_surface_targetin" +
-      "g\"\200\001\n\035ListPlannableLocationsRequest\022_\n\026r" +
-      "each_application_info\030\001 \001(\0132:.google.ads" +
-      ".googleads.v26.common.AdditionalApplicat" +
-      "ionInfoB\003\340A\001\"s\n\036ListPlannableLocationsRe" +
-      "sponse\022Q\n\023plannable_locations\030\001 \003(\01324.go" +
-      "ogle.ads.googleads.v26.services.Plannabl" +
-      "eLocation\"\327\001\n\021PlannableLocation\022\017\n\002id\030\004 " +
-      "\001(\tH\000\210\001\001\022\021\n\004name\030\005 \001(\tH\001\210\001\001\022\036\n\021parent_co" +
-      "untry_id\030\006 \001(\003H\002\210\001\001\022\031\n\014country_code\030\007 \001(" +
-      "\tH\003\210\001\001\022\032\n\rlocation_type\030\010 \001(\tH\004\210\001\001B\005\n\003_i" +
-      "dB\007\n\005_nameB\024\n\022_parent_country_idB\017\n\r_cou" +
-      "ntry_codeB\020\n\016_location_type\"\243\001\n\034ListPlan" +
-      "nableProductsRequest\022\"\n\025plannable_locati" +
-      "on_id\030\002 \001(\tB\003\340A\002\022_\n\026reach_application_in" +
-      "fo\030\003 \001(\0132:.google.ads.googleads.v26.comm" +
-      "on.AdditionalApplicationInfoB\003\340A\001\"m\n\035Lis" +
-      "tPlannableProductsResponse\022L\n\020product_me" +
-      "tadata\030\001 \003(\01322.google.ads.googleads.v26." +
-      "services.ProductMetadata\"\243\003\n\017ProductMeta" +
-      "data\022#\n\026plannable_product_code\030\004 \001(\tH\000\210\001" +
-      "\001\022\036\n\026plannable_product_name\030\003 \001(\t\022*\n\035pla" +
-      "nnable_product_description\030\005 \001(\tH\001\210\001\001\022h\n" +
-      "!plannable_product_core_attributes\030\006 \001(\013" +
-      "28.google.ads.googleads.v26.services.Pro" +
-      "ductCoreAttributesH\002\210\001\001\022R\n\023plannable_tar" +
-      "geting\030\002 \001(\01325.google.ads.googleads.v26." +
-      "services.PlannableTargetingB\031\n\027_plannabl" +
-      "e_product_codeB \n\036_plannable_product_des" +
-      "criptionB$\n\"_plannable_product_core_attr" +
-      "ibutes\"\240\003\n\025ProductCoreAttributes\022}\n\023mark" +
-      "eting_objective\030\001 \001(\0162[.google.ads.googl" +
-      "eads.v26.enums.ReachPlanMarketingObjecti" +
-      "veEnum.ReachPlanMarketingObjectiveH\000\210\001\001\022" +
-      "b\n\ncost_model\030\002 \001(\0162I.google.ads.googlea" +
-      "ds.v26.enums.ReachPlanCostModelEnum.Reac" +
-      "hPlanCostModelH\001\210\001\001\022k\n\rbuying_method\030\003 \001" +
-      "(\0162O.google.ads.googleads.v26.enums.Reac" +
-      "hPlanBuyingMethodEnum.ReachPlanBuyingMet" +
-      "hodH\002\210\001\001B\026\n\024_marketing_objectiveB\r\n\013_cos" +
-      "t_modelB\020\n\016_buying_method\"\326\001\n\035ListPlanna" +
-      "bleUserListsRequest\022\030\n\013customer_id\030\001 \001(\t" +
-      "B\003\340A\002\022!\n\024customer_reach_group\030\002 \001(\tH\000\210\001\001" +
-      "\022_\n\026reach_application_info\030\003 \001(\0132:.googl" +
-      "e.ads.googleads.v26.common.AdditionalApp" +
-      "licationInfoB\003\340A\001B\027\n\025_customer_reach_gro" +
-      "up\"t\n\036ListPlannableUserListsResponse\022R\n\024" +
-      "plannable_user_lists\030\001 \003(\01324.google.ads." +
-      "googleads.v26.services.PlannableUserList" +
-      "\"\254\003\n\021PlannableUserList\022E\n\016user_list_info" +
-      "\030\001 \001(\0132-.google.ads.googleads.v26.common" +
-      ".UserListInfo\022\024\n\014display_name\030\002 \001(\t\022U\n\016u" +
-      "ser_list_type\030\003 \001(\0162=.google.ads.googlea" +
-      "ds.v26.enums.UserListTypeEnum.UserListTy" +
-      "pe\022\177\n\020plannable_status\030\004 \001(\0162e.google.ad" +
-      "s.googleads.v26.enums.ReachPlanPlannable" +
-      "UserListStatusEnum.ReachPlanPlannableUse" +
-      "rListStatus\022b\n\034plannable_user_list_metad" +
-      "ata\030\005 \001(\0132<.google.ads.googleads.v26.ser" +
-      "vices.PlannableUserListMetadata\"\234\001\n\031Plan" +
-      "nableUserListMetadata\022\177\n\036user_list_crm_d" +
-      "ata_source_type\030\001 \001(\0162W.google.ads.googl" +
-      "eads.v26.enums.UserListCrmDataSourceType" +
-      "Enum.UserListCrmDataSourceType\"\334\004\n\022Plann" +
-      "ableTargeting\022[\n\nage_ranges\030\001 \003(\0162G.goog" +
-      "le.ads.googleads.v26.enums.ReachPlanAgeR" +
-      "angeEnum.ReachPlanAgeRange\022<\n\007genders\030\002 " +
-      "\003(\0132+.google.ads.googleads.v26.common.Ge" +
-      "nderInfo\022<\n\007devices\030\003 \003(\0132+.google.ads.g" +
-      "oogleads.v26.common.DeviceInfo\022W\n\010networ" +
-      "ks\030\004 \003(\0162E.google.ads.googleads.v26.enum" +
-      "s.ReachPlanNetworkEnum.ReachPlanNetwork\022" +
-      "N\n\021parental_statuses\030\010 \003(\01323.google.ads." +
-      "googleads.v26.common.ParentalStatusInfo\022" +
-      "h\n\037youtube_select_lineup_targeting\030\007 \001(\013" +
-      "2?.google.ads.googleads.v26.services.You" +
-      "TubeSelectLineUpTargeting\022Z\n\021surface_tar" +
-      "geting\030\006 \001(\0132?.google.ads.googleads.v26." +
-      "services.SurfaceTargetingCombinations\"\361\002" +
-      "\n!ListPlannableUserInterestsRequest\022\030\n\013c" +
-      "ustomer_id\030\001 \001(\tB\003\340A\002\022\200\001\n\034user_interest_" +
-      "taxonomy_types\030\002 \003(\0162U.google.ads.google" +
-      "ads.v26.enums.UserInterestTaxonomyTypeEn" +
-      "um.UserInterestTaxonomyTypeB\003\340A\001\022\027\n\nname" +
-      "_query\030\003 \001(\tH\000\210\001\001\022\027\n\npath_query\030\004 \001(\tH\001\210" +
-      "\001\001\022_\n\026reach_application_info\030\005 \001(\0132:.goo" +
-      "gle.ads.googleads.v26.common.AdditionalA" +
-      "pplicationInfoB\003\340A\001B\r\n\013_name_queryB\r\n\013_p" +
-      "ath_query\"\200\001\n\"ListPlannableUserInterests" +
-      "Response\022Z\n\030plannable_user_interests\030\001 \003" +
-      "(\01328.google.ads.googleads.v26.services.P" +
-      "lannableUserInterest\"\224\002\n\025PlannableUserIn" +
-      "terest\022H\n\ruser_interest\030\001 \001(\01321.google.a" +
-      "ds.googleads.v26.common.UserInterestInfo" +
-      "\022q\n\022user_interest_type\030\002 \001(\0162U.google.ad" +
+      "vior.proto\"\331\001\n\036GenerateConversionRatesRe" +
+      "quest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022!\n\024cust" +
+      "omer_reach_group\030\002 \001(\tH\000\210\001\001\022`\n\026reach_app" +
+      "lication_info\030\003 \001(\0132:.google.ads.googlea" +
+      "ds.v26.common.AdditionalApplicationInfoB" +
+      "\004\342A\001\001B\027\n\025_customer_reach_group\"\203\001\n\037Gener" +
+      "ateConversionRatesResponse\022`\n\033conversion" +
+      "_rate_suggestions\030\001 \003(\0132;.google.ads.goo" +
+      "gleads.v26.services.ConversionRateSugges" +
+      "tion\"\274\002\n\030ConversionRateSuggestion\022|\n\025con" +
+      "version_rate_model\030\001 \001(\0162].google.ads.go" +
+      "ogleads.v26.enums.ReachPlanConversionRat" +
+      "eModelEnum.ReachPlanConversionRateModel\022" +
+      "\036\n\026plannable_product_code\030\002 \001(\t\022S\n\021surfa" +
+      "ce_targeting\030\004 \001(\01323.google.ads.googlead" +
+      "s.v26.services.SurfaceTargetingH\000\210\001\001\022\027\n\017" +
+      "conversion_rate\030\003 \001(\001B\024\n\022_surface_target" +
+      "ing\"\201\001\n\035ListPlannableLocationsRequest\022`\n" +
+      "\026reach_application_info\030\001 \001(\0132:.google.a" +
+      "ds.googleads.v26.common.AdditionalApplic" +
+      "ationInfoB\004\342A\001\001\"s\n\036ListPlannableLocation" +
+      "sResponse\022Q\n\023plannable_locations\030\001 \003(\01324" +
+      ".google.ads.googleads.v26.services.Plann" +
+      "ableLocation\"\327\001\n\021PlannableLocation\022\017\n\002id" +
+      "\030\004 \001(\tH\000\210\001\001\022\021\n\004name\030\005 \001(\tH\001\210\001\001\022\036\n\021parent" +
+      "_country_id\030\006 \001(\003H\002\210\001\001\022\031\n\014country_code\030\007" +
+      " \001(\tH\003\210\001\001\022\032\n\rlocation_type\030\010 \001(\tH\004\210\001\001B\005\n" +
+      "\003_idB\007\n\005_nameB\024\n\022_parent_country_idB\017\n\r_" +
+      "country_codeB\020\n\016_location_type\"\245\001\n\034ListP" +
+      "lannableProductsRequest\022#\n\025plannable_loc" +
+      "ation_id\030\002 \001(\tB\004\342A\001\002\022`\n\026reach_applicatio" +
+      "n_info\030\003 \001(\0132:.google.ads.googleads.v26." +
+      "common.AdditionalApplicationInfoB\004\342A\001\001\"m" +
+      "\n\035ListPlannableProductsResponse\022L\n\020produ" +
+      "ct_metadata\030\001 \003(\01322.google.ads.googleads" +
+      ".v26.services.ProductMetadata\"\243\003\n\017Produc" +
+      "tMetadata\022#\n\026plannable_product_code\030\004 \001(" +
+      "\tH\000\210\001\001\022\036\n\026plannable_product_name\030\003 \001(\t\022*" +
+      "\n\035plannable_product_description\030\005 \001(\tH\001\210" +
+      "\001\001\022h\n!plannable_product_core_attributes\030" +
+      "\006 \001(\01328.google.ads.googleads.v26.service" +
+      "s.ProductCoreAttributesH\002\210\001\001\022R\n\023plannabl" +
+      "e_targeting\030\002 \001(\01325.google.ads.googleads" +
+      ".v26.services.PlannableTargetingB\031\n\027_pla" +
+      "nnable_product_codeB \n\036_plannable_produc" +
+      "t_descriptionB$\n\"_plannable_product_core" +
+      "_attributes\"\240\003\n\025ProductCoreAttributes\022}\n" +
+      "\023marketing_objective\030\001 \001(\0162[.google.ads." +
+      "googleads.v26.enums.ReachPlanMarketingOb" +
+      "jectiveEnum.ReachPlanMarketingObjectiveH" +
+      "\000\210\001\001\022b\n\ncost_model\030\002 \001(\0162I.google.ads.go" +
+      "ogleads.v26.enums.ReachPlanCostModelEnum" +
+      ".ReachPlanCostModelH\001\210\001\001\022k\n\rbuying_metho" +
+      "d\030\003 \001(\0162O.google.ads.googleads.v26.enums" +
+      ".ReachPlanBuyingMethodEnum.ReachPlanBuyi" +
+      "ngMethodH\002\210\001\001B\026\n\024_marketing_objectiveB\r\n" +
+      "\013_cost_modelB\020\n\016_buying_method\"\330\001\n\035ListP" +
+      "lannableUserListsRequest\022\031\n\013customer_id\030" +
+      "\001 \001(\tB\004\342A\001\002\022!\n\024customer_reach_group\030\002 \001(" +
+      "\tH\000\210\001\001\022`\n\026reach_application_info\030\003 \001(\0132:" +
+      ".google.ads.googleads.v26.common.Additio" +
+      "nalApplicationInfoB\004\342A\001\001B\027\n\025_customer_re" +
+      "ach_group\"t\n\036ListPlannableUserListsRespo" +
+      "nse\022R\n\024plannable_user_lists\030\001 \003(\01324.goog" +
+      "le.ads.googleads.v26.services.PlannableU" +
+      "serList\"\254\003\n\021PlannableUserList\022E\n\016user_li" +
+      "st_info\030\001 \001(\0132-.google.ads.googleads.v26" +
+      ".common.UserListInfo\022\024\n\014display_name\030\002 \001" +
+      "(\t\022U\n\016user_list_type\030\003 \001(\0162=.google.ads." +
+      "googleads.v26.enums.UserListTypeEnum.Use" +
+      "rListType\022\177\n\020plannable_status\030\004 \001(\0162e.go" +
+      "ogle.ads.googleads.v26.enums.ReachPlanPl" +
+      "annableUserListStatusEnum.ReachPlanPlann" +
+      "ableUserListStatus\022b\n\034plannable_user_lis" +
+      "t_metadata\030\005 \001(\0132<.google.ads.googleads." +
+      "v26.services.PlannableUserListMetadata\"\234" +
+      "\001\n\031PlannableUserListMetadata\022\177\n\036user_lis" +
+      "t_crm_data_source_type\030\001 \001(\0162W.google.ad" +
+      "s.googleads.v26.enums.UserListCrmDataSou" +
+      "rceTypeEnum.UserListCrmDataSourceType\"\334\004" +
+      "\n\022PlannableTargeting\022[\n\nage_ranges\030\001 \003(\016" +
+      "2G.google.ads.googleads.v26.enums.ReachP" +
+      "lanAgeRangeEnum.ReachPlanAgeRange\022<\n\007gen" +
+      "ders\030\002 \003(\0132+.google.ads.googleads.v26.co" +
+      "mmon.GenderInfo\022<\n\007devices\030\003 \003(\0132+.googl" +
+      "e.ads.googleads.v26.common.DeviceInfo\022W\n" +
+      "\010networks\030\004 \003(\0162E.google.ads.googleads.v" +
+      "26.enums.ReachPlanNetworkEnum.ReachPlanN" +
+      "etwork\022N\n\021parental_statuses\030\010 \003(\01323.goog" +
+      "le.ads.googleads.v26.common.ParentalStat" +
+      "usInfo\022h\n\037youtube_select_lineup_targetin" +
+      "g\030\007 \001(\0132?.google.ads.googleads.v26.servi" +
+      "ces.YouTubeSelectLineUpTargeting\022Z\n\021surf" +
+      "ace_targeting\030\006 \001(\0132?.google.ads.googlea" +
+      "ds.v26.services.SurfaceTargetingCombinat" +
+      "ions\"\364\002\n!ListPlannableUserInterestsReque" +
+      "st\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022\201\001\n\034user_i" +
+      "nterest_taxonomy_types\030\002 \003(\0162U.google.ad" +
       "s.googleads.v26.enums.UserInterestTaxono" +
-      "myTypeEnum.UserInterestTaxonomyType\022\"\n\032u" +
-      "ser_interest_display_name\030\003 \001(\t\022\032\n\022user_" +
-      "interest_path\030\004 \001(\t\"\341\006\n\034GenerateReachFor" +
-      "ecastRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022\032" +
-      "\n\rcurrency_code\030\t \001(\tH\000\210\001\001\022S\n\021campaign_d" +
-      "uration\030\003 \001(\01323.google.ads.googleads.v26" +
-      ".services.CampaignDurationB\003\340A\002\022U\n\034cooki" +
-      "e_frequency_cap_setting\030\010 \001(\0132/.google.a" +
-      "ds.googleads.v26.services.FrequencyCap\022$" +
-      "\n\027min_effective_frequency\030\013 \001(\005H\001\210\001\001\022b\n\031" +
-      "effective_frequency_limit\030\014 \001(\0132:.google" +
-      ".ads.googleads.v26.services.EffectiveFre" +
-      "quencyLimitH\002\210\001\001\022?\n\ttargeting\030\006 \001(\0132,.go" +
-      "ogle.ads.googleads.v26.services.Targetin" +
-      "g\022P\n\020planned_products\030\007 \003(\01321.google.ads" +
-      ".googleads.v26.services.PlannedProductB\003" +
-      "\340A\002\022Y\n\027forecast_metric_options\030\r \001(\01328.g" +
-      "oogle.ads.googleads.v26.services.Forecas" +
-      "tMetricOptions\022!\n\024customer_reach_group\030\016" +
-      " \001(\tH\003\210\001\001\022_\n\026reach_application_info\030\017 \001(" +
-      "\0132:.google.ads.googleads.v26.common.Addi" +
-      "tionalApplicationInfoB\003\340A\001B\020\n\016_currency_" +
-      "codeB\032\n\030_min_effective_frequencyB\034\n\032_eff" +
-      "ective_frequency_limitB\027\n\025_customer_reac" +
-      "h_group\"F\n\027EffectiveFrequencyLimit\022+\n#ef" +
-      "fective_frequency_breakdown_limit\030\001 \001(\005\"" +
-      "\217\001\n\014FrequencyCap\022\030\n\013impressions\030\003 \001(\005B\003\340" +
-      "A\002\022e\n\ttime_unit\030\002 \001(\0162M.google.ads.googl" +
-      "eads.v26.enums.FrequencyCapTimeUnitEnum." +
-      "FrequencyCapTimeUnitB\003\340A\002\"\375\003\n\tTargeting\022" +
-      "\036\n\026plannable_location_ids\030\010 \003(\t\022Z\n\tage_r" +
-      "ange\030\002 \001(\0162G.google.ads.googleads.v26.en" +
-      "ums.ReachPlanAgeRangeEnum.ReachPlanAgeRa" +
-      "nge\022<\n\007genders\030\003 \003(\0132+.google.ads.google" +
-      "ads.v26.common.GenderInfo\022<\n\007devices\030\004 \003" +
-      "(\0132+.google.ads.googleads.v26.common.Dev" +
-      "iceInfo\022V\n\007network\030\005 \001(\0162E.google.ads.go" +
-      "ogleads.v26.enums.ReachPlanNetworkEnum.R" +
-      "eachPlanNetwork\022N\n\021parental_statuses\030\t \003" +
-      "(\01323.google.ads.googleads.v26.common.Par" +
-      "entalStatusInfo\022P\n\022audience_targeting\030\007 " +
-      "\001(\01324.google.ads.googleads.v26.services." +
-      "AudienceTargeting\"\206\001\n\020CampaignDuration\022\035" +
-      "\n\020duration_in_days\030\002 \001(\005H\000\210\001\001\022>\n\ndate_ra" +
-      "nge\030\003 \001(\0132*.google.ads.googleads.v26.com" +
-      "mon.DateRangeB\023\n\021_duration_in_days\"\233\002\n\016P" +
-      "lannedProduct\022(\n\026plannable_product_code\030" +
-      "\003 \001(\tB\003\340A\002H\000\210\001\001\022\037\n\rbudget_micros\030\004 \001(\003B\003" +
-      "\340A\002H\001\210\001\001\022\034\n\017conversion_rate\030\006 \001(\001H\002\210\001\001\022_" +
-      "\n\032advanced_product_targeting\030\005 \001(\0132;.goo" +
-      "gle.ads.googleads.v26.services.AdvancedP" +
-      "roductTargetingB\031\n\027_plannable_product_co" +
-      "deB\020\n\016_budget_microsB\022\n\020_conversion_rate" +
-      "\"\303\001\n\035GenerateReachForecastResponse\022^\n\032on" +
-      "_target_audience_metrics\030\001 \001(\0132:.google." +
-      "ads.googleads.v26.services.OnTargetAudie" +
-      "nceMetrics\022B\n\013reach_curve\030\002 \001(\0132-.google" +
-      ".ads.googleads.v26.services.ReachCurve\"W" +
-      "\n\nReachCurve\022I\n\017reach_forecasts\030\001 \003(\01320." +
-      "google.ads.googleads.v26.services.ReachF" +
-      "orecast\"\314\001\n\rReachForecast\022\023\n\013cost_micros" +
-      "\030\005 \001(\003\022=\n\010forecast\030\002 \001(\0132+.google.ads.go" +
-      "ogleads.v26.services.Forecast\022g\n\037planned" +
-      "_product_reach_forecasts\030\004 \003(\0132>.google." +
-      "ads.googleads.v26.services.PlannedProduc" +
-      "tReachForecast\"\200\006\n\010Forecast\022\034\n\017on_target" +
-      "_reach\030\005 \001(\003H\000\210\001\001\022\030\n\013total_reach\030\006 \001(\003H\001" +
-      "\210\001\001\022\"\n\025on_target_impressions\030\007 \001(\003H\002\210\001\001\022" +
-      "\036\n\021total_impressions\030\010 \001(\003H\003\210\001\001\022!\n\024viewa" +
-      "ble_impressions\030\t \001(\003H\004\210\001\001\022f\n\036effective_" +
-      "frequency_breakdowns\030\n \003(\0132>.google.ads." +
-      "googleads.v26.services.EffectiveFrequenc" +
-      "yBreakdown\022#\n\026on_target_coview_reach\030\013 \001" +
-      "(\003H\005\210\001\001\022\037\n\022total_coview_reach\030\014 \001(\003H\006\210\001\001" +
-      "\022)\n\034on_target_coview_impressions\030\r \001(\003H\007" +
-      "\210\001\001\022%\n\030total_coview_impressions\030\016 \001(\003H\010\210" +
-      "\001\001\022\030\n\013conversions\030\020 \001(\001H\t\210\001\001\022\033\n\016trueview" +
-      "_views\030\021 \001(\003H\n\210\001\001\022\023\n\006clicks\030\022 \001(\003H\013\210\001\001B\022" +
-      "\n\020_on_target_reachB\016\n\014_total_reachB\030\n\026_o" +
-      "n_target_impressionsB\024\n\022_total_impressio" +
-      "nsB\027\n\025_viewable_impressionsB\031\n\027_on_targe" +
-      "t_coview_reachB\025\n\023_total_coview_reachB\037\n" +
-      "\035_on_target_coview_impressionsB\033\n\031_total" +
-      "_coview_impressionsB\016\n\014_conversionsB\021\n\017_" +
-      "trueview_viewsB\t\n\007_clicks\"\257\001\n\033PlannedPro" +
-      "ductReachForecast\022\036\n\026plannable_product_c" +
-      "ode\030\001 \001(\t\022\023\n\013cost_micros\030\002 \001(\003\022[\n\030planne" +
-      "d_product_forecast\030\003 \001(\01329.google.ads.go" +
-      "ogleads.v26.services.PlannedProductForec" +
-      "ast\"\364\004\n\026PlannedProductForecast\022\027\n\017on_tar" +
-      "get_reach\030\001 \001(\003\022\023\n\013total_reach\030\002 \001(\003\022\035\n\025" +
-      "on_target_impressions\030\003 \001(\003\022\031\n\021total_imp" +
-      "ressions\030\004 \001(\003\022!\n\024viewable_impressions\030\005" +
-      " \001(\003H\000\210\001\001\022#\n\026on_target_coview_reach\030\006 \001(" +
-      "\003H\001\210\001\001\022\037\n\022total_coview_reach\030\007 \001(\003H\002\210\001\001\022" +
-      ")\n\034on_target_coview_impressions\030\010 \001(\003H\003\210" +
-      "\001\001\022%\n\030total_coview_impressions\030\t \001(\003H\004\210\001" +
-      "\001\022\036\n\021average_frequency\030\n \001(\001H\005\210\001\001\022\030\n\013con" +
-      "versions\030\014 \001(\001H\006\210\001\001\022\033\n\016trueview_views\030\r " +
-      "\001(\003H\007\210\001\001\022\023\n\006clicks\030\016 \001(\003H\010\210\001\001B\027\n\025_viewab" +
-      "le_impressionsB\031\n\027_on_target_coview_reac" +
-      "hB\025\n\023_total_coview_reachB\037\n\035_on_target_c" +
-      "oview_impressionsB\033\n\031_total_coview_impre" +
-      "ssionsB\024\n\022_average_frequencyB\016\n\014_convers" +
-      "ionsB\021\n\017_trueview_viewsB\t\n\007_clicks\"\223\001\n\027O" +
-      "nTargetAudienceMetrics\022\"\n\025youtube_audien" +
-      "ce_size\030\003 \001(\003H\000\210\001\001\022!\n\024census_audience_si" +
-      "ze\030\004 \001(\003H\001\210\001\001B\030\n\026_youtube_audience_sizeB" +
-      "\027\n\025_census_audience_size\"\374\001\n\033EffectiveFr" +
-      "equencyBreakdown\022\033\n\023effective_frequency\030" +
-      "\001 \001(\005\022\027\n\017on_target_reach\030\002 \001(\003\022\023\n\013total_" +
-      "reach\030\003 \001(\003\022#\n\026effective_coview_reach\030\004 " +
-      "\001(\003H\000\210\001\001\022-\n on_target_effective_coview_r" +
-      "each\030\005 \001(\003H\001\210\001\001B\031\n\027_effective_coview_rea" +
-      "chB#\n!_on_target_effective_coview_reach\"" +
-      "/\n\025ForecastMetricOptions\022\026\n\016include_covi" +
-      "ew\030\001 \001(\010\"\240\001\n\021AudienceTargeting\022H\n\ruser_i" +
-      "nterest\030\001 \003(\01321.google.ads.googleads.v26" +
-      ".common.UserInterestInfo\022A\n\nuser_lists\030\002" +
-      " \003(\0132-.google.ads.googleads.v26.common.U" +
-      "serListInfo\"\305\002\n\030AdvancedProductTargeting" +
-      "\022W\n\032surface_targeting_settings\030\002 \001(\01323.g" +
-      "oogle.ads.googleads.v26.services.Surface" +
-      "Targeting\022]\n\031target_frequency_settings\030\003" +
-      " \001(\0132:.google.ads.googleads.v26.services" +
-      ".TargetFrequencySettings\022[\n\027youtube_sele" +
-      "ct_settings\030\001 \001(\01328.google.ads.googleads" +
-      ".v26.services.YouTubeSelectSettingsH\000B\024\n" +
-      "\022advanced_targeting\"*\n\025YouTubeSelectSett" +
-      "ings\022\021\n\tlineup_id\030\001 \001(\003\"=\n\023YouTubeSelect" +
-      "LineUp\022\021\n\tlineup_id\030\001 \001(\003\022\023\n\013lineup_name" +
-      "\030\002 \001(\t\"\325\001\n\034YouTubeSelectLineUpTargeting\022" +
-      "V\n\026youtube_select_lineups\030\001 \003(\01326.google" +
-      ".ads.googleads.v26.services.YouTubeSelec" +
-      "tLineUp\022]\n\035default_youtube_select_lineup" +
-      "\030\002 \001(\01326.google.ads.googleads.v26.servic" +
-      "es.YouTubeSelectLineUp\"\315\001\n\034SurfaceTarget" +
-      "ingCombinations\022N\n\021default_targeting\030\001 \001" +
-      "(\01323.google.ads.googleads.v26.services.S" +
-      "urfaceTargeting\022]\n available_targeting_c" +
-      "ombinations\030\002 \003(\01323.google.ads.googleads" +
-      ".v26.services.SurfaceTargeting\"k\n\020Surfac" +
-      "eTargeting\022W\n\010surfaces\030\001 \003(\0162E.google.ad" +
-      "s.googleads.v26.enums.ReachPlanSurfaceEn" +
-      "um.ReachPlanSurface\"\245\001\n\027TargetFrequencyS" +
-      "ettings\022k\n\ttime_unit\030\001 \001(\0162S.google.ads." +
-      "googleads.v26.enums.TargetFrequencyTimeU" +
-      "nitEnum.TargetFrequencyTimeUnitB\003\340A\002\022\035\n\020" +
-      "target_frequency\030\002 \001(\005B\003\340A\0022\242\013\n\020ReachPla" +
-      "nService\022\327\001\n\027GenerateConversionRates\022A.g" +
-      "oogle.ads.googleads.v26.services.Generat" +
-      "eConversionRatesRequest\032B.google.ads.goo" +
-      "gleads.v26.services.GenerateConversionRa" +
-      "tesResponse\"5\332A\013customer_id\202\323\344\223\002!\"\034/v26:" +
-      "generateConversionRates:\001*\022\305\001\n\026ListPlann" +
-      "ableLocations\022@.google.ads.googleads.v26" +
-      ".services.ListPlannableLocationsRequest\032" +
-      "A.google.ads.googleads.v26.services.List" +
-      "PlannableLocationsResponse\"&\202\323\344\223\002 \"\033/v26" +
-      ":listPlannableLocations:\001*\022\331\001\n\025ListPlann" +
-      "ableProducts\022?.google.ads.googleads.v26." +
-      "services.ListPlannableProductsRequest\032@." +
-      "google.ads.googleads.v26.services.ListPl" +
-      "annableProductsResponse\"=\332A\025plannable_lo" +
-      "cation_id\202\323\344\223\002\037\"\032/v26:listPlannableProdu" +
-      "cts:\001*\022\214\002\n\025GenerateReachForecast\022?.googl" +
-      "e.ads.googleads.v26.services.GenerateRea" +
-      "chForecastRequest\032@.google.ads.googleads" +
-      ".v26.services.GenerateReachForecastRespo" +
-      "nse\"p\332A.customer_id,campaign_duration,pl" +
-      "anned_products\202\323\344\223\0029\"4/v26/customers/{cu" +
-      "stomer_id=*}:generateReachForecast:\001*\022\323\001" +
-      "\n\026ListPlannableUserLists\022@.google.ads.go" +
-      "ogleads.v26.services.ListPlannableUserLi" +
-      "stsRequest\032A.google.ads.googleads.v26.se" +
-      "rvices.ListPlannableUserListsResponse\"4\332" +
-      "A\013customer_id\202\323\344\223\002 \"\033/v26:listPlannableU" +
-      "serLists:\001*\022\343\001\n\032ListPlannableUserInteres" +
-      "ts\022D.google.ads.googleads.v26.services.L" +
-      "istPlannableUserInterestsRequest\032E.googl" +
+      "myTypeEnum.UserInterestTaxonomyTypeB\004\342A\001" +
+      "\001\022\027\n\nname_query\030\003 \001(\tH\000\210\001\001\022\027\n\npath_query" +
+      "\030\004 \001(\tH\001\210\001\001\022`\n\026reach_application_info\030\005 " +
+      "\001(\0132:.google.ads.googleads.v26.common.Ad" +
+      "ditionalApplicationInfoB\004\342A\001\001B\r\n\013_name_q" +
+      "ueryB\r\n\013_path_query\"\200\001\n\"ListPlannableUse" +
+      "rInterestsResponse\022Z\n\030plannable_user_int" +
+      "erests\030\001 \003(\01328.google.ads.googleads.v26." +
+      "services.PlannableUserInterest\"\224\002\n\025Plann" +
+      "ableUserInterest\022H\n\ruser_interest\030\001 \001(\0132" +
+      "1.google.ads.googleads.v26.common.UserIn" +
+      "terestInfo\022q\n\022user_interest_type\030\002 \001(\0162U" +
+      ".google.ads.googleads.v26.enums.UserInte" +
+      "restTaxonomyTypeEnum.UserInterestTaxonom" +
+      "yType\022\"\n\032user_interest_display_name\030\003 \001(" +
+      "\t\022\032\n\022user_interest_path\030\004 \001(\t\"\345\006\n\034Genera" +
+      "teReachForecastRequest\022\031\n\013customer_id\030\001 " +
+      "\001(\tB\004\342A\001\002\022\032\n\rcurrency_code\030\t \001(\tH\000\210\001\001\022T\n" +
+      "\021campaign_duration\030\003 \001(\01323.google.ads.go" +
+      "ogleads.v26.services.CampaignDurationB\004\342" +
+      "A\001\002\022U\n\034cookie_frequency_cap_setting\030\010 \001(" +
+      "\0132/.google.ads.googleads.v26.services.Fr" +
+      "equencyCap\022$\n\027min_effective_frequency\030\013 " +
+      "\001(\005H\001\210\001\001\022b\n\031effective_frequency_limit\030\014 " +
+      "\001(\0132:.google.ads.googleads.v26.services." +
+      "EffectiveFrequencyLimitH\002\210\001\001\022?\n\ttargetin" +
+      "g\030\006 \001(\0132,.google.ads.googleads.v26.servi" +
+      "ces.Targeting\022Q\n\020planned_products\030\007 \003(\0132" +
+      "1.google.ads.googleads.v26.services.Plan" +
+      "nedProductB\004\342A\001\002\022Y\n\027forecast_metric_opti" +
+      "ons\030\r \001(\01328.google.ads.googleads.v26.ser" +
+      "vices.ForecastMetricOptions\022!\n\024customer_" +
+      "reach_group\030\016 \001(\tH\003\210\001\001\022`\n\026reach_applicat" +
+      "ion_info\030\017 \001(\0132:.google.ads.googleads.v2" +
+      "6.common.AdditionalApplicationInfoB\004\342A\001\001" +
+      "B\020\n\016_currency_codeB\032\n\030_min_effective_fre" +
+      "quencyB\034\n\032_effective_frequency_limitB\027\n\025" +
+      "_customer_reach_group\"F\n\027EffectiveFreque" +
+      "ncyLimit\022+\n#effective_frequency_breakdow" +
+      "n_limit\030\001 \001(\005\"\221\001\n\014FrequencyCap\022\031\n\013impres" +
+      "sions\030\003 \001(\005B\004\342A\001\002\022f\n\ttime_unit\030\002 \001(\0162M.g" +
+      "oogle.ads.googleads.v26.enums.FrequencyC" +
+      "apTimeUnitEnum.FrequencyCapTimeUnitB\004\342A\001" +
+      "\002\"\375\003\n\tTargeting\022\036\n\026plannable_location_id" +
+      "s\030\010 \003(\t\022Z\n\tage_range\030\002 \001(\0162G.google.ads." +
+      "googleads.v26.enums.ReachPlanAgeRangeEnu" +
+      "m.ReachPlanAgeRange\022<\n\007genders\030\003 \003(\0132+.g" +
+      "oogle.ads.googleads.v26.common.GenderInf" +
+      "o\022<\n\007devices\030\004 \003(\0132+.google.ads.googlead" +
+      "s.v26.common.DeviceInfo\022V\n\007network\030\005 \001(\016" +
+      "2E.google.ads.googleads.v26.enums.ReachP" +
+      "lanNetworkEnum.ReachPlanNetwork\022N\n\021paren" +
+      "tal_statuses\030\t \003(\01323.google.ads.googlead" +
+      "s.v26.common.ParentalStatusInfo\022P\n\022audie" +
+      "nce_targeting\030\007 \001(\01324.google.ads.googlea" +
+      "ds.v26.services.AudienceTargeting\"\206\001\n\020Ca" +
+      "mpaignDuration\022\035\n\020duration_in_days\030\002 \001(\005" +
+      "H\000\210\001\001\022>\n\ndate_range\030\003 \001(\0132*.google.ads.g" +
+      "oogleads.v26.common.DateRangeB\023\n\021_durati" +
+      "on_in_days\"\235\002\n\016PlannedProduct\022)\n\026plannab" +
+      "le_product_code\030\003 \001(\tB\004\342A\001\002H\000\210\001\001\022 \n\rbudg" +
+      "et_micros\030\004 \001(\003B\004\342A\001\002H\001\210\001\001\022\034\n\017conversion" +
+      "_rate\030\006 \001(\001H\002\210\001\001\022_\n\032advanced_product_tar" +
+      "geting\030\005 \001(\0132;.google.ads.googleads.v26." +
+      "services.AdvancedProductTargetingB\031\n\027_pl" +
+      "annable_product_codeB\020\n\016_budget_microsB\022" +
+      "\n\020_conversion_rate\"\303\001\n\035GenerateReachFore" +
+      "castResponse\022^\n\032on_target_audience_metri" +
+      "cs\030\001 \001(\0132:.google.ads.googleads.v26.serv" +
+      "ices.OnTargetAudienceMetrics\022B\n\013reach_cu" +
+      "rve\030\002 \001(\0132-.google.ads.googleads.v26.ser" +
+      "vices.ReachCurve\"W\n\nReachCurve\022I\n\017reach_" +
+      "forecasts\030\001 \003(\01320.google.ads.googleads.v" +
+      "26.services.ReachForecast\"\314\001\n\rReachForec" +
+      "ast\022\023\n\013cost_micros\030\005 \001(\003\022=\n\010forecast\030\002 \001" +
+      "(\0132+.google.ads.googleads.v26.services.F" +
+      "orecast\022g\n\037planned_product_reach_forecas" +
+      "ts\030\004 \003(\0132>.google.ads.googleads.v26.serv" +
+      "ices.PlannedProductReachForecast\"\200\006\n\010For" +
+      "ecast\022\034\n\017on_target_reach\030\005 \001(\003H\000\210\001\001\022\030\n\013t" +
+      "otal_reach\030\006 \001(\003H\001\210\001\001\022\"\n\025on_target_impre" +
+      "ssions\030\007 \001(\003H\002\210\001\001\022\036\n\021total_impressions\030\010" +
+      " \001(\003H\003\210\001\001\022!\n\024viewable_impressions\030\t \001(\003H" +
+      "\004\210\001\001\022f\n\036effective_frequency_breakdowns\030\n" +
+      " \003(\0132>.google.ads.googleads.v26.services" +
+      ".EffectiveFrequencyBreakdown\022#\n\026on_targe" +
+      "t_coview_reach\030\013 \001(\003H\005\210\001\001\022\037\n\022total_covie" +
+      "w_reach\030\014 \001(\003H\006\210\001\001\022)\n\034on_target_coview_i" +
+      "mpressions\030\r \001(\003H\007\210\001\001\022%\n\030total_coview_im" +
+      "pressions\030\016 \001(\003H\010\210\001\001\022\030\n\013conversions\030\020 \001(" +
+      "\001H\t\210\001\001\022\033\n\016trueview_views\030\021 \001(\003H\n\210\001\001\022\023\n\006c" +
+      "licks\030\022 \001(\003H\013\210\001\001B\022\n\020_on_target_reachB\016\n\014" +
+      "_total_reachB\030\n\026_on_target_impressionsB\024" +
+      "\n\022_total_impressionsB\027\n\025_viewable_impres" +
+      "sionsB\031\n\027_on_target_coview_reachB\025\n\023_tot" +
+      "al_coview_reachB\037\n\035_on_target_coview_imp" +
+      "ressionsB\033\n\031_total_coview_impressionsB\016\n" +
+      "\014_conversionsB\021\n\017_trueview_viewsB\t\n\007_cli" +
+      "cks\"\257\001\n\033PlannedProductReachForecast\022\036\n\026p" +
+      "lannable_product_code\030\001 \001(\t\022\023\n\013cost_micr" +
+      "os\030\002 \001(\003\022[\n\030planned_product_forecast\030\003 \001" +
+      "(\01329.google.ads.googleads.v26.services.P" +
+      "lannedProductForecast\"\364\004\n\026PlannedProduct" +
+      "Forecast\022\027\n\017on_target_reach\030\001 \001(\003\022\023\n\013tot" +
+      "al_reach\030\002 \001(\003\022\035\n\025on_target_impressions\030" +
+      "\003 \001(\003\022\031\n\021total_impressions\030\004 \001(\003\022!\n\024view" +
+      "able_impressions\030\005 \001(\003H\000\210\001\001\022#\n\026on_target" +
+      "_coview_reach\030\006 \001(\003H\001\210\001\001\022\037\n\022total_coview" +
+      "_reach\030\007 \001(\003H\002\210\001\001\022)\n\034on_target_coview_im" +
+      "pressions\030\010 \001(\003H\003\210\001\001\022%\n\030total_coview_imp" +
+      "ressions\030\t \001(\003H\004\210\001\001\022\036\n\021average_frequency" +
+      "\030\n \001(\001H\005\210\001\001\022\030\n\013conversions\030\014 \001(\001H\006\210\001\001\022\033\n" +
+      "\016trueview_views\030\r \001(\003H\007\210\001\001\022\023\n\006clicks\030\016 \001" +
+      "(\003H\010\210\001\001B\027\n\025_viewable_impressionsB\031\n\027_on_" +
+      "target_coview_reachB\025\n\023_total_coview_rea" +
+      "chB\037\n\035_on_target_coview_impressionsB\033\n\031_" +
+      "total_coview_impressionsB\024\n\022_average_fre" +
+      "quencyB\016\n\014_conversionsB\021\n\017_trueview_view" +
+      "sB\t\n\007_clicks\"\223\001\n\027OnTargetAudienceMetrics" +
+      "\022\"\n\025youtube_audience_size\030\003 \001(\003H\000\210\001\001\022!\n\024" +
+      "census_audience_size\030\004 \001(\003H\001\210\001\001B\030\n\026_yout" +
+      "ube_audience_sizeB\027\n\025_census_audience_si" +
+      "ze\"\374\001\n\033EffectiveFrequencyBreakdown\022\033\n\023ef" +
+      "fective_frequency\030\001 \001(\005\022\027\n\017on_target_rea" +
+      "ch\030\002 \001(\003\022\023\n\013total_reach\030\003 \001(\003\022#\n\026effecti" +
+      "ve_coview_reach\030\004 \001(\003H\000\210\001\001\022-\n on_target_" +
+      "effective_coview_reach\030\005 \001(\003H\001\210\001\001B\031\n\027_ef" +
+      "fective_coview_reachB#\n!_on_target_effec" +
+      "tive_coview_reach\"/\n\025ForecastMetricOptio" +
+      "ns\022\026\n\016include_coview\030\001 \001(\010\"\240\001\n\021AudienceT" +
+      "argeting\022H\n\ruser_interest\030\001 \003(\01321.google" +
+      ".ads.googleads.v26.common.UserInterestIn" +
+      "fo\022A\n\nuser_lists\030\002 \003(\0132-.google.ads.goog" +
+      "leads.v26.common.UserListInfo\"\305\002\n\030Advanc" +
+      "edProductTargeting\022W\n\032surface_targeting_" +
+      "settings\030\002 \001(\01323.google.ads.googleads.v2" +
+      "6.services.SurfaceTargeting\022]\n\031target_fr" +
+      "equency_settings\030\003 \001(\0132:.google.ads.goog" +
+      "leads.v26.services.TargetFrequencySettin" +
+      "gs\022[\n\027youtube_select_settings\030\001 \001(\01328.go" +
+      "ogle.ads.googleads.v26.services.YouTubeS" +
+      "electSettingsH\000B\024\n\022advanced_targeting\"*\n" +
+      "\025YouTubeSelectSettings\022\021\n\tlineup_id\030\001 \001(" +
+      "\003\"=\n\023YouTubeSelectLineUp\022\021\n\tlineup_id\030\001 " +
+      "\001(\003\022\023\n\013lineup_name\030\002 \001(\t\"\325\001\n\034YouTubeSele" +
+      "ctLineUpTargeting\022V\n\026youtube_select_line" +
+      "ups\030\001 \003(\01326.google.ads.googleads.v26.ser" +
+      "vices.YouTubeSelectLineUp\022]\n\035default_you" +
+      "tube_select_lineup\030\002 \001(\01326.google.ads.go" +
+      "ogleads.v26.services.YouTubeSelectLineUp" +
+      "\"\315\001\n\034SurfaceTargetingCombinations\022N\n\021def" +
+      "ault_targeting\030\001 \001(\01323.google.ads.google" +
+      "ads.v26.services.SurfaceTargeting\022]\n ava" +
+      "ilable_targeting_combinations\030\002 \003(\01323.go" +
+      "ogle.ads.googleads.v26.services.SurfaceT" +
+      "argeting\"k\n\020SurfaceTargeting\022W\n\010surfaces" +
+      "\030\001 \003(\0162E.google.ads.googleads.v26.enums." +
+      "ReachPlanSurfaceEnum.ReachPlanSurface\"\247\001" +
+      "\n\027TargetFrequencySettings\022l\n\ttime_unit\030\001" +
+      " \001(\0162S.google.ads.googleads.v26.enums.Ta" +
+      "rgetFrequencyTimeUnitEnum.TargetFrequenc" +
+      "yTimeUnitB\004\342A\001\002\022\036\n\020target_frequency\030\002 \001(" +
+      "\005B\004\342A\001\0022\242\013\n\020ReachPlanService\022\327\001\n\027Generat" +
+      "eConversionRates\022A.google.ads.googleads." +
+      "v26.services.GenerateConversionRatesRequ" +
+      "est\032B.google.ads.googleads.v26.services." +
+      "GenerateConversionRatesResponse\"5\332A\013cust" +
+      "omer_id\202\323\344\223\002!\"\034/v26:generateConversionRa" +
+      "tes:\001*\022\305\001\n\026ListPlannableLocations\022@.goog" +
+      "le.ads.googleads.v26.services.ListPlanna" +
+      "bleLocationsRequest\032A.google.ads.googlea" +
+      "ds.v26.services.ListPlannableLocationsRe" +
+      "sponse\"&\202\323\344\223\002 \"\033/v26:listPlannableLocati" +
+      "ons:\001*\022\331\001\n\025ListPlannableProducts\022?.googl" +
       "e.ads.googleads.v26.services.ListPlannab" +
-      "leUserInterestsResponse\"8\332A\013customer_id\202" +
-      "\323\344\223\002$\"\037/v26:listPlannableUserInterests:\001" +
-      "*\032E\312A\030googleads.googleapis.com\322A\'https:/" +
-      "/www.googleapis.com/auth/adwordsB\201\002\n%com" +
-      ".google.ads.googleads.v26.servicesB\025Reac" +
-      "hPlanServiceProtoP\001ZIgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v26/ser" +
-      "vices;services\242\002\003GAA\252\002!Google.Ads.Google" +
-      "Ads.V26.Services\312\002!Google\\Ads\\GoogleAds\\" +
-      "V26\\Services\352\002%Google::Ads::GoogleAds::V" +
-      "26::Servicesb\006proto3"
+      "leProductsRequest\032@.google.ads.googleads" +
+      ".v26.services.ListPlannableProductsRespo" +
+      "nse\"=\332A\025plannable_location_id\202\323\344\223\002\037\"\032/v2" +
+      "6:listPlannableProducts:\001*\022\214\002\n\025GenerateR" +
+      "eachForecast\022?.google.ads.googleads.v26." +
+      "services.GenerateReachForecastRequest\032@." +
+      "google.ads.googleads.v26.services.Genera" +
+      "teReachForecastResponse\"p\332A.customer_id," +
+      "campaign_duration,planned_products\202\323\344\223\0029" +
+      "\"4/v26/customers/{customer_id=*}:generat" +
+      "eReachForecast:\001*\022\323\001\n\026ListPlannableUserL" +
+      "ists\022@.google.ads.googleads.v26.services" +
+      ".ListPlannableUserListsRequest\032A.google." +
+      "ads.googleads.v26.services.ListPlannable" +
+      "UserListsResponse\"4\332A\013customer_id\202\323\344\223\002 \"" +
+      "\033/v26:listPlannableUserLists:\001*\022\343\001\n\032List" +
+      "PlannableUserInterests\022D.google.ads.goog" +
+      "leads.v26.services.ListPlannableUserInte" +
+      "restsRequest\032E.google.ads.googleads.v26." +
+      "services.ListPlannableUserInterestsRespo" +
+      "nse\"8\332A\013customer_id\202\323\344\223\002$\"\037/v26:listPlan" +
+      "nableUserInterests:\001*\032E\312A\030googleads.goog" +
+      "leapis.com\322A\'https://www.googleapis.com/" +
+      "auth/adwordsB\201\002\n%com.google.ads.googlead" +
+      "s.v26.servicesB\025ReachPlanServiceProtoP\001Z" +
+      "Igoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v26/services;services\242\002\003GAA" +
+      "\252\002!Google.Ads.GoogleAds.V26.Services\312\002!G" +
+      "oogle\\Ads\\GoogleAds\\V26\\Services\352\002%Googl" +
+      "e::Ads::GoogleAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

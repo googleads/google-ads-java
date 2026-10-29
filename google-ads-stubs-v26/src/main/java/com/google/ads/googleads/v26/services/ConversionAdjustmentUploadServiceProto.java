@@ -73,64 +73,64 @@ public final class ConversionAdjustmentUploadServiceProto extends com.google.pro
       "ms/conversion_adjustment_type.proto\032\034goo" +
       "gle/api/annotations.proto\032\027google/api/cl" +
       "ient.proto\032\037google/api/field_behavior.pr" +
-      "oto\032\027google/rpc/status.proto\"\366\001\n\"UploadC" +
-      "onversionAdjustmentsRequest\022\030\n\013customer_" +
-      "id\030\001 \001(\tB\003\340A\002\022\\\n\026conversion_adjustments\030" +
-      "\002 \003(\01327.google.ads.googleads.v26.service" +
-      "s.ConversionAdjustmentB\003\340A\002\022\034\n\017partial_f" +
-      "ailure\030\003 \001(\010B\003\340A\002\022\025\n\rvalidate_only\030\004 \001(\010" +
-      "\022\030\n\006job_id\030\005 \001(\005B\003\340A\001H\000\210\001\001B\t\n\007_job_id\"\270\001" +
-      "\n#UploadConversionAdjustmentsResponse\0221\n" +
-      "\025partial_failure_error\030\001 \001(\0132\022.google.rp" +
-      "c.Status\022N\n\007results\030\002 \003(\0132=.google.ads.g" +
-      "oogleads.v26.services.ConversionAdjustme" +
-      "ntResult\022\016\n\006job_id\030\003 \001(\003\"\263\004\n\024ConversionA" +
-      "djustment\022R\n\024gclid_date_time_pair\030\014 \001(\0132" +
-      "4.google.ads.googleads.v26.services.Gcli" +
-      "dDateTimePair\022\025\n\010order_id\030\r \001(\tH\000\210\001\001\022\036\n\021" +
-      "conversion_action\030\010 \001(\tH\001\210\001\001\022!\n\024adjustme" +
-      "nt_date_time\030\t \001(\tH\002\210\001\001\022n\n\017adjustment_ty" +
-      "pe\030\005 \001(\0162U.google.ads.googleads.v26.enum" +
-      "s.ConversionAdjustmentTypeEnum.Conversio" +
-      "nAdjustmentType\022N\n\021restatement_value\030\006 \001" +
-      "(\01323.google.ads.googleads.v26.services.R" +
-      "estatementValue\022I\n\020user_identifiers\030\n \003(" +
-      "\0132/.google.ads.googleads.v26.common.User" +
-      "Identifier\022\027\n\nuser_agent\030\013 \001(\tH\003\210\001\001B\013\n\t_" +
-      "order_idB\024\n\022_conversion_actionB\027\n\025_adjus" +
-      "tment_date_timeB\r\n\013_user_agent\"p\n\020Restat" +
-      "ementValue\022\033\n\016adjusted_value\030\003 \001(\001H\000\210\001\001\022" +
-      "\032\n\rcurrency_code\030\004 \001(\tH\001\210\001\001B\021\n\017_adjusted" +
-      "_valueB\020\n\016_currency_code\"m\n\021GclidDateTim" +
-      "ePair\022\022\n\005gclid\030\003 \001(\tH\000\210\001\001\022!\n\024conversion_" +
-      "date_time\030\004 \001(\tH\001\210\001\001B\010\n\006_gclidB\027\n\025_conve" +
-      "rsion_date_time\"\344\002\n\032ConversionAdjustment" +
-      "Result\022R\n\024gclid_date_time_pair\030\t \001(\01324.g" +
-      "oogle.ads.googleads.v26.services.GclidDa" +
-      "teTimePair\022\020\n\010order_id\030\n \001(\t\022\036\n\021conversi" +
-      "on_action\030\007 \001(\tH\000\210\001\001\022!\n\024adjustment_date_" +
-      "time\030\010 \001(\tH\001\210\001\001\022n\n\017adjustment_type\030\005 \001(\016" +
-      "2U.google.ads.googleads.v26.enums.Conver" +
-      "sionAdjustmentTypeEnum.ConversionAdjustm" +
-      "entTypeB\024\n\022_conversion_actionB\027\n\025_adjust" +
-      "ment_date_time2\225\003\n!ConversionAdjustmentU" +
-      "ploadService\022\250\002\n\033UploadConversionAdjustm" +
-      "ents\022E.google.ads.googleads.v26.services" +
-      ".UploadConversionAdjustmentsRequest\032F.go" +
-      "ogle.ads.googleads.v26.services.UploadCo" +
-      "nversionAdjustmentsResponse\"z\332A2customer" +
-      "_id,conversion_adjustments,partial_failu" +
-      "re\202\323\344\223\002?\":/v26/customers/{customer_id=*}" +
-      ":uploadConversionAdjustments:\001*\032E\312A\030goog" +
-      "leads.googleapis.com\322A\'https://www.googl" +
-      "eapis.com/auth/adwordsB\222\002\n%com.google.ad" +
-      "s.googleads.v26.servicesB&ConversionAdju" +
-      "stmentUploadServiceProtoP\001ZIgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v26/services;services\242\002\003GAA\252\002!Google.Ads" +
-      ".GoogleAds.V26.Services\312\002!Google\\Ads\\Goo" +
-      "gleAds\\V26\\Services\352\002%Google::Ads::Googl" +
-      "eAds::V26::Servicesb\006proto3"
+      "oto\032\027google/rpc/status.proto\"\372\001\n\"UploadC" +
+      "onversionAdjustmentsRequest\022\031\n\013customer_" +
+      "id\030\001 \001(\tB\004\342A\001\002\022]\n\026conversion_adjustments" +
+      "\030\002 \003(\01327.google.ads.googleads.v26.servic" +
+      "es.ConversionAdjustmentB\004\342A\001\002\022\035\n\017partial" +
+      "_failure\030\003 \001(\010B\004\342A\001\002\022\025\n\rvalidate_only\030\004 " +
+      "\001(\010\022\031\n\006job_id\030\005 \001(\005B\004\342A\001\001H\000\210\001\001B\t\n\007_job_i" +
+      "d\"\270\001\n#UploadConversionAdjustmentsRespons" +
+      "e\0221\n\025partial_failure_error\030\001 \001(\0132\022.googl" +
+      "e.rpc.Status\022N\n\007results\030\002 \003(\0132=.google.a" +
+      "ds.googleads.v26.services.ConversionAdju" +
+      "stmentResult\022\016\n\006job_id\030\003 \001(\003\"\263\004\n\024Convers" +
+      "ionAdjustment\022R\n\024gclid_date_time_pair\030\014 " +
+      "\001(\01324.google.ads.googleads.v26.services." +
+      "GclidDateTimePair\022\025\n\010order_id\030\r \001(\tH\000\210\001\001" +
+      "\022\036\n\021conversion_action\030\010 \001(\tH\001\210\001\001\022!\n\024adju" +
+      "stment_date_time\030\t \001(\tH\002\210\001\001\022n\n\017adjustmen" +
+      "t_type\030\005 \001(\0162U.google.ads.googleads.v26." +
+      "enums.ConversionAdjustmentTypeEnum.Conve" +
+      "rsionAdjustmentType\022N\n\021restatement_value" +
+      "\030\006 \001(\01323.google.ads.googleads.v26.servic" +
+      "es.RestatementValue\022I\n\020user_identifiers\030" +
+      "\n \003(\0132/.google.ads.googleads.v26.common." +
+      "UserIdentifier\022\027\n\nuser_agent\030\013 \001(\tH\003\210\001\001B" +
+      "\013\n\t_order_idB\024\n\022_conversion_actionB\027\n\025_a" +
+      "djustment_date_timeB\r\n\013_user_agent\"p\n\020Re" +
+      "statementValue\022\033\n\016adjusted_value\030\003 \001(\001H\000" +
+      "\210\001\001\022\032\n\rcurrency_code\030\004 \001(\tH\001\210\001\001B\021\n\017_adju" +
+      "sted_valueB\020\n\016_currency_code\"m\n\021GclidDat" +
+      "eTimePair\022\022\n\005gclid\030\003 \001(\tH\000\210\001\001\022!\n\024convers" +
+      "ion_date_time\030\004 \001(\tH\001\210\001\001B\010\n\006_gclidB\027\n\025_c" +
+      "onversion_date_time\"\344\002\n\032ConversionAdjust" +
+      "mentResult\022R\n\024gclid_date_time_pair\030\t \001(\013" +
+      "24.google.ads.googleads.v26.services.Gcl" +
+      "idDateTimePair\022\020\n\010order_id\030\n \001(\t\022\036\n\021conv" +
+      "ersion_action\030\007 \001(\tH\000\210\001\001\022!\n\024adjustment_d" +
+      "ate_time\030\010 \001(\tH\001\210\001\001\022n\n\017adjustment_type\030\005" +
+      " \001(\0162U.google.ads.googleads.v26.enums.Co" +
+      "nversionAdjustmentTypeEnum.ConversionAdj" +
+      "ustmentTypeB\024\n\022_conversion_actionB\027\n\025_ad" +
+      "justment_date_time2\225\003\n!ConversionAdjustm" +
+      "entUploadService\022\250\002\n\033UploadConversionAdj" +
+      "ustments\022E.google.ads.googleads.v26.serv" +
+      "ices.UploadConversionAdjustmentsRequest\032" +
+      "F.google.ads.googleads.v26.services.Uplo" +
+      "adConversionAdjustmentsResponse\"z\332A2cust" +
+      "omer_id,conversion_adjustments,partial_f" +
+      "ailure\202\323\344\223\002?\":/v26/customers/{customer_i" +
+      "d=*}:uploadConversionAdjustments:\001*\032E\312A\030" +
+      "googleads.googleapis.com\322A\'https://www.g" +
+      "oogleapis.com/auth/adwordsB\222\002\n%com.googl" +
+      "e.ads.googleads.v26.servicesB&Conversion" +
+      "AdjustmentUploadServiceProtoP\001ZIgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v26/services;services\242\002\003GAA\252\002!Google" +
+      ".Ads.GoogleAds.V26.Services\312\002!Google\\Ads" +
+      "\\GoogleAds\\V26\\Services\352\002%Google::Ads::G" +
+      "oogleAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -45913,6 +45913,576 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface OptimizeForNewCustomersRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. The recommended incremental conversion value, in the
+     * account's local currency, to be added to conversion values for new
+     * customers. This is a standard floating-point value expressed in units of
+     * the account's local currency, not in micros.
+     *
+     * When applying this recommendation, this value can be supplied to
+     * `account_default_incremental_conversion_value` or
+     * `campaign_override_incremental_conversion_value` in
+     * [OptimizeForNewCustomersParameters][google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters].
+     * </pre>
+     *
+     * <code>optional double recommended_incremental_conversion_value = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedIncrementalConversionValue field is set.
+     */
+    boolean hasRecommendedIncrementalConversionValue();
+    /**
+     * <pre>
+     * Output only. The recommended incremental conversion value, in the
+     * account's local currency, to be added to conversion values for new
+     * customers. This is a standard floating-point value expressed in units of
+     * the account's local currency, not in micros.
+     *
+     * When applying this recommendation, this value can be supplied to
+     * `account_default_incremental_conversion_value` or
+     * `campaign_override_incremental_conversion_value` in
+     * [OptimizeForNewCustomersParameters][google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters].
+     * </pre>
+     *
+     * <code>optional double recommended_incremental_conversion_value = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedIncrementalConversionValue.
+     */
+    double getRecommendedIncrementalConversionValue();
+  }
+  /**
+   * <pre>
+   * Recommendation to optimize for new customers.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation}
+   */
+  public static final class OptimizeForNewCustomersRecommendation extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation)
+      OptimizeForNewCustomersRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 33,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        "OptimizeForNewCustomersRecommendation");
+    }
+    // Use OptimizeForNewCustomersRecommendation.newBuilder() to construct.
+    private OptimizeForNewCustomersRecommendation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private OptimizeForNewCustomersRecommendation() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v26.resources.RecommendationProto.internal_static_google_ads_googleads_v26_resources_Recommendation_OptimizeForNewCustomersRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v26.resources.RecommendationProto.internal_static_google_ads_googleads_v26_resources_Recommendation_OptimizeForNewCustomersRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.class, com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RECOMMENDED_INCREMENTAL_CONVERSION_VALUE_FIELD_NUMBER = 1;
+    private double recommendedIncrementalConversionValue_ = 0D;
+    /**
+     * <pre>
+     * Output only. The recommended incremental conversion value, in the
+     * account's local currency, to be added to conversion values for new
+     * customers. This is a standard floating-point value expressed in units of
+     * the account's local currency, not in micros.
+     *
+     * When applying this recommendation, this value can be supplied to
+     * `account_default_incremental_conversion_value` or
+     * `campaign_override_incremental_conversion_value` in
+     * [OptimizeForNewCustomersParameters][google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters].
+     * </pre>
+     *
+     * <code>optional double recommended_incremental_conversion_value = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the recommendedIncrementalConversionValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecommendedIncrementalConversionValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The recommended incremental conversion value, in the
+     * account's local currency, to be added to conversion values for new
+     * customers. This is a standard floating-point value expressed in units of
+     * the account's local currency, not in micros.
+     *
+     * When applying this recommendation, this value can be supplied to
+     * `account_default_incremental_conversion_value` or
+     * `campaign_override_incremental_conversion_value` in
+     * [OptimizeForNewCustomersParameters][google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters].
+     * </pre>
+     *
+     * <code>optional double recommended_incremental_conversion_value = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The recommendedIncrementalConversionValue.
+     */
+    @java.lang.Override
+    public double getRecommendedIncrementalConversionValue() {
+      return recommendedIncrementalConversionValue_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeDouble(1, recommendedIncrementalConversionValue_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(1, recommendedIncrementalConversionValue_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation other = (com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation) obj;
+
+      if (hasRecommendedIncrementalConversionValue() != other.hasRecommendedIncrementalConversionValue()) return false;
+      if (hasRecommendedIncrementalConversionValue()) {
+        if (java.lang.Double.doubleToLongBits(getRecommendedIncrementalConversionValue())
+            != java.lang.Double.doubleToLongBits(
+                other.getRecommendedIncrementalConversionValue())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRecommendedIncrementalConversionValue()) {
+        hash = (37 * hash) + RECOMMENDED_INCREMENTAL_CONVERSION_VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getRecommendedIncrementalConversionValue()));
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Recommendation to optimize for new customers.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation)
+        com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v26.resources.RecommendationProto.internal_static_google_ads_googleads_v26_resources_Recommendation_OptimizeForNewCustomersRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v26.resources.RecommendationProto.internal_static_google_ads_googleads_v26_resources_Recommendation_OptimizeForNewCustomersRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.class, com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recommendedIncrementalConversionValue_ = 0D;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v26.resources.RecommendationProto.internal_static_google_ads_googleads_v26_resources_Recommendation_OptimizeForNewCustomersRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation build() {
+        com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation buildPartial() {
+        com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation result = new com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recommendedIncrementalConversionValue_ = recommendedIncrementalConversionValue_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation other) {
+        if (other == com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.getDefaultInstance()) return this;
+        if (other.hasRecommendedIncrementalConversionValue()) {
+          setRecommendedIncrementalConversionValue(other.getRecommendedIncrementalConversionValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 9: {
+                recommendedIncrementalConversionValue_ = input.readDouble();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 9
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private double recommendedIncrementalConversionValue_ ;
+      /**
+       * <pre>
+       * Output only. The recommended incremental conversion value, in the
+       * account's local currency, to be added to conversion values for new
+       * customers. This is a standard floating-point value expressed in units of
+       * the account's local currency, not in micros.
+       *
+       * When applying this recommendation, this value can be supplied to
+       * `account_default_incremental_conversion_value` or
+       * `campaign_override_incremental_conversion_value` in
+       * [OptimizeForNewCustomersParameters][google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters].
+       * </pre>
+       *
+       * <code>optional double recommended_incremental_conversion_value = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the recommendedIncrementalConversionValue field is set.
+       */
+      @java.lang.Override
+      public boolean hasRecommendedIncrementalConversionValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. The recommended incremental conversion value, in the
+       * account's local currency, to be added to conversion values for new
+       * customers. This is a standard floating-point value expressed in units of
+       * the account's local currency, not in micros.
+       *
+       * When applying this recommendation, this value can be supplied to
+       * `account_default_incremental_conversion_value` or
+       * `campaign_override_incremental_conversion_value` in
+       * [OptimizeForNewCustomersParameters][google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters].
+       * </pre>
+       *
+       * <code>optional double recommended_incremental_conversion_value = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The recommendedIncrementalConversionValue.
+       */
+      @java.lang.Override
+      public double getRecommendedIncrementalConversionValue() {
+        return recommendedIncrementalConversionValue_;
+      }
+      /**
+       * <pre>
+       * Output only. The recommended incremental conversion value, in the
+       * account's local currency, to be added to conversion values for new
+       * customers. This is a standard floating-point value expressed in units of
+       * the account's local currency, not in micros.
+       *
+       * When applying this recommendation, this value can be supplied to
+       * `account_default_incremental_conversion_value` or
+       * `campaign_override_incremental_conversion_value` in
+       * [OptimizeForNewCustomersParameters][google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters].
+       * </pre>
+       *
+       * <code>optional double recommended_incremental_conversion_value = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The recommendedIncrementalConversionValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecommendedIncrementalConversionValue(double value) {
+
+        recommendedIncrementalConversionValue_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The recommended incremental conversion value, in the
+       * account's local currency, to be added to conversion values for new
+       * customers. This is a standard floating-point value expressed in units of
+       * the account's local currency, not in micros.
+       *
+       * When applying this recommendation, this value can be supplied to
+       * `account_default_incremental_conversion_value` or
+       * `campaign_override_incremental_conversion_value` in
+       * [OptimizeForNewCustomersParameters][google.ads.googleads.v26.services.ApplyRecommendationOperation.OptimizeForNewCustomersParameters].
+       * </pre>
+       *
+       * <code>optional double recommended_incremental_conversion_value = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecommendedIncrementalConversionValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        recommendedIncrementalConversionValue_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation)
+    private static final com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation();
+    }
+
+    public static com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OptimizeForNewCustomersRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<OptimizeForNewCustomersRecommendation>() {
+      @java.lang.Override
+      public OptimizeForNewCustomersRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OptimizeForNewCustomersRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OptimizeForNewCustomersRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int recommendationCase_ = 0;
   @SuppressWarnings("serial")
@@ -45978,6 +46548,7 @@ private static final long serialVersionUID = 0L;
     RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION(72),
     LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION(73),
     RAISE_BUDGET_PERFORMANCE_TOO_LOW_RECOMMENDATION(74),
+    OPTIMIZE_FOR_NEW_CUSTOMERS_RECOMMENDATION(75),
     RECOMMENDATION_NOT_SET(0);
     private final int value;
     private RecommendationCase(int value) {
@@ -46053,6 +46624,7 @@ private static final long serialVersionUID = 0L;
         case 72: return RAISE_TARGET_CPA_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION;
         case 73: return LOWER_TARGET_ROAS_PERFORMANCE_BID_TOO_LOW_RECOMMENDATION;
         case 74: return RAISE_BUDGET_PERFORMANCE_TOO_LOW_RECOMMENDATION;
+        case 75: return OPTIMIZE_FOR_NEW_CUSTOMERS_RECOMMENDATION;
         case 0: return RECOMMENDATION_NOT_SET;
         default: return null;
       }
@@ -49076,6 +49648,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v26.resources.Recommendation.RaiseBudgetPerformanceTooLowRecommendation.getDefaultInstance();
   }
 
+  public static final int OPTIMIZE_FOR_NEW_CUSTOMERS_RECOMMENDATION_FIELD_NUMBER = 75;
+  /**
+   * <pre>
+   * Output only. The optimize for new customers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the optimizeForNewCustomersRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasOptimizeForNewCustomersRecommendation() {
+    return recommendationCase_ == 75;
+  }
+  /**
+   * <pre>
+   * Output only. The optimize for new customers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The optimizeForNewCustomersRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation getOptimizeForNewCustomersRecommendation() {
+    if (recommendationCase_ == 75) {
+       return (com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The optimize for new customers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendationOrBuilder getOptimizeForNewCustomersRecommendationOrBuilder() {
+    if (recommendationCase_ == 75) {
+       return (com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -49287,6 +49902,9 @@ private static final long serialVersionUID = 0L;
     }
     if (recommendationCase_ == 74) {
       output.writeMessage(74, (com.google.ads.googleads.v26.resources.Recommendation.RaiseBudgetPerformanceTooLowRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 75) {
+      output.writeMessage(75, (com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation) recommendation_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -49560,6 +50178,10 @@ private static final long serialVersionUID = 0L;
     if (recommendationCase_ == 74) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(74, (com.google.ads.googleads.v26.resources.Recommendation.RaiseBudgetPerformanceTooLowRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 75) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(75, (com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation) recommendation_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -49840,6 +50462,10 @@ private static final long serialVersionUID = 0L;
         if (!getRaiseBudgetPerformanceTooLowRecommendation()
             .equals(other.getRaiseBudgetPerformanceTooLowRecommendation())) return false;
         break;
+      case 75:
+        if (!getOptimizeForNewCustomersRecommendation()
+            .equals(other.getOptimizeForNewCustomersRecommendation())) return false;
+        break;
       case 0:
       default:
     }
@@ -50115,6 +50741,10 @@ private static final long serialVersionUID = 0L;
       case 74:
         hash = (37 * hash) + RAISE_BUDGET_PERFORMANCE_TOO_LOW_RECOMMENDATION_FIELD_NUMBER;
         hash = (53 * hash) + getRaiseBudgetPerformanceTooLowRecommendation().hashCode();
+        break;
+      case 75:
+        hash = (37 * hash) + OPTIMIZE_FOR_NEW_CUSTOMERS_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getOptimizeForNewCustomersRecommendation().hashCode();
         break;
       case 0:
       default:
@@ -50449,6 +51079,9 @@ private static final long serialVersionUID = 0L;
       if (raiseBudgetPerformanceTooLowRecommendationBuilder_ != null) {
         raiseBudgetPerformanceTooLowRecommendationBuilder_.clear();
       }
+      if (optimizeForNewCustomersRecommendationBuilder_ != null) {
+        optimizeForNewCustomersRecommendationBuilder_.clear();
+      }
       recommendationCase_ = 0;
       recommendation_ = null;
       return this;
@@ -50766,6 +51399,10 @@ private static final long serialVersionUID = 0L;
           raiseBudgetPerformanceTooLowRecommendationBuilder_ != null) {
         result.recommendation_ = raiseBudgetPerformanceTooLowRecommendationBuilder_.build();
       }
+      if (recommendationCase_ == 75 &&
+          optimizeForNewCustomersRecommendationBuilder_ != null) {
+        result.recommendation_ = optimizeForNewCustomersRecommendationBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -51050,6 +51687,10 @@ private static final long serialVersionUID = 0L;
         }
         case RAISE_BUDGET_PERFORMANCE_TOO_LOW_RECOMMENDATION: {
           mergeRaiseBudgetPerformanceTooLowRecommendation(other.getRaiseBudgetPerformanceTooLowRecommendation());
+          break;
+        }
+        case OPTIMIZE_FOR_NEW_CUSTOMERS_RECOMMENDATION: {
+          mergeOptimizeForNewCustomersRecommendation(other.getOptimizeForNewCustomersRecommendation());
           break;
         }
         case RECOMMENDATION_NOT_SET: {
@@ -51531,6 +52172,13 @@ private static final long serialVersionUID = 0L;
               recommendationCase_ = 74;
               break;
             } // case 594
+            case 602: {
+              input.readMessage(
+                  internalGetOptimizeForNewCustomersRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 75;
+              break;
+            } // case 602
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -63053,6 +63701,184 @@ private static final long serialVersionUID = 0L;
       recommendationCase_ = 74;
       onChanged();
       return raiseBudgetPerformanceTooLowRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation, com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.Builder, com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendationOrBuilder> optimizeForNewCustomersRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The optimize for new customers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the optimizeForNewCustomersRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptimizeForNewCustomersRecommendation() {
+      return recommendationCase_ == 75;
+    }
+    /**
+     * <pre>
+     * Output only. The optimize for new customers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The optimizeForNewCustomersRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation getOptimizeForNewCustomersRecommendation() {
+      if (optimizeForNewCustomersRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 75) {
+          return (com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 75) {
+          return optimizeForNewCustomersRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The optimize for new customers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setOptimizeForNewCustomersRecommendation(com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation value) {
+      if (optimizeForNewCustomersRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        optimizeForNewCustomersRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 75;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The optimize for new customers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setOptimizeForNewCustomersRecommendation(
+        com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.Builder builderForValue) {
+      if (optimizeForNewCustomersRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        optimizeForNewCustomersRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 75;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The optimize for new customers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeOptimizeForNewCustomersRecommendation(com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation value) {
+      if (optimizeForNewCustomersRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 75 &&
+            recommendation_ != com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.newBuilder((com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 75) {
+          optimizeForNewCustomersRecommendationBuilder_.mergeFrom(value);
+        } else {
+          optimizeForNewCustomersRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 75;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The optimize for new customers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearOptimizeForNewCustomersRecommendation() {
+      if (optimizeForNewCustomersRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 75) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 75) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        optimizeForNewCustomersRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The optimize for new customers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.Builder getOptimizeForNewCustomersRecommendationBuilder() {
+      return internalGetOptimizeForNewCustomersRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The optimize for new customers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendationOrBuilder getOptimizeForNewCustomersRecommendationOrBuilder() {
+      if ((recommendationCase_ == 75) && (optimizeForNewCustomersRecommendationBuilder_ != null)) {
+        return optimizeForNewCustomersRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 75) {
+          return (com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The optimize for new customers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation, com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.Builder, com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendationOrBuilder> 
+        internalGetOptimizeForNewCustomersRecommendationFieldBuilder() {
+      if (optimizeForNewCustomersRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 75)) {
+          recommendation_ = com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.getDefaultInstance();
+        }
+        optimizeForNewCustomersRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation, com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation.Builder, com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendationOrBuilder>(
+                (com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 75;
+      onChanged();
+      return optimizeForNewCustomersRecommendationBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v26.resources.Recommendation)

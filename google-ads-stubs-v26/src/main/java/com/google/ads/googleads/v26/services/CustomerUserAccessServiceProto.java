@@ -62,41 +62,41 @@ public final class CustomerUserAccessServiceProto extends com.google.protobuf.Ge
       "ss.proto\032\034google/api/annotations.proto\032\027" +
       "google/api/client.proto\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\032 google/protobuf/field_mask.proto\"\223\001" +
-      "\n\037MutateCustomerUserAccessRequest\022\030\n\013cus" +
-      "tomer_id\030\001 \001(\tB\003\340A\002\022V\n\toperation\030\002 \001(\0132>" +
-      ".google.ads.googleads.v26.services.Custo" +
-      "merUserAccessOperationB\003\340A\002\"\351\001\n\033Customer" +
-      "UserAccessOperation\022/\n\013update_mask\030\003 \001(\013" +
-      "2\032.google.protobuf.FieldMask\022H\n\006update\030\001" +
-      " \001(\01326.google.ads.googleads.v26.resource" +
-      "s.CustomerUserAccessH\000\022B\n\006remove\030\002 \001(\tB0" +
-      "\372A-\n+googleads.googleapis.com/CustomerUs" +
-      "erAccessH\000B\013\n\toperation\"u\n MutateCustome" +
-      "rUserAccessResponse\022Q\n\006result\030\001 \001(\0132A.go" +
-      "ogle.ads.googleads.v26.services.MutateCu" +
-      "stomerUserAccessResult\"\276\001\n\036MutateCustome" +
-      "rUserAccessResult\022G\n\rresource_name\030\001 \001(\t" +
+      "oto\032 google/protobuf/field_mask.proto\"\225\001" +
+      "\n\037MutateCustomerUserAccessRequest\022\031\n\013cus" +
+      "tomer_id\030\001 \001(\tB\004\342A\001\002\022W\n\toperation\030\002 \001(\0132" +
+      ">.google.ads.googleads.v26.services.Cust" +
+      "omerUserAccessOperationB\004\342A\001\002\"\351\001\n\033Custom" +
+      "erUserAccessOperation\022/\n\013update_mask\030\003 \001" +
+      "(\0132\032.google.protobuf.FieldMask\022H\n\006update" +
+      "\030\001 \001(\01326.google.ads.googleads.v26.resour" +
+      "ces.CustomerUserAccessH\000\022B\n\006remove\030\002 \001(\t" +
       "B0\372A-\n+googleads.googleapis.com/Customer" +
-      "UserAccess\022S\n\027multi_party_auth_review\030\002 " +
-      "\001(\tB2\372A/\n-googleads.googleapis.com/Multi" +
-      "PartyAuthReview2\347\002\n\031CustomerUserAccessSe" +
-      "rvice\022\202\002\n\030MutateCustomerUserAccess\022B.goo" +
-      "gle.ads.googleads.v26.services.MutateCus" +
-      "tomerUserAccessRequest\032C.google.ads.goog" +
-      "leads.v26.services.MutateCustomerUserAcc" +
-      "essResponse\"]\332A\025customer_id,operation\202\323\344" +
-      "\223\002?\":/v26/customers/{customer_id=*}/cust" +
-      "omerUserAccesses:mutate:\001*\032E\312A\030googleads" +
-      ".googleapis.com\322A\'https://www.googleapis" +
-      ".com/auth/adwordsB\212\002\n%com.google.ads.goo" +
-      "gleads.v26.servicesB\036CustomerUserAccessS" +
-      "erviceProtoP\001ZIgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v26/services;" +
-      "services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2" +
-      "6.Services\312\002!Google\\Ads\\GoogleAds\\V26\\Se" +
-      "rvices\352\002%Google::Ads::GoogleAds::V26::Se" +
-      "rvicesb\006proto3"
+      "UserAccessH\000B\013\n\toperation\"u\n MutateCusto" +
+      "merUserAccessResponse\022Q\n\006result\030\001 \001(\0132A." +
+      "google.ads.googleads.v26.services.Mutate" +
+      "CustomerUserAccessResult\"\276\001\n\036MutateCusto" +
+      "merUserAccessResult\022G\n\rresource_name\030\001 \001" +
+      "(\tB0\372A-\n+googleads.googleapis.com/Custom" +
+      "erUserAccess\022S\n\027multi_party_auth_review\030" +
+      "\002 \001(\tB2\372A/\n-googleads.googleapis.com/Mul" +
+      "tiPartyAuthReview2\347\002\n\031CustomerUserAccess" +
+      "Service\022\202\002\n\030MutateCustomerUserAccess\022B.g" +
+      "oogle.ads.googleads.v26.services.MutateC" +
+      "ustomerUserAccessRequest\032C.google.ads.go" +
+      "ogleads.v26.services.MutateCustomerUserA" +
+      "ccessResponse\"]\332A\025customer_id,operation\202" +
+      "\323\344\223\002?\":/v26/customers/{customer_id=*}/cu" +
+      "stomerUserAccesses:mutate:\001*\032E\312A\030googlea" +
+      "ds.googleapis.com\322A\'https://www.googleap" +
+      "is.com/auth/adwordsB\212\002\n%com.google.ads.g" +
+      "oogleads.v26.servicesB\036CustomerUserAcces" +
+      "sServiceProtoP\001ZIgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v26/service" +
+      "s;services\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
+      "V26.Services\312\002!Google\\Ads\\GoogleAds\\V26\\" +
+      "Services\352\002%Google::Ads::GoogleAds::V26::" +
+      "Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

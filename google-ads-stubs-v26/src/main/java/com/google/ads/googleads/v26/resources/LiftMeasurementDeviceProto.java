@@ -45,26 +45,26 @@ public final class LiftMeasurementDeviceProto extends com.google.protobuf.Genera
       "oogleads.v26.resources\032+google/ads/googl" +
       "eads/v26/enums/device.proto\032\037google/api/" +
       "field_behavior.proto\032\031google/api/resourc" +
-      "e.proto\"\362\003\n\025LiftMeasurementDevice\022M\n\rres" +
-      "ource_name\030\001 \001(\tB6\340A\003\372A0\n.googleads.goog" +
-      "leapis.com/LiftMeasurementDevice\022,\n\032lift" +
-      "_measurement_config_id\030\002 \001(\003B\003\340A\003H\000\210\001\001\022@" +
-      "\n\010campaign\030\003 \001(\tB)\340A\003\372A#\n!googleads.goog" +
-      "leapis.com/CampaignH\001\210\001\001\022F\n\006device\030\005 \001(\016" +
-      "21.google.ads.googleads.v26.enums.Device" +
-      "Enum.DeviceB\003\340A\003:\245\001\352A\241\001\n.googleads.googl" +
-      "eapis.com/LiftMeasurementDevice\022ocustome" +
-      "rs/{customer_id}/liftMeasurementDevices/" +
-      "{lift_measurement_configuration_id}~{cam" +
-      "paign_id}~{criterion_id}B\035\n\033_lift_measur" +
-      "ement_config_idB\013\n\t_campaignB\214\002\n&com.goo" +
-      "gle.ads.googleads.v26.resourcesB\032LiftMea" +
-      "surementDeviceProtoP\001ZKgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v26/r" +
-      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
-      "ogleAds.V26.Resources\312\002\"Google\\Ads\\Googl" +
-      "eAds\\V26\\Resources\352\002&Google::Ads::Google" +
-      "Ads::V26::Resourcesb\006proto3"
+      "e.proto\"\366\003\n\025LiftMeasurementDevice\022N\n\rres" +
+      "ource_name\030\001 \001(\tB7\342A\001\003\372A0\n.googleads.goo" +
+      "gleapis.com/LiftMeasurementDevice\022-\n\032lif" +
+      "t_measurement_config_id\030\002 \001(\003B\004\342A\001\003H\000\210\001\001" +
+      "\022A\n\010campaign\030\003 \001(\tB*\342A\001\003\372A#\n!googleads.g" +
+      "oogleapis.com/CampaignH\001\210\001\001\022G\n\006device\030\005 " +
+      "\001(\01621.google.ads.googleads.v26.enums.Dev" +
+      "iceEnum.DeviceB\004\342A\001\003:\245\001\352A\241\001\n.googleads.g" +
+      "oogleapis.com/LiftMeasurementDevice\022ocus" +
+      "tomers/{customer_id}/liftMeasurementDevi" +
+      "ces/{lift_measurement_configuration_id}~" +
+      "{campaign_id}~{criterion_id}B\035\n\033_lift_me" +
+      "asurement_config_idB\013\n\t_campaignB\214\002\n&com" +
+      ".google.ads.googleads.v26.resourcesB\032Lif" +
+      "tMeasurementDeviceProtoP\001ZKgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "26/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
+      "s.GoogleAds.V26.Resources\312\002\"Google\\Ads\\G" +
+      "oogleAds\\V26\\Resources\352\002&Google::Ads::Go" +
+      "ogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -88,74 +88,75 @@ public final class IncentiveServiceProto extends com.google.protobuf.GeneratedFi
       ".proto\032\034google/api/annotations.proto\032\027go" +
       "ogle/api/client.proto\032\037google/api/field_" +
       "behavior.proto\032\027google/type/money.proto\"" +
-      "\224\002\n\025FetchIncentiveRequest\022\037\n\rlanguage_co" +
-      "de\030\001 \001(\tB\003\340A\001H\000\210\001\001\022\036\n\014country_code\030\002 \001(\t" +
-      "B\003\340A\001H\001\210\001\001\022\027\n\005email\030\003 \001(\tB\003\340A\001H\002\210\001\001\022a\n\016i" +
-      "ncentive_type\030\005 \001(\0162?.google.ads.googlea" +
-      "ds.v26.enums.IncentiveTypeEnum.Incentive" +
-      "TypeB\003\340A\001H\003\210\001\001B\020\n\016_language_codeB\017\n\r_cou" +
-      "ntry_codeB\010\n\006_emailB\021\n\017_incentive_type\"\363" +
-      "\004\n\tIncentive\022\031\n\014incentive_id\030\001 \001(\003H\000\210\001\001\022" +
-      "R\n\013requirement\030\002 \001(\01328.google.ads.google" +
-      "ads.v26.services.Incentive.RequirementH\001" +
-      "\210\001\001\022/\n\"incentive_terms_and_conditions_ur" +
-      "l\030\003 \001(\tH\002\210\001\001\022\\\n\016incentive_type\030\005 \001(\0162?.g" +
-      "oogle.ads.googleads.v26.enums.IncentiveT" +
-      "ypeEnum.IncentiveTypeH\003\210\001\001\032\214\002\n\013Requireme" +
-      "nt\022T\n\005spend\030\001 \001(\0132>.google.ads.googleads" +
-      ".v26.services.Incentive.Requirement.Spen" +
-      "dB\003\340A\001H\000\032\227\001\n\005Spend\0222\n\014award_amount\030\001 \001(\013" +
-      "2\022.google.type.MoneyB\003\340A\002H\000\210\001\001\0225\n\017requir" +
-      "ed_amount\030\002 \001(\0132\022.google.type.MoneyB\003\340A\002" +
-      "H\001\210\001\001B\017\n\r_award_amountB\022\n\020_required_amou" +
-      "ntB\r\n\013requirementB\017\n\r_incentive_idB\016\n\014_r" +
-      "equirementB%\n#_incentive_terms_and_condi" +
-      "tions_urlB\021\n\017_incentive_type\"\242\002\n\rCyoInce" +
-      "ntives\022I\n\tlow_offer\030\001 \001(\0132,.google.ads.g" +
-      "oogleads.v26.services.IncentiveB\003\340A\002H\000\210\001" +
-      "\001\022L\n\014medium_offer\030\002 \001(\0132,.google.ads.goo" +
-      "gleads.v26.services.IncentiveB\003\340A\002H\001\210\001\001\022" +
-      "J\n\nhigh_offer\030\003 \001(\0132,.google.ads.googlea" +
-      "ds.v26.services.IncentiveB\003\340A\002H\002\210\001\001B\014\n\n_" +
-      "low_offerB\017\n\r_medium_offerB\r\n\013_high_offe" +
-      "r\"\303\002\n\016IncentiveOffer\0227\n%consolidated_ter" +
-      "ms_and_conditions_url\030\002 \001(\tB\003\340A\001H\001\210\001\001\022^\n" +
-      "\noffer_type\030\004 \001(\0162@.google.ads.googleads" +
-      ".v26.enums.IncentiveOfferTypeEnum.OfferT" +
-      "ypeB\003\340A\002H\002\210\001\001\022J\n\016cyo_incentives\030\003 \001(\01320." +
-      "google.ads.googleads.v26.services.CyoInc" +
-      "entivesH\000B\023\n\021incentive_detailsB(\n&_conso" +
-      "lidated_terms_and_conditions_urlB\r\n\013_off" +
-      "er_type\"\202\001\n\026FetchIncentiveResponse\022T\n\017in" +
-      "centive_offer\030\001 \001(\01321.google.ads.googlea" +
-      "ds.v26.services.IncentiveOfferB\003\340A\002H\000\210\001\001" +
-      "B\022\n\020_incentive_offer\"p\n\025ApplyIncentiveRe" +
-      "quest\022\"\n\025selected_incentive_id\030\001 \001(\003B\003\340A" +
-      "\002\022\030\n\013customer_id\030\002 \001(\tB\003\340A\002\022\031\n\014country_c" +
-      "ode\030\003 \001(\tB\003\340A\002\"p\n\026ApplyIncentiveResponse" +
-      "\022\030\n\013coupon_code\030\001 \001(\tH\000\210\001\001\022\032\n\rcreation_t" +
-      "ime\030\002 \001(\tH\001\210\001\001B\016\n\014_coupon_codeB\020\n\016_creat" +
-      "ion_time2\261\004\n\020IncentiveService\022\255\001\n\016FetchI" +
-      "ncentive\0228.google.ads.googleads.v26.serv" +
-      "ices.FetchIncentiveRequest\0329.google.ads." +
-      "googleads.v26.services.FetchIncentiveRes" +
-      "ponse\"&\202\323\344\223\002 \022\036/v26/incentives:fetchInce" +
-      "ntive\022\245\002\n\016ApplyIncentive\0228.google.ads.go" +
-      "ogleads.v26.services.ApplyIncentiveReque" +
-      "st\0329.google.ads.googleads.v26.services.A" +
-      "pplyIncentiveResponse\"\235\001\332A\014country_code\332" +
-      "A.selected_incentive_id,customer_id,coun" +
-      "try_code\202\323\344\223\002W\"R/v26/customers/{customer" +
-      "_id=*}/incentives/{selected_incentive_id" +
-      "=*}:applyIncentive:\001*\032E\312A\030googleads.goog" +
-      "leapis.com\322A\'https://www.googleapis.com/" +
-      "auth/adwordsB\201\002\n%com.google.ads.googlead" +
-      "s.v26.servicesB\025IncentiveServiceProtoP\001Z" +
-      "Igoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v26/services;services\242\002\003GAA" +
-      "\252\002!Google.Ads.GoogleAds.V26.Services\312\002!G" +
-      "oogle\\Ads\\GoogleAds\\V26\\Services\352\002%Googl" +
-      "e::Ads::GoogleAds::V26::Servicesb\006proto3"
+      "\230\002\n\025FetchIncentiveRequest\022 \n\rlanguage_co" +
+      "de\030\001 \001(\tB\004\342A\001\001H\000\210\001\001\022\037\n\014country_code\030\002 \001(" +
+      "\tB\004\342A\001\001H\001\210\001\001\022\030\n\005email\030\003 \001(\tB\004\342A\001\001H\002\210\001\001\022b" +
+      "\n\016incentive_type\030\005 \001(\0162?.google.ads.goog" +
+      "leads.v26.enums.IncentiveTypeEnum.Incent" +
+      "iveTypeB\004\342A\001\001H\003\210\001\001B\020\n\016_language_codeB\017\n\r" +
+      "_country_codeB\010\n\006_emailB\021\n\017_incentive_ty" +
+      "pe\"\366\004\n\tIncentive\022\031\n\014incentive_id\030\001 \001(\003H\000" +
+      "\210\001\001\022R\n\013requirement\030\002 \001(\01328.google.ads.go" +
+      "ogleads.v26.services.Incentive.Requireme" +
+      "ntH\001\210\001\001\022/\n\"incentive_terms_and_condition" +
+      "s_url\030\003 \001(\tH\002\210\001\001\022\\\n\016incentive_type\030\005 \001(\016" +
+      "2?.google.ads.googleads.v26.enums.Incent" +
+      "iveTypeEnum.IncentiveTypeH\003\210\001\001\032\217\002\n\013Requi" +
+      "rement\022U\n\005spend\030\001 \001(\0132>.google.ads.googl" +
+      "eads.v26.services.Incentive.Requirement." +
+      "SpendB\004\342A\001\001H\000\032\231\001\n\005Spend\0223\n\014award_amount\030" +
+      "\001 \001(\0132\022.google.type.MoneyB\004\342A\001\002H\000\210\001\001\0226\n\017" +
+      "required_amount\030\002 \001(\0132\022.google.type.Mone" +
+      "yB\004\342A\001\002H\001\210\001\001B\017\n\r_award_amountB\022\n\020_requir" +
+      "ed_amountB\r\n\013requirementB\017\n\r_incentive_i" +
+      "dB\016\n\014_requirementB%\n#_incentive_terms_an" +
+      "d_conditions_urlB\021\n\017_incentive_type\"\245\002\n\r" +
+      "CyoIncentives\022J\n\tlow_offer\030\001 \001(\0132,.googl" +
+      "e.ads.googleads.v26.services.IncentiveB\004" +
+      "\342A\001\002H\000\210\001\001\022M\n\014medium_offer\030\002 \001(\0132,.google" +
+      ".ads.googleads.v26.services.IncentiveB\004\342" +
+      "A\001\002H\001\210\001\001\022K\n\nhigh_offer\030\003 \001(\0132,.google.ad" +
+      "s.googleads.v26.services.IncentiveB\004\342A\001\002" +
+      "H\002\210\001\001B\014\n\n_low_offerB\017\n\r_medium_offerB\r\n\013" +
+      "_high_offer\"\305\002\n\016IncentiveOffer\0228\n%consol" +
+      "idated_terms_and_conditions_url\030\002 \001(\tB\004\342" +
+      "A\001\001H\001\210\001\001\022_\n\noffer_type\030\004 \001(\0162@.google.ad" +
+      "s.googleads.v26.enums.IncentiveOfferType" +
+      "Enum.OfferTypeB\004\342A\001\002H\002\210\001\001\022J\n\016cyo_incenti" +
+      "ves\030\003 \001(\01320.google.ads.googleads.v26.ser" +
+      "vices.CyoIncentivesH\000B\023\n\021incentive_detai" +
+      "lsB(\n&_consolidated_terms_and_conditions" +
+      "_urlB\r\n\013_offer_type\"\203\001\n\026FetchIncentiveRe" +
+      "sponse\022U\n\017incentive_offer\030\001 \001(\01321.google" +
+      ".ads.googleads.v26.services.IncentiveOff" +
+      "erB\004\342A\001\002H\000\210\001\001B\022\n\020_incentive_offer\"s\n\025App" +
+      "lyIncentiveRequest\022#\n\025selected_incentive" +
+      "_id\030\001 \001(\003B\004\342A\001\002\022\031\n\013customer_id\030\002 \001(\tB\004\342A" +
+      "\001\002\022\032\n\014country_code\030\003 \001(\tB\004\342A\001\002\"p\n\026ApplyI" +
+      "ncentiveResponse\022\030\n\013coupon_code\030\001 \001(\tH\000\210" +
+      "\001\001\022\032\n\rcreation_time\030\002 \001(\tH\001\210\001\001B\016\n\014_coupo" +
+      "n_codeB\020\n\016_creation_time2\261\004\n\020IncentiveSe" +
+      "rvice\022\255\001\n\016FetchIncentive\0228.google.ads.go" +
+      "ogleads.v26.services.FetchIncentiveReque" +
+      "st\0329.google.ads.googleads.v26.services.F" +
+      "etchIncentiveResponse\"&\202\323\344\223\002 \022\036/v26/ince" +
+      "ntives:fetchIncentive\022\245\002\n\016ApplyIncentive" +
+      "\0228.google.ads.googleads.v26.services.App" +
+      "lyIncentiveRequest\0329.google.ads.googlead" +
+      "s.v26.services.ApplyIncentiveResponse\"\235\001" +
+      "\332A\014country_code\332A.selected_incentive_id," +
+      "customer_id,country_code\202\323\344\223\002W\"R/v26/cus" +
+      "tomers/{customer_id=*}/incentives/{selec" +
+      "ted_incentive_id=*}:applyIncentive:\001*\032E\312" +
+      "A\030googleads.googleapis.com\322A\'https://www" +
+      ".googleapis.com/auth/adwordsB\201\002\n%com.goo" +
+      "gle.ads.googleads.v26.servicesB\025Incentiv" +
+      "eServiceProtoP\001ZIgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v26/service" +
+      "s;services\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
+      "V26.Services\312\002!Google\\Ads\\GoogleAds\\V26\\" +
+      "Services\352\002%Google::Ads::GoogleAds::V26::" +
+      "Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

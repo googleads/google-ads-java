@@ -1935,5 +1935,32 @@ public interface RecommendationOrBuilder extends
    */
   com.google.ads.googleads.v26.resources.Recommendation.RaiseBudgetPerformanceTooLowRecommendationOrBuilder getRaiseBudgetPerformanceTooLowRecommendationOrBuilder();
 
+  /**
+   * <pre>
+   * Output only. The optimize for new customers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the optimizeForNewCustomersRecommendation field is set.
+   */
+  boolean hasOptimizeForNewCustomersRecommendation();
+  /**
+   * <pre>
+   * Output only. The optimize for new customers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The optimizeForNewCustomersRecommendation.
+   */
+  com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation getOptimizeForNewCustomersRecommendation();
+  /**
+   * <pre>
+   * Output only. The optimize for new customers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendation optimize_for_new_customers_recommendation = 75 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v26.resources.Recommendation.OptimizeForNewCustomersRecommendationOrBuilder getOptimizeForNewCustomersRecommendationOrBuilder();
+
   com.google.ads.googleads.v26.resources.Recommendation.RecommendationCase getRecommendationCase();
 }

@@ -46,46 +46,47 @@ public final class SharedCriterionProto extends com.google.protobuf.GeneratedFil
       "6/common/criteria.proto\0323google/ads/goog" +
       "leads/v26/enums/criterion_type.proto\032\037go" +
       "ogle/api/field_behavior.proto\032\031google/ap" +
-      "i/resource.proto\"\216\n\n\017SharedCriterion\022G\n\r" +
-      "resource_name\030\001 \001(\tB0\340A\005\372A*\n(googleads.g" +
-      "oogleapis.com/SharedCriterion\022C\n\nshared_" +
-      "set\030\n \001(\tB*\340A\005\372A$\n\"googleads.googleapis." +
-      "com/SharedSetH\001\210\001\001\022\036\n\014criterion_id\030\013 \001(\003" +
-      "B\003\340A\003H\002\210\001\001\022R\n\004type\030\004 \001(\0162?.google.ads.go" +
-      "ogleads.v26.enums.CriterionTypeEnum.Crit" +
-      "erionTypeB\003\340A\003\022\032\n\010negative\030\017 \001(\010B\003\340A\005H\003\210" +
-      "\001\001\022D\n\007keyword\030\003 \001(\0132,.google.ads.googlea" +
-      "ds.v26.common.KeywordInfoB\003\340A\005H\000\022O\n\ryout" +
-      "ube_video\030\005 \001(\01321.google.ads.googleads.v" +
-      "26.common.YouTubeVideoInfoB\003\340A\005H\000\022S\n\017you" +
-      "tube_channel\030\006 \001(\01323.google.ads.googlead" +
-      "s.v26.common.YouTubeChannelInfoB\003\340A\005H\000\022H" +
-      "\n\tplacement\030\007 \001(\0132..google.ads.googleads" +
-      ".v26.common.PlacementInfoB\003\340A\005H\000\022Z\n\023mobi" +
-      "le_app_category\030\010 \001(\01326.google.ads.googl" +
-      "eads.v26.common.MobileAppCategoryInfoB\003\340" +
-      "A\005H\000\022Y\n\022mobile_application\030\t \001(\01326.googl" +
-      "e.ads.googleads.v26.common.MobileApplica" +
-      "tionInfoB\003\340A\005H\000\022@\n\005brand\030\014 \001(\0132*.google." +
-      "ads.googleads.v26.common.BrandInfoB\003\340A\005H" +
-      "\000\022D\n\007webpage\030\r \001(\0132,.google.ads.googlead" +
-      "s.v26.common.WebpageInfoB\003\340A\005H\000\022j\n\034verti" +
-      "cal_ads_item_group_rule\030\016 \001(\0132=.google.a" +
-      "ds.googleads.v26.common.VerticalAdsItemG" +
-      "roupRuleInfoB\003\340A\005H\000\022L\n\rretail_filter\030\265\001 " +
-      "\001(\0132-.google.ads.googleads.v26.common.Re" +
-      "tailFilterB\003\340A\005H\000:t\352Aq\n(googleads.google" +
-      "apis.com/SharedCriterion\022Ecustomers/{cus" +
-      "tomer_id}/sharedCriteria/{shared_set_id}" +
-      "~{criterion_id}B\013\n\tcriterionB\r\n\013_shared_" +
-      "setB\017\n\r_criterion_idB\013\n\t_negativeB\206\002\n&co" +
-      "m.google.ads.googleads.v26.resourcesB\024Sh" +
-      "aredCriterionProtoP\001ZKgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v26/re" +
-      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
-      "gleAds.V26.Resources\312\002\"Google\\Ads\\Google" +
-      "Ads\\V26\\Resources\352\002&Google::Ads::GoogleA" +
-      "ds::V26::Resourcesb\006proto3"
+      "i/resource.proto\"\235\n\n\017SharedCriterion\022H\n\r" +
+      "resource_name\030\001 \001(\tB1\342A\001\005\372A*\n(googleads." +
+      "googleapis.com/SharedCriterion\022D\n\nshared" +
+      "_set\030\n \001(\tB+\342A\001\005\372A$\n\"googleads.googleapi" +
+      "s.com/SharedSetH\001\210\001\001\022\037\n\014criterion_id\030\013 \001" +
+      "(\003B\004\342A\001\003H\002\210\001\001\022S\n\004type\030\004 \001(\0162?.google.ads" +
+      ".googleads.v26.enums.CriterionTypeEnum.C" +
+      "riterionTypeB\004\342A\001\003\022\033\n\010negative\030\017 \001(\010B\004\342A" +
+      "\001\005H\003\210\001\001\022E\n\007keyword\030\003 \001(\0132,.google.ads.go" +
+      "ogleads.v26.common.KeywordInfoB\004\342A\001\005H\000\022P" +
+      "\n\ryoutube_video\030\005 \001(\01321.google.ads.googl" +
+      "eads.v26.common.YouTubeVideoInfoB\004\342A\001\005H\000" +
+      "\022T\n\017youtube_channel\030\006 \001(\01323.google.ads.g" +
+      "oogleads.v26.common.YouTubeChannelInfoB\004" +
+      "\342A\001\005H\000\022I\n\tplacement\030\007 \001(\0132..google.ads.g" +
+      "oogleads.v26.common.PlacementInfoB\004\342A\001\005H" +
+      "\000\022[\n\023mobile_app_category\030\010 \001(\01326.google." +
+      "ads.googleads.v26.common.MobileAppCatego" +
+      "ryInfoB\004\342A\001\005H\000\022Z\n\022mobile_application\030\t \001" +
+      "(\01326.google.ads.googleads.v26.common.Mob" +
+      "ileApplicationInfoB\004\342A\001\005H\000\022A\n\005brand\030\014 \001(" +
+      "\0132*.google.ads.googleads.v26.common.Bran" +
+      "dInfoB\004\342A\001\005H\000\022E\n\007webpage\030\r \001(\0132,.google." +
+      "ads.googleads.v26.common.WebpageInfoB\004\342A" +
+      "\001\005H\000\022k\n\034vertical_ads_item_group_rule\030\016 \001" +
+      "(\0132=.google.ads.googleads.v26.common.Ver" +
+      "ticalAdsItemGroupRuleInfoB\004\342A\001\005H\000\022M\n\rret" +
+      "ail_filter\030\265\001 \001(\0132-.google.ads.googleads" +
+      ".v26.common.RetailFilterB\004\342A\001\005H\000:t\352Aq\n(g" +
+      "oogleads.googleapis.com/SharedCriterion\022" +
+      "Ecustomers/{customer_id}/sharedCriteria/" +
+      "{shared_set_id}~{criterion_id}B\013\n\tcriter" +
+      "ionB\r\n\013_shared_setB\017\n\r_criterion_idB\013\n\t_" +
+      "negativeB\206\002\n&com.google.ads.googleads.v2" +
+      "6.resourcesB\024SharedCriterionProtoP\001ZKgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v26/resources;resources\242\002\003GAA\252\002" +
+      "\"Google.Ads.GoogleAds.V26.Resources\312\002\"Go" +
+      "ogle\\Ads\\GoogleAds\\V26\\Resources\352\002&Googl" +
+      "e::Ads::GoogleAds::V26::Resourcesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

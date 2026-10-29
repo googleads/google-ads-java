@@ -649,28 +649,28 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Settings for Local Services customer.
+   * Settings for Local Services customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
    * @return Whether the localServicesSettings field is set.
    */
   boolean hasLocalServicesSettings();
   /**
    * <pre>
-   * Output only. Settings for Local Services customer.
+   * Settings for Local Services customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
    * @return The localServicesSettings.
    */
   com.google.ads.googleads.v26.resources.LocalServicesSettings getLocalServicesSettings();
   /**
    * <pre>
-   * Output only. Settings for Local Services customer.
+   * Settings for Local Services customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
    */
   com.google.ads.googleads.v26.resources.LocalServicesSettingsOrBuilder getLocalServicesSettingsOrBuilder();
 

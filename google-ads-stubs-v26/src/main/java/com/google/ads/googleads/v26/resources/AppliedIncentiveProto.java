@@ -45,42 +45,42 @@ public final class AppliedIncentiveProto extends com.google.protobuf.GeneratedFi
       "ds.v26.resources\0324google/ads/googleads/v" +
       "26/enums/incentive_state.proto\032\037google/a" +
       "pi/field_behavior.proto\032\031google/api/reso" +
-      "urce.proto\"\336\010\n\020AppliedIncentive\022H\n\rresou" +
-      "rce_name\030\001 \001(\tB1\340A\003\372A+\n)googleads.google" +
-      "apis.com/AppliedIncentive\022\035\n\013coupon_code" +
-      "\030\002 \001(\tB\003\340A\003H\000\210\001\001\022d\n\017incentive_state\030\003 \001(" +
-      "\0162A.google.ads.googleads.v26.enums.Incen" +
-      "tiveStateEnum.IncentiveStateB\003\340A\003H\001\210\001\001\022&" +
-      "\n\024redemption_date_time\030\004 \001(\tB\003\340A\003H\002\210\001\001\0222" +
-      "\n fulfillment_expiration_date_time\030\005 \001(\t" +
-      "B\003\340A\003H\003\210\001\001\022(\n\026reward_grant_date_time\030\006 \001" +
-      "(\tB\003\340A\003H\004\210\001\001\022-\n\033reward_expiration_date_t" +
-      "ime\030\007 \001(\tB\003\340A\003H\005\210\001\001\022\037\n\rcurrency_code\030\010 \001" +
-      "(\tB\003\340A\003H\006\210\001\001\022&\n\024reward_amount_micros\030\t \001" +
-      "(\003B\003\340A\003H\007\210\001\001\022\'\n\025granted_amount_micros\030\n " +
-      "\001(\003B\003\340A\003H\010\210\001\001\022+\n\031required_min_spend_micr" +
-      "os\030\013 \001(\003B\003\340A\003H\t\210\001\001\022:\n(current_spend_towa" +
-      "rds_fulfillment_micros\030\014 \001(\003B\003\340A\003H\n\210\001\001\0221" +
-      "\n\037reward_balance_remaining_micros\030\r \001(\003B" +
-      "\003\340A\003H\013\210\001\001:g\352Ad\n)googleads.googleapis.com" +
-      "/AppliedIncentive\0227customers/{customer_i" +
-      "d}/appliedIncentives/{coupon_code}B\016\n\014_c" +
-      "oupon_codeB\022\n\020_incentive_stateB\027\n\025_redem" +
-      "ption_date_timeB#\n!_fulfillment_expirati" +
-      "on_date_timeB\031\n\027_reward_grant_date_timeB" +
-      "\036\n\034_reward_expiration_date_timeB\020\n\016_curr" +
-      "ency_codeB\027\n\025_reward_amount_microsB\030\n\026_g" +
-      "ranted_amount_microsB\034\n\032_required_min_sp" +
-      "end_microsB+\n)_current_spend_towards_ful" +
-      "fillment_microsB\"\n _reward_balance_remai" +
-      "ning_microsB\207\002\n&com.google.ads.googleads" +
-      ".v26.resourcesB\025AppliedIncentiveProtoP\001Z" +
-      "Kgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v26/resources;resources\242\002\003G" +
-      "AA\252\002\"Google.Ads.GoogleAds.V26.Resources\312" +
-      "\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002&G" +
-      "oogle::Ads::GoogleAds::V26::Resourcesb\006p" +
-      "roto3"
+      "urce.proto\"\353\010\n\020AppliedIncentive\022I\n\rresou" +
+      "rce_name\030\001 \001(\tB2\342A\001\003\372A+\n)googleads.googl" +
+      "eapis.com/AppliedIncentive\022\036\n\013coupon_cod" +
+      "e\030\002 \001(\tB\004\342A\001\003H\000\210\001\001\022e\n\017incentive_state\030\003 " +
+      "\001(\0162A.google.ads.googleads.v26.enums.Inc" +
+      "entiveStateEnum.IncentiveStateB\004\342A\001\003H\001\210\001" +
+      "\001\022\'\n\024redemption_date_time\030\004 \001(\tB\004\342A\001\003H\002\210" +
+      "\001\001\0223\n fulfillment_expiration_date_time\030\005" +
+      " \001(\tB\004\342A\001\003H\003\210\001\001\022)\n\026reward_grant_date_tim" +
+      "e\030\006 \001(\tB\004\342A\001\003H\004\210\001\001\022.\n\033reward_expiration_" +
+      "date_time\030\007 \001(\tB\004\342A\001\003H\005\210\001\001\022 \n\rcurrency_c" +
+      "ode\030\010 \001(\tB\004\342A\001\003H\006\210\001\001\022\'\n\024reward_amount_mi" +
+      "cros\030\t \001(\003B\004\342A\001\003H\007\210\001\001\022(\n\025granted_amount_" +
+      "micros\030\n \001(\003B\004\342A\001\003H\010\210\001\001\022,\n\031required_min_" +
+      "spend_micros\030\013 \001(\003B\004\342A\001\003H\t\210\001\001\022;\n(current" +
+      "_spend_towards_fulfillment_micros\030\014 \001(\003B" +
+      "\004\342A\001\003H\n\210\001\001\0222\n\037reward_balance_remaining_m" +
+      "icros\030\r \001(\003B\004\342A\001\003H\013\210\001\001:g\352Ad\n)googleads.g" +
+      "oogleapis.com/AppliedIncentive\0227customer" +
+      "s/{customer_id}/appliedIncentives/{coupo" +
+      "n_code}B\016\n\014_coupon_codeB\022\n\020_incentive_st" +
+      "ateB\027\n\025_redemption_date_timeB#\n!_fulfill" +
+      "ment_expiration_date_timeB\031\n\027_reward_gra" +
+      "nt_date_timeB\036\n\034_reward_expiration_date_" +
+      "timeB\020\n\016_currency_codeB\027\n\025_reward_amount" +
+      "_microsB\030\n\026_granted_amount_microsB\034\n\032_re" +
+      "quired_min_spend_microsB+\n)_current_spen" +
+      "d_towards_fulfillment_microsB\"\n _reward_" +
+      "balance_remaining_microsB\207\002\n&com.google." +
+      "ads.googleads.v26.resourcesB\025AppliedInce" +
+      "ntiveProtoP\001ZKgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v26/resources;" +
+      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
+      "26.Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\" +
+      "Resources\352\002&Google::Ads::GoogleAds::V26:" +
+      ":Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

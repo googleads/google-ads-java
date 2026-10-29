@@ -50,42 +50,43 @@ public final class ExperimentProto extends com.google.protobuf.GeneratedFile {
       "/enums/experiment_status.proto\0324google/a" +
       "ds/googleads/v26/enums/experiment_type.p" +
       "roto\032\037google/api/field_behavior.proto\032\031g" +
-      "oogle/api/resource.proto\"\364\010\n\nExperiment\022" +
-      "B\n\rresource_name\030\001 \001(\tB+\340A\005\372A%\n#googlead" +
-      "s.googleapis.com/Experiment\022\037\n\rexperimen" +
-      "t_id\030\t \001(\003B\003\340A\003H\001\210\001\001\022\021\n\004name\030\n \001(\tB\003\340A\002\022" +
-      "\023\n\013description\030\013 \001(\t\022\016\n\006suffix\030\014 \001(\t\022T\n\004" +
-      "type\030\r \001(\0162A.google.ads.googleads.v26.en" +
-      "ums.ExperimentTypeEnum.ExperimentTypeB\003\340" +
-      "A\002\022U\n\006status\030\016 \001(\0162E.google.ads.googlead" +
-      "s.v26.enums.ExperimentStatusEnum.Experim" +
-      "entStatus\022\027\n\nstart_date\030\017 \001(\tH\002\210\001\001\022\025\n\010en" +
-      "d_date\030\020 \001(\tH\003\210\001\001\022:\n\005goals\030\021 \003(\0132+.googl" +
-      "e.ads.googleads.v26.common.MetricGoal\022(\n" +
-      "\026long_running_operation\030\022 \001(\tB\003\340A\003H\004\210\001\001\022" +
-      "d\n\016promote_status\030\023 \001(\0162G.google.ads.goo" +
-      "gleads.v26.enums.AsyncActionStatusEnum.A" +
-      "syncActionStatusB\003\340A\003\022\036\n\014sync_enabled\030\024 " +
-      "\001(\010B\003\340A\005H\005\210\001\001\022\\\n\027lift_measurement_config" +
-      "\030\027 \001(\tB6\340A\003\372A0\n.googleads.googleapis.com" +
-      "/LiftMeasurementConfigH\006\210\001\001\022U\n\020video_exp" +
-      "eriment\030\025 \001(\01324.google.ads.googleads.v26" +
-      ".common.VideoExperimentInfoB\003\340A\005H\000\022h\n\032op" +
-      "timize_assets_experiment\030\026 \001(\0132=.google." +
-      "ads.googleads.v26.common.OptimizeAssetsE" +
-      "xperimentInfoB\003\340A\005H\000:X\352AU\n#googleads.goo" +
-      "gleapis.com/Experiment\022.customers/{custo" +
-      "mer_id}/experiments/{trial_id}B\021\n\017experi" +
-      "ment_infoB\020\n\016_experiment_idB\r\n\013_start_da" +
-      "teB\013\n\t_end_dateB\031\n\027_long_running_operati" +
-      "onB\017\n\r_sync_enabledB\032\n\030_lift_measurement" +
-      "_configB\201\002\n&com.google.ads.googleads.v26" +
-      ".resourcesB\017ExperimentProtoP\001ZKgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v26/resources;resources\242\002\003GAA\252\002\"Googl" +
-      "e.Ads.GoogleAds.V26.Resources\312\002\"Google\\A" +
-      "ds\\GoogleAds\\V26\\Resources\352\002&Google::Ads" +
-      "::GoogleAds::V26::Resourcesb\006proto3"
+      "oogle/api/resource.proto\"\376\010\n\nExperiment\022" +
+      "C\n\rresource_name\030\001 \001(\tB,\342A\001\005\372A%\n#googlea" +
+      "ds.googleapis.com/Experiment\022 \n\rexperime" +
+      "nt_id\030\t \001(\003B\004\342A\001\003H\001\210\001\001\022\022\n\004name\030\n \001(\tB\004\342A" +
+      "\001\002\022\023\n\013description\030\013 \001(\t\022\016\n\006suffix\030\014 \001(\t\022" +
+      "U\n\004type\030\r \001(\0162A.google.ads.googleads.v26" +
+      ".enums.ExperimentTypeEnum.ExperimentType" +
+      "B\004\342A\001\002\022U\n\006status\030\016 \001(\0162E.google.ads.goog" +
+      "leads.v26.enums.ExperimentStatusEnum.Exp" +
+      "erimentStatus\022\027\n\nstart_date\030\017 \001(\tH\002\210\001\001\022\025" +
+      "\n\010end_date\030\020 \001(\tH\003\210\001\001\022:\n\005goals\030\021 \003(\0132+.g" +
+      "oogle.ads.googleads.v26.common.MetricGoa" +
+      "l\022)\n\026long_running_operation\030\022 \001(\tB\004\342A\001\003H" +
+      "\004\210\001\001\022e\n\016promote_status\030\023 \001(\0162G.google.ad" +
+      "s.googleads.v26.enums.AsyncActionStatusE" +
+      "num.AsyncActionStatusB\004\342A\001\003\022\037\n\014sync_enab" +
+      "led\030\024 \001(\010B\004\342A\001\005H\005\210\001\001\022]\n\027lift_measurement" +
+      "_config\030\027 \001(\tB7\342A\001\003\372A0\n.googleads.google" +
+      "apis.com/LiftMeasurementConfigH\006\210\001\001\022V\n\020v" +
+      "ideo_experiment\030\025 \001(\01324.google.ads.googl" +
+      "eads.v26.common.VideoExperimentInfoB\004\342A\001" +
+      "\005H\000\022i\n\032optimize_assets_experiment\030\026 \001(\0132" +
+      "=.google.ads.googleads.v26.common.Optimi" +
+      "zeAssetsExperimentInfoB\004\342A\001\005H\000:X\352AU\n#goo" +
+      "gleads.googleapis.com/Experiment\022.custom" +
+      "ers/{customer_id}/experiments/{trial_id}" +
+      "B\021\n\017experiment_infoB\020\n\016_experiment_idB\r\n" +
+      "\013_start_dateB\013\n\t_end_dateB\031\n\027_long_runni" +
+      "ng_operationB\017\n\r_sync_enabledB\032\n\030_lift_m" +
+      "easurement_configB\201\002\n&com.google.ads.goo" +
+      "gleads.v26.resourcesB\017ExperimentProtoP\001Z" +
+      "Kgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v26/resources;resources\242\002\003G" +
+      "AA\252\002\"Google.Ads.GoogleAds.V26.Resources\312" +
+      "\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002&G" +
+      "oogle::Ads::GoogleAds::V26::Resourcesb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

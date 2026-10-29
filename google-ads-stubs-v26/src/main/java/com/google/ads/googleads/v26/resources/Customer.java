@@ -1088,10 +1088,10 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v26.resources.LocalServicesSettings localServicesSettings_;
   /**
    * <pre>
-   * Output only. Settings for Local Services customer.
+   * Settings for Local Services customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
    * @return Whether the localServicesSettings field is set.
    */
   @java.lang.Override
@@ -1100,10 +1100,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Settings for Local Services customer.
+   * Settings for Local Services customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
    * @return The localServicesSettings.
    */
   @java.lang.Override
@@ -1112,10 +1112,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Settings for Local Services customer.
+   * Settings for Local Services customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v26.resources.LocalServicesSettingsOrBuilder getLocalServicesSettingsOrBuilder() {
@@ -4720,10 +4720,10 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v26.resources.LocalServicesSettings, com.google.ads.googleads.v26.resources.LocalServicesSettings.Builder, com.google.ads.googleads.v26.resources.LocalServicesSettingsOrBuilder> localServicesSettingsBuilder_;
     /**
      * <pre>
-     * Output only. Settings for Local Services customer.
+     * Settings for Local Services customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
      * @return Whether the localServicesSettings field is set.
      */
     public boolean hasLocalServicesSettings() {
@@ -4731,10 +4731,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Settings for Local Services customer.
+     * Settings for Local Services customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
      * @return The localServicesSettings.
      */
     public com.google.ads.googleads.v26.resources.LocalServicesSettings getLocalServicesSettings() {
@@ -4746,10 +4746,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Settings for Local Services customer.
+     * Settings for Local Services customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
      */
     public Builder setLocalServicesSettings(com.google.ads.googleads.v26.resources.LocalServicesSettings value) {
       if (localServicesSettingsBuilder_ == null) {
@@ -4766,10 +4766,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Settings for Local Services customer.
+     * Settings for Local Services customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
      */
     public Builder setLocalServicesSettings(
         com.google.ads.googleads.v26.resources.LocalServicesSettings.Builder builderForValue) {
@@ -4784,10 +4784,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Settings for Local Services customer.
+     * Settings for Local Services customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
      */
     public Builder mergeLocalServicesSettings(com.google.ads.googleads.v26.resources.LocalServicesSettings value) {
       if (localServicesSettingsBuilder_ == null) {
@@ -4809,10 +4809,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Settings for Local Services customer.
+     * Settings for Local Services customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
      */
     public Builder clearLocalServicesSettings() {
       bitField0_ = (bitField0_ & ~0x00800000);
@@ -4826,10 +4826,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Settings for Local Services customer.
+     * Settings for Local Services customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
      */
     public com.google.ads.googleads.v26.resources.LocalServicesSettings.Builder getLocalServicesSettingsBuilder() {
       bitField0_ |= 0x00800000;
@@ -4838,10 +4838,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Settings for Local Services customer.
+     * Settings for Local Services customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
      */
     public com.google.ads.googleads.v26.resources.LocalServicesSettingsOrBuilder getLocalServicesSettingsOrBuilder() {
       if (localServicesSettingsBuilder_ != null) {
@@ -4853,10 +4853,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Settings for Local Services customer.
+     * Settings for Local Services customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>.google.ads.googleads.v26.resources.LocalServicesSettings local_services_settings = 45;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
         com.google.ads.googleads.v26.resources.LocalServicesSettings, com.google.ads.googleads.v26.resources.LocalServicesSettings.Builder, com.google.ads.googleads.v26.resources.LocalServicesSettingsOrBuilder> 

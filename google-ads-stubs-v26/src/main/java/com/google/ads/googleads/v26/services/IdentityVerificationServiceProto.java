@@ -74,57 +74,57 @@ public final class IdentityVerificationServiceProto extends com.google.protobuf.
       "tus.proto\032\034google/api/annotations.proto\032" +
       "\027google/api/client.proto\032\037google/api/fie" +
       "ld_behavior.proto\032\033google/protobuf/empty" +
-      ".proto\"\274\001\n StartIdentityVerificationRequ" +
-      "est\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022~\n\024verific" +
-      "ation_program\030\002 \001(\0162[.google.ads.googlea" +
-      "ds.v26.enums.IdentityVerificationProgram" +
-      "Enum.IdentityVerificationProgramB\003\340A\002\":\n" +
-      "\036GetIdentityVerificationRequest\022\030\n\013custo" +
-      "mer_id\030\001 \001(\tB\003\340A\002\"y\n\037GetIdentityVerifica" +
-      "tionResponse\022V\n\025identity_verification\030\001 " +
-      "\003(\01327.google.ads.googleads.v26.services." +
-      "IdentityVerification\"\252\003\n\024IdentityVerific" +
-      "ation\022y\n\024verification_program\030\001 \001(\0162[.go" +
-      "ogle.ads.googleads.v26.enums.IdentityVer" +
-      "ificationProgramEnum.IdentityVerificatio" +
-      "nProgram\022r\n!identity_verification_requir" +
-      "ement\030\002 \001(\0132B.google.ads.googleads.v26.s" +
-      "ervices.IdentityVerificationRequirementH" +
-      "\000\210\001\001\022c\n\025verification_progress\030\003 \001(\0132?.go" +
-      "ogle.ads.googleads.v26.services.Identity" +
-      "VerificationProgressH\001\210\001\001B$\n\"_identity_v" +
-      "erification_requirementB\030\n\026_verification" +
-      "_progress\"\334\001\n\034IdentityVerificationProgre" +
-      "ss\022\177\n\016program_status\030\001 \001(\0162g.google.ads." +
-      "googleads.v26.enums.IdentityVerification" +
-      "ProgramStatusEnum.IdentityVerificationPr" +
-      "ogramStatus\022\'\n\037invitation_link_expiratio" +
-      "n_time\030\002 \001(\t\022\022\n\naction_url\030\003 \001(\t\"z\n\037Iden" +
-      "tityVerificationRequirement\022(\n verificat" +
-      "ion_start_deadline_time\030\001 \001(\t\022-\n%verific" +
-      "ation_completion_deadline_time\030\002 \001(\t2\270\004\n" +
-      "\033IdentityVerificationService\022\340\001\n\031StartId" +
-      "entityVerification\022C.google.ads.googlead" +
-      "s.v26.services.StartIdentityVerification" +
-      "Request\032\026.google.protobuf.Empty\"f\332A cust" +
-      "omer_id,verification_program\202\323\344\223\002=\"8/v26" +
-      "/customers/{customer_id=*}:startIdentity" +
-      "Verification:\001*\022\356\001\n\027GetIdentityVerificat" +
-      "ion\022A.google.ads.googleads.v26.services." +
-      "GetIdentityVerificationRequest\032B.google." +
-      "ads.googleads.v26.services.GetIdentityVe" +
-      "rificationResponse\"L\332A\013customer_id\202\323\344\223\0028" +
-      "\0226/v26/customers/{customer_id=*}/getIden" +
-      "tityVerification\032E\312A\030googleads.googleapi" +
-      "s.com\322A\'https://www.googleapis.com/auth/" +
-      "adwordsB\214\002\n%com.google.ads.googleads.v26" +
-      ".servicesB IdentityVerificationServicePr" +
-      "otoP\001ZIgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v26/services;services" +
-      "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V26.Servic" +
-      "es\312\002!Google\\Ads\\GoogleAds\\V26\\Services\352\002" +
-      "%Google::Ads::GoogleAds::V26::Servicesb\006" +
-      "proto3"
+      ".proto\"\276\001\n StartIdentityVerificationRequ" +
+      "est\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022\177\n\024verifi" +
+      "cation_program\030\002 \001(\0162[.google.ads.google" +
+      "ads.v26.enums.IdentityVerificationProgra" +
+      "mEnum.IdentityVerificationProgramB\004\342A\001\002\"" +
+      ";\n\036GetIdentityVerificationRequest\022\031\n\013cus" +
+      "tomer_id\030\001 \001(\tB\004\342A\001\002\"y\n\037GetIdentityVerif" +
+      "icationResponse\022V\n\025identity_verification" +
+      "\030\001 \003(\01327.google.ads.googleads.v26.servic" +
+      "es.IdentityVerification\"\252\003\n\024IdentityVeri" +
+      "fication\022y\n\024verification_program\030\001 \001(\0162[" +
+      ".google.ads.googleads.v26.enums.Identity" +
+      "VerificationProgramEnum.IdentityVerifica" +
+      "tionProgram\022r\n!identity_verification_req" +
+      "uirement\030\002 \001(\0132B.google.ads.googleads.v2" +
+      "6.services.IdentityVerificationRequireme" +
+      "ntH\000\210\001\001\022c\n\025verification_progress\030\003 \001(\0132?" +
+      ".google.ads.googleads.v26.services.Ident" +
+      "ityVerificationProgressH\001\210\001\001B$\n\"_identit" +
+      "y_verification_requirementB\030\n\026_verificat" +
+      "ion_progress\"\334\001\n\034IdentityVerificationPro" +
+      "gress\022\177\n\016program_status\030\001 \001(\0162g.google.a" +
+      "ds.googleads.v26.enums.IdentityVerificat" +
+      "ionProgramStatusEnum.IdentityVerificatio" +
+      "nProgramStatus\022\'\n\037invitation_link_expira" +
+      "tion_time\030\002 \001(\t\022\022\n\naction_url\030\003 \001(\t\"z\n\037I" +
+      "dentityVerificationRequirement\022(\n verifi" +
+      "cation_start_deadline_time\030\001 \001(\t\022-\n%veri" +
+      "fication_completion_deadline_time\030\002 \001(\t2" +
+      "\270\004\n\033IdentityVerificationService\022\340\001\n\031Star" +
+      "tIdentityVerification\022C.google.ads.googl" +
+      "eads.v26.services.StartIdentityVerificat" +
+      "ionRequest\032\026.google.protobuf.Empty\"f\332A c" +
+      "ustomer_id,verification_program\202\323\344\223\002=\"8/" +
+      "v26/customers/{customer_id=*}:startIdent" +
+      "ityVerification:\001*\022\356\001\n\027GetIdentityVerifi" +
+      "cation\022A.google.ads.googleads.v26.servic" +
+      "es.GetIdentityVerificationRequest\032B.goog" +
+      "le.ads.googleads.v26.services.GetIdentit" +
+      "yVerificationResponse\"L\332A\013customer_id\202\323\344" +
+      "\223\0028\0226/v26/customers/{customer_id=*}/getI" +
+      "dentityVerification\032E\312A\030googleads.google" +
+      "apis.com\322A\'https://www.googleapis.com/au" +
+      "th/adwordsB\214\002\n%com.google.ads.googleads." +
+      "v26.servicesB IdentityVerificationServic" +
+      "eProtoP\001ZIgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v26/services;servi" +
+      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V26.Ser" +
+      "vices\312\002!Google\\Ads\\GoogleAds\\V26\\Service" +
+      "s\352\002%Google::Ads::GoogleAds::V26::Service" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
