@@ -92,6 +92,16 @@ public final class AssetTypesProto extends com.google.protobuf.GeneratedFile {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_google_ads_googleads_v26_common_PromotionAsset_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v26_common_ExternalRedeemInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v26_common_ExternalRedeemInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v26_common_ExternalPartnerId_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_google_ads_googleads_v26_common_ExternalPartnerId_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v26_common_PromotionBarcodeInfo_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -288,289 +298,307 @@ public final class AssetTypesProto extends com.google.protobuf.GeneratedFile {
       "s/v26/enums/location_ownership_type.prot" +
       "o\032.google/ads/googleads/v26/enums/mime_t" +
       "ype.proto\0326google/ads/googleads/v26/enum" +
-      "s/mobile_app_vendor.proto\032Dgoogle/ads/go" +
-      "ogleads/v26/enums/price_extension_price_" +
-      "qualifier.proto\032?google/ads/googleads/v2" +
-      "6/enums/price_extension_price_unit.proto" +
-      "\0329google/ads/googleads/v26/enums/price_e" +
-      "xtension_type.proto\032;google/ads/googlead" +
-      "s/v26/enums/promotion_barcode_type.proto" +
-      "\032Jgoogle/ads/googleads/v26/enums/promoti" +
-      "on_extension_discount_modifier.proto\032Ago" +
-      "ogle/ads/googleads/v26/enums/promotion_e" +
-      "xtension_occasion.proto\032\037google/api/fiel" +
-      "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\"d\n\021YoutubeVideoAsset\022\035\n\020youtube_vide" +
-      "o_id\030\002 \001(\tH\000\210\001\001\022\033\n\023youtube_video_title\030\003" +
-      " \001(\tB\023\n\021_youtube_video_id\".\n\020MediaBundle" +
-      "Asset\022\021\n\004data\030\002 \001(\014H\000\210\001\001B\007\n\005_data\"\334\001\n\nIm" +
-      "ageAsset\022\021\n\004data\030\005 \001(\014H\000\210\001\001\022\026\n\tfile_size" +
-      "\030\006 \001(\003H\001\210\001\001\022H\n\tmime_type\030\003 \001(\01625.google." +
-      "ads.googleads.v26.enums.MimeTypeEnum.Mim" +
-      "eType\022B\n\tfull_size\030\004 \001(\0132/.google.ads.go" +
-      "ogleads.v26.common.ImageDimensionB\007\n\005_da" +
-      "taB\014\n\n_file_size\"\204\001\n\016ImageDimension\022\032\n\rh" +
-      "eight_pixels\030\004 \001(\003H\000\210\001\001\022\031\n\014width_pixels\030" +
-      "\005 \001(\003H\001\210\001\001\022\020\n\003url\030\006 \001(\tH\002\210\001\001B\020\n\016_height_" +
-      "pixelsB\017\n\r_width_pixelsB\006\n\004_url\"\'\n\tTextA" +
-      "sset\022\021\n\004text\030\002 \001(\tH\000\210\001\001B\007\n\005_text\"\202\010\n\rLea" +
-      "dFormAsset\022\032\n\rbusiness_name\030\n \001(\tB\003\340A\002\022w" +
-      "\n\023call_to_action_type\030\021 \001(\0162U.google.ads" +
-      ".googleads.v26.enums.LeadFormCallToActio" +
-      "nTypeEnum.LeadFormCallToActionTypeB\003\340A\002\022" +
-      "\'\n\032call_to_action_description\030\022 \001(\tB\003\340A\002" +
-      "\022\025\n\010headline\030\014 \001(\tB\003\340A\002\022\030\n\013description\030\r" +
-      " \001(\tB\003\340A\002\022\037\n\022privacy_policy_url\030\016 \001(\tB\003\340" +
-      "A\002\022!\n\024post_submit_headline\030\017 \001(\tH\000\210\001\001\022$\n" +
-      "\027post_submit_description\030\020 \001(\tH\001\210\001\001\022>\n\006f" +
-      "ields\030\010 \003(\0132..google.ads.googleads.v26.c" +
-      "ommon.LeadFormField\022\\\n\026custom_question_f" +
-      "ields\030\027 \003(\0132<.google.ads.googleads.v26.c" +
-      "ommon.LeadFormCustomQuestionField\022Q\n\020del" +
-      "ivery_methods\030\t \003(\01327.google.ads.googlea" +
-      "ds.v26.common.LeadFormDeliveryMethod\022\222\001\n" +
-      "\037post_submit_call_to_action_type\030\023 \001(\0162i" +
-      ".google.ads.googleads.v26.enums.LeadForm" +
-      "PostSubmitCallToActionTypeEnum.LeadFormP" +
-      "ostSubmitCallToActionType\022#\n\026background_" +
-      "image_asset\030\024 \001(\tH\002\210\001\001\022g\n\016desired_intent" +
-      "\030\025 \001(\0162O.google.ads.googleads.v26.enums." +
-      "LeadFormDesiredIntentEnum.LeadFormDesire" +
-      "dIntent\022\036\n\021custom_disclosure\030\026 \001(\tH\003\210\001\001B" +
-      "\027\n\025_post_submit_headlineB\032\n\030_post_submit" +
-      "_descriptionB\031\n\027_background_image_assetB" +
-      "\024\n\022_custom_disclosure\"\207\002\n\rLeadFormField\022" +
-      "m\n\ninput_type\030\001 \001(\0162Y.google.ads.googlea" +
-      "ds.v26.enums.LeadFormFieldUserInputTypeE" +
-      "num.LeadFormFieldUserInputType\022]\n\025single" +
-      "_choice_answers\030\002 \001(\0132<.google.ads.googl" +
-      "eads.v26.common.LeadFormSingleChoiceAnsw" +
-      "ersH\000\022\035\n\023has_location_answer\030\003 \001(\010H\000B\t\n\007" +
-      "answers\"\304\001\n\033LeadFormCustomQuestionField\022" +
-      "\034\n\024custom_question_text\030\001 \001(\t\022]\n\025single_" +
-      "choice_answers\030\002 \001(\0132<.google.ads.google" +
-      "ads.v26.common.LeadFormSingleChoiceAnswe" +
-      "rsH\000\022\035\n\023has_location_answer\030\003 \001(\010H\000B\t\n\007a" +
-      "nswers\".\n\033LeadFormSingleChoiceAnswers\022\017\n" +
-      "\007answers\030\001 \003(\t\"q\n\026LeadFormDeliveryMethod" +
-      "\022C\n\007webhook\030\001 \001(\01320.google.ads.googleads" +
-      ".v26.common.WebhookDeliveryH\000B\022\n\020deliver" +
-      "y_details\"\277\001\n\017WebhookDelivery\022#\n\026adverti" +
-      "ser_webhook_url\030\004 \001(\tH\000\210\001\001\022\032\n\rgoogle_sec" +
-      "ret\030\005 \001(\tH\001\210\001\001\022#\n\026payload_schema_version" +
-      "\030\006 \001(\003H\002\210\001\001B\031\n\027_advertiser_webhook_urlB\020" +
-      "\n\016_google_secretB\031\n\027_payload_schema_vers" +
-      "ion\"\023\n\021BookOnGoogleAsset\"\301\007\n\016PromotionAs" +
-      "set\022\035\n\020promotion_target\030\001 \001(\tB\003\340A\002\022\204\001\n\021d" +
-      "iscount_modifier\030\002 \001(\0162i.google.ads.goog" +
-      "leads.v26.enums.PromotionExtensionDiscou" +
-      "ntModifierEnum.PromotionExtensionDiscoun" +
-      "tModifier\022\035\n\025redemption_start_date\030\007 \001(\t" +
-      "\022\033\n\023redemption_end_date\030\010 \001(\t\022k\n\010occasio" +
-      "n\030\t \001(\0162Y.google.ads.googleads.v26.enums" +
-      ".PromotionExtensionOccasionEnum.Promotio" +
-      "nExtensionOccasion\022\025\n\rlanguage_code\030\n \001(" +
-      "\t\022\022\n\nstart_date\030\013 \001(\t\022\020\n\010end_date\030\014 \001(\t\022" +
-      "L\n\023ad_schedule_targets\030\r \003(\0132/.google.ad" +
-      "s.googleads.v26.common.AdScheduleInfo\022!\n" +
-      "\031terms_and_conditions_text\030\016 \001(\t\022 \n\030term" +
-      "s_and_conditions_uri\030\017 \001(\t\022\025\n\013percent_of" +
-      "f\030\003 \001(\003H\000\022B\n\020money_amount_off\030\004 \001(\0132&.go" +
-      "ogle.ads.googleads.v26.common.MoneyH\000\022\030\n" +
-      "\016promotion_code\030\005 \001(\tH\001\022D\n\022orders_over_a" +
-      "mount\030\006 \001(\0132&.google.ads.googleads.v26.c" +
-      "ommon.MoneyH\001\022W\n\026promotion_barcode_info\030" +
-      "\020 \001(\01325.google.ads.googleads.v26.common." +
-      "PromotionBarcodeInfoH\001\022V\n\026promotion_qr_c" +
-      "ode_info\030\021 \001(\01324.google.ads.googleads.v2" +
-      "6.common.PromotionQrCodeInfoH\001B\017\n\rdiscou" +
-      "nt_typeB\023\n\021promotion_trigger\"\214\001\n\024Promoti" +
-      "onBarcodeInfo\022[\n\004type\030\001 \001(\0162M.google.ads" +
-      ".googleads.v26.enums.PromotionBarcodeTyp" +
-      "eEnum.PromotionBarcodeType\022\027\n\017barcode_co" +
-      "ntent\030\002 \001(\t\".\n\023PromotionQrCodeInfo\022\027\n\017qr" +
-      "_code_content\030\001 \001(\t\"\235\001\n\014CalloutAsset\022\031\n\014" +
-      "callout_text\030\001 \001(\tB\003\340A\002\022\022\n\nstart_date\030\002 " +
-      "\001(\t\022\020\n\010end_date\030\003 \001(\t\022L\n\023ad_schedule_tar" +
-      "gets\030\004 \003(\0132/.google.ads.googleads.v26.co" +
-      "mmon.AdScheduleInfo\"B\n\026StructuredSnippet" +
-      "Asset\022\023\n\006header\030\001 \001(\tB\003\340A\002\022\023\n\006values\030\002 \003" +
-      "(\tB\003\340A\002\"\307\001\n\rSitelinkAsset\022\026\n\tlink_text\030\001" +
-      " \001(\tB\003\340A\002\022\024\n\014description1\030\002 \001(\t\022\024\n\014descr" +
-      "iption2\030\003 \001(\t\022\022\n\nstart_date\030\004 \001(\t\022\020\n\010end" +
-      "_date\030\005 \001(\t\022L\n\023ad_schedule_targets\030\006 \003(\013" +
-      "2/.google.ads.googleads.v26.common.AdSch" +
-      "eduleInfo\"6\n\rPageFeedAsset\022\025\n\010page_url\030\001" +
-      " \001(\tB\003\340A\002\022\016\n\006labels\030\002 \003(\t\"\350\002\n\025DynamicEdu" +
-      "cationAsset\022\027\n\nprogram_id\030\001 \001(\tB\003\340A\002\022\023\n\013" +
-      "location_id\030\002 \001(\t\022\031\n\014program_name\030\003 \001(\tB" +
-      "\003\340A\002\022\017\n\007subject\030\004 \001(\t\022\033\n\023program_descrip" +
-      "tion\030\005 \001(\t\022\023\n\013school_name\030\006 \001(\t\022\017\n\007addre" +
-      "ss\030\007 \001(\t\022\033\n\023contextual_keywords\030\010 \003(\t\022\030\n" +
-      "\020android_app_link\030\t \001(\t\022\033\n\023similar_progr" +
-      "am_ids\030\n \003(\t\022\024\n\014ios_app_link\030\013 \001(\t\022\030\n\020io" +
-      "s_app_store_id\030\014 \001(\003\022\033\n\023thumbnail_image_" +
-      "url\030\r \001(\t\022\021\n\timage_url\030\016 \001(\t\"\300\001\n\016MobileA" +
-      "ppAsset\022\023\n\006app_id\030\001 \001(\tB\003\340A\002\022[\n\tapp_stor" +
-      "e\030\002 \001(\0162C.google.ads.googleads.v26.enums" +
-      ".MobileAppVendorEnum.MobileAppVendorB\003\340A" +
-      "\002\022\026\n\tlink_text\030\003 \001(\tB\003\340A\002\022\022\n\nstart_date\030" +
-      "\004 \001(\t\022\020\n\010end_date\030\005 \001(\t\"B\n\021HotelCalloutA" +
-      "sset\022\021\n\004text\030\001 \001(\tB\003\340A\002\022\032\n\rlanguage_code" +
-      "\030\002 \001(\tB\003\340A\002\"\350\002\n\tCallAsset\022\031\n\014country_cod" +
-      "e\030\001 \001(\tB\003\340A\002\022\031\n\014phone_number\030\002 \001(\tB\003\340A\002\022" +
-      "\206\001\n\037call_conversion_reporting_state\030\003 \001(" +
-      "\0162].google.ads.googleads.v26.enums.CallC" +
-      "onversionReportingStateEnum.CallConversi" +
-      "onReportingState\022N\n\026call_conversion_acti" +
-      "on\030\004 \001(\tB.\372A+\n)googleads.googleapis.com/" +
-      "ConversionAction\022L\n\023ad_schedule_targets\030" +
-      "\005 \003(\0132/.google.ads.googleads.v26.common." +
-      "AdScheduleInfo\"\307\002\n\nPriceAsset\022\\\n\004type\030\001 " +
-      "\001(\0162I.google.ads.googleads.v26.enums.Pri" +
-      "ceExtensionTypeEnum.PriceExtensionTypeB\003" +
-      "\340A\002\022v\n\017price_qualifier\030\002 \001(\0162].google.ad" +
-      "s.googleads.v26.enums.PriceExtensionPric" +
-      "eQualifierEnum.PriceExtensionPriceQualif" +
-      "ier\022\032\n\rlanguage_code\030\003 \001(\tB\003\340A\002\022G\n\017price" +
-      "_offerings\030\004 \003(\0132..google.ads.googleads." +
-      "v26.common.PriceOffering\"\217\002\n\rPriceOfferi" +
-      "ng\022\023\n\006header\030\001 \001(\tB\003\340A\002\022\030\n\013description\030\002" +
-      " \001(\tB\003\340A\002\022:\n\005price\030\003 \001(\0132&.google.ads.go" +
-      "ogleads.v26.common.MoneyB\003\340A\002\022a\n\004unit\030\004 " +
-      "\001(\0162S.google.ads.googleads.v26.enums.Pri" +
-      "ceExtensionPriceUnitEnum.PriceExtensionP" +
-      "riceUnit\022\026\n\tfinal_url\030\005 \001(\tB\003\340A\002\022\030\n\020fina" +
-      "l_mobile_url\030\006 \001(\t\"r\n\021CallToActionAsset\022" +
-      "]\n\016call_to_action\030\001 \001(\0162E.google.ads.goo" +
-      "gleads.v26.enums.CallToActionTypeEnum.Ca" +
-      "llToActionType\"\361\002\n\026DynamicRealEstateAsse" +
-      "t\022\027\n\nlisting_id\030\001 \001(\tB\003\340A\002\022\031\n\014listing_na" +
-      "me\030\002 \001(\tB\003\340A\002\022\021\n\tcity_name\030\003 \001(\t\022\023\n\013desc" +
-      "ription\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\022\r\n\005price\030" +
-      "\006 \001(\t\022\021\n\timage_url\030\007 \001(\t\022\025\n\rproperty_typ" +
-      "e\030\010 \001(\t\022\024\n\014listing_type\030\t \001(\t\022\033\n\023context" +
-      "ual_keywords\030\n \003(\t\022\027\n\017formatted_price\030\013 " +
-      "\001(\t\022\030\n\020android_app_link\030\014 \001(\t\022\024\n\014ios_app" +
-      "_link\030\r \001(\t\022\030\n\020ios_app_store_id\030\016 \001(\003\022\033\n" +
-      "\023similar_listing_ids\030\017 \003(\t\"\222\003\n\022DynamicCu" +
-      "stomAsset\022\017\n\002id\030\001 \001(\tB\003\340A\002\022\013\n\003id2\030\002 \001(\t\022" +
-      "\027\n\nitem_title\030\003 \001(\tB\003\340A\002\022\025\n\ritem_subtitl" +
-      "e\030\004 \001(\t\022\030\n\020item_description\030\005 \001(\t\022\024\n\014ite" +
-      "m_address\030\006 \001(\t\022\025\n\ritem_category\030\007 \001(\t\022\r" +
-      "\n\005price\030\010 \001(\t\022\022\n\nsale_price\030\t \001(\t\022\027\n\017for" +
-      "matted_price\030\n \001(\t\022\034\n\024formatted_sale_pri" +
-      "ce\030\013 \001(\t\022\021\n\timage_url\030\014 \001(\t\022\033\n\023contextua" +
-      "l_keywords\030\r \003(\t\022\030\n\020android_app_link\030\016 \001" +
+      "s/mobile_app_vendor.proto\032Bgoogle/ads/go" +
+      "ogleads/v26/enums/offline_promotion_code" +
+      "_source.proto\032@google/ads/googleads/v26/" +
+      "enums/offline_promotion_code_type.proto\032" +
+      "Dgoogle/ads/googleads/v26/enums/price_ex" +
+      "tension_price_qualifier.proto\032?google/ad" +
+      "s/googleads/v26/enums/price_extension_pr" +
+      "ice_unit.proto\0329google/ads/googleads/v26" +
+      "/enums/price_extension_type.proto\032;googl" +
+      "e/ads/googleads/v26/enums/promotion_barc" +
+      "ode_type.proto\032Jgoogle/ads/googleads/v26" +
+      "/enums/promotion_extension_discount_modi" +
+      "fier.proto\032Agoogle/ads/googleads/v26/enu" +
+      "ms/promotion_extension_occasion.proto\032\037g" +
+      "oogle/api/field_behavior.proto\032\031google/a" +
+      "pi/resource.proto\"d\n\021YoutubeVideoAsset\022\035" +
+      "\n\020youtube_video_id\030\002 \001(\tH\000\210\001\001\022\033\n\023youtube" +
+      "_video_title\030\003 \001(\tB\023\n\021_youtube_video_id\"" +
+      ".\n\020MediaBundleAsset\022\021\n\004data\030\002 \001(\014H\000\210\001\001B\007" +
+      "\n\005_data\"\334\001\n\nImageAsset\022\021\n\004data\030\005 \001(\014H\000\210\001" +
+      "\001\022\026\n\tfile_size\030\006 \001(\003H\001\210\001\001\022H\n\tmime_type\030\003" +
+      " \001(\01625.google.ads.googleads.v26.enums.Mi" +
+      "meTypeEnum.MimeType\022B\n\tfull_size\030\004 \001(\0132/" +
+      ".google.ads.googleads.v26.common.ImageDi" +
+      "mensionB\007\n\005_dataB\014\n\n_file_size\"\204\001\n\016Image" +
+      "Dimension\022\032\n\rheight_pixels\030\004 \001(\003H\000\210\001\001\022\031\n" +
+      "\014width_pixels\030\005 \001(\003H\001\210\001\001\022\020\n\003url\030\006 \001(\tH\002\210" +
+      "\001\001B\020\n\016_height_pixelsB\017\n\r_width_pixelsB\006\n" +
+      "\004_url\"\'\n\tTextAsset\022\021\n\004text\030\002 \001(\tH\000\210\001\001B\007\n" +
+      "\005_text\"\210\010\n\rLeadFormAsset\022\033\n\rbusiness_nam" +
+      "e\030\n \001(\tB\004\342A\001\002\022x\n\023call_to_action_type\030\021 \001" +
+      "(\0162U.google.ads.googleads.v26.enums.Lead" +
+      "FormCallToActionTypeEnum.LeadFormCallToA" +
+      "ctionTypeB\004\342A\001\002\022(\n\032call_to_action_descri" +
+      "ption\030\022 \001(\tB\004\342A\001\002\022\026\n\010headline\030\014 \001(\tB\004\342A\001" +
+      "\002\022\031\n\013description\030\r \001(\tB\004\342A\001\002\022 \n\022privacy_" +
+      "policy_url\030\016 \001(\tB\004\342A\001\002\022!\n\024post_submit_he" +
+      "adline\030\017 \001(\tH\000\210\001\001\022$\n\027post_submit_descrip" +
+      "tion\030\020 \001(\tH\001\210\001\001\022>\n\006fields\030\010 \003(\0132..google" +
+      ".ads.googleads.v26.common.LeadFormField\022" +
+      "\\\n\026custom_question_fields\030\027 \003(\0132<.google" +
+      ".ads.googleads.v26.common.LeadFormCustom" +
+      "QuestionField\022Q\n\020delivery_methods\030\t \003(\0132" +
+      "7.google.ads.googleads.v26.common.LeadFo" +
+      "rmDeliveryMethod\022\222\001\n\037post_submit_call_to" +
+      "_action_type\030\023 \001(\0162i.google.ads.googlead" +
+      "s.v26.enums.LeadFormPostSubmitCallToActi" +
+      "onTypeEnum.LeadFormPostSubmitCallToActio" +
+      "nType\022#\n\026background_image_asset\030\024 \001(\tH\002\210" +
+      "\001\001\022g\n\016desired_intent\030\025 \001(\0162O.google.ads." +
+      "googleads.v26.enums.LeadFormDesiredInten" +
+      "tEnum.LeadFormDesiredIntent\022\036\n\021custom_di" +
+      "sclosure\030\026 \001(\tH\003\210\001\001B\027\n\025_post_submit_head" +
+      "lineB\032\n\030_post_submit_descriptionB\031\n\027_bac" +
+      "kground_image_assetB\024\n\022_custom_disclosur" +
+      "e\"\207\002\n\rLeadFormField\022m\n\ninput_type\030\001 \001(\0162" +
+      "Y.google.ads.googleads.v26.enums.LeadFor" +
+      "mFieldUserInputTypeEnum.LeadFormFieldUse" +
+      "rInputType\022]\n\025single_choice_answers\030\002 \001(" +
+      "\0132<.google.ads.googleads.v26.common.Lead" +
+      "FormSingleChoiceAnswersH\000\022\035\n\023has_locatio" +
+      "n_answer\030\003 \001(\010H\000B\t\n\007answers\"\304\001\n\033LeadForm" +
+      "CustomQuestionField\022\034\n\024custom_question_t" +
+      "ext\030\001 \001(\t\022]\n\025single_choice_answers\030\002 \001(\013" +
+      "2<.google.ads.googleads.v26.common.LeadF" +
+      "ormSingleChoiceAnswersH\000\022\035\n\023has_location" +
+      "_answer\030\003 \001(\010H\000B\t\n\007answers\".\n\033LeadFormSi" +
+      "ngleChoiceAnswers\022\017\n\007answers\030\001 \003(\t\"q\n\026Le" +
+      "adFormDeliveryMethod\022C\n\007webhook\030\001 \001(\01320." +
+      "google.ads.googleads.v26.common.WebhookD" +
+      "eliveryH\000B\022\n\020delivery_details\"\277\001\n\017Webhoo" +
+      "kDelivery\022#\n\026advertiser_webhook_url\030\004 \001(" +
+      "\tH\000\210\001\001\022\032\n\rgoogle_secret\030\005 \001(\tH\001\210\001\001\022#\n\026pa" +
+      "yload_schema_version\030\006 \001(\003H\002\210\001\001B\031\n\027_adve" +
+      "rtiser_webhook_urlB\020\n\016_google_secretB\031\n\027" +
+      "_payload_schema_version\"\023\n\021BookOnGoogleA" +
+      "sset\"\233\010\n\016PromotionAsset\022\036\n\020promotion_tar" +
+      "get\030\001 \001(\tB\004\342A\001\002\022\204\001\n\021discount_modifier\030\002 " +
+      "\001(\0162i.google.ads.googleads.v26.enums.Pro" +
+      "motionExtensionDiscountModifierEnum.Prom" +
+      "otionExtensionDiscountModifier\022\035\n\025redemp" +
+      "tion_start_date\030\007 \001(\t\022\033\n\023redemption_end_" +
+      "date\030\010 \001(\t\022k\n\010occasion\030\t \001(\0162Y.google.ad" +
+      "s.googleads.v26.enums.PromotionExtension" +
+      "OccasionEnum.PromotionExtensionOccasion\022" +
+      "\025\n\rlanguage_code\030\n \001(\t\022\022\n\nstart_date\030\013 \001" +
+      "(\t\022\020\n\010end_date\030\014 \001(\t\022L\n\023ad_schedule_targ" +
+      "ets\030\r \003(\0132/.google.ads.googleads.v26.com" +
+      "mon.AdScheduleInfo\022!\n\031terms_and_conditio" +
+      "ns_text\030\016 \001(\t\022 \n\030terms_and_conditions_ur" +
+      "i\030\017 \001(\t\022W\n\024external_redeem_info\030\022 \001(\01323." +
+      "google.ads.googleads.v26.common.External" +
+      "RedeemInfoB\004\342A\001\005\022\025\n\013percent_off\030\003 \001(\003H\000\022" +
+      "B\n\020money_amount_off\030\004 \001(\0132&.google.ads.g" +
+      "oogleads.v26.common.MoneyH\000\022\030\n\016promotion" +
+      "_code\030\005 \001(\tH\001\022D\n\022orders_over_amount\030\006 \001(" +
+      "\0132&.google.ads.googleads.v26.common.Mone" +
+      "yH\001\022W\n\026promotion_barcode_info\030\020 \001(\01325.go" +
+      "ogle.ads.googleads.v26.common.PromotionB" +
+      "arcodeInfoH\001\022V\n\026promotion_qr_code_info\030\021" +
+      " \001(\01324.google.ads.googleads.v26.common.P" +
+      "romotionQrCodeInfoH\001B\017\n\rdiscount_typeB\023\n" +
+      "\021promotion_trigger\"\324\002\n\022ExternalRedeemInf" +
+      "o\022V\n\024partner_promotion_id\030\001 \001(\01322.google" +
+      ".ads.googleads.v26.common.ExternalPartne" +
+      "rIdB\004\342A\001\005\022o\n\tcode_type\030\002 \001(\0162U.google.ad" +
+      "s.googleads.v26.enums.OfflinePromotionCo" +
+      "deTypeEnum.OfflinePromotionCodeTypeB\005\342A\002" +
+      "\002\005\022u\n\013code_source\030\003 \001(\0162Y.google.ads.goo" +
+      "gleads.v26.enums.OfflinePromotionCodeSou" +
+      "rceEnum.OfflinePromotionCodeSourceB\005\342A\002\002" +
+      "\005\"I\n\021ExternalPartnerId\022\023\n\tint_value\030\001 \001(" +
+      "\003H\000\022\026\n\014string_value\030\002 \001(\tH\000B\007\n\005value\"\214\001\n" +
+      "\024PromotionBarcodeInfo\022[\n\004type\030\001 \001(\0162M.go" +
+      "ogle.ads.googleads.v26.enums.PromotionBa" +
+      "rcodeTypeEnum.PromotionBarcodeType\022\027\n\017ba" +
+      "rcode_content\030\002 \001(\t\".\n\023PromotionQrCodeIn" +
+      "fo\022\027\n\017qr_code_content\030\001 \001(\t\"\236\001\n\014CalloutA" +
+      "sset\022\032\n\014callout_text\030\001 \001(\tB\004\342A\001\002\022\022\n\nstar" +
+      "t_date\030\002 \001(\t\022\020\n\010end_date\030\003 \001(\t\022L\n\023ad_sch" +
+      "edule_targets\030\004 \003(\0132/.google.ads.googlea" +
+      "ds.v26.common.AdScheduleInfo\"D\n\026Structur" +
+      "edSnippetAsset\022\024\n\006header\030\001 \001(\tB\004\342A\001\002\022\024\n\006" +
+      "values\030\002 \003(\tB\004\342A\001\002\"\310\001\n\rSitelinkAsset\022\027\n\t" +
+      "link_text\030\001 \001(\tB\004\342A\001\002\022\024\n\014description1\030\002 " +
+      "\001(\t\022\024\n\014description2\030\003 \001(\t\022\022\n\nstart_date\030" +
+      "\004 \001(\t\022\020\n\010end_date\030\005 \001(\t\022L\n\023ad_schedule_t" +
+      "argets\030\006 \003(\0132/.google.ads.googleads.v26." +
+      "common.AdScheduleInfo\"7\n\rPageFeedAsset\022\026" +
+      "\n\010page_url\030\001 \001(\tB\004\342A\001\002\022\016\n\006labels\030\002 \003(\t\"\352" +
+      "\002\n\025DynamicEducationAsset\022\030\n\nprogram_id\030\001" +
+      " \001(\tB\004\342A\001\002\022\023\n\013location_id\030\002 \001(\t\022\032\n\014progr" +
+      "am_name\030\003 \001(\tB\004\342A\001\002\022\017\n\007subject\030\004 \001(\t\022\033\n\023" +
+      "program_description\030\005 \001(\t\022\023\n\013school_name" +
+      "\030\006 \001(\t\022\017\n\007address\030\007 \001(\t\022\033\n\023contextual_ke" +
+      "ywords\030\010 \003(\t\022\030\n\020android_app_link\030\t \001(\t\022\033" +
+      "\n\023similar_program_ids\030\n \003(\t\022\024\n\014ios_app_l" +
+      "ink\030\013 \001(\t\022\030\n\020ios_app_store_id\030\014 \001(\003\022\033\n\023t" +
+      "humbnail_image_url\030\r \001(\t\022\021\n\timage_url\030\016 " +
+      "\001(\t\"\303\001\n\016MobileAppAsset\022\024\n\006app_id\030\001 \001(\tB\004" +
+      "\342A\001\002\022\\\n\tapp_store\030\002 \001(\0162C.google.ads.goo" +
+      "gleads.v26.enums.MobileAppVendorEnum.Mob" +
+      "ileAppVendorB\004\342A\001\002\022\027\n\tlink_text\030\003 \001(\tB\004\342" +
+      "A\001\002\022\022\n\nstart_date\030\004 \001(\t\022\020\n\010end_date\030\005 \001(" +
+      "\t\"D\n\021HotelCalloutAsset\022\022\n\004text\030\001 \001(\tB\004\342A" +
+      "\001\002\022\033\n\rlanguage_code\030\002 \001(\tB\004\342A\001\002\"\352\002\n\tCall" +
+      "Asset\022\032\n\014country_code\030\001 \001(\tB\004\342A\001\002\022\032\n\014pho" +
+      "ne_number\030\002 \001(\tB\004\342A\001\002\022\206\001\n\037call_conversio" +
+      "n_reporting_state\030\003 \001(\0162].google.ads.goo" +
+      "gleads.v26.enums.CallConversionReporting" +
+      "StateEnum.CallConversionReportingState\022N" +
+      "\n\026call_conversion_action\030\004 \001(\tB.\372A+\n)goo" +
+      "gleads.googleapis.com/ConversionAction\022L" +
+      "\n\023ad_schedule_targets\030\005 \003(\0132/.google.ads" +
+      ".googleads.v26.common.AdScheduleInfo\"\311\002\n" +
+      "\nPriceAsset\022]\n\004type\030\001 \001(\0162I.google.ads.g" +
+      "oogleads.v26.enums.PriceExtensionTypeEnu" +
+      "m.PriceExtensionTypeB\004\342A\001\002\022v\n\017price_qual" +
+      "ifier\030\002 \001(\0162].google.ads.googleads.v26.e" +
+      "nums.PriceExtensionPriceQualifierEnum.Pr" +
+      "iceExtensionPriceQualifier\022\033\n\rlanguage_c" +
+      "ode\030\003 \001(\tB\004\342A\001\002\022G\n\017price_offerings\030\004 \003(\013" +
+      "2..google.ads.googleads.v26.common.Price" +
+      "Offering\"\223\002\n\rPriceOffering\022\024\n\006header\030\001 \001" +
+      "(\tB\004\342A\001\002\022\031\n\013description\030\002 \001(\tB\004\342A\001\002\022;\n\005p" +
+      "rice\030\003 \001(\0132&.google.ads.googleads.v26.co" +
+      "mmon.MoneyB\004\342A\001\002\022a\n\004unit\030\004 \001(\0162S.google." +
+      "ads.googleads.v26.enums.PriceExtensionPr" +
+      "iceUnitEnum.PriceExtensionPriceUnit\022\027\n\tf" +
+      "inal_url\030\005 \001(\tB\004\342A\001\002\022\030\n\020final_mobile_url" +
+      "\030\006 \001(\t\"r\n\021CallToActionAsset\022]\n\016call_to_a" +
+      "ction\030\001 \001(\0162E.google.ads.googleads.v26.e" +
+      "nums.CallToActionTypeEnum.CallToActionTy" +
+      "pe\"\363\002\n\026DynamicRealEstateAsset\022\030\n\nlisting" +
+      "_id\030\001 \001(\tB\004\342A\001\002\022\032\n\014listing_name\030\002 \001(\tB\004\342" +
+      "A\001\002\022\021\n\tcity_name\030\003 \001(\t\022\023\n\013description\030\004 " +
+      "\001(\t\022\017\n\007address\030\005 \001(\t\022\r\n\005price\030\006 \001(\t\022\021\n\ti" +
+      "mage_url\030\007 \001(\t\022\025\n\rproperty_type\030\010 \001(\t\022\024\n" +
+      "\014listing_type\030\t \001(\t\022\033\n\023contextual_keywor" +
+      "ds\030\n \003(\t\022\027\n\017formatted_price\030\013 \001(\t\022\030\n\020and" +
+      "roid_app_link\030\014 \001(\t\022\024\n\014ios_app_link\030\r \001(" +
+      "\t\022\030\n\020ios_app_store_id\030\016 \001(\003\022\033\n\023similar_l" +
+      "isting_ids\030\017 \003(\t\"\224\003\n\022DynamicCustomAsset\022" +
+      "\020\n\002id\030\001 \001(\tB\004\342A\001\002\022\013\n\003id2\030\002 \001(\t\022\030\n\nitem_t" +
+      "itle\030\003 \001(\tB\004\342A\001\002\022\025\n\ritem_subtitle\030\004 \001(\t\022" +
+      "\030\n\020item_description\030\005 \001(\t\022\024\n\014item_addres" +
+      "s\030\006 \001(\t\022\025\n\ritem_category\030\007 \001(\t\022\r\n\005price\030" +
+      "\010 \001(\t\022\022\n\nsale_price\030\t \001(\t\022\027\n\017formatted_p" +
+      "rice\030\n \001(\t\022\034\n\024formatted_sale_price\030\013 \001(\t" +
+      "\022\021\n\timage_url\030\014 \001(\t\022\033\n\023contextual_keywor" +
+      "ds\030\r \003(\t\022\030\n\020android_app_link\030\016 \001(\t\022\024\n\014io" +
+      "s_app_link\030\020 \001(\t\022\030\n\020ios_app_store_id\030\021 \001" +
+      "(\003\022\023\n\013similar_ids\030\017 \003(\t\"\257\003\n\034DynamicHotel" +
+      "sAndRentalsAsset\022\031\n\013property_id\030\001 \001(\tB\004\342" +
+      "A\001\002\022\033\n\rproperty_name\030\002 \001(\tB\004\342A\001\002\022\021\n\timag" +
+      "e_url\030\003 \001(\t\022\030\n\020destination_name\030\004 \001(\t\022\023\n" +
+      "\013description\030\005 \001(\t\022\r\n\005price\030\006 \001(\t\022\022\n\nsal" +
+      "e_price\030\007 \001(\t\022\023\n\013star_rating\030\010 \001(\003\022\020\n\010ca" +
+      "tegory\030\t \001(\t\022\033\n\023contextual_keywords\030\n \003(" +
+      "\t\022\017\n\007address\030\013 \001(\t\022\030\n\020android_app_link\030\014" +
+      " \001(\t\022\024\n\014ios_app_link\030\r \001(\t\022\030\n\020ios_app_st" +
+      "ore_id\030\016 \001(\003\022\027\n\017formatted_price\030\017 \001(\t\022\034\n" +
+      "\024formatted_sale_price\030\020 \001(\t\022\034\n\024similar_p" +
+      "roperty_ids\030\021 \003(\t\"\225\003\n\023DynamicFlightsAsse" +
+      "t\022\034\n\016destination_id\030\001 \001(\tB\004\342A\001\002\022\021\n\torigi" +
+      "n_id\030\002 \001(\t\022 \n\022flight_description\030\003 \001(\tB\004" +
+      "\342A\001\002\022\021\n\timage_url\030\004 \001(\t\022\030\n\020destination_n" +
+      "ame\030\005 \001(\t\022\023\n\013origin_name\030\006 \001(\t\022\024\n\014flight" +
+      "_price\030\007 \001(\t\022\031\n\021flight_sale_price\030\010 \001(\t\022" +
+      "\027\n\017formatted_price\030\t \001(\t\022\034\n\024formatted_sa" +
+      "le_price\030\n \001(\t\022\030\n\020android_app_link\030\013 \001(\t" +
+      "\022\024\n\014ios_app_link\030\014 \001(\t\022\030\n\020ios_app_store_" +
+      "id\030\r \001(\003\022\037\n\027similar_destination_ids\030\016 \003(" +
+      "\t\022\026\n\016custom_mapping\030\017 \001(\t\"\276\001\n\032DemandGenC" +
+      "arouselCardAsset\022\035\n\025marketing_image_asse" +
+      "t\030\001 \001(\t\022$\n\034square_marketing_image_asset\030" +
+      "\002 \001(\t\022&\n\036portrait_marketing_image_asset\030" +
+      "\003 \001(\t\022\026\n\010headline\030\004 \001(\tB\004\342A\001\002\022\033\n\023call_to" +
+      "_action_text\030\005 \001(\t\"\255\003\n\022DynamicTravelAsse" +
+      "t\022\034\n\016destination_id\030\001 \001(\tB\004\342A\001\002\022\021\n\torigi" +
+      "n_id\030\002 \001(\t\022\023\n\005title\030\003 \001(\tB\004\342A\001\002\022\030\n\020desti" +
+      "nation_name\030\004 \001(\t\022\033\n\023destination_address" +
+      "\030\005 \001(\t\022\023\n\013origin_name\030\006 \001(\t\022\r\n\005price\030\007 \001" +
+      "(\t\022\022\n\nsale_price\030\010 \001(\t\022\027\n\017formatted_pric" +
+      "e\030\t \001(\t\022\034\n\024formatted_sale_price\030\n \001(\t\022\020\n" +
+      "\010category\030\013 \001(\t\022\033\n\023contextual_keywords\030\014" +
+      " \003(\t\022\037\n\027similar_destination_ids\030\r \003(\t\022\021\n" +
+      "\timage_url\030\016 \001(\t\022\030\n\020android_app_link\030\017 \001" +
       "(\t\022\024\n\014ios_app_link\030\020 \001(\t\022\030\n\020ios_app_stor" +
-      "e_id\030\021 \001(\003\022\023\n\013similar_ids\030\017 \003(\t\"\255\003\n\034Dyna" +
-      "micHotelsAndRentalsAsset\022\030\n\013property_id\030" +
-      "\001 \001(\tB\003\340A\002\022\032\n\rproperty_name\030\002 \001(\tB\003\340A\002\022\021" +
-      "\n\timage_url\030\003 \001(\t\022\030\n\020destination_name\030\004 " +
-      "\001(\t\022\023\n\013description\030\005 \001(\t\022\r\n\005price\030\006 \001(\t\022" +
-      "\022\n\nsale_price\030\007 \001(\t\022\023\n\013star_rating\030\010 \001(\003" +
-      "\022\020\n\010category\030\t \001(\t\022\033\n\023contextual_keyword" +
-      "s\030\n \003(\t\022\017\n\007address\030\013 \001(\t\022\030\n\020android_app_" +
-      "link\030\014 \001(\t\022\024\n\014ios_app_link\030\r \001(\t\022\030\n\020ios_" +
-      "app_store_id\030\016 \001(\003\022\027\n\017formatted_price\030\017 " +
-      "\001(\t\022\034\n\024formatted_sale_price\030\020 \001(\t\022\034\n\024sim" +
-      "ilar_property_ids\030\021 \003(\t\"\223\003\n\023DynamicFligh" +
-      "tsAsset\022\033\n\016destination_id\030\001 \001(\tB\003\340A\002\022\021\n\t" +
-      "origin_id\030\002 \001(\t\022\037\n\022flight_description\030\003 " +
-      "\001(\tB\003\340A\002\022\021\n\timage_url\030\004 \001(\t\022\030\n\020destinati" +
-      "on_name\030\005 \001(\t\022\023\n\013origin_name\030\006 \001(\t\022\024\n\014fl" +
-      "ight_price\030\007 \001(\t\022\031\n\021flight_sale_price\030\010 " +
-      "\001(\t\022\027\n\017formatted_price\030\t \001(\t\022\034\n\024formatte" +
-      "d_sale_price\030\n \001(\t\022\030\n\020android_app_link\030\013" +
-      " \001(\t\022\024\n\014ios_app_link\030\014 \001(\t\022\030\n\020ios_app_st" +
-      "ore_id\030\r \001(\003\022\037\n\027similar_destination_ids\030" +
-      "\016 \003(\t\022\026\n\016custom_mapping\030\017 \001(\t\"\275\001\n\032Demand" +
-      "GenCarouselCardAsset\022\035\n\025marketing_image_" +
-      "asset\030\001 \001(\t\022$\n\034square_marketing_image_as" +
-      "set\030\002 \001(\t\022&\n\036portrait_marketing_image_as" +
-      "set\030\003 \001(\t\022\025\n\010headline\030\004 \001(\tB\003\340A\002\022\033\n\023call" +
-      "_to_action_text\030\005 \001(\t\"\253\003\n\022DynamicTravelA" +
-      "sset\022\033\n\016destination_id\030\001 \001(\tB\003\340A\002\022\021\n\tori" +
-      "gin_id\030\002 \001(\t\022\022\n\005title\030\003 \001(\tB\003\340A\002\022\030\n\020dest" +
-      "ination_name\030\004 \001(\t\022\033\n\023destination_addres" +
-      "s\030\005 \001(\t\022\023\n\013origin_name\030\006 \001(\t\022\r\n\005price\030\007 " +
-      "\001(\t\022\022\n\nsale_price\030\010 \001(\t\022\027\n\017formatted_pri" +
-      "ce\030\t \001(\t\022\034\n\024formatted_sale_price\030\n \001(\t\022\020" +
-      "\n\010category\030\013 \001(\t\022\033\n\023contextual_keywords\030" +
-      "\014 \003(\t\022\037\n\027similar_destination_ids\030\r \003(\t\022\021" +
-      "\n\timage_url\030\016 \001(\t\022\030\n\020android_app_link\030\017 " +
-      "\001(\t\022\024\n\014ios_app_link\030\020 \001(\t\022\030\n\020ios_app_sto" +
-      "re_id\030\021 \001(\003\"\371\002\n\021DynamicLocalAsset\022\024\n\007dea" +
-      "l_id\030\001 \001(\tB\003\340A\002\022\026\n\tdeal_name\030\002 \001(\tB\003\340A\002\022" +
-      "\020\n\010subtitle\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\r" +
-      "\n\005price\030\005 \001(\t\022\022\n\nsale_price\030\006 \001(\t\022\021\n\tima" +
-      "ge_url\030\007 \001(\t\022\017\n\007address\030\010 \001(\t\022\020\n\010categor" +
-      "y\030\t \001(\t\022\033\n\023contextual_keywords\030\n \003(\t\022\027\n\017" +
-      "formatted_price\030\013 \001(\t\022\034\n\024formatted_sale_" +
-      "price\030\014 \001(\t\022\030\n\020android_app_link\030\r \001(\t\022\030\n" +
-      "\020similar_deal_ids\030\016 \003(\t\022\024\n\014ios_app_link\030" +
-      "\017 \001(\t\022\030\n\020ios_app_store_id\030\020 \001(\003\"\311\002\n\020Dyna" +
-      "micJobsAsset\022\023\n\006job_id\030\001 \001(\tB\003\340A\002\022\023\n\013loc" +
-      "ation_id\030\002 \001(\t\022\026\n\tjob_title\030\003 \001(\tB\003\340A\002\022\024" +
-      "\n\014job_subtitle\030\004 \001(\t\022\023\n\013description\030\005 \001(" +
-      "\t\022\021\n\timage_url\030\006 \001(\t\022\024\n\014job_category\030\007 \001" +
-      "(\t\022\033\n\023contextual_keywords\030\010 \003(\t\022\017\n\007addre" +
-      "ss\030\t \001(\t\022\016\n\006salary\030\n \001(\t\022\030\n\020android_app_" +
-      "link\030\013 \001(\t\022\027\n\017similar_job_ids\030\014 \003(\t\022\024\n\014i" +
-      "os_app_link\030\r \001(\t\022\030\n\020ios_app_store_id\030\016 " +
-      "\001(\003\"\361\001\n\rLocationAsset\022\020\n\010place_id\030\001 \001(\t\022" +
-      "\\\n\032business_profile_locations\030\002 \003(\01328.go" +
-      "ogle.ads.googleads.v26.common.BusinessPr" +
-      "ofileLocation\022p\n\027location_ownership_type" +
-      "\030\003 \001(\0162O.google.ads.googleads.v26.enums." +
-      "LocationOwnershipTypeEnum.LocationOwners" +
-      "hipType\"Q\n\027BusinessProfileLocation\022\016\n\006la" +
-      "bels\030\001 \003(\t\022\022\n\nstore_code\030\002 \001(\t\022\022\n\nlistin" +
-      "g_id\030\003 \001(\003\"Q\n\022HotelPropertyAsset\022\020\n\010plac" +
-      "e_id\030\001 \001(\t\022\025\n\rhotel_address\030\002 \001(\t\022\022\n\nhot" +
-      "el_name\030\003 \001(\t\"\337\005\n\024BusinessMessageAsset\022r" +
-      "\n\020message_provider\030\001 \001(\0162S.google.ads.go" +
-      "ogleads.v26.enums.BusinessMessageProvide" +
-      "rEnum.BusinessMessageProviderB\003\340A\002\022\034\n\017st" +
-      "arter_message\030\002 \001(\tB\003\340A\002\022]\n\016call_to_acti" +
-      "on\030\003 \001(\0132@.google.ads.googleads.v26.comm" +
-      "on.BusinessMessageCallToActionInfoH\001\210\001\001\022" +
-      "U\n\rwhatsapp_info\030\005 \001(\0132<.google.ads.goog" +
-      "leads.v26.common.WhatsappBusinessMessage" +
-      "InfoH\000\022h\n\027facebook_messenger_info\030\006 \001(\0132" +
-      "E.google.ads.googleads.v26.common.Facebo" +
-      "okMessengerBusinessMessageInfoH\000\022M\n\tzalo" +
-      "_info\030\007 \001(\01328.google.ads.googleads.v26.c" +
-      "ommon.ZaloBusinessMessageInfoH\000\022M\n\tline_" +
-      "info\030\010 \001(\01328.google.ads.googleads.v26.co" +
-      "mmon.LineBusinessMessageInfoH\000\022K\n\010sms_in" +
-      "fo\030\t \001(\01327.google.ads.googleads.v26.comm" +
-      "on.SmsBusinessMessageInfoH\000B\027\n\025message_p" +
-      "rovider_dataB\021\n\017_call_to_action\"S\n\033Whats" +
-      "appBusinessMessageInfo\022\031\n\014country_code\030\001" +
-      " \001(\tB\003\340A\002\022\031\n\014phone_number\030\002 \001(\tB\003\340A\002\">\n$" +
-      "FacebookMessengerBusinessMessageInfo\022\026\n\t" +
-      "page_name\030\001 \001(\tB\003\340A\002\"L\n\027ZaloBusinessMess" +
-      "ageInfo\022\017\n\005oa_id\030\001 \001(\003H\000\022\025\n\013custom_name\030" +
-      "\002 \001(\tH\000B\t\n\007zalo_id\"/\n\027LineBusinessMessag" +
-      "eInfo\022\024\n\007line_id\030\001 \001(\tB\003\340A\002\"N\n\026SmsBusine" +
-      "ssMessageInfo\022\031\n\014country_code\030\001 \001(\tB\003\340A\002" +
-      "\022\031\n\014phone_number\030\002 \001(\tB\003\340A\002\"\327\001\n\037Business" +
-      "MessageCallToActionInfo\022\212\001\n\030call_to_acti" +
-      "on_selection\030\001 \001(\0162c.google.ads.googlead" +
-      "s.v26.enums.BusinessMessageCallToActionT" +
-      "ypeEnum.BusinessMessageCallToActionTypeB" +
-      "\003\340A\002\022\'\n\032call_to_action_description\030\002 \001(\t" +
-      "B\003\340A\002\"-\n\020AppDeepLinkAsset\022\031\n\021app_deep_li" +
-      "nk_uri\030\001 \001(\t\"^\n\025YouTubeVideoListAsset\022E\n" +
-      "\016youtube_videos\030\001 \003(\0132-.google.ads.googl" +
-      "eads.v26.common.AdVideoAssetB\357\001\n#com.goo" +
-      "gle.ads.googleads.v26.commonB\017AssetTypes" +
-      "ProtoP\001ZEgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v26/common;common\242\002" +
-      "\003GAA\252\002\037Google.Ads.GoogleAds.V26.Common\312\002" +
-      "\037Google\\Ads\\GoogleAds\\V26\\Common\352\002#Googl" +
-      "e::Ads::GoogleAds::V26::Commonb\006proto3"
+      "e_id\030\021 \001(\003\"\373\002\n\021DynamicLocalAsset\022\025\n\007deal" +
+      "_id\030\001 \001(\tB\004\342A\001\002\022\027\n\tdeal_name\030\002 \001(\tB\004\342A\001\002" +
+      "\022\020\n\010subtitle\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022" +
+      "\r\n\005price\030\005 \001(\t\022\022\n\nsale_price\030\006 \001(\t\022\021\n\tim" +
+      "age_url\030\007 \001(\t\022\017\n\007address\030\010 \001(\t\022\020\n\010catego" +
+      "ry\030\t \001(\t\022\033\n\023contextual_keywords\030\n \003(\t\022\027\n" +
+      "\017formatted_price\030\013 \001(\t\022\034\n\024formatted_sale" +
+      "_price\030\014 \001(\t\022\030\n\020android_app_link\030\r \001(\t\022\030" +
+      "\n\020similar_deal_ids\030\016 \003(\t\022\024\n\014ios_app_link" +
+      "\030\017 \001(\t\022\030\n\020ios_app_store_id\030\020 \001(\003\"\313\002\n\020Dyn" +
+      "amicJobsAsset\022\024\n\006job_id\030\001 \001(\tB\004\342A\001\002\022\023\n\013l" +
+      "ocation_id\030\002 \001(\t\022\027\n\tjob_title\030\003 \001(\tB\004\342A\001" +
+      "\002\022\024\n\014job_subtitle\030\004 \001(\t\022\023\n\013description\030\005" +
+      " \001(\t\022\021\n\timage_url\030\006 \001(\t\022\024\n\014job_category\030" +
+      "\007 \001(\t\022\033\n\023contextual_keywords\030\010 \003(\t\022\017\n\007ad" +
+      "dress\030\t \001(\t\022\016\n\006salary\030\n \001(\t\022\030\n\020android_a" +
+      "pp_link\030\013 \001(\t\022\027\n\017similar_job_ids\030\014 \003(\t\022\024" +
+      "\n\014ios_app_link\030\r \001(\t\022\030\n\020ios_app_store_id" +
+      "\030\016 \001(\003\"\361\001\n\rLocationAsset\022\020\n\010place_id\030\001 \001" +
+      "(\t\022\\\n\032business_profile_locations\030\002 \003(\01328" +
+      ".google.ads.googleads.v26.common.Busines" +
+      "sProfileLocation\022p\n\027location_ownership_t" +
+      "ype\030\003 \001(\0162O.google.ads.googleads.v26.enu" +
+      "ms.LocationOwnershipTypeEnum.LocationOwn" +
+      "ershipType\"Q\n\027BusinessProfileLocation\022\016\n" +
+      "\006labels\030\001 \003(\t\022\022\n\nstore_code\030\002 \001(\t\022\022\n\nlis" +
+      "ting_id\030\003 \001(\003\"Q\n\022HotelPropertyAsset\022\020\n\010p" +
+      "lace_id\030\001 \001(\t\022\025\n\rhotel_address\030\002 \001(\t\022\022\n\n" +
+      "hotel_name\030\003 \001(\t\"\341\005\n\024BusinessMessageAsse" +
+      "t\022s\n\020message_provider\030\001 \001(\0162S.google.ads" +
+      ".googleads.v26.enums.BusinessMessageProv" +
+      "iderEnum.BusinessMessageProviderB\004\342A\001\002\022\035" +
+      "\n\017starter_message\030\002 \001(\tB\004\342A\001\002\022]\n\016call_to" +
+      "_action\030\003 \001(\0132@.google.ads.googleads.v26" +
+      ".common.BusinessMessageCallToActionInfoH" +
+      "\001\210\001\001\022U\n\rwhatsapp_info\030\005 \001(\0132<.google.ads" +
+      ".googleads.v26.common.WhatsappBusinessMe" +
+      "ssageInfoH\000\022h\n\027facebook_messenger_info\030\006" +
+      " \001(\0132E.google.ads.googleads.v26.common.F" +
+      "acebookMessengerBusinessMessageInfoH\000\022M\n" +
+      "\tzalo_info\030\007 \001(\01328.google.ads.googleads." +
+      "v26.common.ZaloBusinessMessageInfoH\000\022M\n\t" +
+      "line_info\030\010 \001(\01328.google.ads.googleads.v" +
+      "26.common.LineBusinessMessageInfoH\000\022K\n\010s" +
+      "ms_info\030\t \001(\01327.google.ads.googleads.v26" +
+      ".common.SmsBusinessMessageInfoH\000B\027\n\025mess" +
+      "age_provider_dataB\021\n\017_call_to_action\"U\n\033" +
+      "WhatsappBusinessMessageInfo\022\032\n\014country_c" +
+      "ode\030\001 \001(\tB\004\342A\001\002\022\032\n\014phone_number\030\002 \001(\tB\004\342" +
+      "A\001\002\"?\n$FacebookMessengerBusinessMessageI" +
+      "nfo\022\027\n\tpage_name\030\001 \001(\tB\004\342A\001\002\"L\n\027ZaloBusi" +
+      "nessMessageInfo\022\017\n\005oa_id\030\001 \001(\003H\000\022\025\n\013cust" +
+      "om_name\030\002 \001(\tH\000B\t\n\007zalo_id\"0\n\027LineBusine" +
+      "ssMessageInfo\022\025\n\007line_id\030\001 \001(\tB\004\342A\001\002\"P\n\026" +
+      "SmsBusinessMessageInfo\022\032\n\014country_code\030\001" +
+      " \001(\tB\004\342A\001\002\022\032\n\014phone_number\030\002 \001(\tB\004\342A\001\002\"\331" +
+      "\001\n\037BusinessMessageCallToActionInfo\022\213\001\n\030c" +
+      "all_to_action_selection\030\001 \001(\0162c.google.a" +
+      "ds.googleads.v26.enums.BusinessMessageCa" +
+      "llToActionTypeEnum.BusinessMessageCallTo" +
+      "ActionTypeB\004\342A\001\002\022(\n\032call_to_action_descr" +
+      "iption\030\002 \001(\tB\004\342A\001\002\"-\n\020AppDeepLinkAsset\022\031" +
+      "\n\021app_deep_link_uri\030\001 \001(\t\"^\n\025YouTubeVide" +
+      "oListAsset\022E\n\016youtube_videos\030\001 \003(\0132-.goo" +
+      "gle.ads.googleads.v26.common.AdVideoAsse" +
+      "tB\357\001\n#com.google.ads.googleads.v26.commo" +
+      "nB\017AssetTypesProtoP\001ZEgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v26/co" +
+      "mmon;common\242\002\003GAA\252\002\037Google.Ads.GoogleAds" +
+      ".V26.Common\312\002\037Google\\Ads\\GoogleAds\\V26\\C" +
+      "ommon\352\002#Google::Ads::GoogleAds::V26::Com" +
+      "monb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -589,6 +617,8 @@ public final class AssetTypesProto extends com.google.protobuf.GeneratedFile {
           com.google.ads.googleads.v26.enums.LocationOwnershipTypeProto.getDescriptor(),
           com.google.ads.googleads.v26.enums.MimeTypeProto.getDescriptor(),
           com.google.ads.googleads.v26.enums.MobileAppVendorProto.getDescriptor(),
+          com.google.ads.googleads.v26.enums.OfflinePromotionCodeSourceProto.getDescriptor(),
+          com.google.ads.googleads.v26.enums.OfflinePromotionCodeTypeProto.getDescriptor(),
           com.google.ads.googleads.v26.enums.PriceExtensionPriceQualifierProto.getDescriptor(),
           com.google.ads.googleads.v26.enums.PriceExtensionPriceUnitProto.getDescriptor(),
           com.google.ads.googleads.v26.enums.PriceExtensionTypeProto.getDescriptor(),
@@ -675,201 +705,213 @@ public final class AssetTypesProto extends com.google.protobuf.GeneratedFile {
     internal_static_google_ads_googleads_v26_common_PromotionAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_PromotionAsset_descriptor,
-        new java.lang.String[] { "PromotionTarget", "DiscountModifier", "RedemptionStartDate", "RedemptionEndDate", "Occasion", "LanguageCode", "StartDate", "EndDate", "AdScheduleTargets", "TermsAndConditionsText", "TermsAndConditionsUri", "PercentOff", "MoneyAmountOff", "PromotionCode", "OrdersOverAmount", "PromotionBarcodeInfo", "PromotionQrCodeInfo", "DiscountType", "PromotionTrigger", });
-    internal_static_google_ads_googleads_v26_common_PromotionBarcodeInfo_descriptor =
+        new java.lang.String[] { "PromotionTarget", "DiscountModifier", "RedemptionStartDate", "RedemptionEndDate", "Occasion", "LanguageCode", "StartDate", "EndDate", "AdScheduleTargets", "TermsAndConditionsText", "TermsAndConditionsUri", "ExternalRedeemInfo", "PercentOff", "MoneyAmountOff", "PromotionCode", "OrdersOverAmount", "PromotionBarcodeInfo", "PromotionQrCodeInfo", "DiscountType", "PromotionTrigger", });
+    internal_static_google_ads_googleads_v26_common_ExternalRedeemInfo_descriptor =
       getDescriptor().getMessageType(13);
+    internal_static_google_ads_googleads_v26_common_ExternalRedeemInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v26_common_ExternalRedeemInfo_descriptor,
+        new java.lang.String[] { "PartnerPromotionId", "CodeType", "CodeSource", });
+    internal_static_google_ads_googleads_v26_common_ExternalPartnerId_descriptor =
+      getDescriptor().getMessageType(14);
+    internal_static_google_ads_googleads_v26_common_ExternalPartnerId_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_google_ads_googleads_v26_common_ExternalPartnerId_descriptor,
+        new java.lang.String[] { "IntValue", "StringValue", "Value", });
+    internal_static_google_ads_googleads_v26_common_PromotionBarcodeInfo_descriptor =
+      getDescriptor().getMessageType(15);
     internal_static_google_ads_googleads_v26_common_PromotionBarcodeInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_PromotionBarcodeInfo_descriptor,
         new java.lang.String[] { "Type", "BarcodeContent", });
     internal_static_google_ads_googleads_v26_common_PromotionQrCodeInfo_descriptor =
-      getDescriptor().getMessageType(14);
+      getDescriptor().getMessageType(16);
     internal_static_google_ads_googleads_v26_common_PromotionQrCodeInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_PromotionQrCodeInfo_descriptor,
         new java.lang.String[] { "QrCodeContent", });
     internal_static_google_ads_googleads_v26_common_CalloutAsset_descriptor =
-      getDescriptor().getMessageType(15);
+      getDescriptor().getMessageType(17);
     internal_static_google_ads_googleads_v26_common_CalloutAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_CalloutAsset_descriptor,
         new java.lang.String[] { "CalloutText", "StartDate", "EndDate", "AdScheduleTargets", });
     internal_static_google_ads_googleads_v26_common_StructuredSnippetAsset_descriptor =
-      getDescriptor().getMessageType(16);
+      getDescriptor().getMessageType(18);
     internal_static_google_ads_googleads_v26_common_StructuredSnippetAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_StructuredSnippetAsset_descriptor,
         new java.lang.String[] { "Header", "Values", });
     internal_static_google_ads_googleads_v26_common_SitelinkAsset_descriptor =
-      getDescriptor().getMessageType(17);
+      getDescriptor().getMessageType(19);
     internal_static_google_ads_googleads_v26_common_SitelinkAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_SitelinkAsset_descriptor,
         new java.lang.String[] { "LinkText", "Description1", "Description2", "StartDate", "EndDate", "AdScheduleTargets", });
     internal_static_google_ads_googleads_v26_common_PageFeedAsset_descriptor =
-      getDescriptor().getMessageType(18);
+      getDescriptor().getMessageType(20);
     internal_static_google_ads_googleads_v26_common_PageFeedAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_PageFeedAsset_descriptor,
         new java.lang.String[] { "PageUrl", "Labels", });
     internal_static_google_ads_googleads_v26_common_DynamicEducationAsset_descriptor =
-      getDescriptor().getMessageType(19);
+      getDescriptor().getMessageType(21);
     internal_static_google_ads_googleads_v26_common_DynamicEducationAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_DynamicEducationAsset_descriptor,
         new java.lang.String[] { "ProgramId", "LocationId", "ProgramName", "Subject", "ProgramDescription", "SchoolName", "Address", "ContextualKeywords", "AndroidAppLink", "SimilarProgramIds", "IosAppLink", "IosAppStoreId", "ThumbnailImageUrl", "ImageUrl", });
     internal_static_google_ads_googleads_v26_common_MobileAppAsset_descriptor =
-      getDescriptor().getMessageType(20);
+      getDescriptor().getMessageType(22);
     internal_static_google_ads_googleads_v26_common_MobileAppAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_MobileAppAsset_descriptor,
         new java.lang.String[] { "AppId", "AppStore", "LinkText", "StartDate", "EndDate", });
     internal_static_google_ads_googleads_v26_common_HotelCalloutAsset_descriptor =
-      getDescriptor().getMessageType(21);
+      getDescriptor().getMessageType(23);
     internal_static_google_ads_googleads_v26_common_HotelCalloutAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_HotelCalloutAsset_descriptor,
         new java.lang.String[] { "Text", "LanguageCode", });
     internal_static_google_ads_googleads_v26_common_CallAsset_descriptor =
-      getDescriptor().getMessageType(22);
+      getDescriptor().getMessageType(24);
     internal_static_google_ads_googleads_v26_common_CallAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_CallAsset_descriptor,
         new java.lang.String[] { "CountryCode", "PhoneNumber", "CallConversionReportingState", "CallConversionAction", "AdScheduleTargets", });
     internal_static_google_ads_googleads_v26_common_PriceAsset_descriptor =
-      getDescriptor().getMessageType(23);
+      getDescriptor().getMessageType(25);
     internal_static_google_ads_googleads_v26_common_PriceAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_PriceAsset_descriptor,
         new java.lang.String[] { "Type", "PriceQualifier", "LanguageCode", "PriceOfferings", });
     internal_static_google_ads_googleads_v26_common_PriceOffering_descriptor =
-      getDescriptor().getMessageType(24);
+      getDescriptor().getMessageType(26);
     internal_static_google_ads_googleads_v26_common_PriceOffering_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_PriceOffering_descriptor,
         new java.lang.String[] { "Header", "Description", "Price", "Unit", "FinalUrl", "FinalMobileUrl", });
     internal_static_google_ads_googleads_v26_common_CallToActionAsset_descriptor =
-      getDescriptor().getMessageType(25);
+      getDescriptor().getMessageType(27);
     internal_static_google_ads_googleads_v26_common_CallToActionAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_CallToActionAsset_descriptor,
         new java.lang.String[] { "CallToAction", });
     internal_static_google_ads_googleads_v26_common_DynamicRealEstateAsset_descriptor =
-      getDescriptor().getMessageType(26);
+      getDescriptor().getMessageType(28);
     internal_static_google_ads_googleads_v26_common_DynamicRealEstateAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_DynamicRealEstateAsset_descriptor,
         new java.lang.String[] { "ListingId", "ListingName", "CityName", "Description", "Address", "Price", "ImageUrl", "PropertyType", "ListingType", "ContextualKeywords", "FormattedPrice", "AndroidAppLink", "IosAppLink", "IosAppStoreId", "SimilarListingIds", });
     internal_static_google_ads_googleads_v26_common_DynamicCustomAsset_descriptor =
-      getDescriptor().getMessageType(27);
+      getDescriptor().getMessageType(29);
     internal_static_google_ads_googleads_v26_common_DynamicCustomAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_DynamicCustomAsset_descriptor,
         new java.lang.String[] { "Id", "Id2", "ItemTitle", "ItemSubtitle", "ItemDescription", "ItemAddress", "ItemCategory", "Price", "SalePrice", "FormattedPrice", "FormattedSalePrice", "ImageUrl", "ContextualKeywords", "AndroidAppLink", "IosAppLink", "IosAppStoreId", "SimilarIds", });
     internal_static_google_ads_googleads_v26_common_DynamicHotelsAndRentalsAsset_descriptor =
-      getDescriptor().getMessageType(28);
+      getDescriptor().getMessageType(30);
     internal_static_google_ads_googleads_v26_common_DynamicHotelsAndRentalsAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_DynamicHotelsAndRentalsAsset_descriptor,
         new java.lang.String[] { "PropertyId", "PropertyName", "ImageUrl", "DestinationName", "Description", "Price", "SalePrice", "StarRating", "Category", "ContextualKeywords", "Address", "AndroidAppLink", "IosAppLink", "IosAppStoreId", "FormattedPrice", "FormattedSalePrice", "SimilarPropertyIds", });
     internal_static_google_ads_googleads_v26_common_DynamicFlightsAsset_descriptor =
-      getDescriptor().getMessageType(29);
+      getDescriptor().getMessageType(31);
     internal_static_google_ads_googleads_v26_common_DynamicFlightsAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_DynamicFlightsAsset_descriptor,
         new java.lang.String[] { "DestinationId", "OriginId", "FlightDescription", "ImageUrl", "DestinationName", "OriginName", "FlightPrice", "FlightSalePrice", "FormattedPrice", "FormattedSalePrice", "AndroidAppLink", "IosAppLink", "IosAppStoreId", "SimilarDestinationIds", "CustomMapping", });
     internal_static_google_ads_googleads_v26_common_DemandGenCarouselCardAsset_descriptor =
-      getDescriptor().getMessageType(30);
+      getDescriptor().getMessageType(32);
     internal_static_google_ads_googleads_v26_common_DemandGenCarouselCardAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_DemandGenCarouselCardAsset_descriptor,
         new java.lang.String[] { "MarketingImageAsset", "SquareMarketingImageAsset", "PortraitMarketingImageAsset", "Headline", "CallToActionText", });
     internal_static_google_ads_googleads_v26_common_DynamicTravelAsset_descriptor =
-      getDescriptor().getMessageType(31);
+      getDescriptor().getMessageType(33);
     internal_static_google_ads_googleads_v26_common_DynamicTravelAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_DynamicTravelAsset_descriptor,
         new java.lang.String[] { "DestinationId", "OriginId", "Title", "DestinationName", "DestinationAddress", "OriginName", "Price", "SalePrice", "FormattedPrice", "FormattedSalePrice", "Category", "ContextualKeywords", "SimilarDestinationIds", "ImageUrl", "AndroidAppLink", "IosAppLink", "IosAppStoreId", });
     internal_static_google_ads_googleads_v26_common_DynamicLocalAsset_descriptor =
-      getDescriptor().getMessageType(32);
+      getDescriptor().getMessageType(34);
     internal_static_google_ads_googleads_v26_common_DynamicLocalAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_DynamicLocalAsset_descriptor,
         new java.lang.String[] { "DealId", "DealName", "Subtitle", "Description", "Price", "SalePrice", "ImageUrl", "Address", "Category", "ContextualKeywords", "FormattedPrice", "FormattedSalePrice", "AndroidAppLink", "SimilarDealIds", "IosAppLink", "IosAppStoreId", });
     internal_static_google_ads_googleads_v26_common_DynamicJobsAsset_descriptor =
-      getDescriptor().getMessageType(33);
+      getDescriptor().getMessageType(35);
     internal_static_google_ads_googleads_v26_common_DynamicJobsAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_DynamicJobsAsset_descriptor,
         new java.lang.String[] { "JobId", "LocationId", "JobTitle", "JobSubtitle", "Description", "ImageUrl", "JobCategory", "ContextualKeywords", "Address", "Salary", "AndroidAppLink", "SimilarJobIds", "IosAppLink", "IosAppStoreId", });
     internal_static_google_ads_googleads_v26_common_LocationAsset_descriptor =
-      getDescriptor().getMessageType(34);
+      getDescriptor().getMessageType(36);
     internal_static_google_ads_googleads_v26_common_LocationAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_LocationAsset_descriptor,
         new java.lang.String[] { "PlaceId", "BusinessProfileLocations", "LocationOwnershipType", });
     internal_static_google_ads_googleads_v26_common_BusinessProfileLocation_descriptor =
-      getDescriptor().getMessageType(35);
+      getDescriptor().getMessageType(37);
     internal_static_google_ads_googleads_v26_common_BusinessProfileLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_BusinessProfileLocation_descriptor,
         new java.lang.String[] { "Labels", "StoreCode", "ListingId", });
     internal_static_google_ads_googleads_v26_common_HotelPropertyAsset_descriptor =
-      getDescriptor().getMessageType(36);
+      getDescriptor().getMessageType(38);
     internal_static_google_ads_googleads_v26_common_HotelPropertyAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_HotelPropertyAsset_descriptor,
         new java.lang.String[] { "PlaceId", "HotelAddress", "HotelName", });
     internal_static_google_ads_googleads_v26_common_BusinessMessageAsset_descriptor =
-      getDescriptor().getMessageType(37);
+      getDescriptor().getMessageType(39);
     internal_static_google_ads_googleads_v26_common_BusinessMessageAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_BusinessMessageAsset_descriptor,
         new java.lang.String[] { "MessageProvider", "StarterMessage", "CallToAction", "WhatsappInfo", "FacebookMessengerInfo", "ZaloInfo", "LineInfo", "SmsInfo", "MessageProviderData", });
     internal_static_google_ads_googleads_v26_common_WhatsappBusinessMessageInfo_descriptor =
-      getDescriptor().getMessageType(38);
+      getDescriptor().getMessageType(40);
     internal_static_google_ads_googleads_v26_common_WhatsappBusinessMessageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_WhatsappBusinessMessageInfo_descriptor,
         new java.lang.String[] { "CountryCode", "PhoneNumber", });
     internal_static_google_ads_googleads_v26_common_FacebookMessengerBusinessMessageInfo_descriptor =
-      getDescriptor().getMessageType(39);
+      getDescriptor().getMessageType(41);
     internal_static_google_ads_googleads_v26_common_FacebookMessengerBusinessMessageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_FacebookMessengerBusinessMessageInfo_descriptor,
         new java.lang.String[] { "PageName", });
     internal_static_google_ads_googleads_v26_common_ZaloBusinessMessageInfo_descriptor =
-      getDescriptor().getMessageType(40);
+      getDescriptor().getMessageType(42);
     internal_static_google_ads_googleads_v26_common_ZaloBusinessMessageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_ZaloBusinessMessageInfo_descriptor,
         new java.lang.String[] { "OaId", "CustomName", "ZaloId", });
     internal_static_google_ads_googleads_v26_common_LineBusinessMessageInfo_descriptor =
-      getDescriptor().getMessageType(41);
+      getDescriptor().getMessageType(43);
     internal_static_google_ads_googleads_v26_common_LineBusinessMessageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_LineBusinessMessageInfo_descriptor,
         new java.lang.String[] { "LineId", });
     internal_static_google_ads_googleads_v26_common_SmsBusinessMessageInfo_descriptor =
-      getDescriptor().getMessageType(42);
+      getDescriptor().getMessageType(44);
     internal_static_google_ads_googleads_v26_common_SmsBusinessMessageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_SmsBusinessMessageInfo_descriptor,
         new java.lang.String[] { "CountryCode", "PhoneNumber", });
     internal_static_google_ads_googleads_v26_common_BusinessMessageCallToActionInfo_descriptor =
-      getDescriptor().getMessageType(43);
+      getDescriptor().getMessageType(45);
     internal_static_google_ads_googleads_v26_common_BusinessMessageCallToActionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_BusinessMessageCallToActionInfo_descriptor,
         new java.lang.String[] { "CallToActionSelection", "CallToActionDescription", });
     internal_static_google_ads_googleads_v26_common_AppDeepLinkAsset_descriptor =
-      getDescriptor().getMessageType(44);
+      getDescriptor().getMessageType(46);
     internal_static_google_ads_googleads_v26_common_AppDeepLinkAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_AppDeepLinkAsset_descriptor,
         new java.lang.String[] { "AppDeepLinkUri", });
     internal_static_google_ads_googleads_v26_common_YouTubeVideoListAsset_descriptor =
-      getDescriptor().getMessageType(45);
+      getDescriptor().getMessageType(47);
     internal_static_google_ads_googleads_v26_common_YouTubeVideoListAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_common_YouTubeVideoListAsset_descriptor,
@@ -889,6 +931,8 @@ public final class AssetTypesProto extends com.google.protobuf.GeneratedFile {
     com.google.ads.googleads.v26.enums.LocationOwnershipTypeProto.getDescriptor();
     com.google.ads.googleads.v26.enums.MimeTypeProto.getDescriptor();
     com.google.ads.googleads.v26.enums.MobileAppVendorProto.getDescriptor();
+    com.google.ads.googleads.v26.enums.OfflinePromotionCodeSourceProto.getDescriptor();
+    com.google.ads.googleads.v26.enums.OfflinePromotionCodeTypeProto.getDescriptor();
     com.google.ads.googleads.v26.enums.PriceExtensionPriceQualifierProto.getDescriptor();
     com.google.ads.googleads.v26.enums.PriceExtensionPriceUnitProto.getDescriptor();
     com.google.ads.googleads.v26.enums.PriceExtensionTypeProto.getDescriptor();

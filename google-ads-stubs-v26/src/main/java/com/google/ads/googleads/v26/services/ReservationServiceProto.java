@@ -62,38 +62,38 @@ public final class ReservationServiceProto extends com.google.protobuf.Generated
       "ads/googleads/v26/actions/quote_campaign" +
       "s.proto\032\034google/api/annotations.proto\032\027g" +
       "oogle/api/client.proto\032\037google/api/field" +
-      "_behavior.proto\"\177\n\025QuoteCampaignsRequest" +
-      "\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022L\n\toperation\030" +
-      "\002 \001(\01329.google.ads.googleads.v26.actions" +
-      ".QuoteCampaignsOperation\"`\n\026QuoteCampaig" +
-      "nsResponse\022F\n\006result\030\001 \001(\01326.google.ads." +
-      "googleads.v26.actions.QuoteCampaignsResu" +
-      "lt\"}\n\024BookCampaignsRequest\022\030\n\013customer_i" +
-      "d\030\001 \001(\tB\003\340A\002\022K\n\toperation\030\002 \001(\01328.google" +
-      ".ads.googleads.v26.actions.BookCampaigns" +
-      "Operation\"^\n\025BookCampaignsResponse\022E\n\006re" +
-      "sult\030\001 \001(\01325.google.ads.googleads.v26.ac" +
-      "tions.BookCampaignsResult2\221\004\n\022Reservatio" +
-      "nService\022\332\001\n\016QuoteCampaigns\0228.google.ads" +
-      ".googleads.v26.services.QuoteCampaignsRe" +
-      "quest\0329.google.ads.googleads.v26.service" +
-      "s.QuoteCampaignsResponse\"S\332A\013customer_id" +
-      "\202\323\344\223\002?\":/v26/customers/{customer_id=*}/r" +
-      "eservations:quoteCampaigns:\001*\022\326\001\n\rBookCa" +
-      "mpaigns\0227.google.ads.googleads.v26.servi" +
-      "ces.BookCampaignsRequest\0328.google.ads.go" +
-      "ogleads.v26.services.BookCampaignsRespon" +
-      "se\"R\332A\013customer_id\202\323\344\223\002>\"9/v26/customers" +
-      "/{customer_id=*}/reservations:bookCampai" +
-      "gns:\001*\032E\312A\030googleads.googleapis.com\322A\'ht" +
-      "tps://www.googleapis.com/auth/adwordsB\203\002" +
-      "\n%com.google.ads.googleads.v26.servicesB" +
-      "\027ReservationServiceProtoP\001ZIgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v26/services;services\242\002\003GAA\252\002!Google.Ads" +
-      ".GoogleAds.V26.Services\312\002!Google\\Ads\\Goo" +
-      "gleAds\\V26\\Services\352\002%Google::Ads::Googl" +
-      "eAds::V26::Servicesb\006proto3"
+      "_behavior.proto\"\200\001\n\025QuoteCampaignsReques" +
+      "t\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022L\n\toperatio" +
+      "n\030\002 \001(\01329.google.ads.googleads.v26.actio" +
+      "ns.QuoteCampaignsOperation\"`\n\026QuoteCampa" +
+      "ignsResponse\022F\n\006result\030\001 \001(\01326.google.ad" +
+      "s.googleads.v26.actions.QuoteCampaignsRe" +
+      "sult\"~\n\024BookCampaignsRequest\022\031\n\013customer" +
+      "_id\030\001 \001(\tB\004\342A\001\002\022K\n\toperation\030\002 \001(\01328.goo" +
+      "gle.ads.googleads.v26.actions.BookCampai" +
+      "gnsOperation\"^\n\025BookCampaignsResponse\022E\n" +
+      "\006result\030\001 \001(\01325.google.ads.googleads.v26" +
+      ".actions.BookCampaignsResult2\221\004\n\022Reserva" +
+      "tionService\022\332\001\n\016QuoteCampaigns\0228.google." +
+      "ads.googleads.v26.services.QuoteCampaign" +
+      "sRequest\0329.google.ads.googleads.v26.serv" +
+      "ices.QuoteCampaignsResponse\"S\332A\013customer" +
+      "_id\202\323\344\223\002?\":/v26/customers/{customer_id=*" +
+      "}/reservations:quoteCampaigns:\001*\022\326\001\n\rBoo" +
+      "kCampaigns\0227.google.ads.googleads.v26.se" +
+      "rvices.BookCampaignsRequest\0328.google.ads" +
+      ".googleads.v26.services.BookCampaignsRes" +
+      "ponse\"R\332A\013customer_id\202\323\344\223\002>\"9/v26/custom" +
+      "ers/{customer_id=*}/reservations:bookCam" +
+      "paigns:\001*\032E\312A\030googleads.googleapis.com\322A" +
+      "\'https://www.googleapis.com/auth/adwords" +
+      "B\203\002\n%com.google.ads.googleads.v26.servic" +
+      "esB\027ReservationServiceProtoP\001ZIgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v26/services;services\242\002\003GAA\252\002!Google." +
+      "Ads.GoogleAds.V26.Services\312\002!Google\\Ads\\" +
+      "GoogleAds\\V26\\Services\352\002%Google::Ads::Go" +
+      "ogleAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

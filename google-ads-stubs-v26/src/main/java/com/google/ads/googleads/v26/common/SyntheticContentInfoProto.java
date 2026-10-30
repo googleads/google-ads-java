@@ -57,19 +57,19 @@ public final class SyntheticContentInfoProto extends com.google.protobuf.Generat
       "tentAttestationStatusEnum.SyntheticConte" +
       "ntAttestationStatus\022a\n\006source\030\002 \001(\0162Q.go" +
       "ogle.ads.googleads.v26.enums.SyntheticCo" +
-      "ntentSourceEnum.SyntheticContentSource\"\323" +
+      "ntentSourceEnum.SyntheticContentSource\"\324" +
       "\001\n\024SyntheticContentInfo\022\\\n\026advertiser_at" +
       "testation\030\001 \001(\0132<.google.ads.googleads.v" +
-      "26.common.SyntheticContentAttestation\022]\n" +
+      "26.common.SyntheticContentAttestation\022^\n" +
       "\022system_attestation\030\002 \001(\0132<.google.ads.g" +
       "oogleads.v26.common.SyntheticContentAtte" +
-      "stationB\003\340A\003B\371\001\n#com.google.ads.googlead" +
-      "s.v26.commonB\031SyntheticContentInfoProtoP" +
-      "\001ZEgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v26/common;common\242\002\003GAA\252\002" +
-      "\037Google.Ads.GoogleAds.V26.Common\312\002\037Googl" +
-      "e\\Ads\\GoogleAds\\V26\\Common\352\002#Google::Ads" +
-      "::GoogleAds::V26::Commonb\006proto3"
+      "stationB\004\342A\001\003B\371\001\n#com.google.ads.googlea" +
+      "ds.v26.commonB\031SyntheticContentInfoProto" +
+      "P\001ZEgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v26/common;common\242\002\003GAA\252" +
+      "\002\037Google.Ads.GoogleAds.V26.Common\312\002\037Goog" +
+      "le\\Ads\\GoogleAds\\V26\\Common\352\002#Google::Ad" +
+      "s::GoogleAds::V26::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

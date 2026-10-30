@@ -62,36 +62,36 @@ public final class GoalServiceProto extends com.google.protobuf.GeneratedFile {
       ".proto\032\027google/api/client.proto\032\037google/" +
       "api/field_behavior.proto\032\031google/api/res" +
       "ource.proto\032 google/protobuf/field_mask." +
-      "proto\032\027google/rpc/status.proto\"\263\001\n\022Mutat" +
-      "eGoalsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022" +
-      "I\n\noperations\030\002 \003(\01320.google.ads.googlea" +
-      "ds.v26.services.GoalOperationB\003\340A\002\022\034\n\017pa" +
-      "rtial_failure\030\003 \001(\010B\003\340A\001\022\032\n\rvalidate_onl" +
-      "y\030\004 \001(\010B\003\340A\001\"\305\001\n\rGoalOperation\022/\n\013update" +
-      "_mask\030\003 \001(\0132\032.google.protobuf.FieldMask\022" +
-      ":\n\006create\030\001 \001(\0132(.google.ads.googleads.v" +
-      "26.resources.GoalH\000\022:\n\006update\030\002 \001(\0132(.go" +
-      "ogle.ads.googleads.v26.resources.GoalH\000B" +
-      "\013\n\toperation\"\216\001\n\023MutateGoalsResponse\0221\n\025" +
-      "partial_failure_error\030\001 \001(\0132\022.google.rpc" +
-      ".Status\022D\n\007results\030\002 \003(\01323.google.ads.go" +
-      "ogleads.v26.services.MutateGoalResult\"M\n" +
-      "\020MutateGoalResult\0229\n\rresource_name\030\001 \001(\t" +
-      "B\"\372A\037\n\035googleads.googleapis.com/Goal2\244\002\n" +
-      "\013GoalService\022\315\001\n\013MutateGoals\0225.google.ad" +
-      "s.googleads.v26.services.MutateGoalsRequ" +
-      "est\0326.google.ads.googleads.v26.services." +
-      "MutateGoalsResponse\"O\332A\026customer_id,oper" +
-      "ations\202\323\344\223\0020\"+/v26/customers/{customer_i" +
-      "d=*}/Goals:mutate:\001*\032E\312A\030googleads.googl" +
-      "eapis.com\322A\'https://www.googleapis.com/a" +
-      "uth/adwordsB\374\001\n%com.google.ads.googleads" +
-      ".v26.servicesB\020GoalServiceProtoP\001ZIgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v26/services;services\242\002\003GAA\252\002!Goo" +
-      "gle.Ads.GoogleAds.V26.Services\312\002!Google\\" +
-      "Ads\\GoogleAds\\V26\\Services\352\002%Google::Ads" +
-      "::GoogleAds::V26::Servicesb\006proto3"
+      "proto\032\027google/rpc/status.proto\"\267\001\n\022Mutat" +
+      "eGoalsRequest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002" +
+      "\022J\n\noperations\030\002 \003(\01320.google.ads.google" +
+      "ads.v26.services.GoalOperationB\004\342A\001\002\022\035\n\017" +
+      "partial_failure\030\003 \001(\010B\004\342A\001\001\022\033\n\rvalidate_" +
+      "only\030\004 \001(\010B\004\342A\001\001\"\305\001\n\rGoalOperation\022/\n\013up" +
+      "date_mask\030\003 \001(\0132\032.google.protobuf.FieldM" +
+      "ask\022:\n\006create\030\001 \001(\0132(.google.ads.googlea" +
+      "ds.v26.resources.GoalH\000\022:\n\006update\030\002 \001(\0132" +
+      "(.google.ads.googleads.v26.resources.Goa" +
+      "lH\000B\013\n\toperation\"\216\001\n\023MutateGoalsResponse" +
+      "\0221\n\025partial_failure_error\030\001 \001(\0132\022.google" +
+      ".rpc.Status\022D\n\007results\030\002 \003(\01323.google.ad" +
+      "s.googleads.v26.services.MutateGoalResul" +
+      "t\"M\n\020MutateGoalResult\0229\n\rresource_name\030\001" +
+      " \001(\tB\"\372A\037\n\035googleads.googleapis.com/Goal" +
+      "2\244\002\n\013GoalService\022\315\001\n\013MutateGoals\0225.googl" +
+      "e.ads.googleads.v26.services.MutateGoals" +
+      "Request\0326.google.ads.googleads.v26.servi" +
+      "ces.MutateGoalsResponse\"O\332A\026customer_id," +
+      "operations\202\323\344\223\0020\"+/v26/customers/{custom" +
+      "er_id=*}/Goals:mutate:\001*\032E\312A\030googleads.g" +
+      "oogleapis.com\322A\'https://www.googleapis.c" +
+      "om/auth/adwordsB\374\001\n%com.google.ads.googl" +
+      "eads.v26.servicesB\020GoalServiceProtoP\001ZIg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v26/services;services\242\002\003GAA\252\002" +
+      "!Google.Ads.GoogleAds.V26.Services\312\002!Goo" +
+      "gle\\Ads\\GoogleAds\\V26\\Services\352\002%Google:" +
+      ":Ads::GoogleAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -48,34 +48,34 @@ public final class AndroidPrivacySharedKeyGoogleAdGroupProto extends com.google.
       "/ads/googleads/v26/enums/android_privacy" +
       "_network_type.proto\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\"" +
-      "\246\006\n$AndroidPrivacySharedKeyGoogleAdGroup" +
-      "\022\\\n\rresource_name\030\001 \001(\tBE\340A\003\372A?\n=googlea" +
-      "ds.googleapis.com/AndroidPrivacySharedKe" +
-      "yGoogleAdGroup\022\030\n\013campaign_id\030\002 \001(\003B\003\340A\003" +
-      "\022\216\001\n android_privacy_interaction_type\030\003 " +
-      "\001(\0162_.google.ads.googleads.v26.enums.And" +
-      "roidPrivacyInteractionTypeEnum.AndroidPr" +
-      "ivacyInteractionTypeB\003\340A\003\022-\n android_pri" +
-      "vacy_interaction_date\030\004 \001(\tB\003\340A\003\022\202\001\n\034and" +
-      "roid_privacy_network_type\030\005 \001(\0162W.google" +
-      ".ads.googleads.v26.enums.AndroidPrivacyN" +
-      "etworkTypeEnum.AndroidPrivacyNetworkType" +
-      "B\003\340A\003\022\030\n\013ad_group_id\030\006 \001(\003B\003\340A\003\022 \n\023share" +
-      "d_ad_group_key\030\007 \001(\tB\003\340A\003:\204\002\352A\200\002\n=google" +
+      "\255\006\n$AndroidPrivacySharedKeyGoogleAdGroup" +
+      "\022]\n\rresource_name\030\001 \001(\tBF\342A\001\003\372A?\n=google" +
       "ads.googleapis.com/AndroidPrivacySharedK" +
-      "eyGoogleAdGroup\022\276\001customers/{customer_id" +
-      "}/androidPrivacySharedKeyGoogleAdGroups/" +
-      "{campaign_id}~{ad_group_id}~{android_pri" +
-      "vacy_interaction_type}~{android_privacy_" +
-      "network_type}~{android_privacy_interacti" +
-      "on_date}B\233\002\n&com.google.ads.googleads.v2" +
-      "6.resourcesB)AndroidPrivacySharedKeyGoog" +
-      "leAdGroupProtoP\001ZKgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v26/resour" +
-      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
-      "ds.V26.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
-      "V26\\Resources\352\002&Google::Ads::GoogleAds::" +
-      "V26::Resourcesb\006proto3"
+      "eyGoogleAdGroup\022\031\n\013campaign_id\030\002 \001(\003B\004\342A" +
+      "\001\003\022\217\001\n android_privacy_interaction_type\030" +
+      "\003 \001(\0162_.google.ads.googleads.v26.enums.A" +
+      "ndroidPrivacyInteractionTypeEnum.Android" +
+      "PrivacyInteractionTypeB\004\342A\001\003\022.\n android_" +
+      "privacy_interaction_date\030\004 \001(\tB\004\342A\001\003\022\203\001\n" +
+      "\034android_privacy_network_type\030\005 \001(\0162W.go" +
+      "ogle.ads.googleads.v26.enums.AndroidPriv" +
+      "acyNetworkTypeEnum.AndroidPrivacyNetwork" +
+      "TypeB\004\342A\001\003\022\031\n\013ad_group_id\030\006 \001(\003B\004\342A\001\003\022!\n" +
+      "\023shared_ad_group_key\030\007 \001(\tB\004\342A\001\003:\204\002\352A\200\002\n" +
+      "=googleads.googleapis.com/AndroidPrivacy" +
+      "SharedKeyGoogleAdGroup\022\276\001customers/{cust" +
+      "omer_id}/androidPrivacySharedKeyGoogleAd" +
+      "Groups/{campaign_id}~{ad_group_id}~{andr" +
+      "oid_privacy_interaction_type}~{android_p" +
+      "rivacy_network_type}~{android_privacy_in" +
+      "teraction_date}B\233\002\n&com.google.ads.googl" +
+      "eads.v26.resourcesB)AndroidPrivacyShared" +
+      "KeyGoogleAdGroupProtoP\001ZKgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v26" +
+      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
+      "GoogleAds.V26.Resources\312\002\"Google\\Ads\\Goo" +
+      "gleAds\\V26\\Resources\352\002&Google::Ads::Goog" +
+      "leAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

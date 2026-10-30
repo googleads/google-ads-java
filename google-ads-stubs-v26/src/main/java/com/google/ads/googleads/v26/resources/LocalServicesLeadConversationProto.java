@@ -57,40 +57,40 @@ public final class LocalServicesLeadConversationProto extends com.google.protobu
       "onversation_type.proto\032Dgoogle/ads/googl" +
       "eads/v26/enums/local_services_participan" +
       "t_type.proto\032\037google/api/field_behavior." +
-      "proto\032\031google/api/resource.proto\"\316\006\n\035Loc" +
-      "alServicesLeadConversation\022U\n\rresource_n" +
-      "ame\030\001 \001(\tB>\340A\003\372A8\n6googleads.googleapis." +
-      "com/LocalServicesLeadConversation\022\017\n\002id\030" +
-      "\002 \001(\003B\003\340A\003\022y\n\024conversation_channel\030\003 \001(\016" +
-      "2V.google.ads.googleads.v26.enums.LocalS" +
-      "ervicesLeadConversationTypeEnum.Conversa" +
-      "tionTypeB\003\340A\003\022o\n\020participant_type\030\004 \001(\0162" +
-      "P.google.ads.googleads.v26.enums.LocalSe" +
-      "rvicesParticipantTypeEnum.ParticipantTyp" +
-      "eB\003\340A\003\022@\n\004lead\030\005 \001(\tB2\340A\003\372A,\n*googleads." +
-      "googleapis.com/LocalServicesLead\022\034\n\017even" +
-      "t_date_time\030\006 \001(\tB\003\340A\003\022Z\n\022phone_call_det" +
-      "ails\030\007 \001(\01324.google.ads.googleads.v26.re" +
-      "sources.PhoneCallDetailsB\003\340A\003H\000\210\001\001\022U\n\017me" +
-      "ssage_details\030\010 \001(\01322.google.ads.googlea" +
-      "ds.v26.resources.MessageDetailsB\003\340A\003H\001\210\001" +
-      "\001:\232\001\352A\226\001\n6googleads.googleapis.com/Local" +
-      "ServicesLeadConversation\022\\customers/{cus" +
-      "tomer_id}/localServicesLeadConversations" +
-      "/{local_services_lead_conversation_id}B\025" +
-      "\n\023_phone_call_detailsB\022\n\020_message_detail" +
-      "s\"V\n\020PhoneCallDetails\022!\n\024call_duration_m" +
-      "illis\030\001 \001(\003B\003\340A\003\022\037\n\022call_recording_url\030\002" +
-      " \001(\tB\003\340A\003\"A\n\016MessageDetails\022\021\n\004text\030\001 \001(" +
-      "\tB\003\340A\003\022\034\n\017attachment_urls\030\002 \003(\tB\003\340A\003B\224\002\n" +
-      "&com.google.ads.googleads.v26.resourcesB" +
-      "\"LocalServicesLeadConversationProtoP\001ZKg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v26/resources;resources\242\002\003GAA" +
-      "\252\002\"Google.Ads.GoogleAds.V26.Resources\312\002\"" +
-      "Google\\Ads\\GoogleAds\\V26\\Resources\352\002&Goo" +
-      "gle::Ads::GoogleAds::V26::Resourcesb\006pro" +
-      "to3"
+      "proto\032\031google/api/resource.proto\"\326\006\n\035Loc" +
+      "alServicesLeadConversation\022V\n\rresource_n" +
+      "ame\030\001 \001(\tB?\342A\001\003\372A8\n6googleads.googleapis" +
+      ".com/LocalServicesLeadConversation\022\020\n\002id" +
+      "\030\002 \001(\003B\004\342A\001\003\022z\n\024conversation_channel\030\003 \001" +
+      "(\0162V.google.ads.googleads.v26.enums.Loca" +
+      "lServicesLeadConversationTypeEnum.Conver" +
+      "sationTypeB\004\342A\001\003\022p\n\020participant_type\030\004 \001" +
+      "(\0162P.google.ads.googleads.v26.enums.Loca" +
+      "lServicesParticipantTypeEnum.Participant" +
+      "TypeB\004\342A\001\003\022A\n\004lead\030\005 \001(\tB3\342A\001\003\372A,\n*googl" +
+      "eads.googleapis.com/LocalServicesLead\022\035\n" +
+      "\017event_date_time\030\006 \001(\tB\004\342A\001\003\022[\n\022phone_ca" +
+      "ll_details\030\007 \001(\01324.google.ads.googleads." +
+      "v26.resources.PhoneCallDetailsB\004\342A\001\003H\000\210\001" +
+      "\001\022V\n\017message_details\030\010 \001(\01322.google.ads." +
+      "googleads.v26.resources.MessageDetailsB\004" +
+      "\342A\001\003H\001\210\001\001:\232\001\352A\226\001\n6googleads.googleapis.c" +
+      "om/LocalServicesLeadConversation\022\\custom" +
+      "ers/{customer_id}/localServicesLeadConve" +
+      "rsations/{local_services_lead_conversati" +
+      "on_id}B\025\n\023_phone_call_detailsB\022\n\020_messag" +
+      "e_details\"X\n\020PhoneCallDetails\022\"\n\024call_du" +
+      "ration_millis\030\001 \001(\003B\004\342A\001\003\022 \n\022call_record" +
+      "ing_url\030\002 \001(\tB\004\342A\001\003\"C\n\016MessageDetails\022\022\n" +
+      "\004text\030\001 \001(\tB\004\342A\001\003\022\035\n\017attachment_urls\030\002 \003" +
+      "(\tB\004\342A\001\003B\224\002\n&com.google.ads.googleads.v2" +
+      "6.resourcesB\"LocalServicesLeadConversati" +
+      "onProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v26/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V26::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

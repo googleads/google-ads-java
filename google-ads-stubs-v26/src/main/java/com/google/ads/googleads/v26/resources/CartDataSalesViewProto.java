@@ -44,19 +44,19 @@ public final class CartDataSalesViewProto extends com.google.protobuf.GeneratedF
       "t_data_sales_view.proto\022\"google.ads.goog" +
       "leads.v26.resources\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\"" +
-      "\342\001\n\021CartDataSalesView\022I\n\rresource_name\030\001" +
-      " \001(\tB2\340A\003\372A,\n*googleads.googleapis.com/C" +
-      "artDataSalesView:\201\001\352A~\n*googleads.google" +
-      "apis.com/CartDataSalesView\022)customers/{c" +
-      "ustomer_id}/cartDataSalesView*\022cartDataS" +
-      "alesViews2\021cartDataSalesViewB\210\002\n&com.goo" +
-      "gle.ads.googleads.v26.resourcesB\026CartDat" +
-      "aSalesViewProtoP\001ZKgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v26/resou" +
-      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
-      "Ads.V26.Resources\312\002\"Google\\Ads\\GoogleAds" +
-      "\\V26\\Resources\352\002&Google::Ads::GoogleAds:" +
-      ":V26::Resourcesb\006proto3"
+      "\343\001\n\021CartDataSalesView\022J\n\rresource_name\030\001" +
+      " \001(\tB3\342A\001\003\372A,\n*googleads.googleapis.com/" +
+      "CartDataSalesView:\201\001\352A~\n*googleads.googl" +
+      "eapis.com/CartDataSalesView\022)customers/{" +
+      "customer_id}/cartDataSalesView*\022cartData" +
+      "SalesViews2\021cartDataSalesViewB\210\002\n&com.go" +
+      "ogle.ads.googleads.v26.resourcesB\026CartDa" +
+      "taSalesViewProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v26/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V26.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V26\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

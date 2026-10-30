@@ -172,64 +172,64 @@ public final class AudienceInsightsAttributeProto extends com.google.protobuf.Ge
       "beVideoInfoH\000\022=\n\006device\030\014 \001(\0132+.google.a" +
       "ds.googleads.v26.common.DeviceInfoH\000\022B\n\t" +
       "user_list\030\016 \001(\0132-.google.ads.googleads.v" +
-      "26.common.UserListInfoH\000B\013\n\tattribute\"A\n" +
-      "\026AudienceInsightsEntity\022\'\n\032knowledge_gra" +
-      "ph_machine_id\030\001 \001(\tB\003\340A\002\"4\n\030AudienceInsi" +
-      "ghtsCategory\022\030\n\013category_id\030\001 \001(\tB\003\340A\002\"0" +
-      "\n\026AudienceInsightsLineup\022\026\n\tlineup_id\030\001 " +
-      "\001(\tB\003\340A\002\";\n\037YouTubeChannelAttributeMetad" +
-      "ata\022\030\n\020subscriber_count\030\001 \001(\003\"\311\002\n\035YouTub" +
-      "eVideoAttributeMetadata\022\025\n\rthumbnail_url" +
-      "\030\001 \001(\t\022\021\n\tvideo_url\030\002 \001(\t\022\023\n\013views_count" +
-      "\030\003 \001(\003\022\023\n\013likes_count\030\004 \001(\003\022\026\n\016comments_" +
-      "count\030\005 \001(\003\022g\n\020video_properties\030\006 \003(\0162M." +
-      "google.ads.googleads.v26.enums.YouTubeVi" +
-      "deoPropertyEnum.YouTubeVideoProperty\022\024\n\014" +
-      "publish_date\030\007 \001(\t\022\022\n\nchannel_id\030\010 \001(\t\022\024" +
-      "\n\014channel_name\030\t \001(\t\022\023\n\013channel_url\030\n \001(" +
-      "\t\"\356\004\n\027LineupAttributeMetadata\022H\n\021invento" +
-      "ry_country\030\001 \001(\0132-.google.ads.googleads." +
-      "v26.common.LocationInfo\022%\n\030median_monthl" +
-      "y_inventory\030\002 \001(\003H\000\210\001\001\022&\n\031channel_count_" +
-      "lower_bound\030\003 \001(\003H\001\210\001\001\022&\n\031channel_count_" +
-      "upper_bound\030\004 \001(\003H\002\210\001\001\022_\n\017sample_channel" +
-      "s\030\005 \003(\0132F.google.ads.googleads.v26.commo" +
-      "n.LineupAttributeMetadata.SampleChannel\032" +
-      "\327\001\n\rSampleChannel\022L\n\017youtube_channel\030\001 \001" +
-      "(\01323.google.ads.googleads.v26.common.You" +
-      "TubeChannelInfo\022\024\n\014display_name\030\002 \001(\t\022b\n" +
-      "\030youtube_channel_metadata\030\003 \001(\0132@.google" +
-      ".ads.googleads.v26.common.YouTubeChannel" +
-      "AttributeMetadataB\033\n\031_median_monthly_inv" +
-      "entoryB\034\n\032_channel_count_lower_boundB\034\n\032" +
-      "_channel_count_upper_bound\"d\n\031LocationAt" +
-      "tributeMetadata\022G\n\020country_location\030\001 \001(" +
-      "\0132-.google.ads.googleads.v26.common.Loca" +
-      "tionInfo\"B\n\035UserInterestAttributeMetadat" +
-      "a\022!\n\031user_interest_description\030\001 \001(\t\"\226\002\n" +
-      "\037KnowledgeGraphAttributeMetadata\022\222\001\n\023ent" +
-      "ity_capabilities\030\001 \003(\0162u.google.ads.goog" +
-      "leads.v26.enums.InsightsKnowledgeGraphEn" +
-      "tityCapabilitiesEnum.InsightsKnowledgeGr" +
-      "aphEntityCapabilities\022^\n\022related_categor" +
-      "ies\030\002 \003(\0132B.google.ads.googleads.v26.com" +
-      "mon.AudienceInsightsAttributeMetadata\"r\n" +
-      "\031UserListAttributeMetadata\022U\n\016user_list_" +
-      "type\030\001 \001(\0162=.google.ads.googleads.v26.en" +
-      "ums.UserListTypeEnum.UserListType\"\200\001\n&Au" +
-      "dienceInsightsAttributeMetadataGroup\022V\n\n" +
-      "attributes\030\001 \003(\0132B.google.ads.googleads." +
-      "v26.common.AudienceInsightsAttributeMeta" +
-      "data\"u\n\036InsightsAudienceAttributeGroup\022S" +
-      "\n\nattributes\030\001 \003(\0132:.google.ads.googlead" +
-      "s.v26.common.AudienceInsightsAttributeB\003" +
-      "\340A\002B\376\001\n#com.google.ads.googleads.v26.com" +
-      "monB\036AudienceInsightsAttributeProtoP\001ZEg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v26/common;common\242\002\003GAA\252\002\037Goo" +
-      "gle.Ads.GoogleAds.V26.Common\312\002\037Google\\Ad" +
-      "s\\GoogleAds\\V26\\Common\352\002#Google::Ads::Go" +
-      "ogleAds::V26::Commonb\006proto3"
+      "26.common.UserListInfoH\000B\013\n\tattribute\"B\n" +
+      "\026AudienceInsightsEntity\022(\n\032knowledge_gra" +
+      "ph_machine_id\030\001 \001(\tB\004\342A\001\002\"5\n\030AudienceIns" +
+      "ightsCategory\022\031\n\013category_id\030\001 \001(\tB\004\342A\001\002" +
+      "\"1\n\026AudienceInsightsLineup\022\027\n\tlineup_id\030" +
+      "\001 \001(\tB\004\342A\001\002\";\n\037YouTubeChannelAttributeMe" +
+      "tadata\022\030\n\020subscriber_count\030\001 \001(\003\"\311\002\n\035You" +
+      "TubeVideoAttributeMetadata\022\025\n\rthumbnail_" +
+      "url\030\001 \001(\t\022\021\n\tvideo_url\030\002 \001(\t\022\023\n\013views_co" +
+      "unt\030\003 \001(\003\022\023\n\013likes_count\030\004 \001(\003\022\026\n\016commen" +
+      "ts_count\030\005 \001(\003\022g\n\020video_properties\030\006 \003(\016" +
+      "2M.google.ads.googleads.v26.enums.YouTub" +
+      "eVideoPropertyEnum.YouTubeVideoProperty\022" +
+      "\024\n\014publish_date\030\007 \001(\t\022\022\n\nchannel_id\030\010 \001(" +
+      "\t\022\024\n\014channel_name\030\t \001(\t\022\023\n\013channel_url\030\n" +
+      " \001(\t\"\356\004\n\027LineupAttributeMetadata\022H\n\021inve" +
+      "ntory_country\030\001 \001(\0132-.google.ads.googlea" +
+      "ds.v26.common.LocationInfo\022%\n\030median_mon" +
+      "thly_inventory\030\002 \001(\003H\000\210\001\001\022&\n\031channel_cou" +
+      "nt_lower_bound\030\003 \001(\003H\001\210\001\001\022&\n\031channel_cou" +
+      "nt_upper_bound\030\004 \001(\003H\002\210\001\001\022_\n\017sample_chan" +
+      "nels\030\005 \003(\0132F.google.ads.googleads.v26.co" +
+      "mmon.LineupAttributeMetadata.SampleChann" +
+      "el\032\327\001\n\rSampleChannel\022L\n\017youtube_channel\030" +
+      "\001 \001(\01323.google.ads.googleads.v26.common." +
+      "YouTubeChannelInfo\022\024\n\014display_name\030\002 \001(\t" +
+      "\022b\n\030youtube_channel_metadata\030\003 \001(\0132@.goo" +
+      "gle.ads.googleads.v26.common.YouTubeChan" +
+      "nelAttributeMetadataB\033\n\031_median_monthly_" +
+      "inventoryB\034\n\032_channel_count_lower_boundB" +
+      "\034\n\032_channel_count_upper_bound\"d\n\031Locatio" +
+      "nAttributeMetadata\022G\n\020country_location\030\001" +
+      " \001(\0132-.google.ads.googleads.v26.common.L" +
+      "ocationInfo\"B\n\035UserInterestAttributeMeta" +
+      "data\022!\n\031user_interest_description\030\001 \001(\t\"" +
+      "\226\002\n\037KnowledgeGraphAttributeMetadata\022\222\001\n\023" +
+      "entity_capabilities\030\001 \003(\0162u.google.ads.g" +
+      "oogleads.v26.enums.InsightsKnowledgeGrap" +
+      "hEntityCapabilitiesEnum.InsightsKnowledg" +
+      "eGraphEntityCapabilities\022^\n\022related_cate" +
+      "gories\030\002 \003(\0132B.google.ads.googleads.v26." +
+      "common.AudienceInsightsAttributeMetadata" +
+      "\"r\n\031UserListAttributeMetadata\022U\n\016user_li" +
+      "st_type\030\001 \001(\0162=.google.ads.googleads.v26" +
+      ".enums.UserListTypeEnum.UserListType\"\200\001\n" +
+      "&AudienceInsightsAttributeMetadataGroup\022" +
+      "V\n\nattributes\030\001 \003(\0132B.google.ads.googlea" +
+      "ds.v26.common.AudienceInsightsAttributeM" +
+      "etadata\"v\n\036InsightsAudienceAttributeGrou" +
+      "p\022T\n\nattributes\030\001 \003(\0132:.google.ads.googl" +
+      "eads.v26.common.AudienceInsightsAttribut" +
+      "eB\004\342A\001\002B\376\001\n#com.google.ads.googleads.v26" +
+      ".commonB\036AudienceInsightsAttributeProtoP" +
+      "\001ZEgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v26/common;common\242\002\003GAA\252\002" +
+      "\037Google.Ads.GoogleAds.V26.Common\312\002\037Googl" +
+      "e\\Ads\\GoogleAds\\V26\\Common\352\002#Google::Ads" +
+      "::GoogleAds::V26::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

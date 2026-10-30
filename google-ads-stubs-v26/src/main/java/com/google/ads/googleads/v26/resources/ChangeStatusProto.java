@@ -47,59 +47,59 @@ public final class ChangeStatusProto extends com.google.protobuf.GeneratedFile {
       "le/ads/googleads/v26/enums/change_status" +
       "_resource_type.proto\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\"\241\016\n\014ChangeStatus\022D\n\rresource_name\030\001 \001(\t" +
-      "B-\340A\003\372A\'\n%googleads.googleapis.com/Chang" +
-      "eStatus\022\'\n\025last_change_date_time\030\030 \001(\tB\003" +
-      "\340A\003H\000\210\001\001\022q\n\rresource_type\030\004 \001(\0162U.google" +
-      ".ads.googleads.v26.enums.ChangeStatusRes" +
-      "ourceTypeEnum.ChangeStatusResourceTypeB\003" +
-      "\340A\003\022@\n\010campaign\030\021 \001(\tB)\340A\003\372A#\n!googleads" +
-      ".googleapis.com/CampaignH\001\210\001\001\022?\n\010ad_grou" +
-      "p\030\022 \001(\tB(\340A\003\372A\"\n googleads.googleapis.co" +
-      "m/AdGroupH\002\210\001\001\022m\n\017resource_status\030\010 \001(\0162" +
-      "O.google.ads.googleads.v26.enums.ChangeS" +
-      "tatusOperationEnum.ChangeStatusOperation" +
-      "B\003\340A\003\022D\n\013ad_group_ad\030\031 \001(\tB*\340A\003\372A$\n\"goog" +
-      "leads.googleapis.com/AdGroupAdH\003\210\001\001\022R\n\022a" +
-      "d_group_criterion\030\032 \001(\tB1\340A\003\372A+\n)googlea" +
-      "ds.googleapis.com/AdGroupCriterionH\004\210\001\001\022" +
-      "S\n\022campaign_criterion\030\033 \001(\tB2\340A\003\372A,\n*goo" +
-      "gleads.googleapis.com/CampaignCriterionH" +
-      "\005\210\001\001\022W\n\025ad_group_bid_modifier\030  \001(\tB3\340A\003" +
-      "\372A-\n+googleads.googleapis.com/AdGroupBid" +
-      "ModifierH\006\210\001\001\022>\n\nshared_set\030! \001(\tB*\340A\003\372A" +
-      "$\n\"googleads.googleapis.com/SharedSet\022O\n" +
-      "\023campaign_shared_set\030\" \001(\tB2\340A\003\372A,\n*goog" +
-      "leads.googleapis.com/CampaignSharedSet\0225" +
-      "\n\005asset\030# \001(\tB&\340A\003\372A \n\036googleads.googlea" +
-      "pis.com/Asset\022F\n\016customer_asset\030$ \001(\tB.\340" +
-      "A\003\372A(\n&googleads.googleapis.com/Customer" +
-      "Asset\022F\n\016campaign_asset\030% \001(\tB.\340A\003\372A(\n&g" +
-      "oogleads.googleapis.com/CampaignAsset\022E\n" +
-      "\016ad_group_asset\030& \001(\tB-\340A\003\372A\'\n%googleads" +
-      ".googleapis.com/AdGroupAsset\022L\n\021combined" +
-      "_audience\030( \001(\tB1\340A\003\372A+\n)googleads.googl" +
-      "eapis.com/CombinedAudience\022@\n\013asset_grou" +
-      "p\030) \001(\tB+\340A\003\372A%\n#googleads.googleapis.co" +
-      "m/AssetGroup\022<\n\tasset_set\030+ \001(\tB)\340A\003\372A#\n" +
-      "!googleads.googleapis.com/AssetSet\022H\n\017ca" +
-      "mpaign_budget\030* \001(\tB/\340A\003\372A)\n\'googleads.g" +
-      "oogleapis.com/CampaignBudget\022M\n\022campaign" +
-      "_asset_set\030, \001(\tB1\340A\003\372A+\n)googleads.goog" +
-      "leapis.com/CampaignAssetSet:c\352A`\n%google" +
-      "ads.googleapis.com/ChangeStatus\0227custome" +
-      "rs/{customer_id}/changeStatus/{change_st" +
-      "atus_id}B\030\n\026_last_change_date_timeB\013\n\t_c" +
-      "ampaignB\013\n\t_ad_groupB\016\n\014_ad_group_adB\025\n\023" +
-      "_ad_group_criterionB\025\n\023_campaign_criteri" +
-      "onB\030\n\026_ad_group_bid_modifierB\203\002\n&com.goo" +
-      "gle.ads.googleads.v26.resourcesB\021ChangeS" +
-      "tatusProtoP\001ZKgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v26/resources;" +
-      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
-      "26.Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\" +
-      "Resources\352\002&Google::Ads::GoogleAds::V26:" +
-      ":Resourcesb\006proto3"
+      "\"\266\016\n\014ChangeStatus\022E\n\rresource_name\030\001 \001(\t" +
+      "B.\342A\001\003\372A\'\n%googleads.googleapis.com/Chan" +
+      "geStatus\022(\n\025last_change_date_time\030\030 \001(\tB" +
+      "\004\342A\001\003H\000\210\001\001\022r\n\rresource_type\030\004 \001(\0162U.goog" +
+      "le.ads.googleads.v26.enums.ChangeStatusR" +
+      "esourceTypeEnum.ChangeStatusResourceType" +
+      "B\004\342A\001\003\022A\n\010campaign\030\021 \001(\tB*\342A\001\003\372A#\n!googl" +
+      "eads.googleapis.com/CampaignH\001\210\001\001\022@\n\010ad_" +
+      "group\030\022 \001(\tB)\342A\001\003\372A\"\n googleads.googleap" +
+      "is.com/AdGroupH\002\210\001\001\022n\n\017resource_status\030\010" +
+      " \001(\0162O.google.ads.googleads.v26.enums.Ch" +
+      "angeStatusOperationEnum.ChangeStatusOper" +
+      "ationB\004\342A\001\003\022E\n\013ad_group_ad\030\031 \001(\tB+\342A\001\003\372A" +
+      "$\n\"googleads.googleapis.com/AdGroupAdH\003\210" +
+      "\001\001\022S\n\022ad_group_criterion\030\032 \001(\tB2\342A\001\003\372A+\n" +
+      ")googleads.googleapis.com/AdGroupCriteri" +
+      "onH\004\210\001\001\022T\n\022campaign_criterion\030\033 \001(\tB3\342A\001" +
+      "\003\372A,\n*googleads.googleapis.com/CampaignC" +
+      "riterionH\005\210\001\001\022X\n\025ad_group_bid_modifier\030 " +
+      " \001(\tB4\342A\001\003\372A-\n+googleads.googleapis.com/" +
+      "AdGroupBidModifierH\006\210\001\001\022?\n\nshared_set\030! " +
+      "\001(\tB+\342A\001\003\372A$\n\"googleads.googleapis.com/S" +
+      "haredSet\022P\n\023campaign_shared_set\030\" \001(\tB3\342" +
+      "A\001\003\372A,\n*googleads.googleapis.com/Campaig" +
+      "nSharedSet\0226\n\005asset\030# \001(\tB\'\342A\001\003\372A \n\036goog" +
+      "leads.googleapis.com/Asset\022G\n\016customer_a" +
+      "sset\030$ \001(\tB/\342A\001\003\372A(\n&googleads.googleapi" +
+      "s.com/CustomerAsset\022G\n\016campaign_asset\030% " +
+      "\001(\tB/\342A\001\003\372A(\n&googleads.googleapis.com/C" +
+      "ampaignAsset\022F\n\016ad_group_asset\030& \001(\tB.\342A" +
+      "\001\003\372A\'\n%googleads.googleapis.com/AdGroupA" +
+      "sset\022M\n\021combined_audience\030( \001(\tB2\342A\001\003\372A+" +
+      "\n)googleads.googleapis.com/CombinedAudie" +
+      "nce\022A\n\013asset_group\030) \001(\tB,\342A\001\003\372A%\n#googl" +
+      "eads.googleapis.com/AssetGroup\022=\n\tasset_" +
+      "set\030+ \001(\tB*\342A\001\003\372A#\n!googleads.googleapis" +
+      ".com/AssetSet\022I\n\017campaign_budget\030* \001(\tB0" +
+      "\342A\001\003\372A)\n\'googleads.googleapis.com/Campai" +
+      "gnBudget\022N\n\022campaign_asset_set\030, \001(\tB2\342A" +
+      "\001\003\372A+\n)googleads.googleapis.com/Campaign" +
+      "AssetSet:c\352A`\n%googleads.googleapis.com/" +
+      "ChangeStatus\0227customers/{customer_id}/ch" +
+      "angeStatus/{change_status_id}B\030\n\026_last_c" +
+      "hange_date_timeB\013\n\t_campaignB\013\n\t_ad_grou" +
+      "pB\016\n\014_ad_group_adB\025\n\023_ad_group_criterion" +
+      "B\025\n\023_campaign_criterionB\030\n\026_ad_group_bid" +
+      "_modifierB\203\002\n&com.google.ads.googleads.v" +
+      "26.resourcesB\021ChangeStatusProtoP\001ZKgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v26/resources;resources\242\002\003GAA\252\002\"G" +
+      "oogle.Ads.GoogleAds.V26.Resources\312\002\"Goog" +
+      "le\\Ads\\GoogleAds\\V26\\Resources\352\002&Google:" +
+      ":Ads::GoogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

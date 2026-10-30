@@ -72,51 +72,52 @@ public final class DataLinkServiceProto extends com.google.protobuf.GeneratedFil
       "s/googleads/v26/resources/data_link.prot" +
       "o\032\034google/api/annotations.proto\032\027google/" +
       "api/client.proto\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"w\n\025" +
-      "CreateDataLinkRequest\022\030\n\013customer_id\030\001 \001" +
-      "(\tB\003\340A\002\022D\n\tdata_link\030\002 \001(\0132,.google.ads." +
-      "googleads.v26.resources.DataLinkB\003\340A\002\"W\n" +
-      "\026CreateDataLinkResponse\022=\n\rresource_name" +
-      "\030\001 \001(\tB&\372A#\n!googleads.googleapis.com/Da" +
-      "taLink\"s\n\025RemoveDataLinkRequest\022\030\n\013custo" +
-      "mer_id\030\001 \001(\tB\003\340A\002\022@\n\rresource_name\030\002 \001(\t" +
-      "B)\340A\002\372A#\n!googleads.googleapis.com/DataL" +
-      "ink\"W\n\026RemoveDataLinkResponse\022=\n\rresourc" +
-      "e_name\030\001 \001(\tB&\372A#\n!googleads.googleapis." +
-      "com/DataLink\"\325\001\n\025UpdateDataLinkRequest\022\030" +
-      "\n\013customer_id\030\001 \001(\tB\003\340A\002\022`\n\020data_link_st" +
-      "atus\030\002 \001(\0162A.google.ads.googleads.v26.en" +
-      "ums.DataLinkStatusEnum.DataLinkStatusB\003\340" +
-      "A\002\022@\n\rresource_name\030\003 \001(\tB)\340A\002\372A#\n!googl" +
-      "eads.googleapis.com/DataLink\"W\n\026UpdateDa" +
-      "taLinkResponse\022=\n\rresource_name\030\001 \001(\tB&\372" +
-      "A#\n!googleads.googleapis.com/DataLink2\205\006" +
-      "\n\017DataLinkService\022\331\001\n\016CreateDataLink\0228.g" +
-      "oogle.ads.googleads.v26.services.CreateD" +
-      "ataLinkRequest\0329.google.ads.googleads.v2" +
-      "6.services.CreateDataLinkResponse\"R\332A\025cu" +
-      "stomer_id,data_link\202\323\344\223\0024\"//v26/customer" +
-      "s/{customer_id=*}/dataLinks:create:\001*\022\335\001" +
-      "\n\016RemoveDataLink\0228.google.ads.googleads." +
-      "v26.services.RemoveDataLinkRequest\0329.goo" +
-      "gle.ads.googleads.v26.services.RemoveDat" +
-      "aLinkResponse\"V\332A\031customer_id,resource_n" +
-      "ame\202\323\344\223\0024\"//v26/customers/{customer_id=*" +
-      "}/dataLinks:remove:\001*\022\356\001\n\016UpdateDataLink" +
-      "\0228.google.ads.googleads.v26.services.Upd" +
-      "ateDataLinkRequest\0329.google.ads.googlead" +
-      "s.v26.services.UpdateDataLinkResponse\"g\332" +
-      "A*customer_id,data_link_status,resource_" +
-      "name\202\323\344\223\0024\"//v26/customers/{customer_id=" +
-      "*}/dataLinks:update:\001*\032E\312A\030googleads.goo" +
-      "gleapis.com\322A\'https://www.googleapis.com" +
-      "/auth/adwordsB\200\002\n%com.google.ads.googlea" +
-      "ds.v26.servicesB\024DataLinkServiceProtoP\001Z" +
-      "Igoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v26/services;services\242\002\003GAA" +
-      "\252\002!Google.Ads.GoogleAds.V26.Services\312\002!G" +
-      "oogle\\Ads\\GoogleAds\\V26\\Services\352\002%Googl" +
-      "e::Ads::GoogleAds::V26::Servicesb\006proto3"
+      "ior.proto\032\031google/api/resource.proto\"y\n\025" +
+      "CreateDataLinkRequest\022\031\n\013customer_id\030\001 \001" +
+      "(\tB\004\342A\001\002\022E\n\tdata_link\030\002 \001(\0132,.google.ads" +
+      ".googleads.v26.resources.DataLinkB\004\342A\001\002\"" +
+      "W\n\026CreateDataLinkResponse\022=\n\rresource_na" +
+      "me\030\001 \001(\tB&\372A#\n!googleads.googleapis.com/" +
+      "DataLink\"u\n\025RemoveDataLinkRequest\022\031\n\013cus" +
+      "tomer_id\030\001 \001(\tB\004\342A\001\002\022A\n\rresource_name\030\002 " +
+      "\001(\tB*\342A\001\002\372A#\n!googleads.googleapis.com/D" +
+      "ataLink\"W\n\026RemoveDataLinkResponse\022=\n\rres" +
+      "ource_name\030\001 \001(\tB&\372A#\n!googleads.googlea" +
+      "pis.com/DataLink\"\330\001\n\025UpdateDataLinkReque" +
+      "st\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022a\n\020data_li" +
+      "nk_status\030\002 \001(\0162A.google.ads.googleads.v" +
+      "26.enums.DataLinkStatusEnum.DataLinkStat" +
+      "usB\004\342A\001\002\022A\n\rresource_name\030\003 \001(\tB*\342A\001\002\372A#" +
+      "\n!googleads.googleapis.com/DataLink\"W\n\026U" +
+      "pdateDataLinkResponse\022=\n\rresource_name\030\001" +
+      " \001(\tB&\372A#\n!googleads.googleapis.com/Data" +
+      "Link2\205\006\n\017DataLinkService\022\331\001\n\016CreateDataL" +
+      "ink\0228.google.ads.googleads.v26.services." +
+      "CreateDataLinkRequest\0329.google.ads.googl" +
+      "eads.v26.services.CreateDataLinkResponse" +
+      "\"R\332A\025customer_id,data_link\202\323\344\223\0024\"//v26/c" +
+      "ustomers/{customer_id=*}/dataLinks:creat" +
+      "e:\001*\022\335\001\n\016RemoveDataLink\0228.google.ads.goo" +
+      "gleads.v26.services.RemoveDataLinkReques" +
+      "t\0329.google.ads.googleads.v26.services.Re" +
+      "moveDataLinkResponse\"V\332A\031customer_id,res" +
+      "ource_name\202\323\344\223\0024\"//v26/customers/{custom" +
+      "er_id=*}/dataLinks:remove:\001*\022\356\001\n\016UpdateD" +
+      "ataLink\0228.google.ads.googleads.v26.servi" +
+      "ces.UpdateDataLinkRequest\0329.google.ads.g" +
+      "oogleads.v26.services.UpdateDataLinkResp" +
+      "onse\"g\332A*customer_id,data_link_status,re" +
+      "source_name\202\323\344\223\0024\"//v26/customers/{custo" +
+      "mer_id=*}/dataLinks:update:\001*\032E\312A\030google" +
+      "ads.googleapis.com\322A\'https://www.googlea" +
+      "pis.com/auth/adwordsB\200\002\n%com.google.ads." +
+      "googleads.v26.servicesB\024DataLinkServiceP" +
+      "rotoP\001ZIgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v26/services;service" +
+      "s\242\002\003GAA\252\002!Google.Ads.GoogleAds.V26.Servi" +
+      "ces\312\002!Google\\Ads\\GoogleAds\\V26\\Services\352" +
+      "\002%Google::Ads::GoogleAds::V26::Servicesb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

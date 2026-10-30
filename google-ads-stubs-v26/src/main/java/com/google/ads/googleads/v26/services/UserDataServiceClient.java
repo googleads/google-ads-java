@@ -32,7 +32,10 @@ import org.jspecify.annotations.Nullable;
  * list through this service will be eligible for matching as per the customer matching process. See
  * https://support.google.com/google-ads/answer/7474263. However, the uploads made through this
  * service will not be visible under the 'Segment members' section for the Customer Match List in
- * the Google Ads UI.
+ * the Google Ads UI. For help diagnosing and resolving conversion or user data upload issues, see
+ * the conversion upload [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+ * (or use the `troubleshoot-conversions` workflow in the [Google Ads API Developer
+ * Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:

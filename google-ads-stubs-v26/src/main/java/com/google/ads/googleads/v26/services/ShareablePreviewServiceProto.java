@@ -51,29 +51,29 @@ public final class ShareablePreviewServiceProto extends com.google.protobuf.Gene
       "eads/v26/actions/generate_shareable_prev" +
       "iews.proto\032\034google/api/annotations.proto" +
       "\032\027google/api/client.proto\032\037google/api/fi" +
-      "eld_behavior.proto\"\225\001\n GenerateShareable" +
-      "PreviewsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A" +
-      "\002\022W\n\toperation\030\003 \001(\0132D.google.ads.google" +
-      "ads.v26.actions.GenerateShareablePreview" +
-      "sOperation\"v\n!GenerateShareablePreviewsR" +
-      "esponse\022Q\n\006result\030\003 \001(\0132A.google.ads.goo" +
-      "gleads.v26.actions.GenerateShareablePrev" +
-      "iewsResult2\334\002\n\027ShareablePreviewService\022\371" +
-      "\001\n\031GenerateShareablePreviews\022C.google.ad" +
-      "s.googleads.v26.services.GenerateShareab" +
-      "lePreviewsRequest\032D.google.ads.googleads" +
-      ".v26.services.GenerateShareablePreviewsR" +
-      "esponse\"Q\332A\013customer_id\202\323\344\223\002=\"8/v26/cust" +
-      "omers/{customer_id=*}:generateShareableP" +
-      "reviews:\001*\032E\312A\030googleads.googleapis.com\322" +
-      "A\'https://www.googleapis.com/auth/adword" +
-      "sB\210\002\n%com.google.ads.googleads.v26.servi" +
-      "cesB\034ShareablePreviewServiceProtoP\001ZIgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v26/services;services\242\002\003GAA\252\002!G" +
-      "oogle.Ads.GoogleAds.V26.Services\312\002!Googl" +
-      "e\\Ads\\GoogleAds\\V26\\Services\352\002%Google::A" +
-      "ds::GoogleAds::V26::Servicesb\006proto3"
+      "eld_behavior.proto\"\226\001\n GenerateShareable" +
+      "PreviewsRequest\022\031\n\013customer_id\030\001 \001(\tB\004\342A" +
+      "\001\002\022W\n\toperation\030\003 \001(\0132D.google.ads.googl" +
+      "eads.v26.actions.GenerateShareablePrevie" +
+      "wsOperation\"v\n!GenerateShareablePreviews" +
+      "Response\022Q\n\006result\030\003 \001(\0132A.google.ads.go" +
+      "ogleads.v26.actions.GenerateShareablePre" +
+      "viewsResult2\334\002\n\027ShareablePreviewService\022" +
+      "\371\001\n\031GenerateShareablePreviews\022C.google.a" +
+      "ds.googleads.v26.services.GenerateSharea" +
+      "blePreviewsRequest\032D.google.ads.googlead" +
+      "s.v26.services.GenerateShareablePreviews" +
+      "Response\"Q\332A\013customer_id\202\323\344\223\002=\"8/v26/cus" +
+      "tomers/{customer_id=*}:generateShareable" +
+      "Previews:\001*\032E\312A\030googleads.googleapis.com" +
+      "\322A\'https://www.googleapis.com/auth/adwor" +
+      "dsB\210\002\n%com.google.ads.googleads.v26.serv" +
+      "icesB\034ShareablePreviewServiceProtoP\001ZIgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v26/services;services\242\002\003GAA\252\002!" +
+      "Google.Ads.GoogleAds.V26.Services\312\002!Goog" +
+      "le\\Ads\\GoogleAds\\V26\\Services\352\002%Google::" +
+      "Ads::GoogleAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

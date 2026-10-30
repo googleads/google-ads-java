@@ -67,48 +67,49 @@ public final class MultiPartyAuthReviewServiceProto extends com.google.protobuf.
       "view_status.proto\032\034google/api/annotation" +
       "s.proto\032\027google/api/client.proto\032\037google" +
       "/api/field_behavior.proto\032\031google/api/re" +
-      "source.proto\032\027google/rpc/status.proto\"\240\001" +
-      "\n\"ResolveMultiPartyAuthReviewRequest\022\030\n\013" +
-      "customer_id\030\001 \001(\tB\003\340A\002\022`\n\noperations\030\002 \003" +
-      "(\0132G.google.ads.googleads.v26.services.R" +
-      "esolveMultiPartyAuthReviewOperationB\003\340A\002" +
-      "\"\213\001\n#ResolveMultiPartyAuthReviewResponse" +
-      "\022d\n\017result_or_error\030\001 \003(\0132K.google.ads.g" +
-      "oogleads.v26.services.ResolveMultiPartyA" +
-      "uthReviewResultOrError\"\362\001\n$ResolveMultiP" +
-      "artyAuthReviewOperation\022V\n\027multi_party_a" +
-      "uth_review\030\001 \001(\tB5\340A\002\372A/\n-googleads.goog" +
-      "leapis.com/MultiPartyAuthReview\022r\n\nnew_s" +
-      "tatus\030\002 \001(\0162Y.google.ads.googleads.v26.e" +
-      "nums.MultiPartyAuthReviewStatusEnum.Mult" +
-      "iPartyAuthReviewStatusB\003\340A\002\"\312\001\n(ResolveM" +
-      "ultiPartyAuthReviewResultOrError\022V\n\006resu" +
-      "lt\030\001 \001(\0132D.google.ads.googleads.v26.serv" +
-      "ices.ResolveMultiPartyAuthReviewResultH\000" +
-      "\0223\n\025partial_failure_error\030\002 \001(\0132\022.google" +
-      ".rpc.StatusH\000B\021\n\017result_or_error\"\345\001\n!Res" +
-      "olveMultiPartyAuthReviewResult\022V\n\027multi_" +
-      "party_auth_review\030\001 \001(\tB5\340A\003\372A/\n-googlea" +
-      "ds.googleapis.com/MultiPartyAuthReview\022." +
-      "\n\037customer_user_access_invitation\030\002 \001(\tB" +
-      "\003\340A\003H\000\022#\n\024customer_user_access\030\003 \001(\tB\003\340A" +
-      "\003H\000B\023\n\021resolved_resource2\364\002\n\033MultiPartyA" +
-      "uthReviewService\022\215\002\n\033ResolveMultiPartyAu" +
-      "thReview\022E.google.ads.googleads.v26.serv" +
-      "ices.ResolveMultiPartyAuthReviewRequest\032" +
-      "F.google.ads.googleads.v26.services.Reso" +
-      "lveMultiPartyAuthReviewResponse\"_\332A\026cust" +
-      "omer_id,operations\202\323\344\223\002@\";/v26/customers" +
-      "/{customer_id=*}/multiPartyAuthReview:re" +
-      "solve:\001*\032E\312A\030googleads.googleapis.com\322A\'" +
-      "https://www.googleapis.com/auth/adwordsB" +
-      "\214\002\n%com.google.ads.googleads.v26.service" +
-      "sB MultiPartyAuthReviewServiceProtoP\001ZIg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v26/services;services\242\002\003GAA\252\002" +
-      "!Google.Ads.GoogleAds.V26.Services\312\002!Goo" +
-      "gle\\Ads\\GoogleAds\\V26\\Services\352\002%Google:" +
-      ":Ads::GoogleAds::V26::Servicesb\006proto3"
+      "source.proto\032\027google/rpc/status.proto\"\242\001" +
+      "\n\"ResolveMultiPartyAuthReviewRequest\022\031\n\013" +
+      "customer_id\030\001 \001(\tB\004\342A\001\002\022a\n\noperations\030\002 " +
+      "\003(\0132G.google.ads.googleads.v26.services." +
+      "ResolveMultiPartyAuthReviewOperationB\004\342A" +
+      "\001\002\"\213\001\n#ResolveMultiPartyAuthReviewRespon" +
+      "se\022d\n\017result_or_error\030\001 \003(\0132K.google.ads" +
+      ".googleads.v26.services.ResolveMultiPart" +
+      "yAuthReviewResultOrError\"\364\001\n$ResolveMult" +
+      "iPartyAuthReviewOperation\022W\n\027multi_party" +
+      "_auth_review\030\001 \001(\tB6\342A\001\002\372A/\n-googleads.g" +
+      "oogleapis.com/MultiPartyAuthReview\022s\n\nne" +
+      "w_status\030\002 \001(\0162Y.google.ads.googleads.v2" +
+      "6.enums.MultiPartyAuthReviewStatusEnum.M" +
+      "ultiPartyAuthReviewStatusB\004\342A\001\002\"\312\001\n(Reso" +
+      "lveMultiPartyAuthReviewResultOrError\022V\n\006" +
+      "result\030\001 \001(\0132D.google.ads.googleads.v26." +
+      "services.ResolveMultiPartyAuthReviewResu" +
+      "ltH\000\0223\n\025partial_failure_error\030\002 \001(\0132\022.go" +
+      "ogle.rpc.StatusH\000B\021\n\017result_or_error\"\350\001\n" +
+      "!ResolveMultiPartyAuthReviewResult\022W\n\027mu" +
+      "lti_party_auth_review\030\001 \001(\tB6\342A\001\003\372A/\n-go" +
+      "ogleads.googleapis.com/MultiPartyAuthRev" +
+      "iew\022/\n\037customer_user_access_invitation\030\002" +
+      " \001(\tB\004\342A\001\003H\000\022$\n\024customer_user_access\030\003 \001" +
+      "(\tB\004\342A\001\003H\000B\023\n\021resolved_resource2\364\002\n\033Mult" +
+      "iPartyAuthReviewService\022\215\002\n\033ResolveMulti" +
+      "PartyAuthReview\022E.google.ads.googleads.v" +
+      "26.services.ResolveMultiPartyAuthReviewR" +
+      "equest\032F.google.ads.googleads.v26.servic" +
+      "es.ResolveMultiPartyAuthReviewResponse\"_" +
+      "\332A\026customer_id,operations\202\323\344\223\002@\";/v26/cu" +
+      "stomers/{customer_id=*}/multiPartyAuthRe" +
+      "view:resolve:\001*\032E\312A\030googleads.googleapis" +
+      ".com\322A\'https://www.googleapis.com/auth/a" +
+      "dwordsB\214\002\n%com.google.ads.googleads.v26." +
+      "servicesB MultiPartyAuthReviewServicePro" +
+      "toP\001ZIgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v26/services;services\242" +
+      "\002\003GAA\252\002!Google.Ads.GoogleAds.V26.Service" +
+      "s\312\002!Google\\Ads\\GoogleAds\\V26\\Services\352\002%" +
+      "Google::Ads::GoogleAds::V26::Servicesb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -165,751 +165,760 @@ public final class ErrorsProto extends com.google.protobuf.GeneratedFile {
       "o\0329google/ads/googleads/v26/errors/billi" +
       "ng_setup_error.proto\032Fgoogle/ads/googlea" +
       "ds/v26/errors/brand_guidelines_migration" +
-      "_error.proto\032Jgoogle/ads/googleads/v26/e" +
-      "rrors/business_profile_location_sync_err" +
-      "or.proto\032;google/ads/googleads/v26/error" +
-      "s/campaign_budget_error.proto\032Dgoogle/ad" +
-      "s/googleads/v26/errors/campaign_conversi" +
-      "on_goal_error.proto\032>google/ads/googlead" +
-      "s/v26/errors/campaign_criterion_error.pr" +
-      "oto\032?google/ads/googleads/v26/errors/cam" +
-      "paign_customizer_error.proto\032:google/ads" +
-      "/googleads/v26/errors/campaign_draft_err" +
-      "or.proto\0324google/ads/googleads/v26/error" +
-      "s/campaign_error.proto\032?google/ads/googl" +
-      "eads/v26/errors/campaign_experiment_erro" +
-      "r.proto\0329google/ads/googleads/v26/errors" +
-      "/campaign_feed_error.proto\032@google/ads/g" +
-      "oogleads/v26/errors/campaign_goal_config" +
-      "_error.proto\032?google/ads/googleads/v26/e" +
-      "rrors/campaign_shared_set_error.proto\0328g" +
-      "oogle/ads/googleads/v26/errors/change_ev" +
-      "ent_error.proto\0329google/ads/googleads/v2" +
-      "6/errors/change_status_error.proto\0326goog" +
-      "le/ads/googleads/v26/errors/click_view_e" +
-      "rror.proto\032;google/ads/googleads/v26/err" +
-      "ors/collection_size_error.proto\032Dgoogle/" +
-      "ads/googleads/v26/errors/content_creator" +
-      "_insights_error.proto\0323google/ads/google" +
-      "ads/v26/errors/context_error.proto\032=goog" +
-      "le/ads/googleads/v26/errors/conversion_a" +
-      "ction_error.proto\032Hgoogle/ads/googleads/" +
-      "v26/errors/conversion_adjustment_upload_" +
-      "error.proto\032Fgoogle/ads/googleads/v26/er" +
-      "rors/conversion_custom_variable_error.pr" +
-      "oto\032Kgoogle/ads/googleads/v26/errors/con" +
-      "version_goal_campaign_config_error.proto" +
-      "\032=google/ads/googleads/v26/errors/conver" +
-      "sion_upload_error.proto\032Agoogle/ads/goog" +
-      "leads/v26/errors/conversion_value_rule_e" +
-      "rror.proto\032Egoogle/ads/googleads/v26/err" +
-      "ors/conversion_value_rule_set_error.prot" +
-      "o\0328google/ads/googleads/v26/errors/count" +
-      "ry_code_error.proto\0325google/ads/googlead" +
-      "s/v26/errors/criterion_error.proto\0329goog" +
-      "le/ads/googleads/v26/errors/currency_cod" +
-      "e_error.proto\0324google/ads/googleads/v26/" +
-      "errors/currency_error.proto\032;google/ads/" +
-      "googleads/v26/errors/custom_audience_err" +
-      "or.proto\032Bgoogle/ads/googleads/v26/error" +
-      "s/custom_conversion_goal_error.proto\032;go" +
-      "ogle/ads/googleads/v26/errors/custom_int" +
-      "erest_error.proto\032@google/ads/googleads/" +
-      "v26/errors/customer_client_link_error.pr" +
-      "oto\032?google/ads/googleads/v26/errors/cus" +
-      "tomer_customizer_error.proto\0324google/ads" +
-      "/googleads/v26/errors/customer_error.pro" +
-      "to\0329google/ads/googleads/v26/errors/cust" +
-      "omer_feed_error.proto\032Agoogle/ads/google" +
-      "ads/v26/errors/customer_manager_link_err" +
-      "or.proto\032Zgoogle/ads/googleads/v26/error" +
-      "s/customer_sk_ad_network_conversion_valu" +
-      "e_schema_error.proto\032@google/ads/googlea" +
-      "ds/v26/errors/customer_user_access_error" +
-      ".proto\032@google/ads/googleads/v26/errors/" +
-      "customizer_attribute_error.proto\0325google" +
-      "/ads/googleads/v26/errors/data_link_erro" +
-      "r.proto\0324google/ads/googleads/v26/errors" +
-      "/database_error.proto\0320google/ads/google" +
-      "ads/v26/errors/date_error.proto\0326google/" +
-      "ads/googleads/v26/errors/date_range_erro" +
-      "r.proto\0324google/ads/googleads/v26/errors" +
-      "/distinct_error.proto\0320google/ads/google" +
-      "ads/v26/errors/enum_error.proto\032:google/" +
-      "ads/googleads/v26/errors/experiment_arm_" +
-      "error.proto\0326google/ads/googleads/v26/er" +
-      "rors/experiment_error.proto\032?google/ads/" +
-      "googleads/v26/errors/extension_feed_item" +
-      "_error.proto\032=google/ads/googleads/v26/e" +
-      "rrors/extension_setting_error.proto\032Dgoo" +
-      "gle/ads/googleads/v26/errors/feed_attrib" +
-      "ute_reference_error.proto\0320google/ads/go" +
-      "ogleads/v26/errors/feed_error.proto\0325goo" +
-      "gle/ads/googleads/v26/errors/feed_item_e" +
-      "rror.proto\0329google/ads/googleads/v26/err" +
-      "ors/feed_item_set_error.proto\032>google/ad" +
-      "s/googleads/v26/errors/feed_item_set_lin" +
-      "k_error.proto\032<google/ads/googleads/v26/" +
-      "errors/feed_item_target_error.proto\032@goo" +
-      "gle/ads/googleads/v26/errors/feed_item_v" +
-      "alidation_error.proto\0328google/ads/google" +
-      "ads/v26/errors/feed_mapping_error.proto\032" +
-      "1google/ads/googleads/v26/errors/field_e" +
-      "rror.proto\0326google/ads/googleads/v26/err" +
-      "ors/field_mask_error.proto\032Jgoogle/ads/g" +
-      "oogleads/v26/errors/final_url_expansion_" +
-      "asset_view_error.proto\0324google/ads/googl" +
-      "eads/v26/errors/function_error.proto\032<go" +
-      "ogle/ads/googleads/v26/errors/function_p" +
-      "arsing_error.proto\032Jgoogle/ads/googleads" +
-      "/v26/errors/geo_target_constant_suggesti" +
-      "on_error.proto\0320google/ads/googleads/v26" +
-      "/errors/goal_error.proto\0322google/ads/goo" +
-      "gleads/v26/errors/header_error.proto\032.go" +
-      "ogle/ads/googleads/v26/errors/id_error.p" +
-      "roto\032Agoogle/ads/googleads/v26/errors/id" +
-      "entity_verification_error.proto\0321google/" +
-      "ads/googleads/v26/errors/image_error.pro" +
-      "to\0325google/ads/googleads/v26/errors/ince" +
-      "ntive_error.proto\0324google/ads/googleads/" +
-      "v26/errors/internal_error.proto\0323google/" +
-      "ads/googleads/v26/errors/invoice_error.p" +
-      "roto\032Agoogle/ads/googleads/v26/errors/ke" +
-      "yword_plan_ad_group_error.proto\032Igoogle/" +
-      "ads/googleads/v26/errors/keyword_plan_ad" +
-      "_group_keyword_error.proto\032Agoogle/ads/g" +
-      "oogleads/v26/errors/keyword_plan_campaig" +
-      "n_error.proto\032Igoogle/ads/googleads/v26/" +
-      "errors/keyword_plan_campaign_keyword_err" +
-      "or.proto\0328google/ads/googleads/v26/error" +
-      "s/keyword_plan_error.proto\032=google/ads/g" +
-      "oogleads/v26/errors/keyword_plan_idea_er" +
-      "ror.proto\0321google/ads/googleads/v26/erro" +
-      "rs/label_error.proto\0329google/ads/googlea" +
-      "ds/v26/errors/language_code_error.proto\032" +
-      ":google/ads/googleads/v26/errors/list_op" +
-      "eration_error.proto\0328google/ads/googlead" +
-      "s/v26/errors/manager_link_error.proto\0328g" +
-      "oogle/ads/googleads/v26/errors/media_bun" +
-      "dle_error.proto\0326google/ads/googleads/v2" +
-      "6/errors/media_file_error.proto\0328google/" +
-      "ads/googleads/v26/errors/media_upload_er" +
-      "ror.proto\032;google/ads/googleads/v26/erro" +
-      "rs/merchant_center_error.proto\032Cgoogle/a" +
-      "ds/googleads/v26/errors/multi_party_auth" +
-      "_review_error.proto\0326google/ads/googlead" +
-      "s/v26/errors/multiplier_error.proto\0322goo" +
-      "gle/ads/googleads/v26/errors/mutate_erro" +
-      "r.proto\032Agoogle/ads/googleads/v26/errors" +
-      "/new_resource_creation_error.proto\032;goog" +
-      "le/ads/googleads/v26/errors/not_allowlis" +
-      "ted_error.proto\0325google/ads/googleads/v2" +
-      "6/errors/not_empty_error.proto\0320google/a" +
-      "ds/googleads/v26/errors/null_error.proto" +
-      "\032Agoogle/ads/googleads/v26/errors/offlin" +
-      "e_user_data_job_error.proto\032Cgoogle/ads/" +
-      "googleads/v26/errors/operation_access_de" +
-      "nied_error.proto\0324google/ads/googleads/v" +
-      "26/errors/operator_error.proto\032;google/a" +
-      "ds/googleads/v26/errors/partial_failure_" +
-      "error.proto\032<google/ads/googleads/v26/er" +
-      "rors/payments_account_error.proto\032:googl" +
-      "e/ads/googleads/v26/errors/policy_findin" +
-      "g_error.proto\032Ggoogle/ads/googleads/v26/" +
-      "errors/policy_validation_parameter_error" +
-      ".proto\032<google/ads/googleads/v26/errors/" +
-      "policy_violation_error.proto\0328google/ads" +
-      "/googleads/v26/errors/product_link_error" +
-      ".proto\032Cgoogle/ads/googleads/v26/errors/" +
-      "product_link_invitation_error.proto\0321goo" +
-      "gle/ads/googleads/v26/errors/query_error" +
-      ".proto\0321google/ads/googleads/v26/errors/" +
-      "quota_error.proto\0321google/ads/googleads/" +
-      "v26/errors/range_error.proto\0326google/ads" +
-      "/googleads/v26/errors/reach_plan_error.p" +
-      "roto\032:google/ads/googleads/v26/errors/re" +
-      "commendation_error.proto\032Ggoogle/ads/goo" +
-      "gleads/v26/errors/recommendation_subscri" +
-      "ption_error.proto\0327google/ads/googleads/" +
-      "v26/errors/region_code_error.proto\0323goog" +
-      "le/ads/googleads/v26/errors/request_erro" +
-      "r.proto\032Bgoogle/ads/googleads/v26/errors" +
-      "/resource_access_denied_error.proto\032Igoo" +
-      "gle/ads/googleads/v26/errors/resource_co" +
-      "unt_limit_exceeded_error.proto\032?google/a" +
-      "ds/googleads/v26/errors/search_term_insi" +
-      "ght_error.proto\0323google/ads/googleads/v2" +
-      "6/errors/setting_error.proto\032=google/ads" +
-      "/googleads/v26/errors/shareable_preview_" +
-      "error.proto\032<google/ads/googleads/v26/er" +
-      "rors/shared_criterion_error.proto\0326googl" +
-      "e/ads/googleads/v26/errors/shared_set_er" +
+      "_error.proto\032Bgoogle/ads/googleads/v26/e" +
+      "rrors/budget_network_setting_error.proto" +
+      "\032Jgoogle/ads/googleads/v26/errors/busine" +
+      "ss_profile_location_sync_error.proto\032;go" +
+      "ogle/ads/googleads/v26/errors/campaign_b" +
+      "udget_error.proto\032Dgoogle/ads/googleads/" +
+      "v26/errors/campaign_conversion_goal_erro" +
+      "r.proto\032>google/ads/googleads/v26/errors" +
+      "/campaign_criterion_error.proto\032?google/" +
+      "ads/googleads/v26/errors/campaign_custom" +
+      "izer_error.proto\032:google/ads/googleads/v" +
+      "26/errors/campaign_draft_error.proto\0324go" +
+      "ogle/ads/googleads/v26/errors/campaign_e" +
+      "rror.proto\032?google/ads/googleads/v26/err" +
+      "ors/campaign_experiment_error.proto\0329goo" +
+      "gle/ads/googleads/v26/errors/campaign_fe" +
+      "ed_error.proto\032@google/ads/googleads/v26" +
+      "/errors/campaign_goal_config_error.proto" +
+      "\032?google/ads/googleads/v26/errors/campai" +
+      "gn_shared_set_error.proto\0328google/ads/go" +
+      "ogleads/v26/errors/change_event_error.pr" +
+      "oto\0329google/ads/googleads/v26/errors/cha" +
+      "nge_status_error.proto\0326google/ads/googl" +
+      "eads/v26/errors/click_view_error.proto\032;" +
+      "google/ads/googleads/v26/errors/collecti" +
+      "on_size_error.proto\032Dgoogle/ads/googlead" +
+      "s/v26/errors/content_creator_insights_er" +
+      "ror.proto\0323google/ads/googleads/v26/erro" +
+      "rs/context_error.proto\032=google/ads/googl" +
+      "eads/v26/errors/conversion_action_error." +
+      "proto\032Hgoogle/ads/googleads/v26/errors/c" +
+      "onversion_adjustment_upload_error.proto\032" +
+      "Fgoogle/ads/googleads/v26/errors/convers" +
+      "ion_custom_variable_error.proto\032Kgoogle/" +
+      "ads/googleads/v26/errors/conversion_goal" +
+      "_campaign_config_error.proto\032=google/ads" +
+      "/googleads/v26/errors/conversion_upload_" +
+      "error.proto\032Agoogle/ads/googleads/v26/er" +
+      "rors/conversion_value_rule_error.proto\032E" +
+      "google/ads/googleads/v26/errors/conversi" +
+      "on_value_rule_set_error.proto\0328google/ad" +
+      "s/googleads/v26/errors/country_code_erro" +
+      "r.proto\0325google/ads/googleads/v26/errors" +
+      "/criterion_error.proto\0329google/ads/googl" +
+      "eads/v26/errors/currency_code_error.prot" +
+      "o\0324google/ads/googleads/v26/errors/curre" +
+      "ncy_error.proto\032;google/ads/googleads/v2" +
+      "6/errors/custom_audience_error.proto\032Bgo" +
+      "ogle/ads/googleads/v26/errors/custom_con" +
+      "version_goal_error.proto\032;google/ads/goo" +
+      "gleads/v26/errors/custom_interest_error." +
+      "proto\032@google/ads/googleads/v26/errors/c" +
+      "ustomer_client_link_error.proto\032?google/" +
+      "ads/googleads/v26/errors/customer_custom" +
+      "izer_error.proto\0324google/ads/googleads/v" +
+      "26/errors/customer_error.proto\0329google/a" +
+      "ds/googleads/v26/errors/customer_feed_er" +
+      "ror.proto\032Agoogle/ads/googleads/v26/erro" +
+      "rs/customer_manager_link_error.proto\032Zgo" +
+      "ogle/ads/googleads/v26/errors/customer_s" +
+      "k_ad_network_conversion_value_schema_err" +
+      "or.proto\032@google/ads/googleads/v26/error" +
+      "s/customer_user_access_error.proto\032@goog" +
+      "le/ads/googleads/v26/errors/customizer_a" +
+      "ttribute_error.proto\0325google/ads/googlea" +
+      "ds/v26/errors/data_link_error.proto\0324goo" +
+      "gle/ads/googleads/v26/errors/database_er" +
+      "ror.proto\0320google/ads/googleads/v26/erro" +
+      "rs/date_error.proto\0326google/ads/googlead" +
+      "s/v26/errors/date_range_error.proto\032?goo" +
+      "gle/ads/googleads/v26/errors/demand_gen_" +
+      "campaign_error.proto\0324google/ads/googlea" +
+      "ds/v26/errors/distinct_error.proto\0320goog" +
+      "le/ads/googleads/v26/errors/enum_error.p" +
+      "roto\032:google/ads/googleads/v26/errors/ex" +
+      "periment_arm_error.proto\0326google/ads/goo" +
+      "gleads/v26/errors/experiment_error.proto" +
+      "\032?google/ads/googleads/v26/errors/extens" +
+      "ion_feed_item_error.proto\032=google/ads/go" +
+      "ogleads/v26/errors/extension_setting_err" +
+      "or.proto\032Dgoogle/ads/googleads/v26/error" +
+      "s/feed_attribute_reference_error.proto\0320" +
+      "google/ads/googleads/v26/errors/feed_err" +
+      "or.proto\0325google/ads/googleads/v26/error" +
+      "s/feed_item_error.proto\0329google/ads/goog" +
+      "leads/v26/errors/feed_item_set_error.pro" +
+      "to\032>google/ads/googleads/v26/errors/feed" +
+      "_item_set_link_error.proto\032<google/ads/g" +
+      "oogleads/v26/errors/feed_item_target_err" +
+      "or.proto\032@google/ads/googleads/v26/error" +
+      "s/feed_item_validation_error.proto\0328goog" +
+      "le/ads/googleads/v26/errors/feed_mapping" +
+      "_error.proto\0321google/ads/googleads/v26/e" +
+      "rrors/field_error.proto\0326google/ads/goog" +
+      "leads/v26/errors/field_mask_error.proto\032" +
+      "Jgoogle/ads/googleads/v26/errors/final_u" +
+      "rl_expansion_asset_view_error.proto\0324goo" +
+      "gle/ads/googleads/v26/errors/function_er" +
       "ror.proto\032<google/ads/googleads/v26/erro" +
-      "rs/shopping_product_error.proto\0326google/" +
-      "ads/googleads/v26/errors/size_limit_erro" +
-      "r.proto\032:google/ads/googleads/v26/errors" +
-      "/smart_campaign_error.proto\0329google/ads/" +
-      "googleads/v26/errors/string_format_error" +
-      ".proto\0329google/ads/googleads/v26/errors/" +
-      "string_length_error.proto\032Jgoogle/ads/go" +
-      "ogleads/v26/errors/third_party_app_analy" +
-      "tics_link_error.proto\0325google/ads/google" +
-      "ads/v26/errors/time_zone_error.proto\0325go" +
-      "ogle/ads/googleads/v26/errors/url_field_" +
-      "error.proto\0325google/ads/googleads/v26/er" +
-      "rors/user_data_error.proto\032Cgoogle/ads/g" +
-      "oogleads/v26/errors/user_list_customer_t" +
-      "ype_error.proto\0325google/ads/googleads/v2" +
-      "6/errors/user_list_error.proto\032:google/a" +
-      "ds/googleads/v26/errors/video_campaign_e" +
-      "rror.proto\032=google/ads/googleads/v26/err" +
-      "ors/video_reservation_error.proto\032Fgoogl" +
-      "e/ads/googleads/v26/errors/youtube_video" +
-      "_registration_error.proto\032\036google/protob" +
-      "uf/duration.proto\"g\n\020GoogleAdsFailure\022?\n" +
-      "\006errors\030\001 \003(\0132/.google.ads.googleads.v26" +
-      ".errors.GoogleAdsError\022\022\n\nrequest_id\030\002 \001" +
-      "(\t\"\234\002\n\016GoogleAdsError\022>\n\nerror_code\030\001 \001(" +
-      "\0132*.google.ads.googleads.v26.errors.Erro" +
-      "rCode\022\017\n\007message\030\002 \001(\t\0227\n\007trigger\030\003 \001(\0132" +
-      "&.google.ads.googleads.v26.common.Value\022" +
-      "@\n\010location\030\004 \001(\0132..google.ads.googleads" +
-      ".v26.errors.ErrorLocation\022>\n\007details\030\005 \001" +
-      "(\0132-.google.ads.googleads.v26.errors.Err" +
-      "orDetails\"\373\221\001\n\tErrorCode\022W\n\rrequest_erro" +
-      "r\030\001 \001(\0162>.google.ads.googleads.v26.error" +
-      "s.RequestErrorEnum.RequestErrorH\000\022p\n\026bid" +
-      "ding_strategy_error\030\002 \001(\0162N.google.ads.g" +
-      "oogleads.v26.errors.BiddingStrategyError" +
-      "Enum.BiddingStrategyErrorH\000\022[\n\017url_field" +
-      "_error\030\003 \001(\0162@.google.ads.googleads.v26." +
-      "errors.UrlFieldErrorEnum.UrlFieldErrorH\000" +
-      "\022j\n\024list_operation_error\030\004 \001(\0162J.google." +
-      "ads.googleads.v26.errors.ListOperationEr" +
-      "rorEnum.ListOperationErrorH\000\022Q\n\013query_er" +
-      "ror\030\005 \001(\0162:.google.ads.googleads.v26.err" +
-      "ors.QueryErrorEnum.QueryErrorH\000\022T\n\014mutat" +
-      "e_error\030\007 \001(\0162<.google.ads.googleads.v26" +
-      ".errors.MutateErrorEnum.MutateErrorH\000\022^\n" +
-      "\020field_mask_error\030\010 \001(\0162B.google.ads.goo" +
-      "gleads.v26.errors.FieldMaskErrorEnum.Fie" +
-      "ldMaskErrorH\000\022i\n\023authorization_error\030\t \001" +
-      "(\0162J.google.ads.googleads.v26.errors.Aut" +
-      "horizationErrorEnum.AuthorizationErrorH\000" +
-      "\022Z\n\016internal_error\030\n \001(\0162@.google.ads.go" +
-      "ogleads.v26.errors.InternalErrorEnum.Int" +
-      "ernalErrorH\000\022Q\n\013quota_error\030\013 \001(\0162:.goog" +
-      "le.ads.googleads.v26.errors.QuotaErrorEn" +
-      "um.QuotaErrorH\000\022H\n\010ad_error\030\014 \001(\01624.goog" +
-      "le.ads.googleads.v26.errors.AdErrorEnum." +
-      "AdErrorH\000\022X\n\016ad_group_error\030\r \001(\0162>.goog" +
-      "le.ads.googleads.v26.errors.AdGroupError" +
-      "Enum.AdGroupErrorH\000\022m\n\025campaign_budget_e" +
-      "rror\030\016 \001(\0162L.google.ads.googleads.v26.er" +
-      "rors.CampaignBudgetErrorEnum.CampaignBud" +
-      "getErrorH\000\022Z\n\016campaign_error\030\017 \001(\0162@.goo" +
-      "gle.ads.googleads.v26.errors.CampaignErr" +
-      "orEnum.CampaignErrorH\000\022k\n\024video_campaign" +
-      "_error\030\266\001 \001(\0162J.google.ads.googleads.v26" +
-      ".errors.VideoCampaignErrorEnum.VideoCamp" +
-      "aignErrorH\000\022l\n\024authentication_error\030\021 \001(" +
-      "\0162L.google.ads.googleads.v26.errors.Auth" +
-      "enticationErrorEnum.AuthenticationErrorH" +
-      "\000\022U\n\014action_error\030\304\001 \001(\0162<.google.ads.go" +
-      "ogleads.v26.errors.ActionErrorEnum.Actio" +
-      "nErrorH\000\022\224\001\n#ad_group_criterion_customiz" +
-      "er_error\030\241\001 \001(\0162d.google.ads.googleads.v" +
-      "26.errors.AdGroupCriterionCustomizerErro" +
-      "rEnum.AdGroupCriterionCustomizerErrorH\000\022" +
-      "t\n\030ad_group_criterion_error\030\022 \001(\0162P.goog" +
-      "le.ads.googleads.v26.errors.AdGroupCrite" +
-      "rionErrorEnum.AdGroupCriterionErrorH\000\022x\n" +
-      "\031ad_group_customizer_error\030\237\001 \001(\0162R.goog" +
-      "le.ads.googleads.v26.errors.AdGroupCusto" +
-      "mizerErrorEnum.AdGroupCustomizerErrorH\000\022" +
-      "g\n\023ad_customizer_error\030\023 \001(\0162H.google.ad" +
-      "s.googleads.v26.errors.AdCustomizerError" +
-      "Enum.AdCustomizerErrorH\000\022_\n\021ad_group_ad_" +
-      "error\030\025 \001(\0162B.google.ads.googleads.v26.e" +
-      "rrors.AdGroupAdErrorEnum.AdGroupAdErrorH" +
-      "\000\022^\n\020ad_sharing_error\030\030 \001(\0162B.google.ads" +
-      ".googleads.v26.errors.AdSharingErrorEnum" +
-      ".AdSharingErrorH\000\022K\n\tadx_error\030\031 \001(\01626.g" +
-      "oogle.ads.googleads.v26.errors.AdxErrorE" +
-      "num.AdxErrorH\000\022Q\n\013asset_error\030k \001(\0162:.go" +
-      "ogle.ads.googleads.v26.errors.AssetError" +
-      "Enum.AssetErrorH\000\022r\n\027asset_group_asset_e" +
-      "rror\030\225\001 \001(\0162N.google.ads.googleads.v26.e" +
-      "rrors.AssetGroupAssetErrorEnum.AssetGrou" +
-      "pAssetErrorH\000\022\233\001\n&asset_group_listing_gr" +
-      "oup_filter_error\030\233\001 \001(\0162h.google.ads.goo" +
-      "gleads.v26.errors.AssetGroupListingGroup" +
-      "FilterErrorEnum.AssetGroupListingGroupFi" +
-      "lterErrorH\000\022b\n\021asset_group_error\030\224\001 \001(\0162" +
-      "D.google.ads.googleads.v26.errors.AssetG" +
-      "roupErrorEnum.AssetGroupErrorH\000\022l\n\025asset" +
-      "_set_asset_error\030\231\001 \001(\0162J.google.ads.goo" +
-      "gleads.v26.errors.AssetSetAssetErrorEnum" +
-      ".AssetSetAssetErrorH\000\022i\n\024asset_set_link_" +
-      "error\030\232\001 \001(\0162H.google.ads.googleads.v26." +
-      "errors.AssetSetLinkErrorEnum.AssetSetLin" +
-      "kErrorH\000\022\\\n\017asset_set_error\030\230\001 \001(\0162@.goo" +
-      "gle.ads.googleads.v26.errors.AssetSetErr" +
-      "orEnum.AssetSetErrorH\000\022\227\001\n$business_prof" +
-      "ile_location_sync_error\030\250\001 \001(\0162f.google." +
-      "ads.googleads.v26.errors.BusinessProfile" +
-      "LocationSyncErrorEnum.BusinessProfileLoc" +
-      "ationSyncErrorH\000\022W\n\rbidding_error\030\032 \001(\0162" +
-      ">.google.ads.googleads.v26.errors.Biddin" +
-      "gErrorEnum.BiddingErrorH\000\022v\n\030campaign_cr" +
-      "iterion_error\030\035 \001(\0162R.google.ads.googlea" +
-      "ds.v26.errors.CampaignCriterionErrorEnum" +
-      ".CampaignCriterionErrorH\000\022\207\001\n\036campaign_c" +
-      "onversion_goal_error\030\246\001 \001(\0162\\.google.ads" +
-      ".googleads.v26.errors.CampaignConversion" +
-      "GoalErrorEnum.CampaignConversionGoalErro" +
-      "rH\000\022z\n\031campaign_customizer_error\030\240\001 \001(\0162" +
-      "T.google.ads.googleads.v26.errors.Campai" +
-      "gnCustomizerErrorEnum.CampaignCustomizer" +
-      "ErrorH\000\022m\n\025collection_size_error\030\037 \001(\0162L" +
-      ".google.ads.googleads.v26.errors.Collect" +
-      "ionSizeErrorEnum.CollectionSizeErrorH\000\022\232" +
-      "\001\n%conversion_goal_campaign_config_error" +
-      "\030\245\001 \001(\0162h.google.ads.googleads.v26.error" +
-      "s.ConversionGoalCampaignConfigErrorEnum." +
-      "ConversionGoalCampaignConfigErrorH\000\022d\n\022c" +
-      "ountry_code_error\030m \001(\0162F.google.ads.goo" +
-      "gleads.v26.errors.CountryCodeErrorEnum.C" +
-      "ountryCodeErrorH\000\022]\n\017criterion_error\030  \001" +
-      "(\0162B.google.ads.googleads.v26.errors.Cri" +
-      "terionErrorEnum.CriterionErrorH\000\022\201\001\n\034cus" +
-      "tom_conversion_goal_error\030\226\001 \001(\0162X.googl" +
-      "e.ads.googleads.v26.errors.CustomConvers" +
-      "ionGoalErrorEnum.CustomConversionGoalErr" +
-      "orH\000\022z\n\031customer_customizer_error\030\236\001 \001(\016" +
-      "2T.google.ads.googleads.v26.errors.Custo" +
-      "merCustomizerErrorEnum.CustomerCustomize" +
-      "rErrorH\000\022Z\n\016customer_error\030Z \001(\0162@.googl" +
-      "e.ads.googleads.v26.errors.CustomerError" +
-      "Enum.CustomerErrorH\000\022}\n\032customizer_attri" +
-      "bute_error\030\227\001 \001(\0162V.google.ads.googleads" +
-      ".v26.errors.CustomizerAttributeErrorEnum" +
-      ".CustomizerAttributeErrorH\000\022N\n\ndate_erro" +
-      "r\030! \001(\01628.google.ads.googleads.v26.error" +
-      "s.DateErrorEnum.DateErrorH\000\022^\n\020date_rang" +
-      "e_error\030\" \001(\0162B.google.ads.googleads.v26" +
-      ".errors.DateRangeErrorEnum.DateRangeErro" +
-      "rH\000\022Z\n\016distinct_error\030# \001(\0162@.google.ads",
-      ".googleads.v26.errors.DistinctErrorEnum." +
-      "DistinctErrorH\000\022\206\001\n\036feed_attribute_refer" +
-      "ence_error\030$ \001(\0162\\.google.ads.googleads." +
-      "v26.errors.FeedAttributeReferenceErrorEn" +
-      "um.FeedAttributeReferenceErrorH\000\022\225\001\n$fin" +
-      "al_url_expansion_asset_view_error\030\301\001 \001(\016" +
-      "2d.google.ads.googleads.v26.errors.Final" +
-      "UrlExpansionAssetViewErrorEnum.FinalUrlE" +
-      "xpansionAssetViewErrorH\000\022Z\n\016function_err" +
-      "or\030% \001(\0162@.google.ads.googleads.v26.erro" +
-      "rs.FunctionErrorEnum.FunctionErrorH\000\022p\n\026" +
-      "function_parsing_error\030& \001(\0162N.google.ad" +
-      "s.googleads.v26.errors.FunctionParsingEr" +
-      "rorEnum.FunctionParsingErrorH\000\022H\n\010id_err" +
-      "or\030\' \001(\01624.google.ads.googleads.v26.erro" +
-      "rs.IdErrorEnum.IdErrorH\000\022Q\n\013image_error\030" +
-      "( \001(\0162:.google.ads.googleads.v26.errors." +
-      "ImageErrorEnum.ImageErrorH\000\022g\n\023language_" +
-      "code_error\030n \001(\0162H.google.ads.googleads." +
-      "v26.errors.LanguageCodeErrorEnum.Languag" +
-      "eCodeErrorH\000\022d\n\022media_bundle_error\030* \001(\016" +
-      "2F.google.ads.googleads.v26.errors.Media" +
-      "BundleErrorEnum.MediaBundleErrorH\000\022d\n\022me" +
-      "dia_upload_error\030t \001(\0162F.google.ads.goog" +
-      "leads.v26.errors.MediaUploadErrorEnum.Me" +
-      "diaUploadErrorH\000\022^\n\020media_file_error\030V \001" +
-      "(\0162B.google.ads.googleads.v26.errors.Med" +
-      "iaFileErrorEnum.MediaFileErrorH\000\022n\n\025merc" +
-      "hant_center_error\030\242\001 \001(\0162L.google.ads.go" +
-      "ogleads.v26.errors.MerchantCenterErrorEn" +
-      "um.MerchantCenterErrorH\000\022`\n\020multiplier_e" +
-      "rror\030, \001(\0162D.google.ads.googleads.v26.er" +
-      "rors.MultiplierErrorEnum.MultiplierError" +
-      "H\000\022}\n\033new_resource_creation_error\030- \001(\0162" +
-      "V.google.ads.googleads.v26.errors.NewRes" +
-      "ourceCreationErrorEnum.NewResourceCreati" +
-      "onErrorH\000\022[\n\017not_empty_error\030. \001(\0162@.goo" +
-      "gle.ads.googleads.v26.errors.NotEmptyErr" +
-      "orEnum.NotEmptyErrorH\000\022N\n\nnull_error\030/ \001" +
-      "(\01628.google.ads.googleads.v26.errors.Nul" +
-      "lErrorEnum.NullErrorH\000\022Z\n\016operator_error" +
-      "\0300 \001(\0162@.google.ads.googleads.v26.errors" +
-      ".OperatorErrorEnum.OperatorErrorH\000\022Q\n\013ra" +
-      "nge_error\0301 \001(\0162:.google.ads.googleads.v" +
-      "26.errors.RangeErrorEnum.RangeErrorH\000\022l\n" +
-      "\024recommendation_error\030: \001(\0162L.google.ads" +
-      ".googleads.v26.errors.RecommendationErro" +
-      "rEnum.RecommendationErrorH\000\022\222\001\n!recommen" +
-      "dation_subscription_error\030\264\001 \001(\0162d.googl" +
-      "e.ads.googleads.v26.errors.Recommendatio" +
-      "nSubscriptionErrorEnum.RecommendationSub" +
-      "scriptionErrorH\000\022a\n\021region_code_error\0303 " +
-      "\001(\0162D.google.ads.googleads.v26.errors.Re" +
-      "gionCodeErrorEnum.RegionCodeErrorH\000\022W\n\rs" +
-      "etting_error\0304 \001(\0162>.google.ads.googlead" +
-      "s.v26.errors.SettingErrorEnum.SettingErr" +
-      "orH\000\022g\n\023string_format_error\0305 \001(\0162H.goog" +
-      "le.ads.googleads.v26.errors.StringFormat" +
-      "ErrorEnum.StringFormatErrorH\000\022g\n\023string_" +
-      "length_error\0306 \001(\0162H.google.ads.googlead" +
-      "s.v26.errors.StringLengthErrorEnum.Strin" +
-      "gLengthErrorH\000\022\203\001\n\035operation_access_deni" +
-      "ed_error\0307 \001(\0162Z.google.ads.googleads.v2" +
-      "6.errors.OperationAccessDeniedErrorEnum." +
-      "OperationAccessDeniedErrorH\000\022\200\001\n\034resourc" +
-      "e_access_denied_error\0308 \001(\0162X.google.ads" +
-      ".googleads.v26.errors.ResourceAccessDeni" +
-      "edErrorEnum.ResourceAccessDeniedErrorH\000\022" +
-      "\223\001\n#resource_count_limit_exceeded_error\030" +
-      "9 \001(\0162d.google.ads.googleads.v26.errors." +
-      "ResourceCountLimitExceededErrorEnum.Reso" +
-      "urceCountLimitExceededErrorH\000\022\214\001\n youtub" +
-      "e_video_registration_error\030u \001(\0162`.googl" +
-      "e.ads.googleads.v26.errors.YoutubeVideoR" +
-      "egistrationErrorEnum.YoutubeVideoRegistr" +
-      "ationErrorH\000\022{\n\033ad_group_bid_modifier_er" +
-      "ror\030; \001(\0162T.google.ads.googleads.v26.err" +
-      "ors.AdGroupBidModifierErrorEnum.AdGroupB" +
-      "idModifierErrorH\000\022W\n\rcontext_error\030< \001(\016" +
-      "2>.google.ads.googleads.v26.errors.Conte" +
-      "xtErrorEnum.ContextErrorH\000\022Q\n\013field_erro" +
-      "r\030= \001(\0162:.google.ads.googleads.v26.error" +
-      "s.FieldErrorEnum.FieldErrorH\000\022^\n\020shared_" +
-      "set_error\030> \001(\0162B.google.ads.googleads.v" +
-      "26.errors.SharedSetErrorEnum.SharedSetEr" +
-      "rorH\000\022p\n\026shared_criterion_error\030? \001(\0162N." +
-      "google.ads.googleads.v26.errors.SharedCr" +
-      "iterionErrorEnum.SharedCriterionErrorH\000\022" +
-      "w\n\031campaign_shared_set_error\030@ \001(\0162R.goo" +
-      "gle.ads.googleads.v26.errors.CampaignSha" +
-      "redSetErrorEnum.CampaignSharedSetErrorH\000" +
-      "\022s\n\027conversion_action_error\030A \001(\0162P.goog" +
-      "le.ads.googleads.v26.errors.ConversionAc" +
-      "tionErrorEnum.ConversionActionErrorH\000\022\222\001" +
-      "\n\"conversion_adjustment_upload_error\030s \001" +
-      "(\0162d.google.ads.googleads.v26.errors.Con" +
-      "versionAdjustmentUploadErrorEnum.Convers" +
-      "ionAdjustmentUploadErrorH\000\022\215\001\n conversio" +
-      "n_custom_variable_error\030\217\001 \001(\0162`.google." +
-      "ads.googleads.v26.errors.ConversionCusto" +
-      "mVariableErrorEnum.ConversionCustomVaria" +
-      "bleErrorH\000\022s\n\027conversion_upload_error\030o " +
-      "\001(\0162P.google.ads.googleads.v26.errors.Co" +
-      "nversionUploadErrorEnum.ConversionUpload" +
-      "ErrorH\000\022~\n\033conversion_value_rule_error\030\221" +
-      "\001 \001(\0162V.google.ads.googleads.v26.errors." +
-      "ConversionValueRuleErrorEnum.ConversionV" +
-      "alueRuleErrorH\000\022\210\001\n\037conversion_value_rul" +
-      "e_set_error\030\222\001 \001(\0162\\.google.ads.googlead" +
-      "s.v26.errors.ConversionValueRuleSetError" +
-      "Enum.ConversionValueRuleSetErrorH\000\022T\n\014he" +
-      "ader_error\030B \001(\0162<.google.ads.googleads." +
-      "v26.errors.HeaderErrorEnum.HeaderErrorH\000" +
-      "\022Z\n\016database_error\030C \001(\0162@.google.ads.go" +
-      "ogleads.v26.errors.DatabaseErrorEnum.Dat" +
-      "abaseErrorH\000\022j\n\024policy_finding_error\030D \001" +
-      "(\0162J.google.ads.googleads.v26.errors.Pol" +
-      "icyFindingErrorEnum.PolicyFindingErrorH\000" +
-      "\022N\n\nenum_error\030F \001(\01628.google.ads.google" +
-      "ads.v26.errors.EnumErrorEnum.EnumErrorH\000" +
-      "\022d\n\022keyword_plan_error\030G \001(\0162F.google.ad" +
-      "s.googleads.v26.errors.KeywordPlanErrorE" +
-      "num.KeywordPlanErrorH\000\022}\n\033keyword_plan_c" +
-      "ampaign_error\030H \001(\0162V.google.ads.googlea" +
-      "ds.v26.errors.KeywordPlanCampaignErrorEn" +
-      "um.KeywordPlanCampaignErrorH\000\022\224\001\n#keywor" +
-      "d_plan_campaign_keyword_error\030\204\001 \001(\0162d.g" +
-      "oogle.ads.googleads.v26.errors.KeywordPl" +
-      "anCampaignKeywordErrorEnum.KeywordPlanCa" +
-      "mpaignKeywordErrorH\000\022{\n\033keyword_plan_ad_" +
-      "group_error\030J \001(\0162T.google.ads.googleads" +
-      ".v26.errors.KeywordPlanAdGroupErrorEnum." +
-      "KeywordPlanAdGroupErrorH\000\022\222\001\n#keyword_pl" +
-      "an_ad_group_keyword_error\030\205\001 \001(\0162b.googl" +
-      "e.ads.googleads.v26.errors.KeywordPlanAd" +
-      "GroupKeywordErrorEnum.KeywordPlanAdGroup" +
-      "KeywordErrorH\000\022q\n\027keyword_plan_idea_erro" +
-      "r\030L \001(\0162N.google.ads.googleads.v26.error" +
-      "s.KeywordPlanIdeaErrorEnum.KeywordPlanId" +
-      "eaErrorH\000\022\203\001\n\035account_budget_proposal_er" +
-      "ror\030M \001(\0162Z.google.ads.googleads.v26.err" +
-      "ors.AccountBudgetProposalErrorEnum.Accou" +
-      "ntBudgetProposalErrorH\000\022[\n\017user_list_err" +
-      "or\030N \001(\0162@.google.ads.googleads.v26.erro" +
-      "rs.UserListErrorEnum.UserListErrorH\000\022e\n\022" +
-      "change_event_error\030\210\001 \001(\0162F.google.ads.g" +
-      "oogleads.v26.errors.ChangeEventErrorEnum" +
-      ".ChangeEventErrorH\000\022g\n\023change_status_err" +
-      "or\030O \001(\0162H.google.ads.googleads.v26.erro" +
-      "rs.ChangeStatusErrorEnum.ChangeStatusErr" +
-      "orH\000\022N\n\nfeed_error\030P \001(\01628.google.ads.go" +
-      "ogleads.v26.errors.FeedErrorEnum.FeedErr" +
-      "orH\000\022\226\001\n$geo_target_constant_suggestion_" +
-      "error\030Q \001(\0162f.google.ads.googleads.v26.e" +
-      "rrors.GeoTargetConstantSuggestionErrorEn" +
-      "um.GeoTargetConstantSuggestionErrorH\000\022j\n" +
-      "\024campaign_draft_error\030R \001(\0162J.google.ads" +
-      ".googleads.v26.errors.CampaignDraftError" +
-      "Enum.CampaignDraftErrorH\000\022[\n\017feed_item_e" +
-      "rror\030S \001(\0162@.google.ads.googleads.v26.er" +
-      "rors.FeedItemErrorEnum.FeedItemErrorH\000\022Q" +
-      "\n\013label_error\030T \001(\0162:.google.ads.googlea" +
-      "ds.v26.errors.LabelErrorEnum.LabelErrorH" +
-      "\000\022g\n\023billing_setup_error\030W \001(\0162H.google." +
-      "ads.googleads.v26.errors.BillingSetupErr" +
-      "orEnum.BillingSetupErrorH\000\022z\n\032customer_c" +
-      "lient_link_error\030X \001(\0162T.google.ads.goog" +
-      "leads.v26.errors.CustomerClientLinkError" +
-      "Enum.CustomerClientLinkErrorH\000\022}\n\033custom" +
-      "er_manager_link_error\030[ \001(\0162V.google.ads" +
-      ".googleads.v26.errors.CustomerManagerLin" +
-      "kErrorEnum.CustomerManagerLinkErrorH\000\022d\n" +
-      "\022feed_mapping_error\030\\ \001(\0162F.google.ads.g" +
-      "oogleads.v26.errors.FeedMappingErrorEnum" +
-      ".FeedMappingErrorH\000\022g\n\023customer_feed_err" +
-      "or\030] \001(\0162H.google.ads.googleads.v26.erro" +
-      "rs.CustomerFeedErrorEnum.CustomerFeedErr" +
-      "orH\000\022e\n\023ad_group_feed_error\030^ \001(\0162F.goog" +
-      "le.ads.googleads.v26.errors.AdGroupFeedE" +
-      "rrorEnum.AdGroupFeedErrorH\000\022g\n\023campaign_" +
-      "feed_error\030` \001(\0162H.google.ads.googleads." +
-      "v26.errors.CampaignFeedErrorEnum.Campaig" +
-      "nFeedErrorH\000\022m\n\025custom_interest_error\030a " +
-      "\001(\0162L.google.ads.googleads.v26.errors.Cu" +
-      "stomInterestErrorEnum.CustomInterestErro" +
-      "rH\000\022y\n\031campaign_experiment_error\030b \001(\0162T" +
-      ".google.ads.googleads.v26.errors.Campaig" +
-      "nExperimentErrorEnum.CampaignExperimentE" +
-      "rrorH\000\022w\n\031extension_feed_item_error\030d \001(" +
-      "\0162R.google.ads.googleads.v26.errors.Exte" +
-      "nsionFeedItemErrorEnum.ExtensionFeedItem" +
-      "ErrorH\000\022d\n\022ad_parameter_error\030e \001(\0162F.go" +
-      "ogle.ads.googleads.v26.errors.AdParamete" +
-      "rErrorEnum.AdParameterErrorH\000\022z\n\032feed_it" +
-      "em_validation_error\030f \001(\0162T.google.ads.g" +
-      "oogleads.v26.errors.FeedItemValidationEr" +
-      "rorEnum.FeedItemValidationErrorH\000\022s\n\027ext" +
-      "ension_setting_error\030g \001(\0162P.google.ads." +
-      "googleads.v26.errors.ExtensionSettingErr" +
-      "orEnum.ExtensionSettingErrorH\000\022f\n\023feed_i" +
-      "tem_set_error\030\214\001 \001(\0162F.google.ads.google" +
-      "ads.v26.errors.FeedItemSetErrorEnum.Feed" +
-      "ItemSetErrorH\000\022s\n\030feed_item_set_link_err" +
-      "or\030\215\001 \001(\0162N.google.ads.googleads.v26.err" +
-      "ors.FeedItemSetLinkErrorEnum.FeedItemSet" +
-      "LinkErrorH\000\022n\n\026feed_item_target_error\030h " +
-      "\001(\0162L.google.ads.googleads.v26.errors.Fe" +
-      "edItemTargetErrorEnum.FeedItemTargetErro" +
-      "rH\000\022p\n\026policy_violation_error\030i \001(\0162N.go" +
-      "ogle.ads.googleads.v26.errors.PolicyViol" +
-      "ationErrorEnum.PolicyViolationErrorH\000\022m\n" +
-      "\025partial_failure_error\030p \001(\0162L.google.ad" +
-      "s.googleads.v26.errors.PartialFailureErr" +
-      "orEnum.PartialFailureErrorH\000\022^\n\020click_vi" +
-      "ew_error\030q \001(\0162B.google.ads.googleads.v2" +
-      "6.errors.ClickViewErrorEnum.ClickViewErr" +
-      "orH\000\022\217\001\n!policy_validation_parameter_err" +
-      "or\030r \001(\0162b.google.ads.googleads.v26.erro" +
-      "rs.PolicyValidationParameterErrorEnum.Po" +
-      "licyValidationParameterErrorH\000\022^\n\020size_l" +
-      "imit_error\030v \001(\0162B.google.ads.googleads." +
-      "v26.errors.SizeLimitErrorEnum.SizeLimitE" +
-      "rrorH\000\022{\n\033offline_user_data_job_error\030w " +
-      "\001(\0162T.google.ads.googleads.v26.errors.Of" +
-      "flineUserDataJobErrorEnum.OfflineUserDat" +
-      "aJobErrorH\000\022n\n\025not_allowlisted_error\030\211\001 " +
-      "\001(\0162L.google.ads.googleads.v26.errors.No" +
-      "tAllowlistedErrorEnum.NotAllowlistedErro" +
-      "rH\000\022d\n\022manager_link_error\030y \001(\0162F.google" +
-      ".ads.googleads.v26.errors.ManagerLinkErr" +
-      "orEnum.ManagerLinkErrorH\000\022g\n\023currency_co" +
-      "de_error\030z \001(\0162H.google.ads.googleads.v2" +
-      "6.errors.CurrencyCodeErrorEnum.CurrencyC" +
-      "odeErrorH\000\022`\n\020experiment_error\030{ \001(\0162D.g" +
-      "oogle.ads.googleads.v26.errors.Experimen" +
-      "tErrorEnum.ExperimentErrorH\000\022s\n\027access_i" +
-      "nvitation_error\030| \001(\0162P.google.ads.googl" +
-      "eads.v26.errors.AccessInvitationErrorEnu" +
-      "m.AccessInvitationErrorH\000\022^\n\020reach_plan_" +
-      "error\030} \001(\0162B.google.ads.googleads.v26.e" +
-      "rrors.ReachPlanErrorEnum.ReachPlanErrorH" +
-      "\000\022W\n\rinvoice_error\030~ \001(\0162>.google.ads.go" +
-      "ogleads.v26.errors.InvoiceErrorEnum.Invo" +
-      "iceErrorH\000\022p\n\026payments_account_error\030\177 \001" +
-      "(\0162N.google.ads.googleads.v26.errors.Pay" +
-      "mentsAccountErrorEnum.PaymentsAccountErr" +
-      "orH\000\022\\\n\017time_zone_error\030\200\001 \001(\0162@.google." +
-      "ads.googleads.v26.errors.TimeZoneErrorEn" +
-      "um.TimeZoneErrorH\000\022_\n\020asset_link_error\030\201" +
-      "\001 \001(\0162B.google.ads.googleads.v26.errors." +
-      "AssetLinkErrorEnum.AssetLinkErrorH\000\022\\\n\017u" +
-      "ser_data_error\030\202\001 \001(\0162@.google.ads.googl" +
-      "eads.v26.errors.UserDataErrorEnum.UserDa" +
-      "taErrorH\000\022\\\n\017batch_job_error\030\203\001 \001(\0162@.go" +
-      "ogle.ads.googleads.v26.errors.BatchJobEr" +
-      "rorEnum.BatchJobErrorH\000\022e\n\022account_link_" +
-      "error\030\206\001 \001(\0162F.google.ads.googleads.v26." +
-      "errors.AccountLinkErrorEnum.AccountLinkE" +
-      "rrorH\000\022\225\001\n$third_party_app_analytics_lin" +
-      "k_error\030\207\001 \001(\0162d.google.ads.googleads.v2" +
-      "6.errors.ThirdPartyAppAnalyticsLinkError" +
-      "Enum.ThirdPartyAppAnalyticsLinkErrorH\000\022{" +
-      "\n\032customer_user_access_error\030\212\001 \001(\0162T.go" +
-      "ogle.ads.googleads.v26.errors.CustomerUs" +
-      "erAccessErrorEnum.CustomerUserAccessErro" +
-      "rH\000\022n\n\025custom_audience_error\030\213\001 \001(\0162L.go" +
-      "ogle.ads.googleads.v26.errors.CustomAudi" +
-      "enceErrorEnum.CustomAudienceErrorH\000\022[\n\016a" +
-      "udience_error\030\244\001 \001(\0162@.google.ads.google" +
-      "ads.v26.errors.AudienceErrorEnum.Audienc" +
-      "eErrorH\000\022x\n\031search_term_insight_error\030\256\001" +
-      " \001(\0162R.google.ads.googleads.v26.errors.S" +
-      "earchTermInsightErrorEnum.SearchTermInsi" +
-      "ghtErrorH\000\022k\n\024smart_campaign_error\030\223\001 \001(" +
-      "\0162J.google.ads.googleads.v26.errors.Smar" +
-      "tCampaignErrorEnum.SmartCampaignErrorH\000\022" +
-      "k\n\024experiment_arm_error\030\234\001 \001(\0162J.google." +
-      "ads.googleads.v26.errors.ExperimentArmEr" +
-      "rorEnum.ExperimentArmErrorH\000\022t\n\027audience" +
-      "_insights_error\030\247\001 \001(\0162P.google.ads.goog" +
-      "leads.v26.errors.AudienceInsightsErrorEn" +
-      "um.AudienceInsightsErrorH\000\022e\n\022product_li" +
-      "nk_error\030\251\001 \001(\0162F.google.ads.googleads.v" +
-      "26.errors.ProductLinkErrorEnum.ProductLi" +
-      "nkErrorH\000\022\\\n\017data_link_error\030\273\001 \001(\0162@.go" +
-      "ogle.ads.googleads.v26.errors.DataLinkEr" +
-      "rorEnum.DataLinkErrorH\000\022\302\001\n4customer_sk_" +
-      "ad_network_conversion_value_schema_error" +
-      "\030\252\001 \001(\0162\200\001.google.ads.googleads.v26.erro" +
-      "rs.CustomerSkAdNetworkConversionValueSch" +
-      "emaErrorEnum.CustomerSkAdNetworkConversi" +
-      "onValueSchemaErrorH\000\022[\n\016currency_error\030\253" +
-      "\001 \001(\0162@.google.ads.googleads.v26.errors." +
-      "CurrencyErrorEnum.CurrencyErrorH\000\022u\n\030ass" +
-      "et_group_signal_error\030\260\001 \001(\0162P.google.ad" +
-      "s.googleads.v26.errors.AssetGroupSignalE" +
-      "rrorEnum.AssetGroupSignalErrorH\000\022\204\001\n\035pro" +
-      "duct_link_invitation_error\030\261\001 \001(\0162Z.goog" +
-      "le.ads.googleads.v26.errors.ProductLinkI" +
-      "nvitationErrorEnum.ProductLinkInvitation" +
-      "ErrorH\000\022\200\001\n\033identity_verification_error\030" +
-      "\265\001 \001(\0162X.google.ads.googleads.v26.errors" +
-      ".IdentityVerificationErrorEnum.IdentityV" +
-      "erificationErrorH\000\022\202\001\n\035user_list_custome" +
-      "r_type_error\030\267\001 \001(\0162X.google.ads.googlea" +
-      "ds.v26.errors.UserListCustomerTypeErrorE" +
-      "num.UserListCustomerTypeErrorH\000\022q\n\026shopp" +
-      "ing_product_error\030\270\001 \001(\0162N.google.ads.go" +
-      "ogleads.v26.errors.ShoppingProductErrorE" +
-      "num.ShoppingProductErrorH\000\022\246\001\n)automatic" +
-      "ally_created_asset_removal_error\030\271\001 \001(\0162" +
-      "p.google.ads.googleads.v26.errors.Automa" +
-      "ticallyCreatedAssetRemovalErrorEnum.Auto" +
-      "maticallyCreatedAssetRemovalErrorH\000\022t\n\027s" +
-      "hareable_preview_error\030\272\001 \001(\0162P.google.a" +
-      "ds.googleads.v26.errors.ShareablePreview" +
-      "ErrorEnum.ShareablePreviewErrorH\000\022{\n\032cam" +
-      "paign_goal_config_error\030\274\001 \001(\0162T.google." +
-      "ads.googleads.v26.errors.CampaignGoalCon" +
-      "figErrorEnum.CampaignGoalConfigErrorH\000\022O" +
-      "\n\ngoal_error\030\275\001 \001(\01628.google.ads.googlea" +
-      "ds.v26.errors.GoalErrorEnum.GoalErrorH\000\022" +
-      "\215\001\n brand_guidelines_migration_error\030\277\001 " +
-      "\001(\0162`.google.ads.googleads.v26.errors.Br" +
-      "andGuidelinesMigrationErrorEnum.BrandGui" +
-      "delinesMigrationErrorH\000\022q\n\026asset_generat" +
-      "ion_error\030\302\001 \001(\0162N.google.ads.googleads." +
-      "v26.errors.AssetGenerationErrorEnum.Asse" +
-      "tGenerationErrorH\000\022a\n\020benchmarks_error\030\303" +
-      "\001 \001(\0162D.google.ads.googleads.v26.errors." +
-      "BenchmarksErrorEnum.BenchmarksErrorH\000\022^\n" +
-      "\017incentive_error\030\305\001 \001(\0162B.google.ads.goo" +
-      "gleads.v26.errors.IncentiveErrorEnum.Inc" +
-      "entiveErrorH\000\022\207\001\n\036content_creator_insigh" +
-      "ts_error\030\306\001 \001(\0162\\.google.ads.googleads.v" +
-      "26.errors.ContentCreatorInsightsErrorEnu" +
-      "m.ContentCreatorInsightsErrorH\000\022t\n\027video" +
-      "_reservation_error\030\307\001 \001(\0162P.google.ads.g" +
-      "oogleads.v26.errors.VideoReservationErro" +
-      "rEnum.VideoReservationErrorH\000\022\202\001\n\035multi_" +
-      "party_auth_review_error\030\310\001 \001(\0162X.google." +
-      "ads.googleads.v26.errors.MultiPartyAuthR" +
-      "eviewErrorEnum.MultiPartyAuthReviewError" +
-      "H\000B\014\n\nerror_code\"\263\001\n\rErrorLocation\022\\\n\023fi" +
-      "eld_path_elements\030\002 \003(\0132?.google.ads.goo" +
-      "gleads.v26.errors.ErrorLocation.FieldPat" +
-      "hElement\032D\n\020FieldPathElement\022\022\n\nfield_na" +
-      "me\030\001 \001(\t\022\022\n\005index\030\003 \001(\005H\000\210\001\001B\010\n\006_index\"\305" +
-      "\005\n\014ErrorDetails\022\036\n\026unpublished_error_cod" +
-      "e\030\001 \001(\t\022Y\n\030policy_violation_details\030\002 \001(" +
-      "\01327.google.ads.googleads.v26.errors.Poli" +
-      "cyViolationDetails\022U\n\026policy_finding_det" +
-      "ails\030\003 \001(\01325.google.ads.googleads.v26.er" +
-      "rors.PolicyFindingDetails\022O\n\023quota_error" +
-      "_details\030\004 \001(\01322.google.ads.googleads.v2" +
-      "6.errors.QuotaErrorDetails\022U\n\026resource_c" +
-      "ount_details\030\005 \001(\01325.google.ads.googlead" +
-      "s.v26.errors.ResourceCountDetails\022n\n$bud" +
-      "get_per_day_minimum_error_details\030\006 \001(\0132" +
-      "@.google.ads.googleads.v26.errors.Budget" +
-      "PerDayMinimumErrorDetails\022[\n\031reservation" +
-      "_error_details\030\007 \001(\01328.google.ads.google" +
-      "ads.v26.errors.ReservationErrorDetails\022n" +
-      "\n#incompatible_clo_goal_error_details\030\010 " +
-      "\001(\0132A.google.ads.googleads.v26.errors.In" +
-      "compatibleCloGoalsErrorDetails\"\264\001\n\026Polic" +
-      "yViolationDetails\022#\n\033external_policy_des" +
-      "cription\030\002 \001(\t\022@\n\003key\030\004 \001(\01323.google.ads" +
-      ".googleads.v26.common.PolicyViolationKey" +
-      "\022\034\n\024external_policy_name\030\005 \001(\t\022\025\n\ris_exe" +
-      "mptible\030\006 \001(\010\"g\n\024PolicyFindingDetails\022O\n" +
-      "\024policy_topic_entries\030\001 \003(\01321.google.ads" +
-      ".googleads.v26.common.PolicyTopicEntry\"\371" +
-      "\001\n\021QuotaErrorDetails\022U\n\nrate_scope\030\001 \001(\016" +
-      "2A.google.ads.googleads.v26.errors.Quota" +
-      "ErrorDetails.QuotaRateScope\022\021\n\trate_name" +
-      "\030\002 \001(\t\022.\n\013retry_delay\030\003 \001(\0132\031.google.pro" +
-      "tobuf.Duration\"J\n\016QuotaRateScope\022\017\n\013UNSP" +
-      "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007ACCOUNT\020\002\022\r\n\tD" +
-      "EVELOPER\020\003\"\314\001\n\024ResourceCountDetails\022\024\n\014e" +
-      "nclosing_id\030\001 \001(\t\022\032\n\022enclosing_resource\030" +
-      "\005 \001(\t\022\r\n\005limit\030\002 \001(\005\022[\n\nlimit_type\030\003 \001(\016" +
-      "2G.google.ads.googleads.v26.enums.Resour" +
-      "ceLimitTypeEnum.ResourceLimitType\022\026\n\016exi" +
-      "sting_count\030\004 \001(\005\"\201\002\n\037BudgetPerDayMinimu" +
-      "mErrorDetails\022\025\n\rcurrency_code\030\001 \001(\t\022%\n\035" +
-      "budget_per_day_minimum_micros\030\002 \001(\003\022$\n\034m" +
-      "inimum_budget_amount_micros\030\003 \001(\003\022*\n\"min" +
-      "imum_budget_total_amount_micros\030\004 \001(\003\022#\n" +
-      "\033failed_budget_amount_micros\030\005 \001(\003\022)\n!fa" +
-      "iled_budget_total_amount_micros\030\006 \001(\003\"\217\001" +
-      "\n\027ReservationErrorDetails\022\020\n\010campaign\030\001 " +
-      "\001(\t\022I\n\006quotes\030\002 \003(\01329.google.ads.googlea" +
-      "ds.v26.common.CampaignReservationQuote\022\027" +
-      "\n\017quote_signature\030\003 \001(\t\"\312\002\n Incompatible" +
-      "CloGoalsErrorDetails\022\221\001\n\022clo_goal_sub_ty" +
-      "pe1\030\001 \001(\0162u.google.ads.googleads.v26.enu" +
-      "ms.CustomerLifecycleOptimizationGoalSubT" +
-      "ypeEnum.CustomerLifecycleOptimizationGoa" +
-      "lSubType\022\221\001\n\022clo_goal_sub_type2\030\002 \001(\0162u.",
-      "google.ads.googleads.v26.enums.CustomerL" +
-      "ifecycleOptimizationGoalSubTypeEnum.Cust" +
-      "omerLifecycleOptimizationGoalSubTypeB\353\001\n" +
-      "#com.google.ads.googleads.v26.errorsB\013Er" +
-      "rorsProtoP\001ZEgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v26/errors;erro" +
-      "rs\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V26.Erro" +
-      "rs\312\002\037Google\\Ads\\GoogleAds\\V26\\Errors\352\002#G" +
-      "oogle::Ads::GoogleAds::V26::Errorsb\006prot" +
-      "o3"
+      "rs/function_parsing_error.proto\032Jgoogle/" +
+      "ads/googleads/v26/errors/geo_target_cons" +
+      "tant_suggestion_error.proto\0320google/ads/" +
+      "googleads/v26/errors/goal_error.proto\0322g" +
+      "oogle/ads/googleads/v26/errors/header_er" +
+      "ror.proto\032.google/ads/googleads/v26/erro" +
+      "rs/id_error.proto\032Agoogle/ads/googleads/" +
+      "v26/errors/identity_verification_error.p" +
+      "roto\0321google/ads/googleads/v26/errors/im" +
+      "age_error.proto\0325google/ads/googleads/v2" +
+      "6/errors/incentive_error.proto\0324google/a" +
+      "ds/googleads/v26/errors/internal_error.p" +
+      "roto\0323google/ads/googleads/v26/errors/in" +
+      "voice_error.proto\032Agoogle/ads/googleads/" +
+      "v26/errors/keyword_plan_ad_group_error.p" +
+      "roto\032Igoogle/ads/googleads/v26/errors/ke" +
+      "yword_plan_ad_group_keyword_error.proto\032" +
+      "Agoogle/ads/googleads/v26/errors/keyword" +
+      "_plan_campaign_error.proto\032Igoogle/ads/g" +
+      "oogleads/v26/errors/keyword_plan_campaig" +
+      "n_keyword_error.proto\0328google/ads/google" +
+      "ads/v26/errors/keyword_plan_error.proto\032" +
+      "=google/ads/googleads/v26/errors/keyword" +
+      "_plan_idea_error.proto\0321google/ads/googl" +
+      "eads/v26/errors/label_error.proto\0329googl" +
+      "e/ads/googleads/v26/errors/language_code" +
+      "_error.proto\032:google/ads/googleads/v26/e" +
+      "rrors/list_operation_error.proto\0328google" +
+      "/ads/googleads/v26/errors/manager_link_e" +
+      "rror.proto\0328google/ads/googleads/v26/err" +
+      "ors/media_bundle_error.proto\0326google/ads" +
+      "/googleads/v26/errors/media_file_error.p" +
+      "roto\0328google/ads/googleads/v26/errors/me" +
+      "dia_upload_error.proto\032;google/ads/googl" +
+      "eads/v26/errors/merchant_center_error.pr" +
+      "oto\032Cgoogle/ads/googleads/v26/errors/mul" +
+      "ti_party_auth_review_error.proto\0326google" +
+      "/ads/googleads/v26/errors/multiplier_err" +
+      "or.proto\0322google/ads/googleads/v26/error" +
+      "s/mutate_error.proto\032Agoogle/ads/googlea" +
+      "ds/v26/errors/new_resource_creation_erro" +
+      "r.proto\032;google/ads/googleads/v26/errors" +
+      "/not_allowlisted_error.proto\0325google/ads" +
+      "/googleads/v26/errors/not_empty_error.pr" +
+      "oto\0320google/ads/googleads/v26/errors/nul" +
+      "l_error.proto\032Agoogle/ads/googleads/v26/" +
+      "errors/offline_user_data_job_error.proto" +
+      "\032Cgoogle/ads/googleads/v26/errors/operat" +
+      "ion_access_denied_error.proto\0324google/ad" +
+      "s/googleads/v26/errors/operator_error.pr" +
+      "oto\032;google/ads/googleads/v26/errors/par" +
+      "tial_failure_error.proto\032<google/ads/goo" +
+      "gleads/v26/errors/payments_account_error" +
+      ".proto\032:google/ads/googleads/v26/errors/" +
+      "policy_finding_error.proto\032Ggoogle/ads/g" +
+      "oogleads/v26/errors/policy_validation_pa" +
+      "rameter_error.proto\032<google/ads/googlead" +
+      "s/v26/errors/policy_violation_error.prot" +
+      "o\0328google/ads/googleads/v26/errors/produ" +
+      "ct_link_error.proto\032Cgoogle/ads/googlead" +
+      "s/v26/errors/product_link_invitation_err" +
+      "or.proto\0321google/ads/googleads/v26/error" +
+      "s/query_error.proto\0321google/ads/googlead" +
+      "s/v26/errors/quota_error.proto\0321google/a" +
+      "ds/googleads/v26/errors/range_error.prot" +
+      "o\0326google/ads/googleads/v26/errors/reach" +
+      "_plan_error.proto\032:google/ads/googleads/" +
+      "v26/errors/recommendation_error.proto\032Gg" +
+      "oogle/ads/googleads/v26/errors/recommend" +
+      "ation_subscription_error.proto\0327google/a" +
+      "ds/googleads/v26/errors/region_code_erro" +
+      "r.proto\0323google/ads/googleads/v26/errors" +
+      "/request_error.proto\032Bgoogle/ads/googlea" +
+      "ds/v26/errors/resource_access_denied_err" +
+      "or.proto\032Igoogle/ads/googleads/v26/error" +
+      "s/resource_count_limit_exceeded_error.pr" +
+      "oto\032?google/ads/googleads/v26/errors/sea" +
+      "rch_term_insight_error.proto\0323google/ads" +
+      "/googleads/v26/errors/setting_error.prot" +
+      "o\032=google/ads/googleads/v26/errors/share" +
+      "able_preview_error.proto\032<google/ads/goo" +
+      "gleads/v26/errors/shared_criterion_error" +
+      ".proto\0326google/ads/googleads/v26/errors/" +
+      "shared_set_error.proto\032<google/ads/googl" +
+      "eads/v26/errors/shopping_product_error.p" +
+      "roto\0326google/ads/googleads/v26/errors/si" +
+      "ze_limit_error.proto\032:google/ads/googlea" +
+      "ds/v26/errors/smart_campaign_error.proto" +
+      "\0329google/ads/googleads/v26/errors/string" +
+      "_format_error.proto\0329google/ads/googlead" +
+      "s/v26/errors/string_length_error.proto\032J" +
+      "google/ads/googleads/v26/errors/third_pa" +
+      "rty_app_analytics_link_error.proto\0325goog" +
+      "le/ads/googleads/v26/errors/time_zone_er" +
+      "ror.proto\0325google/ads/googleads/v26/erro" +
+      "rs/url_field_error.proto\0325google/ads/goo" +
+      "gleads/v26/errors/user_data_error.proto\032" +
+      "Cgoogle/ads/googleads/v26/errors/user_li" +
+      "st_customer_type_error.proto\0325google/ads" +
+      "/googleads/v26/errors/user_list_error.pr" +
+      "oto\032:google/ads/googleads/v26/errors/vid" +
+      "eo_campaign_error.proto\032=google/ads/goog" +
+      "leads/v26/errors/video_reservation_error" +
+      ".proto\032Fgoogle/ads/googleads/v26/errors/" +
+      "youtube_video_registration_error.proto\032\036" +
+      "google/protobuf/duration.proto\"g\n\020Google" +
+      "AdsFailure\022?\n\006errors\030\001 \003(\0132/.google.ads." +
+      "googleads.v26.errors.GoogleAdsError\022\022\n\nr" +
+      "equest_id\030\002 \001(\t\"\234\002\n\016GoogleAdsError\022>\n\ner" +
+      "ror_code\030\001 \001(\0132*.google.ads.googleads.v2" +
+      "6.errors.ErrorCode\022\017\n\007message\030\002 \001(\t\0227\n\007t" +
+      "rigger\030\003 \001(\0132&.google.ads.googleads.v26." +
+      "common.Value\022@\n\010location\030\004 \001(\0132..google." +
+      "ads.googleads.v26.errors.ErrorLocation\022>" +
+      "\n\007details\030\005 \001(\0132-.google.ads.googleads.v" +
+      "26.errors.ErrorDetails\"\371\223\001\n\tErrorCode\022W\n" +
+      "\rrequest_error\030\001 \001(\0162>.google.ads.google" +
+      "ads.v26.errors.RequestErrorEnum.RequestE" +
+      "rrorH\000\022p\n\026bidding_strategy_error\030\002 \001(\0162N" +
+      ".google.ads.googleads.v26.errors.Bidding" +
+      "StrategyErrorEnum.BiddingStrategyErrorH\000" +
+      "\022[\n\017url_field_error\030\003 \001(\0162@.google.ads.g" +
+      "oogleads.v26.errors.UrlFieldErrorEnum.Ur" +
+      "lFieldErrorH\000\022j\n\024list_operation_error\030\004 " +
+      "\001(\0162J.google.ads.googleads.v26.errors.Li" +
+      "stOperationErrorEnum.ListOperationErrorH" +
+      "\000\022Q\n\013query_error\030\005 \001(\0162:.google.ads.goog" +
+      "leads.v26.errors.QueryErrorEnum.QueryErr" +
+      "orH\000\022T\n\014mutate_error\030\007 \001(\0162<.google.ads." +
+      "googleads.v26.errors.MutateErrorEnum.Mut" +
+      "ateErrorH\000\022^\n\020field_mask_error\030\010 \001(\0162B.g" +
+      "oogle.ads.googleads.v26.errors.FieldMask" +
+      "ErrorEnum.FieldMaskErrorH\000\022i\n\023authorizat" +
+      "ion_error\030\t \001(\0162J.google.ads.googleads.v" +
+      "26.errors.AuthorizationErrorEnum.Authori" +
+      "zationErrorH\000\022Z\n\016internal_error\030\n \001(\0162@." +
+      "google.ads.googleads.v26.errors.Internal" +
+      "ErrorEnum.InternalErrorH\000\022Q\n\013quota_error" +
+      "\030\013 \001(\0162:.google.ads.googleads.v26.errors" +
+      ".QuotaErrorEnum.QuotaErrorH\000\022H\n\010ad_error" +
+      "\030\014 \001(\01624.google.ads.googleads.v26.errors" +
+      ".AdErrorEnum.AdErrorH\000\022X\n\016ad_group_error" +
+      "\030\r \001(\0162>.google.ads.googleads.v26.errors" +
+      ".AdGroupErrorEnum.AdGroupErrorH\000\022m\n\025camp" +
+      "aign_budget_error\030\016 \001(\0162L.google.ads.goo" +
+      "gleads.v26.errors.CampaignBudgetErrorEnu" +
+      "m.CampaignBudgetErrorH\000\022Z\n\016campaign_erro" +
+      "r\030\017 \001(\0162@.google.ads.googleads.v26.error" +
+      "s.CampaignErrorEnum.CampaignErrorH\000\022k\n\024v" +
+      "ideo_campaign_error\030\266\001 \001(\0162J.google.ads." +
+      "googleads.v26.errors.VideoCampaignErrorE" +
+      "num.VideoCampaignErrorH\000\022l\n\024authenticati" +
+      "on_error\030\021 \001(\0162L.google.ads.googleads.v2" +
+      "6.errors.AuthenticationErrorEnum.Authent" +
+      "icationErrorH\000\022U\n\014action_error\030\304\001 \001(\0162<." +
+      "google.ads.googleads.v26.errors.ActionEr" +
+      "rorEnum.ActionErrorH\000\022\224\001\n#ad_group_crite" +
+      "rion_customizer_error\030\241\001 \001(\0162d.google.ad" +
+      "s.googleads.v26.errors.AdGroupCriterionC" +
+      "ustomizerErrorEnum.AdGroupCriterionCusto" +
+      "mizerErrorH\000\022t\n\030ad_group_criterion_error" +
+      "\030\022 \001(\0162P.google.ads.googleads.v26.errors" +
+      ".AdGroupCriterionErrorEnum.AdGroupCriter" +
+      "ionErrorH\000\022x\n\031ad_group_customizer_error\030" +
+      "\237\001 \001(\0162R.google.ads.googleads.v26.errors" +
+      ".AdGroupCustomizerErrorEnum.AdGroupCusto" +
+      "mizerErrorH\000\022g\n\023ad_customizer_error\030\023 \001(" +
+      "\0162H.google.ads.googleads.v26.errors.AdCu" +
+      "stomizerErrorEnum.AdCustomizerErrorH\000\022_\n" +
+      "\021ad_group_ad_error\030\025 \001(\0162B.google.ads.go" +
+      "ogleads.v26.errors.AdGroupAdErrorEnum.Ad" +
+      "GroupAdErrorH\000\022^\n\020ad_sharing_error\030\030 \001(\016" +
+      "2B.google.ads.googleads.v26.errors.AdSha" +
+      "ringErrorEnum.AdSharingErrorH\000\022K\n\tadx_er" +
+      "ror\030\031 \001(\01626.google.ads.googleads.v26.err" +
+      "ors.AdxErrorEnum.AdxErrorH\000\022Q\n\013asset_err" +
+      "or\030k \001(\0162:.google.ads.googleads.v26.erro" +
+      "rs.AssetErrorEnum.AssetErrorH\000\022r\n\027asset_" +
+      "group_asset_error\030\225\001 \001(\0162N.google.ads.go" +
+      "ogleads.v26.errors.AssetGroupAssetErrorE" +
+      "num.AssetGroupAssetErrorH\000\022\233\001\n&asset_gro" +
+      "up_listing_group_filter_error\030\233\001 \001(\0162h.g" +
+      "oogle.ads.googleads.v26.errors.AssetGrou" +
+      "pListingGroupFilterErrorEnum.AssetGroupL" +
+      "istingGroupFilterErrorH\000\022b\n\021asset_group_" +
+      "error\030\224\001 \001(\0162D.google.ads.googleads.v26." +
+      "errors.AssetGroupErrorEnum.AssetGroupErr" +
+      "orH\000\022l\n\025asset_set_asset_error\030\231\001 \001(\0162J.g" +
+      "oogle.ads.googleads.v26.errors.AssetSetA" +
+      "ssetErrorEnum.AssetSetAssetErrorH\000\022i\n\024as" +
+      "set_set_link_error\030\232\001 \001(\0162H.google.ads.g" +
+      "oogleads.v26.errors.AssetSetLinkErrorEnu" +
+      "m.AssetSetLinkErrorH\000\022\\\n\017asset_set_error" +
+      "\030\230\001 \001(\0162@.google.ads.googleads.v26.error" +
+      "s.AssetSetErrorEnum.AssetSetErrorH\000\022\227\001\n$" +
+      "business_profile_location_sync_error\030\250\001 " +
+      "\001(\0162f.google.ads.googleads.v26.errors.Bu" +
+      "sinessProfileLocationSyncErrorEnum.Busin" +
+      "essProfileLocationSyncErrorH\000\022W\n\rbidding" +
+      "_error\030\032 \001(\0162>.google.ads.googleads.v26." +
+      "errors.BiddingErrorEnum.BiddingErrorH\000\022v" +
+      "\n\030campaign_criterion_error\030\035 \001(\0162R.googl" +
+      "e.ads.googleads.v26.errors.CampaignCrite" +
+      "rionErrorEnum.CampaignCriterionErrorH\000\022\207" +
+      "\001\n\036campaign_conversion_goal_error\030\246\001 \001(\016" +
+      "2\\.google.ads.googleads.v26.errors.Campa" +
+      "ignConversionGoalErrorEnum.CampaignConve" +
+      "rsionGoalErrorH\000\022z\n\031campaign_customizer_" +
+      "error\030\240\001 \001(\0162T.google.ads.googleads.v26." +
+      "errors.CampaignCustomizerErrorEnum.Campa" +
+      "ignCustomizerErrorH\000\022m\n\025collection_size_" +
+      "error\030\037 \001(\0162L.google.ads.googleads.v26.e" +
+      "rrors.CollectionSizeErrorEnum.Collection" +
+      "SizeErrorH\000\022\232\001\n%conversion_goal_campaign" +
+      "_config_error\030\245\001 \001(\0162h.google.ads.google" +
+      "ads.v26.errors.ConversionGoalCampaignCon" +
+      "figErrorEnum.ConversionGoalCampaignConfi" +
+      "gErrorH\000\022d\n\022country_code_error\030m \001(\0162F.g" +
+      "oogle.ads.googleads.v26.errors.CountryCo" +
+      "deErrorEnum.CountryCodeErrorH\000\022]\n\017criter" +
+      "ion_error\030  \001(\0162B.google.ads.googleads.v" +
+      "26.errors.CriterionErrorEnum.CriterionEr" +
+      "rorH\000\022\201\001\n\034custom_conversion_goal_error\030\226" +
+      "\001 \001(\0162X.google.ads.googleads.v26.errors." +
+      "CustomConversionGoalErrorEnum.CustomConv" +
+      "ersionGoalErrorH\000\022z\n\031customer_customizer" +
+      "_error\030\236\001 \001(\0162T.google.ads.googleads.v26" +
+      ".errors.CustomerCustomizerErrorEnum.Cust" +
+      "omerCustomizerErrorH\000\022Z\n\016customer_error\030" +
+      "Z \001(\0162@.google.ads.googleads.v26.errors." +
+      "CustomerErrorEnum.CustomerErrorH\000\022}\n\032cus" +
+      "tomizer_attribute_error\030\227\001 \001(\0162V.google." +
+      "ads.googleads.v26.errors.CustomizerAttri" +
+      "buteErrorEnum.CustomizerAttributeErrorH\000" +
+      "\022N\n\ndate_error\030! \001(\01628.google.ads.google" +
+      "ads.v26.errors.DateErrorEnum.DateErrorH\000",
+      "\022^\n\020date_range_error\030\" \001(\0162B.google.ads." +
+      "googleads.v26.errors.DateRangeErrorEnum." +
+      "DateRangeErrorH\000\022Z\n\016distinct_error\030# \001(\016" +
+      "2@.google.ads.googleads.v26.errors.Disti" +
+      "nctErrorEnum.DistinctErrorH\000\022\206\001\n\036feed_at" +
+      "tribute_reference_error\030$ \001(\0162\\.google.a" +
+      "ds.googleads.v26.errors.FeedAttributeRef" +
+      "erenceErrorEnum.FeedAttributeReferenceEr" +
+      "rorH\000\022\225\001\n$final_url_expansion_asset_view" +
+      "_error\030\301\001 \001(\0162d.google.ads.googleads.v26" +
+      ".errors.FinalUrlExpansionAssetViewErrorE" +
+      "num.FinalUrlExpansionAssetViewErrorH\000\022Z\n" +
+      "\016function_error\030% \001(\0162@.google.ads.googl" +
+      "eads.v26.errors.FunctionErrorEnum.Functi" +
+      "onErrorH\000\022p\n\026function_parsing_error\030& \001(" +
+      "\0162N.google.ads.googleads.v26.errors.Func" +
+      "tionParsingErrorEnum.FunctionParsingErro" +
+      "rH\000\022H\n\010id_error\030\' \001(\01624.google.ads.googl" +
+      "eads.v26.errors.IdErrorEnum.IdErrorH\000\022Q\n" +
+      "\013image_error\030( \001(\0162:.google.ads.googlead" +
+      "s.v26.errors.ImageErrorEnum.ImageErrorH\000" +
+      "\022g\n\023language_code_error\030n \001(\0162H.google.a" +
+      "ds.googleads.v26.errors.LanguageCodeErro" +
+      "rEnum.LanguageCodeErrorH\000\022d\n\022media_bundl" +
+      "e_error\030* \001(\0162F.google.ads.googleads.v26" +
+      ".errors.MediaBundleErrorEnum.MediaBundle" +
+      "ErrorH\000\022d\n\022media_upload_error\030t \001(\0162F.go" +
+      "ogle.ads.googleads.v26.errors.MediaUploa" +
+      "dErrorEnum.MediaUploadErrorH\000\022^\n\020media_f" +
+      "ile_error\030V \001(\0162B.google.ads.googleads.v" +
+      "26.errors.MediaFileErrorEnum.MediaFileEr" +
+      "rorH\000\022n\n\025merchant_center_error\030\242\001 \001(\0162L." +
+      "google.ads.googleads.v26.errors.Merchant" +
+      "CenterErrorEnum.MerchantCenterErrorH\000\022`\n" +
+      "\020multiplier_error\030, \001(\0162D.google.ads.goo" +
+      "gleads.v26.errors.MultiplierErrorEnum.Mu" +
+      "ltiplierErrorH\000\022}\n\033new_resource_creation" +
+      "_error\030- \001(\0162V.google.ads.googleads.v26." +
+      "errors.NewResourceCreationErrorEnum.NewR" +
+      "esourceCreationErrorH\000\022[\n\017not_empty_erro" +
+      "r\030. \001(\0162@.google.ads.googleads.v26.error" +
+      "s.NotEmptyErrorEnum.NotEmptyErrorH\000\022N\n\nn" +
+      "ull_error\030/ \001(\01628.google.ads.googleads.v" +
+      "26.errors.NullErrorEnum.NullErrorH\000\022Z\n\016o" +
+      "perator_error\0300 \001(\0162@.google.ads.googlea" +
+      "ds.v26.errors.OperatorErrorEnum.Operator" +
+      "ErrorH\000\022Q\n\013range_error\0301 \001(\0162:.google.ad" +
+      "s.googleads.v26.errors.RangeErrorEnum.Ra" +
+      "ngeErrorH\000\022l\n\024recommendation_error\030: \001(\016" +
+      "2L.google.ads.googleads.v26.errors.Recom" +
+      "mendationErrorEnum.RecommendationErrorH\000" +
+      "\022\222\001\n!recommendation_subscription_error\030\264" +
+      "\001 \001(\0162d.google.ads.googleads.v26.errors." +
+      "RecommendationSubscriptionErrorEnum.Reco" +
+      "mmendationSubscriptionErrorH\000\022a\n\021region_" +
+      "code_error\0303 \001(\0162D.google.ads.googleads." +
+      "v26.errors.RegionCodeErrorEnum.RegionCod" +
+      "eErrorH\000\022W\n\rsetting_error\0304 \001(\0162>.google" +
+      ".ads.googleads.v26.errors.SettingErrorEn" +
+      "um.SettingErrorH\000\022g\n\023string_format_error" +
+      "\0305 \001(\0162H.google.ads.googleads.v26.errors" +
+      ".StringFormatErrorEnum.StringFormatError" +
+      "H\000\022g\n\023string_length_error\0306 \001(\0162H.google" +
+      ".ads.googleads.v26.errors.StringLengthEr" +
+      "rorEnum.StringLengthErrorH\000\022\203\001\n\035operatio" +
+      "n_access_denied_error\0307 \001(\0162Z.google.ads" +
+      ".googleads.v26.errors.OperationAccessDen" +
+      "iedErrorEnum.OperationAccessDeniedErrorH" +
+      "\000\022\200\001\n\034resource_access_denied_error\0308 \001(\016" +
+      "2X.google.ads.googleads.v26.errors.Resou" +
+      "rceAccessDeniedErrorEnum.ResourceAccessD" +
+      "eniedErrorH\000\022\223\001\n#resource_count_limit_ex" +
+      "ceeded_error\0309 \001(\0162d.google.ads.googlead" +
+      "s.v26.errors.ResourceCountLimitExceededE" +
+      "rrorEnum.ResourceCountLimitExceededError" +
+      "H\000\022\214\001\n youtube_video_registration_error\030" +
+      "u \001(\0162`.google.ads.googleads.v26.errors." +
+      "YoutubeVideoRegistrationErrorEnum.Youtub" +
+      "eVideoRegistrationErrorH\000\022{\n\033ad_group_bi" +
+      "d_modifier_error\030; \001(\0162T.google.ads.goog" +
+      "leads.v26.errors.AdGroupBidModifierError" +
+      "Enum.AdGroupBidModifierErrorH\000\022W\n\rcontex" +
+      "t_error\030< \001(\0162>.google.ads.googleads.v26" +
+      ".errors.ContextErrorEnum.ContextErrorH\000\022" +
+      "Q\n\013field_error\030= \001(\0162:.google.ads.google" +
+      "ads.v26.errors.FieldErrorEnum.FieldError" +
+      "H\000\022^\n\020shared_set_error\030> \001(\0162B.google.ad" +
+      "s.googleads.v26.errors.SharedSetErrorEnu" +
+      "m.SharedSetErrorH\000\022p\n\026shared_criterion_e" +
+      "rror\030? \001(\0162N.google.ads.googleads.v26.er" +
+      "rors.SharedCriterionErrorEnum.SharedCrit" +
+      "erionErrorH\000\022w\n\031campaign_shared_set_erro" +
+      "r\030@ \001(\0162R.google.ads.googleads.v26.error" +
+      "s.CampaignSharedSetErrorEnum.CampaignSha" +
+      "redSetErrorH\000\022s\n\027conversion_action_error" +
+      "\030A \001(\0162P.google.ads.googleads.v26.errors" +
+      ".ConversionActionErrorEnum.ConversionAct" +
+      "ionErrorH\000\022\222\001\n\"conversion_adjustment_upl" +
+      "oad_error\030s \001(\0162d.google.ads.googleads.v" +
+      "26.errors.ConversionAdjustmentUploadErro" +
+      "rEnum.ConversionAdjustmentUploadErrorH\000\022" +
+      "\215\001\n conversion_custom_variable_error\030\217\001 " +
+      "\001(\0162`.google.ads.googleads.v26.errors.Co" +
+      "nversionCustomVariableErrorEnum.Conversi" +
+      "onCustomVariableErrorH\000\022s\n\027conversion_up" +
+      "load_error\030o \001(\0162P.google.ads.googleads." +
+      "v26.errors.ConversionUploadErrorEnum.Con" +
+      "versionUploadErrorH\000\022~\n\033conversion_value" +
+      "_rule_error\030\221\001 \001(\0162V.google.ads.googlead" +
+      "s.v26.errors.ConversionValueRuleErrorEnu" +
+      "m.ConversionValueRuleErrorH\000\022\210\001\n\037convers" +
+      "ion_value_rule_set_error\030\222\001 \001(\0162\\.google" +
+      ".ads.googleads.v26.errors.ConversionValu" +
+      "eRuleSetErrorEnum.ConversionValueRuleSet" +
+      "ErrorH\000\022T\n\014header_error\030B \001(\0162<.google.a" +
+      "ds.googleads.v26.errors.HeaderErrorEnum." +
+      "HeaderErrorH\000\022Z\n\016database_error\030C \001(\0162@." +
+      "google.ads.googleads.v26.errors.Database" +
+      "ErrorEnum.DatabaseErrorH\000\022j\n\024policy_find" +
+      "ing_error\030D \001(\0162J.google.ads.googleads.v" +
+      "26.errors.PolicyFindingErrorEnum.PolicyF" +
+      "indingErrorH\000\022N\n\nenum_error\030F \001(\01628.goog" +
+      "le.ads.googleads.v26.errors.EnumErrorEnu" +
+      "m.EnumErrorH\000\022d\n\022keyword_plan_error\030G \001(" +
+      "\0162F.google.ads.googleads.v26.errors.Keyw" +
+      "ordPlanErrorEnum.KeywordPlanErrorH\000\022}\n\033k" +
+      "eyword_plan_campaign_error\030H \001(\0162V.googl" +
+      "e.ads.googleads.v26.errors.KeywordPlanCa" +
+      "mpaignErrorEnum.KeywordPlanCampaignError" +
+      "H\000\022\224\001\n#keyword_plan_campaign_keyword_err" +
+      "or\030\204\001 \001(\0162d.google.ads.googleads.v26.err" +
+      "ors.KeywordPlanCampaignKeywordErrorEnum." +
+      "KeywordPlanCampaignKeywordErrorH\000\022{\n\033key" +
+      "word_plan_ad_group_error\030J \001(\0162T.google." +
+      "ads.googleads.v26.errors.KeywordPlanAdGr" +
+      "oupErrorEnum.KeywordPlanAdGroupErrorH\000\022\222" +
+      "\001\n#keyword_plan_ad_group_keyword_error\030\205" +
+      "\001 \001(\0162b.google.ads.googleads.v26.errors." +
+      "KeywordPlanAdGroupKeywordErrorEnum.Keywo" +
+      "rdPlanAdGroupKeywordErrorH\000\022q\n\027keyword_p" +
+      "lan_idea_error\030L \001(\0162N.google.ads.google" +
+      "ads.v26.errors.KeywordPlanIdeaErrorEnum." +
+      "KeywordPlanIdeaErrorH\000\022\203\001\n\035account_budge" +
+      "t_proposal_error\030M \001(\0162Z.google.ads.goog" +
+      "leads.v26.errors.AccountBudgetProposalEr" +
+      "rorEnum.AccountBudgetProposalErrorH\000\022[\n\017" +
+      "user_list_error\030N \001(\0162@.google.ads.googl" +
+      "eads.v26.errors.UserListErrorEnum.UserLi" +
+      "stErrorH\000\022e\n\022change_event_error\030\210\001 \001(\0162F" +
+      ".google.ads.googleads.v26.errors.ChangeE" +
+      "ventErrorEnum.ChangeEventErrorH\000\022g\n\023chan" +
+      "ge_status_error\030O \001(\0162H.google.ads.googl" +
+      "eads.v26.errors.ChangeStatusErrorEnum.Ch" +
+      "angeStatusErrorH\000\022N\n\nfeed_error\030P \001(\01628." +
+      "google.ads.googleads.v26.errors.FeedErro" +
+      "rEnum.FeedErrorH\000\022\226\001\n$geo_target_constan" +
+      "t_suggestion_error\030Q \001(\0162f.google.ads.go" +
+      "ogleads.v26.errors.GeoTargetConstantSugg" +
+      "estionErrorEnum.GeoTargetConstantSuggest" +
+      "ionErrorH\000\022j\n\024campaign_draft_error\030R \001(\016" +
+      "2J.google.ads.googleads.v26.errors.Campa" +
+      "ignDraftErrorEnum.CampaignDraftErrorH\000\022[" +
+      "\n\017feed_item_error\030S \001(\0162@.google.ads.goo" +
+      "gleads.v26.errors.FeedItemErrorEnum.Feed" +
+      "ItemErrorH\000\022Q\n\013label_error\030T \001(\0162:.googl" +
+      "e.ads.googleads.v26.errors.LabelErrorEnu" +
+      "m.LabelErrorH\000\022g\n\023billing_setup_error\030W " +
+      "\001(\0162H.google.ads.googleads.v26.errors.Bi" +
+      "llingSetupErrorEnum.BillingSetupErrorH\000\022" +
+      "z\n\032customer_client_link_error\030X \001(\0162T.go" +
+      "ogle.ads.googleads.v26.errors.CustomerCl" +
+      "ientLinkErrorEnum.CustomerClientLinkErro" +
+      "rH\000\022}\n\033customer_manager_link_error\030[ \001(\016" +
+      "2V.google.ads.googleads.v26.errors.Custo" +
+      "merManagerLinkErrorEnum.CustomerManagerL" +
+      "inkErrorH\000\022d\n\022feed_mapping_error\030\\ \001(\0162F" +
+      ".google.ads.googleads.v26.errors.FeedMap" +
+      "pingErrorEnum.FeedMappingErrorH\000\022g\n\023cust" +
+      "omer_feed_error\030] \001(\0162H.google.ads.googl" +
+      "eads.v26.errors.CustomerFeedErrorEnum.Cu" +
+      "stomerFeedErrorH\000\022e\n\023ad_group_feed_error" +
+      "\030^ \001(\0162F.google.ads.googleads.v26.errors" +
+      ".AdGroupFeedErrorEnum.AdGroupFeedErrorH\000" +
+      "\022g\n\023campaign_feed_error\030` \001(\0162H.google.a" +
+      "ds.googleads.v26.errors.CampaignFeedErro" +
+      "rEnum.CampaignFeedErrorH\000\022m\n\025custom_inte" +
+      "rest_error\030a \001(\0162L.google.ads.googleads." +
+      "v26.errors.CustomInterestErrorEnum.Custo" +
+      "mInterestErrorH\000\022y\n\031campaign_experiment_" +
+      "error\030b \001(\0162T.google.ads.googleads.v26.e" +
+      "rrors.CampaignExperimentErrorEnum.Campai" +
+      "gnExperimentErrorH\000\022w\n\031extension_feed_it" +
+      "em_error\030d \001(\0162R.google.ads.googleads.v2" +
+      "6.errors.ExtensionFeedItemErrorEnum.Exte" +
+      "nsionFeedItemErrorH\000\022d\n\022ad_parameter_err" +
+      "or\030e \001(\0162F.google.ads.googleads.v26.erro" +
+      "rs.AdParameterErrorEnum.AdParameterError" +
+      "H\000\022z\n\032feed_item_validation_error\030f \001(\0162T" +
+      ".google.ads.googleads.v26.errors.FeedIte" +
+      "mValidationErrorEnum.FeedItemValidationE" +
+      "rrorH\000\022s\n\027extension_setting_error\030g \001(\0162" +
+      "P.google.ads.googleads.v26.errors.Extens" +
+      "ionSettingErrorEnum.ExtensionSettingErro" +
+      "rH\000\022f\n\023feed_item_set_error\030\214\001 \001(\0162F.goog" +
+      "le.ads.googleads.v26.errors.FeedItemSetE" +
+      "rrorEnum.FeedItemSetErrorH\000\022s\n\030feed_item" +
+      "_set_link_error\030\215\001 \001(\0162N.google.ads.goog" +
+      "leads.v26.errors.FeedItemSetLinkErrorEnu" +
+      "m.FeedItemSetLinkErrorH\000\022n\n\026feed_item_ta" +
+      "rget_error\030h \001(\0162L.google.ads.googleads." +
+      "v26.errors.FeedItemTargetErrorEnum.FeedI" +
+      "temTargetErrorH\000\022p\n\026policy_violation_err" +
+      "or\030i \001(\0162N.google.ads.googleads.v26.erro" +
+      "rs.PolicyViolationErrorEnum.PolicyViolat" +
+      "ionErrorH\000\022m\n\025partial_failure_error\030p \001(" +
+      "\0162L.google.ads.googleads.v26.errors.Part" +
+      "ialFailureErrorEnum.PartialFailureErrorH" +
+      "\000\022^\n\020click_view_error\030q \001(\0162B.google.ads" +
+      ".googleads.v26.errors.ClickViewErrorEnum" +
+      ".ClickViewErrorH\000\022\217\001\n!policy_validation_" +
+      "parameter_error\030r \001(\0162b.google.ads.googl" +
+      "eads.v26.errors.PolicyValidationParamete" +
+      "rErrorEnum.PolicyValidationParameterErro" +
+      "rH\000\022^\n\020size_limit_error\030v \001(\0162B.google.a" +
+      "ds.googleads.v26.errors.SizeLimitErrorEn" +
+      "um.SizeLimitErrorH\000\022{\n\033offline_user_data" +
+      "_job_error\030w \001(\0162T.google.ads.googleads." +
+      "v26.errors.OfflineUserDataJobErrorEnum.O" +
+      "fflineUserDataJobErrorH\000\022n\n\025not_allowlis" +
+      "ted_error\030\211\001 \001(\0162L.google.ads.googleads." +
+      "v26.errors.NotAllowlistedErrorEnum.NotAl" +
+      "lowlistedErrorH\000\022d\n\022manager_link_error\030y" +
+      " \001(\0162F.google.ads.googleads.v26.errors.M" +
+      "anagerLinkErrorEnum.ManagerLinkErrorH\000\022g" +
+      "\n\023currency_code_error\030z \001(\0162H.google.ads" +
+      ".googleads.v26.errors.CurrencyCodeErrorE" +
+      "num.CurrencyCodeErrorH\000\022`\n\020experiment_er" +
+      "ror\030{ \001(\0162D.google.ads.googleads.v26.err" +
+      "ors.ExperimentErrorEnum.ExperimentErrorH" +
+      "\000\022s\n\027access_invitation_error\030| \001(\0162P.goo" +
+      "gle.ads.googleads.v26.errors.AccessInvit" +
+      "ationErrorEnum.AccessInvitationErrorH\000\022^" +
+      "\n\020reach_plan_error\030} \001(\0162B.google.ads.go" +
+      "ogleads.v26.errors.ReachPlanErrorEnum.Re" +
+      "achPlanErrorH\000\022W\n\rinvoice_error\030~ \001(\0162>." +
+      "google.ads.googleads.v26.errors.InvoiceE" +
+      "rrorEnum.InvoiceErrorH\000\022p\n\026payments_acco" +
+      "unt_error\030\177 \001(\0162N.google.ads.googleads.v" +
+      "26.errors.PaymentsAccountErrorEnum.Payme" +
+      "ntsAccountErrorH\000\022\\\n\017time_zone_error\030\200\001 " +
+      "\001(\0162@.google.ads.googleads.v26.errors.Ti" +
+      "meZoneErrorEnum.TimeZoneErrorH\000\022_\n\020asset" +
+      "_link_error\030\201\001 \001(\0162B.google.ads.googlead" +
+      "s.v26.errors.AssetLinkErrorEnum.AssetLin" +
+      "kErrorH\000\022\\\n\017user_data_error\030\202\001 \001(\0162@.goo" +
+      "gle.ads.googleads.v26.errors.UserDataErr" +
+      "orEnum.UserDataErrorH\000\022\\\n\017batch_job_erro" +
+      "r\030\203\001 \001(\0162@.google.ads.googleads.v26.erro" +
+      "rs.BatchJobErrorEnum.BatchJobErrorH\000\022e\n\022" +
+      "account_link_error\030\206\001 \001(\0162F.google.ads.g" +
+      "oogleads.v26.errors.AccountLinkErrorEnum" +
+      ".AccountLinkErrorH\000\022\225\001\n$third_party_app_" +
+      "analytics_link_error\030\207\001 \001(\0162d.google.ads" +
+      ".googleads.v26.errors.ThirdPartyAppAnaly" +
+      "ticsLinkErrorEnum.ThirdPartyAppAnalytics" +
+      "LinkErrorH\000\022{\n\032customer_user_access_erro" +
+      "r\030\212\001 \001(\0162T.google.ads.googleads.v26.erro" +
+      "rs.CustomerUserAccessErrorEnum.CustomerU" +
+      "serAccessErrorH\000\022n\n\025custom_audience_erro" +
+      "r\030\213\001 \001(\0162L.google.ads.googleads.v26.erro" +
+      "rs.CustomAudienceErrorEnum.CustomAudienc" +
+      "eErrorH\000\022[\n\016audience_error\030\244\001 \001(\0162@.goog" +
+      "le.ads.googleads.v26.errors.AudienceErro" +
+      "rEnum.AudienceErrorH\000\022x\n\031search_term_ins" +
+      "ight_error\030\256\001 \001(\0162R.google.ads.googleads" +
+      ".v26.errors.SearchTermInsightErrorEnum.S" +
+      "earchTermInsightErrorH\000\022k\n\024smart_campaig" +
+      "n_error\030\223\001 \001(\0162J.google.ads.googleads.v2" +
+      "6.errors.SmartCampaignErrorEnum.SmartCam" +
+      "paignErrorH\000\022k\n\024experiment_arm_error\030\234\001 " +
+      "\001(\0162J.google.ads.googleads.v26.errors.Ex" +
+      "perimentArmErrorEnum.ExperimentArmErrorH" +
+      "\000\022t\n\027audience_insights_error\030\247\001 \001(\0162P.go" +
+      "ogle.ads.googleads.v26.errors.AudienceIn" +
+      "sightsErrorEnum.AudienceInsightsErrorH\000\022" +
+      "e\n\022product_link_error\030\251\001 \001(\0162F.google.ad" +
+      "s.googleads.v26.errors.ProductLinkErrorE" +
+      "num.ProductLinkErrorH\000\022\\\n\017data_link_erro" +
+      "r\030\273\001 \001(\0162@.google.ads.googleads.v26.erro" +
+      "rs.DataLinkErrorEnum.DataLinkErrorH\000\022\302\001\n" +
+      "4customer_sk_ad_network_conversion_value" +
+      "_schema_error\030\252\001 \001(\0162\200\001.google.ads.googl" +
+      "eads.v26.errors.CustomerSkAdNetworkConve" +
+      "rsionValueSchemaErrorEnum.CustomerSkAdNe" +
+      "tworkConversionValueSchemaErrorH\000\022[\n\016cur" +
+      "rency_error\030\253\001 \001(\0162@.google.ads.googlead" +
+      "s.v26.errors.CurrencyErrorEnum.CurrencyE" +
+      "rrorH\000\022u\n\030asset_group_signal_error\030\260\001 \001(" +
+      "\0162P.google.ads.googleads.v26.errors.Asse" +
+      "tGroupSignalErrorEnum.AssetGroupSignalEr" +
+      "rorH\000\022\204\001\n\035product_link_invitation_error\030" +
+      "\261\001 \001(\0162Z.google.ads.googleads.v26.errors" +
+      ".ProductLinkInvitationErrorEnum.ProductL" +
+      "inkInvitationErrorH\000\022\200\001\n\033identity_verifi" +
+      "cation_error\030\265\001 \001(\0162X.google.ads.googlea" +
+      "ds.v26.errors.IdentityVerificationErrorE" +
+      "num.IdentityVerificationErrorH\000\022\202\001\n\035user" +
+      "_list_customer_type_error\030\267\001 \001(\0162X.googl" +
+      "e.ads.googleads.v26.errors.UserListCusto" +
+      "merTypeErrorEnum.UserListCustomerTypeErr" +
+      "orH\000\022q\n\026shopping_product_error\030\270\001 \001(\0162N." +
+      "google.ads.googleads.v26.errors.Shopping" +
+      "ProductErrorEnum.ShoppingProductErrorH\000\022" +
+      "\246\001\n)automatically_created_asset_removal_" +
+      "error\030\271\001 \001(\0162p.google.ads.googleads.v26." +
+      "errors.AutomaticallyCreatedAssetRemovalE" +
+      "rrorEnum.AutomaticallyCreatedAssetRemova" +
+      "lErrorH\000\022t\n\027shareable_preview_error\030\272\001 \001" +
+      "(\0162P.google.ads.googleads.v26.errors.Sha" +
+      "reablePreviewErrorEnum.ShareablePreviewE" +
+      "rrorH\000\022{\n\032campaign_goal_config_error\030\274\001 " +
+      "\001(\0162T.google.ads.googleads.v26.errors.Ca" +
+      "mpaignGoalConfigErrorEnum.CampaignGoalCo" +
+      "nfigErrorH\000\022O\n\ngoal_error\030\275\001 \001(\01628.googl" +
+      "e.ads.googleads.v26.errors.GoalErrorEnum" +
+      ".GoalErrorH\000\022\215\001\n brand_guidelines_migrat" +
+      "ion_error\030\277\001 \001(\0162`.google.ads.googleads." +
+      "v26.errors.BrandGuidelinesMigrationError" +
+      "Enum.BrandGuidelinesMigrationErrorH\000\022q\n\026" +
+      "asset_generation_error\030\302\001 \001(\0162N.google.a" +
+      "ds.googleads.v26.errors.AssetGenerationE" +
+      "rrorEnum.AssetGenerationErrorH\000\022a\n\020bench" +
+      "marks_error\030\303\001 \001(\0162D.google.ads.googlead" +
+      "s.v26.errors.BenchmarksErrorEnum.Benchma" +
+      "rksErrorH\000\022^\n\017incentive_error\030\305\001 \001(\0162B.g" +
+      "oogle.ads.googleads.v26.errors.Incentive" +
+      "ErrorEnum.IncentiveErrorH\000\022\207\001\n\036content_c" +
+      "reator_insights_error\030\306\001 \001(\0162\\.google.ad" +
+      "s.googleads.v26.errors.ContentCreatorIns" +
+      "ightsErrorEnum.ContentCreatorInsightsErr" +
+      "orH\000\022t\n\027video_reservation_error\030\307\001 \001(\0162P" +
+      ".google.ads.googleads.v26.errors.VideoRe" +
+      "servationErrorEnum.VideoReservationError" +
+      "H\000\022\202\001\n\035multi_party_auth_review_error\030\310\001 " +
+      "\001(\0162X.google.ads.googleads.v26.errors.Mu" +
+      "ltiPartyAuthReviewErrorEnum.MultiPartyAu" +
+      "thReviewErrorH\000\022\201\001\n\034budget_network_setti" +
+      "ng_error\030\311\001 \001(\0162X.google.ads.googleads.v" +
+      "26.errors.BudgetNetworkSettingErrorEnum." +
+      "BudgetNetworkSettingErrorH\000\022x\n\031demand_ge" +
+      "n_campaign_error\030\312\001 \001(\0162R.google.ads.goo" +
+      "gleads.v26.errors.DemandGenCampaignError" +
+      "Enum.DemandGenCampaignErrorH\000B\014\n\nerror_c" +
+      "ode\"\263\001\n\rErrorLocation\022\\\n\023field_path_elem" +
+      "ents\030\002 \003(\0132?.google.ads.googleads.v26.er" +
+      "rors.ErrorLocation.FieldPathElement\032D\n\020F" +
+      "ieldPathElement\022\022\n\nfield_name\030\001 \001(\t\022\022\n\005i" +
+      "ndex\030\003 \001(\005H\000\210\001\001B\010\n\006_index\"\305\005\n\014ErrorDetai" +
+      "ls\022\036\n\026unpublished_error_code\030\001 \001(\t\022Y\n\030po" +
+      "licy_violation_details\030\002 \001(\01327.google.ad" +
+      "s.googleads.v26.errors.PolicyViolationDe" +
+      "tails\022U\n\026policy_finding_details\030\003 \001(\01325." +
+      "google.ads.googleads.v26.errors.PolicyFi" +
+      "ndingDetails\022O\n\023quota_error_details\030\004 \001(" +
+      "\01322.google.ads.googleads.v26.errors.Quot" +
+      "aErrorDetails\022U\n\026resource_count_details\030" +
+      "\005 \001(\01325.google.ads.googleads.v26.errors." +
+      "ResourceCountDetails\022n\n$budget_per_day_m" +
+      "inimum_error_details\030\006 \001(\0132@.google.ads." +
+      "googleads.v26.errors.BudgetPerDayMinimum" +
+      "ErrorDetails\022[\n\031reservation_error_detail" +
+      "s\030\007 \001(\01328.google.ads.googleads.v26.error" +
+      "s.ReservationErrorDetails\022n\n#incompatibl" +
+      "e_clo_goal_error_details\030\010 \001(\0132A.google." +
+      "ads.googleads.v26.errors.IncompatibleClo" +
+      "GoalsErrorDetails\"\264\001\n\026PolicyViolationDet" +
+      "ails\022#\n\033external_policy_description\030\002 \001(" +
+      "\t\022@\n\003key\030\004 \001(\01323.google.ads.googleads.v2" +
+      "6.common.PolicyViolationKey\022\034\n\024external_" +
+      "policy_name\030\005 \001(\t\022\025\n\ris_exemptible\030\006 \001(\010" +
+      "\"g\n\024PolicyFindingDetails\022O\n\024policy_topic" +
+      "_entries\030\001 \003(\01321.google.ads.googleads.v2" +
+      "6.common.PolicyTopicEntry\"\371\001\n\021QuotaError" +
+      "Details\022U\n\nrate_scope\030\001 \001(\0162A.google.ads" +
+      ".googleads.v26.errors.QuotaErrorDetails." +
+      "QuotaRateScope\022\021\n\trate_name\030\002 \001(\t\022.\n\013ret" +
+      "ry_delay\030\003 \001(\0132\031.google.protobuf.Duratio" +
+      "n\"J\n\016QuotaRateScope\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
+      "UNKNOWN\020\001\022\013\n\007ACCOUNT\020\002\022\r\n\tDEVELOPER\020\003\"\314\001" +
+      "\n\024ResourceCountDetails\022\024\n\014enclosing_id\030\001" +
+      " \001(\t\022\032\n\022enclosing_resource\030\005 \001(\t\022\r\n\005limi" +
+      "t\030\002 \001(\005\022[\n\nlimit_type\030\003 \001(\0162G.google.ads" +
+      ".googleads.v26.enums.ResourceLimitTypeEn" +
+      "um.ResourceLimitType\022\026\n\016existing_count\030\004" +
+      " \001(\005\"\201\002\n\037BudgetPerDayMinimumErrorDetails" +
+      "\022\025\n\rcurrency_code\030\001 \001(\t\022%\n\035budget_per_da" +
+      "y_minimum_micros\030\002 \001(\003\022$\n\034minimum_budget" +
+      "_amount_micros\030\003 \001(\003\022*\n\"minimum_budget_t" +
+      "otal_amount_micros\030\004 \001(\003\022#\n\033failed_budge" +
+      "t_amount_micros\030\005 \001(\003\022)\n!failed_budget_t",
+      "otal_amount_micros\030\006 \001(\003\"\217\001\n\027Reservation" +
+      "ErrorDetails\022\020\n\010campaign\030\001 \001(\t\022I\n\006quotes" +
+      "\030\002 \003(\01329.google.ads.googleads.v26.common" +
+      ".CampaignReservationQuote\022\027\n\017quote_signa" +
+      "ture\030\003 \001(\t\"\312\002\n IncompatibleCloGoalsError" +
+      "Details\022\221\001\n\022clo_goal_sub_type1\030\001 \001(\0162u.g" +
+      "oogle.ads.googleads.v26.enums.CustomerLi" +
+      "fecycleOptimizationGoalSubTypeEnum.Custo" +
+      "merLifecycleOptimizationGoalSubType\022\221\001\n\022" +
+      "clo_goal_sub_type2\030\002 \001(\0162u.google.ads.go" +
+      "ogleads.v26.enums.CustomerLifecycleOptim" +
+      "izationGoalSubTypeEnum.CustomerLifecycle" +
+      "OptimizationGoalSubTypeB\353\001\n#com.google.a" +
+      "ds.googleads.v26.errorsB\013ErrorsProtoP\001ZE" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v26/errors;errors\242\002\003GAA\252\002\037Go" +
+      "ogle.Ads.GoogleAds.V26.Errors\312\002\037Google\\A" +
+      "ds\\GoogleAds\\V26\\Errors\352\002#Google::Ads::G" +
+      "oogleAds::V26::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -956,6 +965,7 @@ public final class ErrorsProto extends com.google.protobuf.GeneratedFile {
           com.google.ads.googleads.v26.errors.BiddingStrategyErrorProto.getDescriptor(),
           com.google.ads.googleads.v26.errors.BillingSetupErrorProto.getDescriptor(),
           com.google.ads.googleads.v26.errors.BrandGuidelinesMigrationErrorProto.getDescriptor(),
+          com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorProto.getDescriptor(),
           com.google.ads.googleads.v26.errors.BusinessProfileLocationSyncErrorProto.getDescriptor(),
           com.google.ads.googleads.v26.errors.CampaignBudgetErrorProto.getDescriptor(),
           com.google.ads.googleads.v26.errors.CampaignConversionGoalErrorProto.getDescriptor(),
@@ -999,6 +1009,7 @@ public final class ErrorsProto extends com.google.protobuf.GeneratedFile {
           com.google.ads.googleads.v26.errors.DatabaseErrorProto.getDescriptor(),
           com.google.ads.googleads.v26.errors.DateErrorProto.getDescriptor(),
           com.google.ads.googleads.v26.errors.DateRangeErrorProto.getDescriptor(),
+          com.google.ads.googleads.v26.errors.DemandGenCampaignErrorProto.getDescriptor(),
           com.google.ads.googleads.v26.errors.DistinctErrorProto.getDescriptor(),
           com.google.ads.googleads.v26.errors.EnumErrorProto.getDescriptor(),
           com.google.ads.googleads.v26.errors.ExperimentArmErrorProto.getDescriptor(),
@@ -1106,7 +1117,7 @@ public final class ErrorsProto extends com.google.protobuf.GeneratedFile {
     internal_static_google_ads_googleads_v26_errors_ErrorCode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_errors_ErrorCode_descriptor,
-        new java.lang.String[] { "RequestError", "BiddingStrategyError", "UrlFieldError", "ListOperationError", "QueryError", "MutateError", "FieldMaskError", "AuthorizationError", "InternalError", "QuotaError", "AdError", "AdGroupError", "CampaignBudgetError", "CampaignError", "VideoCampaignError", "AuthenticationError", "ActionError", "AdGroupCriterionCustomizerError", "AdGroupCriterionError", "AdGroupCustomizerError", "AdCustomizerError", "AdGroupAdError", "AdSharingError", "AdxError", "AssetError", "AssetGroupAssetError", "AssetGroupListingGroupFilterError", "AssetGroupError", "AssetSetAssetError", "AssetSetLinkError", "AssetSetError", "BusinessProfileLocationSyncError", "BiddingError", "CampaignCriterionError", "CampaignConversionGoalError", "CampaignCustomizerError", "CollectionSizeError", "ConversionGoalCampaignConfigError", "CountryCodeError", "CriterionError", "CustomConversionGoalError", "CustomerCustomizerError", "CustomerError", "CustomizerAttributeError", "DateError", "DateRangeError", "DistinctError", "FeedAttributeReferenceError", "FinalUrlExpansionAssetViewError", "FunctionError", "FunctionParsingError", "IdError", "ImageError", "LanguageCodeError", "MediaBundleError", "MediaUploadError", "MediaFileError", "MerchantCenterError", "MultiplierError", "NewResourceCreationError", "NotEmptyError", "NullError", "OperatorError", "RangeError", "RecommendationError", "RecommendationSubscriptionError", "RegionCodeError", "SettingError", "StringFormatError", "StringLengthError", "OperationAccessDeniedError", "ResourceAccessDeniedError", "ResourceCountLimitExceededError", "YoutubeVideoRegistrationError", "AdGroupBidModifierError", "ContextError", "FieldError", "SharedSetError", "SharedCriterionError", "CampaignSharedSetError", "ConversionActionError", "ConversionAdjustmentUploadError", "ConversionCustomVariableError", "ConversionUploadError", "ConversionValueRuleError", "ConversionValueRuleSetError", "HeaderError", "DatabaseError", "PolicyFindingError", "EnumError", "KeywordPlanError", "KeywordPlanCampaignError", "KeywordPlanCampaignKeywordError", "KeywordPlanAdGroupError", "KeywordPlanAdGroupKeywordError", "KeywordPlanIdeaError", "AccountBudgetProposalError", "UserListError", "ChangeEventError", "ChangeStatusError", "FeedError", "GeoTargetConstantSuggestionError", "CampaignDraftError", "FeedItemError", "LabelError", "BillingSetupError", "CustomerClientLinkError", "CustomerManagerLinkError", "FeedMappingError", "CustomerFeedError", "AdGroupFeedError", "CampaignFeedError", "CustomInterestError", "CampaignExperimentError", "ExtensionFeedItemError", "AdParameterError", "FeedItemValidationError", "ExtensionSettingError", "FeedItemSetError", "FeedItemSetLinkError", "FeedItemTargetError", "PolicyViolationError", "PartialFailureError", "ClickViewError", "PolicyValidationParameterError", "SizeLimitError", "OfflineUserDataJobError", "NotAllowlistedError", "ManagerLinkError", "CurrencyCodeError", "ExperimentError", "AccessInvitationError", "ReachPlanError", "InvoiceError", "PaymentsAccountError", "TimeZoneError", "AssetLinkError", "UserDataError", "BatchJobError", "AccountLinkError", "ThirdPartyAppAnalyticsLinkError", "CustomerUserAccessError", "CustomAudienceError", "AudienceError", "SearchTermInsightError", "SmartCampaignError", "ExperimentArmError", "AudienceInsightsError", "ProductLinkError", "DataLinkError", "CustomerSkAdNetworkConversionValueSchemaError", "CurrencyError", "AssetGroupSignalError", "ProductLinkInvitationError", "IdentityVerificationError", "UserListCustomerTypeError", "ShoppingProductError", "AutomaticallyCreatedAssetRemovalError", "ShareablePreviewError", "CampaignGoalConfigError", "GoalError", "BrandGuidelinesMigrationError", "AssetGenerationError", "BenchmarksError", "IncentiveError", "ContentCreatorInsightsError", "VideoReservationError", "MultiPartyAuthReviewError", "ErrorCode", });
+        new java.lang.String[] { "RequestError", "BiddingStrategyError", "UrlFieldError", "ListOperationError", "QueryError", "MutateError", "FieldMaskError", "AuthorizationError", "InternalError", "QuotaError", "AdError", "AdGroupError", "CampaignBudgetError", "CampaignError", "VideoCampaignError", "AuthenticationError", "ActionError", "AdGroupCriterionCustomizerError", "AdGroupCriterionError", "AdGroupCustomizerError", "AdCustomizerError", "AdGroupAdError", "AdSharingError", "AdxError", "AssetError", "AssetGroupAssetError", "AssetGroupListingGroupFilterError", "AssetGroupError", "AssetSetAssetError", "AssetSetLinkError", "AssetSetError", "BusinessProfileLocationSyncError", "BiddingError", "CampaignCriterionError", "CampaignConversionGoalError", "CampaignCustomizerError", "CollectionSizeError", "ConversionGoalCampaignConfigError", "CountryCodeError", "CriterionError", "CustomConversionGoalError", "CustomerCustomizerError", "CustomerError", "CustomizerAttributeError", "DateError", "DateRangeError", "DistinctError", "FeedAttributeReferenceError", "FinalUrlExpansionAssetViewError", "FunctionError", "FunctionParsingError", "IdError", "ImageError", "LanguageCodeError", "MediaBundleError", "MediaUploadError", "MediaFileError", "MerchantCenterError", "MultiplierError", "NewResourceCreationError", "NotEmptyError", "NullError", "OperatorError", "RangeError", "RecommendationError", "RecommendationSubscriptionError", "RegionCodeError", "SettingError", "StringFormatError", "StringLengthError", "OperationAccessDeniedError", "ResourceAccessDeniedError", "ResourceCountLimitExceededError", "YoutubeVideoRegistrationError", "AdGroupBidModifierError", "ContextError", "FieldError", "SharedSetError", "SharedCriterionError", "CampaignSharedSetError", "ConversionActionError", "ConversionAdjustmentUploadError", "ConversionCustomVariableError", "ConversionUploadError", "ConversionValueRuleError", "ConversionValueRuleSetError", "HeaderError", "DatabaseError", "PolicyFindingError", "EnumError", "KeywordPlanError", "KeywordPlanCampaignError", "KeywordPlanCampaignKeywordError", "KeywordPlanAdGroupError", "KeywordPlanAdGroupKeywordError", "KeywordPlanIdeaError", "AccountBudgetProposalError", "UserListError", "ChangeEventError", "ChangeStatusError", "FeedError", "GeoTargetConstantSuggestionError", "CampaignDraftError", "FeedItemError", "LabelError", "BillingSetupError", "CustomerClientLinkError", "CustomerManagerLinkError", "FeedMappingError", "CustomerFeedError", "AdGroupFeedError", "CampaignFeedError", "CustomInterestError", "CampaignExperimentError", "ExtensionFeedItemError", "AdParameterError", "FeedItemValidationError", "ExtensionSettingError", "FeedItemSetError", "FeedItemSetLinkError", "FeedItemTargetError", "PolicyViolationError", "PartialFailureError", "ClickViewError", "PolicyValidationParameterError", "SizeLimitError", "OfflineUserDataJobError", "NotAllowlistedError", "ManagerLinkError", "CurrencyCodeError", "ExperimentError", "AccessInvitationError", "ReachPlanError", "InvoiceError", "PaymentsAccountError", "TimeZoneError", "AssetLinkError", "UserDataError", "BatchJobError", "AccountLinkError", "ThirdPartyAppAnalyticsLinkError", "CustomerUserAccessError", "CustomAudienceError", "AudienceError", "SearchTermInsightError", "SmartCampaignError", "ExperimentArmError", "AudienceInsightsError", "ProductLinkError", "DataLinkError", "CustomerSkAdNetworkConversionValueSchemaError", "CurrencyError", "AssetGroupSignalError", "ProductLinkInvitationError", "IdentityVerificationError", "UserListCustomerTypeError", "ShoppingProductError", "AutomaticallyCreatedAssetRemovalError", "ShareablePreviewError", "CampaignGoalConfigError", "GoalError", "BrandGuidelinesMigrationError", "AssetGenerationError", "BenchmarksError", "IncentiveError", "ContentCreatorInsightsError", "VideoReservationError", "MultiPartyAuthReviewError", "BudgetNetworkSettingError", "DemandGenCampaignError", "ErrorCode", });
     internal_static_google_ads_googleads_v26_errors_ErrorLocation_descriptor =
       getDescriptor().getMessageType(3);
     internal_static_google_ads_googleads_v26_errors_ErrorLocation_fieldAccessorTable = new
@@ -1210,6 +1221,7 @@ public final class ErrorsProto extends com.google.protobuf.GeneratedFile {
     com.google.ads.googleads.v26.errors.BiddingStrategyErrorProto.getDescriptor();
     com.google.ads.googleads.v26.errors.BillingSetupErrorProto.getDescriptor();
     com.google.ads.googleads.v26.errors.BrandGuidelinesMigrationErrorProto.getDescriptor();
+    com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorProto.getDescriptor();
     com.google.ads.googleads.v26.errors.BusinessProfileLocationSyncErrorProto.getDescriptor();
     com.google.ads.googleads.v26.errors.CampaignBudgetErrorProto.getDescriptor();
     com.google.ads.googleads.v26.errors.CampaignConversionGoalErrorProto.getDescriptor();
@@ -1253,6 +1265,7 @@ public final class ErrorsProto extends com.google.protobuf.GeneratedFile {
     com.google.ads.googleads.v26.errors.DatabaseErrorProto.getDescriptor();
     com.google.ads.googleads.v26.errors.DateErrorProto.getDescriptor();
     com.google.ads.googleads.v26.errors.DateRangeErrorProto.getDescriptor();
+    com.google.ads.googleads.v26.errors.DemandGenCampaignErrorProto.getDescriptor();
     com.google.ads.googleads.v26.errors.DistinctErrorProto.getDescriptor();
     com.google.ads.googleads.v26.errors.EnumErrorProto.getDescriptor();
     com.google.ads.googleads.v26.errors.ExperimentArmErrorProto.getDescriptor();

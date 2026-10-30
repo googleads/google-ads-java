@@ -57,91 +57,92 @@ public final class ShoppingProductProto extends com.google.protobuf.GeneratedFil
       "ms/product_issue_severity.proto\0323google/" +
       "ads/googleads/v26/enums/product_status.p" +
       "roto\032\037google/api/field_behavior.proto\032\031g" +
-      "oogle/api/resource.proto\"\372\027\n\017ShoppingPro" +
-      "duct\022G\n\rresource_name\030\001 \001(\tB0\340A\003\372A*\n(goo" +
-      "gleads.googleapis.com/ShoppingProduct\022\037\n" +
-      "\022merchant_center_id\030\002 \001(\003B\003\340A\003\022W\n\007channe" +
-      "l\030\003 \001(\0162A.google.ads.googleads.v26.enums" +
-      ".ProductChannelEnum.ProductChannelB\003\340A\003\022" +
-      "\032\n\rlanguage_code\030\004 \001(\tB\003\340A\003\022\027\n\nfeed_labe" +
-      "l\030\005 \001(\tB\003\340A\003\022\024\n\007item_id\030\006 \001(\tB\003\340A\003\022)\n\027mu" +
-      "lti_client_account_id\030\007 \001(\003B\003\340A\003H\000\210\001\001\022\027\n" +
-      "\005title\030\010 \001(\tB\003\340A\003H\001\210\001\001\022\027\n\005brand\030\t \001(\tB\003\340" +
-      "A\003H\002\210\001\001\022#\n\021product_image_uri\030$ \001(\tB\003\340A\003H" +
-      "\003\210\001\001\022\036\n\014price_micros\030\n \001(\003B\003\340A\003H\004\210\001\001\022\037\n\r" +
-      "currency_code\030\013 \001(\tB\003\340A\003H\005\210\001\001\022~\n\023channel" +
-      "_exclusivity\030\014 \001(\0162W.google.ads.googlead" +
-      "s.v26.enums.ProductChannelExclusivityEnu" +
-      "m.ProductChannelExclusivityB\003\340A\003H\006\210\001\001\022b\n" +
-      "\tcondition\030\r \001(\0162E.google.ads.googleads." +
-      "v26.enums.ProductConditionEnum.ProductCo" +
-      "nditionB\003\340A\003H\007\210\001\001\022k\n\014availability\030\016 \001(\0162" +
-      "K.google.ads.googleads.v26.enums.Product" +
-      "AvailabilityEnum.ProductAvailabilityB\003\340A" +
-      "\003H\010\210\001\001\022\035\n\020target_countries\030\017 \003(\tB\003\340A\003\022#\n" +
-      "\021custom_attribute0\030\020 \001(\tB\003\340A\003H\t\210\001\001\022#\n\021cu" +
-      "stom_attribute1\030\021 \001(\tB\003\340A\003H\n\210\001\001\022#\n\021custo" +
-      "m_attribute2\030\022 \001(\tB\003\340A\003H\013\210\001\001\022#\n\021custom_a" +
-      "ttribute3\030\023 \001(\tB\003\340A\003H\014\210\001\001\022#\n\021custom_attr" +
-      "ibute4\030\024 \001(\tB\003\340A\003H\r\210\001\001\022V\n\017category_level" +
-      "1\030\025 \001(\tB8\340A\003\372A2\n0googleads.googleapis.co" +
-      "m/ProductCategoryConstantH\016\210\001\001\022V\n\017catego" +
-      "ry_level2\030\026 \001(\tB8\340A\003\372A2\n0googleads.googl" +
-      "eapis.com/ProductCategoryConstantH\017\210\001\001\022V" +
-      "\n\017category_level3\030\027 \001(\tB8\340A\003\372A2\n0googlea" +
-      "ds.googleapis.com/ProductCategoryConstan" +
-      "tH\020\210\001\001\022V\n\017category_level4\030\030 \001(\tB8\340A\003\372A2\n" +
-      "0googleads.googleapis.com/ProductCategor" +
-      "yConstantH\021\210\001\001\022V\n\017category_level5\030\031 \001(\tB" +
-      "8\340A\003\372A2\n0googleads.googleapis.com/Produc" +
-      "tCategoryConstantH\022\210\001\001\022%\n\023product_type_l" +
-      "evel1\030\032 \001(\tB\003\340A\003H\023\210\001\001\022%\n\023product_type_le" +
-      "vel2\030\033 \001(\tB\003\340A\003H\024\210\001\001\022%\n\023product_type_lev" +
-      "el3\030\034 \001(\tB\003\340A\003H\025\210\001\001\022%\n\023product_type_leve" +
-      "l4\030\035 \001(\tB\003\340A\003H\026\210\001\001\022%\n\023product_type_level" +
-      "5\030\036 \001(\tB\003\340A\003H\027\210\001\001\022*\n\030effective_max_cpc_m" +
-      "icros\030\037 \001(\003B\003\340A\003H\030\210\001\001\022T\n\006status\030  \001(\0162?." +
-      "google.ads.googleads.v26.enums.ProductSt" +
-      "atusEnum.ProductStatusB\003\340A\003\022U\n\006issues\030! " +
-      "\003(\0132@.google.ads.googleads.v26.resources" +
-      ".ShoppingProduct.ProductIssueB\003\340A\003\022@\n\010ca" +
-      "mpaign\030\" \001(\tB)\340A\003\372A#\n!googleads.googleap" +
-      "is.com/CampaignH\031\210\001\001\022?\n\010ad_group\030# \001(\tB(" +
-      "\340A\003\372A\"\n googleads.googleapis.com/AdGroup" +
-      "H\032\210\001\001\032\260\002\n\014ProductIssue\022\027\n\nerror_code\030\001 \001" +
-      "(\tB\003\340A\003\022h\n\014ads_severity\030\002 \001(\0162M.google.a" +
-      "ds.googleads.v26.enums.ProductIssueSever" +
-      "ityEnum.ProductIssueSeverityB\003\340A\003\022 \n\016att" +
-      "ribute_name\030\003 \001(\tB\003\340A\003H\000\210\001\001\022\030\n\013descripti" +
-      "on\030\004 \001(\tB\003\340A\003\022\023\n\006detail\030\005 \001(\tB\003\340A\003\022\032\n\rdo" +
-      "cumentation\030\006 \001(\tB\003\340A\003\022\035\n\020affected_regio" +
-      "ns\030\007 \003(\tB\003\340A\003B\021\n\017_attribute_name:\301\001\352A\275\001\n" +
-      "(googleads.googleapis.com/ShoppingProduc" +
-      "t\022ncustomers/{customer_id}/shoppingProdu" +
-      "cts/{merchant_center_id}~{channel}~{lang" +
-      "uage_code}~{feed_label}~{item_id}*\020shopp" +
-      "ingProducts2\017shoppingProductB\032\n\030_multi_c" +
-      "lient_account_idB\010\n\006_titleB\010\n\006_brandB\024\n\022" +
-      "_product_image_uriB\017\n\r_price_microsB\020\n\016_" +
-      "currency_codeB\026\n\024_channel_exclusivityB\014\n" +
-      "\n_conditionB\017\n\r_availabilityB\024\n\022_custom_" +
-      "attribute0B\024\n\022_custom_attribute1B\024\n\022_cus" +
-      "tom_attribute2B\024\n\022_custom_attribute3B\024\n\022" +
-      "_custom_attribute4B\022\n\020_category_level1B\022" +
-      "\n\020_category_level2B\022\n\020_category_level3B\022" +
-      "\n\020_category_level4B\022\n\020_category_level5B\026" +
-      "\n\024_product_type_level1B\026\n\024_product_type_" +
-      "level2B\026\n\024_product_type_level3B\026\n\024_produ" +
-      "ct_type_level4B\026\n\024_product_type_level5B\033" +
-      "\n\031_effective_max_cpc_microsB\013\n\t_campaign" +
-      "B\013\n\t_ad_groupB\206\002\n&com.google.ads.googlea" +
-      "ds.v26.resourcesB\024ShoppingProductProtoP\001" +
-      "ZKgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v26/resources;resources\242\002\003" +
-      "GAA\252\002\"Google.Ads.GoogleAds.V26.Resources" +
-      "\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002&" +
-      "Google::Ads::GoogleAds::V26::Resourcesb\006" +
-      "proto3"
+      "oogle/api/resource.proto\"\245\030\n\017ShoppingPro" +
+      "duct\022H\n\rresource_name\030\001 \001(\tB1\342A\001\003\372A*\n(go" +
+      "ogleads.googleapis.com/ShoppingProduct\022 " +
+      "\n\022merchant_center_id\030\002 \001(\003B\004\342A\001\003\022X\n\007chan" +
+      "nel\030\003 \001(\0162A.google.ads.googleads.v26.enu" +
+      "ms.ProductChannelEnum.ProductChannelB\004\342A" +
+      "\001\003\022\033\n\rlanguage_code\030\004 \001(\tB\004\342A\001\003\022\030\n\nfeed_" +
+      "label\030\005 \001(\tB\004\342A\001\003\022\025\n\007item_id\030\006 \001(\tB\004\342A\001\003" +
+      "\022*\n\027multi_client_account_id\030\007 \001(\003B\004\342A\001\003H" +
+      "\000\210\001\001\022\030\n\005title\030\010 \001(\tB\004\342A\001\003H\001\210\001\001\022\030\n\005brand\030" +
+      "\t \001(\tB\004\342A\001\003H\002\210\001\001\022$\n\021product_image_uri\030$ " +
+      "\001(\tB\004\342A\001\003H\003\210\001\001\022\037\n\014price_micros\030\n \001(\003B\004\342A" +
+      "\001\003H\004\210\001\001\022 \n\rcurrency_code\030\013 \001(\tB\004\342A\001\003H\005\210\001" +
+      "\001\022\177\n\023channel_exclusivity\030\014 \001(\0162W.google." +
+      "ads.googleads.v26.enums.ProductChannelEx" +
+      "clusivityEnum.ProductChannelExclusivityB" +
+      "\004\342A\001\003H\006\210\001\001\022c\n\tcondition\030\r \001(\0162E.google.a" +
+      "ds.googleads.v26.enums.ProductConditionE" +
+      "num.ProductConditionB\004\342A\001\003H\007\210\001\001\022l\n\014avail" +
+      "ability\030\016 \001(\0162K.google.ads.googleads.v26" +
+      ".enums.ProductAvailabilityEnum.ProductAv" +
+      "ailabilityB\004\342A\001\003H\010\210\001\001\022\036\n\020target_countrie" +
+      "s\030\017 \003(\tB\004\342A\001\003\022$\n\021custom_attribute0\030\020 \001(\t" +
+      "B\004\342A\001\003H\t\210\001\001\022$\n\021custom_attribute1\030\021 \001(\tB\004" +
+      "\342A\001\003H\n\210\001\001\022$\n\021custom_attribute2\030\022 \001(\tB\004\342A" +
+      "\001\003H\013\210\001\001\022$\n\021custom_attribute3\030\023 \001(\tB\004\342A\001\003" +
+      "H\014\210\001\001\022$\n\021custom_attribute4\030\024 \001(\tB\004\342A\001\003H\r" +
+      "\210\001\001\022W\n\017category_level1\030\025 \001(\tB9\342A\001\003\372A2\n0g" +
+      "oogleads.googleapis.com/ProductCategoryC" +
+      "onstantH\016\210\001\001\022W\n\017category_level2\030\026 \001(\tB9\342" +
+      "A\001\003\372A2\n0googleads.googleapis.com/Product" +
+      "CategoryConstantH\017\210\001\001\022W\n\017category_level3" +
+      "\030\027 \001(\tB9\342A\001\003\372A2\n0googleads.googleapis.co" +
+      "m/ProductCategoryConstantH\020\210\001\001\022W\n\017catego" +
+      "ry_level4\030\030 \001(\tB9\342A\001\003\372A2\n0googleads.goog" +
+      "leapis.com/ProductCategoryConstantH\021\210\001\001\022" +
+      "W\n\017category_level5\030\031 \001(\tB9\342A\001\003\372A2\n0googl" +
+      "eads.googleapis.com/ProductCategoryConst" +
+      "antH\022\210\001\001\022&\n\023product_type_level1\030\032 \001(\tB\004\342" +
+      "A\001\003H\023\210\001\001\022&\n\023product_type_level2\030\033 \001(\tB\004\342" +
+      "A\001\003H\024\210\001\001\022&\n\023product_type_level3\030\034 \001(\tB\004\342" +
+      "A\001\003H\025\210\001\001\022&\n\023product_type_level4\030\035 \001(\tB\004\342" +
+      "A\001\003H\026\210\001\001\022&\n\023product_type_level5\030\036 \001(\tB\004\342" +
+      "A\001\003H\027\210\001\001\022+\n\030effective_max_cpc_micros\030\037 \001" +
+      "(\003B\004\342A\001\003H\030\210\001\001\022U\n\006status\030  \001(\0162?.google.a" +
+      "ds.googleads.v26.enums.ProductStatusEnum" +
+      ".ProductStatusB\004\342A\001\003\022V\n\006issues\030! \003(\0132@.g" +
+      "oogle.ads.googleads.v26.resources.Shoppi" +
+      "ngProduct.ProductIssueB\004\342A\001\003\022A\n\010campaign" +
+      "\030\" \001(\tB*\342A\001\003\372A#\n!googleads.googleapis.co" +
+      "m/CampaignH\031\210\001\001\022@\n\010ad_group\030# \001(\tB)\342A\001\003\372" +
+      "A\"\n googleads.googleapis.com/AdGroupH\032\210\001" +
+      "\001\032\267\002\n\014ProductIssue\022\030\n\nerror_code\030\001 \001(\tB\004" +
+      "\342A\001\003\022i\n\014ads_severity\030\002 \001(\0162M.google.ads." +
+      "googleads.v26.enums.ProductIssueSeverity" +
+      "Enum.ProductIssueSeverityB\004\342A\001\003\022!\n\016attri" +
+      "bute_name\030\003 \001(\tB\004\342A\001\003H\000\210\001\001\022\031\n\013descriptio" +
+      "n\030\004 \001(\tB\004\342A\001\003\022\024\n\006detail\030\005 \001(\tB\004\342A\001\003\022\033\n\rd" +
+      "ocumentation\030\006 \001(\tB\004\342A\001\003\022\036\n\020affected_reg" +
+      "ions\030\007 \003(\tB\004\342A\001\003B\021\n\017_attribute_name:\301\001\352A" +
+      "\275\001\n(googleads.googleapis.com/ShoppingPro" +
+      "duct\022ncustomers/{customer_id}/shoppingPr" +
+      "oducts/{merchant_center_id}~{channel}~{l" +
+      "anguage_code}~{feed_label}~{item_id}*\020sh" +
+      "oppingProducts2\017shoppingProductB\032\n\030_mult" +
+      "i_client_account_idB\010\n\006_titleB\010\n\006_brandB" +
+      "\024\n\022_product_image_uriB\017\n\r_price_microsB\020" +
+      "\n\016_currency_codeB\026\n\024_channel_exclusivity" +
+      "B\014\n\n_conditionB\017\n\r_availabilityB\024\n\022_cust" +
+      "om_attribute0B\024\n\022_custom_attribute1B\024\n\022_" +
+      "custom_attribute2B\024\n\022_custom_attribute3B" +
+      "\024\n\022_custom_attribute4B\022\n\020_category_level" +
+      "1B\022\n\020_category_level2B\022\n\020_category_level" +
+      "3B\022\n\020_category_level4B\022\n\020_category_level" +
+      "5B\026\n\024_product_type_level1B\026\n\024_product_ty" +
+      "pe_level2B\026\n\024_product_type_level3B\026\n\024_pr" +
+      "oduct_type_level4B\026\n\024_product_type_level" +
+      "5B\033\n\031_effective_max_cpc_microsB\013\n\t_campa" +
+      "ignB\013\n\t_ad_groupB\206\002\n&com.google.ads.goog" +
+      "leads.v26.resourcesB\024ShoppingProductProt" +
+      "oP\001ZKgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v26/resources;resources" +
+      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resour" +
+      "ces\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources" +
+      "\352\002&Google::Ads::GoogleAds::V26::Resource" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -45,21 +45,21 @@ public final class AssetFieldTypeViewProto extends com.google.protobuf.Generated
       "gleads.v26.resources\0325google/ads/googlea" +
       "ds/v26/enums/asset_field_type.proto\032\037goo" +
       "gle/api/field_behavior.proto\032\031google/api" +
-      "/resource.proto\"\250\002\n\022AssetFieldTypeView\022J" +
-      "\n\rresource_name\030\001 \001(\tB3\340A\003\372A-\n+googleads" +
-      ".googleapis.com/AssetFieldTypeView\022Z\n\nfi" +
-      "eld_type\030\003 \001(\0162A.google.ads.googleads.v2" +
-      "6.enums.AssetFieldTypeEnum.AssetFieldTyp" +
-      "eB\003\340A\003:j\352Ag\n+googleads.googleapis.com/As" +
-      "setFieldTypeView\0228customers/{customer_id" +
-      "}/assetFieldTypeViews/{field_type}B\211\002\n&c" +
-      "om.google.ads.googleads.v26.resourcesB\027A" +
-      "ssetFieldTypeViewProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v2" +
-      "6/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V26.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V26\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V26::Resourcesb\006proto3"
+      "/resource.proto\"\252\002\n\022AssetFieldTypeView\022K" +
+      "\n\rresource_name\030\001 \001(\tB4\342A\001\003\372A-\n+googlead" +
+      "s.googleapis.com/AssetFieldTypeView\022[\n\nf" +
+      "ield_type\030\003 \001(\0162A.google.ads.googleads.v" +
+      "26.enums.AssetFieldTypeEnum.AssetFieldTy" +
+      "peB\004\342A\001\003:j\352Ag\n+googleads.googleapis.com/" +
+      "AssetFieldTypeView\0228customers/{customer_" +
+      "id}/assetFieldTypeViews/{field_type}B\211\002\n" +
+      "&com.google.ads.googleads.v26.resourcesB" +
+      "\027AssetFieldTypeViewProtoP\001ZKgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v26/resources;resources\242\002\003GAA\252\002\"Google.A" +
+      "ds.GoogleAds.V26.Resources\312\002\"Google\\Ads\\" +
+      "GoogleAds\\V26\\Resources\352\002&Google::Ads::G" +
+      "oogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

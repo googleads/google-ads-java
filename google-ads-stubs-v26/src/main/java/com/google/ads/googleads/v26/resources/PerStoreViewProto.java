@@ -43,24 +43,24 @@ public final class PerStoreViewProto extends com.google.protobuf.GeneratedFile {
       "\n7google/ads/googleads/v26/resources/per" +
       "_store_view.proto\022\"google.ads.googleads." +
       "v26.resources\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\215\003\n\014Pe" +
-      "rStoreView\022D\n\rresource_name\030\001 \001(\tB-\340A\003\372A" +
-      "\'\n%googleads.googleapis.com/PerStoreView" +
-      "\022\025\n\010place_id\030\002 \001(\tB\003\340A\003\022\025\n\010address1\030\003 \001(" +
-      "\tB\003\340A\003\022\025\n\010address2\030\004 \001(\tB\003\340A\003\022\032\n\rbusines" +
-      "s_name\030\005 \001(\tB\003\340A\003\022\021\n\004city\030\006 \001(\tB\003\340A\003\022\031\n\014" +
-      "country_code\030\007 \001(\tB\003\340A\003\022\031\n\014phone_number\030" +
-      "\010 \001(\tB\003\340A\003\022\030\n\013postal_code\030\t \001(\tB\003\340A\003\022\025\n\010" +
-      "province\030\n \001(\tB\003\340A\003:\\\352AY\n%googleads.goog" +
-      "leapis.com/PerStoreView\0220customers/{cust" +
-      "omer_id}/perStoreViews/{place_id}B\203\002\n&co" +
-      "m.google.ads.googleads.v26.resourcesB\021Pe" +
-      "rStoreViewProtoP\001ZKgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v26/resou" +
-      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
-      "Ads.V26.Resources\312\002\"Google\\Ads\\GoogleAds" +
-      "\\V26\\Resources\352\002&Google::Ads::GoogleAds:" +
-      ":V26::Resourcesb\006proto3"
+      ".proto\032\031google/api/resource.proto\"\227\003\n\014Pe" +
+      "rStoreView\022E\n\rresource_name\030\001 \001(\tB.\342A\001\003\372" +
+      "A\'\n%googleads.googleapis.com/PerStoreVie" +
+      "w\022\026\n\010place_id\030\002 \001(\tB\004\342A\001\003\022\026\n\010address1\030\003 " +
+      "\001(\tB\004\342A\001\003\022\026\n\010address2\030\004 \001(\tB\004\342A\001\003\022\033\n\rbus" +
+      "iness_name\030\005 \001(\tB\004\342A\001\003\022\022\n\004city\030\006 \001(\tB\004\342A" +
+      "\001\003\022\032\n\014country_code\030\007 \001(\tB\004\342A\001\003\022\032\n\014phone_" +
+      "number\030\010 \001(\tB\004\342A\001\003\022\031\n\013postal_code\030\t \001(\tB" +
+      "\004\342A\001\003\022\026\n\010province\030\n \001(\tB\004\342A\001\003:\\\352AY\n%goog" +
+      "leads.googleapis.com/PerStoreView\0220custo" +
+      "mers/{customer_id}/perStoreViews/{place_" +
+      "id}B\203\002\n&com.google.ads.googleads.v26.res" +
+      "ourcesB\021PerStoreViewProtoP\001ZKgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v26/resources;resources\242\002\003GAA\252\002\"Google." +
+      "Ads.GoogleAds.V26.Resources\312\002\"Google\\Ads" +
+      "\\GoogleAds\\V26\\Resources\352\002&Google::Ads::" +
+      "GoogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

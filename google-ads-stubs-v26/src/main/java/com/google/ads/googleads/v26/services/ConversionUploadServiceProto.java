@@ -117,121 +117,122 @@ public final class ConversionUploadServiceProto extends com.google.protobuf.Gene
       "proto\032\027google/api/client.proto\032\037google/a" +
       "pi/field_behavior.proto\032\033google/api/fiel" +
       "d_info.proto\032\031google/api/resource.proto\032" +
-      "\027google/rpc/status.proto\"\341\001\n\035UploadClick" +
-      "ConversionsRequest\022\030\n\013customer_id\030\001 \001(\tB" +
-      "\003\340A\002\022L\n\013conversions\030\002 \003(\01322.google.ads.g" +
-      "oogleads.v26.services.ClickConversionB\003\340" +
-      "A\002\022\034\n\017partial_failure\030\003 \001(\010B\003\340A\002\022\025\n\rvali" +
-      "date_only\030\004 \001(\010\022\030\n\006job_id\030\006 \001(\005B\003\340A\001H\000\210\001" +
-      "\001B\t\n\007_job_id\"\256\001\n\036UploadClickConversionsR" +
-      "esponse\0221\n\025partial_failure_error\030\001 \001(\0132\022" +
-      ".google.rpc.Status\022I\n\007results\030\002 \003(\01328.go" +
-      "ogle.ads.googleads.v26.services.ClickCon" +
-      "versionResult\022\016\n\006job_id\030\003 \001(\003\"\272\001\n\034Upload" +
-      "CallConversionsRequest\022\030\n\013customer_id\030\001 " +
-      "\001(\tB\003\340A\002\022K\n\013conversions\030\002 \003(\01321.google.a" +
-      "ds.googleads.v26.services.CallConversion" +
-      "B\003\340A\002\022\034\n\017partial_failure\030\003 \001(\010B\003\340A\002\022\025\n\rv" +
-      "alidate_only\030\004 \001(\010\"\234\001\n\035UploadCallConvers" +
-      "ionsResponse\0221\n\025partial_failure_error\030\001 " +
-      "\001(\0132\022.google.rpc.Status\022H\n\007results\030\002 \003(\013" +
-      "27.google.ads.googleads.v26.services.Cal" +
-      "lConversionResult\"\375\010\n\017ClickConversion\022\022\n" +
-      "\005gclid\030\t \001(\tH\001\210\001\001\022\016\n\006gbraid\030\022 \001(\t\022\016\n\006wbr" +
-      "aid\030\023 \001(\t\022\036\n\021conversion_action\030\n \001(\tH\002\210\001" +
-      "\001\022!\n\024conversion_date_time\030\013 \001(\tH\003\210\001\001\022\035\n\020" +
-      "conversion_value\030\014 \001(\001H\004\210\001\001\022\032\n\rcurrency_" +
-      "code\030\r \001(\tH\005\210\001\001\022\025\n\010order_id\030\016 \001(\tH\006\210\001\001\022]" +
-      "\n\031external_attribution_data\030\007 \001(\0132:.goog" +
-      "le.ads.googleads.v26.services.ExternalAt" +
-      "tributionData\022K\n\020custom_variables\030\017 \003(\0132" +
-      "1.google.ads.googleads.v26.services.Cust" +
-      "omVariable\022>\n\tcart_data\030\020 \001(\0132+.google.a" +
-      "ds.googleads.v26.services.CartData\022I\n\020us" +
-      "er_identifiers\030\021 \003(\0132/.google.ads.google" +
-      "ads.v26.common.UserIdentifier\022o\n\026convers" +
-      "ion_environment\030\024 \001(\0162O.google.ads.googl" +
-      "eads.v26.enums.ConversionEnvironmentEnum" +
-      ".ConversionEnvironment\0229\n\007consent\030\027 \001(\0132" +
-      "(.google.ads.googleads.v26.common.Consen" +
-      "t\022h\n\rcustomer_type\030\032 \001(\0162Q.google.ads.go" +
-      "ogleads.v26.enums.ConversionCustomerType" +
-      "Enum.ConversionCustomerType\022&\n\017user_ip_a" +
-      "ddress\030\033 \001(\tB\010\342\214\317\327\010\002\010\004H\007\210\001\001\022$\n\032session_a" +
-      "ttributes_encoded\030\030 \001(\014H\000\022o\n\"session_att" +
-      "ributes_key_value_pairs\030\031 \001(\0132A.google.a" +
-      "ds.googleads.v26.services.SessionAttribu" +
-      "tesKeyValuePairsH\000B\024\n\022session_attributes" +
-      "B\010\n\006_gclidB\024\n\022_conversion_actionB\027\n\025_con" +
-      "version_date_timeB\023\n\021_conversion_valueB\020" +
-      "\n\016_currency_codeB\013\n\t_order_idB\022\n\020_user_i" +
-      "p_address\"\316\003\n\016CallConversion\022\026\n\tcaller_i" +
-      "d\030\007 \001(\tH\000\210\001\001\022!\n\024call_start_date_time\030\010 \001" +
-      "(\tH\001\210\001\001\022\036\n\021conversion_action\030\t \001(\tH\002\210\001\001\022" +
-      "!\n\024conversion_date_time\030\n \001(\tH\003\210\001\001\022\035\n\020co" +
-      "nversion_value\030\013 \001(\001H\004\210\001\001\022\032\n\rcurrency_co" +
-      "de\030\014 \001(\tH\005\210\001\001\022K\n\020custom_variables\030\r \003(\0132" +
-      "1.google.ads.googleads.v26.services.Cust" +
-      "omVariable\0229\n\007consent\030\016 \001(\0132(.google.ads" +
-      ".googleads.v26.common.ConsentB\014\n\n_caller" +
-      "_idB\027\n\025_call_start_date_timeB\024\n\022_convers" +
-      "ion_actionB\027\n\025_conversion_date_timeB\023\n\021_" +
-      "conversion_valueB\020\n\016_currency_code\"\253\001\n\027E" +
-      "xternalAttributionData\022(\n\033external_attri" +
-      "bution_credit\030\003 \001(\001H\000\210\001\001\022\'\n\032external_att" +
-      "ribution_model\030\004 \001(\tH\001\210\001\001B\036\n\034_external_a" +
-      "ttribution_creditB\035\n\033_external_attributi" +
-      "on_model\"\222\002\n\025ClickConversionResult\022\022\n\005gc" +
-      "lid\030\004 \001(\tH\000\210\001\001\022\016\n\006gbraid\030\010 \001(\t\022\016\n\006wbraid" +
-      "\030\t \001(\t\022\036\n\021conversion_action\030\005 \001(\tH\001\210\001\001\022!" +
-      "\n\024conversion_date_time\030\006 \001(\tH\002\210\001\001\022I\n\020use" +
-      "r_identifiers\030\007 \003(\0132/.google.ads.googlea" +
-      "ds.v26.common.UserIdentifierB\010\n\006_gclidB\024" +
-      "\n\022_conversion_actionB\027\n\025_conversion_date" +
-      "_time\"\352\001\n\024CallConversionResult\022\026\n\tcaller" +
-      "_id\030\005 \001(\tH\000\210\001\001\022!\n\024call_start_date_time\030\006" +
-      " \001(\tH\001\210\001\001\022\036\n\021conversion_action\030\007 \001(\tH\002\210\001" +
-      "\001\022!\n\024conversion_date_time\030\010 \001(\tH\003\210\001\001B\014\n\n" +
+      "\027google/rpc/status.proto\"\345\001\n\035UploadClick" +
+      "ConversionsRequest\022\031\n\013customer_id\030\001 \001(\tB" +
+      "\004\342A\001\002\022M\n\013conversions\030\002 \003(\01322.google.ads." +
+      "googleads.v26.services.ClickConversionB\004" +
+      "\342A\001\002\022\035\n\017partial_failure\030\003 \001(\010B\004\342A\001\002\022\025\n\rv" +
+      "alidate_only\030\004 \001(\010\022\031\n\006job_id\030\006 \001(\005B\004\342A\001\001" +
+      "H\000\210\001\001B\t\n\007_job_id\"\256\001\n\036UploadClickConversi" +
+      "onsResponse\0221\n\025partial_failure_error\030\001 \001" +
+      "(\0132\022.google.rpc.Status\022I\n\007results\030\002 \003(\0132" +
+      "8.google.ads.googleads.v26.services.Clic" +
+      "kConversionResult\022\016\n\006job_id\030\003 \001(\003\"\275\001\n\034Up" +
+      "loadCallConversionsRequest\022\031\n\013customer_i" +
+      "d\030\001 \001(\tB\004\342A\001\002\022L\n\013conversions\030\002 \003(\01321.goo" +
+      "gle.ads.googleads.v26.services.CallConve" +
+      "rsionB\004\342A\001\002\022\035\n\017partial_failure\030\003 \001(\010B\004\342A" +
+      "\001\002\022\025\n\rvalidate_only\030\004 \001(\010\"\234\001\n\035UploadCall" +
+      "ConversionsResponse\0221\n\025partial_failure_e" +
+      "rror\030\001 \001(\0132\022.google.rpc.Status\022H\n\007result" +
+      "s\030\002 \003(\01327.google.ads.googleads.v26.servi" +
+      "ces.CallConversionResult\"\375\010\n\017ClickConver" +
+      "sion\022\022\n\005gclid\030\t \001(\tH\001\210\001\001\022\016\n\006gbraid\030\022 \001(\t" +
+      "\022\016\n\006wbraid\030\023 \001(\t\022\036\n\021conversion_action\030\n " +
+      "\001(\tH\002\210\001\001\022!\n\024conversion_date_time\030\013 \001(\tH\003" +
+      "\210\001\001\022\035\n\020conversion_value\030\014 \001(\001H\004\210\001\001\022\032\n\rcu" +
+      "rrency_code\030\r \001(\tH\005\210\001\001\022\025\n\010order_id\030\016 \001(\t" +
+      "H\006\210\001\001\022]\n\031external_attribution_data\030\007 \001(\013" +
+      "2:.google.ads.googleads.v26.services.Ext" +
+      "ernalAttributionData\022K\n\020custom_variables" +
+      "\030\017 \003(\01321.google.ads.googleads.v26.servic" +
+      "es.CustomVariable\022>\n\tcart_data\030\020 \001(\0132+.g" +
+      "oogle.ads.googleads.v26.services.CartDat" +
+      "a\022I\n\020user_identifiers\030\021 \003(\0132/.google.ads" +
+      ".googleads.v26.common.UserIdentifier\022o\n\026" +
+      "conversion_environment\030\024 \001(\0162O.google.ad" +
+      "s.googleads.v26.enums.ConversionEnvironm" +
+      "entEnum.ConversionEnvironment\0229\n\007consent" +
+      "\030\027 \001(\0132(.google.ads.googleads.v26.common" +
+      ".Consent\022h\n\rcustomer_type\030\032 \001(\0162Q.google" +
+      ".ads.googleads.v26.enums.ConversionCusto" +
+      "merTypeEnum.ConversionCustomerType\022&\n\017us" +
+      "er_ip_address\030\033 \001(\tB\010\342\214\317\327\010\002\010\004H\007\210\001\001\022$\n\032se" +
+      "ssion_attributes_encoded\030\030 \001(\014H\000\022o\n\"sess" +
+      "ion_attributes_key_value_pairs\030\031 \001(\0132A.g" +
+      "oogle.ads.googleads.v26.services.Session" +
+      "AttributesKeyValuePairsH\000B\024\n\022session_att" +
+      "ributesB\010\n\006_gclidB\024\n\022_conversion_actionB" +
+      "\027\n\025_conversion_date_timeB\023\n\021_conversion_" +
+      "valueB\020\n\016_currency_codeB\013\n\t_order_idB\022\n\020" +
+      "_user_ip_address\"\316\003\n\016CallConversion\022\026\n\tc" +
+      "aller_id\030\007 \001(\tH\000\210\001\001\022!\n\024call_start_date_t" +
+      "ime\030\010 \001(\tH\001\210\001\001\022\036\n\021conversion_action\030\t \001(" +
+      "\tH\002\210\001\001\022!\n\024conversion_date_time\030\n \001(\tH\003\210\001" +
+      "\001\022\035\n\020conversion_value\030\013 \001(\001H\004\210\001\001\022\032\n\rcurr" +
+      "ency_code\030\014 \001(\tH\005\210\001\001\022K\n\020custom_variables" +
+      "\030\r \003(\01321.google.ads.googleads.v26.servic" +
+      "es.CustomVariable\0229\n\007consent\030\016 \001(\0132(.goo" +
+      "gle.ads.googleads.v26.common.ConsentB\014\n\n" +
       "_caller_idB\027\n\025_call_start_date_timeB\024\n\022_" +
       "conversion_actionB\027\n\025_conversion_date_ti" +
-      "me\"{\n\016CustomVariable\022Z\n\032conversion_custo" +
-      "m_variable\030\001 \001(\tB6\372A3\n1googleads.googlea" +
-      "pis.com/ConversionCustomVariable\022\r\n\005valu" +
-      "e\030\002 \001(\t\"\371\001\n\010CartData\022\023\n\013merchant_id\030\006 \001(" +
-      "\003\022\031\n\021feed_country_code\030\002 \001(\t\022\032\n\022feed_lan" +
-      "guage_code\030\003 \001(\t\022\036\n\026local_transaction_co" +
-      "st\030\004 \001(\001\022?\n\005items\030\005 \003(\01320.google.ads.goo" +
-      "gleads.v26.services.CartData.Item\032@\n\004Ite" +
-      "m\022\022\n\nproduct_id\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005\022" +
-      "\022\n\nunit_price\030\003 \001(\001\"h\n\034SessionAttributeK" +
-      "eyValuePair\022\"\n\025session_attribute_key\030\001 \001" +
-      "(\tB\003\340A\002\022$\n\027session_attribute_value\030\002 \001(\t" +
-      "B\003\340A\002\"\177\n\036SessionAttributesKeyValuePairs\022" +
-      "]\n\017key_value_pairs\030\001 \003(\0132?.google.ads.go" +
-      "ogleads.v26.services.SessionAttributeKey" +
-      "ValuePairB\003\340A\0022\364\004\n\027ConversionUploadServi" +
-      "ce\022\211\002\n\026UploadClickConversions\022@.google.a" +
-      "ds.googleads.v26.services.UploadClickCon" +
-      "versionsRequest\032A.google.ads.googleads.v" +
-      "26.services.UploadClickConversionsRespon" +
-      "se\"j\332A\'customer_id,conversions,partial_f" +
-      "ailure\202\323\344\223\002:\"5/v26/customers/{customer_i" +
-      "d=*}:uploadClickConversions:\001*\022\205\002\n\025Uploa" +
-      "dCallConversions\022?.google.ads.googleads." +
-      "v26.services.UploadCallConversionsReques" +
-      "t\032@.google.ads.googleads.v26.services.Up" +
-      "loadCallConversionsResponse\"i\332A\'customer" +
-      "_id,conversions,partial_failure\202\323\344\223\0029\"4/" +
-      "v26/customers/{customer_id=*}:uploadCall" +
-      "Conversions:\001*\032E\312A\030googleads.googleapis." +
-      "com\322A\'https://www.googleapis.com/auth/ad" +
-      "wordsB\210\002\n%com.google.ads.googleads.v26.s" +
-      "ervicesB\034ConversionUploadServiceProtoP\001Z" +
-      "Igoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v26/services;services\242\002\003GAA" +
-      "\252\002!Google.Ads.GoogleAds.V26.Services\312\002!G" +
-      "oogle\\Ads\\GoogleAds\\V26\\Services\352\002%Googl" +
-      "e::Ads::GoogleAds::V26::Servicesb\006proto3"
+      "meB\023\n\021_conversion_valueB\020\n\016_currency_cod" +
+      "e\"\253\001\n\027ExternalAttributionData\022(\n\033externa" +
+      "l_attribution_credit\030\003 \001(\001H\000\210\001\001\022\'\n\032exter" +
+      "nal_attribution_model\030\004 \001(\tH\001\210\001\001B\036\n\034_ext" +
+      "ernal_attribution_creditB\035\n\033_external_at" +
+      "tribution_model\"\222\002\n\025ClickConversionResul" +
+      "t\022\022\n\005gclid\030\004 \001(\tH\000\210\001\001\022\016\n\006gbraid\030\010 \001(\t\022\016\n" +
+      "\006wbraid\030\t \001(\t\022\036\n\021conversion_action\030\005 \001(\t" +
+      "H\001\210\001\001\022!\n\024conversion_date_time\030\006 \001(\tH\002\210\001\001" +
+      "\022I\n\020user_identifiers\030\007 \003(\0132/.google.ads." +
+      "googleads.v26.common.UserIdentifierB\010\n\006_" +
+      "gclidB\024\n\022_conversion_actionB\027\n\025_conversi" +
+      "on_date_time\"\352\001\n\024CallConversionResult\022\026\n" +
+      "\tcaller_id\030\005 \001(\tH\000\210\001\001\022!\n\024call_start_date" +
+      "_time\030\006 \001(\tH\001\210\001\001\022\036\n\021conversion_action\030\007 " +
+      "\001(\tH\002\210\001\001\022!\n\024conversion_date_time\030\010 \001(\tH\003" +
+      "\210\001\001B\014\n\n_caller_idB\027\n\025_call_start_date_ti" +
+      "meB\024\n\022_conversion_actionB\027\n\025_conversion_" +
+      "date_time\"{\n\016CustomVariable\022Z\n\032conversio" +
+      "n_custom_variable\030\001 \001(\tB6\372A3\n1googleads." +
+      "googleapis.com/ConversionCustomVariable\022" +
+      "\r\n\005value\030\002 \001(\t\"\371\001\n\010CartData\022\023\n\013merchant_" +
+      "id\030\006 \001(\003\022\031\n\021feed_country_code\030\002 \001(\t\022\032\n\022f" +
+      "eed_language_code\030\003 \001(\t\022\036\n\026local_transac" +
+      "tion_cost\030\004 \001(\001\022?\n\005items\030\005 \003(\01320.google." +
+      "ads.googleads.v26.services.CartData.Item" +
+      "\032@\n\004Item\022\022\n\nproduct_id\030\001 \001(\t\022\020\n\010quantity" +
+      "\030\002 \001(\005\022\022\n\nunit_price\030\003 \001(\001\"j\n\034SessionAtt" +
+      "ributeKeyValuePair\022#\n\025session_attribute_" +
+      "key\030\001 \001(\tB\004\342A\001\002\022%\n\027session_attribute_val" +
+      "ue\030\002 \001(\tB\004\342A\001\002\"\200\001\n\036SessionAttributesKeyV" +
+      "aluePairs\022^\n\017key_value_pairs\030\001 \003(\0132?.goo" +
+      "gle.ads.googleads.v26.services.SessionAt" +
+      "tributeKeyValuePairB\004\342A\001\0022\364\004\n\027Conversion" +
+      "UploadService\022\211\002\n\026UploadClickConversions" +
+      "\022@.google.ads.googleads.v26.services.Upl" +
+      "oadClickConversionsRequest\032A.google.ads." +
+      "googleads.v26.services.UploadClickConver" +
+      "sionsResponse\"j\332A\'customer_id,conversion" +
+      "s,partial_failure\202\323\344\223\002:\"5/v26/customers/" +
+      "{customer_id=*}:uploadClickConversions:\001" +
+      "*\022\205\002\n\025UploadCallConversions\022?.google.ads" +
+      ".googleads.v26.services.UploadCallConver" +
+      "sionsRequest\032@.google.ads.googleads.v26." +
+      "services.UploadCallConversionsResponse\"i" +
+      "\332A\'customer_id,conversions,partial_failu" +
+      "re\202\323\344\223\0029\"4/v26/customers/{customer_id=*}" +
+      ":uploadCallConversions:\001*\032E\312A\030googleads." +
+      "googleapis.com\322A\'https://www.googleapis." +
+      "com/auth/adwordsB\210\002\n%com.google.ads.goog" +
+      "leads.v26.servicesB\034ConversionUploadServ" +
+      "iceProtoP\001ZIgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v26/services;ser" +
+      "vices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V26.S" +
+      "ervices\312\002!Google\\Ads\\GoogleAds\\V26\\Servi" +
+      "ces\352\002%Google::Ads::GoogleAds::V26::Servi" +
+      "cesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

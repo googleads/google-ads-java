@@ -44,20 +44,20 @@ public final class TravelActivityPerformanceViewProto extends com.google.protobu
       "vel_activity_performance_view.proto\022\"goo" +
       "gle.ads.googleads.v26.resources\032\037google/" +
       "api/field_behavior.proto\032\031google/api/res" +
-      "ource.proto\"\353\001\n\035TravelActivityPerformanc" +
-      "eView\022U\n\rresource_name\030\001 \001(\tB>\340A\003\372A8\n6go" +
-      "ogleads.googleapis.com/TravelActivityPer" +
-      "formanceView:s\352Ap\n6googleads.googleapis." +
-      "com/TravelActivityPerformanceView\0226custo" +
-      "mers/{customer_id}/travelActivityPerform" +
-      "anceViewsB\224\002\n&com.google.ads.googleads.v" +
-      "26.resourcesB\"TravelActivityPerformanceV" +
-      "iewProtoP\001ZKgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v26/resources;re" +
-      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26" +
-      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\Re" +
-      "sources\352\002&Google::Ads::GoogleAds::V26::R" +
-      "esourcesb\006proto3"
+      "ource.proto\"\354\001\n\035TravelActivityPerformanc" +
+      "eView\022V\n\rresource_name\030\001 \001(\tB?\342A\001\003\372A8\n6g" +
+      "oogleads.googleapis.com/TravelActivityPe" +
+      "rformanceView:s\352Ap\n6googleads.googleapis" +
+      ".com/TravelActivityPerformanceView\0226cust" +
+      "omers/{customer_id}/travelActivityPerfor" +
+      "manceViewsB\224\002\n&com.google.ads.googleads." +
+      "v26.resourcesB\"TravelActivityPerformance" +
+      "ViewProtoP\001ZKgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v26/resources;r" +
+      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V2" +
+      "6.Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\R" +
+      "esources\352\002&Google::Ads::GoogleAds::V26::" +
+      "Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -58,6 +58,7 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v26.common.PromotionAsset.class, com.google.ads.googleads.v26.common.PromotionAsset.Builder.class);
   }
 
+  private int bitField0_;
   private int discountTypeCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object discountType_;
@@ -659,6 +660,47 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int EXTERNAL_REDEEM_INFO_FIELD_NUMBER = 18;
+  private com.google.ads.googleads.v26.common.ExternalRedeemInfo externalRedeemInfo_;
+  /**
+   * <pre>
+   * Immutable. Info related to external promotion redemption. This is only set
+   * for promotions with external redemption tracking ability.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the externalRedeemInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasExternalRedeemInfo() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * Immutable. Info related to external promotion redemption. This is only set
+   * for promotions with external redemption tracking ability.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The externalRedeemInfo.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.common.ExternalRedeemInfo getExternalRedeemInfo() {
+    return externalRedeemInfo_ == null ? com.google.ads.googleads.v26.common.ExternalRedeemInfo.getDefaultInstance() : externalRedeemInfo_;
+  }
+  /**
+   * <pre>
+   * Immutable. Info related to external promotion redemption. This is only set
+   * for promotions with external redemption tracking ability.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.common.ExternalRedeemInfoOrBuilder getExternalRedeemInfoOrBuilder() {
+    return externalRedeemInfo_ == null ? com.google.ads.googleads.v26.common.ExternalRedeemInfo.getDefaultInstance() : externalRedeemInfo_;
+  }
+
   public static final int PERCENT_OFF_FIELD_NUMBER = 3;
   /**
    * <pre>
@@ -1004,6 +1046,9 @@ private static final long serialVersionUID = 0L;
     if (promotionTriggerCase_ == 17) {
       output.writeMessage(17, (com.google.ads.googleads.v26.common.PromotionQrCodeInfo) promotionTrigger_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(18, getExternalRedeemInfo());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1073,6 +1118,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, (com.google.ads.googleads.v26.common.PromotionQrCodeInfo) promotionTrigger_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, getExternalRedeemInfo());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1108,6 +1157,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTermsAndConditionsText())) return false;
     if (!getTermsAndConditionsUri()
         .equals(other.getTermsAndConditionsUri())) return false;
+    if (hasExternalRedeemInfo() != other.hasExternalRedeemInfo()) return false;
+    if (hasExternalRedeemInfo()) {
+      if (!getExternalRedeemInfo()
+          .equals(other.getExternalRedeemInfo())) return false;
+    }
     if (!getDiscountTypeCase().equals(other.getDiscountTypeCase())) return false;
     switch (discountTypeCase_) {
       case 3:
@@ -1177,6 +1231,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTermsAndConditionsText().hashCode();
     hash = (37 * hash) + TERMS_AND_CONDITIONS_URI_FIELD_NUMBER;
     hash = (53 * hash) + getTermsAndConditionsUri().hashCode();
+    if (hasExternalRedeemInfo()) {
+      hash = (37 * hash) + EXTERNAL_REDEEM_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalRedeemInfo().hashCode();
+    }
     switch (discountTypeCase_) {
       case 3:
         hash = (37 * hash) + PERCENT_OFF_FIELD_NUMBER;
@@ -1333,13 +1391,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v26.common.PromotionAsset.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetAdScheduleTargetsFieldBuilder();
+        internalGetExternalRedeemInfoFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1362,6 +1427,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000100);
       termsAndConditionsText_ = "";
       termsAndConditionsUri_ = "";
+      externalRedeemInfo_ = null;
+      if (externalRedeemInfoBuilder_ != null) {
+        externalRedeemInfoBuilder_.dispose();
+        externalRedeemInfoBuilder_ = null;
+      }
       if (moneyAmountOffBuilder_ != null) {
         moneyAmountOffBuilder_.clear();
       }
@@ -1455,6 +1525,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.termsAndConditionsUri_ = termsAndConditionsUri_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.externalRedeemInfo_ = externalRedeemInfoBuilder_ == null
+            ? externalRedeemInfo_
+            : externalRedeemInfoBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartialOneofs(com.google.ads.googleads.v26.common.PromotionAsset result) {
@@ -1563,6 +1641,9 @@ private static final long serialVersionUID = 0L;
         termsAndConditionsUri_ = other.termsAndConditionsUri_;
         bitField0_ |= 0x00000400;
         onChanged();
+      }
+      if (other.hasExternalRedeemInfo()) {
+        mergeExternalRedeemInfo(other.getExternalRedeemInfo());
       }
       switch (other.getDiscountTypeCase()) {
         case PERCENT_OFF: {
@@ -1728,6 +1809,13 @@ private static final long serialVersionUID = 0L;
               promotionTriggerCase_ = 17;
               break;
             } // case 138
+            case 146: {
+              input.readMessage(
+                  internalGetExternalRedeemInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3034,6 +3122,172 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000400;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v26.common.ExternalRedeemInfo externalRedeemInfo_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.common.ExternalRedeemInfo, com.google.ads.googleads.v26.common.ExternalRedeemInfo.Builder, com.google.ads.googleads.v26.common.ExternalRedeemInfoOrBuilder> externalRedeemInfoBuilder_;
+    /**
+     * <pre>
+     * Immutable. Info related to external promotion redemption. This is only set
+     * for promotions with external redemption tracking ability.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the externalRedeemInfo field is set.
+     */
+    public boolean hasExternalRedeemInfo() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * Immutable. Info related to external promotion redemption. This is only set
+     * for promotions with external redemption tracking ability.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The externalRedeemInfo.
+     */
+    public com.google.ads.googleads.v26.common.ExternalRedeemInfo getExternalRedeemInfo() {
+      if (externalRedeemInfoBuilder_ == null) {
+        return externalRedeemInfo_ == null ? com.google.ads.googleads.v26.common.ExternalRedeemInfo.getDefaultInstance() : externalRedeemInfo_;
+      } else {
+        return externalRedeemInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Info related to external promotion redemption. This is only set
+     * for promotions with external redemption tracking ability.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setExternalRedeemInfo(com.google.ads.googleads.v26.common.ExternalRedeemInfo value) {
+      if (externalRedeemInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        externalRedeemInfo_ = value;
+      } else {
+        externalRedeemInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Info related to external promotion redemption. This is only set
+     * for promotions with external redemption tracking ability.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setExternalRedeemInfo(
+        com.google.ads.googleads.v26.common.ExternalRedeemInfo.Builder builderForValue) {
+      if (externalRedeemInfoBuilder_ == null) {
+        externalRedeemInfo_ = builderForValue.build();
+      } else {
+        externalRedeemInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Info related to external promotion redemption. This is only set
+     * for promotions with external redemption tracking ability.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder mergeExternalRedeemInfo(com.google.ads.googleads.v26.common.ExternalRedeemInfo value) {
+      if (externalRedeemInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0) &&
+          externalRedeemInfo_ != null &&
+          externalRedeemInfo_ != com.google.ads.googleads.v26.common.ExternalRedeemInfo.getDefaultInstance()) {
+          getExternalRedeemInfoBuilder().mergeFrom(value);
+        } else {
+          externalRedeemInfo_ = value;
+        }
+      } else {
+        externalRedeemInfoBuilder_.mergeFrom(value);
+      }
+      if (externalRedeemInfo_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Info related to external promotion redemption. This is only set
+     * for promotions with external redemption tracking ability.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder clearExternalRedeemInfo() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      externalRedeemInfo_ = null;
+      if (externalRedeemInfoBuilder_ != null) {
+        externalRedeemInfoBuilder_.dispose();
+        externalRedeemInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Info related to external promotion redemption. This is only set
+     * for promotions with external redemption tracking ability.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v26.common.ExternalRedeemInfo.Builder getExternalRedeemInfoBuilder() {
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return internalGetExternalRedeemInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Immutable. Info related to external promotion redemption. This is only set
+     * for promotions with external redemption tracking ability.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v26.common.ExternalRedeemInfoOrBuilder getExternalRedeemInfoOrBuilder() {
+      if (externalRedeemInfoBuilder_ != null) {
+        return externalRedeemInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return externalRedeemInfo_ == null ?
+            com.google.ads.googleads.v26.common.ExternalRedeemInfo.getDefaultInstance() : externalRedeemInfo_;
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Info related to external promotion redemption. This is only set
+     * for promotions with external redemption tracking ability.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.common.ExternalRedeemInfo, com.google.ads.googleads.v26.common.ExternalRedeemInfo.Builder, com.google.ads.googleads.v26.common.ExternalRedeemInfoOrBuilder> 
+        internalGetExternalRedeemInfoFieldBuilder() {
+      if (externalRedeemInfoBuilder_ == null) {
+        externalRedeemInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v26.common.ExternalRedeemInfo, com.google.ads.googleads.v26.common.ExternalRedeemInfo.Builder, com.google.ads.googleads.v26.common.ExternalRedeemInfoOrBuilder>(
+                getExternalRedeemInfo(),
+                getParentForChildren(),
+                isClean());
+        externalRedeemInfo_ = null;
+      }
+      return externalRedeemInfoBuilder_;
     }
 
     /**

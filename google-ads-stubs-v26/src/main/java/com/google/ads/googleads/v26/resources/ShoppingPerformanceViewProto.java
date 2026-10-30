@@ -44,19 +44,19 @@ public final class ShoppingPerformanceViewProto extends com.google.protobuf.Gene
       "pping_performance_view.proto\022\"google.ads" +
       ".googleads.v26.resources\032\037google/api/fie" +
       "ld_behavior.proto\032\031google/api/resource.p" +
-      "roto\"\322\001\n\027ShoppingPerformanceView\022O\n\rreso" +
-      "urce_name\030\001 \001(\tB8\340A\003\372A2\n0googleads.googl" +
-      "eapis.com/ShoppingPerformanceView:f\352Ac\n0" +
-      "googleads.googleapis.com/ShoppingPerform" +
-      "anceView\022/customers/{customer_id}/shoppi" +
-      "ngPerformanceViewB\216\002\n&com.google.ads.goo" +
-      "gleads.v26.resourcesB\034ShoppingPerformanc" +
-      "eViewProtoP\001ZKgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v26/resources;" +
-      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
-      "26.Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\" +
-      "Resources\352\002&Google::Ads::GoogleAds::V26:" +
-      ":Resourcesb\006proto3"
+      "roto\"\323\001\n\027ShoppingPerformanceView\022P\n\rreso" +
+      "urce_name\030\001 \001(\tB9\342A\001\003\372A2\n0googleads.goog" +
+      "leapis.com/ShoppingPerformanceView:f\352Ac\n" +
+      "0googleads.googleapis.com/ShoppingPerfor" +
+      "manceView\022/customers/{customer_id}/shopp" +
+      "ingPerformanceViewB\216\002\n&com.google.ads.go" +
+      "ogleads.v26.resourcesB\034ShoppingPerforman" +
+      "ceViewProtoP\001ZKgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v26/resources" +
+      ";resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds." +
+      "V26.Resources\312\002\"Google\\Ads\\GoogleAds\\V26" +
+      "\\Resources\352\002&Google::Ads::GoogleAds::V26" +
+      "::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

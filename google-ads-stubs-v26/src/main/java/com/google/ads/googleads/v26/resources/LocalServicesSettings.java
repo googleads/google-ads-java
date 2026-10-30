@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v26.resources.LocalServicesSettings.class, com.google.ads.googleads.v26.resources.LocalServicesSettings.Builder.class);
   }
 
+  private int bitField0_;
   public static final int GRANULAR_LICENSE_STATUSES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v26.resources.GranularLicenseStatus> granularLicenseStatuses_;
@@ -171,6 +172,44 @@ private static final long serialVersionUID = 0L;
     return granularInsuranceStatuses_.get(index);
   }
 
+  public static final int REDEMPTION_PROVIDER_INFO_FIELD_NUMBER = 3;
+  private com.google.ads.googleads.v26.resources.RedemptionProviderInfo redemptionProviderInfo_;
+  /**
+   * <pre>
+   * Settings for external redemption provider integration.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+   * @return Whether the redemptionProviderInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasRedemptionProviderInfo() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * Settings for external redemption provider integration.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+   * @return The redemptionProviderInfo.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.resources.RedemptionProviderInfo getRedemptionProviderInfo() {
+    return redemptionProviderInfo_ == null ? com.google.ads.googleads.v26.resources.RedemptionProviderInfo.getDefaultInstance() : redemptionProviderInfo_;
+  }
+  /**
+   * <pre>
+   * Settings for external redemption provider integration.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.resources.RedemptionProviderInfoOrBuilder getRedemptionProviderInfoOrBuilder() {
+    return redemptionProviderInfo_ == null ? com.google.ads.googleads.v26.resources.RedemptionProviderInfo.getDefaultInstance() : redemptionProviderInfo_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -191,6 +230,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < granularInsuranceStatuses_.size(); i++) {
       output.writeMessage(2, granularInsuranceStatuses_.get(i));
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(3, getRedemptionProviderInfo());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -207,6 +249,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < granularInsuranceStatuses_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, granularInsuranceStatuses_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getRedemptionProviderInfo());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -227,6 +273,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getGranularLicenseStatusesList())) return false;
     if (!getGranularInsuranceStatusesList()
         .equals(other.getGranularInsuranceStatusesList())) return false;
+    if (hasRedemptionProviderInfo() != other.hasRedemptionProviderInfo()) return false;
+    if (hasRedemptionProviderInfo()) {
+      if (!getRedemptionProviderInfo()
+          .equals(other.getRedemptionProviderInfo())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -245,6 +296,10 @@ private static final long serialVersionUID = 0L;
     if (getGranularInsuranceStatusesCount() > 0) {
       hash = (37 * hash) + GRANULAR_INSURANCE_STATUSES_FIELD_NUMBER;
       hash = (53 * hash) + getGranularInsuranceStatusesList().hashCode();
+    }
+    if (hasRedemptionProviderInfo()) {
+      hash = (37 * hash) + REDEMPTION_PROVIDER_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getRedemptionProviderInfo().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -369,13 +424,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v26.resources.LocalServicesSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetGranularLicenseStatusesFieldBuilder();
+        internalGetGranularInsuranceStatusesFieldBuilder();
+        internalGetRedemptionProviderInfoFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -395,6 +458,11 @@ private static final long serialVersionUID = 0L;
         granularInsuranceStatusesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      redemptionProviderInfo_ = null;
+      if (redemptionProviderInfoBuilder_ != null) {
+        redemptionProviderInfoBuilder_.dispose();
+        redemptionProviderInfoBuilder_ = null;
+      }
       return this;
     }
 
@@ -450,6 +518,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.google.ads.googleads.v26.resources.LocalServicesSettings result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.redemptionProviderInfo_ = redemptionProviderInfoBuilder_ == null
+            ? redemptionProviderInfo_
+            : redemptionProviderInfoBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -516,6 +592,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasRedemptionProviderInfo()) {
+        mergeRedemptionProviderInfo(other.getRedemptionProviderInfo());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -568,6 +647,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  internalGetRedemptionProviderInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1207,6 +1293,163 @@ private static final long serialVersionUID = 0L;
         granularInsuranceStatuses_ = null;
       }
       return granularInsuranceStatusesBuilder_;
+    }
+
+    private com.google.ads.googleads.v26.resources.RedemptionProviderInfo redemptionProviderInfo_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.resources.RedemptionProviderInfo, com.google.ads.googleads.v26.resources.RedemptionProviderInfo.Builder, com.google.ads.googleads.v26.resources.RedemptionProviderInfoOrBuilder> redemptionProviderInfoBuilder_;
+    /**
+     * <pre>
+     * Settings for external redemption provider integration.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+     * @return Whether the redemptionProviderInfo field is set.
+     */
+    public boolean hasRedemptionProviderInfo() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Settings for external redemption provider integration.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+     * @return The redemptionProviderInfo.
+     */
+    public com.google.ads.googleads.v26.resources.RedemptionProviderInfo getRedemptionProviderInfo() {
+      if (redemptionProviderInfoBuilder_ == null) {
+        return redemptionProviderInfo_ == null ? com.google.ads.googleads.v26.resources.RedemptionProviderInfo.getDefaultInstance() : redemptionProviderInfo_;
+      } else {
+        return redemptionProviderInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Settings for external redemption provider integration.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+     */
+    public Builder setRedemptionProviderInfo(com.google.ads.googleads.v26.resources.RedemptionProviderInfo value) {
+      if (redemptionProviderInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        redemptionProviderInfo_ = value;
+      } else {
+        redemptionProviderInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for external redemption provider integration.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+     */
+    public Builder setRedemptionProviderInfo(
+        com.google.ads.googleads.v26.resources.RedemptionProviderInfo.Builder builderForValue) {
+      if (redemptionProviderInfoBuilder_ == null) {
+        redemptionProviderInfo_ = builderForValue.build();
+      } else {
+        redemptionProviderInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for external redemption provider integration.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+     */
+    public Builder mergeRedemptionProviderInfo(com.google.ads.googleads.v26.resources.RedemptionProviderInfo value) {
+      if (redemptionProviderInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          redemptionProviderInfo_ != null &&
+          redemptionProviderInfo_ != com.google.ads.googleads.v26.resources.RedemptionProviderInfo.getDefaultInstance()) {
+          getRedemptionProviderInfoBuilder().mergeFrom(value);
+        } else {
+          redemptionProviderInfo_ = value;
+        }
+      } else {
+        redemptionProviderInfoBuilder_.mergeFrom(value);
+      }
+      if (redemptionProviderInfo_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for external redemption provider integration.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+     */
+    public Builder clearRedemptionProviderInfo() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      redemptionProviderInfo_ = null;
+      if (redemptionProviderInfoBuilder_ != null) {
+        redemptionProviderInfoBuilder_.dispose();
+        redemptionProviderInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for external redemption provider integration.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+     */
+    public com.google.ads.googleads.v26.resources.RedemptionProviderInfo.Builder getRedemptionProviderInfoBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return internalGetRedemptionProviderInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Settings for external redemption provider integration.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+     */
+    public com.google.ads.googleads.v26.resources.RedemptionProviderInfoOrBuilder getRedemptionProviderInfoOrBuilder() {
+      if (redemptionProviderInfoBuilder_ != null) {
+        return redemptionProviderInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return redemptionProviderInfo_ == null ?
+            com.google.ads.googleads.v26.resources.RedemptionProviderInfo.getDefaultInstance() : redemptionProviderInfo_;
+      }
+    }
+    /**
+     * <pre>
+     * Settings for external redemption provider integration.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.resources.RedemptionProviderInfo, com.google.ads.googleads.v26.resources.RedemptionProviderInfo.Builder, com.google.ads.googleads.v26.resources.RedemptionProviderInfoOrBuilder> 
+        internalGetRedemptionProviderInfoFieldBuilder() {
+      if (redemptionProviderInfoBuilder_ == null) {
+        redemptionProviderInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v26.resources.RedemptionProviderInfo, com.google.ads.googleads.v26.resources.RedemptionProviderInfo.Builder, com.google.ads.googleads.v26.resources.RedemptionProviderInfoOrBuilder>(
+                getRedemptionProviderInfo(),
+                getParentForChildren(),
+                isClean());
+        redemptionProviderInfo_ = null;
+      }
+      return redemptionProviderInfoBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v26.resources.LocalServicesSettings)

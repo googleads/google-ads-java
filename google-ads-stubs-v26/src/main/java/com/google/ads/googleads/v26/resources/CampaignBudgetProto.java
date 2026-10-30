@@ -43,62 +43,69 @@ public final class CampaignBudgetProto extends com.google.protobuf.GeneratedFile
       "\n8google/ads/googleads/v26/resources/cam" +
       "paign_budget.proto\022\"google.ads.googleads" +
       ".v26.resources\032;google/ads/googleads/v26" +
-      "/enums/budget_delivery_method.proto\0322goo" +
-      "gle/ads/googleads/v26/enums/budget_perio" +
-      "d.proto\0322google/ads/googleads/v26/enums/" +
-      "budget_status.proto\0320google/ads/googlead" +
-      "s/v26/enums/budget_type.proto\032\037google/ap" +
-      "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\363\013\n\016CampaignBudget\022F\n\rresource" +
-      "_name\030\001 \001(\tB/\340A\005\372A)\n\'googleads.googleapi" +
-      "s.com/CampaignBudget\022\024\n\002id\030\023 \001(\003B\003\340A\003H\000\210" +
-      "\001\001\022\021\n\004name\030\024 \001(\tH\001\210\001\001\022\032\n\ramount_micros\030\025" +
-      " \001(\003H\002\210\001\001\022 \n\023total_amount_micros\030\026 \001(\003H\003" +
-      "\210\001\001\022R\n\006status\030\006 \001(\0162=.google.ads.googlea" +
-      "ds.v26.enums.BudgetStatusEnum.BudgetStat" +
-      "usB\003\340A\003\022f\n\017delivery_method\030\007 \001(\0162M.googl" +
-      "e.ads.googleads.v26.enums.BudgetDelivery" +
-      "MethodEnum.BudgetDeliveryMethod\022\036\n\021expli" +
-      "citly_shared\030\027 \001(\010H\004\210\001\001\022!\n\017reference_cou" +
-      "nt\030\030 \001(\003B\003\340A\003H\005\210\001\001\022(\n\026has_recommended_bu" +
-      "dget\030\031 \001(\010B\003\340A\003H\006\210\001\001\0222\n recommended_budg" +
-      "et_amount_micros\030\032 \001(\003B\003\340A\003H\007\210\001\001\022R\n\006peri" +
-      "od\030\r \001(\0162=.google.ads.googleads.v26.enum" +
-      "s.BudgetPeriodEnum.BudgetPeriodB\003\340A\005\022C\n1" +
-      "recommended_budget_estimated_change_week" +
-      "ly_clicks\030\033 \001(\003B\003\340A\003H\010\210\001\001\022H\n6recommended" +
-      "_budget_estimated_change_weekly_cost_mic" +
-      "ros\030\034 \001(\003B\003\340A\003H\t\210\001\001\022I\n7recommended_budge" +
-      "t_estimated_change_weekly_interactions\030\035" +
-      " \001(\003B\003\340A\003H\n\210\001\001\022B\n0recommended_budget_est" +
-      "imated_change_weekly_views\030\036 \001(\003B\003\340A\003H\013\210" +
-      "\001\001\022L\n\004type\030\022 \001(\01629.google.ads.googleads." +
-      "v26.enums.BudgetTypeEnum.BudgetTypeB\003\340A\005" +
-      "\022#\n\033aligned_bidding_strategy_id\030\037 \001(\003:j\352" +
-      "Ag\n\'googleads.googleapis.com/CampaignBud" +
-      "get\022<customers/{customer_id}/campaignBud" +
-      "gets/{campaign_budget_id}B\005\n\003_idB\007\n\005_nam" +
-      "eB\020\n\016_amount_microsB\026\n\024_total_amount_mic" +
-      "rosB\024\n\022_explicitly_sharedB\022\n\020_reference_" +
-      "countB\031\n\027_has_recommended_budgetB#\n!_rec" +
-      "ommended_budget_amount_microsB4\n2_recomm" +
-      "ended_budget_estimated_change_weekly_cli" +
-      "cksB9\n7_recommended_budget_estimated_cha" +
-      "nge_weekly_cost_microsB:\n8_recommended_b" +
-      "udget_estimated_change_weekly_interactio" +
-      "nsB3\n1_recommended_budget_estimated_chan" +
-      "ge_weekly_viewsB\205\002\n&com.google.ads.googl" +
-      "eads.v26.resourcesB\023CampaignBudgetProtoP" +
-      "\001ZKgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v26/resources;resources\242\002" +
-      "\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resource" +
-      "s\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002" +
-      "&Google::Ads::GoogleAds::V26::Resourcesb" +
-      "\006proto3"
+      "/common/budget_network_common.proto\032;goo" +
+      "gle/ads/googleads/v26/enums/budget_deliv" +
+      "ery_method.proto\0322google/ads/googleads/v" +
+      "26/enums/budget_period.proto\0322google/ads" +
+      "/googleads/v26/enums/budget_status.proto" +
+      "\0320google/ads/googleads/v26/enums/budget_" +
+      "type.proto\032\037google/api/field_behavior.pr" +
+      "oto\032\031google/api/resource.proto\"\275\r\n\016Campa" +
+      "ignBudget\022G\n\rresource_name\030\001 \001(\tB0\342A\001\005\372A" +
+      ")\n\'googleads.googleapis.com/CampaignBudg" +
+      "et\022\025\n\002id\030\023 \001(\003B\004\342A\001\003H\000\210\001\001\022\021\n\004name\030\024 \001(\tH" +
+      "\001\210\001\001\022\032\n\ramount_micros\030\025 \001(\003H\002\210\001\001\022 \n\023tota" +
+      "l_amount_micros\030\026 \001(\003H\003\210\001\001\022S\n\006status\030\006 \001" +
+      "(\0162=.google.ads.googleads.v26.enums.Budg" +
+      "etStatusEnum.BudgetStatusB\004\342A\001\003\022f\n\017deliv" +
+      "ery_method\030\007 \001(\0162M.google.ads.googleads." +
+      "v26.enums.BudgetDeliveryMethodEnum.Budge" +
+      "tDeliveryMethod\022\036\n\021explicitly_shared\030\027 \001" +
+      "(\010H\004\210\001\001\022\"\n\017reference_count\030\030 \001(\003B\004\342A\001\003H\005" +
+      "\210\001\001\022)\n\026has_recommended_budget\030\031 \001(\010B\004\342A\001" +
+      "\003H\006\210\001\001\0223\n recommended_budget_amount_micr" +
+      "os\030\032 \001(\003B\004\342A\001\003H\007\210\001\001\022S\n\006period\030\r \001(\0162=.go" +
+      "ogle.ads.googleads.v26.enums.BudgetPerio" +
+      "dEnum.BudgetPeriodB\004\342A\001\005\022D\n1recommended_" +
+      "budget_estimated_change_weekly_clicks\030\033 " +
+      "\001(\003B\004\342A\001\003H\010\210\001\001\022I\n6recommended_budget_est" +
+      "imated_change_weekly_cost_micros\030\034 \001(\003B\004" +
+      "\342A\001\003H\t\210\001\001\022J\n7recommended_budget_estimate" +
+      "d_change_weekly_interactions\030\035 \001(\003B\004\342A\001\003" +
+      "H\n\210\001\001\022C\n0recommended_budget_estimated_ch" +
+      "ange_weekly_views\030\036 \001(\003B\004\342A\001\003H\013\210\001\001\022M\n\004ty" +
+      "pe\030\022 \001(\01629.google.ads.googleads.v26.enum" +
+      "s.BudgetTypeEnum.BudgetTypeB\004\342A\001\005\022#\n\033ali" +
+      "gned_bidding_strategy_id\030\037 \001(\003\022W\n\027budget" +
+      "_network_settings\030  \001(\01326.google.ads.goo" +
+      "gleads.v26.common.BudgetNetworkSettings\022" +
+      "c\n\032budget_network_eligibility\030! \001(\01329.go" +
+      "ogle.ads.googleads.v26.common.BudgetNetw" +
+      "orkEligibilityB\004\342A\001\003:j\352Ag\n\'googleads.goo" +
+      "gleapis.com/CampaignBudget\022<customers/{c" +
+      "ustomer_id}/campaignBudgets/{campaign_bu" +
+      "dget_id}B\005\n\003_idB\007\n\005_nameB\020\n\016_amount_micr" +
+      "osB\026\n\024_total_amount_microsB\024\n\022_explicitl" +
+      "y_sharedB\022\n\020_reference_countB\031\n\027_has_rec" +
+      "ommended_budgetB#\n!_recommended_budget_a" +
+      "mount_microsB4\n2_recommended_budget_esti" +
+      "mated_change_weekly_clicksB9\n7_recommend" +
+      "ed_budget_estimated_change_weekly_cost_m" +
+      "icrosB:\n8_recommended_budget_estimated_c" +
+      "hange_weekly_interactionsB3\n1_recommende" +
+      "d_budget_estimated_change_weekly_viewsB\205" +
+      "\002\n&com.google.ads.googleads.v26.resource" +
+      "sB\023CampaignBudgetProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v2" +
+      "6/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V26.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V26\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v26.common.BudgetNetworkCommonProto.getDescriptor(),
           com.google.ads.googleads.v26.enums.BudgetDeliveryMethodProto.getDescriptor(),
           com.google.ads.googleads.v26.enums.BudgetPeriodProto.getDescriptor(),
           com.google.ads.googleads.v26.enums.BudgetStatusProto.getDescriptor(),
@@ -111,8 +118,9 @@ public final class CampaignBudgetProto extends com.google.protobuf.GeneratedFile
     internal_static_google_ads_googleads_v26_resources_CampaignBudget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_google_ads_googleads_v26_resources_CampaignBudget_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "AmountMicros", "TotalAmountMicros", "Status", "DeliveryMethod", "ExplicitlyShared", "ReferenceCount", "HasRecommendedBudget", "RecommendedBudgetAmountMicros", "Period", "RecommendedBudgetEstimatedChangeWeeklyClicks", "RecommendedBudgetEstimatedChangeWeeklyCostMicros", "RecommendedBudgetEstimatedChangeWeeklyInteractions", "RecommendedBudgetEstimatedChangeWeeklyViews", "Type", "AlignedBiddingStrategyId", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "AmountMicros", "TotalAmountMicros", "Status", "DeliveryMethod", "ExplicitlyShared", "ReferenceCount", "HasRecommendedBudget", "RecommendedBudgetAmountMicros", "Period", "RecommendedBudgetEstimatedChangeWeeklyClicks", "RecommendedBudgetEstimatedChangeWeeklyCostMicros", "RecommendedBudgetEstimatedChangeWeeklyInteractions", "RecommendedBudgetEstimatedChangeWeeklyViews", "Type", "AlignedBiddingStrategyId", "BudgetNetworkSettings", "BudgetNetworkEligibility", });
     descriptor.resolveAllFeaturesImmutable();
+    com.google.ads.googleads.v26.common.BudgetNetworkCommonProto.getDescriptor();
     com.google.ads.googleads.v26.enums.BudgetDeliveryMethodProto.getDescriptor();
     com.google.ads.googleads.v26.enums.BudgetPeriodProto.getDescriptor();
     com.google.ads.googleads.v26.enums.BudgetStatusProto.getDescriptor();

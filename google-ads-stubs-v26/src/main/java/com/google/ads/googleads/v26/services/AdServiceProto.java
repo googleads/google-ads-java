@@ -65,40 +65,40 @@ public final class AdServiceProto extends com.google.protobuf.GeneratedFile {
       "/client.proto\032\037google/api/field_behavior" +
       ".proto\032\031google/api/resource.proto\032 googl" +
       "e/protobuf/field_mask.proto\032\027google/rpc/" +
-      "status.proto\"\221\002\n\020MutateAdsRequest\022\030\n\013cus" +
-      "tomer_id\030\001 \001(\tB\003\340A\002\022G\n\noperations\030\002 \003(\0132" +
-      "..google.ads.googleads.v26.services.AdOp" +
-      "erationB\003\340A\002\022\027\n\017partial_failure\030\004 \001(\010\022j\n" +
-      "\025response_content_type\030\005 \001(\0162K.google.ad" +
-      "s.googleads.v26.enums.ResponseContentTyp" +
-      "eEnum.ResponseContentType\022\025\n\rvalidate_on" +
-      "ly\030\003 \001(\010\"\346\001\n\013AdOperation\022/\n\013update_mask\030" +
-      "\002 \001(\0132\032.google.protobuf.FieldMask\022_\n\033pol" +
-      "icy_validation_parameter\030\003 \001(\0132:.google." +
-      "ads.googleads.v26.common.PolicyValidatio" +
-      "nParameter\0228\n\006update\030\001 \001(\0132&.google.ads." +
-      "googleads.v26.resources.AdH\000B\013\n\toperatio" +
-      "n\"\212\001\n\021MutateAdsResponse\0221\n\025partial_failu" +
-      "re_error\030\003 \001(\0132\022.google.rpc.Status\022B\n\007re" +
-      "sults\030\002 \003(\01321.google.ads.googleads.v26.s" +
-      "ervices.MutateAdResult\"}\n\016MutateAdResult" +
-      "\0227\n\rresource_name\030\001 \001(\tB \372A\035\n\033googleads." +
-      "googleapis.com/Ad\0222\n\002ad\030\002 \001(\0132&.google.a" +
-      "ds.googleads.v26.resources.Ad2\232\002\n\tAdServ" +
-      "ice\022\305\001\n\tMutateAds\0223.google.ads.googleads" +
-      ".v26.services.MutateAdsRequest\0324.google." +
-      "ads.googleads.v26.services.MutateAdsResp" +
-      "onse\"M\332A\026customer_id,operations\202\323\344\223\002.\")/" +
-      "v26/customers/{customer_id=*}/ads:mutate" +
-      ":\001*\032E\312A\030googleads.googleapis.com\322A\'https" +
-      "://www.googleapis.com/auth/adwordsB\372\001\n%c" +
-      "om.google.ads.googleads.v26.servicesB\016Ad" +
-      "ServiceProtoP\001ZIgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v26/services" +
-      ";services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
-      "26.Services\312\002!Google\\Ads\\GoogleAds\\V26\\S" +
-      "ervices\352\002%Google::Ads::GoogleAds::V26::S" +
-      "ervicesb\006proto3"
+      "status.proto\"\223\002\n\020MutateAdsRequest\022\031\n\013cus" +
+      "tomer_id\030\001 \001(\tB\004\342A\001\002\022H\n\noperations\030\002 \003(\013" +
+      "2..google.ads.googleads.v26.services.AdO" +
+      "perationB\004\342A\001\002\022\027\n\017partial_failure\030\004 \001(\010\022" +
+      "j\n\025response_content_type\030\005 \001(\0162K.google." +
+      "ads.googleads.v26.enums.ResponseContentT" +
+      "ypeEnum.ResponseContentType\022\025\n\rvalidate_" +
+      "only\030\003 \001(\010\"\346\001\n\013AdOperation\022/\n\013update_mas" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022_\n\033p" +
+      "olicy_validation_parameter\030\003 \001(\0132:.googl" +
+      "e.ads.googleads.v26.common.PolicyValidat" +
+      "ionParameter\0228\n\006update\030\001 \001(\0132&.google.ad" +
+      "s.googleads.v26.resources.AdH\000B\013\n\toperat" +
+      "ion\"\212\001\n\021MutateAdsResponse\0221\n\025partial_fai" +
+      "lure_error\030\003 \001(\0132\022.google.rpc.Status\022B\n\007" +
+      "results\030\002 \003(\01321.google.ads.googleads.v26" +
+      ".services.MutateAdResult\"}\n\016MutateAdResu" +
+      "lt\0227\n\rresource_name\030\001 \001(\tB \372A\035\n\033googlead" +
+      "s.googleapis.com/Ad\0222\n\002ad\030\002 \001(\0132&.google" +
+      ".ads.googleads.v26.resources.Ad2\232\002\n\tAdSe" +
+      "rvice\022\305\001\n\tMutateAds\0223.google.ads.googlea" +
+      "ds.v26.services.MutateAdsRequest\0324.googl" +
+      "e.ads.googleads.v26.services.MutateAdsRe" +
+      "sponse\"M\332A\026customer_id,operations\202\323\344\223\002.\"" +
+      ")/v26/customers/{customer_id=*}/ads:muta" +
+      "te:\001*\032E\312A\030googleads.googleapis.com\322A\'htt" +
+      "ps://www.googleapis.com/auth/adwordsB\372\001\n" +
+      "%com.google.ads.googleads.v26.servicesB\016" +
+      "AdServiceProtoP\001ZIgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v26/servic" +
+      "es;services\242\002\003GAA\252\002!Google.Ads.GoogleAds" +
+      ".V26.Services\312\002!Google\\Ads\\GoogleAds\\V26" +
+      "\\Services\352\002%Google::Ads::GoogleAds::V26:" +
+      ":Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

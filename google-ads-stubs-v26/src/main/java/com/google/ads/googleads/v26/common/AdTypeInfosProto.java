@@ -270,7 +270,7 @@ public final class AdTypeInfosProto extends com.google.protobuf.GeneratedFile {
       "_feed\030\t \001(\01322.google.ads.googleads.v26.c" +
       "ommon.InFeedVideoAdInfoH\000\022D\n\005audio\030\n \001(\013" +
       "23.google.ads.googleads.v26.common.YouTu" +
-      "beAudioAdInfoH\000B\010\n\006format\"\364\004\n\025VideoRespo" +
+      "beAudioAdInfoH\000B\010\n\006format\"\367\004\n\025VideoRespo" +
       "nsiveAdInfo\022?\n\theadlines\030\001 \003(\0132,.google." +
       "ads.googleads.v26.common.AdTextAsset\022D\n\016" +
       "long_headlines\030\002 \003(\0132,.google.ads.google" +
@@ -278,192 +278,192 @@ public final class AdTypeInfosProto extends com.google.protobuf.GeneratedFile {
       "ns\030\003 \003(\0132,.google.ads.googleads.v26.comm" +
       "on.AdTextAsset\022E\n\017call_to_actions\030\004 \003(\0132" +
       ",.google.ads.googleads.v26.common.AdText" +
-      "Asset\022B\n\006videos\030\005 \003(\0132-.google.ads.googl" +
-      "eads.v26.common.AdVideoAssetB\003\340A\002\022H\n\rbus" +
-      "iness_name\030\t \001(\0132,.google.ads.googleads." +
-      "v26.common.AdTextAssetB\003\340A\002\022G\n\013logo_imag" +
-      "es\030\n \003(\0132-.google.ads.googleads.v26.comm" +
-      "on.AdImageAssetB\003\340A\002\022H\n\021companion_banner" +
-      "s\030\006 \003(\0132-.google.ads.googleads.v26.commo" +
-      "n.AdImageAsset\022\023\n\013breadcrumb1\030\007 \001(\t\022\023\n\013b" +
-      "readcrumb2\030\010 \001(\t\"\331\001\n\026ResponsiveSearchAdI" +
-      "nfo\022?\n\theadlines\030\001 \003(\0132,.google.ads.goog" +
-      "leads.v26.common.AdTextAsset\022B\n\014descript" +
-      "ions\030\002 \003(\0132,.google.ads.googleads.v26.co" +
-      "mmon.AdTextAsset\022\022\n\005path1\030\005 \001(\tH\000\210\001\001\022\022\n\005" +
-      "path2\030\006 \001(\tH\001\210\001\001B\010\n\006_path1B\010\n\006_path2\"\256\006\n" +
-      "\035LegacyResponsiveDisplayAdInfo\022\033\n\016short_" +
-      "headline\030\020 \001(\tH\000\210\001\001\022\032\n\rlong_headline\030\021 \001" +
-      "(\tH\001\210\001\001\022\030\n\013description\030\022 \001(\tH\002\210\001\001\022\032\n\rbus" +
-      "iness_name\030\023 \001(\tH\003\210\001\001\022!\n\024allow_flexible_" +
-      "color\030\024 \001(\010H\004\210\001\001\022\031\n\014accent_color\030\025 \001(\tH\005" +
-      "\210\001\001\022\027\n\nmain_color\030\026 \001(\tH\006\210\001\001\022 \n\023call_to_" +
-      "action_text\030\027 \001(\tH\007\210\001\001\022\027\n\nlogo_image\030\030 \001" +
-      "(\tH\010\210\001\001\022\036\n\021square_logo_image\030\031 \001(\tH\t\210\001\001\022" +
-      "\034\n\017marketing_image\030\032 \001(\tH\n\210\001\001\022#\n\026square_" +
-      "marketing_image\030\033 \001(\tH\013\210\001\001\022i\n\016format_set" +
-      "ting\030\r \001(\0162Q.google.ads.googleads.v26.en" +
-      "ums.DisplayAdFormatSettingEnum.DisplayAd" +
-      "FormatSetting\022\031\n\014price_prefix\030\034 \001(\tH\014\210\001\001" +
-      "\022\027\n\npromo_text\030\035 \001(\tH\r\210\001\001B\021\n\017_short_head" +
-      "lineB\020\n\016_long_headlineB\016\n\014_descriptionB\020" +
-      "\n\016_business_nameB\027\n\025_allow_flexible_colo" +
-      "rB\017\n\r_accent_colorB\r\n\013_main_colorB\026\n\024_ca" +
-      "ll_to_action_textB\r\n\013_logo_imageB\024\n\022_squ" +
-      "are_logo_imageB\022\n\020_marketing_imageB\031\n\027_s" +
-      "quare_marketing_imageB\017\n\r_price_prefixB\r" +
-      "\n\013_promo_text\"\375\003\n\tAppAdInfo\022G\n\021mandatory" +
-      "_ad_text\030\001 \001(\0132,.google.ads.googleads.v2" +
-      "6.common.AdTextAsset\022?\n\theadlines\030\002 \003(\0132" +
+      "Asset\022C\n\006videos\030\005 \003(\0132-.google.ads.googl" +
+      "eads.v26.common.AdVideoAssetB\004\342A\001\002\022I\n\rbu" +
+      "siness_name\030\t \001(\0132,.google.ads.googleads" +
+      ".v26.common.AdTextAssetB\004\342A\001\002\022H\n\013logo_im" +
+      "ages\030\n \003(\0132-.google.ads.googleads.v26.co" +
+      "mmon.AdImageAssetB\004\342A\001\002\022H\n\021companion_ban" +
+      "ners\030\006 \003(\0132-.google.ads.googleads.v26.co" +
+      "mmon.AdImageAsset\022\023\n\013breadcrumb1\030\007 \001(\t\022\023" +
+      "\n\013breadcrumb2\030\010 \001(\t\"\331\001\n\026ResponsiveSearch" +
+      "AdInfo\022?\n\theadlines\030\001 \003(\0132,.google.ads.g" +
+      "oogleads.v26.common.AdTextAsset\022B\n\014descr" +
+      "iptions\030\002 \003(\0132,.google.ads.googleads.v26" +
+      ".common.AdTextAsset\022\022\n\005path1\030\005 \001(\tH\000\210\001\001\022" +
+      "\022\n\005path2\030\006 \001(\tH\001\210\001\001B\010\n\006_path1B\010\n\006_path2\"" +
+      "\256\006\n\035LegacyResponsiveDisplayAdInfo\022\033\n\016sho" +
+      "rt_headline\030\020 \001(\tH\000\210\001\001\022\032\n\rlong_headline\030" +
+      "\021 \001(\tH\001\210\001\001\022\030\n\013description\030\022 \001(\tH\002\210\001\001\022\032\n\r" +
+      "business_name\030\023 \001(\tH\003\210\001\001\022!\n\024allow_flexib" +
+      "le_color\030\024 \001(\010H\004\210\001\001\022\031\n\014accent_color\030\025 \001(" +
+      "\tH\005\210\001\001\022\027\n\nmain_color\030\026 \001(\tH\006\210\001\001\022 \n\023call_" +
+      "to_action_text\030\027 \001(\tH\007\210\001\001\022\027\n\nlogo_image\030" +
+      "\030 \001(\tH\010\210\001\001\022\036\n\021square_logo_image\030\031 \001(\tH\t\210" +
+      "\001\001\022\034\n\017marketing_image\030\032 \001(\tH\n\210\001\001\022#\n\026squa" +
+      "re_marketing_image\030\033 \001(\tH\013\210\001\001\022i\n\016format_" +
+      "setting\030\r \001(\0162Q.google.ads.googleads.v26" +
+      ".enums.DisplayAdFormatSettingEnum.Displa" +
+      "yAdFormatSetting\022\031\n\014price_prefix\030\034 \001(\tH\014" +
+      "\210\001\001\022\027\n\npromo_text\030\035 \001(\tH\r\210\001\001B\021\n\017_short_h" +
+      "eadlineB\020\n\016_long_headlineB\016\n\014_descriptio" +
+      "nB\020\n\016_business_nameB\027\n\025_allow_flexible_c" +
+      "olorB\017\n\r_accent_colorB\r\n\013_main_colorB\026\n\024" +
+      "_call_to_action_textB\r\n\013_logo_imageB\024\n\022_" +
+      "square_logo_imageB\022\n\020_marketing_imageB\031\n" +
+      "\027_square_marketing_imageB\017\n\r_price_prefi" +
+      "xB\r\n\013_promo_text\"\375\003\n\tAppAdInfo\022G\n\021mandat" +
+      "ory_ad_text\030\001 \001(\0132,.google.ads.googleads" +
+      ".v26.common.AdTextAsset\022?\n\theadlines\030\002 \003" +
+      "(\0132,.google.ads.googleads.v26.common.AdT" +
+      "extAsset\022B\n\014descriptions\030\003 \003(\0132,.google." +
+      "ads.googleads.v26.common.AdTextAsset\022=\n\006" +
+      "images\030\004 \003(\0132-.google.ads.googleads.v26." +
+      "common.AdImageAsset\022E\n\016youtube_videos\030\005 " +
+      "\003(\0132-.google.ads.googleads.v26.common.Ad" +
+      "VideoAsset\022P\n\023html5_media_bundles\030\006 \003(\0132" +
+      "3.google.ads.googleads.v26.common.AdMedi" +
+      "aBundleAsset\022J\n\rapp_deep_link\030\007 \001(\01323.go" +
+      "ogle.ads.googleads.v26.common.AdAppDeepL" +
+      "inkAsset\"\230\002\n\023AppEngagementAdInfo\022?\n\thead" +
+      "lines\030\001 \003(\0132,.google.ads.googleads.v26.c" +
+      "ommon.AdTextAsset\022B\n\014descriptions\030\002 \003(\0132" +
       ",.google.ads.googleads.v26.common.AdText" +
-      "Asset\022B\n\014descriptions\030\003 \003(\0132,.google.ads" +
-      ".googleads.v26.common.AdTextAsset\022=\n\006ima" +
-      "ges\030\004 \003(\0132-.google.ads.googleads.v26.com" +
-      "mon.AdImageAsset\022E\n\016youtube_videos\030\005 \003(\013" +
-      "2-.google.ads.googleads.v26.common.AdVid" +
-      "eoAsset\022P\n\023html5_media_bundles\030\006 \003(\01323.g" +
-      "oogle.ads.googleads.v26.common.AdMediaBu" +
-      "ndleAsset\022J\n\rapp_deep_link\030\007 \001(\01323.googl" +
-      "e.ads.googleads.v26.common.AdAppDeepLink" +
-      "Asset\"\230\002\n\023AppEngagementAdInfo\022?\n\theadlin" +
-      "es\030\001 \003(\0132,.google.ads.googleads.v26.comm" +
-      "on.AdTextAsset\022B\n\014descriptions\030\002 \003(\0132,.g" +
-      "oogle.ads.googleads.v26.common.AdTextAss" +
-      "et\022=\n\006images\030\003 \003(\0132-.google.ads.googlead" +
-      "s.v26.common.AdImageAsset\022=\n\006videos\030\004 \003(" +
-      "\0132-.google.ads.googleads.v26.common.AdVi" +
-      "deoAsset\"\245\002\n\030AppPreRegistrationAdInfo\022?\n" +
-      "\theadlines\030\001 \003(\0132,.google.ads.googleads." +
-      "v26.common.AdTextAsset\022B\n\014descriptions\030\002" +
-      " \003(\0132,.google.ads.googleads.v26.common.A" +
-      "dTextAsset\022=\n\006images\030\003 \003(\0132-.google.ads." +
-      "googleads.v26.common.AdImageAsset\022E\n\016you" +
-      "tube_videos\030\004 \003(\0132-.google.ads.googleads" +
-      ".v26.common.AdVideoAsset\"\242\002\n\026LegacyAppIn" +
-      "stallAdInfo\022\023\n\006app_id\030\006 \001(\tH\000\210\001\001\022l\n\tapp_" +
-      "store\030\002 \001(\0162Y.google.ads.googleads.v26.e" +
-      "nums.LegacyAppInstallAdAppStoreEnum.Lega" +
-      "cyAppInstallAdAppStore\022\025\n\010headline\030\007 \001(\t" +
-      "H\001\210\001\001\022\031\n\014description1\030\010 \001(\tH\002\210\001\001\022\031\n\014desc" +
-      "ription2\030\t \001(\tH\003\210\001\001B\t\n\007_app_idB\013\n\t_headl" +
-      "ineB\017\n\r_description1B\017\n\r_description2\"\340\010" +
-      "\n\027ResponsiveDisplayAdInfo\022G\n\020marketing_i" +
-      "mages\030\001 \003(\0132-.google.ads.googleads.v26.c" +
-      "ommon.AdImageAsset\022N\n\027square_marketing_i" +
-      "mages\030\002 \003(\0132-.google.ads.googleads.v26.c" +
-      "ommon.AdImageAsset\022B\n\013logo_images\030\003 \003(\0132" +
-      "-.google.ads.googleads.v26.common.AdImag" +
-      "eAsset\022I\n\022square_logo_images\030\004 \003(\0132-.goo" +
-      "gle.ads.googleads.v26.common.AdImageAsse" +
-      "t\022?\n\theadlines\030\005 \003(\0132,.google.ads.google" +
-      "ads.v26.common.AdTextAsset\022C\n\rlong_headl" +
-      "ine\030\006 \001(\0132,.google.ads.googleads.v26.com" +
-      "mon.AdTextAsset\022B\n\014descriptions\030\007 \003(\0132,." +
-      "google.ads.googleads.v26.common.AdTextAs" +
-      "set\022E\n\016youtube_videos\030\010 \003(\0132-.google.ads" +
-      ".googleads.v26.common.AdVideoAsset\022\032\n\rbu" +
-      "siness_name\030\021 \001(\tH\000\210\001\001\022\027\n\nmain_color\030\022 \001" +
-      "(\tH\001\210\001\001\022\031\n\014accent_color\030\023 \001(\tH\002\210\001\001\022!\n\024al" +
-      "low_flexible_color\030\024 \001(\010H\003\210\001\001\022 \n\023call_to" +
-      "_action_text\030\025 \001(\tH\004\210\001\001\022\031\n\014price_prefix\030" +
-      "\026 \001(\tH\005\210\001\001\022\027\n\npromo_text\030\027 \001(\tH\006\210\001\001\022i\n\016f" +
-      "ormat_setting\030\020 \001(\0162Q.google.ads.googlea" +
-      "ds.v26.enums.DisplayAdFormatSettingEnum." +
-      "DisplayAdFormatSetting\022U\n\014control_spec\030\030" +
-      " \001(\0132?.google.ads.googleads.v26.common.R" +
-      "esponsiveDisplayAdControlSpecB\020\n\016_busine" +
-      "ss_nameB\r\n\013_main_colorB\017\n\r_accent_colorB" +
-      "\027\n\025_allow_flexible_colorB\026\n\024_call_to_act" +
-      "ion_textB\017\n\r_price_prefixB\r\n\013_promo_text" +
-      "\"\341\003\n\013LocalAdInfo\022?\n\theadlines\030\001 \003(\0132,.go" +
-      "ogle.ads.googleads.v26.common.AdTextAsse" +
-      "t\022B\n\014descriptions\030\002 \003(\0132,.google.ads.goo" +
-      "gleads.v26.common.AdTextAsset\022E\n\017call_to" +
-      "_actions\030\003 \003(\0132,.google.ads.googleads.v2" +
-      "6.common.AdTextAsset\022G\n\020marketing_images" +
-      "\030\004 \003(\0132-.google.ads.googleads.v26.common" +
-      ".AdImageAsset\022B\n\013logo_images\030\005 \003(\0132-.goo" +
-      "gle.ads.googleads.v26.common.AdImageAsse" +
-      "t\022=\n\006videos\030\006 \003(\0132-.google.ads.googleads" +
-      ".v26.common.AdVideoAsset\022\022\n\005path1\030\t \001(\tH" +
-      "\000\210\001\001\022\022\n\005path2\030\n \001(\tH\001\210\001\001B\010\n\006_path1B\010\n\006_p" +
-      "ath2\"\355\001\n\023DisplayUploadAdInfo\022z\n\033display_" +
-      "upload_product_type\030\001 \001(\0162U.google.ads.g" +
-      "oogleads.v26.enums.DisplayUploadProductT" +
-      "ypeEnum.DisplayUploadProductType\022K\n\014medi" +
-      "a_bundle\030\002 \001(\01323.google.ads.googleads.v2" +
-      "6.common.AdMediaBundleAssetH\000B\r\n\013media_a" +
-      "sset\"a\n\036ResponsiveDisplayAdControlSpec\022!" +
-      "\n\031enable_asset_enhancements\030\001 \001(\010\022\034\n\024ena" +
-      "ble_autogen_video\030\002 \001(\010\"\232\001\n\023SmartCampaig" +
-      "nAdInfo\022?\n\theadlines\030\001 \003(\0132,.google.ads." +
-      "googleads.v26.common.AdTextAsset\022B\n\014desc" +
-      "riptions\030\002 \003(\0132,.google.ads.googleads.v2" +
-      "6.common.AdTextAsset\"\335\005\n\031DemandGenMultiA" +
-      "ssetAdInfo\022G\n\020marketing_images\030\001 \003(\0132-.g" +
-      "oogle.ads.googleads.v26.common.AdImageAs" +
-      "set\022N\n\027square_marketing_images\030\002 \003(\0132-.g" +
-      "oogle.ads.googleads.v26.common.AdImageAs" +
-      "set\022P\n\031portrait_marketing_images\030\003 \003(\0132-" +
-      ".google.ads.googleads.v26.common.AdImage" +
-      "Asset\022U\n\036tall_portrait_marketing_images\030" +
-      "\n \003(\0132-.google.ads.googleads.v26.common." +
-      "AdImageAsset\022B\n\013logo_images\030\004 \003(\0132-.goog" +
-      "le.ads.googleads.v26.common.AdImageAsset" +
-      "\022M\n\026classic_display_images\030\013 \003(\0132-.googl" +
-      "e.ads.googleads.v26.common.AdImageAsset\022" +
-      "?\n\theadlines\030\005 \003(\0132,.google.ads.googlead" +
-      "s.v26.common.AdTextAsset\022B\n\014descriptions" +
-      "\030\006 \003(\0132,.google.ads.googleads.v26.common" +
-      ".AdTextAsset\022\032\n\rbusiness_name\030\007 \001(\tH\000\210\001\001" +
-      "\022 \n\023call_to_action_text\030\010 \001(\tH\001\210\001\001B\020\n\016_b" +
-      "usiness_nameB\026\n\024_call_to_action_text\"\203\003\n" +
-      "\027DemandGenCarouselAdInfo\022\032\n\rbusiness_nam" +
-      "e\030\001 \001(\tB\003\340A\002\022F\n\nlogo_image\030\002 \001(\0132-.googl" +
-      "e.ads.googleads.v26.common.AdImageAssetB" +
-      "\003\340A\002\022C\n\010headline\030\003 \001(\0132,.google.ads.goog" +
-      "leads.v26.common.AdTextAssetB\003\340A\002\022F\n\013des" +
-      "cription\030\004 \001(\0132,.google.ads.googleads.v2" +
-      "6.common.AdTextAssetB\003\340A\002\022\033\n\023call_to_act" +
-      "ion_text\030\005 \001(\t\022Z\n\016carousel_cards\030\006 \003(\0132=" +
-      ".google.ads.googleads.v26.common.AdDeman" +
-      "dGenCarouselCardAssetB\003\340A\002\"\205\005\n\036DemandGen" +
-      "VideoResponsiveAdInfo\022?\n\theadlines\030\001 \003(\013" +
+      "Asset\022=\n\006images\030\003 \003(\0132-.google.ads.googl" +
+      "eads.v26.common.AdImageAsset\022=\n\006videos\030\004" +
+      " \003(\0132-.google.ads.googleads.v26.common.A" +
+      "dVideoAsset\"\245\002\n\030AppPreRegistrationAdInfo" +
+      "\022?\n\theadlines\030\001 \003(\0132,.google.ads.googlea" +
+      "ds.v26.common.AdTextAsset\022B\n\014description" +
+      "s\030\002 \003(\0132,.google.ads.googleads.v26.commo" +
+      "n.AdTextAsset\022=\n\006images\030\003 \003(\0132-.google.a" +
+      "ds.googleads.v26.common.AdImageAsset\022E\n\016" +
+      "youtube_videos\030\004 \003(\0132-.google.ads.google" +
+      "ads.v26.common.AdVideoAsset\"\242\002\n\026LegacyAp" +
+      "pInstallAdInfo\022\023\n\006app_id\030\006 \001(\tH\000\210\001\001\022l\n\ta" +
+      "pp_store\030\002 \001(\0162Y.google.ads.googleads.v2" +
+      "6.enums.LegacyAppInstallAdAppStoreEnum.L" +
+      "egacyAppInstallAdAppStore\022\025\n\010headline\030\007 " +
+      "\001(\tH\001\210\001\001\022\031\n\014description1\030\010 \001(\tH\002\210\001\001\022\031\n\014d" +
+      "escription2\030\t \001(\tH\003\210\001\001B\t\n\007_app_idB\013\n\t_he" +
+      "adlineB\017\n\r_description1B\017\n\r_description2" +
+      "\"\340\010\n\027ResponsiveDisplayAdInfo\022G\n\020marketin" +
+      "g_images\030\001 \003(\0132-.google.ads.googleads.v2" +
+      "6.common.AdImageAsset\022N\n\027square_marketin" +
+      "g_images\030\002 \003(\0132-.google.ads.googleads.v2" +
+      "6.common.AdImageAsset\022B\n\013logo_images\030\003 \003" +
+      "(\0132-.google.ads.googleads.v26.common.AdI" +
+      "mageAsset\022I\n\022square_logo_images\030\004 \003(\0132-." +
+      "google.ads.googleads.v26.common.AdImageA" +
+      "sset\022?\n\theadlines\030\005 \003(\0132,.google.ads.goo" +
+      "gleads.v26.common.AdTextAsset\022C\n\rlong_he" +
+      "adline\030\006 \001(\0132,.google.ads.googleads.v26." +
+      "common.AdTextAsset\022B\n\014descriptions\030\007 \003(\013" +
       "2,.google.ads.googleads.v26.common.AdTex" +
-      "tAsset\022D\n\016long_headlines\030\002 \003(\0132,.google." +
-      "ads.googleads.v26.common.AdTextAsset\022B\n\014" +
-      "descriptions\030\003 \003(\0132,.google.ads.googlead" +
-      "s.v26.common.AdTextAsset\022B\n\006videos\030\004 \003(\013" +
-      "2-.google.ads.googleads.v26.common.AdVid" +
-      "eoAssetB\003\340A\002\022G\n\013logo_images\030\005 \003(\0132-.goog" +
-      "le.ads.googleads.v26.common.AdImageAsset" +
-      "B\003\340A\002\022H\n\021companion_banners\030\n \003(\0132-.googl" +
-      "e.ads.googleads.v26.common.AdImageAsset\022" +
-      "\023\n\013breadcrumb1\030\006 \001(\t\022\023\n\013breadcrumb2\030\007 \001(" +
-      "\t\022H\n\rbusiness_name\030\010 \001(\0132,.google.ads.go" +
-      "ogleads.v26.common.AdTextAssetB\003\340A\002\022M\n\017c" +
-      "all_to_actions\030\t \003(\01324.google.ads.google" +
-      "ads.v26.common.AdCallToActionAsset\"\202\004\n\026D" +
-      "emandGenProductAdInfo\022H\n\010headline\030\001 \001(\0132" +
-      ",.google.ads.googleads.v26.common.AdText" +
-      "AssetB\003\340A\002H\000\210\001\001\022K\n\013description\030\002 \001(\0132,.g" +
-      "oogle.ads.googleads.v26.common.AdTextAss" +
-      "etB\003\340A\002H\001\210\001\001\022K\n\nlogo_image\030\003 \001(\0132-.googl" +
-      "e.ads.googleads.v26.common.AdImageAssetB" +
-      "\003\340A\002H\002\210\001\001\022\023\n\013breadcrumb1\030\004 \001(\t\022\023\n\013breadc" +
-      "rumb2\030\005 \001(\t\022H\n\rbusiness_name\030\006 \001(\0132,.goo" +
+      "tAsset\022E\n\016youtube_videos\030\010 \003(\0132-.google." +
+      "ads.googleads.v26.common.AdVideoAsset\022\032\n" +
+      "\rbusiness_name\030\021 \001(\tH\000\210\001\001\022\027\n\nmain_color\030" +
+      "\022 \001(\tH\001\210\001\001\022\031\n\014accent_color\030\023 \001(\tH\002\210\001\001\022!\n" +
+      "\024allow_flexible_color\030\024 \001(\010H\003\210\001\001\022 \n\023call" +
+      "_to_action_text\030\025 \001(\tH\004\210\001\001\022\031\n\014price_pref" +
+      "ix\030\026 \001(\tH\005\210\001\001\022\027\n\npromo_text\030\027 \001(\tH\006\210\001\001\022i" +
+      "\n\016format_setting\030\020 \001(\0162Q.google.ads.goog" +
+      "leads.v26.enums.DisplayAdFormatSettingEn" +
+      "um.DisplayAdFormatSetting\022U\n\014control_spe" +
+      "c\030\030 \001(\0132?.google.ads.googleads.v26.commo" +
+      "n.ResponsiveDisplayAdControlSpecB\020\n\016_bus" +
+      "iness_nameB\r\n\013_main_colorB\017\n\r_accent_col" +
+      "orB\027\n\025_allow_flexible_colorB\026\n\024_call_to_" +
+      "action_textB\017\n\r_price_prefixB\r\n\013_promo_t" +
+      "ext\"\341\003\n\013LocalAdInfo\022?\n\theadlines\030\001 \003(\0132," +
+      ".google.ads.googleads.v26.common.AdTextA" +
+      "sset\022B\n\014descriptions\030\002 \003(\0132,.google.ads." +
+      "googleads.v26.common.AdTextAsset\022E\n\017call" +
+      "_to_actions\030\003 \003(\0132,.google.ads.googleads" +
+      ".v26.common.AdTextAsset\022G\n\020marketing_ima" +
+      "ges\030\004 \003(\0132-.google.ads.googleads.v26.com" +
+      "mon.AdImageAsset\022B\n\013logo_images\030\005 \003(\0132-." +
+      "google.ads.googleads.v26.common.AdImageA" +
+      "sset\022=\n\006videos\030\006 \003(\0132-.google.ads.google" +
+      "ads.v26.common.AdVideoAsset\022\022\n\005path1\030\t \001" +
+      "(\tH\000\210\001\001\022\022\n\005path2\030\n \001(\tH\001\210\001\001B\010\n\006_path1B\010\n" +
+      "\006_path2\"\355\001\n\023DisplayUploadAdInfo\022z\n\033displ" +
+      "ay_upload_product_type\030\001 \001(\0162U.google.ad" +
+      "s.googleads.v26.enums.DisplayUploadProdu" +
+      "ctTypeEnum.DisplayUploadProductType\022K\n\014m" +
+      "edia_bundle\030\002 \001(\01323.google.ads.googleads" +
+      ".v26.common.AdMediaBundleAssetH\000B\r\n\013medi" +
+      "a_asset\"a\n\036ResponsiveDisplayAdControlSpe" +
+      "c\022!\n\031enable_asset_enhancements\030\001 \001(\010\022\034\n\024" +
+      "enable_autogen_video\030\002 \001(\010\"\232\001\n\023SmartCamp" +
+      "aignAdInfo\022?\n\theadlines\030\001 \003(\0132,.google.a" +
+      "ds.googleads.v26.common.AdTextAsset\022B\n\014d" +
+      "escriptions\030\002 \003(\0132,.google.ads.googleads" +
+      ".v26.common.AdTextAsset\"\335\005\n\031DemandGenMul" +
+      "tiAssetAdInfo\022G\n\020marketing_images\030\001 \003(\0132" +
+      "-.google.ads.googleads.v26.common.AdImag" +
+      "eAsset\022N\n\027square_marketing_images\030\002 \003(\0132" +
+      "-.google.ads.googleads.v26.common.AdImag" +
+      "eAsset\022P\n\031portrait_marketing_images\030\003 \003(" +
+      "\0132-.google.ads.googleads.v26.common.AdIm" +
+      "ageAsset\022U\n\036tall_portrait_marketing_imag" +
+      "es\030\n \003(\0132-.google.ads.googleads.v26.comm" +
+      "on.AdImageAsset\022B\n\013logo_images\030\004 \003(\0132-.g" +
+      "oogle.ads.googleads.v26.common.AdImageAs" +
+      "set\022M\n\026classic_display_images\030\013 \003(\0132-.go" +
+      "ogle.ads.googleads.v26.common.AdImageAss" +
+      "et\022?\n\theadlines\030\005 \003(\0132,.google.ads.googl" +
+      "eads.v26.common.AdTextAsset\022B\n\014descripti" +
+      "ons\030\006 \003(\0132,.google.ads.googleads.v26.com" +
+      "mon.AdTextAsset\022\032\n\rbusiness_name\030\007 \001(\tH\000" +
+      "\210\001\001\022 \n\023call_to_action_text\030\010 \001(\tH\001\210\001\001B\020\n" +
+      "\016_business_nameB\026\n\024_call_to_action_text\"" +
+      "\210\003\n\027DemandGenCarouselAdInfo\022\033\n\rbusiness_" +
+      "name\030\001 \001(\tB\004\342A\001\002\022G\n\nlogo_image\030\002 \001(\0132-.g" +
+      "oogle.ads.googleads.v26.common.AdImageAs" +
+      "setB\004\342A\001\002\022D\n\010headline\030\003 \001(\0132,.google.ads" +
+      ".googleads.v26.common.AdTextAssetB\004\342A\001\002\022" +
+      "G\n\013description\030\004 \001(\0132,.google.ads.google" +
+      "ads.v26.common.AdTextAssetB\004\342A\001\002\022\033\n\023call" +
+      "_to_action_text\030\005 \001(\t\022[\n\016carousel_cards\030" +
+      "\006 \003(\0132=.google.ads.googleads.v26.common." +
+      "AdDemandGenCarouselCardAssetB\004\342A\001\002\"\210\005\n\036D" +
+      "emandGenVideoResponsiveAdInfo\022?\n\theadlin" +
+      "es\030\001 \003(\0132,.google.ads.googleads.v26.comm" +
+      "on.AdTextAsset\022D\n\016long_headlines\030\002 \003(\0132," +
+      ".google.ads.googleads.v26.common.AdTextA" +
+      "sset\022B\n\014descriptions\030\003 \003(\0132,.google.ads." +
+      "googleads.v26.common.AdTextAsset\022C\n\006vide" +
+      "os\030\004 \003(\0132-.google.ads.googleads.v26.comm" +
+      "on.AdVideoAssetB\004\342A\001\002\022H\n\013logo_images\030\005 \003" +
+      "(\0132-.google.ads.googleads.v26.common.AdI" +
+      "mageAssetB\004\342A\001\002\022H\n\021companion_banners\030\n \003" +
+      "(\0132-.google.ads.googleads.v26.common.AdI" +
+      "mageAsset\022\023\n\013breadcrumb1\030\006 \001(\t\022\023\n\013breadc" +
+      "rumb2\030\007 \001(\t\022I\n\rbusiness_name\030\010 \001(\0132,.goo" +
       "gle.ads.googleads.v26.common.AdTextAsset" +
-      "B\003\340A\002\022Q\n\016call_to_action\030\007 \001(\01324.google.a" +
-      "ds.googleads.v26.common.AdCallToActionAs" +
-      "setH\003\210\001\001B\013\n\t_headlineB\016\n\014_descriptionB\r\n" +
-      "\013_logo_imageB\021\n\017_call_to_actionB\360\001\n#com." +
-      "google.ads.googleads.v26.commonB\020AdTypeI" +
-      "nfosProtoP\001ZEgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v26/common;comm" +
-      "on\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V26.Comm" +
-      "on\312\002\037Google\\Ads\\GoogleAds\\V26\\Common\352\002#G" +
-      "oogle::Ads::GoogleAds::V26::Commonb\006prot" +
-      "o3"
+      "B\004\342A\001\002\022M\n\017call_to_actions\030\t \003(\01324.google" +
+      ".ads.googleads.v26.common.AdCallToAction" +
+      "Asset\"\206\004\n\026DemandGenProductAdInfo\022I\n\010head" +
+      "line\030\001 \001(\0132,.google.ads.googleads.v26.co" +
+      "mmon.AdTextAssetB\004\342A\001\002H\000\210\001\001\022L\n\013descripti" +
+      "on\030\002 \001(\0132,.google.ads.googleads.v26.comm" +
+      "on.AdTextAssetB\004\342A\001\002H\001\210\001\001\022L\n\nlogo_image\030" +
+      "\003 \001(\0132-.google.ads.googleads.v26.common." +
+      "AdImageAssetB\004\342A\001\002H\002\210\001\001\022\023\n\013breadcrumb1\030\004" +
+      " \001(\t\022\023\n\013breadcrumb2\030\005 \001(\t\022I\n\rbusiness_na" +
+      "me\030\006 \001(\0132,.google.ads.googleads.v26.comm" +
+      "on.AdTextAssetB\004\342A\001\002\022Q\n\016call_to_action\030\007" +
+      " \001(\01324.google.ads.googleads.v26.common.A" +
+      "dCallToActionAssetH\003\210\001\001B\013\n\t_headlineB\016\n\014" +
+      "_descriptionB\r\n\013_logo_imageB\021\n\017_call_to_" +
+      "actionB\360\001\n#com.google.ads.googleads.v26." +
+      "commonB\020AdTypeInfosProtoP\001ZEgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v26/common;common\242\002\003GAA\252\002\037Google.Ads.Goo" +
+      "gleAds.V26.Common\312\002\037Google\\Ads\\GoogleAds" +
+      "\\V26\\Common\352\002#Google::Ads::GoogleAds::V2" +
+      "6::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

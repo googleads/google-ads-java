@@ -8,6 +8,11 @@ package com.google.ads.googleads.v26.services;
 /**
  * <pre>
  * A single operation (create, update, remove) on a campaign budget.
+ *
+ * Update operations require an `update_mask` specifying which fields to modify.
+ * Note that `explicitly_shared` defaults to `true` if unspecified. A non-shared
+ * budget can be updated to explicitly shared, but an explicitly shared budget
+ * cannot become non-shared.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v26.services.CampaignBudgetOperation}
@@ -97,6 +102,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * FieldMask that determines which resource fields are modified in an update.
+   * Required for `update` operations.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -109,6 +115,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * FieldMask that determines which resource fields are modified in an update.
+   * Required for `update` operations.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -121,6 +128,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * FieldMask that determines which resource fields are modified in an update.
+   * Required for `update` operations.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -134,6 +142,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Create operation: No resource name is expected for the new budget.
+   * Note that `explicitly_shared` defaults to `true` if unspecified. A
+   * non-shared budget can be updated to explicitly shared, but an explicitly
+   * shared budget cannot become non-shared.
    * </pre>
    *
    * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -146,6 +157,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Create operation: No resource name is expected for the new budget.
+   * Note that `explicitly_shared` defaults to `true` if unspecified. A
+   * non-shared budget can be updated to explicitly shared, but an explicitly
+   * shared budget cannot become non-shared.
    * </pre>
    *
    * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -161,6 +175,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Create operation: No resource name is expected for the new budget.
+   * Note that `explicitly_shared` defaults to `true` if unspecified. A
+   * non-shared budget can be updated to explicitly shared, but an explicitly
+   * shared budget cannot become non-shared.
    * </pre>
    *
    * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -177,7 +194,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Update operation: The campaign budget is expected to have a valid
-   * resource name.
+   * resource name, and `update_mask` must be populated with the fields to
+   * modify. Note that `explicitly_shared` defaults to `true` if
+   * unspecified. A non-shared budget can be updated to explicitly shared,
+   * but an explicitly shared budget cannot become non-shared.
    * </pre>
    *
    * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -190,7 +210,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Update operation: The campaign budget is expected to have a valid
-   * resource name.
+   * resource name, and `update_mask` must be populated with the fields to
+   * modify. Note that `explicitly_shared` defaults to `true` if
+   * unspecified. A non-shared budget can be updated to explicitly shared,
+   * but an explicitly shared budget cannot become non-shared.
    * </pre>
    *
    * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -206,7 +229,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Update operation: The campaign budget is expected to have a valid
-   * resource name.
+   * resource name, and `update_mask` must be populated with the fields to
+   * modify. Note that `explicitly_shared` defaults to `true` if
+   * unspecified. A non-shared budget can be updated to explicitly shared,
+   * but an explicitly shared budget cannot become non-shared.
    * </pre>
    *
    * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -510,6 +536,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A single operation (create, update, remove) on a campaign budget.
+   *
+   * Update operations require an `update_mask` specifying which fields to modify.
+   * Note that `explicitly_shared` defaults to `true` if unspecified. A non-shared
+   * budget can be updated to explicitly shared, but an explicitly shared budget
+   * cannot become non-shared.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v26.services.CampaignBudgetOperation}
@@ -746,6 +777,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * FieldMask that determines which resource fields are modified in an update.
+     * Required for `update` operations.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -757,6 +789,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * FieldMask that determines which resource fields are modified in an update.
+     * Required for `update` operations.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -772,6 +805,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * FieldMask that determines which resource fields are modified in an update.
+     * Required for `update` operations.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -792,6 +826,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * FieldMask that determines which resource fields are modified in an update.
+     * Required for `update` operations.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -810,6 +845,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * FieldMask that determines which resource fields are modified in an update.
+     * Required for `update` operations.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -835,6 +871,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * FieldMask that determines which resource fields are modified in an update.
+     * Required for `update` operations.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -852,6 +889,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * FieldMask that determines which resource fields are modified in an update.
+     * Required for `update` operations.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -864,6 +902,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * FieldMask that determines which resource fields are modified in an update.
+     * Required for `update` operations.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -879,6 +918,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * FieldMask that determines which resource fields are modified in an update.
+     * Required for `update` operations.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
@@ -902,6 +942,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Create operation: No resource name is expected for the new budget.
+     * Note that `explicitly_shared` defaults to `true` if unspecified. A
+     * non-shared budget can be updated to explicitly shared, but an explicitly
+     * shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -914,6 +957,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Create operation: No resource name is expected for the new budget.
+     * Note that `explicitly_shared` defaults to `true` if unspecified. A
+     * non-shared budget can be updated to explicitly shared, but an explicitly
+     * shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -936,6 +982,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Create operation: No resource name is expected for the new budget.
+     * Note that `explicitly_shared` defaults to `true` if unspecified. A
+     * non-shared budget can be updated to explicitly shared, but an explicitly
+     * shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -956,6 +1005,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Create operation: No resource name is expected for the new budget.
+     * Note that `explicitly_shared` defaults to `true` if unspecified. A
+     * non-shared budget can be updated to explicitly shared, but an explicitly
+     * shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -974,6 +1026,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Create operation: No resource name is expected for the new budget.
+     * Note that `explicitly_shared` defaults to `true` if unspecified. A
+     * non-shared budget can be updated to explicitly shared, but an explicitly
+     * shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -1001,6 +1056,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Create operation: No resource name is expected for the new budget.
+     * Note that `explicitly_shared` defaults to `true` if unspecified. A
+     * non-shared budget can be updated to explicitly shared, but an explicitly
+     * shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -1024,6 +1082,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Create operation: No resource name is expected for the new budget.
+     * Note that `explicitly_shared` defaults to `true` if unspecified. A
+     * non-shared budget can be updated to explicitly shared, but an explicitly
+     * shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -1034,6 +1095,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Create operation: No resource name is expected for the new budget.
+     * Note that `explicitly_shared` defaults to `true` if unspecified. A
+     * non-shared budget can be updated to explicitly shared, but an explicitly
+     * shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -1052,6 +1116,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Create operation: No resource name is expected for the new budget.
+     * Note that `explicitly_shared` defaults to `true` if unspecified. A
+     * non-shared budget can be updated to explicitly shared, but an explicitly
+     * shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget create = 1;</code>
@@ -1080,7 +1147,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Update operation: The campaign budget is expected to have a valid
-     * resource name.
+     * resource name, and `update_mask` must be populated with the fields to
+     * modify. Note that `explicitly_shared` defaults to `true` if
+     * unspecified. A non-shared budget can be updated to explicitly shared,
+     * but an explicitly shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -1093,7 +1163,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Update operation: The campaign budget is expected to have a valid
-     * resource name.
+     * resource name, and `update_mask` must be populated with the fields to
+     * modify. Note that `explicitly_shared` defaults to `true` if
+     * unspecified. A non-shared budget can be updated to explicitly shared,
+     * but an explicitly shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -1116,7 +1189,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Update operation: The campaign budget is expected to have a valid
-     * resource name.
+     * resource name, and `update_mask` must be populated with the fields to
+     * modify. Note that `explicitly_shared` defaults to `true` if
+     * unspecified. A non-shared budget can be updated to explicitly shared,
+     * but an explicitly shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -1137,7 +1213,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Update operation: The campaign budget is expected to have a valid
-     * resource name.
+     * resource name, and `update_mask` must be populated with the fields to
+     * modify. Note that `explicitly_shared` defaults to `true` if
+     * unspecified. A non-shared budget can be updated to explicitly shared,
+     * but an explicitly shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -1156,7 +1235,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Update operation: The campaign budget is expected to have a valid
-     * resource name.
+     * resource name, and `update_mask` must be populated with the fields to
+     * modify. Note that `explicitly_shared` defaults to `true` if
+     * unspecified. A non-shared budget can be updated to explicitly shared,
+     * but an explicitly shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -1184,7 +1266,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Update operation: The campaign budget is expected to have a valid
-     * resource name.
+     * resource name, and `update_mask` must be populated with the fields to
+     * modify. Note that `explicitly_shared` defaults to `true` if
+     * unspecified. A non-shared budget can be updated to explicitly shared,
+     * but an explicitly shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -1208,7 +1293,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Update operation: The campaign budget is expected to have a valid
-     * resource name.
+     * resource name, and `update_mask` must be populated with the fields to
+     * modify. Note that `explicitly_shared` defaults to `true` if
+     * unspecified. A non-shared budget can be updated to explicitly shared,
+     * but an explicitly shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -1219,7 +1307,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Update operation: The campaign budget is expected to have a valid
-     * resource name.
+     * resource name, and `update_mask` must be populated with the fields to
+     * modify. Note that `explicitly_shared` defaults to `true` if
+     * unspecified. A non-shared budget can be updated to explicitly shared,
+     * but an explicitly shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>
@@ -1238,7 +1329,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Update operation: The campaign budget is expected to have a valid
-     * resource name.
+     * resource name, and `update_mask` must be populated with the fields to
+     * modify. Note that `explicitly_shared` defaults to `true` if
+     * unspecified. A non-shared budget can be updated to explicitly shared,
+     * but an explicitly shared budget cannot become non-shared.
      * </pre>
      *
      * <code>.google.ads.googleads.v26.resources.CampaignBudget update = 2;</code>

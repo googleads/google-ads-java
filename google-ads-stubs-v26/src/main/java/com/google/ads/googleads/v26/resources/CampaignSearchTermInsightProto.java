@@ -44,23 +44,23 @@ public final class CampaignSearchTermInsightProto extends com.google.protobuf.Ge
       "paign_search_term_insight.proto\022\"google." +
       "ads.googleads.v26.resources\032\037google/api/" +
       "field_behavior.proto\032\031google/api/resourc" +
-      "e.proto\"\371\002\n\031CampaignSearchTermInsight\022Q\n" +
-      "\rresource_name\030\001 \001(\tB:\340A\003\372A4\n2googleads." +
-      "googleapis.com/CampaignSearchTermInsight" +
-      "\022 \n\016category_label\030\002 \001(\tB\003\340A\003H\000\210\001\001\022\024\n\002id" +
-      "\030\003 \001(\003B\003\340A\003H\001\210\001\001\022\035\n\013campaign_id\030\004 \001(\003B\003\340" +
-      "A\003H\002\210\001\001:\207\001\352A\203\001\n2googleads.googleapis.com" +
-      "/CampaignSearchTermInsight\022Mcustomers/{c" +
-      "ustomer_id}/campaignSearchTermInsights/{" +
-      "campaign_id}~{cluster_id}B\021\n\017_category_l" +
-      "abelB\005\n\003_idB\016\n\014_campaign_idB\220\002\n&com.goog" +
-      "le.ads.googleads.v26.resourcesB\036Campaign" +
-      "SearchTermInsightProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v2" +
-      "6/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V26.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V26\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V26::Resourcesb\006proto3"
+      "e.proto\"\375\002\n\031CampaignSearchTermInsight\022R\n" +
+      "\rresource_name\030\001 \001(\tB;\342A\001\003\372A4\n2googleads" +
+      ".googleapis.com/CampaignSearchTermInsigh" +
+      "t\022!\n\016category_label\030\002 \001(\tB\004\342A\001\003H\000\210\001\001\022\025\n\002" +
+      "id\030\003 \001(\003B\004\342A\001\003H\001\210\001\001\022\036\n\013campaign_id\030\004 \001(\003" +
+      "B\004\342A\001\003H\002\210\001\001:\207\001\352A\203\001\n2googleads.googleapis" +
+      ".com/CampaignSearchTermInsight\022Mcustomer" +
+      "s/{customer_id}/campaignSearchTermInsigh" +
+      "ts/{campaign_id}~{cluster_id}B\021\n\017_catego" +
+      "ry_labelB\005\n\003_idB\016\n\014_campaign_idB\220\002\n&com." +
+      "google.ads.googleads.v26.resourcesB\036Camp" +
+      "aignSearchTermInsightProtoP\001ZKgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v26/resources;resources\242\002\003GAA\252\002\"Google" +
+      ".Ads.GoogleAds.V26.Resources\312\002\"Google\\Ad" +
+      "s\\GoogleAds\\V26\\Resources\352\002&Google::Ads:" +
+      ":GoogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

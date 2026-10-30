@@ -48,28 +48,28 @@ public final class CurrencyConstantProto extends com.google.protobuf.GeneratedFi
       "\n:google/ads/googleads/v26/resources/cur" +
       "rency_constant.proto\022\"google.ads.googlea" +
       "ds.v26.resources\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"\255\004\n" +
-      "\020CurrencyConstant\022H\n\rresource_name\030\001 \001(\t" +
-      "B1\340A\003\372A+\n)googleads.googleapis.com/Curre" +
-      "ncyConstant\022\026\n\004code\030\006 \001(\tB\003\340A\003H\000\210\001\001\022\026\n\004n" +
-      "ame\030\007 \001(\tB\003\340A\003H\001\210\001\001\022\030\n\006symbol\030\010 \001(\tB\003\340A\003" +
-      "H\002\210\001\001\022&\n\024billable_unit_micros\030\t \001(\003B\003\340A\003" +
-      "H\003\210\001\001\022e\n\017demand_gen_info\030\n \001(\0132B.google." +
-      "ads.googleads.v26.resources.CurrencyCons" +
-      "tant.DemandGenInfoB\003\340A\003H\004\210\001\001\032b\n\rDemandGe" +
-      "nInfo\022/\n\035minimum_budget_per_day_micros\030\001" +
-      " \001(\003B\003\340A\003H\000\210\001\001B \n\036_minimum_budget_per_da" +
-      "y_micros:H\352AE\n)googleads.googleapis.com/" +
-      "CurrencyConstant\022\030currencyConstants/{cod" +
-      "e}B\007\n\005_codeB\007\n\005_nameB\t\n\007_symbolB\027\n\025_bill" +
-      "able_unit_microsB\022\n\020_demand_gen_infoB\207\002\n" +
-      "&com.google.ads.googleads.v26.resourcesB" +
-      "\025CurrencyConstantProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v2" +
-      "6/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V26.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V26\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V26::Resourcesb\006proto3"
+      "ior.proto\032\031google/api/resource.proto\"\264\004\n" +
+      "\020CurrencyConstant\022I\n\rresource_name\030\001 \001(\t" +
+      "B2\342A\001\003\372A+\n)googleads.googleapis.com/Curr" +
+      "encyConstant\022\027\n\004code\030\006 \001(\tB\004\342A\001\003H\000\210\001\001\022\027\n" +
+      "\004name\030\007 \001(\tB\004\342A\001\003H\001\210\001\001\022\031\n\006symbol\030\010 \001(\tB\004" +
+      "\342A\001\003H\002\210\001\001\022\'\n\024billable_unit_micros\030\t \001(\003B" +
+      "\004\342A\001\003H\003\210\001\001\022f\n\017demand_gen_info\030\n \001(\0132B.go" +
+      "ogle.ads.googleads.v26.resources.Currenc" +
+      "yConstant.DemandGenInfoB\004\342A\001\003H\004\210\001\001\032c\n\rDe" +
+      "mandGenInfo\0220\n\035minimum_budget_per_day_mi" +
+      "cros\030\001 \001(\003B\004\342A\001\003H\000\210\001\001B \n\036_minimum_budget" +
+      "_per_day_micros:H\352AE\n)googleads.googleap" +
+      "is.com/CurrencyConstant\022\030currencyConstan" +
+      "ts/{code}B\007\n\005_codeB\007\n\005_nameB\t\n\007_symbolB\027" +
+      "\n\025_billable_unit_microsB\022\n\020_demand_gen_i" +
+      "nfoB\207\002\n&com.google.ads.googleads.v26.res" +
+      "ourcesB\025CurrencyConstantProtoP\001ZKgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v26/resources;resources\242\002\003GAA\252\002\"Goo" +
+      "gle.Ads.GoogleAds.V26.Resources\312\002\"Google" +
+      "\\Ads\\GoogleAds\\V26\\Resources\352\002&Google::A" +
+      "ds::GoogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

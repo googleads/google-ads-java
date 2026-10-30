@@ -44,21 +44,21 @@ public final class TargetingExpansionViewProto extends com.google.protobuf.Gener
       "geting_expansion_view.proto\022\"google.ads." +
       "googleads.v26.resources\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\"\253\002\n\026TargetingExpansionView\022N\n\rresour" +
-      "ce_name\030\001 \001(\tB7\340A\003\372A1\n/googleads.googlea" +
-      "pis.com/TargetingExpansionView:\300\001\352A\274\001\n/g" +
-      "oogleads.googleapis.com/TargetingExpansi" +
-      "onView\022Xcustomers/{customer_id}/targetin" +
-      "gExpansionViews/{campaign_id}~{targeting" +
-      "_expansion_type}*\027targetingExpansionView" +
-      "s2\026targetingExpansionViewB\215\002\n&com.google" +
-      ".ads.googleads.v26.resourcesB\033TargetingE" +
-      "xpansionViewProtoP\001ZKgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v26/res" +
-      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
-      "leAds.V26.Resources\312\002\"Google\\Ads\\GoogleA" +
-      "ds\\V26\\Resources\352\002&Google::Ads::GoogleAd" +
-      "s::V26::Resourcesb\006proto3"
+      "oto\"\254\002\n\026TargetingExpansionView\022O\n\rresour" +
+      "ce_name\030\001 \001(\tB8\342A\001\003\372A1\n/googleads.google" +
+      "apis.com/TargetingExpansionView:\300\001\352A\274\001\n/" +
+      "googleads.googleapis.com/TargetingExpans" +
+      "ionView\022Xcustomers/{customer_id}/targeti" +
+      "ngExpansionViews/{campaign_id}~{targetin" +
+      "g_expansion_type}*\027targetingExpansionVie" +
+      "ws2\026targetingExpansionViewB\215\002\n&com.googl" +
+      "e.ads.googleads.v26.resourcesB\033Targeting" +
+      "ExpansionViewProtoP\001ZKgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v26/re" +
+      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
+      "gleAds.V26.Resources\312\002\"Google\\Ads\\Google" +
+      "Ads\\V26\\Resources\352\002&Google::Ads::GoogleA" +
+      "ds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

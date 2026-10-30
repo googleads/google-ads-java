@@ -44,26 +44,26 @@ public final class LiftMeasurementVideoProto extends com.google.protobuf.Generat
       "t_measurement_video.proto\022\"google.ads.go" +
       "ogleads.v26.resources\032\037google/api/field_" +
       "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\361\003\n\024LiftMeasurementVideo\022L\n\rresource_n" +
-      "ame\030\001 \001(\tB5\340A\003\372A/\n-googleads.googleapis." +
-      "com/LiftMeasurementVideo\022,\n\032lift_measure" +
-      "ment_config_id\030\002 \001(\003B\003\340A\003H\000\210\001\001\022@\n\010campai" +
-      "gn\030\003 \001(\tB)\340A\003\372A#\n!googleads.googleapis.c" +
-      "om/CampaignH\001\210\001\001\022:\n\005video\030\005 \001(\tB&\340A\003\372A \n" +
-      "\036googleads.googleapis.com/VideoH\002\210\001\001:\250\001\352" +
-      "A\244\001\n-googleads.googleapis.com/LiftMeasur" +
-      "ementVideo\022scustomers/{customer_id}/lift" +
-      "MeasurementVideos/{lift_measurement_conf" +
-      "iguration_id}~{campaign_id}~{external_vi" +
-      "deo_id}B\035\n\033_lift_measurement_config_idB\013" +
-      "\n\t_campaignB\010\n\006_videoB\213\002\n&com.google.ads" +
-      ".googleads.v26.resourcesB\031LiftMeasuremen" +
-      "tVideoProtoP\001ZKgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v26/resources" +
-      ";resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds." +
-      "V26.Resources\312\002\"Google\\Ads\\GoogleAds\\V26" +
-      "\\Resources\352\002&Google::Ads::GoogleAds::V26" +
-      "::Resourcesb\006proto3"
+      "o\"\365\003\n\024LiftMeasurementVideo\022M\n\rresource_n" +
+      "ame\030\001 \001(\tB6\342A\001\003\372A/\n-googleads.googleapis" +
+      ".com/LiftMeasurementVideo\022-\n\032lift_measur" +
+      "ement_config_id\030\002 \001(\003B\004\342A\001\003H\000\210\001\001\022A\n\010camp" +
+      "aign\030\003 \001(\tB*\342A\001\003\372A#\n!googleads.googleapi" +
+      "s.com/CampaignH\001\210\001\001\022;\n\005video\030\005 \001(\tB\'\342A\001\003" +
+      "\372A \n\036googleads.googleapis.com/VideoH\002\210\001\001" +
+      ":\250\001\352A\244\001\n-googleads.googleapis.com/LiftMe" +
+      "asurementVideo\022scustomers/{customer_id}/" +
+      "liftMeasurementVideos/{lift_measurement_" +
+      "configuration_id}~{campaign_id}~{externa" +
+      "l_video_id}B\035\n\033_lift_measurement_config_" +
+      "idB\013\n\t_campaignB\010\n\006_videoB\213\002\n&com.google" +
+      ".ads.googleads.v26.resourcesB\031LiftMeasur" +
+      "ementVideoProtoP\001ZKgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v26/resou" +
+      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
+      "Ads.V26.Resources\312\002\"Google\\Ads\\GoogleAds" +
+      "\\V26\\Resources\352\002&Google::Ads::GoogleAds:" +
+      ":V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

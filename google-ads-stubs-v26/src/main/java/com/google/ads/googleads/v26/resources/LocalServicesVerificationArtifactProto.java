@@ -88,97 +88,98 @@ public final class LocalServicesVerificationArtifactProto extends com.google.pro
       "googleads/v26/enums/local_services_verif" +
       "ication_artifact_type.proto\032\037google/api/" +
       "field_behavior.proto\032\031google/api/resourc" +
-      "e.proto\"\374\010\n!LocalServicesVerificationArt" +
-      "ifact\022Y\n\rresource_name\030\001 \001(\tBB\340A\005\372A<\n:go" +
-      "ogleads.googleapis.com/LocalServicesVeri" +
-      "ficationArtifact\022\024\n\002id\030\002 \001(\003B\003\340A\003H\001\210\001\001\022\037" +
-      "\n\022creation_date_time\030\003 \001(\tB\003\340A\003\022\210\001\n\006stat" +
-      "us\030\004 \001(\0162s.google.ads.googleads.v26.enum" +
-      "s.LocalServicesVerificationArtifactStatu" +
-      "sEnum.LocalServicesVerificationArtifactS" +
-      "tatusB\003\340A\003\022\213\001\n\rartifact_type\030\005 \001(\0162o.goo" +
-      "gle.ads.googleads.v26.enums.LocalService" +
-      "sVerificationArtifactTypeEnum.LocalServi" +
-      "cesVerificationArtifactTypeB\003\340A\003\022~\n&back" +
-      "ground_check_verification_artifact\030\006 \001(\013" +
-      "2G.google.ads.googleads.v26.resources.Ba" +
-      "ckgroundCheckVerificationArtifactB\003\340A\003H\000" +
-      "\022q\n\037insurance_verification_artifact\030\007 \001(" +
-      "\0132A.google.ads.googleads.v26.resources.I" +
-      "nsuranceVerificationArtifactB\003\340A\003H\000\022m\n\035l" +
-      "icense_verification_artifact\030\010 \001(\0132?.goo" +
-      "gle.ads.googleads.v26.resources.LicenseV" +
-      "erificationArtifactB\003\340A\003H\000\022\223\001\n1business_" +
-      "registration_check_verification_artifact" +
-      "\030\t \001(\0132Q.google.ads.googleads.v26.resour" +
-      "ces.BusinessRegistrationCheckVerificatio" +
-      "nArtifactB\003\340A\003H\000:\233\001\352A\227\001\n:googleads.googl" +
-      "eapis.com/LocalServicesVerificationArtif" +
-      "act\022Ycustomers/{customer_id}/localServic" +
-      "esVerificationArtifacts/{gls_verificatio" +
-      "n_artifact_id}B\017\n\rartifact_dataB\005\n\003_id\"\237" +
-      "\001\n#BackgroundCheckVerificationArtifact\022\032" +
-      "\n\010case_url\030\001 \001(\tB\003\340A\003H\000\210\001\001\022.\n\034final_adju" +
-      "dication_date_time\030\002 \001(\tB\003\340A\003H\001\210\001\001B\013\n\t_c" +
-      "ase_urlB\037\n\035_final_adjudication_date_time" +
-      "\"\315\003\n\035InsuranceVerificationArtifact\022\037\n\ram" +
-      "ount_micros\030\001 \001(\003B\003\340A\003H\000\210\001\001\022\223\001\n\020rejectio" +
-      "n_reason\030\002 \001(\0162o.google.ads.googleads.v2" +
-      "6.enums.LocalServicesInsuranceRejectionR" +
-      "easonEnum.LocalServicesInsuranceRejectio" +
-      "nReasonB\003\340A\003H\001\210\001\001\022m\n\033insurance_document_" +
-      "readonly\030\003 \001(\0132>.google.ads.googleads.v2" +
-      "6.common.LocalServicesDocumentReadOnlyB\003" +
-      "\340A\003H\002\210\001\001\022&\n\024expiration_date_time\030\004 \001(\tB\003" +
-      "\340A\003H\003\210\001\001B\020\n\016_amount_microsB\023\n\021_rejection" +
-      "_reasonB\036\n\034_insurance_document_readonlyB" +
-      "\027\n\025_expiration_date_time\"\362\004\n\033LicenseVeri" +
-      "ficationArtifact\022\036\n\014license_type\030\001 \001(\tB\003" +
-      "\340A\003H\000\210\001\001\022 \n\016license_number\030\002 \001(\tB\003\340A\003H\001\210" +
-      "\001\001\022%\n\023licensee_first_name\030\003 \001(\tB\003\340A\003H\002\210\001" +
-      "\001\022$\n\022licensee_last_name\030\004 \001(\tB\003\340A\003H\003\210\001\001\022" +
-      "\217\001\n\020rejection_reason\030\005 \001(\0162k.google.ads." +
-      "googleads.v26.enums.LocalServicesLicense" +
-      "RejectionReasonEnum.LocalServicesLicense" +
-      "RejectionReasonB\003\340A\003H\004\210\001\001\022k\n\031license_doc" +
-      "ument_readonly\030\006 \001(\0132>.google.ads.google" +
-      "ads.v26.common.LocalServicesDocumentRead" +
-      "OnlyB\003\340A\003H\005\210\001\001\022&\n\024expiration_date_time\030\007" +
-      " \001(\tB\003\340A\003H\006\210\001\001B\017\n\r_license_typeB\021\n\017_lice" +
-      "nse_numberB\026\n\024_licensee_first_nameB\025\n\023_l" +
-      "icensee_last_nameB\023\n\021_rejection_reasonB\034" +
-      "\n\032_license_document_readonlyB\027\n\025_expirat" +
-      "ion_date_time\"\266\005\n-BusinessRegistrationCh" +
-      "eckVerificationArtifact\022\224\001\n\021registration" +
-      "_type\030\003 \001(\0162o.google.ads.googleads.v26.e" +
-      "nums.LocalServicesBusinessRegistrationTy" +
-      "peEnum.LocalServicesBusinessRegistration" +
-      "TypeB\003\340A\003H\001\210\001\001\022\032\n\010check_id\030\004 \001(\tB\003\340A\003H\002\210" +
-      "\001\001\022\264\001\n\020rejection_reason\030\005 \001(\0162\217\001.google." +
-      "ads.googleads.v26.enums.LocalServicesBus" +
-      "inessRegistrationCheckRejectionReasonEnu" +
-      "m.LocalServicesBusinessRegistrationCheck" +
-      "RejectionReasonB\003\340A\003H\003\210\001\001\022b\n\023registratio" +
-      "n_number\030\001 \001(\0132>.google.ads.googleads.v2" +
-      "6.resources.BusinessRegistrationNumberB\003" +
-      "\340A\003H\000\022f\n\025registration_document\030\002 \001(\0132@.g" +
-      "oogle.ads.googleads.v26.resources.Busine" +
-      "ssRegistrationDocumentB\003\340A\003H\000B\027\n\025busines" +
-      "s_registrationB\024\n\022_registration_typeB\013\n\t" +
-      "_check_idB\023\n\021_rejection_reason\"A\n\032Busine" +
-      "ssRegistrationNumber\022\030\n\006number\030\001 \001(\tB\003\340A" +
-      "\003H\000\210\001\001B\t\n\007_number\"\231\001\n\034BusinessRegistrati" +
-      "onDocument\022c\n\021document_readonly\030\001 \001(\0132>." +
-      "google.ads.googleads.v26.common.LocalSer" +
-      "vicesDocumentReadOnlyB\003\340A\003H\000\210\001\001B\024\n\022_docu" +
-      "ment_readonlyB\230\002\n&com.google.ads.googlea" +
-      "ds.v26.resourcesB&LocalServicesVerificat" +
-      "ionArtifactProtoP\001ZKgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v26/reso" +
-      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
-      "eAds.V26.Resources\312\002\"Google\\Ads\\GoogleAd" +
-      "s\\V26\\Resources\352\002&Google::Ads::GoogleAds" +
-      "::V26::Resourcesb\006proto3"
+      "e.proto\"\205\t\n!LocalServicesVerificationArt" +
+      "ifact\022Z\n\rresource_name\030\001 \001(\tBC\342A\001\005\372A<\n:g" +
+      "oogleads.googleapis.com/LocalServicesVer" +
+      "ificationArtifact\022\025\n\002id\030\002 \001(\003B\004\342A\001\003H\001\210\001\001" +
+      "\022 \n\022creation_date_time\030\003 \001(\tB\004\342A\001\003\022\211\001\n\006s" +
+      "tatus\030\004 \001(\0162s.google.ads.googleads.v26.e" +
+      "nums.LocalServicesVerificationArtifactSt" +
+      "atusEnum.LocalServicesVerificationArtifa" +
+      "ctStatusB\004\342A\001\003\022\214\001\n\rartifact_type\030\005 \001(\0162o" +
+      ".google.ads.googleads.v26.enums.LocalSer" +
+      "vicesVerificationArtifactTypeEnum.LocalS" +
+      "ervicesVerificationArtifactTypeB\004\342A\001\003\022\177\n" +
+      "&background_check_verification_artifact\030" +
+      "\006 \001(\0132G.google.ads.googleads.v26.resourc" +
+      "es.BackgroundCheckVerificationArtifactB\004" +
+      "\342A\001\003H\000\022r\n\037insurance_verification_artifac" +
+      "t\030\007 \001(\0132A.google.ads.googleads.v26.resou" +
+      "rces.InsuranceVerificationArtifactB\004\342A\001\003" +
+      "H\000\022n\n\035license_verification_artifact\030\010 \001(" +
+      "\0132?.google.ads.googleads.v26.resources.L" +
+      "icenseVerificationArtifactB\004\342A\001\003H\000\022\224\001\n1b" +
+      "usiness_registration_check_verification_" +
+      "artifact\030\t \001(\0132Q.google.ads.googleads.v2" +
+      "6.resources.BusinessRegistrationCheckVer" +
+      "ificationArtifactB\004\342A\001\003H\000:\233\001\352A\227\001\n:google" +
+      "ads.googleapis.com/LocalServicesVerifica" +
+      "tionArtifact\022Ycustomers/{customer_id}/lo" +
+      "calServicesVerificationArtifacts/{gls_ve" +
+      "rification_artifact_id}B\017\n\rartifact_data" +
+      "B\005\n\003_id\"\241\001\n#BackgroundCheckVerificationA" +
+      "rtifact\022\033\n\010case_url\030\001 \001(\tB\004\342A\001\003H\000\210\001\001\022/\n\034" +
+      "final_adjudication_date_time\030\002 \001(\tB\004\342A\001\003" +
+      "H\001\210\001\001B\013\n\t_case_urlB\037\n\035_final_adjudicatio" +
+      "n_date_time\"\321\003\n\035InsuranceVerificationArt" +
+      "ifact\022 \n\ramount_micros\030\001 \001(\003B\004\342A\001\003H\000\210\001\001\022" +
+      "\224\001\n\020rejection_reason\030\002 \001(\0162o.google.ads." +
+      "googleads.v26.enums.LocalServicesInsuran" +
+      "ceRejectionReasonEnum.LocalServicesInsur" +
+      "anceRejectionReasonB\004\342A\001\003H\001\210\001\001\022n\n\033insura" +
+      "nce_document_readonly\030\003 \001(\0132>.google.ads" +
+      ".googleads.v26.common.LocalServicesDocum" +
+      "entReadOnlyB\004\342A\001\003H\002\210\001\001\022\'\n\024expiration_dat" +
+      "e_time\030\004 \001(\tB\004\342A\001\003H\003\210\001\001B\020\n\016_amount_micro" +
+      "sB\023\n\021_rejection_reasonB\036\n\034_insurance_doc" +
+      "ument_readonlyB\027\n\025_expiration_date_time\"" +
+      "\371\004\n\033LicenseVerificationArtifact\022\037\n\014licen" +
+      "se_type\030\001 \001(\tB\004\342A\001\003H\000\210\001\001\022!\n\016license_numb" +
+      "er\030\002 \001(\tB\004\342A\001\003H\001\210\001\001\022&\n\023licensee_first_na" +
+      "me\030\003 \001(\tB\004\342A\001\003H\002\210\001\001\022%\n\022licensee_last_nam" +
+      "e\030\004 \001(\tB\004\342A\001\003H\003\210\001\001\022\220\001\n\020rejection_reason\030" +
+      "\005 \001(\0162k.google.ads.googleads.v26.enums.L" +
+      "ocalServicesLicenseRejectionReasonEnum.L" +
+      "ocalServicesLicenseRejectionReasonB\004\342A\001\003" +
+      "H\004\210\001\001\022l\n\031license_document_readonly\030\006 \001(\013" +
+      "2>.google.ads.googleads.v26.common.Local" +
+      "ServicesDocumentReadOnlyB\004\342A\001\003H\005\210\001\001\022\'\n\024e" +
+      "xpiration_date_time\030\007 \001(\tB\004\342A\001\003H\006\210\001\001B\017\n\r" +
+      "_license_typeB\021\n\017_license_numberB\026\n\024_lic" +
+      "ensee_first_nameB\025\n\023_licensee_last_nameB" +
+      "\023\n\021_rejection_reasonB\034\n\032_license_documen" +
+      "t_readonlyB\027\n\025_expiration_date_time\"\273\005\n-" +
+      "BusinessRegistrationCheckVerificationArt" +
+      "ifact\022\225\001\n\021registration_type\030\003 \001(\0162o.goog" +
+      "le.ads.googleads.v26.enums.LocalServices" +
+      "BusinessRegistrationTypeEnum.LocalServic" +
+      "esBusinessRegistrationTypeB\004\342A\001\003H\001\210\001\001\022\033\n" +
+      "\010check_id\030\004 \001(\tB\004\342A\001\003H\002\210\001\001\022\265\001\n\020rejection" +
+      "_reason\030\005 \001(\0162\217\001.google.ads.googleads.v2" +
+      "6.enums.LocalServicesBusinessRegistratio" +
+      "nCheckRejectionReasonEnum.LocalServicesB" +
+      "usinessRegistrationCheckRejectionReasonB" +
+      "\004\342A\001\003H\003\210\001\001\022c\n\023registration_number\030\001 \001(\0132" +
+      ">.google.ads.googleads.v26.resources.Bus" +
+      "inessRegistrationNumberB\004\342A\001\003H\000\022g\n\025regis" +
+      "tration_document\030\002 \001(\0132@.google.ads.goog" +
+      "leads.v26.resources.BusinessRegistration" +
+      "DocumentB\004\342A\001\003H\000B\027\n\025business_registratio" +
+      "nB\024\n\022_registration_typeB\013\n\t_check_idB\023\n\021" +
+      "_rejection_reason\"B\n\032BusinessRegistratio" +
+      "nNumber\022\031\n\006number\030\001 \001(\tB\004\342A\001\003H\000\210\001\001B\t\n\007_n" +
+      "umber\"\232\001\n\034BusinessRegistrationDocument\022d" +
+      "\n\021document_readonly\030\001 \001(\0132>.google.ads.g" +
+      "oogleads.v26.common.LocalServicesDocumen" +
+      "tReadOnlyB\004\342A\001\003H\000\210\001\001B\024\n\022_document_readon" +
+      "lyB\230\002\n&com.google.ads.googleads.v26.reso" +
+      "urcesB&LocalServicesVerificationArtifact" +
+      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v26/resources;resou" +
+      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Re" +
+      "sources\312\002\"Google\\Ads\\GoogleAds\\V26\\Resou" +
+      "rces\352\002&Google::Ads::GoogleAds::V26::Reso" +
+      "urcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

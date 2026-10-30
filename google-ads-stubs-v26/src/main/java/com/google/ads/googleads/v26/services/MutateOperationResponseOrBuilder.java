@@ -1173,6 +1173,33 @@ public interface MutateOperationResponseOrBuilder extends
 
   /**
    * <pre>
+   * The result for the customer budget network setting mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.services.MutateCustomerBudgetNetworkSettingResult customer_budget_network_setting_result = 92;</code>
+   * @return Whether the customerBudgetNetworkSettingResult field is set.
+   */
+  boolean hasCustomerBudgetNetworkSettingResult();
+  /**
+   * <pre>
+   * The result for the customer budget network setting mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.services.MutateCustomerBudgetNetworkSettingResult customer_budget_network_setting_result = 92;</code>
+   * @return The customerBudgetNetworkSettingResult.
+   */
+  com.google.ads.googleads.v26.services.MutateCustomerBudgetNetworkSettingResult getCustomerBudgetNetworkSettingResult();
+  /**
+   * <pre>
+   * The result for the customer budget network setting mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.services.MutateCustomerBudgetNetworkSettingResult customer_budget_network_setting_result = 92;</code>
+   */
+  com.google.ads.googleads.v26.services.MutateCustomerBudgetNetworkSettingResultOrBuilder getCustomerBudgetNetworkSettingResultOrBuilder();
+
+  /**
+   * <pre>
    * The result for the customer conversion goal mutate.
    * </pre>
    *

@@ -140,172 +140,172 @@ public final class ContentCreatorInsightsServiceProto extends com.google.protobu
       "y.proto\032.google/ads/googleads/v26/enums/" +
       "sentiment.proto\032\034google/api/annotations." +
       "proto\032\027google/api/client.proto\032\037google/a" +
-      "pi/field_behavior.proto\"\355\t\n\036GenerateCrea" +
-      "torInsightsRequest\022\030\n\013customer_id\030\001 \001(\tB" +
-      "\003\340A\002\022$\n\027customer_insights_group\030\002 \001(\tB\003\340" +
-      "A\002\022b\n\031insights_application_info\030\010 \001(\0132:." +
-      "google.ads.googleads.v26.common.Addition" +
-      "alApplicationInfoB\003\340A\001\022M\n\021country_locati" +
-      "ons\030\006 \003(\0132-.google.ads.googleads.v26.com" +
-      "mon.LocationInfoB\003\340A\002\022L\n\025sub_country_loc" +
-      "ations\030\007 \003(\0132-.google.ads.googleads.v26." +
-      "common.LocationInfo\022\221\001\n\021supplemental_dat" +
-      "a\030\n \003(\0162q.google.ads.googleads.v26.enums" +
-      ".ContentCreatorInsightsSupplementalDataE" +
-      "num.ContentCreatorInsightsSupplementalDa" +
-      "taB\003\340A\001\022o\n\021search_attributes\030\003 \001(\0132R.goo" +
-      "gle.ads.googleads.v26.services.GenerateC" +
-      "reatorInsightsRequest.SearchAttributesH\000" +
-      "\022l\n\017search_channels\030\004 \001(\0132Q.google.ads.g" +
-      "oogleads.v26.services.GenerateCreatorIns" +
-      "ightsRequest.YouTubeChannelsH\000\022H\n\rsearch" +
-      "_topics\030\t \001(\0132/.google.ads.googleads.v26" +
-      ".services.SearchTopicsH\000\032\262\002\n\020SearchAttri" +
-      "butes\022\\\n\023audience_attributes\030\001 \003(\0132:.goo" +
-      "gle.ads.googleads.v26.common.AudienceIns" +
-      "ightsAttributeB\003\340A\001\022c\n\025audience_combinat" +
-      "ions\030\003 \003(\0132?.google.ads.googleads.v26.co" +
-      "mmon.InsightsAudienceAttributeGroupB\003\340A\001" +
-      "\022[\n\022creator_attributes\030\002 \003(\0132:.google.ad" +
-      "s.googleads.v26.common.AudienceInsightsA" +
-      "ttributeB\003\340A\001\032\213\001\n\017YouTubeChannels\022R\n\020you" +
-      "tube_channels\030\001 \003(\01323.google.ads.googlea" +
-      "ds.v26.common.YouTubeChannelInfoB\003\340A\001\022$\n" +
-      "\027youtube_channel_handles\030\002 \003(\tB\003\340A\001B\n\n\010c" +
-      "riteria\"\321\001\n\037GenerateCreatorInsightsRespo" +
-      "nse\022S\n\020creator_insights\030\001 \003(\01329.google.a" +
-      "ds.googleads.v26.services.YouTubeCreator" +
-      "Insights\022Y\n\026local_creator_insights\030\002 \003(\013" +
-      "29.google.ads.googleads.v26.services.You" +
-      "TubeCreatorInsights\"\236\005\n\037GenerateTrending" +
-      "InsightsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A" +
-      "\002\022$\n\027customer_insights_group\030\002 \001(\tB\003\340A\002\022" +
-      "b\n\031insights_application_info\030\006 \001(\0132:.goo" +
-      "gle.ads.googleads.v26.common.AdditionalA" +
-      "pplicationInfoB\003\340A\001\022L\n\020country_location\030" +
-      "\003 \001(\0132-.google.ads.googleads.v26.common." +
-      "LocationInfoB\003\340A\002\022Q\n\025sub_country_locatio" +
-      "ns\030\010 \003(\0132-.google.ads.googleads.v26.comm" +
-      "on.LocationInfoB\003\340A\001\022\221\001\n\021supplemental_da" +
-      "ta\030\007 \003(\0162q.google.ads.googleads.v26.enum" +
-      "s.ContentCreatorInsightsSupplementalData" +
-      "Enum.ContentCreatorInsightsSupplementalD" +
-      "ataB\003\340A\001\022L\n\017search_audience\030\004 \001(\01321.goog" +
-      "le.ads.googleads.v26.services.SearchAudi" +
-      "enceH\000\022H\n\rsearch_topics\030\005 \001(\0132/.google.a" +
-      "ds.googleads.v26.services.SearchTopicsH\000" +
-      "B\n\n\010criteria\"k\n GenerateTrendingInsights" +
-      "Response\022G\n\016trend_insights\030\001 \003(\0132/.googl" +
-      "e.ads.googleads.v26.services.TrendInsigh" +
-      "t\"\203\001\n\026YouTubeCreatorInsights\022\024\n\014creator_" +
-      "name\030\001 \001(\t\022S\n\020creator_channels\030\002 \003(\01329.g" +
-      "oogle.ads.googleads.v26.services.YouTube" +
-      "ChannelInsights\"\257\004\n\016YouTubeMetrics\022\030\n\020su" +
-      "bscriber_count\030\001 \001(\003\022\023\n\013views_count\030\002 \001(" +
-      "\003\022\023\n\013video_count\030\003 \001(\003\022\023\n\013likes_count\030\005 " +
-      "\001(\003\022\024\n\014shares_count\030\006 \001(\003\022\026\n\016comments_co" +
-      "unt\030\007 \001(\003\022\027\n\017engagement_rate\030\010 \001(\001\022\037\n\027av" +
-      "erage_views_per_video\030\t \001(\001\022\037\n\027average_l" +
-      "ikes_per_video\030\n \001(\001\022 \n\030average_shares_p" +
-      "er_video\030\013 \001(\001\022\"\n\032average_comments_per_v" +
-      "ideo\030\014 \001(\001\022\032\n\022shorts_views_count\030\r \001(\003\022\032" +
-      "\n\022shorts_video_count\030\016 \001(\003\022 \n\030is_active_" +
-      "shorts_creator\030\004 \001(\010\022%\n\035is_active_live_s" +
-      "tream_creator\030\020 \001(\010\022t\n\031partnership_oppor" +
-      "tunities\030\021 \003(\0162Q.google.ads.googleads.v2" +
-      "6.enums.PartnershipOpportunityEnum.Partn" +
-      "ershipOpportunity\"\315\006\n\026YouTubeChannelInsi" +
-      "ghts\022\024\n\014display_name\030\001 \001(\t\022L\n\017youtube_ch" +
-      "annel\030\002 \001(\01323.google.ads.googleads.v26.c" +
-      "ommon.YouTubeChannelInfo\022\023\n\013channel_url\030" +
-      "\t \001(\t\022\033\n\023channel_description\030\n \001(\t\022\016\n\006ha" +
-      "ndle\030\013 \001(\t\022\025\n\rthumbnail_url\030\014 \001(\t\022\024\n\014pub" +
-      "lish_date\030\r \001(\t\022G\n\020country_location\030\016 \001(" +
-      "\0132-.google.ads.googleads.v26.common.Loca" +
-      "tionInfo\022J\n\017channel_metrics\030\003 \001(\01321.goog" +
-      "le.ads.googleads.v26.services.YouTubeMet" +
-      "rics\022\"\n\032data_sharing_consent_given\030\022 \001(\010" +
-      "\022g\n\033channel_audience_attributes\030\007 \003(\0132B." +
-      "google.ads.googleads.v26.common.Audience" +
-      "InsightsAttributeMetadata\022^\n\022channel_att" +
-      "ributes\030\005 \003(\0132B.google.ads.googleads.v26" +
+      "pi/field_behavior.proto\"\367\t\n\036GenerateCrea" +
+      "torInsightsRequest\022\031\n\013customer_id\030\001 \001(\tB" +
+      "\004\342A\001\002\022%\n\027customer_insights_group\030\002 \001(\tB\004" +
+      "\342A\001\002\022c\n\031insights_application_info\030\010 \001(\0132" +
+      ":.google.ads.googleads.v26.common.Additi" +
+      "onalApplicationInfoB\004\342A\001\001\022N\n\021country_loc" +
+      "ations\030\006 \003(\0132-.google.ads.googleads.v26." +
+      "common.LocationInfoB\004\342A\001\002\022L\n\025sub_country" +
+      "_locations\030\007 \003(\0132-.google.ads.googleads." +
+      "v26.common.LocationInfo\022\222\001\n\021supplemental" +
+      "_data\030\n \003(\0162q.google.ads.googleads.v26.e" +
+      "nums.ContentCreatorInsightsSupplementalD" +
+      "ataEnum.ContentCreatorInsightsSupplement" +
+      "alDataB\004\342A\001\001\022o\n\021search_attributes\030\003 \001(\0132" +
+      "R.google.ads.googleads.v26.services.Gene" +
+      "rateCreatorInsightsRequest.SearchAttribu" +
+      "tesH\000\022l\n\017search_channels\030\004 \001(\0132Q.google." +
+      "ads.googleads.v26.services.GenerateCreat" +
+      "orInsightsRequest.YouTubeChannelsH\000\022H\n\rs" +
+      "earch_topics\030\t \001(\0132/.google.ads.googlead" +
+      "s.v26.services.SearchTopicsH\000\032\265\002\n\020Search" +
+      "Attributes\022]\n\023audience_attributes\030\001 \003(\0132" +
+      ":.google.ads.googleads.v26.common.Audien" +
+      "ceInsightsAttributeB\004\342A\001\001\022d\n\025audience_co" +
+      "mbinations\030\003 \003(\0132?.google.ads.googleads." +
+      "v26.common.InsightsAudienceAttributeGrou" +
+      "pB\004\342A\001\001\022\\\n\022creator_attributes\030\002 \003(\0132:.go" +
+      "ogle.ads.googleads.v26.common.AudienceIn" +
+      "sightsAttributeB\004\342A\001\001\032\215\001\n\017YouTubeChannel" +
+      "s\022S\n\020youtube_channels\030\001 \003(\01323.google.ads" +
+      ".googleads.v26.common.YouTubeChannelInfo" +
+      "B\004\342A\001\001\022%\n\027youtube_channel_handles\030\002 \003(\tB" +
+      "\004\342A\001\001B\n\n\010criteria\"\321\001\n\037GenerateCreatorIns" +
+      "ightsResponse\022S\n\020creator_insights\030\001 \003(\0132" +
+      "9.google.ads.googleads.v26.services.YouT" +
+      "ubeCreatorInsights\022Y\n\026local_creator_insi" +
+      "ghts\030\002 \003(\01329.google.ads.googleads.v26.se" +
+      "rvices.YouTubeCreatorInsights\"\244\005\n\037Genera" +
+      "teTrendingInsightsRequest\022\031\n\013customer_id" +
+      "\030\001 \001(\tB\004\342A\001\002\022%\n\027customer_insights_group\030" +
+      "\002 \001(\tB\004\342A\001\002\022c\n\031insights_application_info" +
+      "\030\006 \001(\0132:.google.ads.googleads.v26.common" +
+      ".AdditionalApplicationInfoB\004\342A\001\001\022M\n\020coun" +
+      "try_location\030\003 \001(\0132-.google.ads.googlead" +
+      "s.v26.common.LocationInfoB\004\342A\001\002\022R\n\025sub_c" +
+      "ountry_locations\030\010 \003(\0132-.google.ads.goog" +
+      "leads.v26.common.LocationInfoB\004\342A\001\001\022\222\001\n\021" +
+      "supplemental_data\030\007 \003(\0162q.google.ads.goo" +
+      "gleads.v26.enums.ContentCreatorInsightsS" +
+      "upplementalDataEnum.ContentCreatorInsigh" +
+      "tsSupplementalDataB\004\342A\001\001\022L\n\017search_audie" +
+      "nce\030\004 \001(\01321.google.ads.googleads.v26.ser" +
+      "vices.SearchAudienceH\000\022H\n\rsearch_topics\030" +
+      "\005 \001(\0132/.google.ads.googleads.v26.service" +
+      "s.SearchTopicsH\000B\n\n\010criteria\"k\n Generate" +
+      "TrendingInsightsResponse\022G\n\016trend_insigh" +
+      "ts\030\001 \003(\0132/.google.ads.googleads.v26.serv" +
+      "ices.TrendInsight\"\203\001\n\026YouTubeCreatorInsi" +
+      "ghts\022\024\n\014creator_name\030\001 \001(\t\022S\n\020creator_ch" +
+      "annels\030\002 \003(\01329.google.ads.googleads.v26." +
+      "services.YouTubeChannelInsights\"\257\004\n\016YouT" +
+      "ubeMetrics\022\030\n\020subscriber_count\030\001 \001(\003\022\023\n\013" +
+      "views_count\030\002 \001(\003\022\023\n\013video_count\030\003 \001(\003\022\023" +
+      "\n\013likes_count\030\005 \001(\003\022\024\n\014shares_count\030\006 \001(" +
+      "\003\022\026\n\016comments_count\030\007 \001(\003\022\027\n\017engagement_" +
+      "rate\030\010 \001(\001\022\037\n\027average_views_per_video\030\t " +
+      "\001(\001\022\037\n\027average_likes_per_video\030\n \001(\001\022 \n\030" +
+      "average_shares_per_video\030\013 \001(\001\022\"\n\032averag" +
+      "e_comments_per_video\030\014 \001(\001\022\032\n\022shorts_vie" +
+      "ws_count\030\r \001(\003\022\032\n\022shorts_video_count\030\016 \001" +
+      "(\003\022 \n\030is_active_shorts_creator\030\004 \001(\010\022%\n\035" +
+      "is_active_live_stream_creator\030\020 \001(\010\022t\n\031p" +
+      "artnership_opportunities\030\021 \003(\0162Q.google." +
+      "ads.googleads.v26.enums.PartnershipOppor" +
+      "tunityEnum.PartnershipOpportunity\"\315\006\n\026Yo" +
+      "uTubeChannelInsights\022\024\n\014display_name\030\001 \001" +
+      "(\t\022L\n\017youtube_channel\030\002 \001(\01323.google.ads" +
+      ".googleads.v26.common.YouTubeChannelInfo" +
+      "\022\023\n\013channel_url\030\t \001(\t\022\033\n\023channel_descrip" +
+      "tion\030\n \001(\t\022\016\n\006handle\030\013 \001(\t\022\025\n\rthumbnail_" +
+      "url\030\014 \001(\t\022\024\n\014publish_date\030\r \001(\t\022G\n\020count" +
+      "ry_location\030\016 \001(\0132-.google.ads.googleads" +
+      ".v26.common.LocationInfo\022J\n\017channel_metr" +
+      "ics\030\003 \001(\01321.google.ads.googleads.v26.ser" +
+      "vices.YouTubeMetrics\022\"\n\032data_sharing_con" +
+      "sent_given\030\022 \001(\010\022g\n\033channel_audience_att" +
+      "ributes\030\007 \003(\0132B.google.ads.googleads.v26" +
       ".common.AudienceInsightsAttributeMetadat" +
-      "a\022V\n\ntop_videos\030\010 \003(\0132B.google.ads.googl" +
-      "eads.v26.common.AudienceInsightsAttribut" +
-      "eMetadata\022W\n\026language_distributions\030\017 \003(" +
-      "\01327.google.ads.googleads.v26.services.La" +
-      "nguageDistribution\022\024\n\014channel_type\030\006 \001(\t" +
-      "\022\027\n\017relevance_score\030\020 \001(\001\"\323\001\n\016SearchAudi" +
-      "ence\022\\\n\023audience_attributes\030\001 \003(\0132:.goog" +
-      "le.ads.googleads.v26.common.AudienceInsi" +
-      "ghtsAttributeB\003\340A\002\022c\n\025audience_combinati" +
-      "ons\030\002 \003(\0132?.google.ads.googleads.v26.com" +
-      "mon.InsightsAudienceAttributeGroupB\003\340A\001\"" +
-      "^\n\014SearchTopics\022N\n\010entities\030\001 \003(\01327.goog" +
-      "le.ads.googleads.v26.common.AudienceInsi" +
-      "ghtsEntityB\003\340A\002\"\307\005\n\014TrendInsight\022[\n\017tren" +
-      "d_attribute\030\001 \001(\0132B.google.ads.googleads" +
-      ".v26.common.AudienceInsightsAttributeMet" +
-      "adata\022M\n\rtrend_metrics\030\002 \001(\01326.google.ad" +
-      "s.googleads.v26.services.TrendInsightMet" +
-      "rics\022N\n\005trend\030\003 \001(\0162?.google.ads.googlea" +
-      "ds.v26.enums.InsightsTrendEnum.InsightsT" +
-      "rend\022S\n\021trend_data_points\030\006 \003(\01328.google" +
-      ".ads.googleads.v26.services.TrendInsight" +
-      "DataPoint\022Z\n\030brand_sentiment_insights\030\007 " +
-      "\003(\01328.google.ads.googleads.v26.services." +
-      "BrandSentimentInsight\022Z\n\016related_videos\030" +
-      "\004 \003(\0132B.google.ads.googleads.v26.common." +
-      "AudienceInsightsAttributeMetadata\022S\n\020rel" +
-      "ated_creators\030\005 \003(\01329.google.ads.googlea" +
-      "ds.v26.services.YouTubeCreatorInsights\022Y" +
-      "\n\026related_local_creators\030\010 \003(\01329.google." +
-      "ads.googleads.v26.services.YouTubeCreato" +
-      "rInsights\"}\n\023TrendInsightMetrics\022\023\n\013view" +
-      "s_count\030\001 \001(\003\022\033\n\023views_indexed_value\030\004 \001" +
-      "(\003\022\026\n\016audience_share\030\002 \001(\001\022\034\n\024trend_chan" +
-      "ge_percent\030\003 \001(\001\"u\n\025TrendInsightDataPoin" +
-      "t\022\r\n\005month\030\001 \001(\t\022M\n\rtrend_metrics\030\002 \001(\0132" +
-      "6.google.ads.googleads.v26.services.Tren" +
-      "dInsightMetrics\"\200\002\n\025BrandSentimentInsigh" +
-      "t\022\r\n\005month\030\001 \001(\t\022\035\n\025has_insufficient_dat" +
-      "a\030\002 \001(\010\022`\n\027sentiment_distributions\030\003 \003(\013" +
-      "2?.google.ads.googleads.v26.services.Sen" +
-      "timentInsightDistribution\022W\n\023sentiment_s" +
-      "ummaries\030\004 \003(\0132:.google.ads.googleads.v2" +
-      "6.services.SentimentInsightSummary\"\203\001\n\034S" +
-      "entimentInsightDistribution\022J\n\tsentiment" +
-      "\030\001 \001(\01627.google.ads.googleads.v26.enums." +
-      "SentimentEnum.Sentiment\022\027\n\017sentiment_sha" +
-      "re\030\002 \001(\001\"\321\001\n\027SentimentInsightSummary\022J\n\t" +
-      "sentiment\030\001 \001(\01627.google.ads.googleads.v" +
-      "26.enums.SentimentEnum.Sentiment\022\017\n\007summ" +
-      "ary\030\002 \001(\t\022Y\n\rsample_videos\030\003 \003(\0132B.googl" +
-      "e.ads.googleads.v26.common.AudienceInsig" +
-      "htsAttributeMetadata\"A\n\024LanguageDistribu" +
-      "tion\022\025\n\rlanguage_code\030\001 \001(\t\022\022\n\nproportio" +
-      "n\030\002 \001(\0012\266\004\n\035ContentCreatorInsightsServic" +
-      "e\022\343\001\n\027GenerateCreatorInsights\022A.google.a" +
-      "ds.googleads.v26.services.GenerateCreato" +
-      "rInsightsRequest\032B.google.ads.googleads." +
-      "v26.services.GenerateCreatorInsightsResp" +
-      "onse\"A\202\323\344\223\002;\"6/v26/customers/{customer_i" +
-      "d=*}:generateCreatorInsights:\001*\022\347\001\n\030Gene" +
-      "rateTrendingInsights\022B.google.ads.google" +
-      "ads.v26.services.GenerateTrendingInsight" +
-      "sRequest\032C.google.ads.googleads.v26.serv" +
-      "ices.GenerateTrendingInsightsResponse\"B\202" +
-      "\323\344\223\002<\"7/v26/customers/{customer_id=*}:ge" +
-      "nerateTrendingInsights:\001*\032E\312A\030googleads." +
-      "googleapis.com\322A\'https://www.googleapis." +
-      "com/auth/adwordsB\216\002\n%com.google.ads.goog" +
-      "leads.v26.servicesB\"ContentCreatorInsigh" +
-      "tsServiceProtoP\001ZIgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v26/servic" +
-      "es;services\242\002\003GAA\252\002!Google.Ads.GoogleAds" +
-      ".V26.Services\312\002!Google\\Ads\\GoogleAds\\V26" +
-      "\\Services\352\002%Google::Ads::GoogleAds::V26:" +
-      ":Servicesb\006proto3"
+      "a\022^\n\022channel_attributes\030\005 \003(\0132B.google.a" +
+      "ds.googleads.v26.common.AudienceInsights" +
+      "AttributeMetadata\022V\n\ntop_videos\030\010 \003(\0132B." +
+      "google.ads.googleads.v26.common.Audience" +
+      "InsightsAttributeMetadata\022W\n\026language_di" +
+      "stributions\030\017 \003(\01327.google.ads.googleads" +
+      ".v26.services.LanguageDistribution\022\024\n\014ch" +
+      "annel_type\030\006 \001(\t\022\027\n\017relevance_score\030\020 \001(" +
+      "\001\"\325\001\n\016SearchAudience\022]\n\023audience_attribu" +
+      "tes\030\001 \003(\0132:.google.ads.googleads.v26.com" +
+      "mon.AudienceInsightsAttributeB\004\342A\001\002\022d\n\025a" +
+      "udience_combinations\030\002 \003(\0132?.google.ads." +
+      "googleads.v26.common.InsightsAudienceAtt" +
+      "ributeGroupB\004\342A\001\001\"_\n\014SearchTopics\022O\n\010ent" +
+      "ities\030\001 \003(\01327.google.ads.googleads.v26.c" +
+      "ommon.AudienceInsightsEntityB\004\342A\001\002\"\307\005\n\014T" +
+      "rendInsight\022[\n\017trend_attribute\030\001 \001(\0132B.g" +
+      "oogle.ads.googleads.v26.common.AudienceI" +
+      "nsightsAttributeMetadata\022M\n\rtrend_metric" +
+      "s\030\002 \001(\01326.google.ads.googleads.v26.servi" +
+      "ces.TrendInsightMetrics\022N\n\005trend\030\003 \001(\0162?" +
+      ".google.ads.googleads.v26.enums.Insights" +
+      "TrendEnum.InsightsTrend\022S\n\021trend_data_po" +
+      "ints\030\006 \003(\01328.google.ads.googleads.v26.se" +
+      "rvices.TrendInsightDataPoint\022Z\n\030brand_se" +
+      "ntiment_insights\030\007 \003(\01328.google.ads.goog" +
+      "leads.v26.services.BrandSentimentInsight" +
+      "\022Z\n\016related_videos\030\004 \003(\0132B.google.ads.go" +
+      "ogleads.v26.common.AudienceInsightsAttri" +
+      "buteMetadata\022S\n\020related_creators\030\005 \003(\01329" +
+      ".google.ads.googleads.v26.services.YouTu" +
+      "beCreatorInsights\022Y\n\026related_local_creat" +
+      "ors\030\010 \003(\01329.google.ads.googleads.v26.ser" +
+      "vices.YouTubeCreatorInsights\"}\n\023TrendIns" +
+      "ightMetrics\022\023\n\013views_count\030\001 \001(\003\022\033\n\023view" +
+      "s_indexed_value\030\004 \001(\003\022\026\n\016audience_share\030" +
+      "\002 \001(\001\022\034\n\024trend_change_percent\030\003 \001(\001\"u\n\025T" +
+      "rendInsightDataPoint\022\r\n\005month\030\001 \001(\t\022M\n\rt" +
+      "rend_metrics\030\002 \001(\01326.google.ads.googlead" +
+      "s.v26.services.TrendInsightMetrics\"\200\002\n\025B" +
+      "randSentimentInsight\022\r\n\005month\030\001 \001(\t\022\035\n\025h" +
+      "as_insufficient_data\030\002 \001(\010\022`\n\027sentiment_" +
+      "distributions\030\003 \003(\0132?.google.ads.googlea" +
+      "ds.v26.services.SentimentInsightDistribu" +
+      "tion\022W\n\023sentiment_summaries\030\004 \003(\0132:.goog" +
+      "le.ads.googleads.v26.services.SentimentI" +
+      "nsightSummary\"\203\001\n\034SentimentInsightDistri" +
+      "bution\022J\n\tsentiment\030\001 \001(\01627.google.ads.g" +
+      "oogleads.v26.enums.SentimentEnum.Sentime" +
+      "nt\022\027\n\017sentiment_share\030\002 \001(\001\"\321\001\n\027Sentimen" +
+      "tInsightSummary\022J\n\tsentiment\030\001 \001(\01627.goo" +
+      "gle.ads.googleads.v26.enums.SentimentEnu" +
+      "m.Sentiment\022\017\n\007summary\030\002 \001(\t\022Y\n\rsample_v" +
+      "ideos\030\003 \003(\0132B.google.ads.googleads.v26.c" +
+      "ommon.AudienceInsightsAttributeMetadata\"" +
+      "A\n\024LanguageDistribution\022\025\n\rlanguage_code" +
+      "\030\001 \001(\t\022\022\n\nproportion\030\002 \001(\0012\266\004\n\035ContentCr" +
+      "eatorInsightsService\022\343\001\n\027GenerateCreator" +
+      "Insights\022A.google.ads.googleads.v26.serv" +
+      "ices.GenerateCreatorInsightsRequest\032B.go" +
+      "ogle.ads.googleads.v26.services.Generate" +
+      "CreatorInsightsResponse\"A\202\323\344\223\002;\"6/v26/cu" +
+      "stomers/{customer_id=*}:generateCreatorI" +
+      "nsights:\001*\022\347\001\n\030GenerateTrendingInsights\022" +
+      "B.google.ads.googleads.v26.services.Gene" +
+      "rateTrendingInsightsRequest\032C.google.ads" +
+      ".googleads.v26.services.GenerateTrending" +
+      "InsightsResponse\"B\202\323\344\223\002<\"7/v26/customers" +
+      "/{customer_id=*}:generateTrendingInsight" +
+      "s:\001*\032E\312A\030googleads.googleapis.com\322A\'http" +
+      "s://www.googleapis.com/auth/adwordsB\216\002\n%" +
+      "com.google.ads.googleads.v26.servicesB\"C" +
+      "ontentCreatorInsightsServiceProtoP\001ZIgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v26/services;services\242\002\003GAA\252\002!G" +
+      "oogle.Ads.GoogleAds.V26.Services\312\002!Googl" +
+      "e\\Ads\\GoogleAds\\V26\\Services\352\002%Google::A" +
+      "ds::GoogleAds::V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

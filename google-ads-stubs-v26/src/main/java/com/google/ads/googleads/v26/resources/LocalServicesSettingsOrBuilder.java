@@ -97,4 +97,31 @@ public interface LocalServicesSettingsOrBuilder extends
    */
   com.google.ads.googleads.v26.resources.GranularInsuranceStatusOrBuilder getGranularInsuranceStatusesOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Settings for external redemption provider integration.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+   * @return Whether the redemptionProviderInfo field is set.
+   */
+  boolean hasRedemptionProviderInfo();
+  /**
+   * <pre>
+   * Settings for external redemption provider integration.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+   * @return The redemptionProviderInfo.
+   */
+  com.google.ads.googleads.v26.resources.RedemptionProviderInfo getRedemptionProviderInfo();
+  /**
+   * <pre>
+   * Settings for external redemption provider integration.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.resources.RedemptionProviderInfo redemption_provider_info = 3;</code>
+   */
+  com.google.ads.googleads.v26.resources.RedemptionProviderInfoOrBuilder getRedemptionProviderInfoOrBuilder();
 }

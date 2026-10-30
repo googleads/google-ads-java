@@ -62,54 +62,55 @@ public final class LocalServicesEmployeeProto extends com.google.protobuf.Genera
       "tatus.proto\032Agoogle/ads/googleads/v26/en" +
       "ums/local_services_employee_type.proto\032\037" +
       "google/api/field_behavior.proto\032\031google/" +
-      "api/resource.proto\"\230\t\n\025LocalServicesEmpl" +
-      "oyee\022M\n\rresource_name\030\001 \001(\tB6\340A\005\372A0\n.goo" +
-      "gleads.googleapis.com/LocalServicesEmplo" +
-      "yee\022\024\n\002id\030\002 \001(\003B\003\340A\003H\000\210\001\001\022\037\n\022creation_da" +
-      "te_time\030\003 \001(\tB\003\340A\003\022p\n\006status\030\004 \001(\0162[.goo" +
-      "gle.ads.googleads.v26.enums.LocalService" +
-      "sEmployeeStatusEnum.LocalServicesEmploye" +
-      "eStatusB\003\340A\003\022j\n\004type\030\005 \001(\0162W.google.ads." +
-      "googleads.v26.enums.LocalServicesEmploye" +
-      "eTypeEnum.LocalServicesEmployeeTypeB\003\340A\003" +
-      "\022U\n\022university_degrees\030\006 \003(\01324.google.ad" +
-      "s.googleads.v26.resources.UniversityDegr" +
-      "eeB\003\340A\003\022G\n\013residencies\030\007 \003(\0132-.google.ad" +
-      "s.googleads.v26.resources.ResidencyB\003\340A\003" +
-      "\022H\n\013fellowships\030\010 \003(\0132..google.ads.googl" +
-      "eads.v26.resources.FellowshipB\003\340A\003\022\033\n\tjo" +
-      "b_title\030\t \001(\tB\003\340A\003H\001\210\001\001\022)\n\027year_started_" +
-      "practicing\030\n \001(\005B\003\340A\003H\002\210\001\001\022\035\n\020languages_" +
-      "spoken\030\013 \003(\tB\003\340A\003\022\031\n\014category_ids\030\014 \003(\tB" +
-      "\003\340A\003\022-\n\033national_provider_id_number\030\r \001(" +
-      "\tB\003\340A\003H\003\210\001\001\022\037\n\remail_address\030\016 \001(\tB\003\340A\003H" +
-      "\004\210\001\001\022\034\n\nfirst_name\030\017 \001(\tB\003\340A\003H\005\210\001\001\022\035\n\013mi" +
-      "ddle_name\030\020 \001(\tB\003\340A\003H\006\210\001\001\022\033\n\tlast_name\030\021" +
-      " \001(\tB\003\340A\003H\007\210\001\001:u\352Ar\n.googleads.googleapi" +
-      "s.com/LocalServicesEmployee\022@customers/{" +
-      "customer_id}/localServicesEmployees/{gls" +
-      "_employee_id}B\005\n\003_idB\014\n\n_job_titleB\032\n\030_y" +
-      "ear_started_practicingB\036\n\034_national_prov" +
-      "ider_id_numberB\020\n\016_email_addressB\r\n\013_fir" +
-      "st_nameB\016\n\014_middle_nameB\014\n\n_last_name\"\247\001" +
-      "\n\020UniversityDegree\022\"\n\020institution_name\030\001" +
-      " \001(\tB\003\340A\003H\000\210\001\001\022\030\n\006degree\030\002 \001(\tB\003\340A\003H\001\210\001\001" +
-      "\022!\n\017graduation_year\030\003 \001(\005B\003\340A\003H\002\210\001\001B\023\n\021_" +
-      "institution_nameB\t\n\007_degreeB\022\n\020_graduati" +
-      "on_year\"{\n\tResidency\022\"\n\020institution_name" +
-      "\030\001 \001(\tB\003\340A\003H\000\210\001\001\022!\n\017completion_year\030\002 \001(" +
-      "\005B\003\340A\003H\001\210\001\001B\023\n\021_institution_nameB\022\n\020_com" +
-      "pletion_year\"|\n\nFellowship\022\"\n\020institutio" +
-      "n_name\030\001 \001(\tB\003\340A\003H\000\210\001\001\022!\n\017completion_yea" +
-      "r\030\002 \001(\005B\003\340A\003H\001\210\001\001B\023\n\021_institution_nameB\022" +
-      "\n\020_completion_yearB\214\002\n&com.google.ads.go" +
-      "ogleads.v26.resourcesB\032LocalServicesEmpl" +
-      "oyeeProtoP\001ZKgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v26/resources;r" +
-      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V2" +
-      "6.Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\R" +
-      "esources\352\002&Google::Ads::GoogleAds::V26::" +
-      "Resourcesb\006proto3"
+      "api/resource.proto\"\251\t\n\025LocalServicesEmpl" +
+      "oyee\022N\n\rresource_name\030\001 \001(\tB7\342A\001\005\372A0\n.go" +
+      "ogleads.googleapis.com/LocalServicesEmpl" +
+      "oyee\022\025\n\002id\030\002 \001(\003B\004\342A\001\003H\000\210\001\001\022 \n\022creation_" +
+      "date_time\030\003 \001(\tB\004\342A\001\003\022q\n\006status\030\004 \001(\0162[." +
+      "google.ads.googleads.v26.enums.LocalServ" +
+      "icesEmployeeStatusEnum.LocalServicesEmpl" +
+      "oyeeStatusB\004\342A\001\003\022k\n\004type\030\005 \001(\0162W.google." +
+      "ads.googleads.v26.enums.LocalServicesEmp" +
+      "loyeeTypeEnum.LocalServicesEmployeeTypeB" +
+      "\004\342A\001\003\022V\n\022university_degrees\030\006 \003(\01324.goog" +
+      "le.ads.googleads.v26.resources.Universit" +
+      "yDegreeB\004\342A\001\003\022H\n\013residencies\030\007 \003(\0132-.goo" +
+      "gle.ads.googleads.v26.resources.Residenc" +
+      "yB\004\342A\001\003\022I\n\013fellowships\030\010 \003(\0132..google.ad" +
+      "s.googleads.v26.resources.FellowshipB\004\342A" +
+      "\001\003\022\034\n\tjob_title\030\t \001(\tB\004\342A\001\003H\001\210\001\001\022*\n\027year" +
+      "_started_practicing\030\n \001(\005B\004\342A\001\003H\002\210\001\001\022\036\n\020" +
+      "languages_spoken\030\013 \003(\tB\004\342A\001\003\022\032\n\014category" +
+      "_ids\030\014 \003(\tB\004\342A\001\003\022.\n\033national_provider_id" +
+      "_number\030\r \001(\tB\004\342A\001\003H\003\210\001\001\022 \n\remail_addres" +
+      "s\030\016 \001(\tB\004\342A\001\003H\004\210\001\001\022\035\n\nfirst_name\030\017 \001(\tB\004" +
+      "\342A\001\003H\005\210\001\001\022\036\n\013middle_name\030\020 \001(\tB\004\342A\001\003H\006\210\001" +
+      "\001\022\034\n\tlast_name\030\021 \001(\tB\004\342A\001\003H\007\210\001\001:u\352Ar\n.go" +
+      "ogleads.googleapis.com/LocalServicesEmpl" +
+      "oyee\022@customers/{customer_id}/localServi" +
+      "cesEmployees/{gls_employee_id}B\005\n\003_idB\014\n" +
+      "\n_job_titleB\032\n\030_year_started_practicingB" +
+      "\036\n\034_national_provider_id_numberB\020\n\016_emai" +
+      "l_addressB\r\n\013_first_nameB\016\n\014_middle_name" +
+      "B\014\n\n_last_name\"\252\001\n\020UniversityDegree\022#\n\020i" +
+      "nstitution_name\030\001 \001(\tB\004\342A\001\003H\000\210\001\001\022\031\n\006degr" +
+      "ee\030\002 \001(\tB\004\342A\001\003H\001\210\001\001\022\"\n\017graduation_year\030\003" +
+      " \001(\005B\004\342A\001\003H\002\210\001\001B\023\n\021_institution_nameB\t\n\007" +
+      "_degreeB\022\n\020_graduation_year\"}\n\tResidency" +
+      "\022#\n\020institution_name\030\001 \001(\tB\004\342A\001\003H\000\210\001\001\022\"\n" +
+      "\017completion_year\030\002 \001(\005B\004\342A\001\003H\001\210\001\001B\023\n\021_in" +
+      "stitution_nameB\022\n\020_completion_year\"~\n\nFe" +
+      "llowship\022#\n\020institution_name\030\001 \001(\tB\004\342A\001\003" +
+      "H\000\210\001\001\022\"\n\017completion_year\030\002 \001(\005B\004\342A\001\003H\001\210\001" +
+      "\001B\023\n\021_institution_nameB\022\n\020_completion_ye" +
+      "arB\214\002\n&com.google.ads.googleads.v26.reso" +
+      "urcesB\032LocalServicesEmployeeProtoP\001ZKgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v26/resources;resources\242\002\003GAA\252\002" +
+      "\"Google.Ads.GoogleAds.V26.Resources\312\002\"Go" +
+      "ogle\\Ads\\GoogleAds\\V26\\Resources\352\002&Googl" +
+      "e::Ads::GoogleAds::V26::Resourcesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

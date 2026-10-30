@@ -54,36 +54,36 @@ public final class YoutubeVideoUploadProto extends com.google.protobuf.Generated
       "re.proto\032?google/ads/googleads/v26/enums" +
       "/youtube_video_upload_state.proto\032\037googl" +
       "e/api/field_behavior.proto\032\031google/api/r" +
-      "esource.proto\"\271\005\n\022YouTubeVideoUpload\022J\n\r" +
-      "resource_name\030\001 \001(\tB3\340A\005\372A-\n+googleads.g" +
-      "oogleapis.com/YouTubeVideoUpload\022\034\n\017vide" +
-      "o_upload_id\030\002 \001(\003B\003\340A\003\022\027\n\nchannel_id\030\003 \001" +
-      "(\tB\003\340A\005\022\025\n\010video_id\030\004 \001(\tB\003\340A\003\022g\n\005state\030" +
-      "\005 \001(\0162S.google.ads.googleads.v26.enums.Y" +
-      "ouTubeVideoUploadStateEnum.YouTubeVideoU" +
-      "ploadStateB\003\340A\003\022\033\n\013video_title\030\006 \001(\tB\006\340A" +
-      "\004\340A\005\022!\n\021video_description\030\007 \001(\tB\006\340A\004\340A\005\022" +
-      "b\n\rvideo_privacy\030\010 \001(\0162K.google.ads.goog" +
-      "leads.v26.enums.YouTubeVideoPrivacyEnum." +
-      "YouTubeVideoPrivacy\022`\n\026video_content_met" +
-      "adata\030\t \001(\01328.google.ads.googleads.v26.r" +
-      "esources.VideoContentMetadataB\006\340A\004\340A\005:\231\001" +
-      "\352A\225\001\n+googleads.googleapis.com/YouTubeVi" +
-      "deoUpload\022=customers/{customer_id}/youTu" +
-      "beVideoUploads/{video_upload_id}*\023youTub" +
-      "eVideoUploads2\022youTubeVideoUpload\"\307\001\n\024Vi" +
-      "deoContentMetadata\022\256\001\n\035generative_conten" +
-      "t_disclosure\030\001 \001(\0162\177.google.ads.googlead" +
-      "s.v26.enums.YouTubeVideoUploadGenerative" +
-      "ContentDisclosureEnum.YouTubeVideoUpload" +
-      "GenerativeContentDisclosureB\006\340A\004\340A\005B\211\002\n&" +
-      "com.google.ads.googleads.v26.resourcesB\027" +
-      "YoutubeVideoUploadProtoP\001ZKgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "26/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
-      "s.GoogleAds.V26.Resources\312\002\"Google\\Ads\\G" +
-      "oogleAds\\V26\\Resources\352\002&Google::Ads::Go" +
-      "ogleAds::V26::Resourcesb\006proto3"
+      "esource.proto\"\273\005\n\022YouTubeVideoUpload\022K\n\r" +
+      "resource_name\030\001 \001(\tB4\342A\001\005\372A-\n+googleads." +
+      "googleapis.com/YouTubeVideoUpload\022\035\n\017vid" +
+      "eo_upload_id\030\002 \001(\003B\004\342A\001\003\022\030\n\nchannel_id\030\003" +
+      " \001(\tB\004\342A\001\005\022\026\n\010video_id\030\004 \001(\tB\004\342A\001\003\022h\n\005st" +
+      "ate\030\005 \001(\0162S.google.ads.googleads.v26.enu" +
+      "ms.YouTubeVideoUploadStateEnum.YouTubeVi" +
+      "deoUploadStateB\004\342A\001\003\022\032\n\013video_title\030\006 \001(" +
+      "\tB\005\342A\002\004\005\022 \n\021video_description\030\007 \001(\tB\005\342A\002" +
+      "\004\005\022b\n\rvideo_privacy\030\010 \001(\0162K.google.ads.g" +
+      "oogleads.v26.enums.YouTubeVideoPrivacyEn" +
+      "um.YouTubeVideoPrivacy\022_\n\026video_content_" +
+      "metadata\030\t \001(\01328.google.ads.googleads.v2" +
+      "6.resources.VideoContentMetadataB\005\342A\002\004\005:" +
+      "\231\001\352A\225\001\n+googleads.googleapis.com/YouTube" +
+      "VideoUpload\022=customers/{customer_id}/you" +
+      "TubeVideoUploads/{video_upload_id}*\023youT" +
+      "ubeVideoUploads2\022youTubeVideoUpload\"\306\001\n\024" +
+      "VideoContentMetadata\022\255\001\n\035generative_cont" +
+      "ent_disclosure\030\001 \001(\0162\177.google.ads.google" +
+      "ads.v26.enums.YouTubeVideoUploadGenerati" +
+      "veContentDisclosureEnum.YouTubeVideoUplo" +
+      "adGenerativeContentDisclosureB\005\342A\002\004\005B\211\002\n" +
+      "&com.google.ads.googleads.v26.resourcesB" +
+      "\027YoutubeVideoUploadProtoP\001ZKgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v26/resources;resources\242\002\003GAA\252\002\"Google.A" +
+      "ds.GoogleAds.V26.Resources\312\002\"Google\\Ads\\" +
+      "GoogleAds\\V26\\Resources\352\002&Google::Ads::G" +
+      "oogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

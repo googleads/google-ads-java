@@ -45,25 +45,25 @@ public final class UserListCustomerTypeProto extends com.google.protobuf.Generat
       "oogleads.v26.resources\032Egoogle/ads/googl" +
       "eads/v26/enums/user_list_customer_type_c" +
       "ategory.proto\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\253\003\n\024Us" +
-      "erListCustomerType\022L\n\rresource_name\030\001 \001(" +
-      "\tB5\340A\005\372A/\n-googleads.googleapis.com/User" +
-      "ListCustomerType\022<\n\tuser_list\030\002 \001(\tB)\340A\005" +
-      "\372A#\n!googleads.googleapis.com/UserList\022\202" +
-      "\001\n\026customer_type_category\030\003 \001(\0162].google" +
-      ".ads.googleads.v26.enums.UserListCustome" +
-      "rTypeCategoryEnum.UserListCustomerTypeCa" +
-      "tegoryB\003\340A\005:\201\001\352A~\n-googleads.googleapis." +
-      "com/UserListCustomerType\022Mcustomers/{cus" +
-      "tomer_id}/userListCustomerTypes/{user_li" +
-      "st_id}~{semantic_label}B\213\002\n&com.google.a" +
-      "ds.googleads.v26.resourcesB\031UserListCust" +
-      "omerTypeProtoP\001ZKgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v26/resourc" +
-      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
-      "s.V26.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
-      "26\\Resources\352\002&Google::Ads::GoogleAds::V" +
-      "26::Resourcesb\006proto3"
+      ".proto\032\031google/api/resource.proto\"\256\003\n\024Us" +
+      "erListCustomerType\022M\n\rresource_name\030\001 \001(" +
+      "\tB6\342A\001\005\372A/\n-googleads.googleapis.com/Use" +
+      "rListCustomerType\022=\n\tuser_list\030\002 \001(\tB*\342A" +
+      "\001\005\372A#\n!googleads.googleapis.com/UserList" +
+      "\022\203\001\n\026customer_type_category\030\003 \001(\0162].goog" +
+      "le.ads.googleads.v26.enums.UserListCusto" +
+      "merTypeCategoryEnum.UserListCustomerType" +
+      "CategoryB\004\342A\001\005:\201\001\352A~\n-googleads.googleap" +
+      "is.com/UserListCustomerType\022Mcustomers/{" +
+      "customer_id}/userListCustomerTypes/{user" +
+      "_list_id}~{semantic_label}B\213\002\n&com.googl" +
+      "e.ads.googleads.v26.resourcesB\031UserListC" +
+      "ustomerTypeProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v26/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V26.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V26\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

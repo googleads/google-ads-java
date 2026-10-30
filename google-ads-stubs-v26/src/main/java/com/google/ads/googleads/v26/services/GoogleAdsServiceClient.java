@@ -37,7 +37,22 @@ import org.jspecify.annotations.Nullable;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * Service Description: Service to fetch data and metrics across resources.
+ * Service Description: Service to fetch data and metrics across resources. Use the interactive
+ * [Google Ads Query Builder](/google-ads/api/fields/latest/overview_query_builder) to construct and
+ * validate Google Ads Query Language (GAQL) queries.
+ *
+ * <p>Search versus SearchStream:
+ *
+ * <ul>
+ *   <li>`Search`: Paginated using `next_page_token` with up to 10,000 rows per page. Caches pages
+ *       across requests. Best for small result sets (&lt; 10,000 rows) or user-driven paginated
+ *       interfaces.
+ *   <li>`SearchStream`: Delivers a single stream of response batches with up to 10,000 rows per
+ *       batch. Lower overhead without request caching. Best for large result sets (&gt; 10,000
+ *       rows) or batch reporting workloads.
+ * </ul>
+ *
+ * <p>For more details, see [Streaming versus paging](/google-ads/api/docs/reporting/streaming).
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
@@ -69,7 +84,7 @@ import org.jspecify.annotations.Nullable;
  *    </tr>
  *    <tr>
  *      <td><p> Search</td>
- *      <td><p> Returns all rows that match the search query.
+ *      <td><p> Returns all rows that match the search query. Uses pagination (`next_page_token`) with up to 10,000 rows per page. For result sets larger than 10,000 rows, prefer [GoogleAdsService.SearchStream][google.ads.googleads.v26.services.GoogleAdsService.SearchStream]. To build and validate queries, use the [Google Ads Query Builder](/google-ads/api/fields/latest/overview_query_builder).
  * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [ChangeEventError]()   [ChangeStatusError]()   [ClickViewError]()   [HeaderError]()   [InternalError]()   [QueryError]()   [QuotaError]()   [RequestError]()</td>
  *      <td>
  *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
@@ -89,7 +104,7 @@ import org.jspecify.annotations.Nullable;
  *    </tr>
  *    <tr>
  *      <td><p> SearchStream</td>
- *      <td><p> Returns all rows that match the search stream query.
+ *      <td><p> Returns all rows that match the search stream query. Streams batches of rows over a single connection without pagination overhead, making it preferred over [GoogleAdsService.Search][google.ads.googleads.v26.services.GoogleAdsService.Search] for large result sets (&gt; 10,000 rows). To build and validate queries, use the [Google Ads Query Builder](/google-ads/api/fields/latest/overview_query_builder).
  * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [ChangeEventError]()   [ChangeStatusError]()   [ClickViewError]()   [HeaderError]()   [InternalError]()   [QueryError]()   [QuotaError]()   [RequestError]()</td>
  *      <td>
  *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
@@ -225,7 +240,11 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Returns all rows that match the search query.
+   * Returns all rows that match the search query. Uses pagination (`next_page_token`) with up to
+   * 10,000 rows per page. For result sets larger than 10,000 rows, prefer
+   * [GoogleAdsService.SearchStream][google.ads.googleads.v26.services.GoogleAdsService.SearchStream].
+   * To build and validate queries, use the [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder).
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [ChangeEventError]()
    * [ChangeStatusError]() [ClickViewError]() [HeaderError]() [InternalError]() [QueryError]()
@@ -260,7 +279,11 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Returns all rows that match the search query.
+   * Returns all rows that match the search query. Uses pagination (`next_page_token`) with up to
+   * 10,000 rows per page. For result sets larger than 10,000 rows, prefer
+   * [GoogleAdsService.SearchStream][google.ads.googleads.v26.services.GoogleAdsService.SearchStream].
+   * To build and validate queries, use the [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder).
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [ChangeEventError]()
    * [ChangeStatusError]() [ClickViewError]() [HeaderError]() [InternalError]() [QueryError]()
@@ -299,7 +322,11 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Returns all rows that match the search query.
+   * Returns all rows that match the search query. Uses pagination (`next_page_token`) with up to
+   * 10,000 rows per page. For result sets larger than 10,000 rows, prefer
+   * [GoogleAdsService.SearchStream][google.ads.googleads.v26.services.GoogleAdsService.SearchStream].
+   * To build and validate queries, use the [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder).
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [ChangeEventError]()
    * [ChangeStatusError]() [ClickViewError]() [HeaderError]() [InternalError]() [QueryError]()
@@ -338,7 +365,11 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Returns all rows that match the search query.
+   * Returns all rows that match the search query. Uses pagination (`next_page_token`) with up to
+   * 10,000 rows per page. For result sets larger than 10,000 rows, prefer
+   * [GoogleAdsService.SearchStream][google.ads.googleads.v26.services.GoogleAdsService.SearchStream].
+   * To build and validate queries, use the [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder).
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [ChangeEventError]()
    * [ChangeStatusError]() [ClickViewError]() [HeaderError]() [InternalError]() [QueryError]()
@@ -383,7 +414,11 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Returns all rows that match the search stream query.
+   * Returns all rows that match the search stream query. Streams batches of rows over a single
+   * connection without pagination overhead, making it preferred over
+   * [GoogleAdsService.Search][google.ads.googleads.v26.services.GoogleAdsService.Search] for large
+   * result sets (&gt; 10,000 rows). To build and validate queries, use the [Google Ads Query
+   * Builder](/google-ads/api/fields/latest/overview_query_builder).
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [ChangeEventError]()
    * [ChangeStatusError]() [ClickViewError]() [HeaderError]() [InternalError]() [QueryError]()

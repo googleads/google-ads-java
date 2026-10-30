@@ -46,36 +46,36 @@ public final class CampaignGoalConfigProto extends com.google.protobuf.Generated
       "s/v26/common/campaign_goal_settings.prot" +
       "o\032.google/ads/googleads/v26/enums/goal_t" +
       "ype.proto\032\037google/api/field_behavior.pro" +
-      "to\032\031google/api/resource.proto\"\342\006\n\022Campai" +
-      "gnGoalConfig\022J\n\rresource_name\030\001 \001(\tB3\340A\005" +
-      "\372A-\n+googleads.googleapis.com/CampaignGo" +
-      "alConfig\022;\n\010campaign\030\002 \001(\tB)\340A\005\372A#\n!goog" +
-      "leads.googleapis.com/Campaign\0223\n\004goal\030\003 " +
-      "\001(\tB%\340A\005\372A\037\n\035googleads.googleapis.com/Go" +
-      "al\022M\n\tgoal_type\030\004 \001(\01625.google.ads.googl" +
-      "eads.v26.enums.GoalTypeEnum.GoalTypeB\003\340A" +
-      "\003\022z\n\033campaign_retention_settings\030\005 \001(\0132S" +
-      ".google.ads.googleads.v26.common.Campaig" +
-      "nGoalSettings.CampaignRetentionGoalSetti" +
-      "ngsH\000\022\226\001\n*campaign_new_customer_acquisit" +
-      "ion_settings\030\006 \001(\0132`.google.ads.googlead" +
-      "s.v26.common.CampaignGoalSettings.Campai" +
-      "gnNewCustomerAcquisitionGoalSettingsH\000\022\211" +
-      "\001\n#campaign_loyalty_retention_settings\030\007" +
-      " \001(\0132Z.google.ads.googleads.v26.common.C" +
-      "ampaignGoalSettings.CampaignLoyaltyReten" +
-      "tionGoalSettingsH\000:}\352Az\n+googleads.googl" +
-      "eapis.com/CampaignGoalConfig\022Kcustomers/" +
-      "{customer_id}/campaignGoalConfigs/{campa" +
-      "ign_id}~{unified_goal_id}B\037\n\035campaign_go" +
-      "al_config_settingsB\211\002\n&com.google.ads.go" +
-      "ogleads.v26.resourcesB\027CampaignGoalConfi" +
-      "gProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v26/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V26\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V26::Res" +
-      "ourcesb\006proto3"
+      "to\032\031google/api/resource.proto\"\346\006\n\022Campai" +
+      "gnGoalConfig\022K\n\rresource_name\030\001 \001(\tB4\342A\001" +
+      "\005\372A-\n+googleads.googleapis.com/CampaignG" +
+      "oalConfig\022<\n\010campaign\030\002 \001(\tB*\342A\001\005\372A#\n!go" +
+      "ogleads.googleapis.com/Campaign\0224\n\004goal\030" +
+      "\003 \001(\tB&\342A\001\005\372A\037\n\035googleads.googleapis.com" +
+      "/Goal\022N\n\tgoal_type\030\004 \001(\01625.google.ads.go" +
+      "ogleads.v26.enums.GoalTypeEnum.GoalTypeB" +
+      "\004\342A\001\003\022z\n\033campaign_retention_settings\030\005 \001" +
+      "(\0132S.google.ads.googleads.v26.common.Cam" +
+      "paignGoalSettings.CampaignRetentionGoalS" +
+      "ettingsH\000\022\226\001\n*campaign_new_customer_acqu" +
+      "isition_settings\030\006 \001(\0132`.google.ads.goog" +
+      "leads.v26.common.CampaignGoalSettings.Ca" +
+      "mpaignNewCustomerAcquisitionGoalSettings" +
+      "H\000\022\211\001\n#campaign_loyalty_retention_settin" +
+      "gs\030\007 \001(\0132Z.google.ads.googleads.v26.comm" +
+      "on.CampaignGoalSettings.CampaignLoyaltyR" +
+      "etentionGoalSettingsH\000:}\352Az\n+googleads.g" +
+      "oogleapis.com/CampaignGoalConfig\022Kcustom" +
+      "ers/{customer_id}/campaignGoalConfigs/{c" +
+      "ampaign_id}~{unified_goal_id}B\037\n\035campaig" +
+      "n_goal_config_settingsB\211\002\n&com.google.ad" +
+      "s.googleads.v26.resourcesB\027CampaignGoalC" +
+      "onfigProtoP\001ZKgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v26/resources;" +
+      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
+      "26.Resources\312\002\"Google\\Ads\\GoogleAds\\V26\\" +
+      "Resources\352\002&Google::Ads::GoogleAds::V26:" +
+      ":Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

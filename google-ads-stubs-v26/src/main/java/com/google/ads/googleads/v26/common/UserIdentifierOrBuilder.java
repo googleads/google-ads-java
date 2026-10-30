@@ -34,6 +34,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed email address using SHA-256 hash function after normalization.
+   * Normalize the email address by trimming leading and trailing whitespace
+   * and converting all characters to lowercase before hashing with SHA-256.
    * Accepted for Customer Match, Store Sales, ConversionUploadService, and
    * ConversionAdjustmentUploadService.
    * </pre>
@@ -45,6 +47,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed email address using SHA-256 hash function after normalization.
+   * Normalize the email address by trimming leading and trailing whitespace
+   * and converting all characters to lowercase before hashing with SHA-256.
    * Accepted for Customer Match, Store Sales, ConversionUploadService, and
    * ConversionAdjustmentUploadService.
    * </pre>
@@ -56,6 +60,8 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed email address using SHA-256 hash function after normalization.
+   * Normalize the email address by trimming leading and trailing whitespace
+   * and converting all characters to lowercase before hashing with SHA-256.
    * Accepted for Customer Match, Store Sales, ConversionUploadService, and
    * ConversionAdjustmentUploadService.
    * </pre>
@@ -69,7 +75,9 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed phone number using SHA-256 hash function after normalization
-   * (E164 standard). Accepted for Customer Match, Store Sales,
+   * (E164 standard). Normalize the phone number by trimming whitespace and
+   * formatting in E.164 format (for example, `+16502531234`) before hashing
+   * with SHA-256. Accepted for Customer Match, Store Sales,
    * ConversionUploadService, and ConversionAdjustmentUploadService.
    * </pre>
    *
@@ -80,7 +88,9 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed phone number using SHA-256 hash function after normalization
-   * (E164 standard). Accepted for Customer Match, Store Sales,
+   * (E164 standard). Normalize the phone number by trimming whitespace and
+   * formatting in E.164 format (for example, `+16502531234`) before hashing
+   * with SHA-256. Accepted for Customer Match, Store Sales,
    * ConversionUploadService, and ConversionAdjustmentUploadService.
    * </pre>
    *
@@ -91,7 +101,9 @@ public interface UserIdentifierOrBuilder extends
   /**
    * <pre>
    * Hashed phone number using SHA-256 hash function after normalization
-   * (E164 standard). Accepted for Customer Match, Store Sales,
+   * (E164 standard). Normalize the phone number by trimming whitespace and
+   * formatting in E.164 format (for example, `+16502531234`) before hashing
+   * with SHA-256. Accepted for Customer Match, Store Sales,
    * ConversionUploadService, and ConversionAdjustmentUploadService.
    * </pre>
    *

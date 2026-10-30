@@ -76,11 +76,10 @@ public interface UploadCallConversionsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. If `true`, successful operations will be carried out and invalid
-   * operations will return errors. If `false`, all operations will be carried
-   * out in one transaction if and only if they are all valid.
-   *
-   * This should always be set to `true`.
+   * Required. Must be set to `true`. Enables partial failure mode so that
+   * valid conversions are processed and any invalid conversions return
+   * individual errors in `partial_failure_error`. Setting this field to
+   * `false` is not supported and causes the entire request to fail.
    *
    * See
    * [Best practices for partial

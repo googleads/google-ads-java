@@ -278,6 +278,36 @@ public interface PromotionAssetOrBuilder extends
 
   /**
    * <pre>
+   * Immutable. Info related to external promotion redemption. This is only set
+   * for promotions with external redemption tracking ability.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the externalRedeemInfo field is set.
+   */
+  boolean hasExternalRedeemInfo();
+  /**
+   * <pre>
+   * Immutable. Info related to external promotion redemption. This is only set
+   * for promotions with external redemption tracking ability.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The externalRedeemInfo.
+   */
+  com.google.ads.googleads.v26.common.ExternalRedeemInfo getExternalRedeemInfo();
+  /**
+   * <pre>
+   * Immutable. Info related to external promotion redemption. This is only set
+   * for promotions with external redemption tracking ability.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.common.ExternalRedeemInfo external_redeem_info = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  com.google.ads.googleads.v26.common.ExternalRedeemInfoOrBuilder getExternalRedeemInfoOrBuilder();
+
+  /**
+   * <pre>
    * Percentage off discount in the promotion. 1,000,000 = 100%.
    * Either this or money_amount_off is required.
    * </pre>

@@ -57,38 +57,38 @@ public final class AutomaticallyCreatedAssetRemovalServiceProto extends com.goog
       "ield_type.proto\032\034google/api/annotations." +
       "proto\032\027google/api/client.proto\032\037google/a" +
       "pi/field_behavior.proto\032\027google/rpc/stat" +
-      "us.proto\"\326\001\n.RemoveCampaignAutomatically" +
-      "CreatedAssetRequest\022\030\n\013customer_id\030\001 \001(\t" +
-      "B\003\340A\002\022l\n\noperations\030\002 \003(\0132S.google.ads.g" +
-      "oogleads.v26.services.RemoveCampaignAuto" +
-      "maticallyCreatedAssetOperationB\003\340A\002\022\034\n\017p" +
-      "artial_failure\030\003 \001(\010B\003\340A\002\"\271\001\n0RemoveCamp" +
-      "aignAutomaticallyCreatedAssetOperation\022\025" +
-      "\n\010campaign\030\001 \001(\tB\003\340A\002\022\022\n\005asset\030\002 \001(\tB\003\340A" +
-      "\002\022Z\n\nfield_type\030\003 \001(\0162A.google.ads.googl" +
-      "eads.v26.enums.AssetFieldTypeEnum.AssetF" +
-      "ieldTypeB\003\340A\002\"d\n/RemoveCampaignAutomatic" +
-      "allyCreatedAssetResponse\0221\n\025partial_fail" +
-      "ure_error\030\001 \001(\0132\022.google.rpc.Status2\277\003\n\'" +
-      "AutomaticallyCreatedAssetRemovalService\022" +
-      "\314\002\n\'RemoveCampaignAutomaticallyCreatedAs" +
-      "set\022Q.google.ads.googleads.v26.services." +
-      "RemoveCampaignAutomaticallyCreatedAssetR" +
-      "equest\032R.google.ads.googleads.v26.servic" +
-      "es.RemoveCampaignAutomaticallyCreatedAss" +
-      "etResponse\"z\332A&customer_id,operations,pa" +
-      "rtial_failure\202\323\344\223\002K\"F/v26/customers/{cus" +
-      "tomer_id=*}:removeCampaignAutomaticallyC" +
-      "reatedAsset:\001*\032E\312A\030googleads.googleapis." +
-      "com\322A\'https://www.googleapis.com/auth/ad" +
-      "wordsB\230\002\n%com.google.ads.googleads.v26.s" +
-      "ervicesB,AutomaticallyCreatedAssetRemova" +
-      "lServiceProtoP\001ZIgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v26/service" +
-      "s;services\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
-      "V26.Services\312\002!Google\\Ads\\GoogleAds\\V26\\" +
-      "Services\352\002%Google::Ads::GoogleAds::V26::" +
-      "Servicesb\006proto3"
+      "us.proto\"\331\001\n.RemoveCampaignAutomatically" +
+      "CreatedAssetRequest\022\031\n\013customer_id\030\001 \001(\t" +
+      "B\004\342A\001\002\022m\n\noperations\030\002 \003(\0132S.google.ads." +
+      "googleads.v26.services.RemoveCampaignAut" +
+      "omaticallyCreatedAssetOperationB\004\342A\001\002\022\035\n" +
+      "\017partial_failure\030\003 \001(\010B\004\342A\001\002\"\274\001\n0RemoveC" +
+      "ampaignAutomaticallyCreatedAssetOperatio" +
+      "n\022\026\n\010campaign\030\001 \001(\tB\004\342A\001\002\022\023\n\005asset\030\002 \001(\t" +
+      "B\004\342A\001\002\022[\n\nfield_type\030\003 \001(\0162A.google.ads." +
+      "googleads.v26.enums.AssetFieldTypeEnum.A" +
+      "ssetFieldTypeB\004\342A\001\002\"d\n/RemoveCampaignAut" +
+      "omaticallyCreatedAssetResponse\0221\n\025partia" +
+      "l_failure_error\030\001 \001(\0132\022.google.rpc.Statu" +
+      "s2\277\003\n\'AutomaticallyCreatedAssetRemovalSe" +
+      "rvice\022\314\002\n\'RemoveCampaignAutomaticallyCre" +
+      "atedAsset\022Q.google.ads.googleads.v26.ser" +
+      "vices.RemoveCampaignAutomaticallyCreated" +
+      "AssetRequest\032R.google.ads.googleads.v26." +
+      "services.RemoveCampaignAutomaticallyCrea" +
+      "tedAssetResponse\"z\332A&customer_id,operati" +
+      "ons,partial_failure\202\323\344\223\002K\"F/v26/customer" +
+      "s/{customer_id=*}:removeCampaignAutomati" +
+      "callyCreatedAsset:\001*\032E\312A\030googleads.googl" +
+      "eapis.com\322A\'https://www.googleapis.com/a" +
+      "uth/adwordsB\230\002\n%com.google.ads.googleads" +
+      ".v26.servicesB,AutomaticallyCreatedAsset" +
+      "RemovalServiceProtoP\001ZIgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v26/s" +
+      "ervices;services\242\002\003GAA\252\002!Google.Ads.Goog" +
+      "leAds.V26.Services\312\002!Google\\Ads\\GoogleAd" +
+      "s\\V26\\Services\352\002%Google::Ads::GoogleAds:" +
+      ":V26::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

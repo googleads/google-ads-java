@@ -189,16 +189,13 @@ public class GenerateUserCredentials {
     adsProperties.put(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey(), clientSecret);
     adsProperties.put(
         ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey(), userCredentials.getRefreshToken());
-    adsProperties.put(
-        ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyKey(), "INSERT_DEVELOPER_TOKEN_HERE");
 
     showConfigurationFile(adsProperties);
   }
 
   private void showConfigurationFile(Properties adsProperties) throws IOException {
     System.out.printf(
-        "Copy the text below into a file named %s in your home directory, and replace "
-            + "INSERT_XXX_HERE with your configuration:%n",
+        "Copy the text below into a file named %s in your home directory:%n",
         GoogleAdsClient.Builder.DEFAULT_PROPERTIES_CONFIG_FILE_NAME);
     System.out.println(
         "######################## Configuration file start ########################");

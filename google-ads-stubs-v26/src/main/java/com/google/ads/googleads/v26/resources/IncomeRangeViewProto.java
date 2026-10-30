@@ -43,19 +43,20 @@ public final class IncomeRangeViewProto extends com.google.protobuf.GeneratedFil
       "\n:google/ads/googleads/v26/resources/inc" +
       "ome_range_view.proto\022\"google.ads.googlea" +
       "ds.v26.resources\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"\320\001\n" +
-      "\017IncomeRangeView\022G\n\rresource_name\030\001 \001(\tB" +
-      "0\340A\003\372A*\n(googleads.googleapis.com/Income" +
-      "RangeView:t\352Aq\n(googleads.googleapis.com" +
-      "/IncomeRangeView\022Ecustomers/{customer_id" +
-      "}/incomeRangeViews/{ad_group_id}~{criter" +
-      "ion_id}B\206\002\n&com.google.ads.googleads.v26" +
-      ".resourcesB\024IncomeRangeViewProtoP\001ZKgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v26/resources;resources\242\002\003GAA\252\002\"" +
-      "Google.Ads.GoogleAds.V26.Resources\312\002\"Goo" +
-      "gle\\Ads\\GoogleAds\\V26\\Resources\352\002&Google" +
-      "::Ads::GoogleAds::V26::Resourcesb\006proto3"
+      "ior.proto\032\031google/api/resource.proto\"\321\001\n" +
+      "\017IncomeRangeView\022H\n\rresource_name\030\001 \001(\tB" +
+      "1\342A\001\003\372A*\n(googleads.googleapis.com/Incom" +
+      "eRangeView:t\352Aq\n(googleads.googleapis.co" +
+      "m/IncomeRangeView\022Ecustomers/{customer_i" +
+      "d}/incomeRangeViews/{ad_group_id}~{crite" +
+      "rion_id}B\206\002\n&com.google.ads.googleads.v2" +
+      "6.resourcesB\024IncomeRangeViewProtoP\001ZKgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v26/resources;resources\242\002\003GAA\252\002" +
+      "\"Google.Ads.GoogleAds.V26.Resources\312\002\"Go" +
+      "ogle\\Ads\\GoogleAds\\V26\\Resources\352\002&Googl" +
+      "e::Ads::GoogleAds::V26::Resourcesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

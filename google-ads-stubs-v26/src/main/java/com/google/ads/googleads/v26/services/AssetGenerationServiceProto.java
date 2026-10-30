@@ -98,78 +98,79 @@ public final class AssetGenerationServiceProto extends com.google.protobuf.Gener
       "et_field_type.proto\032\034google/api/annotati" +
       "ons.proto\032\027google/api/client.proto\032\037goog" +
       "le/api/field_behavior.proto\032\031google/api/" +
-      "resource.proto\"\325\003\n\023GenerateTextRequest\022\030" +
-      "\n\013customer_id\030\001 \001(\tB\003\340A\002\022a\n\021asset_field_" +
-      "types\030\002 \003(\0162A.google.ads.googleads.v26.e" +
-      "nums.AssetFieldTypeEnum.AssetFieldTypeB\003" +
-      "\340A\002\022\026\n\tfinal_url\030\005 \001(\tB\003\340A\001\022\034\n\017freeform_" +
-      "prompt\030\006 \001(\tB\003\340A\001\022\025\n\010keywords\030\007 \003(\tB\003\340A\001" +
-      "\022m\n\033existing_generation_context\030\003 \001(\0132A." +
-      "google.ads.googleads.v26.services.AssetG" +
-      "enerationExistingContextB\003\340A\001H\000\022z\n\030adver" +
-      "tising_channel_type\030\004 \001(\0162Q.google.ads.g" +
-      "oogleads.v26.enums.AdvertisingChannelTyp" +
-      "eEnum.AdvertisingChannelTypeB\003\340A\001H\000B\t\n\007c" +
-      "ontext\"`\n\024GenerateTextResponse\022H\n\016genera" +
-      "ted_text\030\001 \003(\01320.google.ads.googleads.v2" +
-      "6.services.GeneratedText\"z\n\rGeneratedTex" +
-      "t\022\014\n\004text\030\001 \001(\t\022[\n\020asset_field_type\030\002 \001(" +
-      "\0162A.google.ads.googleads.v26.enums.Asset" +
-      "FieldTypeEnum.AssetFieldType\"\357\004\n\025Generat" +
-      "eImagesRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002" +
-      "\022a\n\021asset_field_types\030\004 \003(\0162A.google.ads" +
-      ".googleads.v26.enums.AssetFieldTypeEnum." +
-      "AssetFieldTypeB\003\340A\001\022z\n\030advertising_chann" +
-      "el_type\030\002 \001(\0162Q.google.ads.googleads.v26" +
-      ".enums.AdvertisingChannelTypeEnum.Advert" +
-      "isingChannelTypeB\003\340A\001H\000\022d\n\024final_url_gen" +
-      "eration\030\005 \001(\0132?.google.ads.googleads.v26" +
-      ".services.FinalUrlImageGenerationInputB\003" +
-      "\340A\001H\001\022c\n\023freeform_generation\030\006 \001(\0132?.goo" +
-      "gle.ads.googleads.v26.services.FreeformI" +
-      "mageGenerationInputB\003\340A\001H\001\022t\n\034product_re" +
-      "context_generation\030\007 \001(\0132G.google.ads.go" +
-      "ogleads.v26.services.ProductRecontextGen" +
-      "erationImageInputB\003\340A\001H\001B\t\n\007contextB\021\n\017g" +
-      "eneration_type\"6\n\034FinalUrlImageGeneratio" +
-      "nInput\022\026\n\tfinal_url\030\001 \001(\tB\003\340A\002\"<\n\034Freefo" +
-      "rmImageGenerationInput\022\034\n\017freeform_promp" +
-      "t\030\001 \001(\tB\003\340A\002\"\207\001\n$ProductRecontextGenerat" +
-      "ionImageInput\022\023\n\006prompt\030\001 \001(\tB\003\340A\001\022J\n\rso" +
-      "urce_images\030\002 \003(\0132..google.ads.googleads" +
-      ".v26.services.SourceImageB\003\340A\002\"e\n\026Genera" +
-      "teImagesResponse\022K\n\020generated_images\030\001 \003" +
-      "(\01321.google.ads.googleads.v26.services.G" +
-      "eneratedImage\"1\n\013SourceImage\022\031\n\nimage_da" +
-      "ta\030\001 \001(\014B\003\340A\001H\000B\007\n\005image\"\212\001\n\016GeneratedIm" +
-      "age\022\033\n\023image_temporary_url\030\001 \001(\t\022[\n\020asse" +
-      "t_field_type\030\002 \001(\0162A.google.ads.googlead" +
-      "s.v26.enums.AssetFieldTypeEnum.AssetFiel" +
-      "dType\"\307\001\n\036AssetGenerationExistingContext" +
-      "\022H\n\024existing_asset_group\030\001 \001(\tB(\372A%\n#goo" +
-      "gleads.googleapis.com/AssetGroupH\000\022G\n\024ex" +
-      "isting_ad_group_ad\030\002 \001(\tB\'\372A$\n\"googleads" +
-      ".googleapis.com/AdGroupAdH\000B\022\n\020existing_" +
-      "context2\375\003\n\026AssetGenerationService\022\310\001\n\014G" +
-      "enerateText\0226.google.ads.googleads.v26.s" +
-      "ervices.GenerateTextRequest\0327.google.ads" +
-      ".googleads.v26.services.GenerateTextResp" +
-      "onse\"G\202\323\344\223\002A\"</v26/customers/{customer_i" +
-      "d=*}/assetGenerations:generateText:\001*\022\320\001" +
-      "\n\016GenerateImages\0228.google.ads.googleads." +
-      "v26.services.GenerateImagesRequest\0329.goo" +
+      "resource.proto\"\334\003\n\023GenerateTextRequest\022\031" +
+      "\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022b\n\021asset_field" +
+      "_types\030\002 \003(\0162A.google.ads.googleads.v26." +
+      "enums.AssetFieldTypeEnum.AssetFieldTypeB" +
+      "\004\342A\001\002\022\027\n\tfinal_url\030\005 \001(\tB\004\342A\001\001\022\035\n\017freefo" +
+      "rm_prompt\030\006 \001(\tB\004\342A\001\001\022\026\n\010keywords\030\007 \003(\tB" +
+      "\004\342A\001\001\022n\n\033existing_generation_context\030\003 \001" +
+      "(\0132A.google.ads.googleads.v26.services.A" +
+      "ssetGenerationExistingContextB\004\342A\001\001H\000\022{\n" +
+      "\030advertising_channel_type\030\004 \001(\0162Q.google" +
+      ".ads.googleads.v26.enums.AdvertisingChan" +
+      "nelTypeEnum.AdvertisingChannelTypeB\004\342A\001\001" +
+      "H\000B\t\n\007context\"`\n\024GenerateTextResponse\022H\n" +
+      "\016generated_text\030\001 \003(\01320.google.ads.googl" +
+      "eads.v26.services.GeneratedText\"z\n\rGener" +
+      "atedText\022\014\n\004text\030\001 \001(\t\022[\n\020asset_field_ty" +
+      "pe\030\002 \001(\0162A.google.ads.googleads.v26.enum" +
+      "s.AssetFieldTypeEnum.AssetFieldType\"\365\004\n\025" +
+      "GenerateImagesRequest\022\031\n\013customer_id\030\001 \001" +
+      "(\tB\004\342A\001\002\022b\n\021asset_field_types\030\004 \003(\0162A.go" +
+      "ogle.ads.googleads.v26.enums.AssetFieldT" +
+      "ypeEnum.AssetFieldTypeB\004\342A\001\001\022{\n\030advertis" +
+      "ing_channel_type\030\002 \001(\0162Q.google.ads.goog" +
+      "leads.v26.enums.AdvertisingChannelTypeEn" +
+      "um.AdvertisingChannelTypeB\004\342A\001\001H\000\022e\n\024fin" +
+      "al_url_generation\030\005 \001(\0132?.google.ads.goo" +
+      "gleads.v26.services.FinalUrlImageGenerat" +
+      "ionInputB\004\342A\001\001H\001\022d\n\023freeform_generation\030" +
+      "\006 \001(\0132?.google.ads.googleads.v26.service" +
+      "s.FreeformImageGenerationInputB\004\342A\001\001H\001\022u" +
+      "\n\034product_recontext_generation\030\007 \001(\0132G.g" +
+      "oogle.ads.googleads.v26.services.Product" +
+      "RecontextGenerationImageInputB\004\342A\001\001H\001B\t\n" +
+      "\007contextB\021\n\017generation_type\"7\n\034FinalUrlI" +
+      "mageGenerationInput\022\027\n\tfinal_url\030\001 \001(\tB\004" +
+      "\342A\001\002\"=\n\034FreeformImageGenerationInput\022\035\n\017" +
+      "freeform_prompt\030\001 \001(\tB\004\342A\001\002\"\211\001\n$ProductR" +
+      "econtextGenerationImageInput\022\024\n\006prompt\030\001" +
+      " \001(\tB\004\342A\001\001\022K\n\rsource_images\030\002 \003(\0132..goog" +
+      "le.ads.googleads.v26.services.SourceImag" +
+      "eB\004\342A\001\002\"e\n\026GenerateImagesResponse\022K\n\020gen" +
+      "erated_images\030\001 \003(\01321.google.ads.googlea" +
+      "ds.v26.services.GeneratedImage\"2\n\013Source" +
+      "Image\022\032\n\nimage_data\030\001 \001(\014B\004\342A\001\001H\000B\007\n\005ima" +
+      "ge\"\212\001\n\016GeneratedImage\022\033\n\023image_temporary" +
+      "_url\030\001 \001(\t\022[\n\020asset_field_type\030\002 \001(\0162A.g" +
+      "oogle.ads.googleads.v26.enums.AssetField" +
+      "TypeEnum.AssetFieldType\"\307\001\n\036AssetGenerat" +
+      "ionExistingContext\022H\n\024existing_asset_gro" +
+      "up\030\001 \001(\tB(\372A%\n#googleads.googleapis.com/" +
+      "AssetGroupH\000\022G\n\024existing_ad_group_ad\030\002 \001" +
+      "(\tB\'\372A$\n\"googleads.googleapis.com/AdGrou" +
+      "pAdH\000B\022\n\020existing_context2\375\003\n\026AssetGener" +
+      "ationService\022\310\001\n\014GenerateText\0226.google.a" +
+      "ds.googleads.v26.services.GenerateTextRe" +
+      "quest\0327.google.ads.googleads.v26.service" +
+      "s.GenerateTextResponse\"G\202\323\344\223\002A\"</v26/cus" +
+      "tomers/{customer_id=*}/assetGenerations:" +
+      "generateText:\001*\022\320\001\n\016GenerateImages\0228.goo" +
       "gle.ads.googleads.v26.services.GenerateI" +
-      "magesResponse\"I\202\323\344\223\002C\">/v26/customers/{c" +
-      "ustomer_id=*}/assetGenerations:generateI" +
-      "mages:\001*\032E\312A\030googleads.googleapis.com\322A\'" +
-      "https://www.googleapis.com/auth/adwordsB" +
-      "\207\002\n%com.google.ads.googleads.v26.service" +
-      "sB\033AssetGenerationServiceProtoP\001ZIgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v26/services;services\242\002\003GAA\252\002!Goog" +
-      "le.Ads.GoogleAds.V26.Services\312\002!Google\\A" +
-      "ds\\GoogleAds\\V26\\Services\352\002%Google::Ads:" +
-      ":GoogleAds::V26::Servicesb\006proto3"
+      "magesRequest\0329.google.ads.googleads.v26." +
+      "services.GenerateImagesResponse\"I\202\323\344\223\002C\"" +
+      ">/v26/customers/{customer_id=*}/assetGen" +
+      "erations:generateImages:\001*\032E\312A\030googleads" +
+      ".googleapis.com\322A\'https://www.googleapis" +
+      ".com/auth/adwordsB\207\002\n%com.google.ads.goo" +
+      "gleads.v26.servicesB\033AssetGenerationServ" +
+      "iceProtoP\001ZIgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v26/services;ser" +
+      "vices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V26.S" +
+      "ervices\312\002!Google\\Ads\\GoogleAds\\V26\\Servi" +
+      "ces\352\002%Google::Ads::GoogleAds::V26::Servi" +
+      "cesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

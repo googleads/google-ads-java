@@ -221,6 +221,8 @@ private static final long serialVersionUID = 0L;
     CONTENT_CREATOR_INSIGHTS_ERROR(198),
     VIDEO_RESERVATION_ERROR(199),
     MULTI_PARTY_AUTH_REVIEW_ERROR(200),
+    BUDGET_NETWORK_SETTING_ERROR(201),
+    DEMAND_GEN_CAMPAIGN_ERROR(202),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -406,6 +408,8 @@ private static final long serialVersionUID = 0L;
         case 198: return CONTENT_CREATOR_INSIGHTS_ERROR;
         case 199: return VIDEO_RESERVATION_ERROR;
         case 200: return MULTI_PARTY_AUTH_REVIEW_ERROR;
+        case 201: return BUDGET_NETWORK_SETTING_ERROR;
+        case 202: return DEMAND_GEN_CAMPAIGN_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -7645,6 +7649,92 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v26.errors.MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError.UNSPECIFIED;
   }
 
+  public static final int BUDGET_NETWORK_SETTING_ERROR_FIELD_NUMBER = 201;
+  /**
+   * <pre>
+   * The reasons for the budget network setting error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+   * @return Whether the budgetNetworkSettingError field is set.
+   */
+  public boolean hasBudgetNetworkSettingError() {
+    return errorCodeCase_ == 201;
+  }
+  /**
+   * <pre>
+   * The reasons for the budget network setting error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+   * @return The enum numeric value on the wire for budgetNetworkSettingError.
+   */
+  public int getBudgetNetworkSettingErrorValue() {
+    if (errorCodeCase_ == 201) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the budget network setting error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+   * @return The budgetNetworkSettingError.
+   */
+  public com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError getBudgetNetworkSettingError() {
+    if (errorCodeCase_ == 201) {
+      com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError result = com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError.forNumber(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError.UNSPECIFIED;
+  }
+
+  public static final int DEMAND_GEN_CAMPAIGN_ERROR_FIELD_NUMBER = 202;
+  /**
+   * <pre>
+   * The reasons for the Demand Gen campaign error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+   * @return Whether the demandGenCampaignError field is set.
+   */
+  public boolean hasDemandGenCampaignError() {
+    return errorCodeCase_ == 202;
+  }
+  /**
+   * <pre>
+   * The reasons for the Demand Gen campaign error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+   * @return The enum numeric value on the wire for demandGenCampaignError.
+   */
+  public int getDemandGenCampaignErrorValue() {
+    if (errorCodeCase_ == 202) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the Demand Gen campaign error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+   * @return The demandGenCampaignError.
+   */
+  public com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError getDemandGenCampaignError() {
+    if (errorCodeCase_ == 202) {
+      com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError result = com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError.forNumber(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -8162,6 +8252,12 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 200) {
       output.writeEnum(200, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 201) {
+      output.writeEnum(201, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 202) {
+      output.writeEnum(202, ((java.lang.Integer) errorCode_));
     }
     getUnknownFields().writeTo(output);
   }
@@ -8843,6 +8939,14 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 200) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(200, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 201) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(201, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 202) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(202, ((java.lang.Integer) errorCode_));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -9533,6 +9637,14 @@ private static final long serialVersionUID = 0L;
         if (getMultiPartyAuthReviewErrorValue()
             != other.getMultiPartyAuthReviewErrorValue()) return false;
         break;
+      case 201:
+        if (getBudgetNetworkSettingErrorValue()
+            != other.getBudgetNetworkSettingErrorValue()) return false;
+        break;
+      case 202:
+        if (getDemandGenCampaignErrorValue()
+            != other.getDemandGenCampaignErrorValue()) return false;
+        break;
       case 0:
       default:
     }
@@ -10219,6 +10331,14 @@ private static final long serialVersionUID = 0L;
       case 200:
         hash = (37 * hash) + MULTI_PARTY_AUTH_REVIEW_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getMultiPartyAuthReviewErrorValue();
+        break;
+      case 201:
+        hash = (37 * hash) + BUDGET_NETWORK_SETTING_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getBudgetNetworkSettingErrorValue();
+        break;
+      case 202:
+        hash = (37 * hash) + DEMAND_GEN_CAMPAIGN_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getDemandGenCampaignErrorValue();
         break;
       case 0:
       default:
@@ -11114,6 +11234,14 @@ private static final long serialVersionUID = 0L;
         }
         case MULTI_PARTY_AUTH_REVIEW_ERROR: {
           setMultiPartyAuthReviewErrorValue(other.getMultiPartyAuthReviewErrorValue());
+          break;
+        }
+        case BUDGET_NETWORK_SETTING_ERROR: {
+          setBudgetNetworkSettingErrorValue(other.getBudgetNetworkSettingErrorValue());
+          break;
+        }
+        case DEMAND_GEN_CAMPAIGN_ERROR: {
+          setDemandGenCampaignErrorValue(other.getDemandGenCampaignErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -12154,6 +12282,18 @@ private static final long serialVersionUID = 0L;
               errorCode_ = rawValue;
               break;
             } // case 1600
+            case 1608: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 201;
+              errorCode_ = rawValue;
+              break;
+            } // case 1608
+            case 1616: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 202;
+              errorCode_ = rawValue;
+              break;
+            } // case 1616
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -27640,6 +27780,190 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearMultiPartyAuthReviewError() {
       if (errorCodeCase_ == 200) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the budget network setting error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+     * @return Whether the budgetNetworkSettingError field is set.
+     */
+    @java.lang.Override
+    public boolean hasBudgetNetworkSettingError() {
+      return errorCodeCase_ == 201;
+    }
+    /**
+     * <pre>
+     * The reasons for the budget network setting error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+     * @return The enum numeric value on the wire for budgetNetworkSettingError.
+     */
+    @java.lang.Override
+    public int getBudgetNetworkSettingErrorValue() {
+      if (errorCodeCase_ == 201) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the budget network setting error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+     * @param value The enum numeric value on the wire for budgetNetworkSettingError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBudgetNetworkSettingErrorValue(int value) {
+      errorCodeCase_ = 201;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the budget network setting error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+     * @return The budgetNetworkSettingError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError getBudgetNetworkSettingError() {
+      if (errorCodeCase_ == 201) {
+        com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError result = com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError.forNumber(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the budget network setting error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+     * @param value The budgetNetworkSettingError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBudgetNetworkSettingError(com.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError value) {
+      if (value == null) { throw new NullPointerException(); }
+      errorCodeCase_ = 201;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the budget network setting error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.BudgetNetworkSettingErrorEnum.BudgetNetworkSettingError budget_network_setting_error = 201;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBudgetNetworkSettingError() {
+      if (errorCodeCase_ == 201) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the Demand Gen campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+     * @return Whether the demandGenCampaignError field is set.
+     */
+    @java.lang.Override
+    public boolean hasDemandGenCampaignError() {
+      return errorCodeCase_ == 202;
+    }
+    /**
+     * <pre>
+     * The reasons for the Demand Gen campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+     * @return The enum numeric value on the wire for demandGenCampaignError.
+     */
+    @java.lang.Override
+    public int getDemandGenCampaignErrorValue() {
+      if (errorCodeCase_ == 202) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the Demand Gen campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+     * @param value The enum numeric value on the wire for demandGenCampaignError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDemandGenCampaignErrorValue(int value) {
+      errorCodeCase_ = 202;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the Demand Gen campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+     * @return The demandGenCampaignError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError getDemandGenCampaignError() {
+      if (errorCodeCase_ == 202) {
+        com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError result = com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError.forNumber(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the Demand Gen campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+     * @param value The demandGenCampaignError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDemandGenCampaignError(com.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError value) {
+      if (value == null) { throw new NullPointerException(); }
+      errorCodeCase_ = 202;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the Demand Gen campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.errors.DemandGenCampaignErrorEnum.DemandGenCampaignError demand_gen_campaign_error = 202;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDemandGenCampaignError() {
+      if (errorCodeCase_ == 202) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

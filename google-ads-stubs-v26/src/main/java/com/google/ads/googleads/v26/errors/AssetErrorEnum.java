@@ -435,6 +435,15 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOMER_NOT_ON_ALLOWLIST_FOR_MESSAGE_ASSETS = 46;</code>
      */
     CUSTOMER_NOT_ON_ALLOWLIST_FOR_MESSAGE_ASSETS(46),
+    /**
+     * <pre>
+     * The partner promotion ID is set as the oneof variant (int_value or
+     * string_value) that this account's promotion integration does not accept.
+     * </pre>
+     *
+     * <code>PARTNER_PROMOTION_ID_TYPE_INCOMPATIBLE = 47;</code>
+     */
+    PARTNER_PROMOTION_ID_TYPE_INCOMPATIBLE(47),
     UNRECOGNIZED(-1),
     ;
 
@@ -826,6 +835,15 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOMER_NOT_ON_ALLOWLIST_FOR_MESSAGE_ASSETS = 46;</code>
      */
     public static final int CUSTOMER_NOT_ON_ALLOWLIST_FOR_MESSAGE_ASSETS_VALUE = 46;
+    /**
+     * <pre>
+     * The partner promotion ID is set as the oneof variant (int_value or
+     * string_value) that this account's promotion integration does not accept.
+     * </pre>
+     *
+     * <code>PARTNER_PROMOTION_ID_TYPE_INCOMPATIBLE = 47;</code>
+     */
+    public static final int PARTNER_PROMOTION_ID_TYPE_INCOMPATIBLE_VALUE = 47;
 
 
     public final int getNumber() {
@@ -898,6 +916,7 @@ private static final long serialVersionUID = 0L;
         case 44: return PROMOTION_QR_CODE_CANNOT_CONTAIN_LINKS;
         case 45: return PROMOTION_QR_CODE_INVALID_FORMAT;
         case 46: return CUSTOMER_NOT_ON_ALLOWLIST_FOR_MESSAGE_ASSETS;
+        case 47: return PARTNER_PROMOTION_ID_TYPE_INCOMPATIBLE;
         default: return null;
       }
     }

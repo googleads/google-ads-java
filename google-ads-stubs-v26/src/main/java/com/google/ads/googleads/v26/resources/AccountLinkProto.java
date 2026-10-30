@@ -53,33 +53,33 @@ public final class AccountLinkProto extends com.google.protobuf.GeneratedFile {
       "e.proto\0326google/ads/googleads/v26/enums/" +
       "mobile_app_vendor.proto\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\"\247\004\n\013AccountLink\022C\n\rresource_name\030\001 \001" +
-      "(\tB,\340A\005\372A&\n$googleads.googleapis.com/Acc" +
-      "ountLink\022!\n\017account_link_id\030\010 \001(\003B\003\340A\003H\001" +
-      "\210\001\001\022W\n\006status\030\003 \001(\0162G.google.ads.googlea" +
-      "ds.v26.enums.AccountLinkStatusEnum.Accou" +
-      "ntLinkStatus\022Z\n\004type\030\004 \001(\0162G.google.ads." +
-      "googleads.v26.enums.LinkedAccountTypeEnu" +
-      "m.LinkedAccountTypeB\003\340A\003\022r\n\031third_party_" +
-      "app_analytics\030\005 \001(\0132H.google.ads.googlea" +
-      "ds.v26.resources.ThirdPartyAppAnalyticsL" +
-      "inkIdentifierB\003\340A\005H\000:a\352A^\n$googleads.goo" +
-      "gleapis.com/AccountLink\0226customers/{cust" +
-      "omer_id}/accountLinks/{account_link_id}B" +
-      "\020\n\016linked_accountB\022\n\020_account_link_id\"\364\001" +
-      "\n$ThirdPartyAppAnalyticsLinkIdentifier\022+" +
-      "\n\031app_analytics_provider_id\030\004 \001(\003B\003\340A\005H\000" +
-      "\210\001\001\022\030\n\006app_id\030\005 \001(\tB\003\340A\005H\001\210\001\001\022\\\n\napp_ven" +
-      "dor\030\003 \001(\0162C.google.ads.googleads.v26.enu" +
-      "ms.MobileAppVendorEnum.MobileAppVendorB\003" +
-      "\340A\005B\034\n\032_app_analytics_provider_idB\t\n\007_ap" +
-      "p_idB\202\002\n&com.google.ads.googleads.v26.re" +
-      "sourcesB\020AccountLinkProtoP\001ZKgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v26/resources;resources\242\002\003GAA\252\002\"Google." +
-      "Ads.GoogleAds.V26.Resources\312\002\"Google\\Ads" +
-      "\\GoogleAds\\V26\\Resources\352\002&Google::Ads::" +
-      "GoogleAds::V26::Resourcesb\006proto3"
+      "oto\"\253\004\n\013AccountLink\022D\n\rresource_name\030\001 \001" +
+      "(\tB-\342A\001\005\372A&\n$googleads.googleapis.com/Ac" +
+      "countLink\022\"\n\017account_link_id\030\010 \001(\003B\004\342A\001\003" +
+      "H\001\210\001\001\022W\n\006status\030\003 \001(\0162G.google.ads.googl" +
+      "eads.v26.enums.AccountLinkStatusEnum.Acc" +
+      "ountLinkStatus\022[\n\004type\030\004 \001(\0162G.google.ad" +
+      "s.googleads.v26.enums.LinkedAccountTypeE" +
+      "num.LinkedAccountTypeB\004\342A\001\003\022s\n\031third_par" +
+      "ty_app_analytics\030\005 \001(\0132H.google.ads.goog" +
+      "leads.v26.resources.ThirdPartyAppAnalyti" +
+      "csLinkIdentifierB\004\342A\001\005H\000:a\352A^\n$googleads" +
+      ".googleapis.com/AccountLink\0226customers/{" +
+      "customer_id}/accountLinks/{account_link_" +
+      "id}B\020\n\016linked_accountB\022\n\020_account_link_i" +
+      "d\"\367\001\n$ThirdPartyAppAnalyticsLinkIdentifi" +
+      "er\022,\n\031app_analytics_provider_id\030\004 \001(\003B\004\342" +
+      "A\001\005H\000\210\001\001\022\031\n\006app_id\030\005 \001(\tB\004\342A\001\005H\001\210\001\001\022]\n\na" +
+      "pp_vendor\030\003 \001(\0162C.google.ads.googleads.v" +
+      "26.enums.MobileAppVendorEnum.MobileAppVe" +
+      "ndorB\004\342A\001\005B\034\n\032_app_analytics_provider_id" +
+      "B\t\n\007_app_idB\202\002\n&com.google.ads.googleads" +
+      ".v26.resourcesB\020AccountLinkProtoP\001ZKgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v26/resources;resources\242\002\003GAA\252\002\"" +
+      "Google.Ads.GoogleAds.V26.Resources\312\002\"Goo" +
+      "gle\\Ads\\GoogleAds\\V26\\Resources\352\002&Google" +
+      "::Ads::GoogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

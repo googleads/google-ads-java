@@ -44,19 +44,19 @@ public final class ContentCriterionViewProto extends com.google.protobuf.Generat
       "tent_criterion_view.proto\022\"google.ads.go" +
       "ogleads.v26.resources\032\037google/api/field_" +
       "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\344\001\n\024ContentCriterionView\022L\n\rresource_n" +
-      "ame\030\001 \001(\tB5\340A\003\372A/\n-googleads.googleapis." +
-      "com/ContentCriterionView:~\352A{\n-googleads" +
-      ".googleapis.com/ContentCriterionView\022Jcu" +
-      "stomers/{customer_id}/contentCriterionVi" +
-      "ews/{ad_group_id}~{criterion_id}B\213\002\n&com" +
-      ".google.ads.googleads.v26.resourcesB\031Con" +
-      "tentCriterionViewProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v2" +
-      "6/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V26.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V26\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V26::Resourcesb\006proto3"
+      "o\"\345\001\n\024ContentCriterionView\022M\n\rresource_n" +
+      "ame\030\001 \001(\tB6\342A\001\003\372A/\n-googleads.googleapis" +
+      ".com/ContentCriterionView:~\352A{\n-googlead" +
+      "s.googleapis.com/ContentCriterionView\022Jc" +
+      "ustomers/{customer_id}/contentCriterionV" +
+      "iews/{ad_group_id}~{criterion_id}B\213\002\n&co" +
+      "m.google.ads.googleads.v26.resourcesB\031Co" +
+      "ntentCriterionViewProtoP\001ZKgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "26/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
+      "s.GoogleAds.V26.Resources\312\002\"Google\\Ads\\G" +
+      "oogleAds\\V26\\Resources\352\002&Google::Ads::Go" +
+      "ogleAds::V26::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

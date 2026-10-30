@@ -102,128 +102,129 @@ public final class AdGroupProto extends com.google.protobuf.GeneratedFile {
       "emand_gen_channel_strategy.proto\0328google" +
       "/ads/googleads/v26/enums/targeting_dimen" +
       "sion.proto\032\037google/api/field_behavior.pr" +
-      "oto\032\031google/api/resource.proto\"\334#\n\007AdGro" +
-      "up\022?\n\rresource_name\030\001 \001(\tB(\340A\005\372A\"\n googl" +
-      "eads.googleapis.com/AdGroup\022\024\n\002id\030\" \001(\003B" +
-      "\003\340A\003H\000\210\001\001\022\021\n\004name\030# \001(\tH\001\210\001\001\022O\n\006status\030\005" +
-      " \001(\0162?.google.ads.googleads.v26.enums.Ad" +
-      "GroupStatusEnum.AdGroupStatus\022N\n\004type\030\014 " +
-      "\001(\0162;.google.ads.googleads.v26.enums.AdG" +
-      "roupTypeEnum.AdGroupTypeB\003\340A\005\022i\n\020ad_rota" +
-      "tion_mode\030\026 \001(\0162O.google.ads.googleads.v" +
-      "26.enums.AdGroupAdRotationModeEnum.AdGro" +
-      "upAdRotationMode\022D\n\rbase_ad_group\030$ \001(\tB" +
-      "(\340A\003\372A\"\n googleads.googleapis.com/AdGrou" +
-      "pH\002\210\001\001\022\"\n\025tracking_url_template\030% \001(\tH\003\210" +
-      "\001\001\022O\n\025url_custom_parameters\030\006 \003(\01320.goog" +
-      "le.ads.googleads.v26.common.CustomParame" +
-      "ter\022@\n\010campaign\030& \001(\tB)\340A\005\372A#\n!googleads" +
-      ".googleapis.com/CampaignH\004\210\001\001\022\033\n\016cpc_bid" +
-      "_micros\030\' \001(\003H\005\210\001\001\022*\n\030effective_cpc_bid_" +
-      "micros\0309 \001(\003B\003\340A\003H\006\210\001\001\022\033\n\016cpm_bid_micros" +
-      "\030( \001(\003H\007\210\001\001\022\036\n\021target_cpa_micros\030) \001(\003H\010" +
-      "\210\001\001\022\033\n\016cpv_bid_micros\030* \001(\003H\t\210\001\001\022\036\n\021targ" +
-      "et_cpm_micros\030+ \001(\003H\n\210\001\001\022\030\n\013target_roas\030" +
-      ", \001(\001H\013\210\001\001\022#\n\026percent_cpc_bid_micros\030- \001" +
-      "(\003H\014\210\001\001\022\035\n\020fixed_cpm_micros\030@ \001(\003H\r\210\001\001\022\036" +
-      "\n\021target_cpv_micros\030A \001(\003H\016\210\001\001\022\036\n\021target" +
-      "_cpc_micros\030D \001(\003H\017\210\001\001\022#\n\033optimized_targ" +
-      "eting_enabled\030; \001(\010\022%\n\035exclude_demograph" +
-      "ic_expansion\030C \001(\010\022o\n\034display_custom_bid" +
-      "_dimension\030\027 \001(\0162I.google.ads.googleads." +
-      "v26.enums.TargetingDimensionEnum.Targeti" +
-      "ngDimension\022\035\n\020final_url_suffix\030. \001(\tH\020\210" +
-      "\001\001\022L\n\021targeting_setting\030\031 \001(\01321.google.a" +
-      "ds.googleads.v26.common.TargetingSetting" +
-      "\022Z\n\020audience_setting\0308 \001(\0132;.google.ads." +
-      "googleads.v26.resources.AdGroup.Audience" +
-      "SettingB\003\340A\005\022-\n\033effective_target_cpa_mic" +
-      "ros\030/ \001(\003B\003\340A\003H\021\210\001\001\022i\n\033effective_target_" +
-      "cpa_source\030\035 \001(\0162?.google.ads.googleads." +
-      "v26.enums.BiddingSourceEnum.BiddingSourc" +
-      "eB\003\340A\003\022\'\n\025effective_target_roas\0300 \001(\001B\003\340" +
-      "A\003H\022\210\001\001\022j\n\034effective_target_roas_source\030" +
-      "  \001(\0162?.google.ads.googleads.v26.enums.B" +
-      "iddingSourceEnum.BiddingSourceB\003\340A\003\022&\n\024e" +
-      "ffective_target_cpc\030E \001(\003B\003\340A\003H\023\210\001\001\022i\n\033e" +
-      "ffective_target_cpc_source\030F \001(\0162?.googl" +
-      "e.ads.googleads.v26.enums.BiddingSourceE" +
-      "num.BiddingSourceB\003\340A\003\022=\n\006labels\0301 \003(\tB-" +
-      "\340A\003\372A\'\n%googleads.googleapis.com/AdGroup" +
-      "Label\022l\n!excluded_parent_asset_field_typ" +
-      "es\0306 \003(\0162A.google.ads.googleads.v26.enum" +
-      "s.AssetFieldTypeEnum.AssetFieldType\022f\n\037e" +
-      "xcluded_parent_asset_set_types\030: \003(\0162=.g" +
-      "oogle.ads.googleads.v26.enums.AssetSetTy" +
-      "peEnum.AssetSetType\022j\n\016primary_status\030> " +
-      "\001(\0162M.google.ads.googleads.v26.enums.AdG" +
-      "roupPrimaryStatusEnum.AdGroupPrimaryStat" +
-      "usB\003\340A\003\022~\n\026primary_status_reasons\030? \003(\0162" +
-      "Y.google.ads.googleads.v26.enums.AdGroup" +
-      "PrimaryStatusReasonEnum.AdGroupPrimarySt" +
-      "atusReasonB\003\340A\003\022j\n\034demand_gen_ad_group_s" +
-      "ettings\030[ \001(\0132D.google.ads.googleads.v26" +
+      "oto\032\031google/api/resource.proto\"\356#\n\007AdGro" +
+      "up\022@\n\rresource_name\030\001 \001(\tB)\342A\001\005\372A\"\n goog" +
+      "leads.googleapis.com/AdGroup\022\025\n\002id\030\" \001(\003" +
+      "B\004\342A\001\003H\000\210\001\001\022\021\n\004name\030# \001(\tH\001\210\001\001\022O\n\006status" +
+      "\030\005 \001(\0162?.google.ads.googleads.v26.enums." +
+      "AdGroupStatusEnum.AdGroupStatus\022O\n\004type\030" +
+      "\014 \001(\0162;.google.ads.googleads.v26.enums.A" +
+      "dGroupTypeEnum.AdGroupTypeB\004\342A\001\005\022i\n\020ad_r" +
+      "otation_mode\030\026 \001(\0162O.google.ads.googlead" +
+      "s.v26.enums.AdGroupAdRotationModeEnum.Ad" +
+      "GroupAdRotationMode\022E\n\rbase_ad_group\030$ \001" +
+      "(\tB)\342A\001\003\372A\"\n googleads.googleapis.com/Ad" +
+      "GroupH\002\210\001\001\022\"\n\025tracking_url_template\030% \001(" +
+      "\tH\003\210\001\001\022O\n\025url_custom_parameters\030\006 \003(\01320." +
+      "google.ads.googleads.v26.common.CustomPa" +
+      "rameter\022A\n\010campaign\030& \001(\tB*\342A\001\005\372A#\n!goog" +
+      "leads.googleapis.com/CampaignH\004\210\001\001\022\033\n\016cp" +
+      "c_bid_micros\030\' \001(\003H\005\210\001\001\022+\n\030effective_cpc" +
+      "_bid_micros\0309 \001(\003B\004\342A\001\003H\006\210\001\001\022\033\n\016cpm_bid_" +
+      "micros\030( \001(\003H\007\210\001\001\022\036\n\021target_cpa_micros\030)" +
+      " \001(\003H\010\210\001\001\022\033\n\016cpv_bid_micros\030* \001(\003H\t\210\001\001\022\036" +
+      "\n\021target_cpm_micros\030+ \001(\003H\n\210\001\001\022\030\n\013target" +
+      "_roas\030, \001(\001H\013\210\001\001\022#\n\026percent_cpc_bid_micr" +
+      "os\030- \001(\003H\014\210\001\001\022\035\n\020fixed_cpm_micros\030@ \001(\003H" +
+      "\r\210\001\001\022\036\n\021target_cpv_micros\030A \001(\003H\016\210\001\001\022\036\n\021" +
+      "target_cpc_micros\030D \001(\003H\017\210\001\001\022#\n\033optimize" +
+      "d_targeting_enabled\030; \001(\010\022%\n\035exclude_dem" +
+      "ographic_expansion\030C \001(\010\022o\n\034display_cust" +
+      "om_bid_dimension\030\027 \001(\0162I.google.ads.goog" +
+      "leads.v26.enums.TargetingDimensionEnum.T" +
+      "argetingDimension\022\035\n\020final_url_suffix\030. " +
+      "\001(\tH\020\210\001\001\022L\n\021targeting_setting\030\031 \001(\01321.go" +
+      "ogle.ads.googleads.v26.common.TargetingS" +
+      "etting\022[\n\020audience_setting\0308 \001(\0132;.googl" +
+      "e.ads.googleads.v26.resources.AdGroup.Au" +
+      "dienceSettingB\004\342A\001\005\022.\n\033effective_target_" +
+      "cpa_micros\030/ \001(\003B\004\342A\001\003H\021\210\001\001\022j\n\033effective" +
+      "_target_cpa_source\030\035 \001(\0162?.google.ads.go" +
+      "ogleads.v26.enums.BiddingSourceEnum.Bidd" +
+      "ingSourceB\004\342A\001\003\022(\n\025effective_target_roas" +
+      "\0300 \001(\001B\004\342A\001\003H\022\210\001\001\022k\n\034effective_target_ro" +
+      "as_source\030  \001(\0162?.google.ads.googleads.v" +
+      "26.enums.BiddingSourceEnum.BiddingSource" +
+      "B\004\342A\001\003\022\'\n\024effective_target_cpc\030E \001(\003B\004\342A" +
+      "\001\003H\023\210\001\001\022j\n\033effective_target_cpc_source\030F" +
+      " \001(\0162?.google.ads.googleads.v26.enums.Bi" +
+      "ddingSourceEnum.BiddingSourceB\004\342A\001\003\022>\n\006l" +
+      "abels\0301 \003(\tB.\342A\001\003\372A\'\n%googleads.googleap" +
+      "is.com/AdGroupLabel\022l\n!excluded_parent_a" +
+      "sset_field_types\0306 \003(\0162A.google.ads.goog" +
+      "leads.v26.enums.AssetFieldTypeEnum.Asset" +
+      "FieldType\022f\n\037excluded_parent_asset_set_t" +
+      "ypes\030: \003(\0162=.google.ads.googleads.v26.en" +
+      "ums.AssetSetTypeEnum.AssetSetType\022k\n\016pri" +
+      "mary_status\030> \001(\0162M.google.ads.googleads" +
+      ".v26.enums.AdGroupPrimaryStatusEnum.AdGr" +
+      "oupPrimaryStatusB\004\342A\001\003\022\177\n\026primary_status" +
+      "_reasons\030? \003(\0162Y.google.ads.googleads.v2" +
+      "6.enums.AdGroupPrimaryStatusReasonEnum.A" +
+      "dGroupPrimaryStatusReasonB\004\342A\001\003\022j\n\034deman" +
+      "d_gen_ad_group_settings\030[ \001(\0132D.google.a" +
+      "ds.googleads.v26.resources.AdGroup.Deman" +
+      "dGenAdGroupSettings\022a\n\027video_ad_group_se" +
+      "ttings\030\\ \001(\0132@.google.ads.googleads.v26." +
+      "resources.AdGroup.VideoAdGroupSettings\022`" +
+      "\n\027ai_max_ad_group_setting\030G \001(\0132?.google" +
+      ".ads.googleads.v26.resources.AdGroup.AiM" +
+      "axAdGroupSetting\022i\n\033vertical_ads_format_" +
+      "setting\030H \001(\0132D.google.ads.googleads.v26" +
+      ".resources.AdGroup.VerticalAdsFormatSett" +
+      "ing\0325\n\017AudienceSetting\022\"\n\024use_audience_g" +
+      "rouped\030\001 \001(\010B\004\342A\001\005\032\356\005\n\030DemandGenAdGroupS" +
+      "ettings\022w\n\020channel_controls\030\001 \001(\0132].goog" +
+      "le.ads.googleads.v26.resources.AdGroup.D" +
+      "emandGenAdGroupSettings.DemandGenChannel" +
+      "Controls\032\330\004\n\030DemandGenChannelControls\022o\n" +
+      "\016channel_config\030\001 \001(\0162Q.google.ads.googl" +
+      "eads.v26.enums.DemandGenChannelConfigEnu" +
+      "m.DemandGenChannelConfigB\004\342A\001\003\022q\n\020channe" +
+      "l_strategy\030\002 \001(\0162U.google.ads.googleads." +
+      "v26.enums.DemandGenChannelStrategyEnum.D" +
+      "emandGenChannelStrategyH\000\022\224\001\n\021selected_c" +
+      "hannels\030\003 \001(\0132w.google.ads.googleads.v26" +
       ".resources.AdGroup.DemandGenAdGroupSetti" +
-      "ngs\022a\n\027video_ad_group_settings\030\\ \001(\0132@.g" +
-      "oogle.ads.googleads.v26.resources.AdGrou" +
-      "p.VideoAdGroupSettings\022`\n\027ai_max_ad_grou" +
-      "p_setting\030G \001(\0132?.google.ads.googleads.v" +
-      "26.resources.AdGroup.AiMaxAdGroupSetting" +
-      "\022i\n\033vertical_ads_format_setting\030H \001(\0132D." +
-      "google.ads.googleads.v26.resources.AdGro" +
-      "up.VerticalAdsFormatSetting\0324\n\017AudienceS" +
-      "etting\022!\n\024use_audience_grouped\030\001 \001(\010B\003\340A" +
-      "\005\032\355\005\n\030DemandGenAdGroupSettings\022w\n\020channe" +
-      "l_controls\030\001 \001(\0132].google.ads.googleads." +
-      "v26.resources.AdGroup.DemandGenAdGroupSe" +
-      "ttings.DemandGenChannelControls\032\327\004\n\030Dema" +
-      "ndGenChannelControls\022n\n\016channel_config\030\001" +
-      " \001(\0162Q.google.ads.googleads.v26.enums.De" +
-      "mandGenChannelConfigEnum.DemandGenChanne" +
-      "lConfigB\003\340A\003\022q\n\020channel_strategy\030\002 \001(\0162U" +
-      ".google.ads.googleads.v26.enums.DemandGe" +
-      "nChannelStrategyEnum.DemandGenChannelStr" +
-      "ategyH\000\022\224\001\n\021selected_channels\030\003 \001(\0132w.go" +
-      "ogle.ads.googleads.v26.resources.AdGroup" +
-      ".DemandGenAdGroupSettings.DemandGenChann" +
-      "elControls.DemandGenSelectedChannelsH\000\032\247" +
-      "\001\n\031DemandGenSelectedChannels\022\031\n\021youtube_" +
-      "in_stream\030\001 \001(\010\022\027\n\017youtube_in_feed\030\002 \001(\010" +
-      "\022\026\n\016youtube_shorts\030\003 \001(\010\022\020\n\010discover\030\004 \001" +
-      "(\010\022\r\n\005gmail\030\005 \001(\010\022\017\n\007display\030\006 \001(\010\022\014\n\004ma" +
-      "ps\030\007 \001(\010B\027\n\025channel_configuration\032\275\001\n\024Vi" +
-      "deoAdGroupSettings\022v\n\021video_ad_sequence\030" +
-      "\001 \001(\0132[.google.ads.googleads.v26.resourc" +
-      "es.AdGroup.VideoAdGroupSettings.VideoAdS" +
-      "equenceStepSetting\032-\n\032VideoAdSequenceSte" +
-      "pSetting\022\017\n\007step_id\030\001 \001(\003\032a\n\023AiMaxAdGrou" +
-      "pSetting\022)\n\034disable_search_term_matching" +
-      "\030\001 \001(\010H\000\210\001\001B\037\n\035_disable_search_term_matc" +
-      "hing\032\330\001\n\030VerticalAdsFormatSetting\022\035\n\020dis" +
-      "able_text_ads\030\001 \001(\010H\000\210\001\001\022!\n\024enable_booki" +
-      "ng_links\030\002 \001(\010H\001\210\001\001\022*\n\035enable_vertical_p" +
-      "romotion_ads\030\003 \001(\010H\002\210\001\001B\023\n\021_disable_text" +
-      "_adsB\027\n\025_enable_booking_linksB \n\036_enable" +
-      "_vertical_promotion_ads:U\352AR\n googleads." +
-      "googleapis.com/AdGroup\022.customers/{custo" +
-      "mer_id}/adGroups/{ad_group_id}B\005\n\003_idB\007\n" +
-      "\005_nameB\020\n\016_base_ad_groupB\030\n\026_tracking_ur" +
-      "l_templateB\013\n\t_campaignB\021\n\017_cpc_bid_micr" +
-      "osB\033\n\031_effective_cpc_bid_microsB\021\n\017_cpm_" +
-      "bid_microsB\024\n\022_target_cpa_microsB\021\n\017_cpv" +
-      "_bid_microsB\024\n\022_target_cpm_microsB\016\n\014_ta" +
-      "rget_roasB\031\n\027_percent_cpc_bid_microsB\023\n\021" +
-      "_fixed_cpm_microsB\024\n\022_target_cpv_microsB" +
-      "\024\n\022_target_cpc_microsB\023\n\021_final_url_suff" +
-      "ixB\036\n\034_effective_target_cpa_microsB\030\n\026_e" +
-      "ffective_target_roasB\027\n\025_effective_targe" +
-      "t_cpcB\376\001\n&com.google.ads.googleads.v26.r" +
-      "esourcesB\014AdGroupProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v2" +
-      "6/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V26.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V26\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V26::Resourcesb\006proto3"
+      "ngs.DemandGenChannelControls.DemandGenSe" +
+      "lectedChannelsH\000\032\247\001\n\031DemandGenSelectedCh" +
+      "annels\022\031\n\021youtube_in_stream\030\001 \001(\010\022\027\n\017you" +
+      "tube_in_feed\030\002 \001(\010\022\026\n\016youtube_shorts\030\003 \001" +
+      "(\010\022\020\n\010discover\030\004 \001(\010\022\r\n\005gmail\030\005 \001(\010\022\017\n\007d" +
+      "isplay\030\006 \001(\010\022\014\n\004maps\030\007 \001(\010B\027\n\025channel_co" +
+      "nfiguration\032\275\001\n\024VideoAdGroupSettings\022v\n\021" +
+      "video_ad_sequence\030\001 \001(\0132[.google.ads.goo" +
+      "gleads.v26.resources.AdGroup.VideoAdGrou" +
+      "pSettings.VideoAdSequenceStepSetting\032-\n\032" +
+      "VideoAdSequenceStepSetting\022\017\n\007step_id\030\001 " +
+      "\001(\003\032a\n\023AiMaxAdGroupSetting\022)\n\034disable_se" +
+      "arch_term_matching\030\001 \001(\010H\000\210\001\001B\037\n\035_disabl" +
+      "e_search_term_matching\032\330\001\n\030VerticalAdsFo" +
+      "rmatSetting\022\035\n\020disable_text_ads\030\001 \001(\010H\000\210" +
+      "\001\001\022!\n\024enable_booking_links\030\002 \001(\010H\001\210\001\001\022*\n" +
+      "\035enable_vertical_promotion_ads\030\003 \001(\010H\002\210\001" +
+      "\001B\023\n\021_disable_text_adsB\027\n\025_enable_bookin" +
+      "g_linksB \n\036_enable_vertical_promotion_ad" +
+      "s:U\352AR\n googleads.googleapis.com/AdGroup" +
+      "\022.customers/{customer_id}/adGroups/{ad_g" +
+      "roup_id}B\005\n\003_idB\007\n\005_nameB\020\n\016_base_ad_gro" +
+      "upB\030\n\026_tracking_url_templateB\013\n\t_campaig" +
+      "nB\021\n\017_cpc_bid_microsB\033\n\031_effective_cpc_b" +
+      "id_microsB\021\n\017_cpm_bid_microsB\024\n\022_target_" +
+      "cpa_microsB\021\n\017_cpv_bid_microsB\024\n\022_target" +
+      "_cpm_microsB\016\n\014_target_roasB\031\n\027_percent_" +
+      "cpc_bid_microsB\023\n\021_fixed_cpm_microsB\024\n\022_" +
+      "target_cpv_microsB\024\n\022_target_cpc_microsB" +
+      "\023\n\021_final_url_suffixB\036\n\034_effective_targe" +
+      "t_cpa_microsB\030\n\026_effective_target_roasB\027" +
+      "\n\025_effective_target_cpcB\376\001\n&com.google.a" +
+      "ds.googleads.v26.resourcesB\014AdGroupProto" +
+      "P\001ZKgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v26/resources;resources\242" +
+      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resourc" +
+      "es\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352" +
+      "\002&Google::Ads::GoogleAds::V26::Resources" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

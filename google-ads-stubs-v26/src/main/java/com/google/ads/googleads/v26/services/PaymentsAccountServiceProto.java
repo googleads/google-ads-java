@@ -51,26 +51,26 @@ public final class PaymentsAccountServiceProto extends com.google.protobuf.Gener
       "ads/v26/resources/payments_account.proto" +
       "\032\034google/api/annotations.proto\032\027google/a" +
       "pi/client.proto\032\037google/api/field_behavi" +
-      "or.proto\"7\n\033ListPaymentsAccountsRequest\022" +
-      "\030\n\013customer_id\030\001 \001(\tB\003\340A\002\"n\n\034ListPayment" +
-      "sAccountsResponse\022N\n\021payments_accounts\030\001" +
-      " \003(\01323.google.ads.googleads.v26.resource" +
-      "s.PaymentsAccount2\300\002\n\026PaymentsAccountSer" +
-      "vice\022\336\001\n\024ListPaymentsAccounts\022>.google.a" +
-      "ds.googleads.v26.services.ListPaymentsAc" +
-      "countsRequest\032?.google.ads.googleads.v26" +
-      ".services.ListPaymentsAccountsResponse\"E" +
-      "\332A\013customer_id\202\323\344\223\0021\022//v26/customers/{cu" +
-      "stomer_id=*}/paymentsAccounts\032E\312A\030google" +
-      "ads.googleapis.com\322A\'https://www.googlea" +
-      "pis.com/auth/adwordsB\207\002\n%com.google.ads." +
-      "googleads.v26.servicesB\033PaymentsAccountS" +
-      "erviceProtoP\001ZIgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v26/services;" +
-      "services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2" +
-      "6.Services\312\002!Google\\Ads\\GoogleAds\\V26\\Se" +
-      "rvices\352\002%Google::Ads::GoogleAds::V26::Se" +
-      "rvicesb\006proto3"
+      "or.proto\"8\n\033ListPaymentsAccountsRequest\022" +
+      "\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\"n\n\034ListPaymen" +
+      "tsAccountsResponse\022N\n\021payments_accounts\030" +
+      "\001 \003(\01323.google.ads.googleads.v26.resourc" +
+      "es.PaymentsAccount2\300\002\n\026PaymentsAccountSe" +
+      "rvice\022\336\001\n\024ListPaymentsAccounts\022>.google." +
+      "ads.googleads.v26.services.ListPaymentsA" +
+      "ccountsRequest\032?.google.ads.googleads.v2" +
+      "6.services.ListPaymentsAccountsResponse\"" +
+      "E\332A\013customer_id\202\323\344\223\0021\022//v26/customers/{c" +
+      "ustomer_id=*}/paymentsAccounts\032E\312A\030googl" +
+      "eads.googleapis.com\322A\'https://www.google" +
+      "apis.com/auth/adwordsB\207\002\n%com.google.ads" +
+      ".googleads.v26.servicesB\033PaymentsAccount" +
+      "ServiceProtoP\001ZIgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v26/services" +
+      ";services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
+      "26.Services\312\002!Google\\Ads\\GoogleAds\\V26\\S" +
+      "ervices\352\002%Google::Ads::GoogleAds::V26::S" +
+      "ervicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

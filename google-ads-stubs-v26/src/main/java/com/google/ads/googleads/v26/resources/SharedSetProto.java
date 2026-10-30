@@ -48,31 +48,31 @@ public final class SharedSetProto extends com.google.protobuf.GeneratedFile {
       "Dgoogle/ads/googleads/v26/enums/vertical" +
       "_ads_item_vertical_type.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\257\005\n\tSharedSet\022A\n\rresource_name" +
-      "\030\001 \001(\tB*\340A\005\372A$\n\"googleads.googleapis.com" +
-      "/SharedSet\022\024\n\002id\030\010 \001(\003B\003\340A\003H\000\210\001\001\022R\n\004type" +
-      "\030\003 \001(\0162?.google.ads.googleads.v26.enums." +
-      "SharedSetTypeEnum.SharedSetTypeB\003\340A\005\022\021\n\004" +
-      "name\030\t \001(\tH\001\210\001\001\022X\n\006status\030\005 \001(\0162C.google" +
-      ".ads.googleads.v26.enums.SharedSetStatus" +
-      "Enum.SharedSetStatusB\003\340A\003\022\036\n\014member_coun" +
-      "t\030\n \001(\003B\003\340A\003H\002\210\001\001\022!\n\017reference_count\030\013 \001" +
-      "(\003B\003\340A\003H\003\210\001\001\022\216\001\n\037vertical_ads_item_verti" +
-      "cal_type\030\014 \001(\0162[.google.ads.googleads.v2" +
-      "6.enums.VerticalAdsItemVerticalTypeEnum." +
-      "VerticalAdsItemVerticalTypeB\003\340A\005H\004\210\001\001:[\352" +
-      "AX\n\"googleads.googleapis.com/SharedSet\0222" +
-      "customers/{customer_id}/sharedSets/{shar" +
-      "ed_set_id}B\005\n\003_idB\007\n\005_nameB\017\n\r_member_co" +
-      "untB\022\n\020_reference_countB\"\n _vertical_ads" +
-      "_item_vertical_typeB\200\002\n&com.google.ads.g" +
-      "oogleads.v26.resourcesB\016SharedSetProtoP\001" +
-      "ZKgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v26/resources;resources\242\002\003" +
-      "GAA\252\002\"Google.Ads.GoogleAds.V26.Resources" +
-      "\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002&" +
-      "Google::Ads::GoogleAds::V26::Resourcesb\006" +
-      "proto3"
+      "rce.proto\"\266\005\n\tSharedSet\022B\n\rresource_name" +
+      "\030\001 \001(\tB+\342A\001\005\372A$\n\"googleads.googleapis.co" +
+      "m/SharedSet\022\025\n\002id\030\010 \001(\003B\004\342A\001\003H\000\210\001\001\022S\n\004ty" +
+      "pe\030\003 \001(\0162?.google.ads.googleads.v26.enum" +
+      "s.SharedSetTypeEnum.SharedSetTypeB\004\342A\001\005\022" +
+      "\021\n\004name\030\t \001(\tH\001\210\001\001\022Y\n\006status\030\005 \001(\0162C.goo" +
+      "gle.ads.googleads.v26.enums.SharedSetSta" +
+      "tusEnum.SharedSetStatusB\004\342A\001\003\022\037\n\014member_" +
+      "count\030\n \001(\003B\004\342A\001\003H\002\210\001\001\022\"\n\017reference_coun" +
+      "t\030\013 \001(\003B\004\342A\001\003H\003\210\001\001\022\217\001\n\037vertical_ads_item" +
+      "_vertical_type\030\014 \001(\0162[.google.ads.google" +
+      "ads.v26.enums.VerticalAdsItemVerticalTyp" +
+      "eEnum.VerticalAdsItemVerticalTypeB\004\342A\001\005H" +
+      "\004\210\001\001:[\352AX\n\"googleads.googleapis.com/Shar" +
+      "edSet\0222customers/{customer_id}/sharedSet" +
+      "s/{shared_set_id}B\005\n\003_idB\007\n\005_nameB\017\n\r_me" +
+      "mber_countB\022\n\020_reference_countB\"\n _verti" +
+      "cal_ads_item_vertical_typeB\200\002\n&com.googl" +
+      "e.ads.googleads.v26.resourcesB\016SharedSet" +
+      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v26/resources;resou" +
+      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Re" +
+      "sources\312\002\"Google\\Ads\\GoogleAds\\V26\\Resou" +
+      "rces\352\002&Google::Ads::GoogleAds::V26::Reso" +
+      "urcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

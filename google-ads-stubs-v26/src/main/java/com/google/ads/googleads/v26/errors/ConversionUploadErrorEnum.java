@@ -8,6 +8,11 @@ package com.google.ads.googleads.v26.errors;
 /**
  * <pre>
  * Container for enum describing possible conversion upload errors.
+ *
+ * For help diagnosing and resolving these errors, see the [Conversion upload
+ * troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting) (or
+ * use the `troubleshoot-conversions` workflow in the [Google Ads API Developer
+ * Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v26.errors.ConversionUploadErrorEnum}
@@ -50,6 +55,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Enum describing possible conversion upload errors.
+   *
+   * For step-by-step resolution guidance, see the [Conversion upload
+   * troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
+   * Developer
+   * Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v26.errors.ConversionUploadErrorEnum.ConversionUploadError}
@@ -1195,6 +1206,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Container for enum describing possible conversion upload errors.
+   *
+   * For help diagnosing and resolving these errors, see the [Conversion upload
+   * troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting) (or
+   * use the `troubleshoot-conversions` workflow in the [Google Ads API Developer
+   * Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v26.errors.ConversionUploadErrorEnum}

@@ -1294,6 +1294,29 @@
  * }
  * }</pre>
  *
+ * <p>======================= CustomerBudgetNetworkSettingServiceClient =======================
+ *
+ * <p>Service Description: Service to manage customer-level budget network settings.
+ *
+ * <p>Sample for CustomerBudgetNetworkSettingServiceClient:
+ *
+ * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+ * try (CustomerBudgetNetworkSettingServiceClient customerBudgetNetworkSettingServiceClient =
+ *     CustomerBudgetNetworkSettingServiceClient.create()) {
+ *   String customerId = "customerId-1581184615";
+ *   CustomerBudgetNetworkSettingOperation operation =
+ *       CustomerBudgetNetworkSettingOperation.newBuilder().build();
+ *   MutateCustomerBudgetNetworkSettingResponse response =
+ *       customerBudgetNetworkSettingServiceClient.mutateCustomerBudgetNetworkSetting(
+ *           customerId, operation);
+ * }
+ * }</pre>
+ *
  * <p>======================= CustomerClientLinkServiceClient =======================
  *
  * <p>Service Description: Service to manage customer client links.
@@ -1663,7 +1686,22 @@
  *
  * <p>======================= GoogleAdsServiceClient =======================
  *
- * <p>Service Description: Service to fetch data and metrics across resources.
+ * <p>Service Description: Service to fetch data and metrics across resources. Use the interactive
+ * [Google Ads Query Builder](/google-ads/api/fields/latest/overview_query_builder) to construct and
+ * validate Google Ads Query Language (GAQL) queries.
+ *
+ * <p>Search versus SearchStream:
+ *
+ * <ul>
+ *   <li>`Search`: Paginated using `next_page_token` with up to 10,000 rows per page. Caches pages
+ *       across requests. Best for small result sets (&lt; 10,000 rows) or user-driven paginated
+ *       interfaces.
+ *   <li>`SearchStream`: Delivers a single stream of response batches with up to 10,000 rows per
+ *       batch. Lower overhead without request caching. Best for large result sets (&gt; 10,000
+ *       rows) or batch reporting workloads.
+ * </ul>
+ *
+ * <p>For more details, see [Streaming versus paging](/google-ads/api/docs/reporting/streaming).
  *
  * <p>Sample for GoogleAdsServiceClient:
  *
@@ -1934,6 +1972,29 @@
  * }
  * }</pre>
  *
+ * <p>======================= LocalServicesEligibilityServiceClient =======================
+ *
+ * <p>Service Description: This service allows eligibility checking and discovery of category/job
+ * type details for Local Services.
+ *
+ * <p>Sample for LocalServicesEligibilityServiceClient:
+ *
+ * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+ * try (LocalServicesEligibilityServiceClient localServicesEligibilityServiceClient =
+ *     LocalServicesEligibilityServiceClient.create()) {
+ *   String customerId = "customerId-1581184615";
+ *   String listingId = "listingId-1215024449";
+ *   CheckLocalServicesEligibilityResponse response =
+ *       localServicesEligibilityServiceClient.checkLocalServicesEligibility(
+ *           customerId, listingId);
+ * }
+ * }</pre>
+ *
  * <p>======================= LocalServicesLeadServiceClient =======================
  *
  * <p>Service Description: This service allows management of LocalServicesLead resources.
@@ -1978,7 +2039,11 @@
  *
  * <p>======================= OfflineUserDataJobServiceClient =======================
  *
- * <p>Service Description: Service to manage offline user data jobs.
+ * <p>Service Description: Service to manage offline user data jobs. For help diagnosing and
+ * resolving conversion or user data upload issues, see the conversion upload [troubleshooting
+ * guide](/google-ads/api/docs/conversions/troubleshooting) (or use the `troubleshoot-conversions`
+ * workflow in the [Google Ads API Developer
+ * Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
  *
  * <p>Sample for OfflineUserDataJobServiceClient:
  *
@@ -2332,7 +2397,10 @@
  * list through this service will be eligible for matching as per the customer matching process. See
  * https://support.google.com/google-ads/answer/7474263. However, the uploads made through this
  * service will not be visible under the 'Segment members' section for the Customer Match List in
- * the Google Ads UI.
+ * the Google Ads UI. For help diagnosing and resolving conversion or user data upload issues, see
+ * the conversion upload [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
+ * (or use the `troubleshoot-conversions` workflow in the [Google Ads API Developer
+ * Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
  *
  * <p>Sample for UserDataServiceClient:
  *

@@ -14,7 +14,7 @@
 # - All settings in this file can be set & overridden programmatically.
 #   e.g. GoogleAdsClient.newBuilder()
 #          .fromPropertiesFile() // optionally load from config file.
-#          .setDeveloperToken("your_token")
+#          .setLoginCustomerId(1234567890L)
 
 # ------------------------------- OAuth 2.0 ---------------------------------------
 #
@@ -64,18 +64,6 @@
 #api.googleads.useApplicationDefaultCredentials=false
 
 # -------------------------- Google Ads API -----------------------------------
-
-# Developer token
-#
-# Specifies the credential used to access the Google Ads API.
-#
-# - Grants access to the API, not any Google account or Google Ads account.
-# - Associated with a Google Ads manager accoount.
-# - Found by logging into the manager account on http://ads.google.com
-#   and navigating to -> Tools & Settings -> API Center.
-# - An unapproved developer token can be used to issue requests against test
-#   accounts.
-#api.googleads.developerToken=
 
 # Login customer ID
 #

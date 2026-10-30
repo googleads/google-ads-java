@@ -97,6 +97,7 @@ private static final long serialVersionUID = 0L;
     CONVERSION_VALUE_RULE_SET_OPERATION(64),
     CUSTOM_CONVERSION_GOAL_OPERATION(68),
     CUSTOMER_ASSET_OPERATION(57),
+    CUSTOMER_BUDGET_NETWORK_SETTING_OPERATION(92),
     CUSTOMER_CONVERSION_GOAL_OPERATION(66),
     CUSTOMER_CUSTOMIZER_OPERATION(79),
     CUSTOMER_LABEL_OPERATION(32),
@@ -178,6 +179,7 @@ private static final long serialVersionUID = 0L;
         case 64: return CONVERSION_VALUE_RULE_SET_OPERATION;
         case 68: return CUSTOM_CONVERSION_GOAL_OPERATION;
         case 57: return CUSTOMER_ASSET_OPERATION;
+        case 92: return CUSTOMER_BUDGET_NETWORK_SETTING_OPERATION;
         case 66: return CUSTOMER_CONVERSION_GOAL_OPERATION;
         case 79: return CUSTOMER_CUSTOMIZER_OPERATION;
         case 32: return CUSTOMER_LABEL_OPERATION;
@@ -2063,6 +2065,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v26.services.CustomerAssetOperation.getDefaultInstance();
   }
 
+  public static final int CUSTOMER_BUDGET_NETWORK_SETTING_OPERATION_FIELD_NUMBER = 92;
+  /**
+   * <pre>
+   * A customer budget network setting mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+   * @return Whether the customerBudgetNetworkSettingOperation field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerBudgetNetworkSettingOperation() {
+    return operationCase_ == 92;
+  }
+  /**
+   * <pre>
+   * A customer budget network setting mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+   * @return The customerBudgetNetworkSettingOperation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation getCustomerBudgetNetworkSettingOperation() {
+    if (operationCase_ == 92) {
+       return (com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation) operation_;
+    }
+    return com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A customer budget network setting mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperationOrBuilder getCustomerBudgetNetworkSettingOperationOrBuilder() {
+    if (operationCase_ == 92) {
+       return (com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation) operation_;
+    }
+    return com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.getDefaultInstance();
+  }
+
   public static final int CUSTOMER_CONVERSION_GOAL_OPERATION_FIELD_NUMBER = 66;
   /**
    * <pre>
@@ -3175,6 +3220,9 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 89) {
       output.writeMessage(89, (com.google.ads.googleads.v26.actions.BookCampaignsOperation) operation_);
     }
+    if (operationCase_ == 92) {
+      output.writeMessage(92, (com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation) operation_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -3440,6 +3488,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(89, (com.google.ads.googleads.v26.actions.BookCampaignsOperation) operation_);
     }
+    if (operationCase_ == 92) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(92, (com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation) operation_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3628,6 +3680,10 @@ private static final long serialVersionUID = 0L;
       case 57:
         if (!getCustomerAssetOperation()
             .equals(other.getCustomerAssetOperation())) return false;
+        break;
+      case 92:
+        if (!getCustomerBudgetNetworkSettingOperation()
+            .equals(other.getCustomerBudgetNetworkSettingOperation())) return false;
         break;
       case 66:
         if (!getCustomerConversionGoalOperation()
@@ -3900,6 +3956,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CUSTOMER_ASSET_OPERATION_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerAssetOperation().hashCode();
         break;
+      case 92:
+        hash = (37 * hash) + CUSTOMER_BUDGET_NETWORK_SETTING_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerBudgetNetworkSettingOperation().hashCode();
+        break;
       case 66:
         hash = (37 * hash) + CUSTOMER_CONVERSION_GOAL_OPERATION_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerConversionGoalOperation().hashCode();
@@ -4124,6 +4184,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       bitField1_ = 0;
+      bitField2_ = 0;
       if (adGroupAdLabelOperationBuilder_ != null) {
         adGroupAdLabelOperationBuilder_.clear();
       }
@@ -4253,6 +4314,9 @@ private static final long serialVersionUID = 0L;
       if (customerAssetOperationBuilder_ != null) {
         customerAssetOperationBuilder_.clear();
       }
+      if (customerBudgetNetworkSettingOperationBuilder_ != null) {
+        customerBudgetNetworkSettingOperationBuilder_.clear();
+      }
       if (customerConversionGoalOperationBuilder_ != null) {
         customerConversionGoalOperationBuilder_.clear();
       }
@@ -4346,6 +4410,7 @@ private static final long serialVersionUID = 0L;
       com.google.ads.googleads.v26.services.MutateOperation result = new com.google.ads.googleads.v26.services.MutateOperation(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       if (bitField1_ != 0) { buildPartial1(result); }
+      if (bitField2_ != 0) { buildPartial2(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -4357,6 +4422,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial1(com.google.ads.googleads.v26.services.MutateOperation result) {
       int from_bitField1_ = bitField1_;
+    }
+
+    private void buildPartial2(com.google.ads.googleads.v26.services.MutateOperation result) {
+      int from_bitField2_ = bitField2_;
     }
 
     private void buildPartialOneofs(com.google.ads.googleads.v26.services.MutateOperation result) {
@@ -4533,6 +4602,10 @@ private static final long serialVersionUID = 0L;
       if (operationCase_ == 57 &&
           customerAssetOperationBuilder_ != null) {
         result.operation_ = customerAssetOperationBuilder_.build();
+      }
+      if (operationCase_ == 92 &&
+          customerBudgetNetworkSettingOperationBuilder_ != null) {
+        result.operation_ = customerBudgetNetworkSettingOperationBuilder_.build();
       }
       if (operationCase_ == 66 &&
           customerConversionGoalOperationBuilder_ != null) {
@@ -4803,6 +4876,10 @@ private static final long serialVersionUID = 0L;
         }
         case CUSTOMER_ASSET_OPERATION: {
           mergeCustomerAssetOperation(other.getCustomerAssetOperation());
+          break;
+        }
+        case CUSTOMER_BUDGET_NETWORK_SETTING_OPERATION: {
+          mergeCustomerBudgetNetworkSettingOperation(other.getCustomerBudgetNetworkSettingOperation());
           break;
         }
         case CUSTOMER_CONVERSION_GOAL_OPERATION: {
@@ -5367,6 +5444,13 @@ private static final long serialVersionUID = 0L;
               operationCase_ = 89;
               break;
             } // case 714
+            case 738: {
+              input.readMessage(
+                  internalGetCustomerBudgetNetworkSettingOperationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              operationCase_ = 92;
+              break;
+            } // case 738
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5399,6 +5483,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     private int bitField1_;
+    private int bitField2_;
 
     private com.google.protobuf.SingleFieldBuilder<
         com.google.ads.googleads.v26.services.AdGroupAdLabelOperation, com.google.ads.googleads.v26.services.AdGroupAdLabelOperation.Builder, com.google.ads.googleads.v26.services.AdGroupAdLabelOperationOrBuilder> adGroupAdLabelOperationBuilder_;
@@ -13052,6 +13137,184 @@ private static final long serialVersionUID = 0L;
       operationCase_ = 57;
       onChanged();
       return customerAssetOperationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation, com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.Builder, com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperationOrBuilder> customerBudgetNetworkSettingOperationBuilder_;
+    /**
+     * <pre>
+     * A customer budget network setting mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+     * @return Whether the customerBudgetNetworkSettingOperation field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerBudgetNetworkSettingOperation() {
+      return operationCase_ == 92;
+    }
+    /**
+     * <pre>
+     * A customer budget network setting mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+     * @return The customerBudgetNetworkSettingOperation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation getCustomerBudgetNetworkSettingOperation() {
+      if (customerBudgetNetworkSettingOperationBuilder_ == null) {
+        if (operationCase_ == 92) {
+          return (com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation) operation_;
+        }
+        return com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.getDefaultInstance();
+      } else {
+        if (operationCase_ == 92) {
+          return customerBudgetNetworkSettingOperationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A customer budget network setting mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+     */
+    public Builder setCustomerBudgetNetworkSettingOperation(com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation value) {
+      if (customerBudgetNetworkSettingOperationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        operation_ = value;
+        onChanged();
+      } else {
+        customerBudgetNetworkSettingOperationBuilder_.setMessage(value);
+      }
+      operationCase_ = 92;
+      return this;
+    }
+    /**
+     * <pre>
+     * A customer budget network setting mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+     */
+    public Builder setCustomerBudgetNetworkSettingOperation(
+        com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.Builder builderForValue) {
+      if (customerBudgetNetworkSettingOperationBuilder_ == null) {
+        operation_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerBudgetNetworkSettingOperationBuilder_.setMessage(builderForValue.build());
+      }
+      operationCase_ = 92;
+      return this;
+    }
+    /**
+     * <pre>
+     * A customer budget network setting mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+     */
+    public Builder mergeCustomerBudgetNetworkSettingOperation(com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation value) {
+      if (customerBudgetNetworkSettingOperationBuilder_ == null) {
+        if (operationCase_ == 92 &&
+            operation_ != com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.getDefaultInstance()) {
+          operation_ = com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.newBuilder((com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation) operation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          operation_ = value;
+        }
+        onChanged();
+      } else {
+        if (operationCase_ == 92) {
+          customerBudgetNetworkSettingOperationBuilder_.mergeFrom(value);
+        } else {
+          customerBudgetNetworkSettingOperationBuilder_.setMessage(value);
+        }
+      }
+      operationCase_ = 92;
+      return this;
+    }
+    /**
+     * <pre>
+     * A customer budget network setting mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+     */
+    public Builder clearCustomerBudgetNetworkSettingOperation() {
+      if (customerBudgetNetworkSettingOperationBuilder_ == null) {
+        if (operationCase_ == 92) {
+          operationCase_ = 0;
+          operation_ = null;
+          onChanged();
+        }
+      } else {
+        if (operationCase_ == 92) {
+          operationCase_ = 0;
+          operation_ = null;
+        }
+        customerBudgetNetworkSettingOperationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A customer budget network setting mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+     */
+    public com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.Builder getCustomerBudgetNetworkSettingOperationBuilder() {
+      return internalGetCustomerBudgetNetworkSettingOperationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A customer budget network setting mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperationOrBuilder getCustomerBudgetNetworkSettingOperationOrBuilder() {
+      if ((operationCase_ == 92) && (customerBudgetNetworkSettingOperationBuilder_ != null)) {
+        return customerBudgetNetworkSettingOperationBuilder_.getMessageOrBuilder();
+      } else {
+        if (operationCase_ == 92) {
+          return (com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation) operation_;
+        }
+        return com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A customer budget network setting mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation customer_budget_network_setting_operation = 92;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation, com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.Builder, com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperationOrBuilder> 
+        internalGetCustomerBudgetNetworkSettingOperationFieldBuilder() {
+      if (customerBudgetNetworkSettingOperationBuilder_ == null) {
+        if (!(operationCase_ == 92)) {
+          operation_ = com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.getDefaultInstance();
+        }
+        customerBudgetNetworkSettingOperationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation, com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation.Builder, com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperationOrBuilder>(
+                (com.google.ads.googleads.v26.services.CustomerBudgetNetworkSettingOperation) operation_,
+                getParentForChildren(),
+                isClean());
+        operation_ = null;
+      }
+      operationCase_ = 92;
+      onChanged();
+      return customerBudgetNetworkSettingOperationBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilder<

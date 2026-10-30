@@ -44,22 +44,22 @@ public final class CustomerSearchTermInsightProto extends com.google.protobuf.Ge
       "tomer_search_term_insight.proto\022\"google." +
       "ads.googleads.v26.resources\032\037google/api/" +
       "field_behavior.proto\032\031google/api/resourc" +
-      "e.proto\"\272\002\n\031CustomerSearchTermInsight\022Q\n" +
-      "\rresource_name\030\001 \001(\tB:\340A\003\372A4\n2googleads." +
-      "googleapis.com/CustomerSearchTermInsight" +
-      "\022 \n\016category_label\030\002 \001(\tB\003\340A\003H\000\210\001\001\022\024\n\002id" +
-      "\030\003 \001(\003B\003\340A\003H\001\210\001\001:x\352Au\n2googleads.googlea" +
-      "pis.com/CustomerSearchTermInsight\022?custo" +
-      "mers/{customer_id}/customerSearchTermIns" +
-      "ights/{cluster_id}B\021\n\017_category_labelB\005\n" +
-      "\003_idB\220\002\n&com.google.ads.googleads.v26.re" +
-      "sourcesB\036CustomerSearchTermInsightProtoP" +
-      "\001ZKgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v26/resources;resources\242\002" +
-      "\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resource" +
-      "s\312\002\"Google\\Ads\\GoogleAds\\V26\\Resources\352\002" +
-      "&Google::Ads::GoogleAds::V26::Resourcesb" +
-      "\006proto3"
+      "e.proto\"\275\002\n\031CustomerSearchTermInsight\022R\n" +
+      "\rresource_name\030\001 \001(\tB;\342A\001\003\372A4\n2googleads" +
+      ".googleapis.com/CustomerSearchTermInsigh" +
+      "t\022!\n\016category_label\030\002 \001(\tB\004\342A\001\003H\000\210\001\001\022\025\n\002" +
+      "id\030\003 \001(\003B\004\342A\001\003H\001\210\001\001:x\352Au\n2googleads.goog" +
+      "leapis.com/CustomerSearchTermInsight\022?cu" +
+      "stomers/{customer_id}/customerSearchTerm" +
+      "Insights/{cluster_id}B\021\n\017_category_label" +
+      "B\005\n\003_idB\220\002\n&com.google.ads.googleads.v26" +
+      ".resourcesB\036CustomerSearchTermInsightPro" +
+      "toP\001ZKgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v26/resources;resource" +
+      "s\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V26.Resou" +
+      "rces\312\002\"Google\\Ads\\GoogleAds\\V26\\Resource" +
+      "s\352\002&Google::Ads::GoogleAds::V26::Resourc" +
+      "esb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
