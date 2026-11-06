@@ -21,7 +21,7 @@ import java.util.regex.Pattern
  */
 abstract class UpdateVersionTask extends DefaultTask {
 
-    static final def VERSION_REGEX = "([0-9]+)\\.([0-9]+)\\.([0-9]+)(-SNAPSHOT)?"
+    static final def VERSION_REGEX = "([0-9]+)\\.([0-9]+)\\.([0-9]+)(-SNAPSHOT|-rc[0-9]*)?"
 
     @Input
     String newVersion
@@ -61,10 +61,15 @@ tasks.register('updateVersionToNextSnapshot', UpdateVersionTask) {
     def current = new Properties()
     propertiesFile.withInputStream { current.load(it) }
     def matcher = Pattern.compile(UpdateVersionTask.VERSION_REGEX).matcher(current.version as String)
-    if (!matcher.find()) {
+    if (!matcher.matches()) {
         throw new GradleException("Current version cannot be parsed: ${current.version} expected match of: ${UpdateVersionTask.VERSION_REGEX}")
     }
-    def toSet = "${matcher.group(1)}.${matcher.group(2)}.${Integer.parseInt(matcher.group(3)) + 1}-SNAPSHOT"
+    // A release candidate hasn't finalized X.Y.Z yet, so keeps the same patch
+    // version (e.g., 1.2.3-rc1 -> 1.2.3-SNAPSHOT, vs. 1.2.3 -> 1.2.4-SNAPSHOT).
+    def nextPatch = matcher.group(4)?.startsWith("-rc")
+        ? Integer.parseInt(matcher.group(3))
+        : Integer.parseInt(matcher.group(3)) + 1
+    def toSet = "${matcher.group(1)}.${matcher.group(2)}.${nextPatch}-SNAPSHOT"
     newVersion = toSet
 }
 
