@@ -130,13 +130,14 @@ dependencies {
 
     // Add constraints for all of this project's artifacts.
     constraints {
-        api "com.google.api-ads:google-ads:${version}"
-        api "com.google.api-ads:google-ads-codegen:${version}"
+        api project(":google-ads")
+        api project(":google-ads-codegen")
+        // Uses string coordinates because :google-ads-shadowjar is excluded when -Pfastbuild is set.
         api "com.google.api-ads:google-ads-shadowjar:${version}"
-        api "com.google.api-ads:google-ads-stubs-v23:${version}"
-        api "com.google.api-ads:google-ads-stubs-v24:${version}"
-        api "com.google.api-ads:google-ads-stubs-v25:${version}"
-        api "com.google.api-ads:google-ads-stubs-v26:${version}"
+        rootProject.subprojects
+                .findAll { it.name.startsWith("google-ads-stubs-v") }
+                .sort { it.name.replace("google-ads-stubs-v", "") as Integer }
+                .each { api it }
     }
 }
 
