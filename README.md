@@ -43,9 +43,9 @@ Our documentation is available [here](https://developers.google.com/google-ads/a
 
 - https://developers.google.com/google-ads/api/docs
 
-### Support forum
+### Support
 
-- https://groups.google.com/forum/#!forum/adwords-api
+- https://developers.google.com/google-ads/api/support
 
 ### Authors
 

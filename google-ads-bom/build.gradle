@@ -133,13 +133,10 @@ dependencies {
         api "com.google.api-ads:google-ads-stubs-v26:${version}"
         api "com.google.api-ads:google-ads-stubs-v25:${version}"
         api "com.google.api-ads:google-ads-stubs-v24:${version}"
+        api "com.google.api-ads:google-ads-stubs-v23:${version}"
         api "com.google.api-ads:google-ads:${version}"
         api "com.google.api-ads:google-ads-codegen:${version}"
         api "com.google.api-ads:google-ads-shadowjar:${version}"
-        api "com.google.api-ads:google-ads-stubs-v21:${version}"
-        api "com.google.api-ads:google-ads-stubs-v22:${version}"
-        api "com.google.api-ads:google-ads-stubs-v23:${version}"
-        api "com.google.api-ads:google-ads-stubs-v24:${version}"
     }
 }
 
