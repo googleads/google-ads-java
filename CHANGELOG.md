@@ -1,3 +1,8 @@
+48.1.1-rc1 - 2026-11-09
+-----------------------
+- Remove duplicate dependencies from google-ads-bom.
+- Update support link in README.md.
+
 48.1.0 - 2026-10-28
 -------------------
 - Add support for v26_1 of the Google Ads API.
