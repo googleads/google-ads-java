@@ -40,10 +40,17 @@ abstract class UpdateVersionTask extends DefaultTask {
         if (!newVersion.matches(VERSION_REGEX)) {
             throw new GradleException("Invalid format for -PnewVersion. Expecting: ${VERSION_REGEX}")
         }
-        def toSet = new Properties()
-        propertiesFile.withInputStream { toSet.load(it) }
-        toSet.version = newVersion
-        propertiesFile.withOutputStream { toSet.store(it, "See LICENSE for license terms") }
+        // Rewrites only the version line. Properties.store() would reorder keys
+        // (in a JDK-dependent order) and add a timestamp comment, creating noisy
+        // diffs in release PRs. Matches the canonical `version=` form because
+        // the Kokoro release script reads it with `sed 's/^version=//'`.
+        def lines = propertiesFile.readLines()
+        def versionIndex = lines.findIndexOf { it.startsWith('version=') }
+        if (versionIndex < 0) {
+            throw new GradleException("No version property found in ${propertiesFile}")
+        }
+        lines[versionIndex] = "version=${newVersion}"
+        propertiesFile.text = lines.join('\n') + '\n'
     }
 }
 

@@ -18,8 +18,10 @@
  */
 
 
+import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 
+import java.util.regex.Pattern
 import java.util.stream.Collectors
 
 import static nl.javadude.gradle.plugins.license.DownloadLicensesExtension.license
@@ -168,6 +170,12 @@ Googlers, there is a company policy for this available internally.""")
     }
 }
 
+// Entry patterns for the com.github.hierynomus.license-report 0.16.1 output
+// format. Each entry begins with the dependency name, so sorting the entry text
+// orders entries by dependency name (matching the JSON sort in copyLicenses).
+final Pattern XML_LICENSE_ENTRY = ~/(?s)  <dependency name='[^']*'>.*?<\/dependency>\R/
+final Pattern HTML_LICENSE_ENTRY = ~/(?s)      <tr>\s*<td class='dependencies'>.*?<\/tr>\R/
+
 task copyLicenses(type: Copy) {
     description = "Copies licenses from build directory to third_party"
     dependsOn 'verifyLicenses'
@@ -196,7 +204,46 @@ task copyLicenses(type: Copy) {
                     "Failed to locate files to copy from. Expected: 3 but was: "
                             + inputs.sourceFiles.toList())
         }
+
+        // The license-report plugin emits dependencies in a nondeterministic
+        // order. Sorts each report by dependency name so that diffs of
+        // third_party only show actual dependency changes.
+        def thirdPartyDir = tasks.generateThirdPartyDirectory.thirdPartyDir
+        sortLicenseReportEntries(new File(thirdPartyDir, 'LICENSES.xml'), XML_LICENSE_ENTRY)
+        sortLicenseReportEntries(new File(thirdPartyDir, 'LICENSES.html'), HTML_LICENSE_ENTRY)
+        def jsonFile = new File(thirdPartyDir, 'LICENSES.json')
+        def json = new JsonSlurper().parse(jsonFile)
+        json.dependencies = json.dependencies.sort(false) { it.name }
+        jsonFile.text = JsonOutput.toJson(json)
     }
+}
+
+/**
+ * Sorts the contiguous entries matching entryPattern in a license report file,
+ * leaving the text before the first entry and after the last entry untouched.
+ * Fails if the entries aren't contiguous, so that an unexpected change in the
+ * report format can't silently corrupt the report.
+ */
+def sortLicenseReportEntries(File file, Pattern entryPattern) {
+    String text = file.text
+    def matcher = entryPattern.matcher(text)
+    List<String> entries = []
+    int start = -1
+    int end = -1
+    while (matcher.find()) {
+        if (start < 0) {
+            start = matcher.start()
+        } else if (matcher.start() != end) {
+            throw new GradleException(
+                    "Unexpected content between license entries in ${file}")
+        }
+        end = matcher.end()
+        entries << matcher.group()
+    }
+    if (entries.isEmpty()) {
+        throw new GradleException("No license entries found in ${file}")
+    }
+    file.text = text.substring(0, start) + entries.sort().join('') + text.substring(end)
 }
 
 task copyThirdPartySources(type: Copy) {
