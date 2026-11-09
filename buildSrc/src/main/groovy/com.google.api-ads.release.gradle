@@ -1,0 +1,120 @@
+/*
+ * Copyright 2026 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import java.util.regex.Pattern
+
+/**
+ * Task for updating version numbers in gradle.properties.
+ */
+abstract class UpdateVersionTask extends DefaultTask {
+
+    static final def VERSION_REGEX = "([0-9]+)\\.([0-9]+)\\.([0-9]+)(-SNAPSHOT|-rc[0-9]*)?"
+
+    @Input
+    String newVersion
+
+    @InputFile
+    File propertiesFile = project.file("${project.projectDir}/gradle.properties")
+
+    @TaskAction
+    def update() {
+        if (newVersion == null) {
+            throw new GradleException("Need to specify newVersion")
+        }
+        if (propertiesFile == null) {
+            throw new GradleException("Need to specify gradlePropertiesFile")
+        }
+        if (!newVersion.matches(VERSION_REGEX)) {
+            throw new GradleException("Invalid format for -PnewVersion. Expecting: ${VERSION_REGEX}")
+        }
+        def toSet = new Properties()
+        propertiesFile.withInputStream { toSet.load(it) }
+        toSet.version = newVersion
+        propertiesFile.withOutputStream { toSet.store(it, "See LICENSE for license terms") }
+    }
+}
+
+/** Updates the version to version specified with -PnewVersion=X.Y.Z. */
+tasks.register('updateVersion', UpdateVersionTask) {
+    group = 'Release Prep'
+    description = "Updates the version in gradle.properties to the version specified with -PnewVersion=X.Y.Z"
+    newVersion = project.findProperty('newVersion') as String
+}
+
+/** Updates the version to the next snapshot. */
+tasks.register('updateVersionToNextSnapshot', UpdateVersionTask) {
+    group = 'Release Prep'
+    description = "Updates the version in gradle.properties to the next -SNAPSHOT version"
+    def current = new Properties()
+    propertiesFile.withInputStream { current.load(it) }
+    def matcher = Pattern.compile(UpdateVersionTask.VERSION_REGEX).matcher(current.version as String)
+    if (!matcher.matches()) {
+        throw new GradleException("Current version cannot be parsed: ${current.version} expected match of: ${UpdateVersionTask.VERSION_REGEX}")
+    }
+    // A release candidate hasn't finalized X.Y.Z yet, so keeps the same patch
+    // version (e.g., 1.2.3-rc1 -> 1.2.3-SNAPSHOT, vs. 1.2.3 -> 1.2.4-SNAPSHOT).
+    def nextPatch = matcher.group(4)?.startsWith("-rc")
+        ? Integer.parseInt(matcher.group(3))
+        : Integer.parseInt(matcher.group(3)) + 1
+    def toSet = "${matcher.group(1)}.${matcher.group(2)}.${nextPatch}-SNAPSHOT"
+    newVersion = toSet
+}
+
+/**
+ * Updates dependency version snippets in README.md.
+ */
+tasks.register('updateReadme') {
+    group = 'Release Prep'
+    description = "Updates version references in README.md to the version specified with -PnewVersion=X.Y.Z"
+    doLast {
+        def versionToSet = project.findProperty('newVersion') as String
+        if (!versionToSet) {
+            throw new GradleException("Need to specify -PnewVersion=X.Y.Z for updateReadme")
+        }
+        File readmeFile = project.file("${project.projectDir}/README.md")
+        if (!readmeFile.exists()) {
+            throw new GradleException("README.md not found at ${readmeFile.absolutePath}")
+        }
+        String text = readmeFile.text
+
+        // Replace version in Maven dependency snippet
+        text = text.replaceAll(
+            /(?s)(<groupId>com\.google\.api-ads<\/groupId>\s*<artifactId>google-ads<\/artifactId>\s*<version>)[^<]+(<\/version>)/,
+            "\$1${versionToSet}\$2"
+        )
+
+        // Replace version in Gradle dependency snippet
+        text = text.replaceAll(
+            /(implementation\s+['"]com\.google\.api-ads:google-ads:)[^'"]+(['"])/,
+            "\$1${versionToSet}\$2"
+        )
+
+        readmeFile.text = text
+        project.logger.lifecycle("Updated README.md with version ${versionToSet}")
+    }
+}
+
+/**
+ * Composite pre-release task for release rotation engineers.
+ * Runs version bumping, README update, and third_party generation.
+ */
+tasks.register('prepareRelease') {
+    group = 'Release Prep'
+    description = "Orchestrates pre-release updates: version, README, and third_party generation"
+    dependsOn 'updateVersion'
+    dependsOn 'updateReadme'
+    dependsOn ':google-ads:generateThirdPartyDirectory'
+}
