@@ -19,6 +19,9 @@
 
 
 import groovy.json.JsonSlurper
+import nl.javadude.gradle.plugins.license.DependencyMetadata
+import nl.javadude.gradle.plugins.license.LicenseMetadata
+import nl.javadude.gradle.plugins.license.LicenseReporter
 
 import java.util.stream.Collectors
 
@@ -126,6 +129,28 @@ task generateLicenses(type: nl.javadude.gradle.plugins.license.DownloadLicenses)
                                                       'BSD New license'],
             (ext.allowedLicenses['mit'])           : ['The MIT License', 'MIT license'],
     ]
+
+    // The plugin writes dependencies in HashSet order, which changes between
+    // runs. Re-renders the by-dependency reports with the plugin's own
+    // LicenseReporter in dependency name order so that regenerating
+    // third_party only produces diffs for actual changes.
+    doLast {
+        def fileName = reportByDependencyFileName
+        def report = new JsonSlurper().parse(new File(jsonDestination, fileName + '.json'))
+        def sorted = report.dependencies
+                .collect { dep ->
+                    new DependencyMetadata(
+                            dependency: dep.name,
+                            dependencyFileName: dep.file,
+                            licenseMetadataList: dep.licenses.collect { new LicenseMetadata(it.name, it.url) })
+                }
+                .sort { it.dependency } as LinkedHashSet
+        def reporter = new LicenseReporter(xmlOutputDir: xmlDestination,
+                htmlOutputDir: htmlDestination, jsonOutputDir: jsonDestination)
+        reporter.generateJSONReport4DependencyToLicense(sorted, fileName + '.json')
+        reporter.generateXMLReport4DependencyToLicense(sorted, fileName + '.xml')
+        reporter.generateHTMLReport4DependencyToLicense(sorted, fileName + '.html')
+    }
 }
 
 task verifyLicenses() {
