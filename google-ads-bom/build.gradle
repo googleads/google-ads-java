@@ -100,6 +100,7 @@ jreleaser {
                     url = 'https://central.sonatype.com/api/v1/publisher'
                     stagingRepository(layout.buildDirectory.dir("staging-deploy").get().toString())
                     stage = 'UPLOAD'
+                    skipPublicationCheck = true
                 }
             }
 
