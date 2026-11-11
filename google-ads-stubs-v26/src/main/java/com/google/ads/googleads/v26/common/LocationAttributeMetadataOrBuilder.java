@@ -12,7 +12,7 @@ public interface LocationAttributeMetadataOrBuilder extends
 
   /**
    * <pre>
-   * The country location that this attribute’s sub country location is located
+   * The country location that this attribute's sub country location is located
    * in.
    * </pre>
    *
@@ -22,7 +22,7 @@ public interface LocationAttributeMetadataOrBuilder extends
   boolean hasCountryLocation();
   /**
    * <pre>
-   * The country location that this attribute’s sub country location is located
+   * The country location that this attribute's sub country location is located
    * in.
    * </pre>
    *
@@ -32,7 +32,7 @@ public interface LocationAttributeMetadataOrBuilder extends
   com.google.ads.googleads.v26.common.LocationInfo getCountryLocation();
   /**
    * <pre>
-   * The country location that this attribute’s sub country location is located
+   * The country location that this attribute's sub country location is located
    * in.
    * </pre>
    *

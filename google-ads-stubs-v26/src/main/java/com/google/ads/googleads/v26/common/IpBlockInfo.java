@@ -13,7 +13,7 @@ package com.google.ads.googleads.v26.common;
  * IpBlockInfo criterion for each individual IP address or CIDR block you want
  * to exclude. You can exclude up to 500 IP addresses per campaign. For more
  * details, see
- * [Exclude IP addresses](//support.google.com/google-ads/answer/2456098).
+ * [Exclude IP addresses](https://support.google.com/google-ads/answer/2456098).
  *
  * IPv4 examples:
  *
@@ -299,7 +299,7 @@ private static final long serialVersionUID = 0L;
    * IpBlockInfo criterion for each individual IP address or CIDR block you want
    * to exclude. You can exclude up to 500 IP addresses per campaign. For more
    * details, see
-   * [Exclude IP addresses](//support.google.com/google-ads/answer/2456098).
+   * [Exclude IP addresses](https://support.google.com/google-ads/answer/2456098).
    *
    * IPv4 examples:
    *

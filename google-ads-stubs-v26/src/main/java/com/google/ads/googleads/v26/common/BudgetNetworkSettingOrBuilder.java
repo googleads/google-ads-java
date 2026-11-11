@@ -13,7 +13,7 @@ public interface BudgetNetworkSettingOrBuilder extends
   /**
    * <pre>
    * The advertising channel type this setting applies to (e.g., SEARCH,
-   * SHOPPING, or PERFORMANCE_MAX).
+   * SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
    * </pre>
    *
    * <code>.google.ads.googleads.v26.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 1;</code>
@@ -23,7 +23,7 @@ public interface BudgetNetworkSettingOrBuilder extends
   /**
    * <pre>
    * The advertising channel type this setting applies to (e.g., SEARCH,
-   * SHOPPING, or PERFORMANCE_MAX).
+   * SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
    * </pre>
    *
    * <code>.google.ads.googleads.v26.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 1;</code>

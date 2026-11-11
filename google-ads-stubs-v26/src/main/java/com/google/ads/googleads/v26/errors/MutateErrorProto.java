@@ -42,7 +42,7 @@ public final class MutateErrorProto extends com.google.protobuf.GeneratedFile {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v26/errors/mutate" +
       "_error.proto\022\037google.ads.googleads.v26.e" +
-      "rrors\"\226\003\n\017MutateErrorEnum\"\202\003\n\013MutateErro" +
+      "rrors\"\321\003\n\017MutateErrorEnum\"\275\003\n\013MutateErro" +
       "r\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022RESOU" +
       "RCE_NOT_FOUND\020\003\022!\n\035ID_EXISTS_IN_MULTIPLE" +
       "_MUTATES\020\007\022\035\n\031INCONSISTENT_FIELD_VALUES\020" +
@@ -52,13 +52,15 @@ public final class MutateErrorProto extends com.google.protobuf.GeneratedFile {
       "DATE_ONLY\020\014\022.\n*OPERATION_DOES_NOT_SUPPOR" +
       "T_PARTIAL_FAILURE\020\020\022\026\n\022RESOURCE_READ_ONL" +
       "Y\020\r\0221\n-EU_POLITICAL_ADVERTISING_DECLARAT" +
-      "ION_REQUIRED\020\021B\360\001\n#com.google.ads.google" +
-      "ads.v26.errorsB\020MutateErrorProtoP\001ZEgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v26/errors;errors\242\002\003GAA\252\002\037Google" +
-      ".Ads.GoogleAds.V26.Errors\312\002\037Google\\Ads\\G" +
-      "oogleAds\\V26\\Errors\352\002#Google::Ads::Googl" +
-      "eAds::V26::Errorsb\006proto3"
+      "ION_REQUIRED\020\021\0229\n5MULTI_PARTY_APPROVAL_U" +
+      "NSUPPORTED_RESOURCE_COMBINATION\020\022B\360\001\n#co" +
+      "m.google.ads.googleads.v26.errorsB\020Mutat" +
+      "eErrorProtoP\001ZEgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v26/errors;er" +
+      "rors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V26.Er" +
+      "rors\312\002\037Google\\Ads\\GoogleAds\\V26\\Errors\352\002" +
+      "#Google::Ads::GoogleAds::V26::Errorsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

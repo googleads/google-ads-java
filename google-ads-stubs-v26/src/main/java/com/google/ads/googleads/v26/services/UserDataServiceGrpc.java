@@ -11,10 +11,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * made through this service will not be visible under the 'Segment members'
  * section for the Customer Match List in the Google Ads UI.
  * For help diagnosing and resolving conversion or user data upload issues, see
- * the conversion upload
- * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
- * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
- * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+ * the [conversion upload troubleshooting
+ * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting)
+ * (or use the `troubleshoot-conversions` workflow in the
+ * [Google Ads API Developer
+ * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
  * </pre>
  */
 @io.grpc.stub.annotations.GrpcGenerated
@@ -124,10 +125,11 @@ public final class UserDataServiceGrpc {
    * made through this service will not be visible under the 'Segment members'
    * section for the Customer Match List in the Google Ads UI.
    * For help diagnosing and resolving conversion or user data upload issues, see
-   * the conversion upload
-   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
-   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
-   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+   * the [conversion upload troubleshooting
+   * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the
+   * [Google Ads API Developer
+   * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public interface AsyncService {
@@ -165,10 +167,11 @@ public final class UserDataServiceGrpc {
    * made through this service will not be visible under the 'Segment members'
    * section for the Customer Match List in the Google Ads UI.
    * For help diagnosing and resolving conversion or user data upload issues, see
-   * the conversion upload
-   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
-   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
-   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+   * the [conversion upload troubleshooting
+   * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the
+   * [Google Ads API Developer
+   * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public static abstract class UserDataServiceImplBase
@@ -189,10 +192,11 @@ public final class UserDataServiceGrpc {
    * made through this service will not be visible under the 'Segment members'
    * section for the Customer Match List in the Google Ads UI.
    * For help diagnosing and resolving conversion or user data upload issues, see
-   * the conversion upload
-   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
-   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
-   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+   * the [conversion upload troubleshooting
+   * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the
+   * [Google Ads API Developer
+   * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public static final class UserDataServiceStub
@@ -242,10 +246,11 @@ public final class UserDataServiceGrpc {
    * made through this service will not be visible under the 'Segment members'
    * section for the Customer Match List in the Google Ads UI.
    * For help diagnosing and resolving conversion or user data upload issues, see
-   * the conversion upload
-   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
-   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
-   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+   * the [conversion upload troubleshooting
+   * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the
+   * [Google Ads API Developer
+   * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public static final class UserDataServiceBlockingV2Stub
@@ -294,10 +299,11 @@ public final class UserDataServiceGrpc {
    * made through this service will not be visible under the 'Segment members'
    * section for the Customer Match List in the Google Ads UI.
    * For help diagnosing and resolving conversion or user data upload issues, see
-   * the conversion upload
-   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
-   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
-   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+   * the [conversion upload troubleshooting
+   * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the
+   * [Google Ads API Developer
+   * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public static final class UserDataServiceBlockingStub
@@ -346,10 +352,11 @@ public final class UserDataServiceGrpc {
    * made through this service will not be visible under the 'Segment members'
    * section for the Customer Match List in the Google Ads UI.
    * For help diagnosing and resolving conversion or user data upload issues, see
-   * the conversion upload
-   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
-   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
-   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+   * the [conversion upload troubleshooting
+   * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the
+   * [Google Ads API Developer
+   * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    */
   public static final class UserDataServiceFutureStub

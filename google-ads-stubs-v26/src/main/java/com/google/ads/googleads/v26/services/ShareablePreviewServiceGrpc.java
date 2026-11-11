@@ -8,8 +8,10 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Only Performance Max asset groups and certain YouTube video/audio ad formats
  * are supported. Other ad types, such as Responsive Search Ads or Responsive
  * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
- * The generated preview URLs cannot be embedded in an iframe because the
- * response headers include `X-Frame-Options: deny`.
+ * By default, the generated preview URLs cannot be embedded in an iframe
+ * because the response headers include `X-Frame-Options: deny`. Embedding in
+ * an iframe is only supported for allowlisted domains when the `origin` query
+ * parameter is appended to the preview URL.
  * </pre>
  */
 @io.grpc.stub.annotations.GrpcGenerated
@@ -116,8 +118,10 @@ public final class ShareablePreviewServiceGrpc {
    * Only Performance Max asset groups and certain YouTube video/audio ad formats
    * are supported. Other ad types, such as Responsive Search Ads or Responsive
    * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
-   * The generated preview URLs cannot be embedded in an iframe because the
-   * response headers include `X-Frame-Options: deny`.
+   * By default, the generated preview URLs cannot be embedded in an iframe
+   * because the response headers include `X-Frame-Options: deny`. Embedding in
+   * an iframe is only supported for allowlisted domains when the `origin` query
+   * parameter is appended to the preview URL.
    * </pre>
    */
   public interface AsyncService {
@@ -140,8 +144,10 @@ public final class ShareablePreviewServiceGrpc {
    * Only Performance Max asset groups and certain YouTube video/audio ad formats
    * are supported. Other ad types, such as Responsive Search Ads or Responsive
    * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
-   * The generated preview URLs cannot be embedded in an iframe because the
-   * response headers include `X-Frame-Options: deny`.
+   * By default, the generated preview URLs cannot be embedded in an iframe
+   * because the response headers include `X-Frame-Options: deny`. Embedding in
+   * an iframe is only supported for allowlisted domains when the `origin` query
+   * parameter is appended to the preview URL.
    * </pre>
    */
   public static abstract class ShareablePreviewServiceImplBase
@@ -159,8 +165,10 @@ public final class ShareablePreviewServiceGrpc {
    * Only Performance Max asset groups and certain YouTube video/audio ad formats
    * are supported. Other ad types, such as Responsive Search Ads or Responsive
    * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
-   * The generated preview URLs cannot be embedded in an iframe because the
-   * response headers include `X-Frame-Options: deny`.
+   * By default, the generated preview URLs cannot be embedded in an iframe
+   * because the response headers include `X-Frame-Options: deny`. Embedding in
+   * an iframe is only supported for allowlisted domains when the `origin` query
+   * parameter is appended to the preview URL.
    * </pre>
    */
   public static final class ShareablePreviewServiceStub
@@ -195,8 +203,10 @@ public final class ShareablePreviewServiceGrpc {
    * Only Performance Max asset groups and certain YouTube video/audio ad formats
    * are supported. Other ad types, such as Responsive Search Ads or Responsive
    * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
-   * The generated preview URLs cannot be embedded in an iframe because the
-   * response headers include `X-Frame-Options: deny`.
+   * By default, the generated preview URLs cannot be embedded in an iframe
+   * because the response headers include `X-Frame-Options: deny`. Embedding in
+   * an iframe is only supported for allowlisted domains when the `origin` query
+   * parameter is appended to the preview URL.
    * </pre>
    */
   public static final class ShareablePreviewServiceBlockingV2Stub
@@ -230,8 +240,10 @@ public final class ShareablePreviewServiceGrpc {
    * Only Performance Max asset groups and certain YouTube video/audio ad formats
    * are supported. Other ad types, such as Responsive Search Ads or Responsive
    * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
-   * The generated preview URLs cannot be embedded in an iframe because the
-   * response headers include `X-Frame-Options: deny`.
+   * By default, the generated preview URLs cannot be embedded in an iframe
+   * because the response headers include `X-Frame-Options: deny`. Embedding in
+   * an iframe is only supported for allowlisted domains when the `origin` query
+   * parameter is appended to the preview URL.
    * </pre>
    */
   public static final class ShareablePreviewServiceBlockingStub
@@ -265,8 +277,10 @@ public final class ShareablePreviewServiceGrpc {
    * Only Performance Max asset groups and certain YouTube video/audio ad formats
    * are supported. Other ad types, such as Responsive Search Ads or Responsive
    * Display Ads, are not supported and return an `UNSUPPORTED_AD_TYPE` error.
-   * The generated preview URLs cannot be embedded in an iframe because the
-   * response headers include `X-Frame-Options: deny`.
+   * By default, the generated preview URLs cannot be embedded in an iframe
+   * because the response headers include `X-Frame-Options: deny`. Embedding in
+   * an iframe is only supported for allowlisted domains when the `origin` query
+   * parameter is appended to the preview URL.
    * </pre>
    */
   public static final class ShareablePreviewServiceFutureStub
