@@ -1,3 +1,7 @@
+48.2.0 - 2026-11-11
+-------------------
+- Add support for v26_2 of the Google Ads API.
+
 48.1.0 - 2026-10-28
 -------------------
 - Add support for v26_1 of the Google Ads API.

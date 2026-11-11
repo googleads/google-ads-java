@@ -8,7 +8,7 @@ package com.google.ads.googleads.v26.common;
 /**
  * <pre>
  * Budget allocation setting for a specific advertising channel type (e.g.,
- * SEARCH, SHOPPING, PERFORMANCE_MAX).
+ * SEARCH, SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v26.common.BudgetNetworkSetting}
@@ -56,7 +56,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The advertising channel type this setting applies to (e.g., SEARCH,
-   * SHOPPING, or PERFORMANCE_MAX).
+   * SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
    * </pre>
    *
    * <code>.google.ads.googleads.v26.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 1;</code>
@@ -68,7 +68,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The advertising channel type this setting applies to (e.g., SEARCH,
-   * SHOPPING, or PERFORMANCE_MAX).
+   * SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
    * </pre>
    *
    * <code>.google.ads.googleads.v26.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 1;</code>
@@ -396,7 +396,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Budget allocation setting for a specific advertising channel type (e.g.,
-   * SEARCH, SHOPPING, PERFORMANCE_MAX).
+   * SEARCH, SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v26.common.BudgetNetworkSetting}
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The advertising channel type this setting applies to (e.g., SEARCH,
-     * SHOPPING, or PERFORMANCE_MAX).
+     * SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
      * </pre>
      *
      * <code>.google.ads.googleads.v26.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 1;</code>
@@ -664,7 +664,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The advertising channel type this setting applies to (e.g., SEARCH,
-     * SHOPPING, or PERFORMANCE_MAX).
+     * SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
      * </pre>
      *
      * <code>.google.ads.googleads.v26.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 1;</code>
@@ -680,7 +680,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The advertising channel type this setting applies to (e.g., SEARCH,
-     * SHOPPING, or PERFORMANCE_MAX).
+     * SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
      * </pre>
      *
      * <code>.google.ads.googleads.v26.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 1;</code>
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The advertising channel type this setting applies to (e.g., SEARCH,
-     * SHOPPING, or PERFORMANCE_MAX).
+     * SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
      * </pre>
      *
      * <code>.google.ads.googleads.v26.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 1;</code>
@@ -711,7 +711,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The advertising channel type this setting applies to (e.g., SEARCH,
-     * SHOPPING, or PERFORMANCE_MAX).
+     * SHOPPING, PERFORMANCE_MAX, or DEMAND_GEN).
      * </pre>
      *
      * <code>.google.ads.googleads.v26.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 1;</code>

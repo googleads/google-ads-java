@@ -213,6 +213,16 @@ private static final long serialVersionUID = 0L;
      * <code>AUTOMATED_VIDEO_CRAWL = 15;</code>
      */
     AUTOMATED_VIDEO_CRAWL(15),
+    /**
+     * <pre>
+     * Overlays text taken from associated text Assets (such as headlines) on
+     * top of video Assets. By default, advertisers are opted in for
+     * DemandGenVideoResponsiveAd.
+     * </pre>
+     *
+     * <code>OVERLAY_TEXT_ON_VIDEOS = 16;</code>
+     */
+    OVERLAY_TEXT_ON_VIDEOS(16),
     UNRECOGNIZED(-1),
     ;
 
@@ -382,6 +392,16 @@ private static final long serialVersionUID = 0L;
      * <code>AUTOMATED_VIDEO_CRAWL = 15;</code>
      */
     public static final int AUTOMATED_VIDEO_CRAWL_VALUE = 15;
+    /**
+     * <pre>
+     * Overlays text taken from associated text Assets (such as headlines) on
+     * top of video Assets. By default, advertisers are opted in for
+     * DemandGenVideoResponsiveAd.
+     * </pre>
+     *
+     * <code>OVERLAY_TEXT_ON_VIDEOS = 16;</code>
+     */
+    public static final int OVERLAY_TEXT_ON_VIDEOS_VALUE = 16;
 
 
     public final int getNumber() {
@@ -423,6 +443,7 @@ private static final long serialVersionUID = 0L;
         case 12: return GENERATE_VIDEOS_FROM_OTHER_ASSETS;
         case 13: return GENERATE_ANIMATED_IMAGES_FROM_OTHER_ASSETS;
         case 15: return AUTOMATED_VIDEO_CRAWL;
+        case 16: return OVERLAY_TEXT_ON_VIDEOS;
         default: return null;
       }
     }

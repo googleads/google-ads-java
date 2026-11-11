@@ -3771,7 +3771,7 @@ private static final long serialVersionUID = 0L;
      * If you previously used the deprecated `sales_country` in the two-letter
      * country code (`XX`) format, the `feed_label` field should be used
      * instead. For more information see the
-     * [feed label](//support.google.com/merchants/answer/12453549)
+     * [feed label](https://support.google.com/merchants/answer/12453549)
      * support article.
      * </pre>
      *
@@ -3787,7 +3787,7 @@ private static final long serialVersionUID = 0L;
      * If you previously used the deprecated `sales_country` in the two-letter
      * country code (`XX`) format, the `feed_label` field should be used
      * instead. For more information see the
-     * [feed label](//support.google.com/merchants/answer/12453549)
+     * [feed label](https://support.google.com/merchants/answer/12453549)
      * support article.
      * </pre>
      *
@@ -4031,7 +4031,7 @@ private static final long serialVersionUID = 0L;
      * If you previously used the deprecated `sales_country` in the two-letter
      * country code (`XX`) format, the `feed_label` field should be used
      * instead. For more information see the
-     * [feed label](//support.google.com/merchants/answer/12453549)
+     * [feed label](https://support.google.com/merchants/answer/12453549)
      * support article.
      * </pre>
      *
@@ -4059,7 +4059,7 @@ private static final long serialVersionUID = 0L;
      * If you previously used the deprecated `sales_country` in the two-letter
      * country code (`XX`) format, the `feed_label` field should be used
      * instead. For more information see the
-     * [feed label](//support.google.com/merchants/answer/12453549)
+     * [feed label](https://support.google.com/merchants/answer/12453549)
      * support article.
      * </pre>
      *
@@ -4885,7 +4885,7 @@ private static final long serialVersionUID = 0L;
        * If you previously used the deprecated `sales_country` in the two-letter
        * country code (`XX`) format, the `feed_label` field should be used
        * instead. For more information see the
-       * [feed label](//support.google.com/merchants/answer/12453549)
+       * [feed label](https://support.google.com/merchants/answer/12453549)
        * support article.
        * </pre>
        *
@@ -4912,7 +4912,7 @@ private static final long serialVersionUID = 0L;
        * If you previously used the deprecated `sales_country` in the two-letter
        * country code (`XX`) format, the `feed_label` field should be used
        * instead. For more information see the
-       * [feed label](//support.google.com/merchants/answer/12453549)
+       * [feed label](https://support.google.com/merchants/answer/12453549)
        * support article.
        * </pre>
        *
@@ -4940,7 +4940,7 @@ private static final long serialVersionUID = 0L;
        * If you previously used the deprecated `sales_country` in the two-letter
        * country code (`XX`) format, the `feed_label` field should be used
        * instead. For more information see the
-       * [feed label](//support.google.com/merchants/answer/12453549)
+       * [feed label](https://support.google.com/merchants/answer/12453549)
        * support article.
        * </pre>
        *
@@ -4964,7 +4964,7 @@ private static final long serialVersionUID = 0L;
        * If you previously used the deprecated `sales_country` in the two-letter
        * country code (`XX`) format, the `feed_label` field should be used
        * instead. For more information see the
-       * [feed label](//support.google.com/merchants/answer/12453549)
+       * [feed label](https://support.google.com/merchants/answer/12453549)
        * support article.
        * </pre>
        *
@@ -4985,7 +4985,7 @@ private static final long serialVersionUID = 0L;
        * If you previously used the deprecated `sales_country` in the two-letter
        * country code (`XX`) format, the `feed_label` field should be used
        * instead. For more information see the
-       * [feed label](//support.google.com/merchants/answer/12453549)
+       * [feed label](https://support.google.com/merchants/answer/12453549)
        * support article.
        * </pre>
        *

@@ -55,8 +55,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The timestamp of when the campaign was last paused.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string paused_date_time = 1;</code>
@@ -69,8 +69,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The timestamp of when the campaign was last paused.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string paused_date_time = 1;</code>
@@ -92,8 +92,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The timestamp of when the campaign was last paused.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string paused_date_time = 1;</code>
@@ -424,8 +424,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The timestamp of when the campaign was last paused.
-     * The timestamp is in the customer’s timezone and in
-     * “yyyy-MM-dd HH:mm:ss” format.
+     * The timestamp is in the customer's timezone and in
+     * "yyyy-MM-dd HH:mm:ss" format.
      * </pre>
      *
      * <code>optional string paused_date_time = 1;</code>
@@ -437,8 +437,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The timestamp of when the campaign was last paused.
-     * The timestamp is in the customer’s timezone and in
-     * “yyyy-MM-dd HH:mm:ss” format.
+     * The timestamp is in the customer's timezone and in
+     * "yyyy-MM-dd HH:mm:ss" format.
      * </pre>
      *
      * <code>optional string paused_date_time = 1;</code>
@@ -459,8 +459,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The timestamp of when the campaign was last paused.
-     * The timestamp is in the customer’s timezone and in
-     * “yyyy-MM-dd HH:mm:ss” format.
+     * The timestamp is in the customer's timezone and in
+     * "yyyy-MM-dd HH:mm:ss" format.
      * </pre>
      *
      * <code>optional string paused_date_time = 1;</code>
@@ -482,8 +482,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The timestamp of when the campaign was last paused.
-     * The timestamp is in the customer’s timezone and in
-     * “yyyy-MM-dd HH:mm:ss” format.
+     * The timestamp is in the customer's timezone and in
+     * "yyyy-MM-dd HH:mm:ss" format.
      * </pre>
      *
      * <code>optional string paused_date_time = 1;</code>
@@ -501,8 +501,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The timestamp of when the campaign was last paused.
-     * The timestamp is in the customer’s timezone and in
-     * “yyyy-MM-dd HH:mm:ss” format.
+     * The timestamp is in the customer's timezone and in
+     * "yyyy-MM-dd HH:mm:ss" format.
      * </pre>
      *
      * <code>optional string paused_date_time = 1;</code>
@@ -517,8 +517,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The timestamp of when the campaign was last paused.
-     * The timestamp is in the customer’s timezone and in
-     * “yyyy-MM-dd HH:mm:ss” format.
+     * The timestamp is in the customer's timezone and in
+     * "yyyy-MM-dd HH:mm:ss" format.
      * </pre>
      *
      * <code>optional string paused_date_time = 1;</code>
