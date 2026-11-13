@@ -22,11 +22,15 @@ import com.google.ads.googleads.lib.catalog.Version;
 import com.google.ads.googleads.lib.stubs.exceptions.BaseGoogleAdsException;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.rpc.ApiException;
+import com.google.protobuf.Any;
 import com.google.protobuf.Message;
 import io.grpc.Metadata;
 import io.grpc.Status;
 import io.grpc.Status.Code;
 import io.grpc.StatusException;
+import io.grpc.StatusRuntimeException;
+import io.grpc.protobuf.ProtoUtils;
+import io.grpc.protobuf.StatusProto;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -74,6 +78,38 @@ public class GoogleAdsExceptionTransformationTest {
           getApiExceptionForVersion(version.getExceptionFactory().getTrailerKey(), null);
       Throwable result = transformation.transform(exception);
       assertEquals(exception, result);
+    }
+  }
+
+  @Test
+  public void handlesFailureInRpcStatusButNotInTrailers() {
+    for (Version version : catalog.getSupportedVersions()) {
+      // Creates a GoogleAdsFailure instance.
+      Message googleAdsFailure = version.getExceptionFactory().createGoogleAdsFailure();
+
+      // Creates a com.google.rpc.Status proto with the GoogleAdsFailure in the details field.
+      com.google.rpc.Status rpcStatus =
+          com.google.rpc.Status.newBuilder()
+              .setCode(com.google.rpc.Code.INVALID_ARGUMENT.getNumber())
+              .addDetails(Any.pack(googleAdsFailure))
+              .build();
+
+      // Creates a StatusRuntimeException that will be the cause of the ApiException.
+      StatusRuntimeException statusRuntimeException = StatusProto.toStatusRuntimeException(rpcStatus);
+
+      // Creates an ApiException that contains the metadata.
+      ApiException exception =
+          new ApiException(
+              statusRuntimeException,
+              GrpcStatusCode.of(io.grpc.Status.Code.INVALID_ARGUMENT),
+              false);
+
+      // Transforms the exception.
+      Throwable result = transformation.transform(exception);
+      // Retrieves the GoogleAdsFailure from the transformed exception.
+      Message actualFailure = ((BaseGoogleAdsException) result).getGoogleAdsFailure();
+      // Asserts that the expected and actual GoogleAdsFailure protos are the same.
+      assertEquals(googleAdsFailure, actualFailure);
     }
   }
 
