@@ -40,10 +40,14 @@ abstract class UpdateVersionTask extends DefaultTask {
         if (!newVersion.matches(VERSION_REGEX)) {
             throw new GradleException("Invalid format for -PnewVersion. Expecting: ${VERSION_REGEX}")
         }
-        def toSet = new Properties()
-        propertiesFile.withInputStream { toSet.load(it) }
-        toSet.version = newVersion
-        propertiesFile.withOutputStream { toSet.store(it, "See LICENSE for license terms") }
+        // Rewrites only the version line. Properties.store() would reorder keys
+        // and add a timestamp comment, creating unrelated diffs.
+        def versionLine = '(?m)^version=[^\r\n]*'
+        def text = propertiesFile.text
+        if (!(text =~ versionLine)) {
+            throw new GradleException("No version property found in ${propertiesFile}")
+        }
+        propertiesFile.text = text.replaceFirst(versionLine, "version=${newVersion}")
     }
 }
 
