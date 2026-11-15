@@ -128,7 +128,7 @@ public class AddAppCampaign {
     // Creates an ad group.
     String adGroupResourceName = createAdGroup(googleAdsClient, customerId, campaignResourceName);
 
-    // Creates ad App ad.
+    // Creates an App ad.
     createAppAd(googleAdsClient, customerId, adGroupResourceName);
   }
 
@@ -206,7 +206,7 @@ public class AddAppCampaign {
                 AppCampaignSetting.newBuilder()
                     .setAppId("com.google.android.apps.adwords")
                     .setAppStore(AppCampaignAppStore.GOOGLE_APP_STORE)
-                    // Optional: Optimize this campaign for getting new users for your app.
+                    // Optimizes this campaign for getting new users for your app.
                     .setBiddingStrategyGoalType(
                         AppCampaignBiddingStrategyGoalType.OPTIMIZE_INSTALLS_TARGET_INSTALL_COST)
                     .build())
@@ -221,7 +221,7 @@ public class AddAppCampaign {
             // your campaign on people who are most likely to complete the
             // corresponding in-app actions.
             // .setSelectiveOptimization(SelectiveOptimization.newBuilder()
-            //     .addConversionActions("INSERT_CONVERSION_TYPE_ID_HERE")
+            //     .addConversionActions("INSERT_CONVERSION_ACTION_RESOURCE_NAME_HERE")
             //     .build())
             .build();
 
@@ -338,7 +338,7 @@ public class AddAppCampaign {
     // Note that the ad group type must not be set.
     // Since the advertising_channel_sub_type is APP_CAMPAIGN,
     //   1. you cannot override bid settings at the ad group level.
-    //   2. you cannot add ad group criteria.
+    //   2. you cannot add ad group criteria other than audience signals.
     AdGroup adGroup =
         AdGroup.newBuilder()
             .setName("Earth to Mars cruises #" + getPrintableDateTime())
@@ -400,7 +400,7 @@ public class AddAppCampaign {
                             // .addAllImages(
                             //     ImmutableList.of(
                             //         AdImageAsset.newBuilder()
-                            //             .setAsset("INSERT_AD_IMAGE_ASSET_ID")
+                            //             .setAsset("INSERT_IMAGE_ASSET_RESOURCE_NAME_HERE")
                             //             .build()))
                             .build())
                     .build())
