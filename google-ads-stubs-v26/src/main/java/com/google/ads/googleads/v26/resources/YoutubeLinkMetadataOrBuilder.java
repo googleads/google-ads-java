@@ -14,7 +14,7 @@ public interface YoutubeLinkMetadataOrBuilder extends
    * <pre>
    * Immutable. The ID of a YouTube brand channel to help creators understand
    * your brand. The channel must be linked to this account. This is a string
-   * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+   * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
    * </pre>
    *
    * <code>optional string brand_channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -25,7 +25,7 @@ public interface YoutubeLinkMetadataOrBuilder extends
    * <pre>
    * Immutable. The ID of a YouTube brand channel to help creators understand
    * your brand. The channel must be linked to this account. This is a string
-   * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+   * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
    * </pre>
    *
    * <code>optional string brand_channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -36,7 +36,7 @@ public interface YoutubeLinkMetadataOrBuilder extends
    * <pre>
    * Immutable. The ID of a YouTube brand channel to help creators understand
    * your brand. The channel must be linked to this account. This is a string
-   * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+   * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
    * </pre>
    *
    * <code>optional string brand_channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>

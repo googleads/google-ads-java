@@ -1687,8 +1687,9 @@
  * <p>======================= GoogleAdsServiceClient =======================
  *
  * <p>Service Description: Service to fetch data and metrics across resources. Use the interactive
- * [Google Ads Query Builder](/google-ads/api/fields/latest/overview_query_builder) to construct and
- * validate Google Ads Query Language (GAQL) queries.
+ * [Google Ads Query
+ * Builder](https://developers.google.com/google-ads/api/fields/latest/overview_query_builder) to
+ * construct and validate Google Ads Query Language (GAQL) queries.
  *
  * <p>Search versus SearchStream:
  *
@@ -1701,7 +1702,8 @@
  *       rows) or batch reporting workloads.
  * </ul>
  *
- * <p>For more details, see [Streaming versus paging](/google-ads/api/docs/reporting/streaming).
+ * <p>For more details, see [Streaming versus
+ * paging](https://developers.google.com/google-ads/api/docs/reporting/streaming).
  *
  * <p>Sample for GoogleAdsServiceClient:
  *
@@ -2040,10 +2042,10 @@
  * <p>======================= OfflineUserDataJobServiceClient =======================
  *
  * <p>Service Description: Service to manage offline user data jobs. For help diagnosing and
- * resolving conversion or user data upload issues, see the conversion upload [troubleshooting
- * guide](/google-ads/api/docs/conversions/troubleshooting) (or use the `troubleshoot-conversions`
- * workflow in the [Google Ads API Developer
- * Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+ * resolving conversion or user data upload issues, see the [conversion upload troubleshooting
+ * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting) (or use the
+ * `troubleshoot-conversions` workflow in the [Google Ads API Developer
+ * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
  *
  * <p>Sample for OfflineUserDataJobServiceClient:
  *
@@ -2240,8 +2242,9 @@
  * Other ad types, such as Responsive Search Ads or Responsive Display Ads, are not supported and
  * return an `UNSUPPORTED_AD_TYPE` error.
  *
- * <p>The generated preview URLs cannot be embedded in an iframe because the response headers
- * include `X-Frame-Options: deny`.
+ * <p>By default, the generated preview URLs cannot be embedded in an iframe because the response
+ * headers include `X-Frame-Options: deny`. Embedding in an iframe is only supported for allowlisted
+ * domains when the `origin` query parameter is appended to the preview URL.
  *
  * <p>Sample for ShareablePreviewServiceClient:
  *
@@ -2398,9 +2401,10 @@
  * https://support.google.com/google-ads/answer/7474263. However, the uploads made through this
  * service will not be visible under the 'Segment members' section for the Customer Match List in
  * the Google Ads UI. For help diagnosing and resolving conversion or user data upload issues, see
- * the conversion upload [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
- * (or use the `troubleshoot-conversions` workflow in the [Google Ads API Developer
- * Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+ * the [conversion upload troubleshooting
+ * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting) (or use the
+ * `troubleshoot-conversions` workflow in the [Google Ads API Developer
+ * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
  *
  * <p>Sample for UserDataServiceClient:
  *

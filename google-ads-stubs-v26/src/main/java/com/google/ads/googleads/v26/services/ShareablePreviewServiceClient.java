@@ -34,8 +34,9 @@ import org.jspecify.annotations.Nullable;
  * Other ad types, such as Responsive Search Ads or Responsive Display Ads, are not supported and
  * return an `UNSUPPORTED_AD_TYPE` error.
  *
- * <p>The generated preview URLs cannot be embedded in an iframe because the response headers
- * include `X-Frame-Options: deny`.
+ * <p>By default, the generated preview URLs cannot be embedded in an iframe because the response
+ * headers include `X-Frame-Options: deny`. Embedding in an iframe is only supported for allowlisted
+ * domains when the `origin` query parameter is appended to the preview URL.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:

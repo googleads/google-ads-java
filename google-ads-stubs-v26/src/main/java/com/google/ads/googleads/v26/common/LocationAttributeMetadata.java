@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v26.common.LocationInfo countryLocation_;
   /**
    * <pre>
-   * The country location that this attribute’s sub country location is located
+   * The country location that this attribute's sub country location is located
    * in.
    * </pre>
    *
@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The country location that this attribute’s sub country location is located
+   * The country location that this attribute's sub country location is located
    * in.
    * </pre>
    *
@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The country location that this attribute’s sub country location is located
+   * The country location that this attribute's sub country location is located
    * in.
    * </pre>
    *
@@ -413,7 +413,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v26.common.LocationInfo, com.google.ads.googleads.v26.common.LocationInfo.Builder, com.google.ads.googleads.v26.common.LocationInfoOrBuilder> countryLocationBuilder_;
     /**
      * <pre>
-     * The country location that this attribute’s sub country location is located
+     * The country location that this attribute's sub country location is located
      * in.
      * </pre>
      *
@@ -425,7 +425,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The country location that this attribute’s sub country location is located
+     * The country location that this attribute's sub country location is located
      * in.
      * </pre>
      *
@@ -441,7 +441,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The country location that this attribute’s sub country location is located
+     * The country location that this attribute's sub country location is located
      * in.
      * </pre>
      *
@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The country location that this attribute’s sub country location is located
+     * The country location that this attribute's sub country location is located
      * in.
      * </pre>
      *
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The country location that this attribute’s sub country location is located
+     * The country location that this attribute's sub country location is located
      * in.
      * </pre>
      *
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The country location that this attribute’s sub country location is located
+     * The country location that this attribute's sub country location is located
      * in.
      * </pre>
      *
@@ -525,7 +525,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The country location that this attribute’s sub country location is located
+     * The country location that this attribute's sub country location is located
      * in.
      * </pre>
      *
@@ -538,7 +538,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The country location that this attribute’s sub country location is located
+     * The country location that this attribute's sub country location is located
      * in.
      * </pre>
      *
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The country location that this attribute’s sub country location is located
+     * The country location that this attribute's sub country location is located
      * in.
      * </pre>
      *

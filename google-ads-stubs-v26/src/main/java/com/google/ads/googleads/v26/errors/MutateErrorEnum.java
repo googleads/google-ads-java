@@ -154,6 +154,15 @@ private static final long serialVersionUID = 0L;
      * <code>EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED = 17;</code>
      */
     EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED(17),
+    /**
+     * <pre>
+     * The combination of resources in this mutate is not supported for
+     * multi-party approval.
+     * </pre>
+     *
+     * <code>MULTI_PARTY_APPROVAL_UNSUPPORTED_RESOURCE_COMBINATION = 18;</code>
+     */
+    MULTI_PARTY_APPROVAL_UNSUPPORTED_RESOURCE_COMBINATION(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -264,6 +273,15 @@ private static final long serialVersionUID = 0L;
      * <code>EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED = 17;</code>
      */
     public static final int EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED_VALUE = 17;
+    /**
+     * <pre>
+     * The combination of resources in this mutate is not supported for
+     * multi-party approval.
+     * </pre>
+     *
+     * <code>MULTI_PARTY_APPROVAL_UNSUPPORTED_RESOURCE_COMBINATION = 18;</code>
+     */
+    public static final int MULTI_PARTY_APPROVAL_UNSUPPORTED_RESOURCE_COMBINATION_VALUE = 18;
 
 
     public final int getNumber() {
@@ -302,6 +320,7 @@ private static final long serialVersionUID = 0L;
         case 16: return OPERATION_DOES_NOT_SUPPORT_PARTIAL_FAILURE;
         case 13: return RESOURCE_READ_ONLY;
         case 17: return EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED;
+        case 18: return MULTI_PARTY_APPROVAL_UNSUPPORTED_RESOURCE_COMBINATION;
         default: return null;
       }
     }

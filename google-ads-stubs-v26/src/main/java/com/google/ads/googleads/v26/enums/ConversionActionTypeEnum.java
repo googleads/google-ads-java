@@ -320,9 +320,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Deprecated: The Salesforce integration ended on May 31, 2025.
-     * See
-     * [Legacy Salesforce integration for conversions upgrade
-     * FAQ](//support.google.com/google-ads/answer/14728349).
+     * See [Legacy Salesforce integration for conversions upgrade
+     * FAQ](https://support.google.com/google-ads/answer/14728349).
      * </pre>
      *
      * <code>SALESFORCE = 30 [deprecated = true];</code>
@@ -812,9 +811,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Deprecated: The Salesforce integration ended on May 31, 2025.
-     * See
-     * [Legacy Salesforce integration for conversions upgrade
-     * FAQ](//support.google.com/google-ads/answer/14728349).
+     * See [Legacy Salesforce integration for conversions upgrade
+     * FAQ](https://support.google.com/google-ads/answer/14728349).
      * </pre>
      *
      * <code>SALESFORCE = 30 [deprecated = true];</code>

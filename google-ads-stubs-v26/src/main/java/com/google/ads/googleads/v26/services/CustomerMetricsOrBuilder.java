@@ -117,7 +117,7 @@ public interface CustomerMetricsOrBuilder extends
 
   /**
    * <pre>
-   * Metrics representing the customer’s competitive standing among advertisers
+   * Metrics representing the customer's competitive standing among advertisers
    * scoped by the analysis. Percentile metrics are only returned when:
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -131,7 +131,7 @@ public interface CustomerMetricsOrBuilder extends
   boolean hasPercentileMetrics();
   /**
    * <pre>
-   * Metrics representing the customer’s competitive standing among advertisers
+   * Metrics representing the customer's competitive standing among advertisers
    * scoped by the analysis. Percentile metrics are only returned when:
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -145,7 +145,7 @@ public interface CustomerMetricsOrBuilder extends
   com.google.ads.googleads.v26.services.PercentileMetrics getPercentileMetrics();
   /**
    * <pre>
-   * Metrics representing the customer’s competitive standing among advertisers
+   * Metrics representing the customer's competitive standing among advertisers
    * scoped by the analysis. Percentile metrics are only returned when:
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the

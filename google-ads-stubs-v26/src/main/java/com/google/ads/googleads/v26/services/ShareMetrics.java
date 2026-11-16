@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   private double shareOfVoice_ = 0D;
   /**
    * <pre>
-   * Relative impressions. Share of voice is defined by the customer’s total
+   * Relative impressions. Share of voice is defined by the customer's total
    * number of impressions divided by the aggregated number of impressions of
    * all advertisers in the selected benchmarks source including your own. Share
    * of voice is represented on a scale of 0 to 1 precise to 4 decimal places.
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   private double shareOfSpend_ = 0D;
   /**
    * <pre>
-   * Relative spend. Share of spend is defined by the customer’s total cost
+   * Relative spend. Share of spend is defined by the customer's total cost
    * divided by the total aggregated cost of all advertisers in the selected
    * benchmarks source including your own. Share of spend is represented on a
    * scale of 0 to 1 precise to 4 decimal places. For example, 0.0123 which
@@ -414,7 +414,7 @@ private static final long serialVersionUID = 0L;
     private double shareOfVoice_ ;
     /**
      * <pre>
-     * Relative impressions. Share of voice is defined by the customer’s total
+     * Relative impressions. Share of voice is defined by the customer's total
      * number of impressions divided by the aggregated number of impressions of
      * all advertisers in the selected benchmarks source including your own. Share
      * of voice is represented on a scale of 0 to 1 precise to 4 decimal places.
@@ -430,7 +430,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Relative impressions. Share of voice is defined by the customer’s total
+     * Relative impressions. Share of voice is defined by the customer's total
      * number of impressions divided by the aggregated number of impressions of
      * all advertisers in the selected benchmarks source including your own. Share
      * of voice is represented on a scale of 0 to 1 precise to 4 decimal places.
@@ -450,7 +450,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Relative impressions. Share of voice is defined by the customer’s total
+     * Relative impressions. Share of voice is defined by the customer's total
      * number of impressions divided by the aggregated number of impressions of
      * all advertisers in the selected benchmarks source including your own. Share
      * of voice is represented on a scale of 0 to 1 precise to 4 decimal places.
@@ -470,7 +470,7 @@ private static final long serialVersionUID = 0L;
     private double shareOfSpend_ ;
     /**
      * <pre>
-     * Relative spend. Share of spend is defined by the customer’s total cost
+     * Relative spend. Share of spend is defined by the customer's total cost
      * divided by the total aggregated cost of all advertisers in the selected
      * benchmarks source including your own. Share of spend is represented on a
      * scale of 0 to 1 precise to 4 decimal places. For example, 0.0123 which
@@ -486,7 +486,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Relative spend. Share of spend is defined by the customer’s total cost
+     * Relative spend. Share of spend is defined by the customer's total cost
      * divided by the total aggregated cost of all advertisers in the selected
      * benchmarks source including your own. Share of spend is represented on a
      * scale of 0 to 1 precise to 4 decimal places. For example, 0.0123 which
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Relative spend. Share of spend is defined by the customer’s total cost
+     * Relative spend. Share of spend is defined by the customer's total cost
      * divided by the total aggregated cost of all advertisers in the selected
      * benchmarks source including your own. Share of spend is represented on a
      * scale of 0 to 1 precise to 4 decimal places. For example, 0.0123 which

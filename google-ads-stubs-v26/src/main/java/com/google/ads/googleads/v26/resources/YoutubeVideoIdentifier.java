@@ -56,7 +56,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. The ID of the hosting channel of the video. This is a string
-   * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+   * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
    * </pre>
    *
    * <code>optional string channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. The ID of the hosting channel of the video. This is a string
-   * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+   * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
    * </pre>
    *
    * <code>optional string channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -91,7 +91,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. The ID of the hosting channel of the video. This is a string
-   * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+   * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
    * </pre>
    *
    * <code>optional string channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The ID of the hosting channel of the video. This is a string
-     * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+     * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
      * </pre>
      *
      * <code>optional string channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -532,7 +532,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The ID of the hosting channel of the video. This is a string
-     * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+     * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
      * </pre>
      *
      * <code>optional string channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -553,7 +553,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The ID of the hosting channel of the video. This is a string
-     * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+     * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
      * </pre>
      *
      * <code>optional string channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -575,7 +575,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The ID of the hosting channel of the video. This is a string
-     * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+     * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
      * </pre>
      *
      * <code>optional string channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The ID of the hosting channel of the video. This is a string
-     * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+     * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
      * </pre>
      *
      * <code>optional string channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -608,7 +608,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The ID of the hosting channel of the video. This is a string
-     * value with “UC” prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
+     * value with "UC" prefix. For example, "UCK8sQmJBp8GCxrOtXWBpyEA".
      * </pre>
      *
      * <code>optional string channel_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>

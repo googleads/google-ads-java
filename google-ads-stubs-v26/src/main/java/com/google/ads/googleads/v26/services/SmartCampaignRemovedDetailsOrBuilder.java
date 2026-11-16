@@ -13,8 +13,8 @@ public interface SmartCampaignRemovedDetailsOrBuilder extends
   /**
    * <pre>
    * The timestamp of when the campaign was removed.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string removed_date_time = 1;</code>
@@ -24,8 +24,8 @@ public interface SmartCampaignRemovedDetailsOrBuilder extends
   /**
    * <pre>
    * The timestamp of when the campaign was removed.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string removed_date_time = 1;</code>
@@ -35,8 +35,8 @@ public interface SmartCampaignRemovedDetailsOrBuilder extends
   /**
    * <pre>
    * The timestamp of when the campaign was removed.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string removed_date_time = 1;</code>

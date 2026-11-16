@@ -14,8 +14,8 @@ public interface SmartCampaignEligibleDetailsOrBuilder extends
    * <pre>
    * The timestamp of the last impression observed in the last 48 hours for this
    * campaign.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string last_impression_date_time = 1;</code>
@@ -26,8 +26,8 @@ public interface SmartCampaignEligibleDetailsOrBuilder extends
    * <pre>
    * The timestamp of the last impression observed in the last 48 hours for this
    * campaign.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string last_impression_date_time = 1;</code>
@@ -38,8 +38,8 @@ public interface SmartCampaignEligibleDetailsOrBuilder extends
    * <pre>
    * The timestamp of the last impression observed in the last 48 hours for this
    * campaign.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string last_impression_date_time = 1;</code>
@@ -51,8 +51,8 @@ public interface SmartCampaignEligibleDetailsOrBuilder extends
   /**
    * <pre>
    * The timestamp of when the campaign will end, if applicable.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string end_date_time = 2;</code>
@@ -62,8 +62,8 @@ public interface SmartCampaignEligibleDetailsOrBuilder extends
   /**
    * <pre>
    * The timestamp of when the campaign will end, if applicable.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string end_date_time = 2;</code>
@@ -73,8 +73,8 @@ public interface SmartCampaignEligibleDetailsOrBuilder extends
   /**
    * <pre>
    * The timestamp of when the campaign will end, if applicable.
-   * The timestamp is in the customer’s timezone and in
-   * “yyyy-MM-dd HH:mm:ss” format.
+   * The timestamp is in the customer's timezone and in
+   * "yyyy-MM-dd HH:mm:ss" format.
    * </pre>
    *
    * <code>optional string end_date_time = 2;</code>

@@ -104,6 +104,15 @@ private static final long serialVersionUID = 0L;
      * <code>PERMISSION_DENIED = 5;</code>
      */
     PERMISSION_DENIED(5),
+    /**
+     * <pre>
+     * The Multi-Party Authorization review is stale because the target resource
+     * was modified or deleted after the review was created.
+     * </pre>
+     *
+     * <code>STALE_MULTI_PARTY_AUTH_REQUEST = 6;</code>
+     */
+    STALE_MULTI_PARTY_AUTH_REQUEST(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -164,6 +173,15 @@ private static final long serialVersionUID = 0L;
      * <code>PERMISSION_DENIED = 5;</code>
      */
     public static final int PERMISSION_DENIED_VALUE = 5;
+    /**
+     * <pre>
+     * The Multi-Party Authorization review is stale because the target resource
+     * was modified or deleted after the review was created.
+     * </pre>
+     *
+     * <code>STALE_MULTI_PARTY_AUTH_REQUEST = 6;</code>
+     */
+    public static final int STALE_MULTI_PARTY_AUTH_REQUEST_VALUE = 6;
 
 
     public final int getNumber() {
@@ -196,6 +214,7 @@ private static final long serialVersionUID = 0L;
         case 3: return ACCESS_INVITATION_INVALID_STATUS;
         case 4: return INVALID_STATUS_TRANSITION;
         case 5: return PERMISSION_DENIED;
+        case 6: return STALE_MULTI_PARTY_AUTH_REQUEST;
         default: return null;
       }
     }

@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
     DISAPPROVED(4),
     /**
      * <pre>
-     * Search Theme is under review. It won’t be able to trigger ads until
+     * Search Theme is under review. It won't be able to trigger ads until
      * it's been reviewed.
      * </pre>
      *
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
     public static final int DISAPPROVED_VALUE = 4;
     /**
      * <pre>
-     * Search Theme is under review. It won’t be able to trigger ads until
+     * Search Theme is under review. It won't be able to trigger ads until
      * it's been reviewed.
      * </pre>
      *

@@ -7,7 +7,7 @@ package com.google.ads.googleads.v26.services;
 
 /**
  * <pre>
- * Metrics representing the customer’s Ad performance.
+ * Metrics representing the customer's Ad performance.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v26.services.CustomerMetrics}
@@ -190,7 +190,7 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v26.services.PercentileMetrics percentileMetrics_;
   /**
    * <pre>
-   * Metrics representing the customer’s competitive standing among advertisers
+   * Metrics representing the customer's competitive standing among advertisers
    * scoped by the analysis. Percentile metrics are only returned when:
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Metrics representing the customer’s competitive standing among advertisers
+   * Metrics representing the customer's competitive standing among advertisers
    * scoped by the analysis. Percentile metrics are only returned when:
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Metrics representing the customer’s competitive standing among advertisers
+   * Metrics representing the customer's competitive standing among advertisers
    * scoped by the analysis. Percentile metrics are only returned when:
    *
    * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -451,7 +451,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Metrics representing the customer’s Ad performance.
+   * Metrics representing the customer's Ad performance.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v26.services.CustomerMetrics}
@@ -1220,7 +1220,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v26.services.PercentileMetrics, com.google.ads.googleads.v26.services.PercentileMetrics.Builder, com.google.ads.googleads.v26.services.PercentileMetricsOrBuilder> percentileMetricsBuilder_;
     /**
      * <pre>
-     * Metrics representing the customer’s competitive standing among advertisers
+     * Metrics representing the customer's competitive standing among advertisers
      * scoped by the analysis. Percentile metrics are only returned when:
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -1236,7 +1236,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics representing the customer’s competitive standing among advertisers
+     * Metrics representing the customer's competitive standing among advertisers
      * scoped by the analysis. Percentile metrics are only returned when:
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -1256,7 +1256,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics representing the customer’s competitive standing among advertisers
+     * Metrics representing the customer's competitive standing among advertisers
      * scoped by the analysis. Percentile metrics are only returned when:
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -1281,7 +1281,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics representing the customer’s competitive standing among advertisers
+     * Metrics representing the customer's competitive standing among advertisers
      * scoped by the analysis. Percentile metrics are only returned when:
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -1304,7 +1304,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics representing the customer’s competitive standing among advertisers
+     * Metrics representing the customer's competitive standing among advertisers
      * scoped by the analysis. Percentile metrics are only returned when:
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -1334,7 +1334,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics representing the customer’s competitive standing among advertisers
+     * Metrics representing the customer's competitive standing among advertisers
      * scoped by the analysis. Percentile metrics are only returned when:
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -1356,7 +1356,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics representing the customer’s competitive standing among advertisers
+     * Metrics representing the customer's competitive standing among advertisers
      * scoped by the analysis. Percentile metrics are only returned when:
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -1373,7 +1373,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics representing the customer’s competitive standing among advertisers
+     * Metrics representing the customer's competitive standing among advertisers
      * scoped by the analysis. Percentile metrics are only returned when:
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the
@@ -1393,7 +1393,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Metrics representing the customer’s competitive standing among advertisers
+     * Metrics representing the customer's competitive standing among advertisers
      * scoped by the analysis. Percentile metrics are only returned when:
      *
      * 1. `all_advertisers` is used as the `benchmarks_source`. Note that the

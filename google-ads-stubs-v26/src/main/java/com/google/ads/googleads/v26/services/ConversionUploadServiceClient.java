@@ -229,7 +229,7 @@ public class ConversionUploadServiceClient implements BackgroundResource {
    *     `partial_failure_error`. Setting this field to `false` is not supported and causes the
    *     entire request to fail.
    *     <p>See [Best practices for partial
-   *     failures](/google-ads/api/docs/best-practices/partial-failures).
+   *     failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UploadClickConversionsResponse uploadClickConversions(
@@ -353,7 +353,7 @@ public class ConversionUploadServiceClient implements BackgroundResource {
    *     `partial_failure_error`. Setting this field to `false` is not supported and causes the
    *     entire request to fail.
    *     <p>See [Best practices for partial
-   *     failures](/google-ads/api/docs/best-practices/partial-failures).
+   *     failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UploadCallConversionsResponse uploadCallConversions(

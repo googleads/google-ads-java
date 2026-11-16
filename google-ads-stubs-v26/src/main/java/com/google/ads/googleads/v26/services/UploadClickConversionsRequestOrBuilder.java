@@ -83,7 +83,7 @@ public interface UploadClickConversionsRequestOrBuilder extends
    *
    * See
    * [Best practices for partial
-   * failures](/google-ads/api/docs/best-practices/partial-failures).
+   * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
    * </pre>
    *
    * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>

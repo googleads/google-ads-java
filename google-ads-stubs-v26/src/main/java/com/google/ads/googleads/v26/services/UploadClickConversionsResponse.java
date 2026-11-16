@@ -61,7 +61,7 @@ private static final long serialVersionUID = 0L;
    *
    * See
    * [Best practices for partial
-   * failures](/google-ads/api/docs/best-practices/partial-failures).
+   * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
    *
    * See
    * [Best practices for partial
-   * failures](/google-ads/api/docs/best-practices/partial-failures).
+   * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -99,7 +99,7 @@ private static final long serialVersionUID = 0L;
    *
    * See
    * [Best practices for partial
-   * failures](/google-ads/api/docs/best-practices/partial-failures).
+   * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -624,7 +624,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -664,7 +664,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -691,7 +691,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -716,7 +716,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -772,7 +772,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -791,7 +791,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -813,7 +813,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>

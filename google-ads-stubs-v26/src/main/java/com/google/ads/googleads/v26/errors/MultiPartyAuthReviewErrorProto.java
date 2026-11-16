@@ -42,19 +42,20 @@ public final class MultiPartyAuthReviewErrorProto extends com.google.protobuf.Ge
     java.lang.String[] descriptorData = {
       "\nCgoogle/ads/googleads/v26/errors/multi_" +
       "party_auth_review_error.proto\022\037google.ad" +
-      "s.googleads.v26.errors\"\330\001\n\035MultiPartyAut" +
-      "hReviewErrorEnum\"\266\001\n\031MultiPartyAuthRevie" +
+      "s.googleads.v26.errors\"\374\001\n\035MultiPartyAut" +
+      "hReviewErrorEnum\"\332\001\n\031MultiPartyAuthRevie" +
       "wError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\037\n\033" +
       "ACCESS_INVITATION_NOT_FOUND\020\002\022$\n ACCESS_" +
       "INVITATION_INVALID_STATUS\020\003\022\035\n\031INVALID_S" +
       "TATUS_TRANSITION\020\004\022\025\n\021PERMISSION_DENIED\020" +
-      "\005B\376\001\n#com.google.ads.googleads.v26.error" +
-      "sB\036MultiPartyAuthReviewErrorProtoP\001ZEgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v26/errors;errors\242\002\003GAA\252\002\037Googl" +
-      "e.Ads.GoogleAds.V26.Errors\312\002\037Google\\Ads\\" +
-      "GoogleAds\\V26\\Errors\352\002#Google::Ads::Goog" +
-      "leAds::V26::Errorsb\006proto3"
+      "\005\022\"\n\036STALE_MULTI_PARTY_AUTH_REQUEST\020\006B\376\001" +
+      "\n#com.google.ads.googleads.v26.errorsB\036M" +
+      "ultiPartyAuthReviewErrorProtoP\001ZEgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v26/errors;errors\242\002\003GAA\252\002\037Google.Ad" +
+      "s.GoogleAds.V26.Errors\312\002\037Google\\Ads\\Goog" +
+      "leAds\\V26\\Errors\352\002#Google::Ads::GoogleAd" +
+      "s::V26::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

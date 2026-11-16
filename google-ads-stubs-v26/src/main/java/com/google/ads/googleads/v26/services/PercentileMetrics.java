@@ -7,7 +7,7 @@ package com.google.ads.googleads.v26.services;
 
 /**
  * <pre>
- * Metrics representing the customer’s competitive standing among advertisers
+ * Metrics representing the customer's competitive standing among advertisers
  * scoped by the analysis.
  *
  * Percentile tier values classify the customer's percentile rank among other
@@ -460,7 +460,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Metrics representing the customer’s competitive standing among advertisers
+   * Metrics representing the customer's competitive standing among advertisers
    * scoped by the analysis.
    *
    * Percentile tier values classify the customer's percentile rank among other

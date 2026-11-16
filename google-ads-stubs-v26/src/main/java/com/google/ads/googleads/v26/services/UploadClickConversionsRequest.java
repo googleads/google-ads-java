@@ -24,7 +24,8 @@ package com.google.ads.googleads.v26.services;
  * `UserIdentifier` object (`oneof identifier` is mutually exclusive).
  *
  * For help diagnosing conversion upload issues, see the conversion upload
- * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting).
+ * [troubleshooting
+ * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting).
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v26.services.UploadClickConversionsRequest}
@@ -186,7 +187,7 @@ private static final long serialVersionUID = 0L;
    *
    * See
    * [Best practices for partial
-   * failures](/google-ads/api/docs/best-practices/partial-failures).
+   * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
    * </pre>
    *
    * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -476,7 +477,8 @@ private static final long serialVersionUID = 0L;
    * `UserIdentifier` object (`oneof identifier` is mutually exclusive).
    *
    * For help diagnosing conversion upload issues, see the conversion upload
-   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting).
+   * [troubleshooting
+   * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting).
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v26.services.UploadClickConversionsRequest}
@@ -1128,7 +1130,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1147,7 +1149,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1170,7 +1172,7 @@ private static final long serialVersionUID = 0L;
      *
      * See
      * [Best practices for partial
-     * failures](/google-ads/api/docs/best-practices/partial-failures).
+     * failures](https://developers.google.com/google-ads/api/docs/best-practices/partial-failures).
      * </pre>
      *
      * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>

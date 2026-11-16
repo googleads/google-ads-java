@@ -10,10 +10,11 @@ package com.google.ads.googleads.v26.services;
  * A click conversion.
  *
  * For help diagnosing and resolving conversion upload issues, see the
- * conversion upload
- * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
- * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
- * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+ * [conversion upload troubleshooting
+ * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting)
+ * (or use the `troubleshoot-conversions` workflow in the
+ * [Google Ads API Developer
+ * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v26.services.ClickConversion}
@@ -1448,10 +1449,11 @@ private static final long serialVersionUID = 0L;
    * A click conversion.
    *
    * For help diagnosing and resolving conversion upload issues, see the
-   * conversion upload
-   * [troubleshooting guide](/google-ads/api/docs/conversions/troubleshooting)
-   * (or use the `troubleshoot-conversions` workflow in the [Google Ads API
-   * Developer Assistant](/google-ads/api/docs/developer-toolkit/ai-assistant)).
+   * [conversion upload troubleshooting
+   * guide](https://developers.google.com/google-ads/api/docs/conversions/troubleshooting)
+   * (or use the `troubleshoot-conversions` workflow in the
+   * [Google Ads API Developer
+   * Assistant](https://developers.google.com/google-ads/api/docs/developer-toolkit/ai-assistant)).
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v26.services.ClickConversion}
