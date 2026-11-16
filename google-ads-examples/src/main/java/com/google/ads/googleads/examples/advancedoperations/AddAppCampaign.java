@@ -206,7 +206,7 @@ public class AddAppCampaign {
                 AppCampaignSetting.newBuilder()
                     .setAppId("com.google.android.apps.adwords")
                     .setAppStore(AppCampaignAppStore.GOOGLE_APP_STORE)
-                    // Optimizes this campaign for getting new users for your app.
+                    // Optimize this campaign for getting new users for your app.
                     .setBiddingStrategyGoalType(
                         AppCampaignBiddingStrategyGoalType.OPTIMIZE_INSTALLS_TARGET_INSTALL_COST)
                     .build())
@@ -400,7 +400,7 @@ public class AddAppCampaign {
                             // .addAllImages(
                             //     ImmutableList.of(
                             //         AdImageAsset.newBuilder()
-                            //             .setAsset("INSERT_IMAGE_ASSET_RESOURCE_NAME_HERE")
+                            //             .setAsset("INSERT_AD_IMAGE_ASSET_RESOURCE_NAME_HERE")
                             //             .build()))
                             .build())
                     .build())
