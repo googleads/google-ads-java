@@ -11,23 +11,61 @@ This project hosts the Java client library for the Google Ads API.
 ## Requirements
 
   * Java 1.8+
-  * Maven 3.0+
+  * Maven 3.0+ or Gradle 5.0+
+
+## Bill of Materials (BOM)
+
+Use the [Google Ads API Bill of Materials (BOM)](https://developers.google.com/google-ads/api/docs/client-libs/java/bill-of-materials) to manage dependency versions and avoid conflicts with shared transitive dependencies such as Guava, Protobuf, GAX, and gRPC.
+
+Maven (`pom.xml`):
+
+```xml
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.google.api-ads</groupId>
+      <artifactId>google-ads-bom</artifactId>
+      <version>48.2.0</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+
+<dependencies>
+  <dependency>
+    <groupId>com.google.api-ads</groupId>
+    <artifactId>google-ads</artifactId>
+  </dependency>
+</dependencies>
+```
+
+Gradle (`build.gradle`):
+
+```groovy
+implementation platform('com.google.api-ads:google-ads-bom:48.2.0')
+implementation 'com.google.api-ads:google-ads'
+```
 
 ## Maven artifacts
 
-    <dependency>
-      <groupId>com.google.api-ads</groupId>
-      <artifactId>google-ads</artifactId>
-      <version>48.2.0</version>
-    </dependency>
+```xml
+<dependency>
+  <groupId>com.google.api-ads</groupId>
+  <artifactId>google-ads</artifactId>
+  <version>48.2.0</version>
+</dependency>
+```
 
 ## Gradle dependency
 
-    implementation 'com.google.api-ads:google-ads:48.2.0'
+```groovy
+implementation 'com.google.api-ads:google-ads:48.2.0'
+```
 
 ## Documentation
 
-Our documentation is available [here](https://developers.google.com/google-ads/api/docs/client-libs/java).
+See the [Google Ads API client library for Java documentation](https://developers.google.com/google-ads/api/docs/client-libs/java).
 
 ## Miscellaneous
 
@@ -39,9 +77,9 @@ Our documentation is available [here](https://developers.google.com/google-ads/a
 
 - https://github.com/googleads/google-ads-java/issues
 
-### API Documentation:
+### API documentation
 
-- https://developers.google.com/google-ads/api/docs
+- https://developers.google.com/google-ads/api
 
 ### Support
 
@@ -50,6 +88,5 @@ Our documentation is available [here](https://developers.google.com/google-ads/a
 ### Authors
 
 - [Josh Radcliff](https://github.com/jradcliff)
-- [Nick Birnie](https://github.com/nwbirnie)
-- [Devin Chasanoff](https://github.com/devchas)
+- [Natalie Ng](https://github.com/ngnatng)
 - [Sarah Botwinick Pollack](https://github.com/sarahcaseybot)

@@ -60,7 +60,7 @@ publishing {
         maven(MavenPublication) { publication ->
             configurePom(publication,
                     "Google Ads API client library for Java - codegen",
-                    "Generated code (stus) and generators for library")
+                    "Generated code (stubs) and generators for library")
         }
     }
 }

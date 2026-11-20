@@ -597,7 +597,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
 
     /**
      * Retrieves the headers to be provided in requests, generated from properties set on the
-     * builder, e.g. endpoint and developer token.
+     * builder, such as login customer ID and linked customer ID.
      */
     ImmutableMap<String, String> getHeaders() {
       return GoogleAdsHeaderProvider.newBuilder()
