@@ -32,7 +32,7 @@ JDK version:
 To enable logging see this page: https://developers.google.com/google-ads/api/docs/client-libs/java/logging
 
 NOTE: Make sure to include a Request ID when possible, and to redact personally
-identifiable information, including developer tokens, client IDs, customer IDs, etc.
+identifiable information, including client IDs, customer IDs, etc.
 -->
 
  
