@@ -83,7 +83,7 @@ publishing {
     publications {
         maven(MavenPublication) { publication ->
             configurePom(publication,
-                    "Google Ads API client library for java - shadow jar",
+                    "Google Ads API client library for Java - shadow jar",
                     "Provides a jar with all dependencies")
         }
     }

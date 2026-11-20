@@ -161,30 +161,23 @@ ext.configurePom = { publication, nameToSet, descriptionToSet ->
     }
     developers {
       developer {
-        id = 'josh'
+        id = 'jradcliff'
         name = 'Josh Radcliff'
         email = 'jradcliff@users.noreply.github.com'
         organization = 'Google'
         organizationUrl = 'https://www.google.com'
       }
       developer {
-        id = 'nick'
-        name = 'Nick Birnie'
-        email = 'nwbirnie@users.noreply.github.com'
+        id = 'ngnatng'
+        name = 'Natalie Ng'
+        email = 'ngnatng@users.noreply.github.com'
         organization = 'Google'
         organizationUrl = 'https://www.google.com'
       }
       developer {
-        id = 'devin'
-        name = 'Devin Chasanoff'
-        email = 'devchas@users.noreply.github.com'
-        organization = 'Google'
-        organizationUrl = 'https://www.google.com'
-      }
-      developer {
-        id = 'sarah'
+        id = 'sarahcaseybot'
         name = 'Sarah Pollack'
-        email = 'sarahbot@users.noreply.github.com'
+        email = 'sarahcaseybot@users.noreply.github.com'
         organization = 'Google'
         organizationUrl = 'https://www.google.com'
       }

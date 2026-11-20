@@ -19,7 +19,7 @@
  * transitive dependencies are using compatible versions.
  *
  * To use this BOM, add the following to the dependencyManagement section of your
- * pom.xml file and replace REPLACE_WITH_CURRENT-VERSION with the current
+ * pom.xml file and replace REPLACE-WITH-CURRENT-VERSION with the current
  * version of google-ads-bom:
  *
  * <dependencyManagement>
@@ -86,7 +86,7 @@ jreleaser {
             documentation = 'https://developers.google.com/google-ads/api/docs/client-libs/java'
         }
         license = 'Apache-2.0'
-        authors = ['Josh Radcliff', 'Sarah Botwinick Pollack']
+        authors = ['Josh Radcliff', 'Natalie Ng', 'Sarah Botwinick Pollack']
     }
     signing {
         active = 'ALWAYS'
@@ -164,6 +164,10 @@ publishing {
                     developer {
                         name = 'Josh Radcliff'
                         url = 'https://github.com/jradcliff'
+                    }
+                    developer {
+                        name = 'Natalie Ng'
+                        url = 'https://github.com/ngnatng'
                     }
                     developer {
                         name = 'Sarah Botwinick Pollack'

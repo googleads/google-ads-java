@@ -94,15 +94,15 @@ tasks.register('updateReadme') {
         }
         String text = readmeFile.text
 
-        // Replace version in Maven dependency snippet
+        // Replace version in Maven dependency snippets (google-ads and google-ads-bom)
         text = text.replaceAll(
-            /(?s)(<groupId>com\.google\.api-ads<\/groupId>\s*<artifactId>google-ads<\/artifactId>\s*<version>)[^<]+(<\/version>)/,
+            /(?s)(<groupId>com\.google\.api-ads<\/groupId>\s*<artifactId>google-ads(?:-bom)?<\/artifactId>\s*<version>)[^<]+(<\/version>)/,
             "\$1${versionToSet}\$2"
         )
 
-        // Replace version in Gradle dependency snippet
+        // Replace version in Gradle dependency snippets (google-ads and google-ads-bom)
         text = text.replaceAll(
-            /(implementation\s+['"]com\.google\.api-ads:google-ads:)[^'"]+(['"])/,
+            /(implementation\s+(?:platform\(\s*)?['"]com\.google\.api-ads:google-ads(?:-bom)?:)[^'"]+(['"]\s*\)?)/,
             "\$1${versionToSet}\$2"
         )
 
